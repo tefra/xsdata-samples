@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+  <PublicationTimestamp>2010-12-17T09:30:47Z</PublicationTimestamp>
+  <ParticipantRef>SYS001</ParticipantRef>
+  <PublicationRequest version="1.0">
+    <RequestTimestamp>2010-12-17T09:30:47Z</RequestTimestamp>
+    <ParticipantRef>SYS002</ParticipantRef>
+    <topics>
+      <NetworkFrameTopic>
+        <selectionValidityConditions>
+          <AvailabilityCondition id="hde:range" modification="new" version="any" status="active">
+            <FromDate>2011-01-01T00:00:00Z</FromDate>
+          </AvailabilityCondition>
+        </selectionValidityConditions>
+        <FareFrameRef ref="myfares:FF01">REQUEST</FareFrameRef>
+      </NetworkFrameTopic>
+    </topics>
+  </PublicationRequest>
+  <PublicationRefreshInterval>P1M</PublicationRefreshInterval>
+  <Description>Example  of simple point to point fares</Description>
+  <dataObjects>
+    <CompositeFrame id="myfares:DTA@Line24" modification="new" version="1" status="active">
+      <validityConditions modificationSet="all">
+        <ValidBetween modification="new" status="active">
+          <FromDate>2011-01-01T00:00:00Z</FromDate>
+          <ToDate>2011-07-01T00:00:00Z</ToDate>
+        </ValidBetween>
+      </validityConditions>
+      <codespaces modificationSet="all">
+        <Codespace id="mybus">
+          <Xmlns>mybus</Xmlns>
+          <XmlnsUrl>http://www.mybuses.eu/stuff</XmlnsUrl>
+          <Description>My buses</Description>
+        </Codespace>
+        <Codespace id="myfares">
+          <Xmlns>myfares</Xmlns>
+          <XmlnsUrl>http://www.myfares,com/fares</XmlnsUrl>
+          <Description>Fare data</Description>
+        </Codespace>
+      </codespaces>
+      <FrameDefaults>
+        <DefaultCodespaceRef ref="myfares"/>
+        <DefaultCurrency>EUR</DefaultCurrency>
+      </FrameDefaults>
+      <frames modificationSet="all">
+        <FareFrame id="myfares:DTA@Line24@products" modification="new" version="1.0" status="active">
+          <prerequisites modificationSet="all">
+            <ServiceFrameRef version="1.0" ref="mybus:DTA@Line24@network"/>
+          </prerequisites>
+          <tariffs>
+            <Tariff id="myfares:PointToPoint_01" modification="new" version="1.0" status="active">
+              <Name>Point to Point   Tariff</Name>
+              <OperatorRef version="any" ref="mybus:DTA"/>
+              <TypeOfTariffRef version="ntx:v1.0" ref="ntx:point_to_point"/>
+              <fareStructureElements modificationSet="all">
+                <FareStructureElement id="myfares:PointToPoint_01@access" modification="new" version="1.0" status="active">
+                  <distanceMatrixElements modificationSet="all">
+                    <DistanceMatrixElementRef version="any" ref="myfares:SSP_001+SSP_002"/>
+                    <DistanceMatrixElementRef version="any" ref="myfares:SSP_001+SSP_077"/>
+                    <DistanceMatrixElementRef version="any" ref="myfares:SSP_002+SSP_077"/>
+                  </distanceMatrixElements>
+                  <GenericParameterAssignment id="myfares:PointToPoint_01@access" modification="new" version="1.0" status="active" order="1">
+                    <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:can_access"/>
+                    <ValidityParameterGroupingType>XOR</ValidityParameterGroupingType>
+                    <validityParameters modificationSet="all">
+                      <GroupOfLinesRef version="any" ref="mybus:my_lines"/>
+                    </validityParameters>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement id="myfares:PointToPoint_01@eligibility" modification="new" version="1.0" status="active">
+                  <Name>Eligible user types</Name>
+                  <GenericParameterAssignment id="myfares:PointToPoint_01@eligibility" modification="new" version="1.0" status="active" order="1">
+                    <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:eligible"/>
+                    <LimitationGroupingType>XOR</LimitationGroupingType>
+                    <limitations modificationSet="all">
+                      <UserProfile id="myfares:adult" modification="new" version="any" status="active">
+                        <Name>Child Fare</Name>
+                        <TypeOfConcessionRef version="any" ref="myfares:adult"/>
+                        <MaximumAge>16</MaximumAge>
+                      </UserProfile>
+                      <UserProfile id="myfares:child" modification="new" version="any" status="active">
+                        <Name>Child Fare</Name>
+                        <TypeOfConcessionRef version="any" ref="myfares:child"/>
+                        <MaximumAge>16</MaximumAge>
+                      </UserProfile>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement id="myfares:PointToPoint_01@classes_of_use" modification="new" version="1.0" status="active">
+                  <Name>Available classes of use</Name>
+                  <GenericParameterAssignment id="myfares:PointToPoint_01@classes_of_use" modification="new" version="1.0" status="active" order="1">
+                    <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:can_access"/>
+                    <ValidityParameterGroupingType>XOR</ValidityParameterGroupingType>
+                    <validityParameters modificationSet="all">
+                      <ClassOfUseRef version="any" ref="myfares:standard"/>
+                      <ClassOfUseRef version="any" ref="myfares:first"/>
+                    </validityParameters>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement id="myfares:PointToPoint_01@conditions_of_travel" modification="new" version="1.0" status="active">
+                  <Name>Conditions of travel</Name>
+                  <GenericParameterAssignment id="myfares:PointToPoint_01@conditions_of_travel" modification="new" version="1.0" status="active" order="1">
+                    <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:condition_of_use"/>
+                    <LimitationGroupingType>AND</LimitationGroupingType>
+                    <limitations modificationSet="all">
+                      <Interchanging id="myfares:PointToPoint_01@conditions_of_travel@interchanging" modification="new" version="1.0" status="active">
+                        <FromMode>bus</FromMode>
+                        <ToMode>bus</ToMode>
+                        <MaximumNumberOfInterchanges>0</MaximumNumberOfInterchanges>
+                      </Interchanging>
+                      <FrequencyOfUse id="myfares:PointToPoint_01@conditions_of_travel@frequency" modification="new" version="1.0" status="active">
+                        <Name>One trip no transfers</Name>
+                        <FrequencyOfUseType>single</FrequencyOfUseType>
+                        <MaximalFrequency>1</MaximalFrequency>
+                      </FrequencyOfUse>
+                      <RoundTrip id="myfares:PointToPoint_01@conditions_of_travel@trip" modification="new" version="1.0" status="active">
+                        <Name>Single Trip</Name>
+                        <TripType>single</TripType>
+                      </RoundTrip>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+              </fareStructureElements>
+              <distanceMatrixElements modificationSet="all">
+                <DistanceMatrixElement id="myfares:SSP_001+SSP_002" modification="new" version="any" status="active">
+                  <Name>A to B</Name>
+                  <StartStopPointRef version="any" ref="mybus:SSP_001"/>
+                  <EndStopPointRef version="any" ref="mybus:SSP_002"/>
+                  <prices>
+                    <DistanceMatrixElementPriceRef version="1.0" ref="myfares:PointToPoint_01@p-ticket@SSP_001+SSP_002@standard"/>
+                    <DistanceMatrixElementPriceRef version="1.0" ref="myfares:PointToPoint_01@p-ticket@SSP_001+SSP_002@first"/>
+                    <DistanceMatrixElementPriceRef version="1.0" ref="myfares:PointToPoint_01@m-ticket@SSP_001+SSP_002@standard"/>
+                    <DistanceMatrixElementPriceRef version="1.0" ref="myfares:PointToPoint_01@m-ticket@SSP_001+SSP_002@first"/>
+                  </prices>
+                </DistanceMatrixElement>
+                <DistanceMatrixElement id="myfares:SSP_001+SSP_077" modification="new" version="any" status="active">
+                  <Name>A to C</Name>
+                  <StartStopPointRef version="any" ref="mybus:SSP_001"/>
+                  <EndStopPointRef version="any" ref="mybus:SSP_077"/>
+                  <prices>
+                    <DistanceMatrixElementPriceRef version="1.0" ref="myfares:PointToPoint_01@p-ticket@SSP_001+SSP_077@standard"/>
+                    <DistanceMatrixElementPriceRef version="1.0" ref="myfares:PointToPoint_01@p-ticket@SSP_001+SSP_077@first"/>
+                    <DistanceMatrixElementPriceRef version="1.0" ref="myfares:PointToPoint_01@m-ticket@SSP_001+SSP_077@standard"/>
+                    <DistanceMatrixElementPriceRef version="1.0" ref="myfares:PointToPoint_01@m-ticket@SSP_001+SSP_077@first"/>
+                  </prices>
+                </DistanceMatrixElement>
+                <DistanceMatrixElement id="myfares:SSP_002+SSP_077" modification="new" version="any" status="active">
+                  <Name>B to C</Name>
+                  <StartStopPointRef version="any" ref="mybus:SSP_002"/>
+                  <EndStopPointRef version="any" ref="mybus:SSP_077"/>
+                  <prices>
+                    <DistanceMatrixElementPriceRef version="1.0" ref="myfares:PointToPoint_01@p-ticket@SSP_002+SSP_077@standard"/>
+                    <DistanceMatrixElementPriceRef version="1.0" ref="myfares:PointToPoint_01@p-ticket@SSP_002+SSP_077@first"/>
+                    <DistanceMatrixElementPriceRef version="1.0" ref="myfares:PointToPoint_01@m-ticket@SSP_002+SSP_077@standard"/>
+                    <DistanceMatrixElementPriceRef version="1.0" ref="myfares:PointToPoint_01@m-ticket@SSP_002+SSP_077@first"/>
+                  </prices>
+                </DistanceMatrixElement>
+              </distanceMatrixElements>
+              <priceGroups>
+                <PriceGroupRef version="1.0" ref="myfares:Line24@discounts"/>
+              </priceGroups>
+              <fareTables>
+                <FareTableRef version="1.0" ref="myfares:Line24"/>
+              </fareTables>
+            </Tariff>
+          </tariffs>
+          <fareProducts>
+            <PreassignedFareProduct id="myfares:Trip" modification="new" version="1.0" status="active">
+              <Name>Standard Point To Point Trip  fare   </Name>
+              <TypeOfFareProductRef version="ntx:v1.0" ref="ntx:trip"/>
+              <OperatorRef version="any" ref="mybus:DTA"/>
+              <validableElements>
+                <ValidableElement id="myfares:Trip@travel" modification="new" version="1.0" status="active">
+                  <Name>Single  ride</Name>
+                  <fareStructureElements modificationSet="all">
+                    <FareStructureElementRef version="1.0" ref="myfares:PointToPoint_01@access"/>
+                    <FareStructureElementRef version="1.0" ref="myfares:PointToPoint_01@eligibility"/>
+                    <FareStructureElementRef version="1.0" ref="myfares:PointToPoint_01@classes_of_use"/>
+                    <FareStructureElementRef version="1.0" ref="myfares:PointToPoint_01@conditions_of_travel"/>
+                  </fareStructureElements>
+                </ValidableElement>
+              </validableElements>
+              <accessRightsInProduct>
+                <AccessRightInProduct id="myfares:Trip" modification="new" version="1.0" status="active" order="1">
+                  <Name>First ride</Name>
+                  <IsFirstInSequence>true</IsFirstInSequence>
+                  <IsLastInSequence>true</IsLastInSequence>
+                  <ValidableElementRef version="1.0" ref="myfares:Trip@travel"/>
+                </AccessRightInProduct>
+              </accessRightsInProduct>
+            </PreassignedFareProduct>
+          </fareProducts>
+          <salesOfferPackages>
+            <SalesOfferPackage id="myfares:Trip-SOP@p-ticket" modification="new" version="1.0" status="active">
+              <Name/>
+              <distributionAssignments modificationSet="all">
+                <DistributionAssignment id="myfares:Trip-SOP@p-ticket@atStop" modification="new" version="10" status="active" order="1">
+                  <Name>Onboard</Name>
+                  <Description>Pay for ticket onboard</Description>
+                  <DistributionChannelType>atStop</DistributionChannelType>
+                  <TicketingServiceFacilityList>purchase</TicketingServiceFacilityList>
+                  <PaymentMethods>cashAndCard</PaymentMethods>
+                  <FulfilmentMethodRef ref="ntx:collect_on_board" versionRef="ntx:v1.0"/>
+                </DistributionAssignment>
+                <DistributionAssignment id="myfares:Trip-SOP@p-ticket@onBoard" modification="new" version="1.0" status="active" order="2">
+                  <Name>Onboard</Name>
+                  <Description>Pay for ticket onboard</Description>
+                  <DistributionChannelType>onBoard</DistributionChannelType>
+                  <TicketingServiceFacilityList>purchase</TicketingServiceFacilityList>
+                  <PaymentMethods>cashAndCard</PaymentMethods>
+                  <FulfilmentMethodRef ref="ntx:collect_on_board" versionRef="ntx:v1.0"/>
+                </DistributionAssignment>
+              </distributionAssignments>
+              <salesOfferPackageElements modificationSet="all">
+                <SalesOfferPackageElement id="myfares:Trip-SOP@p-ticket" modification="new" version="1.0" status="active" order="1">
+                  <TypeOfTravelDocumentRef version="any" ref="myfares:printed_ticket"/>
+                  <PreassignedFareProductRef version="1.0" ref="myfares:Trip"/>
+                </SalesOfferPackageElement>
+              </salesOfferPackageElements>
+            </SalesOfferPackage>
+            <SalesOfferPackage id="myfares:Trip-SOP@m-ticket" modification="new" version="1.0" status="active">
+              <Name/>
+              <distributionAssignments modificationSet="all">
+                <DistributionAssignment id="myfares:Trip-SOP@m-ticket@online" modification="new" version="10" status="active" order="1">
+                  <Name>Online</Name>
+                  <DistributionChannelType>mobileDevice</DistributionChannelType>
+                  <PaymentMethods>cardsOnly</PaymentMethods>
+                  <FulfilmentMethodRef ref="ntx:mobile_app" versionRef="ntx:v1.0"/>
+                </DistributionAssignment>
+              </distributionAssignments>
+              <salesOfferPackageElements modificationSet="all">
+                <SalesOfferPackageElement id="myfares:Trip-SOP@m-ticket" modification="new" version="1.0" status="active" order="1">
+                  <TypeOfTravelDocumentRef version="any" ref="myfares:mobile_app"/>
+                  <PreassignedFareProductRef version="1.0" ref="myfares:Trip"/>
+                </SalesOfferPackageElement>
+              </salesOfferPackageElements>
+            </SalesOfferPackage>
+          </salesOfferPackages>
+        </FareFrame>
+        <FareFrame id="myfares:DTA@Line24@prices" modification="new" version="1.0" status="active">
+          <Name>Prices for Line 24</Name>
+          <prerequisites modificationSet="all">
+            <FareFrameRef version="1.0" ref="myfares:DTA@Line24@products"/>
+          </prerequisites>
+          <PricingParameterSet id="myfares:Line24" modification="new" version="1.0" status="active">
+            <pricingRules>
+              <DiscountingRule id="myfares:0%" modification="new" version="1.0" status="active">
+                <DiscountAsPercentage>0</DiscountAsPercentage>
+              </DiscountingRule>
+              <DiscountingRule id="myfares:50%" modification="new" version="1.0" status="active">
+                <DiscountAsPercentage>50</DiscountAsPercentage>
+              </DiscountingRule>
+            </pricingRules>
+          </PricingParameterSet>
+          <priceGroups>
+            <PriceGroup id="myfares:Line24@discounts" modification="new" version="1.0" status="active">
+              <members>
+                <UsageParameterPrice id="myfares:adult" modification="new" version="1.0" status="active">
+                  <Name>Adult price</Name>
+                  <DiscountingRuleRef version="1.0" ref="myfares:0%"/>
+                  <UserProfileRef version="any" ref="myfares:adult"/>
+                </UsageParameterPrice>
+                <UsageParameterPrice id="myfares:child" modification="new" version="1.0" status="active">
+                  <Name>Child discount - all fares</Name>
+                  <DiscountingRuleRef version="1.0" ref="myfares:50%"/>
+                  <UserProfileRef version="any" ref="myfares:child"/>
+                </UsageParameterPrice>
+              </members>
+            </PriceGroup>
+          </priceGroups>
+          <fareTables>
+            <FareTable id="myfares:Line24" modification="new" version="1.0" status="active">
+              <Name>Prices for Point to Point  Trip Product</Name>
+              <pricesFor modificationSet="all">
+                <PreassignedFareProductRef version="1.0" ref="myfares:Trip"/>
+              </pricesFor>
+              <usedIn modificationSet="all">
+                <TariffRef version="1.0" ref="myfares:PointToPoint_01"/>
+              </usedIn>
+              <limitations modificationSet="all">
+                <UserProfileRef version="any" ref="myfares:adult"/>
+              </limitations>
+              <includes>
+                <FareTable id="myfares:Line24@p-ticket" modification="new" version="1.0" status="active">
+                  <Name>Prices for Point to Point  Trip Product - paper ticket</Name>
+                  <pricesFor modificationSet="all">
+                    <SalesOfferPackageRef version="1.0" ref="myfares:Trip-SOP@p-ticket"/>
+                  </pricesFor>
+                  <includes>
+                    <FareTable id="myfares:PointToPoint_01@p-ticket@standard" modification="new" version="1.0" status="active">
+                      <Name>Prices for Point to Point Trip Product  - Standard</Name>
+                      <specifics>
+                        <ClassOfUseRef version="any" ref="myfares:standard"/>
+                      </specifics>
+                      <cells>
+                        <DistanceMatrixElementPrice id="myfares:PointToPoint_01@p-ticket@SSP_001+SSP_002@standard" modification="new" version="1.0" status="active">
+                          <Name>Alpha to Beta - Price</Name>
+                          <Amount>1.00</Amount>
+                          <DistanceMatrixElementRef version="any" ref="myfares:SSP_001+SSP_002"/>
+                        </DistanceMatrixElementPrice>
+                        <DistanceMatrixElementPrice id="myfares:PointToPoint_01@p-ticket@SSP_001+SSP_077@standard" modification="new" version="1.0" status="active">
+                          <Name>Alpha  to Charley - Price</Name>
+                          <Amount>3.00</Amount>
+                          <DistanceMatrixElementRef version="any" ref="myfares:SSP_001+SSP_077"/>
+                        </DistanceMatrixElementPrice>
+                        <DistanceMatrixElementPrice id="myfares:PointToPoint_01@p-ticket@SSP_002+SSP_077@standard" modification="new" version="1.0" status="active">
+                          <Name>Beta  to Charley - Price</Name>
+                          <Amount>2.00</Amount>
+                          <DistanceMatrixElementRef version="any" ref="myfares:SSP_002+SSP_077"/>
+                        </DistanceMatrixElementPrice>
+                      </cells>
+                    </FareTable>
+                    <FareTable id="myfares:PointToPoint_01@p-ticket@first" modification="new" version="any" status="active">
+                      <Name>Prices for  Point to Point Fare Product  - First Class</Name>
+                      <specifics>
+                        <ClassOfUseRef version="any" ref="myfares:first"/>
+                      </specifics>
+                      <cells>
+                        <DistanceMatrixElementPrice id="myfares:PointToPoint_01@p-ticket@SSP_001+SSP_002@first" modification="new" version="1.0" status="active">
+                          <Name>Alpha to Beta - Price</Name>
+                          <Amount>1.50</Amount>
+                          <DistanceMatrixElementRef version="any" ref="myfares:SSP_001+SSP_002"/>
+                        </DistanceMatrixElementPrice>
+                        <DistanceMatrixElementPrice id="myfares:PointToPoint_01@p-ticket@SSP_001+SSP_077@first" modification="new" version="1.0" status="active">
+                          <Name>Alpha  to Charley - Price</Name>
+                          <Amount>5.00</Amount>
+                          <DistanceMatrixElementRef version="any" ref="myfares:SSP_001+SSP_077"/>
+                        </DistanceMatrixElementPrice>
+                        <DistanceMatrixElementPrice id="myfares:PointToPoint_01@p-ticket@SSP_002+SSP_077@first" modification="new" version="1.0" status="active">
+                          <Name>Beta  to Charley - Price</Name>
+                          <Amount>3.00</Amount>
+                          <DistanceMatrixElementRef version="any" ref="myfares:SSP_002+SSP_077"/>
+                        </DistanceMatrixElementPrice>
+                      </cells>
+                    </FareTable>
+                  </includes>
+                </FareTable>
+                <FareTable id="myfares:Line24@m-ticket" modification="new" version="1.0" status="active">
+                  <Name>Prices for Point to Point  Trip Product - Mobile app</Name>
+                  <pricesFor modificationSet="all">
+                    <SalesOfferPackageRef version="1.0" ref="myfares:Trip-SOP@m-ticket"/>
+                  </pricesFor>
+                  <includes>
+                    <FareTable id="myfares:PointToPoint_01@m-ticket@standard" modification="new" version="1.0" status="active">
+                      <Name>Prices for Point to Point Trip Product  - Mobile app - Standard</Name>
+                      <specifics>
+                        <ClassOfUseRef version="any" ref="myfares:standard"/>
+                      </specifics>
+                      <cells>
+                        <DistanceMatrixElementPrice id="myfares:PointToPoint_01@m-ticket@SSP_001+SSP_002@standard" modification="new" version="1.0" status="active">
+                          <Name>Alpha to Beta - Price</Name>
+                          <Amount>0.90</Amount>
+                          <DistanceMatrixElementRef version="any" ref="myfares:SSP_001+SSP_002"/>
+                        </DistanceMatrixElementPrice>
+                        <DistanceMatrixElementPrice id="myfares:PointToPoint_01@m-ticket@SSP_001+SSP_077@standard" modification="new" version="1.0" status="active">
+                          <Name>Alpha  to Charley - Price</Name>
+                          <Amount>2.70</Amount>
+                          <DistanceMatrixElementRef version="any" ref="myfares:SSP_001+SSP_077"/>
+                        </DistanceMatrixElementPrice>
+                        <DistanceMatrixElementPrice id="myfares:PointToPoint_01@m-ticket@SSP_002+SSP_077@standard" modification="new" version="1.0" status="active">
+                          <Name>Beta  to Charley - Price</Name>
+                          <Amount>1.90</Amount>
+                          <DistanceMatrixElementRef version="any" ref="myfares:SSP_002+SSP_077"/>
+                        </DistanceMatrixElementPrice>
+                      </cells>
+                    </FareTable>
+                    <FareTable id="myfares:PointToPoint_01@m-ticket@first" modification="new" version="any" status="active">
+                      <Name>Prices for  Point to Point Fare Product  - Mobile app - First Class</Name>
+                      <specifics>
+                        <ClassOfUseRef version="any" ref="myfares:first"/>
+                      </specifics>
+                      <cells>
+                        <DistanceMatrixElementPrice id="myfares:PointToPoint_01@m-ticket@SSP_001+SSP_002@first" modification="new" version="1.0" status="active">
+                          <Name>Alpha to Beta - Price</Name>
+                          <Amount>1.40</Amount>
+                          <DistanceMatrixElementRef version="any" ref="myfares:SSP_001+SSP_002"/>
+                        </DistanceMatrixElementPrice>
+                        <DistanceMatrixElementPrice id="myfares:PointToPoint_01@m-ticket@SSP_001+SSP_077@first" modification="new" version="1.0" status="active">
+                          <Name>Alpha  to Charley - Price</Name>
+                          <Amount>4.80</Amount>
+                          <DistanceMatrixElementRef version="any" ref="myfares:SSP_001+SSP_077"/>
+                        </DistanceMatrixElementPrice>
+                        <DistanceMatrixElementPrice id="myfares:PointToPoint_01@m-ticket@SSP_002+SSP_077@first" modification="new" version="1.0" status="active">
+                          <Name>Beta  to Charley - Price</Name>
+                          <Amount>2.80</Amount>
+                          <DistanceMatrixElementRef version="any" ref="myfares:SSP_002+SSP_077"/>
+                        </DistanceMatrixElementPrice>
+                      </cells>
+                    </FareTable>
+                  </includes>
+                </FareTable>
+              </includes>
+            </FareTable>
+          </fareTables>
+        </FareFrame>
+        <ServiceFrame id="mybus:DTA@Line24@network" modification="new" version="1.0" status="active">
+          <Name>Stops for Winter timetable for route 24 </Name>
+          <prerequisites modificationSet="all">
+            <ResourceFrameRef version="1.0" ref="mybus:DTA@Common_resources"/>
+          </prerequisites>
+          <lines modificationSet="all">
+            <Line id="mybus:LN_24" modification="new" version="any" status="active">
+              <Name>Line 24 Alpha to Charley</Name>
+              <PublicCode>24</PublicCode>
+              <OperatorRef version="any" ref="mybus:DTA"/>
+            </Line>
+          </lines>
+          <groupsOfLines modificationSet="all">
+            <GroupOfLines id="mybus:my_lines" modification="new" version="any" status="active">
+              <Name>Express routes</Name>
+              <members modificationSet="all">
+                <LineRef version="any" ref="mybus:LN_24"/>
+              </members>
+            </GroupOfLines>
+          </groupsOfLines>
+          <scheduledStopPoints modificationSet="all">
+            <ScheduledStopPoint id="mybus:SSP_001" modification="new" version="any" status="active">
+              <Name>Alpha &amp; Castle</Name>
+              <Location>
+                <Longitude>53.0000</Longitude>
+                <Latitude>0.1000</Latitude>
+              </Location>
+              <ShortName>Alpha</ShortName>
+              <PublicCode>ALPH</PublicCode>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint id="mybus:SSP_002" modification="new" version="any" status="active">
+              <Name>Bravo Street</Name>
+              <Location>
+                <Longitude>53.2000</Longitude>
+                <Latitude>0.2000</Latitude>
+              </Location>
+              <ShortName>Bravo</ShortName>
+              <PublicCode>BRAV</PublicCode>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint id="mybus:SSP_077" modification="new" version="any" status="active">
+              <Name>Charley Crescent</Name>
+              <Location>
+                <Longitude>53.3000</Longitude>
+                <Latitude>0.3000</Latitude>
+              </Location>
+              <ShortName>Charley</ShortName>
+              <PublicCode>CHAS</PublicCode>
+            </ScheduledStopPoint>
+          </scheduledStopPoints>
+        </ServiceFrame>
+        <ResourceFrame id="mybus:DTA@Common_resources" modification="new" version="1.0" status="active">
+          <codespaces modificationSet="all">
+            <Codespace id="ntx">
+              <Xmlns>ntx</Xmlns>
+              <XmlnsUrl>http://netex.org.uk/</XmlnsUrl>
+              <Description>Netex built in value</Description>
+            </Codespace>
+          </codespaces>
+          <typesOfValue modificationSet="all">
+            <ValueSet id="ntx:Types_of_Tariff" modification="new" version="ntx:v1.0" status="active" classOfValues="TypeOfTariff">
+              <Name>Types of Tariff</Name>
+              <values>
+                <TypeOfTariff id="ntx:Distance_kilometers" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                  <Name>Kilometer Distance Kilometers</Name>
+                </TypeOfTariff>
+                <TypeOfTariff id="ntx:flat" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                  <Name>Flat</Name>
+                </TypeOfTariff>
+                <TypeOfTariff id="ntx:point_to_point" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                  <Name>Point to point</Name>
+                </TypeOfTariff>
+                <TypeOfTariff id="ntx:zone_to_zone" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                  <Name>Zone to Zone</Name>
+                </TypeOfTariff>
+                <TypeOfTariff id="ntx:zonal" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                  <Name>Zonal</Name>
+                </TypeOfTariff>
+                <TypeOfTariff id="ntx:section" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                  <Name>Section</Name>
+                </TypeOfTariff>
+                <TypeOfTariff id="ntx:banded" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                  <Name>Section</Name>
+                </TypeOfTariff>
+                <TypeOfTariff id="ntx:stored_value" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                  <Name>Stored value</Name>
+                </TypeOfTariff>
+                <TypeOfTariff id="ntx:discount" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                  <Name>Discount value</Name>
+                </TypeOfTariff>
+                <TypeOfTariff id="ntx:multitrip" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                  <Name>Multitrip carnet</Name>
+                </TypeOfTariff>
+                <TypeOfTariff id="ntx:identity_card" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                  <Name>SIdentity</Name>
+                </TypeOfTariff>
+              </values>
+            </ValueSet>
+            <ValueSet id="ntx:Types_of_FareProduct" modification="new" version="ntx:v1.0" status="active" classOfValues="TypeOfFareProduct">
+              <Name>Types of Fare Product</Name>
+              <values>
+                <TypeOfFareProduct id="ntx:trip" modification="new" version="ntx:v1.0" status="active">
+                  <Name>Trip product</Name>
+                </TypeOfFareProduct>
+                <TypeOfFareProduct id="ntx:multi_trip" modification="new" version="ntx:v1.0" status="active">
+                  <Name>Multitrip / carnet  product</Name>
+                </TypeOfFareProduct>
+                <TypeOfFareProduct id="ntx:period_pass" modification="new" version="ntx:v1.0" status="active">
+                  <Name>Peroid pass product</Name>
+                </TypeOfFareProduct>
+                <TypeOfFareProduct id="ntx:day_pass" modification="new" version="ntx:v1.0" status="active">
+                  <Name>Day pass product</Name>
+                </TypeOfFareProduct>
+                <TypeOfFareProduct id="ntx:discount_card" modification="new" version="ntx:v1.0" status="active">
+                  <Name>Discount  product</Name>
+                </TypeOfFareProduct>
+              </values>
+            </ValueSet>
+            <ValueSet id="myfares:Classes_of_Use" modification="new" version="any" status="active" classOfValues="ClassOfUse">
+              <values>
+                <ClassOfUse id="myfares:first" modification="new" version="any" status="active">
+                  <Name>First</Name>
+                </ClassOfUse>
+                <ClassOfUse id="myfares:standard" modification="new" version="any" status="active">
+                  <Name>Standard</Name>
+                </ClassOfUse>
+              </values>
+            </ValueSet>
+            <ValueSet id="myfares:Types_of_Concession" modification="new" version="any" status="active" classOfValues="TypeOfConcession">
+              <Name>Types of concession</Name>
+              <values>
+                <TypeOfConcession id="myfares:adult" modification="new" version="any" status="active">
+                  <Name>Adult</Name>
+                </TypeOfConcession>
+                <TypeOfConcession id="myfares:child" modification="new" version="any" status="active">
+                  <Name>Student</Name>
+                </TypeOfConcession>
+              </values>
+            </ValueSet>
+            <ValueSet id="myfares:Types_of_TravelDocument" modification="new" version="any" status="active" classOfValues="TypeOfTravelDocument">
+              <Name>Types of concession</Name>
+              <values>
+                <TypeOfTravelDocument id="myfares:printed_ticket" modification="new" version="any" status="active">
+                  <Name>Paper ticket</Name>
+                </TypeOfTravelDocument>
+                <TypeOfTravelDocument id="myfares:mobile_app" modification="new" version="any" status="active">
+                  <Name>Mobile app</Name>
+                </TypeOfTravelDocument>
+              </values>
+            </ValueSet>
+            <ValueSet id="ntx:Types_of_AccessRightAssignment" modification="new" version="ntx:v1.0" status="active" classOfValues="TypeOfAccessRightAssignment">
+              <Name>Types of Access Right Assignment</Name>
+              <values>
+                <TypeOfAccessRightAssignment id="ntx:eligible" modification="new" version="ntx:v1.0" status="active">
+                  <Name>Eligible for a product or discount</Name>
+                </TypeOfAccessRightAssignment>
+                <TypeOfAccessRightAssignment id="ntx:can_access" modification="new" version="ntx:v1.0" status="active">
+                  <Name>Grants access rights to use or travel on</Name>
+                </TypeOfAccessRightAssignment>
+                <TypeOfAccessRightAssignment id="ntx:condition_of_use" modification="new" version="ntx:v1.0" status="active">
+                  <Name>Defines a condition or restriction on use</Name>
+                </TypeOfAccessRightAssignment>
+              </values>
+            </ValueSet>
+          </typesOfValue>
+          <organisations modificationSet="all">
+            <Operator id="mybus:DTA" modification="new" version="any" status="active">
+              <Name>Demo Transit Authority</Name>
+            </Operator>
+          </organisations>
+        </ResourceFrame>
+      </frames>
+    </CompositeFrame>
+  </dataObjects>
+</PublicationDelivery>
+

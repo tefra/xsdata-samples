@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+  <PublicationTimestamp>2001-12-17T09:30:47Z</PublicationTimestamp>
+  <ParticipantRef>SYS001</ParticipantRef>
+  <PublicationRequest version="1.0">
+    <RequestTimestamp>2001-12-17T09:30:47Z</RequestTimestamp>
+    <ParticipantRef>SYS002</ParticipantRef>
+  </PublicationRequest>
+  <PublicationRefreshInterval>P1Y2M3DT10H30M0S</PublicationRefreshInterval>
+  <dataObjects>
+    <ServiceCalendarFrame id="hde:SCF01" modification="new" version="any" status="active">
+      <codespaces modificationSet="all">
+        <Codespace id="abc">
+          <Xmlns>abc</Xmlns>
+          <XmlnsUrl>http://www.mybuses.eu/stuff</XmlnsUrl>
+          <Description>My buses</Description>
+        </Codespace>
+        <Codespace id="hde">
+          <Xmlns>hde</Xmlns>
+          <XmlnsUrl>http://www.halt.de/</XmlnsUrl>
+          <Description>Stop data  data</Description>
+        </Codespace>
+      </codespaces>
+      <FrameDefaults>
+        <DefaultCodespaceRef ref="hde"/>
+      </FrameDefaults>
+      <contentValidityConditions modificationSet="all">
+        <ValidityRuleParameter id="hde:VC_ntwkf003_002_icy" modification="new" version="any" status="active">
+          <Description>Use when Icy</Description>
+          <ConditionedObjectRef nameOfRefClass="TimetableFrame" ref="abc:Tf01"/>
+          <WithConditionRef version="any" ref="hde:VC_ntwkf003_002_winter"/>
+          <RuleObjectRef nameOfRefClass="Weather" ref="Myobj:Cur001">EXTERNAL</RuleObjectRef>
+          <AttributeName>roadCondition</AttributeName>
+          <ComparisonOperator>EQ</ComparisonOperator>
+          <AttributeValue>icy</AttributeValue>
+        </ValidityRuleParameter>
+        <ValidityRuleParameter id="hde:VC_ntwkf003_002_winter" modification="new" version="any" status="active">
+          <Description>Use when Winter</Description>
+          <ConditionedObjectRef nameOfRefClass="TimetableFrame" ref="abc:Tf01"/>
+          <WithConditionRef version="any" ref="hde:rp_02_long"/>
+          <RuleObjectRef nameOfRefClass="DayType" version="1" ref="Myobj:DT001"/>
+          <isValid>true</isValid>
+        </ValidityRuleParameter>
+        <ValidityRuleParameter id="hde:rp_02_long" modification="new" version="any" status="active">
+          <Description>If run time is greater than five minuets</Description>
+          <ConditionedObjectRef nameOfRefClass="TimetableFrame" ref="abc:Tf01"/>
+          <WithConditionRef version="any" ref="hde:vt_01"/>
+          <RuleObjectRef nameOfRefClass="JourneyPatternRunTime" ref="JourneyPatternRunTime:JPRT_1234234"/>
+          <AttributeName>RunTime</AttributeName>
+          <ComparisonOperator>GT</ComparisonOperator>
+          <AttributeValue>'PT5M'</AttributeValue>
+        </ValidityRuleParameter>
+        <ValidityTrigger id="hde:vt_01" modification="new" version="any" status="active">
+          <Description>Special event day</Description>
+          <ConditionedObjectRef nameOfRefClass="TimetableFrame" ref="abc:Tf01"/>
+        </ValidityTrigger>
+      </contentValidityConditions>
+      <dayTypes modificationSet="all">
+        <DayType id="Myobj:DT001" modification="new" version="any" status="active">
+          <Name>Winter </Name>
+          <properties>
+            <PropertyOfDay>
+              <Name>Winter </Name>
+              <Seasons>Winter</Seasons>
+            </PropertyOfDay>
+          </properties>
+        </DayType>
+      </dayTypes>
+    </ServiceCalendarFrame>
+  </dataObjects>
+</PublicationDelivery>
+

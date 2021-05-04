@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+  <PublicationTimestamp>2010-05-17T09:30:47Z</PublicationTimestamp>
+  <ParticipantRef>SYS001</ParticipantRef>
+  <PublicationRefreshInterval>P7D</PublicationRefreshInterval>
+  <Description>Netex basic Uniquness check </Description>
+  <dataObjects>
+    <CompositeFrame id="mybus:ntwkf001" modification="new" version="001" status="active">
+      <codespaces modificationSet="all">
+        <Codespace id="bar">
+          <Xmlns>bar</Xmlns>
+          <XmlnsUrl>Test</XmlnsUrl>
+        </Codespace>
+      </codespaces>
+      <frames modificationSet="all">
+        <ServiceFrame id="bar:foo" modification="new" version="001" status="active">
+          <Name>FRAME </Name>
+          <lines modificationSet="all">
+            <FlexibleLine id="bar:foo1" modification="new" version="001" status="active">
+              <Name>LINE</Name>
+            </FlexibleLine>
+            <Line id="bar:foo" modification="new" version="001" status="active">
+              <Name>LINE</Name>
+            </Line>
+          </lines>
+          <groupsOfLines modificationSet="all">
+            <GroupOfLines id="bar:foo" modification="new" version="001" status="active"/>
+          </groupsOfLines>
+          <scheduledStopPoints modificationSet="all">
+            <ScheduledStopPoint id="bar:foo5" modification="new" version="001" status="active">
+              <Name>POINT</Name>
+            </ScheduledStopPoint>
+          </scheduledStopPoints>
+          <serviceLinks modificationSet="all">
+            <ServiceLink id="bar:foo3" modification="new" version="001" status="active">
+              <Name>LINK</Name>
+              <FromPointRef version="001" ref="bar:foo5"/>
+              <ToPointRef version="001" ref="bar:foo5"/>
+            </ServiceLink>
+          </serviceLinks>
+          <servicePatterns modificationSet="all">
+            <ServicePattern id="bar:foo" modification="new" version="001" status="active">
+              <Name>JOURNEY PATTERN</Name>
+              <pointsInSequence>
+                <StopPointInJourneyPattern id="bar:foo" modification="new" version="001" status="active" order="1">
+                  <ScheduledStopPointRef version="001" ref="bar:foo5"/>
+                </StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="bar:foo" modification="new" version="001" status="active" order="2">
+                  <ScheduledStopPointRef version="001" ref="bar:foo5"/>
+                </StopPointInJourneyPattern>
+              </pointsInSequence>
+            </ServicePattern>
+            <ServicePattern id="bar:foo-bis" modification="new" version="001" status="active"/>
+          </servicePatterns>
+          <stopAreas modificationSet="all">
+            <StopArea id="bar:foo" modification="new" version="001" status="active"/>
+          </stopAreas>
+          <journeyPatterns modificationSet="all">
+            <JourneyPattern id="bar:foo2" modification="new" version="001" status="active">
+              <Name>JOURNEY PATTERN</Name>
+              <pointsInSequence>
+                <TimingPointInJourneyPattern id="bar:foo2" modification="new" version="001" status="active" order="1">
+                  <ScheduledStopPointRef version="001" ref="bar:foo5"/>
+                </TimingPointInJourneyPattern>
+                <TimingPointInJourneyPattern id="bar:foo2" modification="new" version="001" status="active" order="2">
+                  <ScheduledStopPointRef version="001" ref="bar:foo5"/>
+                </TimingPointInJourneyPattern>
+              </pointsInSequence>
+            </JourneyPattern>
+          </journeyPatterns>
+        </ServiceFrame>
+        <TimetableFrame id="bar:foo" modification="new" version="001" status="active">
+          <Name>FRAME </Name>
+          <vehicleJourneys modificationSet="all">
+            <VehicleJourney id="bar:foo" modification="new" version="001" status="active">
+              <Name>JOURNEY</Name>
+            </VehicleJourney>
+            <ServiceJourney id="bar:foo1" modification="new" version="001" status="active">
+              <Name>JOURNEY</Name>
+            </ServiceJourney>
+            <DatedServiceJourney id="bar:foo4" modification="new" version="001" status="active">
+              <Name>JOURNEY</Name>
+            </DatedServiceJourney>
+            <DeadRun id="bar:foo5" modification="new" version="001" status="active">
+              <Name>JOURNEY</Name>
+            </DeadRun>
+            <SpecialService id="bar:foo3" modification="new" version="001" status="active">
+              <Name>JOURNEY</Name>
+            </SpecialService>
+            <TemplateServiceJourney id="bar:foo2" modification="new" version="001" status="active">
+              <Name>JOURNEY</Name>
+            </TemplateServiceJourney>
+          </vehicleJourneys>
+          <serviceFacilitySets modificationSet="all">
+            <ServiceFacilitySet id="bar:foo2" modification="new" version="001" status="active">
+              <Description>FACILITY SET</Description>
+            </ServiceFacilitySet>
+          </serviceFacilitySets>
+        </TimetableFrame>
+        <SiteFrame id="bar:foo" modification="new" version="001" status="active">
+          <topographicPlaces modificationSet="all">
+            <TopographicPlace id="bar:foo1" modification="new" version="001" status="active">
+              <Descriptor modification="new" status="active">
+                <Name>ZONE</Name>
+              </Descriptor>
+            </TopographicPlace>
+          </topographicPlaces>
+          <groupsOfStopPlaces modificationSet="all">
+            <GroupOfStopPlaces id="bar:foo" modification="new" version="001" status="active"/>
+          </groupsOfStopPlaces>
+          <stopPlaces modificationSet="all">
+            <StopPlace id="bar:foo2" modification="new" version="001" status="active">
+              <Name>ZONE</Name>
+              <equipmentPlaces modificationSet="all">
+                <EquipmentPlace id="bar:foo2-x" modification="new" version="001" status="active">
+                  <Name>ZONE</Name>
+                  <placeEquipments modificationSet="all">
+                    <PlaceLighting id="bar:foo2" modification="new" version="001" status="active"/>
+                    <HeadingSign id="bar:foo2" modification="new" version="001" status="active">
+                      <PlaceName>SIGN</PlaceName>
+                    </HeadingSign>
+                  </placeEquipments>
+                </EquipmentPlace>
+              </equipmentPlaces>
+              <quays modificationSet="all">
+                <Quay id="bar:foo2-a" modification="new" version="001" status="active">
+                  <Name>ZONE</Name>
+                </Quay>
+              </quays>
+            </StopPlace>
+            <StopPlace id="bar:foo2-bis" modification="new" version="001" status="active">
+              <Name>ZONE</Name>
+            </StopPlace>
+          </stopPlaces>
+          <flexibleStopPlaces modificationSet="all">
+            <FlexibleStopPlace id="bar:foo3" modification="new" version="001" status="active">
+              <Name>ZONE</Name>
+            </FlexibleStopPlace>
+          </flexibleStopPlaces>
+          <pointsOfInterest modificationSet="all">
+            <PointOfInterest id="bar:foo4" modification="new" version="001" status="active">
+              <Name>ZONE</Name>
+            </PointOfInterest>
+          </pointsOfInterest>
+          <parkings modificationSet="all">
+            <Parking id="bar:foo5" modification="new" version="001" status="active">
+              <Name>ZONE</Name>
+              <entrances modificationSet="all">
+                <ParkingPassengerEntrance id="bar:foo5-a" modification="new" version="001" status="active"/>
+                <ParkingPassengerEntrance id="bar:foo5-b" modification="new" version="001" status="active"/>
+              </entrances>
+              <parkingProperties>
+                <ParkingProperties id="bar:foo" modification="new" version="001" status="active">
+                  <spaces modificationSet="all">
+                    <ParkingCapacity id="bar:foo" modification="new" version="001" status="active"/>
+                  </spaces>
+                </ParkingProperties>
+              </parkingProperties>
+              <parkingAreas modificationSet="all">
+                <ParkingArea id="bar:foo7" modification="new" version="001" status="active">
+                  <Name>ZONE</Name>
+                  <bays modificationSet="all">
+                    <ParkingBay id="bar:foo8" modification="new" version="001" status="active">
+                      <Name>ZONE</Name>
+                    </ParkingBay>
+                  </bays>
+                </ParkingArea>
+              </parkingAreas>
+              <vehicleEntrances modificationSet="all">
+                <ParkingEntranceForVehicles id="bar:foo" modification="new" version="001" status="active"/>
+                <ParkingEntranceForVehicles id="bar:foo1" modification="new" version="001" status="active"/>
+              </vehicleEntrances>
+            </Parking>
+          </parkings>
+          <pointOfInterestClassifications modificationSet="all">
+            <PointOfInterestClassification id="bar:foo" modification="new" version="001" status="active"/>
+          </pointOfInterestClassifications>
+          <tariffZones modificationSet="all">
+            <FareZone id="bar:foo10" modification="new" version="001" status="active">
+              <Name>ZONE</Name>
+            </FareZone>
+            <TariffZone id="bar:foo9" modification="new" version="001" status="active">
+              <Name>ZONE</Name>
+            </TariffZone>
+          </tariffZones>
+          <siteFacilitySets modificationSet="all">
+            <SiteFacilitySet id="bar:foo" modification="new" version="001" status="active">
+              <Description>FACILITY SET</Description>
+            </SiteFacilitySet>
+          </siteFacilitySets>
+        </SiteFrame>
+        <InfrastructureFrame id="bar:foo" modification="new" version="001" status="active">
+          <Name>My Network  (V1) </Name>
+          <junctions modificationSet="all">
+            <RailwayJunction id="bar:foo1" modification="new" version="001" status="active">
+              <Name>POINT</Name>
+            </RailwayJunction>
+            <RoadJunction id="bar:foo2" modification="new" version="001" status="active">
+              <Name>POINT</Name>
+            </RoadJunction>
+            <WireJunction id="bar:foo" modification="new" version="001" status="active">
+              <Name>POINT</Name>
+            </WireJunction>
+          </junctions>
+          <elements modificationSet="all">
+            <RailwayElement id="bar:foo1" modification="new" version="001" status="active">
+              <Name>LINK</Name>
+              <FromPointRef version="001" ref="bar:foo1"/>
+              <ToPointRef version="001" ref="bar:foo1"/>
+            </RailwayElement>
+            <RoadElement id="bar:foo2" modification="new" version="001" status="active">
+              <Name>LINK</Name>
+              <FromPointRef version="001" ref="bar:foo2"/>
+              <ToPointRef version="001" ref="bar:foo2"/>
+            </RoadElement>
+            <WireElement id="bar:foo" modification="new" version="001" status="active">
+              <Name>LINK</Name>
+              <FromPointRef version="001" ref="bar:foo"/>
+              <ToPointRef version="001" ref="bar:foo"/>
+            </WireElement>
+          </elements>
+          <activationPoints modificationSet="all">
+            <BeaconPoint id="bar:foo4" modification="new" version="001" status="active"/>
+            <ActivationPoint id="bar:foo3" modification="new" version="001" status="active"/>
+          </activationPoints>
+        </InfrastructureFrame>
+        <ResourceFrame id="bar:foo" modification="new" version="001" status="active">
+          <versions modificationSet="all">
+            <Version id="bar:foo" modification="new" version="001" status="active"/>
+          </versions>
+          <organisations modificationSet="all">
+            <Authority id="bar:foo2" modification="new" version="001" status="active"/>
+            <Operator id="bar:foo" modification="new" version="001" status="active"/>
+            <ServicedOrganisation id="bar:foo3" modification="new" version="001" status="active"/>
+            <ManagementAgent id="bar:foo5" modification="new" version="001" status="active"/>
+            <TravelAgent id="bar:foo4" modification="new" version="001" status="active"/>
+            <OtherOrganisation id="bar:foo5" modification="new" version="001" status="active">
+              <validityConditions modificationSet="all">
+                <ValidBetween id="bar:foo" modification="new" version="001" status="active"/>
+                <ValidDuring id="bar:foo" modification="new" version="001" status="active"/>
+                <AvailabilityCondition id="bar:foo3" modification="new" version="001" status="active">
+                  <timebands modificationSet="all">
+                    <Timeband id="bar:foo" modification="new" version="001" status="active">
+                      <StartTime>00:00:00</StartTime>
+                    </Timeband>
+                  </timebands>
+                  <operatingDays modificationSet="all">
+                    <OperatingDay id="bar:foo" modification="new" version="001" status="active">
+                      <CalendarDate>2001-01-01</CalendarDate>
+                    </OperatingDay>
+                  </operatingDays>
+                </AvailabilityCondition>
+                <ValidityTrigger id="bar:foo1" modification="new" version="001" status="active"/>
+                <ValidityCondition id="bar:foo" modification="new" version="001" status="active"/>
+              </validityConditions>
+              <alternativeTexts>
+                <AlternativeText id="bar:foo" modification="new" version="001" status="active" attributeName="Name" order="1">
+                  <Text>Fum</Text>
+                </AlternativeText>
+              </alternativeTexts>
+              <keyList>
+                <KeyValue typeOfKey="bar:foo">
+                  <Key>bar</Key>
+                  <Value>foo</Value>
+                </KeyValue>
+              </keyList>
+              <Extensions/>
+              <alternativeNames>
+                <AlternativeName id="bar:foo" modification="new" version="001" status="active" order="1">
+                  <Name>Foo</Name>
+                </AlternativeName>
+              </alternativeNames>
+              <parts modificationSet="all">
+                <ControlCentre id="bar:foo" modification="new" version="001" status="active"/>
+                <OperatingDepartment id="bar:foo1" modification="new" version="001" status="active"/>
+                <Department id="bar:foo" modification="new" version="001" status="active"/>
+                <OrganisationPart id="bar:foo" modification="new" version="001" status="active">
+                  <administrativeZones modificationSet="all">
+                    <AdministrativeZone id="bar:foo" modification="new" version="001" status="active"/>
+                  </administrativeZones>
+                </OrganisationPart>
+              </parts>
+              <ownResponsibilitySets modificationSet="all">
+                <ResponsibilitySet id="bar:foo" modification="new" version="001" status="active">
+                  <roles>
+                    <ResponsibilityRoleAssignment id="bar:foo" modification="new" version="001" status="active"/>
+                  </roles>
+                </ResponsibilitySet>
+              </ownResponsibilitySets>
+            </OtherOrganisation>
+          </organisations>
+          <groupsOfOperators modificationSet="all">
+            <GroupOfOperators id="bar:foo" modification="new" version="001" status="active">
+              <members modificationSet="all">
+                <OperatorRef version="001" ref="bar:foo"/>
+              </members>
+            </GroupOfOperators>
+          </groupsOfOperators>
+          <operationalContexts modificationSet="all">
+            <OperationalContext id="bar:foo" modification="new" version="001" status="active"/>
+          </operationalContexts>
+          <vehicleTypes modificationSet="all">
+            <CompoundTrain id="bar:foo" modification="new" version="001" status="active"/>
+            <Train id="bar:foo" modification="new" version="001" status="active">
+              <satisfiesFacilityRequirements modificationSet="all">
+                <FacilityRequirement id="bar:foo" modification="new" version="001" status="active"/>
+              </satisfiesFacilityRequirements>
+              <components modificationSet="all">
+                <TrainComponent id="bar:foo" modification="new" version="001" status="active" order="1">
+                  <TrainElement id="bar:foo" modification="new" version="001" status="active">
+                    <capacities modificationSet="all">
+                      <PassengerCapacity id="bar:foo" modification="new" version="001" status="active"/>
+                    </capacities>
+                    <facilities modificationSet="all">
+                      <ServiceFacilitySet id="bar:foo" modification="new" version="001" status="active">
+                        <otherFacilities modificationSet="all">
+                          <TypeOfEquipment id="bar:foo" modification="new" version="001" status="active"/>
+                        </otherFacilities>
+                      </ServiceFacilitySet>
+                    </facilities>
+                  </TrainElement>
+                </TrainComponent>
+              </components>
+            </Train>
+          </vehicleTypes>
+          <vehicleModels modificationSet="all">
+            <VehicleModel id="bar:foo" modification="new" version="001" status="active"/>
+          </vehicleModels>
+          <vehicleEquipmentProfiles modificationSet="all">
+            <VehicleEquipmentProfile id="bar:foo" modification="new" version="001" status="active"/>
+          </vehicleEquipmentProfiles>
+          <schematicMaps modificationSet="all">
+            <SchematicMap id="bar:foo" modification="new" version="001" status="active">
+              <members>
+                <SchematicMapMember id="bar:foo" modification="new" version="001" status="active"/>
+              </members>
+            </SchematicMap>
+          </schematicMaps>
+          <groupsOfEntities modificationSet="all">
+            <Entrance id="bar:foo6" modification="new" version="001" status="active"/>
+            <Zone id="bar:foo6" modification="new" version="001" status="active"/>
+          </groupsOfEntities>
+          <zones modificationSet="all">
+            <GeneralZone id="bar:foo3" modification="new" version="001" status="active">
+              <members modificationSet="all">
+                <WirePointRef version="001" ref="bar:foo"/>
+              </members>
+              <projections modificationSet="all">
+                <ZoneProjection id="bar:foo" modification="new" version="001" status="active">
+                  <ProjectedZoneRef version="001" ref="bar:foo"/>
+                </ZoneProjection>
+                <PointProjection id="bar:foo" modification="new" version="001" status="active">
+                  <ProjectToPointRef version="001" ref="bar:foo"/>
+                </PointProjection>
+              </projections>
+            </GeneralZone>
+          </zones>
+          <blacklists>
+            <Blacklist id="bar:foo" modification="new" version="001" status="active"/>
+          </blacklists>
+          <whitelists>
+            <Whitelist id="bar:foo" modification="new" version="001" status="active"/>
+          </whitelists>
+        </ResourceFrame>
+      </frames>
+    </CompositeFrame>
+  </dataObjects>
+</PublicationDelivery>
+

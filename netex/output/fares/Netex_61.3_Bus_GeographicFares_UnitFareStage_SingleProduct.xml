@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+  <PublicationTimestamp>2010-12-17T09:30:47Z</PublicationTimestamp>
+  <ParticipantRef>SYS001</ParticipantRef>
+  <PublicationRequest version="1.0">
+    <RequestTimestamp>2010-12-17T09:30:47Z</RequestTimestamp>
+    <ParticipantRef>SYS002</ParticipantRef>
+    <topics>
+      <NetworkFrameTopic>
+        <selectionValidityConditions>
+          <AvailabilityCondition id="hde:range" modification="new" version="any" status="active">
+            <FromDate>2011-01-01T00:00:00Z</FromDate>
+          </AvailabilityCondition>
+        </selectionValidityConditions>
+        <FareFrameRef ref="myfares:any">REQUEST</FareFrameRef>
+      </NetworkFrameTopic>
+    </topics>
+  </PublicationRequest>
+  <PublicationRefreshInterval>P1M</PublicationRefreshInterval>
+  <Description>Example  of simple point to point fares</Description>
+  <dataObjects>
+    <CompositeFrame id="myfares:DTA@Fare_Stage" modification="new" version="1.0" status="active">
+      <validityConditions modificationSet="all">
+        <ValidBetween modification="new" status="active">
+          <FromDate>2011-01-01T00:00:00Z</FromDate>
+          <ToDate>2011-07-01T00:00:00Z</ToDate>
+        </ValidBetween>
+      </validityConditions>
+      <codespaces modificationSet="all">
+        <Codespace id="mybus">
+          <Xmlns>mybus</Xmlns>
+          <XmlnsUrl>http://www.mybuses.eu/stuff</XmlnsUrl>
+          <Description>My buses</Description>
+        </Codespace>
+        <Codespace id="myfares">
+          <Xmlns>myfares</Xmlns>
+          <XmlnsUrl>http://www.myfares,com/fares</XmlnsUrl>
+          <Description>Fare data</Description>
+        </Codespace>
+      </codespaces>
+      <FrameDefaults>
+        <DefaultCodespaceRef ref="myfares"/>
+        <DefaultCurrency>EUR</DefaultCurrency>
+      </FrameDefaults>
+      <frames modificationSet="all">
+        <FareFrame id="myfares:DTA@Fare_Stage@products" modification="new" version="1.0" status="active">
+          <prerequisites modificationSet="all">
+            <ServiceFrameRef version="1.0" ref="mybus:DTA@Fare_Stage@network"/>
+          </prerequisites>
+          <seriesConstraints>
+            <SeriesConstraint id="myfares:Line_5" modification="new" version="1.0" status="active" order="1">
+              <Name>Line 1 normal service: fare stages </Name>
+              <farePointsInPattern modificationSet="all">
+                <FarePointInPattern id="myfares:Line_5" modification="new" version="1.0" status="active" order="1">
+                  <ScheduledStopPointRef version="any" ref="mybus:SSP_001">Alpha</ScheduledStopPointRef>
+                </FarePointInPattern>
+                <FarePointInPattern id="myfares:Line_5" modification="new" version="1.0" status="active" order="2">
+                  <ScheduledStopPointRef version="any" ref="mybus:SSP_002">Bravo</ScheduledStopPointRef>
+                </FarePointInPattern>
+                <FarePointInPattern id="myfares:Line_5" modification="new" version="1.0" status="active" order="3">
+                  <ScheduledStopPointRef version="any" ref="mybus:SSP_077">Charley</ScheduledStopPointRef>
+                  <PresentationPosition>required</PresentationPosition>
+                </FarePointInPattern>
+                <FarePointInPattern id="myfares:Line_5" modification="new" version="1.0" status="active" order="4">
+                  <ScheduledStopPointRef version="any" ref="mybus:SSP_078">Delta</ScheduledStopPointRef>
+                </FarePointInPattern>
+                <FarePointInPattern id="myfares:Line_5" modification="new" version="1.0" status="active" order="5">
+                  <ScheduledStopPointRef version="any" ref="mybus:SSP_101">Echo</ScheduledStopPointRef>
+                </FarePointInPattern>
+                <FarePointInPattern id="myfares:Line_5" modification="new" version="1.0" status="active" order="6">
+                  <ScheduledStopPointRef version="any" ref="mybus:SSP_102">Foxtrot</ScheduledStopPointRef>
+                  <PresentationPosition>required</PresentationPosition>
+                </FarePointInPattern>
+                <FarePointInPattern id="myfares:Line_5" modification="new" version="1.0" status="active" order="7">
+                  <ScheduledStopPointRef version="any" ref="mybus:SSP_103">Golf</ScheduledStopPointRef>
+                </FarePointInPattern>
+                <FarePointInPattern id="myfares:Line_5" modification="new" version="1.0" status="active" order="8">
+                  <ScheduledStopPointRef version="any" ref="mybus:SSP_104">Hotel</ScheduledStopPointRef>
+                </FarePointInPattern>
+              </farePointsInPattern>
+            </SeriesConstraint>
+          </seriesConstraints>
+          <geographicalUnits modificationSet="all">
+            <GeographicalUnit id="myfares:1click" modification="new" version="any" status="active">
+              <Name>Arbitrary Quantized Unit of Transport Usage</Name>
+            </GeographicalUnit>
+          </geographicalUnits>
+          <tariffs>
+            <Tariff id="myfares:Stage" modification="new" version="1.0" status="active">
+              <Name>Unit distance fare.</Name>
+              <OperatorRef version="1.0" ref="mybus:DTA"/>
+              <TypeOfTariffRef version="ntx:v1.0" ref="ntx:section"/>
+              <GeographicalUnitRef version="any" ref="myfares:1click"/>
+              <geographicalIntervals modificationSet="all">
+                <GeographicalInterval id="myfares:Stage@gi_1" modification="new" version="1.0" status="active">
+                  <Name>One Click</Name>
+                  <StartGeographicalValue>1</StartGeographicalValue>
+                  <EndGeographicalValue>1</EndGeographicalValue>
+                  <NumberOfUnits>1</NumberOfUnits>
+                  <IntervalType>section</IntervalType>
+                  <GeographicalUnitRef version="any" ref="myfares:1click"/>
+                </GeographicalInterval>
+                <GeographicalInterval id="myfares:Stage@gi_2" modification="new" version="1.0" status="active">
+                  <Name>Two Clicks</Name>
+                  <StartGeographicalValue>1</StartGeographicalValue>
+                  <EndGeographicalValue>2</EndGeographicalValue>
+                  <NumberOfUnits>2</NumberOfUnits>
+                  <IntervalType>section</IntervalType>
+                  <GeographicalUnitRef version="any" ref="myfares:1click"/>
+                </GeographicalInterval>
+                <GeographicalInterval id="myfares:Stage@gi_3" modification="new" version="1.0" status="active">
+                  <Name>Two Clicks</Name>
+                  <StartGeographicalValue>1</StartGeographicalValue>
+                  <EndGeographicalValue>3</EndGeographicalValue>
+                  <NumberOfUnits>3</NumberOfUnits>
+                  <IntervalType>section</IntervalType>
+                  <GeographicalUnitRef version="any" ref="myfares:1click"/>
+                </GeographicalInterval>
+              </geographicalIntervals>
+              <fareStructureElements modificationSet="all">
+                <FareStructureElement id="myfares:Stage@access" modification="new" version="1.0" status="active">
+                  <GenericParameterAssignment id="myfares:Tz2z@access" modification="new" version="1.0" status="active" order="1">
+                    <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:can_access"/>
+                    <ValidityParameterGroupingType>XOR</ValidityParameterGroupingType>
+                    <validityParameters modificationSet="all">
+                      <LineRef version="1.0" ref="mybus:line_5"/>
+                      <SeriesConstraintRef version="1.0" ref="myfares:Line_5" order="1"/>
+                    </validityParameters>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement id="myfares:Stage@conditions_of_travel" modification="new" version="1.0" status="active">
+                  <Name>eligible user types</Name>
+                  <GenericParameterAssignment id="myfares:Stage@conditions_of_travel" modification="new" version="1.0" status="active" order="1">
+                    <Name>Conditions of travel</Name>
+                    <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:condition_of_use"/>
+                    <LimitationGroupingType>AND</LimitationGroupingType>
+                    <limitations modificationSet="all">
+                      <Interchanging id="myfares:Stage@conditions_of_travel@interchanging" modification="new" version="1.0" status="active">
+                        <MaximumNumberOfInterchanges>0</MaximumNumberOfInterchanges>
+                      </Interchanging>
+                      <FrequencyOfUse id="myfares:Stage@conditions_of_travel@frequency" modification="new" version="1.0" status="active">
+                        <Name>One trip no transfers</Name>
+                        <FrequencyOfUseType>single</FrequencyOfUseType>
+                        <MaximalFrequency>1</MaximalFrequency>
+                      </FrequencyOfUse>
+                      <RoundTrip id="myfares:Stage@conditions_of_travel@trip" modification="new" version="1.0" status="active">
+                        <Name>Single Trip</Name>
+                        <TripType>single</TripType>
+                      </RoundTrip>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+              </fareStructureElements>
+            </Tariff>
+          </tariffs>
+          <fareProducts>
+            <PreassignedFareProduct id="myfares:Single_trip" modification="new" version="1.0" status="active">
+              <Name>Point  to Point  fare</Name>
+              <TypeOfFareProductRef version="ntx:v1.0" ref="ntx:trip"/>
+              <OperatorRef version="1.0" ref="mybus:DTA"/>
+              <validableElements>
+                <ValidableElement id="myfares:Single_trip@travel" modification="new" version="1.0" status="active">
+                  <Name>Single  Trip</Name>
+                  <fareStructureElements modificationSet="all">
+                    <FareStructureElementRef version="1.0" ref="myfares:Stage@access"/>
+                    <FareStructureElementRef version="1.0" ref="myfares:Stage@conditions_of_travel"/>
+                  </fareStructureElements>
+                </ValidableElement>
+              </validableElements>
+              <accessRightsInProduct>
+                <AccessRightInProduct id="myfares:Single_trip@travel" modification="new" version="1.0" status="active" order="1">
+                  <Name>First ride</Name>
+                  <ValidableElementRef version="1.0" ref="myfares:Single_trip@travel"/>
+                </AccessRightInProduct>
+              </accessRightsInProduct>
+            </PreassignedFareProduct>
+          </fareProducts>
+        </FareFrame>
+        <FareFrame id="myfares:DTA@Fare_Stage@prices" modification="new" version="1.0" status="active">
+          <prerequisites modificationSet="all">
+            <FareFrameRef version="1.0" ref="myfares:DTA@Fare_Stage@products"/>
+          </prerequisites>
+          <priceGroups>
+            <PriceGroup id="myfares:Unit DIstance" modification="new" version="1.0" status="active">
+              <Name>Fare Prices  - Standard</Name>
+              <members>
+                <GeographicalIntervalPrice id="myfares:Stage@gi_1" modification="new" version="1.0" status="active">
+                  <Amount>1.50</Amount>
+                  <Units>1</Units>
+                  <GeographicalIntervalRef version="1.0" ref="myfares:Stage@gi_1"/>
+                </GeographicalIntervalPrice>
+                <GeographicalIntervalPrice id="myfares:Stage@gi_2" modification="new" version="1.0" status="active">
+                  <Amount>2.50</Amount>
+                  <Units>2</Units>
+                  <GeographicalIntervalRef version="1.0" ref="myfares:Stage@gi_2"/>
+                </GeographicalIntervalPrice>
+                <GeographicalIntervalPrice id="myfares:Stage@gi_3" modification="new" version="1.0" status="active">
+                  <Amount>4.00</Amount>
+                  <Units>3</Units>
+                  <GeographicalIntervalRef version="1.0" ref="myfares:Stage@gi_3"/>
+                </GeographicalIntervalPrice>
+              </members>
+            </PriceGroup>
+          </priceGroups>
+        </FareFrame>
+        <ServiceFrame id="mybus:DTA@Fare_Stage@network" modification="new" version="1.0" status="active">
+          <Name>Stops for Fare network </Name>
+          <prerequisites modificationSet="all">
+            <ResourceFrameRef version="1.0" ref="mybus:DTA@Common_Resources"/>
+          </prerequisites>
+          <lines modificationSet="all">
+            <Line id="mybus:line_5" modification="new" version="1.0" status="active">
+              <Name>Line 5</Name>
+              <OperatorRef version="1.0" ref="mybus:DTA"/>
+            </Line>
+          </lines>
+          <scheduledStopPoints modificationSet="all">
+            <ScheduledStopPoint id="mybus:SSP_001" modification="new" version="any" status="active">
+              <Name>Alpha &amp; Castle</Name>
+              <Location>
+                <Longitude>53.0000</Longitude>
+                <Latitude>0.1000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+              <ShortName>Alpha</ShortName>
+              <PublicCode>ALPH</PublicCode>
+              <StopType>onstreetBus</StopType>
+              <VehicleModes>bus</VehicleModes>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint id="mybus:SSP_002" modification="new" version="any" status="active">
+              <Name>Bravo Street</Name>
+              <Location>
+                <Longitude>53.2000</Longitude>
+                <Latitude>0.2000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+              <ShortName>Bravo</ShortName>
+              <PublicCode>BRAV</PublicCode>
+              <StopType>onstreetBus</StopType>
+              <VehicleModes>bus</VehicleModes>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint id="mybus:SSP_077" modification="new" version="any" status="active">
+              <Name>Charley Crescent</Name>
+              <Location>
+                <Longitude>53.3000</Longitude>
+                <Latitude>0.3000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+              <ShortName>Charley</ShortName>
+              <PublicCode>CHAS</PublicCode>
+              <StopType>onstreetBus</StopType>
+              <VehicleModes>bus</VehicleModes>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint id="mybus:SSP_078" modification="new" version="any" status="active">
+              <Name>Delta Force</Name>
+              <Location>
+                <Longitude>53.4000</Longitude>
+                <Latitude>0.4000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+              <ShortName>Delta</ShortName>
+              <PublicCode>DELTA</PublicCode>
+              <StopType>onstreetBus</StopType>
+              <VehicleModes>bus</VehicleModes>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint id="mybus:SSP_101" modification="new" version="any" status="active">
+              <Name>Echo Chambers </Name>
+              <Location>
+                <Longitude>53.3000</Longitude>
+                <Latitude>0.3000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+              <ShortName>Echo</ShortName>
+              <PublicCode>ECHO</PublicCode>
+              <StopType>onstreetBus</StopType>
+              <VehicleModes>bus</VehicleModes>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint id="mybus:SSP_102" modification="new" version="any" status="active">
+              <Name>Foxtrot Tango</Name>
+              <Location>
+                <Longitude>53.5000</Longitude>
+                <Latitude>0.5000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+              <ShortName>Foxtrot</ShortName>
+              <PublicCode>FOXTROT</PublicCode>
+              <StopType>onstreetBus</StopType>
+              <VehicleModes>bus</VehicleModes>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint id="mybus:SSP_103" modification="new" version="any" status="active">
+              <Name>Golf Course </Name>
+              <Location>
+                <Longitude>53.6000</Longitude>
+                <Latitude>0.6000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+              <ShortName>Golf</ShortName>
+              <PublicCode>GOLF</PublicCode>
+              <StopType>onstreetBus</StopType>
+              <VehicleModes>bus</VehicleModes>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint id="mybus:SSP_104" modification="new" version="any" status="active">
+              <Name>Hotel Bristol </Name>
+              <Location>
+                <Longitude>53.7000</Longitude>
+                <Latitude>0.7000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+              <ShortName>Hotel</ShortName>
+              <PublicCode>HOTEL</PublicCode>
+              <StopType>onstreetBus</StopType>
+              <VehicleModes>bus</VehicleModes>
+            </ScheduledStopPoint>
+          </scheduledStopPoints>
+        </ServiceFrame>
+        <ResourceFrame id="mybus:DTA@Common_Resources" modification="new" version="1.0" status="active">
+          <codespaces modificationSet="all">
+            <Codespace id="ntx">
+              <Xmlns>ntx</Xmlns>
+              <XmlnsUrl>http://netex.org.uk/</XmlnsUrl>
+              <Description>Netex built in value</Description>
+            </Codespace>
+          </codespaces>
+          <typesOfValue modificationSet="all">
+            <ValueSet id="ntx:Types_of_Tariff" modification="new" version="ntx:v1.0" status="active" classOfValues="TypeOfTariff">
+              <Name>Types of Tariff</Name>
+              <values>
+                <TypeOfTariff id="ntx:Distance_kilometers" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                  <Name>Kilometer Distance Kilometers</Name>
+                </TypeOfTariff>
+                <TypeOfTariff id="ntx:flat" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                  <Name>Flat</Name>
+                </TypeOfTariff>
+                <TypeOfTariff id="ntx:point_to_point" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                  <Name>Point to point</Name>
+                </TypeOfTariff>
+                <TypeOfTariff id="ntx:zone_to_zone" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                  <Name>Zone to Zone</Name>
+                </TypeOfTariff>
+                <TypeOfTariff id="ntx:zonal" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                  <Name>Zonal</Name>
+                </TypeOfTariff>
+                <TypeOfTariff id="ntx:unit_distance" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                  <Name>Unit distance (count of stops, sections, zones)</Name>
+                </TypeOfTariff>
+                <TypeOfTariff id="ntx:section" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                  <Name>Section</Name>
+                </TypeOfTariff>
+                <TypeOfTariff id="ntx:banded" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                  <Name>Section</Name>
+                </TypeOfTariff>
+                <TypeOfTariff id="ntx:stored_value" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                  <Name>Stored value</Name>
+                </TypeOfTariff>
+                <TypeOfTariff id="ntx:discount" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                  <Name>Discount value</Name>
+                </TypeOfTariff>
+                <TypeOfTariff id="ntx:multitrip" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                  <Name>Multitrip carnet</Name>
+                </TypeOfTariff>
+                <TypeOfTariff id="ntx:identity_card" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                  <Name>SIdentity</Name>
+                </TypeOfTariff>
+              </values>
+            </ValueSet>
+            <ValueSet id="ntx:Types_of_FareProduct" modification="new" version="ntx:v1.0" status="active" classOfValues="TypeOfFareProduct">
+              <Name>Types of Fare Product</Name>
+              <values>
+                <TypeOfFareProduct id="ntx:trip" modification="new" version="ntx:v1.0" status="active">
+                  <Name>Trip product</Name>
+                </TypeOfFareProduct>
+                <TypeOfFareProduct id="ntx:multi_trip" modification="new" version="ntx:v1.0" status="active">
+                  <Name>Multitrip / carnet  product</Name>
+                </TypeOfFareProduct>
+                <TypeOfFareProduct id="ntx:period_pass" modification="new" version="ntx:v1.0" status="active">
+                  <Name>Peroid pass product</Name>
+                </TypeOfFareProduct>
+                <TypeOfFareProduct id="ntx:day_pass" modification="new" version="ntx:v1.0" status="active">
+                  <Name>Day pass product</Name>
+                </TypeOfFareProduct>
+                <TypeOfFareProduct id="ntx:discount_card" modification="new" version="ntx:v1.0" status="active">
+                  <Name>Discount  product</Name>
+                </TypeOfFareProduct>
+              </values>
+            </ValueSet>
+            <ValueSet id="myfares:Types_of_Concession" modification="new" version="any" status="active" classOfValues="TypeOfConcession">
+              <Name>Types of concession</Name>
+              <values>
+                <TypeOfConcession id="myfares:adult" modification="new" version="any" status="active">
+                  <Name>Adult</Name>
+                </TypeOfConcession>
+                <TypeOfConcession id="myfares:child" modification="new" version="any" status="active">
+                  <Name>Student</Name>
+                </TypeOfConcession>
+              </values>
+            </ValueSet>
+            <ValueSet id="ntx:Types_of_AccessRightAssignment" modification="new" version="ntx:v1.0" status="active" classOfValues="TypeOfAccessRightAssignment">
+              <Name>Types of Access Right Assignment</Name>
+              <values>
+                <TypeOfAccessRightAssignment id="ntx:eligible" modification="new" version="ntx:v1.0" status="active">
+                  <Name>Eligible for a product or discount</Name>
+                </TypeOfAccessRightAssignment>
+                <TypeOfAccessRightAssignment id="ntx:can_access" modification="new" version="ntx:v1.0" status="active">
+                  <Name>Grants access rights to use or travel on</Name>
+                </TypeOfAccessRightAssignment>
+                <TypeOfAccessRightAssignment id="ntx:condition_of_use" modification="new" version="ntx:v1.0" status="active">
+                  <Name>Defines a condition or restriction on use</Name>
+                </TypeOfAccessRightAssignment>
+              </values>
+            </ValueSet>
+          </typesOfValue>
+          <organisations modificationSet="all">
+            <Operator id="mybus:DTA" modification="new" version="1.0" status="active">
+              <Name>Demo Transit Authority</Name>
+            </Operator>
+          </organisations>
+        </ResourceFrame>
+      </frames>
+    </CompositeFrame>
+  </dataObjects>
+</PublicationDelivery>
+

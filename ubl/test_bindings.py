@@ -15,8 +15,9 @@ schemas = here.joinpath("schemas/maindoc").resolve().glob("*")
 for schema in list(schemas):
     _, name, _ = schema.name.split("-")
     for sample in here.joinpath("samples").glob(f"UBL-{name}-*"):
-        cases.append((str(schema), str(sample)))
-        ids.append(sample.name)
+        if not sample.stem.endswith("xsdata"):
+            cases.append((str(schema), str(sample)))
+            ids.append(sample.name)
 
 parser = XmlParser()
 serializer = XmlSerializer()
@@ -31,8 +32,14 @@ def get_validator(xsd: str):
 @pytest.mark.parametrize("schema,sample", cases, ids=ids)
 def test_serialize(schema, sample):
     obj = parser.parse(sample)
-    output = serializer.render(obj, ns_map=parser.ns_map)
+    result = serializer.render(obj, ns_map=parser.ns_map)
     parser.ns_map.clear()
 
+    expected = Path(sample).with_suffix(".xsdata.xml")
+    if expected.exists():
+        assert expected.read_text() == result
+    else:
+        expected.write_text(result + "\n")
+
     validator = get_validator(schema)
-    validator.assertValid(etree.fromstring(output.encode()))
+    validator.assertValid(etree.fromstring(result.encode()))

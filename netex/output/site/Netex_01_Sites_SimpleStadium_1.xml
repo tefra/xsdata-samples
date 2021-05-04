@@ -1,0 +1,1031 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+  <PublicationTimestamp>2001-12-17T09:30:47Z</PublicationTimestamp>
+  <ParticipantRef>SYS001</ParticipantRef>
+  <PublicationRequest version="1.0">
+    <RequestTimestamp>2001-12-17T09:30:47Z</RequestTimestamp>
+    <ParticipantRef>SYS002</ParticipantRef>
+  </PublicationRequest>
+  <PublicationRefreshInterval>PT5M0S</PublicationRefreshInterval>
+  <dataObjects>
+    <SiteFrame id="oda:SF01" modification="new" version="any" status="active">
+      <validityConditions modificationSet="all">
+        <AvailabilityCondition id="oda:SF01" modification="new" version="any" status="active">
+          <FromDate>2012-07-26T00:00:00Z</FromDate>
+          <ToDate>2012-08-12T00:00:00Z</ToDate>
+        </AvailabilityCondition>
+      </validityConditions>
+      <codespaces modificationSet="all">
+        <Codespace id="naptStop_data">
+          <Xmlns>naptStop</Xmlns>
+          <XmlnsUrl>http://www.naptan.org.uk/naptan</XmlnsUrl>
+          <Description>UK NaPTAN Stop Place codes</Description>
+        </Codespace>
+        <Codespace id="nptg_metadata">
+          <Xmlns>nptg</Xmlns>
+          <XmlnsUrl>http://www.naptan.org.uk/naptan</XmlnsUrl>
+          <Description>NPTG  metadta &amp;  Admin codes </Description>
+        </Codespace>
+        <Codespace id="nptgLocality_data">
+          <Xmlns>nptgLocality</Xmlns>
+          <XmlnsUrl>http://www.nptg.org.uk/loclaities</XmlnsUrl>
+          <Description>NPTG TopographicPlace &amp;  Admin codes </Description>
+        </Codespace>
+        <Codespace id="tbd">
+          <Xmlns>tbd</Xmlns>
+          <XmlnsUrl>http://www.intdata.co.uk/data</XmlnsUrl>
+          <Description>Other interchange DATA SOURCE </Description>
+        </Codespace>
+      </codespaces>
+      <FrameDefaults>
+        <DefaultCodespaceRef ref="tbd"/>
+      </FrameDefaults>
+      <topographicPlaces modificationSet="all">
+        <TopographicPlace id="nptgLocality:TP_0032A" modification="new" version="any" status="active" responsibilitySetRef="nptg:GZ_01">
+          <Name>Frampton</Name>
+          <Descriptor modification="new" status="active">
+            <Name>Frampton</Name>
+          </Descriptor>
+        </TopographicPlace>
+      </topographicPlaces>
+      <pointsOfInterest modificationSet="all">
+        <PointOfInterest id="tbd:POI_23" modification="new" version="any" status="active" responsibilitySetRef="tbd:LRS_01">
+          <Name>Frampton Football Stadium</Name>
+          <ShortName>Frampton FC</ShortName>
+          <Description>Frampton FC Football Stadium</Description>
+          <Centroid modification="new" status="active">
+            <Location>
+              <Longitude>-180</Longitude>
+              <Latitude>-90</Latitude>
+              <Altitude>-1000</Altitude>
+            </Location>
+          </Centroid>
+          <Image>http://www.amy.com/stad.gif</Image>
+          <PostalAddress id="tbd:POI_23@address" modification="new" version="any" status="active">
+            <BuildingName>The Stadium</BuildingName>
+            <AddressLine1>23 Foo St</AddressLine1>
+            <Town>Frampton</Town>
+            <PostCode>FGR 1JS</PostCode>
+          </PostalAddress>
+          <AccessibilityAssessment id="tbd:POI_23" modification="new" version="any" status="active">
+            <MobilityImpairedAccess>true</MobilityImpairedAccess>
+            <limitations>
+              <AccessibilityLimitation id="tbd:POI_23" modification="new" status="active">
+                <WheelchairAccess>true</WheelchairAccess>
+                <StepFreeAccess>true</StepFreeAccess>
+                <EscalatorFreeAccess>true</EscalatorFreeAccess>
+                <LiftFreeAccess>true</LiftFreeAccess>
+              </AccessibilityLimitation>
+            </limitations>
+          </AccessibilityAssessment>
+          <AccessModes>foot</AccessModes>
+          <CrossRoad>Foo St</CrossRoad>
+          <PublicUse>all</PublicUse>
+          <Covered>indoors</Covered>
+          <Gated>gatedArea</Gated>
+          <Lighting>wellLit</Lighting>
+          <TopographicPlaceView>
+            <TopographicPlaceRef version="any" ref="nptgLocality:TP_0032A"/>
+          </TopographicPlaceView>
+          <levels modificationSet="all">
+            <Level id="tbd:POI_23_Lvl_01_lower" modification="new" version="any" status="active">
+              <Name>Ground</Name>
+              <ShortName>Ground</ShortName>
+              <PublicCode>G</PublicCode>
+            </Level>
+            <Level id="tbd:POI_23_Lvl_02_upper" modification="new" version="any" status="active">
+              <Name>Upper Terrace</Name>
+              <ShortName>Upper</ShortName>
+              <PublicCode>T1</PublicCode>
+            </Level>
+          </levels>
+          <entrances modificationSet="all">
+            <PointOfInterestEntrance id="tbd:POI_23_A1-E1" modification="new" version="any" status="active">
+              <Name>Foo St Entrance A</Name>
+              <Description>Entrance A </Description>
+              <Centroid modification="new" status="active">
+                <Location>
+                  <Longitude>-180</Longitude>
+                  <Latitude>-90</Latitude>
+                  <Altitude>-1000</Altitude>
+                </Location>
+              </Centroid>
+              <ParentZoneRef version="any" ref="tbd:POI_23"/>
+              <AccessibilityAssessment id="tbd:POI_23_A1-E1" modification="new" version="any" status="active">
+                <MobilityImpairedAccess>false</MobilityImpairedAccess>
+                <limitations>
+                  <AccessibilityLimitation id="tbd:POI_23_A1-E1" modification="new" status="active">
+                    <WheelchairAccess>unknown</WheelchairAccess>
+                    <StepFreeAccess>false</StepFreeAccess>
+                    <EscalatorFreeAccess>unknown</EscalatorFreeAccess>
+                    <LiftFreeAccess>true</LiftFreeAccess>
+                  </AccessibilityLimitation>
+                </limitations>
+                <suitabilities>
+                  <Suitability id="tbd:POI_23_A1-E1_Suit1" modification="new" status="active">
+                    <MobilityNeed>motorizedWheelchair</MobilityNeed>
+                    <Suitable>notSuitable</Suitable>
+                  </Suitability>
+                </suitabilities>
+              </AccessibilityAssessment>
+              <PublicUse>all</PublicUse>
+              <SiteRef version="any" ref="tbd:POI_23"/>
+              <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
+              <checkConstraints modificationSet="all">
+                <CheckConstraint id="tbd:POI_23_A1-E1_C1" modification="new" version="any" status="active" order="1">
+                  <CheckDirection>forwards</CheckDirection>
+                  <CheckProcess>securityCheck</CheckProcess>
+                  <AccessFeatureType>confinedSpace</AccessFeatureType>
+                  <Congestion>queue</Congestion>
+                  <delays>
+                    <CheckConstraintDelay id="tbd:POI_23_A1-E1_C1 " modification="new" version="any" status="active" order="1">
+                      <MinimumLikelyDelay>PT5M</MinimumLikelyDelay>
+                      <AverageDelay>PT10M</AverageDelay>
+                      <MaximumLikelyDelay>PT30M</MaximumLikelyDelay>
+                    </CheckConstraintDelay>
+                  </delays>
+                </CheckConstraint>
+              </checkConstraints>
+              <equipmentPlaces modificationSet="all">
+                <EquipmentPlace id="tbd:POI_23_A1-E1_Eq1plcs" modification="new" version="any" status="active">
+                  <Name>Validator locator</Name>
+                  <Description>normalizedString</Description>
+                  <equipmentPositions>
+                    <EquipmentPosition id="tbd:POI_23_A1-E1_Eq1pos" modification="new" version="any" status="active">
+                      <EquipmentRef version="any" ref="tbd:POI_23_A1-E1_Eq2@validator"/>
+                      <Location>
+                        <Longitude>-180</Longitude>
+                        <Latitude>-90</Latitude>
+                        <Altitude>-1000</Altitude>
+                        <Precision>0.0</Precision>
+                      </Location>
+                      <XOffset>50</XOffset>
+                      <YOffset>10.0</YOffset>
+                    </EquipmentPosition>
+                  </equipmentPositions>
+                  <placeEquipments modificationSet="all">
+                    <TicketValidatorEquipment id="tbd:POI_23_A1-E1_Eq2@validator" modification="new" version="any" status="active">
+                      <Name>Ticket validator</Name>
+                      <TypeOfEquipmentRef ref="tvd:eq01">validator</TypeOfEquipmentRef>
+                      <TicketValidatorType>paperStamp</TicketValidatorType>
+                    </TicketValidatorEquipment>
+                  </placeEquipments>
+                </EquipmentPlace>
+              </equipmentPlaces>
+              <placeEquipments modificationSet="all">
+                <EntranceEquipment id="tbd:POI_23_A1-E1_Eq2@entrance" modification="new" version="any" status="active">
+                  <Name>gates</Name>
+                  <DirectionOfUse>both</DirectionOfUse>
+                  <NumberOfGates>10</NumberOfGates>
+                </EntranceEquipment>
+              </placeEquipments>
+              <Label>A</Label>
+              <EntranceType>swingDoor</EntranceType>
+              <IsExternal>true</IsExternal>
+              <IsEntry>true</IsEntry>
+              <IsExit>true</IsExit>
+              <Width>2</Width>
+              <Height>2</Height>
+            </PointOfInterestEntrance>
+            <PointOfInterestEntrance id="tbd:POI_23_B1-E1" modification="new" version="any" status="active">
+              <Name>Foo St Entrance B</Name>
+              <Description>Entrance B</Description>
+              <Centroid modification="new" status="active">
+                <Location>
+                  <Longitude>-180</Longitude>
+                  <Latitude>-90</Latitude>
+                  <Altitude>-1000</Altitude>
+                </Location>
+              </Centroid>
+              <ParentZoneRef version="any" ref="tbd:POI_23"/>
+              <AccessibilityAssessment id="tbd:POI_23_B1-E1" modification="new" version="any" status="active">
+                <MobilityImpairedAccess>true</MobilityImpairedAccess>
+                <limitations>
+                  <AccessibilityLimitation id="tbd:POI_23_B1-E1" modification="new" status="active">
+                    <WheelchairAccess>unknown</WheelchairAccess>
+                    <StepFreeAccess>false</StepFreeAccess>
+                    <EscalatorFreeAccess>unknown</EscalatorFreeAccess>
+                    <LiftFreeAccess>false</LiftFreeAccess>
+                  </AccessibilityLimitation>
+                </limitations>
+                <suitabilities>
+                  <Suitability id="tbd:POI_23_A1-E1_Suit2" modification="new" status="active">
+                    <MobilityNeed>motorizedWheelchair</MobilityNeed>
+                    <Suitable>notSuitable</Suitable>
+                  </Suitability>
+                </suitabilities>
+              </AccessibilityAssessment>
+              <PublicUse>all</PublicUse>
+              <SiteRef version="any" ref="tbd:POI_23"/>
+              <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
+              <checkConstraints modificationSet="all">
+                <CheckConstraint id="tbd:POI_23_A1_E2_C1" modification="new" version="any" status="active" order="1">
+                  <CheckDirection>forwards</CheckDirection>
+                  <CheckProcess>securityCheck</CheckProcess>
+                  <AccessFeatureType>confinedSpace</AccessFeatureType>
+                  <Congestion>queue</Congestion>
+                  <delays>
+                    <CheckConstraintDelay id="tbd:POI_23_A1_E2_C1_D1" modification="new" version="any" status="active" order="1">
+                      <MinimumLikelyDelay>PT10M</MinimumLikelyDelay>
+                      <AverageDelay>PT12M</AverageDelay>
+                      <MaximumLikelyDelay>PT30M</MaximumLikelyDelay>
+                    </CheckConstraintDelay>
+                  </delays>
+                </CheckConstraint>
+              </checkConstraints>
+              <equipmentPlaces modificationSet="all">
+                <EquipmentPlace id="tbd:POI_23_A1-E1_Eq1plcsVLD" modification="new" version="any" status="active">
+                  <Name>Validator locator</Name>
+                  <Description>normalizedString</Description>
+                  <equipmentPositions>
+                    <EquipmentPosition id="tbd:POI_23_A1-E1_Eq1pos _2" modification="new" version="any" status="active">
+                      <EquipmentRef version="any" ref="tbd:POI_23_A1-E1_Eq1"/>
+                      <Location>
+                        <Longitude>-180</Longitude>
+                        <Latitude>-90</Latitude>
+                        <Altitude>-1000</Altitude>
+                        <Precision>0.0</Precision>
+                      </Location>
+                      <XOffset>50</XOffset>
+                      <YOffset>10.0</YOffset>
+                    </EquipmentPosition>
+                  </equipmentPositions>
+                  <placeEquipments modificationSet="all">
+                    <TicketValidatorEquipment id="tbd:POI_23_A1-E1_Eq1" modification="new" version="any" status="active">
+                      <Name>Ticket validator</Name>
+                      <TypeOfEquipmentRef ref="">validator</TypeOfEquipmentRef>
+                      <TicketValidatorType>paperStamp</TicketValidatorType>
+                    </TicketValidatorEquipment>
+                  </placeEquipments>
+                </EquipmentPlace>
+              </equipmentPlaces>
+              <placeEquipments modificationSet="all">
+                <EntranceEquipment id="tbd:POI_23_A1-E1_Eq2b" modification="new" version="any" status="active">
+                  <Name>gates</Name>
+                  <DirectionOfUse>both</DirectionOfUse>
+                  <NumberOfGates>10</NumberOfGates>
+                </EntranceEquipment>
+              </placeEquipments>
+              <localServices modificationSet="all">
+                <AssistanceService id="tbd:POI_23_A1-E1_Eq3" modification="new" version="any" status="active">
+                  <Name>Assistance available</Name>
+                </AssistanceService>
+              </localServices>
+              <Label>A</Label>
+              <EntranceType>swingDoor</EntranceType>
+              <IsExternal>true</IsExternal>
+              <IsEntry>true</IsEntry>
+              <IsExit>true</IsExit>
+              <Width>2</Width>
+              <Height>2</Height>
+            </PointOfInterestEntrance>
+          </entrances>
+          <classifications modificationSet="all">
+            <PointOfInterestClassificationRef ref="tbd:Class_476">EXTERNAL</PointOfInterestClassificationRef>
+          </classifications>
+          <spaces modificationSet="all">
+            <PointOfInterestSpace id="tbd:POI_23_A1" modification="new" version="any" status="active">
+              <Name>Main concourse for Gate A</Name>
+              <Centroid modification="new" status="active">
+                <Location>
+                  <Longitude>-180</Longitude>
+                  <Latitude>-90</Latitude>
+                  <Altitude>-1000</Altitude>
+                  <Precision>0.0</Precision>
+                </Location>
+              </Centroid>
+              <ParentZoneRef version="any" ref="tbd:POI_23"/>
+              <AccessibilityAssessment id="tbd:POI_23_A1" modification="new" version="any" status="active">
+                <MobilityImpairedAccess>true</MobilityImpairedAccess>
+                <limitations>
+                  <AccessibilityLimitation id="tbd:POI_23_A1" modification="new" status="active">
+                    <WheelchairAccess>true</WheelchairAccess>
+                    <StepFreeAccess>true</StepFreeAccess>
+                    <EscalatorFreeAccess>true</EscalatorFreeAccess>
+                    <LiftFreeAccess>true</LiftFreeAccess>
+                  </AccessibilityLimitation>
+                </limitations>
+              </AccessibilityAssessment>
+              <PublicUse>all</PublicUse>
+              <Covered>covered</Covered>
+              <Gated>gatedArea</Gated>
+              <Lighting>wellLit</Lighting>
+              <SiteRef version="any" ref="tbd:POI_23"/>
+              <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
+            </PointOfInterestSpace>
+            <PointOfInterestSpace id="tbd:POI_23_A2" modification="new" version="any" status="active">
+              <Name>Lower Terrace A </Name>
+              <Centroid modification="new" status="active">
+                <Location>
+                  <Longitude>-180</Longitude>
+                  <Latitude>-90</Latitude>
+                  <Altitude>-1000</Altitude>
+                  <Precision>0.0</Precision>
+                </Location>
+              </Centroid>
+              <ParentZoneRef version="any" ref="tbd:POI_23"/>
+              <AccessibilityAssessment id="tbd:POI_23_A2" modification="new" version="any" status="active">
+                <MobilityImpairedAccess>true</MobilityImpairedAccess>
+                <limitations>
+                  <AccessibilityLimitation id="tbd:POI_23_A2" modification="new" status="active">
+                    <WheelchairAccess>true</WheelchairAccess>
+                    <StepFreeAccess>true</StepFreeAccess>
+                    <EscalatorFreeAccess>true</EscalatorFreeAccess>
+                    <LiftFreeAccess>true</LiftFreeAccess>
+                  </AccessibilityLimitation>
+                </limitations>
+              </AccessibilityAssessment>
+              <PublicUse>all</PublicUse>
+              <Covered>covered</Covered>
+              <Gated>gatedArea</Gated>
+              <Lighting>wellLit</Lighting>
+              <SiteRef version="any" ref="tbd:POI_23"/>
+              <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
+            </PointOfInterestSpace>
+            <PointOfInterestSpace id="tbd:POI_23_A3" modification="new" version="any" status="active">
+              <Name>Upper Terrace A </Name>
+              <Centroid modification="new" status="active">
+                <Location>
+                  <Longitude>-180</Longitude>
+                  <Latitude>-90</Latitude>
+                  <Altitude>-1000</Altitude>
+                  <Precision>0.0</Precision>
+                </Location>
+              </Centroid>
+              <ParentZoneRef version="any" ref="tbd:POI_23"/>
+              <AccessibilityAssessment id="tbd:POI_23_A3" modification="new" version="any" status="active">
+                <MobilityImpairedAccess>false</MobilityImpairedAccess>
+                <limitations>
+                  <AccessibilityLimitation id="tbd:POI_23_A3" modification="new" status="active">
+                    <WheelchairAccess>false</WheelchairAccess>
+                    <StepFreeAccess>false</StepFreeAccess>
+                    <EscalatorFreeAccess>true</EscalatorFreeAccess>
+                    <LiftFreeAccess>true</LiftFreeAccess>
+                  </AccessibilityLimitation>
+                </limitations>
+              </AccessibilityAssessment>
+              <PublicUse>all</PublicUse>
+              <Covered>covered</Covered>
+              <Gated>gatedArea</Gated>
+              <Lighting>wellLit</Lighting>
+              <SiteRef version="any" ref="tbd:POI_23"/>
+              <LevelRef version="any" ref="tbd:POI_23_Lvl_02_upper"/>
+            </PointOfInterestSpace>
+            <PointOfInterestSpace id="tbd:POI_23_B1" modification="new" version="any" status="active">
+              <Name>Main concourse for Gate B</Name>
+              <Centroid modification="new" status="active">
+                <Location>
+                  <Longitude>-180</Longitude>
+                  <Latitude>-90</Latitude>
+                  <Altitude>-1000</Altitude>
+                  <Precision>0.0</Precision>
+                </Location>
+              </Centroid>
+              <ParentZoneRef version="any" ref="tbd:POI_23"/>
+              <AccessibilityAssessment id="tbd:POI_23_B1" modification="new" version="any" status="active">
+                <MobilityImpairedAccess>true</MobilityImpairedAccess>
+                <limitations>
+                  <AccessibilityLimitation id="tbd:POI_23_B1" modification="new" status="active">
+                    <WheelchairAccess>true</WheelchairAccess>
+                    <StepFreeAccess>true</StepFreeAccess>
+                    <EscalatorFreeAccess>true</EscalatorFreeAccess>
+                    <LiftFreeAccess>true</LiftFreeAccess>
+                  </AccessibilityLimitation>
+                </limitations>
+              </AccessibilityAssessment>
+              <PublicUse>all</PublicUse>
+              <Covered>covered</Covered>
+              <Gated>gatedArea</Gated>
+              <Lighting>wellLit</Lighting>
+              <SiteRef version="any" ref="tbd:POI_23"/>
+              <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
+            </PointOfInterestSpace>
+            <PointOfInterestSpace id="tbd:POI_23_B2" modification="new" version="any" status="active">
+              <Name>Main concourse for Gate B</Name>
+              <Centroid modification="new" status="active">
+                <Location>
+                  <Longitude>-180</Longitude>
+                  <Latitude>-90</Latitude>
+                  <Altitude>-1000</Altitude>
+                  <Precision>0.0</Precision>
+                </Location>
+              </Centroid>
+              <ParentZoneRef version="any" ref="tbd:POI_23"/>
+              <AccessibilityAssessment id="tbd:POI_23_B2" modification="new" version="any" status="active">
+                <MobilityImpairedAccess>true</MobilityImpairedAccess>
+                <limitations>
+                  <AccessibilityLimitation id="tbd:POI_23_A1-E1g_lim1" modification="new" status="active">
+                    <WheelchairAccess>unknown</WheelchairAccess>
+                    <StepFreeAccess>unknown</StepFreeAccess>
+                    <EscalatorFreeAccess>unknown</EscalatorFreeAccess>
+                    <LiftFreeAccess>true</LiftFreeAccess>
+                  </AccessibilityLimitation>
+                </limitations>
+              </AccessibilityAssessment>
+              <PublicUse>all</PublicUse>
+              <Covered>covered</Covered>
+              <Gated>gatedArea</Gated>
+              <Lighting>wellLit</Lighting>
+              <SiteRef version="any" ref="tbd:POI_23"/>
+              <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
+            </PointOfInterestSpace>
+            <PointOfInterestSpace id="tbd:POI_23_B3" modification="new" version="any" status="active">
+              <Name>Lower Terrace B</Name>
+              <Centroid modification="new" status="active">
+                <Location>
+                  <Longitude>-180</Longitude>
+                  <Latitude>-90</Latitude>
+                </Location>
+              </Centroid>
+              <ParentZoneRef version="any" ref="tbd:POI_23"/>
+              <AccessibilityAssessment id="tbd:POI_23_B3" modification="new" version="any" status="active">
+                <MobilityImpairedAccess>true</MobilityImpairedAccess>
+                <limitations>
+                  <AccessibilityLimitation id="tbd:POI_23_B3" modification="new" status="active">
+                    <WheelchairAccess>true</WheelchairAccess>
+                    <StepFreeAccess>true</StepFreeAccess>
+                    <EscalatorFreeAccess>true</EscalatorFreeAccess>
+                    <LiftFreeAccess>true</LiftFreeAccess>
+                  </AccessibilityLimitation>
+                </limitations>
+              </AccessibilityAssessment>
+              <PublicUse>all</PublicUse>
+              <Covered>covered</Covered>
+              <Gated>gatedArea</Gated>
+              <Lighting>wellLit</Lighting>
+              <SiteRef version="any" ref="tbd:POI_23"/>
+              <LevelRef version="any" ref="tbd:POI_23_Lvl_02_upper"/>
+            </PointOfInterestSpace>
+          </spaces>
+          <pathLinks modificationSet="all">
+            <SitePathLink id="tbd:POI_23_pl_A1-E1_to_A1-J1" modification="new" version="any" status="active">
+              <Name>From entrance A to main concourse J1</Name>
+              <Distance>20</Distance>
+              <From>
+                <PlaceRef version="any" ref="tbd:POI_23"/>
+                <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
+                <EntranceRef version="any" ref="tbd:POI_23_A1-E1"/>
+              </From>
+              <To>
+                <PlaceRef version="any" ref="tbd:POI_23_A1-J1"/>
+                <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
+              </To>
+              <AccessibilityAssessment id="tbd:POI_23_pl_A1-E1_to_A1-J1" modification="new" version="any" status="active">
+                <MobilityImpairedAccess>true</MobilityImpairedAccess>
+                <limitations>
+                  <AccessibilityLimitation id="tbd:POI_23_pl_A1-E1_to_A1-J1" modification="new" status="active">
+                    <WheelchairAccess>true</WheelchairAccess>
+                    <StepFreeAccess>true</StepFreeAccess>
+                    <EscalatorFreeAccess>unknown</EscalatorFreeAccess>
+                    <LiftFreeAccess>true</LiftFreeAccess>
+                  </AccessibilityLimitation>
+                </limitations>
+              </AccessibilityAssessment>
+              <PublicUse>all</PublicUse>
+              <Covered>indoors</Covered>
+              <Towards>Lower terrace</Towards>
+              <NumberOfSteps>1</NumberOfSteps>
+              <AllowedUse>twoWay</AllowedUse>
+              <Transition>level</Transition>
+              <AccessFeatureType>barrier</AccessFeatureType>
+              <MaximumFlowPerMinute>1</MaximumFlowPerMinute>
+              <TransferDuration>
+                <DefaultDuration>PT1M</DefaultDuration>
+                <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
+              </TransferDuration>
+              <SiteRef version="any" ref="tbd:POI_23"/>
+              <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
+            </SitePathLink>
+            <SitePathLink id="tbd:POI_23_pl_A1-J1_to_A2" modification="new" version="any" status="active">
+              <Name>from concourse J1 to lower terrace </Name>
+              <Distance>20</Distance>
+              <From>
+                <PlaceRef version="any" ref="tbd:POI_23_A1-J1"/>
+                <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
+              </From>
+              <To>
+                <PlaceRef version="any" ref="tbd:POI_23_A2"/>
+                <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
+              </To>
+              <AccessibilityAssessment id="tbd:POI_23_pl_A1-J1_to_A2" modification="new" version="any" status="active">
+                <MobilityImpairedAccess>true</MobilityImpairedAccess>
+                <limitations>
+                  <AccessibilityLimitation id="tbd:POI_23_pl_A1-J1_to_A2" modification="new" status="active">
+                    <WheelchairAccess>true</WheelchairAccess>
+                    <StepFreeAccess>true</StepFreeAccess>
+                    <EscalatorFreeAccess>unknown</EscalatorFreeAccess>
+                    <LiftFreeAccess>true</LiftFreeAccess>
+                  </AccessibilityLimitation>
+                </limitations>
+              </AccessibilityAssessment>
+              <PublicUse>all</PublicUse>
+              <Covered>indoors</Covered>
+              <Towards>along</Towards>
+              <NumberOfSteps>1</NumberOfSteps>
+              <AllowedUse>twoWay</AllowedUse>
+              <Transition>level</Transition>
+              <AccessFeatureType>concourse</AccessFeatureType>
+              <MaximumFlowPerMinute>1</MaximumFlowPerMinute>
+              <TransferDuration>
+                <DefaultDuration>PT1M</DefaultDuration>
+                <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
+              </TransferDuration>
+              <SiteRef version="any" ref="tbd:POI_23"/>
+              <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
+            </SitePathLink>
+            <SitePathLink id="tbd:POI_23_pl_A1-J1_to_A3" modification="new" version="any" status="active">
+              <Name>from entrance concourse J1 to upper terrace A</Name>
+              <Distance>20</Distance>
+              <From>
+                <PlaceRef version="any" ref="tbd:POI_23_A1-J1"/>
+                <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
+              </From>
+              <To>
+                <PlaceRef version="any" ref="tbd:POI_23_A3"/>
+                <LevelRef version="any" ref="tbd:POI_23_Lvl_02_upper"/>
+              </To>
+              <AccessibilityAssessment id="tbd:POI_23_pl_A1-J1_to_A3" modification="new" version="any" status="active">
+                <MobilityImpairedAccess>true</MobilityImpairedAccess>
+                <limitations>
+                  <AccessibilityLimitation id="tbd:POI_23_pl_A1-J1_to_A3" modification="new" status="active">
+                    <WheelchairAccess>true</WheelchairAccess>
+                    <StepFreeAccess>true</StepFreeAccess>
+                    <EscalatorFreeAccess>unknown</EscalatorFreeAccess>
+                    <LiftFreeAccess>true</LiftFreeAccess>
+                  </AccessibilityLimitation>
+                </limitations>
+              </AccessibilityAssessment>
+              <PublicUse>all</PublicUse>
+              <Covered>indoors</Covered>
+              <Towards>Terrace </Towards>
+              <NumberOfSteps>20</NumberOfSteps>
+              <AllowedUse>twoWay</AllowedUse>
+              <Transition>up</Transition>
+              <AccessFeatureType>stairs</AccessFeatureType>
+              <MaximumFlowPerMinute>1</MaximumFlowPerMinute>
+              <TransferDuration>
+                <DefaultDuration>PT2M</DefaultDuration>
+              </TransferDuration>
+              <SiteRef version="any" ref="tbd:POI_23"/>
+            </SitePathLink>
+            <SitePathLink id="tbd:POI_23_pl_B1-E1_to_B1-J1" modification="new" version="any" status="active">
+              <Name>From entrance A to main concourse J1</Name>
+              <Distance>20</Distance>
+              <From>
+                <PlaceRef version="any" ref="tbd:POI_23"/>
+                <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
+                <EntranceRef version="any" ref="tbd:POI_23_B1-E1"/>
+              </From>
+              <To>
+                <PlaceRef version="any" ref="tbd:POI_23_B1-J1"/>
+                <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
+              </To>
+              <AccessibilityAssessment id="tbd:POI_23_pl_B1-E1_to_B1-J1" modification="new" version="any" status="active">
+                <MobilityImpairedAccess>true</MobilityImpairedAccess>
+                <limitations>
+                  <AccessibilityLimitation id="tbd:POI_23_pl_B1-E1_to_B1-J1" modification="new" status="active">
+                    <WheelchairAccess>true</WheelchairAccess>
+                    <StepFreeAccess>true</StepFreeAccess>
+                    <EscalatorFreeAccess>unknown</EscalatorFreeAccess>
+                    <LiftFreeAccess>true</LiftFreeAccess>
+                  </AccessibilityLimitation>
+                </limitations>
+              </AccessibilityAssessment>
+              <PublicUse>all</PublicUse>
+              <Covered>indoors</Covered>
+              <Towards>Lower terrace</Towards>
+              <NumberOfSteps>1</NumberOfSteps>
+              <AllowedUse>twoWay</AllowedUse>
+              <Transition>level</Transition>
+              <AccessFeatureType>barrier</AccessFeatureType>
+              <MaximumFlowPerMinute>1</MaximumFlowPerMinute>
+              <TransferDuration>
+                <DefaultDuration>PT1M</DefaultDuration>
+                <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
+              </TransferDuration>
+              <SiteRef version="any" ref="tbd:POI_23"/>
+              <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
+            </SitePathLink>
+            <SitePathLink id="tbd:POI_23_pl_B1-J1_to_B2" modification="new" version="any" status="active">
+              <Name>from concourse J1 to lower terrace </Name>
+              <Distance>20</Distance>
+              <From>
+                <PlaceRef version="any" ref="tbd:POI_23_B1-J1"/>
+                <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
+              </From>
+              <To>
+                <PlaceRef version="any" ref="tbd:POI_23_B2"/>
+                <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
+              </To>
+              <AccessibilityAssessment id="tbd:POI_23_pl_B1-J1_to_B2" modification="new" version="any" status="active">
+                <MobilityImpairedAccess>true</MobilityImpairedAccess>
+                <limitations>
+                  <AccessibilityLimitation id="tbd:POI_23_pl_B1-J1_to_B2" modification="new" status="active">
+                    <WheelchairAccess>true</WheelchairAccess>
+                    <StepFreeAccess>true</StepFreeAccess>
+                    <EscalatorFreeAccess>unknown</EscalatorFreeAccess>
+                    <LiftFreeAccess>true</LiftFreeAccess>
+                  </AccessibilityLimitation>
+                </limitations>
+              </AccessibilityAssessment>
+              <PublicUse>all</PublicUse>
+              <Covered>indoors</Covered>
+              <Towards>along</Towards>
+              <NumberOfSteps>1</NumberOfSteps>
+              <AllowedUse>twoWay</AllowedUse>
+              <Transition>level</Transition>
+              <AccessFeatureType>concourse</AccessFeatureType>
+              <MaximumFlowPerMinute>1</MaximumFlowPerMinute>
+              <TransferDuration>
+                <DefaultDuration>PT1M</DefaultDuration>
+                <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
+              </TransferDuration>
+              <SiteRef version="any" ref="tbd:POI_23"/>
+              <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
+            </SitePathLink>
+            <SitePathLink id="tbd:POI_23_pl_B1-J1_to_B3" modification="new" version="any" status="active">
+              <Name>from entrance concourse J1 to upper terrace A</Name>
+              <Distance>20</Distance>
+              <From>
+                <PlaceRef version="any" ref="tbd:POI_23_B1-J1"/>
+                <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
+              </From>
+              <To>
+                <PlaceRef version="any" ref="tbd:POI_23_B3"/>
+                <LevelRef version="any" ref="tbd:POI_23_Lvl_02_upper"/>
+              </To>
+              <AccessibilityAssessment id="tbd:POI_23_pl_B1-J1_to_B3" modification="new" version="any" status="active">
+                <MobilityImpairedAccess>true</MobilityImpairedAccess>
+                <limitations>
+                  <AccessibilityLimitation id="tbd:POI_23_pl_B1-J1_to_B3" modification="new" status="active">
+                    <WheelchairAccess>true</WheelchairAccess>
+                    <StepFreeAccess>true</StepFreeAccess>
+                    <EscalatorFreeAccess>unknown</EscalatorFreeAccess>
+                    <LiftFreeAccess>true</LiftFreeAccess>
+                  </AccessibilityLimitation>
+                </limitations>
+              </AccessibilityAssessment>
+              <PublicUse>all</PublicUse>
+              <Covered>indoors</Covered>
+              <Towards>Terrace </Towards>
+              <NumberOfSteps>20</NumberOfSteps>
+              <AllowedUse>twoWay</AllowedUse>
+              <Transition>up</Transition>
+              <AccessFeatureType>stairs</AccessFeatureType>
+              <MaximumFlowPerMinute>1</MaximumFlowPerMinute>
+              <TransferDuration>
+                <DefaultDuration>PT2M</DefaultDuration>
+              </TransferDuration>
+              <SiteRef version="any" ref="tbd:POI_23"/>
+            </SitePathLink>
+          </pathLinks>
+          <pathJunctions modificationSet="all">
+            <PathJunction id="tbd:POI_23_A1-J1" modification="new" version="any" status="active">
+              <Name>Branch in Entrance Hall A</Name>
+              <ParentZoneRef version="any" ref="tbd:POI_23_A1"/>
+            </PathJunction>
+            <PathJunction id="tbd:POI_23_B1-J1" modification="new" version="any" status="active">
+              <Name>Branch in Entrance Hall B</Name>
+              <ParentZoneRef version="any" ref="tbd:POI_23_B1"/>
+            </PathJunction>
+          </pathJunctions>
+          <accesses modificationSet="all">
+            <Access id="tbd:Access:POI_23_N1" modification="new" version="any" status="active">
+              <Name>Access to stadium from Framton metro</Name>
+              <Distance>0.0</Distance>
+              <TransferDuration>
+                <DefaultDuration>PT5M</DefaultDuration>
+                <FrequentTravellerDuration>PT3M</FrequentTravellerDuration>
+                <OccasionalTravellerDuration>PT5M</OccasionalTravellerDuration>
+                <MobilityRestrictedTravellerDuration>PT20M</MobilityRestrictedTravellerDuration>
+              </TransferDuration>
+              <BothWays>true</BothWays>
+              <From>
+                <TransportMode>metro</TransportMode>
+                <PlaceRef ref="naptStop:470012345"/>
+              </From>
+              <To>
+                <PlaceRef version="any" ref="tbd:POI_23"/>
+              </To>
+            </Access>
+          </accesses>
+          <navigationPaths modificationSet="all">
+            <NavigationPath id="tbd:POI_23_N1_A1-E1_to_A2" modification="new" version="any" status="active">
+              <Name>From entrance A to lower terrace A2</Name>
+              <AccessibilityAssessment id="tbd:POI_23_N1_A1-E1_to_A2" modification="new" version="any" status="active">
+                <MobilityImpairedAccess>true</MobilityImpairedAccess>
+                <limitations>
+                  <AccessibilityLimitation id="tbd:POI_23_N1_A1-E1_to_A2" modification="new" status="active">
+                    <WheelchairAccess>true</WheelchairAccess>
+                    <StepFreeAccess>true</StepFreeAccess>
+                    <EscalatorFreeAccess>true</EscalatorFreeAccess>
+                    <LiftFreeAccess>true</LiftFreeAccess>
+                  </AccessibilityLimitation>
+                </limitations>
+              </AccessibilityAssessment>
+              <AccessModes>foot</AccessModes>
+              <summaries>
+                <AccessSummary id="tbd:POI_23_N1_A1-E1_to_A2_01" modification="new" version="any" status="active">
+                  <AccessFeatureType>concourse</AccessFeatureType>
+                  <Count>1</Count>
+                  <Transition>level</Transition>
+                </AccessSummary>
+              </summaries>
+              <TransferDuration>
+                <DefaultDuration>PT5M</DefaultDuration>
+                <FrequentTravellerDuration>PT5M</FrequentTravellerDuration>
+                <OccasionalTravellerDuration>PT5M</OccasionalTravellerDuration>
+                <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
+              </TransferDuration>
+              <NavigationType>streetToSpace</NavigationType>
+              <placesInSequence>
+                <PlaceInSequence id="tbd:POI_23_N1_A1-E1_to_A2_p01" modification="new" version="any" status="active" order="1">
+                  <Description>Entrance A</Description>
+                  <PlaceRef version="any" ref="tbd:POI_23_A1-E1"/>
+                  <onwardLinks>
+                    <PathLinkInSequence id="tbd:PLIS_POI_23_A1-E1_to_A1_01" modification="new" version="any" status="active" order="1">
+                      <Description>Entrance A</Description>
+                      <PathLinkRef version="any" ref="tbd:POI_23_pl_A1-E1_to_A1-J1"/>
+                      <Reverse>true</Reverse>
+                      <Heading>forward</Heading>
+                      <Transition>level</Transition>
+                    </PathLinkInSequence>
+                  </onwardLinks>
+                </PlaceInSequence>
+                <PlaceInSequence id="tbd:POI_23_N1_A1-E1_to_A2_p02" modification="new" version="any" status="active" order="2">
+                  <Description>Branch {pomit in  concours A</Description>
+                  <PlaceRef version="any" ref="tbd:POI_23_A1-J1"/>
+                  <onwardLinks>
+                    <PathLinkInSequence id="tbd:PLIS_POI_23_A1-E1_to_A1_02" modification="new" version="any" status="active" order="1">
+                      <Description>normalizedString</Description>
+                      <PathLinkRef version="any" ref="tbd:POI_23_pl_A1-J1_to_A2"/>
+                      <Reverse>true</Reverse>
+                      <Heading>forward</Heading>
+                      <Transition>level</Transition>
+                    </PathLinkInSequence>
+                  </onwardLinks>
+                </PlaceInSequence>
+                <PlaceInSequence id="tbd:POI_23_N1_A1-E1_to_A2_p03" modification="new" version="any" status="active" order="3">
+                  <Description>lower terrace</Description>
+                  <PlaceRef version="any" ref="tbd:POI_23_A2"/>
+                </PlaceInSequence>
+              </placesInSequence>
+              <pathLinksInSequence>
+                <PathLinkInSequence id="tbd:POI_23_N1_A1-E1_to_A2_l01" modification="new" version="any" status="active" order="1">
+                  <Description>Link 1</Description>
+                  <PathLinkRef version="any" ref="tbd:POI_23_pl_A1-E1_to_A1-J1"/>
+                  <Reverse>true</Reverse>
+                  <Heading>forward</Heading>
+                  <Transition>level</Transition>
+                </PathLinkInSequence>
+                <PathLinkInSequence id="tbd:POI_23_N1_A1-E1_to_A2_l02" modification="new" version="any" status="active" order="2">
+                  <Description>Link 1</Description>
+                  <PathLinkRef version="any" ref="tbd:POI_23_pl_A1-J1_to_A2"/>
+                  <Reverse>true</Reverse>
+                  <Heading>forward</Heading>
+                  <Transition>level</Transition>
+                </PathLinkInSequence>
+              </pathLinksInSequence>
+            </NavigationPath>
+            <NavigationPath id="tbd:POI_23_N2_A1-E1_to_A3" modification="new" version="any" status="active">
+              <Name>From entrance A to upper terrace</Name>
+              <AccessibilityAssessment id="tbd:POI_23_N2_A1-E1_to_A3" modification="new" version="any" status="active">
+                <MobilityImpairedAccess>false</MobilityImpairedAccess>
+                <limitations>
+                  <AccessibilityLimitation id="tbd:POI_23_N2_A1-E1_to_A3" modification="new" status="active">
+                    <WheelchairAccess>false</WheelchairAccess>
+                    <StepFreeAccess>false</StepFreeAccess>
+                    <EscalatorFreeAccess>true</EscalatorFreeAccess>
+                    <LiftFreeAccess>true</LiftFreeAccess>
+                  </AccessibilityLimitation>
+                </limitations>
+              </AccessibilityAssessment>
+              <AccessModes>foot</AccessModes>
+              <summaries>
+                <AccessSummary id="tbd:POI_23_N2_A1-E1_to_A3_01" modification="new" version="any" status="active">
+                  <AccessFeatureType>stairs</AccessFeatureType>
+                  <Count>1</Count>
+                  <Transition>up</Transition>
+                </AccessSummary>
+                <AccessSummary id="tbd:POI_23_N2_A1-E1_to_A3_02" modification="new" version="any" status="active">
+                  <AccessFeatureType>concourse</AccessFeatureType>
+                  <Count>1</Count>
+                  <Transition>level</Transition>
+                </AccessSummary>
+              </summaries>
+              <TransferDuration>
+                <DefaultDuration>PT5M</DefaultDuration>
+              </TransferDuration>
+              <NavigationType>streetToSpace</NavigationType>
+              <placesInSequence>
+                <PlaceInSequence id="tbd:POI_23_N2_A1-E1_to_A3_p01" modification="new" version="any" status="active" order="1">
+                  <Description>entrance A</Description>
+                  <PlaceRef version="any" ref="tbd:POI_23_A1-E1"/>
+                  <onwardLinks>
+                    <PathLinkInSequence id="tbd:POI_23_N2_A1-E1_to_A3_p01_01" modification="new" version="any" status="active" order="1">
+                      <Description>Entrance A</Description>
+                      <PathLinkRef version="any" ref="tbd:POI_23_pl_A1-E1_to_A1-J1"/>
+                      <Reverse>true</Reverse>
+                      <Heading>forward</Heading>
+                      <Transition>level</Transition>
+                    </PathLinkInSequence>
+                  </onwardLinks>
+                </PlaceInSequence>
+                <PlaceInSequence id="tbd:POI_23_N2_A1-E1_to_A3_p02" modification="new" version="any" status="active" order="2">
+                  <Description>entrance concours A</Description>
+                  <PlaceRef version="any" ref="tbd:POI_23_A1"/>
+                  <onwardLinks>
+                    <PathLinkInSequence id="tbd:POI_23_N2_A1-E1_to_A3_p02_01" modification="new" version="any" status="active" order="1">
+                      <Description>normalizedString</Description>
+                      <PathLinkRef version="any" ref="tbd:POI_23_pl_A1-J1_to_A3"/>
+                      <Reverse>true</Reverse>
+                      <Heading>forward</Heading>
+                      <Transition>level</Transition>
+                    </PathLinkInSequence>
+                  </onwardLinks>
+                </PlaceInSequence>
+                <PlaceInSequence id="tbd:POI_23_N2_A1-E1_to_A3_p03" modification="new" version="any" status="active" order="3">
+                  <Description>upperterrace</Description>
+                  <PlaceRef version="any" ref="tbd:POI_23_A3"/>
+                </PlaceInSequence>
+              </placesInSequence>
+              <pathLinksInSequence>
+                <PathLinkInSequence id="tbd:POI_23_N2_A1-E1_to_A3_l01" modification="new" version="any" status="active" order="1">
+                  <Description>Link 1 into concourse</Description>
+                  <PathLinkRef version="any" ref="tbd:POI_23_pl_A1-E1_to_A1-J1"/>
+                  <Reverse>false</Reverse>
+                  <Heading>forward</Heading>
+                  <Transition>level</Transition>
+                </PathLinkInSequence>
+                <PathLinkInSequence id="tbd:POI_23_N2_A1-E1_to_A3_l02" modification="new" version="any" status="active" order="2">
+                  <Description>Link 2 up stairs</Description>
+                  <PathLinkRef version="any" ref="tbd:POI_23_pl_A1-J1_to_A3"/>
+                  <Reverse>false</Reverse>
+                  <Heading>forward</Heading>
+                  <Transition>up</Transition>
+                </PathLinkInSequence>
+              </pathLinksInSequence>
+            </NavigationPath>
+            <NavigationPath id="tbd:POI_23_N1_B1-E1_to_B2" modification="new" version="any" status="active">
+              <Name>From entrance A to lower terrace B2</Name>
+              <AccessibilityAssessment id="tbd:POI_23_N1_B1-E1_to_B2" modification="new" version="any" status="active">
+                <MobilityImpairedAccess>true</MobilityImpairedAccess>
+                <limitations>
+                  <AccessibilityLimitation id="tbd:POI_23_N1_B1-E1_to_B2" modification="new" status="active">
+                    <WheelchairAccess>true</WheelchairAccess>
+                    <StepFreeAccess>true</StepFreeAccess>
+                    <EscalatorFreeAccess>true</EscalatorFreeAccess>
+                    <LiftFreeAccess>true</LiftFreeAccess>
+                  </AccessibilityLimitation>
+                </limitations>
+              </AccessibilityAssessment>
+              <AccessModes>foot</AccessModes>
+              <summaries>
+                <AccessSummary id="tbd:POI_23_N1_B1-E1_to_B2_01" modification="new" version="any" status="active">
+                  <AccessFeatureType>concourse</AccessFeatureType>
+                  <Count>1</Count>
+                  <Transition>level</Transition>
+                </AccessSummary>
+              </summaries>
+              <TransferDuration>
+                <DefaultDuration>PT5M</DefaultDuration>
+                <FrequentTravellerDuration>PT5M</FrequentTravellerDuration>
+                <OccasionalTravellerDuration>PT5M</OccasionalTravellerDuration>
+                <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
+              </TransferDuration>
+              <NavigationType>streetToSpace</NavigationType>
+              <placesInSequence>
+                <PlaceInSequence id="tbd:POI_23_N1_B1-E1_to_B2_p01" modification="new" version="any" status="active" order="1">
+                  <Description>Entrance A</Description>
+                  <PlaceRef version="any" ref="tbd:POI_23_B1-E1"/>
+                  <onwardLinks>
+                    <PathLinkInSequence id="tbd:PLIS_POI_23_B1-E1_to_B1_01" modification="new" version="any" status="active" order="1">
+                      <Description>Entrance A</Description>
+                      <PathLinkRef version="any" ref="tbd:POI_23_pl_B1-E1_to_B1-J1"/>
+                      <Reverse>true</Reverse>
+                      <Heading>forward</Heading>
+                      <Transition>level</Transition>
+                    </PathLinkInSequence>
+                  </onwardLinks>
+                </PlaceInSequence>
+                <PlaceInSequence id="tbd:POI_23_N1_B1-E1_to_B2_p02" modification="new" version="any" status="active" order="2">
+                  <Description>Branch {pomit in  concours A</Description>
+                  <PlaceRef version="any" ref="tbd:POI_23_B1-J1"/>
+                  <onwardLinks>
+                    <PathLinkInSequence id="tbd:PLIS_POI_23_B1-E1_to_B1_02" modification="new" version="any" status="active" order="1">
+                      <Description>normalizedString</Description>
+                      <PathLinkRef version="any" ref="tbd:POI_23_pl_B1-J1_to_B2"/>
+                      <Reverse>true</Reverse>
+                      <Heading>forward</Heading>
+                      <Transition>level</Transition>
+                    </PathLinkInSequence>
+                  </onwardLinks>
+                </PlaceInSequence>
+                <PlaceInSequence id="tbd:POI_23_N1_B1-E1_to_B2_p03" modification="new" version="any" status="active" order="3">
+                  <Description>lower terrace</Description>
+                  <PlaceRef version="any" ref="tbd:POI_23_B2"/>
+                </PlaceInSequence>
+              </placesInSequence>
+              <pathLinksInSequence>
+                <PathLinkInSequence id="tbd:POI_23_N1_B1-E1_to_B2_l01" modification="new" version="any" status="active" order="1">
+                  <Description>Link 1</Description>
+                  <PathLinkRef version="any" ref="tbd:POI_23_pl_B1-E1_to_B1-J1"/>
+                  <Reverse>true</Reverse>
+                  <Heading>forward</Heading>
+                  <Transition>level</Transition>
+                </PathLinkInSequence>
+                <PathLinkInSequence id="tbd:POI_23_N1_B1-E1_to_B2_l02" modification="new" version="any" status="active" order="2">
+                  <Description>Link 1</Description>
+                  <PathLinkRef version="any" ref="tbd:POI_23_pl_B1-J1_to_B2"/>
+                  <Reverse>true</Reverse>
+                  <Heading>forward</Heading>
+                  <Transition>level</Transition>
+                </PathLinkInSequence>
+              </pathLinksInSequence>
+            </NavigationPath>
+            <NavigationPath id="tbd:POI_23_N2_B1-E1_to_B3" modification="new" version="any" status="active">
+              <Name>From entrance A to upper terrace</Name>
+              <AccessibilityAssessment id="tbd:POI_23_N2_B1-E1_to_B3" modification="new" version="any" status="active">
+                <MobilityImpairedAccess>false</MobilityImpairedAccess>
+                <limitations>
+                  <AccessibilityLimitation id="tbd:POI_23_N2_B1-E1_to_B3" modification="new" status="active">
+                    <WheelchairAccess>false</WheelchairAccess>
+                    <StepFreeAccess>false</StepFreeAccess>
+                    <EscalatorFreeAccess>true</EscalatorFreeAccess>
+                    <LiftFreeAccess>true</LiftFreeAccess>
+                  </AccessibilityLimitation>
+                </limitations>
+              </AccessibilityAssessment>
+              <AccessModes>foot</AccessModes>
+              <summaries>
+                <AccessSummary id="tbd:POI_23_N2_B1-E1_to_B3_01" modification="new" version="any" status="active">
+                  <AccessFeatureType>stairs</AccessFeatureType>
+                  <Count>1</Count>
+                  <Transition>up</Transition>
+                </AccessSummary>
+                <AccessSummary id="tbd:POI_23_N2_B1-E1_to_B3_02" modification="new" version="any" status="active">
+                  <AccessFeatureType>concourse</AccessFeatureType>
+                  <Count>1</Count>
+                  <Transition>level</Transition>
+                </AccessSummary>
+              </summaries>
+              <TransferDuration>
+                <DefaultDuration>PT5M</DefaultDuration>
+              </TransferDuration>
+              <NavigationType>streetToSpace</NavigationType>
+              <placesInSequence>
+                <PlaceInSequence id="tbd:POI_23_N2_B1-E1_to_B3_p01" modification="new" version="any" status="active" order="1">
+                  <Description>entrance A</Description>
+                  <PlaceRef version="any" ref="tbd:POI_23_B1-E1"/>
+                  <onwardLinks>
+                    <PathLinkInSequence id="tbd:POI_23_N2_B1-E1_to_B3_p01_01" modification="new" version="any" status="active" order="1">
+                      <Description>Entrance A</Description>
+                      <PathLinkRef version="any" ref="tbd:POI_23_pl_B1-E1_to_B1-J1"/>
+                      <Reverse>true</Reverse>
+                      <Heading>forward</Heading>
+                      <Transition>level</Transition>
+                    </PathLinkInSequence>
+                  </onwardLinks>
+                </PlaceInSequence>
+                <PlaceInSequence id="tbd:POI_23_N2_B1-E1_to_B3_p02" modification="new" version="any" status="active" order="2">
+                  <Description>entrance concours A</Description>
+                  <PlaceRef version="any" ref="tbd:POI_23_B1"/>
+                  <onwardLinks>
+                    <PathLinkInSequence id="tbd:POI_23_N2_B1-E1_to_B3_p02_01" modification="new" version="any" status="active" order="1">
+                      <Description>normalizedString</Description>
+                      <PathLinkRef version="any" ref="tbd:POI_23_pl_B1-J1_to_B3"/>
+                      <Reverse>true</Reverse>
+                      <Heading>forward</Heading>
+                      <Transition>level</Transition>
+                    </PathLinkInSequence>
+                  </onwardLinks>
+                </PlaceInSequence>
+                <PlaceInSequence id="tbd:POI_23_N2_B1-E1_to_B3_p03" modification="new" version="any" status="active" order="3">
+                  <Description>upperterrace</Description>
+                  <PlaceRef version="any" ref="tbd:POI_23_B3"/>
+                </PlaceInSequence>
+              </placesInSequence>
+              <pathLinksInSequence>
+                <PathLinkInSequence id="tbd:POI_23_N2_B1-E1_to_B3_l01" modification="new" version="any" status="active" order="1">
+                  <Description>Link 1 into concourse</Description>
+                  <PathLinkRef version="any" ref="tbd:POI_23_pl_B1-E1_to_B1-J1"/>
+                  <Reverse>false</Reverse>
+                  <Heading>forward</Heading>
+                  <Transition>level</Transition>
+                </PathLinkInSequence>
+                <PathLinkInSequence id="tbd:POI_23_N2_B1-E1_to_B3_l02" modification="new" version="any" status="active" order="2">
+                  <Description>Link 2 up stairs</Description>
+                  <PathLinkRef version="any" ref="tbd:POI_23_pl_B1-J1_to_B3"/>
+                  <Reverse>false</Reverse>
+                  <Heading>forward</Heading>
+                  <Transition>up</Transition>
+                </PathLinkInSequence>
+              </pathLinksInSequence>
+            </NavigationPath>
+          </navigationPaths>
+        </PointOfInterest>
+      </pointsOfInterest>
+    </SiteFrame>
+  </dataObjects>
+</PublicationDelivery>
+

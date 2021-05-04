@@ -1,0 +1,1614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+  <PublicationTimestamp>2010-12-17T09:30:47Z</PublicationTimestamp>
+  <ParticipantRef>SYS001</ParticipantRef>
+  <PublicationRequest version="1.0">
+    <RequestTimestamp>2010-12-17T09:30:47Z</RequestTimestamp>
+    <ParticipantRef>SYS002</ParticipantRef>
+    <topics>
+      <NetworkFrameTopic>
+        <selectionValidityConditions>
+          <AvailabilityCondition id="hde:range" modification="new" version="any" status="active">
+            <FromDate>2011-08-01T00:00:00Z</FromDate>
+          </AvailabilityCondition>
+        </selectionValidityConditions>
+        <FareFrameRef ref="cdla:FF01">REQUEST</FareFrameRef>
+      </NetworkFrameTopic>
+    </topics>
+  </PublicationRequest>
+  <PublicationRefreshInterval>P1M</PublicationRefreshInterval>
+  <Description>Example  of simple point to point fares</Description>
+  <dataObjects>
+    <CompositeFrame id="cdla:CDLA@Multiple_packages" modification="new" version="1.0" status="active">
+      <validityConditions modificationSet="all">
+        <ValidBetween modification="new" status="active">
+          <FromDate>2011-08-22T00:00:00Z</FromDate>
+          <ToDate>2012-10-31T00:00:00Z</ToDate>
+        </ValidBetween>
+      </validityConditions>
+      <codespaces modificationSet="all">
+        <Codespace id="cdla">
+          <Xmlns>cdla</Xmlns>
+          <XmlnsUrl>http://cdla.com/stuff</XmlnsUrl>
+          <Description>My fares</Description>
+        </Codespace>
+      </codespaces>
+      <FrameDefaults>
+        <DefaultCodespaceRef ref="cdla"/>
+      </FrameDefaults>
+      <frames modificationSet="all">
+        <FareFrame id="cdla:CDLA@Multiple_packages@products@standard" modification="new" version="1.0" status="active">
+          <prerequisites modificationSet="all">
+            <ServiceFrameRef version="1.0" ref="cdla:CDLA@Multiple_packages@network"/>
+          </prerequisites>
+          <tariffs>
+            <Tariff id="cdla:Time_interval@standard" modification="new" version="1.0" status="active">
+              <Name>Time interval tariff</Name>
+              <OperatorRef version="any" ref="mybus:CDLA"/>
+              <TypeOfTariffRef version="ntx:v1.0" ref="ntx:zonal"/>
+              <timeIntervals modificationSet="all">
+                <TimeInterval id="cdla:1day" modification="new" version="1.0" status="active">
+                  <Name>All Day Use on day of purchase</Name>
+                  <StartTime>06:00:00</StartTime>
+                  <EndTime>02:00:00</EndTime>
+                  <DayOffset>1</DayOffset>
+                </TimeInterval>
+                <TimeInterval id="cdla:1week" modification="new" version="1.0" status="active">
+                  <Name>7 Days use</Name>
+                  <StartTime>06:00:00</StartTime>
+                  <EndTime>02:00:00</EndTime>
+                  <DayOffset>7</DayOffset>
+                  <Duration>P7D</Duration>
+                </TimeInterval>
+                <TimeInterval id="cdla:4week" modification="new" version="1.0" status="active">
+                  <Name>7 Days use</Name>
+                  <StartTime>06:00:00</StartTime>
+                  <EndTime>02:00:00</EndTime>
+                  <DayOffset>28</DayOffset>
+                  <Duration>P28D</Duration>
+                </TimeInterval>
+                <TimeInterval id="cdla:1year" modification="new" version="1.0" status="active">
+                  <Name>7 Days use</Name>
+                  <StartTime>06:00:00</StartTime>
+                  <EndTime>02:00:00</EndTime>
+                  <Duration>P1Y</Duration>
+                </TimeInterval>
+              </timeIntervals>
+              <fareStructureElements modificationSet="all">
+                <FareStructureElement id="cdla:Time_interval@standard@access" modification="new" version="1.0" status="active">
+                  <GenericParameterAssignment id="cdla:Time_interval@access" modification="new" version="1.0" status="active" order="1">
+                    <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:can_access"/>
+                    <ValidityParameterGroupingType>XOR</ValidityParameterGroupingType>
+                    <validityParameters modificationSet="all">
+                      <TariffZoneRef version="any" ref="cdla:Midlands_Area"/>
+                      <TariffZoneRef version="any" ref="cdla:Burton_And_Swadlincote"/>
+                      <TariffZoneRef version="any" ref="cdla:Cannock"/>
+                      <TariffZoneRef version="any" ref="cdla:Coalville"/>
+                      <TariffZoneRef version="any" ref="cdla:Derby"/>
+                      <TariffZoneRef version="any" ref="cdla:Leicester_City_Plus"/>
+                      <TariffZoneRef version="any" ref="cdla:Midlands"/>
+                      <TariffZoneRef version="any" ref="cdla:Shrewsbury"/>
+                      <TariffZoneRef version="any" ref="cdla:Stafford"/>
+                      <TariffZoneRef version="any" ref="cdla:Sutton_And_Birmingham"/>
+                      <TariffZoneRef version="any" ref="cdla:Tamworth"/>
+                      <TariffZoneRef version="any" ref="cdla:Telford"/>
+                      <TariffZoneRef version="any" ref="cdla:North_East_Area"/>
+                      <TariffZoneRef version="any" ref="cdla:North_East"/>
+                      <TariffZoneRef version="any" ref="cdla:Ashington_Triple"/>
+                      <TariffZoneRef version="any" ref="cdla:Bishop_Auckland"/>
+                      <TariffZoneRef version="any" ref="cdla:Blyth_Triple"/>
+                      <TariffZoneRef version="any" ref="cdla:Blyth_plus_Ashington_Triple"/>
+                      <TariffZoneRef version="any" ref="cdla:Blyth_plus_Morpeth_Triple"/>
+                      <TariffZoneRef version="any" ref="cdla:Blyth_plus_TandW_Triple"/>
+                      <TariffZoneRef version="any" ref="cdla:Brandon"/>
+                      <TariffZoneRef version="any" ref="cdla:County_Durham"/>
+                      <TariffZoneRef version="any" ref="cdla:Cramlington"/>
+                    </validityParameters>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement id="cdla:Time_interval@standard@access_when" modification="new" version="1.0" status="active">
+                  <timeIntervals modificationSet="all">
+                    <TimeIntervalRef version="1.0" ref="cdla:1day"/>
+                    <TimeIntervalRef version="1.0" ref="cdla:1week"/>
+                    <TimeIntervalRef version="1.0" ref="cdla:4week"/>
+                    <TimeIntervalRef version="1.0" ref="cdla:1year"/>
+                  </timeIntervals>
+                  <GenericParameterAssignment id="myfares:Time_interval@standard@access_when" modification="new" version="1.0" status="active" order="1">
+                    <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:can_access_when"/>
+                    <ValidityParameterGroupingType>XOR</ValidityParameterGroupingType>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement id="cdla:Time_interval@standard@eligibility" modification="new" version="1.0" status="active">
+                  <Name>Eligible user types</Name>
+                  <GenericParameterAssignment id="cdla:Time_interval@eligibility" modification="new" version="1.0" status="active" order="1">
+                    <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:eligible"/>
+                    <LimitationGroupingType>XOR</LimitationGroupingType>
+                    <limitations modificationSet="all">
+                      <UserProfile id="cdla:adult" modification="new" version="any" status="active">
+                        <Name>Child Fare</Name>
+                        <TypeOfConcessionRef version="any" ref="cdla:adult"/>
+                        <MinimumAge>17</MinimumAge>
+                      </UserProfile>
+                      <UserProfile id="cdla:child" modification="new" version="any" status="active">
+                        <Name>Child Fare</Name>
+                        <TypeOfConcessionRef version="any" ref="cdla:child"/>
+                        <MaximumAge>16</MaximumAge>
+                      </UserProfile>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement id="cdla:Time_interval@standard@conditions_of_travel" modification="new" version="1.0" status="active">
+                  <Name>Conditions of travel</Name>
+                  <GenericParameterAssignment id="cdla:Time_interval@standard@conditions_of_travel" modification="new" version="1.0" status="active" order="1">
+                    <Name>Conditions of travel</Name>
+                    <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:condition_of_use"/>
+                    <LimitationGroupingType>AND</LimitationGroupingType>
+                    <limitations modificationSet="all">
+                      <Interchanging id="cdla:Time_interval@standard@conditions_of_travel@interchanging" modification="new" version="1.0" status="active">
+                        <CanInterchange>true</CanInterchange>
+                        <CanBreakJourney>true</CanBreakJourney>
+                      </Interchanging>
+                      <FrequencyOfUse id="cdla:Time_interval@standard@conditions_of_travel@frequency" modification="new" version="1.0" status="active">
+                        <FrequencyOfUseType>unlimited</FrequencyOfUseType>
+                      </FrequencyOfUse>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+              </fareStructureElements>
+            </Tariff>
+          </tariffs>
+          <fareProducts>
+            <PreassignedFareProduct id="cdla:Period_pass@standard" modification="new" version="1.0" status="active">
+              <Name>Adult   Zonal  Period pass    </Name>
+              <validableElements>
+                <ValidableElement id="cdla:Period_pass@standard@travel" modification="new" version="1.0" status="active">
+                  <Name>Single  ride</Name>
+                  <fareStructureElements modificationSet="all">
+                    <FareStructureElementRef version="1.0" ref="cdla:Time_interval@standard@access"/>
+                    <FareStructureElementRef version="1.0" ref="cdla:Time_interval@standard@access_when"/>
+                    <FareStructureElementRef version="1.0" ref="cdla:Time_interval@standard@eligibility"/>
+                    <FareStructureElementRef version="1.0" ref="cdla:Time_interval@standard@conditions_of_travel"/>
+                  </fareStructureElements>
+                </ValidableElement>
+              </validableElements>
+            </PreassignedFareProduct>
+          </fareProducts>
+          <distributionChannels>
+            <DistributionChannel id="cdla:online" modification="new" version="1.0" status="active">
+              <PaymentMethods>cardsOnly</PaymentMethods>
+            </DistributionChannel>
+            <DistributionChannel id="cdla:at_counter" modification="new" version="1.0" status="active">
+              <PaymentMethods>cashAndCard</PaymentMethods>
+            </DistributionChannel>
+          </distributionChannels>
+          <fulfilmentMethods>
+            <FulfilmentMethod id="cdla:mobile_app" modification="new" version="1.0" status="active">
+              <FulfilmentMethodType>mobileApp</FulfilmentMethodType>
+            </FulfilmentMethod>
+            <FulfilmentMethod id="cdla:post" modification="new" version="1.0" status="active">
+              <FulfilmentMethodType>post</FulfilmentMethodType>
+            </FulfilmentMethod>
+            <FulfilmentMethod id="cdla:collect" modification="new" version="1.0" status="active">
+              <FulfilmentMethodType>ticketOffice</FulfilmentMethodType>
+            </FulfilmentMethod>
+          </fulfilmentMethods>
+          <salesOfferPackages>
+            <SalesOfferPackage id="cdla:Period_pass-SOP@mobile" modification="new" version="1.0" status="active">
+              <Name>Adult  Pass  Mobile </Name>
+              <distributionAssignments modificationSet="all">
+                <DistributionAssignment id="cdla:Period_pass-SOP@mobile" modification="new" version="1.0" status="active" order="1">
+                  <DistributionChannelRef version="1.0" ref="cdla:online"/>
+                  <FulfilmentMethodRef version="1.0" ref="cdla:mobile_app"/>
+                </DistributionAssignment>
+              </distributionAssignments>
+              <salesOfferPackageElements modificationSet="all">
+                <SalesOfferPackageElement id="cdla:Period_pass-SOP@mobile" modification="new" version="1.0" status="active" order="1">
+                  <TypeOfTravelDocumentRef version="any" ref="cdla:mobile_app"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                </SalesOfferPackageElement>
+              </salesOfferPackageElements>
+            </SalesOfferPackage>
+            <SalesOfferPackage id="cdla:Period_pass-SOP@smartcard" modification="new" version="1.0" status="active">
+              <Name>Adult   Pass on smartcard  4weeks or annual   </Name>
+              <validityParameterAssignments modificationSet="all">
+                <GenericParameterAssignment id="cdla:Period_pass-SOP@smartcard@can_access_when" modification="new" version="1.0" status="active" order="1">
+                  <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:can_access_when"/>
+                  <includes modificationSet="all">
+                    <GenericParameterAssignment id="cdla:Period_pass-SOP@smartcard@can_access_when@4week" modification="new" version="1.0" status="active" order="1">
+                      <TimeIntervalRef version="1.0" ref="cdla:4week"/>
+                    </GenericParameterAssignment>
+                    <GenericParameterAssignment id="cdla:Period_pass-SOP@smartcard@can_access_when@1year" modification="new" version="1.0" status="active" order="1">
+                      <TimeIntervalRef version="1.0" ref="cdla:1year"/>
+                    </GenericParameterAssignment>
+                  </includes>
+                </GenericParameterAssignment>
+              </validityParameterAssignments>
+              <distributionAssignments modificationSet="all">
+                <DistributionAssignment id="cdla:Period_pass-SOP@smartcard@online" modification="new" version="1.0" status="active" order="1">
+                  <DistributionChannelRef version="1.0" ref="cdla:online"/>
+                  <FulfilmentMethodRef version="1.0" ref="cdla:post"/>
+                </DistributionAssignment>
+                <DistributionAssignment id="cdla:Period_pass-SOP@smartcard@at_counter" modification="new" version="1.0" status="active" order="1">
+                  <DistributionChannelRef version="1.0" ref="cdla:at_counter"/>
+                  <FulfilmentMethodRef version="1.0" ref="cdla:collect"/>
+                </DistributionAssignment>
+              </distributionAssignments>
+              <salesOfferPackageElements modificationSet="all">
+                <SalesOfferPackageElement id="cdla:Period_pass-SOP@smartcard" modification="new" version="1.0" status="active" order="1">
+                  <TypeOfTravelDocumentRef version="any" ref="cdla:card"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                </SalesOfferPackageElement>
+              </salesOfferPackageElements>
+            </SalesOfferPackage>
+          </salesOfferPackages>
+        </FareFrame>
+        <FareFrame id="cdla:CDLA@Multiple_packages@products@family" modification="new" version="1.0" status="active">
+          <prerequisites modificationSet="all">
+            <ServiceFrameRef version="1.0" ref="cdla:CDLA@Multiple_packages@network"/>
+          </prerequisites>
+          <tariffs>
+            <Tariff id="cdla:Time_interval@family" modification="new" version="1.0" status="active">
+              <Name>Day pass  fares - Family group ticket</Name>
+              <OperatorRef version="any" ref="mybus:CDLA"/>
+              <TypeOfTariffRef version="ntx:v1.0" ref="ntx:zonal"/>
+              <timeIntervals modificationSet="all">
+                <TimeIntervalRef version="1.0" ref="cdla:1day"/>
+              </timeIntervals>
+              <fareStructureElements modificationSet="all">
+                <FareStructureElement id="cdla:Time_interval@family@access_when" modification="new" version="1.0" status="active">
+                  <timeIntervals modificationSet="all">
+                    <TimeIntervalRef version="1.0" ref="cdla:1day"/>
+                  </timeIntervals>
+                  <GenericParameterAssignment id="myfares:Time_interval@family@access_when" modification="new" version="1.0" status="active" order="1">
+                    <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:can_access_when"/>
+                    <ValidityParameterGroupingType>XOR</ValidityParameterGroupingType>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement id="cdla:Time_interval@family@eligibility" modification="new" version="1.0" status="active">
+                  <Name>Eligible user types</Name>
+                  <GenericParameterAssignment id="cdla:Time_interval@family@eligibility" modification="new" version="1.0" status="active" order="1">
+                    <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:eligible"/>
+                    <LimitationGroupingType>XOR</LimitationGroupingType>
+                    <limitations modificationSet="all">
+                      <GroupTicket id="cdla:family" modification="new" version="any" status="active">
+                        <Name>Family ticket</Name>
+                        <MinimumNumberOfPersons>2</MinimumNumberOfPersons>
+                        <MaximumNumberOfPersons>7</MaximumNumberOfPersons>
+                        <companionProfiles modificationSet="all">
+                          <CompanionProfile id="cdla:family@adult" modification="new" version="any" status="active">
+                            <Name>At least one adult</Name>
+                            <UserProfileRef version="any" ref="cdla:adult"/>
+                            <MinimumNumberOfPersons>1</MinimumNumberOfPersons>
+                            <MaximumNumberOfPersons>2</MaximumNumberOfPersons>
+                          </CompanionProfile>
+                          <CompanionProfile id="cdla:family@child" modification="new" version="any" status="active">
+                            <Name>Up to 5 Children</Name>
+                            <UserProfileRef version="any" ref="cdla:child"/>
+                            <MinimumNumberOfPersons>1</MinimumNumberOfPersons>
+                            <MaximumNumberOfPersons>5</MaximumNumberOfPersons>
+                          </CompanionProfile>
+                        </companionProfiles>
+                      </GroupTicket>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+              </fareStructureElements>
+            </Tariff>
+          </tariffs>
+          <fareProducts>
+            <PreassignedFareProduct id="cdla:Day_pass@family" modification="new" version="any" status="active">
+              <Name>Family  Day Zonal  pass</Name>
+              <validableElements>
+                <ValidableElement id="cdla:Day_pass@standard@travel" modification="new" version="any" status="active">
+                  <Name>Single  ride</Name>
+                  <fareStructureElements modificationSet="all">
+                    <FareStructureElementRef version="1.0" ref="cdla:Time_interval@standard@access"/>
+                    <FareStructureElementRef version="1.0" ref="cdla:Time_interval@family@access_when"/>
+                    <FareStructureElementRef version="1.0" ref="cdla:Time_interval@family@eligibility"/>
+                    <FareStructureElementRef version="1.0" ref="cdla:Time_interval@standard@conditions_of_travel"/>
+                  </fareStructureElements>
+                </ValidableElement>
+              </validableElements>
+            </PreassignedFareProduct>
+          </fareProducts>
+          <salesOfferPackages>
+            <SalesOfferPackage id="cdla:Day_pass-SOP@family@mobile" modification="new" version="any" status="active">
+              <Name>Family day  Mobile </Name>
+              <distributionAssignments modificationSet="all">
+                <DistributionAssignment id="cdla:Day_pass-SOP@family@mobile" modification="new" version="1.0" status="active" order="1">
+                  <DistributionChannelRef version="1.0" ref="cdla:online"/>
+                  <FulfilmentMethodRef version="1.0" ref="cdla:mobile_app"/>
+                </DistributionAssignment>
+              </distributionAssignments>
+              <salesOfferPackageElements modificationSet="all">
+                <SalesOfferPackageElement id="cdla:Day_pass-SOP@family@mobile" modification="new" version="any" status="active" order="1">
+                  <TypeOfTravelDocumentRef version="any" ref="cdla:mobile_app"/>
+                  <FareProductRef version="1.0" ref="cdla:Day_pass@family"/>
+                </SalesOfferPackageElement>
+              </salesOfferPackageElements>
+            </SalesOfferPackage>
+          </salesOfferPackages>
+        </FareFrame>
+        <FareFrame id="cdla:CDLA@Multiple_packages@products@student" modification="new" version="1.0" status="active">
+          <prerequisites modificationSet="all">
+            <ServiceFrameRef version="1.0" ref="cdla:CDLA@Multiple_packages@network"/>
+          </prerequisites>
+          <contentValidityConditions modificationSet="all">
+            <AvailabilityCondition id="cdla:academic_year" modification="new" version="1.0" status="active">
+              <Name>Academic Year</Name>
+              <FromDate>2011-08-22T00:00:00Z</FromDate>
+              <ToDate>2011-10-31T23:59:59Z</ToDate>
+            </AvailabilityCondition>
+            <AvailabilityCondition id="cdla:academic_term@autumn" modification="new" version="1.0" status="active">
+              <Name>Autumn term</Name>
+              <FromDate>2011-08-22T00:00:00Z</FromDate>
+              <ToDate>2011-10-31T23:59:59Z</ToDate>
+            </AvailabilityCondition>
+            <AvailabilityCondition id="cdla:academic_term@spring" modification="new" version="1.0" status="active">
+              <Name>Spring  term</Name>
+              <FromDate>2011-12-12T00:00:00Z</FromDate>
+              <ToDate>2012-02-29T23:59:59Z</ToDate>
+            </AvailabilityCondition>
+            <AvailabilityCondition id="cdla:academic_term@summer" modification="new" version="1.0" status="active">
+              <Name>Summer term</Name>
+              <FromDate>2012-03-19T00:00:00Z</FromDate>
+              <ToDate>2012-05-31T23:59:59Z</ToDate>
+            </AvailabilityCondition>
+          </contentValidityConditions>
+          <tariffs>
+            <Tariff id="cdla:Time_interval@student" modification="new" version="1.0" status="active">
+              <Name>Student zonal pass fares</Name>
+              <OperatorRef version="any" ref="mybus:CDLA"/>
+              <TypeOfTariffRef version="ntx:v1.0" ref="ntx:zonal"/>
+              <timeIntervals modificationSet="all">
+                <TimeIntervalRef version="1.0" ref="cdla:1day"/>
+                <TimeIntervalRef version="1.0" ref="cdla:1week"/>
+                <TimeIntervalRef version="1.0" ref="cdla:4week"/>
+                <TimeIntervalRef version="1.0" ref="cdla:1year"/>
+                <TimeInterval id="cdla:15week" modification="new" version="1.0" status="active">
+                  <Name>7 Days use</Name>
+                  <StartTime>06:00:00</StartTime>
+                  <EndTime>02:00:00</EndTime>
+                  <DayOffset>28</DayOffset>
+                  <Duration>P28D</Duration>
+                </TimeInterval>
+                <TimeInterval id="cdla:academic_term@autumn" modification="new" version="1.0" status="active">
+                  <validityConditions modificationSet="all">
+                    <AvailabilityConditionRef version="1.0" ref="cdla:academic_term@autumn"/>
+                  </validityConditions>
+                  <Name>Academic  Term - Autumn</Name>
+                </TimeInterval>
+                <TimeInterval id="cdla:academic_term@spring" modification="new" version="1.0" status="active">
+                  <validityConditions modificationSet="all">
+                    <AvailabilityConditionRef version="1.0" ref="cdla:academic_term@spring"/>
+                  </validityConditions>
+                  <Name>Academic  Term - Spring</Name>
+                </TimeInterval>
+                <TimeInterval id="cdla:academic_term@summer" modification="new" version="1.0" status="active">
+                  <validityConditions modificationSet="all">
+                    <AvailabilityConditionRef version="1.0" ref="cdla:academic_term@summer"/>
+                  </validityConditions>
+                  <Name>Academic  Term - Summer</Name>
+                </TimeInterval>
+                <TimeInterval id="cdla:academic_year" modification="new" version="1.0" status="active">
+                  <validityConditions modificationSet="all">
+                    <AvailabilityConditionRef version="1.0" ref="cdla:academic_year"/>
+                  </validityConditions>
+                  <Name>Academic Year</Name>
+                </TimeInterval>
+              </timeIntervals>
+              <qualityStructureFactors>
+                <QualityStructureFactor id="cdla:Time_interval@student@funded@80" modification="new" version="1.0" status="active">
+                  <Name>Funding type - 80%</Name>
+                  <Factor>80</Factor>
+                </QualityStructureFactor>
+                <QualityStructureFactor id="cdla:Time_interval@student@funded@115" modification="new" version="1.0" status="active">
+                  <Name>Funding type - 115 </Name>
+                  <Factor>115</Factor>
+                </QualityStructureFactor>
+                <QualityStructureFactor id="cdla:Time_interval@student@funded@135" modification="new" version="1.0" status="active">
+                  <Name>Fundingtype - 135</Name>
+                  <Factor>135</Factor>
+                </QualityStructureFactor>
+                <QualityStructureFactor id="cdla:Time_interval@student@unfunded" modification="new" version="1.0" status="active">
+                  <Name>Unfunded</Name>
+                </QualityStructureFactor>
+                <QualityStructureFactor id="cdla:Time_interval@student@promo@103.5" modification="new" version="1.0" status="active">
+                  <Name>Promotional code - 103.5</Name>
+                  <Factor>103.5</Factor>
+                </QualityStructureFactor>
+                <QualityStructureFactor id="cdla:Time_interval@student@promo@198" modification="new" version="1.0" status="active">
+                  <Name>Promotional code - 198</Name>
+                  <Factor>198</Factor>
+                </QualityStructureFactor>
+                <QualityStructureFactor id="cdla:Time_interval@student@promo@225" modification="new" version="1.0" status="active">
+                  <Name>Promotional code - 225</Name>
+                  <Factor>225</Factor>
+                </QualityStructureFactor>
+                <QualityStructureFactor id="cdla:Time_interval@student@promo@288" modification="new" version="1.0" status="active">
+                  <Name>Promotional code - 288</Name>
+                  <Factor>288</Factor>
+                </QualityStructureFactor>
+                <QualityStructureFactor id="cdla:Time_interval@student@promo@360" modification="new" version="1.0" status="active">
+                  <Name>Promotional code - 360</Name>
+                  <Factor>360</Factor>
+                </QualityStructureFactor>
+                <QualityStructureFactor id="cdla:Time_interval@student@promo@648" modification="new" version="1.0" status="active">
+                  <Name>Promotional code - 576</Name>
+                  <Factor>576</Factor>
+                </QualityStructureFactor>
+                <QualityStructureFactor id="cdla:Time_interval@student@promo@576" modification="new" version="1.0" status="active">
+                  <Name>Promotional code - 648</Name>
+                  <Factor>648</Factor>
+                </QualityStructureFactor>
+              </qualityStructureFactors>
+              <fareStructureElements modificationSet="all">
+                <FareStructureElement id="cdla:Time_interval@student@access" modification="new" version="1.0" status="active">
+                  <timeIntervals modificationSet="all">
+                    <TimeIntervalRef version="1.0" ref="cdla:1day"/>
+                    <TimeIntervalRef version="1.0" ref="cdla:1week"/>
+                    <TimeIntervalRef version="1.0" ref="cdla:4week"/>
+                    <TimeIntervalRef version="1.0" ref="cdla:1year"/>
+                  </timeIntervals>
+                  <GenericParameterAssignment id="cdla:Time_interval@student@access" modification="new" version="1.0" status="active" order="1">
+                    <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:can_access"/>
+                    <ValidityParameterGroupingType>XOR</ValidityParameterGroupingType>
+                    <validityParameters modificationSet="all">
+                      <TariffZoneRef version="any" ref="cdla:Midlands_Area"/>
+                      <TariffZoneRef version="any" ref="cdla:Burton_And_Swadlincote"/>
+                      <TariffZoneRef version="any" ref="cdla:Cannock"/>
+                      <TariffZoneRef version="any" ref="cdla:Coalville"/>
+                      <TariffZoneRef version="any" ref="cdla:Derby"/>
+                      <TariffZoneRef version="any" ref="cdla:Leicester_City_Plus"/>
+                      <TariffZoneRef version="any" ref="cdla:Midlands"/>
+                      <TariffZoneRef version="any" ref="cdla:Shrewsbury"/>
+                      <TariffZoneRef version="any" ref="cdla:Stafford"/>
+                      <TariffZoneRef version="any" ref="cdla:Sutton_And_Birmingham"/>
+                      <TariffZoneRef version="any" ref="cdla:Tamworth"/>
+                      <TariffZoneRef version="any" ref="cdla:Telford"/>
+                      <TariffZoneRef version="any" ref="cdla:North_East_Area"/>
+                      <TariffZoneRef version="any" ref="cdla:North_East"/>
+                      <TariffZoneRef version="any" ref="cdla:Ashington_Triple"/>
+                      <TariffZoneRef version="any" ref="cdla:Bishop_Auckland"/>
+                      <TariffZoneRef version="any" ref="cdla:Blyth_Triple"/>
+                      <TariffZoneRef version="any" ref="cdla:Blyth_plus_Ashington_Triple"/>
+                      <TariffZoneRef version="any" ref="cdla:Blyth_plus_Morpeth_Triple"/>
+                      <TariffZoneRef version="any" ref="cdla:Blyth_plus_TandW_Triple"/>
+                      <TariffZoneRef version="any" ref="cdla:Brandon"/>
+                      <TariffZoneRef version="any" ref="cdla:County_Durham"/>
+                      <TariffZoneRef version="any" ref="cdla:Cramlington"/>
+                    </validityParameters>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement id="cdla:Time_interval@student@access@academic" modification="new" version="1.0" status="active">
+                  <timeIntervals modificationSet="all">
+                    <TimeIntervalRef version="1.0" ref="cdla:15week"/>
+                    <TimeIntervalRef version="1.0" ref="cdla:academic_term@spring"/>
+                    <TimeIntervalRef version="1.0" ref="cdla:academic_term@summer"/>
+                    <TimeIntervalRef version="1.0" ref="cdla:academic_term@autumn"/>
+                    <TimeIntervalRef version="1.0" ref="cdla:academic_year"/>
+                  </timeIntervals>
+                  <GenericParameterAssignment id="cdla:Time_interval@student@academic" modification="new" version="1.0" status="active" order="1">
+                    <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:can_access"/>
+                    <ValidityParameterGroupingType>XOR</ValidityParameterGroupingType>
+                    <validityParameters modificationSet="all">
+                      <TariffZoneRef version="any" ref="cdla:Leicester_City_Plus"/>
+                      <TariffZoneRef version="any" ref="cdla:Midlands"/>
+                      <TariffZoneRef version="any" ref="cdla:Stafford"/>
+                      <TariffZoneRef version="any" ref="cdla:Sutton_And_Birmingham"/>
+                      <TariffZoneRef version="any" ref="cdla:Tamworth"/>
+                      <TariffZoneRef version="any" ref="cdla:Telford"/>
+                      <TariffZoneRef version="any" ref="cdla:North_East"/>
+                      <TariffZoneRef version="any" ref="cdla:County_Durham"/>
+                    </validityParameters>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement id="cdla:Time_interval@student@eligibility" modification="new" version="1.0" status="active">
+                  <Name>Eligible user types</Name>
+                  <GenericParameterAssignment id="cdla:Time_interval@student@eligibility" modification="new" version="1.0" status="active" order="1">
+                    <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:eligible"/>
+                    <LimitationGroupingType>XOR</LimitationGroupingType>
+                    <limitations modificationSet="all">
+                      <UserProfile id="cdla:student" modification="new" version="any" status="active">
+                        <Name>student Fare</Name>
+                        <TypeOfConcessionRef version="any" ref="cdla:student"/>
+                      </UserProfile>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement id="cdla:Time_interval@student@funding" modification="new" version="1.0" status="active">
+                  <Name>Eligible user types</Name>
+                  <timeIntervals modificationSet="all">
+                    <TimeIntervalRef version="1.0" ref="cdla:15week"/>
+                  </timeIntervals>
+                  <qualityStructureFactors>
+                    <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@funded@80"/>
+                    <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@funded@115"/>
+                    <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@funded@135"/>
+                    <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@unfunded"/>
+                  </qualityStructureFactors>
+                  <GenericParameterAssignment id="cdla:Time_interval@student@funding" modification="new" version="1.0" status="active" order="1">
+                    <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:eligible"/>
+                    <LimitationGroupingType>XOR</LimitationGroupingType>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement id="cdla:Time_interval@student@promo" modification="new" version="1.0" status="active">
+                  <Name>Eligible user types</Name>
+                  <timeIntervals modificationSet="all">
+                    <TimeIntervalRef version="1.0" ref="cdla:15week"/>
+                  </timeIntervals>
+                  <qualityStructureFactors>
+                    <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@promo@103.5"/>
+                    <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@promo@288"/>
+                  </qualityStructureFactors>
+                  <GenericParameterAssignment id="cdla:Time_interval@student@promo" modification="new" version="1.0" status="active" order="1">
+                    <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:eligible"/>
+                    <LimitationGroupingType>XOR</LimitationGroupingType>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+              </fareStructureElements>
+            </Tariff>
+          </tariffs>
+          <fareProducts>
+            <PreassignedFareProduct id="cdla:Period_pass@student" modification="new" version="1.0" status="active">
+              <Name>Adult Day Zonal  fare    </Name>
+              <OperatorRef version="any" ref="mybus:CDLA"/>
+              <validableElements>
+                <ValidableElement id="cdla:Period_pass@student@travel" modification="new" version="1.0" status="active">
+                  <Name>Single  ride</Name>
+                  <fareStructureElements modificationSet="all">
+                    <FareStructureElementRef version="1.0" ref="cdla:Time_interval@student@access"/>
+                    <FareStructureElementRef version="1.0" ref="cdla:Time_interval@student@access@academic"/>
+                    <FareStructureElementRef version="1.0" ref="cdla:Time_interval@student@eligibility"/>
+                    <FareStructureElementRef version="1.0" ref="cdla:Time_interval@student@funding"/>
+                    <FareStructureElementRef version="1.0" ref="cdla:Time_interval@standard@conditions_of_travel"/>
+                  </fareStructureElements>
+                </ValidableElement>
+              </validableElements>
+            </PreassignedFareProduct>
+          </fareProducts>
+          <salesOfferPackages>
+            <SalesOfferPackage id="cdla:Period_pass-SOP@student@mobile" modification="new" version="1.0" status="active">
+              <Name>Student Annual Mobile</Name>
+              <validityParameterAssignments modificationSet="all">
+                <GenericParameterAssignment id="cdla:Period_pass@student@mobile@purchase_window" modification="new" version="1.0" status="active" order="1">
+                  <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:can_purchase_when"/>
+                  <includes modificationSet="all">
+                    <GenericParameterAssignment id="cdla:Period_pass@student@mobile@purchase_window@academic_year" modification="new" version="1.0" status="active" order="1">
+                      <limitations modificationSet="all">
+                        <PurchaseWindow id="cdla:Period_pass@student@mobile@purchase_window@academic_year" modification="new" version="1.0" status="active">
+                          <validityConditions modificationSet="all">
+                            <ValidBetween modification="new" status="active">
+                              <FromDate>2011-08-22T00:00:00Z</FromDate>
+                              <ToDate>2011-10-31T23:59:59Z</ToDate>
+                            </ValidBetween>
+                          </validityConditions>
+                        </PurchaseWindow>
+                      </limitations>
+                      <TimeIntervalRef version="1.0" ref="cdla:academic_year"/>
+                    </GenericParameterAssignment>
+                    <GenericParameterAssignment id="cdla:Period_pass@student@mobile@purchase_window@autumn" modification="new" version="1.0" status="active" order="1">
+                      <limitations modificationSet="all">
+                        <PurchaseWindow id="cdla::student@purchase_window@autum" modification="new" version="1.0" status="active">
+                          <validityConditions modificationSet="all">
+                            <AvailabilityConditionRef version="1.0" ref="cdla:academic_term@autumn"/>
+                          </validityConditions>
+                        </PurchaseWindow>
+                      </limitations>
+                      <TimeIntervalRef version="1.0" ref="cdla:academic_term@autumn"/>
+                    </GenericParameterAssignment>
+                    <GenericParameterAssignment id="cdla:student@purchase_window@spring" modification="new" version="1.0" status="active" order="1">
+                      <limitations modificationSet="all">
+                        <PurchaseWindow id="cdla:Period_pass@student@mobile@purchase_window@spring" modification="new" version="1.0" status="active">
+                          <validityConditions modificationSet="all">
+                            <AvailabilityConditionRef version="1.0" ref="cdla:academic_term@spring"/>
+                          </validityConditions>
+                        </PurchaseWindow>
+                      </limitations>
+                      <TimeIntervalRef version="1.0" ref="cdla:academic_term@spring"/>
+                    </GenericParameterAssignment>
+                    <GenericParameterAssignment id="cdla:student@purchase_window@summer" modification="new" version="1.0" status="active" order="1">
+                      <limitations modificationSet="all">
+                        <PurchaseWindow id="cdla:Period_pass@student@mobile@purchase_window@summer" modification="new" version="1.0" status="active">
+                          <validityConditions modificationSet="all">
+                            <AvailabilityConditionRef version="1.0" ref="cdla:academic_term@summer"/>
+                          </validityConditions>
+                        </PurchaseWindow>
+                      </limitations>
+                      <TimeIntervalRef version="1.0" ref="cdla:academic_term@summer"/>
+                    </GenericParameterAssignment>
+                  </includes>
+                </GenericParameterAssignment>
+              </validityParameterAssignments>
+              <distributionAssignments modificationSet="all">
+                <DistributionAssignment id="cdla:Period_pass-SOP@student@mobile" modification="new" version="1.0" status="active" order="1">
+                  <DistributionChannelRef version="1.0" ref="cdla:online"/>
+                  <FulfilmentMethodRef version="1.0" ref="cdla:mobile_app"/>
+                </DistributionAssignment>
+              </distributionAssignments>
+              <salesOfferPackageElements modificationSet="all">
+                <SalesOfferPackageElement id="cdla:Period_pass-SOP@student@mobile" modification="new" version="1.0" status="active" order="1">
+                  <TypeOfTravelDocumentRef version="any" ref="cdla:mobile_app"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
+                </SalesOfferPackageElement>
+              </salesOfferPackageElements>
+            </SalesOfferPackage>
+            <SalesOfferPackage id="cdla:Period_pass-SOP@student@smartcard" modification="new" version="any" status="active">
+              <Name>student 15 Weekly Card - Smartcard only</Name>
+              <validityParameterAssignments modificationSet="all">
+                <GenericParameterAssignment id="cdla:Period_pass-SOP@student@smartcard" modification="new" version="any" status="active" order="1">
+                  <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:eligible"/>
+                  <LimitationGroupingType>XOR</LimitationGroupingType>
+                  <TimeIntervalRef version="1.0" ref="cdla:15week"/>
+                </GenericParameterAssignment>
+              </validityParameterAssignments>
+              <distributionAssignments modificationSet="all">
+                <DistributionAssignment id="cdla:Period_pass-SOP@student@smartcard@online" modification="new" version="1.0" status="active" order="1">
+                  <DistributionChannelRef version="1.0" ref="cdla:online"/>
+                  <FulfilmentMethodRef version="1.0" ref="cdla:post"/>
+                </DistributionAssignment>
+                <DistributionAssignment id="cdla:Period_pass-SOP@student@smartcard@at_counter" modification="new" version="1.0" status="active" order="1">
+                  <DistributionChannelRef version="1.0" ref="cdla:at_counter"/>
+                  <FulfilmentMethodRef version="1.0" ref="cdla:collect"/>
+                </DistributionAssignment>
+              </distributionAssignments>
+              <salesOfferPackageElements modificationSet="all">
+                <SalesOfferPackageElement id="cdla:Period_pass-SOP@studen@smartcard" modification="new" version="1.0" status="active" order="1">
+                  <TypeOfTravelDocumentRef version="any" ref="cdla:card"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
+                </SalesOfferPackageElement>
+              </salesOfferPackageElements>
+            </SalesOfferPackage>
+          </salesOfferPackages>
+        </FareFrame>
+        <FareFrame id="cdla:CDLA@Multiple_packages@prices" modification="new" version="1.0" status="active">
+          <FrameDefaults>
+            <DefaultCurrency>GBP</DefaultCurrency>
+          </FrameDefaults>
+          <prerequisites modificationSet="all">
+            <FareFrameRef version="1.0" ref="cdla:CDLA@Multiple_packages@products@standard"/>
+            <FareFrameRef version="1.0" ref="cdla:CDLA@Multiple_packages@products@family"/>
+            <FareFrameRef version="1.0" ref="cdla:CDLA@Multiple_packages@products@student"/>
+          </prerequisites>
+          <PricingParameterSet id="cdla:Multiple_packages:pp" modification="new" version="1.0" status="active">
+            <pricingRules>
+              <DiscountingRule id="cdla:£0-Off" modification="new" version="any" status="active">
+                <DiscountAsValue>0</DiscountAsValue>
+              </DiscountingRule>
+              <DiscountingRule id="cdla:£80-Off" modification="new" version="any" status="active">
+                <DiscountAsValue>80</DiscountAsValue>
+              </DiscountingRule>
+              <DiscountingRule id="cdla:£115-Off" modification="new" version="any" status="active">
+                <DiscountAsValue>115</DiscountAsValue>
+              </DiscountingRule>
+              <DiscountingRule id="cdla:£135-Off" modification="new" version="any" status="active">
+                <DiscountAsValue>135</DiscountAsValue>
+              </DiscountingRule>
+            </pricingRules>
+          </PricingParameterSet>
+          <fareTables>
+            <FareTable id="cdla:PriceGroup:zonal@Midlands" modification="new" version="any" status="active">
+              <Name>Prices for Zonal Fare Product  </Name>
+              <cells>
+                <Cell id="cdla:Midlands@adult@day" modification="new" version="any" status="active" order="1">
+                  <CellPrice modification="new" status="active">
+                    <Name>Midlands Adult full fare day</Name>
+                    <Amount>5.20</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:1day"/>
+                  <TariffZoneRef version="any" ref="cdla:Midlands"/>
+                </Cell>
+                <Cell id="cdla:Midlands@family@day" modification="new" version="any" status="active" order="2">
+                  <CellPrice modification="new" status="active">
+                    <Name>Midlands Adult full fare day</Name>
+                    <Amount>8.00</Amount>
+                  </CellPrice>
+                  <GroupTicketRef version="any" ref="cdla:family"/>
+                  <FareProductRef version="1.0" ref="cdla:Day_pass@family"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:1day"/>
+                  <TariffZoneRef version="any" ref="cdla:Midlands"/>
+                </Cell>
+                <Cell id="cdla:Midlands@adult@weekly" modification="new" version="any" status="active" order="3">
+                  <CellPrice modification="new" status="active">
+                    <Name>Midlands Adult full fare weekly</Name>
+                    <Amount>21</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:1week"/>
+                  <TariffZoneRef version="any" ref="cdla:Midlands"/>
+                </Cell>
+                <Cell id="cdla:Midlands@adult@4weekly" modification="new" version="any" status="active" order="4">
+                  <CellPrice modification="new" status="active">
+                    <Name>Midlands Adult full fare 4 weekly</Name>
+                    <Amount>45</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:4week"/>
+                  <TariffZoneRef version="any" ref="cdla:Midlands"/>
+                </Cell>
+                <Cell id="cdla:Midlands@adult@annual" modification="new" version="any" status="active" order="5">
+                  <CellPrice modification="new" status="active">
+                    <Name>Midlands Adult full fare Annual</Name>
+                    <Amount>45</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:1year"/>
+                  <TariffZoneRef version="any" ref="cdla:Midlands"/>
+                </Cell>
+                <Cell id="cdla:Midlands@student@term_autumn" modification="new" version="any" status="active" order="6">
+                  <CellPrice modification="new" status="active">
+                    <Name>Midlands Student fare price Autumn Terml </Name>
+                    <StartDate>2011-08-22</StartDate>
+                    <EndDate>2012-07-31</EndDate>
+                    <Amount>140</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:student"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:academic_term@autumn"/>
+                  <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@promo@103.5"/>
+                  <TariffZoneRef version="any" ref="cdla:Midlands"/>
+                </Cell>
+                <Cell id="cdla:Midlands@student@term_spring" modification="new" version="any" status="active" order="7">
+                  <CellPrice modification="new" status="active">
+                    <Name>Midlands Student fare price Spring Term</Name>
+                    <StartDate>2012-01-02</StartDate>
+                    <EndDate>2012-03-30</EndDate>
+                    <Amount>140</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:student"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:academic_term@spring"/>
+                  <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@promo@103.5"/>
+                  <TariffZoneRef version="any" ref="cdla:Midlands"/>
+                </Cell>
+                <Cell id="cdla:Midlands@student@term_summer" modification="new" version="any" status="active" order="8">
+                  <CellPrice modification="new" status="active">
+                    <Name>Midlands Student fare price Summer</Name>
+                    <StartDate>2012-04-16</StartDate>
+                    <EndDate>2012-07-31</EndDate>
+                    <Amount>140</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:student"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:academic_term@summer"/>
+                  <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@promo@103.5"/>
+                  <TariffZoneRef version="any" ref="cdla:Midlands"/>
+                </Cell>
+                <Cell id="cdla:Midlands@student@academic_year" modification="new" version="any" status="active" order="9">
+                  <CellPrice modification="new" status="active">
+                    <Name>Midlands Student fare price Annual</Name>
+                    <StartDate>2011-09-01</StartDate>
+                    <EndDate>2012-07-31</EndDate>
+                    <Amount>400</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:student"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:academic_year"/>
+                  <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@promo@360"/>
+                  <TariffZoneRef version="any" ref="cdla:Midlands"/>
+                </Cell>
+                <Cell id="cdla:Burton_And_Swadlincote@adult@day" modification="new" version="any" status="active" order="1">
+                  <CellPrice modification="new" status="active">
+                    <Name>Burton and Swadlincote Adult full fare weekly</Name>
+                    <Amount>3.6</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:1day"/>
+                  <TariffZoneRef version="any" ref="cdla:Burton_And_Swadlincote"/>
+                </Cell>
+                <Cell id="cdla:Burton_And_Swadlincote@adult@weekly" modification="new" version="any" status="active" order="2">
+                  <CellPrice modification="new" status="active">
+                    <Name>Burton and Swadlincote Adult full fare weekly</Name>
+                    <Amount>15</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:1week"/>
+                  <TariffZoneRef version="any" ref="cdla:Burton_And_Swadlincote"/>
+                </Cell>
+                <Cell id="cdla:Burton_And_Swadlincote@adult@4weekly" modification="new" version="any" status="active" order="3">
+                  <CellPrice modification="new" status="active">
+                    <Name>Burton and Swadlincote Adult full fare 4 weekly</Name>
+                    <Amount>45</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:4week"/>
+                  <TariffZoneRef version="any" ref="cdla:Burton_And_Swadlincote"/>
+                </Cell>
+                <Cell id="cdla:Burton_And_Swadlincote@adult@annual" modification="new" version="any" status="active" order="4">
+                  <CellPrice modification="new" status="active">
+                    <Name>Burton and Swadlincote Adult full fare</Name>
+                    <Amount>490</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:1year"/>
+                  <TariffZoneRef version="any" ref="cdla:Burton_And_Swadlincote"/>
+                </Cell>
+                <Cell id="cdla:Cannock@adult@day" modification="new" version="any" status="active" order="1">
+                  <CellPrice modification="new" status="active">
+                    <Name>Cannock Adult full fare day</Name>
+                    <Amount>3.80</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:1day"/>
+                  <TariffZoneRef version="any" ref="cdla:Cannock"/>
+                </Cell>
+                <Cell id="cdla:Cannock@adult@weekly" modification="new" version="any" status="active" order="2">
+                  <CellPrice modification="new" status="active">
+                    <Name>Cannock Adult full fare weekly</Name>
+                    <Amount>15</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:1week"/>
+                  <TariffZoneRef version="any" ref="cdla:Cannock"/>
+                </Cell>
+                <Cell id="cdla:Cannock@adult@4weekly" modification="new" version="any" status="active" order="3">
+                  <CellPrice modification="new" status="active">
+                    <Name>Cannock Adult full fare 4 weekly</Name>
+                    <Amount>45</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:4week"/>
+                  <TariffZoneRef version="any" ref="cdla:Cannock"/>
+                </Cell>
+                <Cell id="cdla:Cannock@adult@annual" modification="new" version="any" status="active" order="4">
+                  <CellPrice modification="new" status="active">
+                    <Name>Cannock Adult full fare Annual</Name>
+                    <Amount>45</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:1year"/>
+                  <TariffZoneRef version="any" ref="cdla:Cannock"/>
+                </Cell>
+                <Cell id="cdla:Leicester_City_Plus@adult@day" modification="new" version="any" status="active" order="1">
+                  <CellPrice modification="new" status="active">
+                    <Name>Leicester_City_Plus Adult full fare day</Name>
+                    <Amount>3.60</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:1day"/>
+                  <TariffZoneRef version="any" ref="cdla:Leicester_City_Plus"/>
+                </Cell>
+                <Cell id="cdla:Leicester_City_Plus@adult@weekly" modification="new" version="any" status="active" order="2">
+                  <CellPrice modification="new" status="active">
+                    <Name>Leicester_City_Plus Adult full fare weekly</Name>
+                    <Amount>15</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:1week"/>
+                  <TariffZoneRef version="any" ref="cdla:Leicester_City_Plus"/>
+                </Cell>
+                <Cell id="cdla:Leicester_City_Plus@adult@4weekly" modification="new" version="any" status="active" order="3">
+                  <CellPrice modification="new" status="active">
+                    <Name>Leicester_City_Plus Adult full fare 4 weekly</Name>
+                    <Amount>45</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:4week"/>
+                  <TariffZoneRef version="any" ref="cdla:Leicester_City_Plus"/>
+                </Cell>
+                <Cell id="cdla:Leicester_City_Plus@adult@annual" modification="new" version="any" status="active" order="4">
+                  <CellPrice modification="new" status="active">
+                    <Name>Leicester_City_Plus Adult full fare Annual</Name>
+                    <Amount>45</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:1year"/>
+                  <TariffZoneRef version="any" ref="cdla:Leicester_City_Plus"/>
+                </Cell>
+                <Cell id="cdla:Leicester_City_Plus@student@academic_year" modification="new" version="any" status="active" order="5">
+                  <CellPrice modification="new" status="active">
+                    <Name>Leicester_City_Plus Student fare Annual</Name>
+                    <StartDate>2011-08-22</StartDate>
+                    <EndDate>2012-07-31</EndDate>
+                    <Amount>320</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:student"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:academic_year"/>
+                  <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@promo@288"/>
+                  <TariffZoneRef version="any" ref="cdla:Leicester_City_Plus"/>
+                </Cell>
+                <Cell id="cdla:Leicester_City_Plus@student@academic_year@Promo" modification="new" version="any" status="active" order="6">
+                  <CellPrice modification="new" status="active">
+                    <Name>Leicester_City_Plus Student fare Annual - Promotional Price</Name>
+                    <StartDate>2011-08-22</StartDate>
+                    <EndDate>2012-07-31</EndDate>
+                    <Amount>320</Amount>
+                    <DiscountingRule id="cdla:Leicester_City_Plus@student@academic_year@Promo" modification="new" version="any" status="active">
+                      <DiscountAsValue>288</DiscountAsValue>
+                    </DiscountingRule>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:student"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:academic_year"/>
+                  <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@promo@288"/>
+                  <TariffZoneRef version="any" ref="cdla:Leicester_City_Plus"/>
+                </Cell>
+                <Cell id="cdla:Stafford@adult@day" modification="new" version="any" status="active" order="1">
+                  <CellPrice modification="new" status="active">
+                    <Name>Stafford Adult full fare day</Name>
+                    <Amount>3.80</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:1day"/>
+                  <TariffZoneRef version="any" ref="cdla:Stafford"/>
+                </Cell>
+                <Cell id="cdla:Stafford@adult@weekly" modification="new" version="any" status="active" order="2">
+                  <CellPrice modification="new" status="active">
+                    <Name>Stafford Adult full fare weekly</Name>
+                    <Amount>15</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:1week"/>
+                  <TariffZoneRef version="any" ref="cdla:Stafford"/>
+                </Cell>
+                <Cell id="cdla:Stafford@adult@4weekly" modification="new" version="any" status="active" order="3">
+                  <CellPrice modification="new" status="active">
+                    <Name>Stafford Adult full fare 4 weekly</Name>
+                    <Amount>45</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:4week"/>
+                  <TariffZoneRef version="any" ref="cdla:Stafford"/>
+                </Cell>
+                <Cell id="cdla:Stafford@adult@annual" modification="new" version="any" status="active" order="4">
+                  <CellPrice modification="new" status="active">
+                    <Name>Stafford Adult full fare Annual</Name>
+                    <Amount>45</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:1year"/>
+                  <TariffZoneRef version="any" ref="cdla:Stafford"/>
+                </Cell>
+                <Cell id="cdla:Stafford@student@term_autumn" modification="new" version="any" status="active" order="5">
+                  <CellPrice modification="new" status="active">
+                    <Name>Stafford Student fare price Autumn Term  </Name>
+                    <StartDate>2011-08-22</StartDate>
+                    <EndDate>2012-07-31</EndDate>
+                    <Amount>115</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:student"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:academic_term@autumn"/>
+                  <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@promo@103.5"/>
+                  <TariffZoneRef version="any" ref="cdla:Stafford"/>
+                </Cell>
+                <Cell id="cdla:Stafford@student@term_spring" modification="new" version="any" status="active" order="6">
+                  <CellPrice modification="new" status="active">
+                    <Name>Stafford Student fare price Spring Term</Name>
+                    <StartDate>2012-01-02</StartDate>
+                    <EndDate>2012-03-30</EndDate>
+                    <Amount>115</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:student"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:academic_term@spring"/>
+                  <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@promo@103.5"/>
+                  <TariffZoneRef version="any" ref="cdla:Stafford"/>
+                </Cell>
+                <Cell id="cdla:Stafford@student@term_summer" modification="new" version="any" status="active" order="7">
+                  <CellPrice modification="new" status="active">
+                    <Name>Stafford Student fare price Summer</Name>
+                    <StartDate>2012-04-16</StartDate>
+                    <EndDate>2012-07-31</EndDate>
+                    <Amount>115</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:student"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:academic_term@summer"/>
+                  <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@promo@103.5"/>
+                  <TariffZoneRef version="any" ref="cdla:Stafford"/>
+                </Cell>
+              </cells>
+            </FareTable>
+            <FareTable id="cdla:PriceGroup:zonal@North_East" modification="new" version="any" status="active">
+              <Name>Prices for Zonal Fare Products North East  </Name>
+              <cells>
+                <Cell id="cdla:North_East_Area@adult@day" modification="new" version="any" status="active" order="1">
+                  <CellPrice modification="new" status="active">
+                    <Name>North East All zones Triple adult   fare Day</Name>
+                    <Amount>6.00</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:1day"/>
+                  <TariffZoneRef version="any" ref="cdla:North_East_Area"/>
+                </Cell>
+                <Cell id="cdla:North_East_Area@adult@weekly" modification="new" version="any" status="active" order="2">
+                  <CellPrice modification="new" status="active">
+                    <Name>North East All zones Triple adult   fare Weekly</Name>
+                    <Amount>20.70</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:1week"/>
+                  <TariffZoneRef version="any" ref="cdla:North_East_Area"/>
+                </Cell>
+                <Cell id="cdla:North_East@adult@day" modification="new" version="any" status="active" order="1">
+                  <CellPrice modification="new" status="active">
+                    <Name>North East Adult full fare weekly</Name>
+                    <Amount>6.5</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:1day"/>
+                  <TariffZoneRef version="any" ref="cdla:North_East"/>
+                </Cell>
+                <Cell id="cdla:North_East@family@day" modification="new" version="any" status="active" order="2">
+                  <CellPrice modification="new" status="active">
+                    <Name>North East Adult full fare weekly</Name>
+                    <Amount>12</Amount>
+                  </CellPrice>
+                  <GroupTicketRef version="any" ref="cdla:family"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:1day"/>
+                  <TariffZoneRef version="any" ref="cdla:North_East"/>
+                </Cell>
+                <Cell id="cdla:North_East@adult@weekly" modification="new" version="any" status="active" order="3">
+                  <CellPrice modification="new" status="active">
+                    <Name>North East Adult full fare weekly</Name>
+                    <Amount>21.6</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:1week"/>
+                  <TariffZoneRef version="any" ref="cdla:North_East"/>
+                </Cell>
+                <Cell id="cdla:North_East@adult@4weekly" modification="new" version="any" status="active" order="4">
+                  <CellPrice modification="new" status="active">
+                    <Name>North East Adult full fare 4 weekly</Name>
+                    <Amount>82.8</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:4week"/>
+                  <TariffZoneRef version="any" ref="cdla:North_East"/>
+                </Cell>
+                <Cell id="cdla:North_East@adult@annual" modification="new" version="any" status="active" order="5">
+                  <CellPrice modification="new" status="active">
+                    <Name>North East Adult full fare Annual</Name>
+                    <Amount>900</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:1year"/>
+                  <TariffZoneRef version="any" ref="cdla:North_East"/>
+                </Cell>
+                <Cell id="cdla:North_East@student@15Week@unfunded" modification="new" version="any" status="active" order="6">
+                  <CellPrice modification="new" status="active">
+                    <Name>North East    student   fare 15Week unfunded</Name>
+                    <StartDate>2011-08-08</StartDate>
+                    <Amount>250</Amount>
+                    <DiscountingRuleRef version="any" ref="cdla:£0-Off"/>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:student"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:15week"/>
+                  <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@promo@225"/>
+                  <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@unfunded"/>
+                  <TariffZoneRef version="any" ref="cdla:North_East"/>
+                </Cell>
+                <Cell id="cdla:North_East@student@15Week@funded_80" modification="new" version="any" status="active" order="7">
+                  <CellPrice modification="new" status="active">
+                    <Name>North East    student   fare 15Week unfunded</Name>
+                    <StartDate>2011-08-08</StartDate>
+                    <Amount>170</Amount>
+                    <DiscountingRuleRef version="any" ref="cdla:£80-Off"/>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:student"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:15week"/>
+                  <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@funded@80"/>
+                  <TariffZoneRef version="any" ref="cdla:North_East"/>
+                </Cell>
+                <Cell id="cdla:North_East@student@15Week@funded_115" modification="new" version="any" status="active" order="8">
+                  <CellPrice modification="new" status="active">
+                    <Name>North East    student   fare 15Week unfunded</Name>
+                    <StartDate>2011-08-08</StartDate>
+                    <Amount>135</Amount>
+                    <DiscountingRuleRef version="any" ref="cdla:£115-Off"/>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:student"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:15week"/>
+                  <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@funded@115"/>
+                  <TariffZoneRef version="any" ref="cdla:North_East"/>
+                </Cell>
+                <Cell id="cdla:North_East@student@15Week@funded_135" modification="new" version="any" status="active" order="9">
+                  <CellPrice modification="new" status="active">
+                    <Name>North East    student   fare 15Week unfunded</Name>
+                    <StartDate>2011-08-08</StartDate>
+                    <Amount>115</Amount>
+                    <DiscountingRuleRef version="any" ref="cdla:£115-Off"/>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:student"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:15week"/>
+                  <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@funded@135"/>
+                  <TariffZoneRef version="any" ref="cdla:North_East"/>
+                </Cell>
+                <Cell id="cdla:North_East@student@15Week@NCupgrade" modification="new" version="any" status="active" order="10">
+                  <CellPrice modification="new" status="active">
+                    <Name>North East    student   fare 15Week unfunded</Name>
+                    <StartDate>2011-08-08</StartDate>
+                    <Amount>50</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:student"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:15week"/>
+                  <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@unfunded"/>
+                  <TariffZoneRef version="any" ref="cdla:North_East"/>
+                </Cell>
+                <Cell id="cdla:North_East@student@academic_year" modification="new" version="any" status="active" order="11">
+                  <CellPrice modification="new" status="active">
+                    <Name>North East Student fare price Annual</Name>
+                    <StartDate>2011-09-05</StartDate>
+                    <EndDate>2012-07-27</EndDate>
+                    <Amount>720</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:student"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:academic_year"/>
+                  <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@promo@648"/>
+                  <TariffZoneRef version="any" ref="cdla:North_East"/>
+                </Cell>
+                <Cell id="cdla:Ashington_Triple@adult@day" modification="new" version="any" status="active" order="1">
+                  <CellPrice modification="new" status="active">
+                    <Name>Ashington Triple  adult   fare Day</Name>
+                    <Amount>3.80</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:1day"/>
+                  <TariffZoneRef version="any" ref="cdla:Ashington_Triple"/>
+                </Cell>
+                <Cell id="cdla:Ashington_Triple@adult@weekly" modification="new" version="any" status="active" order="2">
+                  <CellPrice modification="new" status="active">
+                    <Name>Ashington Triple  adult   fare Weekly</Name>
+                    <Amount>15.5</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:1week"/>
+                  <TariffZoneRef version="any" ref="cdla:Ashington_Triple"/>
+                </Cell>
+                <Cell id="cdla:Bishop_Auckland@adult@day" modification="new" version="any" status="active" order="1">
+                  <CellPrice modification="new" status="active">
+                    <Name>Bishop Auckland Adult full fare day</Name>
+                    <Amount>3.80</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:1day"/>
+                  <TariffZoneRef version="any" ref="cdla:Bishop_Auckland"/>
+                </Cell>
+                <Cell id="cdla:Bishop_Auckland@adult@weekly" modification="new" version="any" status="active" order="2">
+                  <CellPrice modification="new" status="active">
+                    <Name>Bishop Auckland Adult full fare weekly</Name>
+                    <Amount>15</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:1week"/>
+                  <TariffZoneRef version="any" ref="cdla:Bishop_Auckland"/>
+                </Cell>
+                <Cell id="cdla:Bishop_Auckland@adult@4weekly" modification="new" version="any" status="active" order="3">
+                  <CellPrice modification="new" status="active">
+                    <Name>Bishop Auckland Adult full fare 4 weekly</Name>
+                    <Amount>55.8</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:4week"/>
+                  <TariffZoneRef version="any" ref="cdla:Bishop_Auckland"/>
+                </Cell>
+                <Cell id="cdla:Bishop_Auckland@adult@annual" modification="new" version="any" status="active" order="4">
+                  <CellPrice modification="new" status="active">
+                    <Name>Bishop Auckland Adult full fare Annual</Name>
+                    <Amount>500</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:1year"/>
+                  <TariffZoneRef version="any" ref="cdla:Bishop_Auckland"/>
+                </Cell>
+                <Cell id="cdla:Blyth_Triple@adult@day" modification="new" version="any" status="active" order="5">
+                  <CellPrice modification="new" status="active">
+                    <Name>Blyth Triple  adult   fare Day</Name>
+                    <Amount>3.80</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:1day"/>
+                  <TariffZoneRef version="any" ref="cdla:Blyth_Triple"/>
+                </Cell>
+                <Cell id="cdla:Blyth_Triple@adult@weekly" modification="new" version="any" status="active" order="6">
+                  <CellPrice modification="new" status="active">
+                    <Name>Blyth Triple  adult   fare Weekly</Name>
+                    <Amount>15.5</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:1week"/>
+                  <TariffZoneRef version="any" ref="cdla:Blyth_Triple"/>
+                </Cell>
+                <Cell id="cdla:Blyth_plus_Ashington_Triple@adult@day" modification="new" version="any" status="active" order="7">
+                  <CellPrice modification="new" status="active">
+                    <Name>Blyth plus Ashington Triple  adult   fare Day</Name>
+                    <Amount>5</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:1day"/>
+                  <TariffZoneRef version="any" ref="cdla:Blyth_plus_Ashington_Triple"/>
+                </Cell>
+                <Cell id="cdla:Blyth_plus_Ashington_Triple@adult@weekly" modification="new" version="any" status="active" order="8">
+                  <CellPrice modification="new" status="active">
+                    <Name>Blyth plus Ashington Triple  adult   fare Weekly</Name>
+                    <Amount>20.0</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:1week"/>
+                  <TariffZoneRef version="any" ref="cdla:Blyth_plus_Ashington_Triple"/>
+                </Cell>
+                <Cell id="cdla:County_Durham@student@15Week@unfunded" modification="new" version="any" status="active" order="1">
+                  <CellPrice modification="new" status="active">
+                    <Name>County Durham    student   fare 15Week unfunded</Name>
+                    <StartDate>2011-08-08</StartDate>
+                    <Amount>220</Amount>
+                    <DiscountingRuleRef version="any" ref="cdla:£0-Off"/>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:student"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:15week"/>
+                  <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@unfunded"/>
+                  <TariffZoneRef version="any" ref="cdla:County_Durham"/>
+                </Cell>
+                <Cell id="cdla:County_Durham@student@15Week@funded_80" modification="new" version="any" status="active" order="2">
+                  <CellPrice modification="new" status="active">
+                    <Name>County Durham    student   fare 15Week unfunded</Name>
+                    <StartDate>2011-08-08</StartDate>
+                    <Amount>140</Amount>
+                    <DiscountingRuleRef version="any" ref="cdla:£80-Off"/>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:student"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:15week"/>
+                  <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@funded@80"/>
+                  <TariffZoneRef version="any" ref="cdla:County_Durham"/>
+                </Cell>
+                <Cell id="cdla:County_Durham@student@15Week@funded_115" modification="new" version="any" status="active" order="3">
+                  <CellPrice modification="new" status="active">
+                    <Name>County Durham    student   fare 15Week unfunded</Name>
+                    <StartDate>2011-08-08</StartDate>
+                    <Amount>105</Amount>
+                    <DiscountingRuleRef version="any" ref="cdla:£115-Off"/>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:student"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:15week"/>
+                  <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@funded@115"/>
+                  <TariffZoneRef version="any" ref="cdla:County_Durham"/>
+                </Cell>
+                <Cell id="cdla:County_Durham@student@15Week@funded_135" modification="new" version="any" status="active" order="4">
+                  <CellPrice modification="new" status="active">
+                    <Name>County Durham    student   fare 15Week unfunded</Name>
+                    <StartDate>2011-08-08</StartDate>
+                    <Amount>85</Amount>
+                    <DiscountingRuleRef version="any" ref="cdla:£135-Off"/>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:student"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:15week"/>
+                  <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@funded@135"/>
+                  <TariffZoneRef version="any" ref="cdla:County_Durham"/>
+                </Cell>
+                <Cell id="cdla:County_Durham@student@15Week@NCupgrade" modification="new" version="any" status="active" order="5">
+                  <CellPrice modification="new" status="active">
+                    <Name>County Durham    student   fare 15Week unfunded</Name>
+                    <StartDate>2011-08-08</StartDate>
+                    <Amount>35</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:student"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:15week"/>
+                  <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@unfunded"/>
+                  <TariffZoneRef version="any" ref="cdla:County_Durham"/>
+                </Cell>
+                <Cell id="cdla:County_Durham@student@academic_year" modification="new" version="any" status="active" order="6">
+                  <CellPrice modification="new" status="active">
+                    <Name>County Durham    student   fare 15Week unfunded</Name>
+                    <StartDate>2011-09-05</StartDate>
+                    <EndDate>2012-07-27</EndDate>
+                    <Amount>640</Amount>
+                  </CellPrice>
+                  <UserProfileRef version="any" ref="cdla:student"/>
+                  <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
+                  <TimeIntervalRef version="1.0" ref="cdla:academic_year"/>
+                  <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@promo@576"/>
+                  <TariffZoneRef version="any" ref="cdla:County_Durham"/>
+                </Cell>
+              </cells>
+            </FareTable>
+          </fareTables>
+        </FareFrame>
+        <ServiceFrame id="cdla:CDLA@Multiple_packages@network" modification="new" version="1.0" status="active">
+          <Name>Farezones  for 2012 fares </Name>
+          <prerequisites modificationSet="all">
+            <ResourceFrameRef version="1.0" ref="cdla:CDLA@Common_resources"/>
+          </prerequisites>
+          <Network id="cdla:Northern_England" modification="new" version="1.0" status="active">
+            <OperatorRef version="any" ref="mybus:CDLA"/>
+            <tariffZones modificationSet="all">
+              <TariffZoneRef version="any" ref="cdla:Midlands_Area"/>
+              <TariffZoneRef version="any" ref="cdla:North_East_Area"/>
+            </tariffZones>
+          </Network>
+          <tariffZones modificationSet="all">
+            <FareZone id="cdla:Midlands_Area" modification="new" version="any" status="active">
+              <Name>Midlands Area</Name>
+              <contains modificationSet="all">
+                <TariffZoneRef version="any" ref="cdla:Burton_And_Swadlincote"/>
+                <TariffZoneRef version="any" ref="cdla:Cannock"/>
+                <TariffZoneRef version="any" ref="cdla:Coalville"/>
+                <TariffZoneRef version="any" ref="cdla:Derby"/>
+                <TariffZoneRef version="any" ref="cdla:Leicester_City_Plus"/>
+                <TariffZoneRef version="any" ref="cdla:Midlands"/>
+                <TariffZoneRef version="any" ref="cdla:Shrewsbury"/>
+                <TariffZoneRef version="any" ref="cdla:Stafford"/>
+                <TariffZoneRef version="any" ref="cdla:Sutton_And_Birmingham"/>
+                <TariffZoneRef version="any" ref="cdla:Tamworth"/>
+                <TariffZoneRef version="any" ref="cdla:Telford"/>
+              </contains>
+            </FareZone>
+            <FareZone id="cdla:Burton_And_Swadlincote" modification="new" version="any" status="active">
+              <Name>Burton &amp; Swadlincote</Name>
+              <ParentZoneRef version="any" ref="cdla:Midlands_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Cannock" modification="new" version="any" status="active">
+              <Name>Cannock</Name>
+              <ParentZoneRef version="any" ref="cdla:Midlands_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Coalville" modification="new" version="any" status="active">
+              <Name>Coalville</Name>
+              <ParentZoneRef version="any" ref="cdla:Midlands_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Derby" modification="new" version="any" status="active">
+              <Name>Derby</Name>
+              <ParentZoneRef version="any" ref="cdla:Midlands_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Leicester_City_Plus" modification="new" version="any" status="active">
+              <Name>Leicester City Plus</Name>
+              <ParentZoneRef version="any" ref="cdla:Midlands_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Midlands" modification="new" version="any" status="active">
+              <Name>Midlands</Name>
+              <ParentZoneRef version="any" ref="cdla:Midlands_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Shrewsbury" modification="new" version="any" status="active">
+              <Name>Shrewsbury</Name>
+              <ParentZoneRef version="any" ref="cdla:Midlands_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Stafford" modification="new" version="any" status="active">
+              <Name>Stafford</Name>
+              <ParentZoneRef version="any" ref="cdla:Midlands_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Sutton_And_Birmingham" modification="new" version="any" status="active">
+              <Name>Sutton &amp; Birmingham</Name>
+              <ParentZoneRef version="any" ref="cdla:Midlands_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Tamworth" modification="new" version="any" status="active">
+              <Name>Tamworth</Name>
+              <ParentZoneRef version="any" ref="cdla:Midlands_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Telford" modification="new" version="any" status="active">
+              <Name>Telford</Name>
+              <ParentZoneRef version="any" ref="cdla:Midlands_Area"/>
+            </FareZone>
+            <FareZone id="cdla:North_East_Area" modification="new" version="any" status="active">
+              <Name>North East Area</Name>
+              <contains modificationSet="all">
+                <TariffZoneRef version="any" ref="cdla:North_East_Area"/>
+                <TariffZoneRef version="any" ref="cdla:North_East"/>
+                <TariffZoneRef version="any" ref="cdla:Ashington_Triple"/>
+                <TariffZoneRef version="any" ref="cdla:Bishop_Auckland"/>
+                <TariffZoneRef version="any" ref="cdla:Blyth_Triple"/>
+                <TariffZoneRef version="any" ref="cdla:Blyth_plus_Ashington_Triple"/>
+                <TariffZoneRef version="any" ref="cdla:Blyth_plus_Morpeth_Triple"/>
+                <TariffZoneRef version="any" ref="cdla:Blyth_plus_TandW_Triple"/>
+                <TariffZoneRef version="any" ref="cdla:Brandon"/>
+                <TariffZoneRef version="any" ref="cdla:County_Durham"/>
+                <TariffZoneRef version="any" ref="cdla:Cramlington"/>
+              </contains>
+            </FareZone>
+            <FareZone id="cdla:North_East" modification="new" version="any" status="active">
+              <Name>North East Zone</Name>
+              <ParentZoneRef version="any" ref="cdla:North_East_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Ashington_Triple" modification="new" version="any" status="active">
+              <Name>Ashington Triple</Name>
+              <ParentZoneRef version="any" ref="cdla:North_East_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Bishop_Auckland" modification="new" version="any" status="active">
+              <Name>Bishop Auckland</Name>
+              <ParentZoneRef version="any" ref="cdla:North_East_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Blyth_Triple" modification="new" version="any" status="active">
+              <Name>Blyth Triple</Name>
+              <ParentZoneRef version="any" ref="cdla:North_East_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Blyth_plus_Ashington_Triple" modification="new" version="any" status="active">
+              <Name>Blyth plus Ashington Triple</Name>
+              <ParentZoneRef version="any" ref="cdla:North_East_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Blyth_plus_Morpeth_Triple" modification="new" version="any" status="active">
+              <Name>Blyth plus Morpeth Triple</Name>
+              <ParentZoneRef version="any" ref="cdla:North_East_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Blyth_plus_TandW_Triple" modification="new" version="any" status="active">
+              <Name>Blyth plus T &amp; W Triple</Name>
+              <ParentZoneRef version="any" ref="cdla:North_East_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Brandon" modification="new" version="any" status="active">
+              <Name>Brandon</Name>
+              <ParentZoneRef version="any" ref="cdla:North_East_Area"/>
+            </FareZone>
+            <FareZone id="cdla:County_Durham" modification="new" version="any" status="active">
+              <Name>County Durham</Name>
+              <ParentZoneRef version="any" ref="cdla:North_East_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Cramlington" modification="new" version="any" status="active">
+              <Name>Cramlington</Name>
+              <ParentZoneRef version="any" ref="cdla:North_East_Area"/>
+            </FareZone>
+          </tariffZones>
+        </ServiceFrame>
+        <ResourceFrame id="cdla:CDLA@Common_resources" modification="new" version="1.0" status="active">
+          <codespaces modificationSet="all">
+            <Codespace id="ntx">
+              <Xmlns>ntx</Xmlns>
+              <XmlnsUrl>http://netex.org.uk/</XmlnsUrl>
+              <Description>Netex built in value</Description>
+            </Codespace>
+          </codespaces>
+          <typesOfValue modificationSet="all">
+            <ValueSet id="cdla:Types_of_Concession" modification="new" version="any" status="active" classOfValues="TypeOfConcession">
+              <Name>Types of concession</Name>
+              <values>
+                <TypeOfConcession id="cdla:adult" modification="new" version="any" status="active">
+                  <Name>Adult</Name>
+                </TypeOfConcession>
+                <TypeOfConcession id="cdla:child" modification="new" version="any" status="active">
+                  <Name>Child</Name>
+                </TypeOfConcession>
+                <TypeOfConcession id="cdla:student" modification="new" version="any" status="active">
+                  <Name>Student</Name>
+                </TypeOfConcession>
+              </values>
+            </ValueSet>
+            <ValueSet id="ntx:Types_of_Tariff" modification="new" version="ntx:v1.0" status="active" classOfValues="TypeOfTariff">
+              <Name>Types of Tariff</Name>
+              <values>
+                <TypeOfTariff id="ntx:Distance_kilometers" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                  <Name>Kilometer Distance Kilometers</Name>
+                </TypeOfTariff>
+                <TypeOfTariff id="ntx:flat" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                  <Name>Flat</Name>
+                </TypeOfTariff>
+                <TypeOfTariff id="ntx:point_to_point" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                  <Name>Point to point</Name>
+                </TypeOfTariff>
+                <TypeOfTariff id="ntx:zone_to_zone" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                  <Name>Zone to Zone</Name>
+                </TypeOfTariff>
+                <TypeOfTariff id="ntx:zonal" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                  <Name>Zonal</Name>
+                </TypeOfTariff>
+                <TypeOfTariff id="ntx:unit_distance" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                  <Name>Unit distance (count of stops, sections, zones)</Name>
+                </TypeOfTariff>
+                <TypeOfTariff id="ntx:section" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                  <Name>Section</Name>
+                </TypeOfTariff>
+                <TypeOfTariff id="ntx:banded" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                  <Name>Section</Name>
+                </TypeOfTariff>
+                <TypeOfTariff id="ntx:stored_value" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                  <Name>Stored value</Name>
+                </TypeOfTariff>
+                <TypeOfTariff id="ntx:discount" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                  <Name>Discount value</Name>
+                </TypeOfTariff>
+                <TypeOfTariff id="ntx:multitrip" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                  <Name>Multitrip carnet</Name>
+                </TypeOfTariff>
+                <TypeOfTariff id="ntx:identity_card" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                  <Name>SIdentity</Name>
+                </TypeOfTariff>
+              </values>
+            </ValueSet>
+            <ValueSet id="ntx:Types_of_FareProduct" modification="new" version="ntx:v1.0" status="active" classOfValues="TypeOfFareProduct">
+              <Name>Types of Fare Product</Name>
+              <values>
+                <TypeOfFareProduct id="ntx:trip" modification="new" version="ntx:v1.0" status="active">
+                  <Name>Trip product</Name>
+                </TypeOfFareProduct>
+                <TypeOfFareProduct id="ntx:multi_trip" modification="new" version="ntx:v1.0" status="active">
+                  <Name>Multitrip / carnet  product</Name>
+                </TypeOfFareProduct>
+                <TypeOfFareProduct id="ntx:period_pass" modification="new" version="ntx:v1.0" status="active">
+                  <Name>Peroid pass product</Name>
+                </TypeOfFareProduct>
+                <TypeOfFareProduct id="ntx:day_pass" modification="new" version="ntx:v1.0" status="active">
+                  <Name>Day pass product</Name>
+                </TypeOfFareProduct>
+                <TypeOfFareProduct id="ntx:discount_card" modification="new" version="ntx:v1.0" status="active">
+                  <Name>Discount  product</Name>
+                </TypeOfFareProduct>
+              </values>
+            </ValueSet>
+            <ValueSet id="cdla:Types_of_TravelDocument" modification="new" version="any" status="active" classOfValues="TypeOfTravelDocument">
+              <Name>Types of Travel document</Name>
+              <values>
+                <TypeOfTravelDocument id="cdla:mobile_app" modification="new" version="any" status="active">
+                  <Name>Mobile Electronic</Name>
+                </TypeOfTravelDocument>
+                <TypeOfTravelDocument id="cdla:card" modification="new" version="any" status="active">
+                  <Name>Travel Card</Name>
+                </TypeOfTravelDocument>
+              </values>
+            </ValueSet>
+            <ValueSet id="ntx:Types_of_AccessRightAssignment" modification="new" version="ntx:v1.0" status="active" classOfValues="TypeOfAccessRightAssignment">
+              <Name>Types of Access Right Assignment</Name>
+              <values>
+                <TypeOfAccessRightAssignment id="ntx:eligible" modification="new" version="ntx:v1.0" status="active">
+                  <Name>Eligible for a product or discount</Name>
+                </TypeOfAccessRightAssignment>
+                <TypeOfAccessRightAssignment id="ntx:can_access" modification="new" version="ntx:v1.0" status="active">
+                  <Name>Grants access rights to use or travel on a network</Name>
+                </TypeOfAccessRightAssignment>
+                <TypeOfAccessRightAssignment id="ntx:can_access_when" modification="new" version="ntx:v1.0" status="active">
+                  <Name>Grants access rights to use or travel within a given period</Name>
+                </TypeOfAccessRightAssignment>
+                <TypeOfAccessRightAssignment id="ntx:can_purchase_when" modification="new" version="ntx:v1.0" status="active">
+                  <Name>Specified conditiosn on when a product can be purchased</Name>
+                </TypeOfAccessRightAssignment>
+                <TypeOfAccessRightAssignment id="ntx:condition_of_use" modification="new" version="ntx:v1.0" status="active">
+                  <Name>Defines a condition or restriction on use</Name>
+                </TypeOfAccessRightAssignment>
+              </values>
+            </ValueSet>
+          </typesOfValue>
+          <organisations modificationSet="all">
+            <Operator id="mybus:CDLA" modification="new" version="any" status="active">
+              <Name>Northern area operator</Name>
+            </Operator>
+          </organisations>
+        </ResourceFrame>
+      </frames>
+    </CompositeFrame>
+  </dataObjects>
+</PublicationDelivery>
+
