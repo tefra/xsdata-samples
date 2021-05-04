@@ -1,0 +1,1250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+  <PublicationTimestamp>2001-12-17T09:30:47Z</PublicationTimestamp>
+  <ParticipantRef>SYS001</ParticipantRef>
+  <PublicationRequest version="1.0">
+    <RequestTimestamp>2001-12-17T09:30:47Z</RequestTimestamp>
+    <ParticipantRef>SYS002</ParticipantRef>
+  </PublicationRequest>
+  <PublicationRefreshInterval>PT5M0S</PublicationRefreshInterval>
+  <dataObjects>
+    <FareFrame id="mypark:FF01" modification="new" version="any" status="active">
+      <Name>Parking Tariffs</Name>
+      <FrameDefaults>
+        <DefaultCurrency>GBP</DefaultCurrency>
+      </FrameDefaults>
+      <PricingParameterSet id="mypark:FF01" modification="new" version="any" status="active">
+        <pricingRules>
+          <DiscountingRule id="mypark:Vat" modification="new" version="any" status="active">
+            <Name>VAT Tax rate</Name>
+            <TypeOfPricingRuleRef version="any" ref="mypark:vat@parking"/>
+            <DiscountAsPercentage>115</DiscountAsPercentage>
+          </DiscountingRule>
+        </pricingRules>
+      </PricingParameterSet>
+      <parkingTariffs modificationSet="all">
+        <ParkingTariff id="mypark:PP01" modification="new" version="any" status="active">
+          <Description>Tariffs for central car park</Description>
+          <ParkingStayType>midTerm</ParkingStayType>
+          <ParkingVehicleTypes>passengerCar</ParkingVehicleTypes>
+          <appliesTo modificationSet="all">
+            <ParkingRef version="any" ref="mypark:PP01"/>
+          </appliesTo>
+          <parkingChargeBands modificationSet="all">
+            <ParkingChargeBand id="mypark:PP01@15M" modification="new" version="any" status="active">
+              <ParkingVehicleType>all</ParkingVehicleType>
+              <MaximumStay>PT15M</MaximumStay>
+              <prices>
+                <ParkingPrice id="mypark:PP01@15M" modification="new" version="any" status="active">
+                  <Amount>0.25</Amount>
+                  <DiscountingRuleRef version="any" ref="mypark:Vat"/>
+                </ParkingPrice>
+              </prices>
+            </ParkingChargeBand>
+            <ParkingChargeBand id="mypark:PP01@30M" modification="new" version="any" status="active">
+              <ParkingVehicleType>all</ParkingVehicleType>
+              <MaximumStay>PT30M</MaximumStay>
+              <prices>
+                <ParkingPrice id="mypark:PP01@30M" modification="new" version="any" status="active">
+                  <Amount>1.00</Amount>
+                  <DiscountingRuleRef version="any" ref="mypark:Vat"/>
+                </ParkingPrice>
+              </prices>
+            </ParkingChargeBand>
+            <ParkingChargeBand id="mypark:PP01@1H" modification="new" version="any" status="active">
+              <ParkingVehicleType>all</ParkingVehicleType>
+              <MaximumStay>PT1H</MaximumStay>
+              <prices>
+                <ParkingPrice id="mypark:PP01@1H" modification="new" version="any" status="active">
+                  <Amount>1.00</Amount>
+                  <DiscountingRuleRef version="any" ref="mypark:Vat"/>
+                </ParkingPrice>
+              </prices>
+            </ParkingChargeBand>
+            <ParkingChargeBand id="mypark:PP01@2H" modification="new" version="any" status="active">
+              <ParkingVehicleType>all</ParkingVehicleType>
+              <MaximumStay>PT2H</MaximumStay>
+              <prices>
+                <ParkingPrice id="mypark:PP01@2H" modification="new" version="any" status="active">
+                  <Amount>2.00</Amount>
+                  <DiscountingRuleRef version="any" ref="mypark:Vat"/>
+                </ParkingPrice>
+              </prices>
+            </ParkingChargeBand>
+            <ParkingChargeBand id="mypark:PP01@4H" modification="new" version="any" status="active">
+              <ParkingVehicleType>all</ParkingVehicleType>
+              <MaximumStay>PT4H</MaximumStay>
+              <prices>
+                <ParkingPrice id="mypark:PP01@4H" modification="new" version="any" status="active">
+                  <Amount>3.00</Amount>
+                  <DiscountingRuleRef version="any" ref="mypark:Vat"/>
+                </ParkingPrice>
+              </prices>
+            </ParkingChargeBand>
+            <ParkingChargeBand id="mypark:PP01@6H" modification="new" version="any" status="active">
+              <ParkingVehicleType>all</ParkingVehicleType>
+              <MaximumStay>PT6H</MaximumStay>
+              <prices>
+                <ParkingPrice id="mypark:PP01@6H" modification="new" version="any" status="active">
+                  <Amount>4.00</Amount>
+                  <DiscountingRuleRef version="any" ref="mypark:Vat"/>
+                </ParkingPrice>
+              </prices>
+            </ParkingChargeBand>
+            <ParkingChargeBand id="mypark:PP01@12H" modification="new" version="any" status="active">
+              <ParkingVehicleType>all</ParkingVehicleType>
+              <MaximumStay>PT12H</MaximumStay>
+              <prices>
+                <ParkingPrice id="mypark:PP01@12H" modification="new" version="any" status="active">
+                  <Amount>10.00</Amount>
+                  <DiscountingRuleRef version="any" ref="mypark:Vat"/>
+                </ParkingPrice>
+              </prices>
+            </ParkingChargeBand>
+            <ParkingChargeBand id="mypark:PP01@24H" modification="new" version="any" status="active">
+              <ParkingVehicleType>all</ParkingVehicleType>
+              <MaximumStay>PT24H</MaximumStay>
+              <prices>
+                <ParkingPrice id="mypark:PP01@24H" modification="new" version="any" status="active">
+                  <Amount>18.00</Amount>
+                  <DiscountingRuleRef version="any" ref="mypark:Vat"/>
+                </ParkingPrice>
+              </prices>
+            </ParkingChargeBand>
+            <ParkingChargeBand id="mypark:PP01@48H" modification="new" version="any" status="active">
+              <ParkingVehicleType>all</ParkingVehicleType>
+              <MaximumStay>PT2H</MaximumStay>
+              <prices>
+                <ParkingPrice id="mypark:PP01@48H" modification="new" version="any" status="active">
+                  <Amount>24.00</Amount>
+                  <DiscountingRuleRef version="any" ref="mypark:Vat"/>
+                </ParkingPrice>
+              </prices>
+            </ParkingChargeBand>
+          </parkingChargeBands>
+        </ParkingTariff>
+        <ParkingTariff id="mypark:PS22@other" modification="new" version="any" status="active">
+          <Description>Tariffs for on PARK AND RIDE Parking  Working dates</Description>
+          <ParkingUserType>other</ParkingUserType>
+          <ParkingStayType>shortStay</ParkingStayType>
+          <ParkingVehicleTypes>passengerCar</ParkingVehicleTypes>
+          <appliesTo modificationSet="all">
+            <ParkingRef version="any" ref="mypark:PNR01"/>
+          </appliesTo>
+          <parkingChargeBands modificationSet="all">
+            <ParkingChargeBand id="mypark:PS22@15M_working" modification="new" version="any" status="active">
+              <Description>25P an hour</Description>
+              <ParkingVehicleType>all</ParkingVehicleType>
+              <MaximumStay>PT15M</MaximumStay>
+              <prices>
+                <ParkingPrice id="mypark:PS22@15M_working" modification="new" version="any" status="active">
+                  <Amount>0.25</Amount>
+                  <DiscountingRuleRef version="any" ref="mypark:Vat"/>
+                </ParkingPrice>
+              </prices>
+            </ParkingChargeBand>
+          </parkingChargeBands>
+        </ParkingTariff>
+        <ParkingTariff id="mypark:PS22@disabled" modification="new" version="any" status="active">
+          <Description>Tariffs for on street Parking  Disabled</Description>
+          <ParkingUserType>registeredDisabled</ParkingUserType>
+          <ParkingStayType>shortStay</ParkingStayType>
+          <ParkingVehicleTypes>passengerCar</ParkingVehicleTypes>
+          <parkingChargeBands modificationSet="all">
+            <ParkingChargeBand id="mypark:PS22@15M_other" modification="new" version="any" status="active">
+              <Description>free</Description>
+              <ParkingVehicleType>all</ParkingVehicleType>
+              <MaximumStay>PT15M</MaximumStay>
+              <prices>
+                <ParkingPrice id="mypark:PS22@15M_other" modification="new" version="any" status="active">
+                  <Amount>0.0</Amount>
+                </ParkingPrice>
+              </prices>
+            </ParkingChargeBand>
+          </parkingChargeBands>
+        </ParkingTariff>
+        <ParkingTariff id="mypark:PNR01" modification="new" version="any" status="active">
+          <Description>Tariffs for on street Parking  Disabled</Description>
+          <ParkingUserType>all</ParkingUserType>
+          <ParkingStayType>shortStay</ParkingStayType>
+          <ParkingVehicleTypes>passengerCar</ParkingVehicleTypes>
+          <parkingChargeBands modificationSet="all">
+            <ParkingChargeBand id="mypark:PNR01@60M" modification="new" version="any" status="active">
+              <Description>10p an hour </Description>
+              <ParkingVehicleType>all</ParkingVehicleType>
+              <MaximumStay>PT1H</MaximumStay>
+              <prices>
+                <ParkingPrice id="mypark:PNR01@60M" modification="new" version="any" status="active">
+                  <Amount>0.10</Amount>
+                  <DiscountingRuleRef version="any" ref="mypark:Vat"/>
+                </ParkingPrice>
+              </prices>
+            </ParkingChargeBand>
+          </parkingChargeBands>
+        </ParkingTariff>
+      </parkingTariffs>
+    </FareFrame>
+    <SiteFrame id="mypark:SF01" modification="new" version="any" status="active">
+      <validityConditions modificationSet="all">
+        <AvailabilityCondition id="mypark:PP01@Opening_Hours" modification="new" version="any" status="active">
+          <dayTypes modificationSet="all">
+            <DayTypeRef ref=""/>
+            <DayType id="mypark:EveryDay" modification="new" version="any" status="active">
+              <Name>Every day</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Everyday</DaysOfWeek>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+          </dayTypes>
+          <timebands modificationSet="all">
+            <Timeband id="mypark:PP01@Opening_Hours@range" modification="new" version="any" status="active">
+              <StartTime>06:30:00</StartTime>
+              <EndTime>12:00:00</EndTime>
+            </Timeband>
+          </timebands>
+        </AvailabilityCondition>
+        <AvailabilityCondition id="mypark:PP01@Exit_Hours" modification="new" version="any" status="active">
+          <dayTypes modificationSet="all">
+            <DayTypeRef ref=""/>
+            <DayType id="mypark:24_Hours_every_day" modification="new" version="any" status="active">
+              <Name>Every day</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Everyday</DaysOfWeek>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+          </dayTypes>
+        </AvailabilityCondition>
+      </validityConditions>
+      <codespaces modificationSet="all">
+        <Codespace id="mypark_data">
+          <Xmlns>mypark</Xmlns>
+          <XmlnsUrl>http://www.pkgdata.co.uk/data</XmlnsUrl>
+          <Description>Other interchange DATA SOURCE </Description>
+        </Codespace>
+        <Codespace id="nptgLocality_data">
+          <Xmlns>nptgLocality</Xmlns>
+          <XmlnsUrl>http://www.nptg.co.uk/data</XmlnsUrl>
+          <Description>NPTG gazetteer  DATA SOURCE </Description>
+        </Codespace>
+      </codespaces>
+      <FrameDefaults>
+        <DefaultCodespaceRef ref="mypark_data"/>
+      </FrameDefaults>
+      <topographicPlaces modificationSet="all">
+        <TopographicPlace id="nptgLocality:TP_0032A" modification="new" version="any" status="active">
+          <Name>Barcester Town</Name>
+          <Descriptor modification="new" status="active">
+            <Name>Barcester</Name>
+          </Descriptor>
+        </TopographicPlace>
+      </topographicPlaces>
+      <parkings modificationSet="all">
+        <Parking id="mypark:PP01" dataSourceRef="parkopedia" modification="new" version="any" status="active">
+          <validityConditions modificationSet="all">
+            <AvailabilityConditionRef version="any" ref="mypark:PP01@Opening_Hours"/>
+          </validityConditions>
+          <Name>Barcester  CIty centre  Car Park</Name>
+          <ShortName>CIty Car Park</ShortName>
+          <Description>Mult storey next to Sainsbury . Three storeys 220 public and 30 disabled places </Description>
+          <Centroid id="xyz" modification="new" status="active">
+            <Location id="xyz12" srsName="WGS84">
+              <Longitude>-180</Longitude>
+              <Latitude>-90</Latitude>
+            </Location>
+          </Centroid>
+          <gml:Polygon gml:id="PP01_ID_1" srsName="wgs84" srsDimension="2">
+            <gml:exterior>
+              <gml:LinearRing>
+                <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+              </gml:LinearRing>
+            </gml:exterior>
+            <gml:interior>
+              <gml:LinearRing>
+                <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+              </gml:LinearRing>
+            </gml:interior>
+          </gml:Polygon>
+          <Url>http://www.barpark.co.uk</Url>
+          <Image>http://ww.mycarpark.com/prettypicture.jpg</Image>
+          <PostalAddress id="mypark:PP01@address" modification="new" version="any" status="active">
+            <CountryRef ref="uk">String</CountryRef>
+            <HouseNumber>27</HouseNumber>
+            <Street>High Street</Street>
+            <Town>Barcester</Town>
+            <PostCode>BXC 24P</PostCode>
+          </PostalAddress>
+          <AccessibilityAssessment id="mypark:PP01" modification="new" version="any" status="active">
+            <MobilityImpairedAccess>partial</MobilityImpairedAccess>
+            <limitations>
+              <AccessibilityLimitation modification="new" status="active">
+                <WheelchairAccess>true</WheelchairAccess>
+                <StepFreeAccess>true</StepFreeAccess>
+                <EscalatorFreeAccess>true</EscalatorFreeAccess>
+                <LiftFreeAccess>true</LiftFreeAccess>
+                <AudibleSignalsAvailable>false</AudibleSignalsAvailable>
+                <VisualSignsAvailable>false</VisualSignsAvailable>
+              </AccessibilityLimitation>
+            </limitations>
+          </AccessibilityAssessment>
+          <AccessModes>foot</AccessModes>
+          <CrossRoad> High Street</CrossRoad>
+          <Landmark>Sainsbury's</Landmark>
+          <PublicUse>all</PublicUse>
+          <Covered>indoors</Covered>
+          <Gated>openArea</Gated>
+          <Lighting>wellLit</Lighting>
+          <AllAreasWheelchairAccessible>false</AllAreasWheelchairAccessible>
+          <facilities modificationSet="all">
+            <SiteFacilitySet id="mypark:PP01" modification="new" version="any" status="active">
+              <AccessibilityToolList>buggy wheelchair</AccessibilityToolList>
+              <CarServiceFacilityList>carWash</CarServiceFacilityList>
+              <SanitaryFacilityList>toilet wheelChairAccessToilet</SanitaryFacilityList>
+            </SiteFacilitySet>
+          </facilities>
+          <TopographicPlaceRef version="any" ref="nptgLocality:TP_0032A"/>
+          <SiteType>retail</SiteType>
+          <AtCentre>true</AtCentre>
+          <levels modificationSet="all">
+            <Level id="mypark:PP01@Level@01" modification="new" version="any" status="active">
+              <Name>Street Level</Name>
+            </Level>
+            <Level id="mypark:PP01@Level@02" modification="new" version="any" status="active">
+              <Name>Level 1</Name>
+            </Level>
+            <Level id="mypark:PP01@Level@03" modification="new" version="any" status="active">
+              <Name>Level 3 (Walkway to STore)</Name>
+            </Level>
+          </levels>
+          <entrances modificationSet="all">
+            <ParkingPassengerEntrance id="mypark:PP01@EP01" modification="new" version="any" status="active">
+              <validityConditions modificationSet="all">
+                <AvailabilityConditionRef version="any" ref="mypark:PP01@Exit_Hours"/>
+              </validityConditions>
+              <Name>Main Entrance from street</Name>
+              <Description lang="en">External Entrance Street level from High Street </Description>
+              <ParentZoneRef version="any" ref="mypark:PP01"/>
+              <LevelRef version="any" ref="mypark:PP01@Level@01"/>
+              <placeEquipments modificationSet="all">
+                <EntranceEquipment id="mypark:PP01@EP01@entrance" modification="new" version="any" status="active">
+                  <Door>true</Door>
+                  <KeptOpen>true</KeptOpen>
+                  <WheelchairPassable>true</WheelchairPassable>
+                </EntranceEquipment>
+                <RampEquipment id="mypark:PP01@EP01@ramp" modification="new" version="any" status="active">
+                  <DirectionOfUse>both</DirectionOfUse>
+                  <Gradient>22</Gradient>
+                  <GradientType>steep</GradientType>
+                  <VisualGuidanceBands>true</VisualGuidanceBands>
+                </RampEquipment>
+              </placeEquipments>
+              <Label>Eingang</Label>
+              <EntranceType>openDoor</EntranceType>
+              <IsExternal>true</IsExternal>
+              <IsEntry>true</IsEntry>
+              <IsExit>true</IsExit>
+              <Width>4.0</Width>
+              <Height>8.0</Height>
+            </ParkingPassengerEntrance>
+            <ParkingPassengerEntrance id="mypark:PP01@EP02" modification="new" version="any" status="active">
+              <validityConditions modificationSet="all">
+                <AvailabilityConditionRef version="any" ref="mypark:PP01@Opening_Hours"/>
+              </validityConditions>
+              <Name>Walkway  Entrance from store</Name>
+              <Description lang="en">External Entrance Walkway to store.</Description>
+              <ParentZoneRef version="any" ref="mypark:PP01"/>
+              <LevelRef version="any" ref="mypark:PP01@Level@03"/>
+              <placeEquipments modificationSet="all">
+                <EntranceEquipment id="mypark:PP01@EP02@entrance" modification="new" version="any" status="active">
+                  <Door>true</Door>
+                  <KeptOpen>false</KeptOpen>
+                  <AutomaticDoor>true</AutomaticDoor>
+                  <WheelchairPassable>true</WheelchairPassable>
+                </EntranceEquipment>
+              </placeEquipments>
+              <Label>Eingang</Label>
+              <EntranceType>automaticDoor</EntranceType>
+              <IsExternal>true</IsExternal>
+              <IsEntry>true</IsEntry>
+              <IsExit>true</IsExit>
+              <Width>3.0</Width>
+              <Height>7.0</Height>
+            </ParkingPassengerEntrance>
+            <ParkingEntranceForVehicles id="mypark:PP01@EV11@Entrance" modification="new" version="any" status="active">
+              <validityConditions modificationSet="all">
+                <AvailabilityConditionRef version="any" ref="mypark:PP01@Opening_Hours"/>
+              </validityConditions>
+              <Name>Main Vehicle Entrance from street</Name>
+              <ParentZoneRef version="any" ref="mypark:PP01"/>
+              <LevelRef version="any" ref="mypark:PP01@Level@01"/>
+              <checkConstraints modificationSet="all">
+                <CheckConstraint id="mypark:PP01@EV11@Entrance" modification="new" version="any" status="active">
+                  <Name>Access Queue</Name>
+                  <CheckDirection>forwards</CheckDirection>
+                  <CheckProcess>ingress</CheckProcess>
+                  <CheckService>selfService</CheckService>
+                  <AccessFeatureType>barrier</AccessFeatureType>
+                  <Congestion>queue</Congestion>
+                  <delays>
+                    <CheckConstraintDelay id="mypark:PP01@EV11@Entrance@peak" modification="new" version="any" status="active">
+                      <validityConditions modificationSet="all">
+                        <ValidityTriggerRef ref="mypark:Peek"/>
+                      </validityConditions>
+                      <Name>pek delay</Name>
+                      <CheckConstraintRef version="any" ref="mypark:PP01@EV11@Entrance"/>
+                      <MinimumLikelyDelay>PT5M</MinimumLikelyDelay>
+                      <AverageDelay>PT7M</AverageDelay>
+                      <MaximumLikelyDelay>PT15M</MaximumLikelyDelay>
+                    </CheckConstraintDelay>
+                    <CheckConstraintDelay id="mypark:PP01@EV11@Entrance@off_peak" modification="new" version="any" status="active">
+                      <validityConditions modificationSet="all">
+                        <ValidityTriggerRef ref="mypark:Off_peak"/>
+                      </validityConditions>
+                      <Name>Off peak delay</Name>
+                      <CheckConstraintRef version="any" ref="mypark:PP01@EV11@Entrance"/>
+                      <MinimumLikelyDelay>PT1M</MinimumLikelyDelay>
+                      <AverageDelay>PT2M</AverageDelay>
+                      <MaximumLikelyDelay>PT5M</MaximumLikelyDelay>
+                    </CheckConstraintDelay>
+                  </delays>
+                  <throughput>
+                    <CheckConstraintThroughput id="mypark:PP01@EV11@Entrance@peak" modification="new" version="any" status="active">
+                      <CheckConstraintRef version="any" ref="mypark:PP01@EV11@Entrance"/>
+                      <Period>PT10M</Period>
+                      <MaximumPassengers>30</MaximumPassengers>
+                      <AveragePassengers>20</AveragePassengers>
+                    </CheckConstraintThroughput>
+                  </throughput>
+                </CheckConstraint>
+              </checkConstraints>
+              <placeEquipments modificationSet="all">
+                <EntranceEquipment id="mypark:PP01@EV11@Entrance" modification="new" version="any" status="active">
+                  <KeptOpen>false</KeptOpen>
+                  <Barrier>true</Barrier>
+                  <AutomaticDoor>true</AutomaticDoor>
+                </EntranceEquipment>
+              </placeEquipments>
+              <Label>Eingang</Label>
+              <EntranceType>gate</EntranceType>
+              <IsExternal>true</IsExternal>
+              <IsEntry>true</IsEntry>
+              <IsExit>false</IsExit>
+              <Width>14.0</Width>
+              <Height>12.0</Height>
+            </ParkingEntranceForVehicles>
+            <ParkingEntranceForVehicles id="mypark:PP01@EV12@Exit" modification="new" version="any" status="active">
+              <validityConditions modificationSet="all">
+                <AvailabilityConditionRef version="any" ref="mypark:PP01@Opening_Hours"/>
+              </validityConditions>
+              <Name>Main Vehicle Exit to street</Name>
+              <ParentZoneRef version="any" ref="mypark:PP01"/>
+              <LevelRef version="any" ref="mypark:PP01@Level@01"/>
+              <checkConstraints modificationSet="all">
+                <CheckConstraint id="mypark:PP01@EV12@Exit" modification="new" version="any" status="active">
+                  <Name>Access Queue</Name>
+                  <CheckDirection>forwards</CheckDirection>
+                  <CheckProcess>ingress</CheckProcess>
+                  <CheckService>selfService</CheckService>
+                  <AccessFeatureType>barrier</AccessFeatureType>
+                  <Congestion>queue</Congestion>
+                  <delays>
+                    <CheckConstraintDelay id="mypark:PP01@EV12@Exit@peak" modification="new" version="any" status="active">
+                      <validityConditions modificationSet="all">
+                        <ValidityTriggerRef ref="mypark:Peek"/>
+                      </validityConditions>
+                      <Name>pek delay</Name>
+                      <CheckConstraintRef ref="mypark:PP01@EV12@Exit"/>
+                      <MinimumLikelyDelay>PT5M</MinimumLikelyDelay>
+                      <AverageDelay>PT7M</AverageDelay>
+                      <MaximumLikelyDelay>PT15M</MaximumLikelyDelay>
+                    </CheckConstraintDelay>
+                    <CheckConstraintDelay id="mypark:PP01@EV12@Exit@Off_peak" modification="new" version="any" status="active">
+                      <validityConditions modificationSet="all">
+                        <ValidityTriggerRef ref="mypark:Off_peak"/>
+                      </validityConditions>
+                      <Name>Off peak delay</Name>
+                      <CheckConstraintRef ref="mypark:PP01@EV12@Exit"/>
+                      <MinimumLikelyDelay>PT1M</MinimumLikelyDelay>
+                      <AverageDelay>PT2M</AverageDelay>
+                      <MaximumLikelyDelay>PT5M</MaximumLikelyDelay>
+                    </CheckConstraintDelay>
+                  </delays>
+                  <throughput>
+                    <CheckConstraintThroughput id="mypark:PP01@EV12@Exit" modification="new" version="any" status="active">
+                      <CheckConstraintRef ref="mypark:PP01@EV12@Exit"/>
+                      <Period>PT10M</Period>
+                      <MaximumPassengers>20</MaximumPassengers>
+                      <AveragePassengers>15</AveragePassengers>
+                    </CheckConstraintThroughput>
+                  </throughput>
+                </CheckConstraint>
+              </checkConstraints>
+              <placeEquipments modificationSet="all">
+                <EntranceEquipment id="mypark:PP01@EV12@Exit" modification="new" version="any" status="active">
+                  <KeptOpen>false</KeptOpen>
+                  <Barrier>true</Barrier>
+                  <EntranceRequiresTicket>true</EntranceRequiresTicket>
+                  <AutomaticDoor>true</AutomaticDoor>
+                  <WheelchairPassable>true</WheelchairPassable>
+                </EntranceEquipment>
+              </placeEquipments>
+              <Label>Exit</Label>
+              <EntranceType>gate</EntranceType>
+              <IsExternal>true</IsExternal>
+              <IsEntry>false</IsEntry>
+              <IsExit>true</IsExit>
+              <Width>14.0</Width>
+              <Height>12.0</Height>
+            </ParkingEntranceForVehicles>
+            <ParkingEntranceForVehicles id="mypark:PP01@EV01+02" modification="new" version="any" status="active">
+              <Name>Entrance from level 1 to level 2</Name>
+              <ParentZoneRef version="any" ref="mypark:PP01"/>
+              <Label>Up To Level 1</Label>
+              <IsExternal>false</IsExternal>
+              <IsEntry>true</IsEntry>
+              <IsExit>false</IsExit>
+              <Width>14.0</Width>
+              <Height>12.0</Height>
+            </ParkingEntranceForVehicles>
+            <ParkingEntranceForVehicles id="mypark:PP01@EV02+03" modification="new" version="any" status="active">
+              <Name>Entrance from level 2 to level 3</Name>
+              <ParentZoneRef version="any" ref="mypark:PP01"/>
+              <Label>Up To Level 2 </Label>
+              <IsExternal>false</IsExternal>
+              <IsEntry>true</IsEntry>
+              <IsExit>false</IsExit>
+              <Width>14.0</Width>
+              <Height>12.0</Height>
+            </ParkingEntranceForVehicles>
+            <ParkingEntranceForVehicles id="mypark:PP01@EV02+01" modification="new" version="any" status="active">
+              <Name>Entrance Dwon from level 2 to level 1</Name>
+              <ParentZoneRef version="any" ref="mypark:PP01"/>
+              <Label>Down  To Level 1</Label>
+              <IsExternal>false</IsExternal>
+              <IsEntry>false</IsEntry>
+              <IsExit>true</IsExit>
+              <Width>14.0</Width>
+              <Height>12.0</Height>
+            </ParkingEntranceForVehicles>
+            <ParkingEntranceForVehicles id="mypark:PP01@EV03+02" modification="new" version="any" status="active">
+              <Name>Entrance  Down from level 3 to level 2</Name>
+              <ParentZoneRef version="any" ref="mypark:PP01"/>
+              <Label>Down  To Level 2 </Label>
+              <IsExternal>false</IsExternal>
+              <IsEntry>false</IsEntry>
+              <IsExit>true</IsExit>
+              <Width>14.0</Width>
+              <Height>12.0</Height>
+            </ParkingEntranceForVehicles>
+          </entrances>
+          <equipmentPlaces modificationSet="all">
+            <EquipmentPlace id="mypark:PP01@QP01" modification="new" version="any" status="active">
+              <Name>Location of Ticket Machines</Name>
+              <equipmentPositions>
+                <EquipmentPosition id="mypark:PP01@QPP01" modification="new" version="any" status="active">
+                  <EquipmentRef version="any" ref="mypark:PP01@Q01"/>
+                  <Description>location of ticket machines </Description>
+                  <Location>
+                    <Longitude>1.00</Longitude>
+                    <Latitude>52.00</Latitude>
+                  </Location>
+                </EquipmentPosition>
+              </equipmentPositions>
+            </EquipmentPlace>
+          </equipmentPlaces>
+          <placeEquipments modificationSet="all">
+            <TicketingEquipment id="mypark:PP01@Q01" modification="new" version="any" status="active">
+              <TicketMachines>true</TicketMachines>
+              <NumberOfMachines>2</NumberOfMachines>
+              <HeightOfMachineInterface>1.20</HeightOfMachineInterface>
+              <PaymentMethods>creditCard cash</PaymentMethods>
+            </TicketingEquipment>
+          </placeEquipments>
+          <accesses modificationSet="all">
+            <Access id="mypark:PP01@S01" modification="new" version="any" status="active">
+              <Description>Walk to Station</Description>
+              <TransferDuration>
+                <DefaultDuration>PT10M</DefaultDuration>
+                <MobilityRestrictedTravellerDuration>PT20M</MobilityRestrictedTravellerDuration>
+              </TransferDuration>
+              <BothWays>true</BothWays>
+              <From>
+                <TransportMode>rail</TransportMode>
+                <PlaceRef ref="napt:9100:00476" versionRef="EXTERNAL"/>
+              </From>
+              <To>
+                <TransportMode>selfDrive</TransportMode>
+                <PlaceRef version="any" ref="mypark:PP01"/>
+              </To>
+            </Access>
+          </accesses>
+          <PublicCode>CP1</PublicCode>
+          <ParkingType>shoppingCentreParking</ParkingType>
+          <ParkingLayout>multistorey</ParkingLayout>
+          <NumberOfParkingLevels>3</NumberOfParkingLevels>
+          <PrincipalCapacity>250</PrincipalCapacity>
+          <TotalCapacity>250</TotalCapacity>
+          <OvernightParkingPermitted>true</OvernightParkingPermitted>
+          <ProhibitedForHazardousMaterials>true</ProhibitedForHazardousMaterials>
+          <RechargingAvailable>false</RechargingAvailable>
+          <RealTimeOccupancyAvailable>true</RealTimeOccupancyAvailable>
+          <ParkingPaymentProcess>payAtBay</ParkingPaymentProcess>
+          <PaymentMethods>creditCard cash debitCard creditCard mobilePhone</PaymentMethods>
+          <DefaultCurrency>GBP</DefaultCurrency>
+          <CurrenciesAccepted>GBP</CurrenciesAccepted>
+          <ParkingReservation>noReservations</ParkingReservation>
+          <BookingUrl>http://www.bookmyparking.com</BookingUrl>
+          <PaymentByMobile>
+            <PhoneNumberToPay>7242</PhoneNumberToPay>
+            <SupportPhoneNumber>0202417656</SupportPhoneNumber>
+            <PaymentUrl>http://www.bookmyparking.com</PaymentUrl>
+          </PaymentByMobile>
+          <FreeParkingOutOfHours>false</FreeParkingOutOfHours>
+          <parkingProperties>
+            <ParkingProperties id="mypark:PP01" modification="new" version="any" status="active">
+              <ParkingUserTypes>all</ParkingUserTypes>
+              <ParkingStayList>all</ParkingStayList>
+              <MaximumStay>PT48H</MaximumStay>
+              <spaces modificationSet="all">
+                <ParkingCapacity id="mypark:PP01@C01_disabled" modification="new" version="any" status="active">
+                  <ParkingRef version="any" ref="mypark:PP01"/>
+                  <ParkingUserType>registeredDisabled</ParkingUserType>
+                  <ParkingVehicleType>passengerCar</ParkingVehicleType>
+                  <ParkingStayType>unlimited</ParkingStayType>
+                  <NumberOfSpaces>30</NumberOfSpaces>
+                </ParkingCapacity>
+                <ParkingCapacity id="mypark:PP01@C02_other" modification="new" version="any" status="active">
+                  <ParentRef version="any" ref="mypark:PP01"/>
+                  <ParkingUserType>allUsers</ParkingUserType>
+                  <ParkingVehicleType>passengerCar</ParkingVehicleType>
+                  <ParkingStayType>unlimited</ParkingStayType>
+                  <NumberOfSpaces>220</NumberOfSpaces>
+                </ParkingCapacity>
+              </spaces>
+            </ParkingProperties>
+          </parkingProperties>
+          <parkingAreas modificationSet="all">
+            <ParkingArea id="mypark:PP01@A01" modification="new" version="any" status="active">
+              <Name>Barcester CIty Centre  Car Park - Street Level</Name>
+              <ShortName>Street Level</ShortName>
+              <SiteRef ref="mypark:PP01"/>
+              <LevelRef ref="mypark:PP01@Level@01"/>
+              <Label>S1</Label>
+              <MaximumLength>8</MaximumLength>
+              <MaximumWidth>3</MaximumWidth>
+              <MaximumHeight>2</MaximumHeight>
+              <MaximumWeight>15</MaximumWeight>
+              <TotalCapacity>100</TotalCapacity>
+              <ParkingProperties id="mypark:PP01@A01" modification="new" version="any" status="active">
+                <ParkingStayList>midTerm</ParkingStayList>
+                <MaximumStay>PT48H</MaximumStay>
+                <spaces modificationSet="all">
+                  <ParkingCapacity id="mypark:PP01@01_01" modification="new" version="any" status="active">
+                    <ParentRef ref=""/>
+                    <ParkingUserType>all</ParkingUserType>
+                    <ParkingVehicleType>passengerCar</ParkingVehicleType>
+                    <NumberOfSpaces>85</NumberOfSpaces>
+                  </ParkingCapacity>
+                  <ParkingCapacity id="mypark:PP01@01_02" modification="new" version="any" status="active">
+                    <ParentRef ref=""/>
+                    <ParkingUserType>registeredDisabled</ParkingUserType>
+                    <ParkingVehicleType>passengerCar</ParkingVehicleType>
+                    <NumberOfSpaces>15</NumberOfSpaces>
+                  </ParkingCapacity>
+                </spaces>
+              </ParkingProperties>
+              <entrances modificationSet="all">
+                <ParkingEntranceForVehiclesRef version="any" ref="mypark:PP01@EV11@Entrance"/>
+                <ParkingEntranceForVehiclesRef version="any" ref="mypark:PP01@EV12@Exit"/>
+                <ParkingEntranceForVehiclesRef version="any" ref="mypark:PP01@EV01+02"/>
+                <ParkingEntranceForVehiclesRef version="any" ref="mypark:PP01@EV02+01"/>
+                <ParkingEntranceRef version="any" ref="mypark:PP01@EP01"/>
+              </entrances>
+            </ParkingArea>
+            <ParkingArea id="mypark:PP01@A02" modification="new" version="any" status="active">
+              <Name>Barcester City Centret Car Park - Mezzanine  Level</Name>
+              <ShortName>Mezzanine</ShortName>
+              <SiteRef ref="mypark:PP01"/>
+              <LevelRef ref="mypark:PP01@Level@012"/>
+              <Label>Parking 1</Label>
+              <MaximumLength>8</MaximumLength>
+              <MaximumWidth>3</MaximumWidth>
+              <MaximumHeight>2</MaximumHeight>
+              <MaximumWeight>10</MaximumWeight>
+              <TotalCapacity>50</TotalCapacity>
+              <ParkingProperties id="mypark:PP01@A02" modification="new" version="any" status="active">
+                <ParkingStayList>midTerm</ParkingStayList>
+                <MaximumStay>PT48H</MaximumStay>
+                <spaces modificationSet="all">
+                  <ParkingCapacity id="mypark:PP01@A02@C01" modification="new" version="any" status="active">
+                    <ParentRef ref=""/>
+                    <ParkingUserType>all</ParkingUserType>
+                    <ParkingVehicleType>passengerCar</ParkingVehicleType>
+                    <NumberOfSpaces>50</NumberOfSpaces>
+                  </ParkingCapacity>
+                </spaces>
+              </ParkingProperties>
+              <entrances modificationSet="all">
+                <ParkingEntranceForVehiclesRef version="any" ref="mypark:PP01@EV02+03"/>
+                <ParkingEntranceForVehiclesRef version="any" ref="mypark:PP01@EV03+02"/>
+                <ParkingEntranceForVehiclesRef version="any" ref="mypark:PP01@EV01+02"/>
+                <ParkingEntranceForVehiclesRef version="any" ref="mypark:PP01@EV02+01"/>
+              </entrances>
+            </ParkingArea>
+            <ParkingArea id="mypark:PP01@A03" modification="new" version="any" status="active">
+              <Name>Barchester City Centret Car Park - Store  Level</Name>
+              <ShortName>Parking 2</ShortName>
+              <SiteRef ref="mypark:PP01"/>
+              <LevelRef ref="mypark:PP01@Level@03"/>
+              <Label>Parking 2</Label>
+              <MaximumLength>8</MaximumLength>
+              <MaximumWidth>3</MaximumWidth>
+              <MaximumHeight>2</MaximumHeight>
+              <MaximumWeight>10</MaximumWeight>
+              <TotalCapacity>100</TotalCapacity>
+              <ParkingProperties id="mypark:PP01@A03" modification="new" version="any" status="active">
+                <ParkingStayList>midTerm</ParkingStayList>
+                <MaximumStay>PT48H</MaximumStay>
+                <spaces modificationSet="all">
+                  <ParkingCapacity id="mypark:PP01@A03@C01" modification="new" version="any" status="active">
+                    <ParentRef ref=""/>
+                    <ParkingUserType>all</ParkingUserType>
+                    <ParkingVehicleType>passengerCar</ParkingVehicleType>
+                    <NumberOfSpaces>85</NumberOfSpaces>
+                  </ParkingCapacity>
+                  <ParkingCapacity id="mypark:PP01@A03@C02" modification="new" version="any" status="active">
+                    <ParentRef ref=""/>
+                    <ParkingUserType>registeredDisabled</ParkingUserType>
+                    <ParkingVehicleType>passengerCar</ParkingVehicleType>
+                    <NumberOfSpaces>15</NumberOfSpaces>
+                  </ParkingCapacity>
+                </spaces>
+              </ParkingProperties>
+              <entrances modificationSet="all">
+                <ParkingEntranceForVehiclesRef version="any" ref="mypark:PP01@EV02+03"/>
+                <ParkingEntranceForVehiclesRef version="any" ref="mypark:PP01@EV03+02"/>
+                <ParkingEntranceRef version="any" ref="mypark:PP01@EP02 "/>
+              </entrances>
+            </ParkingArea>
+          </parkingAreas>
+          <vehicleEntrances modificationSet="all">
+            <ParkingEntranceForVehiclesRef version="any" ref="mypark:PP01@EV11@Entrance"/>
+            <ParkingEntranceForVehiclesRef version="any" ref="mypark:PP01@EV12@Exit"/>
+            <ParkingEntranceForVehiclesRef version="any" ref="mypark:PP01@EV02+03"/>
+            <ParkingEntranceForVehiclesRef version="any" ref="mypark:PP01@EV03+02"/>
+            <ParkingEntranceForVehiclesRef version="any" ref="mypark:PP01@EV01+02"/>
+            <ParkingEntranceForVehiclesRef version="any" ref="mypark:PP01@EV02+01"/>
+          </vehicleEntrances>
+        </Parking>
+        <Parking id="mypark:PS22" dataSourceRef="parkopedia" modification="new" version="any" status="active">
+          <validityConditions modificationSet="all">
+            <AvailabilityCondition id="mypark:Parking_Charge_Hours" modification="new" version="any" status="active">
+              <Name>Charged Parking times</Name>
+              <Description>Modnay to friday not PublicHolidays</Description>
+              <dayTypes modificationSet="all">
+                <DayTypeRef ref=""/>
+                <DayType id="mypark:WorkingDay" modification="new" version="any" status="active">
+                  <Name>Working day</Name>
+                  <properties>
+                    <PropertyOfDay>
+                      <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+                      <HolidayTypes>NotHoliday</HolidayTypes>
+                    </PropertyOfDay>
+                  </properties>
+                </DayType>
+              </dayTypes>
+              <timebands modificationSet="all">
+                <Timeband id="mypark:Parking_Charge_Hours" modification="new" version="any" status="active">
+                  <StartTime>08:30:00</StartTime>
+                  <EndTime>05:30:00</EndTime>
+                </Timeband>
+              </timebands>
+            </AvailabilityCondition>
+          </validityConditions>
+          <Name>Barcester  High street Parking </Name>
+          <ShortName>CIty Car Park</ShortName>
+          <Description>On street parking metered 8.30 to 6 pm Mondat to Friday  </Description>
+          <Url>http://www.barpccyparkingregs.co.uk</Url>
+          <AccessibilityAssessment id="mypark:PS22@01" modification="new" version="any" status="active">
+            <MobilityImpairedAccess>true</MobilityImpairedAccess>
+          </AccessibilityAssessment>
+          <AccessModes>foot</AccessModes>
+          <PublicUse>all</PublicUse>
+          <Covered>outdoors</Covered>
+          <Lighting>wellLit</Lighting>
+          <AllAreasWheelchairAccessible>true</AllAreasWheelchairAccessible>
+          <TopographicPlaceRef version="any" ref="nptgLocality:TP_0032A"/>
+          <equipmentPlaces modificationSet="all">
+            <EquipmentPlace id="mypark:PS22@QP01" modification="new" version="any" status="active">
+              <Name>Location of Ticket Machines</Name>
+              <equipmentPositions>
+                <EquipmentPosition id="mypark:PS22@QPP01@L01" modification="new" version="any" status="active">
+                  <EquipmentRef version="any" ref="mypark:PS22@QP01@L01"/>
+                  <Description>location of ticket machines </Description>
+                  <Location>
+                    <Longitude>1.01</Longitude>
+                    <Latitude>52.01</Latitude>
+                  </Location>
+                </EquipmentPosition>
+              </equipmentPositions>
+            </EquipmentPlace>
+          </equipmentPlaces>
+          <placeEquipments modificationSet="all">
+            <TicketingEquipment id="mypark:PS22@QP01@L01" modification="new" version="any" status="active">
+              <TicketMachines>true</TicketMachines>
+              <NumberOfMachines>1</NumberOfMachines>
+              <HeightOfMachineInterface>1.20</HeightOfMachineInterface>
+              <PaymentMethods>creditCard cash</PaymentMethods>
+            </TicketingEquipment>
+          </placeEquipments>
+          <accesses modificationSet="all">
+            <Access id="mypark:PS22@S01" modification="new" version="any" status="active">
+              <Description>Walk to Station</Description>
+              <TransferDuration>
+                <DefaultDuration>PT15M</DefaultDuration>
+                <MobilityRestrictedTravellerDuration>PT20M</MobilityRestrictedTravellerDuration>
+              </TransferDuration>
+              <BothWays>true</BothWays>
+              <From>
+                <TransportMode>rail</TransportMode>
+                <PlaceRef ref="napt:9100:00476" versionRef="EXTERNAL"/>
+              </From>
+              <To>
+                <TransportMode>selfDrive</TransportMode>
+                <PlaceRef version="any" ref="mypark:PP01"/>
+              </To>
+            </Access>
+          </accesses>
+          <ParkingType>parkingZone</ParkingType>
+          <ParkingLayout>roadside</ParkingLayout>
+          <PrincipalCapacity>45</PrincipalCapacity>
+          <TotalCapacity>50</TotalCapacity>
+          <OvernightParkingPermitted>true</OvernightParkingPermitted>
+          <ProhibitedForHazardousMaterials>false</ProhibitedForHazardousMaterials>
+          <RechargingAvailable>false</RechargingAvailable>
+          <ParkingPaymentProcess>payByMobileDevice payAndDisplay</ParkingPaymentProcess>
+          <PaymentMethods>creditCard cash debitCard creditCard mobilePhone</PaymentMethods>
+          <DefaultCurrency>GBP</DefaultCurrency>
+          <CurrenciesAccepted>GBP</CurrenciesAccepted>
+          <ParkingReservation>noReservations</ParkingReservation>
+          <BookingUrl>http://www.bookmyparking.com</BookingUrl>
+          <PaymentByMobile>
+            <PhoneNumberToPay>7242</PhoneNumberToPay>
+            <SupportPhoneNumber>0202417656</SupportPhoneNumber>
+            <PaymentUrl>http://www.bookmyparking.com</PaymentUrl>
+          </PaymentByMobile>
+          <FreeParkingOutOfHours>true</FreeParkingOutOfHours>
+          <parkingProperties>
+            <ParkingProperties id="mypark:PS22" modification="new" version="any" status="active">
+              <ParkingUserTypes>all</ParkingUserTypes>
+              <ParkingStayList>unlimited</ParkingStayList>
+              <spaces modificationSet="all">
+                <ParkingCapacity id="mypark:PS22@01_disabled" modification="new" version="any" status="active">
+                  <ParentRef version="any" ref="mypark:PS22"/>
+                  <ParkingUserType>registeredDisabled</ParkingUserType>
+                  <ParkingVehicleType>passengerCar</ParkingVehicleType>
+                  <ParkingStayType>unlimited</ParkingStayType>
+                  <NumberOfSpaces>5</NumberOfSpaces>
+                </ParkingCapacity>
+                <ParkingCapacity id="mypark:PS22@01_other" modification="new" version="any" status="active">
+                  <ParentRef version="any" ref="mypark:PS22"/>
+                  <ParkingUserType>allUsers</ParkingUserType>
+                  <ParkingVehicleType>passengerCar</ParkingVehicleType>
+                  <ParkingStayType>unlimited</ParkingStayType>
+                  <NumberOfSpaces>45</NumberOfSpaces>
+                </ParkingCapacity>
+              </spaces>
+            </ParkingProperties>
+          </parkingProperties>
+          <parkingAreas modificationSet="all">
+            <ParkingArea id="mypark:PS22@01" modification="new" version="any" status="active">
+              <Name>Street Level</Name>
+              <ShortName>S1</ShortName>
+              <SiteRef ref="mypark:PS22"/>
+              <ParkingPaymentCode>ABCD</ParkingPaymentCode>
+              <MaximumLength>8</MaximumLength>
+              <MaximumWidth>3</MaximumWidth>
+              <MaximumHeight>2</MaximumHeight>
+              <MaximumWeight>15</MaximumWeight>
+              <TotalCapacity>100</TotalCapacity>
+              <ParkingProperties id="mypark:PS22@01" modification="new" version="any" status="active">
+                <ParkingStayList>midTerm</ParkingStayList>
+                <MaximumStay>PT48H</MaximumStay>
+                <spaces modificationSet="all">
+                  <ParkingCapacityRef version="any" ref="mypark:PS22@01_disabled"/>
+                  <ParkingCapacityRef version="any" ref="mypark:PS22@01_other"/>
+                </spaces>
+              </ParkingProperties>
+            </ParkingArea>
+          </parkingAreas>
+        </Parking>
+        <Parking id="mypark:PB44" dataSourceRef="parkopedia" modification="new" version="any" status="active">
+          <Name>Barcester  Town Hall disabled bays  street Parking </Name>
+          <ShortName>CIty Car Park</ShortName>
+          <Description>On street parking  Blued badge </Description>
+          <Url>http://www.bartwonhallparking.co.uk</Url>
+          <AccessibilityAssessment id="mypark:PS22" modification="new" version="any" status="active">
+            <MobilityImpairedAccess>true</MobilityImpairedAccess>
+          </AccessibilityAssessment>
+          <AccessModes>foot</AccessModes>
+          <PublicUse>disabledPublicOnly</PublicUse>
+          <Covered>outdoors</Covered>
+          <Lighting>wellLit</Lighting>
+          <AllAreasWheelchairAccessible>true</AllAreasWheelchairAccessible>
+          <TopographicPlaceRef version="any" ref="nptgLocality:TP_0032A"/>
+          <ParkingType>urbanParking</ParkingType>
+          <ParkingLayout>roadside</ParkingLayout>
+          <PrincipalCapacity>3</PrincipalCapacity>
+          <TotalCapacity>3</TotalCapacity>
+          <OvernightParkingPermitted>true</OvernightParkingPermitted>
+          <RechargingAvailable>false</RechargingAvailable>
+          <ParkingReservation>noReservations</ParkingReservation>
+          <parkingProperties>
+            <ParkingProperties id="mypark:PB44" modification="new" version="any" status="active">
+              <ParkingUserTypes>all</ParkingUserTypes>
+              <ParkingStayList>unlimited</ParkingStayList>
+              <spaces modificationSet="all">
+                <ParkingCapacity id="mypark:PS44@C01_disabled" modification="new" version="any" status="active">
+                  <ParentRef version="any" ref="mypark:PB44"/>
+                  <ParkingUserType>registeredDisabled</ParkingUserType>
+                  <ParkingVehicleType>passengerCar</ParkingVehicleType>
+                  <ParkingStayType>shortStay</ParkingStayType>
+                  <NumberOfSpaces>3</NumberOfSpaces>
+                </ParkingCapacity>
+              </spaces>
+            </ParkingProperties>
+          </parkingProperties>
+          <parkingAreas modificationSet="all">
+            <ParkingArea id="mypark:PB44@A01" modification="new" version="any" status="active">
+              <Name>Disabled Bays</Name>
+              <ShortName>S1</ShortName>
+              <MaximumLength>8</MaximumLength>
+              <MaximumWidth>3</MaximumWidth>
+              <TotalCapacity>30</TotalCapacity>
+              <ParkingProperties id="mypark:PB44@01" modification="new" version="any" status="active">
+                <ParkingStayList>midTerm</ParkingStayList>
+                <MaximumStay>PT3H</MaximumStay>
+                <spaces modificationSet="all">
+                  <ParkingCapacity id="mypark:PB44@A01@C01" modification="new" version="any" status="active">
+                    <ParentRef ref=""/>
+                    <ParkingUserType>all</ParkingUserType>
+                    <ParkingVehicleType>passengerCar</ParkingVehicleType>
+                    <NumberOfSpaces>85</NumberOfSpaces>
+                  </ParkingCapacity>
+                  <ParkingCapacity id="mypark:PB44@A01@C02" modification="new" version="any" status="active">
+                    <ParentRef ref=""/>
+                    <ParkingUserType>registeredDisabled</ParkingUserType>
+                    <ParkingVehicleType>passengerCar</ParkingVehicleType>
+                    <NumberOfSpaces>15</NumberOfSpaces>
+                  </ParkingCapacity>
+                </spaces>
+              </ParkingProperties>
+              <bays modificationSet="all">
+                <ParkingBay id="mypark:PB44@A01@B001" modification="new" version="any" status="active">
+                  <Name>Disabled Bay 1</Name>
+                  <Centroid modification="new" status="active">
+                    <Location>
+                      <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                    </Location>
+                  </Centroid>
+                  <gml:Polygon gml:id="PB44_A01_B001">
+                    <gml:exterior>
+                      <gml:LinearRing>
+                        <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                        <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                        <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                        <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                      </gml:LinearRing>
+                    </gml:exterior>
+                    <gml:interior>
+                      <gml:LinearRing>
+                        <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                        <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                        <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                        <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                      </gml:LinearRing>
+                    </gml:interior>
+                  </gml:Polygon>
+                  <ParentZoneRef version="any" ref="mypark:PB44@A01"/>
+                  <RoadAddress id="mypark:PB44@A01@B001@address" modification="new" version="any" status="active">
+                    <RoadName>Twon Square</RoadName>
+                    <BearingCompass>N</BearingCompass>
+                    <OddNumberRange>
+                      <FromNumber>7</FromNumber>
+                      <ToNumber>12</ToNumber>
+                    </OddNumberRange>
+                  </RoadAddress>
+                  <AccessibilityAssessment id="mypark:PB44@A01@B001" modification="new" version="any" status="active">
+                    <MobilityImpairedAccess>true</MobilityImpairedAccess>
+                  </AccessibilityAssessment>
+                  <AccessModes>foot</AccessModes>
+                  <PublicUse>disabledPublicOnly</PublicUse>
+                  <Covered>outdoors</Covered>
+                  <Lighting/>
+                  <AllAreasWheelchairAccessible>true</AllAreasWheelchairAccessible>
+                  <ClassOfUseRef ref="blue_badge_Holders" versionRef="EXTERNAL"/>
+                  <ParkingVehicleType>passengerCar</ParkingVehicleType>
+                  <Length>8</Length>
+                  <Width>4</Width>
+                  <RechargingAvailable>false</RechargingAvailable>
+                </ParkingBay>
+                <ParkingBay id="mypark:PB44@A01@B002" modification="new" version="any" status="active">
+                  <Name>Disabled Bay 2</Name>
+                  <Centroid modification="new" status="active">
+                    <Location>
+                      <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                    </Location>
+                  </Centroid>
+                  <gml:Polygon gml:id="PB44_A01_B002">
+                    <gml:exterior>
+                      <gml:LinearRing>
+                        <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                        <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                        <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                        <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                      </gml:LinearRing>
+                    </gml:exterior>
+                    <gml:interior>
+                      <gml:LinearRing>
+                        <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                        <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                        <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                        <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                      </gml:LinearRing>
+                    </gml:interior>
+                  </gml:Polygon>
+                  <ParentZoneRef version="any" ref="mypark:PB44@A01"/>
+                  <RoadAddress id="mypark:PB44@A01@B002@address" modification="new" version="any" status="active">
+                    <RoadName>Twon Square</RoadName>
+                    <BearingCompass>N</BearingCompass>
+                    <OddNumberRange>
+                      <FromNumber>7</FromNumber>
+                      <ToNumber>12</ToNumber>
+                    </OddNumberRange>
+                  </RoadAddress>
+                  <AccessibilityAssessment id="mypark:PB44@A01@B002" modification="new" version="any" status="active">
+                    <MobilityImpairedAccess>true</MobilityImpairedAccess>
+                  </AccessibilityAssessment>
+                  <AccessModes>foot</AccessModes>
+                  <PublicUse>disabledPublicOnly</PublicUse>
+                  <Covered>outdoors</Covered>
+                  <Lighting/>
+                  <AllAreasWheelchairAccessible>true</AllAreasWheelchairAccessible>
+                  <ClassOfUseRef ref="blue_badge_Holders" versionRef="EXTERNAL"/>
+                  <ParkingVehicleType>passengerCar</ParkingVehicleType>
+                  <Length>8</Length>
+                  <Width>4</Width>
+                  <RechargingAvailable>false</RechargingAvailable>
+                </ParkingBay>
+                <ParkingBay id="mypark:PB44@A01@B003" modification="new" version="any" status="active">
+                  <Name>Disabled Bay 3</Name>
+                  <Centroid modification="new" status="active">
+                    <Location>
+                      <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                    </Location>
+                  </Centroid>
+                  <gml:Polygon gml:id="def">
+                    <gml:exterior>
+                      <gml:LinearRing>
+                        <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                        <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                        <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                        <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                      </gml:LinearRing>
+                    </gml:exterior>
+                    <gml:interior>
+                      <gml:LinearRing>
+                        <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                        <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                        <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                        <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                      </gml:LinearRing>
+                    </gml:interior>
+                  </gml:Polygon>
+                  <ParentZoneRef version="any" ref="mypark:PB44@A01"/>
+                  <RoadAddress id="mypark:PB44@A01@B003@addresss" modification="new" version="any" status="active">
+                    <RoadName>Twon Square</RoadName>
+                    <BearingCompass>N</BearingCompass>
+                    <OddNumberRange>
+                      <FromNumber>7</FromNumber>
+                      <ToNumber>12</ToNumber>
+                    </OddNumberRange>
+                  </RoadAddress>
+                  <AccessibilityAssessment id="PB44@A01@B003" modification="new" version="any" status="active">
+                    <MobilityImpairedAccess>true</MobilityImpairedAccess>
+                  </AccessibilityAssessment>
+                  <AccessModes>foot</AccessModes>
+                  <PublicUse>disabledPublicOnly</PublicUse>
+                  <Covered>outdoors</Covered>
+                  <Lighting/>
+                  <AllAreasWheelchairAccessible>true</AllAreasWheelchairAccessible>
+                  <ClassOfUseRef ref="blue_badge_Holders" versionRef="EXTERNAL"/>
+                  <ParkingVehicleType>passengerCar</ParkingVehicleType>
+                  <Length>8</Length>
+                  <Width>4</Width>
+                  <RechargingAvailable>true</RechargingAvailable>
+                </ParkingBay>
+              </bays>
+            </ParkingArea>
+          </parkingAreas>
+        </Parking>
+        <Parking id="mypark:PNR01" dataSourceRef="parkopedia" modification="new" version="any" status="active">
+          <Name>Barcester  PARK AND RIDE A</Name>
+          <ShortName>BARCEST P&amp;R A</ShortName>
+          <Description>PARK and ride outsde town  </Description>
+          <Centroid id="xyz" modification="new" status="active">
+            <Location id="xyz12" srsName="WGS84">
+              <Longitude>-180</Longitude>
+              <Latitude>-90</Latitude>
+            </Location>
+          </Centroid>
+          <gml:Polygon gml:id="I1D_12" srsName="wgs84" srsDimension="2">
+            <gml:exterior>
+              <gml:LinearRing>
+                <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+              </gml:LinearRing>
+            </gml:exterior>
+            <gml:interior>
+              <gml:LinearRing>
+                <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+                <gml:pos srsName="wgs84" srsDimension="2">3.14159265358979 3.14159265358979</gml:pos>
+              </gml:LinearRing>
+            </gml:interior>
+          </gml:Polygon>
+          <Url>http://www.barpark.co.uk</Url>
+          <Image>http://ww.mycarpark.com/pnrprettypicture.jpg</Image>
+          <AccessibilityAssessment id="mypark:PNR01" modification="new" version="any" status="active">
+            <MobilityImpairedAccess>partial</MobilityImpairedAccess>
+          </AccessibilityAssessment>
+          <AccessModes>foot</AccessModes>
+          <Covered>outdoors</Covered>
+          <Gated>openArea</Gated>
+          <Lighting>unlit</Lighting>
+          <AllAreasWheelchairAccessible>true</AllAreasWheelchairAccessible>
+          <TopographicPlaceRef version="any" ref="nptgLocality:TP_0032A"/>
+          <AtCentre>false</AtCentre>
+          <entrances modificationSet="all">
+            <ParkingEntranceForVehicles id="mypark:PNR01@EV01" modification="new" version="any" status="active">
+              <Name>Main Vehicle Entrance from street</Name>
+              <ParentZoneRef version="any" ref="mypark:PNR01"/>
+              <Label>IN</Label>
+              <EntranceType>opening</EntranceType>
+              <IsExternal>true</IsExternal>
+              <IsEntry>true</IsEntry>
+              <IsExit>true</IsExit>
+              <Width>14.0</Width>
+              <Height>12.0</Height>
+            </ParkingEntranceForVehicles>
+          </entrances>
+          <equipmentPlaces modificationSet="all">
+            <EquipmentPlace id="mypark:PNR01@Q01" modification="new" version="any" status="active">
+              <Name>Location of Ticket Machines</Name>
+              <equipmentPositions>
+                <EquipmentPosition id="mypark:PNR01@Q01" modification="new" version="any" status="active">
+                  <EquipmentRef version="any" ref="mypark:PNR01@Q01@ticketing"/>
+                  <Description>location of ticket machines </Description>
+                  <Location>
+                    <Longitude>1.00</Longitude>
+                    <Latitude>52.00</Latitude>
+                  </Location>
+                </EquipmentPosition>
+              </equipmentPositions>
+            </EquipmentPlace>
+          </equipmentPlaces>
+          <placeEquipments modificationSet="all">
+            <TicketingEquipment id="mypark:PNR01@Q01@ticketing" modification="new" version="any" status="active">
+              <TicketMachines>true</TicketMachines>
+              <NumberOfMachines>1</NumberOfMachines>
+              <HeightOfMachineInterface>1.20</HeightOfMachineInterface>
+              <PaymentMethods>creditCard cash</PaymentMethods>
+            </TicketingEquipment>
+          </placeEquipments>
+          <accesses modificationSet="all">
+            <Access id="mypark:PNR01@S01" modification="new" version="any" status="active">
+              <Description>Bus  to Station</Description>
+              <TransferDuration>
+                <DefaultDuration>PT10M</DefaultDuration>
+                <MobilityRestrictedTravellerDuration>PT20M</MobilityRestrictedTravellerDuration>
+              </TransferDuration>
+              <BothWays>true</BothWays>
+              <From>
+                <TransportMode>rail</TransportMode>
+                <PlaceRef ref="napt:9100:00476" versionRef="EXTERNAL"/>
+              </From>
+              <To>
+                <TransportMode>selfDrive</TransportMode>
+                <PlaceRef version="any" ref="mypark:PNR01"/>
+              </To>
+            </Access>
+          </accesses>
+          <ParkingType>parkAndRide</ParkingType>
+          <ParkingLayout>openSpace</ParkingLayout>
+          <PrincipalCapacity>100</PrincipalCapacity>
+          <TotalCapacity>100</TotalCapacity>
+          <OvernightParkingPermitted>true</OvernightParkingPermitted>
+          <ProhibitedForHazardousMaterials>true</ProhibitedForHazardousMaterials>
+          <RechargingAvailable>false</RechargingAvailable>
+          <RealTimeOccupancyAvailable>true</RealTimeOccupancyAvailable>
+          <ParkingPaymentProcess>payAndDisplay</ParkingPaymentProcess>
+          <PaymentMethods>creditCard cash debitCard creditCard</PaymentMethods>
+          <DefaultCurrency>GBP</DefaultCurrency>
+          <CurrenciesAccepted>GBP</CurrenciesAccepted>
+          <ParkingReservation>noReservations</ParkingReservation>
+          <BookingUrl>http://www.bookmyparking.com</BookingUrl>
+          <FreeParkingOutOfHours>false</FreeParkingOutOfHours>
+          <parkingProperties>
+            <ParkingProperties id="mypark:PNR01" modification="new" version="any" status="active">
+              <ParkingUserTypes>all</ParkingUserTypes>
+              <ParkingStayList>all</ParkingStayList>
+              <MaximumStay>PT48H</MaximumStay>
+              <spaces modificationSet="all">
+                <ParkingCapacity id="mypark:PNR01@C01_all" modification="new" version="any" status="active">
+                  <ParentRef ref="mypark:PNR01"/>
+                  <ParkingUserType>all</ParkingUserType>
+                  <ParkingVehicleType>passengerCar</ParkingVehicleType>
+                  <ParkingStayType>unlimited</ParkingStayType>
+                  <NumberOfSpaces>100</NumberOfSpaces>
+                </ParkingCapacity>
+              </spaces>
+            </ParkingProperties>
+          </parkingProperties>
+          <vehicleEntrances modificationSet="all">
+            <ParkingEntranceForVehiclesRef version="any" ref="mypark:PNR01@EV01"/>
+          </vehicleEntrances>
+        </Parking>
+      </parkings>
+    </SiteFrame>
+    <ResourceFrame id="mypark:Resources" modification="new" version="any" status="active">
+      <typesOfValue modificationSet="all">
+        <ValueSet id="mypark:Types_off_VAT_Categopry" modification="new" version="any" status="active" classOfValues="TypeOfPricingRule">
+          <Name>Types of Tariff</Name>
+          <values>
+            <TypeOfPricingRule id="mypark:vat@transportation" modification="new" version="any" status="active">
+              <Name>Transportation</Name>
+              <TaxCategory>transportation</TaxCategory>
+            </TypeOfPricingRule>
+            <TypeOfPricingRule id="mypark:vat@parking" modification="new" version="any" status="active">
+              <Name>Parking</Name>
+              <TaxCategory>parking</TaxCategory>
+            </TypeOfPricingRule>
+          </values>
+        </ValueSet>
+      </typesOfValue>
+    </ResourceFrame>
+  </dataObjects>
+</PublicationDelivery>
+

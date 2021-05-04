@@ -9,7 +9,9 @@ from netex.models import PublicationDelivery
 
 ids = []
 here = Path(__file__).parent
-samples = list(map(str, here.joinpath("NeTEx/examples/functions").rglob("*.xml")))
+output = here.joinpath("output")
+functions = here.joinpath("NeTEx/examples/functions")
+samples = [str(sample.relative_to(functions)) for sample in functions.rglob("*.xml")]
 schema = here.joinpath("NeTEx/xsd/NeTEx_publication.xsd")
 
 validator = etree.XMLSchema(etree.parse(str(schema)))
@@ -22,8 +24,15 @@ serializer.config.pretty_print = True
 @pytest.mark.parametrize("sample", samples)
 def test_serialize(sample):
 
-    obj = parser.parse(sample, PublicationDelivery)
-    output = serializer.render(obj, ns_map=parser.ns_map)
+    obj = parser.from_path(functions.joinpath(sample), PublicationDelivery)
+    result = serializer.render(obj, ns_map=parser.ns_map)
     parser.ns_map.clear()
 
-    validator.assertValid(etree.fromstring(output.encode()))
+    expected = output.joinpath(sample)
+    if expected.exists():
+        assert expected.read_text() == result
+    else:
+        expected.parent.mkdir(parents=True, exist_ok=True)
+        expected.write_text(result + "\n")
+
+    validator.assertValid(etree.fromstring(result.encode()))

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+  <PublicationTimestamp>2010-12-17T09:30:47Z</PublicationTimestamp>
+  <ParticipantRef>SYS001</ParticipantRef>
+  <PublicationRequest version="1.0">
+    <RequestTimestamp>2010-12-17T09:30:47Z</RequestTimestamp>
+    <ParticipantRef>SYS002</ParticipantRef>
+    <topics>
+      <NetworkFrameTopic>
+        <selectionValidityConditions>
+          <AvailabilityCondition id="hde:CAL_02" modification="new" version="any" status="active">
+            <FromDate>2010-11-01T00:00:00Z</FromDate>
+          </AvailabilityCondition>
+        </selectionValidityConditions>
+        <TimetableFrameRef ref="hde:TimetableFrameTIM_23_O">REQUEST</TimetableFrameRef>
+      </NetworkFrameTopic>
+    </topics>
+  </PublicationRequest>
+  <PublicationRefreshInterval>P1M</PublicationRefreshInterval>
+  <Description>Example  of simple flexible timetable  , zones only  
+	
+1. OVERVIEW
+============
+
+   The servIce has two zones     Sigma   and  Tau
+ 
+	 SIgma has a single area,  Tau is made up of  two areas 
+	 
+	There are on demand services between specified start and end time
+	
+	   9 to 5 Monday to Friday.
+	   Booking starts 8 to 12: 1 to 4:30
+ 										
+ day
+
+==================================
+2. DETAILS
+
+  FLEXIBLE LINE  mybus:FL_24
+		has booking  and references two  two flexible stop places 
+
+FLEXIBLE STOP PLACES defines the geometry of the XOnes
+	    A)    FLEXIBLE STOP PLAcE:  mybus:fsp_Sigma   
+					 with a single FLEXIBLE STOP AREA:fsp_Sigma:  						 
+		B)   FLEXIBLE STOP PLAcE: mybus:fsp_Tau					 
+				 with a two FLEXIBLE STOP AREAs     	
+					 :mybus:fa_Tau_01
+			 	 :mybus:fa_Tau_02
+ 
+ A SERVICE CALENDAR FRAME is used to contain the DAY TYPEs etc 
+
+ This has FLEXIBLE BOOKING TIMES with avalabiliuty conbditiosn for the booking and service 
+   
+A COMPOSITE FRAME is used to group the component FRAMEs
+  
+		A SITE   FRAME is used to contain the FLEXIBLE STOP PLACEs , etc
+		A SERVICE  FRAME is used to contain the     LINEs, etc
+		A TIMETABLE FRAME is used to define the Servce AVAILABILITY and the  the Booking times     
+			
+The Calendar is shown coded as
+      Compact : OPERATING DAYs are assumed for each calendar date within the period of the calendar 
+	
+	</Description>
+  <dataObjects>
+    <CompositeFrame id="hde:CAL_02" modification="new" version="1" status="active">
+      <codespaces modificationSet="all">
+        <Codespace id="mybus">
+          <Xmlns>mybus</Xmlns>
+          <XmlnsUrl>http://www.mybuses.eu/stuff</XmlnsUrl>
+          <Description>My buses</Description>
+        </Codespace>
+        <Codespace id="hde">
+          <Xmlns>hde</Xmlns>
+          <XmlnsUrl>http://www.halt.de/</XmlnsUrl>
+          <Description>Stop data  data</Description>
+        </Codespace>
+      </codespaces>
+      <FrameDefaults>
+        <DefaultCodespaceRef ref="mybus"/>
+      </FrameDefaults>
+      <frames modificationSet="all">
+        <ServiceFrame id="mybus:svf_24" modification="new" version="1" status="active">
+          <Name>Lines for Winter timetable for route 24 </Name>
+          <lines modificationSet="all">
+            <FlexibleLine id="mybus:FL_24" modification="new" version="any" status="active">
+              <Name>Line 24 Sigma  to Tau FLEXIBLE SERVICE </Name>
+              <ShortName>Line 24</ShortName>
+              <TransportMode>bus</TransportMode>
+              <TransportSubmode>
+                <BusSubmode>demandAndResponseBus</BusSubmode>
+              </TransportSubmode>
+              <PublicCode>24</PublicCode>
+              <FlexibleLineType>flexibleAreasOnly</FlexibleLineType>
+              <BookingAccess>public</BookingAccess>
+              <LatestBookingTime>16:30:00</LatestBookingTime>
+              <MinimumBookingPeriod>PT30M</MinimumBookingPeriod>
+            </FlexibleLine>
+          </lines>
+        </ServiceFrame>
+        <TimetableFrame id="hde:TIM_02" modification="new" version="1" status="active">
+          <validityConditions modificationSet="all">
+            <AvailabilityCondition id="hde:AC_runs_02" modification="new" version="any" status="active">
+              <Description>Operating  times for DRT service 24</Description>
+              <IsAvailable>true</IsAvailable>
+              <dayTypes modificationSet="all">
+                <DayTypeRef version="any" ref="hde:DT_01-MF-NotHoliday"/>
+              </dayTypes>
+              <timebands modificationSet="all">
+                <Timeband id="hde:AC_runs_01" modification="new" version="any" status="active">
+                  <StartTime>09:00:00</StartTime>
+                  <EndTime>17:00:00</EndTime>
+                </Timeband>
+              </timebands>
+            </AvailabilityCondition>
+          </validityConditions>
+          <Name>TimetableNov to Jan 2011   </Name>
+          <VehicleModes>bus</VehicleModes>
+          <LineView>
+            <FlexibleLineRef version="any" ref="mybus:FL_24"/>
+          </LineView>
+          <bookingTimes modificationSet="all">
+            <AvailabilityCondition id="hde:AC_booking_01" modification="new" version="any" status="active">
+              <Description>Booking times for service</Description>
+              <IsAvailable>true</IsAvailable>
+              <dayTypes modificationSet="all">
+                <DayTypeRef version="any" ref="hde:DT_01-MF-NotHoliday"/>
+              </dayTypes>
+              <timebands modificationSet="all">
+                <Timeband id="hde:AC_booking_01" modification="new" version="any" status="active">
+                  <StartTime>08:30:00</StartTime>
+                  <EndTime>12:00:00</EndTime>
+                </Timeband>
+                <Timeband id="hde:AC_booking_02" modification="new" version="any" status="active">
+                  <StartTime>13:00:00</StartTime>
+                  <EndTime>16:30:00</EndTime>
+                </Timeband>
+              </timebands>
+            </AvailabilityCondition>
+          </bookingTimes>
+        </TimetableFrame>
+        <SiteFrame id="mybus:svf_24" modification="new" version="1" status="active">
+          <Name>Geometry of Zones  for Winter timetable for Flexible Route 24 </Name>
+          <flexibleStopPlaces modificationSet="all">
+            <FlexibleStopPlace id="mybus:fsp_Sigma" modification="new" version="any" status="active">
+              <Name>Flexible Zone Sigma</Name>
+              <ShortName>Sigma</ShortName>
+              <Description>Area around Alphavilee</Description>
+              <Centroid modification="new" status="active">
+                <Location>
+                  <gml:pos>12354.78 2342.2</gml:pos>
+                </Location>
+              </Centroid>
+              <areas>
+                <FlexibleArea id="mybus:fa_Sigma" modification="new" version="any" status="active">
+                  <Name>ZONE Sigma  Area - corresponds to whole of Zone S</Name>
+                  <ShortName>Sigma</ShortName>
+                  <Centroid modification="new" status="active">
+                    <Location>
+                      <gml:pos>12345.76</gml:pos>
+                      <Precision>12</Precision>
+                    </Location>
+                  </Centroid>
+                  <gml:Polygon gml:id="a1234" srsName="wgs84">
+                    <gml:exterior>
+                      <gml:LinearRing>
+                        <gml:pos>12345.78 2345.2</gml:pos>
+                        <gml:pos>12345.76 2346.2</gml:pos>
+                        <gml:pos>12345.88 2345.3</gml:pos>
+                        <gml:pos>12346.18 2344.2</gml:pos>
+                      </gml:LinearRing>
+                    </gml:exterior>
+                  </gml:Polygon>
+                  <TransportMode>bus</TransportMode>
+                  <BoardingUse>true</BoardingUse>
+                  <AlightingUse>true</AlightingUse>
+                </FlexibleArea>
+              </areas>
+              <lines modificationSet="all">
+                <FlexibleLineRef version="any" ref="mybus:FL_24"/>
+              </lines>
+            </FlexibleStopPlace>
+            <FlexibleStopPlace id="mybus:fsp_Tau" modification="new" version="any" status="active">
+              <Name>Flexible Zone Tau</Name>
+              <ShortName>Tau</ShortName>
+              <Description>Area around Beta ville</Description>
+              <Centroid modification="new" status="active">
+                <Location>
+                  <Longitude>53.0000</Longitude>
+                  <Latitude>0.1000</Latitude>
+                </Location>
+              </Centroid>
+              <areas>
+                <FlexibleArea id="mybus:fa_Tau_01" modification="new" version="any" status="active">
+                  <Name>ZONE Tau    Area 1 -   </Name>
+                  <ShortName>Sigma 1</ShortName>
+                  <Centroid modification="new" status="active">
+                    <Location>
+                      <gml:pos>12355.78 2344.2</gml:pos>
+                      <Precision>12</Precision>
+                    </Location>
+                  </Centroid>
+                  <gml:Polygon gml:id="b1234" srsName="wgs84">
+                    <gml:exterior>
+                      <gml:LinearRing>
+                        <gml:pos>12355.78 2345.2</gml:pos>
+                        <gml:pos>12355.76 2355.2</gml:pos>
+                        <gml:pos>12356.88 2365.2</gml:pos>
+                        <gml:pos>12356.18 2355.1</gml:pos>
+                      </gml:LinearRing>
+                    </gml:exterior>
+                  </gml:Polygon>
+                  <TransportMode>bus</TransportMode>
+                  <BoardingUse>true</BoardingUse>
+                  <AlightingUse>true</AlightingUse>
+                </FlexibleArea>
+                <FlexibleArea id="mybus:fa_Tau_02" modification="new" version="any" status="active">
+                  <Name>ZONE Tau    Area 2 -   </Name>
+                  <ShortName>Sigma 2</ShortName>
+                  <Centroid modification="new" status="active">
+                    <Location>
+                      <gml:pos>12345.76</gml:pos>
+                      <Precision>12</Precision>
+                    </Location>
+                  </Centroid>
+                  <gml:Polygon gml:id="c1234" srsName="wgs84">
+                    <gml:exterior>
+                      <gml:LinearRing>
+                        <gml:pos>12356.77 2355.1</gml:pos>
+                        <gml:pos>12357.75 2356.1</gml:pos>
+                        <gml:pos>12357.88 2375.1</gml:pos>
+                        <gml:pos>12356.18 2378.1</gml:pos>
+                        <gml:pos>12354.18 2378.1</gml:pos>
+                      </gml:LinearRing>
+                    </gml:exterior>
+                  </gml:Polygon>
+                  <TransportMode>bus</TransportMode>
+                  <BoardingUse>true</BoardingUse>
+                  <AlightingUse>true</AlightingUse>
+                </FlexibleArea>
+              </areas>
+              <lines modificationSet="all">
+                <FlexibleLineRef version="any" ref="mybus:FL_24"/>
+              </lines>
+            </FlexibleStopPlace>
+          </flexibleStopPlaces>
+        </SiteFrame>
+        <ServiceCalendarFrame id="hde:CAL_02" modification="new" version="1" status="active">
+          <Name>Service Calendar Nov to Jan 2011   </Name>
+          <ServiceCalendar id="hde:CAL_02" modification="new" version="any" status="active">
+            <FromDate>2010-11-01</FromDate>
+            <ToDate>2011-01-14</ToDate>
+          </ServiceCalendar>
+          <dayTypes modificationSet="all">
+            <DayType id="hde:DT_01-MF-NotHoliday" modification="new" version="any" status="active">
+              <Name>Weekdays unless a holiday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+                  <HolidayTypes>NotHoliday</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+          </dayTypes>
+        </ServiceCalendarFrame>
+      </frames>
+    </CompositeFrame>
+  </dataObjects>
+</PublicationDelivery>
+
