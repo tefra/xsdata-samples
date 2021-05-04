@@ -25,10 +25,10 @@ tests = $\
 	test-amadeus $\
 	test-sabre $\
 	test-travelport $\
+	test-common_types $\
 	test-reqif $\
 	test-npo $\
 	test-datexii $\
-	test-bnm $\
 	test-ewp $\
 	test-ubl $\
 	test-netex
@@ -42,6 +42,7 @@ mypies = $\
 	mypy-npo $\
 	mypy-datexii $\
 	mypy-ewp $\
+	mypy-ubl $\
 	mypy-netex
 
 all: $(builds) $(tests) $(mypies)
@@ -53,9 +54,9 @@ common_types: build-common_types test-common_types mypy-common_types
 reqif: build-reqif test-reqif mypy-reqif
 npo: build-npo test-npo mypy-npo
 datexii: build-datexii test-datexii mypy-datexii
-ewp: build-ewp mypy-ewp
-ubl: build-ubl mypy-ubl test-ubl
-netex: build-netex mypy-netex test-netex
+ewp: build-ewp test-ewp mypy-ewp
+ubl: build-ubl test-ubl mypy-ubl
+netex: build-netex test-netex mypy-netex
 
 build: $(builds)
 test: $(tests)
@@ -68,8 +69,8 @@ build-%:
 
 test-%:
 	@echo "**** Running tests: $* ****"
-	pytest $*/
+	@pytest $*/ ||:
 
 mypy-%:
 	@echo "**** Running static analysis: $* ****"
-	mypy $*/models
+	@mypy $*/models ||:

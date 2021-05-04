@@ -4101,13 +4101,6 @@ class FareMasterPricerTravelBoardSearch:
                             "max_occurs": 2,
                         }
                     )
-                    dummy_net: Optional[object] = field(
-                        default=None,
-                        metadata={
-                            "name": "Dummy.NET",
-                            "type": "Element",
-                        }
-                    )
 
                     @dataclass
                     class StopDetails:
@@ -5709,13 +5702,6 @@ class FareMasterPricerTravelBoardSearch:
                     "name": "referencingDetail",
                     "type": "Element",
                     "max_occurs": 9,
-                }
-            )
-            dummy_net: Optional[object] = field(
-                default=None,
-                metadata={
-                    "name": "Dummy.NET",
-                    "type": "Element",
                 }
             )
 

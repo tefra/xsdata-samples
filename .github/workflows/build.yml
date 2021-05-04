@@ -14,17 +14,17 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - { name: "Amadeus", id: "amadeus", xsdata: true, pytest: true }
-          - { name: "Sabre", id: "sabre", xsdata: true, pytest: true }
-          - { name: "Travelport", id: "travelport", xsdata: true, pytest: true }
-          - { name: "Exchange Rates", id: "bnm", pytest: true }
+          - { name: "Amadeus", id: "amadeus", xsdata: true, pytest: true, mypy: true }
+          - { name: "Sabre", id: "sabre", xsdata: true, pytest: true, mypy: true }
+          - { name: "Travelport", id: "travelport", xsdata: true, pytest: true, mypy: true }
+          - { name: "Exchange Rates", id: "bnm", pytest: true, mypy: true }
           - { name: "Common Types", id: "common_types", xsdata: true, mypy: false }
-          - { name: "Requirements Interchange Format", id: "reqif", mypy: true, pytest: true, xsdata: true }
-          - { name: "NPO API", id: "npo", mypy: true, pytest: true, xsdata: true }
-          - { name: "DateX II", id: "datexii", mypy: true, pytest: true, xsdata: true }
-          - { name: "EWP", id: "ewp", mypy: true, pytest: true, xsdata: true }
-          - { name: "UBL", id: "ubl", mypy: false, pytest: true, xsdata: true }
-          - { name: "NeTEx", id: "netex", mypy: false, pytest: true, xsdata: true }
+          - { name: "ReqIF", id: "reqif", xsdata: true, pytest: true, mypy: true }
+          - { name: "NPO API", id: "npo", xsdata: true, pytest: true, mypy: true }
+          - { name: "DateX II", id: "datexii", xsdata: true,  pytest: true, mypy: true,  }
+          - { name: "EWP", id: "ewp", xsdata: true, pytest: true, mypy: true,  }
+          - { name: "UBL", id: "ubl", xsdata: true,  pytest: true, mypy: false }
+          - { name: "NeTEx", id: "netex", xsdata: true, pytest: true, mypy: false }
 
     steps:
       - uses: actions/checkout@v2

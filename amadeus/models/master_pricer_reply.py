@@ -3007,7 +3007,6 @@ class SpecialRequirementsDataDetailsType:
     Special requirements data details.
 
     :ivar seat_characteristics: SSR seat characteristic
-    :ivar dummy_net:
     """
     seat_characteristics: List[str] = field(
         default_factory=list,
@@ -3018,14 +3017,6 @@ class SpecialRequirementsDataDetailsType:
             "max_occurs": 5,
             "min_length": 1,
             "max_length": 2,
-        }
-    )
-    dummy_net: Optional[object] = field(
-        default=None,
-        metadata={
-            "name": "Dummy.NET",
-            "type": "Element",
-            "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
         }
     )
 
@@ -3553,7 +3544,6 @@ class DateAndTimeInformationType:
     not the standard only used in fare quote message.
 
     :ivar stop_details: Details on date and time
-    :ivar dummy_net:
     """
     stop_details: List[DateAndTimeDetailsType] = field(
         default_factory=list,
@@ -3565,14 +3555,6 @@ class DateAndTimeInformationType:
             "max_occurs": 2,
         }
     )
-    dummy_net: Optional[object] = field(
-        default=None,
-        metadata={
-            "name": "Dummy.NET",
-            "type": "Element",
-            "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
-    )
 
 
 @dataclass
@@ -3582,7 +3564,6 @@ class DateAndTimeInformationType182345S:
     operational events.
 
     :ivar date_and_time_details: DATE AND TIME DETAILS
-    :ivar dummy_net:
     """
     class Meta:
         name = "DateAndTimeInformationType_182345S"
@@ -3594,14 +3575,6 @@ class DateAndTimeInformationType182345S:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 400,
-        }
-    )
-    dummy_net: Optional[object] = field(
-        default=None,
-        metadata={
-            "name": "Dummy.NET",
-            "type": "Element",
-            "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
         }
     )
 
@@ -4757,7 +4730,6 @@ class ReferenceInfoType:
     To provide specific reference identification for a traveller.
 
     :ivar referencing_detail: Referencing details
-    :ivar dummy_net:
     """
     referencing_detail: List[ReferencingDetailsType191583C] = field(
         default_factory=list,
@@ -4766,14 +4738,6 @@ class ReferenceInfoType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 200,
-        }
-    )
-    dummy_net: Optional[object] = field(
-        default=None,
-        metadata={
-            "name": "Dummy.NET",
-            "type": "Element",
-            "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
         }
     )
 

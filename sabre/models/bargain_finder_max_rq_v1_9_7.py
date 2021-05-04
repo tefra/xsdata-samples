@@ -10488,36 +10488,10 @@ class OtaAirLowFareSearchRq:
             class Origin:
                 """
                 Attributes
-                    connection_locations: Travel Connection Location -
-                        for example, air uses the IATA 3 letter code.
-                    carriers: Carrier preferrence information
-                    departure_date_time_override: Overrides
-                        DepartureDateTime attributes
                     airport_code: Required unless AirportsGroup is
                         specified. Cannot appear with AirportsGroup.
                     airports_group: Name of the airports group
                 """
-                connection_locations: Optional[ConnectionType] = field(
-                    default=None,
-                    metadata={
-                        "name": "ConnectionLocations",
-                        "type": "Element",
-                    }
-                )
-                carriers: Optional["OtaAirLowFareSearchRq.Leg.Origins.Origin.Carriers"] = field(
-                    default=None,
-                    metadata={
-                        "name": "Carriers",
-                        "type": "Element",
-                    }
-                )
-                departure_date_time_override: Optional[OverrideDateTimeType] = field(
-                    default=None,
-                    metadata={
-                        "name": "DepartureDateTimeOverride",
-                        "type": "Element",
-                    }
-                )
                 airport_code: Optional[str] = field(
                     default=None,
                     metadata={
@@ -10591,36 +10565,10 @@ class OtaAirLowFareSearchRq:
             class Destination:
                 """
                 Attributes
-                    connection_locations: Travel Connection Location -
-                        for example, air uses the IATA 3 letter code.
-                    carriers: Carrier preferrence information
-                    arrival_date_time_override: Overrides
-                        ArrivalDateTime attributes
                     airport_code: Required unless AirportsGroup is
                         specified. Cannot appear with AirportsGroup.
                     airports_group: Name of the airports group
                 """
-                connection_locations: Optional[ConnectionType] = field(
-                    default=None,
-                    metadata={
-                        "name": "ConnectionLocations",
-                        "type": "Element",
-                    }
-                )
-                carriers: Optional["OtaAirLowFareSearchRq.Leg.Destinations.Destination.Carriers"] = field(
-                    default=None,
-                    metadata={
-                        "name": "Carriers",
-                        "type": "Element",
-                    }
-                )
-                arrival_date_time_override: Optional[OverrideDateTimeType] = field(
-                    default=None,
-                    metadata={
-                        "name": "ArrivalDateTimeOverride",
-                        "type": "Element",
-                    }
-                )
                 airport_code: Optional[str] = field(
                     default=None,
                     metadata={

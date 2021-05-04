@@ -2526,20 +2526,6 @@ class St(Ed):
     class Meta:
         name = "ST"
 
-    reference: Optional[Tel] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    thumbnail: Optional[Ed] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
     representation: BinaryDataEncoding = field(
         init=False,
         default=BinaryDataEncoding.TXT,
@@ -2570,14 +2556,6 @@ class Thumbnail(Ed):
     """
     class Meta:
         name = "thumbnail"
-
-    thumbnail: Optional["Thumbnail"] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
 
 
 @dataclass
@@ -2734,14 +2712,6 @@ class Ce(Cd):
     """
     class Meta:
         name = "CE"
-
-    qualifier: Optional[Cr] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
 
 
 @dataclass
@@ -3136,14 +3106,6 @@ class CeExplicit(CdExplicit):
     class Meta:
         name = "CE_explicit"
 
-    qualifier: Optional[Cr] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-
 
 @dataclass
 class Cv(Ce):
@@ -3154,14 +3116,6 @@ class Cv(Ce):
     """
     class Meta:
         name = "CV"
-
-    translation: Optional[Cd] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
 
 
 @dataclass
