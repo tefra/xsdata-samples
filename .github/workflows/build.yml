@@ -23,7 +23,7 @@ jobs:
           - { name: "NPO API", id: "npo", xsdata: true, pytest: true, mypy: true }
           - { name: "DateX II", id: "datexii", xsdata: true,  pytest: true, mypy: true,  }
           - { name: "EWP", id: "ewp", xsdata: true, pytest: true, mypy: true,  }
-          - { name: "UBL", id: "ubl", xsdata: true,  pytest: true, mypy: false }
+          - { name: "UBL", id: "ubl", xsdata: true,  pytest: true, mypy: true }
           - { name: "NeTEx", id: "netex", xsdata: true, pytest: true, mypy: false }
 
     steps:
