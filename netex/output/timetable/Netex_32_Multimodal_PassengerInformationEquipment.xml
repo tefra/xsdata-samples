@@ -375,7 +375,7 @@
             <LogicalDisplay id="mybus:LD001_TramBus_Q1_EastboundSouthbound" modification="new" version="any" status="active">
               <Description>Departures Display for use on  Bravo Bus/Tram Quay 1 Outbound</Description>
               <displayAssignments modificationSet="all">
-                <DisplayAssignment id="mybus:LD001_TramBus_Q1_EastboundSouthbound" modification="new" version="any" status="active" order="1">
+                <DisplayAssignment id="mybus:LD001_TramBus_Q1_EastboundSouthbound" modification="new" version="any" order="1" status="active">
                   <Name>Assign  ScheduledStopPoint 002 (Bravo) route 24 Eastbound Departures to Display LD001 </Name>
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
                   <ServiceJourneyPatternRef version="any" ref="hde:jp_24o"/>
@@ -383,7 +383,7 @@
                   <NumberOfJourneysToShow>2</NumberOfJourneysToShow>
                   <DisplayPriority>1</DisplayPriority>
                 </DisplayAssignment>
-                <DisplayAssignment id="mybus:LD001_TramBus_Q1_EastboundSouthbound" modification="new" version="any" status="active" order="2">
+                <DisplayAssignment id="mybus:LD001_TramBus_Q1_EastboundSouthbound" modification="new" version="any" order="2" status="active">
                   <Name>Assign ScheduledStopPoint 032 (Bravo) route 46 Southbound Departures to Display LD001  </Name>
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_032"/>
                   <ServiceJourneyPatternRef version="any" ref="hde:jp_46o"/>
@@ -391,7 +391,7 @@
                   <NumberOfJourneysToShow>2</NumberOfJourneysToShow>
                   <DisplayPriority>1</DisplayPriority>
                 </DisplayAssignment>
-                <DisplayAssignment id="mybus:LD001_TramBus_Q1_EastboundSouthbound" modification="new" version="any" status="active" order="3">
+                <DisplayAssignment id="mybus:LD001_TramBus_Q1_EastboundSouthbound" modification="new" version="any" order="3" status="active">
                   <Name>Assign   ScheduledStopPoint 032 (Bravo)  route 68 Eastbound Departures to Display LD001  </Name>
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_032"/>
                   <ServiceJourneyPatternRef version="any" ref="hde:jp_68o"/>
@@ -404,7 +404,7 @@
             <LogicalDisplay id="mybus:LD002_TramBus_Q2_WestboundNorthbound" modification="new" version="any" status="active">
               <Description>Departures Display for use on  Bravo Bus/Tram Quay 2</Description>
               <displayAssignments modificationSet="all">
-                <DisplayAssignment id="mybus:LD002_TramBus_Q2_WestboundNorthbound" modification="new" version="any" status="active" order="1">
+                <DisplayAssignment id="mybus:LD002_TramBus_Q2_WestboundNorthbound" modification="new" version="any" order="1" status="active">
                   <Name>Assign ScheduledStopPoint 002 (Bravo)  LINE 24 Westbound Departures to Display LD002 </Name>
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
                   <ServiceJourneyPatternRef version="any" ref="hde:jp_24i"/>
@@ -412,7 +412,7 @@
                   <NumberOfJourneysToShow>2</NumberOfJourneysToShow>
                   <DisplayPriority>1</DisplayPriority>
                 </DisplayAssignment>
-                <DisplayAssignment id="mybus:LD002_TramBus_Q2_WestboundNorthbound" modification="new" version="any" status="active" order="2">
+                <DisplayAssignment id="mybus:LD002_TramBus_Q2_WestboundNorthbound" modification="new" version="any" order="2" status="active">
                   <Name>Assign ScheduledStopPoint 0032  (Bravo)  LINE 46 Northbound Departures to Display LD002 </Name>
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_032"/>
                   <ServiceJourneyPatternRef version="any" ref="hde:jp_46i"/>
@@ -420,7 +420,7 @@
                   <NumberOfJourneysToShow>2</NumberOfJourneysToShow>
                   <DisplayPriority>2</DisplayPriority>
                 </DisplayAssignment>
-                <DisplayAssignment id="mybus:LD002_TramBus_Q2_WestboundNorthbound" modification="new" version="any" status="active" order="3">
+                <DisplayAssignment id="mybus:LD002_TramBus_Q2_WestboundNorthbound" modification="new" version="any" order="3" status="active">
                   <Name>Assign ScheduledStopPoint 0032  (Bravo)  LINE 68  Northbound  Departuresto Display LD002 - Arrivals</Name>
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_032"/>
                   <ServiceJourneyPatternRef version="any" ref="hde:jp_68i"/>
@@ -433,19 +433,19 @@
             <LogicalDisplay id="mybus:LD010_TicketHall_arrivals" modification="new" version="any" status="active">
               <Name>All Arrivals Display for use in Rail Ticket Hall</Name>
               <displayAssignments modificationSet="all">
-                <DisplayAssignment id="mybus:LD010_TicketHall_arrivals" modification="new" version="any" status="active" order="1">
+                <DisplayAssignment id="mybus:LD010_TicketHall_arrivals" modification="new" version="any" order="1" status="active">
                   <Name>Assign ScheduledStopPoint 002 tram arrivals  all routes for Bravo to Display LD010 </Name>
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
                   <VehicleMode>tram</VehicleMode>
                   <DisplayPriority>1</DisplayPriority>
                 </DisplayAssignment>
-                <DisplayAssignment id="mybus:LD010_TicketHall_arrivals" modification="new" version="any" status="active" order="2">
+                <DisplayAssignment id="mybus:LD010_TicketHall_arrivals" modification="new" version="any" order="2" status="active">
                   <Name>Assign ScheduledStopPoint 032 bus arivals  all  routes for Bravo to Display LD010  </Name>
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_032"/>
                   <VehicleMode>bus</VehicleMode>
                   <DisplayAssignmentType>arrivals</DisplayAssignmentType>
                 </DisplayAssignment>
-                <DisplayAssignment id="mybus:LD010_TicketHall_arrivals" modification="new" version="any" status="active" order="3">
+                <DisplayAssignment id="mybus:LD010_TicketHall_arrivals" modification="new" version="any" order="3" status="active">
                   <Name>Assign ScheduledStopPoint 042 rail  arrivals all routes for Bravo to Display LD010  </Name>
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_032"/>
                   <VehicleMode>rail</VehicleMode>
@@ -456,17 +456,17 @@
             <LogicalDisplay id="mybus:LD011_TicketHall_departures" modification="new" version="any" status="active">
               <Description>Departures Display in Ticket Hall</Description>
               <displayAssignments modificationSet="all">
-                <DisplayAssignment id="mybus:LD011_TicketHall_departures" modification="new" version="any" status="active" order="1">
+                <DisplayAssignment id="mybus:LD011_TicketHall_departures" modification="new" version="any" order="1" status="active">
                   <Name>Assign ScheduledStopPoint 002 tram all routes for Bravo to Display LD011 </Name>
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
                   <DisplayAssignmentType>departures</DisplayAssignmentType>
                 </DisplayAssignment>
-                <DisplayAssignment id="mybus:LD011_TicketHall_departures" modification="new" version="any" status="active" order="2">
+                <DisplayAssignment id="mybus:LD011_TicketHall_departures" modification="new" version="any" order="2" status="active">
                   <Name>Assign ScheduledStopPoint 032 bus all routes for Bravo to Display LD011 </Name>
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_032"/>
                   <DisplayAssignmentType>departures</DisplayAssignmentType>
                 </DisplayAssignment>
-                <DisplayAssignment id="mybus:LD011_TicketHall_departures" modification="new" version="any" status="active" order="3">
+                <DisplayAssignment id="mybus:LD011_TicketHall_departures" modification="new" version="any" order="3" status="active">
                   <Name>Assign ScheduledStopPoint 042 rail all routes for Bravo to Display LD011 </Name>
                   <ScheduledStopPointRef version="any" ref="myrail:SSP_042"/>
                   <DisplayAssignmentType>departures</DisplayAssignmentType>
@@ -476,7 +476,7 @@
             <LogicalDisplay id="mybus:LD003_Rail_Q1_all" modification="new" version="any" status="active">
               <Name>Arrivals and Departures Display for use on  on rail Platform 3</Name>
               <displayAssignments modificationSet="all">
-                <DisplayAssignment id="mybus:LD003_Rail_Q1_all" modification="new" version="any" status="active" order="1">
+                <DisplayAssignment id="mybus:LD003_Rail_Q1_all" modification="new" version="any" order="1" status="active">
                   <Name>Assign ScheduledStopPoint 042 rail  all routes for Bravo   </Name>
                   <ScheduledStopPointRef version="any" ref="myrail:SSP_042"/>
                   <VehicleMode>rail</VehicleMode>
