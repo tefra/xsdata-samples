@@ -30,7 +30,7 @@ def test_serialize(sample):
 
     expected = output.joinpath(sample)
     if expected.exists():
-        assert expected.read_text() == result
+        assert expected.read_text().strip() == result.strip()
     else:
         expected.parent.mkdir(parents=True, exist_ok=True)
         expected.write_text(result + "\n")
