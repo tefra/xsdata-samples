@@ -3954,7 +3954,7 @@ class PtcfareBreakdownType:
             non_endorsable_indicator: Indicates whether the ticket is
                 endorsable. If true, the ticket is NOT endorsable.
         """
-        endorsement: List["PtcfareBreakdownType.Endorsements.Endorsement"] = field(
+        endorsement: List[FreeTextType] = field(
             default_factory=list,
             metadata={
                 "name": "Endorsement",
@@ -3985,10 +3985,6 @@ class PtcfareBreakdownType:
                 "type": "Attribute",
             }
         )
-
-        @dataclass
-        class Endorsement(FreeTextType):
-            pass
 
     @dataclass
     class TpaExtensions:
@@ -5000,7 +4996,7 @@ class AirItineraryPricingInfoType:
                     name: Group name
                     message: Arbitrary message returned from MIP
                 """
-                ancillary_fee_item: List["AirItineraryPricingInfoType.TpaExtensions.AncillaryFeeGroups.AncillaryFeeGroup.AncillaryFeeItem"] = field(
+                ancillary_fee_item: List[OcfeeType] = field(
                     default_factory=list,
                     metadata={
                         "name": "AncillaryFeeItem",
@@ -5031,10 +5027,6 @@ class AirItineraryPricingInfoType:
                         "type": "Attribute",
                     }
                 )
-
-                @dataclass
-                class AncillaryFeeItem(OcfeeType):
-                    pass
 
         @dataclass
         class Legs:
