@@ -10091,7 +10091,7 @@ class DeliveryInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
-    shipping_address: Optional["DeliveryInfo.ShippingAddress"] = field(
+    shipping_address: Optional[TypeStructuredAddress] = field(
         default=None,
         metadata={
             "name": "ShippingAddress",
@@ -10150,10 +10150,6 @@ class DeliveryInfo:
             "type": "Attribute",
         }
     )
-
-    @dataclass
-    class ShippingAddress(TypeStructuredAddress):
-        pass
 
 
 @dataclass

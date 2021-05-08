@@ -1731,7 +1731,7 @@ class FareMasterPricerTravelBoardSearch:
                     "type": "Element",
                 }
             )
-            company_id: Optional["FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo.CompanyId"] = field(
+            company_id: Optional[object] = field(
                 default=None,
                 metadata={
                     "name": "companyId",
@@ -1801,10 +1801,6 @@ class FareMasterPricerTravelBoardSearch:
                         "max_length": 6,
                     }
                 )
-
-            @dataclass
-            class CompanyId:
-                pass
 
             @dataclass
             class SellingPoint:
@@ -6392,7 +6388,7 @@ class FareMasterPricerTravelBoardSearch:
                     "type": "Element",
                 }
             )
-            company_id: Optional["FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo.CompanyId"] = field(
+            company_id: Optional[object] = field(
                 default=None,
                 metadata={
                     "name": "companyId",
@@ -6462,10 +6458,6 @@ class FareMasterPricerTravelBoardSearch:
                         "max_length": 6,
                     }
                 )
-
-            @dataclass
-            class CompanyId:
-                pass
 
             @dataclass
             class SellingPoint:
