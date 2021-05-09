@@ -3839,7 +3839,7 @@ class CoverageRoleType(Enum):
     FAMDEP = "FAMDEP"
     HANDIC = "HANDIC"
     INJ = "INJ"
-    SELF = "SELF"
+    SELF_VALUE = "SELF"
     SPON = "SPON"
 
 
@@ -21121,7 +21121,7 @@ class XLabSpecimenCollectionProviders(Enum):
     LABORATORY = "laboratory"
     PATHOLOGIST = "pathologist"
     PHLEBOTOMIST = "phlebotomist"
-    SELF = "self"
+    SELF_VALUE = "self"
     THIRD_PARTY = "thirdParty"
 
 

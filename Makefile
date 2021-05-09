@@ -31,6 +31,7 @@ tests = $\
 	test-datexii $\
 	test-ewp $\
 	test-ubl $\
+	test-defxml $\
 	test-netex
 
 mypies = $\
@@ -43,6 +44,7 @@ mypies = $\
 	mypy-datexii $\
 	mypy-ewp $\
 	mypy-ubl $\
+	mypy-defxml $\
 	mypy-netex
 
 all: $(builds) $(tests) $(mypies)
@@ -57,6 +59,7 @@ datexii: build-datexii test-datexii mypy-datexii
 ewp: build-ewp test-ewp mypy-ewp
 ubl: build-ubl test-ubl mypy-ubl
 netex: build-netex test-netex mypy-netex
+defxml: test-defxml mypy-defxml
 
 build: $(builds)
 test: $(tests)
