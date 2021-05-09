@@ -25,6 +25,7 @@ jobs:
           - { name: "EWP", id: "ewp", xsdata: true, pytest: true, mypy: true,  }
           - { name: "UBL", id: "ubl", xsdata: true,  pytest: true, mypy: true }
           - { name: "NeTEx", id: "netex", xsdata: true, pytest: true, mypy: false }
+          - { name: "DefXML", id: "defxml", xsdata: false, pytest: true, mypy: false }
 
     steps:
       - uses: actions/checkout@v2
