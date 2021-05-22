@@ -683,7 +683,7 @@
               "lang": null,
               "style": null
              },
-             "substituted": false
+             "type": null
             },
             {
              "qname": "{http://www.w3.org/1999/xhtml}br",
@@ -693,7 +693,7 @@
               "class": null,
               "title": null
              },
-             "substituted": false
+             "type": null
             },
             {
              "qname": "{http://www.w3.org/1999/xhtml}b",
@@ -733,7 +733,7 @@
               "lang": null,
               "style": null
              },
-             "substituted": false
+             "type": null
             },
             {
              "qname": "{http://www.w3.org/1999/xhtml}br",
@@ -743,7 +743,7 @@
               "class": null,
               "title": null
              },
-             "substituted": false
+             "type": null
             },
             {
              "qname": "{http://www.w3.org/1999/xhtml}b",
@@ -783,7 +783,7 @@
               "lang": null,
               "style": null
              },
-             "substituted": false
+             "type": null
             },
             {
              "qname": "{http://www.w3.org/1999/xhtml}br",
@@ -793,7 +793,7 @@
               "class": null,
               "title": null
              },
-             "substituted": false
+             "type": null
             },
             {
              "qname": "{http://www.w3.org/1999/xhtml}b",
@@ -833,7 +833,7 @@
               "lang": null,
               "style": null
              },
-             "substituted": false
+             "type": null
             },
             {
              "qname": "{http://www.w3.org/1999/xhtml}br",
@@ -843,7 +843,7 @@
               "class": null,
               "title": null
              },
-             "substituted": false
+             "type": null
             },
             {
              "qname": "{http://www.w3.org/1999/xhtml}b",
@@ -883,7 +883,7 @@
               "lang": null,
               "style": null
              },
-             "substituted": false
+             "type": null
             },
             {
              "qname": "{http://www.w3.org/1999/xhtml}br",
@@ -893,7 +893,7 @@
               "class": null,
               "title": null
              },
-             "substituted": false
+             "type": null
             },
             {
              "qname": "{http://www.w3.org/1999/xhtml}b",
@@ -933,7 +933,7 @@
               "lang": null,
               "style": null
              },
-             "substituted": false
+             "type": null
             },
             {
              "qname": "{http://www.w3.org/1999/xhtml}br",
@@ -943,7 +943,7 @@
               "class": null,
               "title": null
              },
-             "substituted": false
+             "type": null
             },
             {
              "qname": "{http://www.w3.org/1999/xhtml}b",
@@ -983,7 +983,7 @@
               "lang": null,
               "style": null
              },
-             "substituted": false
+             "type": null
             },
             {
              "qname": "{http://www.w3.org/1999/xhtml}br",
@@ -993,7 +993,7 @@
               "class": null,
               "title": null
              },
-             "substituted": false
+             "type": null
             },
             {
              "qname": "{http://www.w3.org/1999/xhtml}b",
@@ -1033,7 +1033,7 @@
               "lang": null,
               "style": null
              },
-             "substituted": false
+             "type": null
             }
            ],
            "br": [],
@@ -1542,7 +1542,7 @@
                  "name": null,
                  "tabindex": null
                 },
-                "substituted": false
+                "type": null
                }
               ],
               "br": [],
@@ -1576,7 +1576,7 @@
               "lang": null,
               "style": ""
              },
-             "substituted": false
+             "type": null
             }
            ],
            "br": [],
@@ -1874,7 +1874,7 @@
               "class": null,
               "title": null
              },
-             "substituted": false
+             "type": null
             },
             "\nFunktion \"Testfunktion\"  "
            ],
@@ -2461,7 +2461,7 @@
               "class": null,
               "title": null
              },
-             "substituted": false
+             "type": null
             },
             "\nAdaptive Cruise Assist  "
            ],
@@ -2608,7 +2608,7 @@
               "class": null,
               "title": null
              },
-             "substituted": false
+             "type": null
             },
             "\nAdaptive Cruise Control  "
            ],
@@ -2755,7 +2755,7 @@
               "class": null,
               "title": null
              },
-             "substituted": false
+             "type": null
             },
             "\nHuman Maschine Interface  "
            ],
@@ -3054,7 +3054,7 @@
               "class": null,
               "title": null
              },
-             "substituted": false
+             "type": null
             },
             "\nDas eigene Fahrzeug auf das sich die Funktionsberschreibung bezieht  "
            ],
@@ -3201,7 +3201,7 @@
               "class": null,
               "title": null
              },
-             "substituted": false
+             "type": null
             },
             "\nFahrstreifen auf dem sich das Ego-Fahrzeug bewegt  "
            ],

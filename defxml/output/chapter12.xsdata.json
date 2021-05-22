@@ -49,7 +49,7 @@
                     "{http://example.org/oth}custom": "12"
                 }
             },
-            "substituted": false
+            "type": null
         }
     ]
 }
