@@ -27,6 +27,7 @@ jobs:
           - { name: "NeTEx", id: "netex", xsdata: true, pytest: true, mypy: false }
           - { name: "DefXML", id: "defxml", xsdata: false, pytest: true, mypy: false }
           - { name: "SpaceX", id: "spacex", xsdata: true, pytest: true, mypy: true }
+          - { name: "Autosar", id: "autosar", xsdata: true, pytest: true, mypy: false }
 
     steps:
       - uses: actions/checkout@v2
