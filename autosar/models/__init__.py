@@ -1,2862 +1,2877 @@
-from autosar.models.autosar_00049_compact import (
-    AbsoluteTolerance,
-    AbstractAccessPointSubtypesEnum,
-    AbstractClassTailoring,
-    AbstractEventSubtypesEnum,
-    AbstractIamRemoteSubjectSubtypesEnum,
-    AbstractImplementationDataTypeSubtypesEnum,
-    AbstractProvidedPortPrototypeSubtypesEnum,
-    AbstractRawDataStreamInterfaceSubtypesEnum,
-    AbstractRequiredPortPrototypeSubtypesEnum,
-    AbstractServiceInstanceSubtypesEnum,
-    AbstractSignalBasedToISignalTriggeringMappingSubtypesEnum,
-    AccessControlEnum,
-    AccessControlEnumSimple,
-    AccessCount,
-    AccessCountSet,
-    AclObjectSet,
-    AclObjectSetSubtypesEnum,
-    AclOperation,
-    AclOperationSubtypesEnum,
-    AclPermission,
-    AclRole,
-    AclRoleSubtypesEnum,
-    AclScopeEnum,
-    AclScopeEnumSimple,
-    AdaptiveApplicationSwComponentType,
-    AdaptiveModuleInstantiationSubtypesEnum,
-    AdaptivePlatformServiceInstanceSubtypesEnum,
-    AdaptiveSwcInternalBehavior,
-    AdditionalBindingTimeEnum,
-    AdditionalBindingTimeEnumSimple,
-    Address,
+from autosar.models.absolute_tolerance import AbsoluteTolerance
+from autosar.models.abstract_access_point_subtypes_enum import AbstractAccessPointSubtypesEnum
+from autosar.models.abstract_event_subtypes_enum import AbstractEventSubtypesEnum
+from autosar.models.abstract_iam_remote_subject_subtypes_enum import AbstractIamRemoteSubjectSubtypesEnum
+from autosar.models.abstract_implementation_data_type_subtypes_enum import AbstractImplementationDataTypeSubtypesEnum
+from autosar.models.abstract_provided_port_prototype_subtypes_enum import AbstractProvidedPortPrototypeSubtypesEnum
+from autosar.models.abstract_raw_data_stream_interface_subtypes_enum import AbstractRawDataStreamInterfaceSubtypesEnum
+from autosar.models.abstract_required_port_prototype_subtypes_enum import AbstractRequiredPortPrototypeSubtypesEnum
+from autosar.models.abstract_service_instance_subtypes_enum import AbstractServiceInstanceSubtypesEnum
+from autosar.models.abstract_signal_based_to_i_signal_triggering_mapping_subtypes_enum import AbstractSignalBasedToISignalTriggeringMappingSubtypesEnum
+from autosar.models.access_control_enum import AccessControlEnum
+from autosar.models.access_control_enum_simple import AccessControlEnumSimple
+from autosar.models.access_count import AccessCount
+from autosar.models.access_count_set import AccessCountSet
+from autosar.models.acl_object_set import AclObjectSet
+from autosar.models.acl_object_set_subtypes_enum import AclObjectSetSubtypesEnum
+from autosar.models.acl_operation import AclOperation
+from autosar.models.acl_operation_subtypes_enum import AclOperationSubtypesEnum
+from autosar.models.acl_permission import AclPermission
+from autosar.models.acl_role import AclRole
+from autosar.models.acl_role_subtypes_enum import AclRoleSubtypesEnum
+from autosar.models.acl_scope_enum import AclScopeEnum
+from autosar.models.acl_scope_enum_simple import AclScopeEnumSimple
+from autosar.models.adaptive_application_sw_component_type import AdaptiveApplicationSwComponentType
+from autosar.models.adaptive_module_instantiation_subtypes_enum import AdaptiveModuleInstantiationSubtypesEnum
+from autosar.models.adaptive_platform_service_instance_subtypes_enum import AdaptivePlatformServiceInstanceSubtypesEnum
+from autosar.models.adaptive_swc_internal_behavior import AdaptiveSwcInternalBehavior
+from autosar.models.additional_binding_time_enum import AdditionalBindingTimeEnum
+from autosar.models.additional_binding_time_enum_simple import AdditionalBindingTimeEnumSimple
+from autosar.models.address import Address
+from autosar.models.age_constraint import AgeConstraint
+from autosar.models.aggregation_condition import AggregationCondition
+from autosar.models.aggregation_tailoring_subtypes_enum import AggregationTailoringSubtypesEnum
+from autosar.models.alias_name_assignment import AliasNameAssignment
+from autosar.models.alias_name_set import AliasNameSet
+from autosar.models.align_enum import AlignEnum
+from autosar.models.align_enum_simple import AlignEnumSimple
+from autosar.models.alignment_type import AlignmentType
+from autosar.models.alive_supervision import AliveSupervision
+from autosar.models.allocator import Allocator
+from autosar.models.allocator_subtypes_enum import AllocatorSubtypesEnum
+from autosar.models.analyzed_execution_time import AnalyzedExecutionTime
+from autosar.models.annotation import (
     AdminData,
-    AgeConstraint,
-    AggregationCondition,
-    AggregationTailoring,
-    AggregationTailoringSubtypesEnum,
-    AliasNameAssignment,
-    AliasNameSet,
-    AlignEnum,
-    AlignEnumSimple,
-    AlignmentType,
-    AliveSupervision,
-    Allocator,
-    AllocatorSubtypesEnum,
-    AnalyzedExecutionTime,
     Annotation,
-    AnyInstanceRef,
-    AnyServiceInstanceId,
-    AnyVersionString,
-    ApApplicationError,
-    ApApplicationErrorSubtypesEnum,
-    ApApplicationErrorDomain,
-    ApApplicationErrorDomainSubtypesEnum,
-    ApApplicationErrorSet,
-    ApApplicationErrorSetSubtypesEnum,
-    ApSomeipTransformationProps,
-    ApSomeipTransformationPropsSubtypesEnum,
-    ApiPrincipleEnum,
-    ApiPrincipleEnumSimple,
-    ApplicationArrayDataType,
-    ApplicationArrayElement,
-    ApplicationArrayElementSubtypesEnum,
-    ApplicationAssocMapDataType,
-    ApplicationAssocMapElement,
-    ApplicationAssocMapElementValueSpecification,
-    ApplicationAssocMapValueSpecification,
-    ApplicationCompositeDataTypeSubElementRef,
-    ApplicationCompositeElementDataPrototypeSubtypesEnum,
-    ApplicationCompositeElementInPortInterfaceInstanceRef,
-    ApplicationDataPrototypeInSystemInstanceRef,
-    ApplicationDataTypeSubtypesEnum,
-    ApplicationDeferredDataType,
-    ApplicationEndpoint,
-    ApplicationEndpointSubtypesEnum,
-    ApplicationEndpointRefConditional,
-    ApplicationEntry,
-    ApplicationError,
-    ApplicationErrorSubtypesEnum,
-    ApplicationErrorMapping,
-    ApplicationPartition,
-    ApplicationPartitionSubtypesEnum,
-    ApplicationPartitionToEcuPartitionMapping,
-    ApplicationPrimitiveDataType,
-    ApplicationPrimitiveDataTypeSubtypesEnum,
-    ApplicationRecordDataType,
-    ApplicationRecordElement,
-    ApplicationRecordElementSubtypesEnum,
-    ApplicationRuleBasedValueSpecification,
-    ApplicationSwComponentType,
-    ApplicationValueSpecification,
-    ArElementSubtypesEnum,
-    ArPackage,
-    ArPackageSubtypesEnum,
-    ArParameterInImplementationDataInstanceRef,
-    ArVariableInImplementationDataInstanceRef,
-    ArbitraryEventTriggering,
-    Area,
-    AreaEnumNohref,
-    AreaEnumNohrefSimple,
-    AreaEnumShape,
-    AreaEnumShapeSimple,
-    ArgumentDataPrototype,
-    ArgumentDataPrototypeSubtypesEnum,
-    ArgumentDirectionEnum,
-    ArgumentDirectionEnumSimple,
-    ArrayImplPolicyEnum,
-    ArrayImplPolicyEnumSimple,
-    ArraySizeHandlingEnum,
-    ArraySizeHandlingEnumSimple,
-    ArraySizeSemanticsEnum,
-    ArraySizeSemanticsEnumSimple,
-    ArrayValueSpecification,
-    AsamRecordLayoutSemantics,
-    AssemblySwConnector,
-    AssignFrameId,
-    AssignFrameIdRange,
-    AssignNad,
-    AsynchronousServerCallPoint,
-    AsynchronousServerCallPointSubtypesEnum,
-    AsynchronousServerCallResultPoint,
-    AsynchronousServerCallResultPointSubtypesEnum,
-    AsynchronousServerCallReturnsEvent,
-    AtomicSwComponentTypeSubtypesEnum,
-    AtpBlueprintSubtypesEnum,
-    AtpBlueprintableSubtypesEnum,
-    AtpClassifierSubtypesEnum,
-    AtpDefinitionSubtypesEnum,
-    AtpFeatureSubtypesEnum,
-    AtpPrototypeSubtypesEnum,
-    AtpTypeSubtypesEnum,
-    AutoCollectEnum,
-    AutoCollectEnumSimple,
-    Autosar,
-    AutosarDataPrototypeSubtypesEnum,
-    AutosarDataTypeSubtypesEnum,
-    AutosarDataTypeRefConditional,
-    AutosarEngineeringObject,
-    AutosarOperationArgumentInstance,
-    AutosarOperationArgumentInstanceSubtypesEnum,
-    AutosarParameterRef,
-    AutosarVariableInstance,
-    AutosarVariableInstanceSubtypesEnum,
-    AutosarVariableRef,
-    AxisIndexType,
-    BackgroundEvent,
-    BaseTypeDirectDefinition,
-    BaseTypeEncodingString,
-    Baseline,
-    BinaryManifestItem,
-    BinaryManifestItemDefinition,
-    BinaryManifestItemNumericalValue,
-    BinaryManifestItemPointerValue,
-    BinaryManifestMetaDataField,
-    BinaryManifestProvideResource,
-    BinaryManifestRequireResource,
-    BinaryManifestResourceDefinition,
-    BinaryManifestResourceDefinitionSubtypesEnum,
-    BindingTimeEnum,
-    BindingTimeEnumSimple,
-    BlockState,
-    BlockStateSubtypesEnum,
     BlueprintFormula,
     BlueprintGenerator,
-    BlueprintMapping,
-    BlueprintMappingSet,
-    BlueprintPolicyList,
-    BlueprintPolicyNotModifiable,
-    BlueprintPolicySingle,
-    Boolean,
-    BooleanValueVariationPoint,
-    Br,
-    BswAsynchronousServerCallPoint,
-    BswAsynchronousServerCallPointSubtypesEnum,
-    BswAsynchronousServerCallResultPoint,
-    BswAsynchronousServerCallResultPointSubtypesEnum,
-    BswAsynchronousServerCallReturnsEvent,
-    BswBackgroundEvent,
-    BswCallType,
-    BswCallTypeSimple,
-    BswCalledEntity,
-    BswClientPolicy,
-    BswCompositionTiming,
-    BswDataReceivedEvent,
-    BswDataSendPolicy,
-    BswDebugInfo,
-    BswDirectCallPoint,
-    BswDistinguishedPartition,
-    BswDistinguishedPartitionSubtypesEnum,
-    BswEntryKindEnum,
-    BswEntryKindEnumSimple,
-    BswEntryRelationship,
-    BswEntryRelationshipEnum,
-    BswEntryRelationshipEnumSimple,
-    BswEntryRelationshipSet,
-    BswExclusiveAreaPolicy,
-    BswExecutionContext,
-    BswExecutionContextSimple,
-    BswExternalTriggerOccurredEvent,
-    BswImplementation,
-    BswImplementationSubtypesEnum,
-    BswInternalBehavior,
-    BswInternalBehaviorSubtypesEnum,
-    BswInternalTriggerOccurredEvent,
-    BswInternalTriggeringPoint,
-    BswInternalTriggeringPointSubtypesEnum,
-    BswInternalTriggeringPointPolicy,
-    BswInternalTriggeringPointRefConditional,
-    BswInterruptCategory,
-    BswInterruptCategorySimple,
-    BswInterruptEntity,
-    BswMgrNeeds,
-    BswModeManagerErrorEvent,
-    BswModeReceiverPolicy,
-    BswModeSenderPolicy,
-    BswModeSwitchAckRequest,
-    BswModeSwitchEvent,
-    BswModeSwitchedAckEvent,
-    BswModuleClientServerEntry,
-    BswModuleClientServerEntrySubtypesEnum,
-    BswModuleDependency,
-    BswModuleDescription,
-    BswModuleDescriptionSubtypesEnum,
-    BswModuleDescriptionRefConditional,
-    BswModuleEntitySubtypesEnum,
-    BswModuleEntry,
-    BswModuleEntrySubtypesEnum,
-    BswModuleEntryRefConditional,
-    BswModuleTiming,
-    BswOperationInvokedEvent,
-    BswOsTaskExecutionEvent,
-    BswParameterPolicy,
-    BswPerInstanceMemoryPolicy,
-    BswQueuedDataReceptionPolicy,
-    BswReleasedTriggerPolicy,
-    BswSchedulableEntity,
-    BswSchedulerNamePrefix,
-    BswSchedulerNamePrefixSubtypesEnum,
-    BswServiceDependency,
-    BswServiceDependencyIdent,
-    BswServiceDependencyIdentSubtypesEnum,
-    BswSynchronousServerCallPoint,
-    BswTimingEvent,
-    BswTriggerDirectImplementation,
-    BswVariableAccess,
-    BufferProperties,
-    BuildAction,
-    BuildActionSubtypesEnum,
-    BuildActionEnvironment,
-    BuildActionEnvironmentSubtypesEnum,
-    BuildActionInvocator,
-    BuildActionIoElement,
-    BuildActionManifest,
-    BuildActionManifestSubtypesEnum,
-    BuildActionManifestRefConditional,
-    BuildEngineeringObject,
-    BuildTypeEnum,
-    BuildTypeEnumSimple,
-    BulkNvDataDescriptor,
-    BurstPatternEventTriggering,
-    BusMirrorCanIdRangeMapping,
-    BusMirrorCanIdToCanIdMapping,
-    BusMirrorChannel,
-    BusMirrorChannelMappingCan,
-    BusMirrorChannelMappingFlexray,
-    BusMirrorChannelMappingIp,
-    BusMirrorChannelMappingUserDefined,
-    BusMirrorLinPidToCanIdMapping,
-    ByteOrderEnum,
-    ByteOrderEnumSimple,
-    CIdentifier,
-    CIdentifierWithIndex,
-    CalibrationParameterValue,
-    CalibrationParameterValueSet,
-    CalibrationParameterValueSetSubtypesEnum,
-    CalprmAxisCategoryEnum,
-    CalprmAxisCategoryEnumSimple,
-    CanAddressingModeType,
-    CanAddressingModeTypeSimple,
-    CanCluster,
-    CanClusterBusOffRecovery,
-    CanClusterConditional,
-    CanCommunicationConnector,
-    CanCommunicationController,
-    CanCommunicationControllerConditional,
-    CanControllerConfiguration,
-    CanControllerConfigurationRequirements,
-    CanControllerFdConfiguration,
-    CanControllerFdConfigurationRequirements,
-    CanFrame,
-    CanFrameRxBehaviorEnum,
-    CanFrameRxBehaviorEnumSimple,
-    CanFrameTriggering,
-    CanFrameTriggeringSubtypesEnum,
-    CanFrameTxBehaviorEnum,
-    CanFrameTxBehaviorEnumSimple,
-    CanGlobalTimeDomainProps,
-    CanNmCluster,
-    CanNmClusterSubtypesEnum,
-    CanNmClusterCoupling,
-    CanNmEcu,
-    CanNmNode,
-    CanNmRangeConfig,
-    CanPhysicalChannel,
-    CanTpAddress,
-    CanTpAddressSubtypesEnum,
-    CanTpAddressingFormatType,
-    CanTpAddressingFormatTypeSimple,
-    CanTpChannel,
-    CanTpChannelSubtypesEnum,
-    CanTpChannelModeType,
-    CanTpChannelModeTypeSimple,
-    CanTpConfig,
-    CanTpConnection,
-    CanTpEcu,
-    CanTpNode,
-    CanTpNodeSubtypesEnum,
-    Caption,
-    CategoryString,
-    Chapter,
-    ChapterContent,
-    ChapterEnumBreak,
-    ChapterEnumBreakSimple,
-    ChapterModel,
-    ChapterOrMsrQuery,
-    CheckpointTransition,
-    CheckpointTransitionSubtypesEnum,
-    ClassContentConditional,
-    ClientComSpec,
-    ClientIdDefinition,
-    ClientIdDefinitionSet,
-    ClientIdDefinitionSetSubtypesEnum,
-    ClientIdMapping,
-    ClientIdRange,
-    ClientIntentEnum,
-    ClientIntentEnumSimple,
-    ClientServerAnnotation,
-    ClientServerApplicationErrorMapping,
-    ClientServerArrayElementMapping,
-    ClientServerArrayTypeMapping,
-    ClientServerInterface,
-    ClientServerInterfaceSubtypesEnum,
-    ClientServerInterfaceMapping,
-    ClientServerInterfaceToBswModuleEntryBlueprintMapping,
-    ClientServerOperation,
-    ClientServerOperationSubtypesEnum,
-    ClientServerOperationBlueprintMapping,
-    ClientServerOperationMapping,
-    ClientServerPrimitiveTypeMapping,
-    ClientServerRecordElementMapping,
-    ClientServerRecordTypeMapping,
-    ClientServerToSignalGroupMapping,
-    ClientServerToSignalMapping,
-    Code,
-    CollectableElementSubtypesEnum,
-    Collection,
-    CollectionSubtypesEnum,
-    Colspec,
-    ComCertificateToCryptoCertificateMapping,
-    ComEventGrant,
-    ComEventGrantDesign,
-    ComEventGrantDesignSubtypesEnum,
-    ComFieldGrant,
-    ComFieldGrantDesign,
-    ComFieldGrantDesignSubtypesEnum,
-    ComFindServiceGrant,
-    ComFindServiceGrantDesign,
-    ComFindServiceGrantDesignSubtypesEnum,
-    ComKeyToCryptoKeySlotMapping,
-    ComManagementMapping,
-    ComMethodGrant,
-    ComMethodGrantDesign,
-    ComMethodGrantDesignSubtypesEnum,
-    ComMgrUserNeeds,
-    ComOfferServiceGrant,
-    ComOfferServiceGrantDesign,
-    ComOfferServiceGrantDesignSubtypesEnum,
-    ComSecOcToCryptoKeySlotMapping,
-    CommonSignalPath,
-    CommunicationBufferLocking,
-    CommunicationClusterSubtypesEnum,
-    CommunicationConnectorSubtypesEnum,
-    CommunicationConnectorRefConditional,
-    CommunicationControllerSubtypesEnum,
-    CommunicationControllerMapping,
-    CommunicationDirectionType,
-    CommunicationDirectionTypeSimple,
-    Compiler,
-    ComplexDeviceDriverSwComponentType,
-    ComponentClustering,
-    ComponentInCompositionInstanceRef,
-    ComponentInSystemInstanceRef,
-    ComponentSeparation,
-    CompositeInterface,
-    CompositeNetworkRepresentation,
-    CompositeRuleBasedValueSpecification,
-    CompositionPPortToExecutablePPortMapping,
-    CompositionRPortToExecutableRPortMapping,
-    CompositionSwComponentType,
-    CompositionSwComponentTypeSubtypesEnum,
-    CompositionSwComponentTypeRefConditional,
-    Compu,
-    CompuConst,
-    CompuConstFormulaContent,
-    CompuConstNumericContent,
-    CompuConstTextContent,
-    CompuGenericMath,
-    CompuMethod,
-    CompuMethodSubtypesEnum,
-    CompuNominatorDenominator,
-    CompuRationalCoeffs,
-    CompuScale,
-    CompuScaleConstantContents,
-    CompuScaleRationalFormula,
-    CompuScales,
-    ConcreteClassTailoring,
-    ConcretePatternEventTriggering,
-    ConditionByFormula,
-    ConditionalChangeNad,
-    ConfidenceInterval,
-    ConsistencyNeeds,
-    ConsistencyNeedsBlueprintSet,
-    ConstantReference,
-    ConstantSpecification,
-    ConstantSpecificationSubtypesEnum,
-    ConstantSpecificationMapping,
-    ConstantSpecificationMappingSet,
-    ConstantSpecificationMappingSetSubtypesEnum,
-    ConstraintTailoring,
-    ConsumedEventGroup,
-    ConsumedEventGroupSubtypesEnum,
-    ConsumedProvidedServiceInstanceGroup,
-    ConsumedProvidedServiceInstanceGroupSubtypesEnum,
-    ConsumedProvidedServiceInstanceGroupRefConditional,
-    ConsumedServiceInstance,
-    ConsumedServiceInstanceSubtypesEnum,
-    ConsumedServiceInstanceRefConditional,
-    ContainedIPduCollectionSemanticsEnum,
-    ContainedIPduCollectionSemanticsEnumSimple,
-    ContainedIPduProps,
-    ContainerIPdu,
-    ContainerIPduHeaderTypeEnum,
-    ContainerIPduHeaderTypeEnumSimple,
-    ContainerIPduTriggerEnum,
-    ContainerIPduTriggerEnumSimple,
-    CouplingElement,
-    CouplingElementEnum,
-    CouplingElementEnumSimple,
-    CouplingPort,
-    CouplingPortSubtypesEnum,
-    CouplingPortConnection,
-    CouplingPortDetails,
-    CouplingPortFifo,
-    CouplingPortFifoSubtypesEnum,
-    CouplingPortRatePolicy,
-    CouplingPortRatePolicyActionEnum,
-    CouplingPortRatePolicyActionEnumSimple,
-    CouplingPortRefConditional,
-    CouplingPortRoleEnum,
-    CouplingPortRoleEnumSimple,
-    CouplingPortScheduler,
-    CouplingPortSchedulerSubtypesEnum,
-    CouplingPortShaper,
-    CouplingPortStructuralElementSubtypesEnum,
-    CouplingPortTrafficClassAssignment,
-    CpSoftwareCluster,
-    CpSoftwareClusterSubtypesEnum,
-    CpSoftwareClusterBinaryManifestDescriptor,
-    CpSoftwareClusterCommunicationResource,
-    CpSoftwareClusterCommunicationResourceSubtypesEnum,
-    CpSoftwareClusterMappingSet,
-    CpSoftwareClusterRefConditional,
-    CpSoftwareClusterResourceSubtypesEnum,
-    CpSoftwareClusterResourcePool,
-    CpSoftwareClusterResourceToApplicationPartitionMapping,
-    CpSoftwareClusterServiceResource,
-    CpSoftwareClusterServiceResourceSubtypesEnum,
-    CpSoftwareClusterToEcuInstanceMapping,
-    CpSoftwareClusterToResourceMapping,
-    CppImplementationDataTypeSubtypesEnum,
-    CppImplementationDataTypeContextTargetSubtypesEnum,
-    CppImplementationDataTypeElement,
-    CppImplementationDataTypeElementSubtypesEnum,
-    CppImplementationDataTypeElementQualifier,
-    CppTemplateArgument,
-    CryptoCertificate,
-    CryptoCertificateSubtypesEnum,
-    CryptoCertificateAlgorithmFamilyEnum,
-    CryptoCertificateAlgorithmFamilyEnumSimple,
-    CryptoCertificateFormatEnum,
-    CryptoCertificateFormatEnumSimple,
-    CryptoCertificateInterface,
-    CryptoCertificateKeySlotNeeds,
-    CryptoCertificateToCryptoKeySlotMapping,
-    CryptoCertificateToPortPrototypeMapping,
-    CryptoKeyManagementNeeds,
-    CryptoKeySlot,
-    CryptoKeySlotSubtypesEnum,
-    CryptoKeySlotAllowedModification,
-    CryptoKeySlotContentAllowedUsage,
-    CryptoKeySlotInterface,
-    CryptoKeySlotToPortPrototypeMapping,
-    CryptoKeySlotTypeEnum,
-    CryptoKeySlotTypeEnumSimple,
-    CryptoKeySlotUsageEnum,
-    CryptoKeySlotUsageEnumSimple,
-    CryptoModuleInstantiation,
-    CryptoNeedToPortPrototypeMapping,
-    CryptoObjectTypeEnum,
-    CryptoObjectTypeEnumSimple,
-    CryptoProvider,
-    CryptoProviderSubtypesEnum,
-    CryptoProviderInterface,
-    CryptoProviderToPortPrototypeMapping,
-    CryptoRPortComSpec,
-    CryptoServiceCertificate,
-    CryptoServiceCertificateSubtypesEnum,
-    CryptoServiceJobNeeds,
-    CryptoServiceKey,
-    CryptoServiceKeySubtypesEnum,
-    CryptoServiceKeyGenerationEnum,
-    CryptoServiceKeyGenerationEnumSimple,
-    CryptoServiceNeeds,
-    CryptoServicePrimitive,
-    CryptoServicePrimitiveSubtypesEnum,
-    CryptoServiceQueue,
-    CryptoServiceQueueSubtypesEnum,
-    CryptoTrustMasterInterface,
-    CsTransformerErrorReactionEnum,
-    CsTransformerErrorReactionEnumSimple,
-    CseCodeTypeString,
-    CustomCppImplementationDataType,
-    CycleCounter,
-    CycleRepetition,
-    CycleRepetitionType,
-    CycleRepetitionTypeSimple,
-    CyclicTiming,
-    DataComProps,
-    DataConstr,
-    DataConstrSubtypesEnum,
-    DataConstrRule,
-    DataDumpEntry,
-    DataExchangePoint,
-    DataExchangePointKind,
-    DataExchangePointKindSimple,
-    DataFilter,
-    DataFilterTypeEnum,
-    DataFilterTypeEnumSimple,
-    DataFormatElementReferenceSubtypesEnum,
-    DataFormatTailoring,
-    DataIdModeEnum,
-    DataIdModeEnumSimple,
-    DataInterfaceSubtypesEnum,
-    DataLimitKindEnum,
-    DataLimitKindEnumSimple,
-    DataPrototypeSubtypesEnum,
-    DataPrototypeGroup,
-    DataPrototypeGroupSubtypesEnum,
-    DataPrototypeInClientServerInterfaceInstanceRef,
-    DataPrototypeInExecutableInstanceRef,
-    DataPrototypeInPortInterfaceRef,
-    DataPrototypeInSenderReceiverInterfaceInstanceRef,
-    DataPrototypeInServiceInterfaceInstanceRef,
-    DataPrototypeInServiceInterfaceRef,
-    DataPrototypeInSystemInstanceRef,
-    DataPrototypeMapping,
-    DataPrototypeTransformationProps,
-    DataPrototypeWithApplicationDataTypeInSystemRef,
-    DataReceiveErrorEvent,
-    DataReceivedEvent,
-    DataSendCompletedEvent,
-    DataTransformation,
-    DataTransformationSubtypesEnum,
-    DataTransformationErrorHandlingEnum,
-    DataTransformationErrorHandlingEnumSimple,
-    DataTransformationKindEnum,
-    DataTransformationKindEnumSimple,
-    DataTransformationRefConditional,
-    DataTransformationSet,
-    DataTransformationStatusForwardingEnum,
-    DataTransformationStatusForwardingEnumSimple,
-    DataTypeMap,
-    DataTypeMappingSet,
-    DataTypeMappingSetSubtypesEnum,
-    DataTypePolicyEnum,
-    DataTypePolicyEnumSimple,
-    DataWriteCompletedEvent,
-    Date,
-    DcmIPdu,
-    DdsEventDeployment,
-    DdsEventQosProps,
-    DdsFieldDeployment,
-    DdsFieldQosProps,
-    DdsProvidedServiceInstance,
-    DdsRequiredServiceInstance,
-    DdsServiceInstanceToMachineMapping,
-    DdsServiceInterfaceDeployment,
-    DdsServiceVersion,
-    DeadlineSupervision,
     DefItem,
     DefList,
-    DefaultValueApplicationStrategyEnum,
-    DefaultValueApplicationStrategyEnumSimple,
-    DefaultValueElement,
-    DelegatedPortAnnotation,
-    DelegationSwConnector,
-    DependencyOnArtifact,
-    DependencyOnArtifactSubtypesEnum,
-    DependencyUsageEnum,
-    DependencyUsageEnumSimple,
-    DeterministicClient,
-    DeterministicClientSubtypesEnum,
-    DeterministicClientResource,
-    DeterministicClientResourceNeeds,
-    DevelopmentError,
-    DhcpServerConfiguration,
-    Dhcpv6Props,
-    DiagEventDebounceCounterBased,
-    DiagEventDebounceMonitorInternal,
-    DiagEventDebounceTimeBased,
-    DiagPduType,
-    DiagPduTypeSimple,
-    DiagRequirementIdString,
-    DiagnosticAbstractDataIdentifierSubtypesEnum,
-    DiagnosticAccessPermission,
-    DiagnosticAccessPermissionSubtypesEnum,
-    DiagnosticAccessPermissionValidityEnum,
-    DiagnosticAccessPermissionValidityEnumSimple,
-    DiagnosticAging,
-    DiagnosticAgingSubtypesEnum,
-    DiagnosticAudienceEnum,
-    DiagnosticAudienceEnumSimple,
-    DiagnosticClearCondition,
-    DiagnosticClearConditionSubtypesEnum,
-    DiagnosticClearConditionGroup,
-    DiagnosticClearConditionGroupSubtypesEnum,
-    DiagnosticClearConditionNeeds,
-    DiagnosticClearConditionPortMapping,
-    DiagnosticClearDiagnosticInformation,
-    DiagnosticClearDiagnosticInformationClass,
-    DiagnosticClearDiagnosticInformationClassSubtypesEnum,
-    DiagnosticClearDtcLimitationEnum,
-    DiagnosticClearDtcLimitationEnumSimple,
-    DiagnosticClearEventAllowedBehaviorEnum,
-    DiagnosticClearEventAllowedBehaviorEnumSimple,
-    DiagnosticClearEventBehaviorEnum,
-    DiagnosticClearEventBehaviorEnumSimple,
-    DiagnosticClearResetEmissionRelatedInfo,
-    DiagnosticClearResetEmissionRelatedInfoClass,
-    DiagnosticClearResetEmissionRelatedInfoClassSubtypesEnum,
-    DiagnosticComControl,
-    DiagnosticComControlClass,
-    DiagnosticComControlClassSubtypesEnum,
-    DiagnosticComControlSpecificChannel,
-    DiagnosticComControlSubNodeChannel,
-    DiagnosticCommonElementSubtypesEnum,
-    DiagnosticCommonElementRefConditional,
-    DiagnosticCommonProps,
-    DiagnosticCommonPropsConditional,
-    DiagnosticCommunicationManagerNeeds,
-    DiagnosticCompareTypeEnum,
-    DiagnosticCompareTypeEnumSimple,
-    DiagnosticComponentNeeds,
-    DiagnosticConditionInterface,
-    DiagnosticConnectedIndicator,
-    DiagnosticConnectedIndicatorBehaviorEnum,
-    DiagnosticConnectedIndicatorBehaviorEnumSimple,
-    DiagnosticConnection,
-    DiagnosticConnectionSubtypesEnum,
-    DiagnosticConnectionRefConditional,
-    DiagnosticContributionSet,
-    DiagnosticContributionSetSubtypesEnum,
-    DiagnosticControlDtcSetting,
-    DiagnosticControlDtcSettingClass,
-    DiagnosticControlDtcSettingClassSubtypesEnum,
-    DiagnosticControlEnableMaskBit,
-    DiagnosticControlNeeds,
-    DiagnosticCustomServiceClass,
-    DiagnosticCustomServiceClassSubtypesEnum,
-    DiagnosticCustomServiceInstance,
-    DiagnosticDataCaptureEnum,
-    DiagnosticDataCaptureEnumSimple,
-    DiagnosticDataChangeTrigger,
-    DiagnosticDataElement,
-    DiagnosticDataElementSubtypesEnum,
-    DiagnosticDataElementInterface,
-    DiagnosticDataIdentifier,
-    DiagnosticDataIdentifierSubtypesEnum,
-    DiagnosticDataIdentifierGenericInterface,
-    DiagnosticDataIdentifierInterface,
-    DiagnosticDataIdentifierSet,
-    DiagnosticDataIdentifierSetSubtypesEnum,
-    DiagnosticDataIdentifierSetRefConditional,
-    DiagnosticDataTransfer,
-    DiagnosticDataTransferClass,
-    DiagnosticDataTransferClassSubtypesEnum,
-    DiagnosticDebounceAlgorithmProps,
-    DiagnosticDebounceAlgorithmPropsSubtypesEnum,
-    DiagnosticDebounceBehaviorEnum,
-    DiagnosticDebounceBehaviorEnumSimple,
-    DiagnosticDebounceBehaviorEnumValueVariationPoint,
-    DiagnosticDemProvidedDataMapping,
-    DiagnosticDenominatorConditionEnum,
-    DiagnosticDenominatorConditionEnumSimple,
-    DiagnosticDoIpActivationLineInterface,
-    DiagnosticDoIpGroupIdentificationInterface,
-    DiagnosticDoIpPowerModeInterface,
-    DiagnosticDoIpTriggerVehicleAnnouncementInterface,
-    DiagnosticDownloadInterface,
-    DiagnosticDtcChangeTrigger,
-    DiagnosticDtcInformationInterface,
-    DiagnosticDynamicDataIdentifier,
-    DiagnosticDynamicDataIdentifierSubtypesEnum,
-    DiagnosticDynamicallyDefineDataIdentifier,
-    DiagnosticDynamicallyDefineDataIdentifierClass,
-    DiagnosticDynamicallyDefineDataIdentifierClassSubtypesEnum,
-    DiagnosticDynamicallyDefineDataIdentifierSubfunctionEnum,
-    DiagnosticDynamicallyDefineDataIdentifierSubfunctionEnumSimple,
-    DiagnosticEcuInstanceProps,
-    DiagnosticEcuProps,
-    DiagnosticEcuReset,
-    DiagnosticEcuResetClass,
-    DiagnosticEcuResetClassSubtypesEnum,
-    DiagnosticEcuResetInterface,
-    DiagnosticEnableCondition,
-    DiagnosticEnableConditionSubtypesEnum,
-    DiagnosticEnableConditionGroup,
-    DiagnosticEnableConditionGroupSubtypesEnum,
-    DiagnosticEnableConditionNeeds,
-    DiagnosticEnableConditionPortMapping,
-    DiagnosticEnableConditionRefConditional,
-    DiagnosticEnvBswModeElement,
-    DiagnosticEnvConditionFormula,
-    DiagnosticEnvDataCondition,
-    DiagnosticEnvModeCondition,
-    DiagnosticEnvModeElementSubtypesEnum,
-    DiagnosticEnvSwcModeElement,
-    DiagnosticEnvironmentalCondition,
-    DiagnosticEnvironmentalConditionSubtypesEnum,
-    DiagnosticEvent,
-    DiagnosticEventSubtypesEnum,
-    DiagnosticEventClearAllowedEnum,
-    DiagnosticEventClearAllowedEnumSimple,
-    DiagnosticEventDisplacementStrategyEnum,
-    DiagnosticEventDisplacementStrategyEnumSimple,
-    DiagnosticEventInfoNeeds,
-    DiagnosticEventInterface,
-    DiagnosticEventKindEnum,
-    DiagnosticEventKindEnumSimple,
-    DiagnosticEventManagerNeeds,
-    DiagnosticEventNeeds,
-    DiagnosticEventNeedsSubtypesEnum,
-    DiagnosticEventPortMapping,
-    DiagnosticEventRefConditional,
-    DiagnosticEventToDebounceAlgorithmMapping,
-    DiagnosticEventToEnableConditionGroupMapping,
-    DiagnosticEventToOperationCycleMapping,
-    DiagnosticEventToSecurityEventMapping,
-    DiagnosticEventToStorageConditionGroupMapping,
-    DiagnosticEventToTroubleCodeJ1939Mapping,
-    DiagnosticEventToTroubleCodeUdsMapping,
-    DiagnosticEventWindow,
-    DiagnosticEventWindowTimeEnum,
-    DiagnosticEventWindowTimeEnumSimple,
-    DiagnosticExtendedDataRecord,
-    DiagnosticExtendedDataRecordSubtypesEnum,
-    DiagnosticExtendedDataRecordRefConditional,
-    DiagnosticFimAliasEvent,
-    DiagnosticFimAliasEventSubtypesEnum,
-    DiagnosticFimAliasEventGroup,
-    DiagnosticFimAliasEventGroupSubtypesEnum,
-    DiagnosticFimAliasEventGroupMapping,
-    DiagnosticFimAliasEventMapping,
-    DiagnosticFimEventGroup,
-    DiagnosticFimEventGroupSubtypesEnum,
-    DiagnosticFimFunctionMapping,
-    DiagnosticFreezeFrame,
-    DiagnosticFreezeFrameSubtypesEnum,
-    DiagnosticFreezeFrameRefConditional,
-    DiagnosticFunctionIdentifier,
-    DiagnosticFunctionIdentifierSubtypesEnum,
-    DiagnosticFunctionIdentifierInhibit,
-    DiagnosticFunctionInhibitSource,
-    DiagnosticFunctionInhibitSourceSubtypesEnum,
-    DiagnosticGenericUdsInterface,
-    DiagnosticGenericUdsNeeds,
-    DiagnosticHandleDddiConfigurationEnum,
-    DiagnosticHandleDddiConfigurationEnumSimple,
-    DiagnosticIndicator,
-    DiagnosticIndicatorSubtypesEnum,
-    DiagnosticIndicatorInterface,
-    DiagnosticIndicatorNeeds,
-    DiagnosticIndicatorPortMapping,
-    DiagnosticIndicatorTypeEnum,
-    DiagnosticIndicatorTypeEnumSimple,
-    DiagnosticIndicatorTypeEnumValueVariationPoint,
-    DiagnosticInfoType,
-    DiagnosticInfoTypeSubtypesEnum,
-    DiagnosticInhibitSourceEventMapping,
-    DiagnosticInhibitionMaskEnum,
-    DiagnosticInhibitionMaskEnumSimple,
-    DiagnosticInitialEventStatusEnum,
-    DiagnosticInitialEventStatusEnumSimple,
-    DiagnosticIoControl,
-    DiagnosticIoControlClass,
-    DiagnosticIoControlClassSubtypesEnum,
-    DiagnosticIoControlNeeds,
-    DiagnosticIumpr,
-    DiagnosticIumprSubtypesEnum,
-    DiagnosticIumprDenominatorGroup,
-    DiagnosticIumprGroup,
-    DiagnosticIumprGroupIdentifier,
-    DiagnosticJ1939ExpandedFreezeFrame,
-    DiagnosticJ1939FreezeFrame,
-    DiagnosticJ1939Node,
-    DiagnosticJ1939NodeSubtypesEnum,
-    DiagnosticJ1939Spn,
-    DiagnosticJ1939SpnSubtypesEnum,
-    DiagnosticJ1939SpnMapping,
-    DiagnosticJ1939SwMapping,
-    DiagnosticJumpToBootLoaderEnum,
-    DiagnosticJumpToBootLoaderEnumSimple,
-    DiagnosticLogicalOperatorEnum,
-    DiagnosticLogicalOperatorEnumSimple,
-    DiagnosticMasterToSlaveEventMapping,
-    DiagnosticMasterToSlaveEventMappingSet,
-    DiagnosticMeasurementIdentifier,
-    DiagnosticMeasurementIdentifierSubtypesEnum,
-    DiagnosticMemoryDestinationSubtypesEnum,
-    DiagnosticMemoryDestinationMirror,
-    DiagnosticMemoryDestinationPortMapping,
-    DiagnosticMemoryDestinationPrimary,
-    DiagnosticMemoryDestinationUserDefined,
-    DiagnosticMemoryEntryStorageTriggerEnum,
-    DiagnosticMemoryEntryStorageTriggerEnumSimple,
-    DiagnosticMemoryIdentifier,
-    DiagnosticMemoryIdentifierSubtypesEnum,
-    DiagnosticMonitorInterface,
-    DiagnosticMonitorUpdateKindEnum,
-    DiagnosticMonitorUpdateKindEnumSimple,
-    DiagnosticObdSupportEnum,
-    DiagnosticObdSupportEnumSimple,
-    DiagnosticOccurrenceCounterProcessingEnum,
-    DiagnosticOccurrenceCounterProcessingEnumSimple,
-    DiagnosticOperationCycle,
-    DiagnosticOperationCycleSubtypesEnum,
-    DiagnosticOperationCycleInterface,
-    DiagnosticOperationCycleNeeds,
-    DiagnosticOperationCyclePortMapping,
-    DiagnosticOperationCycleRefConditional,
-    DiagnosticOperationCycleTypeEnum,
-    DiagnosticOperationCycleTypeEnumSimple,
-    DiagnosticParameter,
-    DiagnosticParameterIdentifier,
-    DiagnosticParameterIdentifierSubtypesEnum,
-    DiagnosticParameterSupportInfo,
-    DiagnosticPeriodicRate,
-    DiagnosticPeriodicRateCategoryEnum,
-    DiagnosticPeriodicRateCategoryEnumSimple,
-    DiagnosticPowertrainFreezeFrame,
-    DiagnosticPowertrainFreezeFrameSubtypesEnum,
-    DiagnosticProcessingStyleEnum,
-    DiagnosticProcessingStyleEnumSimple,
-    DiagnosticProtocol,
-    DiagnosticProvidedDataMapping,
-    DiagnosticReadDataByIdentifier,
-    DiagnosticReadDataByIdentifierClass,
-    DiagnosticReadDataByIdentifierClassSubtypesEnum,
-    DiagnosticReadDataByPeriodicId,
-    DiagnosticReadDataByPeriodicIdClass,
-    DiagnosticReadDataByPeriodicIdClassSubtypesEnum,
-    DiagnosticReadDtcInformation,
-    DiagnosticReadDtcInformationClass,
-    DiagnosticReadDtcInformationClassSubtypesEnum,
-    DiagnosticReadMemoryByAddress,
-    DiagnosticReadMemoryByAddressClass,
-    DiagnosticReadMemoryByAddressClassSubtypesEnum,
-    DiagnosticReadScalingDataByIdentifier,
-    DiagnosticReadScalingDataByIdentifierClass,
-    DiagnosticReadScalingDataByIdentifierClassSubtypesEnum,
-    DiagnosticRecordTriggerEnum,
-    DiagnosticRecordTriggerEnumSimple,
-    DiagnosticRequestControlOfOnBoardDevice,
-    DiagnosticRequestControlOfOnBoardDeviceClass,
-    DiagnosticRequestControlOfOnBoardDeviceClassSubtypesEnum,
-    DiagnosticRequestCurrentPowertrainData,
-    DiagnosticRequestCurrentPowertrainDataClass,
-    DiagnosticRequestCurrentPowertrainDataClassSubtypesEnum,
-    DiagnosticRequestDownload,
-    DiagnosticRequestDownloadClass,
-    DiagnosticRequestDownloadClassSubtypesEnum,
-    DiagnosticRequestEmissionRelatedDtc,
-    DiagnosticRequestEmissionRelatedDtcClass,
-    DiagnosticRequestEmissionRelatedDtcClassSubtypesEnum,
-    DiagnosticRequestEmissionRelatedDtcPermanentStatus,
-    DiagnosticRequestEmissionRelatedDtcPermanentStatusClass,
-    DiagnosticRequestEmissionRelatedDtcPermanentStatusClassSubtypesEnum,
-    DiagnosticRequestFileTransfer,
-    DiagnosticRequestFileTransferClass,
-    DiagnosticRequestFileTransferClassSubtypesEnum,
-    DiagnosticRequestFileTransferNeeds,
-    DiagnosticRequestOnBoardMonitoringTestResults,
-    DiagnosticRequestOnBoardMonitoringTestResultsClass,
-    DiagnosticRequestOnBoardMonitoringTestResultsClassSubtypesEnum,
-    DiagnosticRequestPowertrainFreezeFrameData,
-    DiagnosticRequestPowertrainFreezeFrameDataClass,
-    DiagnosticRequestPowertrainFreezeFrameDataClassSubtypesEnum,
-    DiagnosticRequestRoutineResults,
-    DiagnosticRequestUpload,
-    DiagnosticRequestUploadClass,
-    DiagnosticRequestUploadClassSubtypesEnum,
-    DiagnosticRequestVehicleInfo,
-    DiagnosticRequestVehicleInfoClass,
-    DiagnosticRequestVehicleInfoClassSubtypesEnum,
-    DiagnosticResponseOnEvent,
-    DiagnosticResponseOnEventActionEnum,
-    DiagnosticResponseOnEventActionEnumSimple,
-    DiagnosticResponseOnEventClass,
-    DiagnosticResponseOnEventClassSubtypesEnum,
-    DiagnosticResponseOnEventNeeds,
-    DiagnosticResponseToEcuResetEnum,
-    DiagnosticResponseToEcuResetEnumSimple,
-    DiagnosticRoutine,
-    DiagnosticRoutineSubtypesEnum,
-    DiagnosticRoutineControl,
-    DiagnosticRoutineControlClass,
-    DiagnosticRoutineControlClassSubtypesEnum,
-    DiagnosticRoutineGenericInterface,
-    DiagnosticRoutineInterface,
-    DiagnosticRoutineNeeds,
-    DiagnosticRoutineTypeEnum,
-    DiagnosticRoutineTypeEnumSimple,
-    DiagnosticSecurityAccess,
-    DiagnosticSecurityAccessClass,
-    DiagnosticSecurityAccessClassSubtypesEnum,
-    DiagnosticSecurityEventReportingModeMapping,
-    DiagnosticSecurityLevel,
-    DiagnosticSecurityLevelSubtypesEnum,
-    DiagnosticSecurityLevelInterface,
-    DiagnosticSecurityLevelPortMapping,
-    DiagnosticServiceClassSubtypesEnum,
-    DiagnosticServiceDataIdentifierPortMapping,
-    DiagnosticServiceDataMapping,
-    DiagnosticServiceGenericMapping,
-    DiagnosticServiceInstanceSubtypesEnum,
-    DiagnosticServiceRequestCallbackTypeEnum,
-    DiagnosticServiceRequestCallbackTypeEnumSimple,
-    DiagnosticServiceSwMapping,
-    DiagnosticServiceTable,
-    DiagnosticServiceTableSubtypesEnum,
-    DiagnosticServiceTableRefConditional,
-    DiagnosticServiceValidationInterface,
-    DiagnosticSession,
-    DiagnosticSessionSubtypesEnum,
-    DiagnosticSessionControl,
-    DiagnosticSessionControlClass,
-    DiagnosticSessionControlClassSubtypesEnum,
-    DiagnosticSignificanceEnum,
-    DiagnosticSignificanceEnumSimple,
-    DiagnosticSoftwareClusterProps,
-    DiagnosticStartRoutine,
-    DiagnosticStatusBitHandlingTestFailedSinceLastClearEnum,
-    DiagnosticStatusBitHandlingTestFailedSinceLastClearEnumSimple,
-    DiagnosticStopRoutine,
-    DiagnosticStorageCondition,
-    DiagnosticStorageConditionSubtypesEnum,
-    DiagnosticStorageConditionGroup,
-    DiagnosticStorageConditionGroupSubtypesEnum,
-    DiagnosticStorageConditionNeeds,
-    DiagnosticStorageConditionPortMapping,
-    DiagnosticStorageConditionRefConditional,
-    DiagnosticStoreEventSupportEnum,
-    DiagnosticStoreEventSupportEnumSimple,
-    DiagnosticSupportInfoByte,
-    DiagnosticTestIdentifier,
-    DiagnosticTestResult,
-    DiagnosticTestResultSubtypesEnum,
-    DiagnosticTestResultUpdateEnum,
-    DiagnosticTestResultUpdateEnumSimple,
-    DiagnosticTestResultUpdateEnumValueVariationPoint,
-    DiagnosticTestRoutineIdentifier,
-    DiagnosticTestRoutineIdentifierSubtypesEnum,
-    DiagnosticTransferExit,
-    DiagnosticTransferExitClass,
-    DiagnosticTransferExitClassSubtypesEnum,
-    DiagnosticTroubleCodeSubtypesEnum,
-    DiagnosticTroubleCodeGroup,
-    DiagnosticTroubleCodeJ1939,
-    DiagnosticTroubleCodeJ1939SubtypesEnum,
-    DiagnosticTroubleCodeJ1939DtcKindEnum,
-    DiagnosticTroubleCodeJ1939DtcKindEnumSimple,
-    DiagnosticTroubleCodeObd,
-    DiagnosticTroubleCodeObdSubtypesEnum,
-    DiagnosticTroubleCodeProps,
-    DiagnosticTroubleCodePropsSubtypesEnum,
-    DiagnosticTroubleCodeRefConditional,
-    DiagnosticTroubleCodeUds,
-    DiagnosticTroubleCodeUdsSubtypesEnum,
-    DiagnosticTroubleCodeUdsToClearConditionGroupMapping,
-    DiagnosticTroubleCodeUdsToTroubleCodeObdMapping,
-    DiagnosticTypeOfDtcSupportedEnum,
-    DiagnosticTypeOfDtcSupportedEnumSimple,
-    DiagnosticTypeOfFreezeFrameRecordNumerationEnum,
-    DiagnosticTypeOfFreezeFrameRecordNumerationEnumSimple,
-    DiagnosticUdsSeverityEnum,
-    DiagnosticUdsSeverityEnumSimple,
-    DiagnosticUploadDownloadNeeds,
-    DiagnosticUploadInterface,
-    DiagnosticValueAccessEnum,
-    DiagnosticValueAccessEnumSimple,
-    DiagnosticValueNeeds,
-    DiagnosticValueNeedsSubtypesEnum,
-    DiagnosticWriteDataByIdentifier,
-    DiagnosticWriteDataByIdentifierClass,
-    DiagnosticWriteDataByIdentifierClassSubtypesEnum,
-    DiagnosticWriteMemoryByAddress,
-    DiagnosticWriteMemoryByAddressClass,
-    DiagnosticWriteMemoryByAddressClassSubtypesEnum,
-    DiagnosticWwhObdDtcClassEnum,
-    DiagnosticWwhObdDtcClassEnumSimple,
-    DiagnosticWwhObdDtcClassEnumValueVariationPoint,
-    DiagnosticsCommunicationSecurityNeeds,
-    DiscoveryTechnology,
-    DiscoveryTechnologyEnum,
-    DiscoveryTechnologyEnumSimple,
-    DisplayFormatString,
-    DisplayPresentationEnum,
-    DisplayPresentationEnumSimple,
-    DltArgument,
-    DltConfig,
-    DltLogChannel,
-    DltLogChannelSubtypesEnum,
-    DltLogChannelDesign,
-    DltLogChannelDesignSubtypesEnum,
-    DltLogChannelDesignToProcessDesignMapping,
-    DltLogChannelToProcessMapping,
-    DltMessage,
-    DltMessageSubtypesEnum,
-    DltMessageCollectionSet,
-    DltUserNeeds,
-    DoIpActivationLineNeeds,
-    DoIpConfig,
-    DoIpEntity,
-    DoIpEntityRoleEnum,
-    DoIpEntityRoleEnumSimple,
-    DoIpGidNeeds,
-    DoIpGidSynchronizationNeeds,
-    DoIpInstantiation,
-    DoIpInterface,
-    DoIpLogicAddress,
-    DoIpLogicAddressSubtypesEnum,
-    DoIpLogicTargetAddressProps,
-    DoIpLogicTargetAddressPropsSubtypesEnum,
-    DoIpLogicTesterAddressProps,
-    DoIpNetworkConfiguration,
-    DoIpPowerModeStatusNeeds,
-    DoIpRequestConfiguration,
-    DoIpRoutingActivation,
-    DoIpRoutingActivationSubtypesEnum,
-    DoIpRoutingActivationAuthenticationNeeds,
-    DoIpRoutingActivationConfirmationNeeds,
-    DoIpTpConfig,
-    DoIpTpConfigSubtypesEnum,
-    DoIpTpConnection,
-    DocRevision,
-    DocumentElementScope,
-    Documentation,
-    DocumentationSubtypesEnum,
     DocumentationBlock,
-    DocumentationContext,
-    DtcFormatTypeEnum,
-    DtcFormatTypeEnumSimple,
-    DtcKindEnum,
-    DtcKindEnumSimple,
-    DtcStatusChangeNotificationNeeds,
-    DynamicPart,
-    DynamicPartAlternative,
-    E2EProfileCompatibilityProps,
-    E2EProfileCompatibilityPropsSubtypesEnum,
-    E2EProfileConfiguration,
-    E2EProfileConfigurationSubtypesEnum,
-    E2EProfileConfigurationSet,
-    EEnum,
-    EEnumSimple,
-    EEnumFont,
-    EEnumFontSimple,
-    EcuAbstractionSwComponentType,
-    EcuInstance,
-    EcuInstanceSubtypesEnum,
-    EcuInstanceProps,
-    EcuInstanceRefConditional,
-    EcuMapping,
-    EcuPartition,
-    EcuPartitionSubtypesEnum,
-    EcuResourceEstimation,
-    EcuStateMgrUserNeeds,
-    EcuTiming,
-    EcucAbstractReferenceDefSubtypesEnum,
-    EcucAddInfoParamDef,
-    EcucAddInfoParamValue,
-    EcucAffectionEnum,
-    EcucAffectionEnumSimple,
-    EcucBooleanParamDef,
-    EcucChoiceContainerDef,
-    EcucChoiceReferenceDef,
-    EcucCommonAttributesSubtypesEnum,
-    EcucConditionFormula,
-    EcucConditionSpecification,
-    EcucConfigurationClassAffection,
-    EcucConfigurationClassEnum,
-    EcucConfigurationClassEnumSimple,
-    EcucConfigurationVariantEnum,
-    EcucConfigurationVariantEnumSimple,
-    EcucContainerDefSubtypesEnum,
-    EcucContainerValue,
-    EcucContainerValueSubtypesEnum,
-    EcucDefinitionCollection,
-    EcucDefinitionElementSubtypesEnum,
-    EcucDerivationSpecification,
-    EcucDestinationUriDef,
-    EcucDestinationUriDefSubtypesEnum,
-    EcucDestinationUriDefSet,
-    EcucDestinationUriNestingContractEnum,
-    EcucDestinationUriNestingContractEnumSimple,
-    EcucDestinationUriPolicy,
-    EcucEnumerationLiteralDef,
-    EcucEnumerationParamDef,
-    EcucFloatParamDef,
-    EcucForeignReferenceDef,
-    EcucFunctionNameDef,
-    EcucFunctionNameDefConditional,
-    EcucImplementationConfigurationClass,
-    EcucInstanceReferenceDef,
-    EcucInstanceReferenceValue,
-    EcucIntegerParamDef,
-    EcucLinkerSymbolDef,
-    EcucLinkerSymbolDefConditional,
-    EcucModuleConfigurationValues,
-    EcucModuleConfigurationValuesSubtypesEnum,
-    EcucModuleConfigurationValuesRefConditional,
-    EcucModuleDef,
-    EcucModuleDefSubtypesEnum,
-    EcucMultilineStringParamDef,
-    EcucMultilineStringParamDefConditional,
-    EcucMultiplicityConfigurationClass,
-    EcucNumericalParamValue,
-    EcucParamConfContainerDef,
-    EcucParamConfContainerDefSubtypesEnum,
-    EcucParameterDefSubtypesEnum,
-    EcucParameterDerivationFormula,
-    EcucQuery,
-    EcucQuerySubtypesEnum,
-    EcucQueryExpression,
-    EcucReferenceDef,
-    EcucReferenceValue,
-    EcucScopeEnum,
-    EcucScopeEnumSimple,
-    EcucStringParamDef,
-    EcucStringParamDefConditional,
-    EcucSymbolicNameReferenceDef,
-    EcucTextualParamValue,
-    EcucUriReferenceDef,
-    EcucValidationCondition,
-    EcucValueCollection,
-    EcucValueCollectionSubtypesEnum,
-    EcucValueConfigurationClass,
-    EmphasisText,
-    EmptySignalMapping,
-    End2EndEventProtectionProps,
-    End2EndMethodProtectionProps,
-    EndToEndDescription,
-    EndToEndProfileBehaviorEnum,
-    EndToEndProfileBehaviorEnumSimple,
-    EndToEndProtection,
-    EndToEndProtectionISignalIPdu,
-    EndToEndProtectionSet,
-    EndToEndProtectionVariablePrototype,
-    EndToEndTransformationComSpecProps,
-    EndToEndTransformationDescription,
-    EndToEndTransformationISignalProps,
-    EndToEndTransformationISignalPropsConditional,
-    EnterExitTimeout,
-    Entry,
-    EnumerationMappingEntry,
-    EnumerationMappingTable,
-    EnvironmentCaptureToReportingEnum,
-    EnvironmentCaptureToReportingEnumSimple,
-    EocEventRef,
-    EocExecutableEntityRef,
-    EocExecutableEntityRefAbstractSubtypesEnum,
-    EocExecutableEntityRefGroup,
-    EocExecutableEntityRefGroupSubtypesEnum,
-    ErrorTracerNeeds,
-    EthGlobalTimeDomainProps,
-    EthGlobalTimeManagedCouplingPort,
-    EthGlobalTimeMessageFormatEnum,
-    EthGlobalTimeMessageFormatEnumSimple,
-    EthIpProps,
-    EthIpPropsSubtypesEnum,
-    EthTSynCrcFlags,
-    EthTSynSubTlvConfig,
-    EthTcpIpIcmpProps,
-    EthTcpIpIcmpPropsSubtypesEnum,
-    EthTcpIpProps,
-    EthTcpIpPropsSubtypesEnum,
-    EthTpConfig,
-    EthTpConnection,
-    EthernetCluster,
-    EthernetClusterSubtypesEnum,
-    EthernetClusterConditional,
-    EthernetCommunicationConnector,
-    EthernetCommunicationConnectorSubtypesEnum,
-    EthernetCommunicationController,
-    EthernetCommunicationControllerConditional,
-    EthernetConnectionNegotiationEnum,
-    EthernetConnectionNegotiationEnumSimple,
-    EthernetCouplingPortSchedulerEnum,
-    EthernetCouplingPortSchedulerEnumSimple,
-    EthernetFrame,
-    EthernetFrameTriggering,
-    EthernetMacLayerTypeEnum,
-    EthernetMacLayerTypeEnumSimple,
-    EthernetPhysicalChannel,
-    EthernetPhysicalChannelSubtypesEnum,
-    EthernetPhysicalLayerTypeEnum,
-    EthernetPhysicalLayerTypeEnumSimple,
-    EthernetPriorityRegeneration,
-    EthernetRawDataStreamGrant,
-    EthernetRawDataStreamMapping,
-    EthernetRawDataStreamMappingSubtypesEnum,
-    EthernetSwitchVlanEgressTaggingEnum,
-    EthernetSwitchVlanEgressTaggingEnumSimple,
-    EthernetSwitchVlanIngressTagEnum,
-    EthernetSwitchVlanIngressTagEnumSimple,
-    EthernetWakeupSleepOnDatalineConfig,
-    EthernetWakeupSleepOnDatalineConfigSubtypesEnum,
-    EthernetWakeupSleepOnDatalineConfigSet,
-    EvaluatedVariantSet,
-    EventAcceptanceStatusEnum,
-    EventAcceptanceStatusEnumSimple,
-    EventControlledTiming,
-    EventGroupControlTypeEnum,
-    EventGroupControlTypeEnumSimple,
-    EventHandler,
-    EventHandlerSubtypesEnum,
-    EventInExecutableInstanceRef,
-    EventMapping,
-    EventObdReadinessGroup,
-    EventOccurrenceKindEnum,
-    EventOccurrenceKindEnumSimple,
-    ExclusiveArea,
-    ExclusiveAreaSubtypesEnum,
-    ExclusiveAreaNestingOrder,
-    ExclusiveAreaNestingOrderSubtypesEnum,
-    Executable,
-    ExecutableSubtypesEnum,
-    ExecutableEntitySubtypesEnum,
-    ExecutableEntityActivationReason,
-    ExecutableEntityActivationReasonSubtypesEnum,
-    ExecutableTiming,
-    ExecutionDependency,
-    ExecutionOrderConstraint,
-    ExecutionOrderConstraintTypeEnum,
-    ExecutionOrderConstraintTypeEnumSimple,
-    ExecutionStateReportingBehaviorEnum,
-    ExecutionStateReportingBehaviorEnumSimple,
-    ExecutionTimeConstraint,
-    ExecutionTimeTypeEnum,
-    ExecutionTimeTypeEnumSimple,
-    ExtIdClassEnum,
-    ExternalTriggerOccurredEvent,
-    ExternalTriggeringPoint,
-    ExternalTriggeringPointIdent,
-    FibexElementSubtypesEnum,
-    FibexElementRefConditional,
-    FieldType,
-    FieldSubtypesEnum,
-    FieldAccessEnum,
-    FieldAccessEnumSimple,
-    FieldInExecutableInstanceRef,
-    FieldMapping,
-    FieldSenderComSpec,
-    FileInfoComment,
-    FilterDebouncingEnum,
-    FilterDebouncingEnumSimple,
-    FireAndForgetMapping,
-    FlatInstanceDescriptor,
-    FlatInstanceDescriptorSubtypesEnum,
-    FlatMap,
-    FlatMapSubtypesEnum,
-    FlexrayAbsolutelyScheduledTiming,
-    FlexrayArTpChannel,
-    FlexrayArTpConfig,
-    FlexrayArTpConnection,
-    FlexrayArTpNode,
-    FlexrayArTpNodeSubtypesEnum,
-    FlexrayChannelName,
-    FlexrayChannelNameSimple,
-    FlexrayCluster,
-    FlexrayClusterSubtypesEnum,
-    FlexrayClusterConditional,
-    FlexrayCommunicationConnector,
-    FlexrayCommunicationConnectorSubtypesEnum,
-    FlexrayCommunicationController,
-    FlexrayCommunicationControllerConditional,
-    FlexrayFifoConfiguration,
-    FlexrayFifoRange,
-    FlexrayFrame,
-    FlexrayFrameTriggering,
-    FlexrayNmCluster,
-    FlexrayNmClusterSubtypesEnum,
-    FlexrayNmClusterCoupling,
-    FlexrayNmEcu,
-    FlexrayNmNode,
-    FlexrayNmScheduleVariant,
-    FlexrayNmScheduleVariantSimple,
-    FlexrayPhysicalChannel,
-    FlexrayPhysicalChannelSubtypesEnum,
-    FlexrayTpConfig,
-    FlexrayTpConnection,
-    FlexrayTpConnectionControl,
-    FlexrayTpConnectionControlSubtypesEnum,
-    FlexrayTpEcu,
-    FlexrayTpNode,
-    FlexrayTpNodeSubtypesEnum,
-    FlexrayTpPduPool,
-    FlexrayTpPduPoolSubtypesEnum,
-    FloatType,
-    FloatEnum,
-    FloatEnumSimple,
-    FloatValueVariationPoint,
-    FmAttributeDef,
-    FmAttributeDefSubtypesEnum,
-    FmAttributeValue,
-    FmConditionByFeaturesAndAttributes,
-    FmConditionByFeaturesAndSwSystemconsts,
-    FmFeature,
-    FmFeatureSubtypesEnum,
-    FmFeatureDecomposition,
-    FmFeatureMap,
-    FmFeatureMapAssertion,
-    FmFeatureMapCondition,
-    FmFeatureMapElement,
-    FmFeatureModel,
-    FmFeatureModelSubtypesEnum,
-    FmFeatureRelation,
-    FmFeatureRestriction,
-    FmFeatureSelection,
-    FmFeatureSelectionSet,
-    FmFeatureSelectionSetSubtypesEnum,
-    FmFeatureSelectionState,
-    FmFeatureSelectionStateSimple,
-    ForbiddenSignalPath,
-    ForeignModelReference,
-    FrArTpAckType,
-    FrArTpAckTypeSimple,
-    FrGlobalTimeDomainProps,
-    FrameSubtypesEnum,
-    FrameEnum,
-    FrameEnumSimple,
-    FrameMapping,
-    FramePid,
-    FramePort,
-    FramePortSubtypesEnum,
-    FrameTriggeringSubtypesEnum,
-    FreeFormat,
-    FullBindingTimeEnum,
-    FullBindingTimeEnumSimple,
-    FunctionGroupSet,
-    FunctionGroupSetSubtypesEnum,
-    FunctionGroupStateInFunctionGroupSetInstanceRef,
-    FunctionInhibitionAvailabilityNeeds,
-    FunctionInhibitionNeeds,
-    FunctionInhibitionNeedsSubtypesEnum,
-    FurtherActionByteNeeds,
-    Gateway,
-    GeneralParameter,
-    GeneralPurposeConnection,
-    GeneralPurposeIPdu,
-    GeneralPurposePdu,
-    GeneralPurposePduSubtypesEnum,
-    GenericEthernetFrame,
-    GenericModelReference,
-    GenericModuleInstantiation,
-    GenericTp,
-    GlobalSupervision,
-    GlobalSupervisionSubtypesEnum,
-    GlobalSupervisionNeeds,
-    GlobalTimeCanMaster,
-    GlobalTimeCanSlave,
-    GlobalTimeCorrectionProps,
-    GlobalTimeCouplingPortProps,
-    GlobalTimeCrcSupportEnum,
-    GlobalTimeCrcSupportEnumSimple,
-    GlobalTimeCrcValidationEnum,
-    GlobalTimeCrcValidationEnumSimple,
-    GlobalTimeDomain,
-    GlobalTimeDomainSubtypesEnum,
-    GlobalTimeDomainRefConditional,
-    GlobalTimeEthMaster,
-    GlobalTimeEthSlave,
-    GlobalTimeFrMaster,
-    GlobalTimeFrSlave,
-    GlobalTimeGateway,
-    GlobalTimeMasterSubtypesEnum,
-    GlobalTimeSlaveSubtypesEnum,
-    GrantSubtypesEnum,
-    Graphic,
-    GraphicFitEnum,
-    GraphicFitEnumSimple,
-    GraphicNotationEnum,
-    GraphicNotationEnumSimple,
-    HandleInvalidEnum,
-    HandleInvalidEnumSimple,
-    HandleOutOfRangeEnum,
-    HandleOutOfRangeEnumSimple,
-    HandleOutOfRangeStatusEnum,
-    HandleOutOfRangeStatusEnumSimple,
-    HandleTerminationAndRestartEnum,
-    HandleTerminationAndRestartEnumSimple,
-    HandleTimeoutEnum,
-    HandleTimeoutEnumSimple,
-    HardwareConfiguration,
-    HardwareTestNeeds,
-    HealthChannelExternalReportedStatus,
-    HealthChannelExternalStatus,
-    HealthChannelSupervision,
-    HttpAcceptEncoding,
-    HttpAcceptEncodingEnum,
-    HttpAcceptEncodingEnumSimple,
-    HttpTp,
-    HwAttributeDef,
-    HwAttributeDefSubtypesEnum,
-    HwAttributeLiteralDef,
-    HwAttributeValue,
-    HwCategory,
-    HwCategorySubtypesEnum,
-    HwDescriptionEntitySubtypesEnum,
-    HwElement,
-    HwElementSubtypesEnum,
-    HwElementConnector,
-    HwElementRefConditional,
-    HwPin,
-    HwPinSubtypesEnum,
-    HwPinConnector,
-    HwPinGroup,
-    HwPinGroupSubtypesEnum,
-    HwPinGroupConnector,
-    HwPinGroupContent,
-    HwPortMapping,
-    HwType,
-    HwTypeSubtypesEnum,
-    IPduSubtypesEnum,
-    IPduMapping,
-    IPduPort,
-    IPduPortSubtypesEnum,
-    IPduSignalProcessingEnum,
-    IPduSignalProcessingEnumSimple,
-    IPduTiming,
-    IPsecDpdActionEnum,
-    IPsecDpdActionEnumSimple,
-    IPsecHeaderTypeEnum,
-    IPsecHeaderTypeEnumSimple,
-    IPsecIpProtocolEnum,
-    IPsecIpProtocolEnumSimple,
-    IPsecModeEnum,
-    IPsecModeEnumSimple,
-    IPsecPolicyEnum,
-    IPsecPolicyEnumSimple,
-    IPv6ExtHeaderFilterList,
-    IPv6ExtHeaderFilterListSubtypesEnum,
-    IPv6ExtHeaderFilterSet,
-    ISignal,
-    ISignalSubtypesEnum,
-    ISignalGroup,
-    ISignalGroupSubtypesEnum,
-    ISignalIPdu,
-    ISignalIPduSubtypesEnum,
-    ISignalIPduGroup,
-    ISignalIPduGroupSubtypesEnum,
-    ISignalIPduRefConditional,
-    ISignalMapping,
-    ISignalPort,
-    ISignalPortSubtypesEnum,
-    ISignalProps,
-    ISignalToIPduMapping,
-    ISignalToIPduMappingSubtypesEnum,
-    ISignalTriggering,
-    ISignalTriggeringSubtypesEnum,
-    ISignalTriggeringRefConditional,
-    ISignalTypeEnum,
-    ISignalTypeEnumSimple,
-    IamModuleInstantiation,
-    IdentifiableSubtypesEnum,
-    Identifier,
-    IdsCommonElementSubtypesEnum,
-    IdsCommonElementRefConditional,
-    IdsDesign,
-    IdsMgrCustomTimestampNeeds,
-    IdsMgrNeeds,
-    IdsmInstance,
-    IdsmInstanceSubtypesEnum,
-    IdsmInstanceRefConditional,
-    IdsmModuleInstantiation,
-    IdsmModuleInstantiationSubtypesEnum,
-    IdsmProperties,
-    IdsmRateLimitation,
-    IdsmRateLimitationSubtypesEnum,
-    IdsmRateLimitationRefConditional,
-    IdsmSignatureSupportAp,
-    IdsmSignatureSupportCp,
-    IdsmTrafficLimitation,
-    IdsmTrafficLimitationSubtypesEnum,
-    IdsmTrafficLimitationRefConditional,
-    Ieee1722Tp,
-    Ieee1722TpEthernetFrame,
-    IkeAuthenticationMethodEnum,
-    IkeAuthenticationMethodEnumSimple,
-    ImplementationDataType,
-    ImplementationDataTypeSubtypesEnum,
-    ImplementationDataTypeElement,
-    ImplementationDataTypeElementSubtypesEnum,
-    ImplementationDataTypeElementInPortInterfaceRef,
-    ImplementationDataTypeElementInSystemRef,
-    ImplementationDataTypeSubElementRef,
-    ImplementationElementInParameterInstanceRef,
-    IncludedDataTypeSet,
-    IncludedModeDeclarationGroupSet,
-    IndentSample,
-    IndexEntry,
-    IndexedArrayElement,
-    IndicatorStatusNeeds,
-    InfrastructureServices,
-    InitEvent,
-    InitialSdDelayConfig,
-    InnerDataPrototypeGroupInCompositionInstanceRef,
-    InnerPortGroupInCompositionInstanceRef,
-    InnerRunnableEntityGroupInCompositionInstanceRef,
-    InstanceEventInCompositionInstanceRef,
-    InstantiationDataDefProps,
-    InstantiationTimingEventProps,
-    Integer,
-    IntegerValueVariationPoint,
-    InterfaceMapping,
-    InterfaceMappingSet,
-    InternalConstrs,
-    InternalTriggerOccurredEvent,
-    InternalTriggeringPoint,
-    InternalTriggeringPointSubtypesEnum,
-    InterpolationRoutine,
-    InterpolationRoutineMapping,
-    InterpolationRoutineMappingSet,
-    InterpolationRoutineMappingSetSubtypesEnum,
-    IntervalTypeEnum,
-    IntervalTypeEnumSimple,
-    InvalidationPolicy,
-    InvertCondition,
-    IoHwAbstractionServerAnnotation,
-    IpAddressKeepEnum,
-    IpAddressKeepEnumSimple,
-    IpIamAuthenticConnectionProps,
-    IpIamRemoteSubject,
-    IpSecConfig,
-    IpSecConfigProps,
-    IpSecConfigPropsSubtypesEnum,
-    IpSecIamRemoteSubject,
-    IpSecRule,
-    IpSecRuleSubtypesEnum,
-    IpTransportProtocolEnum,
-    IpTransportProtocolEnumSimple,
-    Ip4AddressString,
-    Ip6AddressString,
-    Ipv4AddressSourceEnum,
-    Ipv4AddressSourceEnumSimple,
-    Ipv4ArpProps,
-    Ipv4AutoIpProps,
-    Ipv4Configuration,
-    Ipv4DhcpServerConfiguration,
-    Ipv4FragmentationProps,
-    Ipv4Props,
-    Ipv6AddressSourceEnum,
-    Ipv6AddressSourceEnumSimple,
-    Ipv6Configuration,
-    Ipv6DhcpServerConfiguration,
-    Ipv6FragmentationProps,
-    Ipv6NdpProps,
-    Ipv6Props,
     Item,
-    ItemLabelPosEnum,
-    ItemLabelPosEnumSimple,
-    J1939Cluster,
-    J1939ClusterSubtypesEnum,
-    J1939ClusterConditional,
-    J1939ControllerApplication,
-    J1939ControllerApplicationSubtypesEnum,
-    J1939ControllerApplicationToJ1939NmNodeMapping,
-    J1939DcmDm19Support,
-    J1939DcmIPdu,
-    J1939NmCluster,
-    J1939NmEcu,
-    J1939NmNode,
-    J1939NmNodeSubtypesEnum,
-    J1939NodeName,
-    J1939RmIncomingRequestServiceNeeds,
-    J1939RmOutgoingRequestServiceNeeds,
-    J1939SharedAddressCluster,
-    J1939TpConfig,
-    J1939TpConnection,
-    J1939TpNode,
-    J1939TpNodeSubtypesEnum,
-    J1939TpPg,
-    KeepWithPreviousEnum,
-    KeepWithPreviousEnumSimple,
-    KeyUsageRestrictionEnum,
-    KeyUsageRestrictionEnumSimple,
-    Keyword,
-    KeywordSet,
-    LEnum,
-    LEnumSimple,
-    LGraphic,
-    LLongName,
-    LOverviewParagraph,
-    LParagraph,
-    LPlainText,
-    LVerbatim,
     LabeledItem,
     LabeledList,
-    LatencyConstraintTypeEnum,
-    LatencyConstraintTypeEnumSimple,
-    LatencyTimingConstraint,
-    LifeCycleInfo,
-    LifeCycleInfoSet,
-    LifeCyclePeriod,
-    LifeCycleState,
-    LifeCycleStateSubtypesEnum,
-    LifeCycleStateDefinitionGroup,
-    LifeCycleStateDefinitionGroupSubtypesEnum,
-    Limit,
-    LimitValue,
-    LinChecksumType,
-    LinChecksumTypeSimple,
-    LinCluster,
-    LinClusterConditional,
-    LinCommunicationConnector,
-    LinConfigurableFrame,
-    LinErrorResponse,
-    LinEventTriggeredFrame,
-    LinFrameSubtypesEnum,
-    LinFrameTriggering,
-    LinFrameTriggeringSubtypesEnum,
-    LinMaster,
-    LinMasterConditional,
-    LinNmCluster,
-    LinOrderedConfigurableFrame,
-    LinPhysicalChannel,
-    LinScheduleTable,
-    LinScheduleTableSubtypesEnum,
-    LinSlave,
-    LinSlaveSubtypesEnum,
-    LinSlaveConditional,
-    LinSlaveConfig,
-    LinSlaveConfigIdent,
-    LinSlaveConfigIdentSubtypesEnum,
-    LinSporadicFrame,
-    LinTpConfig,
-    LinTpConnection,
-    LinTpNode,
-    LinTpNodeSubtypesEnum,
-    LinUnconditionalFrame,
-    LinUnconditionalFrameSubtypesEnum,
-    Linker,
     ListType,
-    ListEnum,
-    ListEnumSimple,
-    LocalSupervision,
-    LocalSupervisionSubtypesEnum,
-    LogAndTraceInstantiation,
-    LogTraceDefaultLogLevelEnum,
-    LogTraceDefaultLogLevelEnumSimple,
-    LogTraceLogModeEnum,
-    LogTraceLogModeEnumSimple,
-    LoggingBehaviorEnum,
-    LoggingBehaviorEnumSimple,
-    LogicAddress,
-    LogicAddressSubtypesEnum,
-    LogicalSupervision,
-    MacAddressString,
-    MacMulticastConfiguration,
-    MacMulticastGroup,
-    MacMulticastGroupSubtypesEnum,
-    Machine,
-    MachineSubtypesEnum,
-    MachineDesign,
-    MachineDesignSubtypesEnum,
-    MachineTiming,
-    Map,
-    MappingDirectionEnum,
-    MappingDirectionEnumSimple,
-    MappingScopeEnum,
-    MappingScopeEnumSimple,
-    MaxCommModeEnum,
-    MaxCommModeEnumSimple,
-    MaximumMessageLengthType,
-    MaximumMessageLengthTypeSimple,
-    McDataAccessDetails,
-    McDataInstance,
-    McDataInstanceSubtypesEnum,
-    McFunction,
-    McFunctionSubtypesEnum,
-    McFunctionDataRefSet,
-    McFunctionDataRefSetConditional,
-    McGroup,
-    McGroupSubtypesEnum,
-    McGroupDataRefSet,
-    McGroupDataRefSetConditional,
-    McParameterElementGroup,
-    McSupportData,
-    McSwEmulationMethodSupport,
-    McdIdentifier,
-    MeasuredExecutionTime,
-    MeasuredHeapUsage,
-    MeasuredStackUsage,
-    MemoryAllocationKeywordPolicyType,
-    MemoryAllocationKeywordPolicyTypeSimple,
-    MemorySection,
-    MemorySectionSubtypesEnum,
-    MemorySectionLocation,
-    MemorySectionType,
-    MemorySectionTypeSimple,
-    MetaClassName,
-    MetaDataItem,
-    MetaDataItemSet,
-    MethodMapping,
-    MimeTypeString,
     MlFigure,
     MlFormula,
-    ModeAccessPoint,
-    ModeAccessPointIdent,
-    ModeActivationKind,
-    ModeActivationKindSimple,
-    ModeDeclaration,
-    ModeDeclarationSubtypesEnum,
-    ModeDeclarationGroup,
-    ModeDeclarationGroupSubtypesEnum,
-    ModeDeclarationGroupPrototype,
-    ModeDeclarationGroupPrototypeSubtypesEnum,
-    ModeDeclarationGroupPrototypeInSystemInstanceRef,
-    ModeDeclarationGroupPrototypeMapping,
-    ModeDeclarationGroupPrototypeRefConditional,
-    ModeDeclarationMapping,
-    ModeDeclarationMappingSet,
-    ModeDeclarationMappingSetSubtypesEnum,
-    ModeDrivenTransmissionModeCondition,
-    ModeErrorBehavior,
-    ModeErrorReactionPolicyEnum,
-    ModeErrorReactionPolicyEnumSimple,
-    ModeInBswInstanceRef,
-    ModeInBswModuleDescriptionInstanceRef,
-    ModeInProcessInstanceRef,
-    ModeInSwcInstanceRef,
-    ModeInterfaceMapping,
-    ModePortAnnotation,
-    ModeRequestTypeMap,
-    ModeSwitchEventTriggeredActivity,
-    ModeSwitchInterface,
-    ModeSwitchPoint,
-    ModeSwitchPointSubtypesEnum,
-    ModeSwitchReceiverComSpec,
-    ModeSwitchSenderComSpec,
-    ModeSwitchedAckEvent,
-    ModeSwitchedAckRequest,
-    ModeTransition,
-    Modification,
-    ModificationTypeEnum,
-    ModificationTypeEnumSimple,
-    MonotonyEnum,
-    MonotonyEnumSimple,
-    MsrQueryArg,
-    MsrQueryChapter,
-    MsrQueryP1,
     MsrQueryP2,
-    MsrQueryProps,
-    MsrQueryResultChapter,
-    MsrQueryResultTopic1,
-    MsrQueryTopic1,
-    MultiLanguageOverviewParagraph,
     MultiLanguageParagraph,
-    MultiLanguagePlainText,
     MultiLanguageVerbatim,
-    MultidimensionalTime,
-    MultilanguageLongName,
-    MultiplexedIPdu,
-    MultiplicityRestrictionWithSeverity,
-    NPdu,
-    NPduSubtypesEnum,
-    NameTokenValueVariationPoint,
-    NativeDeclarationString,
-    NetworkEndpoint,
-    NetworkEndpointSubtypesEnum,
-    NetworkSegmentIdentification,
-    NetworkTargetAddressType,
-    NetworkTargetAddressTypeSimple,
-    NmConfig,
-    NmCoordinator,
-    NmCoordinatorRoleEnum,
-    NmCoordinatorRoleEnumSimple,
-    NmEcu,
-    NmEcuSubtypesEnum,
-    NmInstantiation,
-    NmNetworkHandle,
-    NmNodeSubtypesEnum,
-    NmPdu,
-    NmPduSubtypesEnum,
-    NmPduRefConditional,
-    NmtokenString,
-    NmtokensString,
-    NonOsModuleInstantiationSubtypesEnum,
-    NonqueuedReceiverComSpec,
-    NonqueuedSenderComSpec,
-    NormalizedInstruction,
-    NotAvailableValueSpecification,
     Note,
-    NoteTypeEnum,
-    NoteTypeEnumSimple,
-    NumericalOrText,
-    NumericalRuleBasedValueSpecification,
-    NumericalValue,
-    NumericalValueSpecification,
-    NumericalValueVariationPoint,
-    NvBlockDataMapping,
-    NvBlockDescriptor,
-    NvBlockNeeds,
-    NvBlockNeedsReliabilityEnum,
-    NvBlockNeedsReliabilityEnumSimple,
-    NvBlockNeedsWritingPriorityEnum,
-    NvBlockNeedsWritingPriorityEnumSimple,
-    NvBlockSwComponentType,
-    NvDataInterface,
-    NvDataPortAnnotation,
-    NvProvideComSpec,
-    NvRequireComSpec,
-    ObdControlServiceNeeds,
-    ObdInfoServiceNeeds,
-    ObdMonitorServiceNeeds,
-    ObdPidServiceNeeds,
-    ObdRatioConnectionKindEnum,
-    ObdRatioConnectionKindEnumSimple,
-    ObdRatioDenominatorNeeds,
-    ObdRatioServiceNeeds,
-    OffsetTimingConstraint,
-    OperationArgumentInComponentInstanceRef,
-    OperationCycleTypeEnum,
-    OperationCycleTypeEnumSimple,
-    OperationInSystemInstanceRef,
-    OperationInvokedEvent,
-    OrderedMaster,
-    OrientEnum,
-    OrientEnumSimple,
-    OsModuleInstantiation,
-    OsTaskExecutionEvent,
-    PModeGroupInAtomicSwcInstanceRef,
-    PModeInSystemInstanceRef,
-    POperationInAtomicSwcInstanceRef,
-    PPortInCompositionInstanceRef,
-    PPortPrototype,
-    PPortPrototypeSubtypesEnum,
-    PPortPrototypeInExecutableInstanceRef,
-    PPortPrototypeInSoftwareClusterDesignInstanceRef,
-    PTriggerInAtomicSwcTypeInstanceRef,
-    ParameterAccess,
-    ParameterDataPrototype,
-    ParameterDataPrototypeSubtypesEnum,
-    ParameterDataPrototypeInSystemInstanceRef,
-    ParameterInAtomicSwcTypeInstanceRef,
-    ParameterInterface,
-    ParameterPortAnnotation,
-    ParameterProvideComSpec,
-    ParameterRequireComSpec,
-    ParameterSwComponentType,
-    PassThroughSwConnector,
-    PduSubtypesEnum,
-    PduActivationRoutingGroup,
-    PduCollectionSemanticsEnum,
-    PduCollectionSemanticsEnumSimple,
-    PduCollectionTriggerEnum,
-    PduCollectionTriggerEnumSimple,
-    PduMappingDefaultValue,
-    PduToFrameMapping,
-    PduTriggering,
-    PduTriggeringSubtypesEnum,
-    PduTriggeringRefConditional,
-    PdurIPduGroup,
-    PdurIPduGroupSubtypesEnum,
-    PerInstanceMemory,
-    PerInstanceMemorySubtypesEnum,
-    PerInstanceMemorySize,
-    PeriodicEventTriggering,
-    PermissibleSignalPath,
-    PersistencyCollectionLevelUpdateStrategyEnum,
-    PersistencyCollectionLevelUpdateStrategyEnumSimple,
-    PersistencyDataElement,
-    PersistencyDataElementSubtypesEnum,
-    PersistencyDataRequiredComSpec,
-    PersistencyDeploymentSubtypesEnum,
-    PersistencyDeploymentElementSubtypesEnum,
-    PersistencyDeploymentElementToCryptoKeySlotMapping,
-    PersistencyDeploymentToCryptoKeySlotMapping,
-    PersistencyDeploymentToDltLogChannelMapping,
-    PersistencyElementLevelUpdateStrategyEnum,
-    PersistencyElementLevelUpdateStrategyEnumSimple,
-    PersistencyFile,
-    PersistencyFileElement,
-    PersistencyFileStorage,
-    PersistencyFileStorageSubtypesEnum,
-    PersistencyFileStorageInterface,
-    PersistencyKeyValuePair,
-    PersistencyKeyValueStorage,
-    PersistencyKeyValueStorageSubtypesEnum,
-    PersistencyKeyValueStorageInterface,
-    PersistencyPortPrototypeToFileStorageMapping,
-    PersistencyPortPrototypeToKeyValueStorageMapping,
-    PersistencyRedundancyCrc,
-    PersistencyRedundancyEnum,
-    PersistencyRedundancyEnumSimple,
-    PersistencyRedundancyHandlingScopeEnum,
-    PersistencyRedundancyHandlingScopeEnumSimple,
-    PersistencyRedundancyHash,
-    PersistencyRedundancyMOutOfN,
-    PgwideEnum,
-    PgwideEnumSimple,
-    PhmCheckpoint,
-    PhmCheckpointSubtypesEnum,
-    PhmCheckpointInExecutableInstanceRef,
-    PhmContributionToMachineMapping,
-    PhmHealthChannelInExecutableInstanceRef,
-    PhmHealthChannelInterface,
-    PhmHealthChannelInterfaceSubtypesEnum,
-    PhmHealthChannelRecoveryNotificationInterface,
-    PhmHealthChannelStatus,
-    PhmHealthChannelStatusSubtypesEnum,
-    PhmRecoveryActionInterface,
-    PhmSupervisedEntityInterface,
-    PhmSupervisionRecoveryNotificationInterface,
-    PhysConstrs,
-    PhysicalChannelSubtypesEnum,
-    PhysicalChannelRefConditional,
-    PhysicalDimension,
-    PhysicalDimensionSubtypesEnum,
-    PhysicalDimensionMapping,
-    PhysicalDimensionMappingSet,
-    PlatformHealthManagementContribution,
-    PlatformHealthManagementContributionSubtypesEnum,
-    PlatformModuleEthernetEndpointConfiguration,
-    PlatformModuleEthernetEndpointConfigurationSubtypesEnum,
-    PlcaProps,
-    PncGatewayTypeEnum,
-    PncGatewayTypeEnumSimple,
-    PncMapping,
-    PncMappingIdent,
-    PncMappingIdentSubtypesEnum,
-    PortApiOption,
-    PortDefinedArgumentBlueprint,
-    PortDefinedArgumentValue,
-    PortElementToCommunicationResourceMapping,
-    PortGroup,
-    PortGroupSubtypesEnum,
-    PortGroupInSystemInstanceRef,
-    PortInterfaceSubtypesEnum,
-    PortInterfaceBlueprintMapping,
-    PortInterfaceElementInImplementationDatatypeRef,
-    PortInterfaceMappingSubtypesEnum,
-    PortInterfaceMappingSet,
-    PortInterfaceToDataTypeMapping,
-    PortPrototypeSubtypesEnum,
-    PortPrototypeBlueprint,
-    PortPrototypeBlueprintSubtypesEnum,
-    PortPrototypeBlueprintInitValue,
-    PortPrototypeBlueprintMapping,
-    PortPrototypeInExecutableInstanceRef,
-    PortPrototypeRefConditional,
-    PositiveInteger,
-    PositiveIntegerValueVariationPoint,
-    PositiveUnlimitedInteger,
-    PossibleErrorReaction,
-    PostBuildVariantCondition,
-    PostBuildVariantCriterion,
-    PostBuildVariantCriterionSubtypesEnum,
-    PostBuildVariantCriterionValue,
-    PostBuildVariantCriterionValueSet,
-    PostBuildVariantCriterionValueSetSubtypesEnum,
-    PrPortPrototype,
-    PredefinedChapter,
-    PredefinedVariant,
-    PredefinedVariantSubtypesEnum,
-    PrimitiveAttributeCondition,
-    PrimitiveAttributeTailoring,
-    PrimitiveAttributeTailoringSubtypesEnum,
-    PrimitiveIdentifier,
-    PrmChar,
-    PrmCharAbsTol,
-    PrmCharMinTypMax,
-    PrmCharNumericalContents,
-    PrmCharTextualContents,
-    Prms,
-    Process,
-    ProcessSubtypesEnum,
-    ProcessArgument,
-    ProcessDesign,
-    ProcessDesignSubtypesEnum,
-    ProcessDesignToMachineDesignMapping,
-    ProcessDesignToMachineDesignMappingSubtypesEnum,
-    ProcessDesignToMachineDesignMappingSet,
-    ProcessExecutionError,
-    ProcessExecutionErrorSubtypesEnum,
-    ProcessToMachineMapping,
-    ProcessToMachineMappingSet,
-    ProcessingKindEnum,
-    ProcessingKindEnumSimple,
-    Processor,
-    ProcessorCore,
-    ProcessorCoreSubtypesEnum,
-    ProgramminglanguageEnum,
-    ProgramminglanguageEnumSimple,
-    ProvidedApServiceInstanceSubtypesEnum,
-    ProvidedMethodInExecutableInstanceRef,
-    ProvidedServiceInstance,
-    ProvidedServiceInstanceSubtypesEnum,
-    ProvidedServiceInstanceRefConditional,
-    ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping,
-    ProvidedSomeipServiceInstance,
-    ProvidedUserDefinedServiceInstance,
-    PskIdentityToKeySlotMapping,
-    PulseTestEnum,
-    PulseTestEnumSimple,
-    QueuedReceiverComSpec,
-    QueuedSenderComSpec,
-    RModeGroupInAtomicSwcInstanceRef,
-    RModeInAtomicSwcInstanceRef,
-    ROperationInAtomicSwcInstanceRef,
-    RPortInCompositionInstanceRef,
-    RPortPrototype,
-    RPortPrototypeSubtypesEnum,
-    RPortPrototypeInExecutableInstanceRef,
-    RPortPrototypeInSoftwareClusterDesignInstanceRef,
-    RPortPrototypeProps,
-    RTriggerInAtomicSwcInstanceRef,
-    RVariableInAtomicSwcInstanceRef,
-    RamBlockStatusControlEnum,
-    RamBlockStatusControlEnumSimple,
-    RapidPrototypingScenario,
-    RawDataStreamClientInterface,
-    RawDataStreamClientInterfaceSubtypesEnum,
-    RawDataStreamDeployment,
-    RawDataStreamDeploymentSubtypesEnum,
-    RawDataStreamGrantDesign,
-    RawDataStreamGrantDesignSubtypesEnum,
-    RawDataStreamServerInterface,
-    ReceiverAnnotation,
-    ReceiverIntentEnum,
-    ReceiverIntentEnumSimple,
-    ReceptionComSpecProps,
-    RecordLayoutIteratorPoint,
-    RecordValueSpecification,
-    RecoveryNotification,
-    RecoveryNotificationSubtypesEnum,
-    RecoveryNotificationToPPortPrototypeMapping,
-    ReentrancyLevelEnum,
-    ReentrancyLevelEnumSimple,
-    Ref,
-    ReferenceBase,
-    ReferenceCondition,
-    ReferenceTailoring,
-    ReferenceTailoringSubtypesEnum,
-    ReferenceValueSpecification,
-    ReferrableSubtypesEnum,
     ReferrableRefConditional,
-    RegularExpression,
-    RelativeTolerance,
-    RemotingTechnology,
-    RemotingTechnologyEnum,
-    RemotingTechnologyEnumSimple,
-    ReportBehaviorEnum,
-    ReportBehaviorEnumSimple,
-    RequestMethodEnum,
-    RequestMethodEnumSimple,
-    RequestResponseDelay,
-    RequestTypeEnum,
-    RequestTypeEnumSimple,
-    RequiredApServiceInstanceSubtypesEnum,
-    RequiredMethodInExecutableInstanceRef,
-    RequiredServiceInstanceToSwClusterDesignRPortPrototypeMapping,
-    RequiredSomeipServiceInstance,
-    RequiredUserDefinedServiceInstance,
-    ResolutionPolicyEnum,
-    ResolutionPolicyEnumSimple,
-    ResourceConsumption,
-    ResourceGroup,
-    ResourceGroupSubtypesEnum,
-    RestArrayPropertyDef,
-    RestBooleanPropertyDef,
-    RestElementDef,
-    RestElementDefSubtypesEnum,
-    RestEndpointArgument,
-    RestEndpointDelete,
-    RestEndpointGet,
-    RestEndpointPost,
-    RestEndpointPut,
-    RestEnumeratorDef,
-    RestHttpPortPrototypeMapping,
-    RestIntegerPropertyDef,
-    RestNumberPropertyDef,
-    RestObjectRef,
-    RestResourceDef,
-    RestServiceInterface,
-    RestStringPropertyDef,
-    RestSystemTriggeredEvent,
-    ResumePosition,
-    ResumePositionSimple,
-    RevisionLabelString,
-    RoleBasedBswModuleEntryAssignment,
-    RoleBasedDataAssignment,
-    RoleBasedDataTypeAssignment,
-    RoleBasedMcDataAssignment,
-    RoleBasedPortAssignment,
-    RoleBasedResourceDependency,
-    RootSwClusterDesignComponentPrototype,
-    RootSwClusterDesignComponentPrototypeSubtypesEnum,
-    RootSwComponentPrototype,
-    RootSwComponentPrototypeSubtypesEnum,
-    RootSwCompositionPrototype,
-    RootSwCompositionPrototypeSubtypesEnum,
-    RoughEstimateHeapUsage,
-    RoughEstimateOfExecutionTime,
-    RoughEstimateStackUsage,
-    Row,
-    RptAccessEnum,
-    RptAccessEnumSimple,
-    RptComponent,
-    RptContainer,
-    RptEnablerImplTypeEnum,
-    RptEnablerImplTypeEnumSimple,
-    RptExecutableEntity,
-    RptExecutableEntityEvent,
-    RptExecutableEntityProperties,
-    RptExecutionContext,
-    RptExecutionContextSubtypesEnum,
-    RptExecutionControlEnum,
-    RptExecutionControlEnumSimple,
-    RptHook,
-    RptImplPolicy,
-    RptPreparationEnum,
-    RptPreparationEnumSimple,
-    RptProfile,
-    RptProfileSubtypesEnum,
-    RptServicePoint,
-    RptServicePointSubtypesEnum,
-    RptServicePointEnum,
-    RptServicePointEnumSimple,
-    RptSupportData,
-    RptSwPrototypingAccess,
-    RteApiReturnValueProvisionEnum,
-    RteApiReturnValueProvisionEnumSimple,
-    RteEventSubtypesEnum,
-    RteEventInEcuInstanceRef,
-    RtePluginProps,
-    RtpTp,
-    RuleArguments,
-    RuleBasedAxisCont,
-    RuleBasedValueCont,
-    RuleBasedValueSpecification,
-    RunMode,
-    RunModeSimple,
-    RunnableEntity,
-    RunnableEntitySubtypesEnum,
-    RunnableEntityArgument,
-    RunnableEntityGroup,
-    RunnableEntityGroupSubtypesEnum,
-    RunnableEntityInCompositionInstanceRef,
-    RuntimeAddressConfigurationEnum,
-    RuntimeAddressConfigurationEnumSimple,
-    RuntimeError,
-    RxAcceptContainedIPduEnum,
-    RxAcceptContainedIPduEnumSimple,
-    RxIdentifierRange,
-    SaveConfigurationEntry,
-    ScaleConstr,
-    ScaleConstrValidityEnum,
-    ScaleConstrValidityEnumSimple,
-    Sd,
-    SdClientConfig,
-    SdServerConfig,
-    Sdf,
     Sdg,
-    SdgAggregationWithVariation,
-    SdgCaption,
-    SdgCaptionSubtypesEnum,
-    SdgClass,
-    SdgClassSubtypesEnum,
-    SdgContents,
-    SdgDef,
-    SdgDefSubtypesEnum,
-    SdgForeignReference,
-    SdgForeignReferenceWithVariation,
-    SdgPrimitiveAttribute,
-    SdgPrimitiveAttributeWithVariation,
-    SdgReference,
-    SdgTailoring,
-    SearchIntentionEnum,
-    SearchIntentionEnumSimple,
-    SecOcCryptoServiceMapping,
-    SecOcCryptoServiceMappingSubtypesEnum,
-    SecOcDeployment,
-    SecOcJobMapping,
-    SecOcJobRequirement,
-    SecOcJobRequirementSubtypesEnum,
-    SecOcJobSemanticEnum,
-    SecOcJobSemanticEnumSimple,
-    SecOcSecureComProps,
-    SecOcSecureComPropsSubtypesEnum,
-    SectionInitializationPolicyType,
-    SectionNamePrefix,
-    SectionNamePrefixSubtypesEnum,
-    SecureComPropsSubtypesEnum,
-    SecureComPropsSet,
-    SecureCommunicationAuthenticationProps,
-    SecureCommunicationAuthenticationPropsSubtypesEnum,
-    SecureCommunicationFreshnessProps,
-    SecureCommunicationFreshnessPropsSubtypesEnum,
-    SecureCommunicationProps,
-    SecureCommunicationPropsSet,
-    SecureOnBoardCommunicationNeeds,
-    SecuredIPdu,
-    SecuredPduHeaderEnum,
-    SecuredPduHeaderEnumSimple,
-    SecurityEventAggregationFilter,
-    SecurityEventContextData,
-    SecurityEventContextDataSourceEnum,
-    SecurityEventContextDataSourceEnumSimple,
-    SecurityEventContextMappingApplication,
-    SecurityEventContextMappingBswModule,
-    SecurityEventContextMappingCommConnector,
-    SecurityEventContextMappingFunctionalCluster,
-    SecurityEventContextProps,
-    SecurityEventContextPropsSubtypesEnum,
-    SecurityEventDefinition,
-    SecurityEventDefinitionSubtypesEnum,
-    SecurityEventDefinitionRefConditional,
-    SecurityEventFilterChain,
-    SecurityEventFilterChainSubtypesEnum,
-    SecurityEventFilterChainRefConditional,
-    SecurityEventMapping,
-    SecurityEventMappingSubtypesEnum,
-    SecurityEventOneEveryNFilter,
-    SecurityEventReportInterface,
-    SecurityEventReportToSecurityEventDefinitionMapping,
-    SecurityEventReportingModeEnum,
-    SecurityEventReportingModeEnumSimple,
-    SecurityEventStateFilter,
-    SecurityEventThresholdFilter,
-    SegmentPosition,
-    SendIndicationEnum,
-    SendIndicationEnumSimple,
-    SenderAnnotation,
-    SenderIntentEnum,
-    SenderIntentEnumSimple,
+    StructuredReq,
+    TraceableText,
+    VariationPoint,
+)
+from autosar.models.any_instance_ref import AnyInstanceRef
+from autosar.models.any_service_instance_id import AnyServiceInstanceId
+from autosar.models.any_version_string import AnyVersionString
+from autosar.models.ap_application_error import ApApplicationError
+from autosar.models.ap_application_error_domain import ApApplicationErrorDomain
+from autosar.models.ap_application_error_domain_subtypes_enum import ApApplicationErrorDomainSubtypesEnum
+from autosar.models.ap_application_error_set import ApApplicationErrorSet
+from autosar.models.ap_application_error_set_subtypes_enum import ApApplicationErrorSetSubtypesEnum
+from autosar.models.ap_application_error_subtypes_enum import ApApplicationErrorSubtypesEnum
+from autosar.models.ap_someip_transformation_props import ApSomeipTransformationProps
+from autosar.models.ap_someip_transformation_props_subtypes_enum import ApSomeipTransformationPropsSubtypesEnum
+from autosar.models.api_principle_enum import ApiPrincipleEnum
+from autosar.models.api_principle_enum_simple import ApiPrincipleEnumSimple
+from autosar.models.application_array_data_type import ApplicationArrayDataType
+from autosar.models.application_array_element import ApplicationArrayElement
+from autosar.models.application_array_element_subtypes_enum import ApplicationArrayElementSubtypesEnum
+from autosar.models.application_assoc_map_data_type import ApplicationAssocMapDataType
+from autosar.models.application_assoc_map_element import ApplicationAssocMapElement
+from autosar.models.application_composite_data_type_sub_element_ref import ApplicationCompositeDataTypeSubElementRef
+from autosar.models.application_composite_element_data_prototype_subtypes_enum import ApplicationCompositeElementDataPrototypeSubtypesEnum
+from autosar.models.application_composite_element_in_port_interface_instance_ref import ApplicationCompositeElementInPortInterfaceInstanceRef
+from autosar.models.application_data_prototype_in_system_instance_ref import ApplicationDataPrototypeInSystemInstanceRef
+from autosar.models.application_data_type_subtypes_enum import ApplicationDataTypeSubtypesEnum
+from autosar.models.application_deferred_data_type import ApplicationDeferredDataType
+from autosar.models.application_endpoint import ApplicationEndpoint
+from autosar.models.application_endpoint_ref_conditional import ApplicationEndpointRefConditional
+from autosar.models.application_endpoint_subtypes_enum import ApplicationEndpointSubtypesEnum
+from autosar.models.application_entry import ApplicationEntry
+from autosar.models.application_error import ApplicationError
+from autosar.models.application_error_mapping import ApplicationErrorMapping
+from autosar.models.application_error_subtypes_enum import ApplicationErrorSubtypesEnum
+from autosar.models.application_partition import ApplicationPartition
+from autosar.models.application_partition_subtypes_enum import ApplicationPartitionSubtypesEnum
+from autosar.models.application_partition_to_ecu_partition_mapping import ApplicationPartitionToEcuPartitionMapping
+from autosar.models.application_primitive_data_type import ApplicationPrimitiveDataType
+from autosar.models.application_primitive_data_type_subtypes_enum import ApplicationPrimitiveDataTypeSubtypesEnum
+from autosar.models.application_record_data_type import ApplicationRecordDataType
+from autosar.models.application_record_element import ApplicationRecordElement
+from autosar.models.application_record_element_subtypes_enum import ApplicationRecordElementSubtypesEnum
+from autosar.models.application_rule_based_value_specification import ApplicationRuleBasedValueSpecification
+from autosar.models.application_sw_component_type import ApplicationSwComponentType
+from autosar.models.application_value_specification import ApplicationValueSpecification
+from autosar.models.ar_element_subtypes_enum import ArElementSubtypesEnum
+from autosar.models.ar_package import ArPackage
+from autosar.models.ar_package_subtypes_enum import ArPackageSubtypesEnum
+from autosar.models.ar_parameter_in_implementation_data_instance_ref import ArParameterInImplementationDataInstanceRef
+from autosar.models.ar_variable_in_implementation_data_instance_ref import ArVariableInImplementationDataInstanceRef
+from autosar.models.arbitrary_event_triggering import ArbitraryEventTriggering
+from autosar.models.area import Area
+from autosar.models.area_enum_nohref import AreaEnumNohref
+from autosar.models.area_enum_nohref_simple import AreaEnumNohrefSimple
+from autosar.models.area_enum_shape import AreaEnumShape
+from autosar.models.area_enum_shape_simple import AreaEnumShapeSimple
+from autosar.models.argument_data_prototype import ArgumentDataPrototype
+from autosar.models.argument_data_prototype_subtypes_enum import ArgumentDataPrototypeSubtypesEnum
+from autosar.models.argument_direction_enum import ArgumentDirectionEnum
+from autosar.models.argument_direction_enum_simple import ArgumentDirectionEnumSimple
+from autosar.models.array_impl_policy_enum import ArrayImplPolicyEnum
+from autosar.models.array_impl_policy_enum_simple import ArrayImplPolicyEnumSimple
+from autosar.models.array_size_handling_enum import ArraySizeHandlingEnum
+from autosar.models.array_size_handling_enum_simple import ArraySizeHandlingEnumSimple
+from autosar.models.array_size_semantics_enum import ArraySizeSemanticsEnum
+from autosar.models.array_size_semantics_enum_simple import ArraySizeSemanticsEnumSimple
+from autosar.models.asam_record_layout_semantics import AsamRecordLayoutSemantics
+from autosar.models.assembly_sw_connector import AssemblySwConnector
+from autosar.models.assign_frame_id import AssignFrameId
+from autosar.models.assign_frame_id_range import AssignFrameIdRange
+from autosar.models.assign_nad import AssignNad
+from autosar.models.asynchronous_server_call_point import AsynchronousServerCallPoint
+from autosar.models.asynchronous_server_call_point_subtypes_enum import AsynchronousServerCallPointSubtypesEnum
+from autosar.models.asynchronous_server_call_result_point import AsynchronousServerCallResultPoint
+from autosar.models.asynchronous_server_call_result_point_subtypes_enum import AsynchronousServerCallResultPointSubtypesEnum
+from autosar.models.asynchronous_server_call_returns_event import AsynchronousServerCallReturnsEvent
+from autosar.models.atomic_sw_component_type_subtypes_enum import AtomicSwComponentTypeSubtypesEnum
+from autosar.models.atp_blueprint_subtypes_enum import AtpBlueprintSubtypesEnum
+from autosar.models.atp_blueprintable_subtypes_enum import AtpBlueprintableSubtypesEnum
+from autosar.models.atp_classifier_subtypes_enum import AtpClassifierSubtypesEnum
+from autosar.models.atp_definition_subtypes_enum import AtpDefinitionSubtypesEnum
+from autosar.models.atp_feature_subtypes_enum import AtpFeatureSubtypesEnum
+from autosar.models.atp_prototype_subtypes_enum import AtpPrototypeSubtypesEnum
+from autosar.models.atp_type_subtypes_enum import AtpTypeSubtypesEnum
+from autosar.models.auto_collect_enum import AutoCollectEnum
+from autosar.models.auto_collect_enum_simple import AutoCollectEnumSimple
+from autosar.models.autosar import Autosar
+from autosar.models.autosar_data_prototype_subtypes_enum import AutosarDataPrototypeSubtypesEnum
+from autosar.models.autosar_data_type_ref_conditional import AutosarDataTypeRefConditional
+from autosar.models.autosar_data_type_subtypes_enum import AutosarDataTypeSubtypesEnum
+from autosar.models.autosar_engineering_object import AutosarEngineeringObject
+from autosar.models.autosar_operation_argument_instance import AutosarOperationArgumentInstance
+from autosar.models.autosar_operation_argument_instance_subtypes_enum import AutosarOperationArgumentInstanceSubtypesEnum
+from autosar.models.autosar_parameter_ref import AutosarParameterRef
+from autosar.models.autosar_variable_instance import AutosarVariableInstance
+from autosar.models.autosar_variable_instance_subtypes_enum import AutosarVariableInstanceSubtypesEnum
+from autosar.models.autosar_variable_ref import AutosarVariableRef
+from autosar.models.axis_index_type import AxisIndexType
+from autosar.models.background_event import BackgroundEvent
+from autosar.models.base_type_direct_definition import BaseTypeDirectDefinition
+from autosar.models.base_type_encoding_string import BaseTypeEncodingString
+from autosar.models.baseline import Baseline
+from autosar.models.binary_manifest_item import BinaryManifestItem
+from autosar.models.binary_manifest_item_definition import BinaryManifestItemDefinition
+from autosar.models.binary_manifest_item_numerical_value import BinaryManifestItemNumericalValue
+from autosar.models.binary_manifest_item_pointer_value import BinaryManifestItemPointerValue
+from autosar.models.binary_manifest_meta_data_field import BinaryManifestMetaDataField
+from autosar.models.binary_manifest_provide_resource import BinaryManifestProvideResource
+from autosar.models.binary_manifest_require_resource import BinaryManifestRequireResource
+from autosar.models.binary_manifest_resource_definition import BinaryManifestResourceDefinition
+from autosar.models.binary_manifest_resource_definition_subtypes_enum import BinaryManifestResourceDefinitionSubtypesEnum
+from autosar.models.binding_time_enum import BindingTimeEnum
+from autosar.models.binding_time_enum_simple import BindingTimeEnumSimple
+from autosar.models.block_state import BlockState
+from autosar.models.block_state_subtypes_enum import BlockStateSubtypesEnum
+from autosar.models.blueprint_mapping import BlueprintMapping
+from autosar.models.blueprint_mapping_set import BlueprintMappingSet
+from autosar.models.blueprint_policy_list import BlueprintPolicyList
+from autosar.models.blueprint_policy_not_modifiable import BlueprintPolicyNotModifiable
+from autosar.models.blueprint_policy_single import BlueprintPolicySingle
+from autosar.models.boolean import Boolean
+from autosar.models.boolean_value_variation_point import BooleanValueVariationPoint
+from autosar.models.br import Br
+from autosar.models.bsw_asynchronous_server_call_point import BswAsynchronousServerCallPoint
+from autosar.models.bsw_asynchronous_server_call_point_subtypes_enum import BswAsynchronousServerCallPointSubtypesEnum
+from autosar.models.bsw_asynchronous_server_call_result_point import BswAsynchronousServerCallResultPoint
+from autosar.models.bsw_asynchronous_server_call_result_point_subtypes_enum import BswAsynchronousServerCallResultPointSubtypesEnum
+from autosar.models.bsw_asynchronous_server_call_returns_event import BswAsynchronousServerCallReturnsEvent
+from autosar.models.bsw_background_event import BswBackgroundEvent
+from autosar.models.bsw_call_type import BswCallType
+from autosar.models.bsw_call_type_simple import BswCallTypeSimple
+from autosar.models.bsw_called_entity import BswCalledEntity
+from autosar.models.bsw_client_policy import BswClientPolicy
+from autosar.models.bsw_composition_timing import BswCompositionTiming
+from autosar.models.bsw_data_received_event import BswDataReceivedEvent
+from autosar.models.bsw_data_send_policy import BswDataSendPolicy
+from autosar.models.bsw_debug_info import BswDebugInfo
+from autosar.models.bsw_direct_call_point import BswDirectCallPoint
+from autosar.models.bsw_distinguished_partition import BswDistinguishedPartition
+from autosar.models.bsw_distinguished_partition_subtypes_enum import BswDistinguishedPartitionSubtypesEnum
+from autosar.models.bsw_entry_kind_enum import BswEntryKindEnum
+from autosar.models.bsw_entry_kind_enum_simple import BswEntryKindEnumSimple
+from autosar.models.bsw_entry_relationship import BswEntryRelationship
+from autosar.models.bsw_entry_relationship_enum import BswEntryRelationshipEnum
+from autosar.models.bsw_entry_relationship_enum_simple import BswEntryRelationshipEnumSimple
+from autosar.models.bsw_entry_relationship_set import BswEntryRelationshipSet
+from autosar.models.bsw_exclusive_area_policy import BswExclusiveAreaPolicy
+from autosar.models.bsw_execution_context import BswExecutionContext
+from autosar.models.bsw_execution_context_simple import BswExecutionContextSimple
+from autosar.models.bsw_external_trigger_occurred_event import BswExternalTriggerOccurredEvent
+from autosar.models.bsw_implementation import BswImplementation
+from autosar.models.bsw_implementation_subtypes_enum import BswImplementationSubtypesEnum
+from autosar.models.bsw_internal_behavior import BswInternalBehavior
+from autosar.models.bsw_internal_behavior_subtypes_enum import BswInternalBehaviorSubtypesEnum
+from autosar.models.bsw_internal_trigger_occurred_event import BswInternalTriggerOccurredEvent
+from autosar.models.bsw_internal_triggering_point import BswInternalTriggeringPoint
+from autosar.models.bsw_internal_triggering_point_policy import BswInternalTriggeringPointPolicy
+from autosar.models.bsw_internal_triggering_point_ref_conditional import BswInternalTriggeringPointRefConditional
+from autosar.models.bsw_internal_triggering_point_subtypes_enum import BswInternalTriggeringPointSubtypesEnum
+from autosar.models.bsw_interrupt_category import BswInterruptCategory
+from autosar.models.bsw_interrupt_category_simple import BswInterruptCategorySimple
+from autosar.models.bsw_interrupt_entity import BswInterruptEntity
+from autosar.models.bsw_mgr_needs import BswMgrNeeds
+from autosar.models.bsw_mode_manager_error_event import BswModeManagerErrorEvent
+from autosar.models.bsw_mode_receiver_policy import BswModeReceiverPolicy
+from autosar.models.bsw_mode_sender_policy import BswModeSenderPolicy
+from autosar.models.bsw_mode_switch_ack_request import BswModeSwitchAckRequest
+from autosar.models.bsw_mode_switch_event import BswModeSwitchEvent
+from autosar.models.bsw_mode_switched_ack_event import BswModeSwitchedAckEvent
+from autosar.models.bsw_module_client_server_entry import BswModuleClientServerEntry
+from autosar.models.bsw_module_client_server_entry_subtypes_enum import BswModuleClientServerEntrySubtypesEnum
+from autosar.models.bsw_module_dependency import BswModuleDependency
+from autosar.models.bsw_module_description import BswModuleDescription
+from autosar.models.bsw_module_description_ref_conditional import BswModuleDescriptionRefConditional
+from autosar.models.bsw_module_description_subtypes_enum import BswModuleDescriptionSubtypesEnum
+from autosar.models.bsw_module_entity_subtypes_enum import BswModuleEntitySubtypesEnum
+from autosar.models.bsw_module_entry import BswModuleEntry
+from autosar.models.bsw_module_entry_ref_conditional import BswModuleEntryRefConditional
+from autosar.models.bsw_module_entry_subtypes_enum import BswModuleEntrySubtypesEnum
+from autosar.models.bsw_module_timing import BswModuleTiming
+from autosar.models.bsw_operation_invoked_event import BswOperationInvokedEvent
+from autosar.models.bsw_os_task_execution_event import BswOsTaskExecutionEvent
+from autosar.models.bsw_parameter_policy import BswParameterPolicy
+from autosar.models.bsw_per_instance_memory_policy import BswPerInstanceMemoryPolicy
+from autosar.models.bsw_queued_data_reception_policy import BswQueuedDataReceptionPolicy
+from autosar.models.bsw_released_trigger_policy import BswReleasedTriggerPolicy
+from autosar.models.bsw_schedulable_entity import BswSchedulableEntity
+from autosar.models.bsw_scheduler_name_prefix import BswSchedulerNamePrefix
+from autosar.models.bsw_scheduler_name_prefix_subtypes_enum import BswSchedulerNamePrefixSubtypesEnum
+from autosar.models.bsw_service_dependency import BswServiceDependency
+from autosar.models.bsw_service_dependency_ident import BswServiceDependencyIdent
+from autosar.models.bsw_service_dependency_ident_subtypes_enum import BswServiceDependencyIdentSubtypesEnum
+from autosar.models.bsw_synchronous_server_call_point import BswSynchronousServerCallPoint
+from autosar.models.bsw_timing_event import BswTimingEvent
+from autosar.models.bsw_trigger_direct_implementation import BswTriggerDirectImplementation
+from autosar.models.bsw_variable_access import BswVariableAccess
+from autosar.models.buffer_properties import BufferProperties
+from autosar.models.build_action import BuildAction
+from autosar.models.build_action_environment import BuildActionEnvironment
+from autosar.models.build_action_environment_subtypes_enum import BuildActionEnvironmentSubtypesEnum
+from autosar.models.build_action_invocator import BuildActionInvocator
+from autosar.models.build_action_io_element import BuildActionIoElement
+from autosar.models.build_action_manifest import BuildActionManifest
+from autosar.models.build_action_manifest_ref_conditional import BuildActionManifestRefConditional
+from autosar.models.build_action_manifest_subtypes_enum import BuildActionManifestSubtypesEnum
+from autosar.models.build_action_subtypes_enum import BuildActionSubtypesEnum
+from autosar.models.build_engineering_object import BuildEngineeringObject
+from autosar.models.build_type_enum import BuildTypeEnum
+from autosar.models.build_type_enum_simple import BuildTypeEnumSimple
+from autosar.models.bulk_nv_data_descriptor import BulkNvDataDescriptor
+from autosar.models.burst_pattern_event_triggering import BurstPatternEventTriggering
+from autosar.models.bus_mirror_can_id_range_mapping import BusMirrorCanIdRangeMapping
+from autosar.models.bus_mirror_can_id_to_can_id_mapping import BusMirrorCanIdToCanIdMapping
+from autosar.models.bus_mirror_channel import BusMirrorChannel
+from autosar.models.bus_mirror_channel_mapping_can import BusMirrorChannelMappingCan
+from autosar.models.bus_mirror_channel_mapping_flexray import BusMirrorChannelMappingFlexray
+from autosar.models.bus_mirror_channel_mapping_ip import BusMirrorChannelMappingIp
+from autosar.models.bus_mirror_channel_mapping_user_defined import BusMirrorChannelMappingUserDefined
+from autosar.models.bus_mirror_lin_pid_to_can_id_mapping import BusMirrorLinPidToCanIdMapping
+from autosar.models.byte_order_enum import ByteOrderEnum
+from autosar.models.byte_order_enum_simple import ByteOrderEnumSimple
+from autosar.models.c_identifier import CIdentifier
+from autosar.models.c_identifier_with_index import CIdentifierWithIndex
+from autosar.models.calibration_parameter_value import CalibrationParameterValue
+from autosar.models.calibration_parameter_value_set import CalibrationParameterValueSet
+from autosar.models.calibration_parameter_value_set_subtypes_enum import CalibrationParameterValueSetSubtypesEnum
+from autosar.models.calprm_axis_category_enum import CalprmAxisCategoryEnum
+from autosar.models.calprm_axis_category_enum_simple import CalprmAxisCategoryEnumSimple
+from autosar.models.can_addressing_mode_type import CanAddressingModeType
+from autosar.models.can_addressing_mode_type_simple import CanAddressingModeTypeSimple
+from autosar.models.can_cluster import CanCluster
+from autosar.models.can_cluster_bus_off_recovery import CanClusterBusOffRecovery
+from autosar.models.can_cluster_conditional import CanClusterConditional
+from autosar.models.can_communication_connector import CanCommunicationConnector
+from autosar.models.can_communication_controller import CanCommunicationController
+from autosar.models.can_communication_controller_conditional import CanCommunicationControllerConditional
+from autosar.models.can_controller_configuration import CanControllerConfiguration
+from autosar.models.can_controller_configuration_requirements import CanControllerConfigurationRequirements
+from autosar.models.can_controller_fd_configuration import CanControllerFdConfiguration
+from autosar.models.can_controller_fd_configuration_requirements import CanControllerFdConfigurationRequirements
+from autosar.models.can_frame import CanFrame
+from autosar.models.can_frame_rx_behavior_enum import CanFrameRxBehaviorEnum
+from autosar.models.can_frame_rx_behavior_enum_simple import CanFrameRxBehaviorEnumSimple
+from autosar.models.can_frame_triggering import CanFrameTriggering
+from autosar.models.can_frame_triggering_subtypes_enum import CanFrameTriggeringSubtypesEnum
+from autosar.models.can_frame_tx_behavior_enum import CanFrameTxBehaviorEnum
+from autosar.models.can_frame_tx_behavior_enum_simple import CanFrameTxBehaviorEnumSimple
+from autosar.models.can_global_time_domain_props import CanGlobalTimeDomainProps
+from autosar.models.can_nm_cluster import CanNmCluster
+from autosar.models.can_nm_cluster_coupling import CanNmClusterCoupling
+from autosar.models.can_nm_cluster_subtypes_enum import CanNmClusterSubtypesEnum
+from autosar.models.can_nm_ecu import CanNmEcu
+from autosar.models.can_nm_node import CanNmNode
+from autosar.models.can_nm_range_config import CanNmRangeConfig
+from autosar.models.can_physical_channel import CanPhysicalChannel
+from autosar.models.can_tp_address import CanTpAddress
+from autosar.models.can_tp_address_subtypes_enum import CanTpAddressSubtypesEnum
+from autosar.models.can_tp_addressing_format_type import CanTpAddressingFormatType
+from autosar.models.can_tp_addressing_format_type_simple import CanTpAddressingFormatTypeSimple
+from autosar.models.can_tp_channel import CanTpChannel
+from autosar.models.can_tp_channel_mode_type import CanTpChannelModeType
+from autosar.models.can_tp_channel_mode_type_simple import CanTpChannelModeTypeSimple
+from autosar.models.can_tp_channel_subtypes_enum import CanTpChannelSubtypesEnum
+from autosar.models.can_tp_config import CanTpConfig
+from autosar.models.can_tp_connection import CanTpConnection
+from autosar.models.can_tp_ecu import CanTpEcu
+from autosar.models.can_tp_node import CanTpNode
+from autosar.models.can_tp_node_subtypes_enum import CanTpNodeSubtypesEnum
+from autosar.models.caption import Caption
+from autosar.models.category_string import CategoryString
+from autosar.models.chapter_content import ChapterContent
+from autosar.models.chapter_enum_break import ChapterEnumBreak
+from autosar.models.chapter_enum_break_simple import ChapterEnumBreakSimple
+from autosar.models.chapter_model import ChapterModel
+from autosar.models.chapter_or_msr_query import ChapterOrMsrQuery
+from autosar.models.checkpoint_transition import CheckpointTransition
+from autosar.models.checkpoint_transition_subtypes_enum import CheckpointTransitionSubtypesEnum
+from autosar.models.client_com_spec import ClientComSpec
+from autosar.models.client_id_definition import ClientIdDefinition
+from autosar.models.client_id_definition_set import ClientIdDefinitionSet
+from autosar.models.client_id_definition_set_subtypes_enum import ClientIdDefinitionSetSubtypesEnum
+from autosar.models.client_id_mapping import ClientIdMapping
+from autosar.models.client_id_range import ClientIdRange
+from autosar.models.client_intent_enum import ClientIntentEnum
+from autosar.models.client_intent_enum_simple import ClientIntentEnumSimple
+from autosar.models.client_server_annotation import ClientServerAnnotation
+from autosar.models.client_server_application_error_mapping import ClientServerApplicationErrorMapping
+from autosar.models.client_server_interface import ClientServerInterface
+from autosar.models.client_server_interface_mapping import ClientServerInterfaceMapping
+from autosar.models.client_server_interface_subtypes_enum import ClientServerInterfaceSubtypesEnum
+from autosar.models.client_server_interface_to_bsw_module_entry_blueprint_mapping import ClientServerInterfaceToBswModuleEntryBlueprintMapping
+from autosar.models.client_server_operation import ClientServerOperation
+from autosar.models.client_server_operation_blueprint_mapping import ClientServerOperationBlueprintMapping
+from autosar.models.client_server_operation_mapping import ClientServerOperationMapping
+from autosar.models.client_server_operation_subtypes_enum import ClientServerOperationSubtypesEnum
+from autosar.models.client_server_primitive_type_mapping import ClientServerPrimitiveTypeMapping
+from autosar.models.client_server_record_element_mapping import (
+    ClientServerArrayElementMapping,
+    ClientServerArrayTypeMapping,
+    ClientServerRecordElementMapping,
+    ClientServerRecordTypeMapping,
+)
+from autosar.models.client_server_to_signal_group_mapping import ClientServerToSignalGroupMapping
+from autosar.models.client_server_to_signal_mapping import ClientServerToSignalMapping
+from autosar.models.code import Code
+from autosar.models.collectable_element_subtypes_enum import CollectableElementSubtypesEnum
+from autosar.models.collection import Collection
+from autosar.models.collection_subtypes_enum import CollectionSubtypesEnum
+from autosar.models.colspec import Colspec
+from autosar.models.com_certificate_to_crypto_certificate_mapping import ComCertificateToCryptoCertificateMapping
+from autosar.models.com_event_grant import ComEventGrant
+from autosar.models.com_event_grant_design import ComEventGrantDesign
+from autosar.models.com_event_grant_design_subtypes_enum import ComEventGrantDesignSubtypesEnum
+from autosar.models.com_field_grant import ComFieldGrant
+from autosar.models.com_field_grant_design import ComFieldGrantDesign
+from autosar.models.com_field_grant_design_subtypes_enum import ComFieldGrantDesignSubtypesEnum
+from autosar.models.com_find_service_grant import ComFindServiceGrant
+from autosar.models.com_find_service_grant_design import ComFindServiceGrantDesign
+from autosar.models.com_find_service_grant_design_subtypes_enum import ComFindServiceGrantDesignSubtypesEnum
+from autosar.models.com_key_to_crypto_key_slot_mapping import ComKeyToCryptoKeySlotMapping
+from autosar.models.com_management_mapping import ComManagementMapping
+from autosar.models.com_method_grant import ComMethodGrant
+from autosar.models.com_method_grant_design import ComMethodGrantDesign
+from autosar.models.com_method_grant_design_subtypes_enum import ComMethodGrantDesignSubtypesEnum
+from autosar.models.com_mgr_user_needs import ComMgrUserNeeds
+from autosar.models.com_offer_service_grant import ComOfferServiceGrant
+from autosar.models.com_offer_service_grant_design import ComOfferServiceGrantDesign
+from autosar.models.com_offer_service_grant_design_subtypes_enum import ComOfferServiceGrantDesignSubtypesEnum
+from autosar.models.com_sec_oc_to_crypto_key_slot_mapping import ComSecOcToCryptoKeySlotMapping
+from autosar.models.common_signal_path import CommonSignalPath
+from autosar.models.communication_buffer_locking import CommunicationBufferLocking
+from autosar.models.communication_cluster_subtypes_enum import CommunicationClusterSubtypesEnum
+from autosar.models.communication_connector_ref_conditional import CommunicationConnectorRefConditional
+from autosar.models.communication_connector_subtypes_enum import CommunicationConnectorSubtypesEnum
+from autosar.models.communication_controller_mapping import CommunicationControllerMapping
+from autosar.models.communication_controller_subtypes_enum import CommunicationControllerSubtypesEnum
+from autosar.models.communication_direction_type import CommunicationDirectionType
+from autosar.models.communication_direction_type_simple import CommunicationDirectionTypeSimple
+from autosar.models.compiler import Compiler
+from autosar.models.complex_device_driver_sw_component_type import ComplexDeviceDriverSwComponentType
+from autosar.models.component_clustering import ComponentClustering
+from autosar.models.component_in_composition_instance_ref import ComponentInCompositionInstanceRef
+from autosar.models.component_in_system_instance_ref import ComponentInSystemInstanceRef
+from autosar.models.component_separation import ComponentSeparation
+from autosar.models.composite_interface import CompositeInterface
+from autosar.models.composite_network_representation import CompositeNetworkRepresentation
+from autosar.models.composition_p_port_to_executable_p_port_mapping import CompositionPPortToExecutablePPortMapping
+from autosar.models.composition_r_port_to_executable_r_port_mapping import CompositionRPortToExecutableRPortMapping
+from autosar.models.composition_sw_component_type import CompositionSwComponentType
+from autosar.models.composition_sw_component_type_ref_conditional import CompositionSwComponentTypeRefConditional
+from autosar.models.composition_sw_component_type_subtypes_enum import CompositionSwComponentTypeSubtypesEnum
+from autosar.models.compu import Compu
+from autosar.models.compu_const import CompuConst
+from autosar.models.compu_const_formula_content import CompuConstFormulaContent
+from autosar.models.compu_const_numeric_content import CompuConstNumericContent
+from autosar.models.compu_const_text_content import CompuConstTextContent
+from autosar.models.compu_generic_math import CompuGenericMath
+from autosar.models.compu_method import CompuMethod
+from autosar.models.compu_method_subtypes_enum import CompuMethodSubtypesEnum
+from autosar.models.compu_nominator_denominator import CompuNominatorDenominator
+from autosar.models.compu_rational_coeffs import CompuRationalCoeffs
+from autosar.models.compu_scale import CompuScale
+from autosar.models.compu_scale_constant_contents import CompuScaleConstantContents
+from autosar.models.compu_scale_rational_formula import CompuScaleRationalFormula
+from autosar.models.compu_scales import CompuScales
+from autosar.models.concrete_class_tailoring import (
+    AbstractClassTailoring,
+    AggregationTailoring,
+    ClassContentConditional,
+    ConcreteClassTailoring,
+    ReferenceTailoring,
+)
+from autosar.models.concrete_pattern_event_triggering import ConcretePatternEventTriggering
+from autosar.models.condition_by_formula import ConditionByFormula
+from autosar.models.conditional_change_nad import ConditionalChangeNad
+from autosar.models.confidence_interval import ConfidenceInterval
+from autosar.models.consistency_needs import ConsistencyNeeds
+from autosar.models.consistency_needs_blueprint_set import ConsistencyNeedsBlueprintSet
+from autosar.models.constant_reference import ConstantReference
+from autosar.models.constant_specification import ConstantSpecification
+from autosar.models.constant_specification_mapping import ConstantSpecificationMapping
+from autosar.models.constant_specification_mapping_set import ConstantSpecificationMappingSet
+from autosar.models.constant_specification_mapping_set_subtypes_enum import ConstantSpecificationMappingSetSubtypesEnum
+from autosar.models.constant_specification_subtypes_enum import ConstantSpecificationSubtypesEnum
+from autosar.models.constraint_tailoring import ConstraintTailoring
+from autosar.models.consumed_event_group import ConsumedEventGroup
+from autosar.models.consumed_event_group_subtypes_enum import ConsumedEventGroupSubtypesEnum
+from autosar.models.consumed_provided_service_instance_group import ConsumedProvidedServiceInstanceGroup
+from autosar.models.consumed_provided_service_instance_group_ref_conditional import ConsumedProvidedServiceInstanceGroupRefConditional
+from autosar.models.consumed_provided_service_instance_group_subtypes_enum import ConsumedProvidedServiceInstanceGroupSubtypesEnum
+from autosar.models.consumed_service_instance import ConsumedServiceInstance
+from autosar.models.consumed_service_instance_ref_conditional import ConsumedServiceInstanceRefConditional
+from autosar.models.consumed_service_instance_subtypes_enum import ConsumedServiceInstanceSubtypesEnum
+from autosar.models.contained_i_pdu_collection_semantics_enum import ContainedIPduCollectionSemanticsEnum
+from autosar.models.contained_i_pdu_collection_semantics_enum_simple import ContainedIPduCollectionSemanticsEnumSimple
+from autosar.models.contained_i_pdu_props import ContainedIPduProps
+from autosar.models.container_i_pdu import ContainerIPdu
+from autosar.models.container_i_pdu_header_type_enum import ContainerIPduHeaderTypeEnum
+from autosar.models.container_i_pdu_header_type_enum_simple import ContainerIPduHeaderTypeEnumSimple
+from autosar.models.container_i_pdu_trigger_enum import ContainerIPduTriggerEnum
+from autosar.models.container_i_pdu_trigger_enum_simple import ContainerIPduTriggerEnumSimple
+from autosar.models.coupling_element import CouplingElement
+from autosar.models.coupling_element_enum import CouplingElementEnum
+from autosar.models.coupling_element_enum_simple import CouplingElementEnumSimple
+from autosar.models.coupling_port import CouplingPort
+from autosar.models.coupling_port_connection import CouplingPortConnection
+from autosar.models.coupling_port_details import CouplingPortDetails
+from autosar.models.coupling_port_fifo import CouplingPortFifo
+from autosar.models.coupling_port_fifo_subtypes_enum import CouplingPortFifoSubtypesEnum
+from autosar.models.coupling_port_rate_policy import CouplingPortRatePolicy
+from autosar.models.coupling_port_rate_policy_action_enum import CouplingPortRatePolicyActionEnum
+from autosar.models.coupling_port_rate_policy_action_enum_simple import CouplingPortRatePolicyActionEnumSimple
+from autosar.models.coupling_port_ref_conditional import CouplingPortRefConditional
+from autosar.models.coupling_port_role_enum import CouplingPortRoleEnum
+from autosar.models.coupling_port_role_enum_simple import CouplingPortRoleEnumSimple
+from autosar.models.coupling_port_scheduler import CouplingPortScheduler
+from autosar.models.coupling_port_scheduler_subtypes_enum import CouplingPortSchedulerSubtypesEnum
+from autosar.models.coupling_port_shaper import CouplingPortShaper
+from autosar.models.coupling_port_structural_element_subtypes_enum import CouplingPortStructuralElementSubtypesEnum
+from autosar.models.coupling_port_subtypes_enum import CouplingPortSubtypesEnum
+from autosar.models.coupling_port_traffic_class_assignment import CouplingPortTrafficClassAssignment
+from autosar.models.cp_software_cluster import CpSoftwareCluster
+from autosar.models.cp_software_cluster_binary_manifest_descriptor import CpSoftwareClusterBinaryManifestDescriptor
+from autosar.models.cp_software_cluster_communication_resource import CpSoftwareClusterCommunicationResource
+from autosar.models.cp_software_cluster_communication_resource_subtypes_enum import CpSoftwareClusterCommunicationResourceSubtypesEnum
+from autosar.models.cp_software_cluster_mapping_set import CpSoftwareClusterMappingSet
+from autosar.models.cp_software_cluster_ref_conditional import CpSoftwareClusterRefConditional
+from autosar.models.cp_software_cluster_resource_pool import CpSoftwareClusterResourcePool
+from autosar.models.cp_software_cluster_resource_subtypes_enum import CpSoftwareClusterResourceSubtypesEnum
+from autosar.models.cp_software_cluster_resource_to_application_partition_mapping import CpSoftwareClusterResourceToApplicationPartitionMapping
+from autosar.models.cp_software_cluster_service_resource import CpSoftwareClusterServiceResource
+from autosar.models.cp_software_cluster_service_resource_subtypes_enum import CpSoftwareClusterServiceResourceSubtypesEnum
+from autosar.models.cp_software_cluster_subtypes_enum import CpSoftwareClusterSubtypesEnum
+from autosar.models.cp_software_cluster_to_ecu_instance_mapping import CpSoftwareClusterToEcuInstanceMapping
+from autosar.models.cp_software_cluster_to_resource_mapping import CpSoftwareClusterToResourceMapping
+from autosar.models.cpp_implementation_data_type_context_target_subtypes_enum import CppImplementationDataTypeContextTargetSubtypesEnum
+from autosar.models.cpp_implementation_data_type_element import CppImplementationDataTypeElement
+from autosar.models.cpp_implementation_data_type_element_qualifier import CppImplementationDataTypeElementQualifier
+from autosar.models.cpp_implementation_data_type_element_subtypes_enum import CppImplementationDataTypeElementSubtypesEnum
+from autosar.models.cpp_implementation_data_type_subtypes_enum import CppImplementationDataTypeSubtypesEnum
+from autosar.models.cpp_template_argument import CppTemplateArgument
+from autosar.models.crypto_certificate import CryptoCertificate
+from autosar.models.crypto_certificate_algorithm_family_enum import CryptoCertificateAlgorithmFamilyEnum
+from autosar.models.crypto_certificate_algorithm_family_enum_simple import CryptoCertificateAlgorithmFamilyEnumSimple
+from autosar.models.crypto_certificate_format_enum import CryptoCertificateFormatEnum
+from autosar.models.crypto_certificate_format_enum_simple import CryptoCertificateFormatEnumSimple
+from autosar.models.crypto_certificate_interface import CryptoCertificateInterface
+from autosar.models.crypto_certificate_key_slot_needs import CryptoCertificateKeySlotNeeds
+from autosar.models.crypto_certificate_subtypes_enum import CryptoCertificateSubtypesEnum
+from autosar.models.crypto_certificate_to_crypto_key_slot_mapping import CryptoCertificateToCryptoKeySlotMapping
+from autosar.models.crypto_certificate_to_port_prototype_mapping import CryptoCertificateToPortPrototypeMapping
+from autosar.models.crypto_key_management_needs import CryptoKeyManagementNeeds
+from autosar.models.crypto_key_slot import CryptoKeySlot
+from autosar.models.crypto_key_slot_allowed_modification import CryptoKeySlotAllowedModification
+from autosar.models.crypto_key_slot_content_allowed_usage import CryptoKeySlotContentAllowedUsage
+from autosar.models.crypto_key_slot_interface import CryptoKeySlotInterface
+from autosar.models.crypto_key_slot_subtypes_enum import CryptoKeySlotSubtypesEnum
+from autosar.models.crypto_key_slot_to_port_prototype_mapping import CryptoKeySlotToPortPrototypeMapping
+from autosar.models.crypto_key_slot_type_enum import CryptoKeySlotTypeEnum
+from autosar.models.crypto_key_slot_type_enum_simple import CryptoKeySlotTypeEnumSimple
+from autosar.models.crypto_key_slot_usage_enum import CryptoKeySlotUsageEnum
+from autosar.models.crypto_key_slot_usage_enum_simple import CryptoKeySlotUsageEnumSimple
+from autosar.models.crypto_module_instantiation import CryptoModuleInstantiation
+from autosar.models.crypto_need_to_port_prototype_mapping import CryptoNeedToPortPrototypeMapping
+from autosar.models.crypto_object_type_enum import CryptoObjectTypeEnum
+from autosar.models.crypto_object_type_enum_simple import CryptoObjectTypeEnumSimple
+from autosar.models.crypto_provider import CryptoProvider
+from autosar.models.crypto_provider_interface import CryptoProviderInterface
+from autosar.models.crypto_provider_subtypes_enum import CryptoProviderSubtypesEnum
+from autosar.models.crypto_provider_to_port_prototype_mapping import CryptoProviderToPortPrototypeMapping
+from autosar.models.crypto_r_port_com_spec import CryptoRPortComSpec
+from autosar.models.crypto_service_certificate import CryptoServiceCertificate
+from autosar.models.crypto_service_certificate_subtypes_enum import CryptoServiceCertificateSubtypesEnum
+from autosar.models.crypto_service_job_needs import CryptoServiceJobNeeds
+from autosar.models.crypto_service_key import CryptoServiceKey
+from autosar.models.crypto_service_key_generation_enum import CryptoServiceKeyGenerationEnum
+from autosar.models.crypto_service_key_generation_enum_simple import CryptoServiceKeyGenerationEnumSimple
+from autosar.models.crypto_service_key_subtypes_enum import CryptoServiceKeySubtypesEnum
+from autosar.models.crypto_service_needs import CryptoServiceNeeds
+from autosar.models.crypto_service_primitive import CryptoServicePrimitive
+from autosar.models.crypto_service_primitive_subtypes_enum import CryptoServicePrimitiveSubtypesEnum
+from autosar.models.crypto_service_queue import CryptoServiceQueue
+from autosar.models.crypto_service_queue_subtypes_enum import CryptoServiceQueueSubtypesEnum
+from autosar.models.crypto_trust_master_interface import CryptoTrustMasterInterface
+from autosar.models.cs_transformer_error_reaction_enum import CsTransformerErrorReactionEnum
+from autosar.models.cs_transformer_error_reaction_enum_simple import CsTransformerErrorReactionEnumSimple
+from autosar.models.cse_code_type_string import CseCodeTypeString
+from autosar.models.custom_cpp_implementation_data_type import CustomCppImplementationDataType
+from autosar.models.cycle_counter import CycleCounter
+from autosar.models.cycle_repetition import CycleRepetition
+from autosar.models.cycle_repetition_type import CycleRepetitionType
+from autosar.models.cycle_repetition_type_simple import CycleRepetitionTypeSimple
+from autosar.models.cyclic_timing import CyclicTiming
+from autosar.models.data_com_props import DataComProps
+from autosar.models.data_constr import DataConstr
+from autosar.models.data_constr_rule import DataConstrRule
+from autosar.models.data_constr_subtypes_enum import DataConstrSubtypesEnum
+from autosar.models.data_dump_entry import DataDumpEntry
+from autosar.models.data_exchange_point import DataExchangePoint
+from autosar.models.data_exchange_point_kind import DataExchangePointKind
+from autosar.models.data_exchange_point_kind_simple import DataExchangePointKindSimple
+from autosar.models.data_filter import DataFilter
+from autosar.models.data_filter_type_enum import DataFilterTypeEnum
+from autosar.models.data_filter_type_enum_simple import DataFilterTypeEnumSimple
+from autosar.models.data_format_element_reference_subtypes_enum import DataFormatElementReferenceSubtypesEnum
+from autosar.models.data_format_tailoring import DataFormatTailoring
+from autosar.models.data_id_mode_enum import DataIdModeEnum
+from autosar.models.data_id_mode_enum_simple import DataIdModeEnumSimple
+from autosar.models.data_interface_subtypes_enum import DataInterfaceSubtypesEnum
+from autosar.models.data_limit_kind_enum import DataLimitKindEnum
+from autosar.models.data_limit_kind_enum_simple import DataLimitKindEnumSimple
+from autosar.models.data_prototype_group import DataPrototypeGroup
+from autosar.models.data_prototype_group_subtypes_enum import DataPrototypeGroupSubtypesEnum
+from autosar.models.data_prototype_in_client_server_interface_instance_ref import DataPrototypeInClientServerInterfaceInstanceRef
+from autosar.models.data_prototype_in_executable_instance_ref import DataPrototypeInExecutableInstanceRef
+from autosar.models.data_prototype_in_port_interface_ref import DataPrototypeInPortInterfaceRef
+from autosar.models.data_prototype_in_sender_receiver_interface_instance_ref import DataPrototypeInSenderReceiverInterfaceInstanceRef
+from autosar.models.data_prototype_in_service_interface_instance_ref import DataPrototypeInServiceInterfaceInstanceRef
+from autosar.models.data_prototype_in_service_interface_ref import DataPrototypeInServiceInterfaceRef
+from autosar.models.data_prototype_in_system_instance_ref import DataPrototypeInSystemInstanceRef
+from autosar.models.data_prototype_mapping import DataPrototypeMapping
+from autosar.models.data_prototype_subtypes_enum import DataPrototypeSubtypesEnum
+from autosar.models.data_prototype_transformation_props import DataPrototypeTransformationProps
+from autosar.models.data_prototype_with_application_data_type_in_system_ref import DataPrototypeWithApplicationDataTypeInSystemRef
+from autosar.models.data_receive_error_event import DataReceiveErrorEvent
+from autosar.models.data_received_event import DataReceivedEvent
+from autosar.models.data_send_completed_event import DataSendCompletedEvent
+from autosar.models.data_transformation import DataTransformation
+from autosar.models.data_transformation_error_handling_enum import DataTransformationErrorHandlingEnum
+from autosar.models.data_transformation_error_handling_enum_simple import DataTransformationErrorHandlingEnumSimple
+from autosar.models.data_transformation_kind_enum import DataTransformationKindEnum
+from autosar.models.data_transformation_kind_enum_simple import DataTransformationKindEnumSimple
+from autosar.models.data_transformation_ref_conditional import DataTransformationRefConditional
+from autosar.models.data_transformation_set import DataTransformationSet
+from autosar.models.data_transformation_status_forwarding_enum import DataTransformationStatusForwardingEnum
+from autosar.models.data_transformation_status_forwarding_enum_simple import DataTransformationStatusForwardingEnumSimple
+from autosar.models.data_transformation_subtypes_enum import DataTransformationSubtypesEnum
+from autosar.models.data_type_map import DataTypeMap
+from autosar.models.data_type_mapping_set import DataTypeMappingSet
+from autosar.models.data_type_mapping_set_subtypes_enum import DataTypeMappingSetSubtypesEnum
+from autosar.models.data_type_policy_enum import DataTypePolicyEnum
+from autosar.models.data_type_policy_enum_simple import DataTypePolicyEnumSimple
+from autosar.models.data_write_completed_event import DataWriteCompletedEvent
+from autosar.models.date import Date
+from autosar.models.dcm_i_pdu import DcmIPdu
+from autosar.models.dds_event_deployment import DdsEventDeployment
+from autosar.models.dds_event_qos_props import DdsEventQosProps
+from autosar.models.dds_field_deployment import DdsFieldDeployment
+from autosar.models.dds_field_qos_props import DdsFieldQosProps
+from autosar.models.dds_provided_service_instance import DdsProvidedServiceInstance
+from autosar.models.dds_required_service_instance import DdsRequiredServiceInstance
+from autosar.models.dds_service_instance_to_machine_mapping import DdsServiceInstanceToMachineMapping
+from autosar.models.dds_service_interface_deployment import DdsServiceInterfaceDeployment
+from autosar.models.dds_service_version import DdsServiceVersion
+from autosar.models.deadline_supervision import DeadlineSupervision
+from autosar.models.default_value_application_strategy_enum import DefaultValueApplicationStrategyEnum
+from autosar.models.default_value_application_strategy_enum_simple import DefaultValueApplicationStrategyEnumSimple
+from autosar.models.default_value_element import DefaultValueElement
+from autosar.models.delegated_port_annotation import DelegatedPortAnnotation
+from autosar.models.delegation_sw_connector import DelegationSwConnector
+from autosar.models.dependency_on_artifact import DependencyOnArtifact
+from autosar.models.dependency_on_artifact_subtypes_enum import DependencyOnArtifactSubtypesEnum
+from autosar.models.dependency_usage_enum import DependencyUsageEnum
+from autosar.models.dependency_usage_enum_simple import DependencyUsageEnumSimple
+from autosar.models.deterministic_client import DeterministicClient
+from autosar.models.deterministic_client_resource import DeterministicClientResource
+from autosar.models.deterministic_client_resource_needs import DeterministicClientResourceNeeds
+from autosar.models.deterministic_client_subtypes_enum import DeterministicClientSubtypesEnum
+from autosar.models.development_error import DevelopmentError
+from autosar.models.dhcp_server_configuration import DhcpServerConfiguration
+from autosar.models.dhcpv_6_props import Dhcpv6Props
+from autosar.models.diag_event_debounce_counter_based import DiagEventDebounceCounterBased
+from autosar.models.diag_event_debounce_monitor_internal import DiagEventDebounceMonitorInternal
+from autosar.models.diag_event_debounce_time_based import DiagEventDebounceTimeBased
+from autosar.models.diag_pdu_type import DiagPduType
+from autosar.models.diag_pdu_type_simple import DiagPduTypeSimple
+from autosar.models.diag_requirement_id_string import DiagRequirementIdString
+from autosar.models.diagnostic_abstract_data_identifier_subtypes_enum import DiagnosticAbstractDataIdentifierSubtypesEnum
+from autosar.models.diagnostic_access_permission import DiagnosticAccessPermission
+from autosar.models.diagnostic_access_permission_subtypes_enum import DiagnosticAccessPermissionSubtypesEnum
+from autosar.models.diagnostic_access_permission_validity_enum import DiagnosticAccessPermissionValidityEnum
+from autosar.models.diagnostic_access_permission_validity_enum_simple import DiagnosticAccessPermissionValidityEnumSimple
+from autosar.models.diagnostic_aging import DiagnosticAging
+from autosar.models.diagnostic_aging_subtypes_enum import DiagnosticAgingSubtypesEnum
+from autosar.models.diagnostic_audience_enum import DiagnosticAudienceEnum
+from autosar.models.diagnostic_audience_enum_simple import DiagnosticAudienceEnumSimple
+from autosar.models.diagnostic_clear_condition import DiagnosticClearCondition
+from autosar.models.diagnostic_clear_condition_group import DiagnosticClearConditionGroup
+from autosar.models.diagnostic_clear_condition_group_subtypes_enum import DiagnosticClearConditionGroupSubtypesEnum
+from autosar.models.diagnostic_clear_condition_needs import DiagnosticClearConditionNeeds
+from autosar.models.diagnostic_clear_condition_port_mapping import DiagnosticClearConditionPortMapping
+from autosar.models.diagnostic_clear_condition_subtypes_enum import DiagnosticClearConditionSubtypesEnum
+from autosar.models.diagnostic_clear_diagnostic_information import DiagnosticClearDiagnosticInformation
+from autosar.models.diagnostic_clear_diagnostic_information_class import DiagnosticClearDiagnosticInformationClass
+from autosar.models.diagnostic_clear_diagnostic_information_class_subtypes_enum import DiagnosticClearDiagnosticInformationClassSubtypesEnum
+from autosar.models.diagnostic_clear_dtc_limitation_enum import DiagnosticClearDtcLimitationEnum
+from autosar.models.diagnostic_clear_dtc_limitation_enum_simple import DiagnosticClearDtcLimitationEnumSimple
+from autosar.models.diagnostic_clear_event_allowed_behavior_enum import DiagnosticClearEventAllowedBehaviorEnum
+from autosar.models.diagnostic_clear_event_allowed_behavior_enum_simple import DiagnosticClearEventAllowedBehaviorEnumSimple
+from autosar.models.diagnostic_clear_event_behavior_enum import DiagnosticClearEventBehaviorEnum
+from autosar.models.diagnostic_clear_event_behavior_enum_simple import DiagnosticClearEventBehaviorEnumSimple
+from autosar.models.diagnostic_clear_reset_emission_related_info import DiagnosticClearResetEmissionRelatedInfo
+from autosar.models.diagnostic_clear_reset_emission_related_info_class import DiagnosticClearResetEmissionRelatedInfoClass
+from autosar.models.diagnostic_clear_reset_emission_related_info_class_subtypes_enum import DiagnosticClearResetEmissionRelatedInfoClassSubtypesEnum
+from autosar.models.diagnostic_com_control import DiagnosticComControl
+from autosar.models.diagnostic_com_control_class import DiagnosticComControlClass
+from autosar.models.diagnostic_com_control_class_subtypes_enum import DiagnosticComControlClassSubtypesEnum
+from autosar.models.diagnostic_com_control_specific_channel import DiagnosticComControlSpecificChannel
+from autosar.models.diagnostic_com_control_sub_node_channel import DiagnosticComControlSubNodeChannel
+from autosar.models.diagnostic_common_element_ref_conditional import DiagnosticCommonElementRefConditional
+from autosar.models.diagnostic_common_element_subtypes_enum import DiagnosticCommonElementSubtypesEnum
+from autosar.models.diagnostic_common_props import DiagnosticCommonProps
+from autosar.models.diagnostic_common_props_conditional import DiagnosticCommonPropsConditional
+from autosar.models.diagnostic_communication_manager_needs import DiagnosticCommunicationManagerNeeds
+from autosar.models.diagnostic_compare_type_enum import DiagnosticCompareTypeEnum
+from autosar.models.diagnostic_compare_type_enum_simple import DiagnosticCompareTypeEnumSimple
+from autosar.models.diagnostic_component_needs import DiagnosticComponentNeeds
+from autosar.models.diagnostic_condition_interface import DiagnosticConditionInterface
+from autosar.models.diagnostic_connected_indicator import DiagnosticConnectedIndicator
+from autosar.models.diagnostic_connected_indicator_behavior_enum import DiagnosticConnectedIndicatorBehaviorEnum
+from autosar.models.diagnostic_connected_indicator_behavior_enum_simple import DiagnosticConnectedIndicatorBehaviorEnumSimple
+from autosar.models.diagnostic_connection import DiagnosticConnection
+from autosar.models.diagnostic_connection_ref_conditional import DiagnosticConnectionRefConditional
+from autosar.models.diagnostic_connection_subtypes_enum import DiagnosticConnectionSubtypesEnum
+from autosar.models.diagnostic_contribution_set import DiagnosticContributionSet
+from autosar.models.diagnostic_contribution_set_subtypes_enum import DiagnosticContributionSetSubtypesEnum
+from autosar.models.diagnostic_control_dtc_setting import DiagnosticControlDtcSetting
+from autosar.models.diagnostic_control_dtc_setting_class import DiagnosticControlDtcSettingClass
+from autosar.models.diagnostic_control_dtc_setting_class_subtypes_enum import DiagnosticControlDtcSettingClassSubtypesEnum
+from autosar.models.diagnostic_control_enable_mask_bit import DiagnosticControlEnableMaskBit
+from autosar.models.diagnostic_control_needs import DiagnosticControlNeeds
+from autosar.models.diagnostic_custom_service_class import DiagnosticCustomServiceClass
+from autosar.models.diagnostic_custom_service_class_subtypes_enum import DiagnosticCustomServiceClassSubtypesEnum
+from autosar.models.diagnostic_custom_service_instance import DiagnosticCustomServiceInstance
+from autosar.models.diagnostic_data_capture_enum import DiagnosticDataCaptureEnum
+from autosar.models.diagnostic_data_capture_enum_simple import DiagnosticDataCaptureEnumSimple
+from autosar.models.diagnostic_data_change_trigger import DiagnosticDataChangeTrigger
+from autosar.models.diagnostic_data_element import DiagnosticDataElement
+from autosar.models.diagnostic_data_element_interface import DiagnosticDataElementInterface
+from autosar.models.diagnostic_data_element_subtypes_enum import DiagnosticDataElementSubtypesEnum
+from autosar.models.diagnostic_data_identifier import DiagnosticDataIdentifier
+from autosar.models.diagnostic_data_identifier_generic_interface import DiagnosticDataIdentifierGenericInterface
+from autosar.models.diagnostic_data_identifier_interface import DiagnosticDataIdentifierInterface
+from autosar.models.diagnostic_data_identifier_set import DiagnosticDataIdentifierSet
+from autosar.models.diagnostic_data_identifier_set_ref_conditional import DiagnosticDataIdentifierSetRefConditional
+from autosar.models.diagnostic_data_identifier_set_subtypes_enum import DiagnosticDataIdentifierSetSubtypesEnum
+from autosar.models.diagnostic_data_identifier_subtypes_enum import DiagnosticDataIdentifierSubtypesEnum
+from autosar.models.diagnostic_data_transfer import DiagnosticDataTransfer
+from autosar.models.diagnostic_data_transfer_class import DiagnosticDataTransferClass
+from autosar.models.diagnostic_data_transfer_class_subtypes_enum import DiagnosticDataTransferClassSubtypesEnum
+from autosar.models.diagnostic_debounce_algorithm_props import DiagnosticDebounceAlgorithmProps
+from autosar.models.diagnostic_debounce_algorithm_props_subtypes_enum import DiagnosticDebounceAlgorithmPropsSubtypesEnum
+from autosar.models.diagnostic_debounce_behavior_enum import DiagnosticDebounceBehaviorEnum
+from autosar.models.diagnostic_debounce_behavior_enum_simple import DiagnosticDebounceBehaviorEnumSimple
+from autosar.models.diagnostic_debounce_behavior_enum_value_variation_point import DiagnosticDebounceBehaviorEnumValueVariationPoint
+from autosar.models.diagnostic_dem_provided_data_mapping import DiagnosticDemProvidedDataMapping
+from autosar.models.diagnostic_denominator_condition_enum import DiagnosticDenominatorConditionEnum
+from autosar.models.diagnostic_denominator_condition_enum_simple import DiagnosticDenominatorConditionEnumSimple
+from autosar.models.diagnostic_do_ip_activation_line_interface import DiagnosticDoIpActivationLineInterface
+from autosar.models.diagnostic_do_ip_group_identification_interface import DiagnosticDoIpGroupIdentificationInterface
+from autosar.models.diagnostic_do_ip_power_mode_interface import DiagnosticDoIpPowerModeInterface
+from autosar.models.diagnostic_do_ip_trigger_vehicle_announcement_interface import DiagnosticDoIpTriggerVehicleAnnouncementInterface
+from autosar.models.diagnostic_download_interface import DiagnosticDownloadInterface
+from autosar.models.diagnostic_dtc_change_trigger import DiagnosticDtcChangeTrigger
+from autosar.models.diagnostic_dtc_information_interface import DiagnosticDtcInformationInterface
+from autosar.models.diagnostic_dynamic_data_identifier import DiagnosticDynamicDataIdentifier
+from autosar.models.diagnostic_dynamic_data_identifier_subtypes_enum import DiagnosticDynamicDataIdentifierSubtypesEnum
+from autosar.models.diagnostic_dynamically_define_data_identifier import DiagnosticDynamicallyDefineDataIdentifier
+from autosar.models.diagnostic_dynamically_define_data_identifier_class import DiagnosticDynamicallyDefineDataIdentifierClass
+from autosar.models.diagnostic_dynamically_define_data_identifier_class_subtypes_enum import DiagnosticDynamicallyDefineDataIdentifierClassSubtypesEnum
+from autosar.models.diagnostic_dynamically_define_data_identifier_subfunction_enum import DiagnosticDynamicallyDefineDataIdentifierSubfunctionEnum
+from autosar.models.diagnostic_dynamically_define_data_identifier_subfunction_enum_simple import DiagnosticDynamicallyDefineDataIdentifierSubfunctionEnumSimple
+from autosar.models.diagnostic_ecu_instance_props import DiagnosticEcuInstanceProps
+from autosar.models.diagnostic_ecu_props import DiagnosticEcuProps
+from autosar.models.diagnostic_ecu_reset import DiagnosticEcuReset
+from autosar.models.diagnostic_ecu_reset_class import DiagnosticEcuResetClass
+from autosar.models.diagnostic_ecu_reset_class_subtypes_enum import DiagnosticEcuResetClassSubtypesEnum
+from autosar.models.diagnostic_ecu_reset_interface import DiagnosticEcuResetInterface
+from autosar.models.diagnostic_enable_condition import DiagnosticEnableCondition
+from autosar.models.diagnostic_enable_condition_group import DiagnosticEnableConditionGroup
+from autosar.models.diagnostic_enable_condition_group_subtypes_enum import DiagnosticEnableConditionGroupSubtypesEnum
+from autosar.models.diagnostic_enable_condition_needs import DiagnosticEnableConditionNeeds
+from autosar.models.diagnostic_enable_condition_port_mapping import DiagnosticEnableConditionPortMapping
+from autosar.models.diagnostic_enable_condition_ref_conditional import DiagnosticEnableConditionRefConditional
+from autosar.models.diagnostic_enable_condition_subtypes_enum import DiagnosticEnableConditionSubtypesEnum
+from autosar.models.diagnostic_env_bsw_mode_element import DiagnosticEnvBswModeElement
+from autosar.models.diagnostic_env_condition_formula import DiagnosticEnvConditionFormula
+from autosar.models.diagnostic_env_data_condition import DiagnosticEnvDataCondition
+from autosar.models.diagnostic_env_mode_condition import DiagnosticEnvModeCondition
+from autosar.models.diagnostic_env_mode_element_subtypes_enum import DiagnosticEnvModeElementSubtypesEnum
+from autosar.models.diagnostic_env_swc_mode_element import DiagnosticEnvSwcModeElement
+from autosar.models.diagnostic_environmental_condition import DiagnosticEnvironmentalCondition
+from autosar.models.diagnostic_environmental_condition_subtypes_enum import DiagnosticEnvironmentalConditionSubtypesEnum
+from autosar.models.diagnostic_event import DiagnosticEvent
+from autosar.models.diagnostic_event_clear_allowed_enum import DiagnosticEventClearAllowedEnum
+from autosar.models.diagnostic_event_clear_allowed_enum_simple import DiagnosticEventClearAllowedEnumSimple
+from autosar.models.diagnostic_event_displacement_strategy_enum import DiagnosticEventDisplacementStrategyEnum
+from autosar.models.diagnostic_event_displacement_strategy_enum_simple import DiagnosticEventDisplacementStrategyEnumSimple
+from autosar.models.diagnostic_event_info_needs import DiagnosticEventInfoNeeds
+from autosar.models.diagnostic_event_interface import DiagnosticEventInterface
+from autosar.models.diagnostic_event_kind_enum import DiagnosticEventKindEnum
+from autosar.models.diagnostic_event_kind_enum_simple import DiagnosticEventKindEnumSimple
+from autosar.models.diagnostic_event_manager_needs import DiagnosticEventManagerNeeds
+from autosar.models.diagnostic_event_needs import DiagnosticEventNeeds
+from autosar.models.diagnostic_event_needs_subtypes_enum import DiagnosticEventNeedsSubtypesEnum
+from autosar.models.diagnostic_event_port_mapping import DiagnosticEventPortMapping
+from autosar.models.diagnostic_event_ref_conditional import DiagnosticEventRefConditional
+from autosar.models.diagnostic_event_subtypes_enum import DiagnosticEventSubtypesEnum
+from autosar.models.diagnostic_event_to_debounce_algorithm_mapping import DiagnosticEventToDebounceAlgorithmMapping
+from autosar.models.diagnostic_event_to_enable_condition_group_mapping import DiagnosticEventToEnableConditionGroupMapping
+from autosar.models.diagnostic_event_to_operation_cycle_mapping import DiagnosticEventToOperationCycleMapping
+from autosar.models.diagnostic_event_to_security_event_mapping import DiagnosticEventToSecurityEventMapping
+from autosar.models.diagnostic_event_to_storage_condition_group_mapping import DiagnosticEventToStorageConditionGroupMapping
+from autosar.models.diagnostic_event_to_trouble_code_j_1939_mapping import DiagnosticEventToTroubleCodeJ1939Mapping
+from autosar.models.diagnostic_event_to_trouble_code_uds_mapping import DiagnosticEventToTroubleCodeUdsMapping
+from autosar.models.diagnostic_event_window import DiagnosticEventWindow
+from autosar.models.diagnostic_event_window_time_enum import DiagnosticEventWindowTimeEnum
+from autosar.models.diagnostic_event_window_time_enum_simple import DiagnosticEventWindowTimeEnumSimple
+from autosar.models.diagnostic_extended_data_record import DiagnosticExtendedDataRecord
+from autosar.models.diagnostic_extended_data_record_ref_conditional import DiagnosticExtendedDataRecordRefConditional
+from autosar.models.diagnostic_extended_data_record_subtypes_enum import DiagnosticExtendedDataRecordSubtypesEnum
+from autosar.models.diagnostic_fim_alias_event import DiagnosticFimAliasEvent
+from autosar.models.diagnostic_fim_alias_event_group import DiagnosticFimAliasEventGroup
+from autosar.models.diagnostic_fim_alias_event_group_mapping import DiagnosticFimAliasEventGroupMapping
+from autosar.models.diagnostic_fim_alias_event_group_subtypes_enum import DiagnosticFimAliasEventGroupSubtypesEnum
+from autosar.models.diagnostic_fim_alias_event_mapping import DiagnosticFimAliasEventMapping
+from autosar.models.diagnostic_fim_alias_event_subtypes_enum import DiagnosticFimAliasEventSubtypesEnum
+from autosar.models.diagnostic_fim_event_group import DiagnosticFimEventGroup
+from autosar.models.diagnostic_fim_event_group_subtypes_enum import DiagnosticFimEventGroupSubtypesEnum
+from autosar.models.diagnostic_fim_function_mapping import DiagnosticFimFunctionMapping
+from autosar.models.diagnostic_freeze_frame import DiagnosticFreezeFrame
+from autosar.models.diagnostic_freeze_frame_ref_conditional import DiagnosticFreezeFrameRefConditional
+from autosar.models.diagnostic_freeze_frame_subtypes_enum import DiagnosticFreezeFrameSubtypesEnum
+from autosar.models.diagnostic_function_identifier import DiagnosticFunctionIdentifier
+from autosar.models.diagnostic_function_identifier_inhibit import DiagnosticFunctionIdentifierInhibit
+from autosar.models.diagnostic_function_identifier_subtypes_enum import DiagnosticFunctionIdentifierSubtypesEnum
+from autosar.models.diagnostic_function_inhibit_source import DiagnosticFunctionInhibitSource
+from autosar.models.diagnostic_function_inhibit_source_subtypes_enum import DiagnosticFunctionInhibitSourceSubtypesEnum
+from autosar.models.diagnostic_generic_uds_interface import DiagnosticGenericUdsInterface
+from autosar.models.diagnostic_generic_uds_needs import DiagnosticGenericUdsNeeds
+from autosar.models.diagnostic_handle_dddi_configuration_enum import DiagnosticHandleDddiConfigurationEnum
+from autosar.models.diagnostic_handle_dddi_configuration_enum_simple import DiagnosticHandleDddiConfigurationEnumSimple
+from autosar.models.diagnostic_indicator import DiagnosticIndicator
+from autosar.models.diagnostic_indicator_interface import DiagnosticIndicatorInterface
+from autosar.models.diagnostic_indicator_needs import DiagnosticIndicatorNeeds
+from autosar.models.diagnostic_indicator_port_mapping import DiagnosticIndicatorPortMapping
+from autosar.models.diagnostic_indicator_subtypes_enum import DiagnosticIndicatorSubtypesEnum
+from autosar.models.diagnostic_indicator_type_enum import DiagnosticIndicatorTypeEnum
+from autosar.models.diagnostic_indicator_type_enum_simple import DiagnosticIndicatorTypeEnumSimple
+from autosar.models.diagnostic_indicator_type_enum_value_variation_point import DiagnosticIndicatorTypeEnumValueVariationPoint
+from autosar.models.diagnostic_info_type import DiagnosticInfoType
+from autosar.models.diagnostic_info_type_subtypes_enum import DiagnosticInfoTypeSubtypesEnum
+from autosar.models.diagnostic_inhibit_source_event_mapping import DiagnosticInhibitSourceEventMapping
+from autosar.models.diagnostic_inhibition_mask_enum import DiagnosticInhibitionMaskEnum
+from autosar.models.diagnostic_inhibition_mask_enum_simple import DiagnosticInhibitionMaskEnumSimple
+from autosar.models.diagnostic_initial_event_status_enum import DiagnosticInitialEventStatusEnum
+from autosar.models.diagnostic_initial_event_status_enum_simple import DiagnosticInitialEventStatusEnumSimple
+from autosar.models.diagnostic_io_control import DiagnosticIoControl
+from autosar.models.diagnostic_io_control_class import DiagnosticIoControlClass
+from autosar.models.diagnostic_io_control_class_subtypes_enum import DiagnosticIoControlClassSubtypesEnum
+from autosar.models.diagnostic_io_control_needs import DiagnosticIoControlNeeds
+from autosar.models.diagnostic_iumpr import DiagnosticIumpr
+from autosar.models.diagnostic_iumpr_denominator_group import DiagnosticIumprDenominatorGroup
+from autosar.models.diagnostic_iumpr_group import DiagnosticIumprGroup
+from autosar.models.diagnostic_iumpr_group_identifier import DiagnosticIumprGroupIdentifier
+from autosar.models.diagnostic_iumpr_subtypes_enum import DiagnosticIumprSubtypesEnum
+from autosar.models.diagnostic_j_1939_expanded_freeze_frame import DiagnosticJ1939ExpandedFreezeFrame
+from autosar.models.diagnostic_j_1939_freeze_frame import DiagnosticJ1939FreezeFrame
+from autosar.models.diagnostic_j_1939_node import DiagnosticJ1939Node
+from autosar.models.diagnostic_j_1939_node_subtypes_enum import DiagnosticJ1939NodeSubtypesEnum
+from autosar.models.diagnostic_j_1939_spn import DiagnosticJ1939Spn
+from autosar.models.diagnostic_j_1939_spn_mapping import DiagnosticJ1939SpnMapping
+from autosar.models.diagnostic_j_1939_spn_subtypes_enum import DiagnosticJ1939SpnSubtypesEnum
+from autosar.models.diagnostic_j_1939_sw_mapping import DiagnosticJ1939SwMapping
+from autosar.models.diagnostic_jump_to_boot_loader_enum import DiagnosticJumpToBootLoaderEnum
+from autosar.models.diagnostic_jump_to_boot_loader_enum_simple import DiagnosticJumpToBootLoaderEnumSimple
+from autosar.models.diagnostic_logical_operator_enum import DiagnosticLogicalOperatorEnum
+from autosar.models.diagnostic_logical_operator_enum_simple import DiagnosticLogicalOperatorEnumSimple
+from autosar.models.diagnostic_master_to_slave_event_mapping import DiagnosticMasterToSlaveEventMapping
+from autosar.models.diagnostic_master_to_slave_event_mapping_set import DiagnosticMasterToSlaveEventMappingSet
+from autosar.models.diagnostic_measurement_identifier import DiagnosticMeasurementIdentifier
+from autosar.models.diagnostic_measurement_identifier_subtypes_enum import DiagnosticMeasurementIdentifierSubtypesEnum
+from autosar.models.diagnostic_memory_destination_mirror import DiagnosticMemoryDestinationMirror
+from autosar.models.diagnostic_memory_destination_port_mapping import DiagnosticMemoryDestinationPortMapping
+from autosar.models.diagnostic_memory_destination_primary import DiagnosticMemoryDestinationPrimary
+from autosar.models.diagnostic_memory_destination_subtypes_enum import DiagnosticMemoryDestinationSubtypesEnum
+from autosar.models.diagnostic_memory_destination_user_defined import DiagnosticMemoryDestinationUserDefined
+from autosar.models.diagnostic_memory_entry_storage_trigger_enum import DiagnosticMemoryEntryStorageTriggerEnum
+from autosar.models.diagnostic_memory_entry_storage_trigger_enum_simple import DiagnosticMemoryEntryStorageTriggerEnumSimple
+from autosar.models.diagnostic_memory_identifier import DiagnosticMemoryIdentifier
+from autosar.models.diagnostic_memory_identifier_subtypes_enum import DiagnosticMemoryIdentifierSubtypesEnum
+from autosar.models.diagnostic_monitor_interface import DiagnosticMonitorInterface
+from autosar.models.diagnostic_monitor_update_kind_enum import DiagnosticMonitorUpdateKindEnum
+from autosar.models.diagnostic_monitor_update_kind_enum_simple import DiagnosticMonitorUpdateKindEnumSimple
+from autosar.models.diagnostic_obd_support_enum import DiagnosticObdSupportEnum
+from autosar.models.diagnostic_obd_support_enum_simple import DiagnosticObdSupportEnumSimple
+from autosar.models.diagnostic_occurrence_counter_processing_enum import DiagnosticOccurrenceCounterProcessingEnum
+from autosar.models.diagnostic_occurrence_counter_processing_enum_simple import DiagnosticOccurrenceCounterProcessingEnumSimple
+from autosar.models.diagnostic_operation_cycle import DiagnosticOperationCycle
+from autosar.models.diagnostic_operation_cycle_interface import DiagnosticOperationCycleInterface
+from autosar.models.diagnostic_operation_cycle_needs import DiagnosticOperationCycleNeeds
+from autosar.models.diagnostic_operation_cycle_port_mapping import DiagnosticOperationCyclePortMapping
+from autosar.models.diagnostic_operation_cycle_ref_conditional import DiagnosticOperationCycleRefConditional
+from autosar.models.diagnostic_operation_cycle_subtypes_enum import DiagnosticOperationCycleSubtypesEnum
+from autosar.models.diagnostic_operation_cycle_type_enum import DiagnosticOperationCycleTypeEnum
+from autosar.models.diagnostic_operation_cycle_type_enum_simple import DiagnosticOperationCycleTypeEnumSimple
+from autosar.models.diagnostic_parameter import DiagnosticParameter
+from autosar.models.diagnostic_parameter_identifier import DiagnosticParameterIdentifier
+from autosar.models.diagnostic_parameter_identifier_subtypes_enum import DiagnosticParameterIdentifierSubtypesEnum
+from autosar.models.diagnostic_parameter_support_info import DiagnosticParameterSupportInfo
+from autosar.models.diagnostic_periodic_rate import DiagnosticPeriodicRate
+from autosar.models.diagnostic_periodic_rate_category_enum import DiagnosticPeriodicRateCategoryEnum
+from autosar.models.diagnostic_periodic_rate_category_enum_simple import DiagnosticPeriodicRateCategoryEnumSimple
+from autosar.models.diagnostic_powertrain_freeze_frame import DiagnosticPowertrainFreezeFrame
+from autosar.models.diagnostic_powertrain_freeze_frame_subtypes_enum import DiagnosticPowertrainFreezeFrameSubtypesEnum
+from autosar.models.diagnostic_processing_style_enum import DiagnosticProcessingStyleEnum
+from autosar.models.diagnostic_processing_style_enum_simple import DiagnosticProcessingStyleEnumSimple
+from autosar.models.diagnostic_protocol import DiagnosticProtocol
+from autosar.models.diagnostic_provided_data_mapping import DiagnosticProvidedDataMapping
+from autosar.models.diagnostic_read_data_by_identifier import DiagnosticReadDataByIdentifier
+from autosar.models.diagnostic_read_data_by_identifier_class import DiagnosticReadDataByIdentifierClass
+from autosar.models.diagnostic_read_data_by_identifier_class_subtypes_enum import DiagnosticReadDataByIdentifierClassSubtypesEnum
+from autosar.models.diagnostic_read_data_by_periodic_id import DiagnosticReadDataByPeriodicId
+from autosar.models.diagnostic_read_data_by_periodic_id_class import DiagnosticReadDataByPeriodicIdClass
+from autosar.models.diagnostic_read_data_by_periodic_id_class_subtypes_enum import DiagnosticReadDataByPeriodicIdClassSubtypesEnum
+from autosar.models.diagnostic_read_dtc_information import DiagnosticReadDtcInformation
+from autosar.models.diagnostic_read_dtc_information_class import DiagnosticReadDtcInformationClass
+from autosar.models.diagnostic_read_dtc_information_class_subtypes_enum import DiagnosticReadDtcInformationClassSubtypesEnum
+from autosar.models.diagnostic_read_memory_by_address import DiagnosticReadMemoryByAddress
+from autosar.models.diagnostic_read_memory_by_address_class import DiagnosticReadMemoryByAddressClass
+from autosar.models.diagnostic_read_memory_by_address_class_subtypes_enum import DiagnosticReadMemoryByAddressClassSubtypesEnum
+from autosar.models.diagnostic_read_scaling_data_by_identifier import DiagnosticReadScalingDataByIdentifier
+from autosar.models.diagnostic_read_scaling_data_by_identifier_class import DiagnosticReadScalingDataByIdentifierClass
+from autosar.models.diagnostic_read_scaling_data_by_identifier_class_subtypes_enum import DiagnosticReadScalingDataByIdentifierClassSubtypesEnum
+from autosar.models.diagnostic_record_trigger_enum import DiagnosticRecordTriggerEnum
+from autosar.models.diagnostic_record_trigger_enum_simple import DiagnosticRecordTriggerEnumSimple
+from autosar.models.diagnostic_request_control_of_on_board_device import DiagnosticRequestControlOfOnBoardDevice
+from autosar.models.diagnostic_request_control_of_on_board_device_class import DiagnosticRequestControlOfOnBoardDeviceClass
+from autosar.models.diagnostic_request_control_of_on_board_device_class_subtypes_enum import DiagnosticRequestControlOfOnBoardDeviceClassSubtypesEnum
+from autosar.models.diagnostic_request_current_powertrain_data import DiagnosticRequestCurrentPowertrainData
+from autosar.models.diagnostic_request_current_powertrain_data_class import DiagnosticRequestCurrentPowertrainDataClass
+from autosar.models.diagnostic_request_current_powertrain_data_class_subtypes_enum import DiagnosticRequestCurrentPowertrainDataClassSubtypesEnum
+from autosar.models.diagnostic_request_download import DiagnosticRequestDownload
+from autosar.models.diagnostic_request_download_class import DiagnosticRequestDownloadClass
+from autosar.models.diagnostic_request_download_class_subtypes_enum import DiagnosticRequestDownloadClassSubtypesEnum
+from autosar.models.diagnostic_request_emission_related_dtc import DiagnosticRequestEmissionRelatedDtc
+from autosar.models.diagnostic_request_emission_related_dtc_class import DiagnosticRequestEmissionRelatedDtcClass
+from autosar.models.diagnostic_request_emission_related_dtc_class_subtypes_enum import DiagnosticRequestEmissionRelatedDtcClassSubtypesEnum
+from autosar.models.diagnostic_request_emission_related_dtc_permanent_status import DiagnosticRequestEmissionRelatedDtcPermanentStatus
+from autosar.models.diagnostic_request_emission_related_dtc_permanent_status_class import DiagnosticRequestEmissionRelatedDtcPermanentStatusClass
+from autosar.models.diagnostic_request_emission_related_dtc_permanent_status_class_subtypes_enum import DiagnosticRequestEmissionRelatedDtcPermanentStatusClassSubtypesEnum
+from autosar.models.diagnostic_request_file_transfer import DiagnosticRequestFileTransfer
+from autosar.models.diagnostic_request_file_transfer_class import DiagnosticRequestFileTransferClass
+from autosar.models.diagnostic_request_file_transfer_class_subtypes_enum import DiagnosticRequestFileTransferClassSubtypesEnum
+from autosar.models.diagnostic_request_file_transfer_needs import DiagnosticRequestFileTransferNeeds
+from autosar.models.diagnostic_request_on_board_monitoring_test_results import DiagnosticRequestOnBoardMonitoringTestResults
+from autosar.models.diagnostic_request_on_board_monitoring_test_results_class import DiagnosticRequestOnBoardMonitoringTestResultsClass
+from autosar.models.diagnostic_request_on_board_monitoring_test_results_class_subtypes_enum import DiagnosticRequestOnBoardMonitoringTestResultsClassSubtypesEnum
+from autosar.models.diagnostic_request_powertrain_freeze_frame_data import DiagnosticRequestPowertrainFreezeFrameData
+from autosar.models.diagnostic_request_powertrain_freeze_frame_data_class import DiagnosticRequestPowertrainFreezeFrameDataClass
+from autosar.models.diagnostic_request_powertrain_freeze_frame_data_class_subtypes_enum import DiagnosticRequestPowertrainFreezeFrameDataClassSubtypesEnum
+from autosar.models.diagnostic_request_routine_results import DiagnosticRequestRoutineResults
+from autosar.models.diagnostic_request_upload import DiagnosticRequestUpload
+from autosar.models.diagnostic_request_upload_class import DiagnosticRequestUploadClass
+from autosar.models.diagnostic_request_upload_class_subtypes_enum import DiagnosticRequestUploadClassSubtypesEnum
+from autosar.models.diagnostic_request_vehicle_info import DiagnosticRequestVehicleInfo
+from autosar.models.diagnostic_request_vehicle_info_class import DiagnosticRequestVehicleInfoClass
+from autosar.models.diagnostic_request_vehicle_info_class_subtypes_enum import DiagnosticRequestVehicleInfoClassSubtypesEnum
+from autosar.models.diagnostic_response_on_event import DiagnosticResponseOnEvent
+from autosar.models.diagnostic_response_on_event_action_enum import DiagnosticResponseOnEventActionEnum
+from autosar.models.diagnostic_response_on_event_action_enum_simple import DiagnosticResponseOnEventActionEnumSimple
+from autosar.models.diagnostic_response_on_event_class import DiagnosticResponseOnEventClass
+from autosar.models.diagnostic_response_on_event_class_subtypes_enum import DiagnosticResponseOnEventClassSubtypesEnum
+from autosar.models.diagnostic_response_on_event_needs import DiagnosticResponseOnEventNeeds
+from autosar.models.diagnostic_response_to_ecu_reset_enum import DiagnosticResponseToEcuResetEnum
+from autosar.models.diagnostic_response_to_ecu_reset_enum_simple import DiagnosticResponseToEcuResetEnumSimple
+from autosar.models.diagnostic_routine import DiagnosticRoutine
+from autosar.models.diagnostic_routine_control import DiagnosticRoutineControl
+from autosar.models.diagnostic_routine_control_class import DiagnosticRoutineControlClass
+from autosar.models.diagnostic_routine_control_class_subtypes_enum import DiagnosticRoutineControlClassSubtypesEnum
+from autosar.models.diagnostic_routine_generic_interface import DiagnosticRoutineGenericInterface
+from autosar.models.diagnostic_routine_interface import DiagnosticRoutineInterface
+from autosar.models.diagnostic_routine_needs import DiagnosticRoutineNeeds
+from autosar.models.diagnostic_routine_subtypes_enum import DiagnosticRoutineSubtypesEnum
+from autosar.models.diagnostic_routine_type_enum import DiagnosticRoutineTypeEnum
+from autosar.models.diagnostic_routine_type_enum_simple import DiagnosticRoutineTypeEnumSimple
+from autosar.models.diagnostic_security_access import DiagnosticSecurityAccess
+from autosar.models.diagnostic_security_access_class import DiagnosticSecurityAccessClass
+from autosar.models.diagnostic_security_access_class_subtypes_enum import DiagnosticSecurityAccessClassSubtypesEnum
+from autosar.models.diagnostic_security_event_reporting_mode_mapping import DiagnosticSecurityEventReportingModeMapping
+from autosar.models.diagnostic_security_level import DiagnosticSecurityLevel
+from autosar.models.diagnostic_security_level_interface import DiagnosticSecurityLevelInterface
+from autosar.models.diagnostic_security_level_port_mapping import DiagnosticSecurityLevelPortMapping
+from autosar.models.diagnostic_security_level_subtypes_enum import DiagnosticSecurityLevelSubtypesEnum
+from autosar.models.diagnostic_service_class_subtypes_enum import DiagnosticServiceClassSubtypesEnum
+from autosar.models.diagnostic_service_data_identifier_port_mapping import DiagnosticServiceDataIdentifierPortMapping
+from autosar.models.diagnostic_service_data_mapping import DiagnosticServiceDataMapping
+from autosar.models.diagnostic_service_generic_mapping import DiagnosticServiceGenericMapping
+from autosar.models.diagnostic_service_instance_subtypes_enum import DiagnosticServiceInstanceSubtypesEnum
+from autosar.models.diagnostic_service_request_callback_type_enum import DiagnosticServiceRequestCallbackTypeEnum
+from autosar.models.diagnostic_service_request_callback_type_enum_simple import DiagnosticServiceRequestCallbackTypeEnumSimple
+from autosar.models.diagnostic_service_sw_mapping import DiagnosticServiceSwMapping
+from autosar.models.diagnostic_service_table import DiagnosticServiceTable
+from autosar.models.diagnostic_service_table_ref_conditional import DiagnosticServiceTableRefConditional
+from autosar.models.diagnostic_service_table_subtypes_enum import DiagnosticServiceTableSubtypesEnum
+from autosar.models.diagnostic_service_validation_interface import DiagnosticServiceValidationInterface
+from autosar.models.diagnostic_session import DiagnosticSession
+from autosar.models.diagnostic_session_control import DiagnosticSessionControl
+from autosar.models.diagnostic_session_control_class import DiagnosticSessionControlClass
+from autosar.models.diagnostic_session_control_class_subtypes_enum import DiagnosticSessionControlClassSubtypesEnum
+from autosar.models.diagnostic_session_subtypes_enum import DiagnosticSessionSubtypesEnum
+from autosar.models.diagnostic_significance_enum import DiagnosticSignificanceEnum
+from autosar.models.diagnostic_significance_enum_simple import DiagnosticSignificanceEnumSimple
+from autosar.models.diagnostic_software_cluster_props import DiagnosticSoftwareClusterProps
+from autosar.models.diagnostic_start_routine import DiagnosticStartRoutine
+from autosar.models.diagnostic_status_bit_handling_test_failed_since_last_clear_enum import DiagnosticStatusBitHandlingTestFailedSinceLastClearEnum
+from autosar.models.diagnostic_status_bit_handling_test_failed_since_last_clear_enum_simple import DiagnosticStatusBitHandlingTestFailedSinceLastClearEnumSimple
+from autosar.models.diagnostic_stop_routine import DiagnosticStopRoutine
+from autosar.models.diagnostic_storage_condition import DiagnosticStorageCondition
+from autosar.models.diagnostic_storage_condition_group import DiagnosticStorageConditionGroup
+from autosar.models.diagnostic_storage_condition_group_subtypes_enum import DiagnosticStorageConditionGroupSubtypesEnum
+from autosar.models.diagnostic_storage_condition_needs import DiagnosticStorageConditionNeeds
+from autosar.models.diagnostic_storage_condition_port_mapping import DiagnosticStorageConditionPortMapping
+from autosar.models.diagnostic_storage_condition_ref_conditional import DiagnosticStorageConditionRefConditional
+from autosar.models.diagnostic_storage_condition_subtypes_enum import DiagnosticStorageConditionSubtypesEnum
+from autosar.models.diagnostic_store_event_support_enum import DiagnosticStoreEventSupportEnum
+from autosar.models.diagnostic_store_event_support_enum_simple import DiagnosticStoreEventSupportEnumSimple
+from autosar.models.diagnostic_support_info_byte import DiagnosticSupportInfoByte
+from autosar.models.diagnostic_test_identifier import DiagnosticTestIdentifier
+from autosar.models.diagnostic_test_result import DiagnosticTestResult
+from autosar.models.diagnostic_test_result_subtypes_enum import DiagnosticTestResultSubtypesEnum
+from autosar.models.diagnostic_test_result_update_enum import DiagnosticTestResultUpdateEnum
+from autosar.models.diagnostic_test_result_update_enum_simple import DiagnosticTestResultUpdateEnumSimple
+from autosar.models.diagnostic_test_result_update_enum_value_variation_point import DiagnosticTestResultUpdateEnumValueVariationPoint
+from autosar.models.diagnostic_test_routine_identifier import DiagnosticTestRoutineIdentifier
+from autosar.models.diagnostic_test_routine_identifier_subtypes_enum import DiagnosticTestRoutineIdentifierSubtypesEnum
+from autosar.models.diagnostic_transfer_exit import DiagnosticTransferExit
+from autosar.models.diagnostic_transfer_exit_class import DiagnosticTransferExitClass
+from autosar.models.diagnostic_transfer_exit_class_subtypes_enum import DiagnosticTransferExitClassSubtypesEnum
+from autosar.models.diagnostic_trouble_code_group import DiagnosticTroubleCodeGroup
+from autosar.models.diagnostic_trouble_code_j_1939 import DiagnosticTroubleCodeJ1939
+from autosar.models.diagnostic_trouble_code_j_1939_dtc_kind_enum import DiagnosticTroubleCodeJ1939DtcKindEnum
+from autosar.models.diagnostic_trouble_code_j_1939_dtc_kind_enum_simple import DiagnosticTroubleCodeJ1939DtcKindEnumSimple
+from autosar.models.diagnostic_trouble_code_j_1939_subtypes_enum import DiagnosticTroubleCodeJ1939SubtypesEnum
+from autosar.models.diagnostic_trouble_code_obd import DiagnosticTroubleCodeObd
+from autosar.models.diagnostic_trouble_code_obd_subtypes_enum import DiagnosticTroubleCodeObdSubtypesEnum
+from autosar.models.diagnostic_trouble_code_props import DiagnosticTroubleCodeProps
+from autosar.models.diagnostic_trouble_code_props_subtypes_enum import DiagnosticTroubleCodePropsSubtypesEnum
+from autosar.models.diagnostic_trouble_code_ref_conditional import DiagnosticTroubleCodeRefConditional
+from autosar.models.diagnostic_trouble_code_subtypes_enum import DiagnosticTroubleCodeSubtypesEnum
+from autosar.models.diagnostic_trouble_code_uds import DiagnosticTroubleCodeUds
+from autosar.models.diagnostic_trouble_code_uds_subtypes_enum import DiagnosticTroubleCodeUdsSubtypesEnum
+from autosar.models.diagnostic_trouble_code_uds_to_clear_condition_group_mapping import DiagnosticTroubleCodeUdsToClearConditionGroupMapping
+from autosar.models.diagnostic_trouble_code_uds_to_trouble_code_obd_mapping import DiagnosticTroubleCodeUdsToTroubleCodeObdMapping
+from autosar.models.diagnostic_type_of_dtc_supported_enum import DiagnosticTypeOfDtcSupportedEnum
+from autosar.models.diagnostic_type_of_dtc_supported_enum_simple import DiagnosticTypeOfDtcSupportedEnumSimple
+from autosar.models.diagnostic_type_of_freeze_frame_record_numeration_enum import DiagnosticTypeOfFreezeFrameRecordNumerationEnum
+from autosar.models.diagnostic_type_of_freeze_frame_record_numeration_enum_simple import DiagnosticTypeOfFreezeFrameRecordNumerationEnumSimple
+from autosar.models.diagnostic_uds_severity_enum import DiagnosticUdsSeverityEnum
+from autosar.models.diagnostic_uds_severity_enum_simple import DiagnosticUdsSeverityEnumSimple
+from autosar.models.diagnostic_upload_download_needs import DiagnosticUploadDownloadNeeds
+from autosar.models.diagnostic_upload_interface import DiagnosticUploadInterface
+from autosar.models.diagnostic_value_access_enum import DiagnosticValueAccessEnum
+from autosar.models.diagnostic_value_access_enum_simple import DiagnosticValueAccessEnumSimple
+from autosar.models.diagnostic_value_needs import DiagnosticValueNeeds
+from autosar.models.diagnostic_value_needs_subtypes_enum import DiagnosticValueNeedsSubtypesEnum
+from autosar.models.diagnostic_write_data_by_identifier import DiagnosticWriteDataByIdentifier
+from autosar.models.diagnostic_write_data_by_identifier_class import DiagnosticWriteDataByIdentifierClass
+from autosar.models.diagnostic_write_data_by_identifier_class_subtypes_enum import DiagnosticWriteDataByIdentifierClassSubtypesEnum
+from autosar.models.diagnostic_write_memory_by_address import DiagnosticWriteMemoryByAddress
+from autosar.models.diagnostic_write_memory_by_address_class import DiagnosticWriteMemoryByAddressClass
+from autosar.models.diagnostic_write_memory_by_address_class_subtypes_enum import DiagnosticWriteMemoryByAddressClassSubtypesEnum
+from autosar.models.diagnostic_wwh_obd_dtc_class_enum import DiagnosticWwhObdDtcClassEnum
+from autosar.models.diagnostic_wwh_obd_dtc_class_enum_simple import DiagnosticWwhObdDtcClassEnumSimple
+from autosar.models.diagnostic_wwh_obd_dtc_class_enum_value_variation_point import DiagnosticWwhObdDtcClassEnumValueVariationPoint
+from autosar.models.diagnostics_communication_security_needs import DiagnosticsCommunicationSecurityNeeds
+from autosar.models.discovery_technology import DiscoveryTechnology
+from autosar.models.discovery_technology_enum import DiscoveryTechnologyEnum
+from autosar.models.discovery_technology_enum_simple import DiscoveryTechnologyEnumSimple
+from autosar.models.display_format_string import DisplayFormatString
+from autosar.models.display_presentation_enum import DisplayPresentationEnum
+from autosar.models.display_presentation_enum_simple import DisplayPresentationEnumSimple
+from autosar.models.dlt_argument import DltArgument
+from autosar.models.dlt_config import DltConfig
+from autosar.models.dlt_log_channel import DltLogChannel
+from autosar.models.dlt_log_channel_design import DltLogChannelDesign
+from autosar.models.dlt_log_channel_design_subtypes_enum import DltLogChannelDesignSubtypesEnum
+from autosar.models.dlt_log_channel_design_to_process_design_mapping import DltLogChannelDesignToProcessDesignMapping
+from autosar.models.dlt_log_channel_subtypes_enum import DltLogChannelSubtypesEnum
+from autosar.models.dlt_log_channel_to_process_mapping import DltLogChannelToProcessMapping
+from autosar.models.dlt_message import DltMessage
+from autosar.models.dlt_message_collection_set import DltMessageCollectionSet
+from autosar.models.dlt_message_subtypes_enum import DltMessageSubtypesEnum
+from autosar.models.dlt_user_needs import DltUserNeeds
+from autosar.models.do_ip_activation_line_needs import DoIpActivationLineNeeds
+from autosar.models.do_ip_config import DoIpConfig
+from autosar.models.do_ip_entity import DoIpEntity
+from autosar.models.do_ip_entity_role_enum import DoIpEntityRoleEnum
+from autosar.models.do_ip_entity_role_enum_simple import DoIpEntityRoleEnumSimple
+from autosar.models.do_ip_gid_needs import DoIpGidNeeds
+from autosar.models.do_ip_gid_synchronization_needs import DoIpGidSynchronizationNeeds
+from autosar.models.do_ip_instantiation import DoIpInstantiation
+from autosar.models.do_ip_interface import DoIpInterface
+from autosar.models.do_ip_logic_address import DoIpLogicAddress
+from autosar.models.do_ip_logic_address_subtypes_enum import DoIpLogicAddressSubtypesEnum
+from autosar.models.do_ip_logic_target_address_props import DoIpLogicTargetAddressProps
+from autosar.models.do_ip_logic_target_address_props_subtypes_enum import DoIpLogicTargetAddressPropsSubtypesEnum
+from autosar.models.do_ip_logic_tester_address_props import DoIpLogicTesterAddressProps
+from autosar.models.do_ip_network_configuration import DoIpNetworkConfiguration
+from autosar.models.do_ip_power_mode_status_needs import DoIpPowerModeStatusNeeds
+from autosar.models.do_ip_request_configuration import DoIpRequestConfiguration
+from autosar.models.do_ip_routing_activation import DoIpRoutingActivation
+from autosar.models.do_ip_routing_activation_authentication_needs import DoIpRoutingActivationAuthenticationNeeds
+from autosar.models.do_ip_routing_activation_confirmation_needs import DoIpRoutingActivationConfirmationNeeds
+from autosar.models.do_ip_routing_activation_subtypes_enum import DoIpRoutingActivationSubtypesEnum
+from autosar.models.do_ip_tp_config import DoIpTpConfig
+from autosar.models.do_ip_tp_config_subtypes_enum import DoIpTpConfigSubtypesEnum
+from autosar.models.do_ip_tp_connection import DoIpTpConnection
+from autosar.models.doc_revision import DocRevision
+from autosar.models.document_element_scope import DocumentElementScope
+from autosar.models.documentation import Documentation
+from autosar.models.documentation_context import DocumentationContext
+from autosar.models.documentation_subtypes_enum import DocumentationSubtypesEnum
+from autosar.models.dtc_format_type_enum import DtcFormatTypeEnum
+from autosar.models.dtc_format_type_enum_simple import DtcFormatTypeEnumSimple
+from autosar.models.dtc_kind_enum import DtcKindEnum
+from autosar.models.dtc_kind_enum_simple import DtcKindEnumSimple
+from autosar.models.dtc_status_change_notification_needs import DtcStatusChangeNotificationNeeds
+from autosar.models.dynamic_part import DynamicPart
+from autosar.models.dynamic_part_alternative import DynamicPartAlternative
+from autosar.models.e_2_e_profile_compatibility_props import E2EProfileCompatibilityProps
+from autosar.models.e_2_e_profile_compatibility_props_subtypes_enum import E2EProfileCompatibilityPropsSubtypesEnum
+from autosar.models.e_2_e_profile_configuration import E2EProfileConfiguration
+from autosar.models.e_2_e_profile_configuration_set import E2EProfileConfigurationSet
+from autosar.models.e_2_e_profile_configuration_subtypes_enum import E2EProfileConfigurationSubtypesEnum
+from autosar.models.e_enum import EEnum
+from autosar.models.e_enum_font import EEnumFont
+from autosar.models.e_enum_font_simple import EEnumFontSimple
+from autosar.models.e_enum_simple import EEnumSimple
+from autosar.models.ecu_abstraction_sw_component_type import EcuAbstractionSwComponentType
+from autosar.models.ecu_instance import EcuInstance
+from autosar.models.ecu_instance_props import EcuInstanceProps
+from autosar.models.ecu_instance_ref_conditional import EcuInstanceRefConditional
+from autosar.models.ecu_instance_subtypes_enum import EcuInstanceSubtypesEnum
+from autosar.models.ecu_mapping import EcuMapping
+from autosar.models.ecu_partition import EcuPartition
+from autosar.models.ecu_partition_subtypes_enum import EcuPartitionSubtypesEnum
+from autosar.models.ecu_resource_estimation import EcuResourceEstimation
+from autosar.models.ecu_state_mgr_user_needs import EcuStateMgrUserNeeds
+from autosar.models.ecu_timing import EcuTiming
+from autosar.models.ecuc_abstract_reference_def_subtypes_enum import EcucAbstractReferenceDefSubtypesEnum
+from autosar.models.ecuc_add_info_param_def import EcucAddInfoParamDef
+from autosar.models.ecuc_add_info_param_value import EcucAddInfoParamValue
+from autosar.models.ecuc_affection_enum import EcucAffectionEnum
+from autosar.models.ecuc_affection_enum_simple import EcucAffectionEnumSimple
+from autosar.models.ecuc_boolean_param_def import EcucBooleanParamDef
+from autosar.models.ecuc_choice_reference_def import EcucChoiceReferenceDef
+from autosar.models.ecuc_common_attributes_subtypes_enum import EcucCommonAttributesSubtypesEnum
+from autosar.models.ecuc_condition_formula import EcucConditionFormula
+from autosar.models.ecuc_condition_specification import EcucConditionSpecification
+from autosar.models.ecuc_configuration_class_affection import EcucConfigurationClassAffection
+from autosar.models.ecuc_configuration_class_enum import EcucConfigurationClassEnum
+from autosar.models.ecuc_configuration_class_enum_simple import EcucConfigurationClassEnumSimple
+from autosar.models.ecuc_configuration_variant_enum import EcucConfigurationVariantEnum
+from autosar.models.ecuc_configuration_variant_enum_simple import EcucConfigurationVariantEnumSimple
+from autosar.models.ecuc_container_def_subtypes_enum import EcucContainerDefSubtypesEnum
+from autosar.models.ecuc_container_value import EcucContainerValue
+from autosar.models.ecuc_container_value_subtypes_enum import EcucContainerValueSubtypesEnum
+from autosar.models.ecuc_definition_collection import EcucDefinitionCollection
+from autosar.models.ecuc_definition_element_subtypes_enum import EcucDefinitionElementSubtypesEnum
+from autosar.models.ecuc_derivation_specification import EcucDerivationSpecification
+from autosar.models.ecuc_destination_uri_def import EcucDestinationUriDef
+from autosar.models.ecuc_destination_uri_def_set import EcucDestinationUriDefSet
+from autosar.models.ecuc_destination_uri_def_subtypes_enum import EcucDestinationUriDefSubtypesEnum
+from autosar.models.ecuc_destination_uri_nesting_contract_enum import EcucDestinationUriNestingContractEnum
+from autosar.models.ecuc_destination_uri_nesting_contract_enum_simple import EcucDestinationUriNestingContractEnumSimple
+from autosar.models.ecuc_destination_uri_policy import EcucDestinationUriPolicy
+from autosar.models.ecuc_enumeration_literal_def import EcucEnumerationLiteralDef
+from autosar.models.ecuc_enumeration_param_def import EcucEnumerationParamDef
+from autosar.models.ecuc_float_param_def import EcucFloatParamDef
+from autosar.models.ecuc_foreign_reference_def import EcucForeignReferenceDef
+from autosar.models.ecuc_function_name_def import EcucFunctionNameDef
+from autosar.models.ecuc_function_name_def_conditional import EcucFunctionNameDefConditional
+from autosar.models.ecuc_implementation_configuration_class import EcucImplementationConfigurationClass
+from autosar.models.ecuc_instance_reference_def import EcucInstanceReferenceDef
+from autosar.models.ecuc_instance_reference_value import EcucInstanceReferenceValue
+from autosar.models.ecuc_integer_param_def import EcucIntegerParamDef
+from autosar.models.ecuc_linker_symbol_def import EcucLinkerSymbolDef
+from autosar.models.ecuc_linker_symbol_def_conditional import EcucLinkerSymbolDefConditional
+from autosar.models.ecuc_module_configuration_values import EcucModuleConfigurationValues
+from autosar.models.ecuc_module_configuration_values_ref_conditional import EcucModuleConfigurationValuesRefConditional
+from autosar.models.ecuc_module_configuration_values_subtypes_enum import EcucModuleConfigurationValuesSubtypesEnum
+from autosar.models.ecuc_module_def import EcucModuleDef
+from autosar.models.ecuc_module_def_subtypes_enum import EcucModuleDefSubtypesEnum
+from autosar.models.ecuc_multiline_string_param_def import EcucMultilineStringParamDef
+from autosar.models.ecuc_multiline_string_param_def_conditional import EcucMultilineStringParamDefConditional
+from autosar.models.ecuc_multiplicity_configuration_class import EcucMultiplicityConfigurationClass
+from autosar.models.ecuc_numerical_param_value import EcucNumericalParamValue
+from autosar.models.ecuc_param_conf_container_def import (
+    EcucChoiceContainerDef,
+    EcucParamConfContainerDef,
+)
+from autosar.models.ecuc_param_conf_container_def_subtypes_enum import EcucParamConfContainerDefSubtypesEnum
+from autosar.models.ecuc_parameter_def_subtypes_enum import EcucParameterDefSubtypesEnum
+from autosar.models.ecuc_parameter_derivation_formula import EcucParameterDerivationFormula
+from autosar.models.ecuc_query import EcucQuery
+from autosar.models.ecuc_query_expression import EcucQueryExpression
+from autosar.models.ecuc_query_subtypes_enum import EcucQuerySubtypesEnum
+from autosar.models.ecuc_reference_def import EcucReferenceDef
+from autosar.models.ecuc_reference_value import EcucReferenceValue
+from autosar.models.ecuc_scope_enum import EcucScopeEnum
+from autosar.models.ecuc_scope_enum_simple import EcucScopeEnumSimple
+from autosar.models.ecuc_string_param_def import EcucStringParamDef
+from autosar.models.ecuc_string_param_def_conditional import EcucStringParamDefConditional
+from autosar.models.ecuc_symbolic_name_reference_def import EcucSymbolicNameReferenceDef
+from autosar.models.ecuc_textual_param_value import EcucTextualParamValue
+from autosar.models.ecuc_uri_reference_def import EcucUriReferenceDef
+from autosar.models.ecuc_validation_condition import EcucValidationCondition
+from autosar.models.ecuc_value_collection import EcucValueCollection
+from autosar.models.ecuc_value_collection_subtypes_enum import EcucValueCollectionSubtypesEnum
+from autosar.models.ecuc_value_configuration_class import EcucValueConfigurationClass
+from autosar.models.emphasis_text import EmphasisText
+from autosar.models.empty_signal_mapping import EmptySignalMapping
+from autosar.models.end_2_end_event_protection_props import End2EndEventProtectionProps
+from autosar.models.end_2_end_method_protection_props import End2EndMethodProtectionProps
+from autosar.models.end_to_end_description import EndToEndDescription
+from autosar.models.end_to_end_profile_behavior_enum import EndToEndProfileBehaviorEnum
+from autosar.models.end_to_end_profile_behavior_enum_simple import EndToEndProfileBehaviorEnumSimple
+from autosar.models.end_to_end_protection import EndToEndProtection
+from autosar.models.end_to_end_protection_i_signal_i_pdu import EndToEndProtectionISignalIPdu
+from autosar.models.end_to_end_protection_set import EndToEndProtectionSet
+from autosar.models.end_to_end_protection_variable_prototype import EndToEndProtectionVariablePrototype
+from autosar.models.end_to_end_transformation_com_spec_props import EndToEndTransformationComSpecProps
+from autosar.models.end_to_end_transformation_description import EndToEndTransformationDescription
+from autosar.models.end_to_end_transformation_i_signal_props import EndToEndTransformationISignalProps
+from autosar.models.end_to_end_transformation_i_signal_props_conditional import EndToEndTransformationISignalPropsConditional
+from autosar.models.enter_exit_timeout import EnterExitTimeout
+from autosar.models.entry import Entry
+from autosar.models.enumeration_mapping_entry import EnumerationMappingEntry
+from autosar.models.enumeration_mapping_table import EnumerationMappingTable
+from autosar.models.environment_capture_to_reporting_enum import EnvironmentCaptureToReportingEnum
+from autosar.models.environment_capture_to_reporting_enum_simple import EnvironmentCaptureToReportingEnumSimple
+from autosar.models.eoc_event_ref import EocEventRef
+from autosar.models.eoc_executable_entity_ref import EocExecutableEntityRef
+from autosar.models.eoc_executable_entity_ref_abstract_subtypes_enum import EocExecutableEntityRefAbstractSubtypesEnum
+from autosar.models.eoc_executable_entity_ref_group import EocExecutableEntityRefGroup
+from autosar.models.eoc_executable_entity_ref_group_subtypes_enum import EocExecutableEntityRefGroupSubtypesEnum
+from autosar.models.error_tracer_needs import ErrorTracerNeeds
+from autosar.models.eth_global_time_domain_props import EthGlobalTimeDomainProps
+from autosar.models.eth_global_time_managed_coupling_port import EthGlobalTimeManagedCouplingPort
+from autosar.models.eth_global_time_message_format_enum import EthGlobalTimeMessageFormatEnum
+from autosar.models.eth_global_time_message_format_enum_simple import EthGlobalTimeMessageFormatEnumSimple
+from autosar.models.eth_ip_props import EthIpProps
+from autosar.models.eth_ip_props_subtypes_enum import EthIpPropsSubtypesEnum
+from autosar.models.eth_t_syn_crc_flags import EthTSynCrcFlags
+from autosar.models.eth_t_syn_sub_tlv_config import EthTSynSubTlvConfig
+from autosar.models.eth_tcp_ip_icmp_props import EthTcpIpIcmpProps
+from autosar.models.eth_tcp_ip_icmp_props_subtypes_enum import EthTcpIpIcmpPropsSubtypesEnum
+from autosar.models.eth_tcp_ip_props import EthTcpIpProps
+from autosar.models.eth_tcp_ip_props_subtypes_enum import EthTcpIpPropsSubtypesEnum
+from autosar.models.eth_tp_config import EthTpConfig
+from autosar.models.eth_tp_connection import EthTpConnection
+from autosar.models.ethernet_cluster import EthernetCluster
+from autosar.models.ethernet_cluster_conditional import EthernetClusterConditional
+from autosar.models.ethernet_cluster_subtypes_enum import EthernetClusterSubtypesEnum
+from autosar.models.ethernet_communication_connector import EthernetCommunicationConnector
+from autosar.models.ethernet_communication_connector_subtypes_enum import EthernetCommunicationConnectorSubtypesEnum
+from autosar.models.ethernet_communication_controller import EthernetCommunicationController
+from autosar.models.ethernet_communication_controller_conditional import EthernetCommunicationControllerConditional
+from autosar.models.ethernet_connection_negotiation_enum import EthernetConnectionNegotiationEnum
+from autosar.models.ethernet_connection_negotiation_enum_simple import EthernetConnectionNegotiationEnumSimple
+from autosar.models.ethernet_coupling_port_scheduler_enum import EthernetCouplingPortSchedulerEnum
+from autosar.models.ethernet_coupling_port_scheduler_enum_simple import EthernetCouplingPortSchedulerEnumSimple
+from autosar.models.ethernet_frame import EthernetFrame
+from autosar.models.ethernet_frame_triggering import EthernetFrameTriggering
+from autosar.models.ethernet_mac_layer_type_enum import EthernetMacLayerTypeEnum
+from autosar.models.ethernet_mac_layer_type_enum_simple import EthernetMacLayerTypeEnumSimple
+from autosar.models.ethernet_physical_channel import EthernetPhysicalChannel
+from autosar.models.ethernet_physical_channel_subtypes_enum import EthernetPhysicalChannelSubtypesEnum
+from autosar.models.ethernet_physical_layer_type_enum import EthernetPhysicalLayerTypeEnum
+from autosar.models.ethernet_physical_layer_type_enum_simple import EthernetPhysicalLayerTypeEnumSimple
+from autosar.models.ethernet_priority_regeneration import EthernetPriorityRegeneration
+from autosar.models.ethernet_raw_data_stream_grant import EthernetRawDataStreamGrant
+from autosar.models.ethernet_raw_data_stream_mapping import EthernetRawDataStreamMapping
+from autosar.models.ethernet_raw_data_stream_mapping_subtypes_enum import EthernetRawDataStreamMappingSubtypesEnum
+from autosar.models.ethernet_switch_vlan_egress_tagging_enum import EthernetSwitchVlanEgressTaggingEnum
+from autosar.models.ethernet_switch_vlan_egress_tagging_enum_simple import EthernetSwitchVlanEgressTaggingEnumSimple
+from autosar.models.ethernet_switch_vlan_ingress_tag_enum import EthernetSwitchVlanIngressTagEnum
+from autosar.models.ethernet_switch_vlan_ingress_tag_enum_simple import EthernetSwitchVlanIngressTagEnumSimple
+from autosar.models.ethernet_wakeup_sleep_on_dataline_config import EthernetWakeupSleepOnDatalineConfig
+from autosar.models.ethernet_wakeup_sleep_on_dataline_config_set import EthernetWakeupSleepOnDatalineConfigSet
+from autosar.models.ethernet_wakeup_sleep_on_dataline_config_subtypes_enum import EthernetWakeupSleepOnDatalineConfigSubtypesEnum
+from autosar.models.evaluated_variant_set import EvaluatedVariantSet
+from autosar.models.event_acceptance_status_enum import EventAcceptanceStatusEnum
+from autosar.models.event_acceptance_status_enum_simple import EventAcceptanceStatusEnumSimple
+from autosar.models.event_controlled_timing import EventControlledTiming
+from autosar.models.event_group_control_type_enum import EventGroupControlTypeEnum
+from autosar.models.event_group_control_type_enum_simple import EventGroupControlTypeEnumSimple
+from autosar.models.event_handler import EventHandler
+from autosar.models.event_handler_subtypes_enum import EventHandlerSubtypesEnum
+from autosar.models.event_in_executable_instance_ref import EventInExecutableInstanceRef
+from autosar.models.event_mapping import EventMapping
+from autosar.models.event_obd_readiness_group import EventObdReadinessGroup
+from autosar.models.event_occurrence_kind_enum import EventOccurrenceKindEnum
+from autosar.models.event_occurrence_kind_enum_simple import EventOccurrenceKindEnumSimple
+from autosar.models.exclusive_area import ExclusiveArea
+from autosar.models.exclusive_area_nesting_order import ExclusiveAreaNestingOrder
+from autosar.models.exclusive_area_nesting_order_subtypes_enum import ExclusiveAreaNestingOrderSubtypesEnum
+from autosar.models.exclusive_area_subtypes_enum import ExclusiveAreaSubtypesEnum
+from autosar.models.executable import Executable
+from autosar.models.executable_entity_activation_reason import ExecutableEntityActivationReason
+from autosar.models.executable_entity_activation_reason_subtypes_enum import ExecutableEntityActivationReasonSubtypesEnum
+from autosar.models.executable_entity_subtypes_enum import ExecutableEntitySubtypesEnum
+from autosar.models.executable_subtypes_enum import ExecutableSubtypesEnum
+from autosar.models.executable_timing import ExecutableTiming
+from autosar.models.execution_dependency import ExecutionDependency
+from autosar.models.execution_order_constraint import ExecutionOrderConstraint
+from autosar.models.execution_order_constraint_type_enum import ExecutionOrderConstraintTypeEnum
+from autosar.models.execution_order_constraint_type_enum_simple import ExecutionOrderConstraintTypeEnumSimple
+from autosar.models.execution_state_reporting_behavior_enum import ExecutionStateReportingBehaviorEnum
+from autosar.models.execution_state_reporting_behavior_enum_simple import ExecutionStateReportingBehaviorEnumSimple
+from autosar.models.execution_time_constraint import ExecutionTimeConstraint
+from autosar.models.execution_time_type_enum import ExecutionTimeTypeEnum
+from autosar.models.execution_time_type_enum_simple import ExecutionTimeTypeEnumSimple
+from autosar.models.ext_id_class_enum import ExtIdClassEnum
+from autosar.models.external_trigger_occurred_event import ExternalTriggerOccurredEvent
+from autosar.models.external_triggering_point import ExternalTriggeringPoint
+from autosar.models.external_triggering_point_ident import ExternalTriggeringPointIdent
+from autosar.models.fibex_element_ref_conditional import FibexElementRefConditional
+from autosar.models.fibex_element_subtypes_enum import FibexElementSubtypesEnum
+from autosar.models.field_access_enum import FieldAccessEnum
+from autosar.models.field_access_enum_simple import FieldAccessEnumSimple
+from autosar.models.field_in_executable_instance_ref import FieldInExecutableInstanceRef
+from autosar.models.field_mapping import FieldMapping
+from autosar.models.field_mod import FieldType
+from autosar.models.field_sender_com_spec import FieldSenderComSpec
+from autosar.models.field_subtypes_enum import FieldSubtypesEnum
+from autosar.models.file_info_comment import FileInfoComment
+from autosar.models.filter_debouncing_enum import FilterDebouncingEnum
+from autosar.models.filter_debouncing_enum_simple import FilterDebouncingEnumSimple
+from autosar.models.fire_and_forget_mapping import FireAndForgetMapping
+from autosar.models.flat_instance_descriptor import FlatInstanceDescriptor
+from autosar.models.flat_instance_descriptor_subtypes_enum import FlatInstanceDescriptorSubtypesEnum
+from autosar.models.flat_map import FlatMap
+from autosar.models.flat_map_subtypes_enum import FlatMapSubtypesEnum
+from autosar.models.flexray_absolutely_scheduled_timing import FlexrayAbsolutelyScheduledTiming
+from autosar.models.flexray_ar_tp_channel import FlexrayArTpChannel
+from autosar.models.flexray_ar_tp_config import FlexrayArTpConfig
+from autosar.models.flexray_ar_tp_connection import FlexrayArTpConnection
+from autosar.models.flexray_ar_tp_node import FlexrayArTpNode
+from autosar.models.flexray_ar_tp_node_subtypes_enum import FlexrayArTpNodeSubtypesEnum
+from autosar.models.flexray_channel_name import FlexrayChannelName
+from autosar.models.flexray_channel_name_simple import FlexrayChannelNameSimple
+from autosar.models.flexray_cluster import FlexrayCluster
+from autosar.models.flexray_cluster_conditional import FlexrayClusterConditional
+from autosar.models.flexray_cluster_subtypes_enum import FlexrayClusterSubtypesEnum
+from autosar.models.flexray_communication_connector import FlexrayCommunicationConnector
+from autosar.models.flexray_communication_connector_subtypes_enum import FlexrayCommunicationConnectorSubtypesEnum
+from autosar.models.flexray_communication_controller import FlexrayCommunicationController
+from autosar.models.flexray_communication_controller_conditional import FlexrayCommunicationControllerConditional
+from autosar.models.flexray_fifo_configuration import FlexrayFifoConfiguration
+from autosar.models.flexray_fifo_range import FlexrayFifoRange
+from autosar.models.flexray_frame import FlexrayFrame
+from autosar.models.flexray_frame_triggering import FlexrayFrameTriggering
+from autosar.models.flexray_nm_cluster import FlexrayNmCluster
+from autosar.models.flexray_nm_cluster_coupling import FlexrayNmClusterCoupling
+from autosar.models.flexray_nm_cluster_subtypes_enum import FlexrayNmClusterSubtypesEnum
+from autosar.models.flexray_nm_ecu import FlexrayNmEcu
+from autosar.models.flexray_nm_node import FlexrayNmNode
+from autosar.models.flexray_nm_schedule_variant import FlexrayNmScheduleVariant
+from autosar.models.flexray_nm_schedule_variant_simple import FlexrayNmScheduleVariantSimple
+from autosar.models.flexray_physical_channel import FlexrayPhysicalChannel
+from autosar.models.flexray_physical_channel_subtypes_enum import FlexrayPhysicalChannelSubtypesEnum
+from autosar.models.flexray_tp_config import FlexrayTpConfig
+from autosar.models.flexray_tp_connection import FlexrayTpConnection
+from autosar.models.flexray_tp_connection_control import FlexrayTpConnectionControl
+from autosar.models.flexray_tp_connection_control_subtypes_enum import FlexrayTpConnectionControlSubtypesEnum
+from autosar.models.flexray_tp_ecu import FlexrayTpEcu
+from autosar.models.flexray_tp_node import FlexrayTpNode
+from autosar.models.flexray_tp_node_subtypes_enum import FlexrayTpNodeSubtypesEnum
+from autosar.models.flexray_tp_pdu_pool import FlexrayTpPduPool
+from autosar.models.flexray_tp_pdu_pool_subtypes_enum import FlexrayTpPduPoolSubtypesEnum
+from autosar.models.float_enum import FloatEnum
+from autosar.models.float_enum_simple import FloatEnumSimple
+from autosar.models.float_mod import FloatType
+from autosar.models.float_value_variation_point import FloatValueVariationPoint
+from autosar.models.fm_attribute_def import FmAttributeDef
+from autosar.models.fm_attribute_def_subtypes_enum import FmAttributeDefSubtypesEnum
+from autosar.models.fm_attribute_value import FmAttributeValue
+from autosar.models.fm_condition_by_features_and_attributes import FmConditionByFeaturesAndAttributes
+from autosar.models.fm_condition_by_features_and_sw_systemconsts import FmConditionByFeaturesAndSwSystemconsts
+from autosar.models.fm_feature import FmFeature
+from autosar.models.fm_feature_decomposition import FmFeatureDecomposition
+from autosar.models.fm_feature_map import FmFeatureMap
+from autosar.models.fm_feature_map_assertion import FmFeatureMapAssertion
+from autosar.models.fm_feature_map_condition import FmFeatureMapCondition
+from autosar.models.fm_feature_map_element import FmFeatureMapElement
+from autosar.models.fm_feature_model import FmFeatureModel
+from autosar.models.fm_feature_model_subtypes_enum import FmFeatureModelSubtypesEnum
+from autosar.models.fm_feature_relation import FmFeatureRelation
+from autosar.models.fm_feature_restriction import FmFeatureRestriction
+from autosar.models.fm_feature_selection import FmFeatureSelection
+from autosar.models.fm_feature_selection_set import FmFeatureSelectionSet
+from autosar.models.fm_feature_selection_set_subtypes_enum import FmFeatureSelectionSetSubtypesEnum
+from autosar.models.fm_feature_selection_state import FmFeatureSelectionState
+from autosar.models.fm_feature_selection_state_simple import FmFeatureSelectionStateSimple
+from autosar.models.fm_feature_subtypes_enum import FmFeatureSubtypesEnum
+from autosar.models.forbidden_signal_path import ForbiddenSignalPath
+from autosar.models.foreign_model_reference import ForeignModelReference
+from autosar.models.fr_ar_tp_ack_type import FrArTpAckType
+from autosar.models.fr_ar_tp_ack_type_simple import FrArTpAckTypeSimple
+from autosar.models.fr_global_time_domain_props import FrGlobalTimeDomainProps
+from autosar.models.frame_enum import FrameEnum
+from autosar.models.frame_enum_simple import FrameEnumSimple
+from autosar.models.frame_mapping import FrameMapping
+from autosar.models.frame_pid import FramePid
+from autosar.models.frame_port import FramePort
+from autosar.models.frame_port_subtypes_enum import FramePortSubtypesEnum
+from autosar.models.frame_subtypes_enum import FrameSubtypesEnum
+from autosar.models.frame_triggering_subtypes_enum import FrameTriggeringSubtypesEnum
+from autosar.models.free_format import FreeFormat
+from autosar.models.full_binding_time_enum import FullBindingTimeEnum
+from autosar.models.full_binding_time_enum_simple import FullBindingTimeEnumSimple
+from autosar.models.function_group_set import FunctionGroupSet
+from autosar.models.function_group_set_subtypes_enum import FunctionGroupSetSubtypesEnum
+from autosar.models.function_group_state_in_function_group_set_instance_ref import FunctionGroupStateInFunctionGroupSetInstanceRef
+from autosar.models.function_inhibition_availability_needs import FunctionInhibitionAvailabilityNeeds
+from autosar.models.function_inhibition_needs import FunctionInhibitionNeeds
+from autosar.models.function_inhibition_needs_subtypes_enum import FunctionInhibitionNeedsSubtypesEnum
+from autosar.models.further_action_byte_needs import FurtherActionByteNeeds
+from autosar.models.gateway import Gateway
+from autosar.models.general_parameter import GeneralParameter
+from autosar.models.general_purpose_connection import GeneralPurposeConnection
+from autosar.models.general_purpose_i_pdu import GeneralPurposeIPdu
+from autosar.models.general_purpose_pdu import GeneralPurposePdu
+from autosar.models.general_purpose_pdu_subtypes_enum import GeneralPurposePduSubtypesEnum
+from autosar.models.generic_ethernet_frame import GenericEthernetFrame
+from autosar.models.generic_model_reference import GenericModelReference
+from autosar.models.generic_module_instantiation import GenericModuleInstantiation
+from autosar.models.generic_tp import GenericTp
+from autosar.models.global_supervision import GlobalSupervision
+from autosar.models.global_supervision_needs import GlobalSupervisionNeeds
+from autosar.models.global_supervision_subtypes_enum import GlobalSupervisionSubtypesEnum
+from autosar.models.global_time_can_master import GlobalTimeCanMaster
+from autosar.models.global_time_can_slave import GlobalTimeCanSlave
+from autosar.models.global_time_correction_props import GlobalTimeCorrectionProps
+from autosar.models.global_time_coupling_port_props import GlobalTimeCouplingPortProps
+from autosar.models.global_time_crc_support_enum import GlobalTimeCrcSupportEnum
+from autosar.models.global_time_crc_support_enum_simple import GlobalTimeCrcSupportEnumSimple
+from autosar.models.global_time_crc_validation_enum import GlobalTimeCrcValidationEnum
+from autosar.models.global_time_crc_validation_enum_simple import GlobalTimeCrcValidationEnumSimple
+from autosar.models.global_time_domain import GlobalTimeDomain
+from autosar.models.global_time_domain_ref_conditional import GlobalTimeDomainRefConditional
+from autosar.models.global_time_domain_subtypes_enum import GlobalTimeDomainSubtypesEnum
+from autosar.models.global_time_eth_master import GlobalTimeEthMaster
+from autosar.models.global_time_eth_slave import GlobalTimeEthSlave
+from autosar.models.global_time_fr_master import GlobalTimeFrMaster
+from autosar.models.global_time_fr_slave import GlobalTimeFrSlave
+from autosar.models.global_time_gateway import GlobalTimeGateway
+from autosar.models.global_time_master_subtypes_enum import GlobalTimeMasterSubtypesEnum
+from autosar.models.global_time_slave_subtypes_enum import GlobalTimeSlaveSubtypesEnum
+from autosar.models.grant_subtypes_enum import GrantSubtypesEnum
+from autosar.models.graphic import Graphic
+from autosar.models.graphic_fit_enum import GraphicFitEnum
+from autosar.models.graphic_fit_enum_simple import GraphicFitEnumSimple
+from autosar.models.graphic_notation_enum import GraphicNotationEnum
+from autosar.models.graphic_notation_enum_simple import GraphicNotationEnumSimple
+from autosar.models.handle_invalid_enum import HandleInvalidEnum
+from autosar.models.handle_invalid_enum_simple import HandleInvalidEnumSimple
+from autosar.models.handle_out_of_range_enum import HandleOutOfRangeEnum
+from autosar.models.handle_out_of_range_enum_simple import HandleOutOfRangeEnumSimple
+from autosar.models.handle_out_of_range_status_enum import HandleOutOfRangeStatusEnum
+from autosar.models.handle_out_of_range_status_enum_simple import HandleOutOfRangeStatusEnumSimple
+from autosar.models.handle_termination_and_restart_enum import HandleTerminationAndRestartEnum
+from autosar.models.handle_termination_and_restart_enum_simple import HandleTerminationAndRestartEnumSimple
+from autosar.models.handle_timeout_enum import HandleTimeoutEnum
+from autosar.models.handle_timeout_enum_simple import HandleTimeoutEnumSimple
+from autosar.models.hardware_configuration import HardwareConfiguration
+from autosar.models.hardware_test_needs import HardwareTestNeeds
+from autosar.models.health_channel_external_reported_status import HealthChannelExternalReportedStatus
+from autosar.models.health_channel_external_status import HealthChannelExternalStatus
+from autosar.models.health_channel_supervision import HealthChannelSupervision
+from autosar.models.http_accept_encoding import HttpAcceptEncoding
+from autosar.models.http_accept_encoding_enum import HttpAcceptEncodingEnum
+from autosar.models.http_accept_encoding_enum_simple import HttpAcceptEncodingEnumSimple
+from autosar.models.http_tp import HttpTp
+from autosar.models.hw_attribute_def import HwAttributeDef
+from autosar.models.hw_attribute_def_subtypes_enum import HwAttributeDefSubtypesEnum
+from autosar.models.hw_attribute_literal_def import HwAttributeLiteralDef
+from autosar.models.hw_attribute_value import HwAttributeValue
+from autosar.models.hw_category import HwCategory
+from autosar.models.hw_category_subtypes_enum import HwCategorySubtypesEnum
+from autosar.models.hw_description_entity_subtypes_enum import HwDescriptionEntitySubtypesEnum
+from autosar.models.hw_element import HwElement
+from autosar.models.hw_element_connector import HwElementConnector
+from autosar.models.hw_element_ref_conditional import HwElementRefConditional
+from autosar.models.hw_element_subtypes_enum import HwElementSubtypesEnum
+from autosar.models.hw_pin import HwPin
+from autosar.models.hw_pin_connector import HwPinConnector
+from autosar.models.hw_pin_group_connector import HwPinGroupConnector
+from autosar.models.hw_pin_group_content import (
+    HwPinGroup,
+    HwPinGroupContent,
+)
+from autosar.models.hw_pin_group_subtypes_enum import HwPinGroupSubtypesEnum
+from autosar.models.hw_pin_subtypes_enum import HwPinSubtypesEnum
+from autosar.models.hw_port_mapping import HwPortMapping
+from autosar.models.hw_type import HwType
+from autosar.models.hw_type_subtypes_enum import HwTypeSubtypesEnum
+from autosar.models.i_pdu_mapping import IPduMapping
+from autosar.models.i_pdu_port import IPduPort
+from autosar.models.i_pdu_port_subtypes_enum import IPduPortSubtypesEnum
+from autosar.models.i_pdu_signal_processing_enum import IPduSignalProcessingEnum
+from autosar.models.i_pdu_signal_processing_enum_simple import IPduSignalProcessingEnumSimple
+from autosar.models.i_pdu_subtypes_enum import IPduSubtypesEnum
+from autosar.models.i_pdu_timing import IPduTiming
+from autosar.models.i_psec_dpd_action_enum import IPsecDpdActionEnum
+from autosar.models.i_psec_dpd_action_enum_simple import IPsecDpdActionEnumSimple
+from autosar.models.i_psec_header_type_enum import IPsecHeaderTypeEnum
+from autosar.models.i_psec_header_type_enum_simple import IPsecHeaderTypeEnumSimple
+from autosar.models.i_psec_ip_protocol_enum import IPsecIpProtocolEnum
+from autosar.models.i_psec_ip_protocol_enum_simple import IPsecIpProtocolEnumSimple
+from autosar.models.i_psec_mode_enum import IPsecModeEnum
+from autosar.models.i_psec_mode_enum_simple import IPsecModeEnumSimple
+from autosar.models.i_psec_policy_enum import IPsecPolicyEnum
+from autosar.models.i_psec_policy_enum_simple import IPsecPolicyEnumSimple
+from autosar.models.i_pv_6_ext_header_filter_list import IPv6ExtHeaderFilterList
+from autosar.models.i_pv_6_ext_header_filter_list_subtypes_enum import IPv6ExtHeaderFilterListSubtypesEnum
+from autosar.models.i_pv_6_ext_header_filter_set import IPv6ExtHeaderFilterSet
+from autosar.models.i_signal import ISignal
+from autosar.models.i_signal_group import ISignalGroup
+from autosar.models.i_signal_group_subtypes_enum import ISignalGroupSubtypesEnum
+from autosar.models.i_signal_i_pdu import ISignalIPdu
+from autosar.models.i_signal_i_pdu_group import ISignalIPduGroup
+from autosar.models.i_signal_i_pdu_group_subtypes_enum import ISignalIPduGroupSubtypesEnum
+from autosar.models.i_signal_i_pdu_ref_conditional import ISignalIPduRefConditional
+from autosar.models.i_signal_i_pdu_subtypes_enum import ISignalIPduSubtypesEnum
+from autosar.models.i_signal_mapping import ISignalMapping
+from autosar.models.i_signal_port import ISignalPort
+from autosar.models.i_signal_port_subtypes_enum import ISignalPortSubtypesEnum
+from autosar.models.i_signal_props import ISignalProps
+from autosar.models.i_signal_subtypes_enum import ISignalSubtypesEnum
+from autosar.models.i_signal_to_i_pdu_mapping import ISignalToIPduMapping
+from autosar.models.i_signal_to_i_pdu_mapping_subtypes_enum import ISignalToIPduMappingSubtypesEnum
+from autosar.models.i_signal_triggering import ISignalTriggering
+from autosar.models.i_signal_triggering_ref_conditional import ISignalTriggeringRefConditional
+from autosar.models.i_signal_triggering_subtypes_enum import ISignalTriggeringSubtypesEnum
+from autosar.models.i_signal_type_enum import ISignalTypeEnum
+from autosar.models.i_signal_type_enum_simple import ISignalTypeEnumSimple
+from autosar.models.iam_module_instantiation import IamModuleInstantiation
+from autosar.models.identifiable_subtypes_enum import IdentifiableSubtypesEnum
+from autosar.models.identifier import Identifier
+from autosar.models.ids_common_element_ref_conditional import IdsCommonElementRefConditional
+from autosar.models.ids_common_element_subtypes_enum import IdsCommonElementSubtypesEnum
+from autosar.models.ids_design import IdsDesign
+from autosar.models.ids_mgr_custom_timestamp_needs import IdsMgrCustomTimestampNeeds
+from autosar.models.ids_mgr_needs import IdsMgrNeeds
+from autosar.models.idsm_instance import IdsmInstance
+from autosar.models.idsm_instance_ref_conditional import IdsmInstanceRefConditional
+from autosar.models.idsm_instance_subtypes_enum import IdsmInstanceSubtypesEnum
+from autosar.models.idsm_module_instantiation import IdsmModuleInstantiation
+from autosar.models.idsm_module_instantiation_subtypes_enum import IdsmModuleInstantiationSubtypesEnum
+from autosar.models.idsm_properties import IdsmProperties
+from autosar.models.idsm_rate_limitation import IdsmRateLimitation
+from autosar.models.idsm_rate_limitation_ref_conditional import IdsmRateLimitationRefConditional
+from autosar.models.idsm_rate_limitation_subtypes_enum import IdsmRateLimitationSubtypesEnum
+from autosar.models.idsm_signature_support_ap import IdsmSignatureSupportAp
+from autosar.models.idsm_signature_support_cp import IdsmSignatureSupportCp
+from autosar.models.idsm_traffic_limitation import IdsmTrafficLimitation
+from autosar.models.idsm_traffic_limitation_ref_conditional import IdsmTrafficLimitationRefConditional
+from autosar.models.idsm_traffic_limitation_subtypes_enum import IdsmTrafficLimitationSubtypesEnum
+from autosar.models.ieee_1722_tp import Ieee1722Tp
+from autosar.models.ieee_1722_tp_ethernet_frame import Ieee1722TpEthernetFrame
+from autosar.models.ike_authentication_method_enum import IkeAuthenticationMethodEnum
+from autosar.models.ike_authentication_method_enum_simple import IkeAuthenticationMethodEnumSimple
+from autosar.models.implementation_data_type import ImplementationDataType
+from autosar.models.implementation_data_type_element import ImplementationDataTypeElement
+from autosar.models.implementation_data_type_element_in_port_interface_ref import ImplementationDataTypeElementInPortInterfaceRef
+from autosar.models.implementation_data_type_element_in_system_ref import ImplementationDataTypeElementInSystemRef
+from autosar.models.implementation_data_type_element_subtypes_enum import ImplementationDataTypeElementSubtypesEnum
+from autosar.models.implementation_data_type_sub_element_ref import ImplementationDataTypeSubElementRef
+from autosar.models.implementation_data_type_subtypes_enum import ImplementationDataTypeSubtypesEnum
+from autosar.models.implementation_element_in_parameter_instance_ref import ImplementationElementInParameterInstanceRef
+from autosar.models.included_data_type_set import IncludedDataTypeSet
+from autosar.models.included_mode_declaration_group_set import IncludedModeDeclarationGroupSet
+from autosar.models.indent_sample import IndentSample
+from autosar.models.index_entry import IndexEntry
+from autosar.models.indexed_array_element import IndexedArrayElement
+from autosar.models.indicator_status_needs import IndicatorStatusNeeds
+from autosar.models.infrastructure_services import InfrastructureServices
+from autosar.models.init_event import InitEvent
+from autosar.models.initial_sd_delay_config import InitialSdDelayConfig
+from autosar.models.inner_data_prototype_group_in_composition_instance_ref import InnerDataPrototypeGroupInCompositionInstanceRef
+from autosar.models.inner_port_group_in_composition_instance_ref import InnerPortGroupInCompositionInstanceRef
+from autosar.models.inner_runnable_entity_group_in_composition_instance_ref import InnerRunnableEntityGroupInCompositionInstanceRef
+from autosar.models.instance_event_in_composition_instance_ref import InstanceEventInCompositionInstanceRef
+from autosar.models.instantiation_data_def_props import InstantiationDataDefProps
+from autosar.models.instantiation_timing_event_props import InstantiationTimingEventProps
+from autosar.models.integer import Integer
+from autosar.models.integer_value_variation_point import IntegerValueVariationPoint
+from autosar.models.interface_mapping import InterfaceMapping
+from autosar.models.interface_mapping_set import InterfaceMappingSet
+from autosar.models.internal_constrs import InternalConstrs
+from autosar.models.internal_trigger_occurred_event import InternalTriggerOccurredEvent
+from autosar.models.internal_triggering_point import InternalTriggeringPoint
+from autosar.models.internal_triggering_point_subtypes_enum import InternalTriggeringPointSubtypesEnum
+from autosar.models.interpolation_routine import InterpolationRoutine
+from autosar.models.interpolation_routine_mapping import InterpolationRoutineMapping
+from autosar.models.interpolation_routine_mapping_set import InterpolationRoutineMappingSet
+from autosar.models.interpolation_routine_mapping_set_subtypes_enum import InterpolationRoutineMappingSetSubtypesEnum
+from autosar.models.interval_type_enum import IntervalTypeEnum
+from autosar.models.interval_type_enum_simple import IntervalTypeEnumSimple
+from autosar.models.invalidation_policy import InvalidationPolicy
+from autosar.models.invert_condition import InvertCondition
+from autosar.models.io_hw_abstraction_server_annotation import IoHwAbstractionServerAnnotation
+from autosar.models.ip4_address_string import Ip4AddressString
+from autosar.models.ip6_address_string import Ip6AddressString
+from autosar.models.ip_address_keep_enum import IpAddressKeepEnum
+from autosar.models.ip_address_keep_enum_simple import IpAddressKeepEnumSimple
+from autosar.models.ip_iam_authentic_connection_props import IpIamAuthenticConnectionProps
+from autosar.models.ip_iam_remote_subject import IpIamRemoteSubject
+from autosar.models.ip_sec_config import IpSecConfig
+from autosar.models.ip_sec_config_props import IpSecConfigProps
+from autosar.models.ip_sec_config_props_subtypes_enum import IpSecConfigPropsSubtypesEnum
+from autosar.models.ip_sec_iam_remote_subject import IpSecIamRemoteSubject
+from autosar.models.ip_sec_rule import IpSecRule
+from autosar.models.ip_sec_rule_subtypes_enum import IpSecRuleSubtypesEnum
+from autosar.models.ip_transport_protocol_enum import IpTransportProtocolEnum
+from autosar.models.ip_transport_protocol_enum_simple import IpTransportProtocolEnumSimple
+from autosar.models.ipv_4_address_source_enum import Ipv4AddressSourceEnum
+from autosar.models.ipv_4_address_source_enum_simple import Ipv4AddressSourceEnumSimple
+from autosar.models.ipv_4_arp_props import Ipv4ArpProps
+from autosar.models.ipv_4_auto_ip_props import Ipv4AutoIpProps
+from autosar.models.ipv_4_configuration import Ipv4Configuration
+from autosar.models.ipv_4_dhcp_server_configuration import Ipv4DhcpServerConfiguration
+from autosar.models.ipv_4_fragmentation_props import Ipv4FragmentationProps
+from autosar.models.ipv_4_props import Ipv4Props
+from autosar.models.ipv_6_address_source_enum import Ipv6AddressSourceEnum
+from autosar.models.ipv_6_address_source_enum_simple import Ipv6AddressSourceEnumSimple
+from autosar.models.ipv_6_configuration import Ipv6Configuration
+from autosar.models.ipv_6_dhcp_server_configuration import Ipv6DhcpServerConfiguration
+from autosar.models.ipv_6_fragmentation_props import Ipv6FragmentationProps
+from autosar.models.ipv_6_ndp_props import Ipv6NdpProps
+from autosar.models.ipv_6_props import Ipv6Props
+from autosar.models.item_label_pos_enum import ItemLabelPosEnum
+from autosar.models.item_label_pos_enum_simple import ItemLabelPosEnumSimple
+from autosar.models.j_1939_cluster import J1939Cluster
+from autosar.models.j_1939_cluster_conditional import J1939ClusterConditional
+from autosar.models.j_1939_cluster_subtypes_enum import J1939ClusterSubtypesEnum
+from autosar.models.j_1939_controller_application import J1939ControllerApplication
+from autosar.models.j_1939_controller_application_subtypes_enum import J1939ControllerApplicationSubtypesEnum
+from autosar.models.j_1939_controller_application_to_j_1939_nm_node_mapping import J1939ControllerApplicationToJ1939NmNodeMapping
+from autosar.models.j_1939_dcm_dm_19_support import J1939DcmDm19Support
+from autosar.models.j_1939_dcm_i_pdu import J1939DcmIPdu
+from autosar.models.j_1939_nm_cluster import J1939NmCluster
+from autosar.models.j_1939_nm_ecu import J1939NmEcu
+from autosar.models.j_1939_nm_node import J1939NmNode
+from autosar.models.j_1939_nm_node_subtypes_enum import J1939NmNodeSubtypesEnum
+from autosar.models.j_1939_node_name import J1939NodeName
+from autosar.models.j_1939_rm_incoming_request_service_needs import J1939RmIncomingRequestServiceNeeds
+from autosar.models.j_1939_rm_outgoing_request_service_needs import J1939RmOutgoingRequestServiceNeeds
+from autosar.models.j_1939_shared_address_cluster import J1939SharedAddressCluster
+from autosar.models.j_1939_tp_config import J1939TpConfig
+from autosar.models.j_1939_tp_connection import J1939TpConnection
+from autosar.models.j_1939_tp_node import J1939TpNode
+from autosar.models.j_1939_tp_node_subtypes_enum import J1939TpNodeSubtypesEnum
+from autosar.models.j_1939_tp_pg import J1939TpPg
+from autosar.models.keep_with_previous_enum import KeepWithPreviousEnum
+from autosar.models.keep_with_previous_enum_simple import KeepWithPreviousEnumSimple
+from autosar.models.key_usage_restriction_enum import KeyUsageRestrictionEnum
+from autosar.models.key_usage_restriction_enum_simple import KeyUsageRestrictionEnumSimple
+from autosar.models.keyword import Keyword
+from autosar.models.keyword_set import KeywordSet
+from autosar.models.l_enum import LEnum
+from autosar.models.l_enum_simple import LEnumSimple
+from autosar.models.l_graphic import LGraphic
+from autosar.models.l_long_name import LLongName
+from autosar.models.l_overview_paragraph import LOverviewParagraph
+from autosar.models.l_paragraph import LParagraph
+from autosar.models.l_plain_text import LPlainText
+from autosar.models.l_verbatim import LVerbatim
+from autosar.models.latency_constraint_type_enum import LatencyConstraintTypeEnum
+from autosar.models.latency_constraint_type_enum_simple import LatencyConstraintTypeEnumSimple
+from autosar.models.latency_timing_constraint import LatencyTimingConstraint
+from autosar.models.life_cycle_info import LifeCycleInfo
+from autosar.models.life_cycle_info_set import LifeCycleInfoSet
+from autosar.models.life_cycle_period import LifeCyclePeriod
+from autosar.models.life_cycle_state import LifeCycleState
+from autosar.models.life_cycle_state_definition_group import LifeCycleStateDefinitionGroup
+from autosar.models.life_cycle_state_definition_group_subtypes_enum import LifeCycleStateDefinitionGroupSubtypesEnum
+from autosar.models.life_cycle_state_subtypes_enum import LifeCycleStateSubtypesEnum
+from autosar.models.limit import Limit
+from autosar.models.limit_value import LimitValue
+from autosar.models.lin_checksum_type import LinChecksumType
+from autosar.models.lin_checksum_type_simple import LinChecksumTypeSimple
+from autosar.models.lin_cluster import LinCluster
+from autosar.models.lin_cluster_conditional import LinClusterConditional
+from autosar.models.lin_communication_connector import LinCommunicationConnector
+from autosar.models.lin_configurable_frame import LinConfigurableFrame
+from autosar.models.lin_error_response import LinErrorResponse
+from autosar.models.lin_event_triggered_frame import LinEventTriggeredFrame
+from autosar.models.lin_frame_subtypes_enum import LinFrameSubtypesEnum
+from autosar.models.lin_frame_triggering import LinFrameTriggering
+from autosar.models.lin_frame_triggering_subtypes_enum import LinFrameTriggeringSubtypesEnum
+from autosar.models.lin_master import LinMaster
+from autosar.models.lin_master_conditional import LinMasterConditional
+from autosar.models.lin_nm_cluster import LinNmCluster
+from autosar.models.lin_ordered_configurable_frame import LinOrderedConfigurableFrame
+from autosar.models.lin_physical_channel import LinPhysicalChannel
+from autosar.models.lin_schedule_table import LinScheduleTable
+from autosar.models.lin_schedule_table_subtypes_enum import LinScheduleTableSubtypesEnum
+from autosar.models.lin_slave import LinSlave
+from autosar.models.lin_slave_conditional import LinSlaveConditional
+from autosar.models.lin_slave_config import LinSlaveConfig
+from autosar.models.lin_slave_config_ident import LinSlaveConfigIdent
+from autosar.models.lin_slave_config_ident_subtypes_enum import LinSlaveConfigIdentSubtypesEnum
+from autosar.models.lin_slave_subtypes_enum import LinSlaveSubtypesEnum
+from autosar.models.lin_sporadic_frame import LinSporadicFrame
+from autosar.models.lin_tp_config import LinTpConfig
+from autosar.models.lin_tp_connection import LinTpConnection
+from autosar.models.lin_tp_node import LinTpNode
+from autosar.models.lin_tp_node_subtypes_enum import LinTpNodeSubtypesEnum
+from autosar.models.lin_unconditional_frame import LinUnconditionalFrame
+from autosar.models.lin_unconditional_frame_subtypes_enum import LinUnconditionalFrameSubtypesEnum
+from autosar.models.linker import Linker
+from autosar.models.list_enum import ListEnum
+from autosar.models.list_enum_simple import ListEnumSimple
+from autosar.models.local_supervision import LocalSupervision
+from autosar.models.local_supervision_subtypes_enum import LocalSupervisionSubtypesEnum
+from autosar.models.log_and_trace_instantiation import LogAndTraceInstantiation
+from autosar.models.log_trace_default_log_level_enum import LogTraceDefaultLogLevelEnum
+from autosar.models.log_trace_default_log_level_enum_simple import LogTraceDefaultLogLevelEnumSimple
+from autosar.models.log_trace_log_mode_enum import LogTraceLogModeEnum
+from autosar.models.log_trace_log_mode_enum_simple import LogTraceLogModeEnumSimple
+from autosar.models.logging_behavior_enum import LoggingBehaviorEnum
+from autosar.models.logging_behavior_enum_simple import LoggingBehaviorEnumSimple
+from autosar.models.logic_address import LogicAddress
+from autosar.models.logic_address_subtypes_enum import LogicAddressSubtypesEnum
+from autosar.models.logical_supervision import LogicalSupervision
+from autosar.models.mac_address_string import MacAddressString
+from autosar.models.mac_multicast_configuration import MacMulticastConfiguration
+from autosar.models.mac_multicast_group import MacMulticastGroup
+from autosar.models.mac_multicast_group_subtypes_enum import MacMulticastGroupSubtypesEnum
+from autosar.models.machine import Machine
+from autosar.models.machine_design import MachineDesign
+from autosar.models.machine_design_subtypes_enum import MachineDesignSubtypesEnum
+from autosar.models.machine_subtypes_enum import MachineSubtypesEnum
+from autosar.models.machine_timing import MachineTiming
+from autosar.models.map import Map
+from autosar.models.mapping_direction_enum import MappingDirectionEnum
+from autosar.models.mapping_direction_enum_simple import MappingDirectionEnumSimple
+from autosar.models.mapping_scope_enum import MappingScopeEnum
+from autosar.models.mapping_scope_enum_simple import MappingScopeEnumSimple
+from autosar.models.max_comm_mode_enum import MaxCommModeEnum
+from autosar.models.max_comm_mode_enum_simple import MaxCommModeEnumSimple
+from autosar.models.maximum_message_length_type import MaximumMessageLengthType
+from autosar.models.maximum_message_length_type_simple import MaximumMessageLengthTypeSimple
+from autosar.models.mc_data_access_details import McDataAccessDetails
+from autosar.models.mc_data_instance import McDataInstance
+from autosar.models.mc_data_instance_subtypes_enum import McDataInstanceSubtypesEnum
+from autosar.models.mc_function import McFunction
+from autosar.models.mc_function_data_ref_set import McFunctionDataRefSet
+from autosar.models.mc_function_data_ref_set_conditional import McFunctionDataRefSetConditional
+from autosar.models.mc_function_subtypes_enum import McFunctionSubtypesEnum
+from autosar.models.mc_group import McGroup
+from autosar.models.mc_group_data_ref_set import McGroupDataRefSet
+from autosar.models.mc_group_data_ref_set_conditional import McGroupDataRefSetConditional
+from autosar.models.mc_group_subtypes_enum import McGroupSubtypesEnum
+from autosar.models.mc_parameter_element_group import McParameterElementGroup
+from autosar.models.mc_support_data import McSupportData
+from autosar.models.mc_sw_emulation_method_support import McSwEmulationMethodSupport
+from autosar.models.mcd_identifier import McdIdentifier
+from autosar.models.measured_execution_time import MeasuredExecutionTime
+from autosar.models.measured_heap_usage import MeasuredHeapUsage
+from autosar.models.measured_stack_usage import MeasuredStackUsage
+from autosar.models.memory_allocation_keyword_policy_type import MemoryAllocationKeywordPolicyType
+from autosar.models.memory_allocation_keyword_policy_type_simple import MemoryAllocationKeywordPolicyTypeSimple
+from autosar.models.memory_section import MemorySection
+from autosar.models.memory_section_location import MemorySectionLocation
+from autosar.models.memory_section_subtypes_enum import MemorySectionSubtypesEnum
+from autosar.models.memory_section_type import MemorySectionType
+from autosar.models.memory_section_type_simple import MemorySectionTypeSimple
+from autosar.models.meta_class_name import MetaClassName
+from autosar.models.meta_data_item import MetaDataItem
+from autosar.models.meta_data_item_set import MetaDataItemSet
+from autosar.models.method_mapping import MethodMapping
+from autosar.models.mime_type_string import MimeTypeString
+from autosar.models.mode_access_point import ModeAccessPoint
+from autosar.models.mode_access_point_ident import ModeAccessPointIdent
+from autosar.models.mode_activation_kind import ModeActivationKind
+from autosar.models.mode_activation_kind_simple import ModeActivationKindSimple
+from autosar.models.mode_declaration import ModeDeclaration
+from autosar.models.mode_declaration_group import ModeDeclarationGroup
+from autosar.models.mode_declaration_group_prototype import ModeDeclarationGroupPrototype
+from autosar.models.mode_declaration_group_prototype_in_system_instance_ref import ModeDeclarationGroupPrototypeInSystemInstanceRef
+from autosar.models.mode_declaration_group_prototype_mapping import ModeDeclarationGroupPrototypeMapping
+from autosar.models.mode_declaration_group_prototype_ref_conditional import ModeDeclarationGroupPrototypeRefConditional
+from autosar.models.mode_declaration_group_prototype_subtypes_enum import ModeDeclarationGroupPrototypeSubtypesEnum
+from autosar.models.mode_declaration_group_subtypes_enum import ModeDeclarationGroupSubtypesEnum
+from autosar.models.mode_declaration_mapping import ModeDeclarationMapping
+from autosar.models.mode_declaration_mapping_set import ModeDeclarationMappingSet
+from autosar.models.mode_declaration_mapping_set_subtypes_enum import ModeDeclarationMappingSetSubtypesEnum
+from autosar.models.mode_declaration_subtypes_enum import ModeDeclarationSubtypesEnum
+from autosar.models.mode_driven_transmission_mode_condition import ModeDrivenTransmissionModeCondition
+from autosar.models.mode_error_behavior import ModeErrorBehavior
+from autosar.models.mode_error_reaction_policy_enum import ModeErrorReactionPolicyEnum
+from autosar.models.mode_error_reaction_policy_enum_simple import ModeErrorReactionPolicyEnumSimple
+from autosar.models.mode_in_bsw_instance_ref import ModeInBswInstanceRef
+from autosar.models.mode_in_bsw_module_description_instance_ref import ModeInBswModuleDescriptionInstanceRef
+from autosar.models.mode_in_process_instance_ref import ModeInProcessInstanceRef
+from autosar.models.mode_in_swc_instance_ref import ModeInSwcInstanceRef
+from autosar.models.mode_interface_mapping import ModeInterfaceMapping
+from autosar.models.mode_port_annotation import ModePortAnnotation
+from autosar.models.mode_request_type_map import ModeRequestTypeMap
+from autosar.models.mode_switch_event_triggered_activity import ModeSwitchEventTriggeredActivity
+from autosar.models.mode_switch_interface import ModeSwitchInterface
+from autosar.models.mode_switch_point import ModeSwitchPoint
+from autosar.models.mode_switch_point_subtypes_enum import ModeSwitchPointSubtypesEnum
+from autosar.models.mode_switch_receiver_com_spec import ModeSwitchReceiverComSpec
+from autosar.models.mode_switch_sender_com_spec import ModeSwitchSenderComSpec
+from autosar.models.mode_switched_ack_event import ModeSwitchedAckEvent
+from autosar.models.mode_switched_ack_request import ModeSwitchedAckRequest
+from autosar.models.mode_transition import ModeTransition
+from autosar.models.modification import Modification
+from autosar.models.modification_type_enum import ModificationTypeEnum
+from autosar.models.modification_type_enum_simple import ModificationTypeEnumSimple
+from autosar.models.monotony_enum import MonotonyEnum
+from autosar.models.monotony_enum_simple import MonotonyEnumSimple
+from autosar.models.msr_query_arg import MsrQueryArg
+from autosar.models.msr_query_p_1 import MsrQueryP1
+from autosar.models.msr_query_props import MsrQueryProps
+from autosar.models.msr_query_result_chapter import (
+    Chapter,
+    MsrQueryChapter,
+    MsrQueryResultChapter,
+)
+from autosar.models.msr_query_result_topic_1 import MsrQueryResultTopic1
+from autosar.models.msr_query_topic_1 import MsrQueryTopic1
+from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from autosar.models.multi_language_plain_text import MultiLanguagePlainText
+from autosar.models.multidimensional_time import MultidimensionalTime
+from autosar.models.multilanguage_long_name import MultilanguageLongName
+from autosar.models.multiplexed_i_pdu import MultiplexedIPdu
+from autosar.models.multiplicity_restriction_with_severity import MultiplicityRestrictionWithSeverity
+from autosar.models.n_pdu import NPdu
+from autosar.models.n_pdu_subtypes_enum import NPduSubtypesEnum
+from autosar.models.name_token_value_variation_point import NameTokenValueVariationPoint
+from autosar.models.native_declaration_string import NativeDeclarationString
+from autosar.models.network_endpoint import NetworkEndpoint
+from autosar.models.network_endpoint_subtypes_enum import NetworkEndpointSubtypesEnum
+from autosar.models.network_segment_identification import NetworkSegmentIdentification
+from autosar.models.network_target_address_type import NetworkTargetAddressType
+from autosar.models.network_target_address_type_simple import NetworkTargetAddressTypeSimple
+from autosar.models.nm_config import NmConfig
+from autosar.models.nm_coordinator import NmCoordinator
+from autosar.models.nm_coordinator_role_enum import NmCoordinatorRoleEnum
+from autosar.models.nm_coordinator_role_enum_simple import NmCoordinatorRoleEnumSimple
+from autosar.models.nm_ecu import NmEcu
+from autosar.models.nm_ecu_subtypes_enum import NmEcuSubtypesEnum
+from autosar.models.nm_instantiation import NmInstantiation
+from autosar.models.nm_network_handle import NmNetworkHandle
+from autosar.models.nm_node_subtypes_enum import NmNodeSubtypesEnum
+from autosar.models.nm_pdu import NmPdu
+from autosar.models.nm_pdu_ref_conditional import NmPduRefConditional
+from autosar.models.nm_pdu_subtypes_enum import NmPduSubtypesEnum
+from autosar.models.nmtoken_string import NmtokenString
+from autosar.models.nmtokens_string import NmtokensString
+from autosar.models.non_os_module_instantiation_subtypes_enum import NonOsModuleInstantiationSubtypesEnum
+from autosar.models.nonqueued_receiver_com_spec import NonqueuedReceiverComSpec
+from autosar.models.nonqueued_sender_com_spec import NonqueuedSenderComSpec
+from autosar.models.normalized_instruction import NormalizedInstruction
+from autosar.models.not_available_value_specification import NotAvailableValueSpecification
+from autosar.models.note_type_enum import NoteTypeEnum
+from autosar.models.note_type_enum_simple import NoteTypeEnumSimple
+from autosar.models.numerical_or_text import NumericalOrText
+from autosar.models.numerical_rule_based_value_specification import NumericalRuleBasedValueSpecification
+from autosar.models.numerical_value import NumericalValue
+from autosar.models.numerical_value_specification import NumericalValueSpecification
+from autosar.models.numerical_value_variation_point import NumericalValueVariationPoint
+from autosar.models.nv_block_data_mapping import NvBlockDataMapping
+from autosar.models.nv_block_descriptor import NvBlockDescriptor
+from autosar.models.nv_block_needs import NvBlockNeeds
+from autosar.models.nv_block_needs_reliability_enum import NvBlockNeedsReliabilityEnum
+from autosar.models.nv_block_needs_reliability_enum_simple import NvBlockNeedsReliabilityEnumSimple
+from autosar.models.nv_block_needs_writing_priority_enum import NvBlockNeedsWritingPriorityEnum
+from autosar.models.nv_block_needs_writing_priority_enum_simple import NvBlockNeedsWritingPriorityEnumSimple
+from autosar.models.nv_block_sw_component_type import NvBlockSwComponentType
+from autosar.models.nv_data_interface import NvDataInterface
+from autosar.models.nv_data_port_annotation import NvDataPortAnnotation
+from autosar.models.nv_provide_com_spec import NvProvideComSpec
+from autosar.models.nv_require_com_spec import NvRequireComSpec
+from autosar.models.obd_control_service_needs import ObdControlServiceNeeds
+from autosar.models.obd_info_service_needs import ObdInfoServiceNeeds
+from autosar.models.obd_monitor_service_needs import ObdMonitorServiceNeeds
+from autosar.models.obd_pid_service_needs import ObdPidServiceNeeds
+from autosar.models.obd_ratio_connection_kind_enum import ObdRatioConnectionKindEnum
+from autosar.models.obd_ratio_connection_kind_enum_simple import ObdRatioConnectionKindEnumSimple
+from autosar.models.obd_ratio_denominator_needs import ObdRatioDenominatorNeeds
+from autosar.models.obd_ratio_service_needs import ObdRatioServiceNeeds
+from autosar.models.offset_timing_constraint import OffsetTimingConstraint
+from autosar.models.operation_argument_in_component_instance_ref import OperationArgumentInComponentInstanceRef
+from autosar.models.operation_cycle_type_enum import OperationCycleTypeEnum
+from autosar.models.operation_cycle_type_enum_simple import OperationCycleTypeEnumSimple
+from autosar.models.operation_in_system_instance_ref import OperationInSystemInstanceRef
+from autosar.models.operation_invoked_event import OperationInvokedEvent
+from autosar.models.ordered_master import OrderedMaster
+from autosar.models.orient_enum import OrientEnum
+from autosar.models.orient_enum_simple import OrientEnumSimple
+from autosar.models.os_module_instantiation import OsModuleInstantiation
+from autosar.models.os_task_execution_event import OsTaskExecutionEvent
+from autosar.models.p_mode_group_in_atomic_swc_instance_ref import PModeGroupInAtomicSwcInstanceRef
+from autosar.models.p_mode_in_system_instance_ref import PModeInSystemInstanceRef
+from autosar.models.p_operation_in_atomic_swc_instance_ref import POperationInAtomicSwcInstanceRef
+from autosar.models.p_port_in_composition_instance_ref import PPortInCompositionInstanceRef
+from autosar.models.p_port_prototype import PPortPrototype
+from autosar.models.p_port_prototype_in_executable_instance_ref import PPortPrototypeInExecutableInstanceRef
+from autosar.models.p_port_prototype_in_software_cluster_design_instance_ref import PPortPrototypeInSoftwareClusterDesignInstanceRef
+from autosar.models.p_port_prototype_subtypes_enum import PPortPrototypeSubtypesEnum
+from autosar.models.p_trigger_in_atomic_swc_type_instance_ref import PTriggerInAtomicSwcTypeInstanceRef
+from autosar.models.parameter_access import ParameterAccess
+from autosar.models.parameter_data_prototype import ParameterDataPrototype
+from autosar.models.parameter_data_prototype_in_system_instance_ref import ParameterDataPrototypeInSystemInstanceRef
+from autosar.models.parameter_data_prototype_subtypes_enum import ParameterDataPrototypeSubtypesEnum
+from autosar.models.parameter_in_atomic_swc_type_instance_ref import ParameterInAtomicSwcTypeInstanceRef
+from autosar.models.parameter_interface import ParameterInterface
+from autosar.models.parameter_port_annotation import ParameterPortAnnotation
+from autosar.models.parameter_provide_com_spec import ParameterProvideComSpec
+from autosar.models.parameter_require_com_spec import ParameterRequireComSpec
+from autosar.models.parameter_sw_component_type import ParameterSwComponentType
+from autosar.models.pass_through_sw_connector import PassThroughSwConnector
+from autosar.models.pdu_activation_routing_group import PduActivationRoutingGroup
+from autosar.models.pdu_collection_semantics_enum import PduCollectionSemanticsEnum
+from autosar.models.pdu_collection_semantics_enum_simple import PduCollectionSemanticsEnumSimple
+from autosar.models.pdu_collection_trigger_enum import PduCollectionTriggerEnum
+from autosar.models.pdu_collection_trigger_enum_simple import PduCollectionTriggerEnumSimple
+from autosar.models.pdu_mapping_default_value import PduMappingDefaultValue
+from autosar.models.pdu_subtypes_enum import PduSubtypesEnum
+from autosar.models.pdu_to_frame_mapping import PduToFrameMapping
+from autosar.models.pdu_triggering import PduTriggering
+from autosar.models.pdu_triggering_ref_conditional import PduTriggeringRefConditional
+from autosar.models.pdu_triggering_subtypes_enum import PduTriggeringSubtypesEnum
+from autosar.models.pdur_i_pdu_group import PdurIPduGroup
+from autosar.models.pdur_i_pdu_group_subtypes_enum import PdurIPduGroupSubtypesEnum
+from autosar.models.per_instance_memory import PerInstanceMemory
+from autosar.models.per_instance_memory_size import PerInstanceMemorySize
+from autosar.models.per_instance_memory_subtypes_enum import PerInstanceMemorySubtypesEnum
+from autosar.models.periodic_event_triggering import PeriodicEventTriggering
+from autosar.models.permissible_signal_path import PermissibleSignalPath
+from autosar.models.persistency_collection_level_update_strategy_enum import PersistencyCollectionLevelUpdateStrategyEnum
+from autosar.models.persistency_collection_level_update_strategy_enum_simple import PersistencyCollectionLevelUpdateStrategyEnumSimple
+from autosar.models.persistency_data_element import PersistencyDataElement
+from autosar.models.persistency_data_element_subtypes_enum import PersistencyDataElementSubtypesEnum
+from autosar.models.persistency_data_required_com_spec import PersistencyDataRequiredComSpec
+from autosar.models.persistency_deployment_element_subtypes_enum import PersistencyDeploymentElementSubtypesEnum
+from autosar.models.persistency_deployment_element_to_crypto_key_slot_mapping import PersistencyDeploymentElementToCryptoKeySlotMapping
+from autosar.models.persistency_deployment_subtypes_enum import PersistencyDeploymentSubtypesEnum
+from autosar.models.persistency_deployment_to_crypto_key_slot_mapping import PersistencyDeploymentToCryptoKeySlotMapping
+from autosar.models.persistency_deployment_to_dlt_log_channel_mapping import PersistencyDeploymentToDltLogChannelMapping
+from autosar.models.persistency_element_level_update_strategy_enum import PersistencyElementLevelUpdateStrategyEnum
+from autosar.models.persistency_element_level_update_strategy_enum_simple import PersistencyElementLevelUpdateStrategyEnumSimple
+from autosar.models.persistency_file import PersistencyFile
+from autosar.models.persistency_file_element import PersistencyFileElement
+from autosar.models.persistency_file_storage import PersistencyFileStorage
+from autosar.models.persistency_file_storage_interface import PersistencyFileStorageInterface
+from autosar.models.persistency_file_storage_subtypes_enum import PersistencyFileStorageSubtypesEnum
+from autosar.models.persistency_key_value_pair import PersistencyKeyValuePair
+from autosar.models.persistency_key_value_storage import PersistencyKeyValueStorage
+from autosar.models.persistency_key_value_storage_interface import PersistencyKeyValueStorageInterface
+from autosar.models.persistency_key_value_storage_subtypes_enum import PersistencyKeyValueStorageSubtypesEnum
+from autosar.models.persistency_port_prototype_to_file_storage_mapping import PersistencyPortPrototypeToFileStorageMapping
+from autosar.models.persistency_port_prototype_to_key_value_storage_mapping import PersistencyPortPrototypeToKeyValueStorageMapping
+from autosar.models.persistency_redundancy_crc import PersistencyRedundancyCrc
+from autosar.models.persistency_redundancy_enum import PersistencyRedundancyEnum
+from autosar.models.persistency_redundancy_enum_simple import PersistencyRedundancyEnumSimple
+from autosar.models.persistency_redundancy_handling_scope_enum import PersistencyRedundancyHandlingScopeEnum
+from autosar.models.persistency_redundancy_handling_scope_enum_simple import PersistencyRedundancyHandlingScopeEnumSimple
+from autosar.models.persistency_redundancy_hash import PersistencyRedundancyHash
+from autosar.models.persistency_redundancy_m_out_of_n import PersistencyRedundancyMOutOfN
+from autosar.models.pgwide_enum import PgwideEnum
+from autosar.models.pgwide_enum_simple import PgwideEnumSimple
+from autosar.models.phm_checkpoint import PhmCheckpoint
+from autosar.models.phm_checkpoint_in_executable_instance_ref import PhmCheckpointInExecutableInstanceRef
+from autosar.models.phm_checkpoint_subtypes_enum import PhmCheckpointSubtypesEnum
+from autosar.models.phm_contribution_to_machine_mapping import PhmContributionToMachineMapping
+from autosar.models.phm_health_channel_in_executable_instance_ref import PhmHealthChannelInExecutableInstanceRef
+from autosar.models.phm_health_channel_interface import PhmHealthChannelInterface
+from autosar.models.phm_health_channel_interface_subtypes_enum import PhmHealthChannelInterfaceSubtypesEnum
+from autosar.models.phm_health_channel_recovery_notification_interface import PhmHealthChannelRecoveryNotificationInterface
+from autosar.models.phm_health_channel_status import PhmHealthChannelStatus
+from autosar.models.phm_health_channel_status_subtypes_enum import PhmHealthChannelStatusSubtypesEnum
+from autosar.models.phm_recovery_action_interface import PhmRecoveryActionInterface
+from autosar.models.phm_supervised_entity_interface import PhmSupervisedEntityInterface
+from autosar.models.phm_supervision_recovery_notification_interface import PhmSupervisionRecoveryNotificationInterface
+from autosar.models.phys_constrs import PhysConstrs
+from autosar.models.physical_channel_ref_conditional import PhysicalChannelRefConditional
+from autosar.models.physical_channel_subtypes_enum import PhysicalChannelSubtypesEnum
+from autosar.models.physical_dimension import PhysicalDimension
+from autosar.models.physical_dimension_mapping import PhysicalDimensionMapping
+from autosar.models.physical_dimension_mapping_set import PhysicalDimensionMappingSet
+from autosar.models.physical_dimension_subtypes_enum import PhysicalDimensionSubtypesEnum
+from autosar.models.platform_health_management_contribution import PlatformHealthManagementContribution
+from autosar.models.platform_health_management_contribution_subtypes_enum import PlatformHealthManagementContributionSubtypesEnum
+from autosar.models.platform_module_ethernet_endpoint_configuration import PlatformModuleEthernetEndpointConfiguration
+from autosar.models.platform_module_ethernet_endpoint_configuration_subtypes_enum import PlatformModuleEthernetEndpointConfigurationSubtypesEnum
+from autosar.models.plca_props import PlcaProps
+from autosar.models.pnc_gateway_type_enum import PncGatewayTypeEnum
+from autosar.models.pnc_gateway_type_enum_simple import PncGatewayTypeEnumSimple
+from autosar.models.pnc_mapping import PncMapping
+from autosar.models.pnc_mapping_ident import PncMappingIdent
+from autosar.models.pnc_mapping_ident_subtypes_enum import PncMappingIdentSubtypesEnum
+from autosar.models.port_api_option import PortApiOption
+from autosar.models.port_defined_argument_blueprint import PortDefinedArgumentBlueprint
+from autosar.models.port_defined_argument_value import PortDefinedArgumentValue
+from autosar.models.port_element_to_communication_resource_mapping import PortElementToCommunicationResourceMapping
+from autosar.models.port_group import PortGroup
+from autosar.models.port_group_in_system_instance_ref import PortGroupInSystemInstanceRef
+from autosar.models.port_group_subtypes_enum import PortGroupSubtypesEnum
+from autosar.models.port_interface_blueprint_mapping import PortInterfaceBlueprintMapping
+from autosar.models.port_interface_element_in_implementation_datatype_ref import PortInterfaceElementInImplementationDatatypeRef
+from autosar.models.port_interface_mapping_set import PortInterfaceMappingSet
+from autosar.models.port_interface_mapping_subtypes_enum import PortInterfaceMappingSubtypesEnum
+from autosar.models.port_interface_subtypes_enum import PortInterfaceSubtypesEnum
+from autosar.models.port_interface_to_data_type_mapping import PortInterfaceToDataTypeMapping
+from autosar.models.port_prototype_blueprint import PortPrototypeBlueprint
+from autosar.models.port_prototype_blueprint_init_value import PortPrototypeBlueprintInitValue
+from autosar.models.port_prototype_blueprint_mapping import PortPrototypeBlueprintMapping
+from autosar.models.port_prototype_blueprint_subtypes_enum import PortPrototypeBlueprintSubtypesEnum
+from autosar.models.port_prototype_in_executable_instance_ref import PortPrototypeInExecutableInstanceRef
+from autosar.models.port_prototype_ref_conditional import PortPrototypeRefConditional
+from autosar.models.port_prototype_subtypes_enum import PortPrototypeSubtypesEnum
+from autosar.models.positive_integer import PositiveInteger
+from autosar.models.positive_integer_value_variation_point import PositiveIntegerValueVariationPoint
+from autosar.models.positive_unlimited_integer import PositiveUnlimitedInteger
+from autosar.models.possible_error_reaction import PossibleErrorReaction
+from autosar.models.post_build_variant_condition import PostBuildVariantCondition
+from autosar.models.post_build_variant_criterion import PostBuildVariantCriterion
+from autosar.models.post_build_variant_criterion_subtypes_enum import PostBuildVariantCriterionSubtypesEnum
+from autosar.models.post_build_variant_criterion_value import PostBuildVariantCriterionValue
+from autosar.models.post_build_variant_criterion_value_set import PostBuildVariantCriterionValueSet
+from autosar.models.post_build_variant_criterion_value_set_subtypes_enum import PostBuildVariantCriterionValueSetSubtypesEnum
+from autosar.models.pr_port_prototype import PrPortPrototype
+from autosar.models.predefined_chapter import PredefinedChapter
+from autosar.models.predefined_variant import PredefinedVariant
+from autosar.models.predefined_variant_subtypes_enum import PredefinedVariantSubtypesEnum
+from autosar.models.primitive_attribute_condition import PrimitiveAttributeCondition
+from autosar.models.primitive_attribute_tailoring import PrimitiveAttributeTailoring
+from autosar.models.primitive_attribute_tailoring_subtypes_enum import PrimitiveAttributeTailoringSubtypesEnum
+from autosar.models.primitive_identifier import PrimitiveIdentifier
+from autosar.models.prm_char import PrmChar
+from autosar.models.prm_char_abs_tol import PrmCharAbsTol
+from autosar.models.prm_char_min_typ_max import PrmCharMinTypMax
+from autosar.models.prm_char_numerical_contents import PrmCharNumericalContents
+from autosar.models.prm_char_textual_contents import PrmCharTextualContents
+from autosar.models.prms import Prms
+from autosar.models.process import Process
+from autosar.models.process_argument import ProcessArgument
+from autosar.models.process_design import ProcessDesign
+from autosar.models.process_design_subtypes_enum import ProcessDesignSubtypesEnum
+from autosar.models.process_design_to_machine_design_mapping import ProcessDesignToMachineDesignMapping
+from autosar.models.process_design_to_machine_design_mapping_set import ProcessDesignToMachineDesignMappingSet
+from autosar.models.process_design_to_machine_design_mapping_subtypes_enum import ProcessDesignToMachineDesignMappingSubtypesEnum
+from autosar.models.process_execution_error import ProcessExecutionError
+from autosar.models.process_execution_error_subtypes_enum import ProcessExecutionErrorSubtypesEnum
+from autosar.models.process_subtypes_enum import ProcessSubtypesEnum
+from autosar.models.process_to_machine_mapping import ProcessToMachineMapping
+from autosar.models.process_to_machine_mapping_set import ProcessToMachineMappingSet
+from autosar.models.processing_kind_enum import ProcessingKindEnum
+from autosar.models.processing_kind_enum_simple import ProcessingKindEnumSimple
+from autosar.models.processor import Processor
+from autosar.models.processor_core import ProcessorCore
+from autosar.models.processor_core_subtypes_enum import ProcessorCoreSubtypesEnum
+from autosar.models.programminglanguage_enum import ProgramminglanguageEnum
+from autosar.models.programminglanguage_enum_simple import ProgramminglanguageEnumSimple
+from autosar.models.provided_ap_service_instance_subtypes_enum import ProvidedApServiceInstanceSubtypesEnum
+from autosar.models.provided_method_in_executable_instance_ref import ProvidedMethodInExecutableInstanceRef
+from autosar.models.provided_service_instance import ProvidedServiceInstance
+from autosar.models.provided_service_instance_ref_conditional import ProvidedServiceInstanceRefConditional
+from autosar.models.provided_service_instance_subtypes_enum import ProvidedServiceInstanceSubtypesEnum
+from autosar.models.provided_service_instance_to_sw_cluster_design_p_port_prototype_mapping import ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping
+from autosar.models.provided_someip_service_instance import ProvidedSomeipServiceInstance
+from autosar.models.provided_user_defined_service_instance import ProvidedUserDefinedServiceInstance
+from autosar.models.psk_identity_to_key_slot_mapping import PskIdentityToKeySlotMapping
+from autosar.models.pulse_test_enum import PulseTestEnum
+from autosar.models.pulse_test_enum_simple import PulseTestEnumSimple
+from autosar.models.queued_receiver_com_spec import QueuedReceiverComSpec
+from autosar.models.queued_sender_com_spec import QueuedSenderComSpec
+from autosar.models.r_mode_group_in_atomic_swc_instance_ref import RModeGroupInAtomicSwcInstanceRef
+from autosar.models.r_mode_in_atomic_swc_instance_ref import RModeInAtomicSwcInstanceRef
+from autosar.models.r_operation_in_atomic_swc_instance_ref import ROperationInAtomicSwcInstanceRef
+from autosar.models.r_port_in_composition_instance_ref import RPortInCompositionInstanceRef
+from autosar.models.r_port_prototype import RPortPrototype
+from autosar.models.r_port_prototype_in_executable_instance_ref import RPortPrototypeInExecutableInstanceRef
+from autosar.models.r_port_prototype_in_software_cluster_design_instance_ref import RPortPrototypeInSoftwareClusterDesignInstanceRef
+from autosar.models.r_port_prototype_props import RPortPrototypeProps
+from autosar.models.r_port_prototype_subtypes_enum import RPortPrototypeSubtypesEnum
+from autosar.models.r_trigger_in_atomic_swc_instance_ref import RTriggerInAtomicSwcInstanceRef
+from autosar.models.r_variable_in_atomic_swc_instance_ref import RVariableInAtomicSwcInstanceRef
+from autosar.models.ram_block_status_control_enum import RamBlockStatusControlEnum
+from autosar.models.ram_block_status_control_enum_simple import RamBlockStatusControlEnumSimple
+from autosar.models.rapid_prototyping_scenario import RapidPrototypingScenario
+from autosar.models.raw_data_stream_client_interface import RawDataStreamClientInterface
+from autosar.models.raw_data_stream_client_interface_subtypes_enum import RawDataStreamClientInterfaceSubtypesEnum
+from autosar.models.raw_data_stream_deployment import RawDataStreamDeployment
+from autosar.models.raw_data_stream_deployment_subtypes_enum import RawDataStreamDeploymentSubtypesEnum
+from autosar.models.raw_data_stream_grant_design import RawDataStreamGrantDesign
+from autosar.models.raw_data_stream_grant_design_subtypes_enum import RawDataStreamGrantDesignSubtypesEnum
+from autosar.models.raw_data_stream_server_interface import RawDataStreamServerInterface
+from autosar.models.receiver_annotation import ReceiverAnnotation
+from autosar.models.receiver_intent_enum import ReceiverIntentEnum
+from autosar.models.receiver_intent_enum_simple import ReceiverIntentEnumSimple
+from autosar.models.reception_com_spec_props import ReceptionComSpecProps
+from autosar.models.record_layout_iterator_point import RecordLayoutIteratorPoint
+from autosar.models.record_value_specification import (
+    ApplicationAssocMapElementValueSpecification,
+    ApplicationAssocMapValueSpecification,
+    ArrayValueSpecification,
+    CompositeRuleBasedValueSpecification,
+    RecordValueSpecification,
+)
+from autosar.models.recovery_notification import RecoveryNotification
+from autosar.models.recovery_notification_subtypes_enum import RecoveryNotificationSubtypesEnum
+from autosar.models.recovery_notification_to_p_port_prototype_mapping import RecoveryNotificationToPPortPrototypeMapping
+from autosar.models.reentrancy_level_enum import ReentrancyLevelEnum
+from autosar.models.reentrancy_level_enum_simple import ReentrancyLevelEnumSimple
+from autosar.models.ref import Ref
+from autosar.models.reference_base import ReferenceBase
+from autosar.models.reference_condition import ReferenceCondition
+from autosar.models.reference_tailoring_subtypes_enum import ReferenceTailoringSubtypesEnum
+from autosar.models.reference_value_specification import ReferenceValueSpecification
+from autosar.models.referrable_subtypes_enum import ReferrableSubtypesEnum
+from autosar.models.regular_expression import RegularExpression
+from autosar.models.relative_tolerance import RelativeTolerance
+from autosar.models.remoting_technology import RemotingTechnology
+from autosar.models.remoting_technology_enum import RemotingTechnologyEnum
+from autosar.models.remoting_technology_enum_simple import RemotingTechnologyEnumSimple
+from autosar.models.report_behavior_enum import ReportBehaviorEnum
+from autosar.models.report_behavior_enum_simple import ReportBehaviorEnumSimple
+from autosar.models.request_method_enum import RequestMethodEnum
+from autosar.models.request_method_enum_simple import RequestMethodEnumSimple
+from autosar.models.request_response_delay import RequestResponseDelay
+from autosar.models.request_type_enum import RequestTypeEnum
+from autosar.models.request_type_enum_simple import RequestTypeEnumSimple
+from autosar.models.required_ap_service_instance_subtypes_enum import RequiredApServiceInstanceSubtypesEnum
+from autosar.models.required_method_in_executable_instance_ref import RequiredMethodInExecutableInstanceRef
+from autosar.models.required_service_instance_to_sw_cluster_design_r_port_prototype_mapping import RequiredServiceInstanceToSwClusterDesignRPortPrototypeMapping
+from autosar.models.required_someip_service_instance import RequiredSomeipServiceInstance
+from autosar.models.required_user_defined_service_instance import RequiredUserDefinedServiceInstance
+from autosar.models.resolution_policy_enum import ResolutionPolicyEnum
+from autosar.models.resolution_policy_enum_simple import ResolutionPolicyEnumSimple
+from autosar.models.resource_consumption import ResourceConsumption
+from autosar.models.resource_group import ResourceGroup
+from autosar.models.resource_group_subtypes_enum import ResourceGroupSubtypesEnum
+from autosar.models.rest_array_property_def import RestArrayPropertyDef
+from autosar.models.rest_boolean_property_def import RestBooleanPropertyDef
+from autosar.models.rest_element_def import RestElementDef
+from autosar.models.rest_element_def_subtypes_enum import RestElementDefSubtypesEnum
+from autosar.models.rest_endpoint_argument import RestEndpointArgument
+from autosar.models.rest_endpoint_delete import RestEndpointDelete
+from autosar.models.rest_endpoint_get import RestEndpointGet
+from autosar.models.rest_endpoint_post import RestEndpointPost
+from autosar.models.rest_endpoint_put import RestEndpointPut
+from autosar.models.rest_enumerator_def import RestEnumeratorDef
+from autosar.models.rest_http_port_prototype_mapping import RestHttpPortPrototypeMapping
+from autosar.models.rest_integer_property_def import RestIntegerPropertyDef
+from autosar.models.rest_number_property_def import RestNumberPropertyDef
+from autosar.models.rest_object_ref import RestObjectRef
+from autosar.models.rest_resource_def import RestResourceDef
+from autosar.models.rest_service_interface import RestServiceInterface
+from autosar.models.rest_string_property_def import RestStringPropertyDef
+from autosar.models.rest_system_triggered_event import RestSystemTriggeredEvent
+from autosar.models.resume_position import ResumePosition
+from autosar.models.resume_position_simple import ResumePositionSimple
+from autosar.models.revision_label_string import RevisionLabelString
+from autosar.models.role_based_bsw_module_entry_assignment import RoleBasedBswModuleEntryAssignment
+from autosar.models.role_based_data_assignment import RoleBasedDataAssignment
+from autosar.models.role_based_data_type_assignment import RoleBasedDataTypeAssignment
+from autosar.models.role_based_mc_data_assignment import RoleBasedMcDataAssignment
+from autosar.models.role_based_port_assignment import RoleBasedPortAssignment
+from autosar.models.role_based_resource_dependency import RoleBasedResourceDependency
+from autosar.models.root_sw_cluster_design_component_prototype import RootSwClusterDesignComponentPrototype
+from autosar.models.root_sw_cluster_design_component_prototype_subtypes_enum import RootSwClusterDesignComponentPrototypeSubtypesEnum
+from autosar.models.root_sw_component_prototype import RootSwComponentPrototype
+from autosar.models.root_sw_component_prototype_subtypes_enum import RootSwComponentPrototypeSubtypesEnum
+from autosar.models.root_sw_composition_prototype import RootSwCompositionPrototype
+from autosar.models.root_sw_composition_prototype_subtypes_enum import RootSwCompositionPrototypeSubtypesEnum
+from autosar.models.rough_estimate_heap_usage import RoughEstimateHeapUsage
+from autosar.models.rough_estimate_of_execution_time import RoughEstimateOfExecutionTime
+from autosar.models.rough_estimate_stack_usage import RoughEstimateStackUsage
+from autosar.models.row import Row
+from autosar.models.rpt_access_enum import RptAccessEnum
+from autosar.models.rpt_access_enum_simple import RptAccessEnumSimple
+from autosar.models.rpt_component import RptComponent
+from autosar.models.rpt_container import RptContainer
+from autosar.models.rpt_enabler_impl_type_enum import RptEnablerImplTypeEnum
+from autosar.models.rpt_enabler_impl_type_enum_simple import RptEnablerImplTypeEnumSimple
+from autosar.models.rpt_executable_entity import RptExecutableEntity
+from autosar.models.rpt_executable_entity_event import RptExecutableEntityEvent
+from autosar.models.rpt_executable_entity_properties import RptExecutableEntityProperties
+from autosar.models.rpt_execution_context import RptExecutionContext
+from autosar.models.rpt_execution_context_subtypes_enum import RptExecutionContextSubtypesEnum
+from autosar.models.rpt_execution_control_enum import RptExecutionControlEnum
+from autosar.models.rpt_execution_control_enum_simple import RptExecutionControlEnumSimple
+from autosar.models.rpt_hook import RptHook
+from autosar.models.rpt_impl_policy import RptImplPolicy
+from autosar.models.rpt_preparation_enum import RptPreparationEnum
+from autosar.models.rpt_preparation_enum_simple import RptPreparationEnumSimple
+from autosar.models.rpt_profile import RptProfile
+from autosar.models.rpt_profile_subtypes_enum import RptProfileSubtypesEnum
+from autosar.models.rpt_service_point import RptServicePoint
+from autosar.models.rpt_service_point_enum import RptServicePointEnum
+from autosar.models.rpt_service_point_enum_simple import RptServicePointEnumSimple
+from autosar.models.rpt_service_point_subtypes_enum import RptServicePointSubtypesEnum
+from autosar.models.rpt_support_data import RptSupportData
+from autosar.models.rpt_sw_prototyping_access import RptSwPrototypingAccess
+from autosar.models.rte_api_return_value_provision_enum import RteApiReturnValueProvisionEnum
+from autosar.models.rte_api_return_value_provision_enum_simple import RteApiReturnValueProvisionEnumSimple
+from autosar.models.rte_event_in_ecu_instance_ref import RteEventInEcuInstanceRef
+from autosar.models.rte_event_subtypes_enum import RteEventSubtypesEnum
+from autosar.models.rte_plugin_props import RtePluginProps
+from autosar.models.rtp_tp import RtpTp
+from autosar.models.rule_arguments import RuleArguments
+from autosar.models.rule_based_axis_cont import RuleBasedAxisCont
+from autosar.models.rule_based_value_cont import RuleBasedValueCont
+from autosar.models.rule_based_value_specification import RuleBasedValueSpecification
+from autosar.models.run_mode import RunMode
+from autosar.models.run_mode_simple import RunModeSimple
+from autosar.models.runnable_entity import RunnableEntity
+from autosar.models.runnable_entity_argument import RunnableEntityArgument
+from autosar.models.runnable_entity_group import RunnableEntityGroup
+from autosar.models.runnable_entity_group_subtypes_enum import RunnableEntityGroupSubtypesEnum
+from autosar.models.runnable_entity_in_composition_instance_ref import RunnableEntityInCompositionInstanceRef
+from autosar.models.runnable_entity_subtypes_enum import RunnableEntitySubtypesEnum
+from autosar.models.runtime_address_configuration_enum import RuntimeAddressConfigurationEnum
+from autosar.models.runtime_address_configuration_enum_simple import RuntimeAddressConfigurationEnumSimple
+from autosar.models.runtime_error import RuntimeError
+from autosar.models.rx_accept_contained_i_pdu_enum import RxAcceptContainedIPduEnum
+from autosar.models.rx_accept_contained_i_pdu_enum_simple import RxAcceptContainedIPduEnumSimple
+from autosar.models.rx_identifier_range import RxIdentifierRange
+from autosar.models.save_configuration_entry import SaveConfigurationEntry
+from autosar.models.scale_constr import ScaleConstr
+from autosar.models.scale_constr_validity_enum import ScaleConstrValidityEnum
+from autosar.models.scale_constr_validity_enum_simple import ScaleConstrValidityEnumSimple
+from autosar.models.sd import Sd
+from autosar.models.sd_client_config import SdClientConfig
+from autosar.models.sd_server_config import SdServerConfig
+from autosar.models.sdf import Sdf
+from autosar.models.sdg_aggregation_with_variation import SdgAggregationWithVariation
+from autosar.models.sdg_caption import SdgCaption
+from autosar.models.sdg_caption_subtypes_enum import SdgCaptionSubtypesEnum
+from autosar.models.sdg_class import SdgClass
+from autosar.models.sdg_class_subtypes_enum import SdgClassSubtypesEnum
+from autosar.models.sdg_contents import SdgContents
+from autosar.models.sdg_def import SdgDef
+from autosar.models.sdg_def_subtypes_enum import SdgDefSubtypesEnum
+from autosar.models.sdg_foreign_reference import SdgForeignReference
+from autosar.models.sdg_foreign_reference_with_variation import SdgForeignReferenceWithVariation
+from autosar.models.sdg_primitive_attribute import SdgPrimitiveAttribute
+from autosar.models.sdg_primitive_attribute_with_variation import SdgPrimitiveAttributeWithVariation
+from autosar.models.sdg_reference import SdgReference
+from autosar.models.sdg_tailoring import SdgTailoring
+from autosar.models.search_intention_enum import SearchIntentionEnum
+from autosar.models.search_intention_enum_simple import SearchIntentionEnumSimple
+from autosar.models.sec_oc_crypto_service_mapping import SecOcCryptoServiceMapping
+from autosar.models.sec_oc_crypto_service_mapping_subtypes_enum import SecOcCryptoServiceMappingSubtypesEnum
+from autosar.models.sec_oc_deployment import SecOcDeployment
+from autosar.models.sec_oc_job_mapping import SecOcJobMapping
+from autosar.models.sec_oc_job_requirement import SecOcJobRequirement
+from autosar.models.sec_oc_job_requirement_subtypes_enum import SecOcJobRequirementSubtypesEnum
+from autosar.models.sec_oc_job_semantic_enum import SecOcJobSemanticEnum
+from autosar.models.sec_oc_job_semantic_enum_simple import SecOcJobSemanticEnumSimple
+from autosar.models.sec_oc_secure_com_props import SecOcSecureComProps
+from autosar.models.sec_oc_secure_com_props_subtypes_enum import SecOcSecureComPropsSubtypesEnum
+from autosar.models.section_initialization_policy_type import SectionInitializationPolicyType
+from autosar.models.section_name_prefix import SectionNamePrefix
+from autosar.models.section_name_prefix_subtypes_enum import SectionNamePrefixSubtypesEnum
+from autosar.models.secure_com_props_set import SecureComPropsSet
+from autosar.models.secure_com_props_subtypes_enum import SecureComPropsSubtypesEnum
+from autosar.models.secure_communication_authentication_props import SecureCommunicationAuthenticationProps
+from autosar.models.secure_communication_authentication_props_subtypes_enum import SecureCommunicationAuthenticationPropsSubtypesEnum
+from autosar.models.secure_communication_freshness_props import SecureCommunicationFreshnessProps
+from autosar.models.secure_communication_freshness_props_subtypes_enum import SecureCommunicationFreshnessPropsSubtypesEnum
+from autosar.models.secure_communication_props import SecureCommunicationProps
+from autosar.models.secure_communication_props_set import SecureCommunicationPropsSet
+from autosar.models.secure_on_board_communication_needs import SecureOnBoardCommunicationNeeds
+from autosar.models.secured_i_pdu import SecuredIPdu
+from autosar.models.secured_pdu_header_enum import SecuredPduHeaderEnum
+from autosar.models.secured_pdu_header_enum_simple import SecuredPduHeaderEnumSimple
+from autosar.models.security_event_aggregation_filter import SecurityEventAggregationFilter
+from autosar.models.security_event_context_data import SecurityEventContextData
+from autosar.models.security_event_context_data_source_enum import SecurityEventContextDataSourceEnum
+from autosar.models.security_event_context_data_source_enum_simple import SecurityEventContextDataSourceEnumSimple
+from autosar.models.security_event_context_mapping_application import SecurityEventContextMappingApplication
+from autosar.models.security_event_context_mapping_bsw_module import SecurityEventContextMappingBswModule
+from autosar.models.security_event_context_mapping_comm_connector import SecurityEventContextMappingCommConnector
+from autosar.models.security_event_context_mapping_functional_cluster import SecurityEventContextMappingFunctionalCluster
+from autosar.models.security_event_context_props import SecurityEventContextProps
+from autosar.models.security_event_context_props_subtypes_enum import SecurityEventContextPropsSubtypesEnum
+from autosar.models.security_event_definition import SecurityEventDefinition
+from autosar.models.security_event_definition_ref_conditional import SecurityEventDefinitionRefConditional
+from autosar.models.security_event_definition_subtypes_enum import SecurityEventDefinitionSubtypesEnum
+from autosar.models.security_event_filter_chain import SecurityEventFilterChain
+from autosar.models.security_event_filter_chain_ref_conditional import SecurityEventFilterChainRefConditional
+from autosar.models.security_event_filter_chain_subtypes_enum import SecurityEventFilterChainSubtypesEnum
+from autosar.models.security_event_mapping import SecurityEventMapping
+from autosar.models.security_event_mapping_subtypes_enum import SecurityEventMappingSubtypesEnum
+from autosar.models.security_event_one_every_n_filter import SecurityEventOneEveryNFilter
+from autosar.models.security_event_report_interface import SecurityEventReportInterface
+from autosar.models.security_event_report_to_security_event_definition_mapping import SecurityEventReportToSecurityEventDefinitionMapping
+from autosar.models.security_event_reporting_mode_enum import SecurityEventReportingModeEnum
+from autosar.models.security_event_reporting_mode_enum_simple import SecurityEventReportingModeEnumSimple
+from autosar.models.security_event_state_filter import SecurityEventStateFilter
+from autosar.models.security_event_threshold_filter import SecurityEventThresholdFilter
+from autosar.models.segment_position import SegmentPosition
+from autosar.models.send_indication_enum import SendIndicationEnum
+from autosar.models.send_indication_enum_simple import SendIndicationEnumSimple
+from autosar.models.sender_annotation import SenderAnnotation
+from autosar.models.sender_intent_enum import SenderIntentEnum
+from autosar.models.sender_intent_enum_simple import SenderIntentEnumSimple
+from autosar.models.sender_rec_record_element_mapping import (
     SenderRecArrayElementMapping,
     SenderRecArrayTypeMapping,
     SenderRecRecordElementMapping,
     SenderRecRecordTypeMapping,
-    SenderReceiverCompositeElementToSignalMapping,
-    SenderReceiverInterface,
-    SenderReceiverInterfaceSubtypesEnum,
-    SenderReceiverToSignalGroupMapping,
-    SenderReceiverToSignalMapping,
-    SensorActuatorSwComponentType,
-    SeparateSignalPath,
-    SequenceCounterMapping,
-    SerializationTechnology,
-    SerializationTechnologySubtypesEnum,
-    SerializationTechnologyEnum,
-    SerializationTechnologyEnumSimple,
-    ServerArgumentImplPolicyEnum,
-    ServerArgumentImplPolicyEnumSimple,
-    ServerComSpec,
-    ServiceEventDeploymentSubtypesEnum,
-    ServiceFieldDeploymentSubtypesEnum,
-    ServiceInstanceCollectionSet,
-    ServiceInstanceToPortPrototypeMapping,
-    ServiceInstanceToPortPrototypeMappingSubtypesEnum,
-    ServiceInstanceToSignalMapping,
-    ServiceInstanceToSignalMappingSet,
-    ServiceInterface,
-    ServiceInterfaceSubtypesEnum,
-    ServiceInterfaceDeploymentSubtypesEnum,
-    ServiceInterfaceElementSecureComConfig,
-    ServiceInterfaceElementSecureComConfigSubtypesEnum,
-    ServiceInterfaceEventMapping,
-    ServiceInterfaceFieldMapping,
-    ServiceInterfaceMapping,
-    ServiceInterfaceMappingSet,
-    ServiceInterfaceMethodMapping,
-    ServiceInterfacePedigree,
-    ServiceMethodDeploymentSubtypesEnum,
-    ServiceNeedsSubtypesEnum,
-    ServiceProviderEnum,
-    ServiceProviderEnumSimple,
-    ServiceProxySwComponentType,
-    ServiceSwComponentType,
-    ServiceTiming,
-    ServiceVersionAcceptanceKindEnum,
-    ServiceVersionAcceptanceKindEnumSimple,
-    SeverityEnum,
-    SeverityEnumSimple,
-    ShortNameFragment,
-    ShowContentEnum,
-    ShowContentEnumSimple,
-    ShowResourceAliasNameEnum,
-    ShowResourceAliasNameEnumSimple,
-    ShowResourceCategoryEnum,
-    ShowResourceCategoryEnumSimple,
-    ShowResourceLongNameEnum,
-    ShowResourceLongNameEnumSimple,
-    ShowResourceNumberEnum,
-    ShowResourceNumberEnumSimple,
-    ShowResourcePageEnum,
-    ShowResourcePageEnumSimple,
-    ShowResourceShortNameEnum,
-    ShowResourceShortNameEnumSimple,
-    ShowResourceTypeEnum,
-    ShowResourceTypeEnumSimple,
-    ShowSeeEnum,
-    ShowSeeEnumSimple,
-    SignalBasedEventElementToISignalTriggeringMapping,
-    SignalBasedFieldToISignalTriggeringMapping,
-    SignalBasedMethodToISignalTriggeringMapping,
-    SignalFanEnum,
-    SignalFanEnumSimple,
-    SignalIPduCounter,
-    SignalIPduReplication,
-    SignalServiceTranslationControlEnum,
-    SignalServiceTranslationControlEnumSimple,
-    SignalServiceTranslationElementProps,
-    SignalServiceTranslationEventProps,
-    SignalServiceTranslationProps,
-    SignalServiceTranslationPropsSet,
-    SimulatedExecutionTime,
-    SingleLanguageLongName,
-    SingleLanguageUnitNames,
-    SlOverviewParagraph,
-    SlParagraph,
-    SoAdConfig,
-    SoAdConnectorType,
-    SoAdConnectorTypeSimple,
-    SoAdProtocolType,
-    SoAdProtocolTypeSimple,
-    SoAdRoutingGroup,
-    SoAdRoutingGroupSubtypesEnum,
-    SoConIPduIdentifier,
-    SoConIPduIdentifierSubtypesEnum,
-    SoConIPduIdentifierRefConditional,
-    SocketAddress,
-    SocketAddressSubtypesEnum,
-    SocketAddressRefConditional,
-    SocketConnection,
-    SocketConnectionBundle,
-    SocketConnectionBundleSubtypesEnum,
-    SocketConnectionIpduIdentifier,
-    SocketConnectionIpduIdentifierSet,
-    SoftwareCluster,
-    SoftwareClusterSubtypesEnum,
-    SoftwareClusterDependencyCompareCondition,
-    SoftwareClusterDependencyFormula,
-    SoftwareClusterDependencyLogicalOperatorEnum,
-    SoftwareClusterDependencyLogicalOperatorEnumSimple,
-    SoftwareClusterDependencyOperatorEnum,
-    SoftwareClusterDependencyOperatorEnumSimple,
-    SoftwareClusterDesign,
-    SoftwareClusterDesignSubtypesEnum,
-    SoftwareClusterDiagnosticAddressSemanticsEnum,
-    SoftwareClusterDiagnosticAddressSemanticsEnumSimple,
-    SoftwareClusterDoipDiagnosticAddress,
-    SoftwareContext,
-    SoftwarePackage,
-    SoftwarePackageSubtypesEnum,
-    SoftwarePackageActionTypeEnum,
-    SoftwarePackageActionTypeEnumSimple,
-    SoftwarePackageActivationActionEnum,
-    SoftwarePackageActivationActionEnumSimple,
-    SoftwarePackageStep,
-    SoftwarePackageStoring,
-    SoftwarePackageStoringEnum,
-    SoftwarePackageStoringEnumSimple,
-    SomeipCollectionProps,
-    SomeipDataPrototypeTransformationProps,
-    SomeipEventDeployment,
-    SomeipEventDeploymentSubtypesEnum,
-    SomeipEventGroup,
-    SomeipEventGroupSubtypesEnum,
-    SomeipEventProps,
-    SomeipFieldDeployment,
-    SomeipMessageTypeEnum,
-    SomeipMessageTypeEnumSimple,
-    SomeipMethodDeployment,
-    SomeipMethodDeploymentSubtypesEnum,
-    SomeipMethodProps,
-    SomeipProvidedEventGroup,
-    SomeipRequiredEventGroup,
-    SomeipSdClientEventGroupTimingConfig,
-    SomeipSdClientEventGroupTimingConfigSubtypesEnum,
-    SomeipSdClientEventGroupTimingConfigRefConditional,
-    SomeipSdClientServiceInstanceConfig,
-    SomeipSdClientServiceInstanceConfigSubtypesEnum,
-    SomeipSdClientServiceInstanceConfigRefConditional,
-    SomeipSdServerEventGroupTimingConfig,
-    SomeipSdServerEventGroupTimingConfigSubtypesEnum,
-    SomeipSdServerEventGroupTimingConfigRefConditional,
-    SomeipSdServerServiceInstanceConfig,
-    SomeipSdServerServiceInstanceConfigSubtypesEnum,
-    SomeipSdServerServiceInstanceConfigRefConditional,
-    SomeipServiceDiscovery,
-    SomeipServiceInstanceToMachineMapping,
-    SomeipServiceInterfaceDeployment,
-    SomeipServiceVersion,
-    SomeipTpChannel,
-    SomeipTpChannelSubtypesEnum,
-    SomeipTpConfig,
-    SomeipTpConnection,
-    SomeipTransformationDescription,
-    SomeipTransformationISignalProps,
-    SomeipTransformationISignalPropsConditional,
-    SomeipTransformationProps,
-    SomeipTransformerSessionHandlingEnum,
-    SomeipTransformerSessionHandlingEnumSimple,
-    SpecificationDocumentScope,
-    SpecificationScope,
-    SporadicEventTriggering,
-    StandardNameEnum,
-    StandardNameEnumSimple,
-    StartupConfig,
-    StartupConfigSubtypesEnum,
-    StartupConfigSet,
-    StateDependentStartupConfig,
-    StaticPart,
-    StaticSocketConnection,
-    StaticSocketConnectionSubtypesEnum,
-    Std,
-    StdCppImplementationDataType,
-    StorageConditionStatusEnum,
-    StorageConditionStatusEnumSimple,
-    String,
-    StrongRevisionLabelString,
-    StructuredReq,
-    SubElementMapping,
-    SupervisedEntityCheckpointNeeds,
-    SupervisedEntityCheckpointNeedsSubtypesEnum,
-    SupervisedEntityCheckpointNeedsRefConditional,
-    SupervisedEntityNeeds,
-    SupervisionCheckpoint,
-    SupervisionCheckpointSubtypesEnum,
-    SupportBufferLockingEnum,
-    SupportBufferLockingEnumSimple,
-    Supscript,
-    SwAddrMethod,
-    SwAddrMethodSubtypesEnum,
-    SwAxisCont,
-    SwAxisGeneric,
-    SwAxisGrouped,
-    SwAxisIndividual,
-    SwAxisType,
-    SwAxisTypeSubtypesEnum,
-    SwBaseType,
-    SwBaseTypeSubtypesEnum,
-    SwBitRepresentation,
-    SwCalibrationAccessEnum,
-    SwCalibrationAccessEnumSimple,
-    SwCalprmAxis,
-    SwCalprmAxisSet,
-    SwCalprmRefProxy,
-    SwComponentDocumentation,
-    SwComponentPrototype,
-    SwComponentPrototypeSubtypesEnum,
-    SwComponentPrototypeAssignment,
-    SwComponentTypeSubtypesEnum,
+)
+from autosar.models.sender_receiver_composite_element_to_signal_mapping import SenderReceiverCompositeElementToSignalMapping
+from autosar.models.sender_receiver_interface import SenderReceiverInterface
+from autosar.models.sender_receiver_interface_subtypes_enum import SenderReceiverInterfaceSubtypesEnum
+from autosar.models.sender_receiver_to_signal_group_mapping import SenderReceiverToSignalGroupMapping
+from autosar.models.sender_receiver_to_signal_mapping import SenderReceiverToSignalMapping
+from autosar.models.sensor_actuator_sw_component_type import SensorActuatorSwComponentType
+from autosar.models.separate_signal_path import SeparateSignalPath
+from autosar.models.sequence_counter_mapping import SequenceCounterMapping
+from autosar.models.serialization_technology import SerializationTechnology
+from autosar.models.serialization_technology_enum import SerializationTechnologyEnum
+from autosar.models.serialization_technology_enum_simple import SerializationTechnologyEnumSimple
+from autosar.models.serialization_technology_subtypes_enum import SerializationTechnologySubtypesEnum
+from autosar.models.server_argument_impl_policy_enum import ServerArgumentImplPolicyEnum
+from autosar.models.server_argument_impl_policy_enum_simple import ServerArgumentImplPolicyEnumSimple
+from autosar.models.server_com_spec import ServerComSpec
+from autosar.models.service_event_deployment_subtypes_enum import ServiceEventDeploymentSubtypesEnum
+from autosar.models.service_field_deployment_subtypes_enum import ServiceFieldDeploymentSubtypesEnum
+from autosar.models.service_instance_collection_set import ServiceInstanceCollectionSet
+from autosar.models.service_instance_to_port_prototype_mapping import ServiceInstanceToPortPrototypeMapping
+from autosar.models.service_instance_to_port_prototype_mapping_subtypes_enum import ServiceInstanceToPortPrototypeMappingSubtypesEnum
+from autosar.models.service_instance_to_signal_mapping import ServiceInstanceToSignalMapping
+from autosar.models.service_instance_to_signal_mapping_set import ServiceInstanceToSignalMappingSet
+from autosar.models.service_interface import ServiceInterface
+from autosar.models.service_interface_deployment_subtypes_enum import ServiceInterfaceDeploymentSubtypesEnum
+from autosar.models.service_interface_element_secure_com_config import ServiceInterfaceElementSecureComConfig
+from autosar.models.service_interface_element_secure_com_config_subtypes_enum import ServiceInterfaceElementSecureComConfigSubtypesEnum
+from autosar.models.service_interface_event_mapping import ServiceInterfaceEventMapping
+from autosar.models.service_interface_field_mapping import ServiceInterfaceFieldMapping
+from autosar.models.service_interface_mapping import ServiceInterfaceMapping
+from autosar.models.service_interface_mapping_set import ServiceInterfaceMappingSet
+from autosar.models.service_interface_method_mapping import ServiceInterfaceMethodMapping
+from autosar.models.service_interface_pedigree import ServiceInterfacePedigree
+from autosar.models.service_interface_subtypes_enum import ServiceInterfaceSubtypesEnum
+from autosar.models.service_method_deployment_subtypes_enum import ServiceMethodDeploymentSubtypesEnum
+from autosar.models.service_needs_subtypes_enum import ServiceNeedsSubtypesEnum
+from autosar.models.service_provider_enum import ServiceProviderEnum
+from autosar.models.service_provider_enum_simple import ServiceProviderEnumSimple
+from autosar.models.service_proxy_sw_component_type import ServiceProxySwComponentType
+from autosar.models.service_sw_component_type import ServiceSwComponentType
+from autosar.models.service_timing import ServiceTiming
+from autosar.models.service_version_acceptance_kind_enum import ServiceVersionAcceptanceKindEnum
+from autosar.models.service_version_acceptance_kind_enum_simple import ServiceVersionAcceptanceKindEnumSimple
+from autosar.models.severity_enum import SeverityEnum
+from autosar.models.severity_enum_simple import SeverityEnumSimple
+from autosar.models.short_name_fragment import ShortNameFragment
+from autosar.models.show_content_enum import ShowContentEnum
+from autosar.models.show_content_enum_simple import ShowContentEnumSimple
+from autosar.models.show_resource_alias_name_enum import ShowResourceAliasNameEnum
+from autosar.models.show_resource_alias_name_enum_simple import ShowResourceAliasNameEnumSimple
+from autosar.models.show_resource_category_enum import ShowResourceCategoryEnum
+from autosar.models.show_resource_category_enum_simple import ShowResourceCategoryEnumSimple
+from autosar.models.show_resource_long_name_enum import ShowResourceLongNameEnum
+from autosar.models.show_resource_long_name_enum_simple import ShowResourceLongNameEnumSimple
+from autosar.models.show_resource_number_enum import ShowResourceNumberEnum
+from autosar.models.show_resource_number_enum_simple import ShowResourceNumberEnumSimple
+from autosar.models.show_resource_page_enum import ShowResourcePageEnum
+from autosar.models.show_resource_page_enum_simple import ShowResourcePageEnumSimple
+from autosar.models.show_resource_short_name_enum import ShowResourceShortNameEnum
+from autosar.models.show_resource_short_name_enum_simple import ShowResourceShortNameEnumSimple
+from autosar.models.show_resource_type_enum import ShowResourceTypeEnum
+from autosar.models.show_resource_type_enum_simple import ShowResourceTypeEnumSimple
+from autosar.models.show_see_enum import ShowSeeEnum
+from autosar.models.show_see_enum_simple import ShowSeeEnumSimple
+from autosar.models.signal_based_event_element_to_i_signal_triggering_mapping import SignalBasedEventElementToISignalTriggeringMapping
+from autosar.models.signal_based_field_to_i_signal_triggering_mapping import SignalBasedFieldToISignalTriggeringMapping
+from autosar.models.signal_based_method_to_i_signal_triggering_mapping import SignalBasedMethodToISignalTriggeringMapping
+from autosar.models.signal_fan_enum import SignalFanEnum
+from autosar.models.signal_fan_enum_simple import SignalFanEnumSimple
+from autosar.models.signal_i_pdu_counter import SignalIPduCounter
+from autosar.models.signal_i_pdu_replication import SignalIPduReplication
+from autosar.models.signal_service_translation_control_enum import SignalServiceTranslationControlEnum
+from autosar.models.signal_service_translation_control_enum_simple import SignalServiceTranslationControlEnumSimple
+from autosar.models.signal_service_translation_element_props import SignalServiceTranslationElementProps
+from autosar.models.signal_service_translation_event_props import SignalServiceTranslationEventProps
+from autosar.models.signal_service_translation_props import SignalServiceTranslationProps
+from autosar.models.signal_service_translation_props_set import SignalServiceTranslationPropsSet
+from autosar.models.simulated_execution_time import SimulatedExecutionTime
+from autosar.models.single_language_long_name import SingleLanguageLongName
+from autosar.models.single_language_unit_names import SingleLanguageUnitNames
+from autosar.models.sl_overview_paragraph import SlOverviewParagraph
+from autosar.models.sl_paragraph import SlParagraph
+from autosar.models.so_ad_config import SoAdConfig
+from autosar.models.so_ad_connector_type import SoAdConnectorType
+from autosar.models.so_ad_connector_type_simple import SoAdConnectorTypeSimple
+from autosar.models.so_ad_protocol_type import SoAdProtocolType
+from autosar.models.so_ad_protocol_type_simple import SoAdProtocolTypeSimple
+from autosar.models.so_ad_routing_group import SoAdRoutingGroup
+from autosar.models.so_ad_routing_group_subtypes_enum import SoAdRoutingGroupSubtypesEnum
+from autosar.models.so_con_i_pdu_identifier import SoConIPduIdentifier
+from autosar.models.so_con_i_pdu_identifier_ref_conditional import SoConIPduIdentifierRefConditional
+from autosar.models.so_con_i_pdu_identifier_subtypes_enum import SoConIPduIdentifierSubtypesEnum
+from autosar.models.socket_address import SocketAddress
+from autosar.models.socket_address_ref_conditional import SocketAddressRefConditional
+from autosar.models.socket_address_subtypes_enum import SocketAddressSubtypesEnum
+from autosar.models.socket_connection import SocketConnection
+from autosar.models.socket_connection_bundle import SocketConnectionBundle
+from autosar.models.socket_connection_bundle_subtypes_enum import SocketConnectionBundleSubtypesEnum
+from autosar.models.socket_connection_ipdu_identifier import SocketConnectionIpduIdentifier
+from autosar.models.socket_connection_ipdu_identifier_set import SocketConnectionIpduIdentifierSet
+from autosar.models.software_cluster import SoftwareCluster
+from autosar.models.software_cluster_dependency_compare_condition import SoftwareClusterDependencyCompareCondition
+from autosar.models.software_cluster_dependency_formula import SoftwareClusterDependencyFormula
+from autosar.models.software_cluster_dependency_logical_operator_enum import SoftwareClusterDependencyLogicalOperatorEnum
+from autosar.models.software_cluster_dependency_logical_operator_enum_simple import SoftwareClusterDependencyLogicalOperatorEnumSimple
+from autosar.models.software_cluster_dependency_operator_enum import SoftwareClusterDependencyOperatorEnum
+from autosar.models.software_cluster_dependency_operator_enum_simple import SoftwareClusterDependencyOperatorEnumSimple
+from autosar.models.software_cluster_design import SoftwareClusterDesign
+from autosar.models.software_cluster_design_subtypes_enum import SoftwareClusterDesignSubtypesEnum
+from autosar.models.software_cluster_diagnostic_address_semantics_enum import SoftwareClusterDiagnosticAddressSemanticsEnum
+from autosar.models.software_cluster_diagnostic_address_semantics_enum_simple import SoftwareClusterDiagnosticAddressSemanticsEnumSimple
+from autosar.models.software_cluster_doip_diagnostic_address import SoftwareClusterDoipDiagnosticAddress
+from autosar.models.software_cluster_subtypes_enum import SoftwareClusterSubtypesEnum
+from autosar.models.software_context import SoftwareContext
+from autosar.models.software_package import SoftwarePackage
+from autosar.models.software_package_action_type_enum import SoftwarePackageActionTypeEnum
+from autosar.models.software_package_action_type_enum_simple import SoftwarePackageActionTypeEnumSimple
+from autosar.models.software_package_activation_action_enum import SoftwarePackageActivationActionEnum
+from autosar.models.software_package_activation_action_enum_simple import SoftwarePackageActivationActionEnumSimple
+from autosar.models.software_package_step import SoftwarePackageStep
+from autosar.models.software_package_storing import SoftwarePackageStoring
+from autosar.models.software_package_storing_enum import SoftwarePackageStoringEnum
+from autosar.models.software_package_storing_enum_simple import SoftwarePackageStoringEnumSimple
+from autosar.models.software_package_subtypes_enum import SoftwarePackageSubtypesEnum
+from autosar.models.someip_collection_props import SomeipCollectionProps
+from autosar.models.someip_data_prototype_transformation_props import SomeipDataPrototypeTransformationProps
+from autosar.models.someip_event_deployment import SomeipEventDeployment
+from autosar.models.someip_event_deployment_subtypes_enum import SomeipEventDeploymentSubtypesEnum
+from autosar.models.someip_event_group import SomeipEventGroup
+from autosar.models.someip_event_group_subtypes_enum import SomeipEventGroupSubtypesEnum
+from autosar.models.someip_event_props import SomeipEventProps
+from autosar.models.someip_field_deployment import SomeipFieldDeployment
+from autosar.models.someip_message_type_enum import SomeipMessageTypeEnum
+from autosar.models.someip_message_type_enum_simple import SomeipMessageTypeEnumSimple
+from autosar.models.someip_method_deployment import SomeipMethodDeployment
+from autosar.models.someip_method_deployment_subtypes_enum import SomeipMethodDeploymentSubtypesEnum
+from autosar.models.someip_method_props import SomeipMethodProps
+from autosar.models.someip_provided_event_group import SomeipProvidedEventGroup
+from autosar.models.someip_required_event_group import SomeipRequiredEventGroup
+from autosar.models.someip_sd_client_event_group_timing_config import SomeipSdClientEventGroupTimingConfig
+from autosar.models.someip_sd_client_event_group_timing_config_ref_conditional import SomeipSdClientEventGroupTimingConfigRefConditional
+from autosar.models.someip_sd_client_event_group_timing_config_subtypes_enum import SomeipSdClientEventGroupTimingConfigSubtypesEnum
+from autosar.models.someip_sd_client_service_instance_config import SomeipSdClientServiceInstanceConfig
+from autosar.models.someip_sd_client_service_instance_config_ref_conditional import SomeipSdClientServiceInstanceConfigRefConditional
+from autosar.models.someip_sd_client_service_instance_config_subtypes_enum import SomeipSdClientServiceInstanceConfigSubtypesEnum
+from autosar.models.someip_sd_server_event_group_timing_config import SomeipSdServerEventGroupTimingConfig
+from autosar.models.someip_sd_server_event_group_timing_config_ref_conditional import SomeipSdServerEventGroupTimingConfigRefConditional
+from autosar.models.someip_sd_server_event_group_timing_config_subtypes_enum import SomeipSdServerEventGroupTimingConfigSubtypesEnum
+from autosar.models.someip_sd_server_service_instance_config import SomeipSdServerServiceInstanceConfig
+from autosar.models.someip_sd_server_service_instance_config_ref_conditional import SomeipSdServerServiceInstanceConfigRefConditional
+from autosar.models.someip_sd_server_service_instance_config_subtypes_enum import SomeipSdServerServiceInstanceConfigSubtypesEnum
+from autosar.models.someip_service_discovery import SomeipServiceDiscovery
+from autosar.models.someip_service_instance_to_machine_mapping import SomeipServiceInstanceToMachineMapping
+from autosar.models.someip_service_interface_deployment import SomeipServiceInterfaceDeployment
+from autosar.models.someip_service_version import SomeipServiceVersion
+from autosar.models.someip_tp_channel import SomeipTpChannel
+from autosar.models.someip_tp_channel_subtypes_enum import SomeipTpChannelSubtypesEnum
+from autosar.models.someip_tp_config import SomeipTpConfig
+from autosar.models.someip_tp_connection import SomeipTpConnection
+from autosar.models.someip_transformation_description import SomeipTransformationDescription
+from autosar.models.someip_transformation_i_signal_props import SomeipTransformationISignalProps
+from autosar.models.someip_transformation_i_signal_props_conditional import SomeipTransformationISignalPropsConditional
+from autosar.models.someip_transformation_props import SomeipTransformationProps
+from autosar.models.someip_transformer_session_handling_enum import SomeipTransformerSessionHandlingEnum
+from autosar.models.someip_transformer_session_handling_enum_simple import SomeipTransformerSessionHandlingEnumSimple
+from autosar.models.space_value import SpaceValue
+from autosar.models.specification_document_scope import SpecificationDocumentScope
+from autosar.models.specification_scope import SpecificationScope
+from autosar.models.sporadic_event_triggering import SporadicEventTriggering
+from autosar.models.standard_name_enum import StandardNameEnum
+from autosar.models.standard_name_enum_simple import StandardNameEnumSimple
+from autosar.models.startup_config import StartupConfig
+from autosar.models.startup_config_set import StartupConfigSet
+from autosar.models.startup_config_subtypes_enum import StartupConfigSubtypesEnum
+from autosar.models.state_dependent_startup_config import StateDependentStartupConfig
+from autosar.models.static_part import StaticPart
+from autosar.models.static_socket_connection import StaticSocketConnection
+from autosar.models.static_socket_connection_subtypes_enum import StaticSocketConnectionSubtypesEnum
+from autosar.models.std import Std
+from autosar.models.std_cpp_implementation_data_type import StdCppImplementationDataType
+from autosar.models.storage_condition_status_enum import StorageConditionStatusEnum
+from autosar.models.storage_condition_status_enum_simple import StorageConditionStatusEnumSimple
+from autosar.models.string import String
+from autosar.models.strong_revision_label_string import StrongRevisionLabelString
+from autosar.models.sub_element_mapping import SubElementMapping
+from autosar.models.supervised_entity_checkpoint_needs import SupervisedEntityCheckpointNeeds
+from autosar.models.supervised_entity_checkpoint_needs_ref_conditional import SupervisedEntityCheckpointNeedsRefConditional
+from autosar.models.supervised_entity_checkpoint_needs_subtypes_enum import SupervisedEntityCheckpointNeedsSubtypesEnum
+from autosar.models.supervised_entity_needs import SupervisedEntityNeeds
+from autosar.models.supervision_checkpoint import SupervisionCheckpoint
+from autosar.models.supervision_checkpoint_subtypes_enum import SupervisionCheckpointSubtypesEnum
+from autosar.models.support_buffer_locking_enum import SupportBufferLockingEnum
+from autosar.models.support_buffer_locking_enum_simple import SupportBufferLockingEnumSimple
+from autosar.models.supscript import Supscript
+from autosar.models.sw_addr_method import SwAddrMethod
+from autosar.models.sw_addr_method_subtypes_enum import SwAddrMethodSubtypesEnum
+from autosar.models.sw_axis_cont import SwAxisCont
+from autosar.models.sw_axis_generic import SwAxisGeneric
+from autosar.models.sw_axis_grouped import SwAxisGrouped
+from autosar.models.sw_axis_individual import SwAxisIndividual
+from autosar.models.sw_axis_type import SwAxisType
+from autosar.models.sw_axis_type_subtypes_enum import SwAxisTypeSubtypesEnum
+from autosar.models.sw_base_type import SwBaseType
+from autosar.models.sw_base_type_subtypes_enum import SwBaseTypeSubtypesEnum
+from autosar.models.sw_bit_representation import SwBitRepresentation
+from autosar.models.sw_calibration_access_enum import SwCalibrationAccessEnum
+from autosar.models.sw_calibration_access_enum_simple import SwCalibrationAccessEnumSimple
+from autosar.models.sw_calprm_axis import SwCalprmAxis
+from autosar.models.sw_calprm_axis_set import SwCalprmAxisSet
+from autosar.models.sw_calprm_ref_proxy import SwCalprmRefProxy
+from autosar.models.sw_component_documentation import SwComponentDocumentation
+from autosar.models.sw_component_prototype import SwComponentPrototype
+from autosar.models.sw_component_prototype_assignment import SwComponentPrototypeAssignment
+from autosar.models.sw_component_prototype_subtypes_enum import SwComponentPrototypeSubtypesEnum
+from autosar.models.sw_component_type_subtypes_enum import SwComponentTypeSubtypesEnum
+from autosar.models.sw_data_dependency import SwDataDependency
+from autosar.models.sw_data_dependency_args import SwDataDependencyArgs
+from autosar.models.sw_generic_axis_param import SwGenericAxisParam
+from autosar.models.sw_generic_axis_param_type import SwGenericAxisParamType
+from autosar.models.sw_generic_axis_param_type_subtypes_enum import SwGenericAxisParamTypeSubtypesEnum
+from autosar.models.sw_impl_policy_enum import SwImplPolicyEnum
+from autosar.models.sw_impl_policy_enum_simple import SwImplPolicyEnumSimple
+from autosar.models.sw_pointer_target_props import (
     SwDataDefProps,
     SwDataDefPropsConditional,
-    SwDataDependency,
-    SwDataDependencyArgs,
-    SwGenericAxisParam,
-    SwGenericAxisParamType,
-    SwGenericAxisParamTypeSubtypesEnum,
-    SwImplPolicyEnum,
-    SwImplPolicyEnumSimple,
     SwPointerTargetProps,
-    SwRecordLayout,
-    SwRecordLayoutSubtypesEnum,
-    SwRecordLayoutGroup,
-    SwRecordLayoutGroupContent,
-    SwRecordLayoutV,
-    SwServiceArg,
-    SwServiceImplPolicyEnum,
-    SwServiceImplPolicyEnumSimple,
-    SwServiceReentranceEnum,
-    SwServiceReentranceEnumSimple,
-    SwSystemconst,
-    SwSystemconstSubtypesEnum,
-    SwSystemconstValue,
-    SwSystemconstantValueSet,
-    SwSystemconstantValueSetSubtypesEnum,
-    SwTextProps,
-    SwValueCont,
-    SwValues,
-    SwVariableAccessImplPolicyEnum,
-    SwVariableAccessImplPolicyEnumSimple,
-    SwVariableRefProxy,
-    SwcBswMapping,
-    SwcBswMappingSubtypesEnum,
-    SwcBswRunnableMapping,
-    SwcBswSynchronizedModeGroupPrototype,
-    SwcBswSynchronizedTrigger,
-    SwcExclusiveAreaPolicy,
-    SwcImplementation,
-    SwcImplementationSubtypesEnum,
-    SwcInternalBehavior,
-    SwcInternalBehaviorSubtypesEnum,
-    SwcModeManagerErrorEvent,
-    SwcModeSwitchEvent,
-    SwcModeSwitchEventSubtypesEnum,
-    SwcServiceDependency,
-    SwcServiceDependencySubtypesEnum,
-    SwcServiceDependencyInCompositionInstanceRef,
-    SwcServiceDependencyInExecutableInstanceRef,
-    SwcServiceDependencyInSystemInstanceRef,
-    SwcTiming,
-    SwcToApplicationPartitionMapping,
-    SwcToEcuMapping,
-    SwcToEcuMappingSubtypesEnum,
-    SwcToEcuMappingConstraint,
-    SwcToEcuMappingConstraintType,
-    SwcToEcuMappingConstraintTypeSimple,
-    SwcToImplMapping,
-    SwcToSwcOperationArguments,
-    SwcToSwcOperationArgumentsDirectionEnum,
-    SwcToSwcOperationArgumentsDirectionEnumSimple,
-    SwcToSwcSignal,
-    SymbolProps,
-    SymbolString,
-    SymbolicNameProps,
-    SyncTimeBaseMgrUserNeeds,
-    SynchronizationPointConstraint,
-    SynchronizationTimingConstraint,
-    SynchronizationTypeEnum,
-    SynchronizationTypeEnumSimple,
-    SynchronizedTimeBaseConsumer,
-    SynchronizedTimeBaseConsumerInterface,
-    SynchronizedTimeBaseProvider,
-    SynchronizedTimeBaseProviderSubtypesEnum,
-    SynchronizedTimeBaseProviderInterface,
-    SynchronousServerCallPoint,
-    System,
-    SystemSubtypesEnum,
-    SystemMapping,
-    SystemMemoryUsage,
-    SystemSignal,
-    SystemSignalSubtypesEnum,
-    SystemSignalGroup,
-    SystemSignalGroupSubtypesEnum,
-    SystemTiming,
-    Table,
-    TableSeparatorString,
-    TagWithOptionalValue,
-    TargetIPduRef,
-    Tbody,
-    TcpIpIcmpv4Props,
-    TcpIpIcmpv6Props,
-    TcpOptionFilterList,
-    TcpOptionFilterListSubtypesEnum,
-    TcpOptionFilterSet,
-    TcpProps,
-    TcpRoleEnum,
-    TcpRoleEnumSimple,
-    TcpTp,
-    TdCpSoftwareClusterMapping,
-    TdCpSoftwareClusterMappingSet,
-    TdCpSoftwareClusterResourceMapping,
-    TdEventBswInternalBehavior,
-    TdEventBswInternalBehaviorTypeEnum,
-    TdEventBswInternalBehaviorTypeEnumSimple,
-    TdEventBswModeDeclaration,
-    TdEventBswModeDeclarationTypeEnum,
-    TdEventBswModeDeclarationTypeEnumSimple,
-    TdEventBswModule,
-    TdEventBswModuleTypeEnum,
-    TdEventBswModuleTypeEnumSimple,
-    TdEventComplex,
-    TdEventFrClusterCycleStart,
-    TdEventFrame,
-    TdEventFrameEthernet,
-    TdEventFrameEthernetTypeEnum,
-    TdEventFrameEthernetTypeEnumSimple,
-    TdEventFrameTypeEnum,
-    TdEventFrameTypeEnumSimple,
-    TdEventIPdu,
-    TdEventIPduTypeEnum,
-    TdEventIPduTypeEnumSimple,
-    TdEventISignal,
-    TdEventISignalTypeEnum,
-    TdEventISignalTypeEnumSimple,
-    TdEventModeDeclaration,
-    TdEventModeDeclarationTypeEnum,
-    TdEventModeDeclarationTypeEnumSimple,
-    TdEventOccurrenceExpression,
-    TdEventOccurrenceExpressionFormula,
-    TdEventOperation,
-    TdEventOperationTypeEnum,
-    TdEventOperationTypeEnumSimple,
-    TdEventServiceInstanceDiscovery,
-    TdEventServiceInstanceDiscoveryTypeEnum,
-    TdEventServiceInstanceDiscoveryTypeEnumSimple,
-    TdEventServiceInstanceEvent,
-    TdEventServiceInstanceEventTypeEnum,
-    TdEventServiceInstanceEventTypeEnumSimple,
-    TdEventServiceInstanceField,
-    TdEventServiceInstanceFieldTypeEnum,
-    TdEventServiceInstanceFieldTypeEnumSimple,
-    TdEventServiceInstanceMethod,
-    TdEventServiceInstanceMethodTypeEnum,
-    TdEventServiceInstanceMethodTypeEnumSimple,
-    TdEventSwcSubtypesEnum,
-    TdEventSwcInternalBehavior,
-    TdEventSwcInternalBehaviorReference,
-    TdEventSwcInternalBehaviorTypeEnum,
-    TdEventSwcInternalBehaviorTypeEnumSimple,
-    TdEventTrigger,
-    TdEventTriggerTypeEnum,
-    TdEventTriggerTypeEnumSimple,
-    TdEventTtCanCycleStart,
-    TdEventVariableDataPrototype,
-    TdEventVariableDataPrototypeTypeEnum,
-    TdEventVariableDataPrototypeTypeEnumSimple,
-    TdEventVfbSubtypesEnum,
-    TdEventVfbReference,
-    TdHeaderIdRange,
-    TerminationBehaviorEnum,
-    TerminationBehaviorEnumSimple,
-    TextTableMapping,
-    TextTableValuePair,
-    TextValueSpecification,
-    TextualCondition,
-    Tgroup,
-    TimeBaseProviderToPersistencyMapping,
-    TimeBaseResourceSubtypesEnum,
-    TimeBaseResourceRefConditional,
-    TimeRangeType,
-    TimeSyncClientConfiguration,
-    TimeSyncCorrection,
-    TimeSyncModuleInstantiation,
-    TimeSyncPortPrototypeToTimeBaseMapping,
-    TimeSyncServerConfiguration,
-    TimeSyncServerConfigurationSubtypesEnum,
-    TimeSyncTechnologyEnum,
-    TimeSyncTechnologyEnumSimple,
-    TimeSynchronization,
-    TimeSynchronizationKindEnum,
-    TimeSynchronizationKindEnumSimple,
-    TimeValue,
-    TimeValueValueVariationPoint,
-    TimingCondition,
-    TimingConditionSubtypesEnum,
-    TimingConditionFormula,
-    TimingDescriptionSubtypesEnum,
-    TimingDescriptionEventSubtypesEnum,
-    TimingDescriptionEventChain,
-    TimingDescriptionEventChainSubtypesEnum,
-    TimingEvent,
-    TimingEventSubtypesEnum,
-    TimingExtensionResource,
-    TimingModeInstance,
-    TimingModeInstanceSubtypesEnum,
-    TlsCryptoCipherSuite,
-    TlsCryptoCipherSuiteSubtypesEnum,
-    TlsCryptoServiceMapping,
-    TlsCryptoServiceMappingSubtypesEnum,
-    TlsDeployment,
-    TlsIamRemoteSubject,
-    TlsJobMapping,
-    TlsPskIdentity,
-    TlsSecureComProps,
-    TlsSecureComPropsSubtypesEnum,
-    TlsVersionEnum,
-    TlsVersionEnumSimple,
-    TlvDataIdDefinition,
-    TlvDataIdDefinitionSet,
-    TlvDataIdDefinitionSetSubtypesEnum,
-    Topic1,
-    TopicContent,
-    TopicContentOrMsrQuery,
-    TopicOrMsrQuery,
-    TpAckType,
-    TpAckTypeSimple,
-    TpAddress,
-    TpAddressSubtypesEnum,
-    TpConnectionIdent,
-    TpConnectionIdentSubtypesEnum,
-    TpPort,
-    TraceableSubtypesEnum,
-    TraceableTable,
-    TraceableText,
-    TraceableTextSubtypesEnum,
-    TransferPropertyEnum,
-    TransferPropertyEnumSimple,
-    TransformationPropsSubtypesEnum,
-    TransformationPropsSet,
-    TransformationPropsToServiceInterfaceElementMapping,
-    TransformationPropsToServiceInterfaceElementMappingSet,
-    TransformationTechnology,
-    TransformationTechnologySubtypesEnum,
-    TransformerClassEnum,
-    TransformerClassEnumSimple,
-    TransformerHardErrorEvent,
-    TransientFault,
-    TransmissionAcknowledgementRequest,
-    TransmissionComSpecProps,
-    TransmissionModeCondition,
-    TransmissionModeDeclaration,
-    TransmissionModeDefinitionEnum,
-    TransmissionModeDefinitionEnumSimple,
-    TransmissionModeTiming,
-    TransportLayerProtocolEnum,
-    TransportLayerProtocolEnumSimple,
-    Trigger,
-    TriggerSubtypesEnum,
-    TriggerIPduSendCondition,
-    TriggerInSystemInstanceRef,
-    TriggerInterface,
-    TriggerInterfaceMapping,
-    TriggerMapping,
-    TriggerMode,
-    TriggerModeSimple,
-    TriggerPortAnnotation,
-    TriggerRefConditional,
-    TriggerToSignalMapping,
-    TrustedPlatformExecutableLaunchBehaviorEnum,
-    TrustedPlatformExecutableLaunchBehaviorEnumSimple,
-    Tt,
-    TtcanAbsolutelyScheduledTiming,
-    TtcanCluster,
-    TtcanClusterSubtypesEnum,
-    TtcanClusterConditional,
-    TtcanCommunicationConnector,
-    TtcanCommunicationController,
-    TtcanCommunicationControllerConditional,
-    TtcanPhysicalChannel,
-    TtcanTriggerType,
-    TtcanTriggerTypeSimple,
-    UcmDescription,
-    UcmDescriptionSubtypesEnum,
-    UcmModuleInstantiation,
-    UcmModuleInstantiationSubtypesEnum,
-    UcmStep,
-    UdpChecksumCalculationEnum,
-    UdpChecksumCalculationEnumSimple,
-    UdpCollectionTriggerEnum,
-    UdpCollectionTriggerEnumSimple,
-    UdpNmCluster,
-    UdpNmClusterSubtypesEnum,
-    UdpNmClusterCoupling,
-    UdpNmEcu,
-    UdpNmNetworkConfiguration,
-    UdpNmNode,
-    UdpProps,
-    UdpTp,
-    UnassignFrameId,
-    Unit,
-    UnitSubtypesEnum,
-    UnitGroup,
-    UnitGroupSubtypesEnum,
-    UnlimitedInteger,
-    UnlimitedIntegerValueVariationPoint,
-    UnresolvedReferenceRestrictionWithSeverity,
-    UploadablePackageElementSubtypesEnum,
-    UriString,
-    Url,
-    UserDefinedCluster,
-    UserDefinedClusterConditional,
-    UserDefinedCommunicationConnector,
-    UserDefinedCommunicationController,
-    UserDefinedCommunicationControllerConditional,
-    UserDefinedEthernetFrame,
-    UserDefinedEventDeployment,
-    UserDefinedFieldDeployment,
-    UserDefinedGlobalTimeMaster,
-    UserDefinedGlobalTimeSlave,
-    UserDefinedIPdu,
-    UserDefinedMethodDeployment,
-    UserDefinedPdu,
-    UserDefinedPhysicalChannel,
-    UserDefinedServiceInstanceToMachineMapping,
-    UserDefinedServiceInterfaceDeployment,
-    UserDefinedTransformationComSpecProps,
-    UserDefinedTransformationDescription,
-    UserDefinedTransformationISignalProps,
-    UserDefinedTransformationISignalPropsConditional,
-    UserDefinedTransformationProps,
-    V2XFacUserNeeds,
-    V2XMUserNeeds,
-    V2XSupportEnum,
-    V2XSupportEnumSimple,
-    ValignEnum,
-    ValignEnumSimple,
-    ValueGroup,
-    ValueList,
-    ValueRestrictionWithSeverity,
-    VariableAccess,
-    VariableAccessSubtypesEnum,
-    VariableAccessInEcuInstanceRef,
-    VariableAccessScopeEnum,
-    VariableAccessScopeEnumSimple,
-    VariableAndParameterInterfaceMapping,
-    VariableDataPrototype,
-    VariableDataPrototypeSubtypesEnum,
-    VariableDataPrototypeInCompositionInstanceRef,
-    VariableDataPrototypeInSystemInstanceRef,
-    VariableInAtomicSwcTypeInstanceRef,
-    VariableInComponentInstanceRef,
-    VariationPoint,
-    VariationPointProxy,
-    VariationRestrictionWithSeverity,
-    VehicleDriverNotification,
-    VehicleDriverNotificationEnum,
-    VehicleDriverNotificationEnumSimple,
-    VehiclePackage,
-    VehicleRolloutStep,
-    VendorSpecificServiceNeeds,
-    VerbatimString,
-    VerbatimStringPlain,
-    VfbTiming,
-    ViewMap,
-    ViewMapSet,
-    ViewTokens,
-    VlanConfig,
-    VlanMembership,
-    WaitPoint,
-    WarningIndicatorRequestedBitNeeds,
-    WorstCaseHeapUsage,
-    WorstCaseStackUsage,
-    XcpPdu,
-    Xdoc,
-    Xfile,
-    XmlSpaceEnum,
-    XmlSpaceEnumSimple,
-    Xref,
-    XrefTarget,
 )
-from autosar.models.xml import SpaceValue
+from autosar.models.sw_record_layout import SwRecordLayout
+from autosar.models.sw_record_layout_group import SwRecordLayoutGroup
+from autosar.models.sw_record_layout_group_content import SwRecordLayoutGroupContent
+from autosar.models.sw_record_layout_subtypes_enum import SwRecordLayoutSubtypesEnum
+from autosar.models.sw_record_layout_v import SwRecordLayoutV
+from autosar.models.sw_service_arg import SwServiceArg
+from autosar.models.sw_service_impl_policy_enum import SwServiceImplPolicyEnum
+from autosar.models.sw_service_impl_policy_enum_simple import SwServiceImplPolicyEnumSimple
+from autosar.models.sw_service_reentrance_enum import SwServiceReentranceEnum
+from autosar.models.sw_service_reentrance_enum_simple import SwServiceReentranceEnumSimple
+from autosar.models.sw_systemconst import SwSystemconst
+from autosar.models.sw_systemconst_subtypes_enum import SwSystemconstSubtypesEnum
+from autosar.models.sw_systemconst_value import SwSystemconstValue
+from autosar.models.sw_systemconstant_value_set import SwSystemconstantValueSet
+from autosar.models.sw_systemconstant_value_set_subtypes_enum import SwSystemconstantValueSetSubtypesEnum
+from autosar.models.sw_text_props import SwTextProps
+from autosar.models.sw_value_cont import SwValueCont
+from autosar.models.sw_values import SwValues
+from autosar.models.sw_variable_access_impl_policy_enum import SwVariableAccessImplPolicyEnum
+from autosar.models.sw_variable_access_impl_policy_enum_simple import SwVariableAccessImplPolicyEnumSimple
+from autosar.models.sw_variable_ref_proxy import SwVariableRefProxy
+from autosar.models.swc_bsw_mapping import SwcBswMapping
+from autosar.models.swc_bsw_mapping_subtypes_enum import SwcBswMappingSubtypesEnum
+from autosar.models.swc_bsw_runnable_mapping import SwcBswRunnableMapping
+from autosar.models.swc_bsw_synchronized_mode_group_prototype import SwcBswSynchronizedModeGroupPrototype
+from autosar.models.swc_bsw_synchronized_trigger import SwcBswSynchronizedTrigger
+from autosar.models.swc_exclusive_area_policy import SwcExclusiveAreaPolicy
+from autosar.models.swc_implementation import SwcImplementation
+from autosar.models.swc_implementation_subtypes_enum import SwcImplementationSubtypesEnum
+from autosar.models.swc_internal_behavior import SwcInternalBehavior
+from autosar.models.swc_internal_behavior_subtypes_enum import SwcInternalBehaviorSubtypesEnum
+from autosar.models.swc_mode_manager_error_event import SwcModeManagerErrorEvent
+from autosar.models.swc_mode_switch_event import SwcModeSwitchEvent
+from autosar.models.swc_mode_switch_event_subtypes_enum import SwcModeSwitchEventSubtypesEnum
+from autosar.models.swc_service_dependency import SwcServiceDependency
+from autosar.models.swc_service_dependency_in_composition_instance_ref import SwcServiceDependencyInCompositionInstanceRef
+from autosar.models.swc_service_dependency_in_executable_instance_ref import SwcServiceDependencyInExecutableInstanceRef
+from autosar.models.swc_service_dependency_in_system_instance_ref import SwcServiceDependencyInSystemInstanceRef
+from autosar.models.swc_service_dependency_subtypes_enum import SwcServiceDependencySubtypesEnum
+from autosar.models.swc_timing import SwcTiming
+from autosar.models.swc_to_application_partition_mapping import SwcToApplicationPartitionMapping
+from autosar.models.swc_to_ecu_mapping import SwcToEcuMapping
+from autosar.models.swc_to_ecu_mapping_constraint import SwcToEcuMappingConstraint
+from autosar.models.swc_to_ecu_mapping_constraint_type import SwcToEcuMappingConstraintType
+from autosar.models.swc_to_ecu_mapping_constraint_type_simple import SwcToEcuMappingConstraintTypeSimple
+from autosar.models.swc_to_ecu_mapping_subtypes_enum import SwcToEcuMappingSubtypesEnum
+from autosar.models.swc_to_impl_mapping import SwcToImplMapping
+from autosar.models.swc_to_swc_operation_arguments import SwcToSwcOperationArguments
+from autosar.models.swc_to_swc_operation_arguments_direction_enum import SwcToSwcOperationArgumentsDirectionEnum
+from autosar.models.swc_to_swc_operation_arguments_direction_enum_simple import SwcToSwcOperationArgumentsDirectionEnumSimple
+from autosar.models.swc_to_swc_signal import SwcToSwcSignal
+from autosar.models.symbol_props import SymbolProps
+from autosar.models.symbol_string import SymbolString
+from autosar.models.symbolic_name_props import SymbolicNameProps
+from autosar.models.sync_time_base_mgr_user_needs import SyncTimeBaseMgrUserNeeds
+from autosar.models.synchronization_point_constraint import SynchronizationPointConstraint
+from autosar.models.synchronization_timing_constraint import SynchronizationTimingConstraint
+from autosar.models.synchronization_type_enum import SynchronizationTypeEnum
+from autosar.models.synchronization_type_enum_simple import SynchronizationTypeEnumSimple
+from autosar.models.synchronized_time_base_consumer import SynchronizedTimeBaseConsumer
+from autosar.models.synchronized_time_base_consumer_interface import SynchronizedTimeBaseConsumerInterface
+from autosar.models.synchronized_time_base_provider import SynchronizedTimeBaseProvider
+from autosar.models.synchronized_time_base_provider_interface import SynchronizedTimeBaseProviderInterface
+from autosar.models.synchronized_time_base_provider_subtypes_enum import SynchronizedTimeBaseProviderSubtypesEnum
+from autosar.models.synchronous_server_call_point import SynchronousServerCallPoint
+from autosar.models.system import System
+from autosar.models.system_mapping import SystemMapping
+from autosar.models.system_memory_usage import SystemMemoryUsage
+from autosar.models.system_signal import SystemSignal
+from autosar.models.system_signal_group import SystemSignalGroup
+from autosar.models.system_signal_group_subtypes_enum import SystemSignalGroupSubtypesEnum
+from autosar.models.system_signal_subtypes_enum import SystemSignalSubtypesEnum
+from autosar.models.system_subtypes_enum import SystemSubtypesEnum
+from autosar.models.system_timing import SystemTiming
+from autosar.models.table import Table
+from autosar.models.table_separator_string import TableSeparatorString
+from autosar.models.tag_with_optional_value import TagWithOptionalValue
+from autosar.models.target_i_pdu_ref import TargetIPduRef
+from autosar.models.tbody import Tbody
+from autosar.models.tcp_ip_icmpv_4_props import TcpIpIcmpv4Props
+from autosar.models.tcp_ip_icmpv_6_props import TcpIpIcmpv6Props
+from autosar.models.tcp_option_filter_list import TcpOptionFilterList
+from autosar.models.tcp_option_filter_list_subtypes_enum import TcpOptionFilterListSubtypesEnum
+from autosar.models.tcp_option_filter_set import TcpOptionFilterSet
+from autosar.models.tcp_props import TcpProps
+from autosar.models.tcp_role_enum import TcpRoleEnum
+from autosar.models.tcp_role_enum_simple import TcpRoleEnumSimple
+from autosar.models.tcp_tp import TcpTp
+from autosar.models.td_cp_software_cluster_mapping import TdCpSoftwareClusterMapping
+from autosar.models.td_cp_software_cluster_mapping_set import TdCpSoftwareClusterMappingSet
+from autosar.models.td_cp_software_cluster_resource_mapping import TdCpSoftwareClusterResourceMapping
+from autosar.models.td_event_bsw_internal_behavior import TdEventBswInternalBehavior
+from autosar.models.td_event_bsw_internal_behavior_type_enum import TdEventBswInternalBehaviorTypeEnum
+from autosar.models.td_event_bsw_internal_behavior_type_enum_simple import TdEventBswInternalBehaviorTypeEnumSimple
+from autosar.models.td_event_bsw_mode_declaration import TdEventBswModeDeclaration
+from autosar.models.td_event_bsw_mode_declaration_type_enum import TdEventBswModeDeclarationTypeEnum
+from autosar.models.td_event_bsw_mode_declaration_type_enum_simple import TdEventBswModeDeclarationTypeEnumSimple
+from autosar.models.td_event_bsw_module import TdEventBswModule
+from autosar.models.td_event_bsw_module_type_enum import TdEventBswModuleTypeEnum
+from autosar.models.td_event_bsw_module_type_enum_simple import TdEventBswModuleTypeEnumSimple
+from autosar.models.td_event_complex import TdEventComplex
+from autosar.models.td_event_fr_cluster_cycle_start import TdEventFrClusterCycleStart
+from autosar.models.td_event_frame import TdEventFrame
+from autosar.models.td_event_frame_ethernet import TdEventFrameEthernet
+from autosar.models.td_event_frame_ethernet_type_enum import TdEventFrameEthernetTypeEnum
+from autosar.models.td_event_frame_ethernet_type_enum_simple import TdEventFrameEthernetTypeEnumSimple
+from autosar.models.td_event_frame_type_enum import TdEventFrameTypeEnum
+from autosar.models.td_event_frame_type_enum_simple import TdEventFrameTypeEnumSimple
+from autosar.models.td_event_i_pdu import TdEventIPdu
+from autosar.models.td_event_i_pdu_type_enum import TdEventIPduTypeEnum
+from autosar.models.td_event_i_pdu_type_enum_simple import TdEventIPduTypeEnumSimple
+from autosar.models.td_event_i_signal import TdEventISignal
+from autosar.models.td_event_i_signal_type_enum import TdEventISignalTypeEnum
+from autosar.models.td_event_i_signal_type_enum_simple import TdEventISignalTypeEnumSimple
+from autosar.models.td_event_mode_declaration import TdEventModeDeclaration
+from autosar.models.td_event_mode_declaration_type_enum import TdEventModeDeclarationTypeEnum
+from autosar.models.td_event_mode_declaration_type_enum_simple import TdEventModeDeclarationTypeEnumSimple
+from autosar.models.td_event_occurrence_expression import TdEventOccurrenceExpression
+from autosar.models.td_event_occurrence_expression_formula import TdEventOccurrenceExpressionFormula
+from autosar.models.td_event_operation import TdEventOperation
+from autosar.models.td_event_operation_type_enum import TdEventOperationTypeEnum
+from autosar.models.td_event_operation_type_enum_simple import TdEventOperationTypeEnumSimple
+from autosar.models.td_event_service_instance_discovery import TdEventServiceInstanceDiscovery
+from autosar.models.td_event_service_instance_discovery_type_enum import TdEventServiceInstanceDiscoveryTypeEnum
+from autosar.models.td_event_service_instance_discovery_type_enum_simple import TdEventServiceInstanceDiscoveryTypeEnumSimple
+from autosar.models.td_event_service_instance_event import TdEventServiceInstanceEvent
+from autosar.models.td_event_service_instance_event_type_enum import TdEventServiceInstanceEventTypeEnum
+from autosar.models.td_event_service_instance_event_type_enum_simple import TdEventServiceInstanceEventTypeEnumSimple
+from autosar.models.td_event_service_instance_field import TdEventServiceInstanceField
+from autosar.models.td_event_service_instance_field_type_enum import TdEventServiceInstanceFieldTypeEnum
+from autosar.models.td_event_service_instance_field_type_enum_simple import TdEventServiceInstanceFieldTypeEnumSimple
+from autosar.models.td_event_service_instance_method import TdEventServiceInstanceMethod
+from autosar.models.td_event_service_instance_method_type_enum import TdEventServiceInstanceMethodTypeEnum
+from autosar.models.td_event_service_instance_method_type_enum_simple import TdEventServiceInstanceMethodTypeEnumSimple
+from autosar.models.td_event_swc_internal_behavior import TdEventSwcInternalBehavior
+from autosar.models.td_event_swc_internal_behavior_reference import TdEventSwcInternalBehaviorReference
+from autosar.models.td_event_swc_internal_behavior_type_enum import TdEventSwcInternalBehaviorTypeEnum
+from autosar.models.td_event_swc_internal_behavior_type_enum_simple import TdEventSwcInternalBehaviorTypeEnumSimple
+from autosar.models.td_event_swc_subtypes_enum import TdEventSwcSubtypesEnum
+from autosar.models.td_event_trigger import TdEventTrigger
+from autosar.models.td_event_trigger_type_enum import TdEventTriggerTypeEnum
+from autosar.models.td_event_trigger_type_enum_simple import TdEventTriggerTypeEnumSimple
+from autosar.models.td_event_tt_can_cycle_start import TdEventTtCanCycleStart
+from autosar.models.td_event_variable_data_prototype import TdEventVariableDataPrototype
+from autosar.models.td_event_variable_data_prototype_type_enum import TdEventVariableDataPrototypeTypeEnum
+from autosar.models.td_event_variable_data_prototype_type_enum_simple import TdEventVariableDataPrototypeTypeEnumSimple
+from autosar.models.td_event_vfb_reference import TdEventVfbReference
+from autosar.models.td_event_vfb_subtypes_enum import TdEventVfbSubtypesEnum
+from autosar.models.td_header_id_range import TdHeaderIdRange
+from autosar.models.termination_behavior_enum import TerminationBehaviorEnum
+from autosar.models.termination_behavior_enum_simple import TerminationBehaviorEnumSimple
+from autosar.models.text_table_mapping import TextTableMapping
+from autosar.models.text_table_value_pair import TextTableValuePair
+from autosar.models.text_value_specification import TextValueSpecification
+from autosar.models.textual_condition import TextualCondition
+from autosar.models.tgroup import Tgroup
+from autosar.models.time_base_provider_to_persistency_mapping import TimeBaseProviderToPersistencyMapping
+from autosar.models.time_base_resource_ref_conditional import TimeBaseResourceRefConditional
+from autosar.models.time_base_resource_subtypes_enum import TimeBaseResourceSubtypesEnum
+from autosar.models.time_range_type import TimeRangeType
+from autosar.models.time_sync_client_configuration import TimeSyncClientConfiguration
+from autosar.models.time_sync_correction import TimeSyncCorrection
+from autosar.models.time_sync_module_instantiation import TimeSyncModuleInstantiation
+from autosar.models.time_sync_port_prototype_to_time_base_mapping import TimeSyncPortPrototypeToTimeBaseMapping
+from autosar.models.time_sync_server_configuration import TimeSyncServerConfiguration
+from autosar.models.time_sync_server_configuration_subtypes_enum import TimeSyncServerConfigurationSubtypesEnum
+from autosar.models.time_sync_technology_enum import TimeSyncTechnologyEnum
+from autosar.models.time_sync_technology_enum_simple import TimeSyncTechnologyEnumSimple
+from autosar.models.time_synchronization import TimeSynchronization
+from autosar.models.time_synchronization_kind_enum import TimeSynchronizationKindEnum
+from autosar.models.time_synchronization_kind_enum_simple import TimeSynchronizationKindEnumSimple
+from autosar.models.time_value import TimeValue
+from autosar.models.time_value_value_variation_point import TimeValueValueVariationPoint
+from autosar.models.timing_condition import TimingCondition
+from autosar.models.timing_condition_formula import TimingConditionFormula
+from autosar.models.timing_condition_subtypes_enum import TimingConditionSubtypesEnum
+from autosar.models.timing_description_event_chain import TimingDescriptionEventChain
+from autosar.models.timing_description_event_chain_subtypes_enum import TimingDescriptionEventChainSubtypesEnum
+from autosar.models.timing_description_event_subtypes_enum import TimingDescriptionEventSubtypesEnum
+from autosar.models.timing_description_subtypes_enum import TimingDescriptionSubtypesEnum
+from autosar.models.timing_event import TimingEvent
+from autosar.models.timing_event_subtypes_enum import TimingEventSubtypesEnum
+from autosar.models.timing_extension_resource import TimingExtensionResource
+from autosar.models.timing_mode_instance import TimingModeInstance
+from autosar.models.timing_mode_instance_subtypes_enum import TimingModeInstanceSubtypesEnum
+from autosar.models.tls_crypto_cipher_suite import TlsCryptoCipherSuite
+from autosar.models.tls_crypto_cipher_suite_subtypes_enum import TlsCryptoCipherSuiteSubtypesEnum
+from autosar.models.tls_crypto_service_mapping import TlsCryptoServiceMapping
+from autosar.models.tls_crypto_service_mapping_subtypes_enum import TlsCryptoServiceMappingSubtypesEnum
+from autosar.models.tls_deployment import TlsDeployment
+from autosar.models.tls_iam_remote_subject import TlsIamRemoteSubject
+from autosar.models.tls_job_mapping import TlsJobMapping
+from autosar.models.tls_psk_identity import TlsPskIdentity
+from autosar.models.tls_secure_com_props import TlsSecureComProps
+from autosar.models.tls_secure_com_props_subtypes_enum import TlsSecureComPropsSubtypesEnum
+from autosar.models.tls_version_enum import TlsVersionEnum
+from autosar.models.tls_version_enum_simple import TlsVersionEnumSimple
+from autosar.models.tlv_data_id_definition import TlvDataIdDefinition
+from autosar.models.tlv_data_id_definition_set import TlvDataIdDefinitionSet
+from autosar.models.tlv_data_id_definition_set_subtypes_enum import TlvDataIdDefinitionSetSubtypesEnum
+from autosar.models.topic_1 import Topic1
+from autosar.models.topic_content import TopicContent
+from autosar.models.topic_content_or_msr_query import TopicContentOrMsrQuery
+from autosar.models.topic_or_msr_query import TopicOrMsrQuery
+from autosar.models.tp_ack_type import TpAckType
+from autosar.models.tp_ack_type_simple import TpAckTypeSimple
+from autosar.models.tp_address import TpAddress
+from autosar.models.tp_address_subtypes_enum import TpAddressSubtypesEnum
+from autosar.models.tp_connection_ident import TpConnectionIdent
+from autosar.models.tp_connection_ident_subtypes_enum import TpConnectionIdentSubtypesEnum
+from autosar.models.tp_port import TpPort
+from autosar.models.traceable_subtypes_enum import TraceableSubtypesEnum
+from autosar.models.traceable_table import TraceableTable
+from autosar.models.traceable_text_subtypes_enum import TraceableTextSubtypesEnum
+from autosar.models.transfer_property_enum import TransferPropertyEnum
+from autosar.models.transfer_property_enum_simple import TransferPropertyEnumSimple
+from autosar.models.transformation_props_set import TransformationPropsSet
+from autosar.models.transformation_props_subtypes_enum import TransformationPropsSubtypesEnum
+from autosar.models.transformation_props_to_service_interface_element_mapping import TransformationPropsToServiceInterfaceElementMapping
+from autosar.models.transformation_props_to_service_interface_element_mapping_set import TransformationPropsToServiceInterfaceElementMappingSet
+from autosar.models.transformation_technology import TransformationTechnology
+from autosar.models.transformation_technology_subtypes_enum import TransformationTechnologySubtypesEnum
+from autosar.models.transformer_class_enum import TransformerClassEnum
+from autosar.models.transformer_class_enum_simple import TransformerClassEnumSimple
+from autosar.models.transformer_hard_error_event import TransformerHardErrorEvent
+from autosar.models.transient_fault import TransientFault
+from autosar.models.transmission_acknowledgement_request import TransmissionAcknowledgementRequest
+from autosar.models.transmission_com_spec_props import TransmissionComSpecProps
+from autosar.models.transmission_mode_condition import TransmissionModeCondition
+from autosar.models.transmission_mode_declaration import TransmissionModeDeclaration
+from autosar.models.transmission_mode_definition_enum import TransmissionModeDefinitionEnum
+from autosar.models.transmission_mode_definition_enum_simple import TransmissionModeDefinitionEnumSimple
+from autosar.models.transmission_mode_timing import TransmissionModeTiming
+from autosar.models.transport_layer_protocol_enum import TransportLayerProtocolEnum
+from autosar.models.transport_layer_protocol_enum_simple import TransportLayerProtocolEnumSimple
+from autosar.models.trigger import Trigger
+from autosar.models.trigger_i_pdu_send_condition import TriggerIPduSendCondition
+from autosar.models.trigger_in_system_instance_ref import TriggerInSystemInstanceRef
+from autosar.models.trigger_interface import TriggerInterface
+from autosar.models.trigger_interface_mapping import TriggerInterfaceMapping
+from autosar.models.trigger_mapping import TriggerMapping
+from autosar.models.trigger_mode import TriggerMode
+from autosar.models.trigger_mode_simple import TriggerModeSimple
+from autosar.models.trigger_port_annotation import TriggerPortAnnotation
+from autosar.models.trigger_ref_conditional import TriggerRefConditional
+from autosar.models.trigger_subtypes_enum import TriggerSubtypesEnum
+from autosar.models.trigger_to_signal_mapping import TriggerToSignalMapping
+from autosar.models.trusted_platform_executable_launch_behavior_enum import TrustedPlatformExecutableLaunchBehaviorEnum
+from autosar.models.trusted_platform_executable_launch_behavior_enum_simple import TrustedPlatformExecutableLaunchBehaviorEnumSimple
+from autosar.models.tt import Tt
+from autosar.models.ttcan_absolutely_scheduled_timing import TtcanAbsolutelyScheduledTiming
+from autosar.models.ttcan_cluster import TtcanCluster
+from autosar.models.ttcan_cluster_conditional import TtcanClusterConditional
+from autosar.models.ttcan_cluster_subtypes_enum import TtcanClusterSubtypesEnum
+from autosar.models.ttcan_communication_connector import TtcanCommunicationConnector
+from autosar.models.ttcan_communication_controller import TtcanCommunicationController
+from autosar.models.ttcan_communication_controller_conditional import TtcanCommunicationControllerConditional
+from autosar.models.ttcan_physical_channel import TtcanPhysicalChannel
+from autosar.models.ttcan_trigger_type import TtcanTriggerType
+from autosar.models.ttcan_trigger_type_simple import TtcanTriggerTypeSimple
+from autosar.models.ucm_description import UcmDescription
+from autosar.models.ucm_description_subtypes_enum import UcmDescriptionSubtypesEnum
+from autosar.models.ucm_module_instantiation import UcmModuleInstantiation
+from autosar.models.ucm_module_instantiation_subtypes_enum import UcmModuleInstantiationSubtypesEnum
+from autosar.models.ucm_step import UcmStep
+from autosar.models.udp_checksum_calculation_enum import UdpChecksumCalculationEnum
+from autosar.models.udp_checksum_calculation_enum_simple import UdpChecksumCalculationEnumSimple
+from autosar.models.udp_collection_trigger_enum import UdpCollectionTriggerEnum
+from autosar.models.udp_collection_trigger_enum_simple import UdpCollectionTriggerEnumSimple
+from autosar.models.udp_nm_cluster import UdpNmCluster
+from autosar.models.udp_nm_cluster_coupling import UdpNmClusterCoupling
+from autosar.models.udp_nm_cluster_subtypes_enum import UdpNmClusterSubtypesEnum
+from autosar.models.udp_nm_ecu import UdpNmEcu
+from autosar.models.udp_nm_network_configuration import UdpNmNetworkConfiguration
+from autosar.models.udp_nm_node import UdpNmNode
+from autosar.models.udp_props import UdpProps
+from autosar.models.udp_tp import UdpTp
+from autosar.models.unassign_frame_id import UnassignFrameId
+from autosar.models.unit import Unit
+from autosar.models.unit_group import UnitGroup
+from autosar.models.unit_group_subtypes_enum import UnitGroupSubtypesEnum
+from autosar.models.unit_subtypes_enum import UnitSubtypesEnum
+from autosar.models.unlimited_integer import UnlimitedInteger
+from autosar.models.unlimited_integer_value_variation_point import UnlimitedIntegerValueVariationPoint
+from autosar.models.unresolved_reference_restriction_with_severity import UnresolvedReferenceRestrictionWithSeverity
+from autosar.models.uploadable_package_element_subtypes_enum import UploadablePackageElementSubtypesEnum
+from autosar.models.uri_string import UriString
+from autosar.models.url import Url
+from autosar.models.user_defined_cluster import UserDefinedCluster
+from autosar.models.user_defined_cluster_conditional import UserDefinedClusterConditional
+from autosar.models.user_defined_communication_connector import UserDefinedCommunicationConnector
+from autosar.models.user_defined_communication_controller import UserDefinedCommunicationController
+from autosar.models.user_defined_communication_controller_conditional import UserDefinedCommunicationControllerConditional
+from autosar.models.user_defined_ethernet_frame import UserDefinedEthernetFrame
+from autosar.models.user_defined_event_deployment import UserDefinedEventDeployment
+from autosar.models.user_defined_field_deployment import UserDefinedFieldDeployment
+from autosar.models.user_defined_global_time_master import UserDefinedGlobalTimeMaster
+from autosar.models.user_defined_global_time_slave import UserDefinedGlobalTimeSlave
+from autosar.models.user_defined_i_pdu import UserDefinedIPdu
+from autosar.models.user_defined_method_deployment import UserDefinedMethodDeployment
+from autosar.models.user_defined_pdu import UserDefinedPdu
+from autosar.models.user_defined_physical_channel import UserDefinedPhysicalChannel
+from autosar.models.user_defined_service_instance_to_machine_mapping import UserDefinedServiceInstanceToMachineMapping
+from autosar.models.user_defined_service_interface_deployment import UserDefinedServiceInterfaceDeployment
+from autosar.models.user_defined_transformation_com_spec_props import UserDefinedTransformationComSpecProps
+from autosar.models.user_defined_transformation_description import UserDefinedTransformationDescription
+from autosar.models.user_defined_transformation_i_signal_props import UserDefinedTransformationISignalProps
+from autosar.models.user_defined_transformation_i_signal_props_conditional import UserDefinedTransformationISignalPropsConditional
+from autosar.models.user_defined_transformation_props import UserDefinedTransformationProps
+from autosar.models.v_2_x_fac_user_needs import V2XFacUserNeeds
+from autosar.models.v_2_x_m_user_needs import V2XMUserNeeds
+from autosar.models.v_2_x_support_enum import V2XSupportEnum
+from autosar.models.v_2_x_support_enum_simple import V2XSupportEnumSimple
+from autosar.models.valign_enum import ValignEnum
+from autosar.models.valign_enum_simple import ValignEnumSimple
+from autosar.models.value_group import ValueGroup
+from autosar.models.value_list import ValueList
+from autosar.models.value_restriction_with_severity import ValueRestrictionWithSeverity
+from autosar.models.variable_access import VariableAccess
+from autosar.models.variable_access_in_ecu_instance_ref import VariableAccessInEcuInstanceRef
+from autosar.models.variable_access_scope_enum import VariableAccessScopeEnum
+from autosar.models.variable_access_scope_enum_simple import VariableAccessScopeEnumSimple
+from autosar.models.variable_access_subtypes_enum import VariableAccessSubtypesEnum
+from autosar.models.variable_and_parameter_interface_mapping import VariableAndParameterInterfaceMapping
+from autosar.models.variable_data_prototype import VariableDataPrototype
+from autosar.models.variable_data_prototype_in_composition_instance_ref import VariableDataPrototypeInCompositionInstanceRef
+from autosar.models.variable_data_prototype_in_system_instance_ref import VariableDataPrototypeInSystemInstanceRef
+from autosar.models.variable_data_prototype_subtypes_enum import VariableDataPrototypeSubtypesEnum
+from autosar.models.variable_in_atomic_swc_type_instance_ref import VariableInAtomicSwcTypeInstanceRef
+from autosar.models.variable_in_component_instance_ref import VariableInComponentInstanceRef
+from autosar.models.variation_point_proxy import VariationPointProxy
+from autosar.models.variation_restriction_with_severity import VariationRestrictionWithSeverity
+from autosar.models.vehicle_driver_notification import VehicleDriverNotification
+from autosar.models.vehicle_driver_notification_enum import VehicleDriverNotificationEnum
+from autosar.models.vehicle_driver_notification_enum_simple import VehicleDriverNotificationEnumSimple
+from autosar.models.vehicle_package import VehiclePackage
+from autosar.models.vehicle_rollout_step import VehicleRolloutStep
+from autosar.models.vendor_specific_service_needs import VendorSpecificServiceNeeds
+from autosar.models.verbatim_string import VerbatimString
+from autosar.models.verbatim_string_plain import VerbatimStringPlain
+from autosar.models.vfb_timing import VfbTiming
+from autosar.models.view_map import ViewMap
+from autosar.models.view_map_set import ViewMapSet
+from autosar.models.view_tokens import ViewTokens
+from autosar.models.vlan_config import VlanConfig
+from autosar.models.vlan_membership import VlanMembership
+from autosar.models.wait_point import WaitPoint
+from autosar.models.warning_indicator_requested_bit_needs import WarningIndicatorRequestedBitNeeds
+from autosar.models.worst_case_heap_usage import WorstCaseHeapUsage
+from autosar.models.worst_case_stack_usage import WorstCaseStackUsage
+from autosar.models.xcp_pdu import XcpPdu
+from autosar.models.xdoc import Xdoc
+from autosar.models.xfile import Xfile
+from autosar.models.xml_space_enum import XmlSpaceEnum
+from autosar.models.xml_space_enum_simple import XmlSpaceEnumSimple
+from autosar.models.xref import Xref
+from autosar.models.xref_target import XrefTarget
 
 __all__ = [
     "AbsoluteTolerance",
     "AbstractAccessPointSubtypesEnum",
-    "AbstractClassTailoring",
     "AbstractEventSubtypesEnum",
     "AbstractIamRemoteSubjectSubtypesEnum",
     "AbstractImplementationDataTypeSubtypesEnum",
@@ -2885,10 +2900,8 @@ __all__ = [
     "AdditionalBindingTimeEnum",
     "AdditionalBindingTimeEnumSimple",
     "Address",
-    "AdminData",
     "AgeConstraint",
     "AggregationCondition",
-    "AggregationTailoring",
     "AggregationTailoringSubtypesEnum",
     "AliasNameAssignment",
     "AliasNameSet",
@@ -2899,16 +2912,37 @@ __all__ = [
     "Allocator",
     "AllocatorSubtypesEnum",
     "AnalyzedExecutionTime",
+    "AdminData",
     "Annotation",
+    "BlueprintFormula",
+    "BlueprintGenerator",
+    "DefItem",
+    "DefList",
+    "DocumentationBlock",
+    "Item",
+    "LabeledItem",
+    "LabeledList",
+    "ListType",
+    "MlFigure",
+    "MlFormula",
+    "MsrQueryP2",
+    "MultiLanguageParagraph",
+    "MultiLanguageVerbatim",
+    "Note",
+    "ReferrableRefConditional",
+    "Sdg",
+    "StructuredReq",
+    "TraceableText",
+    "VariationPoint",
     "AnyInstanceRef",
     "AnyServiceInstanceId",
     "AnyVersionString",
     "ApApplicationError",
-    "ApApplicationErrorSubtypesEnum",
     "ApApplicationErrorDomain",
     "ApApplicationErrorDomainSubtypesEnum",
     "ApApplicationErrorSet",
     "ApApplicationErrorSetSubtypesEnum",
+    "ApApplicationErrorSubtypesEnum",
     "ApSomeipTransformationProps",
     "ApSomeipTransformationPropsSubtypesEnum",
     "ApiPrincipleEnum",
@@ -2918,8 +2952,6 @@ __all__ = [
     "ApplicationArrayElementSubtypesEnum",
     "ApplicationAssocMapDataType",
     "ApplicationAssocMapElement",
-    "ApplicationAssocMapElementValueSpecification",
-    "ApplicationAssocMapValueSpecification",
     "ApplicationCompositeDataTypeSubElementRef",
     "ApplicationCompositeElementDataPrototypeSubtypesEnum",
     "ApplicationCompositeElementInPortInterfaceInstanceRef",
@@ -2927,12 +2959,12 @@ __all__ = [
     "ApplicationDataTypeSubtypesEnum",
     "ApplicationDeferredDataType",
     "ApplicationEndpoint",
-    "ApplicationEndpointSubtypesEnum",
     "ApplicationEndpointRefConditional",
+    "ApplicationEndpointSubtypesEnum",
     "ApplicationEntry",
     "ApplicationError",
-    "ApplicationErrorSubtypesEnum",
     "ApplicationErrorMapping",
+    "ApplicationErrorSubtypesEnum",
     "ApplicationPartition",
     "ApplicationPartitionSubtypesEnum",
     "ApplicationPartitionToEcuPartitionMapping",
@@ -2965,7 +2997,6 @@ __all__ = [
     "ArraySizeHandlingEnumSimple",
     "ArraySizeSemanticsEnum",
     "ArraySizeSemanticsEnumSimple",
-    "ArrayValueSpecification",
     "AsamRecordLayoutSemantics",
     "AssemblySwConnector",
     "AssignFrameId",
@@ -2988,8 +3019,8 @@ __all__ = [
     "AutoCollectEnumSimple",
     "Autosar",
     "AutosarDataPrototypeSubtypesEnum",
-    "AutosarDataTypeSubtypesEnum",
     "AutosarDataTypeRefConditional",
+    "AutosarDataTypeSubtypesEnum",
     "AutosarEngineeringObject",
     "AutosarOperationArgumentInstance",
     "AutosarOperationArgumentInstanceSubtypesEnum",
@@ -3015,8 +3046,6 @@ __all__ = [
     "BindingTimeEnumSimple",
     "BlockState",
     "BlockStateSubtypesEnum",
-    "BlueprintFormula",
-    "BlueprintGenerator",
     "BlueprintMapping",
     "BlueprintMappingSet",
     "BlueprintPolicyList",
@@ -3058,9 +3087,9 @@ __all__ = [
     "BswInternalBehaviorSubtypesEnum",
     "BswInternalTriggerOccurredEvent",
     "BswInternalTriggeringPoint",
-    "BswInternalTriggeringPointSubtypesEnum",
     "BswInternalTriggeringPointPolicy",
     "BswInternalTriggeringPointRefConditional",
+    "BswInternalTriggeringPointSubtypesEnum",
     "BswInterruptCategory",
     "BswInterruptCategorySimple",
     "BswInterruptEntity",
@@ -3075,12 +3104,12 @@ __all__ = [
     "BswModuleClientServerEntrySubtypesEnum",
     "BswModuleDependency",
     "BswModuleDescription",
-    "BswModuleDescriptionSubtypesEnum",
     "BswModuleDescriptionRefConditional",
+    "BswModuleDescriptionSubtypesEnum",
     "BswModuleEntitySubtypesEnum",
     "BswModuleEntry",
-    "BswModuleEntrySubtypesEnum",
     "BswModuleEntryRefConditional",
+    "BswModuleEntrySubtypesEnum",
     "BswModuleTiming",
     "BswOperationInvokedEvent",
     "BswOsTaskExecutionEvent",
@@ -3100,14 +3129,14 @@ __all__ = [
     "BswVariableAccess",
     "BufferProperties",
     "BuildAction",
-    "BuildActionSubtypesEnum",
     "BuildActionEnvironment",
     "BuildActionEnvironmentSubtypesEnum",
     "BuildActionInvocator",
     "BuildActionIoElement",
     "BuildActionManifest",
-    "BuildActionManifestSubtypesEnum",
     "BuildActionManifestRefConditional",
+    "BuildActionManifestSubtypesEnum",
+    "BuildActionSubtypesEnum",
     "BuildEngineeringObject",
     "BuildTypeEnum",
     "BuildTypeEnumSimple",
@@ -3151,8 +3180,8 @@ __all__ = [
     "CanFrameTxBehaviorEnumSimple",
     "CanGlobalTimeDomainProps",
     "CanNmCluster",
-    "CanNmClusterSubtypesEnum",
     "CanNmClusterCoupling",
+    "CanNmClusterSubtypesEnum",
     "CanNmEcu",
     "CanNmNode",
     "CanNmRangeConfig",
@@ -3162,9 +3191,9 @@ __all__ = [
     "CanTpAddressingFormatType",
     "CanTpAddressingFormatTypeSimple",
     "CanTpChannel",
-    "CanTpChannelSubtypesEnum",
     "CanTpChannelModeType",
     "CanTpChannelModeTypeSimple",
+    "CanTpChannelSubtypesEnum",
     "CanTpConfig",
     "CanTpConnection",
     "CanTpEcu",
@@ -3172,7 +3201,6 @@ __all__ = [
     "CanTpNodeSubtypesEnum",
     "Caption",
     "CategoryString",
-    "Chapter",
     "ChapterContent",
     "ChapterEnumBreak",
     "ChapterEnumBreakSimple",
@@ -3180,7 +3208,6 @@ __all__ = [
     "ChapterOrMsrQuery",
     "CheckpointTransition",
     "CheckpointTransitionSubtypesEnum",
-    "ClassContentConditional",
     "ClientComSpec",
     "ClientIdDefinition",
     "ClientIdDefinitionSet",
@@ -3191,17 +3218,17 @@ __all__ = [
     "ClientIntentEnumSimple",
     "ClientServerAnnotation",
     "ClientServerApplicationErrorMapping",
-    "ClientServerArrayElementMapping",
-    "ClientServerArrayTypeMapping",
     "ClientServerInterface",
-    "ClientServerInterfaceSubtypesEnum",
     "ClientServerInterfaceMapping",
+    "ClientServerInterfaceSubtypesEnum",
     "ClientServerInterfaceToBswModuleEntryBlueprintMapping",
     "ClientServerOperation",
-    "ClientServerOperationSubtypesEnum",
     "ClientServerOperationBlueprintMapping",
     "ClientServerOperationMapping",
+    "ClientServerOperationSubtypesEnum",
     "ClientServerPrimitiveTypeMapping",
+    "ClientServerArrayElementMapping",
+    "ClientServerArrayTypeMapping",
     "ClientServerRecordElementMapping",
     "ClientServerRecordTypeMapping",
     "ClientServerToSignalGroupMapping",
@@ -3234,10 +3261,10 @@ __all__ = [
     "CommonSignalPath",
     "CommunicationBufferLocking",
     "CommunicationClusterSubtypesEnum",
-    "CommunicationConnectorSubtypesEnum",
     "CommunicationConnectorRefConditional",
-    "CommunicationControllerSubtypesEnum",
+    "CommunicationConnectorSubtypesEnum",
     "CommunicationControllerMapping",
+    "CommunicationControllerSubtypesEnum",
     "CommunicationDirectionType",
     "CommunicationDirectionTypeSimple",
     "Compiler",
@@ -3248,12 +3275,11 @@ __all__ = [
     "ComponentSeparation",
     "CompositeInterface",
     "CompositeNetworkRepresentation",
-    "CompositeRuleBasedValueSpecification",
     "CompositionPPortToExecutablePPortMapping",
     "CompositionRPortToExecutableRPortMapping",
     "CompositionSwComponentType",
-    "CompositionSwComponentTypeSubtypesEnum",
     "CompositionSwComponentTypeRefConditional",
+    "CompositionSwComponentTypeSubtypesEnum",
     "Compu",
     "CompuConst",
     "CompuConstFormulaContent",
@@ -3268,7 +3294,11 @@ __all__ = [
     "CompuScaleConstantContents",
     "CompuScaleRationalFormula",
     "CompuScales",
+    "AbstractClassTailoring",
+    "AggregationTailoring",
+    "ClassContentConditional",
     "ConcreteClassTailoring",
+    "ReferenceTailoring",
     "ConcretePatternEventTriggering",
     "ConditionByFormula",
     "ConditionalChangeNad",
@@ -3277,19 +3307,19 @@ __all__ = [
     "ConsistencyNeedsBlueprintSet",
     "ConstantReference",
     "ConstantSpecification",
-    "ConstantSpecificationSubtypesEnum",
     "ConstantSpecificationMapping",
     "ConstantSpecificationMappingSet",
     "ConstantSpecificationMappingSetSubtypesEnum",
+    "ConstantSpecificationSubtypesEnum",
     "ConstraintTailoring",
     "ConsumedEventGroup",
     "ConsumedEventGroupSubtypesEnum",
     "ConsumedProvidedServiceInstanceGroup",
-    "ConsumedProvidedServiceInstanceGroupSubtypesEnum",
     "ConsumedProvidedServiceInstanceGroupRefConditional",
+    "ConsumedProvidedServiceInstanceGroupSubtypesEnum",
     "ConsumedServiceInstance",
-    "ConsumedServiceInstanceSubtypesEnum",
     "ConsumedServiceInstanceRefConditional",
+    "ConsumedServiceInstanceSubtypesEnum",
     "ContainedIPduCollectionSemanticsEnum",
     "ContainedIPduCollectionSemanticsEnumSimple",
     "ContainedIPduProps",
@@ -3302,7 +3332,6 @@ __all__ = [
     "CouplingElementEnum",
     "CouplingElementEnumSimple",
     "CouplingPort",
-    "CouplingPortSubtypesEnum",
     "CouplingPortConnection",
     "CouplingPortDetails",
     "CouplingPortFifo",
@@ -3317,43 +3346,44 @@ __all__ = [
     "CouplingPortSchedulerSubtypesEnum",
     "CouplingPortShaper",
     "CouplingPortStructuralElementSubtypesEnum",
+    "CouplingPortSubtypesEnum",
     "CouplingPortTrafficClassAssignment",
     "CpSoftwareCluster",
-    "CpSoftwareClusterSubtypesEnum",
     "CpSoftwareClusterBinaryManifestDescriptor",
     "CpSoftwareClusterCommunicationResource",
     "CpSoftwareClusterCommunicationResourceSubtypesEnum",
     "CpSoftwareClusterMappingSet",
     "CpSoftwareClusterRefConditional",
-    "CpSoftwareClusterResourceSubtypesEnum",
     "CpSoftwareClusterResourcePool",
+    "CpSoftwareClusterResourceSubtypesEnum",
     "CpSoftwareClusterResourceToApplicationPartitionMapping",
     "CpSoftwareClusterServiceResource",
     "CpSoftwareClusterServiceResourceSubtypesEnum",
+    "CpSoftwareClusterSubtypesEnum",
     "CpSoftwareClusterToEcuInstanceMapping",
     "CpSoftwareClusterToResourceMapping",
-    "CppImplementationDataTypeSubtypesEnum",
     "CppImplementationDataTypeContextTargetSubtypesEnum",
     "CppImplementationDataTypeElement",
-    "CppImplementationDataTypeElementSubtypesEnum",
     "CppImplementationDataTypeElementQualifier",
+    "CppImplementationDataTypeElementSubtypesEnum",
+    "CppImplementationDataTypeSubtypesEnum",
     "CppTemplateArgument",
     "CryptoCertificate",
-    "CryptoCertificateSubtypesEnum",
     "CryptoCertificateAlgorithmFamilyEnum",
     "CryptoCertificateAlgorithmFamilyEnumSimple",
     "CryptoCertificateFormatEnum",
     "CryptoCertificateFormatEnumSimple",
     "CryptoCertificateInterface",
     "CryptoCertificateKeySlotNeeds",
+    "CryptoCertificateSubtypesEnum",
     "CryptoCertificateToCryptoKeySlotMapping",
     "CryptoCertificateToPortPrototypeMapping",
     "CryptoKeyManagementNeeds",
     "CryptoKeySlot",
-    "CryptoKeySlotSubtypesEnum",
     "CryptoKeySlotAllowedModification",
     "CryptoKeySlotContentAllowedUsage",
     "CryptoKeySlotInterface",
+    "CryptoKeySlotSubtypesEnum",
     "CryptoKeySlotToPortPrototypeMapping",
     "CryptoKeySlotTypeEnum",
     "CryptoKeySlotTypeEnumSimple",
@@ -3364,17 +3394,17 @@ __all__ = [
     "CryptoObjectTypeEnum",
     "CryptoObjectTypeEnumSimple",
     "CryptoProvider",
-    "CryptoProviderSubtypesEnum",
     "CryptoProviderInterface",
+    "CryptoProviderSubtypesEnum",
     "CryptoProviderToPortPrototypeMapping",
     "CryptoRPortComSpec",
     "CryptoServiceCertificate",
     "CryptoServiceCertificateSubtypesEnum",
     "CryptoServiceJobNeeds",
     "CryptoServiceKey",
-    "CryptoServiceKeySubtypesEnum",
     "CryptoServiceKeyGenerationEnum",
     "CryptoServiceKeyGenerationEnumSimple",
+    "CryptoServiceKeySubtypesEnum",
     "CryptoServiceNeeds",
     "CryptoServicePrimitive",
     "CryptoServicePrimitiveSubtypesEnum",
@@ -3392,8 +3422,8 @@ __all__ = [
     "CyclicTiming",
     "DataComProps",
     "DataConstr",
-    "DataConstrSubtypesEnum",
     "DataConstrRule",
+    "DataConstrSubtypesEnum",
     "DataDumpEntry",
     "DataExchangePoint",
     "DataExchangePointKind",
@@ -3408,7 +3438,6 @@ __all__ = [
     "DataInterfaceSubtypesEnum",
     "DataLimitKindEnum",
     "DataLimitKindEnumSimple",
-    "DataPrototypeSubtypesEnum",
     "DataPrototypeGroup",
     "DataPrototypeGroupSubtypesEnum",
     "DataPrototypeInClientServerInterfaceInstanceRef",
@@ -3419,13 +3448,13 @@ __all__ = [
     "DataPrototypeInServiceInterfaceRef",
     "DataPrototypeInSystemInstanceRef",
     "DataPrototypeMapping",
+    "DataPrototypeSubtypesEnum",
     "DataPrototypeTransformationProps",
     "DataPrototypeWithApplicationDataTypeInSystemRef",
     "DataReceiveErrorEvent",
     "DataReceivedEvent",
     "DataSendCompletedEvent",
     "DataTransformation",
-    "DataTransformationSubtypesEnum",
     "DataTransformationErrorHandlingEnum",
     "DataTransformationErrorHandlingEnumSimple",
     "DataTransformationKindEnum",
@@ -3434,6 +3463,7 @@ __all__ = [
     "DataTransformationSet",
     "DataTransformationStatusForwardingEnum",
     "DataTransformationStatusForwardingEnumSimple",
+    "DataTransformationSubtypesEnum",
     "DataTypeMap",
     "DataTypeMappingSet",
     "DataTypeMappingSetSubtypesEnum",
@@ -3452,8 +3482,6 @@ __all__ = [
     "DdsServiceInterfaceDeployment",
     "DdsServiceVersion",
     "DeadlineSupervision",
-    "DefItem",
-    "DefList",
     "DefaultValueApplicationStrategyEnum",
     "DefaultValueApplicationStrategyEnumSimple",
     "DefaultValueElement",
@@ -3464,9 +3492,9 @@ __all__ = [
     "DependencyUsageEnum",
     "DependencyUsageEnumSimple",
     "DeterministicClient",
-    "DeterministicClientSubtypesEnum",
     "DeterministicClientResource",
     "DeterministicClientResourceNeeds",
+    "DeterministicClientSubtypesEnum",
     "DevelopmentError",
     "DhcpServerConfiguration",
     "Dhcpv6Props",
@@ -3486,11 +3514,11 @@ __all__ = [
     "DiagnosticAudienceEnum",
     "DiagnosticAudienceEnumSimple",
     "DiagnosticClearCondition",
-    "DiagnosticClearConditionSubtypesEnum",
     "DiagnosticClearConditionGroup",
     "DiagnosticClearConditionGroupSubtypesEnum",
     "DiagnosticClearConditionNeeds",
     "DiagnosticClearConditionPortMapping",
+    "DiagnosticClearConditionSubtypesEnum",
     "DiagnosticClearDiagnosticInformation",
     "DiagnosticClearDiagnosticInformationClass",
     "DiagnosticClearDiagnosticInformationClassSubtypesEnum",
@@ -3508,8 +3536,8 @@ __all__ = [
     "DiagnosticComControlClassSubtypesEnum",
     "DiagnosticComControlSpecificChannel",
     "DiagnosticComControlSubNodeChannel",
-    "DiagnosticCommonElementSubtypesEnum",
     "DiagnosticCommonElementRefConditional",
+    "DiagnosticCommonElementSubtypesEnum",
     "DiagnosticCommonProps",
     "DiagnosticCommonPropsConditional",
     "DiagnosticCommunicationManagerNeeds",
@@ -3521,8 +3549,8 @@ __all__ = [
     "DiagnosticConnectedIndicatorBehaviorEnum",
     "DiagnosticConnectedIndicatorBehaviorEnumSimple",
     "DiagnosticConnection",
-    "DiagnosticConnectionSubtypesEnum",
     "DiagnosticConnectionRefConditional",
+    "DiagnosticConnectionSubtypesEnum",
     "DiagnosticContributionSet",
     "DiagnosticContributionSetSubtypesEnum",
     "DiagnosticControlDtcSetting",
@@ -3537,15 +3565,15 @@ __all__ = [
     "DiagnosticDataCaptureEnumSimple",
     "DiagnosticDataChangeTrigger",
     "DiagnosticDataElement",
-    "DiagnosticDataElementSubtypesEnum",
     "DiagnosticDataElementInterface",
+    "DiagnosticDataElementSubtypesEnum",
     "DiagnosticDataIdentifier",
-    "DiagnosticDataIdentifierSubtypesEnum",
     "DiagnosticDataIdentifierGenericInterface",
     "DiagnosticDataIdentifierInterface",
     "DiagnosticDataIdentifierSet",
-    "DiagnosticDataIdentifierSetSubtypesEnum",
     "DiagnosticDataIdentifierSetRefConditional",
+    "DiagnosticDataIdentifierSetSubtypesEnum",
+    "DiagnosticDataIdentifierSubtypesEnum",
     "DiagnosticDataTransfer",
     "DiagnosticDataTransferClass",
     "DiagnosticDataTransferClassSubtypesEnum",
@@ -3578,12 +3606,12 @@ __all__ = [
     "DiagnosticEcuResetClassSubtypesEnum",
     "DiagnosticEcuResetInterface",
     "DiagnosticEnableCondition",
-    "DiagnosticEnableConditionSubtypesEnum",
     "DiagnosticEnableConditionGroup",
     "DiagnosticEnableConditionGroupSubtypesEnum",
     "DiagnosticEnableConditionNeeds",
     "DiagnosticEnableConditionPortMapping",
     "DiagnosticEnableConditionRefConditional",
+    "DiagnosticEnableConditionSubtypesEnum",
     "DiagnosticEnvBswModeElement",
     "DiagnosticEnvConditionFormula",
     "DiagnosticEnvDataCondition",
@@ -3593,7 +3621,6 @@ __all__ = [
     "DiagnosticEnvironmentalCondition",
     "DiagnosticEnvironmentalConditionSubtypesEnum",
     "DiagnosticEvent",
-    "DiagnosticEventSubtypesEnum",
     "DiagnosticEventClearAllowedEnum",
     "DiagnosticEventClearAllowedEnumSimple",
     "DiagnosticEventDisplacementStrategyEnum",
@@ -3607,6 +3634,7 @@ __all__ = [
     "DiagnosticEventNeedsSubtypesEnum",
     "DiagnosticEventPortMapping",
     "DiagnosticEventRefConditional",
+    "DiagnosticEventSubtypesEnum",
     "DiagnosticEventToDebounceAlgorithmMapping",
     "DiagnosticEventToEnableConditionGroupMapping",
     "DiagnosticEventToOperationCycleMapping",
@@ -3618,23 +3646,23 @@ __all__ = [
     "DiagnosticEventWindowTimeEnum",
     "DiagnosticEventWindowTimeEnumSimple",
     "DiagnosticExtendedDataRecord",
-    "DiagnosticExtendedDataRecordSubtypesEnum",
     "DiagnosticExtendedDataRecordRefConditional",
+    "DiagnosticExtendedDataRecordSubtypesEnum",
     "DiagnosticFimAliasEvent",
-    "DiagnosticFimAliasEventSubtypesEnum",
     "DiagnosticFimAliasEventGroup",
-    "DiagnosticFimAliasEventGroupSubtypesEnum",
     "DiagnosticFimAliasEventGroupMapping",
+    "DiagnosticFimAliasEventGroupSubtypesEnum",
     "DiagnosticFimAliasEventMapping",
+    "DiagnosticFimAliasEventSubtypesEnum",
     "DiagnosticFimEventGroup",
     "DiagnosticFimEventGroupSubtypesEnum",
     "DiagnosticFimFunctionMapping",
     "DiagnosticFreezeFrame",
-    "DiagnosticFreezeFrameSubtypesEnum",
     "DiagnosticFreezeFrameRefConditional",
+    "DiagnosticFreezeFrameSubtypesEnum",
     "DiagnosticFunctionIdentifier",
-    "DiagnosticFunctionIdentifierSubtypesEnum",
     "DiagnosticFunctionIdentifierInhibit",
+    "DiagnosticFunctionIdentifierSubtypesEnum",
     "DiagnosticFunctionInhibitSource",
     "DiagnosticFunctionInhibitSourceSubtypesEnum",
     "DiagnosticGenericUdsInterface",
@@ -3642,10 +3670,10 @@ __all__ = [
     "DiagnosticHandleDddiConfigurationEnum",
     "DiagnosticHandleDddiConfigurationEnumSimple",
     "DiagnosticIndicator",
-    "DiagnosticIndicatorSubtypesEnum",
     "DiagnosticIndicatorInterface",
     "DiagnosticIndicatorNeeds",
     "DiagnosticIndicatorPortMapping",
+    "DiagnosticIndicatorSubtypesEnum",
     "DiagnosticIndicatorTypeEnum",
     "DiagnosticIndicatorTypeEnumSimple",
     "DiagnosticIndicatorTypeEnumValueVariationPoint",
@@ -3661,17 +3689,17 @@ __all__ = [
     "DiagnosticIoControlClassSubtypesEnum",
     "DiagnosticIoControlNeeds",
     "DiagnosticIumpr",
-    "DiagnosticIumprSubtypesEnum",
     "DiagnosticIumprDenominatorGroup",
     "DiagnosticIumprGroup",
     "DiagnosticIumprGroupIdentifier",
+    "DiagnosticIumprSubtypesEnum",
     "DiagnosticJ1939ExpandedFreezeFrame",
     "DiagnosticJ1939FreezeFrame",
     "DiagnosticJ1939Node",
     "DiagnosticJ1939NodeSubtypesEnum",
     "DiagnosticJ1939Spn",
-    "DiagnosticJ1939SpnSubtypesEnum",
     "DiagnosticJ1939SpnMapping",
+    "DiagnosticJ1939SpnSubtypesEnum",
     "DiagnosticJ1939SwMapping",
     "DiagnosticJumpToBootLoaderEnum",
     "DiagnosticJumpToBootLoaderEnumSimple",
@@ -3681,10 +3709,10 @@ __all__ = [
     "DiagnosticMasterToSlaveEventMappingSet",
     "DiagnosticMeasurementIdentifier",
     "DiagnosticMeasurementIdentifierSubtypesEnum",
-    "DiagnosticMemoryDestinationSubtypesEnum",
     "DiagnosticMemoryDestinationMirror",
     "DiagnosticMemoryDestinationPortMapping",
     "DiagnosticMemoryDestinationPrimary",
+    "DiagnosticMemoryDestinationSubtypesEnum",
     "DiagnosticMemoryDestinationUserDefined",
     "DiagnosticMemoryEntryStorageTriggerEnum",
     "DiagnosticMemoryEntryStorageTriggerEnumSimple",
@@ -3698,11 +3726,11 @@ __all__ = [
     "DiagnosticOccurrenceCounterProcessingEnum",
     "DiagnosticOccurrenceCounterProcessingEnumSimple",
     "DiagnosticOperationCycle",
-    "DiagnosticOperationCycleSubtypesEnum",
     "DiagnosticOperationCycleInterface",
     "DiagnosticOperationCycleNeeds",
     "DiagnosticOperationCyclePortMapping",
     "DiagnosticOperationCycleRefConditional",
+    "DiagnosticOperationCycleSubtypesEnum",
     "DiagnosticOperationCycleTypeEnum",
     "DiagnosticOperationCycleTypeEnumSimple",
     "DiagnosticParameter",
@@ -3776,13 +3804,13 @@ __all__ = [
     "DiagnosticResponseToEcuResetEnum",
     "DiagnosticResponseToEcuResetEnumSimple",
     "DiagnosticRoutine",
-    "DiagnosticRoutineSubtypesEnum",
     "DiagnosticRoutineControl",
     "DiagnosticRoutineControlClass",
     "DiagnosticRoutineControlClassSubtypesEnum",
     "DiagnosticRoutineGenericInterface",
     "DiagnosticRoutineInterface",
     "DiagnosticRoutineNeeds",
+    "DiagnosticRoutineSubtypesEnum",
     "DiagnosticRoutineTypeEnum",
     "DiagnosticRoutineTypeEnumSimple",
     "DiagnosticSecurityAccess",
@@ -3790,9 +3818,9 @@ __all__ = [
     "DiagnosticSecurityAccessClassSubtypesEnum",
     "DiagnosticSecurityEventReportingModeMapping",
     "DiagnosticSecurityLevel",
-    "DiagnosticSecurityLevelSubtypesEnum",
     "DiagnosticSecurityLevelInterface",
     "DiagnosticSecurityLevelPortMapping",
+    "DiagnosticSecurityLevelSubtypesEnum",
     "DiagnosticServiceClassSubtypesEnum",
     "DiagnosticServiceDataIdentifierPortMapping",
     "DiagnosticServiceDataMapping",
@@ -3802,14 +3830,14 @@ __all__ = [
     "DiagnosticServiceRequestCallbackTypeEnumSimple",
     "DiagnosticServiceSwMapping",
     "DiagnosticServiceTable",
-    "DiagnosticServiceTableSubtypesEnum",
     "DiagnosticServiceTableRefConditional",
+    "DiagnosticServiceTableSubtypesEnum",
     "DiagnosticServiceValidationInterface",
     "DiagnosticSession",
-    "DiagnosticSessionSubtypesEnum",
     "DiagnosticSessionControl",
     "DiagnosticSessionControlClass",
     "DiagnosticSessionControlClassSubtypesEnum",
+    "DiagnosticSessionSubtypesEnum",
     "DiagnosticSignificanceEnum",
     "DiagnosticSignificanceEnumSimple",
     "DiagnosticSoftwareClusterProps",
@@ -3818,12 +3846,12 @@ __all__ = [
     "DiagnosticStatusBitHandlingTestFailedSinceLastClearEnumSimple",
     "DiagnosticStopRoutine",
     "DiagnosticStorageCondition",
-    "DiagnosticStorageConditionSubtypesEnum",
     "DiagnosticStorageConditionGroup",
     "DiagnosticStorageConditionGroupSubtypesEnum",
     "DiagnosticStorageConditionNeeds",
     "DiagnosticStorageConditionPortMapping",
     "DiagnosticStorageConditionRefConditional",
+    "DiagnosticStorageConditionSubtypesEnum",
     "DiagnosticStoreEventSupportEnum",
     "DiagnosticStoreEventSupportEnumSimple",
     "DiagnosticSupportInfoByte",
@@ -3838,17 +3866,17 @@ __all__ = [
     "DiagnosticTransferExit",
     "DiagnosticTransferExitClass",
     "DiagnosticTransferExitClassSubtypesEnum",
-    "DiagnosticTroubleCodeSubtypesEnum",
     "DiagnosticTroubleCodeGroup",
     "DiagnosticTroubleCodeJ1939",
-    "DiagnosticTroubleCodeJ1939SubtypesEnum",
     "DiagnosticTroubleCodeJ1939DtcKindEnum",
     "DiagnosticTroubleCodeJ1939DtcKindEnumSimple",
+    "DiagnosticTroubleCodeJ1939SubtypesEnum",
     "DiagnosticTroubleCodeObd",
     "DiagnosticTroubleCodeObdSubtypesEnum",
     "DiagnosticTroubleCodeProps",
     "DiagnosticTroubleCodePropsSubtypesEnum",
     "DiagnosticTroubleCodeRefConditional",
+    "DiagnosticTroubleCodeSubtypesEnum",
     "DiagnosticTroubleCodeUds",
     "DiagnosticTroubleCodeUdsSubtypesEnum",
     "DiagnosticTroubleCodeUdsToClearConditionGroupMapping",
@@ -3884,14 +3912,14 @@ __all__ = [
     "DltArgument",
     "DltConfig",
     "DltLogChannel",
-    "DltLogChannelSubtypesEnum",
     "DltLogChannelDesign",
     "DltLogChannelDesignSubtypesEnum",
     "DltLogChannelDesignToProcessDesignMapping",
+    "DltLogChannelSubtypesEnum",
     "DltLogChannelToProcessMapping",
     "DltMessage",
-    "DltMessageSubtypesEnum",
     "DltMessageCollectionSet",
+    "DltMessageSubtypesEnum",
     "DltUserNeeds",
     "DoIpActivationLineNeeds",
     "DoIpConfig",
@@ -3911,18 +3939,17 @@ __all__ = [
     "DoIpPowerModeStatusNeeds",
     "DoIpRequestConfiguration",
     "DoIpRoutingActivation",
-    "DoIpRoutingActivationSubtypesEnum",
     "DoIpRoutingActivationAuthenticationNeeds",
     "DoIpRoutingActivationConfirmationNeeds",
+    "DoIpRoutingActivationSubtypesEnum",
     "DoIpTpConfig",
     "DoIpTpConfigSubtypesEnum",
     "DoIpTpConnection",
     "DocRevision",
     "DocumentElementScope",
     "Documentation",
-    "DocumentationSubtypesEnum",
-    "DocumentationBlock",
     "DocumentationContext",
+    "DocumentationSubtypesEnum",
     "DtcFormatTypeEnum",
     "DtcFormatTypeEnumSimple",
     "DtcKindEnum",
@@ -3933,17 +3960,17 @@ __all__ = [
     "E2EProfileCompatibilityProps",
     "E2EProfileCompatibilityPropsSubtypesEnum",
     "E2EProfileConfiguration",
-    "E2EProfileConfigurationSubtypesEnum",
     "E2EProfileConfigurationSet",
+    "E2EProfileConfigurationSubtypesEnum",
     "EEnum",
-    "EEnumSimple",
     "EEnumFont",
     "EEnumFontSimple",
+    "EEnumSimple",
     "EcuAbstractionSwComponentType",
     "EcuInstance",
-    "EcuInstanceSubtypesEnum",
     "EcuInstanceProps",
     "EcuInstanceRefConditional",
+    "EcuInstanceSubtypesEnum",
     "EcuMapping",
     "EcuPartition",
     "EcuPartitionSubtypesEnum",
@@ -3956,7 +3983,6 @@ __all__ = [
     "EcucAffectionEnum",
     "EcucAffectionEnumSimple",
     "EcucBooleanParamDef",
-    "EcucChoiceContainerDef",
     "EcucChoiceReferenceDef",
     "EcucCommonAttributesSubtypesEnum",
     "EcucConditionFormula",
@@ -3973,8 +3999,8 @@ __all__ = [
     "EcucDefinitionElementSubtypesEnum",
     "EcucDerivationSpecification",
     "EcucDestinationUriDef",
-    "EcucDestinationUriDefSubtypesEnum",
     "EcucDestinationUriDefSet",
+    "EcucDestinationUriDefSubtypesEnum",
     "EcucDestinationUriNestingContractEnum",
     "EcucDestinationUriNestingContractEnumSimple",
     "EcucDestinationUriPolicy",
@@ -3991,21 +4017,22 @@ __all__ = [
     "EcucLinkerSymbolDef",
     "EcucLinkerSymbolDefConditional",
     "EcucModuleConfigurationValues",
-    "EcucModuleConfigurationValuesSubtypesEnum",
     "EcucModuleConfigurationValuesRefConditional",
+    "EcucModuleConfigurationValuesSubtypesEnum",
     "EcucModuleDef",
     "EcucModuleDefSubtypesEnum",
     "EcucMultilineStringParamDef",
     "EcucMultilineStringParamDefConditional",
     "EcucMultiplicityConfigurationClass",
     "EcucNumericalParamValue",
+    "EcucChoiceContainerDef",
     "EcucParamConfContainerDef",
     "EcucParamConfContainerDefSubtypesEnum",
     "EcucParameterDefSubtypesEnum",
     "EcucParameterDerivationFormula",
     "EcucQuery",
-    "EcucQuerySubtypesEnum",
     "EcucQueryExpression",
+    "EcucQuerySubtypesEnum",
     "EcucReferenceDef",
     "EcucReferenceValue",
     "EcucScopeEnum",
@@ -4061,8 +4088,8 @@ __all__ = [
     "EthTpConfig",
     "EthTpConnection",
     "EthernetCluster",
-    "EthernetClusterSubtypesEnum",
     "EthernetClusterConditional",
+    "EthernetClusterSubtypesEnum",
     "EthernetCommunicationConnector",
     "EthernetCommunicationConnectorSubtypesEnum",
     "EthernetCommunicationController",
@@ -4088,8 +4115,8 @@ __all__ = [
     "EthernetSwitchVlanIngressTagEnum",
     "EthernetSwitchVlanIngressTagEnumSimple",
     "EthernetWakeupSleepOnDatalineConfig",
-    "EthernetWakeupSleepOnDatalineConfigSubtypesEnum",
     "EthernetWakeupSleepOnDatalineConfigSet",
+    "EthernetWakeupSleepOnDatalineConfigSubtypesEnum",
     "EvaluatedVariantSet",
     "EventAcceptanceStatusEnum",
     "EventAcceptanceStatusEnumSimple",
@@ -4104,14 +4131,14 @@ __all__ = [
     "EventOccurrenceKindEnum",
     "EventOccurrenceKindEnumSimple",
     "ExclusiveArea",
-    "ExclusiveAreaSubtypesEnum",
     "ExclusiveAreaNestingOrder",
     "ExclusiveAreaNestingOrderSubtypesEnum",
+    "ExclusiveAreaSubtypesEnum",
     "Executable",
-    "ExecutableSubtypesEnum",
-    "ExecutableEntitySubtypesEnum",
     "ExecutableEntityActivationReason",
     "ExecutableEntityActivationReasonSubtypesEnum",
+    "ExecutableEntitySubtypesEnum",
+    "ExecutableSubtypesEnum",
     "ExecutableTiming",
     "ExecutionDependency",
     "ExecutionOrderConstraint",
@@ -4126,15 +4153,15 @@ __all__ = [
     "ExternalTriggerOccurredEvent",
     "ExternalTriggeringPoint",
     "ExternalTriggeringPointIdent",
-    "FibexElementSubtypesEnum",
     "FibexElementRefConditional",
-    "FieldType",
-    "FieldSubtypesEnum",
+    "FibexElementSubtypesEnum",
     "FieldAccessEnum",
     "FieldAccessEnumSimple",
     "FieldInExecutableInstanceRef",
     "FieldMapping",
+    "FieldType",
     "FieldSenderComSpec",
+    "FieldSubtypesEnum",
     "FileInfoComment",
     "FilterDebouncingEnum",
     "FilterDebouncingEnumSimple",
@@ -4152,8 +4179,8 @@ __all__ = [
     "FlexrayChannelName",
     "FlexrayChannelNameSimple",
     "FlexrayCluster",
-    "FlexrayClusterSubtypesEnum",
     "FlexrayClusterConditional",
+    "FlexrayClusterSubtypesEnum",
     "FlexrayCommunicationConnector",
     "FlexrayCommunicationConnectorSubtypesEnum",
     "FlexrayCommunicationController",
@@ -4163,8 +4190,8 @@ __all__ = [
     "FlexrayFrame",
     "FlexrayFrameTriggering",
     "FlexrayNmCluster",
-    "FlexrayNmClusterSubtypesEnum",
     "FlexrayNmClusterCoupling",
+    "FlexrayNmClusterSubtypesEnum",
     "FlexrayNmEcu",
     "FlexrayNmNode",
     "FlexrayNmScheduleVariant",
@@ -4180,9 +4207,9 @@ __all__ = [
     "FlexrayTpNodeSubtypesEnum",
     "FlexrayTpPduPool",
     "FlexrayTpPduPoolSubtypesEnum",
-    "FloatType",
     "FloatEnum",
     "FloatEnumSimple",
+    "FloatType",
     "FloatValueVariationPoint",
     "FmAttributeDef",
     "FmAttributeDefSubtypesEnum",
@@ -4190,7 +4217,6 @@ __all__ = [
     "FmConditionByFeaturesAndAttributes",
     "FmConditionByFeaturesAndSwSystemconsts",
     "FmFeature",
-    "FmFeatureSubtypesEnum",
     "FmFeatureDecomposition",
     "FmFeatureMap",
     "FmFeatureMapAssertion",
@@ -4205,18 +4231,19 @@ __all__ = [
     "FmFeatureSelectionSetSubtypesEnum",
     "FmFeatureSelectionState",
     "FmFeatureSelectionStateSimple",
+    "FmFeatureSubtypesEnum",
     "ForbiddenSignalPath",
     "ForeignModelReference",
     "FrArTpAckType",
     "FrArTpAckTypeSimple",
     "FrGlobalTimeDomainProps",
-    "FrameSubtypesEnum",
     "FrameEnum",
     "FrameEnumSimple",
     "FrameMapping",
     "FramePid",
     "FramePort",
     "FramePortSubtypesEnum",
+    "FrameSubtypesEnum",
     "FrameTriggeringSubtypesEnum",
     "FreeFormat",
     "FullBindingTimeEnum",
@@ -4239,8 +4266,8 @@ __all__ = [
     "GenericModuleInstantiation",
     "GenericTp",
     "GlobalSupervision",
-    "GlobalSupervisionSubtypesEnum",
     "GlobalSupervisionNeeds",
+    "GlobalSupervisionSubtypesEnum",
     "GlobalTimeCanMaster",
     "GlobalTimeCanSlave",
     "GlobalTimeCorrectionProps",
@@ -4250,8 +4277,8 @@ __all__ = [
     "GlobalTimeCrcValidationEnum",
     "GlobalTimeCrcValidationEnumSimple",
     "GlobalTimeDomain",
-    "GlobalTimeDomainSubtypesEnum",
     "GlobalTimeDomainRefConditional",
+    "GlobalTimeDomainSubtypesEnum",
     "GlobalTimeEthMaster",
     "GlobalTimeEthSlave",
     "GlobalTimeFrMaster",
@@ -4292,25 +4319,25 @@ __all__ = [
     "HwCategorySubtypesEnum",
     "HwDescriptionEntitySubtypesEnum",
     "HwElement",
-    "HwElementSubtypesEnum",
     "HwElementConnector",
     "HwElementRefConditional",
+    "HwElementSubtypesEnum",
     "HwPin",
-    "HwPinSubtypesEnum",
     "HwPinConnector",
-    "HwPinGroup",
-    "HwPinGroupSubtypesEnum",
     "HwPinGroupConnector",
+    "HwPinGroup",
     "HwPinGroupContent",
+    "HwPinGroupSubtypesEnum",
+    "HwPinSubtypesEnum",
     "HwPortMapping",
     "HwType",
     "HwTypeSubtypesEnum",
-    "IPduSubtypesEnum",
     "IPduMapping",
     "IPduPort",
     "IPduPortSubtypesEnum",
     "IPduSignalProcessingEnum",
     "IPduSignalProcessingEnumSimple",
+    "IPduSubtypesEnum",
     "IPduTiming",
     "IPsecDpdActionEnum",
     "IPsecDpdActionEnumSimple",
@@ -4326,58 +4353,58 @@ __all__ = [
     "IPv6ExtHeaderFilterListSubtypesEnum",
     "IPv6ExtHeaderFilterSet",
     "ISignal",
-    "ISignalSubtypesEnum",
     "ISignalGroup",
     "ISignalGroupSubtypesEnum",
     "ISignalIPdu",
-    "ISignalIPduSubtypesEnum",
     "ISignalIPduGroup",
     "ISignalIPduGroupSubtypesEnum",
     "ISignalIPduRefConditional",
+    "ISignalIPduSubtypesEnum",
     "ISignalMapping",
     "ISignalPort",
     "ISignalPortSubtypesEnum",
     "ISignalProps",
+    "ISignalSubtypesEnum",
     "ISignalToIPduMapping",
     "ISignalToIPduMappingSubtypesEnum",
     "ISignalTriggering",
-    "ISignalTriggeringSubtypesEnum",
     "ISignalTriggeringRefConditional",
+    "ISignalTriggeringSubtypesEnum",
     "ISignalTypeEnum",
     "ISignalTypeEnumSimple",
     "IamModuleInstantiation",
     "IdentifiableSubtypesEnum",
     "Identifier",
-    "IdsCommonElementSubtypesEnum",
     "IdsCommonElementRefConditional",
+    "IdsCommonElementSubtypesEnum",
     "IdsDesign",
     "IdsMgrCustomTimestampNeeds",
     "IdsMgrNeeds",
     "IdsmInstance",
-    "IdsmInstanceSubtypesEnum",
     "IdsmInstanceRefConditional",
+    "IdsmInstanceSubtypesEnum",
     "IdsmModuleInstantiation",
     "IdsmModuleInstantiationSubtypesEnum",
     "IdsmProperties",
     "IdsmRateLimitation",
-    "IdsmRateLimitationSubtypesEnum",
     "IdsmRateLimitationRefConditional",
+    "IdsmRateLimitationSubtypesEnum",
     "IdsmSignatureSupportAp",
     "IdsmSignatureSupportCp",
     "IdsmTrafficLimitation",
-    "IdsmTrafficLimitationSubtypesEnum",
     "IdsmTrafficLimitationRefConditional",
+    "IdsmTrafficLimitationSubtypesEnum",
     "Ieee1722Tp",
     "Ieee1722TpEthernetFrame",
     "IkeAuthenticationMethodEnum",
     "IkeAuthenticationMethodEnumSimple",
     "ImplementationDataType",
-    "ImplementationDataTypeSubtypesEnum",
     "ImplementationDataTypeElement",
-    "ImplementationDataTypeElementSubtypesEnum",
     "ImplementationDataTypeElementInPortInterfaceRef",
     "ImplementationDataTypeElementInSystemRef",
+    "ImplementationDataTypeElementSubtypesEnum",
     "ImplementationDataTypeSubElementRef",
+    "ImplementationDataTypeSubtypesEnum",
     "ImplementationElementInParameterInstanceRef",
     "IncludedDataTypeSet",
     "IncludedModeDeclarationGroupSet",
@@ -4411,6 +4438,8 @@ __all__ = [
     "InvalidationPolicy",
     "InvertCondition",
     "IoHwAbstractionServerAnnotation",
+    "Ip4AddressString",
+    "Ip6AddressString",
     "IpAddressKeepEnum",
     "IpAddressKeepEnumSimple",
     "IpIamAuthenticConnectionProps",
@@ -4423,8 +4452,6 @@ __all__ = [
     "IpSecRuleSubtypesEnum",
     "IpTransportProtocolEnum",
     "IpTransportProtocolEnumSimple",
-    "Ip4AddressString",
-    "Ip6AddressString",
     "Ipv4AddressSourceEnum",
     "Ipv4AddressSourceEnumSimple",
     "Ipv4ArpProps",
@@ -4440,12 +4467,11 @@ __all__ = [
     "Ipv6FragmentationProps",
     "Ipv6NdpProps",
     "Ipv6Props",
-    "Item",
     "ItemLabelPosEnum",
     "ItemLabelPosEnumSimple",
     "J1939Cluster",
-    "J1939ClusterSubtypesEnum",
     "J1939ClusterConditional",
+    "J1939ClusterSubtypesEnum",
     "J1939ControllerApplication",
     "J1939ControllerApplicationSubtypesEnum",
     "J1939ControllerApplicationToJ1939NmNodeMapping",
@@ -4478,8 +4504,6 @@ __all__ = [
     "LParagraph",
     "LPlainText",
     "LVerbatim",
-    "LabeledItem",
-    "LabeledList",
     "LatencyConstraintTypeEnum",
     "LatencyConstraintTypeEnumSimple",
     "LatencyTimingConstraint",
@@ -4487,9 +4511,9 @@ __all__ = [
     "LifeCycleInfoSet",
     "LifeCyclePeriod",
     "LifeCycleState",
-    "LifeCycleStateSubtypesEnum",
     "LifeCycleStateDefinitionGroup",
     "LifeCycleStateDefinitionGroupSubtypesEnum",
+    "LifeCycleStateSubtypesEnum",
     "Limit",
     "LimitValue",
     "LinChecksumType",
@@ -4511,11 +4535,11 @@ __all__ = [
     "LinScheduleTable",
     "LinScheduleTableSubtypesEnum",
     "LinSlave",
-    "LinSlaveSubtypesEnum",
     "LinSlaveConditional",
     "LinSlaveConfig",
     "LinSlaveConfigIdent",
     "LinSlaveConfigIdentSubtypesEnum",
+    "LinSlaveSubtypesEnum",
     "LinSporadicFrame",
     "LinTpConfig",
     "LinTpConnection",
@@ -4524,7 +4548,6 @@ __all__ = [
     "LinUnconditionalFrame",
     "LinUnconditionalFrameSubtypesEnum",
     "Linker",
-    "ListType",
     "ListEnum",
     "ListEnumSimple",
     "LocalSupervision",
@@ -4544,9 +4567,9 @@ __all__ = [
     "MacMulticastGroup",
     "MacMulticastGroupSubtypesEnum",
     "Machine",
-    "MachineSubtypesEnum",
     "MachineDesign",
     "MachineDesignSubtypesEnum",
+    "MachineSubtypesEnum",
     "MachineTiming",
     "Map",
     "MappingDirectionEnum",
@@ -4561,13 +4584,13 @@ __all__ = [
     "McDataInstance",
     "McDataInstanceSubtypesEnum",
     "McFunction",
-    "McFunctionSubtypesEnum",
     "McFunctionDataRefSet",
     "McFunctionDataRefSetConditional",
+    "McFunctionSubtypesEnum",
     "McGroup",
-    "McGroupSubtypesEnum",
     "McGroupDataRefSet",
     "McGroupDataRefSetConditional",
+    "McGroupSubtypesEnum",
     "McParameterElementGroup",
     "McSupportData",
     "McSwEmulationMethodSupport",
@@ -4578,8 +4601,8 @@ __all__ = [
     "MemoryAllocationKeywordPolicyType",
     "MemoryAllocationKeywordPolicyTypeSimple",
     "MemorySection",
-    "MemorySectionSubtypesEnum",
     "MemorySectionLocation",
+    "MemorySectionSubtypesEnum",
     "MemorySectionType",
     "MemorySectionTypeSimple",
     "MetaClassName",
@@ -4587,24 +4610,22 @@ __all__ = [
     "MetaDataItemSet",
     "MethodMapping",
     "MimeTypeString",
-    "MlFigure",
-    "MlFormula",
     "ModeAccessPoint",
     "ModeAccessPointIdent",
     "ModeActivationKind",
     "ModeActivationKindSimple",
     "ModeDeclaration",
-    "ModeDeclarationSubtypesEnum",
     "ModeDeclarationGroup",
-    "ModeDeclarationGroupSubtypesEnum",
     "ModeDeclarationGroupPrototype",
-    "ModeDeclarationGroupPrototypeSubtypesEnum",
     "ModeDeclarationGroupPrototypeInSystemInstanceRef",
     "ModeDeclarationGroupPrototypeMapping",
     "ModeDeclarationGroupPrototypeRefConditional",
+    "ModeDeclarationGroupPrototypeSubtypesEnum",
+    "ModeDeclarationGroupSubtypesEnum",
     "ModeDeclarationMapping",
     "ModeDeclarationMappingSet",
     "ModeDeclarationMappingSetSubtypesEnum",
+    "ModeDeclarationSubtypesEnum",
     "ModeDrivenTransmissionModeCondition",
     "ModeErrorBehavior",
     "ModeErrorReactionPolicyEnum",
@@ -4631,17 +4652,15 @@ __all__ = [
     "MonotonyEnum",
     "MonotonyEnumSimple",
     "MsrQueryArg",
-    "MsrQueryChapter",
     "MsrQueryP1",
-    "MsrQueryP2",
     "MsrQueryProps",
+    "Chapter",
+    "MsrQueryChapter",
     "MsrQueryResultChapter",
     "MsrQueryResultTopic1",
     "MsrQueryTopic1",
     "MultiLanguageOverviewParagraph",
-    "MultiLanguageParagraph",
     "MultiLanguagePlainText",
-    "MultiLanguageVerbatim",
     "MultidimensionalTime",
     "MultilanguageLongName",
     "MultiplexedIPdu",
@@ -4665,8 +4684,8 @@ __all__ = [
     "NmNetworkHandle",
     "NmNodeSubtypesEnum",
     "NmPdu",
-    "NmPduSubtypesEnum",
     "NmPduRefConditional",
+    "NmPduSubtypesEnum",
     "NmtokenString",
     "NmtokensString",
     "NonOsModuleInstantiationSubtypesEnum",
@@ -4674,7 +4693,6 @@ __all__ = [
     "NonqueuedSenderComSpec",
     "NormalizedInstruction",
     "NotAvailableValueSpecification",
-    "Note",
     "NoteTypeEnum",
     "NoteTypeEnumSimple",
     "NumericalOrText",
@@ -4718,14 +4736,14 @@ __all__ = [
     "POperationInAtomicSwcInstanceRef",
     "PPortInCompositionInstanceRef",
     "PPortPrototype",
-    "PPortPrototypeSubtypesEnum",
     "PPortPrototypeInExecutableInstanceRef",
     "PPortPrototypeInSoftwareClusterDesignInstanceRef",
+    "PPortPrototypeSubtypesEnum",
     "PTriggerInAtomicSwcTypeInstanceRef",
     "ParameterAccess",
     "ParameterDataPrototype",
-    "ParameterDataPrototypeSubtypesEnum",
     "ParameterDataPrototypeInSystemInstanceRef",
+    "ParameterDataPrototypeSubtypesEnum",
     "ParameterInAtomicSwcTypeInstanceRef",
     "ParameterInterface",
     "ParameterPortAnnotation",
@@ -4733,22 +4751,22 @@ __all__ = [
     "ParameterRequireComSpec",
     "ParameterSwComponentType",
     "PassThroughSwConnector",
-    "PduSubtypesEnum",
     "PduActivationRoutingGroup",
     "PduCollectionSemanticsEnum",
     "PduCollectionSemanticsEnumSimple",
     "PduCollectionTriggerEnum",
     "PduCollectionTriggerEnumSimple",
     "PduMappingDefaultValue",
+    "PduSubtypesEnum",
     "PduToFrameMapping",
     "PduTriggering",
-    "PduTriggeringSubtypesEnum",
     "PduTriggeringRefConditional",
+    "PduTriggeringSubtypesEnum",
     "PdurIPduGroup",
     "PdurIPduGroupSubtypesEnum",
     "PerInstanceMemory",
-    "PerInstanceMemorySubtypesEnum",
     "PerInstanceMemorySize",
+    "PerInstanceMemorySubtypesEnum",
     "PeriodicEventTriggering",
     "PermissibleSignalPath",
     "PersistencyCollectionLevelUpdateStrategyEnum",
@@ -4756,9 +4774,9 @@ __all__ = [
     "PersistencyDataElement",
     "PersistencyDataElementSubtypesEnum",
     "PersistencyDataRequiredComSpec",
-    "PersistencyDeploymentSubtypesEnum",
     "PersistencyDeploymentElementSubtypesEnum",
     "PersistencyDeploymentElementToCryptoKeySlotMapping",
+    "PersistencyDeploymentSubtypesEnum",
     "PersistencyDeploymentToCryptoKeySlotMapping",
     "PersistencyDeploymentToDltLogChannelMapping",
     "PersistencyElementLevelUpdateStrategyEnum",
@@ -4766,12 +4784,12 @@ __all__ = [
     "PersistencyFile",
     "PersistencyFileElement",
     "PersistencyFileStorage",
-    "PersistencyFileStorageSubtypesEnum",
     "PersistencyFileStorageInterface",
+    "PersistencyFileStorageSubtypesEnum",
     "PersistencyKeyValuePair",
     "PersistencyKeyValueStorage",
-    "PersistencyKeyValueStorageSubtypesEnum",
     "PersistencyKeyValueStorageInterface",
+    "PersistencyKeyValueStorageSubtypesEnum",
     "PersistencyPortPrototypeToFileStorageMapping",
     "PersistencyPortPrototypeToKeyValueStorageMapping",
     "PersistencyRedundancyCrc",
@@ -4784,8 +4802,8 @@ __all__ = [
     "PgwideEnum",
     "PgwideEnumSimple",
     "PhmCheckpoint",
-    "PhmCheckpointSubtypesEnum",
     "PhmCheckpointInExecutableInstanceRef",
+    "PhmCheckpointSubtypesEnum",
     "PhmContributionToMachineMapping",
     "PhmHealthChannelInExecutableInstanceRef",
     "PhmHealthChannelInterface",
@@ -4797,12 +4815,12 @@ __all__ = [
     "PhmSupervisedEntityInterface",
     "PhmSupervisionRecoveryNotificationInterface",
     "PhysConstrs",
-    "PhysicalChannelSubtypesEnum",
     "PhysicalChannelRefConditional",
+    "PhysicalChannelSubtypesEnum",
     "PhysicalDimension",
-    "PhysicalDimensionSubtypesEnum",
     "PhysicalDimensionMapping",
     "PhysicalDimensionMappingSet",
+    "PhysicalDimensionSubtypesEnum",
     "PlatformHealthManagementContribution",
     "PlatformHealthManagementContributionSubtypesEnum",
     "PlatformModuleEthernetEndpointConfiguration",
@@ -4818,21 +4836,21 @@ __all__ = [
     "PortDefinedArgumentValue",
     "PortElementToCommunicationResourceMapping",
     "PortGroup",
-    "PortGroupSubtypesEnum",
     "PortGroupInSystemInstanceRef",
-    "PortInterfaceSubtypesEnum",
+    "PortGroupSubtypesEnum",
     "PortInterfaceBlueprintMapping",
     "PortInterfaceElementInImplementationDatatypeRef",
-    "PortInterfaceMappingSubtypesEnum",
     "PortInterfaceMappingSet",
+    "PortInterfaceMappingSubtypesEnum",
+    "PortInterfaceSubtypesEnum",
     "PortInterfaceToDataTypeMapping",
-    "PortPrototypeSubtypesEnum",
     "PortPrototypeBlueprint",
-    "PortPrototypeBlueprintSubtypesEnum",
     "PortPrototypeBlueprintInitValue",
     "PortPrototypeBlueprintMapping",
+    "PortPrototypeBlueprintSubtypesEnum",
     "PortPrototypeInExecutableInstanceRef",
     "PortPrototypeRefConditional",
+    "PortPrototypeSubtypesEnum",
     "PositiveInteger",
     "PositiveIntegerValueVariationPoint",
     "PositiveUnlimitedInteger",
@@ -4858,15 +4876,15 @@ __all__ = [
     "PrmCharTextualContents",
     "Prms",
     "Process",
-    "ProcessSubtypesEnum",
     "ProcessArgument",
     "ProcessDesign",
     "ProcessDesignSubtypesEnum",
     "ProcessDesignToMachineDesignMapping",
-    "ProcessDesignToMachineDesignMappingSubtypesEnum",
     "ProcessDesignToMachineDesignMappingSet",
+    "ProcessDesignToMachineDesignMappingSubtypesEnum",
     "ProcessExecutionError",
     "ProcessExecutionErrorSubtypesEnum",
+    "ProcessSubtypesEnum",
     "ProcessToMachineMapping",
     "ProcessToMachineMappingSet",
     "ProcessingKindEnum",
@@ -4879,8 +4897,8 @@ __all__ = [
     "ProvidedApServiceInstanceSubtypesEnum",
     "ProvidedMethodInExecutableInstanceRef",
     "ProvidedServiceInstance",
-    "ProvidedServiceInstanceSubtypesEnum",
     "ProvidedServiceInstanceRefConditional",
+    "ProvidedServiceInstanceSubtypesEnum",
     "ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping",
     "ProvidedSomeipServiceInstance",
     "ProvidedUserDefinedServiceInstance",
@@ -4894,10 +4912,10 @@ __all__ = [
     "ROperationInAtomicSwcInstanceRef",
     "RPortInCompositionInstanceRef",
     "RPortPrototype",
-    "RPortPrototypeSubtypesEnum",
     "RPortPrototypeInExecutableInstanceRef",
     "RPortPrototypeInSoftwareClusterDesignInstanceRef",
     "RPortPrototypeProps",
+    "RPortPrototypeSubtypesEnum",
     "RTriggerInAtomicSwcInstanceRef",
     "RVariableInAtomicSwcInstanceRef",
     "RamBlockStatusControlEnum",
@@ -4915,6 +4933,10 @@ __all__ = [
     "ReceiverIntentEnumSimple",
     "ReceptionComSpecProps",
     "RecordLayoutIteratorPoint",
+    "ApplicationAssocMapElementValueSpecification",
+    "ApplicationAssocMapValueSpecification",
+    "ArrayValueSpecification",
+    "CompositeRuleBasedValueSpecification",
     "RecordValueSpecification",
     "RecoveryNotification",
     "RecoveryNotificationSubtypesEnum",
@@ -4924,11 +4946,9 @@ __all__ = [
     "Ref",
     "ReferenceBase",
     "ReferenceCondition",
-    "ReferenceTailoring",
     "ReferenceTailoringSubtypesEnum",
     "ReferenceValueSpecification",
     "ReferrableSubtypesEnum",
-    "ReferrableRefConditional",
     "RegularExpression",
     "RelativeTolerance",
     "RemotingTechnology",
@@ -5008,15 +5028,15 @@ __all__ = [
     "RptProfile",
     "RptProfileSubtypesEnum",
     "RptServicePoint",
-    "RptServicePointSubtypesEnum",
     "RptServicePointEnum",
     "RptServicePointEnumSimple",
+    "RptServicePointSubtypesEnum",
     "RptSupportData",
     "RptSwPrototypingAccess",
     "RteApiReturnValueProvisionEnum",
     "RteApiReturnValueProvisionEnumSimple",
-    "RteEventSubtypesEnum",
     "RteEventInEcuInstanceRef",
+    "RteEventSubtypesEnum",
     "RtePluginProps",
     "RtpTp",
     "RuleArguments",
@@ -5026,11 +5046,11 @@ __all__ = [
     "RunMode",
     "RunModeSimple",
     "RunnableEntity",
-    "RunnableEntitySubtypesEnum",
     "RunnableEntityArgument",
     "RunnableEntityGroup",
     "RunnableEntityGroupSubtypesEnum",
     "RunnableEntityInCompositionInstanceRef",
+    "RunnableEntitySubtypesEnum",
     "RuntimeAddressConfigurationEnum",
     "RuntimeAddressConfigurationEnumSimple",
     "RuntimeError",
@@ -5045,7 +5065,6 @@ __all__ = [
     "SdClientConfig",
     "SdServerConfig",
     "Sdf",
-    "Sdg",
     "SdgAggregationWithVariation",
     "SdgCaption",
     "SdgCaptionSubtypesEnum",
@@ -5075,8 +5094,8 @@ __all__ = [
     "SectionInitializationPolicyType",
     "SectionNamePrefix",
     "SectionNamePrefixSubtypesEnum",
-    "SecureComPropsSubtypesEnum",
     "SecureComPropsSet",
+    "SecureComPropsSubtypesEnum",
     "SecureCommunicationAuthenticationProps",
     "SecureCommunicationAuthenticationPropsSubtypesEnum",
     "SecureCommunicationFreshnessProps",
@@ -5098,11 +5117,11 @@ __all__ = [
     "SecurityEventContextProps",
     "SecurityEventContextPropsSubtypesEnum",
     "SecurityEventDefinition",
-    "SecurityEventDefinitionSubtypesEnum",
     "SecurityEventDefinitionRefConditional",
+    "SecurityEventDefinitionSubtypesEnum",
     "SecurityEventFilterChain",
-    "SecurityEventFilterChainSubtypesEnum",
     "SecurityEventFilterChainRefConditional",
+    "SecurityEventFilterChainSubtypesEnum",
     "SecurityEventMapping",
     "SecurityEventMappingSubtypesEnum",
     "SecurityEventOneEveryNFilter",
@@ -5131,9 +5150,9 @@ __all__ = [
     "SeparateSignalPath",
     "SequenceCounterMapping",
     "SerializationTechnology",
-    "SerializationTechnologySubtypesEnum",
     "SerializationTechnologyEnum",
     "SerializationTechnologyEnumSimple",
+    "SerializationTechnologySubtypesEnum",
     "ServerArgumentImplPolicyEnum",
     "ServerArgumentImplPolicyEnumSimple",
     "ServerComSpec",
@@ -5145,7 +5164,6 @@ __all__ = [
     "ServiceInstanceToSignalMapping",
     "ServiceInstanceToSignalMappingSet",
     "ServiceInterface",
-    "ServiceInterfaceSubtypesEnum",
     "ServiceInterfaceDeploymentSubtypesEnum",
     "ServiceInterfaceElementSecureComConfig",
     "ServiceInterfaceElementSecureComConfigSubtypesEnum",
@@ -5155,6 +5173,7 @@ __all__ = [
     "ServiceInterfaceMappingSet",
     "ServiceInterfaceMethodMapping",
     "ServiceInterfacePedigree",
+    "ServiceInterfaceSubtypesEnum",
     "ServiceMethodDeploymentSubtypesEnum",
     "ServiceNeedsSubtypesEnum",
     "ServiceProviderEnum",
@@ -5211,18 +5230,17 @@ __all__ = [
     "SoAdRoutingGroup",
     "SoAdRoutingGroupSubtypesEnum",
     "SoConIPduIdentifier",
-    "SoConIPduIdentifierSubtypesEnum",
     "SoConIPduIdentifierRefConditional",
+    "SoConIPduIdentifierSubtypesEnum",
     "SocketAddress",
-    "SocketAddressSubtypesEnum",
     "SocketAddressRefConditional",
+    "SocketAddressSubtypesEnum",
     "SocketConnection",
     "SocketConnectionBundle",
     "SocketConnectionBundleSubtypesEnum",
     "SocketConnectionIpduIdentifier",
     "SocketConnectionIpduIdentifierSet",
     "SoftwareCluster",
-    "SoftwareClusterSubtypesEnum",
     "SoftwareClusterDependencyCompareCondition",
     "SoftwareClusterDependencyFormula",
     "SoftwareClusterDependencyLogicalOperatorEnum",
@@ -5234,9 +5252,9 @@ __all__ = [
     "SoftwareClusterDiagnosticAddressSemanticsEnum",
     "SoftwareClusterDiagnosticAddressSemanticsEnumSimple",
     "SoftwareClusterDoipDiagnosticAddress",
+    "SoftwareClusterSubtypesEnum",
     "SoftwareContext",
     "SoftwarePackage",
-    "SoftwarePackageSubtypesEnum",
     "SoftwarePackageActionTypeEnum",
     "SoftwarePackageActionTypeEnumSimple",
     "SoftwarePackageActivationActionEnum",
@@ -5245,6 +5263,7 @@ __all__ = [
     "SoftwarePackageStoring",
     "SoftwarePackageStoringEnum",
     "SoftwarePackageStoringEnumSimple",
+    "SoftwarePackageSubtypesEnum",
     "SomeipCollectionProps",
     "SomeipDataPrototypeTransformationProps",
     "SomeipEventDeployment",
@@ -5261,17 +5280,17 @@ __all__ = [
     "SomeipProvidedEventGroup",
     "SomeipRequiredEventGroup",
     "SomeipSdClientEventGroupTimingConfig",
-    "SomeipSdClientEventGroupTimingConfigSubtypesEnum",
     "SomeipSdClientEventGroupTimingConfigRefConditional",
+    "SomeipSdClientEventGroupTimingConfigSubtypesEnum",
     "SomeipSdClientServiceInstanceConfig",
-    "SomeipSdClientServiceInstanceConfigSubtypesEnum",
     "SomeipSdClientServiceInstanceConfigRefConditional",
+    "SomeipSdClientServiceInstanceConfigSubtypesEnum",
     "SomeipSdServerEventGroupTimingConfig",
-    "SomeipSdServerEventGroupTimingConfigSubtypesEnum",
     "SomeipSdServerEventGroupTimingConfigRefConditional",
+    "SomeipSdServerEventGroupTimingConfigSubtypesEnum",
     "SomeipSdServerServiceInstanceConfig",
-    "SomeipSdServerServiceInstanceConfigSubtypesEnum",
     "SomeipSdServerServiceInstanceConfigRefConditional",
+    "SomeipSdServerServiceInstanceConfigSubtypesEnum",
     "SomeipServiceDiscovery",
     "SomeipServiceInstanceToMachineMapping",
     "SomeipServiceInterfaceDeployment",
@@ -5286,14 +5305,15 @@ __all__ = [
     "SomeipTransformationProps",
     "SomeipTransformerSessionHandlingEnum",
     "SomeipTransformerSessionHandlingEnumSimple",
+    "SpaceValue",
     "SpecificationDocumentScope",
     "SpecificationScope",
     "SporadicEventTriggering",
     "StandardNameEnum",
     "StandardNameEnumSimple",
     "StartupConfig",
-    "StartupConfigSubtypesEnum",
     "StartupConfigSet",
+    "StartupConfigSubtypesEnum",
     "StateDependentStartupConfig",
     "StaticPart",
     "StaticSocketConnection",
@@ -5304,11 +5324,10 @@ __all__ = [
     "StorageConditionStatusEnumSimple",
     "String",
     "StrongRevisionLabelString",
-    "StructuredReq",
     "SubElementMapping",
     "SupervisedEntityCheckpointNeeds",
-    "SupervisedEntityCheckpointNeedsSubtypesEnum",
     "SupervisedEntityCheckpointNeedsRefConditional",
+    "SupervisedEntityCheckpointNeedsSubtypesEnum",
     "SupervisedEntityNeeds",
     "SupervisionCheckpoint",
     "SupervisionCheckpointSubtypesEnum",
@@ -5333,11 +5352,9 @@ __all__ = [
     "SwCalprmRefProxy",
     "SwComponentDocumentation",
     "SwComponentPrototype",
-    "SwComponentPrototypeSubtypesEnum",
     "SwComponentPrototypeAssignment",
+    "SwComponentPrototypeSubtypesEnum",
     "SwComponentTypeSubtypesEnum",
-    "SwDataDefProps",
-    "SwDataDefPropsConditional",
     "SwDataDependency",
     "SwDataDependencyArgs",
     "SwGenericAxisParam",
@@ -5345,11 +5362,13 @@ __all__ = [
     "SwGenericAxisParamTypeSubtypesEnum",
     "SwImplPolicyEnum",
     "SwImplPolicyEnumSimple",
+    "SwDataDefProps",
+    "SwDataDefPropsConditional",
     "SwPointerTargetProps",
     "SwRecordLayout",
-    "SwRecordLayoutSubtypesEnum",
     "SwRecordLayoutGroup",
     "SwRecordLayoutGroupContent",
+    "SwRecordLayoutSubtypesEnum",
     "SwRecordLayoutV",
     "SwServiceArg",
     "SwServiceImplPolicyEnum",
@@ -5381,17 +5400,17 @@ __all__ = [
     "SwcModeSwitchEvent",
     "SwcModeSwitchEventSubtypesEnum",
     "SwcServiceDependency",
-    "SwcServiceDependencySubtypesEnum",
     "SwcServiceDependencyInCompositionInstanceRef",
     "SwcServiceDependencyInExecutableInstanceRef",
     "SwcServiceDependencyInSystemInstanceRef",
+    "SwcServiceDependencySubtypesEnum",
     "SwcTiming",
     "SwcToApplicationPartitionMapping",
     "SwcToEcuMapping",
-    "SwcToEcuMappingSubtypesEnum",
     "SwcToEcuMappingConstraint",
     "SwcToEcuMappingConstraintType",
     "SwcToEcuMappingConstraintTypeSimple",
+    "SwcToEcuMappingSubtypesEnum",
     "SwcToImplMapping",
     "SwcToSwcOperationArguments",
     "SwcToSwcOperationArgumentsDirectionEnum",
@@ -5408,17 +5427,17 @@ __all__ = [
     "SynchronizedTimeBaseConsumer",
     "SynchronizedTimeBaseConsumerInterface",
     "SynchronizedTimeBaseProvider",
-    "SynchronizedTimeBaseProviderSubtypesEnum",
     "SynchronizedTimeBaseProviderInterface",
+    "SynchronizedTimeBaseProviderSubtypesEnum",
     "SynchronousServerCallPoint",
     "System",
-    "SystemSubtypesEnum",
     "SystemMapping",
     "SystemMemoryUsage",
     "SystemSignal",
-    "SystemSignalSubtypesEnum",
     "SystemSignalGroup",
     "SystemSignalGroupSubtypesEnum",
+    "SystemSignalSubtypesEnum",
+    "SystemSubtypesEnum",
     "SystemTiming",
     "Table",
     "TableSeparatorString",
@@ -5480,11 +5499,11 @@ __all__ = [
     "TdEventServiceInstanceMethod",
     "TdEventServiceInstanceMethodTypeEnum",
     "TdEventServiceInstanceMethodTypeEnumSimple",
-    "TdEventSwcSubtypesEnum",
     "TdEventSwcInternalBehavior",
     "TdEventSwcInternalBehaviorReference",
     "TdEventSwcInternalBehaviorTypeEnum",
     "TdEventSwcInternalBehaviorTypeEnumSimple",
+    "TdEventSwcSubtypesEnum",
     "TdEventTrigger",
     "TdEventTriggerTypeEnum",
     "TdEventTriggerTypeEnumSimple",
@@ -5492,8 +5511,8 @@ __all__ = [
     "TdEventVariableDataPrototype",
     "TdEventVariableDataPrototypeTypeEnum",
     "TdEventVariableDataPrototypeTypeEnumSimple",
-    "TdEventVfbSubtypesEnum",
     "TdEventVfbReference",
+    "TdEventVfbSubtypesEnum",
     "TdHeaderIdRange",
     "TerminationBehaviorEnum",
     "TerminationBehaviorEnumSimple",
@@ -5503,8 +5522,8 @@ __all__ = [
     "TextualCondition",
     "Tgroup",
     "TimeBaseProviderToPersistencyMapping",
-    "TimeBaseResourceSubtypesEnum",
     "TimeBaseResourceRefConditional",
+    "TimeBaseResourceSubtypesEnum",
     "TimeRangeType",
     "TimeSyncClientConfiguration",
     "TimeSyncCorrection",
@@ -5520,12 +5539,12 @@ __all__ = [
     "TimeValue",
     "TimeValueValueVariationPoint",
     "TimingCondition",
-    "TimingConditionSubtypesEnum",
     "TimingConditionFormula",
-    "TimingDescriptionSubtypesEnum",
-    "TimingDescriptionEventSubtypesEnum",
+    "TimingConditionSubtypesEnum",
     "TimingDescriptionEventChain",
     "TimingDescriptionEventChainSubtypesEnum",
+    "TimingDescriptionEventSubtypesEnum",
+    "TimingDescriptionSubtypesEnum",
     "TimingEvent",
     "TimingEventSubtypesEnum",
     "TimingExtensionResource",
@@ -5559,12 +5578,11 @@ __all__ = [
     "TpPort",
     "TraceableSubtypesEnum",
     "TraceableTable",
-    "TraceableText",
     "TraceableTextSubtypesEnum",
     "TransferPropertyEnum",
     "TransferPropertyEnumSimple",
-    "TransformationPropsSubtypesEnum",
     "TransformationPropsSet",
+    "TransformationPropsSubtypesEnum",
     "TransformationPropsToServiceInterfaceElementMapping",
     "TransformationPropsToServiceInterfaceElementMappingSet",
     "TransformationTechnology",
@@ -5583,7 +5601,6 @@ __all__ = [
     "TransportLayerProtocolEnum",
     "TransportLayerProtocolEnumSimple",
     "Trigger",
-    "TriggerSubtypesEnum",
     "TriggerIPduSendCondition",
     "TriggerInSystemInstanceRef",
     "TriggerInterface",
@@ -5593,14 +5610,15 @@ __all__ = [
     "TriggerModeSimple",
     "TriggerPortAnnotation",
     "TriggerRefConditional",
+    "TriggerSubtypesEnum",
     "TriggerToSignalMapping",
     "TrustedPlatformExecutableLaunchBehaviorEnum",
     "TrustedPlatformExecutableLaunchBehaviorEnumSimple",
     "Tt",
     "TtcanAbsolutelyScheduledTiming",
     "TtcanCluster",
-    "TtcanClusterSubtypesEnum",
     "TtcanClusterConditional",
+    "TtcanClusterSubtypesEnum",
     "TtcanCommunicationConnector",
     "TtcanCommunicationController",
     "TtcanCommunicationControllerConditional",
@@ -5617,8 +5635,8 @@ __all__ = [
     "UdpCollectionTriggerEnum",
     "UdpCollectionTriggerEnumSimple",
     "UdpNmCluster",
-    "UdpNmClusterSubtypesEnum",
     "UdpNmClusterCoupling",
+    "UdpNmClusterSubtypesEnum",
     "UdpNmEcu",
     "UdpNmNetworkConfiguration",
     "UdpNmNode",
@@ -5626,9 +5644,9 @@ __all__ = [
     "UdpTp",
     "UnassignFrameId",
     "Unit",
-    "UnitSubtypesEnum",
     "UnitGroup",
     "UnitGroupSubtypesEnum",
+    "UnitSubtypesEnum",
     "UnlimitedInteger",
     "UnlimitedIntegerValueVariationPoint",
     "UnresolvedReferenceRestrictionWithSeverity",
@@ -5666,18 +5684,17 @@ __all__ = [
     "ValueList",
     "ValueRestrictionWithSeverity",
     "VariableAccess",
-    "VariableAccessSubtypesEnum",
     "VariableAccessInEcuInstanceRef",
     "VariableAccessScopeEnum",
     "VariableAccessScopeEnumSimple",
+    "VariableAccessSubtypesEnum",
     "VariableAndParameterInterfaceMapping",
     "VariableDataPrototype",
-    "VariableDataPrototypeSubtypesEnum",
     "VariableDataPrototypeInCompositionInstanceRef",
     "VariableDataPrototypeInSystemInstanceRef",
+    "VariableDataPrototypeSubtypesEnum",
     "VariableInAtomicSwcTypeInstanceRef",
     "VariableInComponentInstanceRef",
-    "VariationPoint",
     "VariationPointProxy",
     "VariationRestrictionWithSeverity",
     "VehicleDriverNotification",
@@ -5705,5 +5722,4 @@ __all__ = [
     "XmlSpaceEnumSimple",
     "Xref",
     "XrefTarget",
-    "SpaceValue",
 ]

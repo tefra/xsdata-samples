@@ -3,7 +3,7 @@
   <Output maxLineLength="79">
     <Package>autosar.models</Package>
     <Format>dataclasses</Format>
-    <Structure>filenames</Structure>
+    <Structure>clusters</Structure>
     <DocstringStyle>reStructuredText</DocstringStyle>
     <CompoundFields>false</CompoundFields>
   </Output>
