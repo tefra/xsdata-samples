@@ -1,0 +1,10 @@
+from enum import Enum
+
+__NAMESPACE__ = "http://autosar.org/schema/r4.0"
+
+
+class LinFrameSubtypesEnum(Enum):
+    LIN_EVENT_TRIGGERED_FRAME = "LIN-EVENT-TRIGGERED-FRAME"
+    LIN_FRAME = "LIN-FRAME"
+    LIN_SPORADIC_FRAME = "LIN-SPORADIC-FRAME"
+    LIN_UNCONDITIONAL_FRAME = "LIN-UNCONDITIONAL-FRAME"

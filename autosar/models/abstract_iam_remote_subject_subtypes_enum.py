@@ -1,0 +1,10 @@
+from enum import Enum
+
+__NAMESPACE__ = "http://autosar.org/schema/r4.0"
+
+
+class AbstractIamRemoteSubjectSubtypesEnum(Enum):
+    ABSTRACT_IAM_REMOTE_SUBJECT = "ABSTRACT-IAM-REMOTE-SUBJECT"
+    IP_IAM_REMOTE_SUBJECT = "IP-IAM-REMOTE-SUBJECT"
+    IP_SEC_IAM_REMOTE_SUBJECT = "IP-SEC-IAM-REMOTE-SUBJECT"
+    TLS_IAM_REMOTE_SUBJECT = "TLS-IAM-REMOTE-SUBJECT"
