@@ -332,7 +332,7 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class FormOfPaymentDetails:
-            form_of_payment_details: List["FareMasterPricerTravelBoardSearch.FormOfPaymentByPassenger.FormOfPaymentDetails.FormOfPaymentDetails"] = field(
+            form_of_payment_details: List["FareMasterPricerTravelBoardSearch.FormOfPaymentByPassenger.FormOfPaymentDetails.FormOfPaymentDetailsInner"] = field(
                 default_factory=list,
                 metadata={
                     "name": "formOfPaymentDetails",
@@ -342,7 +342,7 @@ class FareMasterPricerTravelBoardSearch:
             )
 
             @dataclass
-            class FormOfPaymentDetails:
+            class FormOfPaymentDetailsInner:
                 type: Optional[str] = field(
                     default=None,
                     metadata={

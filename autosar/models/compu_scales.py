@@ -30,7 +30,7 @@ class CompuScales:
     class Meta:
         name = "COMPU-SCALES"
 
-    compu_scales: Optional["CompuScales.CompuScales"] = field(
+    compu_scales: Optional["CompuScales.CompuScalesInner"] = field(
         default=None,
         metadata={
             "name": "COMPU-SCALES",
@@ -55,7 +55,7 @@ class CompuScales:
     )
 
     @dataclass
-    class CompuScales:
+    class CompuScalesInner:
         compu_scale: List[CompuScale] = field(
             default_factory=list,
             metadata={

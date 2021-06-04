@@ -37,7 +37,7 @@ class TargetIPduRef:
             "namespace": "http://autosar.org/schema/r4.0",
         }
     )
-    target_i_pdu_ref: Optional["TargetIPduRef.TargetIPduRef"] = field(
+    target_i_pdu_ref: Optional["TargetIPduRef.TargetIPduRefInner"] = field(
         default=None,
         metadata={
             "name": "TARGET-I-PDU-REF",
@@ -62,7 +62,7 @@ class TargetIPduRef:
     )
 
     @dataclass
-    class TargetIPduRef(Ref):
+    class TargetIPduRefInner(Ref):
         dest: Optional[PduTriggeringSubtypesEnum] = field(
             default=None,
             metadata={
