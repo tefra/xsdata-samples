@@ -2,4 +2,4 @@ mypy
 pytest
 pre-commit
 requests
-git+https://github.com/tefra/xsdata@feat-508#egg=xsdata[cli,lxml]
+git+https://github.com/tefra/xsdata@master#egg=xsdata[cli,lxml]
