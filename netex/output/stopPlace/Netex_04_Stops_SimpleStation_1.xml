@@ -473,12 +473,12 @@
                   <Name>Main entrance to bus stop to</Name>
                   <Distance>10</Distance>
                   <From>
-                    <PlaceRef version="01" ref="ztb:bh0023@A1"/>
+                    <PlaceRef version="01" ref="ztb:bh0023@A1" xsi:type="AccessSpaceRefStructure"/>
                     <LevelRef version="01" ref="ztb:bh0023@Lvl_0"/>
                     <EntranceRef version="01" ref="ztb:bh0023@A1-E1"/>
                   </From>
                   <To>
-                    <PlaceRef version="01" ref="ztb:bh0024_Rail@Q1"/>
+                    <PlaceRef version="01" ref="ztb:bh0024_Rail@Q1" xsi:type="QuayRefStructure"/>
                     <LevelRef version="01" ref="ztb:bh0023@Lvl_0"/>
                   </To>
                   <AccessibilityAssessment id="ztb:bh0023@lnk_A1-E2+Bus-Q1" created="2010-05-17T09:30:47Z" modification="new" version="01" status="active">
@@ -509,12 +509,12 @@
                   <Name>Tthrough hall to platform1 </Name>
                   <Distance>5</Distance>
                   <From>
-                    <PlaceRef version="01" ref="ztb:bh0023@A1"/>
+                    <PlaceRef version="01" ref="ztb:bh0023@A1" xsi:type="AccessSpaceRefStructure"/>
                     <LevelRef version="01" ref="ztb:bh0023@Lvl_0"/>
                     <EntranceRef version="01" ref="ztb:bh0023@A1-E1"/>
                   </From>
                   <To>
-                    <PlaceRef version="01" ref="ztb:bh0023@A1"/>
+                    <PlaceRef version="01" ref="ztb:bh0023@A1" xsi:type="AccessSpaceRefStructure"/>
                     <LevelRef version="01" ref="ztb:bh0023@Lvl_0"/>
                     <EntranceRef version="01" ref="ztb:bh0023@A1-E2"/>
                   </To>
@@ -559,14 +559,14 @@
                   <Name>Along platform1 to barrow crossing entrance</Name>
                   <Distance>5</Distance>
                   <From>
-                    <PlaceRef version="01" ref="ztb:bh0023@A1"/>
+                    <PlaceRef version="01" ref="ztb:bh0023@A1" xsi:type="AccessSpaceRefStructure"/>
                     <LevelRef version="01" ref="ztb:bh0023@Lvl_0"/>
-                    <EntranceRef version="01" ref="ztb:bh0023@A1-E2"/>
+                    <EntranceRef version="01" ref="ztb:bh0023@A1-E2" xsi:type="StopPlaceEntranceRefStructure"/>
                   </From>
                   <To>
-                    <PlaceRef version="01" ref="ztb:bh0023@Rail@Q1"/>
+                    <PlaceRef version="01" ref="ztb:bh0023@Rail@Q1" xsi:type="QuayRefStructure"/>
                     <LevelRef version="01" ref="ztb:bh0023@Lvl_0"/>
-                    <EntranceRef version="01" ref="ztb:bh0023@Rail@Q1-E1tr"/>
+                    <EntranceRef version="01" ref="ztb:bh0023@Rail@Q1-E1tr" xsi:type="StopPlaceEntranceRefStructure"/>
                   </To>
                   <AccessibilityAssessment id="ztb:bh0023@lnk_A1-E2+Rail@Q1-E2tr" created="2010-05-17T09:30:47Z" modification="new" version="01" status="active">
                     <MobilityImpairedAccess>true</MobilityImpairedAccess>
@@ -609,12 +609,12 @@
                   <Name>Crossing over tracks from platform 1 to platform 2</Name>
                   <Distance>10</Distance>
                   <From>
-                    <PlaceRef version="01" ref="ztb:bh0023@Rail@Q1"/>
+                    <PlaceRef version="01" ref="ztb:bh0023@Rail@Q1" xsi:type="QuayRefStructure"/>
                     <LevelRef version="01" ref="ztb:bh0023@Lvl_0"/>
                     <EntranceRef version="01" ref="ztb:bh0023@Rail@Q1-E1tr"/>
                   </From>
                   <To>
-                    <PlaceRef version="01" ref="ztb:bh0023@Rail@Q1"/>
+                    <PlaceRef version="01" ref="ztb:bh0023@Rail@Q1" xsi:type="QuayRefStructure"/>
                     <LevelRef version="01" ref="ztb:bh0023@Lvl_0"/>
                     <EntranceRef version="01" ref="ztb:bh0023@Rail@Q2-E1tr"/>
                   </To>
@@ -958,7 +958,7 @@
                 <ResponsibilityRoleAssignment id="mybus:Resp01" created="2010-05-17T09:30:47Z" modification="new" version="01" status="active">
                   <Description>Zall Zillertal transport - Managed centrally</Description>
                   <DataRoleType>all</DataRoleType>
-                  <ResponsibleOrganisationRef version="any" ref="zbt:Org_ZTLB"/>
+                  <ResponsibleOrganisationRef version="any" ref="zbt:Org_ZTLB" xsi:type="OperatorRefStructure"/>
                 </ResponsibilityRoleAssignment>
               </roles>
             </ResponsibilitySet>
@@ -968,7 +968,7 @@
                 <ResponsibilityRoleAssignment id="mybus:Resp02" created="2010-05-17T09:30:47Z" modification="new" version="01" status="active">
                   <Description>Zall Zillertal transport - Managed centrally</Description>
                   <DataRoleType>all</DataRoleType>
-                  <ResponsibleOrganisationRef version="any" ref="zbt:Org_ZTLB"/>
+                  <ResponsibleOrganisationRef version="any" ref="zbt:Org_ZTLB" xsi:type="OperatorRefStructure"/>
                 </ResponsibilityRoleAssignment>
               </roles>
             </ResponsibilitySet>

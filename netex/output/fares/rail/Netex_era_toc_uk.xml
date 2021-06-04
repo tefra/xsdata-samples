@@ -8220,14 +8220,14 @@ You must buy 2 tickets at the same time.					</Description>
                     <ValidityRuleParameter id="jsp:JSP@Tariff@PlusBus@Demand@off_peak@varies_by_region@Outside_South_East" modification="new" version="01" status="active">
                       <Description>** outside of the South East of England at all times;</Description>
                       <WithConditionRef version="01" ref="jsp:anytime@anyday"/>
-                      <RuleObjectRef version="01" ref="jsp:Outside_South_East_Region">South East</RuleObjectRef>
+                      <RuleObjectRef version="01" ref="jsp:Outside_South_East_Region" xsi:type="FareZoneRefStructure">South East</RuleObjectRef>
                       <isValid>true</isValid>
                     </ValidityRuleParameter>
                     <ValidityRuleParameter id="jsp:JSP@Tariff@PlusBus@Demand@off_peak@varies_by_region@Inside_South_East" modification="new" version="01" status="active">
                       <Description>** in the South East after the Monday to Friday morning peak period* (excluding Bank Holidays) for a journey wholly within the South East region.
      * times of off-peak services vary by route, but generally related to the availability of Off-Peak tickets.</Description>
                       <WithConditionRef version="01" ref="jsp:working_day_offpeak"/>
-                      <RuleObjectRef version="01" ref="jsp:South_East_Region">South East</RuleObjectRef>
+                      <RuleObjectRef version="01" ref="jsp:South_East_Region" xsi:type="FareZoneRefStructure">South East</RuleObjectRef>
                       <isValid>true</isValid>
                     </ValidityRuleParameter>
                   </validityConditions>

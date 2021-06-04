@@ -129,7 +129,7 @@
                 </suitabilities>
               </AccessibilityAssessment>
               <PublicUse>all</PublicUse>
-              <SiteRef version="any" ref="tbd:POI_23"/>
+              <SiteRef version="any" ref="tbd:POI_23" xsi:type="PointOfInterestRefStructure"/>
               <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
               <checkConstraints modificationSet="all">
                 <CheckConstraint id="tbd:POI_23_A1-E1_C1" modification="new" version="any" status="active" order="1">
@@ -216,7 +216,7 @@
                 </suitabilities>
               </AccessibilityAssessment>
               <PublicUse>all</PublicUse>
-              <SiteRef version="any" ref="tbd:POI_23"/>
+              <SiteRef version="any" ref="tbd:POI_23" xsi:type="PointOfInterestRefStructure"/>
               <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
               <checkConstraints modificationSet="all">
                 <CheckConstraint id="tbd:POI_23_A1_E2_C1" modification="new" version="any" status="active" order="1">
@@ -310,7 +310,7 @@
               <Covered>covered</Covered>
               <Gated>gatedArea</Gated>
               <Lighting>wellLit</Lighting>
-              <SiteRef version="any" ref="tbd:POI_23"/>
+              <SiteRef version="any" ref="tbd:POI_23" xsi:type="PointOfInterestRefStructure"/>
               <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
             </PointOfInterestSpace>
             <PointOfInterestSpace id="tbd:POI_23_A2" modification="new" version="any" status="active">
@@ -339,7 +339,7 @@
               <Covered>covered</Covered>
               <Gated>gatedArea</Gated>
               <Lighting>wellLit</Lighting>
-              <SiteRef version="any" ref="tbd:POI_23"/>
+              <SiteRef version="any" ref="tbd:POI_23" xsi:type="PointOfInterestRefStructure"/>
               <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
             </PointOfInterestSpace>
             <PointOfInterestSpace id="tbd:POI_23_A3" modification="new" version="any" status="active">
@@ -368,7 +368,7 @@
               <Covered>covered</Covered>
               <Gated>gatedArea</Gated>
               <Lighting>wellLit</Lighting>
-              <SiteRef version="any" ref="tbd:POI_23"/>
+              <SiteRef version="any" ref="tbd:POI_23" xsi:type="PointOfInterestRefStructure"/>
               <LevelRef version="any" ref="tbd:POI_23_Lvl_02_upper"/>
             </PointOfInterestSpace>
             <PointOfInterestSpace id="tbd:POI_23_B1" modification="new" version="any" status="active">
@@ -397,7 +397,7 @@
               <Covered>covered</Covered>
               <Gated>gatedArea</Gated>
               <Lighting>wellLit</Lighting>
-              <SiteRef version="any" ref="tbd:POI_23"/>
+              <SiteRef version="any" ref="tbd:POI_23" xsi:type="PointOfInterestRefStructure"/>
               <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
             </PointOfInterestSpace>
             <PointOfInterestSpace id="tbd:POI_23_B2" modification="new" version="any" status="active">
@@ -426,7 +426,7 @@
               <Covered>covered</Covered>
               <Gated>gatedArea</Gated>
               <Lighting>wellLit</Lighting>
-              <SiteRef version="any" ref="tbd:POI_23"/>
+              <SiteRef version="any" ref="tbd:POI_23" xsi:type="PointOfInterestRefStructure"/>
               <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
             </PointOfInterestSpace>
             <PointOfInterestSpace id="tbd:POI_23_B3" modification="new" version="any" status="active">
@@ -453,7 +453,7 @@
               <Covered>covered</Covered>
               <Gated>gatedArea</Gated>
               <Lighting>wellLit</Lighting>
-              <SiteRef version="any" ref="tbd:POI_23"/>
+              <SiteRef version="any" ref="tbd:POI_23" xsi:type="PointOfInterestRefStructure"/>
               <LevelRef version="any" ref="tbd:POI_23_Lvl_02_upper"/>
             </PointOfInterestSpace>
           </spaces>
@@ -462,7 +462,7 @@
               <Name>From entrance A to main concourse J1</Name>
               <Distance>20</Distance>
               <From>
-                <PlaceRef version="any" ref="tbd:POI_23"/>
+                <PlaceRef version="any" ref="tbd:POI_23" xsi:type="PointOfInterestRefStructure"/>
                 <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
                 <EntranceRef version="any" ref="tbd:POI_23_A1-E1"/>
               </From>
@@ -493,7 +493,7 @@
                 <DefaultDuration>PT1M</DefaultDuration>
                 <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
               </TransferDuration>
-              <SiteRef version="any" ref="tbd:POI_23"/>
+              <SiteRef version="any" ref="tbd:POI_23" xsi:type="PointOfInterestRefStructure"/>
               <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
             </SitePathLink>
             <SitePathLink id="tbd:POI_23_pl_A1-J1_to_A2" modification="new" version="any" status="active">
@@ -504,7 +504,7 @@
                 <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
               </From>
               <To>
-                <PlaceRef version="any" ref="tbd:POI_23_A2"/>
+                <PlaceRef version="any" ref="tbd:POI_23_A2" xsi:type="PointOfInterestSpaceRefStructure"/>
                 <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
               </To>
               <AccessibilityAssessment id="tbd:POI_23_pl_A1-J1_to_A2" modification="new" version="any" status="active">
@@ -530,7 +530,7 @@
                 <DefaultDuration>PT1M</DefaultDuration>
                 <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
               </TransferDuration>
-              <SiteRef version="any" ref="tbd:POI_23"/>
+              <SiteRef version="any" ref="tbd:POI_23" xsi:type="PointOfInterestRefStructure"/>
               <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
             </SitePathLink>
             <SitePathLink id="tbd:POI_23_pl_A1-J1_to_A3" modification="new" version="any" status="active">
@@ -541,7 +541,7 @@
                 <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
               </From>
               <To>
-                <PlaceRef version="any" ref="tbd:POI_23_A3"/>
+                <PlaceRef version="any" ref="tbd:POI_23_A3" xsi:type="PointOfInterestSpaceRefStructure"/>
                 <LevelRef version="any" ref="tbd:POI_23_Lvl_02_upper"/>
               </To>
               <AccessibilityAssessment id="tbd:POI_23_pl_A1-J1_to_A3" modification="new" version="any" status="active">
@@ -566,13 +566,13 @@
               <TransferDuration>
                 <DefaultDuration>PT2M</DefaultDuration>
               </TransferDuration>
-              <SiteRef version="any" ref="tbd:POI_23"/>
+              <SiteRef version="any" ref="tbd:POI_23" xsi:type="PointOfInterestRefStructure"/>
             </SitePathLink>
             <SitePathLink id="tbd:POI_23_pl_B1-E1_to_B1-J1" modification="new" version="any" status="active">
               <Name>From entrance A to main concourse J1</Name>
               <Distance>20</Distance>
               <From>
-                <PlaceRef version="any" ref="tbd:POI_23"/>
+                <PlaceRef version="any" ref="tbd:POI_23" xsi:type="PointOfInterestRefStructure"/>
                 <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
                 <EntranceRef version="any" ref="tbd:POI_23_B1-E1"/>
               </From>
@@ -603,7 +603,7 @@
                 <DefaultDuration>PT1M</DefaultDuration>
                 <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
               </TransferDuration>
-              <SiteRef version="any" ref="tbd:POI_23"/>
+              <SiteRef version="any" ref="tbd:POI_23" xsi:type="PointOfInterestRefStructure"/>
               <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
             </SitePathLink>
             <SitePathLink id="tbd:POI_23_pl_B1-J1_to_B2" modification="new" version="any" status="active">
@@ -614,7 +614,7 @@
                 <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
               </From>
               <To>
-                <PlaceRef version="any" ref="tbd:POI_23_B2"/>
+                <PlaceRef version="any" ref="tbd:POI_23_B2" xsi:type="PointOfInterestSpaceRefStructure"/>
                 <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
               </To>
               <AccessibilityAssessment id="tbd:POI_23_pl_B1-J1_to_B2" modification="new" version="any" status="active">
@@ -640,7 +640,7 @@
                 <DefaultDuration>PT1M</DefaultDuration>
                 <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
               </TransferDuration>
-              <SiteRef version="any" ref="tbd:POI_23"/>
+              <SiteRef version="any" ref="tbd:POI_23" xsi:type="PointOfInterestRefStructure"/>
               <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
             </SitePathLink>
             <SitePathLink id="tbd:POI_23_pl_B1-J1_to_B3" modification="new" version="any" status="active">
@@ -651,7 +651,7 @@
                 <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
               </From>
               <To>
-                <PlaceRef version="any" ref="tbd:POI_23_B3"/>
+                <PlaceRef version="any" ref="tbd:POI_23_B3" xsi:type="PointOfInterestSpaceRefStructure"/>
                 <LevelRef version="any" ref="tbd:POI_23_Lvl_02_upper"/>
               </To>
               <AccessibilityAssessment id="tbd:POI_23_pl_B1-J1_to_B3" modification="new" version="any" status="active">
@@ -676,7 +676,7 @@
               <TransferDuration>
                 <DefaultDuration>PT2M</DefaultDuration>
               </TransferDuration>
-              <SiteRef version="any" ref="tbd:POI_23"/>
+              <SiteRef version="any" ref="tbd:POI_23" xsi:type="PointOfInterestRefStructure"/>
             </SitePathLink>
           </pathLinks>
           <pathJunctions modificationSet="all">
@@ -702,10 +702,10 @@
               <BothWays>true</BothWays>
               <From>
                 <TransportMode>metro</TransportMode>
-                <PlaceRef ref="naptStop:470012345"/>
+                <PlaceRef ref="naptStop:470012345" xsi:type="StopPlaceRefStructure"/>
               </From>
               <To>
-                <PlaceRef version="any" ref="tbd:POI_23"/>
+                <PlaceRef version="any" ref="tbd:POI_23" xsi:type="PointOfInterestRefStructure"/>
               </To>
             </Access>
           </accesses>
@@ -741,7 +741,7 @@
               <placesInSequence>
                 <PlaceInSequence id="tbd:POI_23_N1_A1-E1_to_A2_p01" modification="new" version="any" status="active" order="1">
                   <Description>Entrance A</Description>
-                  <PlaceRef version="any" ref="tbd:POI_23_A1-E1"/>
+                  <PlaceRef version="any" ref="tbd:POI_23_A1-E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   <onwardLinks>
                     <PathLinkInSequence id="tbd:PLIS_POI_23_A1-E1_to_A1_01" modification="new" version="any" status="active" order="1">
                       <Description>Entrance A</Description>
@@ -767,7 +767,7 @@
                 </PlaceInSequence>
                 <PlaceInSequence id="tbd:POI_23_N1_A1-E1_to_A2_p03" modification="new" version="any" status="active" order="3">
                   <Description>lower terrace</Description>
-                  <PlaceRef version="any" ref="tbd:POI_23_A2"/>
+                  <PlaceRef version="any" ref="tbd:POI_23_A2" xsi:type="PointOfInterestSpaceRefStructure"/>
                 </PlaceInSequence>
               </placesInSequence>
               <pathLinksInSequence>
@@ -824,7 +824,7 @@
                   <onwardLinks>
                     <PathLinkInSequence id="tbd:POI_23_N2_A1-E1_to_A3_p01_01" modification="new" version="any" status="active" order="1">
                       <Description>Entrance A</Description>
-                      <PathLinkRef version="any" ref="tbd:POI_23_pl_A1-E1_to_A1-J1"/>
+                      <PathLinkRef version="any" ref="tbd:POI_23_pl_A1-E1_to_A1-J1" xsi:type="SitePathLinkRefStructure"/>
                       <Reverse>true</Reverse>
                       <Heading>forward</Heading>
                       <Transition>level</Transition>
@@ -833,7 +833,7 @@
                 </PlaceInSequence>
                 <PlaceInSequence id="tbd:POI_23_N2_A1-E1_to_A3_p02" modification="new" version="any" status="active" order="2">
                   <Description>entrance concours A</Description>
-                  <PlaceRef version="any" ref="tbd:POI_23_A1"/>
+                  <PlaceRef version="any" ref="tbd:POI_23_A1" xsi:type="PointOfInterestSpaceRefStructure"/>
                   <onwardLinks>
                     <PathLinkInSequence id="tbd:POI_23_N2_A1-E1_to_A3_p02_01" modification="new" version="any" status="active" order="1">
                       <Description>normalizedString</Description>
@@ -846,7 +846,7 @@
                 </PlaceInSequence>
                 <PlaceInSequence id="tbd:POI_23_N2_A1-E1_to_A3_p03" modification="new" version="any" status="active" order="3">
                   <Description>upperterrace</Description>
-                  <PlaceRef version="any" ref="tbd:POI_23_A3"/>
+                  <PlaceRef version="any" ref="tbd:POI_23_A3" xsi:type="PointOfInterestSpaceRefStructure"/>
                 </PlaceInSequence>
               </placesInSequence>
               <pathLinksInSequence>
@@ -897,7 +897,7 @@
               <placesInSequence>
                 <PlaceInSequence id="tbd:POI_23_N1_B1-E1_to_B2_p01" modification="new" version="any" status="active" order="1">
                   <Description>Entrance A</Description>
-                  <PlaceRef version="any" ref="tbd:POI_23_B1-E1"/>
+                  <PlaceRef version="any" ref="tbd:POI_23_B1-E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   <onwardLinks>
                     <PathLinkInSequence id="tbd:PLIS_POI_23_B1-E1_to_B1_01" modification="new" version="any" status="active" order="1">
                       <Description>Entrance A</Description>
@@ -923,7 +923,7 @@
                 </PlaceInSequence>
                 <PlaceInSequence id="tbd:POI_23_N1_B1-E1_to_B2_p03" modification="new" version="any" status="active" order="3">
                   <Description>lower terrace</Description>
-                  <PlaceRef version="any" ref="tbd:POI_23_B2"/>
+                  <PlaceRef version="any" ref="tbd:POI_23_B2" xsi:type="PointOfInterestSpaceRefStructure"/>
                 </PlaceInSequence>
               </placesInSequence>
               <pathLinksInSequence>
@@ -976,11 +976,11 @@
               <placesInSequence>
                 <PlaceInSequence id="tbd:POI_23_N2_B1-E1_to_B3_p01" modification="new" version="any" status="active" order="1">
                   <Description>entrance A</Description>
-                  <PlaceRef version="any" ref="tbd:POI_23_B1-E1"/>
+                  <PlaceRef version="any" ref="tbd:POI_23_B1-E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   <onwardLinks>
                     <PathLinkInSequence id="tbd:POI_23_N2_B1-E1_to_B3_p01_01" modification="new" version="any" status="active" order="1">
                       <Description>Entrance A</Description>
-                      <PathLinkRef version="any" ref="tbd:POI_23_pl_B1-E1_to_B1-J1"/>
+                      <PathLinkRef version="any" ref="tbd:POI_23_pl_B1-E1_to_B1-J1" xsi:type="SitePathLinkRefStructure"/>
                       <Reverse>true</Reverse>
                       <Heading>forward</Heading>
                       <Transition>level</Transition>
@@ -989,7 +989,7 @@
                 </PlaceInSequence>
                 <PlaceInSequence id="tbd:POI_23_N2_B1-E1_to_B3_p02" modification="new" version="any" status="active" order="2">
                   <Description>entrance concours A</Description>
-                  <PlaceRef version="any" ref="tbd:POI_23_B1"/>
+                  <PlaceRef version="any" ref="tbd:POI_23_B1" xsi:type="PointOfInterestSpaceRefStructure"/>
                   <onwardLinks>
                     <PathLinkInSequence id="tbd:POI_23_N2_B1-E1_to_B3_p02_01" modification="new" version="any" status="active" order="1">
                       <Description>normalizedString</Description>
@@ -1002,7 +1002,7 @@
                 </PlaceInSequence>
                 <PlaceInSequence id="tbd:POI_23_N2_B1-E1_to_B3_p03" modification="new" version="any" status="active" order="3">
                   <Description>upperterrace</Description>
-                  <PlaceRef version="any" ref="tbd:POI_23_B3"/>
+                  <PlaceRef version="any" ref="tbd:POI_23_B3" xsi:type="PointOfInterestSpaceRefStructure"/>
                 </PlaceInSequence>
               </placesInSequence>
               <pathLinksInSequence>
