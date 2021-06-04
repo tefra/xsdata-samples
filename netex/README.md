@@ -3,7 +3,7 @@
 
 ## Notes
 
-- Auto generated models into a single package
+- Auto generated models with custers style
 - Verify bindings from samples
 
 

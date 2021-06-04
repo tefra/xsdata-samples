@@ -201,7 +201,7 @@
                     <Town>Stratford</Town>
                     <PostCode>E15</PostCode>
                   </PostalAddress>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                   <LevelRef version="any" ref="naptPoi:8100OPK_Lvl_01"/>
                   <checkConstraints modificationSet="all">
                     <CheckConstraint id="naptPoi:8100OPK_E1_C1" modification="new" version="any" status="active" order="1">
@@ -386,7 +386,7 @@
                     <Town>Stratford</Town>
                     <PostCode>E15</PostCode>
                   </PostalAddress>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                   <LevelRef version="any" ref="naptPoi:8100OPK_Lvl_01"/>
                   <checkConstraints modificationSet="all">
                     <CheckConstraint id="naptPoi:8100OPK_E2_C1" modification="new" version="any" status="active" order="1">
@@ -568,7 +568,7 @@
                     <Town>Stratford</Town>
                     <PostCode>E15</PostCode>
                   </PostalAddress>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                   <LevelRef version="any" ref="naptPoi:8100OPK_Lvl_01"/>
                   <checkConstraints modificationSet="all">
                     <CheckConstraint id="naptPoi:8100OPK_E3_C1" modification="new" version="any" status="active" order="1">
@@ -750,7 +750,7 @@
                     <Town>Stratford</Town>
                     <PostCode>E15</PostCode>
                   </PostalAddress>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                   <LevelRef version="any" ref="naptPoi:8100OPK_Lvl_01"/>
                   <checkConstraints modificationSet="all">
                     <CheckConstraint id="naptPoi:8100OPK_E4_C1" modification="new" version="any" status="active" order="1">
@@ -925,11 +925,11 @@
                   <Name>From Stratford  entrance E3 to Olympic Stadium</Name>
                   <Distance>500</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V1_STDM"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V1_STDM" xsi:type="PointOfInterestRefStructure"/>
                   </To>
                   <TransferDuration>
                     <DefaultDuration>PT10M</DefaultDuration>
@@ -941,12 +941,12 @@
                   <Name>From Stratford  entrance E3 to Handball Arena</Name>
                   <Distance>1000</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V3_HAND"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_V3_HAND_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V3_HAND" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_V3_HAND_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </To>
                   <TransferDuration>
                     <DefaultDuration>PT15M</DefaultDuration>
@@ -958,12 +958,12 @@
                   <Name>From Stratford  entrance E3 to Hockey Centre </Name>
                   <Distance>1500</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V2_HOCK"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_V2_HOCK_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V2_HOCK" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_V2_HOCK_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </To>
                   <TransferDuration>
                     <DefaultDuration>PT20M</DefaultDuration>
@@ -975,12 +975,12 @@
                   <Name>From Stratford  entrance E3 to Aquatics Centre </Name>
                   <Distance>100</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V4_AQUA"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_V4_AQUA_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V4_AQUA" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_V4_AQUA_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </To>
                   <TransferDuration>
                     <DefaultDuration>PT8M</DefaultDuration>
@@ -992,12 +992,12 @@
                   <Name>From Stratford  entrance E3 to Water Polo Arena </Name>
                   <Distance>100</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V5_WPOL"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_V5_WPOL_E2"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V5_WPOL" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_V5_WPOL_E2" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </To>
                   <TransferDuration>
                     <DefaultDuration>PT8M</DefaultDuration>
@@ -1009,12 +1009,12 @@
                   <Name>From Stratford  entrance E3 to Velodrome</Name>
                   <Distance>1750</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V6_BKTB"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_V6_BKTB_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V6_BKTB" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_V6_BKTB_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </To>
                   <TransferDuration>
                     <DefaultDuration>PT20M</DefaultDuration>
@@ -1026,12 +1026,12 @@
                   <Name>From Stratford  entrance E3 to Basketball</Name>
                   <Distance>1750</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V7_VELO"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_V7_VELO_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V7_VELO" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_V7_VELO_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </To>
                   <TransferDuration>
                     <DefaultDuration>PT20M</DefaultDuration>
@@ -1043,12 +1043,12 @@
                   <Name>FromStratford  entrance E3 to BMX Track</Name>
                   <Distance>1850</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V8_BMXT"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_V8_BMXT_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V8_BMXT" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_V8_BMXT_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </To>
                   <TransferDuration>
                     <DefaultDuration>PT20M</DefaultDuration>
@@ -1060,12 +1060,12 @@
                   <Name>From Stratford  entrance E3 to Eton Manor</Name>
                   <Distance>2000</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V9_EMAN"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_V9_EMAN_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V9_EMAN" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_V9_EMAN_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </To>
                   <TransferDuration>
                     <DefaultDuration>PT20M</DefaultDuration>
@@ -1077,12 +1077,12 @@
                   <Name>From Stratford  entrance E3 to Press Centre</Name>
                   <Distance>1700</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V10_PRSC"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_V10_PRSC_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V10_PRSC" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_V10_PRSC_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </To>
                   <TransferDuration>
                     <DefaultDuration>PT20M</DefaultDuration>
@@ -1094,11 +1094,11 @@
                   <Name>From Stratford  entrance E3 to Warm Um area</Name>
                   <Distance>1200</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V11_WARM"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V11_WARM" xsi:type="PointOfInterestRefStructure"/>
                   </To>
                   <TransferDuration>
                     <DefaultDuration>PT30M</DefaultDuration>
@@ -1110,11 +1110,11 @@
                   <Name>From Olympic Stadium to Stratford  entrance E3  </Name>
                   <Distance>500</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V1_STDM"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V1_STDM" xsi:type="PointOfInterestRefStructure"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </To>
                   <TransferDuration>
                     <DefaultDuration>PT10M</DefaultDuration>
@@ -1126,12 +1126,12 @@
                   <Name>From Handball Arena to Stratford  entrance E3 </Name>
                   <Distance>1000</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V3_HAND"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_V3_HAND_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V3_HAND" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_V3_HAND_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </To>
                   <TransferDuration>
                     <DefaultDuration>PT15M</DefaultDuration>
@@ -1143,12 +1143,12 @@
                   <Name>From Hockey Centre to Stratford  entrance E3 </Name>
                   <Distance>1500</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V2_HOCK"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_V2_HOCK_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V2_HOCK" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_V2_HOCK_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </To>
                   <TransferDuration>
                     <DefaultDuration>PT20M</DefaultDuration>
@@ -1160,12 +1160,12 @@
                   <Name>From Aquatics Centre to Stratford  entrance E3 </Name>
                   <Distance>100</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V4_AQUA"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_V4_AQUA_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V4_AQUA" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_V4_AQUA_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </To>
                   <TransferDuration>
                     <DefaultDuration>PT8M</DefaultDuration>
@@ -1177,12 +1177,12 @@
                   <Name>From Water Polo to Stratford  entrance E3 Arena </Name>
                   <Distance>100</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V5_WPOL"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_V5_WPOL_E2"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V5_WPOL" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_V5_WPOL_E2" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </To>
                   <TransferDuration>
                     <DefaultDuration>PT8M</DefaultDuration>
@@ -1194,12 +1194,12 @@
                   <Name>From   Velodrome to Stratford  entrance E3 </Name>
                   <Distance>1750</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V6_BKTB"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_V6_BKTB_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V6_BKTB" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_V6_BKTB_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </To>
                   <TransferDuration>
                     <DefaultDuration>PT20M</DefaultDuration>
@@ -1211,12 +1211,12 @@
                   <Name>From Basketball to Stratford  entrance E3 </Name>
                   <Distance>1750</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V7_VELO"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_V7_VELO_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V7_VELO" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_V7_VELO_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </To>
                   <TransferDuration>
                     <DefaultDuration>PT20M</DefaultDuration>
@@ -1228,12 +1228,12 @@
                   <Name>From BMX Track to Stratford Entrance  E3  </Name>
                   <Distance>1850</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V8_BMXT"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_V8_BMXT_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V8_BMXT" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_V8_BMXT_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </To>
                   <TransferDuration>
                     <DefaultDuration>PT20M</DefaultDuration>
@@ -1245,12 +1245,12 @@
                   <Name>From Eton Manor to Stratford entrance E3 </Name>
                   <Distance>2000</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V9_EMAN"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_V9_EMAN_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V9_EMAN" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_V9_EMAN_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </To>
                   <TransferDuration>
                     <DefaultDuration>PT20M</DefaultDuration>
@@ -1262,12 +1262,12 @@
                   <Name>From Press Centre to Stratford  entrance E3 </Name>
                   <Distance>1700</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V10_PRSC"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_V10_PRSC_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V10_PRSC" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_V10_PRSC_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </To>
                   <TransferDuration>
                     <DefaultDuration>PT20M</DefaultDuration>
@@ -1279,11 +1279,11 @@
                   <Name>From  Warm Um area to Stratford  entrance E3 </Name>
                   <Distance>1200</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V11_WARM"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V11_WARM" xsi:type="PointOfInterestRefStructure"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
-                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
+                    <EntranceRef version="any" ref="naptPoi:8100OPK_E1" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </To>
                   <TransferDuration>
                     <DefaultDuration>PT30M</DefaultDuration>
@@ -1301,7 +1301,7 @@
               <placeTypes modificationSet="all">
                 <TypeOfPlaceRef version="any" ref="napt:type_of_place@Venue"/>
               </placeTypes>
-              <ParentSiteRef version="any" ref="naptPoi:8100OPK"/>
+              <ParentSiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
               <classifications modificationSet="all">
                 <PointOfInterestClassificationRef version="any" ref="nptg:PoiCat_Sports_OlympicStadium"/>
               </classifications>
@@ -1314,7 +1314,7 @@
               <placeTypes modificationSet="all">
                 <TypeOfPlaceRef version="any" ref="napt:type_of_place@Venue"/>
               </placeTypes>
-              <ParentSiteRef version="any" ref="naptPoi:8100OPK"/>
+              <ParentSiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
               <entrances modificationSet="all">
                 <PointOfInterestEntrance id="naptPoi:8100OPK_V2_HOCK_E1" modification="new" version="any" status="active">
                   <Name>Hockey Centre Entrance 1</Name>
@@ -1343,7 +1343,7 @@
               <placeTypes modificationSet="all">
                 <TypeOfPlaceRef version="any" ref="napt:type_of_place@Venue"/>
               </placeTypes>
-              <ParentSiteRef version="any" ref="naptPoi:8100OPK"/>
+              <ParentSiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
               <entrances modificationSet="all">
                 <PointOfInterestEntrance id="naptPoi:8100OPK_V3_HAND_E1" modification="new" version="any" status="active">
                   <Name>Handball Arena Entrance 1</Name>
@@ -1368,7 +1368,7 @@
               <placeTypes modificationSet="all">
                 <TypeOfPlaceRef version="any" ref="napt:type_of_place@Venue"/>
               </placeTypes>
-              <ParentSiteRef version="any" ref="naptPoi:8100OPK"/>
+              <ParentSiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
               <entrances modificationSet="all">
                 <PointOfInterestEntrance id="naptPoi:8100OPK_V4_AQUA_E1" modification="new" version="any" status="active">
                   <Name>Aquatics Centre Entrance 1</Name>
@@ -1397,7 +1397,7 @@
               <placeTypes modificationSet="all">
                 <TypeOfPlaceRef version="any" ref="napt:type_of_place@Venue"/>
               </placeTypes>
-              <ParentSiteRef version="any" ref="naptPoi:8100OPK"/>
+              <ParentSiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
               <entrances modificationSet="all">
                 <PointOfInterestEntrance id="naptPoi:8100OPK_V5_WPOL_E1" modification="new" version="any" status="active">
                   <Name>Water Polo Arena Entrance 1</Name>
@@ -1426,7 +1426,7 @@
               <placeTypes modificationSet="all">
                 <TypeOfPlaceRef version="any" ref="napt:type_of_place@Venue"/>
               </placeTypes>
-              <ParentSiteRef version="any" ref="naptPoi:8100OPK"/>
+              <ParentSiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
               <entrances modificationSet="all">
                 <PointOfInterestEntrance id="naptPoi:8100OPK_V6_BKTB_E1" modification="new" version="any" status="active">
                   <Name>Basketball A rena Entrance 1</Name>
@@ -1448,7 +1448,7 @@
               <placeTypes modificationSet="all">
                 <TypeOfPlaceRef version="any" ref="napt:type_of_place@Venue"/>
               </placeTypes>
-              <ParentSiteRef version="any" ref="naptPoi:8100OPK"/>
+              <ParentSiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
               <entrances modificationSet="all">
                 <PointOfInterestEntrance id="naptPoi:8100OPK_V7_VELO_E1" modification="new" version="any" status="active">
                   <Name>Velodrome Entrance 1</Name>
@@ -1473,7 +1473,7 @@
               <placeTypes modificationSet="all">
                 <TypeOfPlaceRef version="any" ref="napt:type_of_place@Venue"/>
               </placeTypes>
-              <ParentSiteRef version="any" ref="naptPoi:8100OPK"/>
+              <ParentSiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
               <entrances modificationSet="all">
                 <PointOfInterestEntrance id="naptPoi:8100OPK_V8_BMXT_E1" modification="new" version="any" status="active">
                   <Name>BMX Track Entrance 1</Name>
@@ -1611,7 +1611,7 @@
               <placeTypes modificationSet="all">
                 <TypeOfPlaceRef version="any" ref="napt:type_of_place@Venue"/>
               </placeTypes>
-              <ParentSiteRef version="any" ref="naptPoi:8100OPK"/>
+              <ParentSiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
               <entrances modificationSet="all">
                 <PointOfInterestEntrance id="naptPoi:8100OPK_V9_EMAN_E1" modification="new" version="any" status="active">
                   <Name>Eton Manor Entrance 1</Name>
@@ -1633,7 +1633,7 @@
               <placeTypes modificationSet="all">
                 <TypeOfPlaceRef version="any" ref="napt:type_of_place@Venue"/>
               </placeTypes>
-              <ParentSiteRef version="any" ref="naptPoi:8100OPK"/>
+              <ParentSiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
               <entrances modificationSet="all">
                 <PointOfInterestEntrance id="naptPoi:8100OPK_V10_PRSC_E1" modification="new" version="any" status="active">
                   <Name>Media Centre Entrance 1</Name>
@@ -1661,7 +1661,7 @@
                   <PublicUse>authorisedPublicOnly</PublicUse>
                   <Covered>covered</Covered>
                   <Gated>gatedArea</Gated>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                   <LevelRef version="any" ref="naptPoi:8100OPK_Lvl_01"/>
                 </PointOfInterestSpace>
                 <PointOfInterestSpace id="naptPoi:8100OPK_V10_PRSC_S2" modification="new" version="any" status="active">
@@ -1678,7 +1678,7 @@
                   <PublicUse>authorisedPublicOnly</PublicUse>
                   <Covered>covered</Covered>
                   <Gated>gatedArea</Gated>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                   <LevelRef version="any" ref="naptPoi:8100OPK_Lvl_01"/>
                 </PointOfInterestSpace>
               </spaces>
@@ -1691,7 +1691,7 @@
               <placeTypes modificationSet="all">
                 <TypeOfPlaceRef version="any" ref="napt:type_of_place@Venue"/>
               </placeTypes>
-              <ParentSiteRef version="any" ref="naptPoi:8100OPK"/>
+              <ParentSiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
               <classifications modificationSet="all">
                 <PointOfInterestClassificationRef version="any" ref="nptg:PoiCat_Sports_WarmUp"/>
               </classifications>

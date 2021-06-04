@@ -1,0 +1,12 @@
+from enum import Enum
+
+__NAMESPACE__ = "http://www.netex.org.uk/netex"
+
+
+class AccountStatusTypeEnumeration(Enum):
+    UNUSED = "unused"
+    ACTIVE = "active"
+    DORMANT = "dormant"
+    SUSPENDED = "suspended"
+    ARCHIVED = "archived"
+    CLOSED = "closed"

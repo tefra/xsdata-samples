@@ -431,19 +431,19 @@
                   <OnwardTimingLinkRef version="any" ref="mybus:TL@SSP_001+SSP_001_t1"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_24o_02" modification="new" version="any" status="active" order="2">
-                  <TimingPointRef version="any" ref="mybus:SSP_001_t1"/>
+                  <TimingPointRef version="any" ref="mybus:SSP_001_t1" xsi:type="TimingPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:TL@SSP_001_t1+SSP_001_t2"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_24o_03" modification="new" version="any" status="active" order="3">
-                  <TimingPointRef version="any" ref="mybus:SSP_001_t2"/>
+                  <TimingPointRef version="any" ref="mybus:SSP_001_t2" xsi:type="TimingPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:TL@SSP_001_t2+SSP_002"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_24o_04" modification="new" version="any" status="active" order="4">
-                  <TimingPointRef version="any" ref="mybus:SSP_002"/>
+                  <TimingPointRef version="any" ref="mybus:SSP_002" xsi:type="TimingPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:TL@SSP_002+SSP_002_t1"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_24o_05" modification="new" version="any" status="active" order="5">
-                  <TimingPointRef version="any" ref="mybus:SSP_002_t1"/>
+                  <TimingPointRef version="any" ref="mybus:SSP_002_t1" xsi:type="TimingPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:TL@SSP_002_t1+SSP_077"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_24o_06" modification="new" version="any" status="active" order="6">
@@ -465,11 +465,11 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="hde:tpip_46o_01" modification="new" version="any" status="active" order="1">
-                  <TimingPointRef version="any" ref="mybus:SSP_002"/>
+                  <TimingPointRef version="any" ref="mybus:SSP_002" xsi:type="TimingPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:TL@SSP_002+SSP_002_t1"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_46o_02" modification="new" version="any" status="active" order="2">
-                  <TimingPointRef version="any" ref="mybus:SSP_002_t1"/>
+                  <TimingPointRef version="any" ref="mybus:SSP_002_t1" xsi:type="TimingPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:TL@SSP_002_t1+SSP_077"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_46o_03" modification="new" version="any" status="active" order="3">
@@ -522,13 +522,13 @@
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_022"/>
                 </StopPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:spip_24o_02" modification="new" version="any" status="active" order="2">
-                  <TimingPointRef version="any" ref="mybus:SSP_001_t1"/>
+                  <TimingPointRef version="any" ref="mybus:SSP_001_t1" xsi:type="TimingPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:spip_24o_03" modification="new" version="any" status="active" order="3">
-                  <TimingPointRef version="any" ref="mybus:SSP_001_t2"/>
+                  <TimingPointRef version="any" ref="mybus:SSP_001_t2" xsi:type="TimingPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:spip_24o_05" modification="new" version="any" status="active" order="5">
-                  <TimingPointRef version="any" ref="mybus:SSP_002_t1"/>
+                  <TimingPointRef version="any" ref="mybus:SSP_002_t1" xsi:type="TimingPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </ServiceJourneyPattern>
@@ -564,7 +564,7 @@
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_022"/>
                 </StopPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:spip_46o_02" modification="new" version="any" status="active" order="2">
-                  <TimingPointRef version="any" ref="mybus:SSP_002_t1"/>
+                  <TimingPointRef version="any" ref="mybus:SSP_002_t1" xsi:type="TimingPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
               <linksInSequence>

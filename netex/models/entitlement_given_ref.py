@@ -1,0 +1,10 @@
+from dataclasses import dataclass
+from netex.models.entitlement_given_ref_structure import EntitlementGivenRefStructure
+
+__NAMESPACE__ = "http://www.netex.org.uk/netex"
+
+
+@dataclass
+class EntitlementGivenRef(EntitlementGivenRefStructure):
+    class Meta:
+        namespace = "http://www.netex.org.uk/netex"

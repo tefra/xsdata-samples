@@ -1,0 +1,22 @@
+from dataclasses import dataclass, field
+from typing import List
+from netex.models.flexible_line_ref import FlexibleLineRef
+from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
+
+__NAMESPACE__ = "http://www.netex.org.uk/netex"
+
+
+@dataclass
+class FlexibleLineRefsRelStructure(OneToManyRelationshipStructure):
+    class Meta:
+        name = "flexibleLineRefs_RelStructure"
+
+    flexible_line_ref: List[FlexibleLineRef] = field(
+        default_factory=list,
+        metadata={
+            "name": "FlexibleLineRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "min_occurs": 1,
+        }
+    )

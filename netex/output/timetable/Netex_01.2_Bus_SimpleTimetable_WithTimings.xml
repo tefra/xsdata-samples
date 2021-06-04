@@ -491,19 +491,19 @@ The Calendar is shown coded as
                   <OnwardTimingLinkRef version="any" ref="mybus:SSP_001_to_SSP_001_t1"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpijp_24o_02" modification="new" version="any" status="active" order="2">
-                  <TimingPointRef version="any" ref="mybus:SSP_001_t1"/>
+                  <TimingPointRef version="any" ref="mybus:SSP_001_t1" xsi:type="TimingPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:SSP_001_t1_to_SSP_001_t2"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpijp_24o_03" modification="new" version="any" status="active" order="3">
-                  <TimingPointRef version="any" ref="mybus:SSP_001_t2"/>
+                  <TimingPointRef version="any" ref="mybus:SSP_001_t2" xsi:type="TimingPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:SSP_001_t2_to_SSP_002"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpijp_24o_04" modification="new" version="any" status="active" order="4">
-                  <TimingPointRef version="any" ref="mybus:SSP_002"/>
+                  <TimingPointRef version="any" ref="mybus:SSP_002" xsi:type="TimingPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:SSP_002_to_SSP_002_t3"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpijp_24o_05" modification="new" version="any" status="active" order="5">
-                  <TimingPointRef version="any" ref="mybus:SSP_002_t3"/>
+                  <TimingPointRef version="any" ref="mybus:SSP_002_t3" xsi:type="TimingPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:SSP_002_t3_to_SSP_077"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpijp_24o_06" modification="new" version="any" status="active" order="6">
@@ -549,7 +549,7 @@ The Calendar is shown coded as
                   </noticeAssignments>
                 </StopPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:pijp_24o_02" modification="new" version="any" status="active" order="2">
-                  <TimingPointRef version="any" ref="mybus:SSP_001_t1"/>
+                  <TimingPointRef version="any" ref="mybus:SSP_001_t1" xsi:type="TimingPointRefStructure"/>
                   <noticeAssignments modificationSet="all">
                     <NoticeAssignment id="mybus:pijp_24o_02" modification="new" version="any" status="active" order="1">
                       <Name>Next Stop Announcement for SSP_001</Name>
@@ -559,10 +559,10 @@ The Calendar is shown coded as
                   </noticeAssignments>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:pijp_24o_03" modification="new" version="any" status="active" order="3">
-                  <TimingPointRef version="any" ref="mybus:SSP_001_t2"/>
+                  <TimingPointRef version="any" ref="mybus:SSP_001_t2" xsi:type="TimingPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_24o_05" modification="new" version="any" status="active" order="5">
-                  <TimingPointRef version="any" ref="mybus:SSP_002_t3"/>
+                  <TimingPointRef version="any" ref="mybus:SSP_002_t3" xsi:type="TimingPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
               <linksInSequence>
@@ -688,13 +688,13 @@ The Calendar is shown coded as
             <ServiceJourney id="hde:sj_24o_01" modification="new" version="any" status="active">
               <journeyAccountings modificationSet="all">
                 <JourneyAccounting id="mytim:ac02" modification="new" version="any" status="active" order="1">
-                  <OrganisationRef ref="txc:xshire">EXTERNAL</OrganisationRef>
+                  <OrganisationRef ref="txc:xshire" xsi:type="AuthorityRefStructure">EXTERNAL</OrganisationRef>
                   <AccountingType>subsidy</AccountingType>
                   <Partial>false</Partial>
                   <Distance>20</Distance>
                 </JourneyAccounting>
                 <JourneyAccounting id="mytim:ac03" modification="new" version="any" status="active" order="2">
-                  <OrganisationRef ref="txc:xshire">EXTERNAL</OrganisationRef>
+                  <OrganisationRef ref="txc:xshire" xsi:type="AuthorityRefStructure">EXTERNAL</OrganisationRef>
                   <AccountingType>contract</AccountingType>
                   <Partial>false</Partial>
                   <Distance>20</Distance>

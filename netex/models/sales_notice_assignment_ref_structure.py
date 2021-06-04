@@ -1,0 +1,9 @@
+from dataclasses import dataclass
+from netex.models.notice_assignment_ref_structure import NoticeAssignmentRefStructure
+
+__NAMESPACE__ = "http://www.netex.org.uk/netex"
+
+
+@dataclass
+class SalesNoticeAssignmentRefStructure(NoticeAssignmentRefStructure):
+    pass

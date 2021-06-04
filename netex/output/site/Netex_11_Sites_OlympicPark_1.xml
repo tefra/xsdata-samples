@@ -243,10 +243,10 @@
                 <NavigationPath id="naptStop:910GSTRFD_to_8100OPK-E1" created="2010-05-17T09:30:47Z" modification="new" version="any" status="active" responsibilitySetRef="tbd:RS_123">
                   <Name>Stratford Rail Station to Park Stratford Entrance </Name>
                   <From>
-                    <PlaceRef version="any" ref="naptStop:910GSTRFD"/>
+                    <PlaceRef version="any" ref="naptStop:910GSTRFD" xsi:type="StopPlaceRefStructure"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
                   </To>
                   <AccessibilityAssessment id="naptStop:910GSTRFD_to_8100OPK-E1-acc_01" dataSourceRef="XtraAccessibilityData" modification="new" version="any" status="active">
@@ -272,11 +272,11 @@
                 <NavigationPath id="tbd:8100OPK-E1_to_910GSTRFD" created="2010-05-17T09:30:47Z" modification="new" version="any" status="active" responsibilitySetRef="tbd:RS_123">
                   <Name>Park Stratford Entrance E1 to Stratford Rail Station</Name>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptStop:910GSTRFD"/>
+                    <PlaceRef version="any" ref="naptStop:910GSTRFD" xsi:type="StopPlaceRefStructure"/>
                   </To>
                   <AccessibilityAssessment id="tbd:8100OPK-E1_to_910GSTRFD-acc_01" dataSourceRef="ukds:XtraAccessibilityData" modification="new" version="any" status="active">
                     <MobilityImpairedAccess>true</MobilityImpairedAccess>
@@ -329,17 +329,17 @@
               <TopographicPlaceView>
                 <TopographicPlaceRef ref="nptgLocality:E0034695"/>
               </TopographicPlaceView>
-              <ParentSiteRef version="any" ref="naptStop:910GSTRFD"/>
+              <ParentSiteRef version="any" ref="naptStop:910GSTRFD" xsi:type="StopPlaceRefStructure"/>
               <TransportMode>metro</TransportMode>
               <StopPlaceType>metroStation</StopPlaceType>
               <navigationPaths modificationSet="all">
                 <NavigationPath id="naptStop:940GZZLUSTD_to_8100OPK-E1" created="2010-05-17T09:30:47Z" modification="new" version="any" status="active" responsibilitySetRef="tbd:RS_123">
                   <Name>Stratford Underground Station to Park Stratford Entrance </Name>
                   <From>
-                    <PlaceRef version="any" ref="naptStop:940GZZLUSTD"/>
+                    <PlaceRef version="any" ref="naptStop:940GZZLUSTD" xsi:type="StopPlaceRefStructure"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
                   </To>
                   <AccessibilityAssessment id="naptStop:940GZZLUSTD_to_8100OPK-E1-acc_01" dataSourceRef="XtraAccessibilityData" modification="new" version="any" status="active">
@@ -365,11 +365,11 @@
                 <NavigationPath id="tbd:8100OPK-E1_to_GZZLUSTD" created="2010-05-17T09:30:47Z" modification="new" version="any" status="active" responsibilitySetRef="tbd:RS_123">
                   <Name>Park Stratford Entrance  to Stratford UndergroundStation</Name>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptStop:940GZZLUSTD"/>
+                    <PlaceRef version="any" ref="naptStop:940GZZLUSTD" xsi:type="StopPlaceRefStructure"/>
                   </To>
                   <AccessibilityAssessment id="tbd:8100OPK-E1_to_GZZLUSTD_ac1" dataSourceRef="XtraAccessibilityData" modification="new" version="any" status="active">
                     <MobilityImpairedAccess>true</MobilityImpairedAccess>
@@ -422,7 +422,7 @@
               <TopographicPlaceView>
                 <TopographicPlaceRef ref="nptgLocality:E0034695"/>
               </TopographicPlaceView>
-              <ParentSiteRef version="any" ref="naptStop:910GSTRFD"/>
+              <ParentSiteRef version="any" ref="naptStop:910GSTRFD" xsi:type="StopPlaceRefStructure"/>
               <TransportMode>metro</TransportMode>
               <StopPlaceType>metroStation</StopPlaceType>
               <navigationPaths modificationSet="all">
@@ -458,7 +458,7 @@
                 <NavigationPath id="tbd::8100OPK-E1_to_940GZZCRSTD" created="2010-05-17T09:30:47Z" modification="new" version="any" status="active" responsibilitySetRef="tbd:RS_123">
                   <Name>Park Stratford Entrance  to Stratford DLR Station</Name>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_E3"/>
                   </From>
                   <To>
@@ -675,7 +675,7 @@
                   </AccessibilityAssessment>
                   <AccessModes>foot</AccessModes>
                   <PublicUse>all</PublicUse>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                   <LevelRef version="any" ref="naptPoi:8100OPK_Lvl_01"/>
                   <checkConstraints modificationSet="all">
                     <CheckConstraint id="naptPoi:8100OPK_E1_C1" modification="new" version="any" status="active" order="1">
@@ -867,7 +867,7 @@
                   </AccessibilityAssessment>
                   <AccessModes>foot</AccessModes>
                   <PublicUse>disabledPublicOnly</PublicUse>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                   <LevelRef version="any" ref="naptPoi:8100OPK_Lvl_01"/>
                   <checkConstraints modificationSet="all">
                     <CheckConstraint id="naptPoi:8100OPK_E1acc_C1" modification="new" version="any" status="active" order="1">
@@ -1065,7 +1065,7 @@
                   </AccessibilityAssessment>
                   <AccessModes>foot</AccessModes>
                   <PublicUse>all</PublicUse>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                   <LevelRef version="any" ref="naptPoi:8100OPK_Lvl_01"/>
                   <checkConstraints modificationSet="all">
                     <CheckConstraint id="naptPoi:8100OPK_E2_C1" modification="new" version="any" status="active" order="1">
@@ -1271,7 +1271,7 @@
                   </AccessibilityAssessment>
                   <AccessModes>foot</AccessModes>
                   <PublicUse>all</PublicUse>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                   <LevelRef version="any" ref="naptPoi:8100OPK_Lvl_01"/>
                   <checkConstraints modificationSet="all">
                     <CheckConstraint id="naptPoi:8100OPK_E3_C1" modification="new" version="any" status="active" order="1">
@@ -1477,7 +1477,7 @@
                   </AccessibilityAssessment>
                   <AccessModes>foot</AccessModes>
                   <PublicUse>all</PublicUse>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                   <LevelRef version="any" ref="naptPoi:8100OPK_Lvl_01"/>
                   <checkConstraints modificationSet="all">
                     <CheckConstraint id="naptPoi:8100OPK_E4_C1" modification="new" version="any" status="active" order="1">
@@ -1683,7 +1683,7 @@
                   </AccessibilityAssessment>
                   <AccessModes>car foot</AccessModes>
                   <PublicUse>authorisedPublicOnly</PublicUse>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                   <LevelRef version="any" ref="naptPoi:8100OPK_Lvl_01"/>
                   <checkConstraints modificationSet="all">
                     <CheckConstraint id="naptPoi:8100OPK_E5_C1" modification="new" version="any" status="active" order="1">
@@ -1794,7 +1794,7 @@
                   <Name>from stratford entrance to pj1</Name>
                   <Distance>20</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
                   </From>
                   <To>
@@ -1820,7 +1820,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_pj11_to_SPC_4" modification="new" version="any" status="active">
                   <Name>from pJ  to Bridge 4</Name>
@@ -1829,7 +1829,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj1"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_SPC_4"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_SPC_4" xsi:type="PointOfInterestSpaceRefStructure"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
                   <PublicUse>all</PublicUse>
@@ -1841,7 +1841,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_pj1_to_V5-E1" modification="new" version="any" status="active">
                   <Name>from pj1  to Aquatics E1</Name>
@@ -1850,7 +1850,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj1"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V4_AQUA"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V4_AQUA" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V4_AQUA_E1"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
@@ -1863,7 +1863,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_pj1_to_V4-E2" modification="new" version="any" status="active">
                   <Name>from pj1 to WaterPolo  E2</Name>
@@ -1872,7 +1872,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj1"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V5_WPOL"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V5_WPOL" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V5_WPOL_E2"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
@@ -1885,16 +1885,16 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_SPC_3_to_V5-E1" modification="new" version="any" status="active">
                   <Name>from Bridge3 to WaterPolo E1</Name>
                   <Distance>20</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_SPC_3"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_SPC_3" xsi:type="PointOfInterestSpaceRefStructure"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V5_WPOL"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V5_WPOL" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V5_WPOL_E1"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
@@ -1907,16 +1907,16 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_SPC_4_to_V5-E2" modification="new" version="any" status="active">
                   <Name>from Bridge5 to Aquatics E2</Name>
                   <Distance>20</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_SPC_5"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_SPC_5" xsi:type="PointOfInterestSpaceRefStructure"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V4_AQUA"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V4_AQUA" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V4_AQUA_E2"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
@@ -1929,13 +1929,13 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_E2_to_pj12" modification="new" version="any" status="active">
                   <Name>from Northern entrance to pj12</Name>
                   <Distance>20</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_E2"/>
                   </From>
                   <To>
@@ -1951,7 +1951,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_pj12_to_SPC_6" modification="new" version="any" status="active">
                   <Name>from pJ12  to Bridge 6</Name>
@@ -1960,7 +1960,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj12"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_SPC_6"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_SPC_6" xsi:type="PointOfInterestSpaceRefStructure"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
                   <PublicUse>all</PublicUse>
@@ -1972,7 +1972,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_pj12_to_V9-E1" modification="new" version="any" status="active">
                   <Name>from pj12  to Eton Manor E1</Name>
@@ -1981,7 +1981,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj12"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V9_EMAN"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V9_EMAN" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V9_EMAN_E1"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
@@ -1994,13 +1994,13 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_E4_to_pj13" modification="new" version="any" status="active">
                   <Name>from Eastern entrance to pj13</Name>
                   <Distance>20</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_E4"/>
                   </From>
                   <To>
@@ -2016,7 +2016,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_pj13_to_E3" modification="new" version="any" status="active">
                   <Name>from pJ12  to Southern Entrance6</Name>
@@ -2025,7 +2025,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj12"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_E3"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
@@ -2038,7 +2038,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_pj13_to_V11" modification="new" version="any" status="active">
                   <Name>from pj12  to Warm up</Name>
@@ -2047,7 +2047,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj12"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V11_WARM"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V11_WARM" xsi:type="PointOfInterestRefStructure"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
                   <PublicUse>all</PublicUse>
@@ -2059,13 +2059,13 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_SPC_6_to_pj11" modification="new" version="any" status="active">
                   <Name>from Bridge6 to pj11 </Name>
                   <Distance>20</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_SPC_6"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_SPC_6" xsi:type="PointOfInterestSpaceRefStructure"/>
                   </From>
                   <To>
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj11"/>
@@ -2080,7 +2080,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_pj11_to_SPC_1" modification="new" version="any" status="active">
                   <Name>from pJ11  to Bridge 1</Name>
@@ -2089,7 +2089,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj11"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_SPC_1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_SPC_1" xsi:type="PointOfInterestSpaceRefStructure"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
                   <PublicUse>all</PublicUse>
@@ -2101,7 +2101,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_pj11_to_V7-E1" modification="new" version="any" status="active">
                   <Name>from pj11  to Velodrome</Name>
@@ -2110,7 +2110,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj11"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V7_VELO"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V7_VELO" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V7_VELO_E1"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
@@ -2123,7 +2123,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_pj11_to_V8-E1" modification="new" version="any" status="active">
                   <Name>from pj11  to BMX</Name>
@@ -2132,7 +2132,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj11"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V8_BMXT"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V8_BMXT" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V8_BMXT_E1"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
@@ -2145,7 +2145,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_pj11_to_V6-E1" modification="new" version="any" status="active">
                   <Name>from pj11  to Basketball</Name>
@@ -2154,7 +2154,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj11"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V6_BKTB"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V6_BKTB" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V6_BKTB_E1"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
@@ -2167,7 +2167,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_pj11_to_pj9" modification="new" version="any" status="active">
                   <Name>from pj11  to pj9</Name>
@@ -2188,7 +2188,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_pj9_to_V6-E1" modification="new" version="any" status="active">
                   <Name>from p9  to Basketball</Name>
@@ -2197,7 +2197,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj9"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V6_BKTB"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V6_BKTB" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V6_BKTB_E1"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
@@ -2210,7 +2210,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_pj9_to_SPC_2" modification="new" version="any" status="active">
                   <Name>from pJ9  to Bridge 2</Name>
@@ -2219,7 +2219,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj9"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_SPC_2"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_SPC_2" xsi:type="PointOfInterestSpaceRefStructure"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
                   <PublicUse>all</PublicUse>
@@ -2231,13 +2231,13 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_SPC_1_to_pj10" modification="new" version="any" status="active">
                   <Name>from Bridge1 to pj10 </Name>
                   <Distance>20</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_SPC_1"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_SPC_1" xsi:type="PointOfInterestSpaceRefStructure"/>
                   </From>
                   <To>
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj10"/>
@@ -2252,13 +2252,13 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_SPC_2_to_pj8" modification="new" version="any" status="active">
                   <Name>from Bridge2 to pj8 </Name>
                   <Distance>20</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_SPC_2"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_SPC_2" xsi:type="PointOfInterestSpaceRefStructure"/>
                   </From>
                   <To>
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj8"/>
@@ -2273,7 +2273,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_pj10_to_pj8" modification="new" version="any" status="active">
                   <Name>from pj10 to pj8</Name>
@@ -2294,7 +2294,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_pj10_to_SPC_4" modification="new" version="any" status="active">
                   <Name>from pj10 to SPC_4</Name>
@@ -2315,7 +2315,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_pj8_to_pj6" modification="new" version="any" status="active">
                   <Name>from pj8  to pj6</Name>
@@ -2336,7 +2336,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_pj8_to_pj7" modification="new" version="any" status="active">
                   <Name>from pj8  to pj7</Name>
@@ -2357,7 +2357,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_pj8_to_V2-E1" modification="new" version="any" status="active">
                   <Name>from pj8  to Handball</Name>
@@ -2366,7 +2366,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj8"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V3_HAND"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V3_HAND" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V3_HAND_E1"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
@@ -2379,7 +2379,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_pj10_to_V3-E1" modification="new" version="any" status="active">
                   <Name>from pj10  to Hockey 1 E1</Name>
@@ -2388,7 +2388,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj10"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V2_HOCK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V2_HOCK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V2_HOCK_E1"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
@@ -2401,7 +2401,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_pj10_to_V3-E2" modification="new" version="any" status="active">
                   <Name>from pj10  to Hockey 1 E2</Name>
@@ -2410,7 +2410,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj10"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V2_HOCK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V2_HOCK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V2_HOCK_E2"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
@@ -2423,13 +2423,13 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_E5_to_pj10" modification="new" version="any" status="active">
                   <Name>from Prsss entrance to pj10</Name>
                   <Distance>20</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_E5"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_E5" xsi:type="PointOfInterestEntranceRefStructure"/>
                   </From>
                   <To>
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj10"/>
@@ -2444,13 +2444,13 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_E3_to_pj2" modification="new" version="any" status="active">
                   <Name>from Southern entrance to pj2</Name>
                   <Distance>20</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_E3"/>
                   </From>
                   <To>
@@ -2466,13 +2466,13 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_SPC_5_to_pj2" modification="new" version="any" status="active">
                   <Name>from Bridge5 to pj2</Name>
                   <Distance>20</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_SPC_5"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_SPC_5" xsi:type="PointOfInterestSpaceRefStructure"/>
                   </From>
                   <To>
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj2"/>
@@ -2487,7 +2487,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_pj2_to_pj3" modification="new" version="any" status="active">
                   <Name>from pj2  to pj3</Name>
@@ -2508,7 +2508,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_pj2_to_pj4" modification="new" version="any" status="active">
                   <Name>from pj2  to pj4</Name>
@@ -2529,13 +2529,13 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_SPC_4_to_pj3" modification="new" version="any" status="active">
                   <Name>from Bridge4 to pj3</Name>
                   <Distance>20</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_SPC_4"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_SPC_4" xsi:type="PointOfInterestSpaceRefStructure"/>
                   </From>
                   <To>
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj3"/>
@@ -2550,13 +2550,13 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_SPC_3_to_pj5" modification="new" version="any" status="active">
                   <Name>from Bridge3to pj5</Name>
                   <Distance>20</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_SPC_3"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_SPC_3" xsi:type="PointOfInterestSpaceRefStructure"/>
                   </From>
                   <To>
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj5"/>
@@ -2571,7 +2571,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_pj3_to_pj5" modification="new" version="any" status="active">
                   <Name>from pj2  to pj3</Name>
@@ -2592,7 +2592,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_pj4_to_V1" modification="new" version="any" status="active">
                   <Name>from pj4   to Stadium</Name>
@@ -2601,7 +2601,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj4"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V1_STDM"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V1_STDM" xsi:type="PointOfInterestRefStructure"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
                   <PublicUse>all</PublicUse>
@@ -2613,7 +2613,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_pj6_to_V1" modification="new" version="any" status="active">
                   <Name>from pj6   to Stadium</Name>
@@ -2622,7 +2622,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj6"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V1_STDM"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V1_STDM" xsi:type="PointOfInterestRefStructure"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
                   <PublicUse>all</PublicUse>
@@ -2634,7 +2634,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_pj7_to_V1" modification="new" version="any" status="active">
                   <Name>from pj7   to Stadium</Name>
@@ -2643,7 +2643,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj7"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V1_STDM"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V1_STDM" xsi:type="PointOfInterestRefStructure"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
                   <PublicUse>all</PublicUse>
@@ -2655,7 +2655,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_pj5_to_pj4" modification="new" version="any" status="active">
                   <Name>from pj5 to p4</Name>
@@ -2676,7 +2676,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_pj5_to_pj10" modification="new" version="any" status="active">
                   <Name>from pj5 to p10</Name>
@@ -2697,7 +2697,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_pj4_to_pj6" modification="new" version="any" status="active">
                   <Name>from pj4  to pj6</Name>
@@ -2718,7 +2718,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
                 <SitePathLink id="naptPoi:8100OPK_pj5_to_pj6" modification="new" version="any" status="active">
                   <Name>from pj5  to pj6</Name>
@@ -2739,7 +2739,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                 </SitePathLink>
               </pathLinks>
               <pathJunctions modificationSet="all">
@@ -2860,11 +2860,11 @@
                   <Name>From Stratford  entrance E3 to Olympic Stadium</Name>
                   <Distance>500</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V1_STDM"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V1_STDM" xsi:type="PointOfInterestRefStructure"/>
                   </To>
                   <AccessibilityAssessment id="naptPoi:8100OPK_N3.1i_OPK-E1_to_V1" modification="new" version="any" status="active">
                     <MobilityImpairedAccess>true</MobilityImpairedAccess>
@@ -2898,11 +2898,11 @@
                   <Name>From Stratford  entrance E3 to Handball Arena</Name>
                   <Distance>1000</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V3_HAND"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V3_HAND" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V3_HAND_E1"/>
                   </To>
                   <AccessibilityAssessment id="naptPoi:8100OPK_N3.2i_OPK-E1_to_V2-E1_ac1" modification="new" version="any" status="active">
@@ -2937,11 +2937,11 @@
                   <Name>From Stratford  entrance E3 to Hockey Centre </Name>
                   <Distance>1500</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V2_HOCK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V2_HOCK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V2_HOCK_E1"/>
                   </To>
                   <AccessibilityAssessment id="naptPoi:8100OPK_N3.3i_OPK-E1_to_V3-E1" modification="new" version="any" status="active">
@@ -2976,11 +2976,11 @@
                   <Name>From Stratford  entrance E3 to Aquatics Centre </Name>
                   <Distance>100</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V4_AQUA"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V4_AQUA" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V4_AQUA_E1"/>
                   </To>
                   <AccessibilityAssessment id="naptPoi:8100OPK_N3.4i_OPK-E1_to_V4-E1_ac1" modification="new" version="any" status="active">
@@ -3015,11 +3015,11 @@
                   <Name>From Stratford  entrance E3 to Water Polo Arena </Name>
                   <Distance>100</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V5_WPOL"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V5_WPOL" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V5_WPOL_E2"/>
                   </To>
                   <AccessibilityAssessment id="naptPoi:8100OPK_N3.5i_OPK-E1_to_V5-E1_ac1" modification="new" version="any" status="active">
@@ -3054,11 +3054,11 @@
                   <Name>From Stratford  entrance E3 to Velodrome</Name>
                   <Distance>1750</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V6_BKTB"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V6_BKTB" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V6_BKTB_E1"/>
                   </To>
                   <AccessibilityAssessment id="naptPoi:8100OPK_N3.6i_OPK-E1_to_V6-E1_ac1" modification="new" version="any" status="active">
@@ -3093,11 +3093,11 @@
                   <Name>From Stratford  entrance E3 to Basketball</Name>
                   <Distance>1750</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V7_VELO"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V7_VELO" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V7_VELO_E1"/>
                   </To>
                   <AccessibilityAssessment id="naptPoi:8100OPK_N3.7i_OPK-E1_to_V7-E1_ac1" modification="new" version="any" status="active">
@@ -3132,11 +3132,11 @@
                   <Name>FromStratford  entrance E3 to BMX Track</Name>
                   <Distance>1850</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V8_BMXT"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V8_BMXT" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V8_BMXT_E1"/>
                   </To>
                   <AccessibilityAssessment id="naptPoi:8100OPK_N3.8i_OPK-E1_to_V8-E1_ac1" modification="new" version="any" status="active">
@@ -3236,11 +3236,11 @@
                   <Name>From Stratford  entrance E3 to Eton Manor</Name>
                   <Distance>2000</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V9_EMAN"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V9_EMAN" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V9_EMAN_E1"/>
                   </To>
                   <AccessibilityAssessment id="naptPoi:8100OPK_N3.9i_OPK-E1_to_V9-E1_ac1" modification="new" version="any" status="active">
@@ -3275,11 +3275,11 @@
                   <Name>From Stratford  entrance E3 to Press Centre</Name>
                   <Distance>1700</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V10_PRSC"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V10_PRSC" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V10_PRSC_E1"/>
                   </To>
                   <AccessibilityAssessment id="naptPoi:8100OPK_N3.10i_OPK-E1_to_V10-E1_ac1" modification="new" version="any" status="active">
@@ -3314,11 +3314,11 @@
                   <Name>From Stratford  entrance E3 to Warm Um area</Name>
                   <Distance>1200</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V11_WARM"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V11_WARM" xsi:type="PointOfInterestRefStructure"/>
                   </To>
                   <AccessibilityAssessment id="naptPoi:8100OPK_N3.11i_OPK-E1_to_V11-E1_ac1" modification="new" version="any" status="active">
                     <MobilityImpairedAccess>true</MobilityImpairedAccess>
@@ -3352,10 +3352,10 @@
                   <Name>From Olympic Stadium to Stratford  entrance E3  </Name>
                   <Distance>500</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V1_STDM"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V1_STDM" xsi:type="PointOfInterestRefStructure"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
                   </To>
                   <AccessibilityAssessment id="naptPoi:8100OPK_N3.1o_OPK-E1_to_V1_ac1" modification="new" version="any" status="active">
@@ -3390,11 +3390,11 @@
                   <Name>From Handball Arena to Stratford  entrance E3 </Name>
                   <Distance>1000</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V3_HAND"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V3_HAND" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V3_HAND_E1"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
                   </To>
                   <AccessibilityAssessment id="naptPoi:8100OPK_N3.2o_OPK-E1_to_V2-E1" modification="new" version="any" status="active">
@@ -3429,11 +3429,11 @@
                   <Name>From Hockey Centre to Stratford  entrance E3 </Name>
                   <Distance>1500</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V2_HOCK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V2_HOCK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V2_HOCK_E1"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
                   </To>
                   <AccessibilityAssessment id="naptPoi:8100OPK_N3.3o_OPK-E1_to_V3-E1_ac1" modification="new" version="any" status="active">
@@ -3468,11 +3468,11 @@
                   <Name>From Aquatics Centre to Stratford  entrance E3 </Name>
                   <Distance>100</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V4_AQUA"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V4_AQUA" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V4_AQUA_E1"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
                   </To>
                   <AccessibilityAssessment id="naptPoi:8100OPK_N3.4o_OPK-E1_to_V4-E1_ac1" modification="new" version="any" status="active">
@@ -3507,11 +3507,11 @@
                   <Name>From Water Polo to Stratford  entrance E3 Arena </Name>
                   <Distance>100</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V5_WPOL"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V5_WPOL" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V5_WPOL_E2"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
                   </To>
                   <AccessibilityAssessment id="naptPoi:8100OPK_N3.5o_OPK-E1_to_V5-E1_ac1" modification="new" version="any" status="active">
@@ -3546,11 +3546,11 @@
                   <Name>From   Velodrome to Stratford  entrance E3 </Name>
                   <Distance>1750</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V6_BKTB"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V6_BKTB" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V6_BKTB_E1"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
                   </To>
                   <AccessibilityAssessment id="naptPoi:8100OPK_N3.6o_OPK-E1_to_V6-E1_ac1" modification="new" version="any" status="active">
@@ -3585,11 +3585,11 @@
                   <Name>From Basketball to Stratford  entrance E3 </Name>
                   <Distance>1750</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V7_VELO"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V7_VELO" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V7_VELO_E1"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
                   </To>
                   <AccessibilityAssessment id="naptPoi:8100OPK_N3.7o_OPK-E1_to_V7-E1" modification="new" version="any" status="active">
@@ -3624,11 +3624,11 @@
                   <Name>From BMX Track to Stratford Entrance  E3  </Name>
                   <Distance>1850</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V8_BMXT"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V8_BMXT" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V8_BMXT_E1"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
                   </To>
                   <AccessibilityAssessment id="naptPoi:8100OPK_N3.8o_V8-E1_to_OPK-E1_ac1" modification="new" version="any" status="active">
@@ -3733,11 +3733,11 @@
                   <Name>From Eton Manor to Stratford entrance E3 </Name>
                   <Distance>2000</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V9_EMAN"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V9_EMAN" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V9_EMAN_E1"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
                   </To>
                   <AccessibilityAssessment id="naptPoi:8100OPK_N3.9o_OPK-E1_to_V9-E1_ac1" modification="new" version="any" status="active">
@@ -3772,11 +3772,11 @@
                   <Name>From Press Centre to Stratford  entrance E3 </Name>
                   <Distance>1700</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V10_PRSC"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V10_PRSC" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V10_PRSC_E1"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
                   </To>
                   <AccessibilityAssessment id="naptPoi:8100OPK_N3.10o_OPK-E1_to_V10-E1_ac1" modification="new" version="any" status="active">
@@ -3811,10 +3811,10 @@
                   <Name>From  Warm Um area to Stratford  entrance E3 </Name>
                   <Distance>1200</Distance>
                   <From>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK_V11_WARM"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK_V11_WARM" xsi:type="PointOfInterestRefStructure"/>
                   </From>
                   <To>
-                    <PlaceRef version="any" ref="naptPoi:8100OPK"/>
+                    <PlaceRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                     <EntranceRef version="any" ref="naptPoi:8100OPK_E1"/>
                   </To>
                   <AccessibilityAssessment id="naptPoi:8100OPK_N3.11o_OPK-E1_to_V11-E1_ac1" modification="new" version="any" status="active">
@@ -4335,7 +4335,7 @@
                   <PublicUse>authorisedPublicOnly</PublicUse>
                   <Covered>covered</Covered>
                   <Gated>gatedArea</Gated>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                   <LevelRef version="any" ref="naptPoi:8100OPK_Lvl_01"/>
                 </PointOfInterestSpace>
                 <PointOfInterestSpace id="naptPoi:8100OPK_V10_PRSC_S2" modification="new" version="any" status="active">
@@ -4352,7 +4352,7 @@
                   <PublicUse>authorisedPublicOnly</PublicUse>
                   <Covered>covered</Covered>
                   <Gated>gatedArea</Gated>
-                  <SiteRef version="any" ref="naptPoi:8100OPK"/>
+                  <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                   <LevelRef version="any" ref="naptPoi:8100OPK_Lvl_01"/>
                 </PointOfInterestSpace>
               </spaces>

@@ -1,0 +1,10 @@
+from dataclasses import dataclass
+from netex.models.operational_context_version_structure import OperationalContextVersionStructure
+
+__NAMESPACE__ = "http://www.netex.org.uk/netex"
+
+
+@dataclass
+class OperationalContext(OperationalContextVersionStructure):
+    class Meta:
+        namespace = "http://www.netex.org.uk/netex"

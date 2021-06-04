@@ -1,0 +1,10 @@
+from dataclasses import dataclass
+from netex.models.observed_passing_time_ref_structure import ObservedPassingTimeRefStructure
+
+__NAMESPACE__ = "http://www.netex.org.uk/netex"
+
+
+@dataclass
+class ObservedPassingTimeRef(ObservedPassingTimeRefStructure):
+    class Meta:
+        namespace = "http://www.netex.org.uk/netex"

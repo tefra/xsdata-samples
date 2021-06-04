@@ -583,7 +583,7 @@
               </From>
               <To>
                 <TransportMode>selfDrive</TransportMode>
-                <PlaceRef version="any" ref="mypark:PP01"/>
+                <PlaceRef version="any" ref="mypark:PP01" xsi:type="ParkingRefStructure"/>
               </To>
             </Access>
           </accesses>
@@ -820,7 +820,7 @@
               </From>
               <To>
                 <TransportMode>selfDrive</TransportMode>
-                <PlaceRef version="any" ref="mypark:PP01"/>
+                <PlaceRef version="any" ref="mypark:PP01" xsi:type="ParkingRefStructure"/>
               </To>
             </Access>
           </accesses>
@@ -1187,7 +1187,7 @@
               </From>
               <To>
                 <TransportMode>selfDrive</TransportMode>
-                <PlaceRef version="any" ref="mypark:PNR01"/>
+                <PlaceRef version="any" ref="mypark:PNR01" xsi:type="ParkingRefStructure"/>
               </To>
             </Access>
           </accesses>
