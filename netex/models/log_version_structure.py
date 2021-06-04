@@ -1,0 +1,28 @@
+from dataclasses import dataclass, field
+from typing import Optional
+from netex.models.group_of_entities_version_structure import GroupOfEntitiesVersionStructure
+from netex.models.log_entries_rel_structure import LogEntriesRelStructure
+
+__NAMESPACE__ = "http://www.netex.org.uk/netex"
+
+
+@dataclass
+class LogVersionStructure(GroupOfEntitiesVersionStructure):
+    class Meta:
+        name = "Log_VersionStructure"
+
+    log_entries: Optional[LogEntriesRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "logEntries",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    name_of_log_entry_class: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "nameOfLogEntryClass",
+            "type": "Attribute",
+        }
+    )

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Config xmlns="http://pypi.org/project/xsdata" version="21.4">
   <Output maxLineLength="79">
-    <Package>netex.models.generated</Package>
+    <Package>netex.models</Package>
     <Format>dataclasses</Format>
-    <Structure>single-package</Structure>
+    <Structure>clusters</Structure>
     <DocstringStyle>Blank</DocstringStyle>
     <CompoundFields>false</CompoundFields>
   </Output>

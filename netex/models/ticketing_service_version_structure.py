@@ -1,0 +1,92 @@
+from dataclasses import dataclass, field
+from typing import List, Optional
+from netex.models.local_service_version_structure import LocalServiceVersionStructure
+from netex.models.payment_method_enumeration import PaymentMethodEnumeration
+from netex.models.ticket_type_enumeration import TicketTypeEnumeration
+from netex.models.ticketing_service_facility_enumeration import TicketingServiceFacilityEnumeration
+from netex.models.vehicle_mode_enumeration import VehicleModeEnumeration
+
+__NAMESPACE__ = "http://www.netex.org.uk/netex"
+
+
+@dataclass
+class TicketingServiceVersionStructure(LocalServiceVersionStructure):
+    class Meta:
+        name = "TicketingService_VersionStructure"
+
+    vehicle_modes: List[VehicleModeEnumeration] = field(
+        default_factory=list,
+        metadata={
+            "name": "VehicleModes",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "tokens": True,
+        }
+    )
+    ticketing_service_list: List[TicketingServiceFacilityEnumeration] = field(
+        default_factory=list,
+        metadata={
+            "name": "TicketingServiceList",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "tokens": True,
+        }
+    )
+    ticket_type_list: List[List[TicketTypeEnumeration]] = field(
+        default_factory=list,
+        metadata={
+            "name": "TicketTypeList",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "tokens": True,
+        }
+    )
+    ticket_counter_service: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "TicketCounterService",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    online_purchase_for_collection: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "OnlinePurchaseForCollection",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    online_purchase_for_eticket: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "OnlinePurchaseForETicket",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    online_purchase_for_self_print_ticket: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "OnlinePurchaseForSelfPrintTicket",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    mobile_device_tickets: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "MobileDeviceTickets",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    payment_methods: List[PaymentMethodEnumeration] = field(
+        default_factory=list,
+        metadata={
+            "name": "PaymentMethods",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "tokens": True,
+        }
+    )

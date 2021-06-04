@@ -1,3891 +1,3912 @@
-from netex.models.generated import (
-    AbstractCapabilitiesStructure,
-    AbstractCurve,
-    AbstractCurveType,
-    AbstractDiscoveryDelivery,
-    AbstractDiscoveryDeliveryStructure,
-    AbstractDiscoveryRequest,
-    AbstractDiscoveryRequestStructure,
-    AbstractFunctionalServiceCapabilitiesRequest,
-    AbstractFunctionalServiceCapabilitiesResponse,
-    AbstractFunctionalServiceDelivery,
-    AbstractFunctionalServiceRequest,
-    AbstractFunctionalServiceRequestStructure,
-    AbstractFunctionalServiceSubscriptionRequest,
-    AbstractGml,
-    AbstractGmltype,
-    AbstractGeometricPrimitive,
-    AbstractGeometricPrimitiveType,
-    AbstractGeometry,
-    AbstractGeometryType,
-    AbstractGroupMember,
-    AbstractGroupMemberVersionedChildStructure,
-    AbstractIdentifiedItemStructure,
-    AbstractItemStructure,
-    AbstractMemberType,
-    AbstractMetadataPropertyType,
-    AbstractNotificationStructure,
-    AbstractObject,
-    AbstractReferencingItemStructure,
-    AbstractRequest,
-    AbstractRequestStructure,
-    AbstractRequiredIdentifiedItemStructure,
-    AbstractRequiredReferencingItemStructure,
-    AbstractResponse,
-    AbstractRing,
-    AbstractRingPropertyType,
-    AbstractRingType,
-    AbstractServiceCapabilitiesResponseStructure,
-    AbstractServiceDeliveryStructure,
-    AbstractServiceRequest,
-    AbstractServiceRequestStructure,
-    AbstractSubscriptionRequestStructure,
-    AbstractSubscriptionStructure,
-    AbstractSurface,
-    AbstractSurfaceType,
-    AbstractTrackedRequest,
-    Access,
-    AccessEndStructure,
-    AccessEquipment,
-    AccessEquipmentRef,
-    AccessEquipmentRefStructure,
-    AccessEquipmentVersionStructure,
-    AccessFacility,
-    AccessFacilityEnumeration,
-    AccessFacilityList,
-    AccessFeatureEnumeration,
-    AccessMode,
-    AccessModeEnumeration,
-    AccessNotAllowedError,
-    AccessNotAllowedErrorStructure,
-    AccessRef,
-    AccessRefStructure,
-    AccessRightInProduct,
-    AccessRightInProductRef,
-    AccessRightInProductRefStructure,
-    AccessRightInProductVersionedChildStructure,
-    AccessRightParameterAssignmentRefStructure,
-    AccessRightParameterAssignment2,
-    AccessRightParameterAssignmentVersionStructure,
-    AccessRightParameterAssignment1,
-    AccessSpace,
-    AccessSpaceRef,
-    AccessSpaceRefStructure,
-    AccessSpaceTypeEnumeration,
-    AccessSpaceVersionStructure,
-    AccessSummary,
-    AccessSummaryVersionedChildStructure,
-    AccessVehicleEquipment,
-    AccessVehicleEquipmentRef,
-    AccessVehicleEquipmentRefStructure,
-    AccessVehicleEquipmentVersionStructure,
-    AccessZone,
-    AccessZoneRef,
-    AccessZoneRefStructure,
-    AccessZoneVersionStructure,
-    AccessVersionStructure,
-    AccessibilityAssessment,
-    AccessibilityAssessmentRef,
-    AccessibilityAssessmentRefStructure,
-    AccessibilityAssessmentVersionedChildStructure,
-    AccessibilityInfoFacility,
-    AccessibilityInfoFacilityEnumeration,
-    AccessibilityInfoFacilityList,
-    AccessibilityLimitation,
-    AccessibilityLimitationVersionedChildStructure,
-    AccessibilityTool,
-    AccessibilityToolEnumeration,
-    AccessibilityToolList,
-    Accommodation,
-    AccommodationAccess,
-    AccommodationAccessEnumeration,
-    AccommodationAccessList,
-    AccommodationFacility,
-    AccommodationFacilityEnumeration,
-    AccommodationFacilityList,
-    AccommodationRef,
-    AccommodationRefStructure,
-    AccommodationVersionedChildStructure,
-    AccountStatusTypeEnumeration,
-    AccountableElement,
-    AccountableElementRef,
-    AccountableElementRefStructure,
-    AccountableElementStructure,
-    AccountingCode,
-    ActivatedEquipment,
-    ActivatedEquipmentRef,
-    ActivatedEquipmentRefStructure,
-    ActivatedEquipmentVersionStructure,
-    ActivationAssignment,
-    ActivationAssignmentRef,
-    ActivationAssignmentRefStructure,
-    ActivationAssignmentVersionStructure,
-    ActivationLink,
-    ActivationLinkRef,
-    ActivationLinkRefByValue,
-    ActivationLinkRefByValueStructure,
-    ActivationLinkRefStructure,
-    ActivationLinkVersionStructure,
-    ActivationMeansEnumeration,
-    ActivationPointRef,
-    ActivationPointRefStructure,
-    ActivationPoint2,
-    ActivationPointVersionStructure,
-    ActivationPoint1,
-    ActualVehicleEquipment,
-    ActualVehicleEquipmentVersionStructure,
-    Address,
-    AddressRef,
-    AddressRefStructure,
-    AddressVersionStructure,
-    AddressablePlace,
-    AddressablePlaceRef,
-    AddressablePlaceRefStructure,
-    AddressablePlaceVersionStructure,
-    AdministrativeZoneRef,
-    AdministrativeZoneRefStructure,
+from netex.models.abstract_association_role import AbstractAssociationRole
+from netex.models.abstract_capabilities_structure import AbstractCapabilitiesStructure
+from netex.models.abstract_curve import AbstractCurve
+from netex.models.abstract_curve_type import AbstractCurveType
+from netex.models.abstract_discovery_delivery import AbstractDiscoveryDelivery
+from netex.models.abstract_discovery_delivery_structure import AbstractDiscoveryDeliveryStructure
+from netex.models.abstract_discovery_request import AbstractDiscoveryRequest
+from netex.models.abstract_discovery_request_structure import AbstractDiscoveryRequestStructure
+from netex.models.abstract_functional_service_capabilities_request import AbstractFunctionalServiceCapabilitiesRequest
+from netex.models.abstract_functional_service_capabilities_response import AbstractFunctionalServiceCapabilitiesResponse
+from netex.models.abstract_functional_service_delivery import AbstractFunctionalServiceDelivery
+from netex.models.abstract_functional_service_request import AbstractFunctionalServiceRequest
+from netex.models.abstract_functional_service_request_structure import AbstractFunctionalServiceRequestStructure
+from netex.models.abstract_functional_service_subscription_request import AbstractFunctionalServiceSubscriptionRequest
+from netex.models.abstract_geometric_primitive import AbstractGeometricPrimitive
+from netex.models.abstract_geometric_primitive_type import AbstractGeometricPrimitiveType
+from netex.models.abstract_geometry import AbstractGeometry
+from netex.models.abstract_geometry_type import AbstractGeometryType
+from netex.models.abstract_gml import AbstractGml
+from netex.models.abstract_gmltype import AbstractGmltype
+from netex.models.abstract_group_member import AbstractGroupMember
+from netex.models.abstract_group_member_versioned_child_structure import AbstractGroupMemberVersionedChildStructure
+from netex.models.abstract_identified_item_structure import AbstractIdentifiedItemStructure
+from netex.models.abstract_inline_property import AbstractInlineProperty
+from netex.models.abstract_item_structure import AbstractItemStructure
+from netex.models.abstract_member_type import AbstractMemberType
+from netex.models.abstract_metadata_property_type import AbstractMetadataPropertyType
+from netex.models.abstract_notification_structure import AbstractNotificationStructure
+from netex.models.abstract_object import AbstractObject
+from netex.models.abstract_reference import AbstractReference
+from netex.models.abstract_referencing_item_structure import AbstractReferencingItemStructure
+from netex.models.abstract_request import AbstractRequest
+from netex.models.abstract_request_structure import AbstractRequestStructure
+from netex.models.abstract_required_identified_item_structure import AbstractRequiredIdentifiedItemStructure
+from netex.models.abstract_required_referencing_item_structure import AbstractRequiredReferencingItemStructure
+from netex.models.abstract_response import AbstractResponse
+from netex.models.abstract_ring import AbstractRing
+from netex.models.abstract_ring_property_type import AbstractRingPropertyType
+from netex.models.abstract_ring_type import AbstractRingType
+from netex.models.abstract_service_capabilities_response_structure import AbstractServiceCapabilitiesResponseStructure
+from netex.models.abstract_service_delivery_structure import AbstractServiceDeliveryStructure
+from netex.models.abstract_service_request import AbstractServiceRequest
+from netex.models.abstract_service_request_structure import AbstractServiceRequestStructure
+from netex.models.abstract_strict_association_role import AbstractStrictAssociationRole
+from netex.models.abstract_subscription_request_structure import AbstractSubscriptionRequestStructure
+from netex.models.abstract_subscription_structure import AbstractSubscriptionStructure
+from netex.models.abstract_surface import AbstractSurface
+from netex.models.abstract_surface_type import AbstractSurfaceType
+from netex.models.abstract_tracked_request import AbstractTrackedRequest
+from netex.models.access import Access
+from netex.models.access_end_structure import AccessEndStructure
+from netex.models.access_equipment import AccessEquipment
+from netex.models.access_equipment_ref import AccessEquipmentRef
+from netex.models.access_equipment_ref_structure import AccessEquipmentRefStructure
+from netex.models.access_equipment_version_structure import AccessEquipmentVersionStructure
+from netex.models.access_facility import AccessFacility
+from netex.models.access_facility_enumeration import AccessFacilityEnumeration
+from netex.models.access_facility_list import AccessFacilityList
+from netex.models.access_feature_enumeration import AccessFeatureEnumeration
+from netex.models.access_mode import AccessMode
+from netex.models.access_mode_enumeration import AccessModeEnumeration
+from netex.models.access_not_allowed_error import AccessNotAllowedError
+from netex.models.access_not_allowed_error_structure import AccessNotAllowedErrorStructure
+from netex.models.access_ref import AccessRef
+from netex.models.access_ref_structure import AccessRefStructure
+from netex.models.access_refs_rel_structure import AccessRefsRelStructure
+from netex.models.access_right_in_product import AccessRightInProduct
+from netex.models.access_right_in_product_ref import AccessRightInProductRef
+from netex.models.access_right_in_product_ref_structure import AccessRightInProductRefStructure
+from netex.models.access_right_in_product_versioned_child_structure import AccessRightInProductVersionedChildStructure
+from netex.models.access_right_parameter_assignment_1 import AccessRightParameterAssignment1
+from netex.models.access_right_parameter_assignment_2 import AccessRightParameterAssignment2
+from netex.models.access_right_parameter_assignment_ref_structure import AccessRightParameterAssignmentRefStructure
+from netex.models.access_right_parameter_assignment_version_structure import AccessRightParameterAssignmentVersionStructure
+from netex.models.access_right_parameter_assignments_in_frame_rel_structure import AccessRightParameterAssignmentsInFrameRelStructure
+from netex.models.access_right_parameter_assignments_rel_structure import AccessRightParameterAssignmentsRelStructure
+from netex.models.access_rights_in_product_rel_structure import AccessRightsInProductRelStructure
+from netex.models.access_space import AccessSpace
+from netex.models.access_space_ref import AccessSpaceRef
+from netex.models.access_space_ref_structure import AccessSpaceRefStructure
+from netex.models.access_space_type_enumeration import AccessSpaceTypeEnumeration
+from netex.models.access_space_version_structure import AccessSpaceVersionStructure
+from netex.models.access_spaces_rel_structure import AccessSpacesRelStructure
+from netex.models.access_summaries_rel_structure import AccessSummariesRelStructure
+from netex.models.access_summary import AccessSummary
+from netex.models.access_summary_versioned_child_structure import AccessSummaryVersionedChildStructure
+from netex.models.access_vehicle_equipment import AccessVehicleEquipment
+from netex.models.access_vehicle_equipment_ref import AccessVehicleEquipmentRef
+from netex.models.access_vehicle_equipment_ref_structure import AccessVehicleEquipmentRefStructure
+from netex.models.access_vehicle_equipment_version_structure import AccessVehicleEquipmentVersionStructure
+from netex.models.access_version_structure import AccessVersionStructure
+from netex.models.access_zone import AccessZone
+from netex.models.access_zone_ref import AccessZoneRef
+from netex.models.access_zone_ref_structure import AccessZoneRefStructure
+from netex.models.access_zone_version_structure import AccessZoneVersionStructure
+from netex.models.access_zones_rel_structure import AccessZonesRelStructure
+from netex.models.accesses_in_frame_rel_structure import AccessesInFrameRelStructure
+from netex.models.accesses_rel_structure import AccessesRelStructure
+from netex.models.accessibility_assessment import AccessibilityAssessment
+from netex.models.accessibility_assessment_ref import AccessibilityAssessmentRef
+from netex.models.accessibility_assessment_ref_structure import AccessibilityAssessmentRefStructure
+from netex.models.accessibility_assessment_versioned_child_structure import AccessibilityAssessmentVersionedChildStructure
+from netex.models.accessibility_assessments_rel_structure import AccessibilityAssessmentsRelStructure
+from netex.models.accessibility_info_facility import AccessibilityInfoFacility
+from netex.models.accessibility_info_facility_enumeration import AccessibilityInfoFacilityEnumeration
+from netex.models.accessibility_info_facility_list import AccessibilityInfoFacilityList
+from netex.models.accessibility_limitation import AccessibilityLimitation
+from netex.models.accessibility_limitation_versioned_child_structure import AccessibilityLimitationVersionedChildStructure
+from netex.models.accessibility_limitations_rel_structure import AccessibilityLimitationsRelStructure
+from netex.models.accessibility_tool import AccessibilityTool
+from netex.models.accessibility_tool_enumeration import AccessibilityToolEnumeration
+from netex.models.accessibility_tool_list import AccessibilityToolList
+from netex.models.accommodation import Accommodation
+from netex.models.accommodation_access import AccommodationAccess
+from netex.models.accommodation_access_enumeration import AccommodationAccessEnumeration
+from netex.models.accommodation_access_list import AccommodationAccessList
+from netex.models.accommodation_facility import AccommodationFacility
+from netex.models.accommodation_facility_enumeration import AccommodationFacilityEnumeration
+from netex.models.accommodation_facility_list import AccommodationFacilityList
+from netex.models.accommodation_ref import AccommodationRef
+from netex.models.accommodation_ref_structure import AccommodationRefStructure
+from netex.models.accommodation_versioned_child_structure import AccommodationVersionedChildStructure
+from netex.models.accommodations_rel_structure import AccommodationsRelStructure
+from netex.models.account_status_type_enumeration import AccountStatusTypeEnumeration
+from netex.models.accountable_element import AccountableElement
+from netex.models.accountable_element_ref import AccountableElementRef
+from netex.models.accountable_element_ref_structure import AccountableElementRefStructure
+from netex.models.accountable_element_structure import AccountableElementStructure
+from netex.models.accounting_code import AccountingCode
+from netex.models.activated_equipment import ActivatedEquipment
+from netex.models.activated_equipment_ref import ActivatedEquipmentRef
+from netex.models.activated_equipment_ref_structure import ActivatedEquipmentRefStructure
+from netex.models.activated_equipment_version_structure import ActivatedEquipmentVersionStructure
+from netex.models.activated_equipments_in_frame_rel_structure import ActivatedEquipmentsInFrameRelStructure
+from netex.models.activation_assignment import ActivationAssignment
+from netex.models.activation_assignment_ref import ActivationAssignmentRef
+from netex.models.activation_assignment_ref_structure import ActivationAssignmentRefStructure
+from netex.models.activation_assignment_version_structure import ActivationAssignmentVersionStructure
+from netex.models.activation_assignments_rel_structure import ActivationAssignmentsRelStructure
+from netex.models.activation_link import ActivationLink
+from netex.models.activation_link_ref import ActivationLinkRef
+from netex.models.activation_link_ref_by_value import ActivationLinkRefByValue
+from netex.models.activation_link_ref_by_value_structure import ActivationLinkRefByValueStructure
+from netex.models.activation_link_ref_structure import ActivationLinkRefStructure
+from netex.models.activation_link_version_structure import ActivationLinkVersionStructure
+from netex.models.activation_links_in_frame_rel_structure import ActivationLinksInFrameRelStructure
+from netex.models.activation_means_enumeration import ActivationMeansEnumeration
+from netex.models.activation_point_1 import ActivationPoint1
+from netex.models.activation_point_2 import ActivationPoint2
+from netex.models.activation_point_ref import ActivationPointRef
+from netex.models.activation_point_ref_structure import ActivationPointRefStructure
+from netex.models.activation_point_version_structure import ActivationPointVersionStructure
+from netex.models.activation_points_in_frame_rel_structure import ActivationPointsInFrameRelStructure
+from netex.models.activation_type_refs_rel_structure import ActivationTypeRefsRelStructure
+from netex.models.actual_vehicle_equipment import ActualVehicleEquipment
+from netex.models.actual_vehicle_equipment_version_structure import ActualVehicleEquipmentVersionStructure
+from netex.models.address import Address
+from netex.models.address_ref import AddressRef
+from netex.models.address_ref_structure import AddressRefStructure
+from netex.models.address_version_structure import AddressVersionStructure
+from netex.models.addressable_place import AddressablePlace
+from netex.models.addressable_place_ref import AddressablePlaceRef
+from netex.models.addressable_place_ref_structure import AddressablePlaceRefStructure
+from netex.models.addressable_place_version_structure import AddressablePlaceVersionStructure
+from netex.models.addresses_in_frame_rel_structure import AddressesInFrameRelStructure
+from netex.models.administrative_zone_1 import AdministrativeZone1
+from netex.models.administrative_zone_ref import AdministrativeZoneRef
+from netex.models.administrative_zone_ref_structure import AdministrativeZoneRefStructure
+from netex.models.administrative_zone_refs_rel_structure import AdministrativeZoneRefsRelStructure
+from netex.models.administrative_zone_version_structure import (
     AdministrativeZone2,
     AdministrativeZoneVersionStructure,
-    AdministrativeZone1,
-    AggregationType,
-    AirSubmode,
-    AirSubmodeEnumeration,
-    AliasStructure,
-    AllAuthoritiesRef,
-    AllCountriesRef,
-    AllCountriesRefStructure,
-    AllDistributionChannelsRef,
-    AllDistributionChannelsRefStructureElement,
-    AllModesEnumeration,
-    AllOperatorsRef,
-    AllOrganisationsRef,
-    AllOrganisationsRefStructure,
-    AllSubmodeStructure,
-    AllTransportOrganisationsRef,
-    AllTransportOrganisationsRefStructure,
-    AllVehicleModes,
-    AllVehicleModesOfTransportEnumeration,
-    AllowedLineDirection,
-    AllowedLineDirectionRef,
-    AllowedLineDirectionRefStructure,
-    AllowedLineDirectionVersionStructure,
-    AllowedResourceUsageExceededError,
-    AllowedResourceUsageExceededErrorStructure,
-    AlternativeName,
-    AlternativeNameRef,
-    AlternativeNameRefStructure,
-    AlternativeNameVersionedChildStructure,
-    AlternativeQuayDescriptor,
-    AlternativeQuayDescriptorVersionedChildStructure,
+    TransportAdministrativeZone,
+    TransportAdministrativeZoneVersionStructure,
+    AdministrativeZonesRelStructure,
+)
+from netex.models.aggregation_type import AggregationType
+from netex.models.air_submode import AirSubmode
+from netex.models.air_submode_enumeration import AirSubmodeEnumeration
+from netex.models.alias_structure import AliasStructure
+from netex.models.all_authorities_ref import AllAuthoritiesRef
+from netex.models.all_countries_ref import AllCountriesRef
+from netex.models.all_countries_ref_structure import AllCountriesRefStructure
+from netex.models.all_distribution_channels_ref import AllDistributionChannelsRef
+from netex.models.all_distribution_channels_ref_structure_element import AllDistributionChannelsRefStructureElement
+from netex.models.all_modes_enumeration import AllModesEnumeration
+from netex.models.all_operators_ref import AllOperatorsRef
+from netex.models.all_organisations_ref import AllOrganisationsRef
+from netex.models.all_organisations_ref_structure import AllOrganisationsRefStructure
+from netex.models.all_submode_structure import AllSubmodeStructure
+from netex.models.all_transport_organisations_ref import AllTransportOrganisationsRef
+from netex.models.all_transport_organisations_ref_structure import AllTransportOrganisationsRefStructure
+from netex.models.all_vehicle_modes import AllVehicleModes
+from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
+from netex.models.allowed_line_direction import AllowedLineDirection
+from netex.models.allowed_line_direction_ref import AllowedLineDirectionRef
+from netex.models.allowed_line_direction_ref_structure import AllowedLineDirectionRefStructure
+from netex.models.allowed_line_direction_refs_rel_structure import AllowedLineDirectionRefsRelStructure
+from netex.models.allowed_line_direction_version_structure import AllowedLineDirectionVersionStructure
+from netex.models.allowed_line_directions_rel_structure import AllowedLineDirectionsRelStructure
+from netex.models.allowed_resource_usage_exceeded_error import AllowedResourceUsageExceededError
+from netex.models.allowed_resource_usage_exceeded_error_structure import AllowedResourceUsageExceededErrorStructure
+from netex.models.alternative_name import AlternativeName
+from netex.models.alternative_name_ref import AlternativeNameRef
+from netex.models.alternative_name_ref_structure import AlternativeNameRefStructure
+from netex.models.alternative_name_versioned_child_structure import AlternativeNameVersionedChildStructure
+from netex.models.alternative_names_rel_structure import AlternativeNamesRelStructure
+from netex.models.alternative_quay_descriptor import AlternativeQuayDescriptor
+from netex.models.alternative_quay_descriptor_versioned_child_structure import AlternativeQuayDescriptorVersionedChildStructure
+from netex.models.alternative_text_ref import AlternativeTextRef
+from netex.models.alternative_text_ref_structure import AlternativeTextRefStructure
+from netex.models.alternative_texts_rel_structure import (
     AlternativeText,
-    AlternativeTextRef,
-    AlternativeTextRefStructure,
     AlternativeTextVersionedChildStructure,
-    AmountOfPriceUnitEnumeration,
-    AmountOfPriceUnitProduct,
-    AmountOfPriceUnitProductRef,
-    AmountOfPriceUnitProductRefStructure,
-    AmountOfPriceUnitProductVersionStructure,
-    ArrivalStructure,
-    AssignmentRef,
-    AssignmentRefStructure,
-    Assignment2,
-    AssignmentVersionStructure2,
-    AssignmentVersionStructure1,
-    Assignment1,
-    AssistanceAvailabilityEnumeration,
-    AssistanceBookingService,
-    AssistanceBookingServiceRef,
-    AssistanceBookingServiceRefStructure,
-    AssistanceBookingServiceVersionStructure,
-    AssistanceFacility,
-    AssistanceFacilityEnumeration,
-    AssistanceFacilityList,
-    AssistanceNeededEnumeration,
-    AssistanceService,
-    AssistanceServiceRef,
-    AssistanceServiceRefStructure,
-    AssistanceServiceVersionStructure,
-    AssistedBoardingLocationEnumeration,
-    AssociationRoleType,
-    AudibleSignalsAvailable,
-    AudioAnnouncementTypeEnumeration,
-    AudioTriggerMethodEnumeration,
-    AuthenticatedRequest,
-    AuthenticatedRequestStructure,
-    Authority,
-    AuthorityRef,
-    AuthorityRefStructure,
-    AuthorityVersionStructure,
     AvailabilityCondition,
-    AvailabilityConditionRef,
-    AvailabilityConditionRefStructure,
     AvailabilityConditionVersionStructure,
-    BaggageTypeEnumeration,
-    BaggageUseTypeEnumeration,
-    BeaconPoint,
-    BeaconPointRef,
-    BeaconPointRefStructure,
-    BeaconPointVersionStructure,
-    BerthFacility,
-    BerthFacilityEnumeration,
-    BeyondDataHorizon,
-    BeyondDataHorizonErrorStructure,
-    Blacklist,
-    BlacklistRef,
-    BlacklistRefStructure,
-    BlacklistVersionStructure,
-    BlackoutStartEnumeration,
-    Block,
-    BlockPart,
-    BlockPartRef,
-    BlockPartRefStructure,
-    BlockPartVersionStructure,
-    BlockRef,
-    BlockRefStructure,
-    BlockVersionStructure,
-    BoardingPermission,
-    BoardingPermissionEnumeration,
-    BoardingPosition,
-    BoardingPositionRef,
-    BoardingPositionRefStructure,
-    BoardingPositionTypeEnumeration,
-    BoardingPositionVersionStructure,
-    BookingAccessEnumeration,
-    BookingArrangementsStructure,
-    BookingMethodEnumeration,
-    BookingProcessEnumeration,
-    BookingProcessFacility,
-    BookingProcessFacilityList,
-    BooleanOperatorEnumeration,
-    BorderPoint,
-    BorderPointRef,
-    BorderPointRefStructure,
-    BorderPointValueStructure,
-    BorderTypeEnumeration,
-    BoundingBoxStructure1,
-    BoundingBoxStructure2,
-    Branding,
-    BrandingRef,
-    BrandingRefStructure,
-    BrandingVersionStructure,
-    BusSubmode,
-    BusSubmodeEnumeration,
-    CallZ,
-    Call2,
-    CallVersionedChildStructure,
-    Call1,
-    Cancelling,
-    CancellingRef,
-    CancellingRefStructure,
-    CancellingVersionStructure,
-    CapabilitiesRequest,
-    CapabilitiesRequestStructure,
-    CapabilitiesResponse,
-    CapabilitiesResponseStructure,
-    CapabilityGeneralInteractionStructure,
-    CapabilityNotSupportedError,
-    CapabilityNotSupportedErrorStructure,
-    CapabilityRequestPolicyStructure,
-    CapabilitySubscriptionPolicyStructure,
-    CappedDiscountRight,
-    CappedDiscountRightRef,
-    CappedDiscountRightRefStructure,
-    CappedDiscountRightVersionStructure,
-    CappingPeriodEnumeration,
-    CappingPeriodStartConstraintTypeEnumeration,
-    CappingRule,
-    CappingRulePrice,
-    CappingRulePriceRef,
-    CappingRulePriceRefStructure,
-    CappingRulePriceVersionedChildStructure,
-    CappingRuleRef,
-    CappingRuleRefStructure,
-    CappingRuleVersionedChildStructure,
-    CarServiceFacility,
-    CarServiceFacilityEnumeration,
-    CarServiceFacilityList,
-    CateringFacility,
-    CateringFacilityEnumeration,
-    CateringFacilityList,
-    CateringRightsEnumeration,
-    CateringService,
-    CateringServiceEnumeration,
-    CateringServiceRef,
-    CateringServiceRefStructure,
-    CateringServiceVersionStructure,
-    CellPriceStructure,
-    CellRefStructure,
-    CellRef2,
-    CellRef1,
-    Cell2,
-    CellVersionedChildStructure,
-    Cell1,
-    ChargingBasisEnumeration,
-    ChargingMoment,
-    ChargingMomentEnumeration,
-    ChargingMomentRef,
-    ChargingMomentRefStructure,
-    ChargingMomentValueStructure,
-    ChargingPolicy,
-    ChargingPolicyRef,
-    ChargingPolicyRefStructure,
-    ChargingPolicyVersionStructure,
-    CheckConstraint,
-    CheckConstraintDelay,
-    CheckConstraintDelayRef,
-    CheckConstraintDelayRefStructure,
-    CheckConstraintDelayVersionStructure,
-    CheckConstraintRef,
-    CheckConstraintRefStructure,
-    CheckConstraintThroughput,
-    CheckConstraintThroughputRef,
-    CheckConstraintThroughputRefStructure,
-    CheckConstraintThroughputVersionStructure,
-    CheckConstraintVersionStructure,
-    CheckDirectionEnumeration,
-    CheckProcessTypeEnumeration,
-    CheckServiceEnumeration,
-    CheckStatusRequest,
-    CheckStatusRequestStructure,
-    CheckStatusResponse,
-    CheckStatusResponseBodyStructure,
-    CheckStatusResponseStructure,
-    ClassAttributeInFrame,
-    ClassAttributeInFrameStructure,
-    ClassInFrame,
-    ClassInFrameRef,
-    ClassInFrameRefStructure,
-    ClassInFrameRefsRelStructure,
-    ClassInFrameStructure,
-    ClassOfUse,
-    ClassOfUseRef,
-    ClassOfUseRefStructure,
-    ClassOfUseValueStructure,
-    ClassRef,
-    ClassRefStructure,
-    ClassRefTypeEnumeration,
-    ClassRelationshipInFrame,
-    ClassRelationshipInFrameStructure,
-    ClassificationDescriptorVersionStructure,
-    ClosedTimeRangeStructure,
-    ClosedTimestampRangeStructure,
-    CoachSubmode,
-    CoachSubmodeEnumeration,
-    CodeListType,
-    CodeOrNilReasonListType,
-    CodeType,
-    CodeWithAuthorityType,
-    Codespace,
-    CodespaceAssignment,
-    CodespaceAssignmentRef,
-    CodespaceAssignmentVersionedChildStructure,
-    CodespaceRef,
-    CodespaceRefStructure,
-    CodespaceStructure,
-    CommercialProfile,
-    CommercialProfileEligibility,
-    CommercialProfileEligibilityRef,
-    CommercialProfileEligibilityRefStructure,
-    CommercialProfileEligibilityVersionedChildStructure,
-    CommercialProfileRef,
-    CommercialProfileRefStructure,
-    CommercialProfileTypeEnumeration,
-    CommercialProfileVersionStructure,
-    CommonCellVersionedChildStructure,
-    CommonFrame,
-    CommonSection,
-    CommonSectionPointMember,
-    CommonSectionRef,
-    CommonSectionRefStructure,
-    CommonSectionVersionStructure,
-    CommonVersionFrameStructure,
-    CommunicationService,
-    CommunicationServiceEnumeration,
-    CommunicationServiceRef,
-    CommunicationServiceRefStructure,
-    CommunicationServiceVersionStructure,
-    CommunicationsTransportMethodEnumeration,
-    CompanionProfile,
-    CompanionProfileRef,
-    CompanionProfileRefStructure,
-    CompanionProfileVersionStructure,
-    CompanionRelationshipEnumeration,
-    CompassBearing16Enumeration,
-    CompassBearing8Enumeration,
-    ComplaintsService,
-    ComplaintsServiceRef,
-    ComplaintsServiceRefStructure,
-    ComplaintsServiceVersionStructure,
-    ComplexFeature,
-    ComplexFeatureMemberVersionedChildStructure,
-    ComplexFeatureProjection,
-    ComplexFeatureProjectionRef,
-    ComplexFeatureProjectionRefStructure,
-    ComplexFeatureProjectionVersionStructure,
-    ComplexFeatureRef,
-    ComplexFeatureRefStructure,
-    ComplexFeatureVersionStructure,
-    CompositeFrame,
-    CompositeFrameRef,
-    CompositeFrameRefStructure,
-    CompositeVersionFrameStructure,
-    CompoundBlock,
-    CompoundBlockRef,
-    CompoundBlockRefStructure,
-    CompoundBlockStructure,
-    CompoundTrain,
-    CompoundTrainRef,
-    CompoundTrainRefStructure,
-    CompoundTrainVersionStructure,
-    CompressionMethodEnumeration,
-    ConditionSummary,
-    ConditionSummaryStructure,
-    CongestionEnumeration,
-    ConnectingJourneyView,
-    ConnectingJourneyDerivedViewStructure,
-    Connection,
-    ConnectionCertaintyEnumeration,
-    ConnectionEnd,
-    ConnectionEndStructure,
-    ConnectionRef,
-    ConnectionRefStructure,
-    ConnectionVersionStructure,
-    ConsumerRequestEndpointStructure,
-    ConsumerResponseEndpointStructure,
-    ContactStructure,
-    ContainmentEnumeration,
-    ContextualisedRequestStructure,
-    ContinuousModeEnumeration,
-    ControlCentre,
-    ControlCentreRef,
-    ControlCentreRefStructure,
-    ControlCentreVersionStructure,
-    ControlCentresRelStructure,
-    ControlParameterAssignmentRefStructure,
-    ControllableElement,
-    ControllableElementInSequence,
-    ControllableElementInSequenceRef,
-    ControllableElementInSequenceRefStructure,
-    ControllableElementInSequenceVersionedChildStructure,
-    ControllableElementPrice,
-    ControllableElementPriceRef,
-    ControllableElementPriceRefStructure,
-    ControllableElementPriceVersionedChildStructure,
-    ControllableElementRef,
-    ControllableElementRefStructure,
-    ControllableElementVersionStructure,
-    CoordinatesType,
-    CouchetteFacility,
-    CouchetteFacilityEnumeration,
-    CouchetteFacilityList,
-    Country,
-    CountryRef,
-    CountryRefStructure,
-    CountryVersionStructure,
-    CoupledJourney,
-    CoupledJourneyRef,
-    CoupledJourneyRefStructure,
-    CoupledJourneyVersionStructure,
-    CourseOfJourneys,
-    CourseOfJourneysRef,
-    CourseOfJourneysRefStructure,
-    CourseOfJourneysVersionStructure,
-    CoveredEnumeration,
-    CrewBase,
-    CrewBaseRef,
-    CrewBaseRefStructure,
-    CrewBaseVersionStructure,
-    CrossingEquipment,
-    CrossingEquipmentRef,
-    CrossingEquipmentRefStructure,
-    CrossingEquipmentVersionStructure,
-    CrossingTypeEnumeration,
-    CrowdingEnumeration,
-    CurveArrayPropertyType,
-    CurvePropertyType,
-    Customer,
-    CustomerAccount,
-    CustomerAccountRef,
-    CustomerAccountRefStructure,
-    CustomerAccountSecurityListing,
-    CustomerAccountSecurityListingRef,
-    CustomerAccountSecurityListingRefStructure,
-    CustomerAccountSecurityListingVersionedChildStructure,
-    CustomerAccountStatus,
-    CustomerAccountStatusRef,
-    CustomerAccountStatusRefStructure,
-    CustomerAccountStatusVersionStructure,
-    CustomerAccountVersionStructure,
-    CustomerEligibilityRef,
-    CustomerEligibilityRefStructure,
-    CustomerEligibility2,
-    CustomerEligibilityVersionedChildStructure,
-    CustomerEligibility1,
-    CustomerPurchasePackage,
-    CustomerPurchasePackageElement,
-    CustomerPurchasePackageElementAccess,
-    CustomerPurchasePackageElementAccessRefStructure,
-    CustomerPurchasePackageElementAccessVersionedChildStructure,
-    CustomerPurchasePackageElementRef,
-    CustomerPurchasePackageElementRefStructure,
-    CustomerPurchasePackageElementVersionStructure,
-    CustomerPurchasePackagePrice,
-    CustomerPurchasePackagePriceRef,
-    CustomerPurchasePackagePriceRefStructure,
-    CustomerPurchasePackagePriceVersionedChildStructure,
-    CustomerPurchasePackageRef,
-    CustomerPurchasePackageRefStructure,
-    CustomerPurchasePackageStatusEnumeration,
-    CustomerPurchasePackageVersionStructure,
-    CustomerPurchaseParameterAssignment,
-    CustomerPurchaseParameterAssignmentRefStructure,
-    CustomerPurchaseParameterAssignmentVersionStructure,
-    CustomerRef,
-    CustomerRefStructure,
-    CustomerSecurityListing,
-    CustomerSecurityListingRef,
-    CustomerSecurityListingRefStructure,
-    CustomerSecurityListingRefsRelStructure,
-    CustomerSecurityListingVersionedChildStructure,
-    CustomerService,
-    CustomerServiceRef,
-    CustomerServiceRefStructure,
-    CustomerServiceVersionStructure,
-    CustomerVersionStructure,
-    CycleStorageEnumeration,
-    CycleStorageEquipment,
-    CycleStorageEquipmentRef,
-    CycleStorageEquipmentRefStructure,
-    CycleStorageEquipmentVersionStructure,
-    CyclesOnServiceEnumeration,
-    DataManagedObject,
     DataManagedObjectStructure,
-    DataManagedObjectView,
-    DataManagedObjectViewStructure,
-    DataNameSpacesStructure,
-    DataObjectCapabilitiesRequest,
-    DataObjectCapabilitiesResponse,
-    DataObjectCapabilitiesResponseStructure,
-    DataObjectCapabilityRequestPolicyStructure,
-    DataObjectDelivery,
-    DataObjectDeliveryStructure,
-    DataObjectPermissions,
-    DataObjectRequest,
-    DataObjectRequestStructure,
-    DataObjectServiceCapabilities,
-    DataObjectServiceCapabilitiesStructure,
-    DataObjectSubscriptionRequest,
-    DataObjectSubscriptionStructure,
-    DataReadyAcknowledgement,
-    DataReadyNotification,
-    DataReadyRequestStructure,
-    DataReadyResponseStructure,
-    DataReceivedAcknowledgement,
-    DataReceivedResponseStructure,
-    DataRoleTypeEnumeration,
-    DataSource,
-    DataSourceRef,
-    DataSourceRefStructure,
-    DataSourceVersionStructure,
-    DataSupplyRequest,
-    DataSupplyRequestBodyStructure,
-    DataSupplyRequestStructure,
-    DatedCall,
-    DatedCallZ,
-    DatedCallVersionedChildStructure,
-    DatedPassingTime,
-    DatedPassingTimeVersionedChildStructure,
-    DatedServiceJourney,
-    DatedServiceJourneyVersionStructure,
-    DatedSpecialService,
-    DatedSpecialServiceRef,
-    DatedSpecialServiceRefStructure,
-    DatedSpecialServiceRefsRelStructure,
-    DatedSpecialServiceVersionStructure,
-    DatedVehicleJourney,
-    DatedVehicleJourneyRef,
-    DatedVehicleJourneyRefStructure,
-    DatedVehicleJourneyVersionStructure,
-    DayEventEnumeration,
-    DayOfWeekEnumeration,
-    DayTypeAssignment,
-    DayTypeAssignmentRef,
-    DayTypeAssignmentRefStructure,
-    DayTypeAssignmentVersionStructure,
-    DayTypeRef,
-    DayTypeRefStructure,
     DayType2,
     DayTypeVersionStructure,
     DayType1,
-    DeadRun,
-    DeadRunCallPartStructure,
-    DeadRunCallVersionedChildStructure,
-    DeadRunEndpointStructure,
-    DeadRunJourneyPattern,
-    DeadRunJourneyPatternRef,
-    DeadRunJourneyPatternRefStructure,
-    DeadRunJourneyPatternVersionStructure,
-    DeadRunRef,
-    DeadRunRefStructure,
-    DeadRunTypeEnumeration,
-    DeadRunWithCallsVersionStructure,
-    DeadRunVersionStructure,
-    DefaultConnection,
-    DefaultConnectionEndStructure,
-    DefaultConnectionRef,
-    DefaultConnectionRefStructure,
-    DefaultConnectionVersionStructure,
-    DefaultDeadRunRunTime,
-    DefaultDeadRunRunTimeRef,
-    DefaultDeadRunRunTimeRefStructure,
-    DefaultDeadRunRunTimeVersionedChildStructure,
-    DefaultInterchange,
-    DefaultInterchangeRef,
-    DefaultInterchangeRefStructure,
-    DefaultInterchangeVersionStructure,
-    DefaultServiceJourneyRunTime,
-    DefaultServiceJourneyRunTimeVersionedChildStructure,
-    DefaultServiceJourneyTimeRef,
-    DefaultServiceJourneyTimeRefStructure,
-    DeliveriesStructure,
-    DeliveryMethodEnumeration,
-    DeliveryVariant,
-    DeliveryVariantRef,
-    DeliveryVariantRefStructure,
-    DeliveryVariantTypeEnumeration,
-    DeliveryVariantVersionStructure,
-    Delta,
-    DeltaStructure,
-    DeltaValue,
-    DeltaValueStructure,
-    Department,
-    DepartmentRef,
-    DepartmentRefStructure,
-    DepartmentVersionStructure,
-    DepartureStructure,
-    DerivedView,
-    DerivedViewStructure,
-    DestinationDisplay,
-    DestinationDisplayContextEnumeration,
-    DestinationDisplayRef,
-    DestinationDisplayRefStructure,
-    DestinationDisplayVariant,
-    DestinationDisplayVariantRef,
-    DestinationDisplayVariantRefStructure,
-    DestinationDisplayVariantVersionStructure,
-    DestinationDisplayView,
-    DestinationDisplayDerivedViewStructure,
-    DestinationDisplayVersionStructure,
-    DeviceParameterAssignmentRefStructure,
-    DirectPositionListType,
-    DirectPositionType,
-    Direction,
-    DirectionOfUseEnumeration,
-    DirectionRef,
-    DirectionRefStructure,
-    DirectionType,
-    DirectionTypeEnumeration,
-    DirectionView,
-    DirectionDerivedViewStructure,
-    DirectionValueStructure,
-    DiscountBasisEnumeration,
-    DiscountingRule,
-    DiscountingRuleRef,
-    DiscountingRuleRefStructure,
-    DiscountingRuleVersionedStructure,
-    DisplayAssignment,
-    DisplayAssignmentRef,
-    DisplayAssignmentRefStructure,
-    DisplayAssignmentTypeEnumeration,
-    DisplayAssignmentVersionStructure,
-    DistanceMatrixElement,
-    DistanceMatrixElementInverseRef,
-    DistanceMatrixElementPrice,
-    DistanceMatrixElementPriceRef,
-    DistanceMatrixElementPriceRefStructure,
-    DistanceMatrixElementPriceVersionedChildStructure,
-    DistanceMatrixElementRef,
-    DistanceMatrixElementRefByValue,
-    DistanceMatrixElementRefByValueStructure,
-    DistanceMatrixElementRefStructure,
-    DistanceMatrixElementView,
-    DistanceMatrixElementDerivedViewStructure,
-    DistanceMatrixElementVersionStructure,
-    DistributionAssignment,
-    DistributionAssignmentRef,
-    DistributionAssignmentRefStructure,
-    DistributionAssignmentVersionStructure,
-    DistributionChannel,
-    DistributionChannelRef,
-    DistributionChannelRefStructureElement,
-    DistributionChannelTypeEnumeration,
-    DistributionChannelVersionStructure,
-    DistributionRightsEnumeration,
-    DriverRef,
-    DriverRefStructure,
-    DriverScheduleFrame,
-    DriverScheduleFrameRef,
-    DriverScheduleFrameRefStructure,
-    DriverScheduleVersionFrameStructure,
-    DriverTrip,
-    DriverTripRef,
-    DriverTripRefStructure,
-    DriverTripTime,
-    DriverTripTimeRef,
-    DriverTripTimeRefStructure,
-    DriverTripTimeVersionStructure,
-    DriverTripVersionStructure,
-    Duty,
-    DutyPart,
-    DutyPartRef,
-    DutyPartRefStructure,
-    DutyPartVersionStructure,
-    DutyRef,
-    DutyRefStructure,
-    DutyVersionStructure,
-    DynamicAdvertisementEnumeration,
-    DynamicStopAssignment,
-    DynamicStopAssignmentRef,
-    DynamicStopAssignmentRefStructure,
-    DynamicStopAssignmentVersionStructure,
-    EffectiveFromEnumeration,
-    EligibilityChangePolicy,
-    EligibilityChangePolicyRef,
-    EligibilityChangePolicyRefStructure,
-    EligibilityChangePolicyVersionStructure,
-    EmergencyService,
-    EmergencyServiceEnumeration,
-    EmergencyServiceList,
-    EmptyType1,
-    EmptyType2,
-    EncumbranceEnumeration,
-    EndpointDeniedAccessError,
-    EndpointDeniedAccessStructure,
-    EndpointNotAvailableAccessError,
-    EndpointNotAvailableAccessStructure,
-    EntitlementConstraintStructure,
-    EntitlementGiven,
-    EntitlementGivenRef,
-    EntitlementGivenRefStructure,
-    EntitlementGivenVersionStructure,
-    EntitlementProduct,
-    EntitlementProductRef,
-    EntitlementProductRefStructure,
-    EntitlementProductVersionStructure,
-    EntitlementRequired,
-    EntitlementRequiredRef,
-    EntitlementRequiredRefStructure,
-    EntitlementRequiredVersionStructure,
-    EntitlementTypeEnumeration,
-    Entity,
-    EntityInVersion,
-    EntityInVersionInFrameRefStructure,
     EntityInVersionStructure,
-    EntityStructure,
-    EntityEntity,
-    EntityEntityStructure,
-    Entrance,
-    EntranceAttentionEnumeration,
-    EntranceEnumeration,
-    EntranceEquipment,
-    EntranceEquipmentRef,
-    EntranceEquipmentRefStructure,
-    EntranceEquipmentVersionStructure,
-    EntranceRef,
-    EntranceRefStructure,
-    EntranceTypeEnumeration,
-    Envelope,
-    EnvelopeType,
-    Equipment,
-    EquipmentPlace,
-    EquipmentPlaceRef,
-    EquipmentPlaceRefStructure,
-    EquipmentPlaceVersionStructure,
-    EquipmentPosition,
-    EquipmentPositionRef,
-    EquipmentPositionRefStructure,
-    EquipmentPositionStructure,
-    EquipmentRef,
-    EquipmentRefStructure,
-    EquipmentStatusEnumeration,
-    EquipmentVersionStructure,
-    ErrorCode,
-    ErrorCodeStructure,
-    ErrorCondition,
-    ErrorConditionElement,
-    ErrorConditionElementStructure,
-    ErrorConditionStructure,
-    EscalatorEquipment,
-    EscalatorEquipmentRef,
-    EscalatorEquipmentRefStructure,
-    EscalatorEquipmentVersionStructure,
-    EscalatorFreeAccess,
-    EstimatedPassingTime,
-    EstimatedPassingTimeRef,
-    EstimatedPassingTimeRefStructure,
-    EstimatedPassingTimeView,
-    EstimatedPassingTimeVersionedChildStructure,
-    EstimatedPassingTimeViewStructure,
-    ExchangableToEnumeration,
-    Exchanging,
-    ExchangingRef,
-    ExchangingRefStructure,
-    ExchangingVersionStructure,
-    ExtensionsStructure1,
-    ExtensionsStructure2,
-    Extensions1,
-    Extensions2,
-    ExternalObjectRefStructure,
-    FacilityRef,
-    FacilityRefStructure,
-    FacilityRequirement,
-    FacilityRequirementRef,
-    FacilityRequirementRefStructure,
-    FacilityRequirementVersionStructure,
-    FacilitySet,
-    FacilitySetRef,
-    FacilitySetRefStructure,
-    FacilitySetVersionStructure,
-    FamilyFacility,
-    FamilyFacilityEnumeration,
-    FamilyFacilityList,
-    FareBasisEnumeration,
-    FareClass,
-    FareClassEnumeration,
-    FareClasses,
-    FareContract,
-    FareContractEntryRef,
-    FareContractEntryRefStructure,
-    FareContractEntry2,
-    FareContractEntryVersionStructure,
-    FareContractEntry1,
-    FareContractRef,
-    FareContractRefStructure,
-    FareContractSecurityListing,
-    FareContractSecurityListingRef,
-    FareContractSecurityListingRefStructure,
-    FareContractSecurityListingRefsRelStructure,
-    FareContractSecurityListingVersionedChildStructure,
-    FareContractVersionStructure,
     FareDayType,
-    FareDayTypeRef,
-    FareDayTypeRefStructure,
     FareDayTypeVersionedStructure,
-    FareDemandFactor,
-    FareDemandFactorRef,
-    FareDemandFactorRefStructure,
-    FareDemandFactorVersionStructure,
-    FareDemandTypeEnumeration,
-    FareElementInSequence,
-    FareElementInSequenceRef,
-    FareElementInSequenceRefStructure,
-    FareElementInSequenceVersionedChildStructure,
-    FareFrame,
-    FareFrameRef,
-    FareFrameRefStructure,
-    FareFrameVersionFrameStructure,
-    FareInterval,
-    FareIntervalRef,
-    FareIntervalRefStructure,
-    FareIntervalVersionStructure,
-    FarePointInPattern,
-    FarePointInPatternRef,
-    FarePointInPatternRefStructure,
-    FarePointInPatternVersionedChildStructure,
-    FarePriceRef,
-    FarePriceRefStructure,
-    FarePrice2,
-    FarePriceVersionedChildStructure,
-    FarePrice1,
-    FareProductPrice,
-    FareProductPriceRef,
-    FareProductPriceRefStructure,
-    FareProductPriceVersionedChildStructure,
-    FareProductRef,
-    FareProductRefStructure,
-    FareProduct2,
-    FareProductVersionStructure,
-    FareProduct1,
-    FareQuotaFactor,
-    FareQuotaFactorRef,
-    FareQuotaFactorRefStructure,
-    FareQuotaFactorVersionStructure,
-    FareRequestRef,
-    FareRequestRefStructure,
-    FareScheduledStopPoint,
-    FareScheduledStopPointRef,
-    FareScheduledStopPointRefStructure,
-    FareScheduledStopPointVersionStructure,
-    FareSection,
-    FareSectionRef,
-    FareSectionRefStructure,
-    FareSectionVersionStructure,
-    FareStructureElement,
-    FareStructureElementInSequence,
-    FareStructureElementInSequenceRef,
-    FareStructureElementInSequenceRefStructure,
-    FareStructureElementInSequenceVersionedChildStructure,
-    FareStructureElementPrice,
-    FareStructureElementPriceRef,
-    FareStructureElementPriceRefStructure,
-    FareStructureElementPriceVersionedChildStructure,
-    FareStructureElementRef,
-    FareStructureElementRefStructure,
-    FareStructureElementVersionStructure,
-    FareStructureFactor,
-    FareStructureFactorRef,
-    FareStructureFactorRefStructure,
-    FareStructureFactorVersionStructure,
-    FareStructureTypeEnumeration,
-    FareTableColumn,
-    FareTableColumnRef,
-    FareTableColumnRefStructure,
-    FareTableColumnVersionedChildStructure,
-    FareTableInContext,
-    FareTableRef,
-    FareTableRefStructure,
-    FareTableRow,
-    FareTableRowRef,
-    FareTableRowRefStructure,
-    FareTableRowVersionedChildStructure,
-    FareTableSpecificsStructure,
-    FareTable2,
-    FareTableVersionStructure,
-    FareTable1,
-    FareUnit,
-    FareUnitRef,
-    FareUnitRefStructure,
-    FareUnitVersionStructure,
-    FareZone,
-    FareZoneRef,
-    FareZoneRefStructure,
-    FareZoneVersionStructure,
-    FixedStartWindowStructure,
-    FlexibleArea,
-    FlexibleAreaRef,
-    FlexibleAreaRefStructure,
-    FlexibleAreaVersionStructure,
-    FlexibleLine,
-    FlexibleLineRef,
-    FlexibleLineRefStructure,
-    FlexibleLineTypeEnumeration,
-    FlexibleLineView,
-    FlexibleLineDerivedViewStructure,
-    FlexibleLineVersionStructure,
-    FlexibleLinkProperties,
-    FlexibleLinkPropertiesRef,
-    FlexibleLinkPropertiesRefStructure,
-    FlexibleLinkPropertiesVersionedChildStructure,
-    FlexibleLinkTypeEnumeration,
-    FlexiblePointProperties,
-    FlexiblePointPropertiesRef,
-    FlexiblePointPropertiesRefStructure,
-    FlexiblePointPropertiesVersionedChildStructure,
-    FlexibleQuay,
-    FlexibleQuayRef,
-    FlexibleQuayRefStructure,
-    FlexibleQuayVersionStructure,
-    FlexibleRoute,
-    FlexibleRouteTypeEnumeration,
-    FlexibleRouteVersionStructure,
-    FlexibleServiceAssignmentRef,
-    FlexibleServiceAssignmentRefStructure,
-    FlexibleServiceEnumeration,
-    FlexibleServiceProperties,
-    FlexibleServicePropertiesRef,
-    FlexibleServicePropertiesRefStructure,
-    FlexibleServicePropertiesVersionStructure,
-    FlexibleStopAssignment,
-    FlexibleStopAssignmentVersionStructure,
-    FlexibleStopPlace,
-    FlexibleStopPlaceRef,
-    FlexibleStopPlaceRefStructure,
-    FlexibleStopPlaceVersionStructure,
-    FlooringTypeEnumeration,
-    FontSizeEnumeration,
-    FrameNatureEnumeration,
-    FrequencyOfUse,
-    FrequencyOfUseRef,
-    FrequencyOfUseRefStructure,
-    FrequencyOfUseTypeEnumeration,
-    FrequencyOfUseVersionStructure,
-    FrequencyStructure,
-    FulfilmentMethod,
-    FulfilmentMethodPrice,
-    FulfilmentMethodPriceRef,
-    FulfilmentMethodPriceRefStructure,
-    FulfilmentMethodPriceVersionedChildStructure,
-    FulfilmentMethodRef,
-    FulfilmentMethodRefStructure,
-    FulfilmentMethodTypeEnumeration,
-    FulfilmentMethodVersionStructure,
-    FunicularSubmode,
-    FunicularSubmodeEnumeration,
-    Garage,
-    GaragePoint,
-    GaragePointRef,
-    GaragePointRefStructure,
-    GaragePointVersionStructure,
-    GarageRef,
-    GarageRefStructure,
-    GarageVersionStructure,
-    GatedEnumeration,
-    GenderEnumeration,
-    GenderLimitation,
-    GenderLimitationEnumeration,
-    GeneralFrame,
-    GeneralFrameMember,
-    GeneralFrameMemberRef,
-    GeneralFrameMemberRefStructure,
-    GeneralFrameMemberStructure,
-    GeneralFrameRef,
-    GeneralFrameRefStructure,
-    GeneralGroupOfEntities,
-    GeneralGroupOfEntitiesRef,
-    GeneralGroupOfEntitiesRefStructure,
-    GeneralGroupOfEntitiesVersionStructure,
-    GeneralOrganisation,
-    GeneralOrganisationRef,
-    GeneralOrganisationRefStructure,
-    GeneralOrganisationVersionStructure,
-    GeneralSection,
-    GeneralSectionRef,
-    GeneralSectionRefStructure,
-    GeneralSectionVersionStructure,
-    GeneralSign,
-    GeneralSignRef,
-    GeneralSignRefStructure,
-    GeneralSignStructure,
-    GeneralZone,
-    GeneralZoneVersionStructure,
-    GeneralVersionFrameStructure,
-    GenericParameterAssignment,
-    GenericParameterAssignmentInContext,
-    GenericParameterAssignmentRefStructure,
-    GenericParameterAssignmentVersionStructure,
-    GeographicalInterval,
-    GeographicalIntervalPrice,
-    GeographicalIntervalPriceRef,
-    GeographicalIntervalPriceRefStructure,
-    GeographicalIntervalPriceVersionedChildStructure,
-    GeographicalIntervalRef,
-    GeographicalIntervalRefStructure,
-    GeographicalIntervalVersionStructure,
-    GeographicalStructureFactor,
-    GeographicalStructureFactorRef,
-    GeographicalStructureFactorRefStructure,
-    GeographicalStructureFactorVersionStructure,
-    GeographicalUnit,
-    GeographicalUnitPrice,
-    GeographicalUnitPriceRef,
-    GeographicalUnitPriceRefStructure,
-    GeographicalUnitPriceVersionedChildStructure,
-    GeographicalUnitRef,
-    GeographicalUnitRefStructure,
-    GeographicalUnitVersionStructure,
-    GeometricPrimitivePropertyType,
-    GeometryArrayPropertyType,
-    GeometryPropertyType,
-    GradientEnumeration,
-    GroupBookingEnumeration,
-    GroupBookingFacility,
-    GroupCheckInEnumeration,
-    GroupConstraintMember,
-    GroupConstraintMemberVersionedChildStructure,
-    GroupDiscountBasisEnumeration,
-    GroupMember,
-    GroupMemberVersionedChildStructure,
-    GroupOfCustomerPurchasePackagesRef,
-    GroupOfCustomerPurchasePackagesRefStructure,
-    GroupOfDistanceMatrixElements,
-    GroupOfDistanceMatrixElementsRef,
-    GroupOfDistanceMatrixElementsRefStructureElement,
-    GroupOfDistanceMatrixElementsVersionStructure,
-    GroupOfDistributionChannels,
-    GroupOfDistributionChannelsRef,
-    GroupOfDistributionChannelsRefStructure,
-    GroupOfDistributionChannelsVersionStructure,
-    GroupOfEntities,
-    GroupOfEntitiesRefStructure2,
-    GroupOfEntitiesRefStructure1,
-    GroupOfEntitiesRef2,
-    GroupOfEntitiesRef1,
-    GroupOfEntitiesVersionStructure,
-    GroupOfLines,
-    GroupOfLinesRef,
-    GroupOfLinesRefStructure,
-    GroupOfLinesTypeEnumeration,
-    GroupOfLinesVersionStructure,
-    GroupOfLinkSequences,
-    GroupOfLinkSequencesRef,
-    GroupOfLinkSequencesRefStructure,
-    GroupOfLinkSequencesVersionStructure,
-    GroupOfLinks,
-    GroupOfLinksVersionStructure,
-    GroupOfOperators,
-    GroupOfOperatorsRef,
-    GroupOfOperatorsRefStructure,
-    GroupOfOperatorsStructure,
-    GroupOfPlaces,
-    GroupOfPlacesRef,
-    GroupOfPlacesRefStructure,
-    GroupOfPlacesVersionStructure,
-    GroupOfPoints,
-    GroupOfPointsRefStructure,
-    GroupOfPointsRef2,
-    GroupOfPointsRef1,
-    GroupOfPointsVersionStructure,
-    GroupOfSalesOfferPackages,
-    GroupOfSalesOfferPackagesRef,
-    GroupOfSalesOfferPackagesRefStructure,
-    GroupOfSalesOfferPackagesVersionStructure,
-    GroupOfServices,
-    GroupOfServicesEndPointDerivedViewStructure,
-    GroupOfServicesMemberStructure,
-    GroupOfServicesRef,
-    GroupOfServicesRefStructure,
-    GroupOfServicesVersionStructure,
-    GroupOfStopPlaces,
-    GroupOfStopPlacesRef,
-    GroupOfStopPlacesRefStructure,
-    GroupOfStopPlacesStructure,
-    GroupOfTimebands,
-    GroupOfTimebandsRef,
-    GroupOfTimebandsRefStructure,
-    GroupOfTimebandsVersionedChildStructure,
-    GroupOfTimingLinks,
-    GroupOfTimingLinksRef,
-    GroupOfTimingLinksRefStructure,
-    GroupOfTimingLinksRelStructure,
-    GroupSizeChangesEnumeration,
-    GroupTicket,
-    GroupTicketRef,
-    GroupTicketRefStructure,
-    GroupTicketVersionStructure,
-    GroupTicketingEnumeration,
-    GuideDogAccess,
-    HailAndRideArea,
-    HailAndRideAreaRef,
-    HailAndRideAreaRefStructure,
-    HailAndRideAreaVersionStructure,
-    HalfOpenTimeRangeStructure,
-    HalfOpenTimestampRangeStructure,
-    HandrailEnumeration,
-    HeadingSign,
-    HeadingSignRef,
-    HeadingSignRefStructure,
-    HeadingSignStructure,
-    HeadwayIntervalStructure,
-    HeadwayJourneyGroup,
-    HeadwayJourneyGroupRef,
-    HeadwayJourneyGroupRefStructure,
-    HeadwayJourneyGroupVersionStructure,
-    HeadwayRef,
-    HeadwayRefStructure,
-    HeadwayUseEnumeration,
-    HeartbeatNotification,
-    HeartbeatNotificationStructure,
-    HelpPointEquipment,
-    HelpPointEquipmentRef,
-    HelpPointEquipmentRefStructure,
-    HelpPointEquipmentVersionStructure,
-    HireFacility,
-    HireFacilityEnumeration,
-    HireFacilityList,
-    HireService,
-    HireServiceEnumeration,
-    HireServiceRef,
-    HireServiceRefStructure,
-    HireServiceVersionStructure,
-    HolidayTypeEnumeration,
-    IanaCountryTldEnumeration,
-    IncludeTranslations,
-    InfoLink,
-    InfoLinkStructure,
-    InfrastructureFrame,
-    InfrastructureFrameRef,
-    InfrastructureFrameRefStructure,
-    InfrastructureLinkRef,
-    InfrastructureLinkRefStructure,
-    InfrastructureLinkRestriction,
-    InfrastructureLinkRestrictionRef,
-    InfrastructureLinkRestrictionRefStructure,
-    InfrastructureLinkRestrictionVersionStructure,
-    InfrastructureLink2,
-    InfrastructureLinkVersionStructure,
-    InfrastructureLink1,
-    InfrastructurePoint,
-    InfrastructurePointRef,
-    InfrastructurePointRefStructure,
-    InfrastructurePointVersionStructure,
-    InfrastructureVersionFrameStructure,
-    InlinePropertyType,
-    InstalledEquipment,
-    InstalledEquipmentRef,
-    InstalledEquipmentRefStructure,
-    InstalledEquipmentVersionStructure,
-    InterchangeRef,
-    InterchangeRefStructure,
-    InterchangeRule,
-    InterchangeRuleFilter,
-    InterchangeRuleFilterVersionedChildStructure,
-    InterchangeRuleParameterStructure,
-    InterchangeRuleRef,
-    InterchangeRuleRefStructure,
-    InterchangeRuleTiming,
-    InterchangeRuleTimingRef,
-    InterchangeRuleTimingRefStructure,
-    InterchangeRuleTimingVersionStructure,
-    InterchangeRuleVersionStructure,
-    InterchangeWeightingEnumeration,
-    Interchange2,
-    InterchangeVersionStructure,
-    Interchange1,
-    Interchanging,
-    InterchangingRef,
-    InterchangingRefStructure,
-    InterchangingTypeEnumeration,
-    InterchangingVersionStructure,
-    IntervalTypeEnumeration,
-    InvalidDataReferencesError,
-    InvalidDataReferencesErrorStructure,
-    JourneyAccounting,
-    JourneyAccountingEnumeration,
-    JourneyAccountingRef,
-    JourneyAccountingRefStructure,
-    JourneyAccountingVersionStructure,
-    JourneyDesignator,
-    JourneyDesignatorStructure,
-    JourneyEndpointStructure,
-    JourneyFrequencyGroup,
-    JourneyFrequencyGroupRef,
-    JourneyFrequencyGroupRefStructure,
-    JourneyFrequencyGroupVersionStructure,
-    JourneyHeadway,
-    JourneyHeadwayVersionedChildStructure,
-    JourneyLayover,
-    JourneyLayoverStructure,
-    JourneyMeeting,
-    JourneyMeetingRef,
-    JourneyMeetingRefStructure,
-    JourneyMeetingView,
-    JourneyMeetingDerivedViewStructure,
-    JourneyMeetingVersionStructure,
-    JourneyPart,
-    JourneyPartCouple,
-    JourneyPartCoupleRef,
-    JourneyPartCoupleRefStructure,
-    JourneyPartCoupleVersionStructure,
-    JourneyPartEnumeration,
-    JourneyPartPosition,
-    JourneyPartPositionVersionedChildStructure,
-    JourneyPartRef,
-    JourneyPartRefStructure,
-    JourneyPartVersionStructure,
-    JourneyPatternHeadway,
-    JourneyPatternHeadwayRef,
-    JourneyPatternHeadwayRefStructure,
-    JourneyPatternHeadwayVersionedChildStructure,
-    JourneyPatternLayover,
-    JourneyPatternLayoverRef,
-    JourneyPatternLayoverRefStructure,
-    JourneyPatternLayoverStructure,
-    JourneyPatternRef,
-    JourneyPatternRefStructure,
-    JourneyPatternRunTime,
-    JourneyPatternRunTimeRef,
-    JourneyPatternRunTimeRefStructure,
-    JourneyPatternRunTimeVersionedChildStructure,
-    JourneyPatternView,
-    JourneyPatternWaitTime,
-    JourneyPatternWaitTimeRef,
-    JourneyPatternWaitTimeRefStructure,
-    JourneyPatternWaitTimeVersionedChildStructure,
-    JourneyPattern2,
-    JourneyPatternDerivedViewStructure,
-    JourneyPatternVersionStructure,
-    JourneyPattern1,
-    JourneyRef,
-    JourneyRefStructure,
-    JourneyRunTime,
-    JourneyRunTimeVersionedChildStructure,
-    JourneyTiming,
-    JourneyTimingRef,
-    JourneyTimingRefStructure,
-    JourneyTimingVersionedChildStructure,
-    JourneyWaitTime,
-    JourneyWaitTimeVersionedChildStructure,
-    Journey2,
-    JourneyVersionStructure,
-    Journey1,
-    KeyListStructure,
-    KeyValueStructure,
-    LanguageUsageStructure,
-    LanguageUseEnumeration,
-    Layer,
-    LayerRef,
-    LayerRefStructure,
-    LayerVersionStructure,
-    LeftLuggageService,
-    LeftLuggageServiceRef,
-    LeftLuggageServiceRefStructure,
-    LeftLuggageServiceVersionStructure,
-    Level,
-    LevelRef,
-    LevelRefStructure,
-    LevelVersionStructure,
-    LiftEquipment,
-    LiftEquipmentRef,
-    LiftEquipmentRefStructure,
-    LiftEquipmentVersionStructure,
-    LiftFreeAccess,
-    LightingEnumeration,
-    LightingOnMethodEnumeration,
-    LimitationRefStructure,
-    LimitationStatusEnumeration,
-    LimitedUseTypeEnumeration,
-    LimitingRule,
-    LimitingRuleInContext,
-    LimitingRuleRef,
-    LimitingRuleRefStructure,
-    LimitingRuleVersionedStructure,
-    LineInDirectionRef,
-    LineInDirectionRefStructure,
-    LineLinkRef,
-    LineLinkRefByValue,
-    LineLinkRefByValueStructure,
-    LineLinkRefStructure,
-    LineNetwork,
-    LineNetworkRef,
-    LineNetworkRefStructure,
-    LineNetworkVersionStructure,
-    LineRef,
-    LineRefStructure,
-    LineSection,
-    LineSectionPointMember,
-    LineSectionPointTypeEnumeration,
-    LineSectionRef,
-    LineSectionRefStructure,
-    LineSectionVersionStructure,
-    LineShape,
-    LineShapeStructure1,
-    LineShapeStructure2,
-    LineString,
-    LineStringType,
-    LineTypeEnumeration,
-    LineView,
-    Line2,
-    LineDerivedViewStructure,
-    LineVersionStructure,
-    Line1,
-    LinearRing,
-    LinearRingPropertyType,
-    LinearRingType,
-    Link,
-    LinkInJourneyPattern,
-    LinkInJourneyPatternRef,
-    LinkInJourneyPatternRefStructure,
-    LinkInJourneyPatternVersionedChildStructure,
-    LinkInLinkSequence,
-    LinkInLinkSequenceVersionedChildStructure,
-    LinkInSequenceRef,
-    LinkInSequenceRefStructure,
-    LinkOnSection,
-    LinkOnSectionVersionedChildStructure,
-    LinkProjection,
-    LinkProjectionRef,
-    LinkProjectionRefStructure,
-    LinkProjectionVersionStructure,
-    LinkRef,
-    LinkRefByValue,
-    LinkRefByValueStructure,
-    LinkRefStructure,
-    LinkSequence,
-    LinkSequenceProjection,
-    LinkSequenceProjectionRef,
-    LinkSequenceProjectionRefStructure,
-    LinkSequenceProjectionVersionStructure,
-    LinkSequenceRef,
-    LinkSequenceRefStructure,
-    LinkSequenceVersionStructure,
-    LinkVersionStructure,
-    LocalService,
-    LocalServiceRef,
-    LocalServiceRefStructure,
-    LocalServiceVersionStructure,
-    Locale,
-    LocaleStructure,
-    LocationStructure1,
-    LocationStructure2,
-    LockerTypeEnumeration,
-    LockingTypeEnumeration,
-    Log,
-    LogEntry,
-    LogEntryRef,
-    LogEntryRefStructure,
-    LogEntryVersionStructure,
-    LogRef,
-    LogRefStructure,
-    LogVersionStructure,
-    LogicalDisplay,
-    LogicalDisplayRef,
-    LogicalDisplayRefStructure,
-    LogicalDisplayVersionStructure,
-    LostPropertyService,
-    LostPropertyServiceRef,
-    LostPropertyServiceRefStructure,
-    LostPropertyServiceVersionStructure,
-    LuggageAllowance,
-    LuggageAllowanceRef,
-    LuggageAllowanceRefStructure,
-    LuggageAllowanceTypeEnumeration,
-    LuggageAllowanceVersionStructure,
-    LuggageCarriageEnumeration,
-    LuggageCarriageFacility,
-    LuggageCarriageFacilityList,
-    LuggageChargingBasisEnumeration,
-    LuggageLockerEquipment,
-    LuggageLockerEquipmentRef,
-    LuggageLockerEquipmentRefStructure,
-    LuggageLockerEquipmentVersionStructure,
-    LuggageLockerFacility,
-    LuggageLockerFacilityEnumeration,
-    LuggageLockerFacilityList,
-    LuggageService,
-    LuggageServiceEnumeration,
-    LuggageServiceFacility,
-    LuggageServiceFacilityEnumeration,
-    LuggageServiceFacilityList,
-    LuggageServiceRef,
-    LuggageServiceRefStructure,
-    LuggageServiceVersionStructure,
-    MachineReadableEnumeration,
-    ManagementAgent,
-    ManagementAgentRef,
-    ManagementAgentRefStructure,
-    ManagementAgentVersionStructure,
-    MandatoryEnumeration,
-    MarkedAsEnumeration,
-    MealFacility,
-    MealFacilityEnumeration,
-    MealFacilityList,
-    MeasureListType,
-    MeasureOrNilReasonListType,
-    MeasureType,
-    MediaTypeEnumeration,
-    MedicalFacility,
-    MedicalFacilityEnumeration,
-    MedicalFacilityList,
-    MedicalNeedEnumeration,
-    MeetingPointEnumeration,
-    MeetingPointService,
-    MeetingPointServiceRef,
-    MeetingPointServiceRefStructure,
-    MeetingPointServiceVersionStructure,
-    MeetingRestriction,
-    MeetingRestrictionRef,
-    MeetingRestrictionRefStructure,
-    MeetingRestrictionVersionStructure,
-    MetroSubmode,
-    MetroSubmodeEnumeration,
-    MinimumStay,
-    MinimumStayRef,
-    MinimumStayRefStructure,
-    MinimumStayTypeEnumeration,
-    MinimumStayVersionStructure,
-    MobilityEnumeration,
-    MobilityFacility,
-    MobilityFacilityEnumeration,
-    MobilityFacilityList,
-    ModalLinkRefByValue,
-    ModalLinkRefByValue2Structure,
-    ModalLinkRefByValueStructure,
-    ModeRef,
-    ModeRefStructure,
-    ModificationEnumeration,
-    ModificationSetEnumeration,
-    MoneyFacility,
-    MoneyFacilityEnumeration,
-    MoneyFacilityList,
-    MoneyService,
-    MoneyServiceEnumeration,
-    MoneyServiceRef,
-    MoneyServiceRefStructure,
-    MoneyServiceVersionStructure,
-    MonitoredCall,
-    MonitoredCallVersionedChildStructure,
-    MonthValidityOffset,
-    MonthValidityOffsetRef,
-    MonthValidityOffsetRefStructure,
-    MonthValidityOffsetVersionedStructure,
-    MultilingualString,
-    NameTypeEnumeration,
-    NaturalLanguagePlaceNameStructure,
-    NaturalLanguageStringStructure,
-    NavigationPath,
-    NavigationPathAssignment,
-    NavigationPathAssignmentVersionStructure,
-    NavigationPathRef,
-    NavigationPathRefStructure,
-    NavigationPathVersionStructure,
-    NavigationTypeEnumeration,
-    NecessaryForceEnumeration,
-    Network,
-    NetworkFilterByValueStructure,
-    NetworkFrameRequestPolicyStructure,
-    NetworkFrameSubscriptionPolicyStructure,
-    NetworkFrameTopic,
-    NetworkFrameTopicStructure,
-    NetworkRef,
-    NetworkRefStructure,
-    NetworkRestriction,
-    NetworkRestrictionRef,
-    NetworkRestrictionRefStructure,
-    NetworkRestrictionVersionStructure,
-    NetworkView,
-    NetworkDerivedViewStructure,
-    NetworkVersionStructure,
-    NilReasonEnumerationValue,
-    NoInfoForTopicError,
-    NoInfoForTopicErrorStructure,
-    NormalDatedVehicleJourney,
-    NormalDatedVehicleJourneyTypeEnumeration,
-    NormalDatedVehicleJourneyVersionStructure,
-    Notice,
-    NoticeAssignmentRefStructure,
-    NoticeAssignmentView,
-    NoticeAssignment2,
-    NoticeAssignmentDerivedViewStructure,
-    NoticeAssignmentVersionStructure,
-    NoticeAssignment1,
-    NoticeRef,
-    NoticeRefStructure,
-    NoticeVersionStructure,
-    NuisanceFacility,
-    NuisanceFacilityEnumeration,
-    NuisanceFacilityList,
-    ObjectFilterByValue,
-    ObjectFilterByValueStructure,
-    ObservedPassingTime,
-    ObservedPassingTimeRef,
-    ObservedPassingTimeRefStructure,
-    ObservedPassingTimeView,
-    ObservedPassingTimeVersionedChildStructure,
-    ObservedPassingTimeViewStructure,
-    OfferedTravelSpecification,
-    OfferedTravelSpecificationRef,
-    OfferedTravelSpecificationRefStructure,
-    OfferedTravelSpecificationVersionStructure,
-    OnBecomingEnumeration,
-    OnCeasingEnumeration,
-    OnboardStay,
-    OnboardStayRef,
-    OnboardStayRefStructure,
-    OnboardStayVersionedChlldStructure,
-    OnwardCall,
-    OnwardCallVersionedChildStructure,
-    OnwardServiceLinkView,
-    OnwardServiceLinkDerivedViewStructure,
-    OnwardTimingLinkView,
-    OnwardTimingLinkDerivedViewStructure,
-    OpenTimeRangeStructure,
-    OpenTimestampRangeStructure,
-    OpenTransportMode,
-    OpenTransportModeRef,
-    OpenTransportModeRefStructure,
-    OpenTransportModeValueStructure,
     OperatingDay,
-    OperatingDayRef,
-    OperatingDayRefStructure,
     OperatingDayVersionStructure,
-    OperatingDepartment,
-    OperatingDepartmentRef,
-    OperatingDepartmentRefStructure,
-    OperatingDepartmentVersionStructure,
-    OperatingPeriod,
-    OperatingPeriodRef,
-    OperatingPeriodRefStructure,
-    OperatingPeriodVersionStructure,
-    OperationalContext,
-    OperationalContextRef,
-    OperationalContextRefStructure,
-    OperationalContextVersionStructure,
-    Operator,
-    OperatorActivitiesEnumeration,
-    OperatorRef,
-    OperatorRefStructure,
-    OperatorRestrictionsEnumeration,
-    OperatorView,
-    OperatorDerivedViewStructure,
-    OperatorVersionStructure,
-    OrderedVersionOfObjectRef,
-    OrderedVersionOfObjectRefStructure,
     OrganisationDayType,
     OrganisationDayTypeVersionStructure,
-    OrganisationPartRef,
-    OrganisationPartRefStructure,
-    OrganisationPart2,
-    OrganisationPartVersionStructure,
-    OrganisationPart1,
-    OrganisationRef,
-    OrganisationRefStructure,
-    OrganisationTypeEnumeration,
-    OrganisationView,
-    Organisation2,
-    OrganisationDerivedViewStructure,
-    OrganisationVersionStructure,
-    Organisation1,
-    OrganisationalUnit,
-    OrganisationalUnitRef,
-    OrganisationalUnitRefStructure,
-    OrganisationalUnitVersionStructure,
-    OtherError,
-    OtherErrorStructure,
-    OtherOrganisation,
-    OtherOrganisationRef,
-    OtherOrganisationRefStructure,
-    OtherOrganisationVersionStructure,
-    OtherPlaceEquipment,
-    OutputDetailEnumeration,
-    OvertakingPossibility,
-    OvertakingPossibilityRef,
-    OvertakingPossibilityRefStructure,
-    OvertakingPossibilityVersionStructure,
-    ParametersIgnoredError,
-    ParametersIgnoredErrorStructure,
-    ParentCommonSectionRef,
-    ParentSectionRef,
-    Parking,
-    ParkingArea,
-    ParkingAreaRef,
-    ParkingAreaRefStructure,
-    ParkingAreaVersionStructure,
-    ParkingBay,
-    ParkingBayRef,
-    ParkingBayRefStructure,
-    ParkingBayVersionStructure,
-    ParkingCapacity,
-    ParkingCapacityRef,
-    ParkingCapacityRefStructure,
-    ParkingCapacityVersionedChildStructure,
-    ParkingChargeBand,
-    ParkingChargeBandRef,
-    ParkingChargeBandRefStructure,
-    ParkingChargeBandVersionStructure,
-    ParkingComponent,
-    ParkingComponentVersionStructure,
-    ParkingEntranceForVehicles,
-    ParkingEntranceForVehiclesRef,
-    ParkingEntranceForVehiclesRefStructure,
-    ParkingEntranceForVehiclesVersionStructure,
-    ParkingEntranceRef,
-    ParkingEntranceRefStructure,
-    ParkingFacility,
-    ParkingFacilityEnumeration,
-    ParkingFacilityList,
-    ParkingLayoutEnumeration,
-    ParkingPassengerEntrance,
-    ParkingPassengerEntranceRef,
-    ParkingPassengerEntranceRefStructure,
-    ParkingPassengerEntranceVersionStructure,
-    ParkingPaymentProcessEnumeration,
-    ParkingPointRef,
-    ParkingPointRefStructure,
-    ParkingPoint2,
-    ParkingPointVersionStructure,
-    ParkingPoint1,
-    ParkingPrice,
-    ParkingPriceRef,
-    ParkingPriceRefStructure,
-    ParkingPriceVersionedChildStructure,
-    ParkingProperties,
-    ParkingPropertiesRef,
-    ParkingPropertiesRefStructure,
-    ParkingPropertiesVersionedChildStructure,
-    ParkingRef,
-    ParkingRefStructure,
-    ParkingReservationEnumeration,
-    ParkingStayEnumeration,
-    ParkingTariff,
-    ParkingTariffRef,
-    ParkingTariffRefStructure,
-    ParkingTariffVersionStructure,
-    ParkingTypeEnumeration,
-    ParkingUserEnumeration,
-    ParkingVehicleEnumeration,
-    ParkingVersionStructure,
-    PartialRefundBasisEnumeration,
-    ParticipantRef,
-    PassageTypeEnumeration,
-    PassengerAccessibilityNeeds,
-    PassengerAccessibilityNeedsStructure,
-    PassengerCapacity,
-    PassengerCapacityRef,
-    PassengerCapacityRefStructure,
-    PassengerCapacityStructure,
-    PassengerCarryingPassengerCarryingViewStructure,
-    PassengerCarryingRequirement,
-    PassengerCarryingRequirementRef,
-    PassengerCarryingRequirementRefStructure,
-    PassengerCarryingRequirementVersionStructure,
-    PassengerCarryingRequirementsView,
-    PassengerCommsFacility,
-    PassengerCommsFacilityEnumeration,
-    PassengerCommsFacilityList,
-    PassengerEquipment,
-    PassengerEquipmentRef,
-    PassengerEquipmentRefStructure,
-    PassengerEquipmentVersionStructure,
-    PassengerInformationEquipment,
-    PassengerInformationEquipmentEnumeration,
-    PassengerInformationEquipmentRef,
-    PassengerInformationEquipmentRefStructure,
-    PassengerInformationEquipmentVersionStructure,
-    PassengerInformationFacility,
-    PassengerInformationFacilityEnumeration,
-    PassengerInformationFacilityList,
-    PassengerInformationRequestRef,
-    PassengerInformationRequestRefStructure,
-    PassengerSafetyEquipment,
-    PassengerSafetyEquipmentRef,
-    PassengerSafetyEquipmentRefStructure,
-    PassengerSafetyEquipmentVersionStructure,
-    PassengerSeatRef,
-    PassengerSeatRefStructure,
-    PassengerStopAssignment,
-    PassengerStopAssignmentRef,
-    PassengerStopAssignmentRefStructure,
-    PassengerStopAssignmentView,
-    PassengerStopAssignmentDerivedViewStructure,
-    PassengerStopAssignmentVersionStructure,
-    PassingTime,
-    PassingTimeRef,
-    PassingTimeRefStructure,
-    PassingTimeView,
-    PassingTimeVersionedChildStructure,
-    PassingTimeViewStructure,
-    PathAssignmentRef,
-    PathAssignmentRefStructure,
-    PathDirectionEnumeration,
-    PathHeadingEnumeration,
-    PathJunction,
-    PathJunctionRef,
-    PathJunctionRefStructure,
-    PathJunctionVersionStructure,
-    PathLink,
-    PathLinkEndStructure,
-    PathLinkInSequence,
-    PathLinkInSequenceRef,
-    PathLinkInSequenceRefStructure,
-    PathLinkInSequenceVersionedChildStructure,
-    PathLinkRef,
-    PathLinkRefByValue,
-    PathLinkRefByValueStructure,
-    PathLinkRefStructure,
-    PathLinkView,
-    PathLinkDerivedViewStructure,
-    PathLinkVersionStructure,
-    PaymentByMobileStructure,
-    PaymentMethodEnumeration,
-    PenaltyPolicy,
-    PenaltyPolicyRef,
-    PenaltyPolicyRefStructure,
-    PenaltyPolicyTypeEnumeration,
-    PenaltyPolicyVersionStructure,
-    PerBasisEnumeration,
-    PeriodicityEnumeration,
-    Place,
-    PlaceEquipment,
-    PlaceEquipmentVersionStructure,
-    PlaceInSequence,
-    PlaceInSequenceRef,
-    PlaceInSequenceRefStructure,
-    PlaceInSequenceVersionedChildStructure,
-    PlaceLighting,
-    PlaceLightingEquipmentRef,
-    PlaceLightingEquipmentRefStructure,
-    PlaceLightingVersionStructure,
-    PlaceRefStructure,
-    PlaceRef2,
-    PlaceRef1,
-    PlaceSign,
-    PlaceSignRef,
-    PlaceSignRefStructure,
-    PlaceSignStructure,
-    PlaceUseEnumeration,
-    PlaceVersionStructure,
-    PointArrayPropertyType,
-    PointInJourneyPattern,
-    PointInJourneyPatternRef,
-    PointInJourneyPatternRefStructure,
-    PointInJourneyPatternVersionedChildStructure,
-    PointInLinkSequence,
-    PointInLinkSequenceVersionedChildStructure,
-    PointInSequenceRef,
-    PointInSequenceRefStructure,
-    PointOfInterest,
-    PointOfInterestClassification,
-    PointOfInterestClassificationHierarchy,
-    PointOfInterestClassificationHierarchyMemberStructure,
-    PointOfInterestClassificationHierarchyVersionStructure,
-    PointOfInterestClassificationRef,
-    PointOfInterestClassificationRefStructure,
-    PointOfInterestClassificationView,
-    PointOfInterestClassificationDerivedViewStructure,
-    PointOfInterestClassificationVersionStructure,
-    PointOfInterestComponent,
-    PointOfInterestComponentVersionStructure,
-    PointOfInterestEntrance,
-    PointOfInterestEntranceRef,
-    PointOfInterestEntranceRefStructure,
-    PointOfInterestEntranceVersionStructure,
-    PointOfInterestHierarchyRef,
-    PointOfInterestHierarchyRefStructure,
-    PointOfInterestRef,
-    PointOfInterestRefStructure,
-    PointOfInterestSpace,
-    PointOfInterestSpaceDescriptorGroupAccessSpaceType,
-    PointOfInterestSpaceRef,
-    PointOfInterestSpaceRefStructure,
-    PointOfInterestSpaceTypeEnumeration,
-    PointOfInterestSpaceVersionStructure,
-    PointOfInterestVehicleEntrance,
-    PointOfInterestVehicleEntranceRef,
-    PointOfInterestVehicleEntranceRefStructure,
-    PointOfInterestVehicleEntranceVersionStructure,
-    PointOfInterestView,
-    PointOfInterestDerivedViewStructure,
-    PointOfInterestVersionStructure,
-    PointOnLineSection,
-    PointOnLineSectionVersionedChildStructure,
-    PointOnLink,
-    PointOnLinkByValueStructure,
-    PointOnLinkRef,
-    PointOnLinkRefStructure2,
-    PointOnLinkRefStructure1,
-    PointOnLinkVersionedChildStructure,
-    PointOnRoute,
-    PointOnRouteRef,
-    PointOnRouteRefStructure,
-    PointOnRouteVersionedChildStructure,
-    PointOnSection2,
-    PointOnSectionVersionedChildStructure,
-    PointOnSection1,
-    PointProjection,
-    PointProjectionRef,
-    PointProjectionRefStructure,
-    PointProjectionVersionStructure,
-    PointPropertyType,
-    PointRef,
-    PointRefStructure,
-    PointType,
-    Point1,
-    Point2,
-    PointVersionStructure,
-    Polygon,
-    PolygonType,
-    PostalAddress,
-    PostalAddressRef,
-    PostalAddressRefStructure,
-    PostalAddressVersionStructure,
-    PreassignedFareProduct,
-    PreassignedFareProductEnumeration,
-    PreassignedFareProductRef,
-    PreassignedFareProductRefStructure,
-    PreassignedFareProductVersionStructure,
-    PredictorsEnumeration,
-    PresentationStructure,
-    PreviousCall,
-    PreviousCallVersionedChildStructure,
-    PriceGroupRef,
-    PriceGroupRefStructure,
-    PriceGroup2,
-    PriceGroupVersionStructure,
-    PriceGroup1,
-    PriceRuleStepResultStructure,
-    PriceUnit,
-    PriceUnitRef,
-    PriceUnitRefStructure,
-    PriceUnitVersionStructure,
-    PriceableObjectRef,
-    PriceableObjectRefStructure,
-    PriceableObject2,
-    PriceableObjectVersionStructure,
-    PriceableObject1,
-    PricingParameterSet,
-    PricingParameterSetRef,
-    PricingParameterSetRefStructure,
-    PricingParameterSetVersionedStructure,
-    PricingRuleRef,
-    PricingRuleRefStructure,
-    PricingRule2,
-    PricingRuleVersionedStructure,
-    PricingRule1,
-    PricingService,
-    PricingServiceRef,
-    PricingServiceRefStructure,
-    PricingServiceVersionedStructure,
-    PrintPresentationStructure,
-    PrivateCode,
-    PrivateCodeStructure,
-    ProducerRequest,
-    ProducerRequestEndpointStructure,
-    ProducerResponse,
-    ProducerResponseEndpointStructure,
-    ProducerResponseStructure,
-    ProfileParameterRef,
-    Projection,
-    ProjectionRef,
-    ProjectionRefStructure,
-    ProjectionVersionStructure,
-    ProofOfIdentityEnumeration,
-    PropertyOfDay,
-    PropertyOfDayStructure,
-    PublicUseEnumeration,
-    PublicationDelivery,
-    PublicationDeliveryStructure,
-    PublicationRequest,
-    PublicationRequestStructure,
-    PublicityChannelEnumeration,
-    PurchaseActionEnumeration,
-    PurchaseMomentEnumeration,
-    PurchaseWhenEnumeration,
-    PurchaseWindow,
-    PurchaseWindowRef,
-    PurchaseWindowRefStructure,
-    PurchaseWindowVersionStructure,
-    PurposeOfEquipmentProfile,
-    PurposeOfEquipmentProfileRef,
-    PurposeOfEquipmentProfileRefStructure,
-    PurposeOfEquipmentProfileValueStructure,
-    PurposeOfGrouping,
-    PurposeOfGroupingRef,
-    PurposeOfGroupingRefStructure,
-    PurposeOfGroupingValueStructure,
-    PurposeOfJourneyPartition,
-    PurposeOfJourneyPartitionRef,
-    PurposeOfJourneyPartitionRefStructure,
-    PurposeOfJourneyPartitionValueStructure,
-    PyschosensoryNeedEnumeration,
-    QualityStructureFactorPrice,
-    QualityStructureFactorPriceRef,
-    QualityStructureFactorPriceRefStructure,
-    QualityStructureFactorPriceVersionedChildStructure,
-    QualityStructureFactorRef,
-    QualityStructureFactorRefStructure,
-    QualityStructureFactor2,
-    QualityStructureFactorVersionStructure,
-    QualityStructureFactor1,
-    Quay,
-    QuayAssignmentView,
-    QuayRef,
-    QuayRefStructure,
-    QuayTypeEnumeration,
-    QuayVersionStructure,
-    QueueManagementEnumeration,
-    QueueingEquipment,
-    QueueingEquipmentRef,
-    QueueingEquipmentRefStructure,
-    QueueingEquipmentVersionStructure,
-    RailSubmode,
-    RailSubmodeEnumeration,
-    RailwayElement,
-    RailwayElementVersionStructure,
-    RailwayJunction,
-    RailwayJunctionVersionStructure,
-    RailwayLinkRef,
-    RailwayLinkRefByValue,
-    RailwayLinkRefByValueStructure,
-    RailwayLinkRefStructure,
-    RailwayPointRef,
-    RailwayPointRefStructure,
-    RampEquipment,
-    RampEquipmentRef,
-    RampEquipmentRefStructure,
-    RampEquipmentVersionStructure,
-    ReasonForMeetingEnumeration,
-    ReferenceType,
-    RefundPolicyEnumeration,
-    RefundTypeEnumeration,
-    Refunding,
-    RefundingRef,
-    RefundingRefStructure,
-    RefundingVersionStructure,
-    RegisterBreakOfJourneyEnumeration,
-    RelationToVehicleEnumeration,
-    RelationshipRef,
-    RelationshipRefStructure,
-    RelativeDirectionEnumeration,
-    RelativeOperatorEnumeration,
-    ReliefOpportunity,
-    ReliefOpportunityRef,
-    ReliefOpportunityRefStructure,
-    ReliefOpportunityVersionStructure,
-    ReliefPointRef,
-    ReliefPointRefStructure,
-    ReliefPoint2,
-    ReliefPointVersionStructure,
-    ReliefPoint1,
-    RepeatedTripFareRequestRef,
-    RepeatedTripFareRequestRefStructure,
-    Replacing,
-    ReplacingRef,
-    ReplacingRefStructure,
-    ReplacingVersionStructure,
-    RequestMethodTypeEnumeration,
-    RequestStructure,
-    RequestTimestamp,
-    RequestedTravelSpecification,
-    RequestedTravelSpecificationRef,
-    RequestedTravelSpecificationRefStructure,
-    RequestedTravelSpecificationVersionStructure,
-    RequestorRef,
-    ResellTypeEnumeration,
-    ResellWhenEnumeration,
-    Reselling,
-    ResellingRef,
-    ResellingRefStructure,
-    ResellingVersionStructure,
-    ReservationChargeTypeEnumeration,
-    ReservationEnumeration,
-    ReservedSpaceFacility,
-    ReservedSpaceFacilityEnumeration,
-    ReservedSpaceFacilityList,
-    Reserving,
-    ReservingRef,
-    ReservingRefStructure,
-    ReservingVersionStructure,
-    ResidenceTypeEnumeration,
-    ResidentialQualification,
-    ResidentialQualificationEligibility,
-    ResidentialQualificationEligibilityRef,
-    ResidentialQualificationEligibilityRefStructure,
-    ResidentialQualificationEligibilityVersionedChildStructure,
-    ResidentialQualificationRef,
-    ResidentialQualificationRefStructure,
-    ResidentialQualificationVersionStructure,
-    ResourceFrame,
-    ResourceFrameRef,
-    ResourceFrameRefStructure,
-    ResourceFrameVersionFrameStructure,
-    ResponseEndpointStructure,
-    ResponseStatus,
-    ResponseStructure,
-    ResponseTimestamp,
-    ResponsibilityRole,
-    ResponsibilityRoleAssignment,
-    ResponsibilityRoleAssignmentVersionedChildStructure,
-    ResponsibilityRoleRef,
-    ResponsibilityRoleRefStructure,
-    ResponsibilityRoleVersionStructure,
-    ResponsibilityRolesRelStructure,
-    ResponsibilitySet,
-    ResponsibilitySetRef,
-    ResponsibilitySetRefStructure,
-    ResponsibilitySetVersionStructure,
-    RestrictedManoeuvre,
-    RestrictedManoeuvreRef,
-    RestrictedManoeuvreRefStructure,
-    RestrictedManoeuvreVersionStructure,
-    RetailConsortium,
-    RetailConsortiumRef,
-    RetailConsortiumRefStructure,
-    RetailConsortiumVersionStructure,
-    RetailDevice,
-    RetailDeviceRef,
-    RetailDeviceRefStructure,
-    RetailDeviceSecurityListing,
-    RetailDeviceSecurityListingRef,
-    RetailDeviceSecurityListingRefStructure,
-    RetailDeviceSecurityListingRefsRelStructure,
-    RetailDeviceSecurityListingVersionedChildStructure,
-    RetailDeviceVersionStructure,
-    RetailDevicesRelStructure,
-    RetailFacility,
-    RetailFacilityEnumeration,
-    RetailFacilityList,
-    RetailService,
-    RetailServiceEnumeration,
-    RetailServiceRef,
-    RetailServiceRefStructure,
-    RetailServiceVersionStructure,
-    RhythmicalJourneyGroup,
-    RhythmicalJourneyGroupRef,
-    RhythmicalJourneyGroupRefStructure,
-    RhythmicalJourneyGroupVersionStructure,
-    RoadAddress,
-    RoadAddressRef,
-    RoadAddressRefStructure,
-    RoadAddressVersionStructure,
-    RoadElement,
-    RoadElementVersionStructure,
-    RoadJunction,
-    RoadJunctionVersionStructure,
-    RoadLinkRef,
-    RoadLinkRefByValue,
-    RoadLinkRefByValueStructure,
-    RoadLinkRefStructure,
-    RoadNumberRangeStructure,
-    RoadPointRef,
-    RoadPointRefStructure,
-    RoadVehicleMode,
-    RoadVehicleModeEnumeration,
-    RoughSurface,
-    RoughSurfaceRef,
-    RoughSurfaceRefStructure,
-    RoughSurfaceStructure,
-    RoundTrip,
-    RoundTripRef,
-    RoundTripRefStructure,
-    RoundTripTypeEnumeration,
-    RoundTripVersionStructure,
-    Rounding,
-    RoundingMethodEnumeration,
-    RoundingRef,
-    RoundingRefStructure,
-    RoundingStep,
-    RoundingStepRef,
-    RoundingStepRefStructure,
-    RoundingStepVersionedChildStructure,
-    RoundingVersionedStructure,
-    RouteInstruction,
-    RouteInstructionRef,
-    RouteInstructionRefStructure,
-    RouteInstructionVersionStructure,
-    RouteLink,
-    RouteLinkRef,
-    RouteLinkRefByValue,
-    RouteLinkRefByValueStructure,
-    RouteLinkRefStructure,
-    RouteLinkVersionStructure,
-    RoutePoint,
-    RoutePointRef,
-    RoutePointRefStructure,
-    RoutePointVersionStructure,
-    RouteRef,
-    RouteRefStructure,
-    RouteView,
-    Route2,
-    RouteDerivedViewStructure,
-    RouteVersionStructure,
-    Route1,
-    Routing,
-    RoutingConstraintZone,
-    RoutingConstraintZoneRef,
-    RoutingConstraintZoneRefStructure,
-    RoutingConstraintZoneVersionStructure,
-    RoutingRef,
-    RoutingRefStructure,
-    RoutingTypeEnumeration,
-    RoutingVersionStructure,
-    RubbishDisposalEquipment,
-    RubbishDisposalEquipmentRef,
-    RubbishDisposalEquipmentRefStructure,
-    RubbishDisposalEquipmentVersionStructure,
-    SafetyFacility,
-    SafetyFacilityEnumeration,
-    SafetyFacilityList,
-    SaleDiscountRight,
-    SaleDiscountRightEnumeration,
-    SaleDiscountRightRef,
-    SaleDiscountRightRefStructure,
-    SaleDiscountRightVersionStructure,
-    SalesNoticeAssignment,
-    SalesNoticeAssignmentRefStructure,
-    SalesNoticeAssignmentVersionStructure,
-    SalesOfferPackage,
-    SalesOfferPackageElement,
-    SalesOfferPackageElementRef,
-    SalesOfferPackageElementRefStructure,
-    SalesOfferPackageElementVersionStructure,
-    SalesOfferPackageEntitlementGiven,
-    SalesOfferPackageEntitlementGivenRef,
-    SalesOfferPackageEntitlementGivenRefStructure,
-    SalesOfferPackageEntitlementGivenVersionStructure,
-    SalesOfferPackageEntitlementRequired,
-    SalesOfferPackageEntitlementRequiredRef,
-    SalesOfferPackageEntitlementRequiredRefStructure,
-    SalesOfferPackageEntitlementRequiredVersionStructure,
-    SalesOfferPackagePrice,
-    SalesOfferPackagePriceRef,
-    SalesOfferPackagePriceRefStructure,
-    SalesOfferPackagePriceVersionedChildStructure,
-    SalesOfferPackageRef,
-    SalesOfferPackageRefStructure,
-    SalesOfferPackageSubstitution,
-    SalesOfferPackageSubstitutionRef,
-    SalesOfferPackageSubstitutionRefStructure,
-    SalesOfferPackageSubstitutionVersionStructure,
-    SalesOfferPackageVersionStructure,
-    SalesTransaction,
-    SalesTransactionFrame,
-    SalesTransactionFrameRef,
-    SalesTransactionFrameRefStructure,
-    SalesTransactionFrameVersionFrameStructure,
-    SalesTransactionRef,
-    SalesTransactionRefStructure,
-    SalesTransactionVersionStructure,
-    SameClassOfUseEnumeration,
-    SameJourneyEnumeration,
-    SameOperatorEnumeration,
-    SamePeriodEnumeration,
-    SameRouteEnumeration,
-    SameStationReentryPolicyEnumeration,
-    SameStopEnumeration,
-    SameTypeOfProductCategoryEnumeration,
-    SameTypeOfTravelDocumentEnumeration,
-    SameUserEnumeration,
-    SameZoneEnumeration,
-    SanitaryEquipment,
-    SanitaryEquipmentRef,
-    SanitaryEquipmentRefStructure,
-    SanitaryEquipmentVersionStructure,
-    SanitaryFacility,
-    SanitaryFacilityEnumeration,
-    SanitaryFacilityList,
-    ScheduleRequestRef,
-    ScheduleRequestRefStructure,
-    ScheduledStopPoint,
-    ScheduledStopPointRef,
-    ScheduledStopPointRefStructure,
-    ScheduledStopPointView,
-    ScheduledStopPointDerivedViewStructure,
-    ScheduledStopPointVersionStructure,
-    SchematicMap,
-    SchematicMapMemberRef,
-    SchematicMapMemberRefStructure,
-    SchematicMapMemberVersionedChildStructure,
-    SchematicMapRef,
-    SchematicMapRefStructure,
-    SchematicMapVersionStructure,
-    ScopeOfTicket,
-    ScopeOfTicketEnumeration,
-    ScopeOfTicketList,
-    ScopingMethodEnumeration,
-    SeasonEnumeration,
-    SeatAllocationMethodEnumeration,
-    SeatingEquipment,
-    SeatingEquipmentRef,
-    SeatingEquipmentRefStructure,
-    SeatingEquipmentVersionStructure,
-    SectionInSequence,
-    SectionInSequenceVersionedChildStructure,
-    SectionRef,
-    SectionRefStructure,
-    SectionTypeEnumeration,
-    Section2,
-    SectionVersionStructure,
-    Section1,
-    SecurityList,
-    SecurityListRef,
-    SecurityListRefStructure,
-    SecurityListVersionStructure,
-    SecurityListingRef,
-    SecurityListingRefStructure,
-    SecurityListingRefsRelStructure,
-    SecurityListing2,
-    SecurityListingVersionedChildStructure,
-    SecurityListing1,
-    SelfDriveSubmode,
-    SelfDriveSubmodeEnumeration,
-    SeriesConstraint,
-    SeriesConstraintPrice,
-    SeriesConstraintPriceRef,
-    SeriesConstraintPriceRefStructure,
-    SeriesConstraintPriceVersionedChildStructure,
-    SeriesConstraintRef,
-    SeriesConstraintRefStructure2,
-    SeriesConstraintRefStructure1,
-    SeriesConstraintVersionStructure,
-    SeriesConstraintsRelStructure,
-    SeriesPresentationEnumeration,
-    SeriesTypeEnumeration,
-    ServiceAccessRightRef,
-    ServiceAccessRightRefStructure,
-    ServiceAccessRight2,
-    ServiceAccessRightVersionStructure,
-    ServiceAccessRight1,
-    ServiceAlterationEnumeration,
-    ServiceCalendar,
-    ServiceCalendarFrame,
-    ServiceCalendarFrameRef,
-    ServiceCalendarFrameRefStructure,
-    ServiceCalendarFrameVersionFrameStructure,
-    ServiceCalendarRef,
-    ServiceCalendarRefStructure,
-    ServiceCalendarVersionStructure,
-    ServiceCapabilitiesRequestStructure,
-    ServiceDelivery,
-    ServiceDeliveryBodyStructure,
-    ServiceDeliveryErrorConditionElement,
-    ServiceDeliveryErrorConditionStructure,
-    ServiceDeliveryStructure,
-    ServiceDesignator,
-    ServiceDesignatorStructure,
-    ServiceExclusion,
-    ServiceExclusionRef,
-    ServiceExclusionRefStructure,
-    ServiceExclusionVersionStructure,
-    ServiceFacilitySet,
-    ServiceFacilitySetRef,
-    ServiceFacilitySetRefStructure,
-    ServiceFacilitySetVersionStructure,
-    ServiceFrame,
-    ServiceFrameRef,
-    ServiceFrameRefStructure,
-    ServiceJourneyInterchange,
-    ServiceJourneyInterchangeRef,
-    ServiceJourneyInterchangeRefStructure,
-    ServiceJourneyInterchangeView,
-    ServiceJourneyInterchangeDerivedViewStructure,
-    ServiceJourneyInterchangeVersionStructure,
-    ServiceJourneyPattern,
-    ServiceJourneyPatternInterchange,
-    ServiceJourneyPatternInterchangeRef,
-    ServiceJourneyPatternInterchangeRefStructure,
-    ServiceJourneyPatternInterchangeVersionStructure,
-    ServiceJourneyPatternRef,
-    ServiceJourneyPatternRefStructure,
-    ServiceJourneyPatternTypeEnumeration,
-    ServiceJourneyPatternVersionStructure,
-    ServiceJourneyRef,
-    ServiceJourneyRefStructure,
-    ServiceJourney2,
-    ServiceJourneyVersionStructure,
-    ServiceJourney1,
-    ServiceLink,
-    ServiceLinkInJourneyPattern,
-    ServiceLinkInJourneyPatternVersionedChildStructure,
-    ServiceLinkInSequenceRef,
-    ServiceLinkInSequenceRefStructure,
-    ServiceLinkRef,
-    ServiceLinkRefByValue,
-    ServiceLinkRefByValueStructure,
-    ServiceLinkRefStructure,
-    ServiceLinkVersionStructure,
-    ServiceNotAvailableError,
-    ServiceNotAvailableErrorStructure,
-    ServicePattern,
-    ServicePatternRef,
-    ServicePatternRefStructure,
-    ServicePatternVersionStructure,
-    ServiceRequest,
-    ServiceRequestContextStructure,
-    ServiceRequestStructure,
-    ServiceReservationFacility,
-    ServiceReservationFacilityList,
-    ServiceSite,
-    ServiceSiteRef,
-    ServiceSiteRefStructure,
-    ServiceSiteVersionStructure,
-    ServiceVersionFrameStructure,
-    ServicedOrganisation,
-    ServicedOrganisationRef,
-    ServicedOrganisationRefStructure,
-    ServicedOrganisationTypeEnumeration,
-    ServicedOrganisationVersionStructure,
-    SetOperatorEnumeration,
-    SharedUsageEnumeration,
-    ShelterEquipment,
-    ShelterEquipmentRef,
-    ShelterEquipmentRefStructure,
-    ShelterEquipmentVersionStructure,
-    SignContentEnumeration,
-    SignEquipment,
-    SignEquipmentRef,
-    SignEquipmentVersionStructure,
-    SignType,
     SimpleAvailabilityCondition,
-    SimpleFeature,
-    SimpleFeatureRef,
-    SimpleFeatureRefStructure,
-    SimpleFeatureVersionStructure,
-    SimpleObjectRef,
-    SimpleObjectRefStructure,
-    SimplePointVersionStructure,
-    SimpleValidityCondition,
-    SingleTripFareRequestRef,
-    SingleTripFareRequestRefStructure,
-    SiriSchema,
-    Site,
-    SiteComponent,
-    SiteComponentRef,
-    SiteComponentRefStructure,
-    SiteComponentVersionStructure,
-    SiteConnection,
-    SiteConnectionEndStructure,
-    SiteConnectionRef,
-    SiteConnectionRefStructure,
-    SiteConnectionVersionStructure,
-    SiteElement,
-    SiteElementRef,
-    SiteElementRefStructure,
-    SiteElementVersionStructure,
-    SiteEntranceVersionStructure,
-    SiteEquipment,
-    SiteEquipmentRef,
-    SiteEquipmentRefStructure,
-    SiteEquipmentVersionStructure,
-    SiteFacilitySet,
-    SiteFacilitySetRef,
-    SiteFacilitySetRefStructure,
-    SiteFacilitySetStructure,
-    SiteFrame,
-    SiteFrameRef,
-    SiteFrameRefStructure,
-    SitePathLink,
-    SitePathLinkRefStructure,
-    SitePathLinkVersionStructure,
-    SiteRef,
-    SiteRefStructure,
-    SiteTypeEnumeration,
-    SiteVersionFrameStructure,
-    SiteVersionStructure,
-    SnowAndIceSubmode,
-    SnowAndIceSubmodeEnumeration,
-    SpatialFeature,
-    SpatialFeatureRef,
-    SpecialService,
-    SpecialServiceRef,
-    SpecialServiceRefStructure,
-    SpecialServiceVersionStructure,
-    SpecificParameterAssignment,
-    SpecificParameterAssignmentRefStructure,
-    SpecificParameterAssignmentVersionStructure,
-    SrsName1,
-    SrsName2,
-    Staffing,
-    StaffingEnumeration,
-    StairEndStructure,
-    StairEquipment,
-    StairEquipmentVersionStructure,
-    StairFlight,
-    StairFlightVersionedChildStructure,
-    StaircaseEquipment,
-    StaircaseEquipmentRef,
-    StaircaseEquipmentRefStructure,
-    StaircaseEquipmentVersionStructure,
-    StakeholderRoleTypeEnumeration,
-    StandardFareTable,
-    StandardFareTableRef,
-    StandardFareTableRefStructure,
-    StandardFareTableRefsRelStructure,
-    StandardFareTableVersionStructure,
-    StartTimeAtStopPoint,
-    StartTimeAtStopPointRef,
-    StartTimeAtStopPointRefStructure,
-    StartTimeAtStopPointVersionedChildStructure,
-    Status,
-    StatusEnumeration,
-    StatusResponseStructure,
-    StepFreeAccess,
-    StepLimit,
-    StepLimitRef,
-    StepLimitRefStructure,
-    StepLimitUnitEnumeration,
-    StepLimitVersionStructure,
-    StopArea,
-    StopAreaRef,
-    StopAreaRefStructure,
-    StopAreaVersionStructure,
-    StopAssignment,
-    StopAssignmentRef,
-    StopAssignmentRefStructure,
-    StopAssignmentVersionStructure,
-    StopEventRequestRef,
-    StopEventRequestRefStructure,
-    StopFinderRequestRef,
-    StopFinderRequestRefStructure,
-    StopPathLinkRefStructure,
-    StopPlace,
-    StopPlaceComponent,
-    StopPlaceComponentTypeEnumeration,
-    StopPlaceComponentVersionStructure,
-    StopPlaceEntrance,
-    StopPlaceEntranceRef,
-    StopPlaceEntranceRefStructure,
-    StopPlaceEntranceVersionStructure,
-    StopPlaceRef,
-    StopPlaceRefStructure,
-    StopPlaceSpace,
-    StopPlaceSpaceRef,
-    StopPlaceSpaceRefStructure,
-    StopPlaceSpaceVersionStructure,
-    StopPlaceVehicleEntrance,
-    StopPlaceVehicleEntranceRef,
-    StopPlaceVehicleEntranceRefStructure,
-    StopPlaceVehicleEntranceVersionStructure,
-    StopPlaceView,
-    StopPlaceWeightEnumeration,
-    StopPlaceDerivedViewStructure,
-    StopPlaceVersionStructure,
-    StopPointInJourneyPattern,
-    StopPointInJourneyPatternRef,
-    StopPointInJourneyPatternRefStructure,
-    StopPointInJourneyPatternView,
-    StopPointInJourneyPatternDerivedViewStructure,
-    StopPointInJourneyPatternVersionedChildStructure,
-    StopTypeEnumeration,
-    StopUseConstraintEnumeration,
-    StopUseEnumeration,
-    Submode,
-    SubmodeRef,
-    SubmodeRefStructure,
-    Subscribing,
-    SubscribingRef,
-    SubscribingRefStructure,
-    SubscribingVersionStructure,
-    SubscriptionContextStructure,
-    SubscriptionRenewalPolicyEnumeration,
-    SubscriptionRequest,
-    SubscriptionRequestStructure,
-    SubscriptionResponse,
-    SubscriptionResponseBodyStructure,
-    SubscriptionResponseStructure,
-    SubscriptionTermTypeEnumeration,
-    SubscriptionTerminatedNotification,
-    SubscriptionTerminatedNotificationStructure,
-    Suitability,
-    SuitabilityVersionedChildStructure,
-    SuitableEnumeration,
-    SupplementProduct,
-    SupplementProductEnumeration,
-    SupplementProductRef,
-    SupplementProductRefStructure,
-    SupplementProductVersionStructure,
-    SupplyContractRef,
-    SupplyContractRefStructure,
-    SurfaceArrayPropertyType,
-    SurfacePropertyType,
-    SurfaceTypeEnumeration,
-    Suspending,
-    SuspendingRef,
-    SuspendingRefStructure,
-    SuspendingVersionStructure,
-    SuspensionPolicyEnumeration,
-    SystemOfUnits,
-    TactileWarningStripEnumeration,
-    TargetPassingTime,
-    TargetPassingTimeRef,
-    TargetPassingTimeRefStructure,
-    TargetPassingTimeView,
-    TargetPassingTimeVersionedChildStructure,
-    TargetPassingTimeViewStructure,
-    Tariff,
-    TariffBasisEnumeration,
-    TariffObjectRef,
-    TariffRef,
-    TariffRefStructure,
-    TariffZoneRefStructure,
-    TariffZoneRef2,
-    TariffZoneRef1,
-    TariffZone2,
-    TariffZoneVersionStructure,
-    TariffZone1,
-    TariffVersionStructure,
-    TaxCategoryEnumeration,
-    TaxiSubmode,
-    TaxiSubmodeEnumeration,
-    TelecabinSubmode,
-    TelecabinSubmodeEnumeration,
-    TelephoneContactStructure,
-    TemplateServiceJourney,
-    TemplateServiceJourneyRef,
-    TemplateServiceJourneyRefStructure,
-    TemplateServiceJourneyVersionStructure,
-    TemplateVehicleJourney,
-    TemplateVehicleJourneyTypeEnumeration,
-    TemplateVehicleJourneyVersionStructure,
-    TerminateSubscriptionRequest,
-    TerminateSubscriptionRequestBodyStructure,
-    TerminateSubscriptionRequestStructure,
-    TerminateSubscriptionResponse,
-    TerminateSubscriptionResponseStructure,
-    TerminationResponseStatusStructure,
-    ThirdPartyProduct,
-    ThirdPartyProductRef,
-    ThirdPartyProductRefStructure,
-    ThirdPartyProductVersionStructure,
-    TicketTypeEnumeration,
-    TicketValidatorEnumeration,
-    TicketValidatorEquipment,
-    TicketValidatorEquipmentRef,
-    TicketValidatorEquipmentRefStructure,
-    TicketValidatorEquipmentVersionStructure,
-    TicketingEquipment,
-    TicketingEquipmentRef,
-    TicketingEquipmentRefStructure,
-    TicketingEquipmentVersionStructure,
-    TicketingFacility,
-    TicketingFacilityEnumeration,
-    TicketingFacilityList,
-    TicketingService,
-    TicketingServiceFacility,
-    TicketingServiceFacilityEnumeration,
-    TicketingServiceFacilityList,
-    TicketingServiceRef,
-    TicketingServiceRefStructure,
-    TicketingServiceVersionStructure,
-    TideEnumeration,
-    TiltTypeEnumeration,
-    TimeDemandProfile,
-    TimeDemandProfileMember,
-    TimeDemandProfileMemberVersionStructure,
-    TimeDemandProfileRef,
-    TimeDemandProfileRefStructure,
-    TimeDemandProfileVersionStructure,
-    TimeDemandType,
-    TimeDemandTypeAssigmentRef,
-    TimeDemandTypeAssigmentRefStructure,
-    TimeDemandTypeAssignment,
-    TimeDemandTypeAssignmentVersionStructure,
-    TimeDemandTypeRef,
-    TimeDemandTypeRefStructure,
-    TimeDemandTypeVersionStructure,
-    TimeInterval,
-    TimeIntervalPrice,
-    TimeIntervalPriceRef,
-    TimeIntervalPriceRefStructure,
-    TimeIntervalPriceVersionedChildStructure,
-    TimeIntervalRef,
-    TimeIntervalRefStructure,
-    TimeIntervalVersionStructure,
-    TimeStructureFactor,
-    TimeStructureFactorRef,
-    TimeStructureFactorRefStructure,
-    TimeStructureFactorVersionStructure,
-    TimeUnit,
-    TimeUnitPrice,
-    TimeUnitPriceRef,
-    TimeUnitPriceRefStructure,
-    TimeUnitPriceVersionedChildStructure,
-    TimeUnitRef,
-    TimeUnitRefStructure,
-    TimeUnitVersionStructure,
-    Timeband,
-    TimebandRef,
-    TimebandRefStructure,
     TimebandVersionedChildStructure,
-    TimetableFrame,
-    TimetableFrameRef,
-    TimetableFrameRefStructure,
-    TimetableVersionFrameStructure,
-    TimetabledPassingTime,
-    TimetabledPassingTimeRef,
-    TimetabledPassingTimeRefStructure,
-    TimetabledPassingTimeView,
-    TimetabledPassingTimeVersionedChildStructure,
-    TimetabledPassingTimeViewStructure,
-    TimingAlgorithmType,
-    TimingAlgorithmTypeRef,
-    TimingAlgorithmTypeRefStructure,
-    TimingAlgorithmTypeValueStructure,
-    TimingLink,
-    TimingLinkInJourneyPattern,
-    TimingLinkInJourneyPatternRef,
-    TimingLinkInJourneyPatternRefStructure,
-    TimingLinkInJourneyPatternVersionedChildStructure,
-    TimingLinkRef,
-    TimingLinkRefByValue,
-    TimingLinkRefByValueStructure,
-    TimingLinkRefStructure,
-    TimingLinkVersionStructure,
-    TimingPattern,
-    TimingPatternRef,
-    TimingPatternRefStructure,
-    TimingPatternVersionStructure,
-    TimingPointInJourneyPattern,
-    TimingPointInJourneyPatternRef,
-    TimingPointInJourneyPatternRefStructure,
-    TimingPointInJourneyPatternVersionedChildStructure,
-    TimingPointRef,
-    TimingPointRefStructure,
-    TimingPointStatusEnumeration,
-    TimingPoint2,
-    TimingPointVersionStructure,
-    TimingPoint1,
-    Topic,
-    TopicStructure,
-    TopographicPlace,
-    TopographicPlaceDescriptorVersionedChildStructure,
-    TopographicPlaceRef,
-    TopographicPlaceRefStructure,
-    TopographicPlaceTypeEnumeration,
-    TopographicPlaceView,
-    TopographicPlaceDerivedViewStructure,
-    TopographicPlaceVersionStructure,
-    TopographicProjection,
-    TopographicProjectionRef,
-    TopographicProjectionRefStructure,
-    TopographicProjectionVersionStructure,
-    Trace,
-    TraceStructure,
-    TrafficControlPoint,
-    TrafficControlPointRef,
-    TrafficControlPointRefStructure,
-    TrafficControlPointVersionStructure,
-    Train,
-    TrainBlock,
-    TrainBlockPart,
-    TrainBlockPartRef,
-    TrainBlockPartRefStructure,
-    TrainBlockPartVersionStructure,
-    TrainBlockRef,
-    TrainBlockRefStructure,
-    TrainBlockVersionStructure,
-    TrainComponent,
-    TrainComponentLabelAssignment,
-    TrainComponentLabelAssignmentRef,
-    TrainComponentLabelAssignmentRefStructure,
-    TrainComponentLabelAssignmentRefsRelStructure,
-    TrainComponentLabelAssignmentVersionStructure,
-    TrainComponentRef,
-    TrainComponentRefStructure,
-    TrainComponentView,
-    TrainComponentDerivedViewStructure,
-    TrainComponentVersionStructure,
-    TrainElement,
-    TrainElementRef,
-    TrainElementRefStructure,
-    TrainElementTypeEnumeration,
-    TrainElementVersionStructure,
-    TrainInCompoundTrainRef,
-    TrainInCompoundTrainRefStructure,
-    TrainInCompoundTrainVersionedChildStructure,
-    TrainNumber,
-    TrainNumberRef,
-    TrainNumberRefStructure,
-    TrainNumberVersionStructure,
-    TrainRef,
-    TrainRefStructure,
-    TrainRestrictionsEnumeration,
-    TrainSize,
-    TrainSizeEnumeration,
-    TrainSizeStructure,
-    TrainStopAssignment,
-    TrainStopAssignmentRef,
-    TrainStopAssignmentRefStructure,
-    TrainStopAssignmentVersionStructure,
-    TrainVersionStructure,
-    TramSubmode,
-    TramSubmodeEnumeration,
-    Transfer,
-    TransferConstraintTypeEnumeration,
-    TransferDuration,
-    TransferDurationStructure,
-    TransferRef,
-    TransferRefStructure,
-    TransferRestriction,
-    TransferRestrictionRef,
-    TransferRestrictionRefStructure,
-    TransferRestrictionVersionStructure,
-    TransferVersionStructure,
-    Transferability,
-    TransferabilityRef,
-    TransferabilityRefStructure,
-    TransferabilityVersionStructure,
-    TransitionEnumeration,
-    TransportAdministrativeZone,
-    TransportAdministrativeZoneRef,
-    TransportAdministrativeZoneRefStructure,
-    TransportAdministrativeZoneVersionStructure,
-    TransportDescriptionStructure,
-    TransportModeStructure,
-    TransportOrganisationRef,
-    TransportOrganisation,
-    TransportSubmode,
-    TransportSubmodeStructure,
-    TravelAgent,
-    TravelAgentRef,
-    TravelAgentRefStructure,
-    TravelAgentVersionStructure,
-    TravelBillingPolicyEnumeration,
-    TravelCreditPolicyEnumeration,
-    TravelDocument,
-    TravelDocumentRef,
-    TravelDocumentRefStructure,
-    TravelDocumentSecurityListing,
-    TravelDocumentSecurityListingRef,
-    TravelDocumentSecurityListingRefStructure,
-    TravelDocumentSecurityListingRefsRelStructure,
-    TravelDocumentSecurityListingVersionedChildStructure,
-    TravelDocumentVersionStructure,
-    TravelSpecificationRef,
-    TravelSpecificationRefStructure,
-    TravelSpecificationSummaryEndpointStructure,
-    TravelSpecificationSummaryView,
-    TravelSpecificationSummaryViewStructure,
-    TravelSpecification2,
-    TravelSpecificationVersionStructure,
-    TravelSpecification1,
-    TravelatorEquipment,
-    TravelatorEquipmentRef,
-    TravelatorEquipmentRefStructure,
-    TravelatorEquipmentVersionStructure,
-    TripPlanRequestRef,
-    TripPlanRequestRefStructure,
-    TrolleyStandEquipment,
-    TrolleyStandEquipmentRef,
-    TrolleyStandEquipmentRefStructure,
-    TrolleyStandEquipmentVersionStructure,
-    TurnaroundTimeLimitTime,
-    TurnaroundTimeLimitTimeRef,
-    TurnaroundTimeLimitTimeRefStructure,
-    TurnaroundTimeLimitTimeVersionedChildStructure,
-    TypeOfAccessRightAssignment,
-    TypeOfAccessRightAssignmentRef,
-    TypeOfAccessRightAssignmentRefStructure,
-    TypeOfAccessRightAssignmentRefsRelStructure,
-    TypeOfAccessRightAssignmentVersionStructure,
-    TypeOfAccessRightAssignmentsRelStructure,
-    TypeOfActivation,
-    TypeOfActivationRef,
-    TypeOfActivationRefStructure,
-    TypeOfActivationValueStructure,
-    TypeOfCodespaceAssignment,
-    TypeOfCodespaceAssignmentRef,
-    TypeOfCodespaceAssignmentRefStructure,
-    TypeOfCodespaceAssignmentValueStructure,
-    TypeOfConcession,
-    TypeOfConcessionRef,
-    TypeOfConcessionRefStructure,
-    TypeOfConcessionVersionStructure,
-    TypeOfCongestion,
-    TypeOfCongestionRef,
-    TypeOfCongestionRefStructure,
-    TypeOfCongestionValueStructure,
-    TypeOfCouplingEnumeration,
-    TypeOfCustomerAccount,
-    TypeOfCustomerAccountRef,
-    TypeOfCustomerAccountRefStructure,
-    TypeOfCustomerAccountVersionStructure,
-    TypeOfDeliveryVariant,
-    TypeOfDeliveryVariantRef,
-    TypeOfDeliveryVariantRefStructure,
-    TypeOfDeliveryVariantValueStructure,
-    TypeOfEntity,
-    TypeOfEntityRef,
-    TypeOfEntityVersionStructure,
-    TypeOfEquipment,
-    TypeOfEquipmentRef,
-    TypeOfEquipmentRefStructure,
-    TypeOfEquipmentValueStructure,
-    TypeOfFacility,
-    TypeOfFacilityRef,
-    TypeOfFacilityRefStructure,
-    TypeOfFacilityVersionStructure,
-    TypeOfFareContract,
-    TypeOfFareContractEntry,
-    TypeOfFareContractEntryRef,
-    TypeOfFareContractEntryRefStructure,
-    TypeOfFareContractEntryVersionStructure,
-    TypeOfFareContractRef,
-    TypeOfFareContractRefStructure,
-    TypeOfFareContractVersionStructure,
-    TypeOfFareProduct,
-    TypeOfFareProductRef,
-    TypeOfFareProductRefStructure,
-    TypeOfFareProductVersionStructure,
-    TypeOfFareStructureElement,
-    TypeOfFareStructureElementRef,
-    TypeOfFareStructureElementRefStructure,
-    TypeOfFareStructureElementVersionStructure,
-    TypeOfFareStructureFactor,
-    TypeOfFareStructureFactorRef,
-    TypeOfFareStructureFactorRefStructure,
-    TypeOfFareStructureFactorVersionStructure,
-    TypeOfFareTable,
-    TypeOfFareTableRef,
-    TypeOfFareTableRefStructure,
-    TypeOfFareTableVersionStructure,
-    TypeOfFeature,
-    TypeOfFeatureRef,
-    TypeOfFeatureRefStructure,
-    TypeOfFeatureValueStructure,
-    TypeOfFlexibleService,
-    TypeOfFlexibleServiceRef,
-    TypeOfFlexibleServiceRefStructure,
-    TypeOfFlexibleServiceValueStructure,
-    TypeOfFrame,
-    TypeOfFrameRef,
-    TypeOfFrameRefStructure,
-    TypeOfFrameValueStructure,
-    TypeOfFuelEnumeration,
-    TypeOfInfolinkEnumeration,
-    TypeOfJourneyPattern,
-    TypeOfJourneyPatternRef,
-    TypeOfJourneyPatternRefStructure,
-    TypeOfJourneyPatternValueStructure,
-    TypeOfLine,
-    TypeOfLineRef,
-    TypeOfLineRefStructure,
-    TypeOfLineValueStructure,
-    TypeOfLink,
-    TypeOfLinkRef,
-    TypeOfLinkRefStructure,
-    TypeOfLinkSequence,
-    TypeOfLinkSequenceRef,
-    TypeOfLinkSequenceRefStructure,
-    TypeOfLinkSequenceValueStructure,
-    TypeOfLinkValueStructure,
-    TypeOfMachineReadability,
-    TypeOfMachineReadabilityRef,
-    TypeOfMachineReadabilityRefStructure,
-    TypeOfMachineReadabilityRefsRelStructure,
-    TypeOfMachineReadabilityVersionStructure,
-    TypeOfNotice,
-    TypeOfNoticeRef,
-    TypeOfNoticeRefStructure,
-    TypeOfNoticeValueStructure,
-    TypeOfOperation,
-    TypeOfOperationRef,
-    TypeOfOperationRefStructure,
-    TypeOfOperationValueStructure,
-    TypeOfOrganisation,
-    TypeOfOrganisationPart,
-    TypeOfOrganisationPartRef,
-    TypeOfOrganisationPartRefStructure,
-    TypeOfOrganisationPartValueStructure,
-    TypeOfOrganisationRef,
-    TypeOfOrganisationRefStructure,
-    TypeOfOrganisationValueStructure,
-    TypeOfPassengerInformationEquipment,
-    TypeOfPassengerInformationEquipmentRef,
-    TypeOfPassengerInformationEquipmentRefStructure,
-    TypeOfPassengerInformationEquipmentValueStructure,
-    TypeOfPaymentMethod,
-    TypeOfPaymentMethodRef,
-    TypeOfPaymentMethodRefStructure,
-    TypeOfPaymentMethodRefsRelStructure,
-    TypeOfPaymentMethodValueStructure,
-    TypeOfPlace,
-    TypeOfPlaceRef,
-    TypeOfPlaceRefStructure,
-    TypeOfPlaceValueStructure,
-    TypeOfPoint,
-    TypeOfPointRef,
-    TypeOfPointRefStructure,
-    TypeOfPointValueStructure,
-    TypeOfPricingEnumeration,
-    TypeOfPricingRule,
-    TypeOfPricingRuleRef,
-    TypeOfPricingRuleRefStructure,
-    TypeOfPricingRuleRefsRelStructure,
-    TypeOfPricingRuleVersionStructure,
-    TypeOfProductCategory,
-    TypeOfProductCategoryRef,
-    TypeOfProductCategoryRefStructure,
-    TypeOfProductCategoryStructure,
-    TypeOfProjection,
-    TypeOfProjectionRef,
-    TypeOfProjectionRefStructure,
-    TypeOfProjectionValueStructure,
-    TypeOfResponsibilityRole,
-    TypeOfResponsibilityRoleRef,
-    TypeOfResponsibilityRoleRefStructure,
-    TypeOfResponsibilityRoleValueStructure,
-    TypeOfRetailDevice,
-    TypeOfRetailDeviceRef,
-    TypeOfRetailDeviceRefStructure,
-    TypeOfRetailDeviceVersionStructure,
-    TypeOfSalesOfferPackage,
-    TypeOfSalesOfferPackageRef,
-    TypeOfSalesOfferPackageRefStructure,
-    TypeOfSalesOfferPackageVersionStructure,
-    TypeOfSecurityList,
-    TypeOfSecurityListRef,
-    TypeOfSecurityListRefStructure,
-    TypeOfSecurityListVersionStructure,
-    TypeOfService,
-    TypeOfServiceFeature,
-    TypeOfServiceFeatureRef,
-    TypeOfServiceFeatureRefStructure,
-    TypeOfServiceFeatureValueStructure,
-    TypeOfServiceRef,
-    TypeOfServiceRefStructure,
-    TypeOfServiceStructure,
-    TypeOfTariff,
-    TypeOfTariffRef,
-    TypeOfTariffRefStructure,
-    TypeOfTariffValueStructure,
-    TypeOfTimeDemandType,
-    TypeOfTimeDemandTypeRef,
-    TypeOfTimeDemandTypeRefStructure,
-    TypeOfTimeDemandTypeStructure,
-    TypeOfTransfer,
-    TypeOfTransferRef,
-    TypeOfTransferRefStructure,
-    TypeOfTransferValueStructure,
-    TypeOfTravelDocument,
-    TypeOfTravelDocumentRef,
-    TypeOfTravelDocumentRefStructure,
-    TypeOfTravelDocumentRefsRelStructure,
-    TypeOfTravelDocumentVersionStructure,
-    TypeOfUsageParameter,
-    TypeOfUsageParameterRef,
-    TypeOfUsageParameterRefStructure,
-    TypeOfUsageParameterVersionStructure,
-    TypeOfValidity,
-    TypeOfValidityRef,
-    TypeOfValidityRefStructure,
-    TypeOfValidityValueStructure,
-    TypeOfValue,
-    TypeOfValueRef,
-    TypeOfValueRefStructure,
-    TypeOfValueVersionStructure,
-    TypeOfVersion,
-    TypeOfVersionRef,
-    TypeOfVersionRefStructure,
-    TypeOfVersionValueStructure,
-    TypeOfZone,
-    TypeOfZoneRef,
-    TypeOfZoneRefStructure,
-    TypeOfZoneValueStructure,
-    UicOperatingPeriod,
-    UicOperatingPeriodVersionStructure,
-    UicProductCharacteristic,
-    UicProductCharacteristicEnumeration,
-    UicProductCharacteristicList,
-    UicRateTypeEnumeration,
-    UicTrainRate,
-    UnapprovedKeyAccessError,
-    UnapprovedKeyAccessStructure,
-    UnknownEndpointError,
-    UnknownEndpointErrorStructure,
-    UnknownExtensionsError,
-    UnknownExtensionsErrorStructure,
-    UnknownParticipantError,
-    UnknownParticipantErrorStructure,
-    UnknownSubscriberError,
-    UnknownSubscriberErrorStructure,
-    UnknownSubscriptionError,
-    UnknownSubscriptionErrorStructure,
-    UsageDiscountRight,
-    UsageDiscountRightEnumeration,
-    UsageDiscountRightRef,
-    UsageDiscountRightRefStructure,
-    UsageDiscountRightVersionStructure,
-    UsageEndEnumeration,
-    UsageParameterPrice,
-    UsageParameterPriceRef,
-    UsageParameterPriceRefStructure,
-    UsageParameterPriceVersionedChildStructure,
-    UsageParameterRef,
-    UsageParameterRefStructure,
-    UsageParameter2,
-    UsageParameterVersionStructure,
-    UsageParameter1,
-    UsageStartConstraintTypeEnumeration,
-    UsageTriggerEnumeration,
-    UsageValidityPeriod,
-    UsageValidityPeriodRef,
-    UsageValidityPeriodRefStructure,
-    UsageValidityPeriodVersionStructure,
-    UsageValidityTypeEnumeration,
-    UserNeed,
-    UserNeedVersionedChildStructure,
-    UserProfile,
-    UserProfileEligibility,
-    UserProfileEligibilityRef,
-    UserProfileEligibilityRefStructure,
-    UserProfileEligibilityVersionedChildStructure,
-    UserProfileRef,
-    UserProfileRefStructure,
-    UserProfileVersionStructure,
-    UserTypeEnumeration,
     ValidBetween,
     ValidBetweenVersionStructure,
     ValidDuring,
     ValidDuringVersionStructure,
-    ValidableElement,
-    ValidableElementPrice,
-    ValidableElementPriceRef,
-    ValidableElementPriceRefStructure,
-    ValidableElementPriceVersionedChildStructure,
-    ValidableElementRef,
-    ValidableElementRefStructure,
-    ValidableElementVersionStructure,
-    ValidityConditionRef,
-    ValidityConditionRefStructure,
     ValidityCondition2,
     ValidityConditionVersionStructure,
     ValidityCondition1,
-    ValidityParameterAssignment,
-    ValidityParameterAssignmentRefStructure,
-    ValidityParameterAssignmentVersionStructure,
     ValidityRuleParameter,
-    ValidityRuleParameterRef,
-    ValidityRuleParameterRefStructure,
     ValidityRuleParameterVersionStructure,
     ValidityTrigger,
-    ValidityTriggerRef,
-    ValidityTriggerRefStructure,
     ValidityTriggerVersionStructure,
-    ValueSet,
-    ValueSetVersionStructure,
-    VectorType,
-    Vehicle,
-    VehicleAccessFacility,
-    VehicleAccessFacilityEnumeration,
-    VehicleAccessFacilityList,
-    VehicleChargingEquipment,
-    VehicleChargingEquipmentRef,
-    VehicleChargingEquipmentRefStructure,
-    VehicleChargingEquipmentVersionStructure,
-    VehicleEntrance,
-    VehicleEntranceRef,
-    VehicleEntranceRefStructure,
-    VehicleEntranceVersionStructure,
-    VehicleEquipmentProfile,
-    VehicleEquipmentProfileRef,
-    VehicleEquipmentProfileRefStructure,
-    VehicleEquipmentProfileVersionStructure,
-    VehicleEquipmentRef,
-    VehicleEquipmentRefStructure,
-    VehicleJourneyHeadway,
-    VehicleJourneyHeadwayVersionedChildStructure,
-    VehicleJourneyLayover,
-    VehicleJourneyLayoverVersionedChildStructure,
-    VehicleJourneyRef,
-    VehicleJourneyRefStructure,
-    VehicleJourneyRunTime,
-    VehicleJourneyRunTimeVersionedChildStructure,
-    VehicleJourneyStopAssignment,
-    VehicleJourneyStopAssignmentRef,
-    VehicleJourneyStopAssignmentRefStructure,
-    VehicleJourneyStopAssignmentVersionStructure,
-    VehicleJourneyWaitTime,
-    VehicleJourneyWaitTimeVersionedChildStructure,
-    VehicleJourney2,
-    VehicleJourneyVersionStructure,
-    VehicleJourney1,
-    VehicleLoadingEnumeration,
-    VehicleManoeuvringRequirement,
-    VehicleManoeuvringRequirementRef,
-    VehicleManoeuvringRequirementRefStructure,
-    VehicleManoeuvringRequirementVersionStructure,
-    VehicleMode,
-    VehicleModeEnumeration,
-    VehicleModel,
-    VehicleModelRef,
-    VehicleModelRefStructure,
-    VehicleModelVersionStructure,
-    VehicleOrientationEnumeration,
-    VehiclePositionAlignment,
-    VehiclePositionAlignmentRef,
-    VehiclePositionAlignmentRefStructure,
-    VehiclePositionAlignmentVersionStructure,
-    VehicleQuayAlignment,
-    VehicleQuayAlignmentRef,
-    VehicleQuayAlignmentRefStructure,
-    VehicleQuayAlignmentVersionStructure,
-    VehicleRef,
-    VehicleRefStructure,
-    VehicleRequirement,
-    VehicleRequirementRef,
-    VehicleRequirementRefStructure,
-    VehicleRequirementVersionStructure,
-    VehicleScheduleFrame,
-    VehicleScheduleFrameRef,
-    VehicleScheduleFrameRefStructure,
-    VehicleScheduleVersionFrameStructure,
-    VehicleService,
-    VehicleServicePart,
-    VehicleServicePartRef,
-    VehicleServicePartRefStructure,
-    VehicleServicePartVersionStructure,
-    VehicleServiceRef,
-    VehicleServiceRefStructure,
-    VehicleServiceVersionStructure,
-    VehicleStoppingPlace,
-    VehicleStoppingPlaceRef,
-    VehicleStoppingPlaceRefStructure,
-    VehicleStoppingPlaceVersionStructure,
-    VehicleStoppingPosition,
-    VehicleStoppingPositionRef,
-    VehicleStoppingPositionRefStructure,
-    VehicleStoppingPositionVersionStructure,
-    VehicleType,
-    VehicleTypeAtPoint,
-    VehicleTypeAtPointRef,
-    VehicleTypeAtPointRefStructure,
-    VehicleTypeAtPointVersionStructure,
-    VehicleTypePreference,
-    VehicleTypePreferenceRef,
-    VehicleTypePreferenceRefStructure,
-    VehicleTypePreferenceVersionedChildStructure,
-    VehicleTypeRef,
-    VehicleTypeRefStructure,
-    VehicleTypeStopAssignment,
-    VehicleTypeStopAssignmentRef,
-    VehicleTypeStopAssignmentRefStructure,
-    VehicleTypeStopAssignmentVersionStructure,
-    VehicleTypeVersionStructure,
-    VehicleVersionStructure,
-    Version,
-    VersionFrame,
-    VersionFrameDefaultsStructure,
-    VersionFrameRef,
-    VersionFrameRefStructure,
-    VersionFrameVersionStructure,
-    VersionOfObjectRef,
-    VersionOfObjectRefStructure,
-    VersionRef,
-    VersionRefStructure,
-    VersionStatusEnumeration,
-    VersionTypeEnumeration,
-    VersionVersionStructure,
-    VersionedChild,
     VersionedChildStructure,
-    ViaTypeEnumeration,
-    ViaVersionedChildStructure,
-    VisualSignsAvailable,
-    WaitingEquipment,
-    WaitingEquipmentRef,
-    WaitingEquipmentRefStructure,
-    WaitingEquipmentVersionStructure,
-    WaitingRoomEquipment,
-    WaitingRoomEquipmentRef,
-    WaitingRoomEquipmentRefStructure,
-    WaitingRoomEquipmentVersionStructure,
-    WaterSubmode,
-    WaterSubmodeEnumeration,
-    WeekOfMonthEnumeration,
-    WeeksOfMonthEnumeration,
-    WheelchairAccess,
-    WheelchairVehicleEquipment,
-    WheelchairVehicleEquipmentVersionStructure,
-    WheelchairVehicleRef,
-    WheelchairVehicleRefStructure,
-    Whitelist,
-    WhitelistRef,
-    WhitelistRefStructure,
-    WhitelistVersionStructure,
-    WireElement,
-    WireElementVersionStructure,
-    WireJunction,
-    WireJunctionVersionStructure,
-    WireLinkRef,
-    WireLinkRefByValue,
-    WireLinkRefByValueStructure,
-    WireLinkRefStructure,
-    WirePointRef,
-    WirePointRefStructure,
-    Zone,
-    ZoneProjection,
-    ZoneProjectionRef,
-    ZoneProjectionRefStructure,
-    ZoneProjectionVersionStructure,
-    ZoneRef,
-    ZoneRefStructure,
-    ZoneTopologyEnumeration,
-    ZoneUseEnumeration,
-    ZoneView,
-    ZoneDerivedViewStructure,
-    ZoneVersionStructure,
-    AbstractAssociationRole,
-    AbstractInlineProperty,
-    AbstractReference,
-    AbstractStrictAssociationRole,
-    AccessRefsRelStructure,
-    AccessRightParameterAssignmentsInFrameRelStructure,
-    AccessRightParameterAssignmentsRelStructure,
-    AccessRightsInProductRelStructure,
-    AccessSpacesRelStructure,
-    AccessSummariesRelStructure,
-    AccessZonesRelStructure,
-    AccessesInFrameRelStructure,
-    AccessesRelStructure,
-    AccessibilityAssessmentsRelStructure,
-    AccessibilityLimitationsRelStructure,
-    AccommodationsRelStructure,
-    ActivatedEquipmentsInFrameRelStructure,
-    ActivationAssignmentsRelStructure,
-    ActivationLinksInFrameRelStructure,
-    ActivationPointsInFrameRelStructure,
-    ActivationTypeRefsRelStructure,
-    AddressesInFrameRelStructure,
-    AdministrativeZoneRefsRelStructure,
-    AdministrativeZonesRelStructure,
-    AllowedLineDirectionRefsRelStructure,
-    AllowedLineDirectionsRelStructure,
-    AlternativeNamesRelStructure,
     AlternativeTextsRelStructure,
-    AmountOfPriceUnitRefsRelStructure,
-    AssistanceBookingServicesRelStructure,
-    AssociationName,
-    AvailabilityConditionsRelStructure,
-    BlacklistRefsRelStructure,
-    BlacklistsInFrameRelStructure,
-    BlacklistsRelStructure,
-    BlockPartsRelStructure,
-    BlocksInFrameRelStructure,
-    BoardingPositionRefsRelStructure,
-    BoardingPositionsRelStructure,
-    BorderPointsInFrameRelStructure,
-    CallsRelStructure,
-    CappingRulePricesRelStructure,
-    CappingRulesRelStructure,
-    CellRefsRelStructure,
-    CellsRelStructure,
-    CheckConstraintDelaysInFrameRelStructure,
-    CheckConstraintDelaysRelStructure,
-    CheckConstraintInFrameRelStructure,
-    CheckConstraintThroughputsInFrameRelStructure,
-    CheckConstraintThroughputsRelStructure,
-    CheckConstraintsRelStructure,
-    ClassRefsRelStructure,
-    ClassesInRepositoryRelStructure,
-    ClassificationDescriptorsRelStructure,
-    CodespaceAssignmentsRelStructure,
-    CodespacesInFrameRelStructure,
-    CodespacesRelStructure,
-    CommonSectionPointMembersRelStructure,
-    CommonSectionsInFrameRelStructure,
-    CompanionProfilesRelStructure,
-    ComplexFeatureMembersRelStructure,
-    ComplexFeatureRefsRelStructure,
-    CompositePricesRelStructure,
-    ContainedAvailabilityConditionsRelStructure,
-    ContainmentAggregationStructure,
-    ContractRefsRelStructure,
-    ControlCentresInFrameRelStructure,
-    ControllableElementPricesRelStructure,
-    ControllableElementsInFrameRelStructure,
-    ControllableElementsInSequenceRelStructure,
-    ControllableElementsRelStructure,
-    CountriesInFrameRelStructure,
-    CountryRefsRelStructure,
-    CoupledJourneysInFrameRelStructure,
-    CoupledJourneysRelStructure,
-    CoursesOfJourneysInFrameRelStructure,
-    CoursesOfJourneysRelStructure,
-    CrewBaseRefsRelStructure,
-    CrewBasesInFrameRelStructure,
-    CurveProperty,
-    CustomerAccountRefsRelStructure,
-    CustomerAccountSecurityListingRefsRelStructure,
-    CustomerAccountStatusRefsRelStructure,
-    CustomerAccountsInFrameRelStructure,
-    CustomerAccountsRelStructure,
-    CustomerEligibilitiesRelStructure,
-    CustomerEligibilityRefsRelStructure,
-    CustomerPurchasePackageElementAccessesRelStructure,
-    CustomerPurchasePackageElementsRelStructure,
-    CustomerPurchasePackagePricesRelStructure,
-    CustomerPurchasePackageRefsRelStructure,
-    CustomerPurchasePackagesInFrameRelStructure,
-    CustomerPurchasePackagesRelStructure,
-    CustomerPurchaseParameterAssignmentsRelStructure,
-    CustomerRefsRelStructure,
-    CustomersInFrameRelStructure,
-    CustomersRelStructure,
-    DataObjectsRelStructure,
-    DataSourcesInFrameRelStructure,
-    DataSourcesRelStructure,
-    DatedCallsRelStructure,
-    DayTypeAssignmentsInFrameRelStructure,
-    DayTypeAssignmentsRelStructure,
-    DayTypeRefsRelStructure,
-    DayTypesInFrameRelStructure,
     DayTypesRelStructure,
-    DeadRunCallsRelStructure,
-    DefaultCodeSpace,
-    DefaultDeadRunRunTimesRelStructure,
-    DefaultInterchangseInFrameRelStructure,
-    DefaultServiceJourneyRunTimesRelStructure,
-    DeliveryVariantsRelStructure,
-    DeltaValuesRelStructure,
-    DeltasRelStructure,
-    DepartmentRefsRelStructure,
-    DepartmentsInFrameRelStructure,
-    DepartmentsRelStructure,
-    DescriptionReference,
-    DestinationDisplayRefsRelStructure,
-    DestinationDisplayVariantRefsRelStructure,
-    DestinationDisplayVariantsRelStructure,
-    DestinationDisplayViewsRelStructure,
-    DestinationDisplaysInFrameRelStructure,
-    DirectionsInFrameRelStructure,
-    DiscountRightRefsRelStructure,
-    DisplayAssignmentsInFrameRelStructure,
-    DisplayAssignmentsRelStructure,
-    DistanceMatrixElementPricesRelStructure,
-    DistanceMatrixElementRefsRelStructure,
-    DistanceMatrixElementsInFrameRelStructure,
-    DistanceMatrixElementsRelStructure,
-    DistributionAssignmentsInFrameRelStructure,
-    DistributionAssignmentsRelStructure,
-    DistributionChannelRefsRelStructure,
-    DistributionChannelsInFrameRelStructure,
-    DriverTripTimesRelStructure,
-    DriverTripsInFrameRelStructure,
-    DummyPlaceRefsRelStructure,
-    DutiesInFrameRelStructure,
-    DutyPartsInFrameRelStructure,
-    DutyPartsRelStructure,
-    EntitiesInVersionRelStructure,
-    EntitlementGivenRefsRelStructure,
-    EntitlementRequiredRefsRelStructure,
-    EntityInVersionInFrameRelStructure,
-    EntranceRefsRelStructure,
-    EquipmentPlacesRelStructure,
-    EquipmentPositionsRelStructure,
-    EquipmentsInFrameRelStructure,
-    EquipmentsRelStructure,
-    EstimatedPassingTimesRelStructure,
-    ExplicitEquipmentsRelStructure,
-    ExplicitJourneyRefsRelStructure,
-    ExplicitLocalServicesRelStructure,
-    ExplicitPlaceEquipmentsRelStructure,
-    Exterior,
-    FacilityRequirementsRelStructure,
-    FareContractEntriesRelStructure,
-    FareContractsInFrameRelStructure,
-    FareContractsRelStructure,
-    FareDemandFactorsRelStructure,
-    FareElementInSequenceRefsRelStructure,
-    FarePointsInPatternRelStructure,
-    FarePricesInFrameRelStructure,
-    FarePricesRelStructure,
-    FareProductPricesRelStructure,
-    FareProductRefsRelStructure,
-    FareProductsInFrameRelStructure,
-    FareQuotaFactorsRelStructure,
-    FareScheduledStopPointRefsRelStructure,
-    FareScheduledStopPointsInFrameRelStructure,
-    FareSectionsInFrameRelStructure,
-    FareSectionsRelStructure,
-    FareSeriesInFrameRelStructure,
-    FareStructureElementPricesRelStructure,
-    FareStructureElementRefsRelStructure,
-    FareStructureElementsInFrameRelStructure,
-    FareStructureElementsInSequenceRelStructure,
-    FareStructureElementsRelStructure,
-    FareStructureFactorsRelStructure,
-    FareTableColumnsRelStructure,
-    FareTableRefsRelStructure,
-    FareTableRowsRelStructure,
-    FareTablesInFrameRelStructure,
-    FareTablesRelStructure,
-    FareZoneRefsRelStructure,
-    FareZonesInFrameRelStructure,
-    FeatureTypeRefsRelStructure,
-    FlexibleAreasRelStructure,
-    FlexibleLineRefsRelStructure,
-    FlexibleLinkPropertiesRelStructure,
-    FlexiblePointPropertiesRelStructure,
-    FlexibleQuaysRelStructure,
-    FlexibleServicePropertiesInFrameRelStructure,
-    FlexibleServicePropertiesRelStructure,
-    FlexibleStopPlaceRefsRelStructure,
-    FlexibleStopPlacesInFrameRelStructure,
-    FlexibleStopPlacesRelStructure,
-    FrameContainmentStructure,
-    FramesRelStructure,
-    FrequencyGroupsInFrameRelStructure,
-    FrequencyGroupsRelStructure,
-    FulfilmentMethodPricesRelStructure,
-    FulfilmentMethodRefsRelStructure,
-    FulfilmentMethodsInFrameRelStructure,
-    FulfilmentMethodsRelStructure,
-    GaragePointsRelStructure,
-    GarageRefsRelStructure,
-    GaragesInFrameRelStructure,
-    GeneralFrameMembersRelStructure,
-    GeneralSectionsInFrameRelStructure,
-    GenericParameterAssignmentsRelStructure,
-    GeographicalIntervalPricesRelStructure,
-    GeographicalIntervalsRelStructure,
-    GeographicalStructureFactorsRelStructure,
-    GeographicalUnitPricesRelStructure,
-    GeographicalUnitsRelStructure,
-    GmlProfileSchema,
-    GroupMembershipRefsRelStructure,
-    GroupOfDistanceMatrixElementsRefsRelStructure,
-    GroupOfEntitiesInFrameRelStructure,
-    GroupOfLinkSequencesRelStructure,
-    GroupOfLinksInFrameRelStructure,
-    GroupOfLinksRelStructure,
-    GroupOfPointsRelStructure,
-    GroupOfSalesOfferPackageRefsRelStructure,
-    GroupOfServicesMembersRelStructure,
-    GroupOfServicesRefsRelStructure,
-    GroupOfTimebandsInFrameRelStructure,
-    GroupOfTimebandsRelStructure,
-    GroupOfTimingLinksInFrameRelStructure,
-    GroupOfcustomerPurchasePackageRefsRelStructure,
-    GroupsOfDistanceMatrixElementsInFrameRelStructure,
-    GroupsOfDistanceMatrixElementsRelStructure,
-    GroupsOfDistributionChannelsInFrameRelStructure,
-    GroupsOfLinesInFrameRelStructure,
-    GroupsOfOperatorsInFrameRelStructure,
-    GroupsOfPlacesInFrameRelStructure,
-    GroupsOfSalesOfferPackagesInFrameRelStructure,
-    GroupsOfServicesInFrameRelStructure,
-    GroupsOfStopPlacesInFrameRelStructure,
-    GroupsOfTransportOrganisationsRefsRelStructure,
-    HailAndRideAreasRelStructure,
-    Identifier,
-    InfoLinksRelStructure,
-    InfrastructureElementsInFrameRelStructure,
-    InfrastructureJunctionsInFrameRelStructure,
-    InterchangeRuleFiltersRelStructure,
-    InterchangeRuleTimingsRelStructure,
-    InterchangeRulesInFrameRelStructure,
-    InterchangeRulesRelStructure,
-    Interior,
-    JourneyAccountingsInFrameRelStructure,
-    JourneyAccountingsRelStructure,
-    JourneyHeadwaysRelStructure,
-    JourneyInterchangesInFrameRelStructure,
-    JourneyLayoversRelStructure,
-    JourneyMeetingViewsRelStructure,
-    JourneyMeetingsInFrameRelStructure,
-    JourneyPartCouplesInFrameRelStructure,
-    JourneyPartCouplesRelStructure,
-    JourneyPartPositionsRelStructure,
-    JourneyPartRefsRelStructure,
-    JourneyPartsInFrameRelStructure,
-    JourneyPartsRelStructure,
-    JourneyPatternHeadwaysRelStructure,
-    JourneyPatternLayoversRelStructure,
-    JourneyPatternRefsRelStructure,
-    JourneyPatternRunTimesRelStructure,
-    JourneyPatternWaitTimesRelStructure,
-    JourneyPatternsInFrameRelStructure,
-    JourneyRefsRelStructure,
-    JourneyRunTimesRelStructure,
-    JourneyWaitTimesRelStructure,
-    JourneysInFrameRelStructure,
-    KeyList,
-    LangValue,
-    LayerRefsRelStructure,
-    LevelsRelStructure,
-    LineNetworksInFrameRelStructure,
-    LineRefsRelStructure,
-    LineSectionsRelStructure,
-    LinesInDirectionRefsRelStructure,
-    LinesInFrameRelStructure,
-    LinkRefsRelStructure,
-    LinkSequenceRefsRelStructure,
-    LinkTypeRefsRelStructure,
-    LinksInJourneyPatternRelStructure,
-    LinksOnSectionRelStructure,
-    LocalServicesRelStructure,
-    LogEntriesRelStructure,
-    LogicalDisplaysInFrameRelStructure,
-    ModeRefsRelStructure,
-    MonitoredCallsRelStructure,
-    MonthValidityOffsetsRelStructure,
-    Name,
-    NavigationPathRefsRelStructure,
-    NavigationPathsInFrameRelStructure,
-    NavigationPathsRelStructure,
-    NetworkRestrictionsInFrameRelStructure,
-    NetworksInFrameRelStructure,
-    NoticeAssignmentViewsRelStructure,
-    NoticeAssignmentsInFrameRelStructure,
-    NoticeAssignmentsRelStructure,
-    NoticesInFrameRelStructure,
-    NoticesRelStructure,
-    ObjectRefsRelStructure,
-    ObservedPassingTimesRelStructure,
-    OfferedTravelSpecificationsRelStructure,
-    OnboardStaysRelStructure,
-    OneToManyRelationshipStructure,
-    OnwardCallsRelStructure,
-    OpenTransportModeRefsRelStructure,
-    OperatingDaysInFrameRelStructure,
     OperatingDaysRelStructure,
-    OperatingPeriodsInFrameRelStructure,
-    OperatingPeriodsRelStructure,
-    OperationalContexRefsRelStructure,
-    OperationalContextsInFrameRelStructure,
-    OrganisationPartsRelStructure,
-    OrganisationRefsRelStructure,
-    OrganisationalUnitRefsRelStructure,
-    OrganisationalUnitsRelStructure,
-    OrganisationsInFrameRelStructure,
-    ParkingAreaRefsRelStructure,
-    ParkingAreasRelStructure,
-    ParkingBayRefsRelStructure,
-    ParkingBaysRelStructure,
-    ParkingCapacitiesRelStructure,
-    ParkingChargeBandsRelStructure,
-    ParkingEntrancesForVehiclesRelStructure,
-    ParkingPricesRelStructure,
-    ParkingPropertiesRelStructure,
-    ParkingRefsRelStructure,
-    ParkingTariffsInFrameRelStructure,
-    ParkingsInFrameRelStructure,
-    PassengerCapacitiesRelStructure,
-    PassengerCarryingRequirementsRelStructure,
-    PassengerEquipmentsRelStructure,
-    PassengerInformationEquipmentsInFrameRelStructure,
-    PassengerJourneysInFrameRelStructure,
-    PathJunctionsInFrameRelStructure,
-    PathJunctionsRelStructure,
-    PathLinkRefsRelStructure,
-    PathLinksInFrameRelStructure,
-    PathLinksInSequenceRelStructure,
-    PlaceEquipmentsRelStructure,
-    PlaceRefsRelStructure,
-    PlacesInSequenceRelStructure,
-    PointOfInterestClassificationHierarchiesInFrameRelStructure,
-    PointOfInterestClassificationHierarchyMembersRelStructure,
-    PointOfInterestClassificationsInFrameRelStructure,
-    PointOfInterestClassificationsViewsRelStructure,
-    PointOfInterestEntrancesRelStructure,
-    PointOfInterestRefsRelStructure,
-    PointOfInterestSpacesRelStructure,
-    PointOnLineSectionsRelStructure,
-    PointProperty,
-    PointRefsRelStructure,
-    PointsInJourneyPatternRelStructure,
-    PointsOfInterestInFrameRelStructure,
-    PointsOnLinkInFrameRelStructure,
-    PointsOnLinkRelStructure,
-    PointsOnRouteRelStructure,
-    PointsOnSectionRelStructure,
-    Pos,
-    PosList,
-    PreviousCallsRelStructure,
-    PriceGroupsRelStructure,
-    PriceRuleStepResultsRelStructure,
-    PriceUnitRefsRelStructure,
-    PriceUnitsRelStructure,
-    PriceableObjectRefsRelStructure,
-    PricingRulesRelStructure,
-    PricingServicesRelStructure,
-    ProjectionsRelStructure,
-    PropertiesOfDayRelStructure,
-    PurposesOfGroupingInFrameRelStructure,
-    QualityStructureFactorPricesRelStructure,
-    QualityStructureFactorsRelStructure,
-    QuayRefsRelStructure,
-    QuaysRelStructure,
-    RelationshipStructure,
-    ReliefOpportunitiesInFrameRelStructure,
-    ReliefOpportunitiesRelStructure,
-    ReliefPointsInFrameRelStructure,
-    ResidentialQualificationsRelStructure,
-    ResponsibilityRoleAssignmentsRelStructure,
-    ResponsibilitySetsInFrameRelStructure,
-    ResponsibilitySetsRelStructure,
-    RetailConsortiumRefsRelStructure,
-    RetailConsortiumsInFrameRelStructure,
-    RetailConsortiumsRelStructure,
-    RetailDeviceRefsRelStructure,
-    RetailDevicesInFrameRelStructure,
-    ReversePropertyName,
-    RoundingStepsRelStructure,
-    RoundingsRelStructure,
-    RouteInstructionsRelStructure,
-    RouteLinksInFrameRelStructure,
-    RoutePointsInFrameRelStructure,
-    RouteRefsRelStructure,
-    RoutesInFrameRelStructure,
-    RoutesRelStructure,
-    RoutingConstraintZonesInFrameRelStructure,
-    SalesOfferPackageElementsInFrameRelStructure,
-    SalesOfferPackageElementsRelStructure,
-    SalesOfferPackagePricesRelStructure,
-    SalesOfferPackageRefsRelStructure,
-    SalesOfferPackageSubstitutionsInFrameRelStructure,
-    SalesOfferPackageSubstitutionsRelStructure,
-    SalesOfferPackagesInFrameRelStructure,
-    SalesTransactionRefsRelStructure,
-    SalesTransactionsInFrameRelStructure,
-    SalesTransactionsRelStructure,
-    ScheduledStopPointRefsRelStructure,
-    ScheduledStopPointsInFrameRelStructure,
-    SchematicMapMembersRelStructure,
-    SchematicMapsInFrameRelStructure,
-    SectionsInSequenceRelStructure,
-    SecurityListingsRelStructure,
-    SecurityListsRelStructure,
-    SecuritylistRefsRelStructure,
-    SeriesConstraintPricesRelStructure,
-    SeriesConstraintRefsRelStructure,
-    ServiceAccessRightRefsRelStructure,
-    ServiceExclusionsInFrameRelStructure,
-    ServiceFacilitySetsInFrameRelStructure,
-    ServiceFacilitySetsRelStructure,
-    ServiceJourneyInterchangesRelStructure,
-    ServiceLinksInFrameRelStructure,
-    ServiceLinksInJourneyPatternRelStructure,
-    ServicePatternsInFrameRelStructure,
-    SiteEntrancesRelStructure,
-    SiteFacilitySetsInFrameRelStructure,
-    SiteFacilitySetsRelStructure,
-    SitePathLinksRelStructure,
-    SiteRefsRelStructure,
-    SpaceValue,
-    SpatialFeaturesInFrameRelStructure,
-    SpecialServiceRefsRelStructure,
-    SpecialServicesRelStructure,
-    SpecificParameterAssignmentsRelStructure,
-    StairFlightsRelStructure,
-    StartTimeAtStopPointsRelStructure,
-    StopAreaRefsRelStructure,
-    StopAreasInFrameRelStructure,
-    StopAssignmentsInFrameRelStructure,
-    StopPlaceRefsRelStructure,
-    StopPlaceVehicleEntrancesRelStructure,
-    StopPlacesInFrameRelStructure,
-    StopPlacesRelStructure,
-    StopPointsInJourneyPatternRelStructure,
-    StrictContainmentAggregationStructure,
-    SuitabilitiesRelStructure,
-    SurfaceProperty,
-    TargetElement,
-    TargetPassingTimesRelStructure,
-    TariffRefsRelStructure,
-    TariffZoneRefsRelStructure,
-    TariffZonesInFrameRelStructure,
-    TariffsInFrameRelStructure,
-    TemporalValidityParametersRelStructure,
-    ThirdPartyProductRefsRelStructure,
-    TimeDemandProfileMembersRelStructure,
-    TimeDemandTypeAssignmentsInFrameRelStructure,
-    TimeDemandTypeRefsRelStructure,
-    TimeDemandTypesInFrameRelStructure,
-    TimeIntervalPricesRelStructure,
-    TimeIntervalRefsRelStructure,
-    TimeIntervalsRelStructure,
-    TimeStructureFactorsRelStructure,
-    TimeUnitPricesRelStructure,
-    TimeUnitsRelStructure,
-    TimebandRefsRelStructure,
-    TimebandsInFrameRelStructure,
     TimebandsRelStructure,
-    TimetabledPassingTimesRelStructure,
-    TimingLinkRefsRelStructure,
-    TimingLinksInFrameRelStructure,
-    TimingLinksRelStructure,
-    TimingPatternsInFrameRelStructure,
-    TimingPointsInFrameRelStructure,
-    TimingPointsInJourneyPatternRelStructure,
-    TimingPointsRelStructure,
-    TopographicPlaceDescriptorsRelStructure,
-    TopographicPlaceRefsRelStructure,
-    TopographicPlacesInFrameRelStructure,
-    TopographicPlacesRelStructure,
-    TracesRelStructure,
-    TrafficControlPointsInFrameRelStructure,
-    TrainComponentLabelAssignmentsRelStructure,
-    TrainComponentsRelStructure,
-    TrainNumberRefsRelStructure,
-    TrainNumbersInFrameRelStructure,
-    TrainStopAssignmentsRelStructure,
-    TrainsInCompoundTrainRelStructure,
-    TransferRefsRelStructure,
-    TransferRestrictionsInFrameRelStructure,
-    TransfersInFrameRelStructure,
-    TransportModesRelStructure,
-    TransportOperatorsInFrameRelStructure,
-    TransportOrganisationRefsRelStructure,
-    TravelDocumentsInFrameRelStructure,
-    TravelDocumentsRelStructure,
-    TravelSpecificationJourneyRefsRelStructure,
-    TravelSpecificationRefsRelStructure,
-    TravelSpecificationsInFrameRelStructure,
-    TravelSpecificationsRelStructure,
-    TurnaroundTimeLimitTimesRelStructure,
-    TypeOfConcessionsRelStructure,
-    TypeOfCustomerAccountRefsRelStructure,
-    TypeOfEntityRefsRelStructure,
-    TypeOfFacilityRefsRelStructure,
-    TypeOfFareContractEntryRefsRelStructure,
-    TypeOfFareContractRefsRelStructure,
-    TypeOfFareProductRefsRelStructure,
-    TypeOfFareProductsRelStructure,
-    TypeOfFrameRefsRelStructure,
-    TypeOfOrganisationRefsRelStructure,
-    TypeOfPlaceRefsRelStructure,
-    TypeOfPointRefsRelStructure,
-    TypeOfProductCategoryRefsRelStructure,
-    TypeOfRetailDeviceRefsRelStructure,
-    TypeOfSecurityListRefsRelStructure,
-    TypeOfServiceFeatureRefsRelStructure,
-    TypeOfServiceRefsRelStructure,
-    TypeOfUsageParametersRelStructure,
-    TypeOfZoneRefsRelStructure,
-    TypeOfsalesOfferPackageRefsRelStructure,
-    TypesOfAccountStatusRelStructure,
-    TypesOfCustomerAccountRelStructure,
-    TypesOfEquipmentRelStructure,
-    TypesOfFacilityRelStructure,
-    TypesOfFareContractEntryRelStructure,
-    TypesOfFareContractRelStructure,
-    TypesOfFrameRelStructure,
-    TypesOfMachineReadabilitiesRelStructure,
-    TypesOfRetailDeviceRelStructure,
-    TypesOfSalesOfferPackageRelStructure,
-    TypesOfSecurityListRelStructure,
-    TypesOfServiceInFrameRelStructure,
-    TypesOfTravelDocumentInFrameRelStructure,
-    TypesOfTravelDocumentsRelStructure,
-    TypesOfValueInFrameRelStructure,
-    TypesOfValueStructure,
-    UsageParameterPriceRefsRelStructure,
-    UsageParameterPricesRelStructure,
-    UsageParameterRefsRelStructure,
-    UsageParametersInFrameRelStructure,
-    UsageParametersRelStructure,
-    UsedInRefsRelStructure,
-    UserProfileRefsRelStructure,
-    ValidableElementPricesRelStructure,
-    ValidableElementsInFrameRelStructure,
-    ValidableElementsRelStructure,
-    ValidityConditionRefsRelStructure,
     ValidityConditionsRelStructure,
-    ValidityParameterAssignmentsInFrameRelStructure,
-    ValidityParameterAssignmentsRelStructure,
-    ValidityParametersRelStructure,
-    ValidityRuleParameterRefsRelStructure,
-    ValidityRuleParametersRelStructure,
-    ValidityTriggerRefsRelStructure,
-    ValidityTriggersRelStructure,
-    Vector,
-    VehicleEntrancesRelStructure,
-    VehicleEquipmenProfilesInFrameRelStructure,
-    VehicleEquipmentsRelStructure,
-    VehicleJourneyHeadwaysRelStructure,
-    VehicleJourneyLayoversRelStructure,
-    VehicleJourneyRefsRelStructure,
-    VehicleJourneyRunTimesRelStructure,
-    VehicleJourneyStopAssignmentsInFrameRelStructure,
-    VehicleJourneyStopAssignmentsRelStructure,
-    VehicleJourneyWaitTimesRelStructure,
-    VehicleManoeuvringRequirementsRelStructure,
-    VehicleModelsInFrameRelStructure,
-    VehiclePositionAlignmentsRelStructure,
-    VehicleQuayAlignmentsRelStructure,
-    VehicleServicePartsRelStructure,
-    VehicleServicesInFrameRelStructure,
-    VehicleStoppingPlacesRelStructure,
-    VehicleStoppingPositionsRelStructure,
-    VehicleTypePreferencesRelStructure,
-    VehicleTypeRefsRelStructure,
-    VehicleTypeStopAssignmentsRelStructure,
-    VehicleTypesInFrameRelStructure,
-    VehiclesInFrameRelStructure,
-    VersionFrameMembersRelStructure,
-    VersionFrameRefsRelStructure,
-    VersionsInFrameRelStructure,
-    VersionsRelStructure,
-    ViasRelStructure,
-    WhitelistRefsRelStructure,
-    WhitelistsInFrameRelStructure,
-    WhitelistsRelStructure,
-    ZoneRefsRelStructure,
-    ZonesInFrameRelStructure,
 )
+from netex.models.amount_of_price_unit_enumeration import AmountOfPriceUnitEnumeration
+from netex.models.amount_of_price_unit_product import AmountOfPriceUnitProduct
+from netex.models.amount_of_price_unit_product_ref import AmountOfPriceUnitProductRef
+from netex.models.amount_of_price_unit_product_ref_structure import AmountOfPriceUnitProductRefStructure
+from netex.models.amount_of_price_unit_product_version_structure import AmountOfPriceUnitProductVersionStructure
+from netex.models.amount_of_price_unit_refs_rel_structure import AmountOfPriceUnitRefsRelStructure
+from netex.models.arrival_structure import ArrivalStructure
+from netex.models.assignment_1 import Assignment1
+from netex.models.assignment_2 import Assignment2
+from netex.models.assignment_ref import AssignmentRef
+from netex.models.assignment_ref_structure import AssignmentRefStructure
+from netex.models.assignment_version_structure_1 import AssignmentVersionStructure1
+from netex.models.assignment_version_structure_2 import AssignmentVersionStructure2
+from netex.models.assistance_availability_enumeration import AssistanceAvailabilityEnumeration
+from netex.models.assistance_booking_service import AssistanceBookingService
+from netex.models.assistance_booking_service_ref import AssistanceBookingServiceRef
+from netex.models.assistance_booking_service_ref_structure import AssistanceBookingServiceRefStructure
+from netex.models.assistance_booking_service_version_structure import AssistanceBookingServiceVersionStructure
+from netex.models.assistance_booking_services_rel_structure import AssistanceBookingServicesRelStructure
+from netex.models.assistance_facility import AssistanceFacility
+from netex.models.assistance_facility_enumeration import AssistanceFacilityEnumeration
+from netex.models.assistance_facility_list import AssistanceFacilityList
+from netex.models.assistance_needed_enumeration import AssistanceNeededEnumeration
+from netex.models.assistance_service import AssistanceService
+from netex.models.assistance_service_ref import AssistanceServiceRef
+from netex.models.assistance_service_ref_structure import AssistanceServiceRefStructure
+from netex.models.assistance_service_version_structure import AssistanceServiceVersionStructure
+from netex.models.assisted_boarding_location_enumeration import AssistedBoardingLocationEnumeration
+from netex.models.association_name import AssociationName
+from netex.models.association_role_type import AssociationRoleType
+from netex.models.audible_signals_available import AudibleSignalsAvailable
+from netex.models.audio_announcement_type_enumeration import AudioAnnouncementTypeEnumeration
+from netex.models.audio_trigger_method_enumeration import AudioTriggerMethodEnumeration
+from netex.models.authenticated_request import AuthenticatedRequest
+from netex.models.authenticated_request_structure import AuthenticatedRequestStructure
+from netex.models.authority import Authority
+from netex.models.authority_ref import AuthorityRef
+from netex.models.authority_ref_structure import AuthorityRefStructure
+from netex.models.authority_version_structure import AuthorityVersionStructure
+from netex.models.availability_condition_ref import AvailabilityConditionRef
+from netex.models.availability_condition_ref_structure import AvailabilityConditionRefStructure
+from netex.models.availability_conditions_rel_structure import AvailabilityConditionsRelStructure
+from netex.models.baggage_type_enumeration import BaggageTypeEnumeration
+from netex.models.baggage_use_type_enumeration import BaggageUseTypeEnumeration
+from netex.models.beacon_point import BeaconPoint
+from netex.models.beacon_point_ref import BeaconPointRef
+from netex.models.beacon_point_ref_structure import BeaconPointRefStructure
+from netex.models.beacon_point_version_structure import BeaconPointVersionStructure
+from netex.models.berth_facility import BerthFacility
+from netex.models.berth_facility_enumeration import BerthFacilityEnumeration
+from netex.models.beyond_data_horizon import BeyondDataHorizon
+from netex.models.beyond_data_horizon_error_structure import BeyondDataHorizonErrorStructure
+from netex.models.blacklist import Blacklist
+from netex.models.blacklist_ref import BlacklistRef
+from netex.models.blacklist_ref_structure import BlacklistRefStructure
+from netex.models.blacklist_refs_rel_structure import BlacklistRefsRelStructure
+from netex.models.blacklist_version_structure import BlacklistVersionStructure
+from netex.models.blacklists_in_frame_rel_structure import BlacklistsInFrameRelStructure
+from netex.models.blacklists_rel_structure import BlacklistsRelStructure
+from netex.models.blackout_start_enumeration import BlackoutStartEnumeration
+from netex.models.block import Block
+from netex.models.block_part import BlockPart
+from netex.models.block_part_ref import BlockPartRef
+from netex.models.block_part_ref_structure import BlockPartRefStructure
+from netex.models.block_part_version_structure import BlockPartVersionStructure
+from netex.models.block_parts_rel_structure import BlockPartsRelStructure
+from netex.models.block_ref import BlockRef
+from netex.models.block_ref_structure import BlockRefStructure
+from netex.models.block_version_structure import BlockVersionStructure
+from netex.models.blocks_in_frame_rel_structure import BlocksInFrameRelStructure
+from netex.models.boarding_permission import BoardingPermission
+from netex.models.boarding_permission_enumeration import BoardingPermissionEnumeration
+from netex.models.boarding_position import BoardingPosition
+from netex.models.boarding_position_ref import BoardingPositionRef
+from netex.models.boarding_position_ref_structure import BoardingPositionRefStructure
+from netex.models.boarding_position_refs_rel_structure import BoardingPositionRefsRelStructure
+from netex.models.boarding_position_type_enumeration import BoardingPositionTypeEnumeration
+from netex.models.boarding_position_version_structure import BoardingPositionVersionStructure
+from netex.models.boarding_positions_rel_structure import BoardingPositionsRelStructure
+from netex.models.booking_access_enumeration import BookingAccessEnumeration
+from netex.models.booking_arrangements_structure import BookingArrangementsStructure
+from netex.models.booking_method_enumeration import BookingMethodEnumeration
+from netex.models.booking_process_enumeration import BookingProcessEnumeration
+from netex.models.booking_process_facility import BookingProcessFacility
+from netex.models.booking_process_facility_list import BookingProcessFacilityList
+from netex.models.boolean_operator_enumeration import BooleanOperatorEnumeration
+from netex.models.border_point import BorderPoint
+from netex.models.border_point_ref import BorderPointRef
+from netex.models.border_point_ref_structure import BorderPointRefStructure
+from netex.models.border_point_value_structure import BorderPointValueStructure
+from netex.models.border_points_in_frame_rel_structure import BorderPointsInFrameRelStructure
+from netex.models.border_type_enumeration import BorderTypeEnumeration
+from netex.models.bounding_box_structure_1 import BoundingBoxStructure1
+from netex.models.bounding_box_structure_2 import BoundingBoxStructure2
+from netex.models.branding import Branding
+from netex.models.branding_ref import BrandingRef
+from netex.models.branding_ref_structure import BrandingRefStructure
+from netex.models.branding_version_structure import BrandingVersionStructure
+from netex.models.bus_submode import BusSubmode
+from netex.models.bus_submode_enumeration import BusSubmodeEnumeration
+from netex.models.call_1 import Call1
+from netex.models.call_2 import Call2
+from netex.models.call_versioned_child_structure import CallVersionedChildStructure
+from netex.models.call_z import CallZ
+from netex.models.calls_rel_structure import CallsRelStructure
+from netex.models.cancelling import Cancelling
+from netex.models.cancelling_ref import CancellingRef
+from netex.models.cancelling_ref_structure import CancellingRefStructure
+from netex.models.cancelling_version_structure import CancellingVersionStructure
+from netex.models.capabilities_request import CapabilitiesRequest
+from netex.models.capabilities_request_structure import CapabilitiesRequestStructure
+from netex.models.capabilities_response import CapabilitiesResponse
+from netex.models.capabilities_response_structure import CapabilitiesResponseStructure
+from netex.models.capability_general_interaction_structure import CapabilityGeneralInteractionStructure
+from netex.models.capability_not_supported_error import CapabilityNotSupportedError
+from netex.models.capability_not_supported_error_structure import CapabilityNotSupportedErrorStructure
+from netex.models.capability_request_policy_structure import CapabilityRequestPolicyStructure
+from netex.models.capability_subscription_policy_structure import CapabilitySubscriptionPolicyStructure
+from netex.models.capped_discount_right import CappedDiscountRight
+from netex.models.capped_discount_right_ref import CappedDiscountRightRef
+from netex.models.capped_discount_right_ref_structure import CappedDiscountRightRefStructure
+from netex.models.capped_discount_right_version_structure import CappedDiscountRightVersionStructure
+from netex.models.capping_period_enumeration import CappingPeriodEnumeration
+from netex.models.capping_period_start_constraint_type_enumeration import CappingPeriodStartConstraintTypeEnumeration
+from netex.models.capping_rule import CappingRule
+from netex.models.capping_rule_price import CappingRulePrice
+from netex.models.capping_rule_price_ref import CappingRulePriceRef
+from netex.models.capping_rule_price_ref_structure import CappingRulePriceRefStructure
+from netex.models.capping_rule_price_versioned_child_structure import CappingRulePriceVersionedChildStructure
+from netex.models.capping_rule_prices_rel_structure import CappingRulePricesRelStructure
+from netex.models.capping_rule_ref import CappingRuleRef
+from netex.models.capping_rule_ref_structure import CappingRuleRefStructure
+from netex.models.capping_rule_versioned_child_structure import CappingRuleVersionedChildStructure
+from netex.models.capping_rules_rel_structure import CappingRulesRelStructure
+from netex.models.car_service_facility import CarServiceFacility
+from netex.models.car_service_facility_enumeration import CarServiceFacilityEnumeration
+from netex.models.car_service_facility_list import CarServiceFacilityList
+from netex.models.catering_facility import CateringFacility
+from netex.models.catering_facility_enumeration import CateringFacilityEnumeration
+from netex.models.catering_facility_list import CateringFacilityList
+from netex.models.catering_rights_enumeration import CateringRightsEnumeration
+from netex.models.catering_service import CateringService
+from netex.models.catering_service_enumeration import CateringServiceEnumeration
+from netex.models.catering_service_ref import CateringServiceRef
+from netex.models.catering_service_ref_structure import CateringServiceRefStructure
+from netex.models.catering_service_version_structure import CateringServiceVersionStructure
+from netex.models.cell_1 import Cell1
+from netex.models.cell_price_structure import CellPriceStructure
+from netex.models.cell_ref_1 import CellRef1
+from netex.models.cell_ref_2 import CellRef2
+from netex.models.cell_ref_structure import CellRefStructure
+from netex.models.cell_refs_rel_structure import CellRefsRelStructure
+from netex.models.cell_versioned_child_structure import (
+    Cell2,
+    CellVersionedChildStructure,
+    FareStructureFactorVersionStructure,
+    FareTableInContext,
+    FareTable2,
+    FareTableVersionStructure,
+    ParkingChargeBand,
+    ParkingChargeBandVersionStructure,
+    ParkingPrice,
+    ParkingPriceVersionedChildStructure,
+    PriceGroup2,
+    PriceGroupVersionStructure,
+    PriceableObjectVersionStructure,
+    TimeStructureFactorVersionStructure,
+    CellsRelStructure,
+    FarePricesRelStructure,
+    FareTablesRelStructure,
+    PriceGroupsRelStructure,
+)
+from netex.models.charging_basis_enumeration import ChargingBasisEnumeration
+from netex.models.charging_moment import ChargingMoment
+from netex.models.charging_moment_enumeration import ChargingMomentEnumeration
+from netex.models.charging_moment_ref import ChargingMomentRef
+from netex.models.charging_moment_ref_structure import ChargingMomentRefStructure
+from netex.models.charging_moment_value_structure import ChargingMomentValueStructure
+from netex.models.charging_policy import ChargingPolicy
+from netex.models.charging_policy_ref import ChargingPolicyRef
+from netex.models.charging_policy_ref_structure import ChargingPolicyRefStructure
+from netex.models.charging_policy_version_structure import ChargingPolicyVersionStructure
+from netex.models.check_constraint import CheckConstraint
+from netex.models.check_constraint_delay import CheckConstraintDelay
+from netex.models.check_constraint_delay_ref import CheckConstraintDelayRef
+from netex.models.check_constraint_delay_ref_structure import CheckConstraintDelayRefStructure
+from netex.models.check_constraint_delay_version_structure import CheckConstraintDelayVersionStructure
+from netex.models.check_constraint_delays_in_frame_rel_structure import CheckConstraintDelaysInFrameRelStructure
+from netex.models.check_constraint_delays_rel_structure import CheckConstraintDelaysRelStructure
+from netex.models.check_constraint_in_frame_rel_structure import CheckConstraintInFrameRelStructure
+from netex.models.check_constraint_ref import CheckConstraintRef
+from netex.models.check_constraint_ref_structure import CheckConstraintRefStructure
+from netex.models.check_constraint_throughput import CheckConstraintThroughput
+from netex.models.check_constraint_throughput_ref import CheckConstraintThroughputRef
+from netex.models.check_constraint_throughput_ref_structure import CheckConstraintThroughputRefStructure
+from netex.models.check_constraint_throughput_version_structure import CheckConstraintThroughputVersionStructure
+from netex.models.check_constraint_throughputs_in_frame_rel_structure import CheckConstraintThroughputsInFrameRelStructure
+from netex.models.check_constraint_throughputs_rel_structure import CheckConstraintThroughputsRelStructure
+from netex.models.check_constraint_version_structure import CheckConstraintVersionStructure
+from netex.models.check_constraints_rel_structure import CheckConstraintsRelStructure
+from netex.models.check_direction_enumeration import CheckDirectionEnumeration
+from netex.models.check_process_type_enumeration import CheckProcessTypeEnumeration
+from netex.models.check_service_enumeration import CheckServiceEnumeration
+from netex.models.check_status_request import CheckStatusRequest
+from netex.models.check_status_request_structure import CheckStatusRequestStructure
+from netex.models.check_status_response import CheckStatusResponse
+from netex.models.check_status_response_body_structure import CheckStatusResponseBodyStructure
+from netex.models.check_status_response_structure import CheckStatusResponseStructure
+from netex.models.class_attribute_in_frame import ClassAttributeInFrame
+from netex.models.class_attribute_in_frame_structure import ClassAttributeInFrameStructure
+from netex.models.class_in_frame import ClassInFrame
+from netex.models.class_in_frame_ref import ClassInFrameRef
+from netex.models.class_in_frame_ref_structure import ClassInFrameRefStructure
+from netex.models.class_in_frame_refs_rel_structure import ClassInFrameRefsRelStructure
+from netex.models.class_in_frame_structure import ClassInFrameStructure
+from netex.models.class_of_use import ClassOfUse
+from netex.models.class_of_use_ref import ClassOfUseRef
+from netex.models.class_of_use_ref_structure import ClassOfUseRefStructure
+from netex.models.class_of_use_value_structure import ClassOfUseValueStructure
+from netex.models.class_ref import ClassRef
+from netex.models.class_ref_structure import ClassRefStructure
+from netex.models.class_ref_type_enumeration import ClassRefTypeEnumeration
+from netex.models.class_refs_rel_structure import ClassRefsRelStructure
+from netex.models.class_relationship_in_frame import ClassRelationshipInFrame
+from netex.models.class_relationship_in_frame_structure import ClassRelationshipInFrameStructure
+from netex.models.classes_in_repository_rel_structure import ClassesInRepositoryRelStructure
+from netex.models.classification_descriptor_version_structure import ClassificationDescriptorVersionStructure
+from netex.models.classification_descriptors_rel_structure import ClassificationDescriptorsRelStructure
+from netex.models.closed_time_range_structure import ClosedTimeRangeStructure
+from netex.models.closed_timestamp_range_structure import ClosedTimestampRangeStructure
+from netex.models.coach_submode import CoachSubmode
+from netex.models.coach_submode_enumeration import CoachSubmodeEnumeration
+from netex.models.code_list_type import CodeListType
+from netex.models.code_or_nil_reason_list_type import CodeOrNilReasonListType
+from netex.models.code_type import CodeType
+from netex.models.code_with_authority_type import CodeWithAuthorityType
+from netex.models.codespace import Codespace
+from netex.models.codespace_assignment import CodespaceAssignment
+from netex.models.codespace_assignment_ref import CodespaceAssignmentRef
+from netex.models.codespace_assignment_versioned_child_structure import CodespaceAssignmentVersionedChildStructure
+from netex.models.codespace_assignments_rel_structure import CodespaceAssignmentsRelStructure
+from netex.models.codespace_ref import CodespaceRef
+from netex.models.codespace_ref_structure import CodespaceRefStructure
+from netex.models.codespace_structure import CodespaceStructure
+from netex.models.codespaces_in_frame_rel_structure import CodespacesInFrameRelStructure
+from netex.models.codespaces_rel_structure import CodespacesRelStructure
+from netex.models.commercial_profile import CommercialProfile
+from netex.models.commercial_profile_eligibility import CommercialProfileEligibility
+from netex.models.commercial_profile_eligibility_ref import CommercialProfileEligibilityRef
+from netex.models.commercial_profile_eligibility_ref_structure import CommercialProfileEligibilityRefStructure
+from netex.models.commercial_profile_eligibility_versioned_child_structure import CommercialProfileEligibilityVersionedChildStructure
+from netex.models.commercial_profile_ref import CommercialProfileRef
+from netex.models.commercial_profile_ref_structure import CommercialProfileRefStructure
+from netex.models.commercial_profile_type_enumeration import CommercialProfileTypeEnumeration
+from netex.models.commercial_profile_version_structure import CommercialProfileVersionStructure
+from netex.models.common_cell_versioned_child_structure import CommonCellVersionedChildStructure
+from netex.models.common_frame import CommonFrame
+from netex.models.common_section_point_member import CommonSectionPointMember
+from netex.models.common_section_point_members_rel_structure import CommonSectionPointMembersRelStructure
+from netex.models.common_section_ref import CommonSectionRef
+from netex.models.common_section_ref_structure import CommonSectionRefStructure
+from netex.models.common_sections_in_frame_rel_structure import CommonSectionsInFrameRelStructure
+from netex.models.common_version_frame_structure import CommonVersionFrameStructure
+from netex.models.communication_service import CommunicationService
+from netex.models.communication_service_enumeration import CommunicationServiceEnumeration
+from netex.models.communication_service_ref import CommunicationServiceRef
+from netex.models.communication_service_ref_structure import CommunicationServiceRefStructure
+from netex.models.communication_service_version_structure import CommunicationServiceVersionStructure
+from netex.models.communications_transport_method_enumeration import CommunicationsTransportMethodEnumeration
+from netex.models.companion_profile import CompanionProfile
+from netex.models.companion_profile_ref import CompanionProfileRef
+from netex.models.companion_profile_ref_structure import CompanionProfileRefStructure
+from netex.models.companion_profile_version_structure import CompanionProfileVersionStructure
+from netex.models.companion_profiles_rel_structure import CompanionProfilesRelStructure
+from netex.models.companion_relationship_enumeration import CompanionRelationshipEnumeration
+from netex.models.compass_bearing16_enumeration import CompassBearing16Enumeration
+from netex.models.compass_bearing8_enumeration import CompassBearing8Enumeration
+from netex.models.complaints_service import ComplaintsService
+from netex.models.complaints_service_ref import ComplaintsServiceRef
+from netex.models.complaints_service_ref_structure import ComplaintsServiceRefStructure
+from netex.models.complaints_service_version_structure import ComplaintsServiceVersionStructure
+from netex.models.complex_feature import ComplexFeature
+from netex.models.complex_feature_member_versioned_child_structure import ComplexFeatureMemberVersionedChildStructure
+from netex.models.complex_feature_members_rel_structure import ComplexFeatureMembersRelStructure
+from netex.models.complex_feature_projection import ComplexFeatureProjection
+from netex.models.complex_feature_projection_ref import ComplexFeatureProjectionRef
+from netex.models.complex_feature_projection_ref_structure import ComplexFeatureProjectionRefStructure
+from netex.models.complex_feature_projection_version_structure import ComplexFeatureProjectionVersionStructure
+from netex.models.complex_feature_ref import ComplexFeatureRef
+from netex.models.complex_feature_ref_structure import ComplexFeatureRefStructure
+from netex.models.complex_feature_refs_rel_structure import ComplexFeatureRefsRelStructure
+from netex.models.complex_feature_version_structure import ComplexFeatureVersionStructure
+from netex.models.composite_frame_ref import CompositeFrameRef
+from netex.models.composite_frame_ref_structure import CompositeFrameRefStructure
+from netex.models.composite_prices_rel_structure import CompositePricesRelStructure
+from netex.models.compound_block import CompoundBlock
+from netex.models.compound_block_ref import CompoundBlockRef
+from netex.models.compound_block_ref_structure import CompoundBlockRefStructure
+from netex.models.compound_block_structure import CompoundBlockStructure
+from netex.models.compound_train import CompoundTrain
+from netex.models.compound_train_ref import CompoundTrainRef
+from netex.models.compound_train_ref_structure import CompoundTrainRefStructure
+from netex.models.compound_train_version_structure import CompoundTrainVersionStructure
+from netex.models.compression_method_enumeration import CompressionMethodEnumeration
+from netex.models.condition_summary import ConditionSummary
+from netex.models.condition_summary_structure import ConditionSummaryStructure
+from netex.models.congestion_enumeration import CongestionEnumeration
+from netex.models.connecting_journey_derived_view_structure import ConnectingJourneyDerivedViewStructure
+from netex.models.connecting_journey_view import ConnectingJourneyView
+from netex.models.connection import Connection
+from netex.models.connection_certainty_enumeration import ConnectionCertaintyEnumeration
+from netex.models.connection_end import ConnectionEnd
+from netex.models.connection_end_structure import ConnectionEndStructure
+from netex.models.connection_ref import ConnectionRef
+from netex.models.connection_ref_structure import ConnectionRefStructure
+from netex.models.connection_version_structure import ConnectionVersionStructure
+from netex.models.consumer_request_endpoint_structure import ConsumerRequestEndpointStructure
+from netex.models.consumer_response_endpoint_structure import ConsumerResponseEndpointStructure
+from netex.models.contact_structure import ContactStructure
+from netex.models.contained_availability_conditions_rel_structure import ContainedAvailabilityConditionsRelStructure
+from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
+from netex.models.containment_enumeration import ContainmentEnumeration
+from netex.models.contextualised_request_structure import ContextualisedRequestStructure
+from netex.models.continuous_mode_enumeration import ContinuousModeEnumeration
+from netex.models.contract_refs_rel_structure import ContractRefsRelStructure
+from netex.models.control_centre import ControlCentre
+from netex.models.control_centre_ref import ControlCentreRef
+from netex.models.control_centre_ref_structure import ControlCentreRefStructure
+from netex.models.control_centre_version_structure import ControlCentreVersionStructure
+from netex.models.control_centres_in_frame_rel_structure import ControlCentresInFrameRelStructure
+from netex.models.control_centres_rel_structure import ControlCentresRelStructure
+from netex.models.control_parameter_assignment_ref_structure import ControlParameterAssignmentRefStructure
+from netex.models.controllable_element import ControllableElement
+from netex.models.controllable_element_in_sequence import ControllableElementInSequence
+from netex.models.controllable_element_in_sequence_ref import ControllableElementInSequenceRef
+from netex.models.controllable_element_in_sequence_ref_structure import ControllableElementInSequenceRefStructure
+from netex.models.controllable_element_in_sequence_versioned_child_structure import ControllableElementInSequenceVersionedChildStructure
+from netex.models.controllable_element_price import ControllableElementPrice
+from netex.models.controllable_element_price_ref import ControllableElementPriceRef
+from netex.models.controllable_element_price_ref_structure import ControllableElementPriceRefStructure
+from netex.models.controllable_element_price_versioned_child_structure import ControllableElementPriceVersionedChildStructure
+from netex.models.controllable_element_prices_rel_structure import ControllableElementPricesRelStructure
+from netex.models.controllable_element_ref import ControllableElementRef
+from netex.models.controllable_element_ref_structure import ControllableElementRefStructure
+from netex.models.controllable_element_version_structure import ControllableElementVersionStructure
+from netex.models.controllable_elements_in_frame_rel_structure import ControllableElementsInFrameRelStructure
+from netex.models.controllable_elements_in_sequence_rel_structure import ControllableElementsInSequenceRelStructure
+from netex.models.controllable_elements_rel_structure import ControllableElementsRelStructure
+from netex.models.coordinates_type import CoordinatesType
+from netex.models.couchette_facility import CouchetteFacility
+from netex.models.couchette_facility_enumeration import CouchetteFacilityEnumeration
+from netex.models.couchette_facility_list import CouchetteFacilityList
+from netex.models.countries_in_frame_rel_structure import CountriesInFrameRelStructure
+from netex.models.country import Country
+from netex.models.country_ref import CountryRef
+from netex.models.country_ref_structure import CountryRefStructure
+from netex.models.country_refs_rel_structure import CountryRefsRelStructure
+from netex.models.country_version_structure import CountryVersionStructure
+from netex.models.coupled_journey import CoupledJourney
+from netex.models.coupled_journey_ref import CoupledJourneyRef
+from netex.models.coupled_journey_ref_structure import CoupledJourneyRefStructure
+from netex.models.coupled_journey_version_structure import CoupledJourneyVersionStructure
+from netex.models.coupled_journeys_in_frame_rel_structure import CoupledJourneysInFrameRelStructure
+from netex.models.coupled_journeys_rel_structure import CoupledJourneysRelStructure
+from netex.models.course_of_journeys import CourseOfJourneys
+from netex.models.course_of_journeys_ref import CourseOfJourneysRef
+from netex.models.course_of_journeys_ref_structure import CourseOfJourneysRefStructure
+from netex.models.course_of_journeys_version_structure import CourseOfJourneysVersionStructure
+from netex.models.courses_of_journeys_in_frame_rel_structure import CoursesOfJourneysInFrameRelStructure
+from netex.models.courses_of_journeys_rel_structure import CoursesOfJourneysRelStructure
+from netex.models.covered_enumeration import CoveredEnumeration
+from netex.models.crew_base import CrewBase
+from netex.models.crew_base_ref import CrewBaseRef
+from netex.models.crew_base_ref_structure import CrewBaseRefStructure
+from netex.models.crew_base_refs_rel_structure import CrewBaseRefsRelStructure
+from netex.models.crew_base_version_structure import CrewBaseVersionStructure
+from netex.models.crew_bases_in_frame_rel_structure import CrewBasesInFrameRelStructure
+from netex.models.crossing_equipment import CrossingEquipment
+from netex.models.crossing_equipment_ref import CrossingEquipmentRef
+from netex.models.crossing_equipment_ref_structure import CrossingEquipmentRefStructure
+from netex.models.crossing_equipment_version_structure import CrossingEquipmentVersionStructure
+from netex.models.crossing_type_enumeration import CrossingTypeEnumeration
+from netex.models.crowding_enumeration import CrowdingEnumeration
+from netex.models.curve_array_property_type import CurveArrayPropertyType
+from netex.models.curve_property import CurveProperty
+from netex.models.curve_property_type import CurvePropertyType
+from netex.models.customer import Customer
+from netex.models.customer_account import CustomerAccount
+from netex.models.customer_account_ref import CustomerAccountRef
+from netex.models.customer_account_ref_structure import CustomerAccountRefStructure
+from netex.models.customer_account_refs_rel_structure import CustomerAccountRefsRelStructure
+from netex.models.customer_account_security_listing import CustomerAccountSecurityListing
+from netex.models.customer_account_security_listing_ref import CustomerAccountSecurityListingRef
+from netex.models.customer_account_security_listing_ref_structure import CustomerAccountSecurityListingRefStructure
+from netex.models.customer_account_security_listing_refs_rel_structure import CustomerAccountSecurityListingRefsRelStructure
+from netex.models.customer_account_security_listing_versioned_child_structure import CustomerAccountSecurityListingVersionedChildStructure
+from netex.models.customer_account_status import CustomerAccountStatus
+from netex.models.customer_account_status_ref import CustomerAccountStatusRef
+from netex.models.customer_account_status_ref_structure import CustomerAccountStatusRefStructure
+from netex.models.customer_account_status_refs_rel_structure import CustomerAccountStatusRefsRelStructure
+from netex.models.customer_account_status_version_structure import CustomerAccountStatusVersionStructure
+from netex.models.customer_account_version_structure import CustomerAccountVersionStructure
+from netex.models.customer_accounts_in_frame_rel_structure import CustomerAccountsInFrameRelStructure
+from netex.models.customer_accounts_rel_structure import CustomerAccountsRelStructure
+from netex.models.customer_eligibilities_rel_structure import CustomerEligibilitiesRelStructure
+from netex.models.customer_eligibility_1 import CustomerEligibility1
+from netex.models.customer_eligibility_2 import CustomerEligibility2
+from netex.models.customer_eligibility_ref import CustomerEligibilityRef
+from netex.models.customer_eligibility_ref_structure import CustomerEligibilityRefStructure
+from netex.models.customer_eligibility_refs_rel_structure import CustomerEligibilityRefsRelStructure
+from netex.models.customer_eligibility_versioned_child_structure import CustomerEligibilityVersionedChildStructure
+from netex.models.customer_purchase_package import CustomerPurchasePackage
+from netex.models.customer_purchase_package_element import CustomerPurchasePackageElement
+from netex.models.customer_purchase_package_element_access import CustomerPurchasePackageElementAccess
+from netex.models.customer_purchase_package_element_access_ref_structure import CustomerPurchasePackageElementAccessRefStructure
+from netex.models.customer_purchase_package_element_access_versioned_child_structure import CustomerPurchasePackageElementAccessVersionedChildStructure
+from netex.models.customer_purchase_package_element_accesses_rel_structure import CustomerPurchasePackageElementAccessesRelStructure
+from netex.models.customer_purchase_package_element_ref import CustomerPurchasePackageElementRef
+from netex.models.customer_purchase_package_element_ref_structure import CustomerPurchasePackageElementRefStructure
+from netex.models.customer_purchase_package_element_version_structure import CustomerPurchasePackageElementVersionStructure
+from netex.models.customer_purchase_package_elements_rel_structure import CustomerPurchasePackageElementsRelStructure
+from netex.models.customer_purchase_package_price import CustomerPurchasePackagePrice
+from netex.models.customer_purchase_package_price_ref import CustomerPurchasePackagePriceRef
+from netex.models.customer_purchase_package_price_ref_structure import CustomerPurchasePackagePriceRefStructure
+from netex.models.customer_purchase_package_price_versioned_child_structure import CustomerPurchasePackagePriceVersionedChildStructure
+from netex.models.customer_purchase_package_prices_rel_structure import CustomerPurchasePackagePricesRelStructure
+from netex.models.customer_purchase_package_ref import CustomerPurchasePackageRef
+from netex.models.customer_purchase_package_ref_structure import CustomerPurchasePackageRefStructure
+from netex.models.customer_purchase_package_refs_rel_structure import CustomerPurchasePackageRefsRelStructure
+from netex.models.customer_purchase_package_status_enumeration import CustomerPurchasePackageStatusEnumeration
+from netex.models.customer_purchase_package_version_structure import CustomerPurchasePackageVersionStructure
+from netex.models.customer_purchase_packages_in_frame_rel_structure import CustomerPurchasePackagesInFrameRelStructure
+from netex.models.customer_purchase_packages_rel_structure import CustomerPurchasePackagesRelStructure
+from netex.models.customer_purchase_parameter_assignment import CustomerPurchaseParameterAssignment
+from netex.models.customer_purchase_parameter_assignment_ref_structure import CustomerPurchaseParameterAssignmentRefStructure
+from netex.models.customer_purchase_parameter_assignment_version_structure import CustomerPurchaseParameterAssignmentVersionStructure
+from netex.models.customer_purchase_parameter_assignments_rel_structure import CustomerPurchaseParameterAssignmentsRelStructure
+from netex.models.customer_ref import CustomerRef
+from netex.models.customer_ref_structure import CustomerRefStructure
+from netex.models.customer_refs_rel_structure import CustomerRefsRelStructure
+from netex.models.customer_security_listing import CustomerSecurityListing
+from netex.models.customer_security_listing_ref import CustomerSecurityListingRef
+from netex.models.customer_security_listing_ref_structure import CustomerSecurityListingRefStructure
+from netex.models.customer_security_listing_refs_rel_structure import CustomerSecurityListingRefsRelStructure
+from netex.models.customer_security_listing_versioned_child_structure import CustomerSecurityListingVersionedChildStructure
+from netex.models.customer_service import CustomerService
+from netex.models.customer_service_ref import CustomerServiceRef
+from netex.models.customer_service_ref_structure import CustomerServiceRefStructure
+from netex.models.customer_service_version_structure import CustomerServiceVersionStructure
+from netex.models.customer_version_structure import CustomerVersionStructure
+from netex.models.customers_in_frame_rel_structure import CustomersInFrameRelStructure
+from netex.models.customers_rel_structure import CustomersRelStructure
+from netex.models.cycle_storage_enumeration import CycleStorageEnumeration
+from netex.models.cycle_storage_equipment import CycleStorageEquipment
+from netex.models.cycle_storage_equipment_ref import CycleStorageEquipmentRef
+from netex.models.cycle_storage_equipment_ref_structure import CycleStorageEquipmentRefStructure
+from netex.models.cycle_storage_equipment_version_structure import CycleStorageEquipmentVersionStructure
+from netex.models.cycles_on_service_enumeration import CyclesOnServiceEnumeration
+from netex.models.data_managed_object import DataManagedObject
+from netex.models.data_managed_object_view import DataManagedObjectView
+from netex.models.data_managed_object_view_structure import DataManagedObjectViewStructure
+from netex.models.data_name_spaces_structure import DataNameSpacesStructure
+from netex.models.data_object_capabilities_request import DataObjectCapabilitiesRequest
+from netex.models.data_object_capabilities_response import DataObjectCapabilitiesResponse
+from netex.models.data_object_capabilities_response_structure import DataObjectCapabilitiesResponseStructure
+from netex.models.data_object_capability_request_policy_structure import DataObjectCapabilityRequestPolicyStructure
+from netex.models.data_object_delivery import DataObjectDelivery
+from netex.models.data_object_delivery_structure import DataObjectDeliveryStructure
+from netex.models.data_object_permissions import DataObjectPermissions
+from netex.models.data_object_request import DataObjectRequest
+from netex.models.data_object_request_structure import DataObjectRequestStructure
+from netex.models.data_object_service_capabilities import DataObjectServiceCapabilities
+from netex.models.data_object_service_capabilities_structure import DataObjectServiceCapabilitiesStructure
+from netex.models.data_object_subscription_request import DataObjectSubscriptionRequest
+from netex.models.data_object_subscription_structure import DataObjectSubscriptionStructure
+from netex.models.data_objects_rel_structure import DataObjectsRelStructure
+from netex.models.data_ready_acknowledgement import DataReadyAcknowledgement
+from netex.models.data_ready_notification import DataReadyNotification
+from netex.models.data_ready_request_structure import DataReadyRequestStructure
+from netex.models.data_ready_response_structure import DataReadyResponseStructure
+from netex.models.data_received_acknowledgement import DataReceivedAcknowledgement
+from netex.models.data_received_response_structure import DataReceivedResponseStructure
+from netex.models.data_role_type_enumeration import DataRoleTypeEnumeration
+from netex.models.data_source import DataSource
+from netex.models.data_source_ref import DataSourceRef
+from netex.models.data_source_ref_structure import DataSourceRefStructure
+from netex.models.data_source_version_structure import DataSourceVersionStructure
+from netex.models.data_sources_in_frame_rel_structure import DataSourcesInFrameRelStructure
+from netex.models.data_sources_rel_structure import DataSourcesRelStructure
+from netex.models.data_supply_request import DataSupplyRequest
+from netex.models.data_supply_request_body_structure import DataSupplyRequestBodyStructure
+from netex.models.data_supply_request_structure import DataSupplyRequestStructure
+from netex.models.dated_call import DatedCall
+from netex.models.dated_call_versioned_child_structure import DatedCallVersionedChildStructure
+from netex.models.dated_call_z import DatedCallZ
+from netex.models.dated_calls_rel_structure import DatedCallsRelStructure
+from netex.models.dated_passing_time import DatedPassingTime
+from netex.models.dated_passing_time_versioned_child_structure import DatedPassingTimeVersionedChildStructure
+from netex.models.dated_service_journey import DatedServiceJourney
+from netex.models.dated_service_journey_version_structure import DatedServiceJourneyVersionStructure
+from netex.models.dated_special_service import DatedSpecialService
+from netex.models.dated_special_service_ref import DatedSpecialServiceRef
+from netex.models.dated_special_service_ref_structure import DatedSpecialServiceRefStructure
+from netex.models.dated_special_service_refs_rel_structure import DatedSpecialServiceRefsRelStructure
+from netex.models.dated_special_service_version_structure import DatedSpecialServiceVersionStructure
+from netex.models.dated_vehicle_journey import DatedVehicleJourney
+from netex.models.dated_vehicle_journey_ref import DatedVehicleJourneyRef
+from netex.models.dated_vehicle_journey_ref_structure import DatedVehicleJourneyRefStructure
+from netex.models.dated_vehicle_journey_version_structure import DatedVehicleJourneyVersionStructure
+from netex.models.day_event_enumeration import DayEventEnumeration
+from netex.models.day_of_week_enumeration import DayOfWeekEnumeration
+from netex.models.day_type_assignment import DayTypeAssignment
+from netex.models.day_type_assignment_ref import DayTypeAssignmentRef
+from netex.models.day_type_assignment_ref_structure import DayTypeAssignmentRefStructure
+from netex.models.day_type_assignment_version_structure import DayTypeAssignmentVersionStructure
+from netex.models.day_type_assignments_in_frame_rel_structure import DayTypeAssignmentsInFrameRelStructure
+from netex.models.day_type_assignments_rel_structure import DayTypeAssignmentsRelStructure
+from netex.models.day_type_ref import DayTypeRef
+from netex.models.day_type_ref_structure import DayTypeRefStructure
+from netex.models.day_type_refs_rel_structure import DayTypeRefsRelStructure
+from netex.models.day_types_in_frame_rel_structure import DayTypesInFrameRelStructure
+from netex.models.dead_run import DeadRun
+from netex.models.dead_run_call_part_structure import DeadRunCallPartStructure
+from netex.models.dead_run_call_versioned_child_structure import DeadRunCallVersionedChildStructure
+from netex.models.dead_run_calls_rel_structure import DeadRunCallsRelStructure
+from netex.models.dead_run_endpoint_structure import DeadRunEndpointStructure
+from netex.models.dead_run_journey_pattern import DeadRunJourneyPattern
+from netex.models.dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
+from netex.models.dead_run_journey_pattern_ref_structure import DeadRunJourneyPatternRefStructure
+from netex.models.dead_run_journey_pattern_version_structure import DeadRunJourneyPatternVersionStructure
+from netex.models.dead_run_ref import DeadRunRef
+from netex.models.dead_run_ref_structure import DeadRunRefStructure
+from netex.models.dead_run_type_enumeration import DeadRunTypeEnumeration
+from netex.models.dead_run_version_structure import DeadRunVersionStructure
+from netex.models.dead_run_with_calls_version_structure import DeadRunWithCallsVersionStructure
+from netex.models.default_code_space import DefaultCodeSpace
+from netex.models.default_connection import DefaultConnection
+from netex.models.default_connection_end_structure import DefaultConnectionEndStructure
+from netex.models.default_connection_ref import DefaultConnectionRef
+from netex.models.default_connection_ref_structure import DefaultConnectionRefStructure
+from netex.models.default_connection_version_structure import DefaultConnectionVersionStructure
+from netex.models.default_dead_run_run_time import DefaultDeadRunRunTime
+from netex.models.default_dead_run_run_time_ref import DefaultDeadRunRunTimeRef
+from netex.models.default_dead_run_run_time_ref_structure import DefaultDeadRunRunTimeRefStructure
+from netex.models.default_dead_run_run_time_versioned_child_structure import DefaultDeadRunRunTimeVersionedChildStructure
+from netex.models.default_dead_run_run_times_rel_structure import DefaultDeadRunRunTimesRelStructure
+from netex.models.default_interchange import DefaultInterchange
+from netex.models.default_interchange_ref import DefaultInterchangeRef
+from netex.models.default_interchange_ref_structure import DefaultInterchangeRefStructure
+from netex.models.default_interchange_version_structure import DefaultInterchangeVersionStructure
+from netex.models.default_interchangse_in_frame_rel_structure import DefaultInterchangseInFrameRelStructure
+from netex.models.default_service_journey_run_time import DefaultServiceJourneyRunTime
+from netex.models.default_service_journey_run_time_versioned_child_structure import DefaultServiceJourneyRunTimeVersionedChildStructure
+from netex.models.default_service_journey_run_times_rel_structure import DefaultServiceJourneyRunTimesRelStructure
+from netex.models.default_service_journey_time_ref import DefaultServiceJourneyTimeRef
+from netex.models.default_service_journey_time_ref_structure import DefaultServiceJourneyTimeRefStructure
+from netex.models.deliveries_structure import DeliveriesStructure
+from netex.models.delivery_method_enumeration import DeliveryMethodEnumeration
+from netex.models.delivery_variant import DeliveryVariant
+from netex.models.delivery_variant_ref import DeliveryVariantRef
+from netex.models.delivery_variant_ref_structure import DeliveryVariantRefStructure
+from netex.models.delivery_variant_type_enumeration import DeliveryVariantTypeEnumeration
+from netex.models.delivery_variant_version_structure import DeliveryVariantVersionStructure
+from netex.models.delivery_variants_rel_structure import DeliveryVariantsRelStructure
+from netex.models.delta import Delta
+from netex.models.delta_structure import DeltaStructure
+from netex.models.delta_value import DeltaValue
+from netex.models.delta_value_structure import DeltaValueStructure
+from netex.models.delta_values_rel_structure import DeltaValuesRelStructure
+from netex.models.deltas_rel_structure import DeltasRelStructure
+from netex.models.department import Department
+from netex.models.department_ref import DepartmentRef
+from netex.models.department_ref_structure import DepartmentRefStructure
+from netex.models.department_refs_rel_structure import DepartmentRefsRelStructure
+from netex.models.department_version_structure import DepartmentVersionStructure
+from netex.models.departments_in_frame_rel_structure import DepartmentsInFrameRelStructure
+from netex.models.departments_rel_structure import DepartmentsRelStructure
+from netex.models.departure_structure import DepartureStructure
+from netex.models.derived_view import DerivedView
+from netex.models.derived_view_structure import DerivedViewStructure
+from netex.models.description_reference import DescriptionReference
+from netex.models.destination_display import DestinationDisplay
+from netex.models.destination_display_context_enumeration import DestinationDisplayContextEnumeration
+from netex.models.destination_display_derived_view_structure import DestinationDisplayDerivedViewStructure
+from netex.models.destination_display_ref import DestinationDisplayRef
+from netex.models.destination_display_ref_structure import DestinationDisplayRefStructure
+from netex.models.destination_display_refs_rel_structure import DestinationDisplayRefsRelStructure
+from netex.models.destination_display_variant import DestinationDisplayVariant
+from netex.models.destination_display_variant_ref import DestinationDisplayVariantRef
+from netex.models.destination_display_variant_ref_structure import DestinationDisplayVariantRefStructure
+from netex.models.destination_display_variant_refs_rel_structure import DestinationDisplayVariantRefsRelStructure
+from netex.models.destination_display_variant_version_structure import DestinationDisplayVariantVersionStructure
+from netex.models.destination_display_variants_rel_structure import DestinationDisplayVariantsRelStructure
+from netex.models.destination_display_version_structure import DestinationDisplayVersionStructure
+from netex.models.destination_display_view import DestinationDisplayView
+from netex.models.destination_display_views_rel_structure import DestinationDisplayViewsRelStructure
+from netex.models.destination_displays_in_frame_rel_structure import DestinationDisplaysInFrameRelStructure
+from netex.models.device_parameter_assignment_ref_structure import DeviceParameterAssignmentRefStructure
+from netex.models.direct_position_list_type import DirectPositionListType
+from netex.models.direct_position_type import DirectPositionType
+from netex.models.direction import Direction
+from netex.models.direction_derived_view_structure import DirectionDerivedViewStructure
+from netex.models.direction_of_use_enumeration import DirectionOfUseEnumeration
+from netex.models.direction_ref import DirectionRef
+from netex.models.direction_ref_structure import DirectionRefStructure
+from netex.models.direction_type import DirectionType
+from netex.models.direction_type_enumeration import DirectionTypeEnumeration
+from netex.models.direction_value_structure import DirectionValueStructure
+from netex.models.direction_view import DirectionView
+from netex.models.directions_in_frame_rel_structure import DirectionsInFrameRelStructure
+from netex.models.discount_basis_enumeration import DiscountBasisEnumeration
+from netex.models.discount_right_refs_rel_structure import DiscountRightRefsRelStructure
+from netex.models.discounting_rule import DiscountingRule
+from netex.models.discounting_rule_ref import DiscountingRuleRef
+from netex.models.discounting_rule_ref_structure import DiscountingRuleRefStructure
+from netex.models.discounting_rule_versioned_structure import DiscountingRuleVersionedStructure
+from netex.models.display_assignment import DisplayAssignment
+from netex.models.display_assignment_ref import DisplayAssignmentRef
+from netex.models.display_assignment_ref_structure import DisplayAssignmentRefStructure
+from netex.models.display_assignment_type_enumeration import DisplayAssignmentTypeEnumeration
+from netex.models.display_assignment_version_structure import DisplayAssignmentVersionStructure
+from netex.models.display_assignments_in_frame_rel_structure import DisplayAssignmentsInFrameRelStructure
+from netex.models.display_assignments_rel_structure import DisplayAssignmentsRelStructure
+from netex.models.distance_matrix_element import DistanceMatrixElement
+from netex.models.distance_matrix_element_derived_view_structure import DistanceMatrixElementDerivedViewStructure
+from netex.models.distance_matrix_element_inverse_ref import DistanceMatrixElementInverseRef
+from netex.models.distance_matrix_element_price import DistanceMatrixElementPrice
+from netex.models.distance_matrix_element_price_ref import DistanceMatrixElementPriceRef
+from netex.models.distance_matrix_element_price_ref_structure import DistanceMatrixElementPriceRefStructure
+from netex.models.distance_matrix_element_price_versioned_child_structure import DistanceMatrixElementPriceVersionedChildStructure
+from netex.models.distance_matrix_element_prices_rel_structure import DistanceMatrixElementPricesRelStructure
+from netex.models.distance_matrix_element_ref import DistanceMatrixElementRef
+from netex.models.distance_matrix_element_ref_by_value import DistanceMatrixElementRefByValue
+from netex.models.distance_matrix_element_ref_by_value_structure import DistanceMatrixElementRefByValueStructure
+from netex.models.distance_matrix_element_ref_structure import DistanceMatrixElementRefStructure
+from netex.models.distance_matrix_element_refs_rel_structure import DistanceMatrixElementRefsRelStructure
+from netex.models.distance_matrix_element_version_structure import DistanceMatrixElementVersionStructure
+from netex.models.distance_matrix_element_view import DistanceMatrixElementView
+from netex.models.distance_matrix_elements_in_frame_rel_structure import DistanceMatrixElementsInFrameRelStructure
+from netex.models.distance_matrix_elements_rel_structure import DistanceMatrixElementsRelStructure
+from netex.models.distribution_assignment import DistributionAssignment
+from netex.models.distribution_assignment_ref import DistributionAssignmentRef
+from netex.models.distribution_assignment_ref_structure import DistributionAssignmentRefStructure
+from netex.models.distribution_assignment_version_structure import DistributionAssignmentVersionStructure
+from netex.models.distribution_assignments_in_frame_rel_structure import DistributionAssignmentsInFrameRelStructure
+from netex.models.distribution_assignments_rel_structure import DistributionAssignmentsRelStructure
+from netex.models.distribution_channel import DistributionChannel
+from netex.models.distribution_channel_ref import DistributionChannelRef
+from netex.models.distribution_channel_ref_structure_element import DistributionChannelRefStructureElement
+from netex.models.distribution_channel_refs_rel_structure import DistributionChannelRefsRelStructure
+from netex.models.distribution_channel_type_enumeration import DistributionChannelTypeEnumeration
+from netex.models.distribution_channel_version_structure import DistributionChannelVersionStructure
+from netex.models.distribution_channels_in_frame_rel_structure import DistributionChannelsInFrameRelStructure
+from netex.models.distribution_rights_enumeration import DistributionRightsEnumeration
+from netex.models.driver_ref import DriverRef
+from netex.models.driver_ref_structure import DriverRefStructure
+from netex.models.driver_schedule_frame import DriverScheduleFrame
+from netex.models.driver_schedule_frame_ref import DriverScheduleFrameRef
+from netex.models.driver_schedule_frame_ref_structure import DriverScheduleFrameRefStructure
+from netex.models.driver_schedule_version_frame_structure import DriverScheduleVersionFrameStructure
+from netex.models.driver_trip import DriverTrip
+from netex.models.driver_trip_ref import DriverTripRef
+from netex.models.driver_trip_ref_structure import DriverTripRefStructure
+from netex.models.driver_trip_time import DriverTripTime
+from netex.models.driver_trip_time_ref import DriverTripTimeRef
+from netex.models.driver_trip_time_ref_structure import DriverTripTimeRefStructure
+from netex.models.driver_trip_time_version_structure import DriverTripTimeVersionStructure
+from netex.models.driver_trip_times_rel_structure import DriverTripTimesRelStructure
+from netex.models.driver_trip_version_structure import DriverTripVersionStructure
+from netex.models.driver_trips_in_frame_rel_structure import DriverTripsInFrameRelStructure
+from netex.models.dummy_place_refs_rel_structure import DummyPlaceRefsRelStructure
+from netex.models.duties_in_frame_rel_structure import DutiesInFrameRelStructure
+from netex.models.duty import Duty
+from netex.models.duty_part import DutyPart
+from netex.models.duty_part_ref import DutyPartRef
+from netex.models.duty_part_ref_structure import DutyPartRefStructure
+from netex.models.duty_part_version_structure import DutyPartVersionStructure
+from netex.models.duty_parts_in_frame_rel_structure import DutyPartsInFrameRelStructure
+from netex.models.duty_parts_rel_structure import DutyPartsRelStructure
+from netex.models.duty_ref import DutyRef
+from netex.models.duty_ref_structure import DutyRefStructure
+from netex.models.duty_version_structure import DutyVersionStructure
+from netex.models.dynamic_advertisement_enumeration import DynamicAdvertisementEnumeration
+from netex.models.dynamic_stop_assignment import DynamicStopAssignment
+from netex.models.dynamic_stop_assignment_ref import DynamicStopAssignmentRef
+from netex.models.dynamic_stop_assignment_ref_structure import DynamicStopAssignmentRefStructure
+from netex.models.dynamic_stop_assignment_version_structure import DynamicStopAssignmentVersionStructure
+from netex.models.effective_from_enumeration import EffectiveFromEnumeration
+from netex.models.eligibility_change_policy import EligibilityChangePolicy
+from netex.models.eligibility_change_policy_ref import EligibilityChangePolicyRef
+from netex.models.eligibility_change_policy_ref_structure import EligibilityChangePolicyRefStructure
+from netex.models.eligibility_change_policy_version_structure import EligibilityChangePolicyVersionStructure
+from netex.models.emergency_service import EmergencyService
+from netex.models.emergency_service_enumeration import EmergencyServiceEnumeration
+from netex.models.emergency_service_list import EmergencyServiceList
+from netex.models.empty_type_1 import EmptyType1
+from netex.models.empty_type_2 import EmptyType2
+from netex.models.encumbrance_enumeration import EncumbranceEnumeration
+from netex.models.endpoint_denied_access_error import EndpointDeniedAccessError
+from netex.models.endpoint_denied_access_structure import EndpointDeniedAccessStructure
+from netex.models.endpoint_not_available_access_error import EndpointNotAvailableAccessError
+from netex.models.endpoint_not_available_access_structure import EndpointNotAvailableAccessStructure
+from netex.models.entities_in_version_rel_structure import (
+    CompositeFrame,
+    CompositeVersionFrameStructure,
+    EntityEntity,
+    EntityEntityStructure,
+    GeneralFrame,
+    GeneralVersionFrameStructure,
+    EntitiesInVersionRelStructure,
+    FramesRelStructure,
+    GeneralFrameMembersRelStructure,
+)
+from netex.models.entitlement_constraint_structure import EntitlementConstraintStructure
+from netex.models.entitlement_given import EntitlementGiven
+from netex.models.entitlement_given_ref import EntitlementGivenRef
+from netex.models.entitlement_given_ref_structure import EntitlementGivenRefStructure
+from netex.models.entitlement_given_refs_rel_structure import EntitlementGivenRefsRelStructure
+from netex.models.entitlement_given_version_structure import EntitlementGivenVersionStructure
+from netex.models.entitlement_product import EntitlementProduct
+from netex.models.entitlement_product_ref import EntitlementProductRef
+from netex.models.entitlement_product_ref_structure import EntitlementProductRefStructure
+from netex.models.entitlement_product_version_structure import EntitlementProductVersionStructure
+from netex.models.entitlement_required import EntitlementRequired
+from netex.models.entitlement_required_ref import EntitlementRequiredRef
+from netex.models.entitlement_required_ref_structure import EntitlementRequiredRefStructure
+from netex.models.entitlement_required_refs_rel_structure import EntitlementRequiredRefsRelStructure
+from netex.models.entitlement_required_version_structure import EntitlementRequiredVersionStructure
+from netex.models.entitlement_type_enumeration import EntitlementTypeEnumeration
+from netex.models.entity import Entity
+from netex.models.entity_in_version import EntityInVersion
+from netex.models.entity_in_version_in_frame_ref_structure import EntityInVersionInFrameRefStructure
+from netex.models.entity_in_version_in_frame_rel_structure import EntityInVersionInFrameRelStructure
+from netex.models.entity_structure import EntityStructure
+from netex.models.entrance import Entrance
+from netex.models.entrance_attention_enumeration import EntranceAttentionEnumeration
+from netex.models.entrance_enumeration import EntranceEnumeration
+from netex.models.entrance_equipment import EntranceEquipment
+from netex.models.entrance_equipment_ref import EntranceEquipmentRef
+from netex.models.entrance_equipment_ref_structure import EntranceEquipmentRefStructure
+from netex.models.entrance_equipment_version_structure import EntranceEquipmentVersionStructure
+from netex.models.entrance_ref import EntranceRef
+from netex.models.entrance_ref_structure import EntranceRefStructure
+from netex.models.entrance_refs_rel_structure import EntranceRefsRelStructure
+from netex.models.entrance_type_enumeration import EntranceTypeEnumeration
+from netex.models.envelope import Envelope
+from netex.models.envelope_type import EnvelopeType
+from netex.models.equipment import Equipment
+from netex.models.equipment_place import EquipmentPlace
+from netex.models.equipment_place_ref import EquipmentPlaceRef
+from netex.models.equipment_place_ref_structure import EquipmentPlaceRefStructure
+from netex.models.equipment_place_version_structure import EquipmentPlaceVersionStructure
+from netex.models.equipment_places_rel_structure import EquipmentPlacesRelStructure
+from netex.models.equipment_position import EquipmentPosition
+from netex.models.equipment_position_ref import EquipmentPositionRef
+from netex.models.equipment_position_ref_structure import EquipmentPositionRefStructure
+from netex.models.equipment_position_structure import EquipmentPositionStructure
+from netex.models.equipment_positions_rel_structure import EquipmentPositionsRelStructure
+from netex.models.equipment_ref import EquipmentRef
+from netex.models.equipment_ref_structure import EquipmentRefStructure
+from netex.models.equipment_status_enumeration import EquipmentStatusEnumeration
+from netex.models.equipment_version_structure import EquipmentVersionStructure
+from netex.models.equipments_in_frame_rel_structure import EquipmentsInFrameRelStructure
+from netex.models.equipments_rel_structure import EquipmentsRelStructure
+from netex.models.error_code import ErrorCode
+from netex.models.error_code_structure import ErrorCodeStructure
+from netex.models.error_condition import ErrorCondition
+from netex.models.error_condition_element import ErrorConditionElement
+from netex.models.error_condition_element_structure import ErrorConditionElementStructure
+from netex.models.error_condition_structure import ErrorConditionStructure
+from netex.models.escalator_equipment import EscalatorEquipment
+from netex.models.escalator_equipment_ref import EscalatorEquipmentRef
+from netex.models.escalator_equipment_ref_structure import EscalatorEquipmentRefStructure
+from netex.models.escalator_equipment_version_structure import EscalatorEquipmentVersionStructure
+from netex.models.escalator_free_access import EscalatorFreeAccess
+from netex.models.estimated_passing_time import EstimatedPassingTime
+from netex.models.estimated_passing_time_ref import EstimatedPassingTimeRef
+from netex.models.estimated_passing_time_ref_structure import EstimatedPassingTimeRefStructure
+from netex.models.estimated_passing_time_versioned_child_structure import EstimatedPassingTimeVersionedChildStructure
+from netex.models.estimated_passing_time_view import EstimatedPassingTimeView
+from netex.models.estimated_passing_time_view_structure import EstimatedPassingTimeViewStructure
+from netex.models.estimated_passing_times_rel_structure import EstimatedPassingTimesRelStructure
+from netex.models.exchangable_to_enumeration import ExchangableToEnumeration
+from netex.models.exchanging import Exchanging
+from netex.models.exchanging_ref import ExchangingRef
+from netex.models.exchanging_ref_structure import ExchangingRefStructure
+from netex.models.exchanging_version_structure import ExchangingVersionStructure
+from netex.models.explicit_equipments_rel_structure import ExplicitEquipmentsRelStructure
+from netex.models.explicit_journey_refs_rel_structure import ExplicitJourneyRefsRelStructure
+from netex.models.explicit_local_services_rel_structure import ExplicitLocalServicesRelStructure
+from netex.models.explicit_place_equipments_rel_structure import ExplicitPlaceEquipmentsRelStructure
+from netex.models.extensions_1 import Extensions1
+from netex.models.extensions_2 import Extensions2
+from netex.models.extensions_structure_1 import ExtensionsStructure1
+from netex.models.extensions_structure_2 import ExtensionsStructure2
+from netex.models.exterior import Exterior
+from netex.models.external_object_ref_structure import ExternalObjectRefStructure
+from netex.models.facility_ref import FacilityRef
+from netex.models.facility_ref_structure import FacilityRefStructure
+from netex.models.facility_requirement import FacilityRequirement
+from netex.models.facility_requirement_ref import FacilityRequirementRef
+from netex.models.facility_requirement_ref_structure import FacilityRequirementRefStructure
+from netex.models.facility_requirement_version_structure import FacilityRequirementVersionStructure
+from netex.models.facility_requirements_rel_structure import FacilityRequirementsRelStructure
+from netex.models.facility_set import FacilitySet
+from netex.models.facility_set_ref import FacilitySetRef
+from netex.models.facility_set_ref_structure import FacilitySetRefStructure
+from netex.models.facility_set_version_structure import FacilitySetVersionStructure
+from netex.models.family_facility import FamilyFacility
+from netex.models.family_facility_enumeration import FamilyFacilityEnumeration
+from netex.models.family_facility_list import FamilyFacilityList
+from netex.models.fare_basis_enumeration import FareBasisEnumeration
+from netex.models.fare_class import FareClass
+from netex.models.fare_class_enumeration import FareClassEnumeration
+from netex.models.fare_classes import FareClasses
+from netex.models.fare_contract import FareContract
+from netex.models.fare_contract_entries_rel_structure import FareContractEntriesRelStructure
+from netex.models.fare_contract_entry_1 import FareContractEntry1
+from netex.models.fare_contract_entry_2 import FareContractEntry2
+from netex.models.fare_contract_entry_ref import FareContractEntryRef
+from netex.models.fare_contract_entry_ref_structure import FareContractEntryRefStructure
+from netex.models.fare_contract_entry_version_structure import FareContractEntryVersionStructure
+from netex.models.fare_contract_ref import FareContractRef
+from netex.models.fare_contract_ref_structure import FareContractRefStructure
+from netex.models.fare_contract_security_listing import FareContractSecurityListing
+from netex.models.fare_contract_security_listing_ref import FareContractSecurityListingRef
+from netex.models.fare_contract_security_listing_ref_structure import FareContractSecurityListingRefStructure
+from netex.models.fare_contract_security_listing_refs_rel_structure import FareContractSecurityListingRefsRelStructure
+from netex.models.fare_contract_security_listing_versioned_child_structure import FareContractSecurityListingVersionedChildStructure
+from netex.models.fare_contract_version_structure import FareContractVersionStructure
+from netex.models.fare_contracts_in_frame_rel_structure import FareContractsInFrameRelStructure
+from netex.models.fare_contracts_rel_structure import FareContractsRelStructure
+from netex.models.fare_day_type_ref import FareDayTypeRef
+from netex.models.fare_day_type_ref_structure import FareDayTypeRefStructure
+from netex.models.fare_demand_factor import FareDemandFactor
+from netex.models.fare_demand_factor_ref import FareDemandFactorRef
+from netex.models.fare_demand_factor_ref_structure import FareDemandFactorRefStructure
+from netex.models.fare_demand_factor_version_structure import FareDemandFactorVersionStructure
+from netex.models.fare_demand_factors_rel_structure import FareDemandFactorsRelStructure
+from netex.models.fare_demand_type_enumeration import FareDemandTypeEnumeration
+from netex.models.fare_element_in_sequence import FareElementInSequence
+from netex.models.fare_element_in_sequence_ref import FareElementInSequenceRef
+from netex.models.fare_element_in_sequence_ref_structure import FareElementInSequenceRefStructure
+from netex.models.fare_element_in_sequence_refs_rel_structure import FareElementInSequenceRefsRelStructure
+from netex.models.fare_element_in_sequence_versioned_child_structure import FareElementInSequenceVersionedChildStructure
+from netex.models.fare_frame import FareFrame
+from netex.models.fare_frame_ref import FareFrameRef
+from netex.models.fare_frame_ref_structure import FareFrameRefStructure
+from netex.models.fare_frame_version_frame_structure import FareFrameVersionFrameStructure
+from netex.models.fare_interval import FareInterval
+from netex.models.fare_interval_ref import FareIntervalRef
+from netex.models.fare_interval_ref_structure import FareIntervalRefStructure
+from netex.models.fare_interval_version_structure import FareIntervalVersionStructure
+from netex.models.fare_point_in_pattern import FarePointInPattern
+from netex.models.fare_point_in_pattern_ref import FarePointInPatternRef
+from netex.models.fare_point_in_pattern_ref_structure import FarePointInPatternRefStructure
+from netex.models.fare_point_in_pattern_versioned_child_structure import FarePointInPatternVersionedChildStructure
+from netex.models.fare_points_in_pattern_rel_structure import FarePointsInPatternRelStructure
+from netex.models.fare_price_1 import FarePrice1
+from netex.models.fare_price_2 import FarePrice2
+from netex.models.fare_price_ref import FarePriceRef
+from netex.models.fare_price_ref_structure import FarePriceRefStructure
+from netex.models.fare_price_versioned_child_structure import FarePriceVersionedChildStructure
+from netex.models.fare_prices_in_frame_rel_structure import FarePricesInFrameRelStructure
+from netex.models.fare_product_1 import FareProduct1
+from netex.models.fare_product_2 import FareProduct2
+from netex.models.fare_product_price import FareProductPrice
+from netex.models.fare_product_price_ref import FareProductPriceRef
+from netex.models.fare_product_price_ref_structure import FareProductPriceRefStructure
+from netex.models.fare_product_price_versioned_child_structure import FareProductPriceVersionedChildStructure
+from netex.models.fare_product_prices_rel_structure import FareProductPricesRelStructure
+from netex.models.fare_product_ref import FareProductRef
+from netex.models.fare_product_ref_structure import FareProductRefStructure
+from netex.models.fare_product_refs_rel_structure import FareProductRefsRelStructure
+from netex.models.fare_product_version_structure import FareProductVersionStructure
+from netex.models.fare_products_in_frame_rel_structure import FareProductsInFrameRelStructure
+from netex.models.fare_quota_factor import FareQuotaFactor
+from netex.models.fare_quota_factor_ref import FareQuotaFactorRef
+from netex.models.fare_quota_factor_ref_structure import FareQuotaFactorRefStructure
+from netex.models.fare_quota_factor_version_structure import FareQuotaFactorVersionStructure
+from netex.models.fare_quota_factors_rel_structure import FareQuotaFactorsRelStructure
+from netex.models.fare_request_ref import FareRequestRef
+from netex.models.fare_request_ref_structure import FareRequestRefStructure
+from netex.models.fare_scheduled_stop_point import FareScheduledStopPoint
+from netex.models.fare_scheduled_stop_point_ref import FareScheduledStopPointRef
+from netex.models.fare_scheduled_stop_point_ref_structure import FareScheduledStopPointRefStructure
+from netex.models.fare_scheduled_stop_point_refs_rel_structure import FareScheduledStopPointRefsRelStructure
+from netex.models.fare_scheduled_stop_point_version_structure import FareScheduledStopPointVersionStructure
+from netex.models.fare_scheduled_stop_points_in_frame_rel_structure import FareScheduledStopPointsInFrameRelStructure
+from netex.models.fare_section_ref import FareSectionRef
+from netex.models.fare_section_ref_structure import FareSectionRefStructure
+from netex.models.fare_sections_in_frame_rel_structure import FareSectionsInFrameRelStructure
+from netex.models.fare_sections_rel_structure import FareSectionsRelStructure
+from netex.models.fare_series_in_frame_rel_structure import FareSeriesInFrameRelStructure
+from netex.models.fare_structure_element import FareStructureElement
+from netex.models.fare_structure_element_in_sequence import FareStructureElementInSequence
+from netex.models.fare_structure_element_in_sequence_ref import FareStructureElementInSequenceRef
+from netex.models.fare_structure_element_in_sequence_ref_structure import FareStructureElementInSequenceRefStructure
+from netex.models.fare_structure_element_in_sequence_versioned_child_structure import FareStructureElementInSequenceVersionedChildStructure
+from netex.models.fare_structure_element_price import FareStructureElementPrice
+from netex.models.fare_structure_element_price_ref import FareStructureElementPriceRef
+from netex.models.fare_structure_element_price_ref_structure import FareStructureElementPriceRefStructure
+from netex.models.fare_structure_element_price_versioned_child_structure import FareStructureElementPriceVersionedChildStructure
+from netex.models.fare_structure_element_prices_rel_structure import FareStructureElementPricesRelStructure
+from netex.models.fare_structure_element_ref import FareStructureElementRef
+from netex.models.fare_structure_element_ref_structure import FareStructureElementRefStructure
+from netex.models.fare_structure_element_refs_rel_structure import FareStructureElementRefsRelStructure
+from netex.models.fare_structure_element_version_structure import FareStructureElementVersionStructure
+from netex.models.fare_structure_elements_in_frame_rel_structure import FareStructureElementsInFrameRelStructure
+from netex.models.fare_structure_elements_in_sequence_rel_structure import FareStructureElementsInSequenceRelStructure
+from netex.models.fare_structure_elements_rel_structure import FareStructureElementsRelStructure
+from netex.models.fare_structure_factor import FareStructureFactor
+from netex.models.fare_structure_factor_ref import FareStructureFactorRef
+from netex.models.fare_structure_factor_ref_structure import FareStructureFactorRefStructure
+from netex.models.fare_structure_factors_rel_structure import FareStructureFactorsRelStructure
+from netex.models.fare_structure_type_enumeration import FareStructureTypeEnumeration
+from netex.models.fare_table_1 import FareTable1
+from netex.models.fare_table_column_ref import FareTableColumnRef
+from netex.models.fare_table_column_ref_structure import FareTableColumnRefStructure
+from netex.models.fare_table_column_versioned_child_structure import (
+    FareTableColumn,
+    FareTableColumnVersionedChildStructure,
+    FareTableColumnsRelStructure,
+)
+from netex.models.fare_table_ref import FareTableRef
+from netex.models.fare_table_ref_structure import FareTableRefStructure
+from netex.models.fare_table_refs_rel_structure import FareTableRefsRelStructure
+from netex.models.fare_table_row_ref import FareTableRowRef
+from netex.models.fare_table_row_ref_structure import FareTableRowRefStructure
+from netex.models.fare_table_row_versioned_child_structure import (
+    FareTableRow,
+    FareTableRowVersionedChildStructure,
+    FareTableRowsRelStructure,
+)
+from netex.models.fare_table_specifics_structure import FareTableSpecificsStructure
+from netex.models.fare_tables_in_frame_rel_structure import FareTablesInFrameRelStructure
+from netex.models.fare_unit import FareUnit
+from netex.models.fare_unit_ref import FareUnitRef
+from netex.models.fare_unit_ref_structure import FareUnitRefStructure
+from netex.models.fare_unit_version_structure import FareUnitVersionStructure
+from netex.models.fare_zone import FareZone
+from netex.models.fare_zone_ref import FareZoneRef
+from netex.models.fare_zone_ref_structure import FareZoneRefStructure
+from netex.models.fare_zone_refs_rel_structure import FareZoneRefsRelStructure
+from netex.models.fare_zone_version_structure import FareZoneVersionStructure
+from netex.models.fare_zones_in_frame_rel_structure import FareZonesInFrameRelStructure
+from netex.models.feature_type_refs_rel_structure import FeatureTypeRefsRelStructure
+from netex.models.fixed_start_window_structure import FixedStartWindowStructure
+from netex.models.flexible_area import FlexibleArea
+from netex.models.flexible_area_ref import FlexibleAreaRef
+from netex.models.flexible_area_ref_structure import FlexibleAreaRefStructure
+from netex.models.flexible_area_version_structure import FlexibleAreaVersionStructure
+from netex.models.flexible_areas_rel_structure import FlexibleAreasRelStructure
+from netex.models.flexible_line import FlexibleLine
+from netex.models.flexible_line_derived_view_structure import FlexibleLineDerivedViewStructure
+from netex.models.flexible_line_ref import FlexibleLineRef
+from netex.models.flexible_line_ref_structure import FlexibleLineRefStructure
+from netex.models.flexible_line_refs_rel_structure import FlexibleLineRefsRelStructure
+from netex.models.flexible_line_type_enumeration import FlexibleLineTypeEnumeration
+from netex.models.flexible_line_version_structure import FlexibleLineVersionStructure
+from netex.models.flexible_line_view import FlexibleLineView
+from netex.models.flexible_link_properties import FlexibleLinkProperties
+from netex.models.flexible_link_properties_ref import FlexibleLinkPropertiesRef
+from netex.models.flexible_link_properties_ref_structure import FlexibleLinkPropertiesRefStructure
+from netex.models.flexible_link_properties_rel_structure import FlexibleLinkPropertiesRelStructure
+from netex.models.flexible_link_properties_versioned_child_structure import FlexibleLinkPropertiesVersionedChildStructure
+from netex.models.flexible_link_type_enumeration import FlexibleLinkTypeEnumeration
+from netex.models.flexible_point_properties import FlexiblePointProperties
+from netex.models.flexible_point_properties_ref import FlexiblePointPropertiesRef
+from netex.models.flexible_point_properties_ref_structure import FlexiblePointPropertiesRefStructure
+from netex.models.flexible_point_properties_rel_structure import FlexiblePointPropertiesRelStructure
+from netex.models.flexible_point_properties_versioned_child_structure import FlexiblePointPropertiesVersionedChildStructure
+from netex.models.flexible_quay import FlexibleQuay
+from netex.models.flexible_quay_ref import FlexibleQuayRef
+from netex.models.flexible_quay_ref_structure import FlexibleQuayRefStructure
+from netex.models.flexible_quay_version_structure import FlexibleQuayVersionStructure
+from netex.models.flexible_quays_rel_structure import FlexibleQuaysRelStructure
+from netex.models.flexible_route import FlexibleRoute
+from netex.models.flexible_route_type_enumeration import FlexibleRouteTypeEnumeration
+from netex.models.flexible_route_version_structure import FlexibleRouteVersionStructure
+from netex.models.flexible_service_assignment_ref import FlexibleServiceAssignmentRef
+from netex.models.flexible_service_assignment_ref_structure import FlexibleServiceAssignmentRefStructure
+from netex.models.flexible_service_enumeration import FlexibleServiceEnumeration
+from netex.models.flexible_service_properties import FlexibleServiceProperties
+from netex.models.flexible_service_properties_in_frame_rel_structure import FlexibleServicePropertiesInFrameRelStructure
+from netex.models.flexible_service_properties_ref import FlexibleServicePropertiesRef
+from netex.models.flexible_service_properties_ref_structure import FlexibleServicePropertiesRefStructure
+from netex.models.flexible_service_properties_rel_structure import FlexibleServicePropertiesRelStructure
+from netex.models.flexible_service_properties_version_structure import FlexibleServicePropertiesVersionStructure
+from netex.models.flexible_stop_assignment import FlexibleStopAssignment
+from netex.models.flexible_stop_assignment_version_structure import FlexibleStopAssignmentVersionStructure
+from netex.models.flexible_stop_place import FlexibleStopPlace
+from netex.models.flexible_stop_place_ref import FlexibleStopPlaceRef
+from netex.models.flexible_stop_place_ref_structure import FlexibleStopPlaceRefStructure
+from netex.models.flexible_stop_place_refs_rel_structure import FlexibleStopPlaceRefsRelStructure
+from netex.models.flexible_stop_place_version_structure import FlexibleStopPlaceVersionStructure
+from netex.models.flexible_stop_places_in_frame_rel_structure import FlexibleStopPlacesInFrameRelStructure
+from netex.models.flexible_stop_places_rel_structure import FlexibleStopPlacesRelStructure
+from netex.models.flooring_type_enumeration import FlooringTypeEnumeration
+from netex.models.font_size_enumeration import FontSizeEnumeration
+from netex.models.frame_containment_structure import FrameContainmentStructure
+from netex.models.frame_nature_enumeration import FrameNatureEnumeration
+from netex.models.frequency_groups_in_frame_rel_structure import FrequencyGroupsInFrameRelStructure
+from netex.models.frequency_groups_rel_structure import FrequencyGroupsRelStructure
+from netex.models.frequency_of_use import FrequencyOfUse
+from netex.models.frequency_of_use_ref import FrequencyOfUseRef
+from netex.models.frequency_of_use_ref_structure import FrequencyOfUseRefStructure
+from netex.models.frequency_of_use_type_enumeration import FrequencyOfUseTypeEnumeration
+from netex.models.frequency_of_use_version_structure import FrequencyOfUseVersionStructure
+from netex.models.frequency_structure import FrequencyStructure
+from netex.models.fulfilment_method import FulfilmentMethod
+from netex.models.fulfilment_method_price import FulfilmentMethodPrice
+from netex.models.fulfilment_method_price_ref import FulfilmentMethodPriceRef
+from netex.models.fulfilment_method_price_ref_structure import FulfilmentMethodPriceRefStructure
+from netex.models.fulfilment_method_price_versioned_child_structure import FulfilmentMethodPriceVersionedChildStructure
+from netex.models.fulfilment_method_prices_rel_structure import FulfilmentMethodPricesRelStructure
+from netex.models.fulfilment_method_ref import FulfilmentMethodRef
+from netex.models.fulfilment_method_ref_structure import FulfilmentMethodRefStructure
+from netex.models.fulfilment_method_refs_rel_structure import FulfilmentMethodRefsRelStructure
+from netex.models.fulfilment_method_type_enumeration import FulfilmentMethodTypeEnumeration
+from netex.models.fulfilment_method_version_structure import FulfilmentMethodVersionStructure
+from netex.models.fulfilment_methods_in_frame_rel_structure import FulfilmentMethodsInFrameRelStructure
+from netex.models.fulfilment_methods_rel_structure import FulfilmentMethodsRelStructure
+from netex.models.funicular_submode import FunicularSubmode
+from netex.models.funicular_submode_enumeration import FunicularSubmodeEnumeration
+from netex.models.garage import Garage
+from netex.models.garage_point import GaragePoint
+from netex.models.garage_point_ref import GaragePointRef
+from netex.models.garage_point_ref_structure import GaragePointRefStructure
+from netex.models.garage_point_version_structure import GaragePointVersionStructure
+from netex.models.garage_points_rel_structure import GaragePointsRelStructure
+from netex.models.garage_ref import GarageRef
+from netex.models.garage_ref_structure import GarageRefStructure
+from netex.models.garage_refs_rel_structure import GarageRefsRelStructure
+from netex.models.garage_version_structure import GarageVersionStructure
+from netex.models.garages_in_frame_rel_structure import GaragesInFrameRelStructure
+from netex.models.gated_enumeration import GatedEnumeration
+from netex.models.gender_enumeration import GenderEnumeration
+from netex.models.gender_limitation import GenderLimitation
+from netex.models.gender_limitation_enumeration import GenderLimitationEnumeration
+from netex.models.general_frame_member import GeneralFrameMember
+from netex.models.general_frame_member_ref import GeneralFrameMemberRef
+from netex.models.general_frame_member_ref_structure import GeneralFrameMemberRefStructure
+from netex.models.general_frame_member_structure import GeneralFrameMemberStructure
+from netex.models.general_frame_ref import GeneralFrameRef
+from netex.models.general_frame_ref_structure import GeneralFrameRefStructure
+from netex.models.general_group_of_entities import GeneralGroupOfEntities
+from netex.models.general_group_of_entities_ref import GeneralGroupOfEntitiesRef
+from netex.models.general_group_of_entities_ref_structure import GeneralGroupOfEntitiesRefStructure
+from netex.models.general_group_of_entities_version_structure import GeneralGroupOfEntitiesVersionStructure
+from netex.models.general_organisation import GeneralOrganisation
+from netex.models.general_organisation_ref import GeneralOrganisationRef
+from netex.models.general_organisation_ref_structure import GeneralOrganisationRefStructure
+from netex.models.general_organisation_version_structure import GeneralOrganisationVersionStructure
+from netex.models.general_section_ref import GeneralSectionRef
+from netex.models.general_section_ref_structure import GeneralSectionRefStructure
+from netex.models.general_sections_in_frame_rel_structure import GeneralSectionsInFrameRelStructure
+from netex.models.general_sign import GeneralSign
+from netex.models.general_sign_ref import GeneralSignRef
+from netex.models.general_sign_ref_structure import GeneralSignRefStructure
+from netex.models.general_sign_structure import GeneralSignStructure
+from netex.models.general_zone import GeneralZone
+from netex.models.general_zone_version_structure import GeneralZoneVersionStructure
+from netex.models.generic_parameter_assignment_ref_structure import GenericParameterAssignmentRefStructure
+from netex.models.generic_parameter_assignment_version_structure import (
+    GenericParameterAssignment,
+    GenericParameterAssignmentInContext,
+    GenericParameterAssignmentVersionStructure,
+    GenericParameterAssignmentsRelStructure,
+)
+from netex.models.geographical_interval import GeographicalInterval
+from netex.models.geographical_interval_price import GeographicalIntervalPrice
+from netex.models.geographical_interval_price_ref import GeographicalIntervalPriceRef
+from netex.models.geographical_interval_price_ref_structure import GeographicalIntervalPriceRefStructure
+from netex.models.geographical_interval_price_versioned_child_structure import GeographicalIntervalPriceVersionedChildStructure
+from netex.models.geographical_interval_prices_rel_structure import GeographicalIntervalPricesRelStructure
+from netex.models.geographical_interval_ref import GeographicalIntervalRef
+from netex.models.geographical_interval_ref_structure import GeographicalIntervalRefStructure
+from netex.models.geographical_interval_version_structure import GeographicalIntervalVersionStructure
+from netex.models.geographical_intervals_rel_structure import GeographicalIntervalsRelStructure
+from netex.models.geographical_structure_factor import GeographicalStructureFactor
+from netex.models.geographical_structure_factor_ref import GeographicalStructureFactorRef
+from netex.models.geographical_structure_factor_ref_structure import GeographicalStructureFactorRefStructure
+from netex.models.geographical_structure_factor_version_structure import GeographicalStructureFactorVersionStructure
+from netex.models.geographical_structure_factors_rel_structure import GeographicalStructureFactorsRelStructure
+from netex.models.geographical_unit import GeographicalUnit
+from netex.models.geographical_unit_price import GeographicalUnitPrice
+from netex.models.geographical_unit_price_ref import GeographicalUnitPriceRef
+from netex.models.geographical_unit_price_ref_structure import GeographicalUnitPriceRefStructure
+from netex.models.geographical_unit_price_versioned_child_structure import (
+    GeographicalUnitPriceVersionedChildStructure,
+    GeographicalUnitPricesRelStructure,
+)
+from netex.models.geographical_unit_ref import GeographicalUnitRef
+from netex.models.geographical_unit_ref_structure import GeographicalUnitRefStructure
+from netex.models.geographical_unit_version_structure import GeographicalUnitVersionStructure
+from netex.models.geographical_units_rel_structure import GeographicalUnitsRelStructure
+from netex.models.geometric_primitive_property_type import GeometricPrimitivePropertyType
+from netex.models.geometry_array_property_type import GeometryArrayPropertyType
+from netex.models.geometry_property_type import GeometryPropertyType
+from netex.models.gml_profile_schema import GmlProfileSchema
+from netex.models.gradient_enumeration import GradientEnumeration
+from netex.models.group_booking_enumeration import GroupBookingEnumeration
+from netex.models.group_booking_facility import GroupBookingFacility
+from netex.models.group_check_in_enumeration import GroupCheckInEnumeration
+from netex.models.group_constraint_member import GroupConstraintMember
+from netex.models.group_constraint_member_versioned_child_structure import GroupConstraintMemberVersionedChildStructure
+from netex.models.group_discount_basis_enumeration import GroupDiscountBasisEnumeration
+from netex.models.group_member import GroupMember
+from netex.models.group_member_versioned_child_structure import GroupMemberVersionedChildStructure
+from netex.models.group_membership_refs_rel_structure import GroupMembershipRefsRelStructure
+from netex.models.group_of_customer_purchase_packages_ref import GroupOfCustomerPurchasePackagesRef
+from netex.models.group_of_customer_purchase_packages_ref_structure import GroupOfCustomerPurchasePackagesRefStructure
+from netex.models.group_of_distance_matrix_elements import GroupOfDistanceMatrixElements
+from netex.models.group_of_distance_matrix_elements_ref import GroupOfDistanceMatrixElementsRef
+from netex.models.group_of_distance_matrix_elements_ref_structure_element import GroupOfDistanceMatrixElementsRefStructureElement
+from netex.models.group_of_distance_matrix_elements_refs_rel_structure import GroupOfDistanceMatrixElementsRefsRelStructure
+from netex.models.group_of_distance_matrix_elements_version_structure import GroupOfDistanceMatrixElementsVersionStructure
+from netex.models.group_of_distribution_channels import GroupOfDistributionChannels
+from netex.models.group_of_distribution_channels_ref import GroupOfDistributionChannelsRef
+from netex.models.group_of_distribution_channels_ref_structure import GroupOfDistributionChannelsRefStructure
+from netex.models.group_of_distribution_channels_version_structure import GroupOfDistributionChannelsVersionStructure
+from netex.models.group_of_entities import GroupOfEntities
+from netex.models.group_of_entities_in_frame_rel_structure import GroupOfEntitiesInFrameRelStructure
+from netex.models.group_of_entities_ref_1 import GroupOfEntitiesRef1
+from netex.models.group_of_entities_ref_2 import GroupOfEntitiesRef2
+from netex.models.group_of_entities_ref_structure_1 import GroupOfEntitiesRefStructure1
+from netex.models.group_of_entities_ref_structure_2 import GroupOfEntitiesRefStructure2
+from netex.models.group_of_entities_version_structure import GroupOfEntitiesVersionStructure
+from netex.models.group_of_lines import GroupOfLines
+from netex.models.group_of_lines_ref import GroupOfLinesRef
+from netex.models.group_of_lines_ref_structure import GroupOfLinesRefStructure
+from netex.models.group_of_lines_type_enumeration import GroupOfLinesTypeEnumeration
+from netex.models.group_of_lines_version_structure import GroupOfLinesVersionStructure
+from netex.models.group_of_link_sequences import GroupOfLinkSequences
+from netex.models.group_of_link_sequences_ref import GroupOfLinkSequencesRef
+from netex.models.group_of_link_sequences_ref_structure import GroupOfLinkSequencesRefStructure
+from netex.models.group_of_link_sequences_rel_structure import GroupOfLinkSequencesRelStructure
+from netex.models.group_of_link_sequences_version_structure import GroupOfLinkSequencesVersionStructure
+from netex.models.group_of_links import GroupOfLinks
+from netex.models.group_of_links_in_frame_rel_structure import GroupOfLinksInFrameRelStructure
+from netex.models.group_of_links_rel_structure import GroupOfLinksRelStructure
+from netex.models.group_of_links_version_structure import GroupOfLinksVersionStructure
+from netex.models.group_of_operators import GroupOfOperators
+from netex.models.group_of_operators_ref import GroupOfOperatorsRef
+from netex.models.group_of_operators_ref_structure import GroupOfOperatorsRefStructure
+from netex.models.group_of_operators_structure import GroupOfOperatorsStructure
+from netex.models.group_of_places import GroupOfPlaces
+from netex.models.group_of_places_ref import GroupOfPlacesRef
+from netex.models.group_of_places_ref_structure import GroupOfPlacesRefStructure
+from netex.models.group_of_places_version_structure import GroupOfPlacesVersionStructure
+from netex.models.group_of_points import GroupOfPoints
+from netex.models.group_of_points_ref_1 import GroupOfPointsRef1
+from netex.models.group_of_points_ref_2 import GroupOfPointsRef2
+from netex.models.group_of_points_ref_structure import GroupOfPointsRefStructure
+from netex.models.group_of_points_rel_structure import GroupOfPointsRelStructure
+from netex.models.group_of_points_version_structure import GroupOfPointsVersionStructure
+from netex.models.group_of_sales_offer_package_refs_rel_structure import GroupOfSalesOfferPackageRefsRelStructure
+from netex.models.group_of_sales_offer_packages import GroupOfSalesOfferPackages
+from netex.models.group_of_sales_offer_packages_ref import GroupOfSalesOfferPackagesRef
+from netex.models.group_of_sales_offer_packages_ref_structure import GroupOfSalesOfferPackagesRefStructure
+from netex.models.group_of_sales_offer_packages_version_structure import GroupOfSalesOfferPackagesVersionStructure
+from netex.models.group_of_services import GroupOfServices
+from netex.models.group_of_services_end_point_derived_view_structure import GroupOfServicesEndPointDerivedViewStructure
+from netex.models.group_of_services_member_structure import GroupOfServicesMemberStructure
+from netex.models.group_of_services_members_rel_structure import GroupOfServicesMembersRelStructure
+from netex.models.group_of_services_ref import GroupOfServicesRef
+from netex.models.group_of_services_ref_structure import GroupOfServicesRefStructure
+from netex.models.group_of_services_refs_rel_structure import GroupOfServicesRefsRelStructure
+from netex.models.group_of_services_version_structure import GroupOfServicesVersionStructure
+from netex.models.group_of_stop_places import GroupOfStopPlaces
+from netex.models.group_of_stop_places_ref import GroupOfStopPlacesRef
+from netex.models.group_of_stop_places_ref_structure import GroupOfStopPlacesRefStructure
+from netex.models.group_of_stop_places_structure import GroupOfStopPlacesStructure
+from netex.models.group_of_timebands import GroupOfTimebands
+from netex.models.group_of_timebands_in_frame_rel_structure import GroupOfTimebandsInFrameRelStructure
+from netex.models.group_of_timebands_ref import GroupOfTimebandsRef
+from netex.models.group_of_timebands_ref_structure import GroupOfTimebandsRefStructure
+from netex.models.group_of_timebands_rel_structure import GroupOfTimebandsRelStructure
+from netex.models.group_of_timebands_versioned_child_structure import GroupOfTimebandsVersionedChildStructure
+from netex.models.group_of_timing_links import GroupOfTimingLinks
+from netex.models.group_of_timing_links_in_frame_rel_structure import GroupOfTimingLinksInFrameRelStructure
+from netex.models.group_of_timing_links_ref import GroupOfTimingLinksRef
+from netex.models.group_of_timing_links_ref_structure import GroupOfTimingLinksRefStructure
+from netex.models.group_of_timing_links_rel_structure import GroupOfTimingLinksRelStructure
+from netex.models.group_ofcustomer_purchase_package_refs_rel_structure import GroupOfcustomerPurchasePackageRefsRelStructure
+from netex.models.group_size_changes_enumeration import GroupSizeChangesEnumeration
+from netex.models.group_ticket import GroupTicket
+from netex.models.group_ticket_ref import GroupTicketRef
+from netex.models.group_ticket_ref_structure import GroupTicketRefStructure
+from netex.models.group_ticket_version_structure import GroupTicketVersionStructure
+from netex.models.group_ticketing_enumeration import GroupTicketingEnumeration
+from netex.models.groups_of_distance_matrix_elements_in_frame_rel_structure import GroupsOfDistanceMatrixElementsInFrameRelStructure
+from netex.models.groups_of_distance_matrix_elements_rel_structure import GroupsOfDistanceMatrixElementsRelStructure
+from netex.models.groups_of_distribution_channels_in_frame_rel_structure import GroupsOfDistributionChannelsInFrameRelStructure
+from netex.models.groups_of_lines_in_frame_rel_structure import GroupsOfLinesInFrameRelStructure
+from netex.models.groups_of_operators_in_frame_rel_structure import GroupsOfOperatorsInFrameRelStructure
+from netex.models.groups_of_places_in_frame_rel_structure import GroupsOfPlacesInFrameRelStructure
+from netex.models.groups_of_sales_offer_packages_in_frame_rel_structure import GroupsOfSalesOfferPackagesInFrameRelStructure
+from netex.models.groups_of_services_in_frame_rel_structure import GroupsOfServicesInFrameRelStructure
+from netex.models.groups_of_stop_places_in_frame_rel_structure import GroupsOfStopPlacesInFrameRelStructure
+from netex.models.groups_of_transport_organisations_refs_rel_structure import GroupsOfTransportOrganisationsRefsRelStructure
+from netex.models.guide_dog_access import GuideDogAccess
+from netex.models.hail_and_ride_area import HailAndRideArea
+from netex.models.hail_and_ride_area_ref import HailAndRideAreaRef
+from netex.models.hail_and_ride_area_ref_structure import HailAndRideAreaRefStructure
+from netex.models.hail_and_ride_area_version_structure import HailAndRideAreaVersionStructure
+from netex.models.hail_and_ride_areas_rel_structure import HailAndRideAreasRelStructure
+from netex.models.half_open_time_range_structure import HalfOpenTimeRangeStructure
+from netex.models.half_open_timestamp_range_structure import HalfOpenTimestampRangeStructure
+from netex.models.handrail_enumeration import HandrailEnumeration
+from netex.models.heading_sign import HeadingSign
+from netex.models.heading_sign_ref import HeadingSignRef
+from netex.models.heading_sign_ref_structure import HeadingSignRefStructure
+from netex.models.heading_sign_structure import HeadingSignStructure
+from netex.models.headway_interval_structure import HeadwayIntervalStructure
+from netex.models.headway_journey_group import HeadwayJourneyGroup
+from netex.models.headway_journey_group_ref import HeadwayJourneyGroupRef
+from netex.models.headway_journey_group_ref_structure import HeadwayJourneyGroupRefStructure
+from netex.models.headway_journey_group_version_structure import HeadwayJourneyGroupVersionStructure
+from netex.models.headway_ref import HeadwayRef
+from netex.models.headway_ref_structure import HeadwayRefStructure
+from netex.models.headway_use_enumeration import HeadwayUseEnumeration
+from netex.models.heartbeat_notification import HeartbeatNotification
+from netex.models.heartbeat_notification_structure import HeartbeatNotificationStructure
+from netex.models.help_point_equipment import HelpPointEquipment
+from netex.models.help_point_equipment_ref import HelpPointEquipmentRef
+from netex.models.help_point_equipment_ref_structure import HelpPointEquipmentRefStructure
+from netex.models.help_point_equipment_version_structure import HelpPointEquipmentVersionStructure
+from netex.models.hire_facility import HireFacility
+from netex.models.hire_facility_enumeration import HireFacilityEnumeration
+from netex.models.hire_facility_list import HireFacilityList
+from netex.models.hire_service import HireService
+from netex.models.hire_service_enumeration import HireServiceEnumeration
+from netex.models.hire_service_ref import HireServiceRef
+from netex.models.hire_service_ref_structure import HireServiceRefStructure
+from netex.models.hire_service_version_structure import HireServiceVersionStructure
+from netex.models.holiday_type_enumeration import HolidayTypeEnumeration
+from netex.models.iana_country_tld_enumeration import IanaCountryTldEnumeration
+from netex.models.identifier import Identifier
+from netex.models.include_translations import IncludeTranslations
+from netex.models.info_link import InfoLink
+from netex.models.info_link_structure import InfoLinkStructure
+from netex.models.info_links_rel_structure import InfoLinksRelStructure
+from netex.models.infrastructure_elements_in_frame_rel_structure import InfrastructureElementsInFrameRelStructure
+from netex.models.infrastructure_frame import InfrastructureFrame
+from netex.models.infrastructure_frame_ref import InfrastructureFrameRef
+from netex.models.infrastructure_frame_ref_structure import InfrastructureFrameRefStructure
+from netex.models.infrastructure_junctions_in_frame_rel_structure import InfrastructureJunctionsInFrameRelStructure
+from netex.models.infrastructure_link_1 import InfrastructureLink1
+from netex.models.infrastructure_link_2 import InfrastructureLink2
+from netex.models.infrastructure_link_ref import InfrastructureLinkRef
+from netex.models.infrastructure_link_ref_structure import InfrastructureLinkRefStructure
+from netex.models.infrastructure_link_restriction import InfrastructureLinkRestriction
+from netex.models.infrastructure_link_restriction_ref import InfrastructureLinkRestrictionRef
+from netex.models.infrastructure_link_restriction_ref_structure import InfrastructureLinkRestrictionRefStructure
+from netex.models.infrastructure_link_restriction_version_structure import InfrastructureLinkRestrictionVersionStructure
+from netex.models.infrastructure_link_version_structure import InfrastructureLinkVersionStructure
+from netex.models.infrastructure_point import InfrastructurePoint
+from netex.models.infrastructure_point_ref import InfrastructurePointRef
+from netex.models.infrastructure_point_ref_structure import InfrastructurePointRefStructure
+from netex.models.infrastructure_point_version_structure import InfrastructurePointVersionStructure
+from netex.models.infrastructure_version_frame_structure import InfrastructureVersionFrameStructure
+from netex.models.inline_property_type import InlinePropertyType
+from netex.models.installed_equipment import InstalledEquipment
+from netex.models.installed_equipment_ref import InstalledEquipmentRef
+from netex.models.installed_equipment_ref_structure import InstalledEquipmentRefStructure
+from netex.models.installed_equipment_version_structure import InstalledEquipmentVersionStructure
+from netex.models.interchange_1 import Interchange1
+from netex.models.interchange_2 import Interchange2
+from netex.models.interchange_ref import InterchangeRef
+from netex.models.interchange_ref_structure import InterchangeRefStructure
+from netex.models.interchange_rule import InterchangeRule
+from netex.models.interchange_rule_filter import InterchangeRuleFilter
+from netex.models.interchange_rule_filter_versioned_child_structure import InterchangeRuleFilterVersionedChildStructure
+from netex.models.interchange_rule_filters_rel_structure import InterchangeRuleFiltersRelStructure
+from netex.models.interchange_rule_parameter_structure import InterchangeRuleParameterStructure
+from netex.models.interchange_rule_ref import InterchangeRuleRef
+from netex.models.interchange_rule_ref_structure import InterchangeRuleRefStructure
+from netex.models.interchange_rule_timing import InterchangeRuleTiming
+from netex.models.interchange_rule_timing_ref import InterchangeRuleTimingRef
+from netex.models.interchange_rule_timing_ref_structure import InterchangeRuleTimingRefStructure
+from netex.models.interchange_rule_timing_version_structure import InterchangeRuleTimingVersionStructure
+from netex.models.interchange_rule_timings_rel_structure import InterchangeRuleTimingsRelStructure
+from netex.models.interchange_rule_version_structure import InterchangeRuleVersionStructure
+from netex.models.interchange_rules_in_frame_rel_structure import InterchangeRulesInFrameRelStructure
+from netex.models.interchange_rules_rel_structure import InterchangeRulesRelStructure
+from netex.models.interchange_version_structure import InterchangeVersionStructure
+from netex.models.interchange_weighting_enumeration import InterchangeWeightingEnumeration
+from netex.models.interchanging import Interchanging
+from netex.models.interchanging_ref import InterchangingRef
+from netex.models.interchanging_ref_structure import InterchangingRefStructure
+from netex.models.interchanging_type_enumeration import InterchangingTypeEnumeration
+from netex.models.interchanging_version_structure import InterchangingVersionStructure
+from netex.models.interior import Interior
+from netex.models.interval_type_enumeration import IntervalTypeEnumeration
+from netex.models.invalid_data_references_error import InvalidDataReferencesError
+from netex.models.invalid_data_references_error_structure import InvalidDataReferencesErrorStructure
+from netex.models.journey_1 import Journey1
+from netex.models.journey_2 import Journey2
+from netex.models.journey_accounting import JourneyAccounting
+from netex.models.journey_accounting_enumeration import JourneyAccountingEnumeration
+from netex.models.journey_accounting_ref import JourneyAccountingRef
+from netex.models.journey_accounting_ref_structure import JourneyAccountingRefStructure
+from netex.models.journey_accounting_version_structure import JourneyAccountingVersionStructure
+from netex.models.journey_accountings_in_frame_rel_structure import JourneyAccountingsInFrameRelStructure
+from netex.models.journey_accountings_rel_structure import JourneyAccountingsRelStructure
+from netex.models.journey_designator import JourneyDesignator
+from netex.models.journey_designator_structure import JourneyDesignatorStructure
+from netex.models.journey_endpoint_structure import JourneyEndpointStructure
+from netex.models.journey_frequency_group import JourneyFrequencyGroup
+from netex.models.journey_frequency_group_ref import JourneyFrequencyGroupRef
+from netex.models.journey_frequency_group_ref_structure import JourneyFrequencyGroupRefStructure
+from netex.models.journey_frequency_group_version_structure import JourneyFrequencyGroupVersionStructure
+from netex.models.journey_headway import JourneyHeadway
+from netex.models.journey_headway_versioned_child_structure import JourneyHeadwayVersionedChildStructure
+from netex.models.journey_headways_rel_structure import JourneyHeadwaysRelStructure
+from netex.models.journey_interchanges_in_frame_rel_structure import JourneyInterchangesInFrameRelStructure
+from netex.models.journey_layover import JourneyLayover
+from netex.models.journey_layover_structure import JourneyLayoverStructure
+from netex.models.journey_layovers_rel_structure import JourneyLayoversRelStructure
+from netex.models.journey_meeting import JourneyMeeting
+from netex.models.journey_meeting_derived_view_structure import JourneyMeetingDerivedViewStructure
+from netex.models.journey_meeting_ref import JourneyMeetingRef
+from netex.models.journey_meeting_ref_structure import JourneyMeetingRefStructure
+from netex.models.journey_meeting_version_structure import JourneyMeetingVersionStructure
+from netex.models.journey_meeting_view import JourneyMeetingView
+from netex.models.journey_meeting_views_rel_structure import JourneyMeetingViewsRelStructure
+from netex.models.journey_meetings_in_frame_rel_structure import JourneyMeetingsInFrameRelStructure
+from netex.models.journey_part import JourneyPart
+from netex.models.journey_part_couple import JourneyPartCouple
+from netex.models.journey_part_couple_ref import JourneyPartCoupleRef
+from netex.models.journey_part_couple_ref_structure import JourneyPartCoupleRefStructure
+from netex.models.journey_part_couple_version_structure import JourneyPartCoupleVersionStructure
+from netex.models.journey_part_couples_in_frame_rel_structure import JourneyPartCouplesInFrameRelStructure
+from netex.models.journey_part_couples_rel_structure import JourneyPartCouplesRelStructure
+from netex.models.journey_part_enumeration import JourneyPartEnumeration
+from netex.models.journey_part_position import JourneyPartPosition
+from netex.models.journey_part_position_versioned_child_structure import JourneyPartPositionVersionedChildStructure
+from netex.models.journey_part_positions_rel_structure import JourneyPartPositionsRelStructure
+from netex.models.journey_part_ref import JourneyPartRef
+from netex.models.journey_part_ref_structure import JourneyPartRefStructure
+from netex.models.journey_part_refs_rel_structure import JourneyPartRefsRelStructure
+from netex.models.journey_part_version_structure import JourneyPartVersionStructure
+from netex.models.journey_parts_in_frame_rel_structure import JourneyPartsInFrameRelStructure
+from netex.models.journey_parts_rel_structure import JourneyPartsRelStructure
+from netex.models.journey_pattern_1 import JourneyPattern1
+from netex.models.journey_pattern_derived_view_structure import JourneyPatternDerivedViewStructure
+from netex.models.journey_pattern_headway import JourneyPatternHeadway
+from netex.models.journey_pattern_headway_ref import JourneyPatternHeadwayRef
+from netex.models.journey_pattern_headway_ref_structure import JourneyPatternHeadwayRefStructure
+from netex.models.journey_pattern_headway_versioned_child_structure import JourneyPatternHeadwayVersionedChildStructure
+from netex.models.journey_pattern_headways_rel_structure import JourneyPatternHeadwaysRelStructure
+from netex.models.journey_pattern_layover import JourneyPatternLayover
+from netex.models.journey_pattern_layover_ref import JourneyPatternLayoverRef
+from netex.models.journey_pattern_layover_ref_structure import JourneyPatternLayoverRefStructure
+from netex.models.journey_pattern_layover_structure import JourneyPatternLayoverStructure
+from netex.models.journey_pattern_layovers_rel_structure import JourneyPatternLayoversRelStructure
+from netex.models.journey_pattern_ref import JourneyPatternRef
+from netex.models.journey_pattern_ref_structure import JourneyPatternRefStructure
+from netex.models.journey_pattern_refs_rel_structure import JourneyPatternRefsRelStructure
+from netex.models.journey_pattern_run_time import JourneyPatternRunTime
+from netex.models.journey_pattern_run_time_ref import JourneyPatternRunTimeRef
+from netex.models.journey_pattern_run_time_ref_structure import JourneyPatternRunTimeRefStructure
+from netex.models.journey_pattern_run_time_versioned_child_structure import JourneyPatternRunTimeVersionedChildStructure
+from netex.models.journey_pattern_run_times_rel_structure import JourneyPatternRunTimesRelStructure
+from netex.models.journey_pattern_view import JourneyPatternView
+from netex.models.journey_pattern_wait_time import JourneyPatternWaitTime
+from netex.models.journey_pattern_wait_time_ref import JourneyPatternWaitTimeRef
+from netex.models.journey_pattern_wait_time_ref_structure import JourneyPatternWaitTimeRefStructure
+from netex.models.journey_pattern_wait_time_versioned_child_structure import JourneyPatternWaitTimeVersionedChildStructure
+from netex.models.journey_pattern_wait_times_rel_structure import JourneyPatternWaitTimesRelStructure
+from netex.models.journey_patterns_in_frame_rel_structure import JourneyPatternsInFrameRelStructure
+from netex.models.journey_ref import JourneyRef
+from netex.models.journey_ref_structure import JourneyRefStructure
+from netex.models.journey_refs_rel_structure import JourneyRefsRelStructure
+from netex.models.journey_run_time import JourneyRunTime
+from netex.models.journey_run_time_versioned_child_structure import JourneyRunTimeVersionedChildStructure
+from netex.models.journey_run_times_rel_structure import JourneyRunTimesRelStructure
+from netex.models.journey_timing import JourneyTiming
+from netex.models.journey_timing_ref import JourneyTimingRef
+from netex.models.journey_timing_ref_structure import JourneyTimingRefStructure
+from netex.models.journey_timing_versioned_child_structure import JourneyTimingVersionedChildStructure
+from netex.models.journey_version_structure import JourneyVersionStructure
+from netex.models.journey_wait_time import JourneyWaitTime
+from netex.models.journey_wait_time_versioned_child_structure import JourneyWaitTimeVersionedChildStructure
+from netex.models.journey_wait_times_rel_structure import JourneyWaitTimesRelStructure
+from netex.models.journeys_in_frame_rel_structure import JourneysInFrameRelStructure
+from netex.models.key_list import KeyList
+from netex.models.key_list_structure import KeyListStructure
+from netex.models.key_value_structure import KeyValueStructure
+from netex.models.lang_value import LangValue
+from netex.models.language_usage_structure import LanguageUsageStructure
+from netex.models.language_use_enumeration import LanguageUseEnumeration
+from netex.models.layer import Layer
+from netex.models.layer_ref import LayerRef
+from netex.models.layer_ref_structure import LayerRefStructure
+from netex.models.layer_refs_rel_structure import LayerRefsRelStructure
+from netex.models.layer_version_structure import LayerVersionStructure
+from netex.models.left_luggage_service import LeftLuggageService
+from netex.models.left_luggage_service_ref import LeftLuggageServiceRef
+from netex.models.left_luggage_service_ref_structure import LeftLuggageServiceRefStructure
+from netex.models.left_luggage_service_version_structure import LeftLuggageServiceVersionStructure
+from netex.models.level import Level
+from netex.models.level_ref import LevelRef
+from netex.models.level_ref_structure import LevelRefStructure
+from netex.models.level_version_structure import LevelVersionStructure
+from netex.models.levels_rel_structure import LevelsRelStructure
+from netex.models.lift_equipment import LiftEquipment
+from netex.models.lift_equipment_ref import LiftEquipmentRef
+from netex.models.lift_equipment_ref_structure import LiftEquipmentRefStructure
+from netex.models.lift_equipment_version_structure import LiftEquipmentVersionStructure
+from netex.models.lift_free_access import LiftFreeAccess
+from netex.models.lighting_enumeration import LightingEnumeration
+from netex.models.lighting_on_method_enumeration import LightingOnMethodEnumeration
+from netex.models.limitation_ref_structure import LimitationRefStructure
+from netex.models.limitation_status_enumeration import LimitationStatusEnumeration
+from netex.models.limited_use_type_enumeration import LimitedUseTypeEnumeration
+from netex.models.limiting_rule import LimitingRule
+from netex.models.limiting_rule_in_context import LimitingRuleInContext
+from netex.models.limiting_rule_ref import LimitingRuleRef
+from netex.models.limiting_rule_ref_structure import LimitingRuleRefStructure
+from netex.models.limiting_rule_versioned_structure import LimitingRuleVersionedStructure
+from netex.models.line_1 import Line1
+from netex.models.line_2 import Line2
+from netex.models.line_derived_view_structure import LineDerivedViewStructure
+from netex.models.line_in_direction_ref import LineInDirectionRef
+from netex.models.line_in_direction_ref_structure import LineInDirectionRefStructure
+from netex.models.line_link_ref import LineLinkRef
+from netex.models.line_link_ref_by_value import LineLinkRefByValue
+from netex.models.line_link_ref_by_value_structure import LineLinkRefByValueStructure
+from netex.models.line_link_ref_structure import LineLinkRefStructure
+from netex.models.line_network import LineNetwork
+from netex.models.line_network_ref import LineNetworkRef
+from netex.models.line_network_ref_structure import LineNetworkRefStructure
+from netex.models.line_network_version_structure import LineNetworkVersionStructure
+from netex.models.line_networks_in_frame_rel_structure import LineNetworksInFrameRelStructure
+from netex.models.line_ref import LineRef
+from netex.models.line_ref_structure import LineRefStructure
+from netex.models.line_refs_rel_structure import LineRefsRelStructure
+from netex.models.line_section_point_member import LineSectionPointMember
+from netex.models.line_section_point_type_enumeration import LineSectionPointTypeEnumeration
+from netex.models.line_section_ref import LineSectionRef
+from netex.models.line_section_ref_structure import LineSectionRefStructure
+from netex.models.line_sections_rel_structure import LineSectionsRelStructure
+from netex.models.line_shape import LineShape
+from netex.models.line_shape_structure_1 import LineShapeStructure1
+from netex.models.line_shape_structure_2 import LineShapeStructure2
+from netex.models.line_string import LineString
+from netex.models.line_string_type import LineStringType
+from netex.models.line_type_enumeration import LineTypeEnumeration
+from netex.models.line_version_structure import LineVersionStructure
+from netex.models.line_view import LineView
+from netex.models.linear_ring import LinearRing
+from netex.models.linear_ring_property_type import LinearRingPropertyType
+from netex.models.linear_ring_type import LinearRingType
+from netex.models.lines_in_direction_refs_rel_structure import LinesInDirectionRefsRelStructure
+from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure
+from netex.models.link import Link
+from netex.models.link_in_journey_pattern import LinkInJourneyPattern
+from netex.models.link_in_journey_pattern_ref import LinkInJourneyPatternRef
+from netex.models.link_in_journey_pattern_ref_structure import LinkInJourneyPatternRefStructure
+from netex.models.link_in_journey_pattern_versioned_child_structure import LinkInJourneyPatternVersionedChildStructure
+from netex.models.link_in_link_sequence import LinkInLinkSequence
+from netex.models.link_in_link_sequence_versioned_child_structure import LinkInLinkSequenceVersionedChildStructure
+from netex.models.link_in_sequence_ref import LinkInSequenceRef
+from netex.models.link_in_sequence_ref_structure import LinkInSequenceRefStructure
+from netex.models.link_on_section import LinkOnSection
+from netex.models.link_on_section_versioned_child_structure import LinkOnSectionVersionedChildStructure
+from netex.models.link_projection import LinkProjection
+from netex.models.link_projection_ref import LinkProjectionRef
+from netex.models.link_projection_ref_structure import LinkProjectionRefStructure
+from netex.models.link_projection_version_structure import LinkProjectionVersionStructure
+from netex.models.link_ref import LinkRef
+from netex.models.link_ref_by_value import LinkRefByValue
+from netex.models.link_ref_by_value_structure import LinkRefByValueStructure
+from netex.models.link_ref_structure import LinkRefStructure
+from netex.models.link_refs_rel_structure import LinkRefsRelStructure
+from netex.models.link_sequence import LinkSequence
+from netex.models.link_sequence_projection import LinkSequenceProjection
+from netex.models.link_sequence_projection_ref import LinkSequenceProjectionRef
+from netex.models.link_sequence_projection_ref_structure import LinkSequenceProjectionRefStructure
+from netex.models.link_sequence_projection_version_structure import LinkSequenceProjectionVersionStructure
+from netex.models.link_sequence_ref import LinkSequenceRef
+from netex.models.link_sequence_ref_structure import LinkSequenceRefStructure
+from netex.models.link_sequence_refs_rel_structure import LinkSequenceRefsRelStructure
+from netex.models.link_sequence_version_structure import (
+    CommonSection,
+    CommonSectionVersionStructure,
+    FareSection,
+    FareSectionVersionStructure,
+    GeneralSection,
+    GeneralSectionVersionStructure,
+    JourneyPattern2,
+    JourneyPatternVersionStructure,
+    LineSection,
+    LineSectionVersionStructure,
+    LinkSequenceVersionStructure,
+    SectionInSequence,
+    SectionInSequenceVersionedChildStructure,
+    Section2,
+    SectionVersionStructure,
+    Section1,
+    SectionsInSequenceRelStructure,
+)
+from netex.models.link_type_refs_rel_structure import LinkTypeRefsRelStructure
+from netex.models.link_version_structure import LinkVersionStructure
+from netex.models.links_in_journey_pattern_rel_structure import LinksInJourneyPatternRelStructure
+from netex.models.links_on_section_rel_structure import LinksOnSectionRelStructure
+from netex.models.local_service import LocalService
+from netex.models.local_service_ref import LocalServiceRef
+from netex.models.local_service_ref_structure import LocalServiceRefStructure
+from netex.models.local_service_version_structure import LocalServiceVersionStructure
+from netex.models.local_services_rel_structure import LocalServicesRelStructure
+from netex.models.locale import Locale
+from netex.models.locale_structure import LocaleStructure
+from netex.models.location_structure_1 import LocationStructure1
+from netex.models.location_structure_2 import LocationStructure2
+from netex.models.locker_type_enumeration import LockerTypeEnumeration
+from netex.models.locking_type_enumeration import LockingTypeEnumeration
+from netex.models.log import Log
+from netex.models.log_entries_rel_structure import LogEntriesRelStructure
+from netex.models.log_entry import LogEntry
+from netex.models.log_entry_ref import LogEntryRef
+from netex.models.log_entry_ref_structure import LogEntryRefStructure
+from netex.models.log_entry_version_structure import LogEntryVersionStructure
+from netex.models.log_ref import LogRef
+from netex.models.log_ref_structure import LogRefStructure
+from netex.models.log_version_structure import LogVersionStructure
+from netex.models.logical_display import LogicalDisplay
+from netex.models.logical_display_ref import LogicalDisplayRef
+from netex.models.logical_display_ref_structure import LogicalDisplayRefStructure
+from netex.models.logical_display_version_structure import LogicalDisplayVersionStructure
+from netex.models.logical_displays_in_frame_rel_structure import LogicalDisplaysInFrameRelStructure
+from netex.models.lost_property_service import LostPropertyService
+from netex.models.lost_property_service_ref import LostPropertyServiceRef
+from netex.models.lost_property_service_ref_structure import LostPropertyServiceRefStructure
+from netex.models.lost_property_service_version_structure import LostPropertyServiceVersionStructure
+from netex.models.luggage_allowance import LuggageAllowance
+from netex.models.luggage_allowance_ref import LuggageAllowanceRef
+from netex.models.luggage_allowance_ref_structure import LuggageAllowanceRefStructure
+from netex.models.luggage_allowance_type_enumeration import LuggageAllowanceTypeEnumeration
+from netex.models.luggage_allowance_version_structure import LuggageAllowanceVersionStructure
+from netex.models.luggage_carriage_enumeration import LuggageCarriageEnumeration
+from netex.models.luggage_carriage_facility import LuggageCarriageFacility
+from netex.models.luggage_carriage_facility_list import LuggageCarriageFacilityList
+from netex.models.luggage_charging_basis_enumeration import LuggageChargingBasisEnumeration
+from netex.models.luggage_locker_equipment import LuggageLockerEquipment
+from netex.models.luggage_locker_equipment_ref import LuggageLockerEquipmentRef
+from netex.models.luggage_locker_equipment_ref_structure import LuggageLockerEquipmentRefStructure
+from netex.models.luggage_locker_equipment_version_structure import LuggageLockerEquipmentVersionStructure
+from netex.models.luggage_locker_facility import LuggageLockerFacility
+from netex.models.luggage_locker_facility_enumeration import LuggageLockerFacilityEnumeration
+from netex.models.luggage_locker_facility_list import LuggageLockerFacilityList
+from netex.models.luggage_service import LuggageService
+from netex.models.luggage_service_enumeration import LuggageServiceEnumeration
+from netex.models.luggage_service_facility import LuggageServiceFacility
+from netex.models.luggage_service_facility_enumeration import LuggageServiceFacilityEnumeration
+from netex.models.luggage_service_facility_list import LuggageServiceFacilityList
+from netex.models.luggage_service_ref import LuggageServiceRef
+from netex.models.luggage_service_ref_structure import LuggageServiceRefStructure
+from netex.models.luggage_service_version_structure import LuggageServiceVersionStructure
+from netex.models.machine_readable_enumeration import MachineReadableEnumeration
+from netex.models.management_agent import ManagementAgent
+from netex.models.management_agent_ref import ManagementAgentRef
+from netex.models.management_agent_ref_structure import ManagementAgentRefStructure
+from netex.models.management_agent_version_structure import ManagementAgentVersionStructure
+from netex.models.mandatory_enumeration import MandatoryEnumeration
+from netex.models.marked_as_enumeration import MarkedAsEnumeration
+from netex.models.meal_facility import MealFacility
+from netex.models.meal_facility_enumeration import MealFacilityEnumeration
+from netex.models.meal_facility_list import MealFacilityList
+from netex.models.measure_list_type import MeasureListType
+from netex.models.measure_or_nil_reason_list_type import MeasureOrNilReasonListType
+from netex.models.measure_type import MeasureType
+from netex.models.media_type_enumeration import MediaTypeEnumeration
+from netex.models.medical_facility import MedicalFacility
+from netex.models.medical_facility_enumeration import MedicalFacilityEnumeration
+from netex.models.medical_facility_list import MedicalFacilityList
+from netex.models.medical_need_enumeration import MedicalNeedEnumeration
+from netex.models.meeting_point_enumeration import MeetingPointEnumeration
+from netex.models.meeting_point_service import MeetingPointService
+from netex.models.meeting_point_service_ref import MeetingPointServiceRef
+from netex.models.meeting_point_service_ref_structure import MeetingPointServiceRefStructure
+from netex.models.meeting_point_service_version_structure import MeetingPointServiceVersionStructure
+from netex.models.meeting_restriction import MeetingRestriction
+from netex.models.meeting_restriction_ref import MeetingRestrictionRef
+from netex.models.meeting_restriction_ref_structure import MeetingRestrictionRefStructure
+from netex.models.meeting_restriction_version_structure import MeetingRestrictionVersionStructure
+from netex.models.metro_submode import MetroSubmode
+from netex.models.metro_submode_enumeration import MetroSubmodeEnumeration
+from netex.models.minimum_stay import MinimumStay
+from netex.models.minimum_stay_ref import MinimumStayRef
+from netex.models.minimum_stay_ref_structure import MinimumStayRefStructure
+from netex.models.minimum_stay_type_enumeration import MinimumStayTypeEnumeration
+from netex.models.minimum_stay_version_structure import MinimumStayVersionStructure
+from netex.models.mobility_enumeration import MobilityEnumeration
+from netex.models.mobility_facility import MobilityFacility
+from netex.models.mobility_facility_enumeration import MobilityFacilityEnumeration
+from netex.models.mobility_facility_list import MobilityFacilityList
+from netex.models.modal_link_ref_by_value import ModalLinkRefByValue
+from netex.models.modal_link_ref_by_value2_structure import ModalLinkRefByValue2Structure
+from netex.models.modal_link_ref_by_value_structure import ModalLinkRefByValueStructure
+from netex.models.mode_ref import ModeRef
+from netex.models.mode_ref_structure import ModeRefStructure
+from netex.models.mode_refs_rel_structure import ModeRefsRelStructure
+from netex.models.modification_enumeration import ModificationEnumeration
+from netex.models.modification_set_enumeration import ModificationSetEnumeration
+from netex.models.money_facility import MoneyFacility
+from netex.models.money_facility_enumeration import MoneyFacilityEnumeration
+from netex.models.money_facility_list import MoneyFacilityList
+from netex.models.money_service import MoneyService
+from netex.models.money_service_enumeration import MoneyServiceEnumeration
+from netex.models.money_service_ref import MoneyServiceRef
+from netex.models.money_service_ref_structure import MoneyServiceRefStructure
+from netex.models.money_service_version_structure import MoneyServiceVersionStructure
+from netex.models.monitored_call import MonitoredCall
+from netex.models.monitored_call_versioned_child_structure import MonitoredCallVersionedChildStructure
+from netex.models.monitored_calls_rel_structure import MonitoredCallsRelStructure
+from netex.models.month_validity_offset import MonthValidityOffset
+from netex.models.month_validity_offset_ref import MonthValidityOffsetRef
+from netex.models.month_validity_offset_ref_structure import MonthValidityOffsetRefStructure
+from netex.models.month_validity_offset_versioned_structure import MonthValidityOffsetVersionedStructure
+from netex.models.month_validity_offsets_rel_structure import MonthValidityOffsetsRelStructure
+from netex.models.multilingual_string import MultilingualString
+from netex.models.name import Name
+from netex.models.name_type_enumeration import NameTypeEnumeration
+from netex.models.natural_language_place_name_structure import NaturalLanguagePlaceNameStructure
+from netex.models.natural_language_string_structure import NaturalLanguageStringStructure
+from netex.models.navigation_path import NavigationPath
+from netex.models.navigation_path_assignment import NavigationPathAssignment
+from netex.models.navigation_path_assignment_version_structure import NavigationPathAssignmentVersionStructure
+from netex.models.navigation_path_ref import NavigationPathRef
+from netex.models.navigation_path_ref_structure import NavigationPathRefStructure
+from netex.models.navigation_path_refs_rel_structure import NavigationPathRefsRelStructure
+from netex.models.navigation_path_version_structure import NavigationPathVersionStructure
+from netex.models.navigation_paths_in_frame_rel_structure import NavigationPathsInFrameRelStructure
+from netex.models.navigation_paths_rel_structure import NavigationPathsRelStructure
+from netex.models.navigation_type_enumeration import NavigationTypeEnumeration
+from netex.models.necessary_force_enumeration import NecessaryForceEnumeration
+from netex.models.network import Network
+from netex.models.network_derived_view_structure import NetworkDerivedViewStructure
+from netex.models.network_filter_by_value_structure import NetworkFilterByValueStructure
+from netex.models.network_frame_request_policy_structure import NetworkFrameRequestPolicyStructure
+from netex.models.network_frame_subscription_policy_structure import NetworkFrameSubscriptionPolicyStructure
+from netex.models.network_frame_topic import NetworkFrameTopic
+from netex.models.network_frame_topic_structure import NetworkFrameTopicStructure
+from netex.models.network_ref import NetworkRef
+from netex.models.network_ref_structure import NetworkRefStructure
+from netex.models.network_restriction import NetworkRestriction
+from netex.models.network_restriction_ref import NetworkRestrictionRef
+from netex.models.network_restriction_ref_structure import NetworkRestrictionRefStructure
+from netex.models.network_restriction_version_structure import NetworkRestrictionVersionStructure
+from netex.models.network_restrictions_in_frame_rel_structure import NetworkRestrictionsInFrameRelStructure
+from netex.models.network_version_structure import NetworkVersionStructure
+from netex.models.network_view import NetworkView
+from netex.models.networks_in_frame_rel_structure import NetworksInFrameRelStructure
+from netex.models.nil_reason_enumeration_value import NilReasonEnumerationValue
+from netex.models.no_info_for_topic_error import NoInfoForTopicError
+from netex.models.no_info_for_topic_error_structure import NoInfoForTopicErrorStructure
+from netex.models.normal_dated_vehicle_journey import NormalDatedVehicleJourney
+from netex.models.normal_dated_vehicle_journey_type_enumeration import NormalDatedVehicleJourneyTypeEnumeration
+from netex.models.normal_dated_vehicle_journey_version_structure import NormalDatedVehicleJourneyVersionStructure
+from netex.models.notice import Notice
+from netex.models.notice_assignment_1 import NoticeAssignment1
+from netex.models.notice_assignment_2 import NoticeAssignment2
+from netex.models.notice_assignment_derived_view_structure import NoticeAssignmentDerivedViewStructure
+from netex.models.notice_assignment_ref_structure import NoticeAssignmentRefStructure
+from netex.models.notice_assignment_version_structure import NoticeAssignmentVersionStructure
+from netex.models.notice_assignment_view import NoticeAssignmentView
+from netex.models.notice_assignment_views_rel_structure import NoticeAssignmentViewsRelStructure
+from netex.models.notice_assignments_in_frame_rel_structure import NoticeAssignmentsInFrameRelStructure
+from netex.models.notice_assignments_rel_structure import NoticeAssignmentsRelStructure
+from netex.models.notice_ref import NoticeRef
+from netex.models.notice_ref_structure import NoticeRefStructure
+from netex.models.notice_version_structure import NoticeVersionStructure
+from netex.models.notices_in_frame_rel_structure import NoticesInFrameRelStructure
+from netex.models.notices_rel_structure import NoticesRelStructure
+from netex.models.nuisance_facility import NuisanceFacility
+from netex.models.nuisance_facility_enumeration import NuisanceFacilityEnumeration
+from netex.models.nuisance_facility_list import NuisanceFacilityList
+from netex.models.object_filter_by_value import ObjectFilterByValue
+from netex.models.object_filter_by_value_structure import ObjectFilterByValueStructure
+from netex.models.object_refs_rel_structure import ObjectRefsRelStructure
+from netex.models.observed_passing_time import ObservedPassingTime
+from netex.models.observed_passing_time_ref import ObservedPassingTimeRef
+from netex.models.observed_passing_time_ref_structure import ObservedPassingTimeRefStructure
+from netex.models.observed_passing_time_versioned_child_structure import ObservedPassingTimeVersionedChildStructure
+from netex.models.observed_passing_time_view import ObservedPassingTimeView
+from netex.models.observed_passing_time_view_structure import ObservedPassingTimeViewStructure
+from netex.models.observed_passing_times_rel_structure import ObservedPassingTimesRelStructure
+from netex.models.offered_travel_specification import OfferedTravelSpecification
+from netex.models.offered_travel_specification_ref import OfferedTravelSpecificationRef
+from netex.models.offered_travel_specification_ref_structure import OfferedTravelSpecificationRefStructure
+from netex.models.offered_travel_specification_version_structure import OfferedTravelSpecificationVersionStructure
+from netex.models.offered_travel_specifications_rel_structure import OfferedTravelSpecificationsRelStructure
+from netex.models.on_becoming_enumeration import OnBecomingEnumeration
+from netex.models.on_ceasing_enumeration import OnCeasingEnumeration
+from netex.models.onboard_stay import OnboardStay
+from netex.models.onboard_stay_ref import OnboardStayRef
+from netex.models.onboard_stay_ref_structure import OnboardStayRefStructure
+from netex.models.onboard_stay_versioned_chlld_structure import OnboardStayVersionedChlldStructure
+from netex.models.onboard_stays_rel_structure import OnboardStaysRelStructure
+from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
+from netex.models.onward_call import OnwardCall
+from netex.models.onward_call_versioned_child_structure import OnwardCallVersionedChildStructure
+from netex.models.onward_calls_rel_structure import OnwardCallsRelStructure
+from netex.models.onward_service_link_derived_view_structure import OnwardServiceLinkDerivedViewStructure
+from netex.models.onward_service_link_view import OnwardServiceLinkView
+from netex.models.onward_timing_link_derived_view_structure import OnwardTimingLinkDerivedViewStructure
+from netex.models.onward_timing_link_view import OnwardTimingLinkView
+from netex.models.open_time_range_structure import OpenTimeRangeStructure
+from netex.models.open_timestamp_range_structure import OpenTimestampRangeStructure
+from netex.models.open_transport_mode import OpenTransportMode
+from netex.models.open_transport_mode_ref import OpenTransportModeRef
+from netex.models.open_transport_mode_ref_structure import OpenTransportModeRefStructure
+from netex.models.open_transport_mode_refs_rel_structure import OpenTransportModeRefsRelStructure
+from netex.models.open_transport_mode_value_structure import OpenTransportModeValueStructure
+from netex.models.operating_day_ref import OperatingDayRef
+from netex.models.operating_day_ref_structure import OperatingDayRefStructure
+from netex.models.operating_days_in_frame_rel_structure import OperatingDaysInFrameRelStructure
+from netex.models.operating_department import OperatingDepartment
+from netex.models.operating_department_ref import OperatingDepartmentRef
+from netex.models.operating_department_ref_structure import OperatingDepartmentRefStructure
+from netex.models.operating_department_version_structure import OperatingDepartmentVersionStructure
+from netex.models.operating_period import OperatingPeriod
+from netex.models.operating_period_ref import OperatingPeriodRef
+from netex.models.operating_period_ref_structure import OperatingPeriodRefStructure
+from netex.models.operating_period_version_structure import OperatingPeriodVersionStructure
+from netex.models.operating_periods_in_frame_rel_structure import OperatingPeriodsInFrameRelStructure
+from netex.models.operating_periods_rel_structure import OperatingPeriodsRelStructure
+from netex.models.operational_contex_refs_rel_structure import OperationalContexRefsRelStructure
+from netex.models.operational_context import OperationalContext
+from netex.models.operational_context_ref import OperationalContextRef
+from netex.models.operational_context_ref_structure import OperationalContextRefStructure
+from netex.models.operational_context_version_structure import OperationalContextVersionStructure
+from netex.models.operational_contexts_in_frame_rel_structure import OperationalContextsInFrameRelStructure
+from netex.models.operator import Operator
+from netex.models.operator_activities_enumeration import OperatorActivitiesEnumeration
+from netex.models.operator_derived_view_structure import OperatorDerivedViewStructure
+from netex.models.operator_ref import OperatorRef
+from netex.models.operator_ref_structure import OperatorRefStructure
+from netex.models.operator_restrictions_enumeration import OperatorRestrictionsEnumeration
+from netex.models.operator_version_structure import OperatorVersionStructure
+from netex.models.operator_view import OperatorView
+from netex.models.ordered_version_of_object_ref import OrderedVersionOfObjectRef
+from netex.models.ordered_version_of_object_ref_structure import OrderedVersionOfObjectRefStructure
+from netex.models.organisation_1 import Organisation1
+from netex.models.organisation_2 import Organisation2
+from netex.models.organisation_derived_view_structure import OrganisationDerivedViewStructure
+from netex.models.organisation_part_1 import OrganisationPart1
+from netex.models.organisation_part_2 import OrganisationPart2
+from netex.models.organisation_part_ref import OrganisationPartRef
+from netex.models.organisation_part_ref_structure import OrganisationPartRefStructure
+from netex.models.organisation_part_version_structure import OrganisationPartVersionStructure
+from netex.models.organisation_parts_rel_structure import OrganisationPartsRelStructure
+from netex.models.organisation_ref import OrganisationRef
+from netex.models.organisation_ref_structure import OrganisationRefStructure
+from netex.models.organisation_refs_rel_structure import OrganisationRefsRelStructure
+from netex.models.organisation_type_enumeration import OrganisationTypeEnumeration
+from netex.models.organisation_version_structure import OrganisationVersionStructure
+from netex.models.organisation_view import OrganisationView
+from netex.models.organisational_unit import OrganisationalUnit
+from netex.models.organisational_unit_ref import OrganisationalUnitRef
+from netex.models.organisational_unit_ref_structure import OrganisationalUnitRefStructure
+from netex.models.organisational_unit_refs_rel_structure import OrganisationalUnitRefsRelStructure
+from netex.models.organisational_unit_version_structure import OrganisationalUnitVersionStructure
+from netex.models.organisational_units_rel_structure import OrganisationalUnitsRelStructure
+from netex.models.organisations_in_frame_rel_structure import OrganisationsInFrameRelStructure
+from netex.models.other_error import OtherError
+from netex.models.other_error_structure import OtherErrorStructure
+from netex.models.other_organisation import OtherOrganisation
+from netex.models.other_organisation_ref import OtherOrganisationRef
+from netex.models.other_organisation_ref_structure import OtherOrganisationRefStructure
+from netex.models.other_organisation_version_structure import OtherOrganisationVersionStructure
+from netex.models.other_place_equipment import OtherPlaceEquipment
+from netex.models.output_detail_enumeration import OutputDetailEnumeration
+from netex.models.overtaking_possibility import OvertakingPossibility
+from netex.models.overtaking_possibility_ref import OvertakingPossibilityRef
+from netex.models.overtaking_possibility_ref_structure import OvertakingPossibilityRefStructure
+from netex.models.overtaking_possibility_version_structure import OvertakingPossibilityVersionStructure
+from netex.models.parameters_ignored_error import ParametersIgnoredError
+from netex.models.parameters_ignored_error_structure import ParametersIgnoredErrorStructure
+from netex.models.parent_common_section_ref import ParentCommonSectionRef
+from netex.models.parent_section_ref import ParentSectionRef
+from netex.models.parking import Parking
+from netex.models.parking_area import ParkingArea
+from netex.models.parking_area_ref import ParkingAreaRef
+from netex.models.parking_area_ref_structure import ParkingAreaRefStructure
+from netex.models.parking_area_refs_rel_structure import ParkingAreaRefsRelStructure
+from netex.models.parking_area_version_structure import ParkingAreaVersionStructure
+from netex.models.parking_areas_rel_structure import ParkingAreasRelStructure
+from netex.models.parking_bay import ParkingBay
+from netex.models.parking_bay_ref import ParkingBayRef
+from netex.models.parking_bay_ref_structure import ParkingBayRefStructure
+from netex.models.parking_bay_refs_rel_structure import ParkingBayRefsRelStructure
+from netex.models.parking_bay_version_structure import ParkingBayVersionStructure
+from netex.models.parking_bays_rel_structure import ParkingBaysRelStructure
+from netex.models.parking_capacities_rel_structure import ParkingCapacitiesRelStructure
+from netex.models.parking_capacity import ParkingCapacity
+from netex.models.parking_capacity_ref import ParkingCapacityRef
+from netex.models.parking_capacity_ref_structure import ParkingCapacityRefStructure
+from netex.models.parking_capacity_versioned_child_structure import ParkingCapacityVersionedChildStructure
+from netex.models.parking_charge_band_ref import ParkingChargeBandRef
+from netex.models.parking_charge_band_ref_structure import ParkingChargeBandRefStructure
+from netex.models.parking_charge_bands_rel_structure import ParkingChargeBandsRelStructure
+from netex.models.parking_component import ParkingComponent
+from netex.models.parking_component_version_structure import ParkingComponentVersionStructure
+from netex.models.parking_entrance_for_vehicles import ParkingEntranceForVehicles
+from netex.models.parking_entrance_for_vehicles_ref import ParkingEntranceForVehiclesRef
+from netex.models.parking_entrance_for_vehicles_ref_structure import ParkingEntranceForVehiclesRefStructure
+from netex.models.parking_entrance_for_vehicles_version_structure import ParkingEntranceForVehiclesVersionStructure
+from netex.models.parking_entrance_ref import ParkingEntranceRef
+from netex.models.parking_entrance_ref_structure import ParkingEntranceRefStructure
+from netex.models.parking_entrances_for_vehicles_rel_structure import ParkingEntrancesForVehiclesRelStructure
+from netex.models.parking_facility import ParkingFacility
+from netex.models.parking_facility_enumeration import ParkingFacilityEnumeration
+from netex.models.parking_facility_list import ParkingFacilityList
+from netex.models.parking_layout_enumeration import ParkingLayoutEnumeration
+from netex.models.parking_passenger_entrance import ParkingPassengerEntrance
+from netex.models.parking_passenger_entrance_ref import ParkingPassengerEntranceRef
+from netex.models.parking_passenger_entrance_ref_structure import ParkingPassengerEntranceRefStructure
+from netex.models.parking_passenger_entrance_version_structure import ParkingPassengerEntranceVersionStructure
+from netex.models.parking_payment_process_enumeration import ParkingPaymentProcessEnumeration
+from netex.models.parking_point_1 import ParkingPoint1
+from netex.models.parking_point_2 import ParkingPoint2
+from netex.models.parking_point_ref import ParkingPointRef
+from netex.models.parking_point_ref_structure import ParkingPointRefStructure
+from netex.models.parking_point_version_structure import ParkingPointVersionStructure
+from netex.models.parking_price_ref import ParkingPriceRef
+from netex.models.parking_price_ref_structure import ParkingPriceRefStructure
+from netex.models.parking_prices_rel_structure import ParkingPricesRelStructure
+from netex.models.parking_properties import ParkingProperties
+from netex.models.parking_properties_ref import ParkingPropertiesRef
+from netex.models.parking_properties_ref_structure import ParkingPropertiesRefStructure
+from netex.models.parking_properties_rel_structure import ParkingPropertiesRelStructure
+from netex.models.parking_properties_versioned_child_structure import ParkingPropertiesVersionedChildStructure
+from netex.models.parking_ref import ParkingRef
+from netex.models.parking_ref_structure import ParkingRefStructure
+from netex.models.parking_refs_rel_structure import ParkingRefsRelStructure
+from netex.models.parking_reservation_enumeration import ParkingReservationEnumeration
+from netex.models.parking_stay_enumeration import ParkingStayEnumeration
+from netex.models.parking_tariff import ParkingTariff
+from netex.models.parking_tariff_ref import ParkingTariffRef
+from netex.models.parking_tariff_ref_structure import ParkingTariffRefStructure
+from netex.models.parking_tariff_version_structure import ParkingTariffVersionStructure
+from netex.models.parking_tariffs_in_frame_rel_structure import ParkingTariffsInFrameRelStructure
+from netex.models.parking_type_enumeration import ParkingTypeEnumeration
+from netex.models.parking_user_enumeration import ParkingUserEnumeration
+from netex.models.parking_vehicle_enumeration import ParkingVehicleEnumeration
+from netex.models.parking_version_structure import ParkingVersionStructure
+from netex.models.parkings_in_frame_rel_structure import ParkingsInFrameRelStructure
+from netex.models.partial_refund_basis_enumeration import PartialRefundBasisEnumeration
+from netex.models.participant_ref import ParticipantRef
+from netex.models.passage_type_enumeration import PassageTypeEnumeration
+from netex.models.passenger_accessibility_needs import PassengerAccessibilityNeeds
+from netex.models.passenger_accessibility_needs_structure import PassengerAccessibilityNeedsStructure
+from netex.models.passenger_capacities_rel_structure import PassengerCapacitiesRelStructure
+from netex.models.passenger_capacity import PassengerCapacity
+from netex.models.passenger_capacity_ref import PassengerCapacityRef
+from netex.models.passenger_capacity_ref_structure import PassengerCapacityRefStructure
+from netex.models.passenger_capacity_structure import PassengerCapacityStructure
+from netex.models.passenger_carrying_passenger_carrying_view_structure import PassengerCarryingPassengerCarryingViewStructure
+from netex.models.passenger_carrying_requirement import PassengerCarryingRequirement
+from netex.models.passenger_carrying_requirement_ref import PassengerCarryingRequirementRef
+from netex.models.passenger_carrying_requirement_ref_structure import PassengerCarryingRequirementRefStructure
+from netex.models.passenger_carrying_requirement_version_structure import PassengerCarryingRequirementVersionStructure
+from netex.models.passenger_carrying_requirements_rel_structure import PassengerCarryingRequirementsRelStructure
+from netex.models.passenger_carrying_requirements_view import PassengerCarryingRequirementsView
+from netex.models.passenger_comms_facility import PassengerCommsFacility
+from netex.models.passenger_comms_facility_enumeration import PassengerCommsFacilityEnumeration
+from netex.models.passenger_comms_facility_list import PassengerCommsFacilityList
+from netex.models.passenger_equipment import PassengerEquipment
+from netex.models.passenger_equipment_ref import PassengerEquipmentRef
+from netex.models.passenger_equipment_ref_structure import PassengerEquipmentRefStructure
+from netex.models.passenger_equipment_version_structure import PassengerEquipmentVersionStructure
+from netex.models.passenger_equipments_rel_structure import PassengerEquipmentsRelStructure
+from netex.models.passenger_information_equipment import PassengerInformationEquipment
+from netex.models.passenger_information_equipment_enumeration import PassengerInformationEquipmentEnumeration
+from netex.models.passenger_information_equipment_ref import PassengerInformationEquipmentRef
+from netex.models.passenger_information_equipment_ref_structure import PassengerInformationEquipmentRefStructure
+from netex.models.passenger_information_equipment_version_structure import PassengerInformationEquipmentVersionStructure
+from netex.models.passenger_information_equipments_in_frame_rel_structure import PassengerInformationEquipmentsInFrameRelStructure
+from netex.models.passenger_information_facility import PassengerInformationFacility
+from netex.models.passenger_information_facility_enumeration import PassengerInformationFacilityEnumeration
+from netex.models.passenger_information_facility_list import PassengerInformationFacilityList
+from netex.models.passenger_information_request_ref import PassengerInformationRequestRef
+from netex.models.passenger_information_request_ref_structure import PassengerInformationRequestRefStructure
+from netex.models.passenger_journeys_in_frame_rel_structure import PassengerJourneysInFrameRelStructure
+from netex.models.passenger_safety_equipment import PassengerSafetyEquipment
+from netex.models.passenger_safety_equipment_ref import PassengerSafetyEquipmentRef
+from netex.models.passenger_safety_equipment_ref_structure import PassengerSafetyEquipmentRefStructure
+from netex.models.passenger_safety_equipment_version_structure import PassengerSafetyEquipmentVersionStructure
+from netex.models.passenger_seat_ref import PassengerSeatRef
+from netex.models.passenger_seat_ref_structure import PassengerSeatRefStructure
+from netex.models.passenger_stop_assignment import PassengerStopAssignment
+from netex.models.passenger_stop_assignment_derived_view_structure import PassengerStopAssignmentDerivedViewStructure
+from netex.models.passenger_stop_assignment_ref import PassengerStopAssignmentRef
+from netex.models.passenger_stop_assignment_ref_structure import PassengerStopAssignmentRefStructure
+from netex.models.passenger_stop_assignment_version_structure import PassengerStopAssignmentVersionStructure
+from netex.models.passenger_stop_assignment_view import PassengerStopAssignmentView
+from netex.models.passing_time import PassingTime
+from netex.models.passing_time_ref import PassingTimeRef
+from netex.models.passing_time_ref_structure import PassingTimeRefStructure
+from netex.models.passing_time_versioned_child_structure import PassingTimeVersionedChildStructure
+from netex.models.passing_time_view import PassingTimeView
+from netex.models.passing_time_view_structure import PassingTimeViewStructure
+from netex.models.path_assignment_ref import PathAssignmentRef
+from netex.models.path_assignment_ref_structure import PathAssignmentRefStructure
+from netex.models.path_direction_enumeration import PathDirectionEnumeration
+from netex.models.path_heading_enumeration import PathHeadingEnumeration
+from netex.models.path_junction import PathJunction
+from netex.models.path_junction_ref import PathJunctionRef
+from netex.models.path_junction_ref_structure import PathJunctionRefStructure
+from netex.models.path_junction_version_structure import PathJunctionVersionStructure
+from netex.models.path_junctions_in_frame_rel_structure import PathJunctionsInFrameRelStructure
+from netex.models.path_junctions_rel_structure import PathJunctionsRelStructure
+from netex.models.path_link import PathLink
+from netex.models.path_link_derived_view_structure import PathLinkDerivedViewStructure
+from netex.models.path_link_end_structure import PathLinkEndStructure
+from netex.models.path_link_in_sequence import PathLinkInSequence
+from netex.models.path_link_in_sequence_ref import PathLinkInSequenceRef
+from netex.models.path_link_in_sequence_ref_structure import PathLinkInSequenceRefStructure
+from netex.models.path_link_in_sequence_versioned_child_structure import PathLinkInSequenceVersionedChildStructure
+from netex.models.path_link_ref import PathLinkRef
+from netex.models.path_link_ref_by_value import PathLinkRefByValue
+from netex.models.path_link_ref_by_value_structure import PathLinkRefByValueStructure
+from netex.models.path_link_ref_structure import PathLinkRefStructure
+from netex.models.path_link_refs_rel_structure import PathLinkRefsRelStructure
+from netex.models.path_link_version_structure import PathLinkVersionStructure
+from netex.models.path_link_view import PathLinkView
+from netex.models.path_links_in_frame_rel_structure import PathLinksInFrameRelStructure
+from netex.models.path_links_in_sequence_rel_structure import PathLinksInSequenceRelStructure
+from netex.models.payment_by_mobile_structure import PaymentByMobileStructure
+from netex.models.payment_method_enumeration import PaymentMethodEnumeration
+from netex.models.penalty_policy import PenaltyPolicy
+from netex.models.penalty_policy_ref import PenaltyPolicyRef
+from netex.models.penalty_policy_ref_structure import PenaltyPolicyRefStructure
+from netex.models.penalty_policy_type_enumeration import PenaltyPolicyTypeEnumeration
+from netex.models.penalty_policy_version_structure import PenaltyPolicyVersionStructure
+from netex.models.per_basis_enumeration import PerBasisEnumeration
+from netex.models.periodicity_enumeration import PeriodicityEnumeration
+from netex.models.place import Place
+from netex.models.place_equipment import PlaceEquipment
+from netex.models.place_equipment_version_structure import PlaceEquipmentVersionStructure
+from netex.models.place_equipments_rel_structure import PlaceEquipmentsRelStructure
+from netex.models.place_in_sequence import PlaceInSequence
+from netex.models.place_in_sequence_ref import PlaceInSequenceRef
+from netex.models.place_in_sequence_ref_structure import PlaceInSequenceRefStructure
+from netex.models.place_in_sequence_versioned_child_structure import PlaceInSequenceVersionedChildStructure
+from netex.models.place_lighting import PlaceLighting
+from netex.models.place_lighting_equipment_ref import PlaceLightingEquipmentRef
+from netex.models.place_lighting_equipment_ref_structure import PlaceLightingEquipmentRefStructure
+from netex.models.place_lighting_version_structure import PlaceLightingVersionStructure
+from netex.models.place_ref_1 import PlaceRef1
+from netex.models.place_ref_2 import PlaceRef2
+from netex.models.place_ref_structure import PlaceRefStructure
+from netex.models.place_refs_rel_structure import PlaceRefsRelStructure
+from netex.models.place_sign import PlaceSign
+from netex.models.place_sign_ref import PlaceSignRef
+from netex.models.place_sign_ref_structure import PlaceSignRefStructure
+from netex.models.place_sign_structure import PlaceSignStructure
+from netex.models.place_use_enumeration import PlaceUseEnumeration
+from netex.models.place_version_structure import PlaceVersionStructure
+from netex.models.places_in_sequence_rel_structure import PlacesInSequenceRelStructure
+from netex.models.point_1 import Point1
+from netex.models.point_2 import Point2
+from netex.models.point_array_property_type import PointArrayPropertyType
+from netex.models.point_in_journey_pattern import PointInJourneyPattern
+from netex.models.point_in_journey_pattern_ref import PointInJourneyPatternRef
+from netex.models.point_in_journey_pattern_ref_structure import PointInJourneyPatternRefStructure
+from netex.models.point_in_journey_pattern_versioned_child_structure import PointInJourneyPatternVersionedChildStructure
+from netex.models.point_in_link_sequence import PointInLinkSequence
+from netex.models.point_in_link_sequence_versioned_child_structure import PointInLinkSequenceVersionedChildStructure
+from netex.models.point_in_sequence_ref import PointInSequenceRef
+from netex.models.point_in_sequence_ref_structure import PointInSequenceRefStructure
+from netex.models.point_of_interest import PointOfInterest
+from netex.models.point_of_interest_classification import PointOfInterestClassification
+from netex.models.point_of_interest_classification_derived_view_structure import PointOfInterestClassificationDerivedViewStructure
+from netex.models.point_of_interest_classification_hierarchies_in_frame_rel_structure import PointOfInterestClassificationHierarchiesInFrameRelStructure
+from netex.models.point_of_interest_classification_hierarchy import PointOfInterestClassificationHierarchy
+from netex.models.point_of_interest_classification_hierarchy_member_structure import PointOfInterestClassificationHierarchyMemberStructure
+from netex.models.point_of_interest_classification_hierarchy_members_rel_structure import PointOfInterestClassificationHierarchyMembersRelStructure
+from netex.models.point_of_interest_classification_hierarchy_version_structure import PointOfInterestClassificationHierarchyVersionStructure
+from netex.models.point_of_interest_classification_ref import PointOfInterestClassificationRef
+from netex.models.point_of_interest_classification_ref_structure import PointOfInterestClassificationRefStructure
+from netex.models.point_of_interest_classification_version_structure import PointOfInterestClassificationVersionStructure
+from netex.models.point_of_interest_classification_view import PointOfInterestClassificationView
+from netex.models.point_of_interest_classifications_in_frame_rel_structure import PointOfInterestClassificationsInFrameRelStructure
+from netex.models.point_of_interest_classifications_views_rel_structure import PointOfInterestClassificationsViewsRelStructure
+from netex.models.point_of_interest_component import PointOfInterestComponent
+from netex.models.point_of_interest_component_version_structure import PointOfInterestComponentVersionStructure
+from netex.models.point_of_interest_derived_view_structure import PointOfInterestDerivedViewStructure
+from netex.models.point_of_interest_entrance import PointOfInterestEntrance
+from netex.models.point_of_interest_entrance_ref import PointOfInterestEntranceRef
+from netex.models.point_of_interest_entrance_ref_structure import PointOfInterestEntranceRefStructure
+from netex.models.point_of_interest_entrance_version_structure import PointOfInterestEntranceVersionStructure
+from netex.models.point_of_interest_entrances_rel_structure import PointOfInterestEntrancesRelStructure
+from netex.models.point_of_interest_hierarchy_ref import PointOfInterestHierarchyRef
+from netex.models.point_of_interest_hierarchy_ref_structure import PointOfInterestHierarchyRefStructure
+from netex.models.point_of_interest_ref import PointOfInterestRef
+from netex.models.point_of_interest_ref_structure import PointOfInterestRefStructure
+from netex.models.point_of_interest_refs_rel_structure import PointOfInterestRefsRelStructure
+from netex.models.point_of_interest_space import PointOfInterestSpace
+from netex.models.point_of_interest_space_descriptor_group_access_space_type import PointOfInterestSpaceDescriptorGroupAccessSpaceType
+from netex.models.point_of_interest_space_ref import PointOfInterestSpaceRef
+from netex.models.point_of_interest_space_ref_structure import PointOfInterestSpaceRefStructure
+from netex.models.point_of_interest_space_type_enumeration import PointOfInterestSpaceTypeEnumeration
+from netex.models.point_of_interest_space_version_structure import PointOfInterestSpaceVersionStructure
+from netex.models.point_of_interest_spaces_rel_structure import PointOfInterestSpacesRelStructure
+from netex.models.point_of_interest_vehicle_entrance import PointOfInterestVehicleEntrance
+from netex.models.point_of_interest_vehicle_entrance_ref import PointOfInterestVehicleEntranceRef
+from netex.models.point_of_interest_vehicle_entrance_ref_structure import PointOfInterestVehicleEntranceRefStructure
+from netex.models.point_of_interest_vehicle_entrance_version_structure import PointOfInterestVehicleEntranceVersionStructure
+from netex.models.point_of_interest_version_structure import PointOfInterestVersionStructure
+from netex.models.point_of_interest_view import PointOfInterestView
+from netex.models.point_on_line_section import PointOnLineSection
+from netex.models.point_on_line_section_versioned_child_structure import PointOnLineSectionVersionedChildStructure
+from netex.models.point_on_line_sections_rel_structure import PointOnLineSectionsRelStructure
+from netex.models.point_on_link import PointOnLink
+from netex.models.point_on_link_by_value_structure import PointOnLinkByValueStructure
+from netex.models.point_on_link_ref import PointOnLinkRef
+from netex.models.point_on_link_ref_structure_1 import PointOnLinkRefStructure1
+from netex.models.point_on_link_ref_structure_2 import PointOnLinkRefStructure2
+from netex.models.point_on_link_versioned_child_structure import PointOnLinkVersionedChildStructure
+from netex.models.point_on_route import PointOnRoute
+from netex.models.point_on_route_ref import PointOnRouteRef
+from netex.models.point_on_route_ref_structure import PointOnRouteRefStructure
+from netex.models.point_on_route_versioned_child_structure import PointOnRouteVersionedChildStructure
+from netex.models.point_on_section_1 import PointOnSection1
+from netex.models.point_on_section_2 import PointOnSection2
+from netex.models.point_on_section_versioned_child_structure import PointOnSectionVersionedChildStructure
+from netex.models.point_projection import PointProjection
+from netex.models.point_projection_ref import PointProjectionRef
+from netex.models.point_projection_ref_structure import PointProjectionRefStructure
+from netex.models.point_projection_version_structure import PointProjectionVersionStructure
+from netex.models.point_property import PointProperty
+from netex.models.point_property_type import PointPropertyType
+from netex.models.point_ref import PointRef
+from netex.models.point_ref_structure import PointRefStructure
+from netex.models.point_refs_rel_structure import PointRefsRelStructure
+from netex.models.point_type import PointType
+from netex.models.point_version_structure import PointVersionStructure
+from netex.models.points_in_journey_pattern_rel_structure import PointsInJourneyPatternRelStructure
+from netex.models.points_of_interest_in_frame_rel_structure import PointsOfInterestInFrameRelStructure
+from netex.models.points_on_link_in_frame_rel_structure import PointsOnLinkInFrameRelStructure
+from netex.models.points_on_link_rel_structure import PointsOnLinkRelStructure
+from netex.models.points_on_route_rel_structure import PointsOnRouteRelStructure
+from netex.models.points_on_section_rel_structure import PointsOnSectionRelStructure
+from netex.models.polygon import Polygon
+from netex.models.polygon_type import PolygonType
+from netex.models.pos import Pos
+from netex.models.pos_list import PosList
+from netex.models.postal_address import PostalAddress
+from netex.models.postal_address_ref import PostalAddressRef
+from netex.models.postal_address_ref_structure import PostalAddressRefStructure
+from netex.models.postal_address_version_structure import PostalAddressVersionStructure
+from netex.models.preassigned_fare_product import PreassignedFareProduct
+from netex.models.preassigned_fare_product_enumeration import PreassignedFareProductEnumeration
+from netex.models.preassigned_fare_product_ref import PreassignedFareProductRef
+from netex.models.preassigned_fare_product_ref_structure import PreassignedFareProductRefStructure
+from netex.models.preassigned_fare_product_version_structure import PreassignedFareProductVersionStructure
+from netex.models.predictors_enumeration import PredictorsEnumeration
+from netex.models.presentation_structure import PresentationStructure
+from netex.models.previous_call import PreviousCall
+from netex.models.previous_call_versioned_child_structure import PreviousCallVersionedChildStructure
+from netex.models.previous_calls_rel_structure import PreviousCallsRelStructure
+from netex.models.price_group_1 import PriceGroup1
+from netex.models.price_group_ref import PriceGroupRef
+from netex.models.price_group_ref_structure import PriceGroupRefStructure
+from netex.models.price_rule_step_result_structure import PriceRuleStepResultStructure
+from netex.models.price_rule_step_results_rel_structure import PriceRuleStepResultsRelStructure
+from netex.models.price_unit import PriceUnit
+from netex.models.price_unit_ref import PriceUnitRef
+from netex.models.price_unit_ref_structure import PriceUnitRefStructure
+from netex.models.price_unit_refs_rel_structure import PriceUnitRefsRelStructure
+from netex.models.price_unit_version_structure import PriceUnitVersionStructure
+from netex.models.price_units_rel_structure import PriceUnitsRelStructure
+from netex.models.priceable_object_1 import PriceableObject1
+from netex.models.priceable_object_2 import PriceableObject2
+from netex.models.priceable_object_ref import PriceableObjectRef
+from netex.models.priceable_object_ref_structure import PriceableObjectRefStructure
+from netex.models.priceable_object_refs_rel_structure import PriceableObjectRefsRelStructure
+from netex.models.pricing_parameter_set import PricingParameterSet
+from netex.models.pricing_parameter_set_ref import PricingParameterSetRef
+from netex.models.pricing_parameter_set_ref_structure import PricingParameterSetRefStructure
+from netex.models.pricing_parameter_set_versioned_structure import PricingParameterSetVersionedStructure
+from netex.models.pricing_rule_1 import PricingRule1
+from netex.models.pricing_rule_2 import PricingRule2
+from netex.models.pricing_rule_ref import PricingRuleRef
+from netex.models.pricing_rule_ref_structure import PricingRuleRefStructure
+from netex.models.pricing_rule_versioned_structure import PricingRuleVersionedStructure
+from netex.models.pricing_rules_rel_structure import PricingRulesRelStructure
+from netex.models.pricing_service import PricingService
+from netex.models.pricing_service_ref import PricingServiceRef
+from netex.models.pricing_service_ref_structure import PricingServiceRefStructure
+from netex.models.pricing_service_versioned_structure import PricingServiceVersionedStructure
+from netex.models.pricing_services_rel_structure import PricingServicesRelStructure
+from netex.models.print_presentation_structure import PrintPresentationStructure
+from netex.models.private_code import PrivateCode
+from netex.models.private_code_structure import PrivateCodeStructure
+from netex.models.producer_request import ProducerRequest
+from netex.models.producer_request_endpoint_structure import ProducerRequestEndpointStructure
+from netex.models.producer_response import ProducerResponse
+from netex.models.producer_response_endpoint_structure import ProducerResponseEndpointStructure
+from netex.models.producer_response_structure import ProducerResponseStructure
+from netex.models.profile_parameter_ref import ProfileParameterRef
+from netex.models.projection import Projection
+from netex.models.projection_ref import ProjectionRef
+from netex.models.projection_ref_structure import ProjectionRefStructure
+from netex.models.projection_version_structure import ProjectionVersionStructure
+from netex.models.projections_rel_structure import ProjectionsRelStructure
+from netex.models.proof_of_identity_enumeration import ProofOfIdentityEnumeration
+from netex.models.properties_of_day_rel_structure import PropertiesOfDayRelStructure
+from netex.models.property_of_day import PropertyOfDay
+from netex.models.property_of_day_structure import PropertyOfDayStructure
+from netex.models.public_use_enumeration import PublicUseEnumeration
+from netex.models.publication_delivery import PublicationDelivery
+from netex.models.publication_delivery_structure import PublicationDeliveryStructure
+from netex.models.publication_request import PublicationRequest
+from netex.models.publication_request_structure import PublicationRequestStructure
+from netex.models.publicity_channel_enumeration import PublicityChannelEnumeration
+from netex.models.purchase_action_enumeration import PurchaseActionEnumeration
+from netex.models.purchase_moment_enumeration import PurchaseMomentEnumeration
+from netex.models.purchase_when_enumeration import PurchaseWhenEnumeration
+from netex.models.purchase_window import PurchaseWindow
+from netex.models.purchase_window_ref import PurchaseWindowRef
+from netex.models.purchase_window_ref_structure import PurchaseWindowRefStructure
+from netex.models.purchase_window_version_structure import PurchaseWindowVersionStructure
+from netex.models.purpose_of_equipment_profile import PurposeOfEquipmentProfile
+from netex.models.purpose_of_equipment_profile_ref import PurposeOfEquipmentProfileRef
+from netex.models.purpose_of_equipment_profile_ref_structure import PurposeOfEquipmentProfileRefStructure
+from netex.models.purpose_of_equipment_profile_value_structure import PurposeOfEquipmentProfileValueStructure
+from netex.models.purpose_of_grouping import PurposeOfGrouping
+from netex.models.purpose_of_grouping_ref import PurposeOfGroupingRef
+from netex.models.purpose_of_grouping_ref_structure import PurposeOfGroupingRefStructure
+from netex.models.purpose_of_grouping_value_structure import PurposeOfGroupingValueStructure
+from netex.models.purpose_of_journey_partition import PurposeOfJourneyPartition
+from netex.models.purpose_of_journey_partition_ref import PurposeOfJourneyPartitionRef
+from netex.models.purpose_of_journey_partition_ref_structure import PurposeOfJourneyPartitionRefStructure
+from netex.models.purpose_of_journey_partition_value_structure import PurposeOfJourneyPartitionValueStructure
+from netex.models.purposes_of_grouping_in_frame_rel_structure import PurposesOfGroupingInFrameRelStructure
+from netex.models.pyschosensory_need_enumeration import PyschosensoryNeedEnumeration
+from netex.models.quality_structure_factor_1 import QualityStructureFactor1
+from netex.models.quality_structure_factor_2 import QualityStructureFactor2
+from netex.models.quality_structure_factor_price import QualityStructureFactorPrice
+from netex.models.quality_structure_factor_price_ref import QualityStructureFactorPriceRef
+from netex.models.quality_structure_factor_price_ref_structure import QualityStructureFactorPriceRefStructure
+from netex.models.quality_structure_factor_price_versioned_child_structure import QualityStructureFactorPriceVersionedChildStructure
+from netex.models.quality_structure_factor_prices_rel_structure import QualityStructureFactorPricesRelStructure
+from netex.models.quality_structure_factor_ref import QualityStructureFactorRef
+from netex.models.quality_structure_factor_ref_structure import QualityStructureFactorRefStructure
+from netex.models.quality_structure_factor_version_structure import QualityStructureFactorVersionStructure
+from netex.models.quality_structure_factors_rel_structure import QualityStructureFactorsRelStructure
+from netex.models.quay import Quay
+from netex.models.quay_assignment_view import QuayAssignmentView
+from netex.models.quay_ref import QuayRef
+from netex.models.quay_ref_structure import QuayRefStructure
+from netex.models.quay_refs_rel_structure import QuayRefsRelStructure
+from netex.models.quay_type_enumeration import QuayTypeEnumeration
+from netex.models.quay_version_structure import QuayVersionStructure
+from netex.models.quays_rel_structure import QuaysRelStructure
+from netex.models.queue_management_enumeration import QueueManagementEnumeration
+from netex.models.queueing_equipment import QueueingEquipment
+from netex.models.queueing_equipment_ref import QueueingEquipmentRef
+from netex.models.queueing_equipment_ref_structure import QueueingEquipmentRefStructure
+from netex.models.queueing_equipment_version_structure import QueueingEquipmentVersionStructure
+from netex.models.rail_submode import RailSubmode
+from netex.models.rail_submode_enumeration import RailSubmodeEnumeration
+from netex.models.railway_element import RailwayElement
+from netex.models.railway_element_version_structure import RailwayElementVersionStructure
+from netex.models.railway_junction import RailwayJunction
+from netex.models.railway_junction_version_structure import RailwayJunctionVersionStructure
+from netex.models.railway_link_ref import RailwayLinkRef
+from netex.models.railway_link_ref_by_value import RailwayLinkRefByValue
+from netex.models.railway_link_ref_by_value_structure import RailwayLinkRefByValueStructure
+from netex.models.railway_link_ref_structure import RailwayLinkRefStructure
+from netex.models.railway_point_ref import RailwayPointRef
+from netex.models.railway_point_ref_structure import RailwayPointRefStructure
+from netex.models.ramp_equipment import RampEquipment
+from netex.models.ramp_equipment_ref import RampEquipmentRef
+from netex.models.ramp_equipment_ref_structure import RampEquipmentRefStructure
+from netex.models.ramp_equipment_version_structure import RampEquipmentVersionStructure
+from netex.models.reason_for_meeting_enumeration import ReasonForMeetingEnumeration
+from netex.models.reference_type import ReferenceType
+from netex.models.refund_policy_enumeration import RefundPolicyEnumeration
+from netex.models.refund_type_enumeration import RefundTypeEnumeration
+from netex.models.refunding import Refunding
+from netex.models.refunding_ref import RefundingRef
+from netex.models.refunding_ref_structure import RefundingRefStructure
+from netex.models.refunding_version_structure import RefundingVersionStructure
+from netex.models.register_break_of_journey_enumeration import RegisterBreakOfJourneyEnumeration
+from netex.models.relation_to_vehicle_enumeration import RelationToVehicleEnumeration
+from netex.models.relationship_ref import RelationshipRef
+from netex.models.relationship_ref_structure import RelationshipRefStructure
+from netex.models.relationship_structure import RelationshipStructure
+from netex.models.relative_direction_enumeration import RelativeDirectionEnumeration
+from netex.models.relative_operator_enumeration import RelativeOperatorEnumeration
+from netex.models.relief_opportunities_in_frame_rel_structure import ReliefOpportunitiesInFrameRelStructure
+from netex.models.relief_opportunities_rel_structure import ReliefOpportunitiesRelStructure
+from netex.models.relief_opportunity import ReliefOpportunity
+from netex.models.relief_opportunity_ref import ReliefOpportunityRef
+from netex.models.relief_opportunity_ref_structure import ReliefOpportunityRefStructure
+from netex.models.relief_opportunity_version_structure import ReliefOpportunityVersionStructure
+from netex.models.relief_point_1 import ReliefPoint1
+from netex.models.relief_point_2 import ReliefPoint2
+from netex.models.relief_point_ref import ReliefPointRef
+from netex.models.relief_point_ref_structure import ReliefPointRefStructure
+from netex.models.relief_point_version_structure import ReliefPointVersionStructure
+from netex.models.relief_points_in_frame_rel_structure import ReliefPointsInFrameRelStructure
+from netex.models.repeated_trip_fare_request_ref import RepeatedTripFareRequestRef
+from netex.models.repeated_trip_fare_request_ref_structure import RepeatedTripFareRequestRefStructure
+from netex.models.replacing import Replacing
+from netex.models.replacing_ref import ReplacingRef
+from netex.models.replacing_ref_structure import ReplacingRefStructure
+from netex.models.replacing_version_structure import ReplacingVersionStructure
+from netex.models.request_method_type_enumeration import RequestMethodTypeEnumeration
+from netex.models.request_structure import RequestStructure
+from netex.models.request_timestamp import RequestTimestamp
+from netex.models.requested_travel_specification import RequestedTravelSpecification
+from netex.models.requested_travel_specification_ref import RequestedTravelSpecificationRef
+from netex.models.requested_travel_specification_ref_structure import RequestedTravelSpecificationRefStructure
+from netex.models.requested_travel_specification_version_structure import RequestedTravelSpecificationVersionStructure
+from netex.models.requestor_ref import RequestorRef
+from netex.models.resell_type_enumeration import ResellTypeEnumeration
+from netex.models.resell_when_enumeration import ResellWhenEnumeration
+from netex.models.reselling import Reselling
+from netex.models.reselling_ref import ResellingRef
+from netex.models.reselling_ref_structure import ResellingRefStructure
+from netex.models.reselling_version_structure import ResellingVersionStructure
+from netex.models.reservation_charge_type_enumeration import ReservationChargeTypeEnumeration
+from netex.models.reservation_enumeration import ReservationEnumeration
+from netex.models.reserved_space_facility import ReservedSpaceFacility
+from netex.models.reserved_space_facility_enumeration import ReservedSpaceFacilityEnumeration
+from netex.models.reserved_space_facility_list import ReservedSpaceFacilityList
+from netex.models.reserving import Reserving
+from netex.models.reserving_ref import ReservingRef
+from netex.models.reserving_ref_structure import ReservingRefStructure
+from netex.models.reserving_version_structure import ReservingVersionStructure
+from netex.models.residence_type_enumeration import ResidenceTypeEnumeration
+from netex.models.residential_qualification import ResidentialQualification
+from netex.models.residential_qualification_eligibility import ResidentialQualificationEligibility
+from netex.models.residential_qualification_eligibility_ref import ResidentialQualificationEligibilityRef
+from netex.models.residential_qualification_eligibility_ref_structure import ResidentialQualificationEligibilityRefStructure
+from netex.models.residential_qualification_eligibility_versioned_child_structure import ResidentialQualificationEligibilityVersionedChildStructure
+from netex.models.residential_qualification_ref import ResidentialQualificationRef
+from netex.models.residential_qualification_ref_structure import ResidentialQualificationRefStructure
+from netex.models.residential_qualification_version_structure import ResidentialQualificationVersionStructure
+from netex.models.residential_qualifications_rel_structure import ResidentialQualificationsRelStructure
+from netex.models.resource_frame import ResourceFrame
+from netex.models.resource_frame_ref import ResourceFrameRef
+from netex.models.resource_frame_ref_structure import ResourceFrameRefStructure
+from netex.models.resource_frame_version_frame_structure import ResourceFrameVersionFrameStructure
+from netex.models.response_endpoint_structure import ResponseEndpointStructure
+from netex.models.response_status import ResponseStatus
+from netex.models.response_structure import ResponseStructure
+from netex.models.response_timestamp import ResponseTimestamp
+from netex.models.responsibility_role import ResponsibilityRole
+from netex.models.responsibility_role_assignment import ResponsibilityRoleAssignment
+from netex.models.responsibility_role_assignment_versioned_child_structure import ResponsibilityRoleAssignmentVersionedChildStructure
+from netex.models.responsibility_role_assignments_rel_structure import ResponsibilityRoleAssignmentsRelStructure
+from netex.models.responsibility_role_ref import ResponsibilityRoleRef
+from netex.models.responsibility_role_ref_structure import ResponsibilityRoleRefStructure
+from netex.models.responsibility_role_version_structure import ResponsibilityRoleVersionStructure
+from netex.models.responsibility_roles_rel_structure import ResponsibilityRolesRelStructure
+from netex.models.responsibility_set import ResponsibilitySet
+from netex.models.responsibility_set_ref import ResponsibilitySetRef
+from netex.models.responsibility_set_ref_structure import ResponsibilitySetRefStructure
+from netex.models.responsibility_set_version_structure import ResponsibilitySetVersionStructure
+from netex.models.responsibility_sets_in_frame_rel_structure import ResponsibilitySetsInFrameRelStructure
+from netex.models.responsibility_sets_rel_structure import ResponsibilitySetsRelStructure
+from netex.models.restricted_manoeuvre import RestrictedManoeuvre
+from netex.models.restricted_manoeuvre_ref import RestrictedManoeuvreRef
+from netex.models.restricted_manoeuvre_ref_structure import RestrictedManoeuvreRefStructure
+from netex.models.restricted_manoeuvre_version_structure import RestrictedManoeuvreVersionStructure
+from netex.models.retail_consortium import RetailConsortium
+from netex.models.retail_consortium_ref import RetailConsortiumRef
+from netex.models.retail_consortium_ref_structure import RetailConsortiumRefStructure
+from netex.models.retail_consortium_refs_rel_structure import RetailConsortiumRefsRelStructure
+from netex.models.retail_consortium_version_structure import RetailConsortiumVersionStructure
+from netex.models.retail_consortiums_in_frame_rel_structure import RetailConsortiumsInFrameRelStructure
+from netex.models.retail_consortiums_rel_structure import RetailConsortiumsRelStructure
+from netex.models.retail_device import RetailDevice
+from netex.models.retail_device_ref import RetailDeviceRef
+from netex.models.retail_device_ref_structure import RetailDeviceRefStructure
+from netex.models.retail_device_refs_rel_structure import RetailDeviceRefsRelStructure
+from netex.models.retail_device_security_listing import RetailDeviceSecurityListing
+from netex.models.retail_device_security_listing_ref import RetailDeviceSecurityListingRef
+from netex.models.retail_device_security_listing_ref_structure import RetailDeviceSecurityListingRefStructure
+from netex.models.retail_device_security_listing_refs_rel_structure import RetailDeviceSecurityListingRefsRelStructure
+from netex.models.retail_device_security_listing_versioned_child_structure import RetailDeviceSecurityListingVersionedChildStructure
+from netex.models.retail_device_version_structure import RetailDeviceVersionStructure
+from netex.models.retail_devices_in_frame_rel_structure import RetailDevicesInFrameRelStructure
+from netex.models.retail_devices_rel_structure import RetailDevicesRelStructure
+from netex.models.retail_facility import RetailFacility
+from netex.models.retail_facility_enumeration import RetailFacilityEnumeration
+from netex.models.retail_facility_list import RetailFacilityList
+from netex.models.retail_service import RetailService
+from netex.models.retail_service_enumeration import RetailServiceEnumeration
+from netex.models.retail_service_ref import RetailServiceRef
+from netex.models.retail_service_ref_structure import RetailServiceRefStructure
+from netex.models.retail_service_version_structure import RetailServiceVersionStructure
+from netex.models.reverse_property_name import ReversePropertyName
+from netex.models.rhythmical_journey_group import RhythmicalJourneyGroup
+from netex.models.rhythmical_journey_group_ref import RhythmicalJourneyGroupRef
+from netex.models.rhythmical_journey_group_ref_structure import RhythmicalJourneyGroupRefStructure
+from netex.models.rhythmical_journey_group_version_structure import RhythmicalJourneyGroupVersionStructure
+from netex.models.road_address import RoadAddress
+from netex.models.road_address_ref import RoadAddressRef
+from netex.models.road_address_ref_structure import RoadAddressRefStructure
+from netex.models.road_address_version_structure import RoadAddressVersionStructure
+from netex.models.road_element import RoadElement
+from netex.models.road_element_version_structure import RoadElementVersionStructure
+from netex.models.road_junction import RoadJunction
+from netex.models.road_junction_version_structure import RoadJunctionVersionStructure
+from netex.models.road_link_ref import RoadLinkRef
+from netex.models.road_link_ref_by_value import RoadLinkRefByValue
+from netex.models.road_link_ref_by_value_structure import RoadLinkRefByValueStructure
+from netex.models.road_link_ref_structure import RoadLinkRefStructure
+from netex.models.road_number_range_structure import RoadNumberRangeStructure
+from netex.models.road_point_ref import RoadPointRef
+from netex.models.road_point_ref_structure import RoadPointRefStructure
+from netex.models.road_vehicle_mode import RoadVehicleMode
+from netex.models.road_vehicle_mode_enumeration import RoadVehicleModeEnumeration
+from netex.models.rough_surface import RoughSurface
+from netex.models.rough_surface_ref import RoughSurfaceRef
+from netex.models.rough_surface_ref_structure import RoughSurfaceRefStructure
+from netex.models.rough_surface_structure import RoughSurfaceStructure
+from netex.models.round_trip import RoundTrip
+from netex.models.round_trip_ref import RoundTripRef
+from netex.models.round_trip_ref_structure import RoundTripRefStructure
+from netex.models.round_trip_type_enumeration import RoundTripTypeEnumeration
+from netex.models.round_trip_version_structure import RoundTripVersionStructure
+from netex.models.rounding import Rounding
+from netex.models.rounding_method_enumeration import RoundingMethodEnumeration
+from netex.models.rounding_ref import RoundingRef
+from netex.models.rounding_ref_structure import RoundingRefStructure
+from netex.models.rounding_step import RoundingStep
+from netex.models.rounding_step_ref import RoundingStepRef
+from netex.models.rounding_step_ref_structure import RoundingStepRefStructure
+from netex.models.rounding_step_versioned_child_structure import RoundingStepVersionedChildStructure
+from netex.models.rounding_steps_rel_structure import RoundingStepsRelStructure
+from netex.models.rounding_versioned_structure import RoundingVersionedStructure
+from netex.models.roundings_rel_structure import RoundingsRelStructure
+from netex.models.route_1 import Route1
+from netex.models.route_2 import Route2
+from netex.models.route_derived_view_structure import RouteDerivedViewStructure
+from netex.models.route_instruction import RouteInstruction
+from netex.models.route_instruction_ref import RouteInstructionRef
+from netex.models.route_instruction_ref_structure import RouteInstructionRefStructure
+from netex.models.route_instruction_version_structure import RouteInstructionVersionStructure
+from netex.models.route_instructions_rel_structure import RouteInstructionsRelStructure
+from netex.models.route_link import RouteLink
+from netex.models.route_link_ref import RouteLinkRef
+from netex.models.route_link_ref_by_value import RouteLinkRefByValue
+from netex.models.route_link_ref_by_value_structure import RouteLinkRefByValueStructure
+from netex.models.route_link_ref_structure import RouteLinkRefStructure
+from netex.models.route_link_version_structure import RouteLinkVersionStructure
+from netex.models.route_links_in_frame_rel_structure import RouteLinksInFrameRelStructure
+from netex.models.route_point import RoutePoint
+from netex.models.route_point_ref import RoutePointRef
+from netex.models.route_point_ref_structure import RoutePointRefStructure
+from netex.models.route_point_version_structure import RoutePointVersionStructure
+from netex.models.route_points_in_frame_rel_structure import RoutePointsInFrameRelStructure
+from netex.models.route_ref import RouteRef
+from netex.models.route_ref_structure import RouteRefStructure
+from netex.models.route_refs_rel_structure import RouteRefsRelStructure
+from netex.models.route_version_structure import RouteVersionStructure
+from netex.models.route_view import RouteView
+from netex.models.routes_in_frame_rel_structure import RoutesInFrameRelStructure
+from netex.models.routes_rel_structure import RoutesRelStructure
+from netex.models.routing import Routing
+from netex.models.routing_constraint_zone import RoutingConstraintZone
+from netex.models.routing_constraint_zone_ref import RoutingConstraintZoneRef
+from netex.models.routing_constraint_zone_ref_structure import RoutingConstraintZoneRefStructure
+from netex.models.routing_constraint_zone_version_structure import RoutingConstraintZoneVersionStructure
+from netex.models.routing_constraint_zones_in_frame_rel_structure import RoutingConstraintZonesInFrameRelStructure
+from netex.models.routing_ref import RoutingRef
+from netex.models.routing_ref_structure import RoutingRefStructure
+from netex.models.routing_type_enumeration import RoutingTypeEnumeration
+from netex.models.routing_version_structure import RoutingVersionStructure
+from netex.models.rubbish_disposal_equipment import RubbishDisposalEquipment
+from netex.models.rubbish_disposal_equipment_ref import RubbishDisposalEquipmentRef
+from netex.models.rubbish_disposal_equipment_ref_structure import RubbishDisposalEquipmentRefStructure
+from netex.models.rubbish_disposal_equipment_version_structure import RubbishDisposalEquipmentVersionStructure
+from netex.models.safety_facility import SafetyFacility
+from netex.models.safety_facility_enumeration import SafetyFacilityEnumeration
+from netex.models.safety_facility_list import SafetyFacilityList
+from netex.models.sale_discount_right import SaleDiscountRight
+from netex.models.sale_discount_right_enumeration import SaleDiscountRightEnumeration
+from netex.models.sale_discount_right_ref import SaleDiscountRightRef
+from netex.models.sale_discount_right_ref_structure import SaleDiscountRightRefStructure
+from netex.models.sale_discount_right_version_structure import SaleDiscountRightVersionStructure
+from netex.models.sales_notice_assignment import SalesNoticeAssignment
+from netex.models.sales_notice_assignment_ref_structure import SalesNoticeAssignmentRefStructure
+from netex.models.sales_notice_assignment_version_structure import SalesNoticeAssignmentVersionStructure
+from netex.models.sales_offer_package import SalesOfferPackage
+from netex.models.sales_offer_package_element import SalesOfferPackageElement
+from netex.models.sales_offer_package_element_ref import SalesOfferPackageElementRef
+from netex.models.sales_offer_package_element_ref_structure import SalesOfferPackageElementRefStructure
+from netex.models.sales_offer_package_element_version_structure import SalesOfferPackageElementVersionStructure
+from netex.models.sales_offer_package_elements_in_frame_rel_structure import SalesOfferPackageElementsInFrameRelStructure
+from netex.models.sales_offer_package_elements_rel_structure import SalesOfferPackageElementsRelStructure
+from netex.models.sales_offer_package_entitlement_given import SalesOfferPackageEntitlementGiven
+from netex.models.sales_offer_package_entitlement_given_ref import SalesOfferPackageEntitlementGivenRef
+from netex.models.sales_offer_package_entitlement_given_ref_structure import SalesOfferPackageEntitlementGivenRefStructure
+from netex.models.sales_offer_package_entitlement_given_version_structure import SalesOfferPackageEntitlementGivenVersionStructure
+from netex.models.sales_offer_package_entitlement_required import SalesOfferPackageEntitlementRequired
+from netex.models.sales_offer_package_entitlement_required_ref import SalesOfferPackageEntitlementRequiredRef
+from netex.models.sales_offer_package_entitlement_required_ref_structure import SalesOfferPackageEntitlementRequiredRefStructure
+from netex.models.sales_offer_package_entitlement_required_version_structure import SalesOfferPackageEntitlementRequiredVersionStructure
+from netex.models.sales_offer_package_price import SalesOfferPackagePrice
+from netex.models.sales_offer_package_price_ref import SalesOfferPackagePriceRef
+from netex.models.sales_offer_package_price_ref_structure import SalesOfferPackagePriceRefStructure
+from netex.models.sales_offer_package_price_versioned_child_structure import SalesOfferPackagePriceVersionedChildStructure
+from netex.models.sales_offer_package_prices_rel_structure import SalesOfferPackagePricesRelStructure
+from netex.models.sales_offer_package_ref import SalesOfferPackageRef
+from netex.models.sales_offer_package_ref_structure import SalesOfferPackageRefStructure
+from netex.models.sales_offer_package_refs_rel_structure import SalesOfferPackageRefsRelStructure
+from netex.models.sales_offer_package_substitution import SalesOfferPackageSubstitution
+from netex.models.sales_offer_package_substitution_ref import SalesOfferPackageSubstitutionRef
+from netex.models.sales_offer_package_substitution_ref_structure import SalesOfferPackageSubstitutionRefStructure
+from netex.models.sales_offer_package_substitution_version_structure import SalesOfferPackageSubstitutionVersionStructure
+from netex.models.sales_offer_package_substitutions_in_frame_rel_structure import SalesOfferPackageSubstitutionsInFrameRelStructure
+from netex.models.sales_offer_package_substitutions_rel_structure import SalesOfferPackageSubstitutionsRelStructure
+from netex.models.sales_offer_package_version_structure import SalesOfferPackageVersionStructure
+from netex.models.sales_offer_packages_in_frame_rel_structure import SalesOfferPackagesInFrameRelStructure
+from netex.models.sales_transaction import SalesTransaction
+from netex.models.sales_transaction_frame import SalesTransactionFrame
+from netex.models.sales_transaction_frame_ref import SalesTransactionFrameRef
+from netex.models.sales_transaction_frame_ref_structure import SalesTransactionFrameRefStructure
+from netex.models.sales_transaction_frame_version_frame_structure import SalesTransactionFrameVersionFrameStructure
+from netex.models.sales_transaction_ref import SalesTransactionRef
+from netex.models.sales_transaction_ref_structure import SalesTransactionRefStructure
+from netex.models.sales_transaction_refs_rel_structure import SalesTransactionRefsRelStructure
+from netex.models.sales_transaction_version_structure import SalesTransactionVersionStructure
+from netex.models.sales_transactions_in_frame_rel_structure import SalesTransactionsInFrameRelStructure
+from netex.models.sales_transactions_rel_structure import SalesTransactionsRelStructure
+from netex.models.same_class_of_use_enumeration import SameClassOfUseEnumeration
+from netex.models.same_journey_enumeration import SameJourneyEnumeration
+from netex.models.same_operator_enumeration import SameOperatorEnumeration
+from netex.models.same_period_enumeration import SamePeriodEnumeration
+from netex.models.same_route_enumeration import SameRouteEnumeration
+from netex.models.same_station_reentry_policy_enumeration import SameStationReentryPolicyEnumeration
+from netex.models.same_stop_enumeration import SameStopEnumeration
+from netex.models.same_type_of_product_category_enumeration import SameTypeOfProductCategoryEnumeration
+from netex.models.same_type_of_travel_document_enumeration import SameTypeOfTravelDocumentEnumeration
+from netex.models.same_user_enumeration import SameUserEnumeration
+from netex.models.same_zone_enumeration import SameZoneEnumeration
+from netex.models.sanitary_equipment import SanitaryEquipment
+from netex.models.sanitary_equipment_ref import SanitaryEquipmentRef
+from netex.models.sanitary_equipment_ref_structure import SanitaryEquipmentRefStructure
+from netex.models.sanitary_equipment_version_structure import SanitaryEquipmentVersionStructure
+from netex.models.sanitary_facility import SanitaryFacility
+from netex.models.sanitary_facility_enumeration import SanitaryFacilityEnumeration
+from netex.models.sanitary_facility_list import SanitaryFacilityList
+from netex.models.schedule_request_ref import ScheduleRequestRef
+from netex.models.schedule_request_ref_structure import ScheduleRequestRefStructure
+from netex.models.scheduled_stop_point import ScheduledStopPoint
+from netex.models.scheduled_stop_point_derived_view_structure import ScheduledStopPointDerivedViewStructure
+from netex.models.scheduled_stop_point_ref import ScheduledStopPointRef
+from netex.models.scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
+from netex.models.scheduled_stop_point_refs_rel_structure import ScheduledStopPointRefsRelStructure
+from netex.models.scheduled_stop_point_version_structure import ScheduledStopPointVersionStructure
+from netex.models.scheduled_stop_point_view import ScheduledStopPointView
+from netex.models.scheduled_stop_points_in_frame_rel_structure import ScheduledStopPointsInFrameRelStructure
+from netex.models.schematic_map import SchematicMap
+from netex.models.schematic_map_member_ref import SchematicMapMemberRef
+from netex.models.schematic_map_member_ref_structure import SchematicMapMemberRefStructure
+from netex.models.schematic_map_member_versioned_child_structure import SchematicMapMemberVersionedChildStructure
+from netex.models.schematic_map_members_rel_structure import SchematicMapMembersRelStructure
+from netex.models.schematic_map_ref import SchematicMapRef
+from netex.models.schematic_map_ref_structure import SchematicMapRefStructure
+from netex.models.schematic_map_version_structure import SchematicMapVersionStructure
+from netex.models.schematic_maps_in_frame_rel_structure import SchematicMapsInFrameRelStructure
+from netex.models.scope_of_ticket import ScopeOfTicket
+from netex.models.scope_of_ticket_enumeration import ScopeOfTicketEnumeration
+from netex.models.scope_of_ticket_list import ScopeOfTicketList
+from netex.models.scoping_method_enumeration import ScopingMethodEnumeration
+from netex.models.season_enumeration import SeasonEnumeration
+from netex.models.seat_allocation_method_enumeration import SeatAllocationMethodEnumeration
+from netex.models.seating_equipment import SeatingEquipment
+from netex.models.seating_equipment_ref import SeatingEquipmentRef
+from netex.models.seating_equipment_ref_structure import SeatingEquipmentRefStructure
+from netex.models.seating_equipment_version_structure import SeatingEquipmentVersionStructure
+from netex.models.section_ref import SectionRef
+from netex.models.section_ref_structure import SectionRefStructure
+from netex.models.section_type_enumeration import SectionTypeEnumeration
+from netex.models.security_list import SecurityList
+from netex.models.security_list_ref import SecurityListRef
+from netex.models.security_list_ref_structure import SecurityListRefStructure
+from netex.models.security_list_version_structure import SecurityListVersionStructure
+from netex.models.security_listing_1 import SecurityListing1
+from netex.models.security_listing_2 import SecurityListing2
+from netex.models.security_listing_ref import SecurityListingRef
+from netex.models.security_listing_ref_structure import SecurityListingRefStructure
+from netex.models.security_listing_refs_rel_structure import SecurityListingRefsRelStructure
+from netex.models.security_listing_versioned_child_structure import SecurityListingVersionedChildStructure
+from netex.models.security_listings_rel_structure import SecurityListingsRelStructure
+from netex.models.security_lists_rel_structure import SecurityListsRelStructure
+from netex.models.securitylist_refs_rel_structure import SecuritylistRefsRelStructure
+from netex.models.self_drive_submode import SelfDriveSubmode
+from netex.models.self_drive_submode_enumeration import SelfDriveSubmodeEnumeration
+from netex.models.series_constraint import SeriesConstraint
+from netex.models.series_constraint_price import SeriesConstraintPrice
+from netex.models.series_constraint_price_ref import SeriesConstraintPriceRef
+from netex.models.series_constraint_price_ref_structure import SeriesConstraintPriceRefStructure
+from netex.models.series_constraint_price_versioned_child_structure import SeriesConstraintPriceVersionedChildStructure
+from netex.models.series_constraint_prices_rel_structure import SeriesConstraintPricesRelStructure
+from netex.models.series_constraint_ref import SeriesConstraintRef
+from netex.models.series_constraint_ref_structure_1 import SeriesConstraintRefStructure1
+from netex.models.series_constraint_ref_structure_2 import SeriesConstraintRefStructure2
+from netex.models.series_constraint_refs_rel_structure import SeriesConstraintRefsRelStructure
+from netex.models.series_constraint_version_structure import SeriesConstraintVersionStructure
+from netex.models.series_constraints_rel_structure import SeriesConstraintsRelStructure
+from netex.models.series_presentation_enumeration import SeriesPresentationEnumeration
+from netex.models.series_type_enumeration import SeriesTypeEnumeration
+from netex.models.service_access_right_1 import ServiceAccessRight1
+from netex.models.service_access_right_2 import ServiceAccessRight2
+from netex.models.service_access_right_ref import ServiceAccessRightRef
+from netex.models.service_access_right_ref_structure import ServiceAccessRightRefStructure
+from netex.models.service_access_right_refs_rel_structure import ServiceAccessRightRefsRelStructure
+from netex.models.service_access_right_version_structure import ServiceAccessRightVersionStructure
+from netex.models.service_alteration_enumeration import ServiceAlterationEnumeration
+from netex.models.service_calendar import ServiceCalendar
+from netex.models.service_calendar_frame import ServiceCalendarFrame
+from netex.models.service_calendar_frame_ref import ServiceCalendarFrameRef
+from netex.models.service_calendar_frame_ref_structure import ServiceCalendarFrameRefStructure
+from netex.models.service_calendar_frame_version_frame_structure import ServiceCalendarFrameVersionFrameStructure
+from netex.models.service_calendar_ref import ServiceCalendarRef
+from netex.models.service_calendar_ref_structure import ServiceCalendarRefStructure
+from netex.models.service_calendar_version_structure import ServiceCalendarVersionStructure
+from netex.models.service_capabilities_request_structure import ServiceCapabilitiesRequestStructure
+from netex.models.service_delivery import ServiceDelivery
+from netex.models.service_delivery_body_structure import ServiceDeliveryBodyStructure
+from netex.models.service_delivery_error_condition_element import ServiceDeliveryErrorConditionElement
+from netex.models.service_delivery_error_condition_structure import ServiceDeliveryErrorConditionStructure
+from netex.models.service_delivery_structure import ServiceDeliveryStructure
+from netex.models.service_designator import ServiceDesignator
+from netex.models.service_designator_structure import ServiceDesignatorStructure
+from netex.models.service_exclusion import ServiceExclusion
+from netex.models.service_exclusion_ref import ServiceExclusionRef
+from netex.models.service_exclusion_ref_structure import ServiceExclusionRefStructure
+from netex.models.service_exclusion_version_structure import ServiceExclusionVersionStructure
+from netex.models.service_exclusions_in_frame_rel_structure import ServiceExclusionsInFrameRelStructure
+from netex.models.service_facility_set import ServiceFacilitySet
+from netex.models.service_facility_set_ref import ServiceFacilitySetRef
+from netex.models.service_facility_set_ref_structure import ServiceFacilitySetRefStructure
+from netex.models.service_facility_set_version_structure import ServiceFacilitySetVersionStructure
+from netex.models.service_facility_sets_in_frame_rel_structure import ServiceFacilitySetsInFrameRelStructure
+from netex.models.service_facility_sets_rel_structure import ServiceFacilitySetsRelStructure
+from netex.models.service_frame import ServiceFrame
+from netex.models.service_frame_ref import ServiceFrameRef
+from netex.models.service_frame_ref_structure import ServiceFrameRefStructure
+from netex.models.service_journey_1 import ServiceJourney1
+from netex.models.service_journey_2 import ServiceJourney2
+from netex.models.service_journey_interchange import ServiceJourneyInterchange
+from netex.models.service_journey_interchange_derived_view_structure import ServiceJourneyInterchangeDerivedViewStructure
+from netex.models.service_journey_interchange_ref import ServiceJourneyInterchangeRef
+from netex.models.service_journey_interchange_ref_structure import ServiceJourneyInterchangeRefStructure
+from netex.models.service_journey_interchange_version_structure import ServiceJourneyInterchangeVersionStructure
+from netex.models.service_journey_interchange_view import ServiceJourneyInterchangeView
+from netex.models.service_journey_interchanges_rel_structure import ServiceJourneyInterchangesRelStructure
+from netex.models.service_journey_pattern import ServiceJourneyPattern
+from netex.models.service_journey_pattern_interchange import ServiceJourneyPatternInterchange
+from netex.models.service_journey_pattern_interchange_ref import ServiceJourneyPatternInterchangeRef
+from netex.models.service_journey_pattern_interchange_ref_structure import ServiceJourneyPatternInterchangeRefStructure
+from netex.models.service_journey_pattern_interchange_version_structure import ServiceJourneyPatternInterchangeVersionStructure
+from netex.models.service_journey_pattern_ref import ServiceJourneyPatternRef
+from netex.models.service_journey_pattern_ref_structure import ServiceJourneyPatternRefStructure
+from netex.models.service_journey_pattern_type_enumeration import ServiceJourneyPatternTypeEnumeration
+from netex.models.service_journey_pattern_version_structure import ServiceJourneyPatternVersionStructure
+from netex.models.service_journey_ref import ServiceJourneyRef
+from netex.models.service_journey_ref_structure import ServiceJourneyRefStructure
+from netex.models.service_journey_version_structure import ServiceJourneyVersionStructure
+from netex.models.service_link import ServiceLink
+from netex.models.service_link_in_journey_pattern import ServiceLinkInJourneyPattern
+from netex.models.service_link_in_journey_pattern_versioned_child_structure import ServiceLinkInJourneyPatternVersionedChildStructure
+from netex.models.service_link_in_sequence_ref import ServiceLinkInSequenceRef
+from netex.models.service_link_in_sequence_ref_structure import ServiceLinkInSequenceRefStructure
+from netex.models.service_link_ref import ServiceLinkRef
+from netex.models.service_link_ref_by_value import ServiceLinkRefByValue
+from netex.models.service_link_ref_by_value_structure import ServiceLinkRefByValueStructure
+from netex.models.service_link_ref_structure import ServiceLinkRefStructure
+from netex.models.service_link_version_structure import ServiceLinkVersionStructure
+from netex.models.service_links_in_frame_rel_structure import ServiceLinksInFrameRelStructure
+from netex.models.service_links_in_journey_pattern_rel_structure import ServiceLinksInJourneyPatternRelStructure
+from netex.models.service_not_available_error import ServiceNotAvailableError
+from netex.models.service_not_available_error_structure import ServiceNotAvailableErrorStructure
+from netex.models.service_pattern import ServicePattern
+from netex.models.service_pattern_ref import ServicePatternRef
+from netex.models.service_pattern_ref_structure import ServicePatternRefStructure
+from netex.models.service_pattern_version_structure import ServicePatternVersionStructure
+from netex.models.service_patterns_in_frame_rel_structure import ServicePatternsInFrameRelStructure
+from netex.models.service_request import ServiceRequest
+from netex.models.service_request_context_structure import ServiceRequestContextStructure
+from netex.models.service_request_structure import ServiceRequestStructure
+from netex.models.service_reservation_facility import ServiceReservationFacility
+from netex.models.service_reservation_facility_list import ServiceReservationFacilityList
+from netex.models.service_site import ServiceSite
+from netex.models.service_site_ref import ServiceSiteRef
+from netex.models.service_site_ref_structure import ServiceSiteRefStructure
+from netex.models.service_site_version_structure import ServiceSiteVersionStructure
+from netex.models.service_version_frame_structure import ServiceVersionFrameStructure
+from netex.models.serviced_organisation import ServicedOrganisation
+from netex.models.serviced_organisation_ref import ServicedOrganisationRef
+from netex.models.serviced_organisation_ref_structure import ServicedOrganisationRefStructure
+from netex.models.serviced_organisation_type_enumeration import ServicedOrganisationTypeEnumeration
+from netex.models.serviced_organisation_version_structure import ServicedOrganisationVersionStructure
+from netex.models.set_operator_enumeration import SetOperatorEnumeration
+from netex.models.shared_usage_enumeration import SharedUsageEnumeration
+from netex.models.shelter_equipment import ShelterEquipment
+from netex.models.shelter_equipment_ref import ShelterEquipmentRef
+from netex.models.shelter_equipment_ref_structure import ShelterEquipmentRefStructure
+from netex.models.shelter_equipment_version_structure import ShelterEquipmentVersionStructure
+from netex.models.sign_content_enumeration import SignContentEnumeration
+from netex.models.sign_equipment import SignEquipment
+from netex.models.sign_equipment_ref import SignEquipmentRef
+from netex.models.sign_equipment_version_structure import SignEquipmentVersionStructure
+from netex.models.sign_type import SignType
+from netex.models.simple_feature import SimpleFeature
+from netex.models.simple_feature_ref import SimpleFeatureRef
+from netex.models.simple_feature_ref_structure import SimpleFeatureRefStructure
+from netex.models.simple_feature_version_structure import SimpleFeatureVersionStructure
+from netex.models.simple_object_ref import SimpleObjectRef
+from netex.models.simple_object_ref_structure import SimpleObjectRefStructure
+from netex.models.simple_point_version_structure import SimplePointVersionStructure
+from netex.models.simple_validity_condition import SimpleValidityCondition
+from netex.models.single_trip_fare_request_ref import SingleTripFareRequestRef
+from netex.models.single_trip_fare_request_ref_structure import SingleTripFareRequestRefStructure
+from netex.models.siri_schema import SiriSchema
+from netex.models.site import Site
+from netex.models.site_component import SiteComponent
+from netex.models.site_component_ref import SiteComponentRef
+from netex.models.site_component_ref_structure import SiteComponentRefStructure
+from netex.models.site_component_version_structure import SiteComponentVersionStructure
+from netex.models.site_connection import SiteConnection
+from netex.models.site_connection_end_structure import SiteConnectionEndStructure
+from netex.models.site_connection_ref import SiteConnectionRef
+from netex.models.site_connection_ref_structure import SiteConnectionRefStructure
+from netex.models.site_connection_version_structure import SiteConnectionVersionStructure
+from netex.models.site_element import SiteElement
+from netex.models.site_element_ref import SiteElementRef
+from netex.models.site_element_ref_structure import SiteElementRefStructure
+from netex.models.site_element_version_structure import SiteElementVersionStructure
+from netex.models.site_entrance_version_structure import SiteEntranceVersionStructure
+from netex.models.site_entrances_rel_structure import SiteEntrancesRelStructure
+from netex.models.site_equipment import SiteEquipment
+from netex.models.site_equipment_ref import SiteEquipmentRef
+from netex.models.site_equipment_ref_structure import SiteEquipmentRefStructure
+from netex.models.site_equipment_version_structure import SiteEquipmentVersionStructure
+from netex.models.site_facility_set import SiteFacilitySet
+from netex.models.site_facility_set_ref import SiteFacilitySetRef
+from netex.models.site_facility_set_ref_structure import SiteFacilitySetRefStructure
+from netex.models.site_facility_set_structure import SiteFacilitySetStructure
+from netex.models.site_facility_sets_in_frame_rel_structure import SiteFacilitySetsInFrameRelStructure
+from netex.models.site_facility_sets_rel_structure import SiteFacilitySetsRelStructure
+from netex.models.site_frame import SiteFrame
+from netex.models.site_frame_ref import SiteFrameRef
+from netex.models.site_frame_ref_structure import SiteFrameRefStructure
+from netex.models.site_path_link import SitePathLink
+from netex.models.site_path_link_ref_structure import SitePathLinkRefStructure
+from netex.models.site_path_link_version_structure import SitePathLinkVersionStructure
+from netex.models.site_path_links_rel_structure import SitePathLinksRelStructure
+from netex.models.site_ref import SiteRef
+from netex.models.site_ref_structure import SiteRefStructure
+from netex.models.site_refs_rel_structure import SiteRefsRelStructure
+from netex.models.site_type_enumeration import SiteTypeEnumeration
+from netex.models.site_version_frame_structure import SiteVersionFrameStructure
+from netex.models.site_version_structure import SiteVersionStructure
+from netex.models.snow_and_ice_submode import SnowAndIceSubmode
+from netex.models.snow_and_ice_submode_enumeration import SnowAndIceSubmodeEnumeration
+from netex.models.space_value import SpaceValue
+from netex.models.spatial_feature import SpatialFeature
+from netex.models.spatial_feature_ref import SpatialFeatureRef
+from netex.models.spatial_features_in_frame_rel_structure import SpatialFeaturesInFrameRelStructure
+from netex.models.special_service import SpecialService
+from netex.models.special_service_ref import SpecialServiceRef
+from netex.models.special_service_ref_structure import SpecialServiceRefStructure
+from netex.models.special_service_refs_rel_structure import SpecialServiceRefsRelStructure
+from netex.models.special_service_version_structure import SpecialServiceVersionStructure
+from netex.models.special_services_rel_structure import SpecialServicesRelStructure
+from netex.models.specific_parameter_assignment_ref_structure import SpecificParameterAssignmentRefStructure
+from netex.models.specific_parameter_assignment_version_structure import (
+    SpecificParameterAssignment,
+    SpecificParameterAssignmentVersionStructure,
+    SpecificParameterAssignmentsRelStructure,
+)
+from netex.models.srs_name_1 import SrsName1
+from netex.models.srs_name_2 import SrsName2
+from netex.models.staffing import Staffing
+from netex.models.staffing_enumeration import StaffingEnumeration
+from netex.models.stair_end_structure import StairEndStructure
+from netex.models.stair_equipment import StairEquipment
+from netex.models.stair_equipment_version_structure import StairEquipmentVersionStructure
+from netex.models.stair_flight import StairFlight
+from netex.models.stair_flight_versioned_child_structure import StairFlightVersionedChildStructure
+from netex.models.stair_flights_rel_structure import StairFlightsRelStructure
+from netex.models.staircase_equipment import StaircaseEquipment
+from netex.models.staircase_equipment_ref import StaircaseEquipmentRef
+from netex.models.staircase_equipment_ref_structure import StaircaseEquipmentRefStructure
+from netex.models.staircase_equipment_version_structure import StaircaseEquipmentVersionStructure
+from netex.models.stakeholder_role_type_enumeration import StakeholderRoleTypeEnumeration
+from netex.models.standard_fare_table import StandardFareTable
+from netex.models.standard_fare_table_ref import StandardFareTableRef
+from netex.models.standard_fare_table_ref_structure import StandardFareTableRefStructure
+from netex.models.standard_fare_table_refs_rel_structure import StandardFareTableRefsRelStructure
+from netex.models.standard_fare_table_version_structure import StandardFareTableVersionStructure
+from netex.models.start_time_at_stop_point import StartTimeAtStopPoint
+from netex.models.start_time_at_stop_point_ref import StartTimeAtStopPointRef
+from netex.models.start_time_at_stop_point_ref_structure import StartTimeAtStopPointRefStructure
+from netex.models.start_time_at_stop_point_versioned_child_structure import StartTimeAtStopPointVersionedChildStructure
+from netex.models.start_time_at_stop_points_rel_structure import StartTimeAtStopPointsRelStructure
+from netex.models.status import Status
+from netex.models.status_enumeration import StatusEnumeration
+from netex.models.status_response_structure import StatusResponseStructure
+from netex.models.step_free_access import StepFreeAccess
+from netex.models.step_limit import StepLimit
+from netex.models.step_limit_ref import StepLimitRef
+from netex.models.step_limit_ref_structure import StepLimitRefStructure
+from netex.models.step_limit_unit_enumeration import StepLimitUnitEnumeration
+from netex.models.step_limit_version_structure import StepLimitVersionStructure
+from netex.models.stop_area import StopArea
+from netex.models.stop_area_ref import StopAreaRef
+from netex.models.stop_area_ref_structure import StopAreaRefStructure
+from netex.models.stop_area_refs_rel_structure import StopAreaRefsRelStructure
+from netex.models.stop_area_version_structure import StopAreaVersionStructure
+from netex.models.stop_areas_in_frame_rel_structure import StopAreasInFrameRelStructure
+from netex.models.stop_assignment import StopAssignment
+from netex.models.stop_assignment_ref import StopAssignmentRef
+from netex.models.stop_assignment_ref_structure import StopAssignmentRefStructure
+from netex.models.stop_assignment_version_structure import StopAssignmentVersionStructure
+from netex.models.stop_assignments_in_frame_rel_structure import StopAssignmentsInFrameRelStructure
+from netex.models.stop_event_request_ref import StopEventRequestRef
+from netex.models.stop_event_request_ref_structure import StopEventRequestRefStructure
+from netex.models.stop_finder_request_ref import StopFinderRequestRef
+from netex.models.stop_finder_request_ref_structure import StopFinderRequestRefStructure
+from netex.models.stop_path_link_ref_structure import StopPathLinkRefStructure
+from netex.models.stop_place import StopPlace
+from netex.models.stop_place_component import StopPlaceComponent
+from netex.models.stop_place_component_type_enumeration import StopPlaceComponentTypeEnumeration
+from netex.models.stop_place_component_version_structure import StopPlaceComponentVersionStructure
+from netex.models.stop_place_derived_view_structure import StopPlaceDerivedViewStructure
+from netex.models.stop_place_entrance import StopPlaceEntrance
+from netex.models.stop_place_entrance_ref import StopPlaceEntranceRef
+from netex.models.stop_place_entrance_ref_structure import StopPlaceEntranceRefStructure
+from netex.models.stop_place_entrance_version_structure import StopPlaceEntranceVersionStructure
+from netex.models.stop_place_ref import StopPlaceRef
+from netex.models.stop_place_ref_structure import StopPlaceRefStructure
+from netex.models.stop_place_refs_rel_structure import StopPlaceRefsRelStructure
+from netex.models.stop_place_space import StopPlaceSpace
+from netex.models.stop_place_space_ref import StopPlaceSpaceRef
+from netex.models.stop_place_space_ref_structure import StopPlaceSpaceRefStructure
+from netex.models.stop_place_space_version_structure import StopPlaceSpaceVersionStructure
+from netex.models.stop_place_vehicle_entrance import StopPlaceVehicleEntrance
+from netex.models.stop_place_vehicle_entrance_ref import StopPlaceVehicleEntranceRef
+from netex.models.stop_place_vehicle_entrance_ref_structure import StopPlaceVehicleEntranceRefStructure
+from netex.models.stop_place_vehicle_entrance_version_structure import StopPlaceVehicleEntranceVersionStructure
+from netex.models.stop_place_vehicle_entrances_rel_structure import StopPlaceVehicleEntrancesRelStructure
+from netex.models.stop_place_version_structure import StopPlaceVersionStructure
+from netex.models.stop_place_view import StopPlaceView
+from netex.models.stop_place_weight_enumeration import StopPlaceWeightEnumeration
+from netex.models.stop_places_in_frame_rel_structure import StopPlacesInFrameRelStructure
+from netex.models.stop_places_rel_structure import StopPlacesRelStructure
+from netex.models.stop_point_in_journey_pattern import StopPointInJourneyPattern
+from netex.models.stop_point_in_journey_pattern_derived_view_structure import StopPointInJourneyPatternDerivedViewStructure
+from netex.models.stop_point_in_journey_pattern_ref import StopPointInJourneyPatternRef
+from netex.models.stop_point_in_journey_pattern_ref_structure import StopPointInJourneyPatternRefStructure
+from netex.models.stop_point_in_journey_pattern_versioned_child_structure import StopPointInJourneyPatternVersionedChildStructure
+from netex.models.stop_point_in_journey_pattern_view import StopPointInJourneyPatternView
+from netex.models.stop_points_in_journey_pattern_rel_structure import StopPointsInJourneyPatternRelStructure
+from netex.models.stop_type_enumeration import StopTypeEnumeration
+from netex.models.stop_use_constraint_enumeration import StopUseConstraintEnumeration
+from netex.models.stop_use_enumeration import StopUseEnumeration
+from netex.models.strict_containment_aggregation_structure import StrictContainmentAggregationStructure
+from netex.models.submode import Submode
+from netex.models.submode_ref import SubmodeRef
+from netex.models.submode_ref_structure import SubmodeRefStructure
+from netex.models.subscribing import Subscribing
+from netex.models.subscribing_ref import SubscribingRef
+from netex.models.subscribing_ref_structure import SubscribingRefStructure
+from netex.models.subscribing_version_structure import SubscribingVersionStructure
+from netex.models.subscription_context_structure import SubscriptionContextStructure
+from netex.models.subscription_renewal_policy_enumeration import SubscriptionRenewalPolicyEnumeration
+from netex.models.subscription_request import SubscriptionRequest
+from netex.models.subscription_request_structure import SubscriptionRequestStructure
+from netex.models.subscription_response import SubscriptionResponse
+from netex.models.subscription_response_body_structure import SubscriptionResponseBodyStructure
+from netex.models.subscription_response_structure import SubscriptionResponseStructure
+from netex.models.subscription_term_type_enumeration import SubscriptionTermTypeEnumeration
+from netex.models.subscription_terminated_notification import SubscriptionTerminatedNotification
+from netex.models.subscription_terminated_notification_structure import SubscriptionTerminatedNotificationStructure
+from netex.models.suitabilities_rel_structure import SuitabilitiesRelStructure
+from netex.models.suitability import Suitability
+from netex.models.suitability_versioned_child_structure import SuitabilityVersionedChildStructure
+from netex.models.suitable_enumeration import SuitableEnumeration
+from netex.models.supplement_product import SupplementProduct
+from netex.models.supplement_product_enumeration import SupplementProductEnumeration
+from netex.models.supplement_product_ref import SupplementProductRef
+from netex.models.supplement_product_ref_structure import SupplementProductRefStructure
+from netex.models.supplement_product_version_structure import SupplementProductVersionStructure
+from netex.models.supply_contract_ref import SupplyContractRef
+from netex.models.supply_contract_ref_structure import SupplyContractRefStructure
+from netex.models.surface_array_property_type import SurfaceArrayPropertyType
+from netex.models.surface_property import SurfaceProperty
+from netex.models.surface_property_type import SurfacePropertyType
+from netex.models.surface_type_enumeration import SurfaceTypeEnumeration
+from netex.models.suspending import Suspending
+from netex.models.suspending_ref import SuspendingRef
+from netex.models.suspending_ref_structure import SuspendingRefStructure
+from netex.models.suspending_version_structure import SuspendingVersionStructure
+from netex.models.suspension_policy_enumeration import SuspensionPolicyEnumeration
+from netex.models.system_of_units import SystemOfUnits
+from netex.models.tactile_warning_strip_enumeration import TactileWarningStripEnumeration
+from netex.models.target_element import TargetElement
+from netex.models.target_passing_time import TargetPassingTime
+from netex.models.target_passing_time_ref import TargetPassingTimeRef
+from netex.models.target_passing_time_ref_structure import TargetPassingTimeRefStructure
+from netex.models.target_passing_time_versioned_child_structure import TargetPassingTimeVersionedChildStructure
+from netex.models.target_passing_time_view import TargetPassingTimeView
+from netex.models.target_passing_time_view_structure import TargetPassingTimeViewStructure
+from netex.models.target_passing_times_rel_structure import TargetPassingTimesRelStructure
+from netex.models.tariff import Tariff
+from netex.models.tariff_basis_enumeration import TariffBasisEnumeration
+from netex.models.tariff_object_ref import TariffObjectRef
+from netex.models.tariff_ref import TariffRef
+from netex.models.tariff_ref_structure import TariffRefStructure
+from netex.models.tariff_refs_rel_structure import TariffRefsRelStructure
+from netex.models.tariff_version_structure import TariffVersionStructure
+from netex.models.tariff_zone_1 import TariffZone1
+from netex.models.tariff_zone_2 import TariffZone2
+from netex.models.tariff_zone_ref_1 import TariffZoneRef1
+from netex.models.tariff_zone_ref_2 import TariffZoneRef2
+from netex.models.tariff_zone_ref_structure import TariffZoneRefStructure
+from netex.models.tariff_zone_refs_rel_structure import TariffZoneRefsRelStructure
+from netex.models.tariff_zone_version_structure import TariffZoneVersionStructure
+from netex.models.tariff_zones_in_frame_rel_structure import TariffZonesInFrameRelStructure
+from netex.models.tariffs_in_frame_rel_structure import TariffsInFrameRelStructure
+from netex.models.tax_category_enumeration import TaxCategoryEnumeration
+from netex.models.taxi_submode import TaxiSubmode
+from netex.models.taxi_submode_enumeration import TaxiSubmodeEnumeration
+from netex.models.telecabin_submode import TelecabinSubmode
+from netex.models.telecabin_submode_enumeration import TelecabinSubmodeEnumeration
+from netex.models.telephone_contact_structure import TelephoneContactStructure
+from netex.models.template_service_journey import TemplateServiceJourney
+from netex.models.template_service_journey_ref import TemplateServiceJourneyRef
+from netex.models.template_service_journey_ref_structure import TemplateServiceJourneyRefStructure
+from netex.models.template_service_journey_version_structure import TemplateServiceJourneyVersionStructure
+from netex.models.template_vehicle_journey import TemplateVehicleJourney
+from netex.models.template_vehicle_journey_type_enumeration import TemplateVehicleJourneyTypeEnumeration
+from netex.models.template_vehicle_journey_version_structure import TemplateVehicleJourneyVersionStructure
+from netex.models.temporal_validity_parameters_rel_structure import TemporalValidityParametersRelStructure
+from netex.models.terminate_subscription_request import TerminateSubscriptionRequest
+from netex.models.terminate_subscription_request_body_structure import TerminateSubscriptionRequestBodyStructure
+from netex.models.terminate_subscription_request_structure import TerminateSubscriptionRequestStructure
+from netex.models.terminate_subscription_response import TerminateSubscriptionResponse
+from netex.models.terminate_subscription_response_structure import TerminateSubscriptionResponseStructure
+from netex.models.termination_response_status_structure import TerminationResponseStatusStructure
+from netex.models.third_party_product import ThirdPartyProduct
+from netex.models.third_party_product_ref import ThirdPartyProductRef
+from netex.models.third_party_product_ref_structure import ThirdPartyProductRefStructure
+from netex.models.third_party_product_refs_rel_structure import ThirdPartyProductRefsRelStructure
+from netex.models.third_party_product_version_structure import ThirdPartyProductVersionStructure
+from netex.models.ticket_type_enumeration import TicketTypeEnumeration
+from netex.models.ticket_validator_enumeration import TicketValidatorEnumeration
+from netex.models.ticket_validator_equipment import TicketValidatorEquipment
+from netex.models.ticket_validator_equipment_ref import TicketValidatorEquipmentRef
+from netex.models.ticket_validator_equipment_ref_structure import TicketValidatorEquipmentRefStructure
+from netex.models.ticket_validator_equipment_version_structure import TicketValidatorEquipmentVersionStructure
+from netex.models.ticketing_equipment import TicketingEquipment
+from netex.models.ticketing_equipment_ref import TicketingEquipmentRef
+from netex.models.ticketing_equipment_ref_structure import TicketingEquipmentRefStructure
+from netex.models.ticketing_equipment_version_structure import TicketingEquipmentVersionStructure
+from netex.models.ticketing_facility import TicketingFacility
+from netex.models.ticketing_facility_enumeration import TicketingFacilityEnumeration
+from netex.models.ticketing_facility_list import TicketingFacilityList
+from netex.models.ticketing_service import TicketingService
+from netex.models.ticketing_service_facility import TicketingServiceFacility
+from netex.models.ticketing_service_facility_enumeration import TicketingServiceFacilityEnumeration
+from netex.models.ticketing_service_facility_list import TicketingServiceFacilityList
+from netex.models.ticketing_service_ref import TicketingServiceRef
+from netex.models.ticketing_service_ref_structure import TicketingServiceRefStructure
+from netex.models.ticketing_service_version_structure import TicketingServiceVersionStructure
+from netex.models.tide_enumeration import TideEnumeration
+from netex.models.tilt_type_enumeration import TiltTypeEnumeration
+from netex.models.time_demand_profile import TimeDemandProfile
+from netex.models.time_demand_profile_member import TimeDemandProfileMember
+from netex.models.time_demand_profile_member_version_structure import TimeDemandProfileMemberVersionStructure
+from netex.models.time_demand_profile_members_rel_structure import TimeDemandProfileMembersRelStructure
+from netex.models.time_demand_profile_ref import TimeDemandProfileRef
+from netex.models.time_demand_profile_ref_structure import TimeDemandProfileRefStructure
+from netex.models.time_demand_profile_version_structure import TimeDemandProfileVersionStructure
+from netex.models.time_demand_type import TimeDemandType
+from netex.models.time_demand_type_assigment_ref import TimeDemandTypeAssigmentRef
+from netex.models.time_demand_type_assigment_ref_structure import TimeDemandTypeAssigmentRefStructure
+from netex.models.time_demand_type_assignment import TimeDemandTypeAssignment
+from netex.models.time_demand_type_assignment_version_structure import TimeDemandTypeAssignmentVersionStructure
+from netex.models.time_demand_type_assignments_in_frame_rel_structure import TimeDemandTypeAssignmentsInFrameRelStructure
+from netex.models.time_demand_type_ref import TimeDemandTypeRef
+from netex.models.time_demand_type_ref_structure import TimeDemandTypeRefStructure
+from netex.models.time_demand_type_refs_rel_structure import TimeDemandTypeRefsRelStructure
+from netex.models.time_demand_type_version_structure import TimeDemandTypeVersionStructure
+from netex.models.time_demand_types_in_frame_rel_structure import TimeDemandTypesInFrameRelStructure
+from netex.models.time_interval import TimeInterval
+from netex.models.time_interval_price import TimeIntervalPrice
+from netex.models.time_interval_price_ref import TimeIntervalPriceRef
+from netex.models.time_interval_price_ref_structure import TimeIntervalPriceRefStructure
+from netex.models.time_interval_price_versioned_child_structure import TimeIntervalPriceVersionedChildStructure
+from netex.models.time_interval_prices_rel_structure import TimeIntervalPricesRelStructure
+from netex.models.time_interval_ref import TimeIntervalRef
+from netex.models.time_interval_ref_structure import TimeIntervalRefStructure
+from netex.models.time_interval_refs_rel_structure import TimeIntervalRefsRelStructure
+from netex.models.time_interval_version_structure import TimeIntervalVersionStructure
+from netex.models.time_intervals_rel_structure import TimeIntervalsRelStructure
+from netex.models.time_structure_factor import TimeStructureFactor
+from netex.models.time_structure_factor_ref import TimeStructureFactorRef
+from netex.models.time_structure_factor_ref_structure import TimeStructureFactorRefStructure
+from netex.models.time_structure_factors_rel_structure import TimeStructureFactorsRelStructure
+from netex.models.time_unit import TimeUnit
+from netex.models.time_unit_price import TimeUnitPrice
+from netex.models.time_unit_price_ref import TimeUnitPriceRef
+from netex.models.time_unit_price_ref_structure import TimeUnitPriceRefStructure
+from netex.models.time_unit_price_versioned_child_structure import TimeUnitPriceVersionedChildStructure
+from netex.models.time_unit_prices_rel_structure import TimeUnitPricesRelStructure
+from netex.models.time_unit_ref import TimeUnitRef
+from netex.models.time_unit_ref_structure import TimeUnitRefStructure
+from netex.models.time_unit_version_structure import TimeUnitVersionStructure
+from netex.models.time_units_rel_structure import TimeUnitsRelStructure
+from netex.models.timeband import Timeband
+from netex.models.timeband_ref import TimebandRef
+from netex.models.timeband_ref_structure import TimebandRefStructure
+from netex.models.timeband_refs_rel_structure import TimebandRefsRelStructure
+from netex.models.timebands_in_frame_rel_structure import TimebandsInFrameRelStructure
+from netex.models.timetable_frame import TimetableFrame
+from netex.models.timetable_frame_ref import TimetableFrameRef
+from netex.models.timetable_frame_ref_structure import TimetableFrameRefStructure
+from netex.models.timetable_version_frame_structure import TimetableVersionFrameStructure
+from netex.models.timetabled_passing_time import TimetabledPassingTime
+from netex.models.timetabled_passing_time_ref import TimetabledPassingTimeRef
+from netex.models.timetabled_passing_time_ref_structure import TimetabledPassingTimeRefStructure
+from netex.models.timetabled_passing_time_versioned_child_structure import TimetabledPassingTimeVersionedChildStructure
+from netex.models.timetabled_passing_time_view import TimetabledPassingTimeView
+from netex.models.timetabled_passing_time_view_structure import TimetabledPassingTimeViewStructure
+from netex.models.timetabled_passing_times_rel_structure import TimetabledPassingTimesRelStructure
+from netex.models.timing_algorithm_type import TimingAlgorithmType
+from netex.models.timing_algorithm_type_ref import TimingAlgorithmTypeRef
+from netex.models.timing_algorithm_type_ref_structure import TimingAlgorithmTypeRefStructure
+from netex.models.timing_algorithm_type_value_structure import TimingAlgorithmTypeValueStructure
+from netex.models.timing_link import TimingLink
+from netex.models.timing_link_in_journey_pattern import TimingLinkInJourneyPattern
+from netex.models.timing_link_in_journey_pattern_ref import TimingLinkInJourneyPatternRef
+from netex.models.timing_link_in_journey_pattern_ref_structure import TimingLinkInJourneyPatternRefStructure
+from netex.models.timing_link_in_journey_pattern_versioned_child_structure import TimingLinkInJourneyPatternVersionedChildStructure
+from netex.models.timing_link_ref import TimingLinkRef
+from netex.models.timing_link_ref_by_value import TimingLinkRefByValue
+from netex.models.timing_link_ref_by_value_structure import TimingLinkRefByValueStructure
+from netex.models.timing_link_ref_structure import TimingLinkRefStructure
+from netex.models.timing_link_refs_rel_structure import TimingLinkRefsRelStructure
+from netex.models.timing_link_version_structure import TimingLinkVersionStructure
+from netex.models.timing_links_in_frame_rel_structure import TimingLinksInFrameRelStructure
+from netex.models.timing_links_rel_structure import TimingLinksRelStructure
+from netex.models.timing_pattern import TimingPattern
+from netex.models.timing_pattern_ref import TimingPatternRef
+from netex.models.timing_pattern_ref_structure import TimingPatternRefStructure
+from netex.models.timing_pattern_version_structure import TimingPatternVersionStructure
+from netex.models.timing_patterns_in_frame_rel_structure import TimingPatternsInFrameRelStructure
+from netex.models.timing_point_1 import TimingPoint1
+from netex.models.timing_point_2 import TimingPoint2
+from netex.models.timing_point_in_journey_pattern import TimingPointInJourneyPattern
+from netex.models.timing_point_in_journey_pattern_ref import TimingPointInJourneyPatternRef
+from netex.models.timing_point_in_journey_pattern_ref_structure import TimingPointInJourneyPatternRefStructure
+from netex.models.timing_point_in_journey_pattern_versioned_child_structure import TimingPointInJourneyPatternVersionedChildStructure
+from netex.models.timing_point_ref import TimingPointRef
+from netex.models.timing_point_ref_structure import TimingPointRefStructure
+from netex.models.timing_point_status_enumeration import TimingPointStatusEnumeration
+from netex.models.timing_point_version_structure import TimingPointVersionStructure
+from netex.models.timing_points_in_frame_rel_structure import TimingPointsInFrameRelStructure
+from netex.models.timing_points_in_journey_pattern_rel_structure import TimingPointsInJourneyPatternRelStructure
+from netex.models.timing_points_rel_structure import TimingPointsRelStructure
+from netex.models.topic import Topic
+from netex.models.topic_structure import TopicStructure
+from netex.models.topographic_place import TopographicPlace
+from netex.models.topographic_place_derived_view_structure import TopographicPlaceDerivedViewStructure
+from netex.models.topographic_place_descriptor_versioned_child_structure import TopographicPlaceDescriptorVersionedChildStructure
+from netex.models.topographic_place_descriptors_rel_structure import TopographicPlaceDescriptorsRelStructure
+from netex.models.topographic_place_ref import TopographicPlaceRef
+from netex.models.topographic_place_ref_structure import TopographicPlaceRefStructure
+from netex.models.topographic_place_refs_rel_structure import TopographicPlaceRefsRelStructure
+from netex.models.topographic_place_type_enumeration import TopographicPlaceTypeEnumeration
+from netex.models.topographic_place_version_structure import TopographicPlaceVersionStructure
+from netex.models.topographic_place_view import TopographicPlaceView
+from netex.models.topographic_places_in_frame_rel_structure import TopographicPlacesInFrameRelStructure
+from netex.models.topographic_places_rel_structure import TopographicPlacesRelStructure
+from netex.models.topographic_projection import TopographicProjection
+from netex.models.topographic_projection_ref import TopographicProjectionRef
+from netex.models.topographic_projection_ref_structure import TopographicProjectionRefStructure
+from netex.models.topographic_projection_version_structure import TopographicProjectionVersionStructure
+from netex.models.trace import Trace
+from netex.models.trace_structure import TraceStructure
+from netex.models.traces_rel_structure import TracesRelStructure
+from netex.models.traffic_control_point import TrafficControlPoint
+from netex.models.traffic_control_point_ref import TrafficControlPointRef
+from netex.models.traffic_control_point_ref_structure import TrafficControlPointRefStructure
+from netex.models.traffic_control_point_version_structure import TrafficControlPointVersionStructure
+from netex.models.traffic_control_points_in_frame_rel_structure import TrafficControlPointsInFrameRelStructure
+from netex.models.train import Train
+from netex.models.train_block import TrainBlock
+from netex.models.train_block_part import TrainBlockPart
+from netex.models.train_block_part_ref import TrainBlockPartRef
+from netex.models.train_block_part_ref_structure import TrainBlockPartRefStructure
+from netex.models.train_block_part_version_structure import TrainBlockPartVersionStructure
+from netex.models.train_block_ref import TrainBlockRef
+from netex.models.train_block_ref_structure import TrainBlockRefStructure
+from netex.models.train_block_version_structure import TrainBlockVersionStructure
+from netex.models.train_component import TrainComponent
+from netex.models.train_component_derived_view_structure import TrainComponentDerivedViewStructure
+from netex.models.train_component_label_assignment import TrainComponentLabelAssignment
+from netex.models.train_component_label_assignment_ref import TrainComponentLabelAssignmentRef
+from netex.models.train_component_label_assignment_ref_structure import TrainComponentLabelAssignmentRefStructure
+from netex.models.train_component_label_assignment_refs_rel_structure import TrainComponentLabelAssignmentRefsRelStructure
+from netex.models.train_component_label_assignment_version_structure import TrainComponentLabelAssignmentVersionStructure
+from netex.models.train_component_label_assignments_rel_structure import TrainComponentLabelAssignmentsRelStructure
+from netex.models.train_component_ref import TrainComponentRef
+from netex.models.train_component_ref_structure import TrainComponentRefStructure
+from netex.models.train_component_version_structure import TrainComponentVersionStructure
+from netex.models.train_component_view import TrainComponentView
+from netex.models.train_components_rel_structure import TrainComponentsRelStructure
+from netex.models.train_element import TrainElement
+from netex.models.train_element_ref import TrainElementRef
+from netex.models.train_element_ref_structure import TrainElementRefStructure
+from netex.models.train_element_type_enumeration import TrainElementTypeEnumeration
+from netex.models.train_element_version_structure import TrainElementVersionStructure
+from netex.models.train_in_compound_train_ref import TrainInCompoundTrainRef
+from netex.models.train_in_compound_train_ref_structure import TrainInCompoundTrainRefStructure
+from netex.models.train_in_compound_train_versioned_child_structure import TrainInCompoundTrainVersionedChildStructure
+from netex.models.train_number import TrainNumber
+from netex.models.train_number_ref import TrainNumberRef
+from netex.models.train_number_ref_structure import TrainNumberRefStructure
+from netex.models.train_number_refs_rel_structure import TrainNumberRefsRelStructure
+from netex.models.train_number_version_structure import TrainNumberVersionStructure
+from netex.models.train_numbers_in_frame_rel_structure import TrainNumbersInFrameRelStructure
+from netex.models.train_ref import TrainRef
+from netex.models.train_ref_structure import TrainRefStructure
+from netex.models.train_restrictions_enumeration import TrainRestrictionsEnumeration
+from netex.models.train_size import TrainSize
+from netex.models.train_size_enumeration import TrainSizeEnumeration
+from netex.models.train_size_structure import TrainSizeStructure
+from netex.models.train_stop_assignment import TrainStopAssignment
+from netex.models.train_stop_assignment_ref import TrainStopAssignmentRef
+from netex.models.train_stop_assignment_ref_structure import TrainStopAssignmentRefStructure
+from netex.models.train_stop_assignment_version_structure import TrainStopAssignmentVersionStructure
+from netex.models.train_stop_assignments_rel_structure import TrainStopAssignmentsRelStructure
+from netex.models.train_version_structure import TrainVersionStructure
+from netex.models.trains_in_compound_train_rel_structure import TrainsInCompoundTrainRelStructure
+from netex.models.tram_submode import TramSubmode
+from netex.models.tram_submode_enumeration import TramSubmodeEnumeration
+from netex.models.transfer import Transfer
+from netex.models.transfer_constraint_type_enumeration import TransferConstraintTypeEnumeration
+from netex.models.transfer_duration import TransferDuration
+from netex.models.transfer_duration_structure import TransferDurationStructure
+from netex.models.transfer_ref import TransferRef
+from netex.models.transfer_ref_structure import TransferRefStructure
+from netex.models.transfer_refs_rel_structure import TransferRefsRelStructure
+from netex.models.transfer_restriction import TransferRestriction
+from netex.models.transfer_restriction_ref import TransferRestrictionRef
+from netex.models.transfer_restriction_ref_structure import TransferRestrictionRefStructure
+from netex.models.transfer_restriction_version_structure import TransferRestrictionVersionStructure
+from netex.models.transfer_restrictions_in_frame_rel_structure import TransferRestrictionsInFrameRelStructure
+from netex.models.transfer_version_structure import TransferVersionStructure
+from netex.models.transferability import Transferability
+from netex.models.transferability_ref import TransferabilityRef
+from netex.models.transferability_ref_structure import TransferabilityRefStructure
+from netex.models.transferability_version_structure import TransferabilityVersionStructure
+from netex.models.transfers_in_frame_rel_structure import TransfersInFrameRelStructure
+from netex.models.transition_enumeration import TransitionEnumeration
+from netex.models.transport_administrative_zone_ref import TransportAdministrativeZoneRef
+from netex.models.transport_administrative_zone_ref_structure import TransportAdministrativeZoneRefStructure
+from netex.models.transport_description_structure import TransportDescriptionStructure
+from netex.models.transport_mode_structure import TransportModeStructure
+from netex.models.transport_modes_rel_structure import TransportModesRelStructure
+from netex.models.transport_operators_in_frame_rel_structure import TransportOperatorsInFrameRelStructure
+from netex.models.transport_organisation import TransportOrganisation
+from netex.models.transport_organisation_ref import TransportOrganisationRef
+from netex.models.transport_organisation_refs_rel_structure import TransportOrganisationRefsRelStructure
+from netex.models.transport_submode import TransportSubmode
+from netex.models.transport_submode_structure import TransportSubmodeStructure
+from netex.models.travel_agent import TravelAgent
+from netex.models.travel_agent_ref import TravelAgentRef
+from netex.models.travel_agent_ref_structure import TravelAgentRefStructure
+from netex.models.travel_agent_version_structure import TravelAgentVersionStructure
+from netex.models.travel_billing_policy_enumeration import TravelBillingPolicyEnumeration
+from netex.models.travel_credit_policy_enumeration import TravelCreditPolicyEnumeration
+from netex.models.travel_document import TravelDocument
+from netex.models.travel_document_ref import TravelDocumentRef
+from netex.models.travel_document_ref_structure import TravelDocumentRefStructure
+from netex.models.travel_document_security_listing import TravelDocumentSecurityListing
+from netex.models.travel_document_security_listing_ref import TravelDocumentSecurityListingRef
+from netex.models.travel_document_security_listing_ref_structure import TravelDocumentSecurityListingRefStructure
+from netex.models.travel_document_security_listing_refs_rel_structure import TravelDocumentSecurityListingRefsRelStructure
+from netex.models.travel_document_security_listing_versioned_child_structure import TravelDocumentSecurityListingVersionedChildStructure
+from netex.models.travel_document_version_structure import TravelDocumentVersionStructure
+from netex.models.travel_documents_in_frame_rel_structure import TravelDocumentsInFrameRelStructure
+from netex.models.travel_documents_rel_structure import TravelDocumentsRelStructure
+from netex.models.travel_specification_1 import TravelSpecification1
+from netex.models.travel_specification_2 import TravelSpecification2
+from netex.models.travel_specification_journey_refs_rel_structure import TravelSpecificationJourneyRefsRelStructure
+from netex.models.travel_specification_ref import TravelSpecificationRef
+from netex.models.travel_specification_ref_structure import TravelSpecificationRefStructure
+from netex.models.travel_specification_refs_rel_structure import TravelSpecificationRefsRelStructure
+from netex.models.travel_specification_summary_endpoint_structure import TravelSpecificationSummaryEndpointStructure
+from netex.models.travel_specification_summary_view import TravelSpecificationSummaryView
+from netex.models.travel_specification_summary_view_structure import TravelSpecificationSummaryViewStructure
+from netex.models.travel_specification_version_structure import TravelSpecificationVersionStructure
+from netex.models.travel_specifications_in_frame_rel_structure import TravelSpecificationsInFrameRelStructure
+from netex.models.travel_specifications_rel_structure import TravelSpecificationsRelStructure
+from netex.models.travelator_equipment import TravelatorEquipment
+from netex.models.travelator_equipment_ref import TravelatorEquipmentRef
+from netex.models.travelator_equipment_ref_structure import TravelatorEquipmentRefStructure
+from netex.models.travelator_equipment_version_structure import TravelatorEquipmentVersionStructure
+from netex.models.trip_plan_request_ref import TripPlanRequestRef
+from netex.models.trip_plan_request_ref_structure import TripPlanRequestRefStructure
+from netex.models.trolley_stand_equipment import TrolleyStandEquipment
+from netex.models.trolley_stand_equipment_ref import TrolleyStandEquipmentRef
+from netex.models.trolley_stand_equipment_ref_structure import TrolleyStandEquipmentRefStructure
+from netex.models.trolley_stand_equipment_version_structure import TrolleyStandEquipmentVersionStructure
+from netex.models.turnaround_time_limit_time import TurnaroundTimeLimitTime
+from netex.models.turnaround_time_limit_time_ref import TurnaroundTimeLimitTimeRef
+from netex.models.turnaround_time_limit_time_ref_structure import TurnaroundTimeLimitTimeRefStructure
+from netex.models.turnaround_time_limit_time_versioned_child_structure import TurnaroundTimeLimitTimeVersionedChildStructure
+from netex.models.turnaround_time_limit_times_rel_structure import TurnaroundTimeLimitTimesRelStructure
+from netex.models.type_of_access_right_assignment import TypeOfAccessRightAssignment
+from netex.models.type_of_access_right_assignment_ref import TypeOfAccessRightAssignmentRef
+from netex.models.type_of_access_right_assignment_ref_structure import TypeOfAccessRightAssignmentRefStructure
+from netex.models.type_of_access_right_assignment_refs_rel_structure import TypeOfAccessRightAssignmentRefsRelStructure
+from netex.models.type_of_access_right_assignment_version_structure import TypeOfAccessRightAssignmentVersionStructure
+from netex.models.type_of_access_right_assignments_rel_structure import TypeOfAccessRightAssignmentsRelStructure
+from netex.models.type_of_activation import TypeOfActivation
+from netex.models.type_of_activation_ref import TypeOfActivationRef
+from netex.models.type_of_activation_ref_structure import TypeOfActivationRefStructure
+from netex.models.type_of_activation_value_structure import TypeOfActivationValueStructure
+from netex.models.type_of_codespace_assignment import TypeOfCodespaceAssignment
+from netex.models.type_of_codespace_assignment_ref import TypeOfCodespaceAssignmentRef
+from netex.models.type_of_codespace_assignment_ref_structure import TypeOfCodespaceAssignmentRefStructure
+from netex.models.type_of_codespace_assignment_value_structure import TypeOfCodespaceAssignmentValueStructure
+from netex.models.type_of_concession import TypeOfConcession
+from netex.models.type_of_concession_ref import TypeOfConcessionRef
+from netex.models.type_of_concession_ref_structure import TypeOfConcessionRefStructure
+from netex.models.type_of_concession_version_structure import TypeOfConcessionVersionStructure
+from netex.models.type_of_concessions_rel_structure import TypeOfConcessionsRelStructure
+from netex.models.type_of_congestion import TypeOfCongestion
+from netex.models.type_of_congestion_ref import TypeOfCongestionRef
+from netex.models.type_of_congestion_ref_structure import TypeOfCongestionRefStructure
+from netex.models.type_of_congestion_value_structure import TypeOfCongestionValueStructure
+from netex.models.type_of_coupling_enumeration import TypeOfCouplingEnumeration
+from netex.models.type_of_customer_account import TypeOfCustomerAccount
+from netex.models.type_of_customer_account_ref import TypeOfCustomerAccountRef
+from netex.models.type_of_customer_account_ref_structure import TypeOfCustomerAccountRefStructure
+from netex.models.type_of_customer_account_refs_rel_structure import TypeOfCustomerAccountRefsRelStructure
+from netex.models.type_of_customer_account_version_structure import TypeOfCustomerAccountVersionStructure
+from netex.models.type_of_delivery_variant import TypeOfDeliveryVariant
+from netex.models.type_of_delivery_variant_ref import TypeOfDeliveryVariantRef
+from netex.models.type_of_delivery_variant_ref_structure import TypeOfDeliveryVariantRefStructure
+from netex.models.type_of_delivery_variant_value_structure import TypeOfDeliveryVariantValueStructure
+from netex.models.type_of_entity import TypeOfEntity
+from netex.models.type_of_entity_ref import TypeOfEntityRef
+from netex.models.type_of_entity_refs_rel_structure import TypeOfEntityRefsRelStructure
+from netex.models.type_of_entity_version_structure import TypeOfEntityVersionStructure
+from netex.models.type_of_equipment import TypeOfEquipment
+from netex.models.type_of_equipment_ref import TypeOfEquipmentRef
+from netex.models.type_of_equipment_ref_structure import TypeOfEquipmentRefStructure
+from netex.models.type_of_equipment_value_structure import TypeOfEquipmentValueStructure
+from netex.models.type_of_facility import TypeOfFacility
+from netex.models.type_of_facility_ref import TypeOfFacilityRef
+from netex.models.type_of_facility_ref_structure import TypeOfFacilityRefStructure
+from netex.models.type_of_facility_refs_rel_structure import TypeOfFacilityRefsRelStructure
+from netex.models.type_of_facility_version_structure import TypeOfFacilityVersionStructure
+from netex.models.type_of_fare_contract import TypeOfFareContract
+from netex.models.type_of_fare_contract_entry import TypeOfFareContractEntry
+from netex.models.type_of_fare_contract_entry_ref import TypeOfFareContractEntryRef
+from netex.models.type_of_fare_contract_entry_ref_structure import TypeOfFareContractEntryRefStructure
+from netex.models.type_of_fare_contract_entry_refs_rel_structure import TypeOfFareContractEntryRefsRelStructure
+from netex.models.type_of_fare_contract_entry_version_structure import TypeOfFareContractEntryVersionStructure
+from netex.models.type_of_fare_contract_ref import TypeOfFareContractRef
+from netex.models.type_of_fare_contract_ref_structure import TypeOfFareContractRefStructure
+from netex.models.type_of_fare_contract_refs_rel_structure import TypeOfFareContractRefsRelStructure
+from netex.models.type_of_fare_contract_version_structure import TypeOfFareContractVersionStructure
+from netex.models.type_of_fare_product import TypeOfFareProduct
+from netex.models.type_of_fare_product_ref import TypeOfFareProductRef
+from netex.models.type_of_fare_product_ref_structure import TypeOfFareProductRefStructure
+from netex.models.type_of_fare_product_refs_rel_structure import TypeOfFareProductRefsRelStructure
+from netex.models.type_of_fare_product_version_structure import TypeOfFareProductVersionStructure
+from netex.models.type_of_fare_products_rel_structure import TypeOfFareProductsRelStructure
+from netex.models.type_of_fare_structure_element import TypeOfFareStructureElement
+from netex.models.type_of_fare_structure_element_ref import TypeOfFareStructureElementRef
+from netex.models.type_of_fare_structure_element_ref_structure import TypeOfFareStructureElementRefStructure
+from netex.models.type_of_fare_structure_element_version_structure import TypeOfFareStructureElementVersionStructure
+from netex.models.type_of_fare_structure_factor import TypeOfFareStructureFactor
+from netex.models.type_of_fare_structure_factor_ref import TypeOfFareStructureFactorRef
+from netex.models.type_of_fare_structure_factor_ref_structure import TypeOfFareStructureFactorRefStructure
+from netex.models.type_of_fare_structure_factor_version_structure import TypeOfFareStructureFactorVersionStructure
+from netex.models.type_of_fare_table import TypeOfFareTable
+from netex.models.type_of_fare_table_ref import TypeOfFareTableRef
+from netex.models.type_of_fare_table_ref_structure import TypeOfFareTableRefStructure
+from netex.models.type_of_fare_table_version_structure import TypeOfFareTableVersionStructure
+from netex.models.type_of_feature import TypeOfFeature
+from netex.models.type_of_feature_ref import TypeOfFeatureRef
+from netex.models.type_of_feature_ref_structure import TypeOfFeatureRefStructure
+from netex.models.type_of_feature_value_structure import TypeOfFeatureValueStructure
+from netex.models.type_of_flexible_service import TypeOfFlexibleService
+from netex.models.type_of_flexible_service_ref import TypeOfFlexibleServiceRef
+from netex.models.type_of_flexible_service_ref_structure import TypeOfFlexibleServiceRefStructure
+from netex.models.type_of_flexible_service_value_structure import TypeOfFlexibleServiceValueStructure
+from netex.models.type_of_frame_ref import TypeOfFrameRef
+from netex.models.type_of_frame_ref_structure import TypeOfFrameRefStructure
+from netex.models.type_of_frame_refs_rel_structure import TypeOfFrameRefsRelStructure
+from netex.models.type_of_fuel_enumeration import TypeOfFuelEnumeration
+from netex.models.type_of_infolink_enumeration import TypeOfInfolinkEnumeration
+from netex.models.type_of_journey_pattern import TypeOfJourneyPattern
+from netex.models.type_of_journey_pattern_ref import TypeOfJourneyPatternRef
+from netex.models.type_of_journey_pattern_ref_structure import TypeOfJourneyPatternRefStructure
+from netex.models.type_of_journey_pattern_value_structure import TypeOfJourneyPatternValueStructure
+from netex.models.type_of_line import TypeOfLine
+from netex.models.type_of_line_ref import TypeOfLineRef
+from netex.models.type_of_line_ref_structure import TypeOfLineRefStructure
+from netex.models.type_of_line_value_structure import TypeOfLineValueStructure
+from netex.models.type_of_link import TypeOfLink
+from netex.models.type_of_link_ref import TypeOfLinkRef
+from netex.models.type_of_link_ref_structure import TypeOfLinkRefStructure
+from netex.models.type_of_link_sequence import TypeOfLinkSequence
+from netex.models.type_of_link_sequence_ref import TypeOfLinkSequenceRef
+from netex.models.type_of_link_sequence_ref_structure import TypeOfLinkSequenceRefStructure
+from netex.models.type_of_link_sequence_value_structure import TypeOfLinkSequenceValueStructure
+from netex.models.type_of_link_value_structure import TypeOfLinkValueStructure
+from netex.models.type_of_machine_readability import TypeOfMachineReadability
+from netex.models.type_of_machine_readability_ref import TypeOfMachineReadabilityRef
+from netex.models.type_of_machine_readability_ref_structure import TypeOfMachineReadabilityRefStructure
+from netex.models.type_of_machine_readability_refs_rel_structure import TypeOfMachineReadabilityRefsRelStructure
+from netex.models.type_of_machine_readability_version_structure import TypeOfMachineReadabilityVersionStructure
+from netex.models.type_of_notice import TypeOfNotice
+from netex.models.type_of_notice_ref import TypeOfNoticeRef
+from netex.models.type_of_notice_ref_structure import TypeOfNoticeRefStructure
+from netex.models.type_of_notice_value_structure import TypeOfNoticeValueStructure
+from netex.models.type_of_operation import TypeOfOperation
+from netex.models.type_of_operation_ref import TypeOfOperationRef
+from netex.models.type_of_operation_ref_structure import TypeOfOperationRefStructure
+from netex.models.type_of_operation_value_structure import TypeOfOperationValueStructure
+from netex.models.type_of_organisation import TypeOfOrganisation
+from netex.models.type_of_organisation_part import TypeOfOrganisationPart
+from netex.models.type_of_organisation_part_ref import TypeOfOrganisationPartRef
+from netex.models.type_of_organisation_part_ref_structure import TypeOfOrganisationPartRefStructure
+from netex.models.type_of_organisation_part_value_structure import TypeOfOrganisationPartValueStructure
+from netex.models.type_of_organisation_ref import TypeOfOrganisationRef
+from netex.models.type_of_organisation_ref_structure import TypeOfOrganisationRefStructure
+from netex.models.type_of_organisation_refs_rel_structure import TypeOfOrganisationRefsRelStructure
+from netex.models.type_of_organisation_value_structure import TypeOfOrganisationValueStructure
+from netex.models.type_of_passenger_information_equipment import TypeOfPassengerInformationEquipment
+from netex.models.type_of_passenger_information_equipment_ref import TypeOfPassengerInformationEquipmentRef
+from netex.models.type_of_passenger_information_equipment_ref_structure import TypeOfPassengerInformationEquipmentRefStructure
+from netex.models.type_of_passenger_information_equipment_value_structure import TypeOfPassengerInformationEquipmentValueStructure
+from netex.models.type_of_payment_method import TypeOfPaymentMethod
+from netex.models.type_of_payment_method_ref import TypeOfPaymentMethodRef
+from netex.models.type_of_payment_method_ref_structure import TypeOfPaymentMethodRefStructure
+from netex.models.type_of_payment_method_refs_rel_structure import TypeOfPaymentMethodRefsRelStructure
+from netex.models.type_of_payment_method_value_structure import TypeOfPaymentMethodValueStructure
+from netex.models.type_of_place import TypeOfPlace
+from netex.models.type_of_place_ref import TypeOfPlaceRef
+from netex.models.type_of_place_ref_structure import TypeOfPlaceRefStructure
+from netex.models.type_of_place_refs_rel_structure import TypeOfPlaceRefsRelStructure
+from netex.models.type_of_place_value_structure import TypeOfPlaceValueStructure
+from netex.models.type_of_point import TypeOfPoint
+from netex.models.type_of_point_ref import TypeOfPointRef
+from netex.models.type_of_point_ref_structure import TypeOfPointRefStructure
+from netex.models.type_of_point_refs_rel_structure import TypeOfPointRefsRelStructure
+from netex.models.type_of_point_value_structure import TypeOfPointValueStructure
+from netex.models.type_of_pricing_enumeration import TypeOfPricingEnumeration
+from netex.models.type_of_pricing_rule import TypeOfPricingRule
+from netex.models.type_of_pricing_rule_ref import TypeOfPricingRuleRef
+from netex.models.type_of_pricing_rule_ref_structure import TypeOfPricingRuleRefStructure
+from netex.models.type_of_pricing_rule_refs_rel_structure import TypeOfPricingRuleRefsRelStructure
+from netex.models.type_of_pricing_rule_version_structure import TypeOfPricingRuleVersionStructure
+from netex.models.type_of_product_category import TypeOfProductCategory
+from netex.models.type_of_product_category_ref import TypeOfProductCategoryRef
+from netex.models.type_of_product_category_ref_structure import TypeOfProductCategoryRefStructure
+from netex.models.type_of_product_category_refs_rel_structure import TypeOfProductCategoryRefsRelStructure
+from netex.models.type_of_product_category_structure import TypeOfProductCategoryStructure
+from netex.models.type_of_projection import TypeOfProjection
+from netex.models.type_of_projection_ref import TypeOfProjectionRef
+from netex.models.type_of_projection_ref_structure import TypeOfProjectionRefStructure
+from netex.models.type_of_projection_value_structure import TypeOfProjectionValueStructure
+from netex.models.type_of_responsibility_role import TypeOfResponsibilityRole
+from netex.models.type_of_responsibility_role_ref import TypeOfResponsibilityRoleRef
+from netex.models.type_of_responsibility_role_ref_structure import TypeOfResponsibilityRoleRefStructure
+from netex.models.type_of_responsibility_role_value_structure import TypeOfResponsibilityRoleValueStructure
+from netex.models.type_of_retail_device import TypeOfRetailDevice
+from netex.models.type_of_retail_device_ref import TypeOfRetailDeviceRef
+from netex.models.type_of_retail_device_ref_structure import TypeOfRetailDeviceRefStructure
+from netex.models.type_of_retail_device_refs_rel_structure import TypeOfRetailDeviceRefsRelStructure
+from netex.models.type_of_retail_device_version_structure import TypeOfRetailDeviceVersionStructure
+from netex.models.type_of_sales_offer_package import TypeOfSalesOfferPackage
+from netex.models.type_of_sales_offer_package_ref import TypeOfSalesOfferPackageRef
+from netex.models.type_of_sales_offer_package_ref_structure import TypeOfSalesOfferPackageRefStructure
+from netex.models.type_of_sales_offer_package_version_structure import TypeOfSalesOfferPackageVersionStructure
+from netex.models.type_of_security_list import TypeOfSecurityList
+from netex.models.type_of_security_list_ref import TypeOfSecurityListRef
+from netex.models.type_of_security_list_ref_structure import TypeOfSecurityListRefStructure
+from netex.models.type_of_security_list_refs_rel_structure import TypeOfSecurityListRefsRelStructure
+from netex.models.type_of_security_list_version_structure import TypeOfSecurityListVersionStructure
+from netex.models.type_of_service import TypeOfService
+from netex.models.type_of_service_feature import TypeOfServiceFeature
+from netex.models.type_of_service_feature_ref import TypeOfServiceFeatureRef
+from netex.models.type_of_service_feature_ref_structure import TypeOfServiceFeatureRefStructure
+from netex.models.type_of_service_feature_refs_rel_structure import TypeOfServiceFeatureRefsRelStructure
+from netex.models.type_of_service_feature_value_structure import TypeOfServiceFeatureValueStructure
+from netex.models.type_of_service_ref import TypeOfServiceRef
+from netex.models.type_of_service_ref_structure import TypeOfServiceRefStructure
+from netex.models.type_of_service_refs_rel_structure import TypeOfServiceRefsRelStructure
+from netex.models.type_of_service_structure import TypeOfServiceStructure
+from netex.models.type_of_tariff import TypeOfTariff
+from netex.models.type_of_tariff_ref import TypeOfTariffRef
+from netex.models.type_of_tariff_ref_structure import TypeOfTariffRefStructure
+from netex.models.type_of_tariff_value_structure import TypeOfTariffValueStructure
+from netex.models.type_of_time_demand_type import TypeOfTimeDemandType
+from netex.models.type_of_time_demand_type_ref import TypeOfTimeDemandTypeRef
+from netex.models.type_of_time_demand_type_ref_structure import TypeOfTimeDemandTypeRefStructure
+from netex.models.type_of_time_demand_type_structure import TypeOfTimeDemandTypeStructure
+from netex.models.type_of_transfer import TypeOfTransfer
+from netex.models.type_of_transfer_ref import TypeOfTransferRef
+from netex.models.type_of_transfer_ref_structure import TypeOfTransferRefStructure
+from netex.models.type_of_transfer_value_structure import TypeOfTransferValueStructure
+from netex.models.type_of_travel_document import TypeOfTravelDocument
+from netex.models.type_of_travel_document_ref import TypeOfTravelDocumentRef
+from netex.models.type_of_travel_document_ref_structure import TypeOfTravelDocumentRefStructure
+from netex.models.type_of_travel_document_refs_rel_structure import TypeOfTravelDocumentRefsRelStructure
+from netex.models.type_of_travel_document_version_structure import TypeOfTravelDocumentVersionStructure
+from netex.models.type_of_usage_parameter import TypeOfUsageParameter
+from netex.models.type_of_usage_parameter_ref import TypeOfUsageParameterRef
+from netex.models.type_of_usage_parameter_ref_structure import TypeOfUsageParameterRefStructure
+from netex.models.type_of_usage_parameter_version_structure import TypeOfUsageParameterVersionStructure
+from netex.models.type_of_usage_parameters_rel_structure import TypeOfUsageParametersRelStructure
+from netex.models.type_of_validity import TypeOfValidity
+from netex.models.type_of_validity_ref import TypeOfValidityRef
+from netex.models.type_of_validity_ref_structure import TypeOfValidityRefStructure
+from netex.models.type_of_validity_value_structure import TypeOfValidityValueStructure
+from netex.models.type_of_value import TypeOfValue
+from netex.models.type_of_value_ref import TypeOfValueRef
+from netex.models.type_of_value_ref_structure import TypeOfValueRefStructure
+from netex.models.type_of_value_version_structure import TypeOfValueVersionStructure
+from netex.models.type_of_version import TypeOfVersion
+from netex.models.type_of_version_ref import TypeOfVersionRef
+from netex.models.type_of_version_ref_structure import TypeOfVersionRefStructure
+from netex.models.type_of_version_value_structure import TypeOfVersionValueStructure
+from netex.models.type_of_zone import TypeOfZone
+from netex.models.type_of_zone_ref import TypeOfZoneRef
+from netex.models.type_of_zone_ref_structure import TypeOfZoneRefStructure
+from netex.models.type_of_zone_refs_rel_structure import TypeOfZoneRefsRelStructure
+from netex.models.type_of_zone_value_structure import TypeOfZoneValueStructure
+from netex.models.type_ofsales_offer_package_refs_rel_structure import TypeOfsalesOfferPackageRefsRelStructure
+from netex.models.types_of_account_status_rel_structure import TypesOfAccountStatusRelStructure
+from netex.models.types_of_customer_account_rel_structure import TypesOfCustomerAccountRelStructure
+from netex.models.types_of_equipment_rel_structure import TypesOfEquipmentRelStructure
+from netex.models.types_of_facility_rel_structure import TypesOfFacilityRelStructure
+from netex.models.types_of_fare_contract_entry_rel_structure import TypesOfFareContractEntryRelStructure
+from netex.models.types_of_fare_contract_rel_structure import TypesOfFareContractRelStructure
+from netex.models.types_of_frame_rel_structure import (
+    TypeOfFrame,
+    TypeOfFrameValueStructure,
+    TypesOfFrameRelStructure,
+)
+from netex.models.types_of_machine_readabilities_rel_structure import TypesOfMachineReadabilitiesRelStructure
+from netex.models.types_of_retail_device_rel_structure import TypesOfRetailDeviceRelStructure
+from netex.models.types_of_sales_offer_package_rel_structure import TypesOfSalesOfferPackageRelStructure
+from netex.models.types_of_security_list_rel_structure import TypesOfSecurityListRelStructure
+from netex.models.types_of_service_in_frame_rel_structure import TypesOfServiceInFrameRelStructure
+from netex.models.types_of_travel_document_in_frame_rel_structure import TypesOfTravelDocumentInFrameRelStructure
+from netex.models.types_of_travel_documents_rel_structure import TypesOfTravelDocumentsRelStructure
+from netex.models.types_of_value_in_frame_rel_structure import TypesOfValueInFrameRelStructure
+from netex.models.types_of_value_structure import TypesOfValueStructure
+from netex.models.uic_operating_period import UicOperatingPeriod
+from netex.models.uic_operating_period_version_structure import UicOperatingPeriodVersionStructure
+from netex.models.uic_product_characteristic import UicProductCharacteristic
+from netex.models.uic_product_characteristic_enumeration import UicProductCharacteristicEnumeration
+from netex.models.uic_product_characteristic_list import UicProductCharacteristicList
+from netex.models.uic_rate_type_enumeration import UicRateTypeEnumeration
+from netex.models.uic_train_rate import UicTrainRate
+from netex.models.unapproved_key_access_error import UnapprovedKeyAccessError
+from netex.models.unapproved_key_access_structure import UnapprovedKeyAccessStructure
+from netex.models.unknown_endpoint_error import UnknownEndpointError
+from netex.models.unknown_endpoint_error_structure import UnknownEndpointErrorStructure
+from netex.models.unknown_extensions_error import UnknownExtensionsError
+from netex.models.unknown_extensions_error_structure import UnknownExtensionsErrorStructure
+from netex.models.unknown_participant_error import UnknownParticipantError
+from netex.models.unknown_participant_error_structure import UnknownParticipantErrorStructure
+from netex.models.unknown_subscriber_error import UnknownSubscriberError
+from netex.models.unknown_subscriber_error_structure import UnknownSubscriberErrorStructure
+from netex.models.unknown_subscription_error import UnknownSubscriptionError
+from netex.models.unknown_subscription_error_structure import UnknownSubscriptionErrorStructure
+from netex.models.usage_discount_right import UsageDiscountRight
+from netex.models.usage_discount_right_enumeration import UsageDiscountRightEnumeration
+from netex.models.usage_discount_right_ref import UsageDiscountRightRef
+from netex.models.usage_discount_right_ref_structure import UsageDiscountRightRefStructure
+from netex.models.usage_discount_right_version_structure import UsageDiscountRightVersionStructure
+from netex.models.usage_end_enumeration import UsageEndEnumeration
+from netex.models.usage_parameter_1 import UsageParameter1
+from netex.models.usage_parameter_2 import UsageParameter2
+from netex.models.usage_parameter_price import UsageParameterPrice
+from netex.models.usage_parameter_price_ref import UsageParameterPriceRef
+from netex.models.usage_parameter_price_ref_structure import UsageParameterPriceRefStructure
+from netex.models.usage_parameter_price_refs_rel_structure import UsageParameterPriceRefsRelStructure
+from netex.models.usage_parameter_price_versioned_child_structure import UsageParameterPriceVersionedChildStructure
+from netex.models.usage_parameter_prices_rel_structure import UsageParameterPricesRelStructure
+from netex.models.usage_parameter_ref import UsageParameterRef
+from netex.models.usage_parameter_ref_structure import UsageParameterRefStructure
+from netex.models.usage_parameter_refs_rel_structure import UsageParameterRefsRelStructure
+from netex.models.usage_parameter_version_structure import UsageParameterVersionStructure
+from netex.models.usage_parameters_in_frame_rel_structure import UsageParametersInFrameRelStructure
+from netex.models.usage_parameters_rel_structure import UsageParametersRelStructure
+from netex.models.usage_start_constraint_type_enumeration import UsageStartConstraintTypeEnumeration
+from netex.models.usage_trigger_enumeration import UsageTriggerEnumeration
+from netex.models.usage_validity_period import UsageValidityPeriod
+from netex.models.usage_validity_period_ref import UsageValidityPeriodRef
+from netex.models.usage_validity_period_ref_structure import UsageValidityPeriodRefStructure
+from netex.models.usage_validity_period_version_structure import UsageValidityPeriodVersionStructure
+from netex.models.usage_validity_type_enumeration import UsageValidityTypeEnumeration
+from netex.models.used_in_refs_rel_structure import UsedInRefsRelStructure
+from netex.models.user_need import UserNeed
+from netex.models.user_need_versioned_child_structure import UserNeedVersionedChildStructure
+from netex.models.user_profile import UserProfile
+from netex.models.user_profile_eligibility import UserProfileEligibility
+from netex.models.user_profile_eligibility_ref import UserProfileEligibilityRef
+from netex.models.user_profile_eligibility_ref_structure import UserProfileEligibilityRefStructure
+from netex.models.user_profile_eligibility_versioned_child_structure import UserProfileEligibilityVersionedChildStructure
+from netex.models.user_profile_ref import UserProfileRef
+from netex.models.user_profile_ref_structure import UserProfileRefStructure
+from netex.models.user_profile_refs_rel_structure import UserProfileRefsRelStructure
+from netex.models.user_profile_version_structure import UserProfileVersionStructure
+from netex.models.user_type_enumeration import UserTypeEnumeration
+from netex.models.validable_element import ValidableElement
+from netex.models.validable_element_price import ValidableElementPrice
+from netex.models.validable_element_price_ref import ValidableElementPriceRef
+from netex.models.validable_element_price_ref_structure import ValidableElementPriceRefStructure
+from netex.models.validable_element_price_versioned_child_structure import ValidableElementPriceVersionedChildStructure
+from netex.models.validable_element_prices_rel_structure import ValidableElementPricesRelStructure
+from netex.models.validable_element_ref import ValidableElementRef
+from netex.models.validable_element_ref_structure import ValidableElementRefStructure
+from netex.models.validable_element_version_structure import ValidableElementVersionStructure
+from netex.models.validable_elements_in_frame_rel_structure import ValidableElementsInFrameRelStructure
+from netex.models.validable_elements_rel_structure import ValidableElementsRelStructure
+from netex.models.validity_condition_ref import ValidityConditionRef
+from netex.models.validity_condition_ref_structure import ValidityConditionRefStructure
+from netex.models.validity_condition_refs_rel_structure import ValidityConditionRefsRelStructure
+from netex.models.validity_parameter_assignment import ValidityParameterAssignment
+from netex.models.validity_parameter_assignment_ref_structure import ValidityParameterAssignmentRefStructure
+from netex.models.validity_parameter_assignment_version_structure import ValidityParameterAssignmentVersionStructure
+from netex.models.validity_parameter_assignments_in_frame_rel_structure import ValidityParameterAssignmentsInFrameRelStructure
+from netex.models.validity_parameter_assignments_rel_structure import ValidityParameterAssignmentsRelStructure
+from netex.models.validity_parameters_rel_structure import ValidityParametersRelStructure
+from netex.models.validity_rule_parameter_ref import ValidityRuleParameterRef
+from netex.models.validity_rule_parameter_ref_structure import ValidityRuleParameterRefStructure
+from netex.models.validity_rule_parameter_refs_rel_structure import ValidityRuleParameterRefsRelStructure
+from netex.models.validity_rule_parameters_rel_structure import ValidityRuleParametersRelStructure
+from netex.models.validity_trigger_ref import ValidityTriggerRef
+from netex.models.validity_trigger_ref_structure import ValidityTriggerRefStructure
+from netex.models.validity_trigger_refs_rel_structure import ValidityTriggerRefsRelStructure
+from netex.models.validity_triggers_rel_structure import ValidityTriggersRelStructure
+from netex.models.value_set import ValueSet
+from netex.models.value_set_version_structure import ValueSetVersionStructure
+from netex.models.vector import Vector
+from netex.models.vector_type import VectorType
+from netex.models.vehicle import Vehicle
+from netex.models.vehicle_access_facility import VehicleAccessFacility
+from netex.models.vehicle_access_facility_enumeration import VehicleAccessFacilityEnumeration
+from netex.models.vehicle_access_facility_list import VehicleAccessFacilityList
+from netex.models.vehicle_charging_equipment import VehicleChargingEquipment
+from netex.models.vehicle_charging_equipment_ref import VehicleChargingEquipmentRef
+from netex.models.vehicle_charging_equipment_ref_structure import VehicleChargingEquipmentRefStructure
+from netex.models.vehicle_charging_equipment_version_structure import VehicleChargingEquipmentVersionStructure
+from netex.models.vehicle_entrance import VehicleEntrance
+from netex.models.vehicle_entrance_ref import VehicleEntranceRef
+from netex.models.vehicle_entrance_ref_structure import VehicleEntranceRefStructure
+from netex.models.vehicle_entrance_version_structure import VehicleEntranceVersionStructure
+from netex.models.vehicle_entrances_rel_structure import VehicleEntrancesRelStructure
+from netex.models.vehicle_equipmen_profiles_in_frame_rel_structure import VehicleEquipmenProfilesInFrameRelStructure
+from netex.models.vehicle_equipment_profile import VehicleEquipmentProfile
+from netex.models.vehicle_equipment_profile_ref import VehicleEquipmentProfileRef
+from netex.models.vehicle_equipment_profile_ref_structure import VehicleEquipmentProfileRefStructure
+from netex.models.vehicle_equipment_profile_version_structure import VehicleEquipmentProfileVersionStructure
+from netex.models.vehicle_equipment_ref import VehicleEquipmentRef
+from netex.models.vehicle_equipment_ref_structure import VehicleEquipmentRefStructure
+from netex.models.vehicle_equipments_rel_structure import VehicleEquipmentsRelStructure
+from netex.models.vehicle_journey_1 import VehicleJourney1
+from netex.models.vehicle_journey_2 import VehicleJourney2
+from netex.models.vehicle_journey_headway import VehicleJourneyHeadway
+from netex.models.vehicle_journey_headway_versioned_child_structure import VehicleJourneyHeadwayVersionedChildStructure
+from netex.models.vehicle_journey_headways_rel_structure import VehicleJourneyHeadwaysRelStructure
+from netex.models.vehicle_journey_layover import VehicleJourneyLayover
+from netex.models.vehicle_journey_layover_versioned_child_structure import VehicleJourneyLayoverVersionedChildStructure
+from netex.models.vehicle_journey_layovers_rel_structure import VehicleJourneyLayoversRelStructure
+from netex.models.vehicle_journey_ref import VehicleJourneyRef
+from netex.models.vehicle_journey_ref_structure import VehicleJourneyRefStructure
+from netex.models.vehicle_journey_refs_rel_structure import VehicleJourneyRefsRelStructure
+from netex.models.vehicle_journey_run_time import VehicleJourneyRunTime
+from netex.models.vehicle_journey_run_time_versioned_child_structure import VehicleJourneyRunTimeVersionedChildStructure
+from netex.models.vehicle_journey_run_times_rel_structure import VehicleJourneyRunTimesRelStructure
+from netex.models.vehicle_journey_stop_assignment import VehicleJourneyStopAssignment
+from netex.models.vehicle_journey_stop_assignment_ref import VehicleJourneyStopAssignmentRef
+from netex.models.vehicle_journey_stop_assignment_ref_structure import VehicleJourneyStopAssignmentRefStructure
+from netex.models.vehicle_journey_stop_assignment_version_structure import VehicleJourneyStopAssignmentVersionStructure
+from netex.models.vehicle_journey_stop_assignments_in_frame_rel_structure import VehicleJourneyStopAssignmentsInFrameRelStructure
+from netex.models.vehicle_journey_stop_assignments_rel_structure import VehicleJourneyStopAssignmentsRelStructure
+from netex.models.vehicle_journey_version_structure import VehicleJourneyVersionStructure
+from netex.models.vehicle_journey_wait_time import VehicleJourneyWaitTime
+from netex.models.vehicle_journey_wait_time_versioned_child_structure import VehicleJourneyWaitTimeVersionedChildStructure
+from netex.models.vehicle_journey_wait_times_rel_structure import VehicleJourneyWaitTimesRelStructure
+from netex.models.vehicle_loading_enumeration import VehicleLoadingEnumeration
+from netex.models.vehicle_manoeuvring_requirement import VehicleManoeuvringRequirement
+from netex.models.vehicle_manoeuvring_requirement_ref import VehicleManoeuvringRequirementRef
+from netex.models.vehicle_manoeuvring_requirement_ref_structure import VehicleManoeuvringRequirementRefStructure
+from netex.models.vehicle_manoeuvring_requirement_version_structure import VehicleManoeuvringRequirementVersionStructure
+from netex.models.vehicle_manoeuvring_requirements_rel_structure import VehicleManoeuvringRequirementsRelStructure
+from netex.models.vehicle_mode import VehicleMode
+from netex.models.vehicle_mode_enumeration import VehicleModeEnumeration
+from netex.models.vehicle_model import VehicleModel
+from netex.models.vehicle_model_ref import VehicleModelRef
+from netex.models.vehicle_model_ref_structure import VehicleModelRefStructure
+from netex.models.vehicle_model_version_structure import VehicleModelVersionStructure
+from netex.models.vehicle_models_in_frame_rel_structure import VehicleModelsInFrameRelStructure
+from netex.models.vehicle_orientation_enumeration import VehicleOrientationEnumeration
+from netex.models.vehicle_position_alignment import VehiclePositionAlignment
+from netex.models.vehicle_position_alignment_ref import VehiclePositionAlignmentRef
+from netex.models.vehicle_position_alignment_ref_structure import VehiclePositionAlignmentRefStructure
+from netex.models.vehicle_position_alignment_version_structure import VehiclePositionAlignmentVersionStructure
+from netex.models.vehicle_position_alignments_rel_structure import VehiclePositionAlignmentsRelStructure
+from netex.models.vehicle_quay_alignment import VehicleQuayAlignment
+from netex.models.vehicle_quay_alignment_ref import VehicleQuayAlignmentRef
+from netex.models.vehicle_quay_alignment_ref_structure import VehicleQuayAlignmentRefStructure
+from netex.models.vehicle_quay_alignment_version_structure import VehicleQuayAlignmentVersionStructure
+from netex.models.vehicle_quay_alignments_rel_structure import VehicleQuayAlignmentsRelStructure
+from netex.models.vehicle_ref import VehicleRef
+from netex.models.vehicle_ref_structure import VehicleRefStructure
+from netex.models.vehicle_requirement import VehicleRequirement
+from netex.models.vehicle_requirement_ref import VehicleRequirementRef
+from netex.models.vehicle_requirement_ref_structure import VehicleRequirementRefStructure
+from netex.models.vehicle_requirement_version_structure import VehicleRequirementVersionStructure
+from netex.models.vehicle_schedule_frame import VehicleScheduleFrame
+from netex.models.vehicle_schedule_frame_ref import VehicleScheduleFrameRef
+from netex.models.vehicle_schedule_frame_ref_structure import VehicleScheduleFrameRefStructure
+from netex.models.vehicle_schedule_version_frame_structure import VehicleScheduleVersionFrameStructure
+from netex.models.vehicle_service import VehicleService
+from netex.models.vehicle_service_part import VehicleServicePart
+from netex.models.vehicle_service_part_ref import VehicleServicePartRef
+from netex.models.vehicle_service_part_ref_structure import VehicleServicePartRefStructure
+from netex.models.vehicle_service_part_version_structure import VehicleServicePartVersionStructure
+from netex.models.vehicle_service_parts_rel_structure import VehicleServicePartsRelStructure
+from netex.models.vehicle_service_ref import VehicleServiceRef
+from netex.models.vehicle_service_ref_structure import VehicleServiceRefStructure
+from netex.models.vehicle_service_version_structure import VehicleServiceVersionStructure
+from netex.models.vehicle_services_in_frame_rel_structure import VehicleServicesInFrameRelStructure
+from netex.models.vehicle_stopping_place import VehicleStoppingPlace
+from netex.models.vehicle_stopping_place_ref import VehicleStoppingPlaceRef
+from netex.models.vehicle_stopping_place_ref_structure import VehicleStoppingPlaceRefStructure
+from netex.models.vehicle_stopping_place_version_structure import VehicleStoppingPlaceVersionStructure
+from netex.models.vehicle_stopping_places_rel_structure import VehicleStoppingPlacesRelStructure
+from netex.models.vehicle_stopping_position import VehicleStoppingPosition
+from netex.models.vehicle_stopping_position_ref import VehicleStoppingPositionRef
+from netex.models.vehicle_stopping_position_ref_structure import VehicleStoppingPositionRefStructure
+from netex.models.vehicle_stopping_position_version_structure import VehicleStoppingPositionVersionStructure
+from netex.models.vehicle_stopping_positions_rel_structure import VehicleStoppingPositionsRelStructure
+from netex.models.vehicle_type import VehicleType
+from netex.models.vehicle_type_at_point import VehicleTypeAtPoint
+from netex.models.vehicle_type_at_point_ref import VehicleTypeAtPointRef
+from netex.models.vehicle_type_at_point_ref_structure import VehicleTypeAtPointRefStructure
+from netex.models.vehicle_type_at_point_version_structure import VehicleTypeAtPointVersionStructure
+from netex.models.vehicle_type_preference import VehicleTypePreference
+from netex.models.vehicle_type_preference_ref import VehicleTypePreferenceRef
+from netex.models.vehicle_type_preference_ref_structure import VehicleTypePreferenceRefStructure
+from netex.models.vehicle_type_preference_versioned_child_structure import VehicleTypePreferenceVersionedChildStructure
+from netex.models.vehicle_type_preferences_rel_structure import VehicleTypePreferencesRelStructure
+from netex.models.vehicle_type_ref import VehicleTypeRef
+from netex.models.vehicle_type_ref_structure import VehicleTypeRefStructure
+from netex.models.vehicle_type_refs_rel_structure import VehicleTypeRefsRelStructure
+from netex.models.vehicle_type_stop_assignment import VehicleTypeStopAssignment
+from netex.models.vehicle_type_stop_assignment_ref import VehicleTypeStopAssignmentRef
+from netex.models.vehicle_type_stop_assignment_ref_structure import VehicleTypeStopAssignmentRefStructure
+from netex.models.vehicle_type_stop_assignment_version_structure import VehicleTypeStopAssignmentVersionStructure
+from netex.models.vehicle_type_stop_assignments_rel_structure import VehicleTypeStopAssignmentsRelStructure
+from netex.models.vehicle_type_version_structure import VehicleTypeVersionStructure
+from netex.models.vehicle_types_in_frame_rel_structure import VehicleTypesInFrameRelStructure
+from netex.models.vehicle_version_structure import VehicleVersionStructure
+from netex.models.vehicles_in_frame_rel_structure import VehiclesInFrameRelStructure
+from netex.models.version import Version
+from netex.models.version_frame import VersionFrame
+from netex.models.version_frame_defaults_structure import VersionFrameDefaultsStructure
+from netex.models.version_frame_members_rel_structure import VersionFrameMembersRelStructure
+from netex.models.version_frame_ref import VersionFrameRef
+from netex.models.version_frame_ref_structure import VersionFrameRefStructure
+from netex.models.version_frame_refs_rel_structure import VersionFrameRefsRelStructure
+from netex.models.version_frame_version_structure import VersionFrameVersionStructure
+from netex.models.version_of_object_ref import VersionOfObjectRef
+from netex.models.version_of_object_ref_structure import VersionOfObjectRefStructure
+from netex.models.version_ref import VersionRef
+from netex.models.version_ref_structure import VersionRefStructure
+from netex.models.version_status_enumeration import VersionStatusEnumeration
+from netex.models.version_type_enumeration import VersionTypeEnumeration
+from netex.models.version_version_structure import VersionVersionStructure
+from netex.models.versioned_child import VersionedChild
+from netex.models.versions_in_frame_rel_structure import VersionsInFrameRelStructure
+from netex.models.versions_rel_structure import VersionsRelStructure
+from netex.models.via_type_enumeration import ViaTypeEnumeration
+from netex.models.via_versioned_child_structure import ViaVersionedChildStructure
+from netex.models.vias_rel_structure import ViasRelStructure
+from netex.models.visual_signs_available import VisualSignsAvailable
+from netex.models.waiting_equipment import WaitingEquipment
+from netex.models.waiting_equipment_ref import WaitingEquipmentRef
+from netex.models.waiting_equipment_ref_structure import WaitingEquipmentRefStructure
+from netex.models.waiting_equipment_version_structure import WaitingEquipmentVersionStructure
+from netex.models.waiting_room_equipment import WaitingRoomEquipment
+from netex.models.waiting_room_equipment_ref import WaitingRoomEquipmentRef
+from netex.models.waiting_room_equipment_ref_structure import WaitingRoomEquipmentRefStructure
+from netex.models.waiting_room_equipment_version_structure import WaitingRoomEquipmentVersionStructure
+from netex.models.water_submode import WaterSubmode
+from netex.models.water_submode_enumeration import WaterSubmodeEnumeration
+from netex.models.week_of_month_enumeration import WeekOfMonthEnumeration
+from netex.models.weeks_of_month_enumeration import WeeksOfMonthEnumeration
+from netex.models.wheelchair_access import WheelchairAccess
+from netex.models.wheelchair_vehicle_equipment import WheelchairVehicleEquipment
+from netex.models.wheelchair_vehicle_equipment_version_structure import WheelchairVehicleEquipmentVersionStructure
+from netex.models.wheelchair_vehicle_ref import WheelchairVehicleRef
+from netex.models.wheelchair_vehicle_ref_structure import WheelchairVehicleRefStructure
+from netex.models.whitelist import Whitelist
+from netex.models.whitelist_ref import WhitelistRef
+from netex.models.whitelist_ref_structure import WhitelistRefStructure
+from netex.models.whitelist_refs_rel_structure import WhitelistRefsRelStructure
+from netex.models.whitelist_version_structure import WhitelistVersionStructure
+from netex.models.whitelists_in_frame_rel_structure import WhitelistsInFrameRelStructure
+from netex.models.whitelists_rel_structure import WhitelistsRelStructure
+from netex.models.wire_element import WireElement
+from netex.models.wire_element_version_structure import WireElementVersionStructure
+from netex.models.wire_junction import WireJunction
+from netex.models.wire_junction_version_structure import WireJunctionVersionStructure
+from netex.models.wire_link_ref import WireLinkRef
+from netex.models.wire_link_ref_by_value import WireLinkRefByValue
+from netex.models.wire_link_ref_by_value_structure import WireLinkRefByValueStructure
+from netex.models.wire_link_ref_structure import WireLinkRefStructure
+from netex.models.wire_point_ref import WirePointRef
+from netex.models.wire_point_ref_structure import WirePointRefStructure
+from netex.models.zone import Zone
+from netex.models.zone_derived_view_structure import ZoneDerivedViewStructure
+from netex.models.zone_projection import ZoneProjection
+from netex.models.zone_projection_ref import ZoneProjectionRef
+from netex.models.zone_projection_ref_structure import ZoneProjectionRefStructure
+from netex.models.zone_projection_version_structure import ZoneProjectionVersionStructure
+from netex.models.zone_ref import ZoneRef
+from netex.models.zone_ref_structure import ZoneRefStructure
+from netex.models.zone_refs_rel_structure import ZoneRefsRelStructure
+from netex.models.zone_topology_enumeration import ZoneTopologyEnumeration
+from netex.models.zone_use_enumeration import ZoneUseEnumeration
+from netex.models.zone_version_structure import ZoneVersionStructure
+from netex.models.zone_view import ZoneView
+from netex.models.zones_in_frame_rel_structure import ZonesInFrameRelStructure
 
 __all__ = [
+    "AbstractAssociationRole",
     "AbstractCapabilitiesStructure",
     "AbstractCurve",
     "AbstractCurveType",
@@ -3899,20 +3920,22 @@ __all__ = [
     "AbstractFunctionalServiceRequest",
     "AbstractFunctionalServiceRequestStructure",
     "AbstractFunctionalServiceSubscriptionRequest",
-    "AbstractGml",
-    "AbstractGmltype",
     "AbstractGeometricPrimitive",
     "AbstractGeometricPrimitiveType",
     "AbstractGeometry",
     "AbstractGeometryType",
+    "AbstractGml",
+    "AbstractGmltype",
     "AbstractGroupMember",
     "AbstractGroupMemberVersionedChildStructure",
     "AbstractIdentifiedItemStructure",
+    "AbstractInlineProperty",
     "AbstractItemStructure",
     "AbstractMemberType",
     "AbstractMetadataPropertyType",
     "AbstractNotificationStructure",
     "AbstractObject",
+    "AbstractReference",
     "AbstractReferencingItemStructure",
     "AbstractRequest",
     "AbstractRequestStructure",
@@ -3926,6 +3949,7 @@ __all__ = [
     "AbstractServiceDeliveryStructure",
     "AbstractServiceRequest",
     "AbstractServiceRequestStructure",
+    "AbstractStrictAssociationRole",
     "AbstractSubscriptionRequestStructure",
     "AbstractSubscriptionStructure",
     "AbstractSurface",
@@ -3947,39 +3971,50 @@ __all__ = [
     "AccessNotAllowedErrorStructure",
     "AccessRef",
     "AccessRefStructure",
+    "AccessRefsRelStructure",
     "AccessRightInProduct",
     "AccessRightInProductRef",
     "AccessRightInProductRefStructure",
     "AccessRightInProductVersionedChildStructure",
-    "AccessRightParameterAssignmentRefStructure",
-    "AccessRightParameterAssignment2",
-    "AccessRightParameterAssignmentVersionStructure",
     "AccessRightParameterAssignment1",
+    "AccessRightParameterAssignment2",
+    "AccessRightParameterAssignmentRefStructure",
+    "AccessRightParameterAssignmentVersionStructure",
+    "AccessRightParameterAssignmentsInFrameRelStructure",
+    "AccessRightParameterAssignmentsRelStructure",
+    "AccessRightsInProductRelStructure",
     "AccessSpace",
     "AccessSpaceRef",
     "AccessSpaceRefStructure",
     "AccessSpaceTypeEnumeration",
     "AccessSpaceVersionStructure",
+    "AccessSpacesRelStructure",
+    "AccessSummariesRelStructure",
     "AccessSummary",
     "AccessSummaryVersionedChildStructure",
     "AccessVehicleEquipment",
     "AccessVehicleEquipmentRef",
     "AccessVehicleEquipmentRefStructure",
     "AccessVehicleEquipmentVersionStructure",
+    "AccessVersionStructure",
     "AccessZone",
     "AccessZoneRef",
     "AccessZoneRefStructure",
     "AccessZoneVersionStructure",
-    "AccessVersionStructure",
+    "AccessZonesRelStructure",
+    "AccessesInFrameRelStructure",
+    "AccessesRelStructure",
     "AccessibilityAssessment",
     "AccessibilityAssessmentRef",
     "AccessibilityAssessmentRefStructure",
     "AccessibilityAssessmentVersionedChildStructure",
+    "AccessibilityAssessmentsRelStructure",
     "AccessibilityInfoFacility",
     "AccessibilityInfoFacilityEnumeration",
     "AccessibilityInfoFacilityList",
     "AccessibilityLimitation",
     "AccessibilityLimitationVersionedChildStructure",
+    "AccessibilityLimitationsRelStructure",
     "AccessibilityTool",
     "AccessibilityToolEnumeration",
     "AccessibilityToolList",
@@ -3993,6 +4028,7 @@ __all__ = [
     "AccommodationRef",
     "AccommodationRefStructure",
     "AccommodationVersionedChildStructure",
+    "AccommodationsRelStructure",
     "AccountStatusTypeEnumeration",
     "AccountableElement",
     "AccountableElementRef",
@@ -4003,22 +4039,27 @@ __all__ = [
     "ActivatedEquipmentRef",
     "ActivatedEquipmentRefStructure",
     "ActivatedEquipmentVersionStructure",
+    "ActivatedEquipmentsInFrameRelStructure",
     "ActivationAssignment",
     "ActivationAssignmentRef",
     "ActivationAssignmentRefStructure",
     "ActivationAssignmentVersionStructure",
+    "ActivationAssignmentsRelStructure",
     "ActivationLink",
     "ActivationLinkRef",
     "ActivationLinkRefByValue",
     "ActivationLinkRefByValueStructure",
     "ActivationLinkRefStructure",
     "ActivationLinkVersionStructure",
+    "ActivationLinksInFrameRelStructure",
     "ActivationMeansEnumeration",
+    "ActivationPoint1",
+    "ActivationPoint2",
     "ActivationPointRef",
     "ActivationPointRefStructure",
-    "ActivationPoint2",
     "ActivationPointVersionStructure",
-    "ActivationPoint1",
+    "ActivationPointsInFrameRelStructure",
+    "ActivationTypeRefsRelStructure",
     "ActualVehicleEquipment",
     "ActualVehicleEquipmentVersionStructure",
     "Address",
@@ -4029,11 +4070,16 @@ __all__ = [
     "AddressablePlaceRef",
     "AddressablePlaceRefStructure",
     "AddressablePlaceVersionStructure",
+    "AddressesInFrameRelStructure",
+    "AdministrativeZone1",
     "AdministrativeZoneRef",
     "AdministrativeZoneRefStructure",
+    "AdministrativeZoneRefsRelStructure",
     "AdministrativeZone2",
     "AdministrativeZoneVersionStructure",
-    "AdministrativeZone1",
+    "TransportAdministrativeZone",
+    "TransportAdministrativeZoneVersionStructure",
+    "AdministrativeZonesRelStructure",
     "AggregationType",
     "AirSubmode",
     "AirSubmodeEnumeration",
@@ -4055,36 +4101,73 @@ __all__ = [
     "AllowedLineDirection",
     "AllowedLineDirectionRef",
     "AllowedLineDirectionRefStructure",
+    "AllowedLineDirectionRefsRelStructure",
     "AllowedLineDirectionVersionStructure",
+    "AllowedLineDirectionsRelStructure",
     "AllowedResourceUsageExceededError",
     "AllowedResourceUsageExceededErrorStructure",
     "AlternativeName",
     "AlternativeNameRef",
     "AlternativeNameRefStructure",
     "AlternativeNameVersionedChildStructure",
+    "AlternativeNamesRelStructure",
     "AlternativeQuayDescriptor",
     "AlternativeQuayDescriptorVersionedChildStructure",
-    "AlternativeText",
     "AlternativeTextRef",
     "AlternativeTextRefStructure",
+    "AlternativeText",
     "AlternativeTextVersionedChildStructure",
+    "AvailabilityCondition",
+    "AvailabilityConditionVersionStructure",
+    "DataManagedObjectStructure",
+    "DayType2",
+    "DayTypeVersionStructure",
+    "DayType1",
+    "EntityInVersionStructure",
+    "FareDayType",
+    "FareDayTypeVersionedStructure",
+    "OperatingDay",
+    "OperatingDayVersionStructure",
+    "OrganisationDayType",
+    "OrganisationDayTypeVersionStructure",
+    "SimpleAvailabilityCondition",
+    "TimebandVersionedChildStructure",
+    "ValidBetween",
+    "ValidBetweenVersionStructure",
+    "ValidDuring",
+    "ValidDuringVersionStructure",
+    "ValidityCondition2",
+    "ValidityConditionVersionStructure",
+    "ValidityCondition1",
+    "ValidityRuleParameter",
+    "ValidityRuleParameterVersionStructure",
+    "ValidityTrigger",
+    "ValidityTriggerVersionStructure",
+    "VersionedChildStructure",
+    "AlternativeTextsRelStructure",
+    "DayTypesRelStructure",
+    "OperatingDaysRelStructure",
+    "TimebandsRelStructure",
+    "ValidityConditionsRelStructure",
     "AmountOfPriceUnitEnumeration",
     "AmountOfPriceUnitProduct",
     "AmountOfPriceUnitProductRef",
     "AmountOfPriceUnitProductRefStructure",
     "AmountOfPriceUnitProductVersionStructure",
+    "AmountOfPriceUnitRefsRelStructure",
     "ArrivalStructure",
+    "Assignment1",
+    "Assignment2",
     "AssignmentRef",
     "AssignmentRefStructure",
-    "Assignment2",
-    "AssignmentVersionStructure2",
     "AssignmentVersionStructure1",
-    "Assignment1",
+    "AssignmentVersionStructure2",
     "AssistanceAvailabilityEnumeration",
     "AssistanceBookingService",
     "AssistanceBookingServiceRef",
     "AssistanceBookingServiceRefStructure",
     "AssistanceBookingServiceVersionStructure",
+    "AssistanceBookingServicesRelStructure",
     "AssistanceFacility",
     "AssistanceFacilityEnumeration",
     "AssistanceFacilityList",
@@ -4094,6 +4177,7 @@ __all__ = [
     "AssistanceServiceRefStructure",
     "AssistanceServiceVersionStructure",
     "AssistedBoardingLocationEnumeration",
+    "AssociationName",
     "AssociationRoleType",
     "AudibleSignalsAvailable",
     "AudioAnnouncementTypeEnumeration",
@@ -4104,10 +4188,9 @@ __all__ = [
     "AuthorityRef",
     "AuthorityRefStructure",
     "AuthorityVersionStructure",
-    "AvailabilityCondition",
     "AvailabilityConditionRef",
     "AvailabilityConditionRefStructure",
-    "AvailabilityConditionVersionStructure",
+    "AvailabilityConditionsRelStructure",
     "BaggageTypeEnumeration",
     "BaggageUseTypeEnumeration",
     "BeaconPoint",
@@ -4121,23 +4204,30 @@ __all__ = [
     "Blacklist",
     "BlacklistRef",
     "BlacklistRefStructure",
+    "BlacklistRefsRelStructure",
     "BlacklistVersionStructure",
+    "BlacklistsInFrameRelStructure",
+    "BlacklistsRelStructure",
     "BlackoutStartEnumeration",
     "Block",
     "BlockPart",
     "BlockPartRef",
     "BlockPartRefStructure",
     "BlockPartVersionStructure",
+    "BlockPartsRelStructure",
     "BlockRef",
     "BlockRefStructure",
     "BlockVersionStructure",
+    "BlocksInFrameRelStructure",
     "BoardingPermission",
     "BoardingPermissionEnumeration",
     "BoardingPosition",
     "BoardingPositionRef",
     "BoardingPositionRefStructure",
+    "BoardingPositionRefsRelStructure",
     "BoardingPositionTypeEnumeration",
     "BoardingPositionVersionStructure",
+    "BoardingPositionsRelStructure",
     "BookingAccessEnumeration",
     "BookingArrangementsStructure",
     "BookingMethodEnumeration",
@@ -4149,6 +4239,7 @@ __all__ = [
     "BorderPointRef",
     "BorderPointRefStructure",
     "BorderPointValueStructure",
+    "BorderPointsInFrameRelStructure",
     "BorderTypeEnumeration",
     "BoundingBoxStructure1",
     "BoundingBoxStructure2",
@@ -4158,10 +4249,11 @@ __all__ = [
     "BrandingVersionStructure",
     "BusSubmode",
     "BusSubmodeEnumeration",
-    "CallZ",
+    "Call1",
     "Call2",
     "CallVersionedChildStructure",
-    "Call1",
+    "CallZ",
+    "CallsRelStructure",
     "Cancelling",
     "CancellingRef",
     "CancellingRefStructure",
@@ -4186,9 +4278,11 @@ __all__ = [
     "CappingRulePriceRef",
     "CappingRulePriceRefStructure",
     "CappingRulePriceVersionedChildStructure",
+    "CappingRulePricesRelStructure",
     "CappingRuleRef",
     "CappingRuleRefStructure",
     "CappingRuleVersionedChildStructure",
+    "CappingRulesRelStructure",
     "CarServiceFacility",
     "CarServiceFacilityEnumeration",
     "CarServiceFacilityList",
@@ -4201,13 +4295,30 @@ __all__ = [
     "CateringServiceRef",
     "CateringServiceRefStructure",
     "CateringServiceVersionStructure",
+    "Cell1",
     "CellPriceStructure",
-    "CellRefStructure",
-    "CellRef2",
     "CellRef1",
+    "CellRef2",
+    "CellRefStructure",
+    "CellRefsRelStructure",
     "Cell2",
     "CellVersionedChildStructure",
-    "Cell1",
+    "FareStructureFactorVersionStructure",
+    "FareTableInContext",
+    "FareTable2",
+    "FareTableVersionStructure",
+    "ParkingChargeBand",
+    "ParkingChargeBandVersionStructure",
+    "ParkingPrice",
+    "ParkingPriceVersionedChildStructure",
+    "PriceGroup2",
+    "PriceGroupVersionStructure",
+    "PriceableObjectVersionStructure",
+    "TimeStructureFactorVersionStructure",
+    "CellsRelStructure",
+    "FarePricesRelStructure",
+    "FareTablesRelStructure",
+    "PriceGroupsRelStructure",
     "ChargingBasisEnumeration",
     "ChargingMoment",
     "ChargingMomentEnumeration",
@@ -4223,13 +4334,19 @@ __all__ = [
     "CheckConstraintDelayRef",
     "CheckConstraintDelayRefStructure",
     "CheckConstraintDelayVersionStructure",
+    "CheckConstraintDelaysInFrameRelStructure",
+    "CheckConstraintDelaysRelStructure",
+    "CheckConstraintInFrameRelStructure",
     "CheckConstraintRef",
     "CheckConstraintRefStructure",
     "CheckConstraintThroughput",
     "CheckConstraintThroughputRef",
     "CheckConstraintThroughputRefStructure",
     "CheckConstraintThroughputVersionStructure",
+    "CheckConstraintThroughputsInFrameRelStructure",
+    "CheckConstraintThroughputsRelStructure",
     "CheckConstraintVersionStructure",
+    "CheckConstraintsRelStructure",
     "CheckDirectionEnumeration",
     "CheckProcessTypeEnumeration",
     "CheckServiceEnumeration",
@@ -4252,9 +4369,12 @@ __all__ = [
     "ClassRef",
     "ClassRefStructure",
     "ClassRefTypeEnumeration",
+    "ClassRefsRelStructure",
     "ClassRelationshipInFrame",
     "ClassRelationshipInFrameStructure",
+    "ClassesInRepositoryRelStructure",
     "ClassificationDescriptorVersionStructure",
+    "ClassificationDescriptorsRelStructure",
     "ClosedTimeRangeStructure",
     "ClosedTimestampRangeStructure",
     "CoachSubmode",
@@ -4267,9 +4387,12 @@ __all__ = [
     "CodespaceAssignment",
     "CodespaceAssignmentRef",
     "CodespaceAssignmentVersionedChildStructure",
+    "CodespaceAssignmentsRelStructure",
     "CodespaceRef",
     "CodespaceRefStructure",
     "CodespaceStructure",
+    "CodespacesInFrameRelStructure",
+    "CodespacesRelStructure",
     "CommercialProfile",
     "CommercialProfileEligibility",
     "CommercialProfileEligibilityRef",
@@ -4281,11 +4404,11 @@ __all__ = [
     "CommercialProfileVersionStructure",
     "CommonCellVersionedChildStructure",
     "CommonFrame",
-    "CommonSection",
     "CommonSectionPointMember",
+    "CommonSectionPointMembersRelStructure",
     "CommonSectionRef",
     "CommonSectionRefStructure",
-    "CommonSectionVersionStructure",
+    "CommonSectionsInFrameRelStructure",
     "CommonVersionFrameStructure",
     "CommunicationService",
     "CommunicationServiceEnumeration",
@@ -4297,6 +4420,7 @@ __all__ = [
     "CompanionProfileRef",
     "CompanionProfileRefStructure",
     "CompanionProfileVersionStructure",
+    "CompanionProfilesRelStructure",
     "CompanionRelationshipEnumeration",
     "CompassBearing16Enumeration",
     "CompassBearing8Enumeration",
@@ -4306,17 +4430,18 @@ __all__ = [
     "ComplaintsServiceVersionStructure",
     "ComplexFeature",
     "ComplexFeatureMemberVersionedChildStructure",
+    "ComplexFeatureMembersRelStructure",
     "ComplexFeatureProjection",
     "ComplexFeatureProjectionRef",
     "ComplexFeatureProjectionRefStructure",
     "ComplexFeatureProjectionVersionStructure",
     "ComplexFeatureRef",
     "ComplexFeatureRefStructure",
+    "ComplexFeatureRefsRelStructure",
     "ComplexFeatureVersionStructure",
-    "CompositeFrame",
     "CompositeFrameRef",
     "CompositeFrameRefStructure",
-    "CompositeVersionFrameStructure",
+    "CompositePricesRelStructure",
     "CompoundBlock",
     "CompoundBlockRef",
     "CompoundBlockRefStructure",
@@ -4329,8 +4454,8 @@ __all__ = [
     "ConditionSummary",
     "ConditionSummaryStructure",
     "CongestionEnumeration",
-    "ConnectingJourneyView",
     "ConnectingJourneyDerivedViewStructure",
+    "ConnectingJourneyView",
     "Connection",
     "ConnectionCertaintyEnumeration",
     "ConnectionEnd",
@@ -4341,13 +4466,17 @@ __all__ = [
     "ConsumerRequestEndpointStructure",
     "ConsumerResponseEndpointStructure",
     "ContactStructure",
+    "ContainedAvailabilityConditionsRelStructure",
+    "ContainmentAggregationStructure",
     "ContainmentEnumeration",
     "ContextualisedRequestStructure",
     "ContinuousModeEnumeration",
+    "ContractRefsRelStructure",
     "ControlCentre",
     "ControlCentreRef",
     "ControlCentreRefStructure",
     "ControlCentreVersionStructure",
+    "ControlCentresInFrameRelStructure",
     "ControlCentresRelStructure",
     "ControlParameterAssignmentRefStructure",
     "ControllableElement",
@@ -4359,30 +4488,42 @@ __all__ = [
     "ControllableElementPriceRef",
     "ControllableElementPriceRefStructure",
     "ControllableElementPriceVersionedChildStructure",
+    "ControllableElementPricesRelStructure",
     "ControllableElementRef",
     "ControllableElementRefStructure",
     "ControllableElementVersionStructure",
+    "ControllableElementsInFrameRelStructure",
+    "ControllableElementsInSequenceRelStructure",
+    "ControllableElementsRelStructure",
     "CoordinatesType",
     "CouchetteFacility",
     "CouchetteFacilityEnumeration",
     "CouchetteFacilityList",
+    "CountriesInFrameRelStructure",
     "Country",
     "CountryRef",
     "CountryRefStructure",
+    "CountryRefsRelStructure",
     "CountryVersionStructure",
     "CoupledJourney",
     "CoupledJourneyRef",
     "CoupledJourneyRefStructure",
     "CoupledJourneyVersionStructure",
+    "CoupledJourneysInFrameRelStructure",
+    "CoupledJourneysRelStructure",
     "CourseOfJourneys",
     "CourseOfJourneysRef",
     "CourseOfJourneysRefStructure",
     "CourseOfJourneysVersionStructure",
+    "CoursesOfJourneysInFrameRelStructure",
+    "CoursesOfJourneysRelStructure",
     "CoveredEnumeration",
     "CrewBase",
     "CrewBaseRef",
     "CrewBaseRefStructure",
+    "CrewBaseRefsRelStructure",
     "CrewBaseVersionStructure",
+    "CrewBasesInFrameRelStructure",
     "CrossingEquipment",
     "CrossingEquipmentRef",
     "CrossingEquipmentRefStructure",
@@ -4390,46 +4531,62 @@ __all__ = [
     "CrossingTypeEnumeration",
     "CrowdingEnumeration",
     "CurveArrayPropertyType",
+    "CurveProperty",
     "CurvePropertyType",
     "Customer",
     "CustomerAccount",
     "CustomerAccountRef",
     "CustomerAccountRefStructure",
+    "CustomerAccountRefsRelStructure",
     "CustomerAccountSecurityListing",
     "CustomerAccountSecurityListingRef",
     "CustomerAccountSecurityListingRefStructure",
+    "CustomerAccountSecurityListingRefsRelStructure",
     "CustomerAccountSecurityListingVersionedChildStructure",
     "CustomerAccountStatus",
     "CustomerAccountStatusRef",
     "CustomerAccountStatusRefStructure",
+    "CustomerAccountStatusRefsRelStructure",
     "CustomerAccountStatusVersionStructure",
     "CustomerAccountVersionStructure",
+    "CustomerAccountsInFrameRelStructure",
+    "CustomerAccountsRelStructure",
+    "CustomerEligibilitiesRelStructure",
+    "CustomerEligibility1",
+    "CustomerEligibility2",
     "CustomerEligibilityRef",
     "CustomerEligibilityRefStructure",
-    "CustomerEligibility2",
+    "CustomerEligibilityRefsRelStructure",
     "CustomerEligibilityVersionedChildStructure",
-    "CustomerEligibility1",
     "CustomerPurchasePackage",
     "CustomerPurchasePackageElement",
     "CustomerPurchasePackageElementAccess",
     "CustomerPurchasePackageElementAccessRefStructure",
     "CustomerPurchasePackageElementAccessVersionedChildStructure",
+    "CustomerPurchasePackageElementAccessesRelStructure",
     "CustomerPurchasePackageElementRef",
     "CustomerPurchasePackageElementRefStructure",
     "CustomerPurchasePackageElementVersionStructure",
+    "CustomerPurchasePackageElementsRelStructure",
     "CustomerPurchasePackagePrice",
     "CustomerPurchasePackagePriceRef",
     "CustomerPurchasePackagePriceRefStructure",
     "CustomerPurchasePackagePriceVersionedChildStructure",
+    "CustomerPurchasePackagePricesRelStructure",
     "CustomerPurchasePackageRef",
     "CustomerPurchasePackageRefStructure",
+    "CustomerPurchasePackageRefsRelStructure",
     "CustomerPurchasePackageStatusEnumeration",
     "CustomerPurchasePackageVersionStructure",
+    "CustomerPurchasePackagesInFrameRelStructure",
+    "CustomerPurchasePackagesRelStructure",
     "CustomerPurchaseParameterAssignment",
     "CustomerPurchaseParameterAssignmentRefStructure",
     "CustomerPurchaseParameterAssignmentVersionStructure",
+    "CustomerPurchaseParameterAssignmentsRelStructure",
     "CustomerRef",
     "CustomerRefStructure",
+    "CustomerRefsRelStructure",
     "CustomerSecurityListing",
     "CustomerSecurityListingRef",
     "CustomerSecurityListingRefStructure",
@@ -4440,6 +4597,8 @@ __all__ = [
     "CustomerServiceRefStructure",
     "CustomerServiceVersionStructure",
     "CustomerVersionStructure",
+    "CustomersInFrameRelStructure",
+    "CustomersRelStructure",
     "CycleStorageEnumeration",
     "CycleStorageEquipment",
     "CycleStorageEquipmentRef",
@@ -4447,7 +4606,6 @@ __all__ = [
     "CycleStorageEquipmentVersionStructure",
     "CyclesOnServiceEnumeration",
     "DataManagedObject",
-    "DataManagedObjectStructure",
     "DataManagedObjectView",
     "DataManagedObjectViewStructure",
     "DataNameSpacesStructure",
@@ -4464,6 +4622,7 @@ __all__ = [
     "DataObjectServiceCapabilitiesStructure",
     "DataObjectSubscriptionRequest",
     "DataObjectSubscriptionStructure",
+    "DataObjectsRelStructure",
     "DataReadyAcknowledgement",
     "DataReadyNotification",
     "DataReadyRequestStructure",
@@ -4475,12 +4634,15 @@ __all__ = [
     "DataSourceRef",
     "DataSourceRefStructure",
     "DataSourceVersionStructure",
+    "DataSourcesInFrameRelStructure",
+    "DataSourcesRelStructure",
     "DataSupplyRequest",
     "DataSupplyRequestBodyStructure",
     "DataSupplyRequestStructure",
     "DatedCall",
-    "DatedCallZ",
     "DatedCallVersionedChildStructure",
+    "DatedCallZ",
+    "DatedCallsRelStructure",
     "DatedPassingTime",
     "DatedPassingTimeVersionedChildStructure",
     "DatedServiceJourney",
@@ -4500,14 +4662,16 @@ __all__ = [
     "DayTypeAssignmentRef",
     "DayTypeAssignmentRefStructure",
     "DayTypeAssignmentVersionStructure",
+    "DayTypeAssignmentsInFrameRelStructure",
+    "DayTypeAssignmentsRelStructure",
     "DayTypeRef",
     "DayTypeRefStructure",
-    "DayType2",
-    "DayTypeVersionStructure",
-    "DayType1",
+    "DayTypeRefsRelStructure",
+    "DayTypesInFrameRelStructure",
     "DeadRun",
     "DeadRunCallPartStructure",
     "DeadRunCallVersionedChildStructure",
+    "DeadRunCallsRelStructure",
     "DeadRunEndpointStructure",
     "DeadRunJourneyPattern",
     "DeadRunJourneyPatternRef",
@@ -4516,8 +4680,9 @@ __all__ = [
     "DeadRunRef",
     "DeadRunRefStructure",
     "DeadRunTypeEnumeration",
-    "DeadRunWithCallsVersionStructure",
     "DeadRunVersionStructure",
+    "DeadRunWithCallsVersionStructure",
+    "DefaultCodeSpace",
     "DefaultConnection",
     "DefaultConnectionEndStructure",
     "DefaultConnectionRef",
@@ -4527,12 +4692,15 @@ __all__ = [
     "DefaultDeadRunRunTimeRef",
     "DefaultDeadRunRunTimeRefStructure",
     "DefaultDeadRunRunTimeVersionedChildStructure",
+    "DefaultDeadRunRunTimesRelStructure",
     "DefaultInterchange",
     "DefaultInterchangeRef",
     "DefaultInterchangeRefStructure",
     "DefaultInterchangeVersionStructure",
+    "DefaultInterchangseInFrameRelStructure",
     "DefaultServiceJourneyRunTime",
     "DefaultServiceJourneyRunTimeVersionedChildStructure",
+    "DefaultServiceJourneyRunTimesRelStructure",
     "DefaultServiceJourneyTimeRef",
     "DefaultServiceJourneyTimeRefStructure",
     "DeliveriesStructure",
@@ -4542,41 +4710,55 @@ __all__ = [
     "DeliveryVariantRefStructure",
     "DeliveryVariantTypeEnumeration",
     "DeliveryVariantVersionStructure",
+    "DeliveryVariantsRelStructure",
     "Delta",
     "DeltaStructure",
     "DeltaValue",
     "DeltaValueStructure",
+    "DeltaValuesRelStructure",
+    "DeltasRelStructure",
     "Department",
     "DepartmentRef",
     "DepartmentRefStructure",
+    "DepartmentRefsRelStructure",
     "DepartmentVersionStructure",
+    "DepartmentsInFrameRelStructure",
+    "DepartmentsRelStructure",
     "DepartureStructure",
     "DerivedView",
     "DerivedViewStructure",
+    "DescriptionReference",
     "DestinationDisplay",
     "DestinationDisplayContextEnumeration",
+    "DestinationDisplayDerivedViewStructure",
     "DestinationDisplayRef",
     "DestinationDisplayRefStructure",
+    "DestinationDisplayRefsRelStructure",
     "DestinationDisplayVariant",
     "DestinationDisplayVariantRef",
     "DestinationDisplayVariantRefStructure",
+    "DestinationDisplayVariantRefsRelStructure",
     "DestinationDisplayVariantVersionStructure",
-    "DestinationDisplayView",
-    "DestinationDisplayDerivedViewStructure",
+    "DestinationDisplayVariantsRelStructure",
     "DestinationDisplayVersionStructure",
+    "DestinationDisplayView",
+    "DestinationDisplayViewsRelStructure",
+    "DestinationDisplaysInFrameRelStructure",
     "DeviceParameterAssignmentRefStructure",
     "DirectPositionListType",
     "DirectPositionType",
     "Direction",
+    "DirectionDerivedViewStructure",
     "DirectionOfUseEnumeration",
     "DirectionRef",
     "DirectionRefStructure",
     "DirectionType",
     "DirectionTypeEnumeration",
-    "DirectionView",
-    "DirectionDerivedViewStructure",
     "DirectionValueStructure",
+    "DirectionView",
+    "DirectionsInFrameRelStructure",
     "DiscountBasisEnumeration",
+    "DiscountRightRefsRelStructure",
     "DiscountingRule",
     "DiscountingRuleRef",
     "DiscountingRuleRefStructure",
@@ -4586,28 +4768,38 @@ __all__ = [
     "DisplayAssignmentRefStructure",
     "DisplayAssignmentTypeEnumeration",
     "DisplayAssignmentVersionStructure",
+    "DisplayAssignmentsInFrameRelStructure",
+    "DisplayAssignmentsRelStructure",
     "DistanceMatrixElement",
+    "DistanceMatrixElementDerivedViewStructure",
     "DistanceMatrixElementInverseRef",
     "DistanceMatrixElementPrice",
     "DistanceMatrixElementPriceRef",
     "DistanceMatrixElementPriceRefStructure",
     "DistanceMatrixElementPriceVersionedChildStructure",
+    "DistanceMatrixElementPricesRelStructure",
     "DistanceMatrixElementRef",
     "DistanceMatrixElementRefByValue",
     "DistanceMatrixElementRefByValueStructure",
     "DistanceMatrixElementRefStructure",
-    "DistanceMatrixElementView",
-    "DistanceMatrixElementDerivedViewStructure",
+    "DistanceMatrixElementRefsRelStructure",
     "DistanceMatrixElementVersionStructure",
+    "DistanceMatrixElementView",
+    "DistanceMatrixElementsInFrameRelStructure",
+    "DistanceMatrixElementsRelStructure",
     "DistributionAssignment",
     "DistributionAssignmentRef",
     "DistributionAssignmentRefStructure",
     "DistributionAssignmentVersionStructure",
+    "DistributionAssignmentsInFrameRelStructure",
+    "DistributionAssignmentsRelStructure",
     "DistributionChannel",
     "DistributionChannelRef",
     "DistributionChannelRefStructureElement",
+    "DistributionChannelRefsRelStructure",
     "DistributionChannelTypeEnumeration",
     "DistributionChannelVersionStructure",
+    "DistributionChannelsInFrameRelStructure",
     "DistributionRightsEnumeration",
     "DriverRef",
     "DriverRefStructure",
@@ -4622,12 +4814,18 @@ __all__ = [
     "DriverTripTimeRef",
     "DriverTripTimeRefStructure",
     "DriverTripTimeVersionStructure",
+    "DriverTripTimesRelStructure",
     "DriverTripVersionStructure",
+    "DriverTripsInFrameRelStructure",
+    "DummyPlaceRefsRelStructure",
+    "DutiesInFrameRelStructure",
     "Duty",
     "DutyPart",
     "DutyPartRef",
     "DutyPartRefStructure",
     "DutyPartVersionStructure",
+    "DutyPartsInFrameRelStructure",
+    "DutyPartsRelStructure",
     "DutyRef",
     "DutyRefStructure",
     "DutyVersionStructure",
@@ -4651,10 +4849,20 @@ __all__ = [
     "EndpointDeniedAccessStructure",
     "EndpointNotAvailableAccessError",
     "EndpointNotAvailableAccessStructure",
+    "CompositeFrame",
+    "CompositeVersionFrameStructure",
+    "EntityEntity",
+    "EntityEntityStructure",
+    "GeneralFrame",
+    "GeneralVersionFrameStructure",
+    "EntitiesInVersionRelStructure",
+    "FramesRelStructure",
+    "GeneralFrameMembersRelStructure",
     "EntitlementConstraintStructure",
     "EntitlementGiven",
     "EntitlementGivenRef",
     "EntitlementGivenRefStructure",
+    "EntitlementGivenRefsRelStructure",
     "EntitlementGivenVersionStructure",
     "EntitlementProduct",
     "EntitlementProductRef",
@@ -4663,15 +4871,14 @@ __all__ = [
     "EntitlementRequired",
     "EntitlementRequiredRef",
     "EntitlementRequiredRefStructure",
+    "EntitlementRequiredRefsRelStructure",
     "EntitlementRequiredVersionStructure",
     "EntitlementTypeEnumeration",
     "Entity",
     "EntityInVersion",
     "EntityInVersionInFrameRefStructure",
-    "EntityInVersionStructure",
+    "EntityInVersionInFrameRelStructure",
     "EntityStructure",
-    "EntityEntity",
-    "EntityEntityStructure",
     "Entrance",
     "EntranceAttentionEnumeration",
     "EntranceEnumeration",
@@ -4681,6 +4888,7 @@ __all__ = [
     "EntranceEquipmentVersionStructure",
     "EntranceRef",
     "EntranceRefStructure",
+    "EntranceRefsRelStructure",
     "EntranceTypeEnumeration",
     "Envelope",
     "EnvelopeType",
@@ -4689,14 +4897,18 @@ __all__ = [
     "EquipmentPlaceRef",
     "EquipmentPlaceRefStructure",
     "EquipmentPlaceVersionStructure",
+    "EquipmentPlacesRelStructure",
     "EquipmentPosition",
     "EquipmentPositionRef",
     "EquipmentPositionRefStructure",
     "EquipmentPositionStructure",
+    "EquipmentPositionsRelStructure",
     "EquipmentRef",
     "EquipmentRefStructure",
     "EquipmentStatusEnumeration",
     "EquipmentVersionStructure",
+    "EquipmentsInFrameRelStructure",
+    "EquipmentsRelStructure",
     "ErrorCode",
     "ErrorCodeStructure",
     "ErrorCondition",
@@ -4711,18 +4923,24 @@ __all__ = [
     "EstimatedPassingTime",
     "EstimatedPassingTimeRef",
     "EstimatedPassingTimeRefStructure",
-    "EstimatedPassingTimeView",
     "EstimatedPassingTimeVersionedChildStructure",
+    "EstimatedPassingTimeView",
     "EstimatedPassingTimeViewStructure",
+    "EstimatedPassingTimesRelStructure",
     "ExchangableToEnumeration",
     "Exchanging",
     "ExchangingRef",
     "ExchangingRefStructure",
     "ExchangingVersionStructure",
-    "ExtensionsStructure1",
-    "ExtensionsStructure2",
+    "ExplicitEquipmentsRelStructure",
+    "ExplicitJourneyRefsRelStructure",
+    "ExplicitLocalServicesRelStructure",
+    "ExplicitPlaceEquipmentsRelStructure",
     "Extensions1",
     "Extensions2",
+    "ExtensionsStructure1",
+    "ExtensionsStructure2",
+    "Exterior",
     "ExternalObjectRefStructure",
     "FacilityRef",
     "FacilityRefStructure",
@@ -4730,6 +4948,7 @@ __all__ = [
     "FacilityRequirementRef",
     "FacilityRequirementRefStructure",
     "FacilityRequirementVersionStructure",
+    "FacilityRequirementsRelStructure",
     "FacilitySet",
     "FacilitySetRef",
     "FacilitySetRefStructure",
@@ -4742,11 +4961,12 @@ __all__ = [
     "FareClassEnumeration",
     "FareClasses",
     "FareContract",
+    "FareContractEntriesRelStructure",
+    "FareContractEntry1",
+    "FareContractEntry2",
     "FareContractEntryRef",
     "FareContractEntryRefStructure",
-    "FareContractEntry2",
     "FareContractEntryVersionStructure",
-    "FareContractEntry1",
     "FareContractRef",
     "FareContractRefStructure",
     "FareContractSecurityListing",
@@ -4755,18 +4975,20 @@ __all__ = [
     "FareContractSecurityListingRefsRelStructure",
     "FareContractSecurityListingVersionedChildStructure",
     "FareContractVersionStructure",
-    "FareDayType",
+    "FareContractsInFrameRelStructure",
+    "FareContractsRelStructure",
     "FareDayTypeRef",
     "FareDayTypeRefStructure",
-    "FareDayTypeVersionedStructure",
     "FareDemandFactor",
     "FareDemandFactorRef",
     "FareDemandFactorRefStructure",
     "FareDemandFactorVersionStructure",
+    "FareDemandFactorsRelStructure",
     "FareDemandTypeEnumeration",
     "FareElementInSequence",
     "FareElementInSequenceRef",
     "FareElementInSequenceRefStructure",
+    "FareElementInSequenceRefsRelStructure",
     "FareElementInSequenceVersionedChildStructure",
     "FareFrame",
     "FareFrameRef",
@@ -4780,34 +5002,43 @@ __all__ = [
     "FarePointInPatternRef",
     "FarePointInPatternRefStructure",
     "FarePointInPatternVersionedChildStructure",
+    "FarePointsInPatternRelStructure",
+    "FarePrice1",
+    "FarePrice2",
     "FarePriceRef",
     "FarePriceRefStructure",
-    "FarePrice2",
     "FarePriceVersionedChildStructure",
-    "FarePrice1",
+    "FarePricesInFrameRelStructure",
+    "FareProduct1",
+    "FareProduct2",
     "FareProductPrice",
     "FareProductPriceRef",
     "FareProductPriceRefStructure",
     "FareProductPriceVersionedChildStructure",
+    "FareProductPricesRelStructure",
     "FareProductRef",
     "FareProductRefStructure",
-    "FareProduct2",
+    "FareProductRefsRelStructure",
     "FareProductVersionStructure",
-    "FareProduct1",
+    "FareProductsInFrameRelStructure",
     "FareQuotaFactor",
     "FareQuotaFactorRef",
     "FareQuotaFactorRefStructure",
     "FareQuotaFactorVersionStructure",
+    "FareQuotaFactorsRelStructure",
     "FareRequestRef",
     "FareRequestRefStructure",
     "FareScheduledStopPoint",
     "FareScheduledStopPointRef",
     "FareScheduledStopPointRefStructure",
+    "FareScheduledStopPointRefsRelStructure",
     "FareScheduledStopPointVersionStructure",
-    "FareSection",
+    "FareScheduledStopPointsInFrameRelStructure",
     "FareSectionRef",
     "FareSectionRefStructure",
-    "FareSectionVersionStructure",
+    "FareSectionsInFrameRelStructure",
+    "FareSectionsRelStructure",
+    "FareSeriesInFrameRelStructure",
     "FareStructureElement",
     "FareStructureElementInSequence",
     "FareStructureElementInSequenceRef",
@@ -4817,29 +5048,35 @@ __all__ = [
     "FareStructureElementPriceRef",
     "FareStructureElementPriceRefStructure",
     "FareStructureElementPriceVersionedChildStructure",
+    "FareStructureElementPricesRelStructure",
     "FareStructureElementRef",
     "FareStructureElementRefStructure",
+    "FareStructureElementRefsRelStructure",
     "FareStructureElementVersionStructure",
+    "FareStructureElementsInFrameRelStructure",
+    "FareStructureElementsInSequenceRelStructure",
+    "FareStructureElementsRelStructure",
     "FareStructureFactor",
     "FareStructureFactorRef",
     "FareStructureFactorRefStructure",
-    "FareStructureFactorVersionStructure",
+    "FareStructureFactorsRelStructure",
     "FareStructureTypeEnumeration",
-    "FareTableColumn",
+    "FareTable1",
     "FareTableColumnRef",
     "FareTableColumnRefStructure",
+    "FareTableColumn",
     "FareTableColumnVersionedChildStructure",
-    "FareTableInContext",
+    "FareTableColumnsRelStructure",
     "FareTableRef",
     "FareTableRefStructure",
-    "FareTableRow",
+    "FareTableRefsRelStructure",
     "FareTableRowRef",
     "FareTableRowRefStructure",
+    "FareTableRow",
     "FareTableRowVersionedChildStructure",
+    "FareTableRowsRelStructure",
     "FareTableSpecificsStructure",
-    "FareTable2",
-    "FareTableVersionStructure",
-    "FareTable1",
+    "FareTablesInFrameRelStructure",
     "FareUnit",
     "FareUnitRef",
     "FareUnitRefStructure",
@@ -4847,32 +5084,40 @@ __all__ = [
     "FareZone",
     "FareZoneRef",
     "FareZoneRefStructure",
+    "FareZoneRefsRelStructure",
     "FareZoneVersionStructure",
+    "FareZonesInFrameRelStructure",
+    "FeatureTypeRefsRelStructure",
     "FixedStartWindowStructure",
     "FlexibleArea",
     "FlexibleAreaRef",
     "FlexibleAreaRefStructure",
     "FlexibleAreaVersionStructure",
+    "FlexibleAreasRelStructure",
     "FlexibleLine",
+    "FlexibleLineDerivedViewStructure",
     "FlexibleLineRef",
     "FlexibleLineRefStructure",
+    "FlexibleLineRefsRelStructure",
     "FlexibleLineTypeEnumeration",
-    "FlexibleLineView",
-    "FlexibleLineDerivedViewStructure",
     "FlexibleLineVersionStructure",
+    "FlexibleLineView",
     "FlexibleLinkProperties",
     "FlexibleLinkPropertiesRef",
     "FlexibleLinkPropertiesRefStructure",
+    "FlexibleLinkPropertiesRelStructure",
     "FlexibleLinkPropertiesVersionedChildStructure",
     "FlexibleLinkTypeEnumeration",
     "FlexiblePointProperties",
     "FlexiblePointPropertiesRef",
     "FlexiblePointPropertiesRefStructure",
+    "FlexiblePointPropertiesRelStructure",
     "FlexiblePointPropertiesVersionedChildStructure",
     "FlexibleQuay",
     "FlexibleQuayRef",
     "FlexibleQuayRefStructure",
     "FlexibleQuayVersionStructure",
+    "FlexibleQuaysRelStructure",
     "FlexibleRoute",
     "FlexibleRouteTypeEnumeration",
     "FlexibleRouteVersionStructure",
@@ -4880,18 +5125,26 @@ __all__ = [
     "FlexibleServiceAssignmentRefStructure",
     "FlexibleServiceEnumeration",
     "FlexibleServiceProperties",
+    "FlexibleServicePropertiesInFrameRelStructure",
     "FlexibleServicePropertiesRef",
     "FlexibleServicePropertiesRefStructure",
+    "FlexibleServicePropertiesRelStructure",
     "FlexibleServicePropertiesVersionStructure",
     "FlexibleStopAssignment",
     "FlexibleStopAssignmentVersionStructure",
     "FlexibleStopPlace",
     "FlexibleStopPlaceRef",
     "FlexibleStopPlaceRefStructure",
+    "FlexibleStopPlaceRefsRelStructure",
     "FlexibleStopPlaceVersionStructure",
+    "FlexibleStopPlacesInFrameRelStructure",
+    "FlexibleStopPlacesRelStructure",
     "FlooringTypeEnumeration",
     "FontSizeEnumeration",
+    "FrameContainmentStructure",
     "FrameNatureEnumeration",
+    "FrequencyGroupsInFrameRelStructure",
+    "FrequencyGroupsRelStructure",
     "FrequencyOfUse",
     "FrequencyOfUseRef",
     "FrequencyOfUseRefStructure",
@@ -4903,10 +5156,14 @@ __all__ = [
     "FulfilmentMethodPriceRef",
     "FulfilmentMethodPriceRefStructure",
     "FulfilmentMethodPriceVersionedChildStructure",
+    "FulfilmentMethodPricesRelStructure",
     "FulfilmentMethodRef",
     "FulfilmentMethodRefStructure",
+    "FulfilmentMethodRefsRelStructure",
     "FulfilmentMethodTypeEnumeration",
     "FulfilmentMethodVersionStructure",
+    "FulfilmentMethodsInFrameRelStructure",
+    "FulfilmentMethodsRelStructure",
     "FunicularSubmode",
     "FunicularSubmodeEnumeration",
     "Garage",
@@ -4914,14 +5171,16 @@ __all__ = [
     "GaragePointRef",
     "GaragePointRefStructure",
     "GaragePointVersionStructure",
+    "GaragePointsRelStructure",
     "GarageRef",
     "GarageRefStructure",
+    "GarageRefsRelStructure",
     "GarageVersionStructure",
+    "GaragesInFrameRelStructure",
     "GatedEnumeration",
     "GenderEnumeration",
     "GenderLimitation",
     "GenderLimitationEnumeration",
-    "GeneralFrame",
     "GeneralFrameMember",
     "GeneralFrameMemberRef",
     "GeneralFrameMemberRefStructure",
@@ -4936,44 +5195,49 @@ __all__ = [
     "GeneralOrganisationRef",
     "GeneralOrganisationRefStructure",
     "GeneralOrganisationVersionStructure",
-    "GeneralSection",
     "GeneralSectionRef",
     "GeneralSectionRefStructure",
-    "GeneralSectionVersionStructure",
+    "GeneralSectionsInFrameRelStructure",
     "GeneralSign",
     "GeneralSignRef",
     "GeneralSignRefStructure",
     "GeneralSignStructure",
     "GeneralZone",
     "GeneralZoneVersionStructure",
-    "GeneralVersionFrameStructure",
+    "GenericParameterAssignmentRefStructure",
     "GenericParameterAssignment",
     "GenericParameterAssignmentInContext",
-    "GenericParameterAssignmentRefStructure",
     "GenericParameterAssignmentVersionStructure",
+    "GenericParameterAssignmentsRelStructure",
     "GeographicalInterval",
     "GeographicalIntervalPrice",
     "GeographicalIntervalPriceRef",
     "GeographicalIntervalPriceRefStructure",
     "GeographicalIntervalPriceVersionedChildStructure",
+    "GeographicalIntervalPricesRelStructure",
     "GeographicalIntervalRef",
     "GeographicalIntervalRefStructure",
     "GeographicalIntervalVersionStructure",
+    "GeographicalIntervalsRelStructure",
     "GeographicalStructureFactor",
     "GeographicalStructureFactorRef",
     "GeographicalStructureFactorRefStructure",
     "GeographicalStructureFactorVersionStructure",
+    "GeographicalStructureFactorsRelStructure",
     "GeographicalUnit",
     "GeographicalUnitPrice",
     "GeographicalUnitPriceRef",
     "GeographicalUnitPriceRefStructure",
     "GeographicalUnitPriceVersionedChildStructure",
+    "GeographicalUnitPricesRelStructure",
     "GeographicalUnitRef",
     "GeographicalUnitRefStructure",
     "GeographicalUnitVersionStructure",
+    "GeographicalUnitsRelStructure",
     "GeometricPrimitivePropertyType",
     "GeometryArrayPropertyType",
     "GeometryPropertyType",
+    "GmlProfileSchema",
     "GradientEnumeration",
     "GroupBookingEnumeration",
     "GroupBookingFacility",
@@ -4983,21 +5247,24 @@ __all__ = [
     "GroupDiscountBasisEnumeration",
     "GroupMember",
     "GroupMemberVersionedChildStructure",
+    "GroupMembershipRefsRelStructure",
     "GroupOfCustomerPurchasePackagesRef",
     "GroupOfCustomerPurchasePackagesRefStructure",
     "GroupOfDistanceMatrixElements",
     "GroupOfDistanceMatrixElementsRef",
     "GroupOfDistanceMatrixElementsRefStructureElement",
+    "GroupOfDistanceMatrixElementsRefsRelStructure",
     "GroupOfDistanceMatrixElementsVersionStructure",
     "GroupOfDistributionChannels",
     "GroupOfDistributionChannelsRef",
     "GroupOfDistributionChannelsRefStructure",
     "GroupOfDistributionChannelsVersionStructure",
     "GroupOfEntities",
-    "GroupOfEntitiesRefStructure2",
-    "GroupOfEntitiesRefStructure1",
-    "GroupOfEntitiesRef2",
+    "GroupOfEntitiesInFrameRelStructure",
     "GroupOfEntitiesRef1",
+    "GroupOfEntitiesRef2",
+    "GroupOfEntitiesRefStructure1",
+    "GroupOfEntitiesRefStructure2",
     "GroupOfEntitiesVersionStructure",
     "GroupOfLines",
     "GroupOfLinesRef",
@@ -5007,8 +5274,11 @@ __all__ = [
     "GroupOfLinkSequences",
     "GroupOfLinkSequencesRef",
     "GroupOfLinkSequencesRefStructure",
+    "GroupOfLinkSequencesRelStructure",
     "GroupOfLinkSequencesVersionStructure",
     "GroupOfLinks",
+    "GroupOfLinksInFrameRelStructure",
+    "GroupOfLinksRelStructure",
     "GroupOfLinksVersionStructure",
     "GroupOfOperators",
     "GroupOfOperatorsRef",
@@ -5019,10 +5289,12 @@ __all__ = [
     "GroupOfPlacesRefStructure",
     "GroupOfPlacesVersionStructure",
     "GroupOfPoints",
-    "GroupOfPointsRefStructure",
-    "GroupOfPointsRef2",
     "GroupOfPointsRef1",
+    "GroupOfPointsRef2",
+    "GroupOfPointsRefStructure",
+    "GroupOfPointsRelStructure",
     "GroupOfPointsVersionStructure",
+    "GroupOfSalesOfferPackageRefsRelStructure",
     "GroupOfSalesOfferPackages",
     "GroupOfSalesOfferPackagesRef",
     "GroupOfSalesOfferPackagesRefStructure",
@@ -5030,32 +5302,49 @@ __all__ = [
     "GroupOfServices",
     "GroupOfServicesEndPointDerivedViewStructure",
     "GroupOfServicesMemberStructure",
+    "GroupOfServicesMembersRelStructure",
     "GroupOfServicesRef",
     "GroupOfServicesRefStructure",
+    "GroupOfServicesRefsRelStructure",
     "GroupOfServicesVersionStructure",
     "GroupOfStopPlaces",
     "GroupOfStopPlacesRef",
     "GroupOfStopPlacesRefStructure",
     "GroupOfStopPlacesStructure",
     "GroupOfTimebands",
+    "GroupOfTimebandsInFrameRelStructure",
     "GroupOfTimebandsRef",
     "GroupOfTimebandsRefStructure",
+    "GroupOfTimebandsRelStructure",
     "GroupOfTimebandsVersionedChildStructure",
     "GroupOfTimingLinks",
+    "GroupOfTimingLinksInFrameRelStructure",
     "GroupOfTimingLinksRef",
     "GroupOfTimingLinksRefStructure",
     "GroupOfTimingLinksRelStructure",
+    "GroupOfcustomerPurchasePackageRefsRelStructure",
     "GroupSizeChangesEnumeration",
     "GroupTicket",
     "GroupTicketRef",
     "GroupTicketRefStructure",
     "GroupTicketVersionStructure",
     "GroupTicketingEnumeration",
+    "GroupsOfDistanceMatrixElementsInFrameRelStructure",
+    "GroupsOfDistanceMatrixElementsRelStructure",
+    "GroupsOfDistributionChannelsInFrameRelStructure",
+    "GroupsOfLinesInFrameRelStructure",
+    "GroupsOfOperatorsInFrameRelStructure",
+    "GroupsOfPlacesInFrameRelStructure",
+    "GroupsOfSalesOfferPackagesInFrameRelStructure",
+    "GroupsOfServicesInFrameRelStructure",
+    "GroupsOfStopPlacesInFrameRelStructure",
+    "GroupsOfTransportOrganisationsRefsRelStructure",
     "GuideDogAccess",
     "HailAndRideArea",
     "HailAndRideAreaRef",
     "HailAndRideAreaRefStructure",
     "HailAndRideAreaVersionStructure",
+    "HailAndRideAreasRelStructure",
     "HalfOpenTimeRangeStructure",
     "HalfOpenTimestampRangeStructure",
     "HandrailEnumeration",
@@ -5087,21 +5376,25 @@ __all__ = [
     "HireServiceVersionStructure",
     "HolidayTypeEnumeration",
     "IanaCountryTldEnumeration",
+    "Identifier",
     "IncludeTranslations",
     "InfoLink",
     "InfoLinkStructure",
+    "InfoLinksRelStructure",
+    "InfrastructureElementsInFrameRelStructure",
     "InfrastructureFrame",
     "InfrastructureFrameRef",
     "InfrastructureFrameRefStructure",
+    "InfrastructureJunctionsInFrameRelStructure",
+    "InfrastructureLink1",
+    "InfrastructureLink2",
     "InfrastructureLinkRef",
     "InfrastructureLinkRefStructure",
     "InfrastructureLinkRestriction",
     "InfrastructureLinkRestrictionRef",
     "InfrastructureLinkRestrictionRefStructure",
     "InfrastructureLinkRestrictionVersionStructure",
-    "InfrastructureLink2",
     "InfrastructureLinkVersionStructure",
-    "InfrastructureLink1",
     "InfrastructurePoint",
     "InfrastructurePointRef",
     "InfrastructurePointRefStructure",
@@ -5112,11 +5405,14 @@ __all__ = [
     "InstalledEquipmentRef",
     "InstalledEquipmentRefStructure",
     "InstalledEquipmentVersionStructure",
+    "Interchange1",
+    "Interchange2",
     "InterchangeRef",
     "InterchangeRefStructure",
     "InterchangeRule",
     "InterchangeRuleFilter",
     "InterchangeRuleFilterVersionedChildStructure",
+    "InterchangeRuleFiltersRelStructure",
     "InterchangeRuleParameterStructure",
     "InterchangeRuleRef",
     "InterchangeRuleRefStructure",
@@ -5124,24 +5420,30 @@ __all__ = [
     "InterchangeRuleTimingRef",
     "InterchangeRuleTimingRefStructure",
     "InterchangeRuleTimingVersionStructure",
+    "InterchangeRuleTimingsRelStructure",
     "InterchangeRuleVersionStructure",
-    "InterchangeWeightingEnumeration",
-    "Interchange2",
+    "InterchangeRulesInFrameRelStructure",
+    "InterchangeRulesRelStructure",
     "InterchangeVersionStructure",
-    "Interchange1",
+    "InterchangeWeightingEnumeration",
     "Interchanging",
     "InterchangingRef",
     "InterchangingRefStructure",
     "InterchangingTypeEnumeration",
     "InterchangingVersionStructure",
+    "Interior",
     "IntervalTypeEnumeration",
     "InvalidDataReferencesError",
     "InvalidDataReferencesErrorStructure",
+    "Journey1",
+    "Journey2",
     "JourneyAccounting",
     "JourneyAccountingEnumeration",
     "JourneyAccountingRef",
     "JourneyAccountingRefStructure",
     "JourneyAccountingVersionStructure",
+    "JourneyAccountingsInFrameRelStructure",
+    "JourneyAccountingsRelStructure",
     "JourneyDesignator",
     "JourneyDesignatorStructure",
     "JourneyEndpointStructure",
@@ -5151,68 +5453,88 @@ __all__ = [
     "JourneyFrequencyGroupVersionStructure",
     "JourneyHeadway",
     "JourneyHeadwayVersionedChildStructure",
+    "JourneyHeadwaysRelStructure",
+    "JourneyInterchangesInFrameRelStructure",
     "JourneyLayover",
     "JourneyLayoverStructure",
+    "JourneyLayoversRelStructure",
     "JourneyMeeting",
+    "JourneyMeetingDerivedViewStructure",
     "JourneyMeetingRef",
     "JourneyMeetingRefStructure",
-    "JourneyMeetingView",
-    "JourneyMeetingDerivedViewStructure",
     "JourneyMeetingVersionStructure",
+    "JourneyMeetingView",
+    "JourneyMeetingViewsRelStructure",
+    "JourneyMeetingsInFrameRelStructure",
     "JourneyPart",
     "JourneyPartCouple",
     "JourneyPartCoupleRef",
     "JourneyPartCoupleRefStructure",
     "JourneyPartCoupleVersionStructure",
+    "JourneyPartCouplesInFrameRelStructure",
+    "JourneyPartCouplesRelStructure",
     "JourneyPartEnumeration",
     "JourneyPartPosition",
     "JourneyPartPositionVersionedChildStructure",
+    "JourneyPartPositionsRelStructure",
     "JourneyPartRef",
     "JourneyPartRefStructure",
+    "JourneyPartRefsRelStructure",
     "JourneyPartVersionStructure",
+    "JourneyPartsInFrameRelStructure",
+    "JourneyPartsRelStructure",
+    "JourneyPattern1",
+    "JourneyPatternDerivedViewStructure",
     "JourneyPatternHeadway",
     "JourneyPatternHeadwayRef",
     "JourneyPatternHeadwayRefStructure",
     "JourneyPatternHeadwayVersionedChildStructure",
+    "JourneyPatternHeadwaysRelStructure",
     "JourneyPatternLayover",
     "JourneyPatternLayoverRef",
     "JourneyPatternLayoverRefStructure",
     "JourneyPatternLayoverStructure",
+    "JourneyPatternLayoversRelStructure",
     "JourneyPatternRef",
     "JourneyPatternRefStructure",
+    "JourneyPatternRefsRelStructure",
     "JourneyPatternRunTime",
     "JourneyPatternRunTimeRef",
     "JourneyPatternRunTimeRefStructure",
     "JourneyPatternRunTimeVersionedChildStructure",
+    "JourneyPatternRunTimesRelStructure",
     "JourneyPatternView",
     "JourneyPatternWaitTime",
     "JourneyPatternWaitTimeRef",
     "JourneyPatternWaitTimeRefStructure",
     "JourneyPatternWaitTimeVersionedChildStructure",
-    "JourneyPattern2",
-    "JourneyPatternDerivedViewStructure",
-    "JourneyPatternVersionStructure",
-    "JourneyPattern1",
+    "JourneyPatternWaitTimesRelStructure",
+    "JourneyPatternsInFrameRelStructure",
     "JourneyRef",
     "JourneyRefStructure",
+    "JourneyRefsRelStructure",
     "JourneyRunTime",
     "JourneyRunTimeVersionedChildStructure",
+    "JourneyRunTimesRelStructure",
     "JourneyTiming",
     "JourneyTimingRef",
     "JourneyTimingRefStructure",
     "JourneyTimingVersionedChildStructure",
+    "JourneyVersionStructure",
     "JourneyWaitTime",
     "JourneyWaitTimeVersionedChildStructure",
-    "Journey2",
-    "JourneyVersionStructure",
-    "Journey1",
+    "JourneyWaitTimesRelStructure",
+    "JourneysInFrameRelStructure",
+    "KeyList",
     "KeyListStructure",
     "KeyValueStructure",
+    "LangValue",
     "LanguageUsageStructure",
     "LanguageUseEnumeration",
     "Layer",
     "LayerRef",
     "LayerRefStructure",
+    "LayerRefsRelStructure",
     "LayerVersionStructure",
     "LeftLuggageService",
     "LeftLuggageServiceRef",
@@ -5222,6 +5544,7 @@ __all__ = [
     "LevelRef",
     "LevelRefStructure",
     "LevelVersionStructure",
+    "LevelsRelStructure",
     "LiftEquipment",
     "LiftEquipmentRef",
     "LiftEquipmentRefStructure",
@@ -5237,6 +5560,9 @@ __all__ = [
     "LimitingRuleRef",
     "LimitingRuleRefStructure",
     "LimitingRuleVersionedStructure",
+    "Line1",
+    "Line2",
+    "LineDerivedViewStructure",
     "LineInDirectionRef",
     "LineInDirectionRefStructure",
     "LineLinkRef",
@@ -5247,28 +5573,28 @@ __all__ = [
     "LineNetworkRef",
     "LineNetworkRefStructure",
     "LineNetworkVersionStructure",
+    "LineNetworksInFrameRelStructure",
     "LineRef",
     "LineRefStructure",
-    "LineSection",
+    "LineRefsRelStructure",
     "LineSectionPointMember",
     "LineSectionPointTypeEnumeration",
     "LineSectionRef",
     "LineSectionRefStructure",
-    "LineSectionVersionStructure",
+    "LineSectionsRelStructure",
     "LineShape",
     "LineShapeStructure1",
     "LineShapeStructure2",
     "LineString",
     "LineStringType",
     "LineTypeEnumeration",
-    "LineView",
-    "Line2",
-    "LineDerivedViewStructure",
     "LineVersionStructure",
-    "Line1",
+    "LineView",
     "LinearRing",
     "LinearRingPropertyType",
     "LinearRingType",
+    "LinesInDirectionRefsRelStructure",
+    "LinesInFrameRelStructure",
     "Link",
     "LinkInJourneyPattern",
     "LinkInJourneyPatternRef",
@@ -5288,6 +5614,7 @@ __all__ = [
     "LinkRefByValue",
     "LinkRefByValueStructure",
     "LinkRefStructure",
+    "LinkRefsRelStructure",
     "LinkSequence",
     "LinkSequenceProjection",
     "LinkSequenceProjectionRef",
@@ -5295,12 +5622,33 @@ __all__ = [
     "LinkSequenceProjectionVersionStructure",
     "LinkSequenceRef",
     "LinkSequenceRefStructure",
+    "LinkSequenceRefsRelStructure",
+    "CommonSection",
+    "CommonSectionVersionStructure",
+    "FareSection",
+    "FareSectionVersionStructure",
+    "GeneralSection",
+    "GeneralSectionVersionStructure",
+    "JourneyPattern2",
+    "JourneyPatternVersionStructure",
+    "LineSection",
+    "LineSectionVersionStructure",
     "LinkSequenceVersionStructure",
+    "SectionInSequence",
+    "SectionInSequenceVersionedChildStructure",
+    "Section2",
+    "SectionVersionStructure",
+    "Section1",
+    "SectionsInSequenceRelStructure",
+    "LinkTypeRefsRelStructure",
     "LinkVersionStructure",
+    "LinksInJourneyPatternRelStructure",
+    "LinksOnSectionRelStructure",
     "LocalService",
     "LocalServiceRef",
     "LocalServiceRefStructure",
     "LocalServiceVersionStructure",
+    "LocalServicesRelStructure",
     "Locale",
     "LocaleStructure",
     "LocationStructure1",
@@ -5308,6 +5656,7 @@ __all__ = [
     "LockerTypeEnumeration",
     "LockingTypeEnumeration",
     "Log",
+    "LogEntriesRelStructure",
     "LogEntry",
     "LogEntryRef",
     "LogEntryRefStructure",
@@ -5319,6 +5668,7 @@ __all__ = [
     "LogicalDisplayRef",
     "LogicalDisplayRefStructure",
     "LogicalDisplayVersionStructure",
+    "LogicalDisplaysInFrameRelStructure",
     "LostPropertyService",
     "LostPropertyServiceRef",
     "LostPropertyServiceRefStructure",
@@ -5390,6 +5740,7 @@ __all__ = [
     "ModalLinkRefByValueStructure",
     "ModeRef",
     "ModeRefStructure",
+    "ModeRefsRelStructure",
     "ModificationEnumeration",
     "ModificationSetEnumeration",
     "MoneyFacility",
@@ -5402,11 +5753,14 @@ __all__ = [
     "MoneyServiceVersionStructure",
     "MonitoredCall",
     "MonitoredCallVersionedChildStructure",
+    "MonitoredCallsRelStructure",
     "MonthValidityOffset",
     "MonthValidityOffsetRef",
     "MonthValidityOffsetRefStructure",
     "MonthValidityOffsetVersionedStructure",
+    "MonthValidityOffsetsRelStructure",
     "MultilingualString",
+    "Name",
     "NameTypeEnumeration",
     "NaturalLanguagePlaceNameStructure",
     "NaturalLanguageStringStructure",
@@ -5415,10 +5769,14 @@ __all__ = [
     "NavigationPathAssignmentVersionStructure",
     "NavigationPathRef",
     "NavigationPathRefStructure",
+    "NavigationPathRefsRelStructure",
     "NavigationPathVersionStructure",
+    "NavigationPathsInFrameRelStructure",
+    "NavigationPathsRelStructure",
     "NavigationTypeEnumeration",
     "NecessaryForceEnumeration",
     "Network",
+    "NetworkDerivedViewStructure",
     "NetworkFilterByValueStructure",
     "NetworkFrameRequestPolicyStructure",
     "NetworkFrameSubscriptionPolicyStructure",
@@ -5430,9 +5788,10 @@ __all__ = [
     "NetworkRestrictionRef",
     "NetworkRestrictionRefStructure",
     "NetworkRestrictionVersionStructure",
-    "NetworkView",
-    "NetworkDerivedViewStructure",
+    "NetworkRestrictionsInFrameRelStructure",
     "NetworkVersionStructure",
+    "NetworkView",
+    "NetworksInFrameRelStructure",
     "NilReasonEnumerationValue",
     "NoInfoForTopicError",
     "NoInfoForTopicErrorStructure",
@@ -5440,52 +5799,63 @@ __all__ = [
     "NormalDatedVehicleJourneyTypeEnumeration",
     "NormalDatedVehicleJourneyVersionStructure",
     "Notice",
-    "NoticeAssignmentRefStructure",
-    "NoticeAssignmentView",
+    "NoticeAssignment1",
     "NoticeAssignment2",
     "NoticeAssignmentDerivedViewStructure",
+    "NoticeAssignmentRefStructure",
     "NoticeAssignmentVersionStructure",
-    "NoticeAssignment1",
+    "NoticeAssignmentView",
+    "NoticeAssignmentViewsRelStructure",
+    "NoticeAssignmentsInFrameRelStructure",
+    "NoticeAssignmentsRelStructure",
     "NoticeRef",
     "NoticeRefStructure",
     "NoticeVersionStructure",
+    "NoticesInFrameRelStructure",
+    "NoticesRelStructure",
     "NuisanceFacility",
     "NuisanceFacilityEnumeration",
     "NuisanceFacilityList",
     "ObjectFilterByValue",
     "ObjectFilterByValueStructure",
+    "ObjectRefsRelStructure",
     "ObservedPassingTime",
     "ObservedPassingTimeRef",
     "ObservedPassingTimeRefStructure",
-    "ObservedPassingTimeView",
     "ObservedPassingTimeVersionedChildStructure",
+    "ObservedPassingTimeView",
     "ObservedPassingTimeViewStructure",
+    "ObservedPassingTimesRelStructure",
     "OfferedTravelSpecification",
     "OfferedTravelSpecificationRef",
     "OfferedTravelSpecificationRefStructure",
     "OfferedTravelSpecificationVersionStructure",
+    "OfferedTravelSpecificationsRelStructure",
     "OnBecomingEnumeration",
     "OnCeasingEnumeration",
     "OnboardStay",
     "OnboardStayRef",
     "OnboardStayRefStructure",
     "OnboardStayVersionedChlldStructure",
+    "OnboardStaysRelStructure",
+    "OneToManyRelationshipStructure",
     "OnwardCall",
     "OnwardCallVersionedChildStructure",
-    "OnwardServiceLinkView",
+    "OnwardCallsRelStructure",
     "OnwardServiceLinkDerivedViewStructure",
-    "OnwardTimingLinkView",
+    "OnwardServiceLinkView",
     "OnwardTimingLinkDerivedViewStructure",
+    "OnwardTimingLinkView",
     "OpenTimeRangeStructure",
     "OpenTimestampRangeStructure",
     "OpenTransportMode",
     "OpenTransportModeRef",
     "OpenTransportModeRefStructure",
+    "OpenTransportModeRefsRelStructure",
     "OpenTransportModeValueStructure",
-    "OperatingDay",
     "OperatingDayRef",
     "OperatingDayRefStructure",
-    "OperatingDayVersionStructure",
+    "OperatingDaysInFrameRelStructure",
     "OperatingDepartment",
     "OperatingDepartmentRef",
     "OperatingDepartmentRefStructure",
@@ -5494,39 +5864,46 @@ __all__ = [
     "OperatingPeriodRef",
     "OperatingPeriodRefStructure",
     "OperatingPeriodVersionStructure",
+    "OperatingPeriodsInFrameRelStructure",
+    "OperatingPeriodsRelStructure",
+    "OperationalContexRefsRelStructure",
     "OperationalContext",
     "OperationalContextRef",
     "OperationalContextRefStructure",
     "OperationalContextVersionStructure",
+    "OperationalContextsInFrameRelStructure",
     "Operator",
     "OperatorActivitiesEnumeration",
+    "OperatorDerivedViewStructure",
     "OperatorRef",
     "OperatorRefStructure",
     "OperatorRestrictionsEnumeration",
-    "OperatorView",
-    "OperatorDerivedViewStructure",
     "OperatorVersionStructure",
+    "OperatorView",
     "OrderedVersionOfObjectRef",
     "OrderedVersionOfObjectRefStructure",
-    "OrganisationDayType",
-    "OrganisationDayTypeVersionStructure",
-    "OrganisationPartRef",
-    "OrganisationPartRefStructure",
-    "OrganisationPart2",
-    "OrganisationPartVersionStructure",
-    "OrganisationPart1",
-    "OrganisationRef",
-    "OrganisationRefStructure",
-    "OrganisationTypeEnumeration",
-    "OrganisationView",
+    "Organisation1",
     "Organisation2",
     "OrganisationDerivedViewStructure",
+    "OrganisationPart1",
+    "OrganisationPart2",
+    "OrganisationPartRef",
+    "OrganisationPartRefStructure",
+    "OrganisationPartVersionStructure",
+    "OrganisationPartsRelStructure",
+    "OrganisationRef",
+    "OrganisationRefStructure",
+    "OrganisationRefsRelStructure",
+    "OrganisationTypeEnumeration",
     "OrganisationVersionStructure",
-    "Organisation1",
+    "OrganisationView",
     "OrganisationalUnit",
     "OrganisationalUnitRef",
     "OrganisationalUnitRefStructure",
+    "OrganisationalUnitRefsRelStructure",
     "OrganisationalUnitVersionStructure",
+    "OrganisationalUnitsRelStructure",
+    "OrganisationsInFrameRelStructure",
     "OtherError",
     "OtherErrorStructure",
     "OtherOrganisation",
@@ -5547,19 +5924,23 @@ __all__ = [
     "ParkingArea",
     "ParkingAreaRef",
     "ParkingAreaRefStructure",
+    "ParkingAreaRefsRelStructure",
     "ParkingAreaVersionStructure",
+    "ParkingAreasRelStructure",
     "ParkingBay",
     "ParkingBayRef",
     "ParkingBayRefStructure",
+    "ParkingBayRefsRelStructure",
     "ParkingBayVersionStructure",
+    "ParkingBaysRelStructure",
+    "ParkingCapacitiesRelStructure",
     "ParkingCapacity",
     "ParkingCapacityRef",
     "ParkingCapacityRefStructure",
     "ParkingCapacityVersionedChildStructure",
-    "ParkingChargeBand",
     "ParkingChargeBandRef",
     "ParkingChargeBandRefStructure",
-    "ParkingChargeBandVersionStructure",
+    "ParkingChargeBandsRelStructure",
     "ParkingComponent",
     "ParkingComponentVersionStructure",
     "ParkingEntranceForVehicles",
@@ -5568,6 +5949,7 @@ __all__ = [
     "ParkingEntranceForVehiclesVersionStructure",
     "ParkingEntranceRef",
     "ParkingEntranceRefStructure",
+    "ParkingEntrancesForVehiclesRelStructure",
     "ParkingFacility",
     "ParkingFacilityEnumeration",
     "ParkingFacilityList",
@@ -5577,36 +5959,40 @@ __all__ = [
     "ParkingPassengerEntranceRefStructure",
     "ParkingPassengerEntranceVersionStructure",
     "ParkingPaymentProcessEnumeration",
+    "ParkingPoint1",
+    "ParkingPoint2",
     "ParkingPointRef",
     "ParkingPointRefStructure",
-    "ParkingPoint2",
     "ParkingPointVersionStructure",
-    "ParkingPoint1",
-    "ParkingPrice",
     "ParkingPriceRef",
     "ParkingPriceRefStructure",
-    "ParkingPriceVersionedChildStructure",
+    "ParkingPricesRelStructure",
     "ParkingProperties",
     "ParkingPropertiesRef",
     "ParkingPropertiesRefStructure",
+    "ParkingPropertiesRelStructure",
     "ParkingPropertiesVersionedChildStructure",
     "ParkingRef",
     "ParkingRefStructure",
+    "ParkingRefsRelStructure",
     "ParkingReservationEnumeration",
     "ParkingStayEnumeration",
     "ParkingTariff",
     "ParkingTariffRef",
     "ParkingTariffRefStructure",
     "ParkingTariffVersionStructure",
+    "ParkingTariffsInFrameRelStructure",
     "ParkingTypeEnumeration",
     "ParkingUserEnumeration",
     "ParkingVehicleEnumeration",
     "ParkingVersionStructure",
+    "ParkingsInFrameRelStructure",
     "PartialRefundBasisEnumeration",
     "ParticipantRef",
     "PassageTypeEnumeration",
     "PassengerAccessibilityNeeds",
     "PassengerAccessibilityNeedsStructure",
+    "PassengerCapacitiesRelStructure",
     "PassengerCapacity",
     "PassengerCapacityRef",
     "PassengerCapacityRefStructure",
@@ -5616,6 +6002,7 @@ __all__ = [
     "PassengerCarryingRequirementRef",
     "PassengerCarryingRequirementRefStructure",
     "PassengerCarryingRequirementVersionStructure",
+    "PassengerCarryingRequirementsRelStructure",
     "PassengerCarryingRequirementsView",
     "PassengerCommsFacility",
     "PassengerCommsFacilityEnumeration",
@@ -5624,16 +6011,19 @@ __all__ = [
     "PassengerEquipmentRef",
     "PassengerEquipmentRefStructure",
     "PassengerEquipmentVersionStructure",
+    "PassengerEquipmentsRelStructure",
     "PassengerInformationEquipment",
     "PassengerInformationEquipmentEnumeration",
     "PassengerInformationEquipmentRef",
     "PassengerInformationEquipmentRefStructure",
     "PassengerInformationEquipmentVersionStructure",
+    "PassengerInformationEquipmentsInFrameRelStructure",
     "PassengerInformationFacility",
     "PassengerInformationFacilityEnumeration",
     "PassengerInformationFacilityList",
     "PassengerInformationRequestRef",
     "PassengerInformationRequestRefStructure",
+    "PassengerJourneysInFrameRelStructure",
     "PassengerSafetyEquipment",
     "PassengerSafetyEquipmentRef",
     "PassengerSafetyEquipmentRefStructure",
@@ -5641,16 +6031,16 @@ __all__ = [
     "PassengerSeatRef",
     "PassengerSeatRefStructure",
     "PassengerStopAssignment",
+    "PassengerStopAssignmentDerivedViewStructure",
     "PassengerStopAssignmentRef",
     "PassengerStopAssignmentRefStructure",
-    "PassengerStopAssignmentView",
-    "PassengerStopAssignmentDerivedViewStructure",
     "PassengerStopAssignmentVersionStructure",
+    "PassengerStopAssignmentView",
     "PassingTime",
     "PassingTimeRef",
     "PassingTimeRefStructure",
-    "PassingTimeView",
     "PassingTimeVersionedChildStructure",
+    "PassingTimeView",
     "PassingTimeViewStructure",
     "PathAssignmentRef",
     "PathAssignmentRefStructure",
@@ -5660,7 +6050,10 @@ __all__ = [
     "PathJunctionRef",
     "PathJunctionRefStructure",
     "PathJunctionVersionStructure",
+    "PathJunctionsInFrameRelStructure",
+    "PathJunctionsRelStructure",
     "PathLink",
+    "PathLinkDerivedViewStructure",
     "PathLinkEndStructure",
     "PathLinkInSequence",
     "PathLinkInSequenceRef",
@@ -5670,9 +6063,11 @@ __all__ = [
     "PathLinkRefByValue",
     "PathLinkRefByValueStructure",
     "PathLinkRefStructure",
-    "PathLinkView",
-    "PathLinkDerivedViewStructure",
+    "PathLinkRefsRelStructure",
     "PathLinkVersionStructure",
+    "PathLinkView",
+    "PathLinksInFrameRelStructure",
+    "PathLinksInSequenceRelStructure",
     "PaymentByMobileStructure",
     "PaymentMethodEnumeration",
     "PenaltyPolicy",
@@ -5685,6 +6080,7 @@ __all__ = [
     "Place",
     "PlaceEquipment",
     "PlaceEquipmentVersionStructure",
+    "PlaceEquipmentsRelStructure",
     "PlaceInSequence",
     "PlaceInSequenceRef",
     "PlaceInSequenceRefStructure",
@@ -5693,15 +6089,19 @@ __all__ = [
     "PlaceLightingEquipmentRef",
     "PlaceLightingEquipmentRefStructure",
     "PlaceLightingVersionStructure",
-    "PlaceRefStructure",
-    "PlaceRef2",
     "PlaceRef1",
+    "PlaceRef2",
+    "PlaceRefStructure",
+    "PlaceRefsRelStructure",
     "PlaceSign",
     "PlaceSignRef",
     "PlaceSignRefStructure",
     "PlaceSignStructure",
     "PlaceUseEnumeration",
     "PlaceVersionStructure",
+    "PlacesInSequenceRelStructure",
+    "Point1",
+    "Point2",
     "PointArrayPropertyType",
     "PointInJourneyPattern",
     "PointInJourneyPatternRef",
@@ -5713,65 +6113,81 @@ __all__ = [
     "PointInSequenceRefStructure",
     "PointOfInterest",
     "PointOfInterestClassification",
+    "PointOfInterestClassificationDerivedViewStructure",
+    "PointOfInterestClassificationHierarchiesInFrameRelStructure",
     "PointOfInterestClassificationHierarchy",
     "PointOfInterestClassificationHierarchyMemberStructure",
+    "PointOfInterestClassificationHierarchyMembersRelStructure",
     "PointOfInterestClassificationHierarchyVersionStructure",
     "PointOfInterestClassificationRef",
     "PointOfInterestClassificationRefStructure",
-    "PointOfInterestClassificationView",
-    "PointOfInterestClassificationDerivedViewStructure",
     "PointOfInterestClassificationVersionStructure",
+    "PointOfInterestClassificationView",
+    "PointOfInterestClassificationsInFrameRelStructure",
+    "PointOfInterestClassificationsViewsRelStructure",
     "PointOfInterestComponent",
     "PointOfInterestComponentVersionStructure",
+    "PointOfInterestDerivedViewStructure",
     "PointOfInterestEntrance",
     "PointOfInterestEntranceRef",
     "PointOfInterestEntranceRefStructure",
     "PointOfInterestEntranceVersionStructure",
+    "PointOfInterestEntrancesRelStructure",
     "PointOfInterestHierarchyRef",
     "PointOfInterestHierarchyRefStructure",
     "PointOfInterestRef",
     "PointOfInterestRefStructure",
+    "PointOfInterestRefsRelStructure",
     "PointOfInterestSpace",
     "PointOfInterestSpaceDescriptorGroupAccessSpaceType",
     "PointOfInterestSpaceRef",
     "PointOfInterestSpaceRefStructure",
     "PointOfInterestSpaceTypeEnumeration",
     "PointOfInterestSpaceVersionStructure",
+    "PointOfInterestSpacesRelStructure",
     "PointOfInterestVehicleEntrance",
     "PointOfInterestVehicleEntranceRef",
     "PointOfInterestVehicleEntranceRefStructure",
     "PointOfInterestVehicleEntranceVersionStructure",
-    "PointOfInterestView",
-    "PointOfInterestDerivedViewStructure",
     "PointOfInterestVersionStructure",
+    "PointOfInterestView",
     "PointOnLineSection",
     "PointOnLineSectionVersionedChildStructure",
+    "PointOnLineSectionsRelStructure",
     "PointOnLink",
     "PointOnLinkByValueStructure",
     "PointOnLinkRef",
-    "PointOnLinkRefStructure2",
     "PointOnLinkRefStructure1",
+    "PointOnLinkRefStructure2",
     "PointOnLinkVersionedChildStructure",
     "PointOnRoute",
     "PointOnRouteRef",
     "PointOnRouteRefStructure",
     "PointOnRouteVersionedChildStructure",
+    "PointOnSection1",
     "PointOnSection2",
     "PointOnSectionVersionedChildStructure",
-    "PointOnSection1",
     "PointProjection",
     "PointProjectionRef",
     "PointProjectionRefStructure",
     "PointProjectionVersionStructure",
+    "PointProperty",
     "PointPropertyType",
     "PointRef",
     "PointRefStructure",
+    "PointRefsRelStructure",
     "PointType",
-    "Point1",
-    "Point2",
     "PointVersionStructure",
+    "PointsInJourneyPatternRelStructure",
+    "PointsOfInterestInFrameRelStructure",
+    "PointsOnLinkInFrameRelStructure",
+    "PointsOnLinkRelStructure",
+    "PointsOnRouteRelStructure",
+    "PointsOnSectionRelStructure",
     "Polygon",
     "PolygonType",
+    "Pos",
+    "PosList",
     "PostalAddress",
     "PostalAddressRef",
     "PostalAddressRefStructure",
@@ -5785,34 +6201,38 @@ __all__ = [
     "PresentationStructure",
     "PreviousCall",
     "PreviousCallVersionedChildStructure",
+    "PreviousCallsRelStructure",
+    "PriceGroup1",
     "PriceGroupRef",
     "PriceGroupRefStructure",
-    "PriceGroup2",
-    "PriceGroupVersionStructure",
-    "PriceGroup1",
     "PriceRuleStepResultStructure",
+    "PriceRuleStepResultsRelStructure",
     "PriceUnit",
     "PriceUnitRef",
     "PriceUnitRefStructure",
+    "PriceUnitRefsRelStructure",
     "PriceUnitVersionStructure",
+    "PriceUnitsRelStructure",
+    "PriceableObject1",
+    "PriceableObject2",
     "PriceableObjectRef",
     "PriceableObjectRefStructure",
-    "PriceableObject2",
-    "PriceableObjectVersionStructure",
-    "PriceableObject1",
+    "PriceableObjectRefsRelStructure",
     "PricingParameterSet",
     "PricingParameterSetRef",
     "PricingParameterSetRefStructure",
     "PricingParameterSetVersionedStructure",
+    "PricingRule1",
+    "PricingRule2",
     "PricingRuleRef",
     "PricingRuleRefStructure",
-    "PricingRule2",
     "PricingRuleVersionedStructure",
-    "PricingRule1",
+    "PricingRulesRelStructure",
     "PricingService",
     "PricingServiceRef",
     "PricingServiceRefStructure",
     "PricingServiceVersionedStructure",
+    "PricingServicesRelStructure",
     "PrintPresentationStructure",
     "PrivateCode",
     "PrivateCodeStructure",
@@ -5826,7 +6246,9 @@ __all__ = [
     "ProjectionRef",
     "ProjectionRefStructure",
     "ProjectionVersionStructure",
+    "ProjectionsRelStructure",
     "ProofOfIdentityEnumeration",
+    "PropertiesOfDayRelStructure",
     "PropertyOfDay",
     "PropertyOfDayStructure",
     "PublicUseEnumeration",
@@ -5854,22 +6276,27 @@ __all__ = [
     "PurposeOfJourneyPartitionRef",
     "PurposeOfJourneyPartitionRefStructure",
     "PurposeOfJourneyPartitionValueStructure",
+    "PurposesOfGroupingInFrameRelStructure",
     "PyschosensoryNeedEnumeration",
+    "QualityStructureFactor1",
+    "QualityStructureFactor2",
     "QualityStructureFactorPrice",
     "QualityStructureFactorPriceRef",
     "QualityStructureFactorPriceRefStructure",
     "QualityStructureFactorPriceVersionedChildStructure",
+    "QualityStructureFactorPricesRelStructure",
     "QualityStructureFactorRef",
     "QualityStructureFactorRefStructure",
-    "QualityStructureFactor2",
     "QualityStructureFactorVersionStructure",
-    "QualityStructureFactor1",
+    "QualityStructureFactorsRelStructure",
     "Quay",
     "QuayAssignmentView",
     "QuayRef",
     "QuayRefStructure",
+    "QuayRefsRelStructure",
     "QuayTypeEnumeration",
     "QuayVersionStructure",
+    "QuaysRelStructure",
     "QueueManagementEnumeration",
     "QueueingEquipment",
     "QueueingEquipmentRef",
@@ -5903,17 +6330,21 @@ __all__ = [
     "RelationToVehicleEnumeration",
     "RelationshipRef",
     "RelationshipRefStructure",
+    "RelationshipStructure",
     "RelativeDirectionEnumeration",
     "RelativeOperatorEnumeration",
+    "ReliefOpportunitiesInFrameRelStructure",
+    "ReliefOpportunitiesRelStructure",
     "ReliefOpportunity",
     "ReliefOpportunityRef",
     "ReliefOpportunityRefStructure",
     "ReliefOpportunityVersionStructure",
+    "ReliefPoint1",
+    "ReliefPoint2",
     "ReliefPointRef",
     "ReliefPointRefStructure",
-    "ReliefPoint2",
     "ReliefPointVersionStructure",
-    "ReliefPoint1",
+    "ReliefPointsInFrameRelStructure",
     "RepeatedTripFareRequestRef",
     "RepeatedTripFareRequestRefStructure",
     "Replacing",
@@ -5952,6 +6383,7 @@ __all__ = [
     "ResidentialQualificationRef",
     "ResidentialQualificationRefStructure",
     "ResidentialQualificationVersionStructure",
+    "ResidentialQualificationsRelStructure",
     "ResourceFrame",
     "ResourceFrameRef",
     "ResourceFrameRefStructure",
@@ -5963,6 +6395,7 @@ __all__ = [
     "ResponsibilityRole",
     "ResponsibilityRoleAssignment",
     "ResponsibilityRoleAssignmentVersionedChildStructure",
+    "ResponsibilityRoleAssignmentsRelStructure",
     "ResponsibilityRoleRef",
     "ResponsibilityRoleRefStructure",
     "ResponsibilityRoleVersionStructure",
@@ -5971,6 +6404,8 @@ __all__ = [
     "ResponsibilitySetRef",
     "ResponsibilitySetRefStructure",
     "ResponsibilitySetVersionStructure",
+    "ResponsibilitySetsInFrameRelStructure",
+    "ResponsibilitySetsRelStructure",
     "RestrictedManoeuvre",
     "RestrictedManoeuvreRef",
     "RestrictedManoeuvreRefStructure",
@@ -5978,16 +6413,21 @@ __all__ = [
     "RetailConsortium",
     "RetailConsortiumRef",
     "RetailConsortiumRefStructure",
+    "RetailConsortiumRefsRelStructure",
     "RetailConsortiumVersionStructure",
+    "RetailConsortiumsInFrameRelStructure",
+    "RetailConsortiumsRelStructure",
     "RetailDevice",
     "RetailDeviceRef",
     "RetailDeviceRefStructure",
+    "RetailDeviceRefsRelStructure",
     "RetailDeviceSecurityListing",
     "RetailDeviceSecurityListingRef",
     "RetailDeviceSecurityListingRefStructure",
     "RetailDeviceSecurityListingRefsRelStructure",
     "RetailDeviceSecurityListingVersionedChildStructure",
     "RetailDeviceVersionStructure",
+    "RetailDevicesInFrameRelStructure",
     "RetailDevicesRelStructure",
     "RetailFacility",
     "RetailFacilityEnumeration",
@@ -5997,6 +6437,7 @@ __all__ = [
     "RetailServiceRef",
     "RetailServiceRefStructure",
     "RetailServiceVersionStructure",
+    "ReversePropertyName",
     "RhythmicalJourneyGroup",
     "RhythmicalJourneyGroupRef",
     "RhythmicalJourneyGroupRefStructure",
@@ -6035,33 +6476,42 @@ __all__ = [
     "RoundingStepRef",
     "RoundingStepRefStructure",
     "RoundingStepVersionedChildStructure",
+    "RoundingStepsRelStructure",
     "RoundingVersionedStructure",
+    "RoundingsRelStructure",
+    "Route1",
+    "Route2",
+    "RouteDerivedViewStructure",
     "RouteInstruction",
     "RouteInstructionRef",
     "RouteInstructionRefStructure",
     "RouteInstructionVersionStructure",
+    "RouteInstructionsRelStructure",
     "RouteLink",
     "RouteLinkRef",
     "RouteLinkRefByValue",
     "RouteLinkRefByValueStructure",
     "RouteLinkRefStructure",
     "RouteLinkVersionStructure",
+    "RouteLinksInFrameRelStructure",
     "RoutePoint",
     "RoutePointRef",
     "RoutePointRefStructure",
     "RoutePointVersionStructure",
+    "RoutePointsInFrameRelStructure",
     "RouteRef",
     "RouteRefStructure",
-    "RouteView",
-    "Route2",
-    "RouteDerivedViewStructure",
+    "RouteRefsRelStructure",
     "RouteVersionStructure",
-    "Route1",
+    "RouteView",
+    "RoutesInFrameRelStructure",
+    "RoutesRelStructure",
     "Routing",
     "RoutingConstraintZone",
     "RoutingConstraintZoneRef",
     "RoutingConstraintZoneRefStructure",
     "RoutingConstraintZoneVersionStructure",
+    "RoutingConstraintZonesInFrameRelStructure",
     "RoutingRef",
     "RoutingRefStructure",
     "RoutingTypeEnumeration",
@@ -6086,6 +6536,8 @@ __all__ = [
     "SalesOfferPackageElementRef",
     "SalesOfferPackageElementRefStructure",
     "SalesOfferPackageElementVersionStructure",
+    "SalesOfferPackageElementsInFrameRelStructure",
+    "SalesOfferPackageElementsRelStructure",
     "SalesOfferPackageEntitlementGiven",
     "SalesOfferPackageEntitlementGivenRef",
     "SalesOfferPackageEntitlementGivenRefStructure",
@@ -6098,13 +6550,18 @@ __all__ = [
     "SalesOfferPackagePriceRef",
     "SalesOfferPackagePriceRefStructure",
     "SalesOfferPackagePriceVersionedChildStructure",
+    "SalesOfferPackagePricesRelStructure",
     "SalesOfferPackageRef",
     "SalesOfferPackageRefStructure",
+    "SalesOfferPackageRefsRelStructure",
     "SalesOfferPackageSubstitution",
     "SalesOfferPackageSubstitutionRef",
     "SalesOfferPackageSubstitutionRefStructure",
     "SalesOfferPackageSubstitutionVersionStructure",
+    "SalesOfferPackageSubstitutionsInFrameRelStructure",
+    "SalesOfferPackageSubstitutionsRelStructure",
     "SalesOfferPackageVersionStructure",
+    "SalesOfferPackagesInFrameRelStructure",
     "SalesTransaction",
     "SalesTransactionFrame",
     "SalesTransactionFrameRef",
@@ -6112,7 +6569,10 @@ __all__ = [
     "SalesTransactionFrameVersionFrameStructure",
     "SalesTransactionRef",
     "SalesTransactionRefStructure",
+    "SalesTransactionRefsRelStructure",
     "SalesTransactionVersionStructure",
+    "SalesTransactionsInFrameRelStructure",
+    "SalesTransactionsRelStructure",
     "SameClassOfUseEnumeration",
     "SameJourneyEnumeration",
     "SameOperatorEnumeration",
@@ -6134,18 +6594,22 @@ __all__ = [
     "ScheduleRequestRef",
     "ScheduleRequestRefStructure",
     "ScheduledStopPoint",
+    "ScheduledStopPointDerivedViewStructure",
     "ScheduledStopPointRef",
     "ScheduledStopPointRefStructure",
-    "ScheduledStopPointView",
-    "ScheduledStopPointDerivedViewStructure",
+    "ScheduledStopPointRefsRelStructure",
     "ScheduledStopPointVersionStructure",
+    "ScheduledStopPointView",
+    "ScheduledStopPointsInFrameRelStructure",
     "SchematicMap",
     "SchematicMapMemberRef",
     "SchematicMapMemberRefStructure",
     "SchematicMapMemberVersionedChildStructure",
+    "SchematicMapMembersRelStructure",
     "SchematicMapRef",
     "SchematicMapRefStructure",
     "SchematicMapVersionStructure",
+    "SchematicMapsInFrameRelStructure",
     "ScopeOfTicket",
     "ScopeOfTicketEnumeration",
     "ScopeOfTicketList",
@@ -6156,24 +6620,22 @@ __all__ = [
     "SeatingEquipmentRef",
     "SeatingEquipmentRefStructure",
     "SeatingEquipmentVersionStructure",
-    "SectionInSequence",
-    "SectionInSequenceVersionedChildStructure",
     "SectionRef",
     "SectionRefStructure",
     "SectionTypeEnumeration",
-    "Section2",
-    "SectionVersionStructure",
-    "Section1",
     "SecurityList",
     "SecurityListRef",
     "SecurityListRefStructure",
     "SecurityListVersionStructure",
+    "SecurityListing1",
+    "SecurityListing2",
     "SecurityListingRef",
     "SecurityListingRefStructure",
     "SecurityListingRefsRelStructure",
-    "SecurityListing2",
     "SecurityListingVersionedChildStructure",
-    "SecurityListing1",
+    "SecurityListingsRelStructure",
+    "SecurityListsRelStructure",
+    "SecuritylistRefsRelStructure",
     "SelfDriveSubmode",
     "SelfDriveSubmodeEnumeration",
     "SeriesConstraint",
@@ -6181,18 +6643,21 @@ __all__ = [
     "SeriesConstraintPriceRef",
     "SeriesConstraintPriceRefStructure",
     "SeriesConstraintPriceVersionedChildStructure",
+    "SeriesConstraintPricesRelStructure",
     "SeriesConstraintRef",
-    "SeriesConstraintRefStructure2",
     "SeriesConstraintRefStructure1",
+    "SeriesConstraintRefStructure2",
+    "SeriesConstraintRefsRelStructure",
     "SeriesConstraintVersionStructure",
     "SeriesConstraintsRelStructure",
     "SeriesPresentationEnumeration",
     "SeriesTypeEnumeration",
+    "ServiceAccessRight1",
+    "ServiceAccessRight2",
     "ServiceAccessRightRef",
     "ServiceAccessRightRefStructure",
-    "ServiceAccessRight2",
+    "ServiceAccessRightRefsRelStructure",
     "ServiceAccessRightVersionStructure",
-    "ServiceAccessRight1",
     "ServiceAlterationEnumeration",
     "ServiceCalendar",
     "ServiceCalendarFrame",
@@ -6214,19 +6679,25 @@ __all__ = [
     "ServiceExclusionRef",
     "ServiceExclusionRefStructure",
     "ServiceExclusionVersionStructure",
+    "ServiceExclusionsInFrameRelStructure",
     "ServiceFacilitySet",
     "ServiceFacilitySetRef",
     "ServiceFacilitySetRefStructure",
     "ServiceFacilitySetVersionStructure",
+    "ServiceFacilitySetsInFrameRelStructure",
+    "ServiceFacilitySetsRelStructure",
     "ServiceFrame",
     "ServiceFrameRef",
     "ServiceFrameRefStructure",
+    "ServiceJourney1",
+    "ServiceJourney2",
     "ServiceJourneyInterchange",
+    "ServiceJourneyInterchangeDerivedViewStructure",
     "ServiceJourneyInterchangeRef",
     "ServiceJourneyInterchangeRefStructure",
-    "ServiceJourneyInterchangeView",
-    "ServiceJourneyInterchangeDerivedViewStructure",
     "ServiceJourneyInterchangeVersionStructure",
+    "ServiceJourneyInterchangeView",
+    "ServiceJourneyInterchangesRelStructure",
     "ServiceJourneyPattern",
     "ServiceJourneyPatternInterchange",
     "ServiceJourneyPatternInterchangeRef",
@@ -6238,9 +6709,7 @@ __all__ = [
     "ServiceJourneyPatternVersionStructure",
     "ServiceJourneyRef",
     "ServiceJourneyRefStructure",
-    "ServiceJourney2",
     "ServiceJourneyVersionStructure",
-    "ServiceJourney1",
     "ServiceLink",
     "ServiceLinkInJourneyPattern",
     "ServiceLinkInJourneyPatternVersionedChildStructure",
@@ -6251,12 +6720,15 @@ __all__ = [
     "ServiceLinkRefByValueStructure",
     "ServiceLinkRefStructure",
     "ServiceLinkVersionStructure",
+    "ServiceLinksInFrameRelStructure",
+    "ServiceLinksInJourneyPatternRelStructure",
     "ServiceNotAvailableError",
     "ServiceNotAvailableErrorStructure",
     "ServicePattern",
     "ServicePatternRef",
     "ServicePatternRefStructure",
     "ServicePatternVersionStructure",
+    "ServicePatternsInFrameRelStructure",
     "ServiceRequest",
     "ServiceRequestContextStructure",
     "ServiceRequestStructure",
@@ -6283,7 +6755,6 @@ __all__ = [
     "SignEquipmentRef",
     "SignEquipmentVersionStructure",
     "SignType",
-    "SimpleAvailabilityCondition",
     "SimpleFeature",
     "SimpleFeatureRef",
     "SimpleFeatureRefStructure",
@@ -6310,6 +6781,7 @@ __all__ = [
     "SiteElementRefStructure",
     "SiteElementVersionStructure",
     "SiteEntranceVersionStructure",
+    "SiteEntrancesRelStructure",
     "SiteEquipment",
     "SiteEquipmentRef",
     "SiteEquipmentRefStructure",
@@ -6318,28 +6790,37 @@ __all__ = [
     "SiteFacilitySetRef",
     "SiteFacilitySetRefStructure",
     "SiteFacilitySetStructure",
+    "SiteFacilitySetsInFrameRelStructure",
+    "SiteFacilitySetsRelStructure",
     "SiteFrame",
     "SiteFrameRef",
     "SiteFrameRefStructure",
     "SitePathLink",
     "SitePathLinkRefStructure",
     "SitePathLinkVersionStructure",
+    "SitePathLinksRelStructure",
     "SiteRef",
     "SiteRefStructure",
+    "SiteRefsRelStructure",
     "SiteTypeEnumeration",
     "SiteVersionFrameStructure",
     "SiteVersionStructure",
     "SnowAndIceSubmode",
     "SnowAndIceSubmodeEnumeration",
+    "SpaceValue",
     "SpatialFeature",
     "SpatialFeatureRef",
+    "SpatialFeaturesInFrameRelStructure",
     "SpecialService",
     "SpecialServiceRef",
     "SpecialServiceRefStructure",
+    "SpecialServiceRefsRelStructure",
     "SpecialServiceVersionStructure",
-    "SpecificParameterAssignment",
+    "SpecialServicesRelStructure",
     "SpecificParameterAssignmentRefStructure",
+    "SpecificParameterAssignment",
     "SpecificParameterAssignmentVersionStructure",
+    "SpecificParameterAssignmentsRelStructure",
     "SrsName1",
     "SrsName2",
     "Staffing",
@@ -6349,6 +6830,7 @@ __all__ = [
     "StairEquipmentVersionStructure",
     "StairFlight",
     "StairFlightVersionedChildStructure",
+    "StairFlightsRelStructure",
     "StaircaseEquipment",
     "StaircaseEquipmentRef",
     "StaircaseEquipmentRefStructure",
@@ -6363,6 +6845,7 @@ __all__ = [
     "StartTimeAtStopPointRef",
     "StartTimeAtStopPointRefStructure",
     "StartTimeAtStopPointVersionedChildStructure",
+    "StartTimeAtStopPointsRelStructure",
     "Status",
     "StatusEnumeration",
     "StatusResponseStructure",
@@ -6375,11 +6858,14 @@ __all__ = [
     "StopArea",
     "StopAreaRef",
     "StopAreaRefStructure",
+    "StopAreaRefsRelStructure",
     "StopAreaVersionStructure",
+    "StopAreasInFrameRelStructure",
     "StopAssignment",
     "StopAssignmentRef",
     "StopAssignmentRefStructure",
     "StopAssignmentVersionStructure",
+    "StopAssignmentsInFrameRelStructure",
     "StopEventRequestRef",
     "StopEventRequestRefStructure",
     "StopFinderRequestRef",
@@ -6389,12 +6875,14 @@ __all__ = [
     "StopPlaceComponent",
     "StopPlaceComponentTypeEnumeration",
     "StopPlaceComponentVersionStructure",
+    "StopPlaceDerivedViewStructure",
     "StopPlaceEntrance",
     "StopPlaceEntranceRef",
     "StopPlaceEntranceRefStructure",
     "StopPlaceEntranceVersionStructure",
     "StopPlaceRef",
     "StopPlaceRefStructure",
+    "StopPlaceRefsRelStructure",
     "StopPlaceSpace",
     "StopPlaceSpaceRef",
     "StopPlaceSpaceRefStructure",
@@ -6403,19 +6891,23 @@ __all__ = [
     "StopPlaceVehicleEntranceRef",
     "StopPlaceVehicleEntranceRefStructure",
     "StopPlaceVehicleEntranceVersionStructure",
+    "StopPlaceVehicleEntrancesRelStructure",
+    "StopPlaceVersionStructure",
     "StopPlaceView",
     "StopPlaceWeightEnumeration",
-    "StopPlaceDerivedViewStructure",
-    "StopPlaceVersionStructure",
+    "StopPlacesInFrameRelStructure",
+    "StopPlacesRelStructure",
     "StopPointInJourneyPattern",
+    "StopPointInJourneyPatternDerivedViewStructure",
     "StopPointInJourneyPatternRef",
     "StopPointInJourneyPatternRefStructure",
-    "StopPointInJourneyPatternView",
-    "StopPointInJourneyPatternDerivedViewStructure",
     "StopPointInJourneyPatternVersionedChildStructure",
+    "StopPointInJourneyPatternView",
+    "StopPointsInJourneyPatternRelStructure",
     "StopTypeEnumeration",
     "StopUseConstraintEnumeration",
     "StopUseEnumeration",
+    "StrictContainmentAggregationStructure",
     "Submode",
     "SubmodeRef",
     "SubmodeRefStructure",
@@ -6433,6 +6925,7 @@ __all__ = [
     "SubscriptionTermTypeEnumeration",
     "SubscriptionTerminatedNotification",
     "SubscriptionTerminatedNotificationStructure",
+    "SuitabilitiesRelStructure",
     "Suitability",
     "SuitabilityVersionedChildStructure",
     "SuitableEnumeration",
@@ -6444,6 +6937,7 @@ __all__ = [
     "SupplyContractRef",
     "SupplyContractRefStructure",
     "SurfaceArrayPropertyType",
+    "SurfaceProperty",
     "SurfacePropertyType",
     "SurfaceTypeEnumeration",
     "Suspending",
@@ -6453,24 +6947,30 @@ __all__ = [
     "SuspensionPolicyEnumeration",
     "SystemOfUnits",
     "TactileWarningStripEnumeration",
+    "TargetElement",
     "TargetPassingTime",
     "TargetPassingTimeRef",
     "TargetPassingTimeRefStructure",
-    "TargetPassingTimeView",
     "TargetPassingTimeVersionedChildStructure",
+    "TargetPassingTimeView",
     "TargetPassingTimeViewStructure",
+    "TargetPassingTimesRelStructure",
     "Tariff",
     "TariffBasisEnumeration",
     "TariffObjectRef",
     "TariffRef",
     "TariffRefStructure",
-    "TariffZoneRefStructure",
-    "TariffZoneRef2",
-    "TariffZoneRef1",
-    "TariffZone2",
-    "TariffZoneVersionStructure",
-    "TariffZone1",
+    "TariffRefsRelStructure",
     "TariffVersionStructure",
+    "TariffZone1",
+    "TariffZone2",
+    "TariffZoneRef1",
+    "TariffZoneRef2",
+    "TariffZoneRefStructure",
+    "TariffZoneRefsRelStructure",
+    "TariffZoneVersionStructure",
+    "TariffZonesInFrameRelStructure",
+    "TariffsInFrameRelStructure",
     "TaxCategoryEnumeration",
     "TaxiSubmode",
     "TaxiSubmodeEnumeration",
@@ -6484,6 +6984,7 @@ __all__ = [
     "TemplateVehicleJourney",
     "TemplateVehicleJourneyTypeEnumeration",
     "TemplateVehicleJourneyVersionStructure",
+    "TemporalValidityParametersRelStructure",
     "TerminateSubscriptionRequest",
     "TerminateSubscriptionRequestBodyStructure",
     "TerminateSubscriptionRequestStructure",
@@ -6493,6 +6994,7 @@ __all__ = [
     "ThirdPartyProduct",
     "ThirdPartyProductRef",
     "ThirdPartyProductRefStructure",
+    "ThirdPartyProductRefsRelStructure",
     "ThirdPartyProductVersionStructure",
     "TicketTypeEnumeration",
     "TicketValidatorEnumeration",
@@ -6519,6 +7021,7 @@ __all__ = [
     "TimeDemandProfile",
     "TimeDemandProfileMember",
     "TimeDemandProfileMemberVersionStructure",
+    "TimeDemandProfileMembersRelStructure",
     "TimeDemandProfileRef",
     "TimeDemandProfileRefStructure",
     "TimeDemandProfileVersionStructure",
@@ -6527,33 +7030,42 @@ __all__ = [
     "TimeDemandTypeAssigmentRefStructure",
     "TimeDemandTypeAssignment",
     "TimeDemandTypeAssignmentVersionStructure",
+    "TimeDemandTypeAssignmentsInFrameRelStructure",
     "TimeDemandTypeRef",
     "TimeDemandTypeRefStructure",
+    "TimeDemandTypeRefsRelStructure",
     "TimeDemandTypeVersionStructure",
+    "TimeDemandTypesInFrameRelStructure",
     "TimeInterval",
     "TimeIntervalPrice",
     "TimeIntervalPriceRef",
     "TimeIntervalPriceRefStructure",
     "TimeIntervalPriceVersionedChildStructure",
+    "TimeIntervalPricesRelStructure",
     "TimeIntervalRef",
     "TimeIntervalRefStructure",
+    "TimeIntervalRefsRelStructure",
     "TimeIntervalVersionStructure",
+    "TimeIntervalsRelStructure",
     "TimeStructureFactor",
     "TimeStructureFactorRef",
     "TimeStructureFactorRefStructure",
-    "TimeStructureFactorVersionStructure",
+    "TimeStructureFactorsRelStructure",
     "TimeUnit",
     "TimeUnitPrice",
     "TimeUnitPriceRef",
     "TimeUnitPriceRefStructure",
     "TimeUnitPriceVersionedChildStructure",
+    "TimeUnitPricesRelStructure",
     "TimeUnitRef",
     "TimeUnitRefStructure",
     "TimeUnitVersionStructure",
+    "TimeUnitsRelStructure",
     "Timeband",
     "TimebandRef",
     "TimebandRefStructure",
-    "TimebandVersionedChildStructure",
+    "TimebandRefsRelStructure",
+    "TimebandsInFrameRelStructure",
     "TimetableFrame",
     "TimetableFrameRef",
     "TimetableFrameRefStructure",
@@ -6561,9 +7073,10 @@ __all__ = [
     "TimetabledPassingTime",
     "TimetabledPassingTimeRef",
     "TimetabledPassingTimeRefStructure",
-    "TimetabledPassingTimeView",
     "TimetabledPassingTimeVersionedChildStructure",
+    "TimetabledPassingTimeView",
     "TimetabledPassingTimeViewStructure",
+    "TimetabledPassingTimesRelStructure",
     "TimingAlgorithmType",
     "TimingAlgorithmTypeRef",
     "TimingAlgorithmTypeRefStructure",
@@ -6577,11 +7090,17 @@ __all__ = [
     "TimingLinkRefByValue",
     "TimingLinkRefByValueStructure",
     "TimingLinkRefStructure",
+    "TimingLinkRefsRelStructure",
     "TimingLinkVersionStructure",
+    "TimingLinksInFrameRelStructure",
+    "TimingLinksRelStructure",
     "TimingPattern",
     "TimingPatternRef",
     "TimingPatternRefStructure",
     "TimingPatternVersionStructure",
+    "TimingPatternsInFrameRelStructure",
+    "TimingPoint1",
+    "TimingPoint2",
     "TimingPointInJourneyPattern",
     "TimingPointInJourneyPatternRef",
     "TimingPointInJourneyPatternRefStructure",
@@ -6589,29 +7108,36 @@ __all__ = [
     "TimingPointRef",
     "TimingPointRefStructure",
     "TimingPointStatusEnumeration",
-    "TimingPoint2",
     "TimingPointVersionStructure",
-    "TimingPoint1",
+    "TimingPointsInFrameRelStructure",
+    "TimingPointsInJourneyPatternRelStructure",
+    "TimingPointsRelStructure",
     "Topic",
     "TopicStructure",
     "TopographicPlace",
+    "TopographicPlaceDerivedViewStructure",
     "TopographicPlaceDescriptorVersionedChildStructure",
+    "TopographicPlaceDescriptorsRelStructure",
     "TopographicPlaceRef",
     "TopographicPlaceRefStructure",
+    "TopographicPlaceRefsRelStructure",
     "TopographicPlaceTypeEnumeration",
-    "TopographicPlaceView",
-    "TopographicPlaceDerivedViewStructure",
     "TopographicPlaceVersionStructure",
+    "TopographicPlaceView",
+    "TopographicPlacesInFrameRelStructure",
+    "TopographicPlacesRelStructure",
     "TopographicProjection",
     "TopographicProjectionRef",
     "TopographicProjectionRefStructure",
     "TopographicProjectionVersionStructure",
     "Trace",
     "TraceStructure",
+    "TracesRelStructure",
     "TrafficControlPoint",
     "TrafficControlPointRef",
     "TrafficControlPointRefStructure",
     "TrafficControlPointVersionStructure",
+    "TrafficControlPointsInFrameRelStructure",
     "Train",
     "TrainBlock",
     "TrainBlockPart",
@@ -6622,16 +7148,18 @@ __all__ = [
     "TrainBlockRefStructure",
     "TrainBlockVersionStructure",
     "TrainComponent",
+    "TrainComponentDerivedViewStructure",
     "TrainComponentLabelAssignment",
     "TrainComponentLabelAssignmentRef",
     "TrainComponentLabelAssignmentRefStructure",
     "TrainComponentLabelAssignmentRefsRelStructure",
     "TrainComponentLabelAssignmentVersionStructure",
+    "TrainComponentLabelAssignmentsRelStructure",
     "TrainComponentRef",
     "TrainComponentRefStructure",
-    "TrainComponentView",
-    "TrainComponentDerivedViewStructure",
     "TrainComponentVersionStructure",
+    "TrainComponentView",
+    "TrainComponentsRelStructure",
     "TrainElement",
     "TrainElementRef",
     "TrainElementRefStructure",
@@ -6643,7 +7171,9 @@ __all__ = [
     "TrainNumber",
     "TrainNumberRef",
     "TrainNumberRefStructure",
+    "TrainNumberRefsRelStructure",
     "TrainNumberVersionStructure",
+    "TrainNumbersInFrameRelStructure",
     "TrainRef",
     "TrainRefStructure",
     "TrainRestrictionsEnumeration",
@@ -6654,7 +7184,9 @@ __all__ = [
     "TrainStopAssignmentRef",
     "TrainStopAssignmentRefStructure",
     "TrainStopAssignmentVersionStructure",
+    "TrainStopAssignmentsRelStructure",
     "TrainVersionStructure",
+    "TrainsInCompoundTrainRelStructure",
     "TramSubmode",
     "TramSubmodeEnumeration",
     "Transfer",
@@ -6663,24 +7195,28 @@ __all__ = [
     "TransferDurationStructure",
     "TransferRef",
     "TransferRefStructure",
+    "TransferRefsRelStructure",
     "TransferRestriction",
     "TransferRestrictionRef",
     "TransferRestrictionRefStructure",
     "TransferRestrictionVersionStructure",
+    "TransferRestrictionsInFrameRelStructure",
     "TransferVersionStructure",
     "Transferability",
     "TransferabilityRef",
     "TransferabilityRefStructure",
     "TransferabilityVersionStructure",
+    "TransfersInFrameRelStructure",
     "TransitionEnumeration",
-    "TransportAdministrativeZone",
     "TransportAdministrativeZoneRef",
     "TransportAdministrativeZoneRefStructure",
-    "TransportAdministrativeZoneVersionStructure",
     "TransportDescriptionStructure",
     "TransportModeStructure",
-    "TransportOrganisationRef",
+    "TransportModesRelStructure",
+    "TransportOperatorsInFrameRelStructure",
     "TransportOrganisation",
+    "TransportOrganisationRef",
+    "TransportOrganisationRefsRelStructure",
     "TransportSubmode",
     "TransportSubmodeStructure",
     "TravelAgent",
@@ -6698,14 +7234,20 @@ __all__ = [
     "TravelDocumentSecurityListingRefsRelStructure",
     "TravelDocumentSecurityListingVersionedChildStructure",
     "TravelDocumentVersionStructure",
+    "TravelDocumentsInFrameRelStructure",
+    "TravelDocumentsRelStructure",
+    "TravelSpecification1",
+    "TravelSpecification2",
+    "TravelSpecificationJourneyRefsRelStructure",
     "TravelSpecificationRef",
     "TravelSpecificationRefStructure",
+    "TravelSpecificationRefsRelStructure",
     "TravelSpecificationSummaryEndpointStructure",
     "TravelSpecificationSummaryView",
     "TravelSpecificationSummaryViewStructure",
-    "TravelSpecification2",
     "TravelSpecificationVersionStructure",
-    "TravelSpecification1",
+    "TravelSpecificationsInFrameRelStructure",
+    "TravelSpecificationsRelStructure",
     "TravelatorEquipment",
     "TravelatorEquipmentRef",
     "TravelatorEquipmentRefStructure",
@@ -6720,6 +7262,7 @@ __all__ = [
     "TurnaroundTimeLimitTimeRef",
     "TurnaroundTimeLimitTimeRefStructure",
     "TurnaroundTimeLimitTimeVersionedChildStructure",
+    "TurnaroundTimeLimitTimesRelStructure",
     "TypeOfAccessRightAssignment",
     "TypeOfAccessRightAssignmentRef",
     "TypeOfAccessRightAssignmentRefStructure",
@@ -6738,6 +7281,7 @@ __all__ = [
     "TypeOfConcessionRef",
     "TypeOfConcessionRefStructure",
     "TypeOfConcessionVersionStructure",
+    "TypeOfConcessionsRelStructure",
     "TypeOfCongestion",
     "TypeOfCongestionRef",
     "TypeOfCongestionRefStructure",
@@ -6746,6 +7290,7 @@ __all__ = [
     "TypeOfCustomerAccount",
     "TypeOfCustomerAccountRef",
     "TypeOfCustomerAccountRefStructure",
+    "TypeOfCustomerAccountRefsRelStructure",
     "TypeOfCustomerAccountVersionStructure",
     "TypeOfDeliveryVariant",
     "TypeOfDeliveryVariantRef",
@@ -6753,6 +7298,7 @@ __all__ = [
     "TypeOfDeliveryVariantValueStructure",
     "TypeOfEntity",
     "TypeOfEntityRef",
+    "TypeOfEntityRefsRelStructure",
     "TypeOfEntityVersionStructure",
     "TypeOfEquipment",
     "TypeOfEquipmentRef",
@@ -6761,19 +7307,24 @@ __all__ = [
     "TypeOfFacility",
     "TypeOfFacilityRef",
     "TypeOfFacilityRefStructure",
+    "TypeOfFacilityRefsRelStructure",
     "TypeOfFacilityVersionStructure",
     "TypeOfFareContract",
     "TypeOfFareContractEntry",
     "TypeOfFareContractEntryRef",
     "TypeOfFareContractEntryRefStructure",
+    "TypeOfFareContractEntryRefsRelStructure",
     "TypeOfFareContractEntryVersionStructure",
     "TypeOfFareContractRef",
     "TypeOfFareContractRefStructure",
+    "TypeOfFareContractRefsRelStructure",
     "TypeOfFareContractVersionStructure",
     "TypeOfFareProduct",
     "TypeOfFareProductRef",
     "TypeOfFareProductRefStructure",
+    "TypeOfFareProductRefsRelStructure",
     "TypeOfFareProductVersionStructure",
+    "TypeOfFareProductsRelStructure",
     "TypeOfFareStructureElement",
     "TypeOfFareStructureElementRef",
     "TypeOfFareStructureElementRefStructure",
@@ -6794,10 +7345,9 @@ __all__ = [
     "TypeOfFlexibleServiceRef",
     "TypeOfFlexibleServiceRefStructure",
     "TypeOfFlexibleServiceValueStructure",
-    "TypeOfFrame",
     "TypeOfFrameRef",
     "TypeOfFrameRefStructure",
-    "TypeOfFrameValueStructure",
+    "TypeOfFrameRefsRelStructure",
     "TypeOfFuelEnumeration",
     "TypeOfInfolinkEnumeration",
     "TypeOfJourneyPattern",
@@ -6836,6 +7386,7 @@ __all__ = [
     "TypeOfOrganisationPartValueStructure",
     "TypeOfOrganisationRef",
     "TypeOfOrganisationRefStructure",
+    "TypeOfOrganisationRefsRelStructure",
     "TypeOfOrganisationValueStructure",
     "TypeOfPassengerInformationEquipment",
     "TypeOfPassengerInformationEquipmentRef",
@@ -6849,10 +7400,12 @@ __all__ = [
     "TypeOfPlace",
     "TypeOfPlaceRef",
     "TypeOfPlaceRefStructure",
+    "TypeOfPlaceRefsRelStructure",
     "TypeOfPlaceValueStructure",
     "TypeOfPoint",
     "TypeOfPointRef",
     "TypeOfPointRefStructure",
+    "TypeOfPointRefsRelStructure",
     "TypeOfPointValueStructure",
     "TypeOfPricingEnumeration",
     "TypeOfPricingRule",
@@ -6863,6 +7416,7 @@ __all__ = [
     "TypeOfProductCategory",
     "TypeOfProductCategoryRef",
     "TypeOfProductCategoryRefStructure",
+    "TypeOfProductCategoryRefsRelStructure",
     "TypeOfProductCategoryStructure",
     "TypeOfProjection",
     "TypeOfProjectionRef",
@@ -6875,6 +7429,7 @@ __all__ = [
     "TypeOfRetailDevice",
     "TypeOfRetailDeviceRef",
     "TypeOfRetailDeviceRefStructure",
+    "TypeOfRetailDeviceRefsRelStructure",
     "TypeOfRetailDeviceVersionStructure",
     "TypeOfSalesOfferPackage",
     "TypeOfSalesOfferPackageRef",
@@ -6883,14 +7438,17 @@ __all__ = [
     "TypeOfSecurityList",
     "TypeOfSecurityListRef",
     "TypeOfSecurityListRefStructure",
+    "TypeOfSecurityListRefsRelStructure",
     "TypeOfSecurityListVersionStructure",
     "TypeOfService",
     "TypeOfServiceFeature",
     "TypeOfServiceFeatureRef",
     "TypeOfServiceFeatureRefStructure",
+    "TypeOfServiceFeatureRefsRelStructure",
     "TypeOfServiceFeatureValueStructure",
     "TypeOfServiceRef",
     "TypeOfServiceRefStructure",
+    "TypeOfServiceRefsRelStructure",
     "TypeOfServiceStructure",
     "TypeOfTariff",
     "TypeOfTariffRef",
@@ -6913,6 +7471,7 @@ __all__ = [
     "TypeOfUsageParameterRef",
     "TypeOfUsageParameterRefStructure",
     "TypeOfUsageParameterVersionStructure",
+    "TypeOfUsageParametersRelStructure",
     "TypeOfValidity",
     "TypeOfValidityRef",
     "TypeOfValidityRefStructure",
@@ -6928,7 +7487,27 @@ __all__ = [
     "TypeOfZone",
     "TypeOfZoneRef",
     "TypeOfZoneRefStructure",
+    "TypeOfZoneRefsRelStructure",
     "TypeOfZoneValueStructure",
+    "TypeOfsalesOfferPackageRefsRelStructure",
+    "TypesOfAccountStatusRelStructure",
+    "TypesOfCustomerAccountRelStructure",
+    "TypesOfEquipmentRelStructure",
+    "TypesOfFacilityRelStructure",
+    "TypesOfFareContractEntryRelStructure",
+    "TypesOfFareContractRelStructure",
+    "TypeOfFrame",
+    "TypeOfFrameValueStructure",
+    "TypesOfFrameRelStructure",
+    "TypesOfMachineReadabilitiesRelStructure",
+    "TypesOfRetailDeviceRelStructure",
+    "TypesOfSalesOfferPackageRelStructure",
+    "TypesOfSecurityListRelStructure",
+    "TypesOfServiceInFrameRelStructure",
+    "TypesOfTravelDocumentInFrameRelStructure",
+    "TypesOfTravelDocumentsRelStructure",
+    "TypesOfValueInFrameRelStructure",
+    "TypesOfValueStructure",
     "UicOperatingPeriod",
     "UicOperatingPeriodVersionStructure",
     "UicProductCharacteristic",
@@ -6954,15 +7533,20 @@ __all__ = [
     "UsageDiscountRightRefStructure",
     "UsageDiscountRightVersionStructure",
     "UsageEndEnumeration",
+    "UsageParameter1",
+    "UsageParameter2",
     "UsageParameterPrice",
     "UsageParameterPriceRef",
     "UsageParameterPriceRefStructure",
+    "UsageParameterPriceRefsRelStructure",
     "UsageParameterPriceVersionedChildStructure",
+    "UsageParameterPricesRelStructure",
     "UsageParameterRef",
     "UsageParameterRefStructure",
-    "UsageParameter2",
+    "UsageParameterRefsRelStructure",
     "UsageParameterVersionStructure",
-    "UsageParameter1",
+    "UsageParametersInFrameRelStructure",
+    "UsageParametersRelStructure",
     "UsageStartConstraintTypeEnumeration",
     "UsageTriggerEnumeration",
     "UsageValidityPeriod",
@@ -6970,6 +7554,7 @@ __all__ = [
     "UsageValidityPeriodRefStructure",
     "UsageValidityPeriodVersionStructure",
     "UsageValidityTypeEnumeration",
+    "UsedInRefsRelStructure",
     "UserNeed",
     "UserNeedVersionedChildStructure",
     "UserProfile",
@@ -6979,38 +7564,40 @@ __all__ = [
     "UserProfileEligibilityVersionedChildStructure",
     "UserProfileRef",
     "UserProfileRefStructure",
+    "UserProfileRefsRelStructure",
     "UserProfileVersionStructure",
     "UserTypeEnumeration",
-    "ValidBetween",
-    "ValidBetweenVersionStructure",
-    "ValidDuring",
-    "ValidDuringVersionStructure",
     "ValidableElement",
     "ValidableElementPrice",
     "ValidableElementPriceRef",
     "ValidableElementPriceRefStructure",
     "ValidableElementPriceVersionedChildStructure",
+    "ValidableElementPricesRelStructure",
     "ValidableElementRef",
     "ValidableElementRefStructure",
     "ValidableElementVersionStructure",
+    "ValidableElementsInFrameRelStructure",
+    "ValidableElementsRelStructure",
     "ValidityConditionRef",
     "ValidityConditionRefStructure",
-    "ValidityCondition2",
-    "ValidityConditionVersionStructure",
-    "ValidityCondition1",
+    "ValidityConditionRefsRelStructure",
     "ValidityParameterAssignment",
     "ValidityParameterAssignmentRefStructure",
     "ValidityParameterAssignmentVersionStructure",
-    "ValidityRuleParameter",
+    "ValidityParameterAssignmentsInFrameRelStructure",
+    "ValidityParameterAssignmentsRelStructure",
+    "ValidityParametersRelStructure",
     "ValidityRuleParameterRef",
     "ValidityRuleParameterRefStructure",
-    "ValidityRuleParameterVersionStructure",
-    "ValidityTrigger",
+    "ValidityRuleParameterRefsRelStructure",
+    "ValidityRuleParametersRelStructure",
     "ValidityTriggerRef",
     "ValidityTriggerRefStructure",
-    "ValidityTriggerVersionStructure",
+    "ValidityTriggerRefsRelStructure",
+    "ValidityTriggersRelStructure",
     "ValueSet",
     "ValueSetVersionStructure",
+    "Vector",
     "VectorType",
     "Vehicle",
     "VehicleAccessFacility",
@@ -7024,49 +7611,63 @@ __all__ = [
     "VehicleEntranceRef",
     "VehicleEntranceRefStructure",
     "VehicleEntranceVersionStructure",
+    "VehicleEntrancesRelStructure",
+    "VehicleEquipmenProfilesInFrameRelStructure",
     "VehicleEquipmentProfile",
     "VehicleEquipmentProfileRef",
     "VehicleEquipmentProfileRefStructure",
     "VehicleEquipmentProfileVersionStructure",
     "VehicleEquipmentRef",
     "VehicleEquipmentRefStructure",
+    "VehicleEquipmentsRelStructure",
+    "VehicleJourney1",
+    "VehicleJourney2",
     "VehicleJourneyHeadway",
     "VehicleJourneyHeadwayVersionedChildStructure",
+    "VehicleJourneyHeadwaysRelStructure",
     "VehicleJourneyLayover",
     "VehicleJourneyLayoverVersionedChildStructure",
+    "VehicleJourneyLayoversRelStructure",
     "VehicleJourneyRef",
     "VehicleJourneyRefStructure",
+    "VehicleJourneyRefsRelStructure",
     "VehicleJourneyRunTime",
     "VehicleJourneyRunTimeVersionedChildStructure",
+    "VehicleJourneyRunTimesRelStructure",
     "VehicleJourneyStopAssignment",
     "VehicleJourneyStopAssignmentRef",
     "VehicleJourneyStopAssignmentRefStructure",
     "VehicleJourneyStopAssignmentVersionStructure",
+    "VehicleJourneyStopAssignmentsInFrameRelStructure",
+    "VehicleJourneyStopAssignmentsRelStructure",
+    "VehicleJourneyVersionStructure",
     "VehicleJourneyWaitTime",
     "VehicleJourneyWaitTimeVersionedChildStructure",
-    "VehicleJourney2",
-    "VehicleJourneyVersionStructure",
-    "VehicleJourney1",
+    "VehicleJourneyWaitTimesRelStructure",
     "VehicleLoadingEnumeration",
     "VehicleManoeuvringRequirement",
     "VehicleManoeuvringRequirementRef",
     "VehicleManoeuvringRequirementRefStructure",
     "VehicleManoeuvringRequirementVersionStructure",
+    "VehicleManoeuvringRequirementsRelStructure",
     "VehicleMode",
     "VehicleModeEnumeration",
     "VehicleModel",
     "VehicleModelRef",
     "VehicleModelRefStructure",
     "VehicleModelVersionStructure",
+    "VehicleModelsInFrameRelStructure",
     "VehicleOrientationEnumeration",
     "VehiclePositionAlignment",
     "VehiclePositionAlignmentRef",
     "VehiclePositionAlignmentRefStructure",
     "VehiclePositionAlignmentVersionStructure",
+    "VehiclePositionAlignmentsRelStructure",
     "VehicleQuayAlignment",
     "VehicleQuayAlignmentRef",
     "VehicleQuayAlignmentRefStructure",
     "VehicleQuayAlignmentVersionStructure",
+    "VehicleQuayAlignmentsRelStructure",
     "VehicleRef",
     "VehicleRefStructure",
     "VehicleRequirement",
@@ -7082,17 +7683,21 @@ __all__ = [
     "VehicleServicePartRef",
     "VehicleServicePartRefStructure",
     "VehicleServicePartVersionStructure",
+    "VehicleServicePartsRelStructure",
     "VehicleServiceRef",
     "VehicleServiceRefStructure",
     "VehicleServiceVersionStructure",
+    "VehicleServicesInFrameRelStructure",
     "VehicleStoppingPlace",
     "VehicleStoppingPlaceRef",
     "VehicleStoppingPlaceRefStructure",
     "VehicleStoppingPlaceVersionStructure",
+    "VehicleStoppingPlacesRelStructure",
     "VehicleStoppingPosition",
     "VehicleStoppingPositionRef",
     "VehicleStoppingPositionRefStructure",
     "VehicleStoppingPositionVersionStructure",
+    "VehicleStoppingPositionsRelStructure",
     "VehicleType",
     "VehicleTypeAtPoint",
     "VehicleTypeAtPointRef",
@@ -7102,19 +7707,26 @@ __all__ = [
     "VehicleTypePreferenceRef",
     "VehicleTypePreferenceRefStructure",
     "VehicleTypePreferenceVersionedChildStructure",
+    "VehicleTypePreferencesRelStructure",
     "VehicleTypeRef",
     "VehicleTypeRefStructure",
+    "VehicleTypeRefsRelStructure",
     "VehicleTypeStopAssignment",
     "VehicleTypeStopAssignmentRef",
     "VehicleTypeStopAssignmentRefStructure",
     "VehicleTypeStopAssignmentVersionStructure",
+    "VehicleTypeStopAssignmentsRelStructure",
     "VehicleTypeVersionStructure",
+    "VehicleTypesInFrameRelStructure",
     "VehicleVersionStructure",
+    "VehiclesInFrameRelStructure",
     "Version",
     "VersionFrame",
     "VersionFrameDefaultsStructure",
+    "VersionFrameMembersRelStructure",
     "VersionFrameRef",
     "VersionFrameRefStructure",
+    "VersionFrameRefsRelStructure",
     "VersionFrameVersionStructure",
     "VersionOfObjectRef",
     "VersionOfObjectRefStructure",
@@ -7124,9 +7736,11 @@ __all__ = [
     "VersionTypeEnumeration",
     "VersionVersionStructure",
     "VersionedChild",
-    "VersionedChildStructure",
+    "VersionsInFrameRelStructure",
+    "VersionsRelStructure",
     "ViaTypeEnumeration",
     "ViaVersionedChildStructure",
+    "ViasRelStructure",
     "VisualSignsAvailable",
     "WaitingEquipment",
     "WaitingEquipmentRef",
@@ -7148,7 +7762,10 @@ __all__ = [
     "Whitelist",
     "WhitelistRef",
     "WhitelistRefStructure",
+    "WhitelistRefsRelStructure",
     "WhitelistVersionStructure",
+    "WhitelistsInFrameRelStructure",
+    "WhitelistsRelStructure",
     "WireElement",
     "WireElementVersionStructure",
     "WireJunction",
@@ -7160,614 +7777,17 @@ __all__ = [
     "WirePointRef",
     "WirePointRefStructure",
     "Zone",
+    "ZoneDerivedViewStructure",
     "ZoneProjection",
     "ZoneProjectionRef",
     "ZoneProjectionRefStructure",
     "ZoneProjectionVersionStructure",
     "ZoneRef",
     "ZoneRefStructure",
+    "ZoneRefsRelStructure",
     "ZoneTopologyEnumeration",
     "ZoneUseEnumeration",
-    "ZoneView",
-    "ZoneDerivedViewStructure",
     "ZoneVersionStructure",
-    "AbstractAssociationRole",
-    "AbstractInlineProperty",
-    "AbstractReference",
-    "AbstractStrictAssociationRole",
-    "AccessRefsRelStructure",
-    "AccessRightParameterAssignmentsInFrameRelStructure",
-    "AccessRightParameterAssignmentsRelStructure",
-    "AccessRightsInProductRelStructure",
-    "AccessSpacesRelStructure",
-    "AccessSummariesRelStructure",
-    "AccessZonesRelStructure",
-    "AccessesInFrameRelStructure",
-    "AccessesRelStructure",
-    "AccessibilityAssessmentsRelStructure",
-    "AccessibilityLimitationsRelStructure",
-    "AccommodationsRelStructure",
-    "ActivatedEquipmentsInFrameRelStructure",
-    "ActivationAssignmentsRelStructure",
-    "ActivationLinksInFrameRelStructure",
-    "ActivationPointsInFrameRelStructure",
-    "ActivationTypeRefsRelStructure",
-    "AddressesInFrameRelStructure",
-    "AdministrativeZoneRefsRelStructure",
-    "AdministrativeZonesRelStructure",
-    "AllowedLineDirectionRefsRelStructure",
-    "AllowedLineDirectionsRelStructure",
-    "AlternativeNamesRelStructure",
-    "AlternativeTextsRelStructure",
-    "AmountOfPriceUnitRefsRelStructure",
-    "AssistanceBookingServicesRelStructure",
-    "AssociationName",
-    "AvailabilityConditionsRelStructure",
-    "BlacklistRefsRelStructure",
-    "BlacklistsInFrameRelStructure",
-    "BlacklistsRelStructure",
-    "BlockPartsRelStructure",
-    "BlocksInFrameRelStructure",
-    "BoardingPositionRefsRelStructure",
-    "BoardingPositionsRelStructure",
-    "BorderPointsInFrameRelStructure",
-    "CallsRelStructure",
-    "CappingRulePricesRelStructure",
-    "CappingRulesRelStructure",
-    "CellRefsRelStructure",
-    "CellsRelStructure",
-    "CheckConstraintDelaysInFrameRelStructure",
-    "CheckConstraintDelaysRelStructure",
-    "CheckConstraintInFrameRelStructure",
-    "CheckConstraintThroughputsInFrameRelStructure",
-    "CheckConstraintThroughputsRelStructure",
-    "CheckConstraintsRelStructure",
-    "ClassRefsRelStructure",
-    "ClassesInRepositoryRelStructure",
-    "ClassificationDescriptorsRelStructure",
-    "CodespaceAssignmentsRelStructure",
-    "CodespacesInFrameRelStructure",
-    "CodespacesRelStructure",
-    "CommonSectionPointMembersRelStructure",
-    "CommonSectionsInFrameRelStructure",
-    "CompanionProfilesRelStructure",
-    "ComplexFeatureMembersRelStructure",
-    "ComplexFeatureRefsRelStructure",
-    "CompositePricesRelStructure",
-    "ContainedAvailabilityConditionsRelStructure",
-    "ContainmentAggregationStructure",
-    "ContractRefsRelStructure",
-    "ControlCentresInFrameRelStructure",
-    "ControllableElementPricesRelStructure",
-    "ControllableElementsInFrameRelStructure",
-    "ControllableElementsInSequenceRelStructure",
-    "ControllableElementsRelStructure",
-    "CountriesInFrameRelStructure",
-    "CountryRefsRelStructure",
-    "CoupledJourneysInFrameRelStructure",
-    "CoupledJourneysRelStructure",
-    "CoursesOfJourneysInFrameRelStructure",
-    "CoursesOfJourneysRelStructure",
-    "CrewBaseRefsRelStructure",
-    "CrewBasesInFrameRelStructure",
-    "CurveProperty",
-    "CustomerAccountRefsRelStructure",
-    "CustomerAccountSecurityListingRefsRelStructure",
-    "CustomerAccountStatusRefsRelStructure",
-    "CustomerAccountsInFrameRelStructure",
-    "CustomerAccountsRelStructure",
-    "CustomerEligibilitiesRelStructure",
-    "CustomerEligibilityRefsRelStructure",
-    "CustomerPurchasePackageElementAccessesRelStructure",
-    "CustomerPurchasePackageElementsRelStructure",
-    "CustomerPurchasePackagePricesRelStructure",
-    "CustomerPurchasePackageRefsRelStructure",
-    "CustomerPurchasePackagesInFrameRelStructure",
-    "CustomerPurchasePackagesRelStructure",
-    "CustomerPurchaseParameterAssignmentsRelStructure",
-    "CustomerRefsRelStructure",
-    "CustomersInFrameRelStructure",
-    "CustomersRelStructure",
-    "DataObjectsRelStructure",
-    "DataSourcesInFrameRelStructure",
-    "DataSourcesRelStructure",
-    "DatedCallsRelStructure",
-    "DayTypeAssignmentsInFrameRelStructure",
-    "DayTypeAssignmentsRelStructure",
-    "DayTypeRefsRelStructure",
-    "DayTypesInFrameRelStructure",
-    "DayTypesRelStructure",
-    "DeadRunCallsRelStructure",
-    "DefaultCodeSpace",
-    "DefaultDeadRunRunTimesRelStructure",
-    "DefaultInterchangseInFrameRelStructure",
-    "DefaultServiceJourneyRunTimesRelStructure",
-    "DeliveryVariantsRelStructure",
-    "DeltaValuesRelStructure",
-    "DeltasRelStructure",
-    "DepartmentRefsRelStructure",
-    "DepartmentsInFrameRelStructure",
-    "DepartmentsRelStructure",
-    "DescriptionReference",
-    "DestinationDisplayRefsRelStructure",
-    "DestinationDisplayVariantRefsRelStructure",
-    "DestinationDisplayVariantsRelStructure",
-    "DestinationDisplayViewsRelStructure",
-    "DestinationDisplaysInFrameRelStructure",
-    "DirectionsInFrameRelStructure",
-    "DiscountRightRefsRelStructure",
-    "DisplayAssignmentsInFrameRelStructure",
-    "DisplayAssignmentsRelStructure",
-    "DistanceMatrixElementPricesRelStructure",
-    "DistanceMatrixElementRefsRelStructure",
-    "DistanceMatrixElementsInFrameRelStructure",
-    "DistanceMatrixElementsRelStructure",
-    "DistributionAssignmentsInFrameRelStructure",
-    "DistributionAssignmentsRelStructure",
-    "DistributionChannelRefsRelStructure",
-    "DistributionChannelsInFrameRelStructure",
-    "DriverTripTimesRelStructure",
-    "DriverTripsInFrameRelStructure",
-    "DummyPlaceRefsRelStructure",
-    "DutiesInFrameRelStructure",
-    "DutyPartsInFrameRelStructure",
-    "DutyPartsRelStructure",
-    "EntitiesInVersionRelStructure",
-    "EntitlementGivenRefsRelStructure",
-    "EntitlementRequiredRefsRelStructure",
-    "EntityInVersionInFrameRelStructure",
-    "EntranceRefsRelStructure",
-    "EquipmentPlacesRelStructure",
-    "EquipmentPositionsRelStructure",
-    "EquipmentsInFrameRelStructure",
-    "EquipmentsRelStructure",
-    "EstimatedPassingTimesRelStructure",
-    "ExplicitEquipmentsRelStructure",
-    "ExplicitJourneyRefsRelStructure",
-    "ExplicitLocalServicesRelStructure",
-    "ExplicitPlaceEquipmentsRelStructure",
-    "Exterior",
-    "FacilityRequirementsRelStructure",
-    "FareContractEntriesRelStructure",
-    "FareContractsInFrameRelStructure",
-    "FareContractsRelStructure",
-    "FareDemandFactorsRelStructure",
-    "FareElementInSequenceRefsRelStructure",
-    "FarePointsInPatternRelStructure",
-    "FarePricesInFrameRelStructure",
-    "FarePricesRelStructure",
-    "FareProductPricesRelStructure",
-    "FareProductRefsRelStructure",
-    "FareProductsInFrameRelStructure",
-    "FareQuotaFactorsRelStructure",
-    "FareScheduledStopPointRefsRelStructure",
-    "FareScheduledStopPointsInFrameRelStructure",
-    "FareSectionsInFrameRelStructure",
-    "FareSectionsRelStructure",
-    "FareSeriesInFrameRelStructure",
-    "FareStructureElementPricesRelStructure",
-    "FareStructureElementRefsRelStructure",
-    "FareStructureElementsInFrameRelStructure",
-    "FareStructureElementsInSequenceRelStructure",
-    "FareStructureElementsRelStructure",
-    "FareStructureFactorsRelStructure",
-    "FareTableColumnsRelStructure",
-    "FareTableRefsRelStructure",
-    "FareTableRowsRelStructure",
-    "FareTablesInFrameRelStructure",
-    "FareTablesRelStructure",
-    "FareZoneRefsRelStructure",
-    "FareZonesInFrameRelStructure",
-    "FeatureTypeRefsRelStructure",
-    "FlexibleAreasRelStructure",
-    "FlexibleLineRefsRelStructure",
-    "FlexibleLinkPropertiesRelStructure",
-    "FlexiblePointPropertiesRelStructure",
-    "FlexibleQuaysRelStructure",
-    "FlexibleServicePropertiesInFrameRelStructure",
-    "FlexibleServicePropertiesRelStructure",
-    "FlexibleStopPlaceRefsRelStructure",
-    "FlexibleStopPlacesInFrameRelStructure",
-    "FlexibleStopPlacesRelStructure",
-    "FrameContainmentStructure",
-    "FramesRelStructure",
-    "FrequencyGroupsInFrameRelStructure",
-    "FrequencyGroupsRelStructure",
-    "FulfilmentMethodPricesRelStructure",
-    "FulfilmentMethodRefsRelStructure",
-    "FulfilmentMethodsInFrameRelStructure",
-    "FulfilmentMethodsRelStructure",
-    "GaragePointsRelStructure",
-    "GarageRefsRelStructure",
-    "GaragesInFrameRelStructure",
-    "GeneralFrameMembersRelStructure",
-    "GeneralSectionsInFrameRelStructure",
-    "GenericParameterAssignmentsRelStructure",
-    "GeographicalIntervalPricesRelStructure",
-    "GeographicalIntervalsRelStructure",
-    "GeographicalStructureFactorsRelStructure",
-    "GeographicalUnitPricesRelStructure",
-    "GeographicalUnitsRelStructure",
-    "GmlProfileSchema",
-    "GroupMembershipRefsRelStructure",
-    "GroupOfDistanceMatrixElementsRefsRelStructure",
-    "GroupOfEntitiesInFrameRelStructure",
-    "GroupOfLinkSequencesRelStructure",
-    "GroupOfLinksInFrameRelStructure",
-    "GroupOfLinksRelStructure",
-    "GroupOfPointsRelStructure",
-    "GroupOfSalesOfferPackageRefsRelStructure",
-    "GroupOfServicesMembersRelStructure",
-    "GroupOfServicesRefsRelStructure",
-    "GroupOfTimebandsInFrameRelStructure",
-    "GroupOfTimebandsRelStructure",
-    "GroupOfTimingLinksInFrameRelStructure",
-    "GroupOfcustomerPurchasePackageRefsRelStructure",
-    "GroupsOfDistanceMatrixElementsInFrameRelStructure",
-    "GroupsOfDistanceMatrixElementsRelStructure",
-    "GroupsOfDistributionChannelsInFrameRelStructure",
-    "GroupsOfLinesInFrameRelStructure",
-    "GroupsOfOperatorsInFrameRelStructure",
-    "GroupsOfPlacesInFrameRelStructure",
-    "GroupsOfSalesOfferPackagesInFrameRelStructure",
-    "GroupsOfServicesInFrameRelStructure",
-    "GroupsOfStopPlacesInFrameRelStructure",
-    "GroupsOfTransportOrganisationsRefsRelStructure",
-    "HailAndRideAreasRelStructure",
-    "Identifier",
-    "InfoLinksRelStructure",
-    "InfrastructureElementsInFrameRelStructure",
-    "InfrastructureJunctionsInFrameRelStructure",
-    "InterchangeRuleFiltersRelStructure",
-    "InterchangeRuleTimingsRelStructure",
-    "InterchangeRulesInFrameRelStructure",
-    "InterchangeRulesRelStructure",
-    "Interior",
-    "JourneyAccountingsInFrameRelStructure",
-    "JourneyAccountingsRelStructure",
-    "JourneyHeadwaysRelStructure",
-    "JourneyInterchangesInFrameRelStructure",
-    "JourneyLayoversRelStructure",
-    "JourneyMeetingViewsRelStructure",
-    "JourneyMeetingsInFrameRelStructure",
-    "JourneyPartCouplesInFrameRelStructure",
-    "JourneyPartCouplesRelStructure",
-    "JourneyPartPositionsRelStructure",
-    "JourneyPartRefsRelStructure",
-    "JourneyPartsInFrameRelStructure",
-    "JourneyPartsRelStructure",
-    "JourneyPatternHeadwaysRelStructure",
-    "JourneyPatternLayoversRelStructure",
-    "JourneyPatternRefsRelStructure",
-    "JourneyPatternRunTimesRelStructure",
-    "JourneyPatternWaitTimesRelStructure",
-    "JourneyPatternsInFrameRelStructure",
-    "JourneyRefsRelStructure",
-    "JourneyRunTimesRelStructure",
-    "JourneyWaitTimesRelStructure",
-    "JourneysInFrameRelStructure",
-    "KeyList",
-    "LangValue",
-    "LayerRefsRelStructure",
-    "LevelsRelStructure",
-    "LineNetworksInFrameRelStructure",
-    "LineRefsRelStructure",
-    "LineSectionsRelStructure",
-    "LinesInDirectionRefsRelStructure",
-    "LinesInFrameRelStructure",
-    "LinkRefsRelStructure",
-    "LinkSequenceRefsRelStructure",
-    "LinkTypeRefsRelStructure",
-    "LinksInJourneyPatternRelStructure",
-    "LinksOnSectionRelStructure",
-    "LocalServicesRelStructure",
-    "LogEntriesRelStructure",
-    "LogicalDisplaysInFrameRelStructure",
-    "ModeRefsRelStructure",
-    "MonitoredCallsRelStructure",
-    "MonthValidityOffsetsRelStructure",
-    "Name",
-    "NavigationPathRefsRelStructure",
-    "NavigationPathsInFrameRelStructure",
-    "NavigationPathsRelStructure",
-    "NetworkRestrictionsInFrameRelStructure",
-    "NetworksInFrameRelStructure",
-    "NoticeAssignmentViewsRelStructure",
-    "NoticeAssignmentsInFrameRelStructure",
-    "NoticeAssignmentsRelStructure",
-    "NoticesInFrameRelStructure",
-    "NoticesRelStructure",
-    "ObjectRefsRelStructure",
-    "ObservedPassingTimesRelStructure",
-    "OfferedTravelSpecificationsRelStructure",
-    "OnboardStaysRelStructure",
-    "OneToManyRelationshipStructure",
-    "OnwardCallsRelStructure",
-    "OpenTransportModeRefsRelStructure",
-    "OperatingDaysInFrameRelStructure",
-    "OperatingDaysRelStructure",
-    "OperatingPeriodsInFrameRelStructure",
-    "OperatingPeriodsRelStructure",
-    "OperationalContexRefsRelStructure",
-    "OperationalContextsInFrameRelStructure",
-    "OrganisationPartsRelStructure",
-    "OrganisationRefsRelStructure",
-    "OrganisationalUnitRefsRelStructure",
-    "OrganisationalUnitsRelStructure",
-    "OrganisationsInFrameRelStructure",
-    "ParkingAreaRefsRelStructure",
-    "ParkingAreasRelStructure",
-    "ParkingBayRefsRelStructure",
-    "ParkingBaysRelStructure",
-    "ParkingCapacitiesRelStructure",
-    "ParkingChargeBandsRelStructure",
-    "ParkingEntrancesForVehiclesRelStructure",
-    "ParkingPricesRelStructure",
-    "ParkingPropertiesRelStructure",
-    "ParkingRefsRelStructure",
-    "ParkingTariffsInFrameRelStructure",
-    "ParkingsInFrameRelStructure",
-    "PassengerCapacitiesRelStructure",
-    "PassengerCarryingRequirementsRelStructure",
-    "PassengerEquipmentsRelStructure",
-    "PassengerInformationEquipmentsInFrameRelStructure",
-    "PassengerJourneysInFrameRelStructure",
-    "PathJunctionsInFrameRelStructure",
-    "PathJunctionsRelStructure",
-    "PathLinkRefsRelStructure",
-    "PathLinksInFrameRelStructure",
-    "PathLinksInSequenceRelStructure",
-    "PlaceEquipmentsRelStructure",
-    "PlaceRefsRelStructure",
-    "PlacesInSequenceRelStructure",
-    "PointOfInterestClassificationHierarchiesInFrameRelStructure",
-    "PointOfInterestClassificationHierarchyMembersRelStructure",
-    "PointOfInterestClassificationsInFrameRelStructure",
-    "PointOfInterestClassificationsViewsRelStructure",
-    "PointOfInterestEntrancesRelStructure",
-    "PointOfInterestRefsRelStructure",
-    "PointOfInterestSpacesRelStructure",
-    "PointOnLineSectionsRelStructure",
-    "PointProperty",
-    "PointRefsRelStructure",
-    "PointsInJourneyPatternRelStructure",
-    "PointsOfInterestInFrameRelStructure",
-    "PointsOnLinkInFrameRelStructure",
-    "PointsOnLinkRelStructure",
-    "PointsOnRouteRelStructure",
-    "PointsOnSectionRelStructure",
-    "Pos",
-    "PosList",
-    "PreviousCallsRelStructure",
-    "PriceGroupsRelStructure",
-    "PriceRuleStepResultsRelStructure",
-    "PriceUnitRefsRelStructure",
-    "PriceUnitsRelStructure",
-    "PriceableObjectRefsRelStructure",
-    "PricingRulesRelStructure",
-    "PricingServicesRelStructure",
-    "ProjectionsRelStructure",
-    "PropertiesOfDayRelStructure",
-    "PurposesOfGroupingInFrameRelStructure",
-    "QualityStructureFactorPricesRelStructure",
-    "QualityStructureFactorsRelStructure",
-    "QuayRefsRelStructure",
-    "QuaysRelStructure",
-    "RelationshipStructure",
-    "ReliefOpportunitiesInFrameRelStructure",
-    "ReliefOpportunitiesRelStructure",
-    "ReliefPointsInFrameRelStructure",
-    "ResidentialQualificationsRelStructure",
-    "ResponsibilityRoleAssignmentsRelStructure",
-    "ResponsibilitySetsInFrameRelStructure",
-    "ResponsibilitySetsRelStructure",
-    "RetailConsortiumRefsRelStructure",
-    "RetailConsortiumsInFrameRelStructure",
-    "RetailConsortiumsRelStructure",
-    "RetailDeviceRefsRelStructure",
-    "RetailDevicesInFrameRelStructure",
-    "ReversePropertyName",
-    "RoundingStepsRelStructure",
-    "RoundingsRelStructure",
-    "RouteInstructionsRelStructure",
-    "RouteLinksInFrameRelStructure",
-    "RoutePointsInFrameRelStructure",
-    "RouteRefsRelStructure",
-    "RoutesInFrameRelStructure",
-    "RoutesRelStructure",
-    "RoutingConstraintZonesInFrameRelStructure",
-    "SalesOfferPackageElementsInFrameRelStructure",
-    "SalesOfferPackageElementsRelStructure",
-    "SalesOfferPackagePricesRelStructure",
-    "SalesOfferPackageRefsRelStructure",
-    "SalesOfferPackageSubstitutionsInFrameRelStructure",
-    "SalesOfferPackageSubstitutionsRelStructure",
-    "SalesOfferPackagesInFrameRelStructure",
-    "SalesTransactionRefsRelStructure",
-    "SalesTransactionsInFrameRelStructure",
-    "SalesTransactionsRelStructure",
-    "ScheduledStopPointRefsRelStructure",
-    "ScheduledStopPointsInFrameRelStructure",
-    "SchematicMapMembersRelStructure",
-    "SchematicMapsInFrameRelStructure",
-    "SectionsInSequenceRelStructure",
-    "SecurityListingsRelStructure",
-    "SecurityListsRelStructure",
-    "SecuritylistRefsRelStructure",
-    "SeriesConstraintPricesRelStructure",
-    "SeriesConstraintRefsRelStructure",
-    "ServiceAccessRightRefsRelStructure",
-    "ServiceExclusionsInFrameRelStructure",
-    "ServiceFacilitySetsInFrameRelStructure",
-    "ServiceFacilitySetsRelStructure",
-    "ServiceJourneyInterchangesRelStructure",
-    "ServiceLinksInFrameRelStructure",
-    "ServiceLinksInJourneyPatternRelStructure",
-    "ServicePatternsInFrameRelStructure",
-    "SiteEntrancesRelStructure",
-    "SiteFacilitySetsInFrameRelStructure",
-    "SiteFacilitySetsRelStructure",
-    "SitePathLinksRelStructure",
-    "SiteRefsRelStructure",
-    "SpaceValue",
-    "SpatialFeaturesInFrameRelStructure",
-    "SpecialServiceRefsRelStructure",
-    "SpecialServicesRelStructure",
-    "SpecificParameterAssignmentsRelStructure",
-    "StairFlightsRelStructure",
-    "StartTimeAtStopPointsRelStructure",
-    "StopAreaRefsRelStructure",
-    "StopAreasInFrameRelStructure",
-    "StopAssignmentsInFrameRelStructure",
-    "StopPlaceRefsRelStructure",
-    "StopPlaceVehicleEntrancesRelStructure",
-    "StopPlacesInFrameRelStructure",
-    "StopPlacesRelStructure",
-    "StopPointsInJourneyPatternRelStructure",
-    "StrictContainmentAggregationStructure",
-    "SuitabilitiesRelStructure",
-    "SurfaceProperty",
-    "TargetElement",
-    "TargetPassingTimesRelStructure",
-    "TariffRefsRelStructure",
-    "TariffZoneRefsRelStructure",
-    "TariffZonesInFrameRelStructure",
-    "TariffsInFrameRelStructure",
-    "TemporalValidityParametersRelStructure",
-    "ThirdPartyProductRefsRelStructure",
-    "TimeDemandProfileMembersRelStructure",
-    "TimeDemandTypeAssignmentsInFrameRelStructure",
-    "TimeDemandTypeRefsRelStructure",
-    "TimeDemandTypesInFrameRelStructure",
-    "TimeIntervalPricesRelStructure",
-    "TimeIntervalRefsRelStructure",
-    "TimeIntervalsRelStructure",
-    "TimeStructureFactorsRelStructure",
-    "TimeUnitPricesRelStructure",
-    "TimeUnitsRelStructure",
-    "TimebandRefsRelStructure",
-    "TimebandsInFrameRelStructure",
-    "TimebandsRelStructure",
-    "TimetabledPassingTimesRelStructure",
-    "TimingLinkRefsRelStructure",
-    "TimingLinksInFrameRelStructure",
-    "TimingLinksRelStructure",
-    "TimingPatternsInFrameRelStructure",
-    "TimingPointsInFrameRelStructure",
-    "TimingPointsInJourneyPatternRelStructure",
-    "TimingPointsRelStructure",
-    "TopographicPlaceDescriptorsRelStructure",
-    "TopographicPlaceRefsRelStructure",
-    "TopographicPlacesInFrameRelStructure",
-    "TopographicPlacesRelStructure",
-    "TracesRelStructure",
-    "TrafficControlPointsInFrameRelStructure",
-    "TrainComponentLabelAssignmentsRelStructure",
-    "TrainComponentsRelStructure",
-    "TrainNumberRefsRelStructure",
-    "TrainNumbersInFrameRelStructure",
-    "TrainStopAssignmentsRelStructure",
-    "TrainsInCompoundTrainRelStructure",
-    "TransferRefsRelStructure",
-    "TransferRestrictionsInFrameRelStructure",
-    "TransfersInFrameRelStructure",
-    "TransportModesRelStructure",
-    "TransportOperatorsInFrameRelStructure",
-    "TransportOrganisationRefsRelStructure",
-    "TravelDocumentsInFrameRelStructure",
-    "TravelDocumentsRelStructure",
-    "TravelSpecificationJourneyRefsRelStructure",
-    "TravelSpecificationRefsRelStructure",
-    "TravelSpecificationsInFrameRelStructure",
-    "TravelSpecificationsRelStructure",
-    "TurnaroundTimeLimitTimesRelStructure",
-    "TypeOfConcessionsRelStructure",
-    "TypeOfCustomerAccountRefsRelStructure",
-    "TypeOfEntityRefsRelStructure",
-    "TypeOfFacilityRefsRelStructure",
-    "TypeOfFareContractEntryRefsRelStructure",
-    "TypeOfFareContractRefsRelStructure",
-    "TypeOfFareProductRefsRelStructure",
-    "TypeOfFareProductsRelStructure",
-    "TypeOfFrameRefsRelStructure",
-    "TypeOfOrganisationRefsRelStructure",
-    "TypeOfPlaceRefsRelStructure",
-    "TypeOfPointRefsRelStructure",
-    "TypeOfProductCategoryRefsRelStructure",
-    "TypeOfRetailDeviceRefsRelStructure",
-    "TypeOfSecurityListRefsRelStructure",
-    "TypeOfServiceFeatureRefsRelStructure",
-    "TypeOfServiceRefsRelStructure",
-    "TypeOfUsageParametersRelStructure",
-    "TypeOfZoneRefsRelStructure",
-    "TypeOfsalesOfferPackageRefsRelStructure",
-    "TypesOfAccountStatusRelStructure",
-    "TypesOfCustomerAccountRelStructure",
-    "TypesOfEquipmentRelStructure",
-    "TypesOfFacilityRelStructure",
-    "TypesOfFareContractEntryRelStructure",
-    "TypesOfFareContractRelStructure",
-    "TypesOfFrameRelStructure",
-    "TypesOfMachineReadabilitiesRelStructure",
-    "TypesOfRetailDeviceRelStructure",
-    "TypesOfSalesOfferPackageRelStructure",
-    "TypesOfSecurityListRelStructure",
-    "TypesOfServiceInFrameRelStructure",
-    "TypesOfTravelDocumentInFrameRelStructure",
-    "TypesOfTravelDocumentsRelStructure",
-    "TypesOfValueInFrameRelStructure",
-    "TypesOfValueStructure",
-    "UsageParameterPriceRefsRelStructure",
-    "UsageParameterPricesRelStructure",
-    "UsageParameterRefsRelStructure",
-    "UsageParametersInFrameRelStructure",
-    "UsageParametersRelStructure",
-    "UsedInRefsRelStructure",
-    "UserProfileRefsRelStructure",
-    "ValidableElementPricesRelStructure",
-    "ValidableElementsInFrameRelStructure",
-    "ValidableElementsRelStructure",
-    "ValidityConditionRefsRelStructure",
-    "ValidityConditionsRelStructure",
-    "ValidityParameterAssignmentsInFrameRelStructure",
-    "ValidityParameterAssignmentsRelStructure",
-    "ValidityParametersRelStructure",
-    "ValidityRuleParameterRefsRelStructure",
-    "ValidityRuleParametersRelStructure",
-    "ValidityTriggerRefsRelStructure",
-    "ValidityTriggersRelStructure",
-    "Vector",
-    "VehicleEntrancesRelStructure",
-    "VehicleEquipmenProfilesInFrameRelStructure",
-    "VehicleEquipmentsRelStructure",
-    "VehicleJourneyHeadwaysRelStructure",
-    "VehicleJourneyLayoversRelStructure",
-    "VehicleJourneyRefsRelStructure",
-    "VehicleJourneyRunTimesRelStructure",
-    "VehicleJourneyStopAssignmentsInFrameRelStructure",
-    "VehicleJourneyStopAssignmentsRelStructure",
-    "VehicleJourneyWaitTimesRelStructure",
-    "VehicleManoeuvringRequirementsRelStructure",
-    "VehicleModelsInFrameRelStructure",
-    "VehiclePositionAlignmentsRelStructure",
-    "VehicleQuayAlignmentsRelStructure",
-    "VehicleServicePartsRelStructure",
-    "VehicleServicesInFrameRelStructure",
-    "VehicleStoppingPlacesRelStructure",
-    "VehicleStoppingPositionsRelStructure",
-    "VehicleTypePreferencesRelStructure",
-    "VehicleTypeRefsRelStructure",
-    "VehicleTypeStopAssignmentsRelStructure",
-    "VehicleTypesInFrameRelStructure",
-    "VehiclesInFrameRelStructure",
-    "VersionFrameMembersRelStructure",
-    "VersionFrameRefsRelStructure",
-    "VersionsInFrameRelStructure",
-    "VersionsRelStructure",
-    "ViasRelStructure",
-    "WhitelistRefsRelStructure",
-    "WhitelistsInFrameRelStructure",
-    "WhitelistsRelStructure",
-    "ZoneRefsRelStructure",
+    "ZoneView",
     "ZonesInFrameRelStructure",
 ]

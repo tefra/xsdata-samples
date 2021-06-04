@@ -1,0 +1,10 @@
+from dataclasses import dataclass
+from netex.models.sale_discount_right_ref_structure import SaleDiscountRightRefStructure
+
+__NAMESPACE__ = "http://www.netex.org.uk/netex"
+
+
+@dataclass
+class SaleDiscountRightRef(SaleDiscountRightRefStructure):
+    class Meta:
+        namespace = "http://www.netex.org.uk/netex"

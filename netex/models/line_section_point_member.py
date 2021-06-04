@@ -1,0 +1,10 @@
+from dataclasses import dataclass
+from netex.models.point_on_line_section_versioned_child_structure import PointOnLineSectionVersionedChildStructure
+
+__NAMESPACE__ = "http://www.netex.org.uk/netex"
+
+
+@dataclass
+class LineSectionPointMember(PointOnLineSectionVersionedChildStructure):
+    class Meta:
+        namespace = "http://www.netex.org.uk/netex"

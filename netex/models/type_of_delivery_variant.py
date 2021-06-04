@@ -1,0 +1,10 @@
+from dataclasses import dataclass
+from netex.models.type_of_delivery_variant_value_structure import TypeOfDeliveryVariantValueStructure
+
+__NAMESPACE__ = "http://www.netex.org.uk/netex"
+
+
+@dataclass
+class TypeOfDeliveryVariant(TypeOfDeliveryVariantValueStructure):
+    class Meta:
+        namespace = "http://www.netex.org.uk/netex"

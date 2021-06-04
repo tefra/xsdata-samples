@@ -1,0 +1,10 @@
+from dataclasses import dataclass
+from netex.models.heading_sign_ref_structure import HeadingSignRefStructure
+
+__NAMESPACE__ = "http://www.netex.org.uk/netex"
+
+
+@dataclass
+class HeadingSignRef(HeadingSignRefStructure):
+    class Meta:
+        namespace = "http://www.netex.org.uk/netex"

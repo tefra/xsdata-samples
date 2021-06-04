@@ -1,0 +1,56 @@
+from dataclasses import dataclass, field
+from typing import Optional
+from xsdata.models.datatype import XmlDuration
+from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
+from netex.models.duty_parts_rel_structure import DutyPartsRelStructure
+from netex.models.multilingual_string import MultilingualString
+from netex.models.timetable_frame_ref import TimetableFrameRef
+
+__NAMESPACE__ = "http://www.netex.org.uk/netex"
+
+
+@dataclass
+class DutyVersionStructure(DataManagedObjectStructure):
+    class Meta:
+        name = "Duty_VersionStructure"
+
+    description: Optional[MultilingualString] = field(
+        default=None,
+        metadata={
+            "name": "Description",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    finishing_duration: Optional[XmlDuration] = field(
+        default=None,
+        metadata={
+            "name": "FinishingDuration",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    preparation_duration: Optional[XmlDuration] = field(
+        default=None,
+        metadata={
+            "name": "PreparationDuration",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    timetable_frame_ref: Optional[TimetableFrameRef] = field(
+        default=None,
+        metadata={
+            "name": "TimetableFrameRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    duty_parts: Optional[DutyPartsRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "dutyParts",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )

@@ -1,0 +1,22 @@
+from dataclasses import dataclass, field
+from typing import List
+from netex.models.dated_call import DatedCall
+from netex.models.strict_containment_aggregation_structure import StrictContainmentAggregationStructure
+
+__NAMESPACE__ = "http://www.netex.org.uk/netex"
+
+
+@dataclass
+class DatedCallsRelStructure(StrictContainmentAggregationStructure):
+    class Meta:
+        name = "datedCalls_RelStructure"
+
+    dated_call: List[DatedCall] = field(
+        default_factory=list,
+        metadata={
+            "name": "DatedCall",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "min_occurs": 2,
+        }
+    )

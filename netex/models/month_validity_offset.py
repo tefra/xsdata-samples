@@ -1,0 +1,10 @@
+from dataclasses import dataclass
+from netex.models.month_validity_offset_versioned_structure import MonthValidityOffsetVersionedStructure
+
+__NAMESPACE__ = "http://www.netex.org.uk/netex"
+
+
+@dataclass
+class MonthValidityOffset(MonthValidityOffsetVersionedStructure):
+    class Meta:
+        namespace = "http://www.netex.org.uk/netex"

@@ -1,0 +1,22 @@
+from dataclasses import dataclass, field
+from typing import List
+from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
+from netex.models.tariff_zone_ref_2 import TariffZoneRef2
+
+__NAMESPACE__ = "http://www.netex.org.uk/netex"
+
+
+@dataclass
+class TariffZoneRefsRelStructure(OneToManyRelationshipStructure):
+    class Meta:
+        name = "tariffZoneRefs_RelStructure"
+
+    tariff_zone_ref: List[TariffZoneRef2] = field(
+        default_factory=list,
+        metadata={
+            "name": "TariffZoneRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "min_occurs": 1,
+        }
+    )

@@ -1,0 +1,42 @@
+from dataclasses import dataclass, field
+from typing import List
+from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
+from netex.models.fare_zone import FareZone
+from netex.models.tariff_zone_1 import TariffZone1
+from netex.models.tariff_zone_2 import TariffZone2
+
+__NAMESPACE__ = "http://www.netex.org.uk/netex"
+
+
+@dataclass
+class TariffZonesInFrameRelStructure(ContainmentAggregationStructure):
+    class Meta:
+        name = "tariffZonesInFrame_RelStructure"
+
+    fare_zone: List[FareZone] = field(
+        default_factory=list,
+        metadata={
+            "name": "FareZone",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "min_occurs": 1,
+        }
+    )
+    tariff_zone: List[TariffZone2] = field(
+        default_factory=list,
+        metadata={
+            "name": "TariffZone",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "min_occurs": 1,
+        }
+    )
+    netex_org_uk_netex_tariff_zone: List[TariffZone1] = field(
+        default_factory=list,
+        metadata={
+            "name": "TariffZone_",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "min_occurs": 1,
+        }
+    )

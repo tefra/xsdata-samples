@@ -1,0 +1,42 @@
+from dataclasses import dataclass, field
+from typing import List
+from netex.models.offered_travel_specification_ref import OfferedTravelSpecificationRef
+from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
+from netex.models.requested_travel_specification_ref import RequestedTravelSpecificationRef
+from netex.models.travel_specification_ref import TravelSpecificationRef
+
+__NAMESPACE__ = "http://www.netex.org.uk/netex"
+
+
+@dataclass
+class TravelSpecificationRefsRelStructure(OneToManyRelationshipStructure):
+    class Meta:
+        name = "travelSpecificationRefs_RelStructure"
+
+    offered_travel_specification_ref: List[OfferedTravelSpecificationRef] = field(
+        default_factory=list,
+        metadata={
+            "name": "OfferedTravelSpecificationRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "min_occurs": 1,
+        }
+    )
+    requested_travel_specification_ref: List[RequestedTravelSpecificationRef] = field(
+        default_factory=list,
+        metadata={
+            "name": "RequestedTravelSpecificationRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "min_occurs": 1,
+        }
+    )
+    travel_specification_ref: List[TravelSpecificationRef] = field(
+        default_factory=list,
+        metadata={
+            "name": "TravelSpecificationRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "min_occurs": 1,
+        }
+    )

@@ -1,0 +1,10 @@
+from dataclasses import dataclass
+from netex.models.destination_display_version_structure import DestinationDisplayVersionStructure
+
+__NAMESPACE__ = "http://www.netex.org.uk/netex"
+
+
+@dataclass
+class DestinationDisplay(DestinationDisplayVersionStructure):
+    class Meta:
+        namespace = "http://www.netex.org.uk/netex"
