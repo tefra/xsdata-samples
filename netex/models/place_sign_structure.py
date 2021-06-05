@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from netex.models.multilingual_string import MultilingualString
-from netex.models.place_ref_2 import PlaceRef2
+from netex.models.place_ref_1 import PlaceRef1
 from netex.models.sign_equipment_version_structure import SignEquipmentVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -18,7 +18,7 @@ class PlaceSignStructure(SignEquipmentVersionStructure):
             "required": True,
         }
     )
-    place_ref: Optional[PlaceRef2] = field(
+    place_ref: Optional[PlaceRef1] = field(
         default=None,
         metadata={
             "name": "PlaceRef",

@@ -163,12 +163,12 @@ from netex.models.addressable_place_ref import AddressablePlaceRef
 from netex.models.addressable_place_ref_structure import AddressablePlaceRefStructure
 from netex.models.addressable_place_version_structure import AddressablePlaceVersionStructure
 from netex.models.addresses_in_frame_rel_structure import AddressesInFrameRelStructure
-from netex.models.administrative_zone_1 import AdministrativeZone1
+from netex.models.administrative_zone_2 import AdministrativeZone2
 from netex.models.administrative_zone_ref import AdministrativeZoneRef
 from netex.models.administrative_zone_ref_structure import AdministrativeZoneRefStructure
 from netex.models.administrative_zone_refs_rel_structure import AdministrativeZoneRefsRelStructure
 from netex.models.administrative_zone_version_structure import (
-    AdministrativeZone2,
+    AdministrativeZone1,
     AdministrativeZoneVersionStructure,
     TransportAdministrativeZone,
     TransportAdministrativeZoneVersionStructure,
@@ -215,9 +215,9 @@ from netex.models.alternative_texts_rel_structure import (
     AvailabilityCondition,
     AvailabilityConditionVersionStructure,
     DataManagedObjectStructure,
-    DayType2,
-    DayTypeVersionStructure,
     DayType1,
+    DayTypeVersionStructure,
+    DayType2,
     EntityInVersionStructure,
     FareDayType,
     FareDayTypeVersionedStructure,
@@ -231,9 +231,9 @@ from netex.models.alternative_texts_rel_structure import (
     ValidBetweenVersionStructure,
     ValidDuring,
     ValidDuringVersionStructure,
-    ValidityCondition2,
-    ValidityConditionVersionStructure,
     ValidityCondition1,
+    ValidityConditionVersionStructure,
+    ValidityCondition2,
     ValidityRuleParameter,
     ValidityRuleParameterVersionStructure,
     ValidityTrigger,
@@ -391,24 +391,24 @@ from netex.models.catering_service_enumeration import CateringServiceEnumeration
 from netex.models.catering_service_ref import CateringServiceRef
 from netex.models.catering_service_ref_structure import CateringServiceRefStructure
 from netex.models.catering_service_version_structure import CateringServiceVersionStructure
-from netex.models.cell_1 import Cell1
+from netex.models.cell_2 import Cell2
 from netex.models.cell_price_structure import CellPriceStructure
 from netex.models.cell_ref_1 import CellRef1
 from netex.models.cell_ref_2 import CellRef2
 from netex.models.cell_ref_structure import CellRefStructure
 from netex.models.cell_refs_rel_structure import CellRefsRelStructure
 from netex.models.cell_versioned_child_structure import (
-    Cell2,
+    Cell1,
     CellVersionedChildStructure,
     FareStructureFactorVersionStructure,
     FareTableInContext,
-    FareTable2,
+    FareTable1,
     FareTableVersionStructure,
     ParkingChargeBand,
     ParkingChargeBandVersionStructure,
     ParkingPrice,
     ParkingPriceVersionedChildStructure,
-    PriceGroup2,
+    PriceGroup1,
     PriceGroupVersionStructure,
     PriceableObjectVersionStructure,
     TimeStructureFactorVersionStructure,
@@ -1161,7 +1161,7 @@ from netex.models.fare_structure_factor_ref import FareStructureFactorRef
 from netex.models.fare_structure_factor_ref_structure import FareStructureFactorRefStructure
 from netex.models.fare_structure_factors_rel_structure import FareStructureFactorsRelStructure
 from netex.models.fare_structure_type_enumeration import FareStructureTypeEnumeration
-from netex.models.fare_table_1 import FareTable1
+from netex.models.fare_table_2 import FareTable2
 from netex.models.fare_table_column_ref import FareTableColumnRef
 from netex.models.fare_table_column_ref_structure import FareTableColumnRefStructure
 from netex.models.fare_table_column_versioned_child_structure import (
@@ -1591,7 +1591,7 @@ from netex.models.journey_part_refs_rel_structure import JourneyPartRefsRelStruc
 from netex.models.journey_part_version_structure import JourneyPartVersionStructure
 from netex.models.journey_parts_in_frame_rel_structure import JourneyPartsInFrameRelStructure
 from netex.models.journey_parts_rel_structure import JourneyPartsRelStructure
-from netex.models.journey_pattern_1 import JourneyPattern1
+from netex.models.journey_pattern_2 import JourneyPattern2
 from netex.models.journey_pattern_derived_view_structure import JourneyPatternDerivedViewStructure
 from netex.models.journey_pattern_headway import JourneyPatternHeadway
 from netex.models.journey_pattern_headway_ref import JourneyPatternHeadwayRef
@@ -1738,16 +1738,16 @@ from netex.models.link_sequence_version_structure import (
     FareSectionVersionStructure,
     GeneralSection,
     GeneralSectionVersionStructure,
-    JourneyPattern2,
+    JourneyPattern1,
     JourneyPatternVersionStructure,
     LineSection,
     LineSectionVersionStructure,
     LinkSequenceVersionStructure,
     SectionInSequence,
     SectionInSequenceVersionedChildStructure,
-    Section2,
-    SectionVersionStructure,
     Section1,
+    SectionVersionStructure,
+    Section2,
     SectionsInSequenceRelStructure,
 )
 from netex.models.link_type_refs_rel_structure import LinkTypeRefsRelStructure
@@ -2312,7 +2312,7 @@ from netex.models.presentation_structure import PresentationStructure
 from netex.models.previous_call import PreviousCall
 from netex.models.previous_call_versioned_child_structure import PreviousCallVersionedChildStructure
 from netex.models.previous_calls_rel_structure import PreviousCallsRelStructure
-from netex.models.price_group_1 import PriceGroup1
+from netex.models.price_group_2 import PriceGroup2
 from netex.models.price_group_ref import PriceGroupRef
 from netex.models.price_group_ref_structure import PriceGroupRefStructure
 from netex.models.price_rule_step_result_structure import PriceRuleStepResultStructure
@@ -4071,11 +4071,11 @@ __all__ = [
     "AddressablePlaceRefStructure",
     "AddressablePlaceVersionStructure",
     "AddressesInFrameRelStructure",
-    "AdministrativeZone1",
+    "AdministrativeZone2",
     "AdministrativeZoneRef",
     "AdministrativeZoneRefStructure",
     "AdministrativeZoneRefsRelStructure",
-    "AdministrativeZone2",
+    "AdministrativeZone1",
     "AdministrativeZoneVersionStructure",
     "TransportAdministrativeZone",
     "TransportAdministrativeZoneVersionStructure",
@@ -4120,9 +4120,9 @@ __all__ = [
     "AvailabilityCondition",
     "AvailabilityConditionVersionStructure",
     "DataManagedObjectStructure",
-    "DayType2",
-    "DayTypeVersionStructure",
     "DayType1",
+    "DayTypeVersionStructure",
+    "DayType2",
     "EntityInVersionStructure",
     "FareDayType",
     "FareDayTypeVersionedStructure",
@@ -4136,9 +4136,9 @@ __all__ = [
     "ValidBetweenVersionStructure",
     "ValidDuring",
     "ValidDuringVersionStructure",
-    "ValidityCondition2",
-    "ValidityConditionVersionStructure",
     "ValidityCondition1",
+    "ValidityConditionVersionStructure",
+    "ValidityCondition2",
     "ValidityRuleParameter",
     "ValidityRuleParameterVersionStructure",
     "ValidityTrigger",
@@ -4295,23 +4295,23 @@ __all__ = [
     "CateringServiceRef",
     "CateringServiceRefStructure",
     "CateringServiceVersionStructure",
-    "Cell1",
+    "Cell2",
     "CellPriceStructure",
     "CellRef1",
     "CellRef2",
     "CellRefStructure",
     "CellRefsRelStructure",
-    "Cell2",
+    "Cell1",
     "CellVersionedChildStructure",
     "FareStructureFactorVersionStructure",
     "FareTableInContext",
-    "FareTable2",
+    "FareTable1",
     "FareTableVersionStructure",
     "ParkingChargeBand",
     "ParkingChargeBandVersionStructure",
     "ParkingPrice",
     "ParkingPriceVersionedChildStructure",
-    "PriceGroup2",
+    "PriceGroup1",
     "PriceGroupVersionStructure",
     "PriceableObjectVersionStructure",
     "TimeStructureFactorVersionStructure",
@@ -5061,7 +5061,7 @@ __all__ = [
     "FareStructureFactorRefStructure",
     "FareStructureFactorsRelStructure",
     "FareStructureTypeEnumeration",
-    "FareTable1",
+    "FareTable2",
     "FareTableColumnRef",
     "FareTableColumnRefStructure",
     "FareTableColumn",
@@ -5483,7 +5483,7 @@ __all__ = [
     "JourneyPartVersionStructure",
     "JourneyPartsInFrameRelStructure",
     "JourneyPartsRelStructure",
-    "JourneyPattern1",
+    "JourneyPattern2",
     "JourneyPatternDerivedViewStructure",
     "JourneyPatternHeadway",
     "JourneyPatternHeadwayRef",
@@ -5629,16 +5629,16 @@ __all__ = [
     "FareSectionVersionStructure",
     "GeneralSection",
     "GeneralSectionVersionStructure",
-    "JourneyPattern2",
+    "JourneyPattern1",
     "JourneyPatternVersionStructure",
     "LineSection",
     "LineSectionVersionStructure",
     "LinkSequenceVersionStructure",
     "SectionInSequence",
     "SectionInSequenceVersionedChildStructure",
-    "Section2",
-    "SectionVersionStructure",
     "Section1",
+    "SectionVersionStructure",
+    "Section2",
     "SectionsInSequenceRelStructure",
     "LinkTypeRefsRelStructure",
     "LinkVersionStructure",
@@ -6202,7 +6202,7 @@ __all__ = [
     "PreviousCall",
     "PreviousCallVersionedChildStructure",
     "PreviousCallsRelStructure",
-    "PriceGroup1",
+    "PriceGroup2",
     "PriceGroupRef",
     "PriceGroupRefStructure",
     "PriceRuleStepResultStructure",

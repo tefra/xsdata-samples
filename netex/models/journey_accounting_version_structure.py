@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
 from xsdata.models.datatype import XmlDuration
-from netex.models.assignment_version_structure_2 import AssignmentVersionStructure2
+from netex.models.assignment_version_structure_1 import AssignmentVersionStructure1
 from netex.models.journey_accounting_enumeration import JourneyAccountingEnumeration
 from netex.models.organisation_ref_structure import OrganisationRefStructure
 from netex.models.supply_contract_ref import SupplyContractRef
@@ -12,7 +12,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class JourneyAccountingVersionStructure(AssignmentVersionStructure2):
+class JourneyAccountingVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "JourneyAccounting_VersionStructure"
 

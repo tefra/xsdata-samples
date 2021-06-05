@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
 from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.timing_point_2 import TimingPoint2
+from netex.models.timing_point_1 import TimingPoint1
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -11,7 +11,7 @@ class TimingPointsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "timingPointsInFrame_RelStructure"
 
-    timing_point: List[TimingPoint2] = field(
+    timing_point: List[TimingPoint1] = field(
         default_factory=list,
         metadata={
             "name": "TimingPoint",

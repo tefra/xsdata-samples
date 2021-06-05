@@ -1,9 +1,9 @@
 from dataclasses import dataclass
-from netex.models.group_of_entities_ref_structure_2 import GroupOfEntitiesRefStructure2
+from netex.models.group_of_entities_ref_structure_1 import GroupOfEntitiesRefStructure1
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class GroupOfTimebandsRefStructure(GroupOfEntitiesRefStructure2):
+class GroupOfTimebandsRefStructure(GroupOfEntitiesRefStructure1):
     pass

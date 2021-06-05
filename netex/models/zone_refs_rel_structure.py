@@ -63,7 +63,7 @@ class ZoneRefsRelStructure(OneToManyRelationshipStructure):
             "required": True,
         }
     )
-    tariff_zone_ref: Optional[TariffZoneRef2] = field(
+    tariff_zone_ref: Optional[TariffZoneRef1] = field(
         default=None,
         metadata={
             "name": "TariffZoneRef",
@@ -72,7 +72,7 @@ class ZoneRefsRelStructure(OneToManyRelationshipStructure):
             "required": True,
         }
     )
-    netex_org_uk_netex_tariff_zone_ref: Optional[TariffZoneRef1] = field(
+    netex_org_uk_netex_tariff_zone_ref: Optional[TariffZoneRef2] = field(
         default=None,
         metadata={
             "name": "TariffZoneRef_",

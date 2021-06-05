@@ -1,11 +1,11 @@
 from dataclasses import dataclass
-from netex.models.infrastructure_link_version_structure import InfrastructureLinkVersionStructure
+from netex.models.link_version_structure import LinkVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class InfrastructureLink2(InfrastructureLinkVersionStructure):
+class InfrastructureLink2(LinkVersionStructure):
     class Meta:
-        name = "InfrastructureLink"
+        name = "InfrastructureLink_"
         namespace = "http://www.netex.org.uk/netex"

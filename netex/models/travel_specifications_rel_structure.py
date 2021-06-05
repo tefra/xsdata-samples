@@ -57,7 +57,7 @@ class TravelSpecificationsRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    travel_specification: List[TravelSpecification2] = field(
+    travel_specification: List[TravelSpecification1] = field(
         default_factory=list,
         metadata={
             "name": "TravelSpecification",
@@ -65,7 +65,7 @@ class TravelSpecificationsRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_travel_specification: List[TravelSpecification1] = field(
+    netex_org_uk_netex_travel_specification: List[TravelSpecification2] = field(
         default_factory=list,
         metadata={
             "name": "TravelSpecification_",

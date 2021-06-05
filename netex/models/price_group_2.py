@@ -5,7 +5,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class PriceGroup1(GroupOfEntitiesVersionStructure):
+class PriceGroup2(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "PriceGroup_"
         namespace = "http://www.netex.org.uk/netex"

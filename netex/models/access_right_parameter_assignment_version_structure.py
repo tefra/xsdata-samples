@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from netex.models.access_right_in_product_ref import AccessRightInProductRef
 from netex.models.amount_of_price_unit_product_ref import AmountOfPriceUnitProductRef
-from netex.models.assignment_version_structure_2 import AssignmentVersionStructure2
+from netex.models.assignment_version_structure_1 import AssignmentVersionStructure1
 from netex.models.boolean_operator_enumeration import BooleanOperatorEnumeration
 from netex.models.capped_discount_right_ref import CappedDiscountRightRef
 from netex.models.charging_basis_enumeration import ChargingBasisEnumeration
@@ -37,7 +37,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class AccessRightParameterAssignmentVersionStructure(AssignmentVersionStructure2):
+class AccessRightParameterAssignmentVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "AccessRightParameterAssignment_VersionStructure"
 

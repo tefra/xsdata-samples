@@ -15,7 +15,7 @@ class ReliefPointsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "reliefPointsInFrame_RelStructure"
 
-    parking_point: List[ParkingPoint2] = field(
+    parking_point: List[ParkingPoint1] = field(
         default_factory=list,
         metadata={
             "name": "ParkingPoint",
@@ -33,7 +33,7 @@ class ReliefPointsInFrameRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_parking_point: List[ParkingPoint1] = field(
+    netex_org_uk_netex_parking_point: List[ParkingPoint2] = field(
         default_factory=list,
         metadata={
             "name": "ParkingPoint_",
@@ -42,7 +42,7 @@ class ReliefPointsInFrameRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    relief_point: List[ReliefPoint2] = field(
+    relief_point: List[ReliefPoint1] = field(
         default_factory=list,
         metadata={
             "name": "ReliefPoint",
@@ -51,7 +51,7 @@ class ReliefPointsInFrameRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_relief_point: List[ReliefPoint1] = field(
+    netex_org_uk_netex_relief_point: List[ReliefPoint2] = field(
         default_factory=list,
         metadata={
             "name": "ReliefPoint_",

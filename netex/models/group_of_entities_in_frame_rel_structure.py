@@ -4,23 +4,23 @@ from netex.models.access_space import AccessSpace
 from netex.models.access_zone import AccessZone
 from netex.models.address import Address
 from netex.models.addressable_place import AddressablePlace
-from netex.models.administrative_zone_1 import AdministrativeZone1
+from netex.models.administrative_zone_2 import AdministrativeZone2
 from netex.models.administrative_zone_version_structure import (
-    AdministrativeZone2,
+    AdministrativeZone1,
     TransportAdministrativeZone,
 )
 from netex.models.boarding_position import BoardingPosition
 from netex.models.cell_versioned_child_structure import (
     FareTableInContext,
-    FareTable2,
-    PriceGroup2,
+    FareTable1,
+    PriceGroup1,
 )
 from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
 from netex.models.country import Country
 from netex.models.crew_base import CrewBase
 from netex.models.entrance import Entrance
 from netex.models.equipment_place import EquipmentPlace
-from netex.models.fare_table_1 import FareTable1
+from netex.models.fare_table_2 import FareTable2
 from netex.models.fare_zone import FareZone
 from netex.models.flexible_area import FlexibleArea
 from netex.models.flexible_quay import FlexibleQuay
@@ -57,7 +57,7 @@ from netex.models.point_of_interest_entrance import PointOfInterestEntrance
 from netex.models.point_of_interest_space import PointOfInterestSpace
 from netex.models.point_of_interest_vehicle_entrance import PointOfInterestVehicleEntrance
 from netex.models.postal_address import PostalAddress
-from netex.models.price_group_1 import PriceGroup1
+from netex.models.price_group_2 import PriceGroup2
 from netex.models.quay import Quay
 from netex.models.rhythmical_journey_group import RhythmicalJourneyGroup
 from netex.models.road_address import RoadAddress
@@ -107,7 +107,7 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    price_group: List[PriceGroup2] = field(
+    price_group: List[PriceGroup1] = field(
         default_factory=list,
         metadata={
             "name": "PriceGroup",
@@ -116,7 +116,7 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_price_group: List[PriceGroup1] = field(
+    netex_org_uk_netex_price_group: List[PriceGroup2] = field(
         default_factory=list,
         metadata={
             "name": "PriceGroup_",
@@ -143,7 +143,7 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    fare_table: List[FareTable2] = field(
+    fare_table: List[FareTable1] = field(
         default_factory=list,
         metadata={
             "name": "FareTable",
@@ -152,7 +152,7 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_fare_table: List[FareTable1] = field(
+    netex_org_uk_netex_fare_table: List[FareTable2] = field(
         default_factory=list,
         metadata={
             "name": "FareTable_",
@@ -656,7 +656,7 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    administrative_zone: List[AdministrativeZone2] = field(
+    administrative_zone: List[AdministrativeZone1] = field(
         default_factory=list,
         metadata={
             "name": "AdministrativeZone",
@@ -665,7 +665,7 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_administrative_zone: List[AdministrativeZone1] = field(
+    netex_org_uk_netex_administrative_zone: List[AdministrativeZone2] = field(
         default_factory=list,
         metadata={
             "name": "AdministrativeZone_",
@@ -683,7 +683,7 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    tariff_zone: List[TariffZone2] = field(
+    tariff_zone: List[TariffZone1] = field(
         default_factory=list,
         metadata={
             "name": "TariffZone",
@@ -692,7 +692,7 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_tariff_zone: List[TariffZone1] = field(
+    netex_org_uk_netex_tariff_zone: List[TariffZone2] = field(
         default_factory=list,
         metadata={
             "name": "TariffZone_",

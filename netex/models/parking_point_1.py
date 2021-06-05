@@ -1,11 +1,11 @@
 from dataclasses import dataclass
-from netex.models.relief_point_version_structure import ReliefPointVersionStructure
+from netex.models.parking_point_version_structure import ParkingPointVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class ParkingPoint1(ReliefPointVersionStructure):
+class ParkingPoint1(ParkingPointVersionStructure):
     class Meta:
-        name = "ParkingPoint_"
+        name = "ParkingPoint"
         namespace = "http://www.netex.org.uk/netex"

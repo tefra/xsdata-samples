@@ -1,11 +1,11 @@
 from dataclasses import dataclass
-from netex.models.point_in_link_sequence_versioned_child_structure import PointInLinkSequenceVersionedChildStructure
+from netex.models.point_on_section_versioned_child_structure import PointOnSectionVersionedChildStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class PointOnSection1(PointInLinkSequenceVersionedChildStructure):
+class PointOnSection1(PointOnSectionVersionedChildStructure):
     class Meta:
-        name = "PointOnSection_"
+        name = "PointOnSection"
         namespace = "http://www.netex.org.uk/netex"

@@ -4,7 +4,7 @@ from netex.models.access_equipment_ref import AccessEquipmentRef
 from netex.models.access_feature_enumeration import AccessFeatureEnumeration
 from netex.models.access_vehicle_equipment_ref import AccessVehicleEquipmentRef
 from netex.models.activated_equipment_ref import ActivatedEquipmentRef
-from netex.models.assignment_version_structure_2 import AssignmentVersionStructure2
+from netex.models.assignment_version_structure_1 import AssignmentVersionStructure1
 from netex.models.assistance_booking_service_ref import AssistanceBookingServiceRef
 from netex.models.assistance_service_ref import AssistanceServiceRef
 from netex.models.catering_service_ref import CateringServiceRef
@@ -41,7 +41,7 @@ from netex.models.passenger_equipment_ref import PassengerEquipmentRef
 from netex.models.passenger_information_equipment_ref import PassengerInformationEquipmentRef
 from netex.models.passenger_safety_equipment_ref import PassengerSafetyEquipmentRef
 from netex.models.place_lighting_equipment_ref import PlaceLightingEquipmentRef
-from netex.models.place_ref_2 import PlaceRef2
+from netex.models.place_ref_1 import PlaceRef1
 from netex.models.place_sign_ref import PlaceSignRef
 from netex.models.queueing_equipment_ref import QueueingEquipmentRef
 from netex.models.ramp_equipment_ref import RampEquipmentRef
@@ -72,11 +72,11 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class CheckConstraintVersionStructure(AssignmentVersionStructure2):
+class CheckConstraintVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "CheckConstraint_VersionStructure"
 
-    place_ref: Optional[PlaceRef2] = field(
+    place_ref: Optional[PlaceRef1] = field(
         default=None,
         metadata={
             "name": "PlaceRef",

@@ -1,11 +1,11 @@
 from dataclasses import dataclass
-from netex.models.service_access_right_version_structure import ServiceAccessRightVersionStructure
+from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class ServiceAccessRight2(ServiceAccessRightVersionStructure):
+class ServiceAccessRight2(DataManagedObjectStructure):
     class Meta:
-        name = "ServiceAccessRight"
+        name = "ServiceAccessRight_"
         namespace = "http://www.netex.org.uk/netex"

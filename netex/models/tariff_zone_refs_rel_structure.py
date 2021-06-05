@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
 from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
-from netex.models.tariff_zone_ref_2 import TariffZoneRef2
+from netex.models.tariff_zone_ref_1 import TariffZoneRef1
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -11,7 +11,7 @@ class TariffZoneRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "tariffZoneRefs_RelStructure"
 
-    tariff_zone_ref: List[TariffZoneRef2] = field(
+    tariff_zone_ref: List[TariffZoneRef1] = field(
         default_factory=list,
         metadata={
             "name": "TariffZoneRef",

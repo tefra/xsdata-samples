@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDuration
-from netex.models.assignment_version_structure_2 import AssignmentVersionStructure2
+from netex.models.assignment_version_structure_1 import AssignmentVersionStructure1
 from netex.models.check_constraint_ref import CheckConstraintRef
 from netex.models.class_of_use_ref import ClassOfUseRef
 
@@ -9,7 +9,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class CheckConstraintDelayVersionStructure(AssignmentVersionStructure2):
+class CheckConstraintDelayVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "CheckConstraintDelay_VersionStructure"
 

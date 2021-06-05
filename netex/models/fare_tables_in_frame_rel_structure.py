@@ -2,9 +2,9 @@ from dataclasses import dataclass, field
 from typing import List
 from netex.models.cell_versioned_child_structure import (
     FareTableInContext,
-    FareTable2,
+    FareTable1,
 )
-from netex.models.fare_table_1 import FareTable1
+from netex.models.fare_table_2 import FareTable2
 from netex.models.frame_containment_structure import FrameContainmentStructure
 from netex.models.standard_fare_table import StandardFareTable
 
@@ -34,7 +34,7 @@ class FareTablesInFrameRelStructure(FrameContainmentStructure):
             "min_occurs": 1,
         }
     )
-    fare_table: List[FareTable2] = field(
+    fare_table: List[FareTable1] = field(
         default_factory=list,
         metadata={
             "name": "FareTable",
@@ -43,7 +43,7 @@ class FareTablesInFrameRelStructure(FrameContainmentStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_fare_table: List[FareTable1] = field(
+    netex_org_uk_netex_fare_table: List[FareTable2] = field(
         default_factory=list,
         metadata={
             "name": "FareTable_",

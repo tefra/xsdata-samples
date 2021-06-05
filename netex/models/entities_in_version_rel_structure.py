@@ -20,9 +20,9 @@ from netex.models.activation_point_2 import ActivationPoint2
 from netex.models.actual_vehicle_equipment import ActualVehicleEquipment
 from netex.models.address import Address
 from netex.models.addressable_place import AddressablePlace
-from netex.models.administrative_zone_1 import AdministrativeZone1
+from netex.models.administrative_zone_2 import AdministrativeZone2
 from netex.models.administrative_zone_version_structure import (
-    AdministrativeZone2,
+    AdministrativeZone1,
     TransportAdministrativeZone,
 )
 from netex.models.allowed_line_direction import AllowedLineDirection
@@ -30,15 +30,15 @@ from netex.models.alternative_name import AlternativeName
 from netex.models.alternative_texts_rel_structure import (
     AlternativeText,
     AvailabilityCondition,
-    DayType2,
     DayType1,
+    DayType2,
     FareDayType,
     OperatingDay,
     OrganisationDayType,
     SimpleAvailabilityCondition,
     ValidDuring,
-    ValidityCondition2,
     ValidityCondition1,
+    ValidityCondition2,
     ValidityRuleParameter,
     ValidityTrigger,
 )
@@ -60,14 +60,14 @@ from netex.models.capped_discount_right import CappedDiscountRight
 from netex.models.capping_rule import CappingRule
 from netex.models.capping_rule_price import CappingRulePrice
 from netex.models.catering_service import CateringService
-from netex.models.cell_1 import Cell1
+from netex.models.cell_2 import Cell2
 from netex.models.cell_versioned_child_structure import (
-    Cell2,
+    Cell1,
     FareTableInContext,
-    FareTable2,
+    FareTable1,
     ParkingChargeBand,
     ParkingPrice,
-    PriceGroup2,
+    PriceGroup1,
 )
 from netex.models.charging_moment import ChargingMoment
 from netex.models.charging_policy import ChargingPolicy
@@ -176,7 +176,7 @@ from netex.models.fare_structure_element import FareStructureElement
 from netex.models.fare_structure_element_in_sequence import FareStructureElementInSequence
 from netex.models.fare_structure_element_price import FareStructureElementPrice
 from netex.models.fare_structure_factor import FareStructureFactor
-from netex.models.fare_table_1 import FareTable1
+from netex.models.fare_table_2 import FareTable2
 from netex.models.fare_unit import FareUnit
 from netex.models.fare_zone import FareZone
 from netex.models.flexible_area import FlexibleArea
@@ -248,7 +248,7 @@ from netex.models.journey_meeting import JourneyMeeting
 from netex.models.journey_part import JourneyPart
 from netex.models.journey_part_couple import JourneyPartCouple
 from netex.models.journey_part_position import JourneyPartPosition
-from netex.models.journey_pattern_1 import JourneyPattern1
+from netex.models.journey_pattern_2 import JourneyPattern2
 from netex.models.journey_pattern_headway import JourneyPatternHeadway
 from netex.models.journey_pattern_layover import JourneyPatternLayover
 from netex.models.journey_pattern_run_time import JourneyPatternRunTime
@@ -274,7 +274,7 @@ from netex.models.link_projection import LinkProjection
 from netex.models.link_sequence import LinkSequence
 from netex.models.link_sequence_projection import LinkSequenceProjection
 from netex.models.link_sequence_version_structure import (
-    JourneyPattern2,
+    JourneyPattern1,
     SectionInSequence,
 )
 from netex.models.local_service import LocalService
@@ -360,7 +360,7 @@ from netex.models.point_on_section_2 import PointOnSection2
 from netex.models.point_projection import PointProjection
 from netex.models.postal_address import PostalAddress
 from netex.models.preassigned_fare_product import PreassignedFareProduct
-from netex.models.price_group_1 import PriceGroup1
+from netex.models.price_group_2 import PriceGroup2
 from netex.models.price_unit import PriceUnit
 from netex.models.priceable_object_1 import PriceableObject1
 from netex.models.priceable_object_2 import PriceableObject2
@@ -664,7 +664,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    customer_eligibility: List[CustomerEligibility2] = field(
+    customer_eligibility: List[CustomerEligibility1] = field(
         default_factory=list,
         metadata={
             "name": "CustomerEligibility",
@@ -673,7 +673,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_customer_eligibility: List[CustomerEligibility1] = field(
+    netex_org_uk_netex_customer_eligibility: List[CustomerEligibility2] = field(
         default_factory=list,
         metadata={
             "name": "CustomerEligibility_",
@@ -736,7 +736,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    cell: List[Cell2] = field(
+    cell: List[Cell1] = field(
         default_factory=list,
         metadata={
             "name": "Cell",
@@ -745,7 +745,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_cell: List[Cell1] = field(
+    netex_org_uk_netex_cell: List[Cell2] = field(
         default_factory=list,
         metadata={
             "name": "Cell_",
@@ -907,7 +907,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    fare_price: List[FarePrice2] = field(
+    fare_price: List[FarePrice1] = field(
         default_factory=list,
         metadata={
             "name": "FarePrice",
@@ -916,7 +916,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_fare_price: List[FarePrice1] = field(
+    netex_org_uk_netex_fare_price: List[FarePrice2] = field(
         default_factory=list,
         metadata={
             "name": "FarePrice_",
@@ -1267,7 +1267,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    security_listing: List[SecurityListing2] = field(
+    security_listing: List[SecurityListing1] = field(
         default_factory=list,
         metadata={
             "name": "SecurityListing",
@@ -1276,7 +1276,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_security_listing: List[SecurityListing1] = field(
+    netex_org_uk_netex_security_listing: List[SecurityListing2] = field(
         default_factory=list,
         metadata={
             "name": "SecurityListing_",
@@ -1411,7 +1411,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    point_on_section: List[PointOnSection2] = field(
+    point_on_section: List[PointOnSection1] = field(
         default_factory=list,
         metadata={
             "name": "PointOnSection",
@@ -1420,7 +1420,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_point_on_section: List[PointOnSection1] = field(
+    netex_org_uk_netex_point_on_section: List[PointOnSection2] = field(
         default_factory=list,
         metadata={
             "name": "PointOnSection_",
@@ -1573,7 +1573,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    travel_specification: List[TravelSpecification2] = field(
+    travel_specification: List[TravelSpecification1] = field(
         default_factory=list,
         metadata={
             "name": "TravelSpecification",
@@ -1582,7 +1582,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_travel_specification: List[TravelSpecification1] = field(
+    netex_org_uk_netex_travel_specification: List[TravelSpecification2] = field(
         default_factory=list,
         metadata={
             "name": "TravelSpecification_",
@@ -1591,7 +1591,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    fare_contract_entry: List[FareContractEntry2] = field(
+    fare_contract_entry: List[FareContractEntry1] = field(
         default_factory=list,
         metadata={
             "name": "FareContractEntry",
@@ -1600,7 +1600,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_fare_contract_entry: List[FareContractEntry1] = field(
+    netex_org_uk_netex_fare_contract_entry: List[FareContractEntry2] = field(
         default_factory=list,
         metadata={
             "name": "FareContractEntry_",
@@ -1771,7 +1771,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    fare_product: List[FareProduct2] = field(
+    fare_product: List[FareProduct1] = field(
         default_factory=list,
         metadata={
             "name": "FareProduct",
@@ -1780,7 +1780,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_fare_product: List[FareProduct1] = field(
+    netex_org_uk_netex_fare_product: List[FareProduct2] = field(
         default_factory=list,
         metadata={
             "name": "FareProduct_",
@@ -1789,7 +1789,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    service_access_right: List[ServiceAccessRight2] = field(
+    service_access_right: List[ServiceAccessRight1] = field(
         default_factory=list,
         metadata={
             "name": "ServiceAccessRight",
@@ -1798,7 +1798,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_service_access_right: List[ServiceAccessRight1] = field(
+    netex_org_uk_netex_service_access_right: List[ServiceAccessRight2] = field(
         default_factory=list,
         metadata={
             "name": "ServiceAccessRight_",
@@ -1834,7 +1834,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    quality_structure_factor: List[QualityStructureFactor2] = field(
+    quality_structure_factor: List[QualityStructureFactor1] = field(
         default_factory=list,
         metadata={
             "name": "QualityStructureFactor",
@@ -1843,7 +1843,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_quality_structure_factor: List[QualityStructureFactor1] = field(
+    netex_org_uk_netex_quality_structure_factor: List[QualityStructureFactor2] = field(
         default_factory=list,
         metadata={
             "name": "QualityStructureFactor_",
@@ -2131,7 +2131,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    usage_parameter: List[UsageParameter2] = field(
+    usage_parameter: List[UsageParameter1] = field(
         default_factory=list,
         metadata={
             "name": "UsageParameter",
@@ -2140,7 +2140,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_usage_parameter: List[UsageParameter1] = field(
+    netex_org_uk_netex_usage_parameter: List[UsageParameter2] = field(
         default_factory=list,
         metadata={
             "name": "UsageParameter_",
@@ -2275,7 +2275,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    priceable_object: List[PriceableObject2] = field(
+    priceable_object: List[PriceableObject1] = field(
         default_factory=list,
         metadata={
             "name": "PriceableObject",
@@ -2284,7 +2284,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_priceable_object: List[PriceableObject1] = field(
+    netex_org_uk_netex_priceable_object: List[PriceableObject2] = field(
         default_factory=list,
         metadata={
             "name": "PriceableObject_",
@@ -2329,7 +2329,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    pricing_rule: List[PricingRule2] = field(
+    pricing_rule: List[PricingRule1] = field(
         default_factory=list,
         metadata={
             "name": "PricingRule",
@@ -2338,7 +2338,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_pricing_rule: List[PricingRule1] = field(
+    netex_org_uk_netex_pricing_rule: List[PricingRule2] = field(
         default_factory=list,
         metadata={
             "name": "PricingRule_",
@@ -2590,7 +2590,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    service_journey: List[ServiceJourney2] = field(
+    service_journey: List[ServiceJourney1] = field(
         default_factory=list,
         metadata={
             "name": "ServiceJourney",
@@ -2617,7 +2617,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_service_journey: List[ServiceJourney1] = field(
+    netex_org_uk_netex_service_journey: List[ServiceJourney2] = field(
         default_factory=list,
         metadata={
             "name": "ServiceJourney_",
@@ -2635,7 +2635,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    vehicle_journey: List[VehicleJourney2] = field(
+    vehicle_journey: List[VehicleJourney1] = field(
         default_factory=list,
         metadata={
             "name": "VehicleJourney",
@@ -2644,7 +2644,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_vehicle_journey: List[VehicleJourney1] = field(
+    netex_org_uk_netex_vehicle_journey: List[VehicleJourney2] = field(
         default_factory=list,
         metadata={
             "name": "VehicleJourney_",
@@ -2653,7 +2653,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    journey: List[Journey2] = field(
+    journey: List[Journey1] = field(
         default_factory=list,
         metadata={
             "name": "Journey",
@@ -2662,7 +2662,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_journey: List[Journey1] = field(
+    netex_org_uk_netex_journey: List[Journey2] = field(
         default_factory=list,
         metadata={
             "name": "Journey_",
@@ -2707,7 +2707,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    interchange: List[Interchange2] = field(
+    interchange: List[Interchange1] = field(
         default_factory=list,
         metadata={
             "name": "Interchange",
@@ -2743,7 +2743,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_interchange: List[Interchange1] = field(
+    netex_org_uk_netex_interchange: List[Interchange2] = field(
         default_factory=list,
         metadata={
             "name": "Interchange_",
@@ -2914,7 +2914,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    line: List[Line2] = field(
+    line: List[Line1] = field(
         default_factory=list,
         metadata={
             "name": "Line",
@@ -2923,7 +2923,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_line: List[Line1] = field(
+    netex_org_uk_netex_line: List[Line2] = field(
         default_factory=list,
         metadata={
             "name": "Line_",
@@ -3652,7 +3652,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    journey_pattern: List[JourneyPattern2] = field(
+    journey_pattern: List[JourneyPattern1] = field(
         default_factory=list,
         metadata={
             "name": "JourneyPattern",
@@ -3661,7 +3661,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_journey_pattern: List[JourneyPattern1] = field(
+    netex_org_uk_netex_journey_pattern: List[JourneyPattern2] = field(
         default_factory=list,
         metadata={
             "name": "JourneyPattern_",
@@ -3679,7 +3679,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    route: List[Route2] = field(
+    route: List[Route1] = field(
         default_factory=list,
         metadata={
             "name": "Route",
@@ -3688,7 +3688,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_route: List[Route1] = field(
+    netex_org_uk_netex_route: List[Route2] = field(
         default_factory=list,
         metadata={
             "name": "Route_",
@@ -3796,7 +3796,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    organisation_part: List[OrganisationPart2] = field(
+    organisation_part: List[OrganisationPart1] = field(
         default_factory=list,
         metadata={
             "name": "OrganisationPart",
@@ -3805,7 +3805,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_organisation_part: List[OrganisationPart1] = field(
+    netex_org_uk_netex_organisation_part: List[OrganisationPart2] = field(
         default_factory=list,
         metadata={
             "name": "OrganisationPart_",
@@ -3895,7 +3895,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    organisation: List[Organisation2] = field(
+    organisation: List[Organisation1] = field(
         default_factory=list,
         metadata={
             "name": "Organisation",
@@ -3904,7 +3904,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_organisation: List[Organisation1] = field(
+    netex_org_uk_netex_organisation: List[Organisation2] = field(
         default_factory=list,
         metadata={
             "name": "Organisation_",
@@ -3958,7 +3958,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    infrastructure_link: List[InfrastructureLink2] = field(
+    infrastructure_link: List[InfrastructureLink1] = field(
         default_factory=list,
         metadata={
             "name": "InfrastructureLink",
@@ -3994,7 +3994,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_infrastructure_link: List[InfrastructureLink1] = field(
+    netex_org_uk_netex_infrastructure_link: List[InfrastructureLink2] = field(
         default_factory=list,
         metadata={
             "name": "InfrastructureLink_",
@@ -4066,7 +4066,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    parking_point: List[ParkingPoint2] = field(
+    parking_point: List[ParkingPoint1] = field(
         default_factory=list,
         metadata={
             "name": "ParkingPoint",
@@ -4084,7 +4084,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_parking_point: List[ParkingPoint1] = field(
+    netex_org_uk_netex_parking_point: List[ParkingPoint2] = field(
         default_factory=list,
         metadata={
             "name": "ParkingPoint_",
@@ -4093,7 +4093,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    relief_point: List[ReliefPoint2] = field(
+    relief_point: List[ReliefPoint1] = field(
         default_factory=list,
         metadata={
             "name": "ReliefPoint",
@@ -4102,7 +4102,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_relief_point: List[ReliefPoint1] = field(
+    netex_org_uk_netex_relief_point: List[ReliefPoint2] = field(
         default_factory=list,
         metadata={
             "name": "ReliefPoint_",
@@ -4111,7 +4111,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    timing_point: List[TimingPoint2] = field(
+    timing_point: List[TimingPoint1] = field(
         default_factory=list,
         metadata={
             "name": "TimingPoint",
@@ -4120,7 +4120,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_timing_point: List[TimingPoint1] = field(
+    netex_org_uk_netex_timing_point: List[TimingPoint2] = field(
         default_factory=list,
         metadata={
             "name": "TimingPoint_",
@@ -4183,7 +4183,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    activation_point: List[ActivationPoint2] = field(
+    activation_point: List[ActivationPoint1] = field(
         default_factory=list,
         metadata={
             "name": "ActivationPoint",
@@ -4192,7 +4192,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_activation_point: List[ActivationPoint1] = field(
+    netex_org_uk_netex_activation_point: List[ActivationPoint2] = field(
         default_factory=list,
         metadata={
             "name": "ActivationPoint_",
@@ -4525,7 +4525,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    access_right_parameter_assignment: List[AccessRightParameterAssignment2] = field(
+    access_right_parameter_assignment: List[AccessRightParameterAssignment1] = field(
         default_factory=list,
         metadata={
             "name": "AccessRightParameterAssignment",
@@ -4534,7 +4534,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_access_right_parameter_assignment: List[AccessRightParameterAssignment1] = field(
+    netex_org_uk_netex_access_right_parameter_assignment: List[AccessRightParameterAssignment2] = field(
         default_factory=list,
         metadata={
             "name": "AccessRightParameterAssignment_",
@@ -4687,7 +4687,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    notice_assignment: List[NoticeAssignment2] = field(
+    notice_assignment: List[NoticeAssignment1] = field(
         default_factory=list,
         metadata={
             "name": "NoticeAssignment",
@@ -4696,7 +4696,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_notice_assignment: List[NoticeAssignment1] = field(
+    netex_org_uk_netex_notice_assignment: List[NoticeAssignment2] = field(
         default_factory=list,
         metadata={
             "name": "NoticeAssignment_",
@@ -4714,7 +4714,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    assignment: List[Assignment2] = field(
+    assignment: List[Assignment1] = field(
         default_factory=list,
         metadata={
             "name": "Assignment",
@@ -4723,7 +4723,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_assignment: List[Assignment1] = field(
+    netex_org_uk_netex_assignment: List[Assignment2] = field(
         default_factory=list,
         metadata={
             "name": "Assignment_",
@@ -4768,7 +4768,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    day_type: List[DayType2] = field(
+    day_type: List[DayType1] = field(
         default_factory=list,
         metadata={
             "name": "DayType",
@@ -4777,7 +4777,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_day_type: List[DayType1] = field(
+    netex_org_uk_netex_day_type: List[DayType2] = field(
         default_factory=list,
         metadata={
             "name": "DayType_",
@@ -4804,7 +4804,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    price_group: List[PriceGroup2] = field(
+    price_group: List[PriceGroup1] = field(
         default_factory=list,
         metadata={
             "name": "PriceGroup",
@@ -4813,7 +4813,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_price_group: List[PriceGroup1] = field(
+    netex_org_uk_netex_price_group: List[PriceGroup2] = field(
         default_factory=list,
         metadata={
             "name": "PriceGroup_",
@@ -4840,7 +4840,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    fare_table: List[FareTable2] = field(
+    fare_table: List[FareTable1] = field(
         default_factory=list,
         metadata={
             "name": "FareTable",
@@ -4849,7 +4849,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_fare_table: List[FareTable1] = field(
+    netex_org_uk_netex_fare_table: List[FareTable2] = field(
         default_factory=list,
         metadata={
             "name": "FareTable_",
@@ -5353,7 +5353,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    administrative_zone: List[AdministrativeZone2] = field(
+    administrative_zone: List[AdministrativeZone1] = field(
         default_factory=list,
         metadata={
             "name": "AdministrativeZone",
@@ -5362,7 +5362,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_administrative_zone: List[AdministrativeZone1] = field(
+    netex_org_uk_netex_administrative_zone: List[AdministrativeZone2] = field(
         default_factory=list,
         metadata={
             "name": "AdministrativeZone_",
@@ -5380,7 +5380,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    tariff_zone: List[TariffZone2] = field(
+    tariff_zone: List[TariffZone1] = field(
         default_factory=list,
         metadata={
             "name": "TariffZone",
@@ -5389,7 +5389,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_tariff_zone: List[TariffZone1] = field(
+    netex_org_uk_netex_tariff_zone: List[TariffZone2] = field(
         default_factory=list,
         metadata={
             "name": "TariffZone_",
@@ -6127,7 +6127,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    validity_condition: List[ValidityCondition2] = field(
+    validity_condition: List[ValidityCondition1] = field(
         default_factory=list,
         metadata={
             "name": "ValidityCondition",
@@ -6136,7 +6136,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_validity_condition: List[ValidityCondition1] = field(
+    netex_org_uk_netex_validity_condition: List[ValidityCondition2] = field(
         default_factory=list,
         metadata={
             "name": "ValidityCondition_",
@@ -6261,7 +6261,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    travel_specification: List[TravelSpecification2] = field(
+    travel_specification: List[TravelSpecification1] = field(
         default_factory=list,
         metadata={
             "name": "TravelSpecification",
@@ -6269,7 +6269,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_travel_specification: List[TravelSpecification1] = field(
+    netex_org_uk_netex_travel_specification: List[TravelSpecification2] = field(
         default_factory=list,
         metadata={
             "name": "TravelSpecification_",
@@ -6277,7 +6277,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    fare_contract_entry: List[FareContractEntry2] = field(
+    fare_contract_entry: List[FareContractEntry1] = field(
         default_factory=list,
         metadata={
             "name": "FareContractEntry",
@@ -6285,7 +6285,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_fare_contract_entry: List[FareContractEntry1] = field(
+    netex_org_uk_netex_fare_contract_entry: List[FareContractEntry2] = field(
         default_factory=list,
         metadata={
             "name": "FareContractEntry_",
@@ -6437,7 +6437,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    fare_product: List[FareProduct2] = field(
+    fare_product: List[FareProduct1] = field(
         default_factory=list,
         metadata={
             "name": "FareProduct",
@@ -6445,7 +6445,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_fare_product: List[FareProduct1] = field(
+    netex_org_uk_netex_fare_product: List[FareProduct2] = field(
         default_factory=list,
         metadata={
             "name": "FareProduct_",
@@ -6453,7 +6453,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    service_access_right: List[ServiceAccessRight2] = field(
+    service_access_right: List[ServiceAccessRight1] = field(
         default_factory=list,
         metadata={
             "name": "ServiceAccessRight",
@@ -6461,7 +6461,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_service_access_right: List[ServiceAccessRight1] = field(
+    netex_org_uk_netex_service_access_right: List[ServiceAccessRight2] = field(
         default_factory=list,
         metadata={
             "name": "ServiceAccessRight_",
@@ -6493,7 +6493,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    quality_structure_factor: List[QualityStructureFactor2] = field(
+    quality_structure_factor: List[QualityStructureFactor1] = field(
         default_factory=list,
         metadata={
             "name": "QualityStructureFactor",
@@ -6501,7 +6501,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_quality_structure_factor: List[QualityStructureFactor1] = field(
+    netex_org_uk_netex_quality_structure_factor: List[QualityStructureFactor2] = field(
         default_factory=list,
         metadata={
             "name": "QualityStructureFactor_",
@@ -6757,7 +6757,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    usage_parameter: List[UsageParameter2] = field(
+    usage_parameter: List[UsageParameter1] = field(
         default_factory=list,
         metadata={
             "name": "UsageParameter",
@@ -6765,7 +6765,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_usage_parameter: List[UsageParameter1] = field(
+    netex_org_uk_netex_usage_parameter: List[UsageParameter2] = field(
         default_factory=list,
         metadata={
             "name": "UsageParameter_",
@@ -6885,7 +6885,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    priceable_object: List[PriceableObject2] = field(
+    priceable_object: List[PriceableObject1] = field(
         default_factory=list,
         metadata={
             "name": "PriceableObject",
@@ -6893,7 +6893,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_priceable_object: List[PriceableObject1] = field(
+    netex_org_uk_netex_priceable_object: List[PriceableObject2] = field(
         default_factory=list,
         metadata={
             "name": "PriceableObject_",
@@ -6933,7 +6933,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    pricing_rule: List[PricingRule2] = field(
+    pricing_rule: List[PricingRule1] = field(
         default_factory=list,
         metadata={
             "name": "PricingRule",
@@ -6941,7 +6941,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_pricing_rule: List[PricingRule1] = field(
+    netex_org_uk_netex_pricing_rule: List[PricingRule2] = field(
         default_factory=list,
         metadata={
             "name": "PricingRule_",
@@ -7165,7 +7165,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    service_journey: List[ServiceJourney2] = field(
+    service_journey: List[ServiceJourney1] = field(
         default_factory=list,
         metadata={
             "name": "ServiceJourney",
@@ -7189,7 +7189,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_service_journey: List[ServiceJourney1] = field(
+    netex_org_uk_netex_service_journey: List[ServiceJourney2] = field(
         default_factory=list,
         metadata={
             "name": "ServiceJourney_",
@@ -7205,7 +7205,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    vehicle_journey: List[VehicleJourney2] = field(
+    vehicle_journey: List[VehicleJourney1] = field(
         default_factory=list,
         metadata={
             "name": "VehicleJourney",
@@ -7213,7 +7213,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_vehicle_journey: List[VehicleJourney1] = field(
+    netex_org_uk_netex_vehicle_journey: List[VehicleJourney2] = field(
         default_factory=list,
         metadata={
             "name": "VehicleJourney_",
@@ -7221,7 +7221,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    journey: List[Journey2] = field(
+    journey: List[Journey1] = field(
         default_factory=list,
         metadata={
             "name": "Journey",
@@ -7229,7 +7229,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_journey: List[Journey1] = field(
+    netex_org_uk_netex_journey: List[Journey2] = field(
         default_factory=list,
         metadata={
             "name": "Journey_",
@@ -7269,7 +7269,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    interchange: List[Interchange2] = field(
+    interchange: List[Interchange1] = field(
         default_factory=list,
         metadata={
             "name": "Interchange",
@@ -7301,7 +7301,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_interchange: List[Interchange1] = field(
+    netex_org_uk_netex_interchange: List[Interchange2] = field(
         default_factory=list,
         metadata={
             "name": "Interchange_",
@@ -7453,7 +7453,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    line: List[Line2] = field(
+    line: List[Line1] = field(
         default_factory=list,
         metadata={
             "name": "Line",
@@ -7461,7 +7461,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_line: List[Line1] = field(
+    netex_org_uk_netex_line: List[Line2] = field(
         default_factory=list,
         metadata={
             "name": "Line_",
@@ -8109,7 +8109,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    journey_pattern: List[JourneyPattern2] = field(
+    journey_pattern: List[JourneyPattern1] = field(
         default_factory=list,
         metadata={
             "name": "JourneyPattern",
@@ -8117,7 +8117,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_journey_pattern: List[JourneyPattern1] = field(
+    netex_org_uk_netex_journey_pattern: List[JourneyPattern2] = field(
         default_factory=list,
         metadata={
             "name": "JourneyPattern_",
@@ -8133,7 +8133,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    route: List[Route2] = field(
+    route: List[Route1] = field(
         default_factory=list,
         metadata={
             "name": "Route",
@@ -8141,7 +8141,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_route: List[Route1] = field(
+    netex_org_uk_netex_route: List[Route2] = field(
         default_factory=list,
         metadata={
             "name": "Route_",
@@ -8237,7 +8237,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    organisation_part: List[OrganisationPart2] = field(
+    organisation_part: List[OrganisationPart1] = field(
         default_factory=list,
         metadata={
             "name": "OrganisationPart",
@@ -8245,7 +8245,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_organisation_part: List[OrganisationPart1] = field(
+    netex_org_uk_netex_organisation_part: List[OrganisationPart2] = field(
         default_factory=list,
         metadata={
             "name": "OrganisationPart_",
@@ -8325,7 +8325,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    organisation: List[Organisation2] = field(
+    organisation: List[Organisation1] = field(
         default_factory=list,
         metadata={
             "name": "Organisation",
@@ -8333,7 +8333,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_organisation: List[Organisation1] = field(
+    netex_org_uk_netex_organisation: List[Organisation2] = field(
         default_factory=list,
         metadata={
             "name": "Organisation_",
@@ -8381,7 +8381,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    infrastructure_link: List[InfrastructureLink2] = field(
+    infrastructure_link: List[InfrastructureLink1] = field(
         default_factory=list,
         metadata={
             "name": "InfrastructureLink",
@@ -8413,7 +8413,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_infrastructure_link: List[InfrastructureLink1] = field(
+    netex_org_uk_netex_infrastructure_link: List[InfrastructureLink2] = field(
         default_factory=list,
         metadata={
             "name": "InfrastructureLink_",
@@ -8477,7 +8477,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    parking_point: List[ParkingPoint2] = field(
+    parking_point: List[ParkingPoint1] = field(
         default_factory=list,
         metadata={
             "name": "ParkingPoint",
@@ -8493,7 +8493,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_parking_point: List[ParkingPoint1] = field(
+    netex_org_uk_netex_parking_point: List[ParkingPoint2] = field(
         default_factory=list,
         metadata={
             "name": "ParkingPoint_",
@@ -8501,7 +8501,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    relief_point: List[ReliefPoint2] = field(
+    relief_point: List[ReliefPoint1] = field(
         default_factory=list,
         metadata={
             "name": "ReliefPoint",
@@ -8509,7 +8509,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_relief_point: List[ReliefPoint1] = field(
+    netex_org_uk_netex_relief_point: List[ReliefPoint2] = field(
         default_factory=list,
         metadata={
             "name": "ReliefPoint_",
@@ -8517,7 +8517,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    timing_point: List[TimingPoint2] = field(
+    timing_point: List[TimingPoint1] = field(
         default_factory=list,
         metadata={
             "name": "TimingPoint",
@@ -8525,7 +8525,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_timing_point: List[TimingPoint1] = field(
+    netex_org_uk_netex_timing_point: List[TimingPoint2] = field(
         default_factory=list,
         metadata={
             "name": "TimingPoint_",
@@ -8581,7 +8581,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    activation_point: List[ActivationPoint2] = field(
+    activation_point: List[ActivationPoint1] = field(
         default_factory=list,
         metadata={
             "name": "ActivationPoint",
@@ -8589,7 +8589,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_activation_point: List[ActivationPoint1] = field(
+    netex_org_uk_netex_activation_point: List[ActivationPoint2] = field(
         default_factory=list,
         metadata={
             "name": "ActivationPoint_",
@@ -8885,7 +8885,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    access_right_parameter_assignment: List[AccessRightParameterAssignment2] = field(
+    access_right_parameter_assignment: List[AccessRightParameterAssignment1] = field(
         default_factory=list,
         metadata={
             "name": "AccessRightParameterAssignment",
@@ -8893,7 +8893,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_access_right_parameter_assignment: List[AccessRightParameterAssignment1] = field(
+    netex_org_uk_netex_access_right_parameter_assignment: List[AccessRightParameterAssignment2] = field(
         default_factory=list,
         metadata={
             "name": "AccessRightParameterAssignment_",
@@ -9029,7 +9029,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    notice_assignment: List[NoticeAssignment2] = field(
+    notice_assignment: List[NoticeAssignment1] = field(
         default_factory=list,
         metadata={
             "name": "NoticeAssignment",
@@ -9037,7 +9037,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_notice_assignment: List[NoticeAssignment1] = field(
+    netex_org_uk_netex_notice_assignment: List[NoticeAssignment2] = field(
         default_factory=list,
         metadata={
             "name": "NoticeAssignment_",
@@ -9053,7 +9053,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    assignment: List[Assignment2] = field(
+    assignment: List[Assignment1] = field(
         default_factory=list,
         metadata={
             "name": "Assignment",
@@ -9061,7 +9061,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_assignment: List[Assignment1] = field(
+    netex_org_uk_netex_assignment: List[Assignment2] = field(
         default_factory=list,
         metadata={
             "name": "Assignment_",
@@ -9101,7 +9101,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    day_type: List[DayType2] = field(
+    day_type: List[DayType1] = field(
         default_factory=list,
         metadata={
             "name": "DayType",
@@ -9109,7 +9109,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_day_type: List[DayType1] = field(
+    netex_org_uk_netex_day_type: List[DayType2] = field(
         default_factory=list,
         metadata={
             "name": "DayType_",
@@ -9133,7 +9133,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    price_group: List[PriceGroup2] = field(
+    price_group: List[PriceGroup1] = field(
         default_factory=list,
         metadata={
             "name": "PriceGroup",
@@ -9141,7 +9141,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_price_group: List[PriceGroup1] = field(
+    netex_org_uk_netex_price_group: List[PriceGroup2] = field(
         default_factory=list,
         metadata={
             "name": "PriceGroup_",
@@ -9165,7 +9165,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    fare_table: List[FareTable2] = field(
+    fare_table: List[FareTable1] = field(
         default_factory=list,
         metadata={
             "name": "FareTable",
@@ -9173,7 +9173,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_fare_table: List[FareTable1] = field(
+    netex_org_uk_netex_fare_table: List[FareTable2] = field(
         default_factory=list,
         metadata={
             "name": "FareTable_",
@@ -9621,7 +9621,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    administrative_zone: List[AdministrativeZone2] = field(
+    administrative_zone: List[AdministrativeZone1] = field(
         default_factory=list,
         metadata={
             "name": "AdministrativeZone",
@@ -9629,7 +9629,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_administrative_zone: List[AdministrativeZone1] = field(
+    netex_org_uk_netex_administrative_zone: List[AdministrativeZone2] = field(
         default_factory=list,
         metadata={
             "name": "AdministrativeZone_",
@@ -9645,7 +9645,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    tariff_zone: List[TariffZone2] = field(
+    tariff_zone: List[TariffZone1] = field(
         default_factory=list,
         metadata={
             "name": "TariffZone",
@@ -9653,7 +9653,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_tariff_zone: List[TariffZone1] = field(
+    netex_org_uk_netex_tariff_zone: List[TariffZone2] = field(
         default_factory=list,
         metadata={
             "name": "TariffZone_",
@@ -10309,7 +10309,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    validity_condition: List[ValidityCondition2] = field(
+    validity_condition: List[ValidityCondition1] = field(
         default_factory=list,
         metadata={
             "name": "ValidityCondition",
@@ -10317,7 +10317,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_validity_condition: List[ValidityCondition1] = field(
+    netex_org_uk_netex_validity_condition: List[ValidityCondition2] = field(
         default_factory=list,
         metadata={
             "name": "ValidityCondition_",

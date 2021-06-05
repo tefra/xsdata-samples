@@ -1,11 +1,11 @@
 from dataclasses import dataclass
-from netex.models.zone_version_structure import ZoneVersionStructure
+from netex.models.alternative_texts_rel_structure import VersionedChildStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class AdministrativeZone1(ZoneVersionStructure):
+class Cell2(VersionedChildStructure):
     class Meta:
-        name = "AdministrativeZone_"
+        name = "Cell_"
         namespace = "http://www.netex.org.uk/netex"

@@ -1,11 +1,11 @@
 from dataclasses import dataclass
-from netex.models.cell_versioned_child_structure import PriceableObjectVersionStructure
+from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class PriceableObject2(PriceableObjectVersionStructure):
+class PriceableObject2(DataManagedObjectStructure):
     class Meta:
-        name = "PriceableObject"
+        name = "PriceableObject_"
         namespace = "http://www.netex.org.uk/netex"

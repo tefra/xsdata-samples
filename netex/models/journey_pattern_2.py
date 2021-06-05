@@ -5,7 +5,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class JourneyPattern1(LinkSequenceVersionStructure):
+class JourneyPattern2(LinkSequenceVersionStructure):
     class Meta:
         name = "JourneyPattern_"
         namespace = "http://www.netex.org.uk/netex"

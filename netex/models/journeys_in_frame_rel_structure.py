@@ -5,10 +5,10 @@ from netex.models.dated_service_journey import DatedServiceJourney
 from netex.models.dated_vehicle_journey import DatedVehicleJourney
 from netex.models.dead_run import DeadRun
 from netex.models.normal_dated_vehicle_journey import NormalDatedVehicleJourney
-from netex.models.service_journey_2 import ServiceJourney2
+from netex.models.service_journey_1 import ServiceJourney1
 from netex.models.special_service import SpecialService
 from netex.models.template_service_journey import TemplateServiceJourney
-from netex.models.vehicle_journey_2 import VehicleJourney2
+from netex.models.vehicle_journey_1 import VehicleJourney1
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -18,7 +18,7 @@ class JourneysInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "journeysInFrame_RelStructure"
 
-    vehicle_journey: List[VehicleJourney2] = field(
+    vehicle_journey: List[VehicleJourney1] = field(
         default_factory=list,
         metadata={
             "name": "VehicleJourney",
@@ -42,7 +42,7 @@ class JourneysInFrameRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    service_journey: List[ServiceJourney2] = field(
+    service_journey: List[ServiceJourney1] = field(
         default_factory=list,
         metadata={
             "name": "ServiceJourney",

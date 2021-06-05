@@ -1,11 +1,11 @@
 from dataclasses import dataclass
-from netex.models.assignment_version_structure_2 import AssignmentVersionStructure2
+from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class Assignment2(AssignmentVersionStructure2):
+class Assignment2(DataManagedObjectStructure):
     class Meta:
-        name = "Assignment"
+        name = "Assignment_"
         namespace = "http://www.netex.org.uk/netex"

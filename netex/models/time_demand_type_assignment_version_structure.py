@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.assignment_version_structure_2 import AssignmentVersionStructure2
+from netex.models.assignment_version_structure_1 import AssignmentVersionStructure1
 from netex.models.group_of_timing_links_ref import GroupOfTimingLinksRef
 from netex.models.time_demand_type_ref import TimeDemandTypeRef
 from netex.models.timeband_ref import TimebandRef
@@ -9,7 +9,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class TimeDemandTypeAssignmentVersionStructure(AssignmentVersionStructure2):
+class TimeDemandTypeAssignmentVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "TimeDemandTypeAssignment_VersionStructure"
 

@@ -58,7 +58,7 @@ class SimpleFeatureVersionStructure(GroupOfPointsVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    tariff_zone_ref: Optional[TariffZoneRef2] = field(
+    tariff_zone_ref: Optional[TariffZoneRef1] = field(
         default=None,
         metadata={
             "name": "TariffZoneRef",
@@ -66,7 +66,7 @@ class SimpleFeatureVersionStructure(GroupOfPointsVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_tariff_zone_ref: Optional[TariffZoneRef1] = field(
+    netex_org_uk_netex_tariff_zone_ref: Optional[TariffZoneRef2] = field(
         default=None,
         metadata={
             "name": "TariffZoneRef_",

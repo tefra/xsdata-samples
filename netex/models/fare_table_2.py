@@ -5,7 +5,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class FareTable1(GroupOfEntitiesVersionStructure):
+class FareTable2(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "FareTable_"
         namespace = "http://www.netex.org.uk/netex"

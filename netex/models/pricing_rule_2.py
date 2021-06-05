@@ -1,11 +1,11 @@
 from dataclasses import dataclass
-from netex.models.pricing_rule_versioned_structure import PricingRuleVersionedStructure
+from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class PricingRule2(PricingRuleVersionedStructure):
+class PricingRule2(DataManagedObjectStructure):
     class Meta:
-        name = "PricingRule"
+        name = "PricingRule_"
         namespace = "http://www.netex.org.uk/netex"

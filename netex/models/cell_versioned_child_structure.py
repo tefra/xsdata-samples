@@ -55,7 +55,7 @@ from netex.models.fare_structure_element_price import FareStructureElementPrice
 from netex.models.fare_structure_element_price_ref import FareStructureElementPriceRef
 from netex.models.fare_structure_element_ref import FareStructureElementRef
 from netex.models.fare_structure_factor_ref import FareStructureFactorRef
-from netex.models.fare_table_1 import FareTable1
+from netex.models.fare_table_2 import FareTable2
 from netex.models.fare_table_column_ref_structure import FareTableColumnRefStructure
 from netex.models.fare_table_column_versioned_child_structure import FareTableColumnsRelStructure
 from netex.models.fare_table_ref import FareTableRef
@@ -103,7 +103,7 @@ from netex.models.payment_method_enumeration import PaymentMethodEnumeration
 from netex.models.penalty_policy_ref import PenaltyPolicyRef
 from netex.models.point_of_interest_ref import PointOfInterestRef
 from netex.models.preassigned_fare_product_ref import PreassignedFareProductRef
-from netex.models.price_group_1 import PriceGroup1
+from netex.models.price_group_2 import PriceGroup2
 from netex.models.price_group_ref import PriceGroupRef
 from netex.models.priceable_object_ref import PriceableObjectRef
 from netex.models.priceable_object_refs_rel_structure import PriceableObjectRefsRelStructure
@@ -151,7 +151,7 @@ from netex.models.subscribing_ref import SubscribingRef
 from netex.models.supplement_product_ref import SupplementProductRef
 from netex.models.suspending_ref import SuspendingRef
 from netex.models.tariff_ref import TariffRef
-from netex.models.tariff_zone_ref_2 import TariffZoneRef2
+from netex.models.tariff_zone_ref_1 import TariffZoneRef1
 from netex.models.template_service_journey_ref import TemplateServiceJourneyRef
 from netex.models.third_party_product_ref import ThirdPartyProductRef
 from netex.models.time_interval_price import TimeIntervalPrice
@@ -566,7 +566,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "sequential": True,
         }
     )
-    fare_price: List[FarePrice2] = field(
+    fare_price: List[FarePrice1] = field(
         default_factory=list,
         metadata={
             "name": "FarePrice",
@@ -576,7 +576,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "sequential": True,
         }
     )
-    netex_org_uk_netex_fare_price: Optional[FarePrice1] = field(
+    netex_org_uk_netex_fare_price: Optional[FarePrice2] = field(
         default=None,
         metadata={
             "name": "FarePrice_",
@@ -1218,7 +1218,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    tariff_zone_ref: Optional[TariffZoneRef2] = field(
+    tariff_zone_ref: Optional[TariffZoneRef1] = field(
         default=None,
         metadata={
             "name": "TariffZoneRef",
@@ -1425,7 +1425,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
 
 
 @dataclass
-class Cell2(CellVersionedChildStructure):
+class Cell1(CellVersionedChildStructure):
     class Meta:
         name = "Cell"
         namespace = "http://www.netex.org.uk/netex"
@@ -1436,7 +1436,7 @@ class CellsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "cells_RelStructure"
 
-    cell: List[Cell2] = field(
+    cell: List[Cell1] = field(
         default_factory=list,
         metadata={
             "name": "Cell",
@@ -1588,7 +1588,7 @@ class CellsRelStructure(StrictContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    fare_price: List[FarePrice2] = field(
+    fare_price: List[FarePrice1] = field(
         default_factory=list,
         metadata={
             "name": "FarePrice",
@@ -1596,7 +1596,7 @@ class CellsRelStructure(StrictContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_fare_price: List[FarePrice1] = field(
+    netex_org_uk_netex_fare_price: List[FarePrice2] = field(
         default_factory=list,
         metadata={
             "name": "FarePrice_",
@@ -1748,7 +1748,7 @@ class CellsRelStructure(StrictContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    cell_ref: List[CellRef2] = field(
+    cell_ref: List[CellRef1] = field(
         default_factory=list,
         metadata={
             "name": "CellRef",
@@ -1983,7 +1983,7 @@ class FareTableInContext(FareTableVersionStructure):
 
 
 @dataclass
-class FareTable2(FareTableVersionStructure):
+class FareTable1(FareTableVersionStructure):
     class Meta:
         name = "FareTable"
         namespace = "http://www.netex.org.uk/netex"
@@ -2026,7 +2026,7 @@ class FareTablesRelStructure(StrictContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    fare_table: List[FareTable2] = field(
+    fare_table: List[FareTable1] = field(
         default_factory=list,
         metadata={
             "name": "FareTable",
@@ -2034,7 +2034,7 @@ class FareTablesRelStructure(StrictContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_fare_table: List[FareTable1] = field(
+    netex_org_uk_netex_fare_table: List[FareTable2] = field(
         default_factory=list,
         metadata={
             "name": "FareTable_",
@@ -2500,7 +2500,7 @@ class FarePricesRelStructure(StrictContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    cell_ref: List[CellRef2] = field(
+    cell_ref: List[CellRef1] = field(
         default_factory=list,
         metadata={
             "name": "CellRef",
@@ -2508,7 +2508,7 @@ class FarePricesRelStructure(StrictContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_cell_ref: List[CellRef1] = field(
+    netex_org_uk_netex_cell_ref: List[CellRef2] = field(
         default_factory=list,
         metadata={
             "name": "CellRef_",
@@ -2652,7 +2652,7 @@ class FarePricesRelStructure(StrictContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    fare_price: List[FarePrice2] = field(
+    fare_price: List[FarePrice1] = field(
         default_factory=list,
         metadata={
             "name": "FarePrice",
@@ -2660,7 +2660,7 @@ class FarePricesRelStructure(StrictContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_fare_price: List[FarePrice1] = field(
+    netex_org_uk_netex_fare_price: List[FarePrice2] = field(
         default_factory=list,
         metadata={
             "name": "FarePrice_",
@@ -2887,7 +2887,7 @@ class PriceGroupVersionStructure(GroupOfEntitiesVersionStructure):
 
 
 @dataclass
-class PriceGroup2(PriceGroupVersionStructure):
+class PriceGroup1(PriceGroupVersionStructure):
     class Meta:
         name = "PriceGroup"
         namespace = "http://www.netex.org.uk/netex"
@@ -2906,7 +2906,7 @@ class PriceGroupsRelStructure(StrictContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    price_group: List[PriceGroup2] = field(
+    price_group: List[PriceGroup1] = field(
         default_factory=list,
         metadata={
             "name": "PriceGroup",
@@ -2914,7 +2914,7 @@ class PriceGroupsRelStructure(StrictContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_price_group: List[PriceGroup1] = field(
+    netex_org_uk_netex_price_group: List[PriceGroup2] = field(
         default_factory=list,
         metadata={
             "name": "PriceGroup_",

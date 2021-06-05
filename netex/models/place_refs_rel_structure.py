@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
 from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
-from netex.models.place_ref_2 import PlaceRef2
+from netex.models.place_ref_1 import PlaceRef1
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -11,7 +11,7 @@ class PlaceRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "placeRefs_RelStructure"
 
-    place_ref: List[PlaceRef2] = field(
+    place_ref: List[PlaceRef1] = field(
         default_factory=list,
         metadata={
             "name": "PlaceRef",

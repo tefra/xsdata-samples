@@ -22,7 +22,7 @@ class TariffZonesInFrameRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    tariff_zone: List[TariffZone2] = field(
+    tariff_zone: List[TariffZone1] = field(
         default_factory=list,
         metadata={
             "name": "TariffZone",
@@ -31,7 +31,7 @@ class TariffZonesInFrameRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_tariff_zone: List[TariffZone1] = field(
+    netex_org_uk_netex_tariff_zone: List[TariffZone2] = field(
         default_factory=list,
         metadata={
             "name": "TariffZone_",

@@ -22,7 +22,7 @@ class RoutesInFrameRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    route: List[Route2] = field(
+    route: List[Route1] = field(
         default_factory=list,
         metadata={
             "name": "Route",
@@ -31,7 +31,7 @@ class RoutesInFrameRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_route: List[Route1] = field(
+    netex_org_uk_netex_route: List[Route2] = field(
         default_factory=list,
         metadata={
             "name": "Route_",

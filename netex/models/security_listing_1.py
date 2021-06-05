@@ -1,11 +1,11 @@
 from dataclasses import dataclass
-from netex.models.alternative_texts_rel_structure import VersionedChildStructure
+from netex.models.security_listing_versioned_child_structure import SecurityListingVersionedChildStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class SecurityListing1(VersionedChildStructure):
+class SecurityListing1(SecurityListingVersionedChildStructure):
     class Meta:
-        name = "SecurityListing_"
+        name = "SecurityListing"
         namespace = "http://www.netex.org.uk/netex"

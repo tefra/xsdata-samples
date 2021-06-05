@@ -75,7 +75,7 @@ class OrganisationPartsRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    organisation_part: List[OrganisationPart2] = field(
+    organisation_part: List[OrganisationPart1] = field(
         default_factory=list,
         metadata={
             "name": "OrganisationPart",
@@ -83,7 +83,7 @@ class OrganisationPartsRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_organisation_part: List[OrganisationPart1] = field(
+    netex_org_uk_netex_organisation_part: List[OrganisationPart2] = field(
         default_factory=list,
         metadata={
             "name": "OrganisationPart_",

@@ -83,7 +83,7 @@ class DayTypesRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    day_type: List["DayType2"] = field(
+    day_type: List["DayType1"] = field(
         default_factory=list,
         metadata={
             "name": "DayType",
@@ -91,7 +91,7 @@ class DayTypesRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_day_type: List["DayType1"] = field(
+    netex_org_uk_netex_day_type: List["DayType2"] = field(
         default_factory=list,
         metadata={
             "name": "DayType_",
@@ -209,7 +209,7 @@ class ValidityConditionsRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    validity_condition: List["ValidityCondition2"] = field(
+    validity_condition: List["ValidityCondition1"] = field(
         default_factory=list,
         metadata={
             "name": "ValidityCondition",
@@ -217,7 +217,7 @@ class ValidityConditionsRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_validity_condition: List["ValidityCondition1"] = field(
+    netex_org_uk_netex_validity_condition: List["ValidityCondition2"] = field(
         default_factory=list,
         metadata={
             "name": "ValidityCondition_",
@@ -475,7 +475,7 @@ class DayTypeVersionStructure(DataManagedObjectStructure):
 
 
 @dataclass
-class DayType1(DataManagedObjectStructure):
+class DayType2(DataManagedObjectStructure):
     class Meta:
         name = "DayType_"
         namespace = "http://www.netex.org.uk/netex"
@@ -641,7 +641,7 @@ class ValidityConditionVersionStructure(DataManagedObjectStructure):
 
 
 @dataclass
-class ValidityCondition1(DataManagedObjectStructure):
+class ValidityCondition2(DataManagedObjectStructure):
     class Meta:
         name = "ValidityCondition_"
         namespace = "http://www.netex.org.uk/netex"
@@ -654,7 +654,7 @@ class AlternativeText(AlternativeTextVersionedChildStructure):
 
 
 @dataclass
-class DayType2(DayTypeVersionStructure):
+class DayType1(DayTypeVersionStructure):
     class Meta:
         name = "DayType"
         namespace = "http://www.netex.org.uk/netex"
@@ -763,7 +763,7 @@ class ValidBetweenVersionStructure(ValidityConditionVersionStructure):
 
 
 @dataclass
-class ValidityCondition2(ValidityConditionVersionStructure):
+class ValidityCondition1(ValidityConditionVersionStructure):
     class Meta:
         name = "ValidityCondition"
         namespace = "http://www.netex.org.uk/netex"

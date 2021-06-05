@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.assignment_version_structure_2 import AssignmentVersionStructure2
+from netex.models.assignment_version_structure_1 import AssignmentVersionStructure1
 from netex.models.compound_train_ref import CompoundTrainRef
 from netex.models.dead_run_ref import DeadRunRef
 from netex.models.train_ref import TrainRef
@@ -13,7 +13,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class VehicleTypeStopAssignmentVersionStructure(AssignmentVersionStructure2):
+class VehicleTypeStopAssignmentVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "VehicleTypeStopAssignment_VersionStructure"
 

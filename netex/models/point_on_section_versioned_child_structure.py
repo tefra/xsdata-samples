@@ -235,7 +235,7 @@ class PointOnSectionVersionedChildStructure(PointInLinkSequenceVersionedChildStr
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    parking_point: Optional[ParkingPoint2] = field(
+    parking_point: Optional[ParkingPoint1] = field(
         default=None,
         metadata={
             "name": "ParkingPoint",
@@ -251,7 +251,7 @@ class PointOnSectionVersionedChildStructure(PointInLinkSequenceVersionedChildStr
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_parking_point: Optional[ParkingPoint1] = field(
+    netex_org_uk_netex_parking_point: Optional[ParkingPoint2] = field(
         default=None,
         metadata={
             "name": "ParkingPoint_",
@@ -259,7 +259,7 @@ class PointOnSectionVersionedChildStructure(PointInLinkSequenceVersionedChildStr
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    relief_point: Optional[ReliefPoint2] = field(
+    relief_point: Optional[ReliefPoint1] = field(
         default=None,
         metadata={
             "name": "ReliefPoint",
@@ -267,7 +267,7 @@ class PointOnSectionVersionedChildStructure(PointInLinkSequenceVersionedChildStr
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_relief_point: Optional[ReliefPoint1] = field(
+    netex_org_uk_netex_relief_point: Optional[ReliefPoint2] = field(
         default=None,
         metadata={
             "name": "ReliefPoint_",
@@ -275,7 +275,7 @@ class PointOnSectionVersionedChildStructure(PointInLinkSequenceVersionedChildStr
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    timing_point: Optional[TimingPoint2] = field(
+    timing_point: Optional[TimingPoint1] = field(
         default=None,
         metadata={
             "name": "TimingPoint",
@@ -283,7 +283,7 @@ class PointOnSectionVersionedChildStructure(PointInLinkSequenceVersionedChildStr
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_timing_point: Optional[TimingPoint1] = field(
+    netex_org_uk_netex_timing_point: Optional[TimingPoint2] = field(
         default=None,
         metadata={
             "name": "TimingPoint_",
@@ -339,7 +339,7 @@ class PointOnSectionVersionedChildStructure(PointInLinkSequenceVersionedChildStr
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    activation_point: Optional[ActivationPoint2] = field(
+    activation_point: Optional[ActivationPoint1] = field(
         default=None,
         metadata={
             "name": "ActivationPoint",
@@ -347,7 +347,7 @@ class PointOnSectionVersionedChildStructure(PointInLinkSequenceVersionedChildStr
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_activation_point: Optional[ActivationPoint1] = field(
+    netex_org_uk_netex_activation_point: Optional[ActivationPoint2] = field(
         default=None,
         metadata={
             "name": "ActivationPoint_",

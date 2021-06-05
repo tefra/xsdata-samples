@@ -53,7 +53,7 @@ class GeographicalUnitPricesRelStructure(StrictContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    cell_ref: List[CellRef2] = field(
+    cell_ref: List[CellRef1] = field(
         default_factory=list,
         metadata={
             "name": "CellRef",
@@ -61,7 +61,7 @@ class GeographicalUnitPricesRelStructure(StrictContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_cell_ref: List[CellRef1] = field(
+    netex_org_uk_netex_cell_ref: List[CellRef2] = field(
         default_factory=list,
         metadata={
             "name": "CellRef_",

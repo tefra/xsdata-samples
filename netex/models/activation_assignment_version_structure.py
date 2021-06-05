@@ -3,13 +3,13 @@ from typing import Optional
 from netex.models.activated_equipment_ref_structure import ActivatedEquipmentRefStructure
 from netex.models.activation_link_ref_structure import ActivationLinkRefStructure
 from netex.models.activation_point_ref_structure import ActivationPointRefStructure
-from netex.models.assignment_version_structure_2 import AssignmentVersionStructure2
+from netex.models.assignment_version_structure_1 import AssignmentVersionStructure1
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class ActivationAssignmentVersionStructure(AssignmentVersionStructure2):
+class ActivationAssignmentVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "ActivationAssignment_VersionStructure"
 

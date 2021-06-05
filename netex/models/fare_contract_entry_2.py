@@ -1,11 +1,11 @@
 from dataclasses import dataclass
-from netex.models.fare_contract_entry_version_structure import FareContractEntryVersionStructure
+from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class FareContractEntry2(FareContractEntryVersionStructure):
+class FareContractEntry2(DataManagedObjectStructure):
     class Meta:
-        name = "FareContractEntry"
+        name = "FareContractEntry_"
         namespace = "http://www.netex.org.uk/netex"

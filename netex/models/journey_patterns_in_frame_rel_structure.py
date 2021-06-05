@@ -2,9 +2,9 @@ from dataclasses import dataclass, field
 from typing import List
 from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
 from netex.models.dead_run_journey_pattern import DeadRunJourneyPattern
-from netex.models.journey_pattern_1 import JourneyPattern1
+from netex.models.journey_pattern_2 import JourneyPattern2
 from netex.models.journey_pattern_view import JourneyPatternView
-from netex.models.link_sequence_version_structure import JourneyPattern2
+from netex.models.link_sequence_version_structure import JourneyPattern1
 from netex.models.service_journey_pattern import ServiceJourneyPattern
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -31,7 +31,7 @@ class JourneyPatternsInFrameRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    journey_pattern: List[JourneyPattern2] = field(
+    journey_pattern: List[JourneyPattern1] = field(
         default_factory=list,
         metadata={
             "name": "JourneyPattern",
@@ -39,7 +39,7 @@ class JourneyPatternsInFrameRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_journey_pattern: List[JourneyPattern1] = field(
+    netex_org_uk_netex_journey_pattern: List[JourneyPattern2] = field(
         default_factory=list,
         metadata={
             "name": "JourneyPattern_",

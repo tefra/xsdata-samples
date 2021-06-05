@@ -7,7 +7,7 @@ from netex.models.all_operators_ref import AllOperatorsRef
 from netex.models.all_organisations_ref import AllOrganisationsRef
 from netex.models.all_transport_organisations_ref import AllTransportOrganisationsRef
 from netex.models.amount_of_price_unit_product_ref import AmountOfPriceUnitProductRef
-from netex.models.assignment_version_structure_1 import AssignmentVersionStructure1
+from netex.models.assignment_version_structure_2 import AssignmentVersionStructure2
 from netex.models.authority_ref import AuthorityRef
 from netex.models.capped_discount_right_ref import CappedDiscountRightRef
 from netex.models.country_ref import CountryRef
@@ -45,7 +45,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class DistributionAssignmentVersionStructure(AssignmentVersionStructure1):
+class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
     class Meta:
         name = "DistributionAssignment_VersionStructure"
 

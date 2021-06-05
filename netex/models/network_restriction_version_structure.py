@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
-from netex.models.assignment_version_structure_2 import AssignmentVersionStructure2
+from netex.models.assignment_version_structure_1 import AssignmentVersionStructure1
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class NetworkRestrictionVersionStructure(AssignmentVersionStructure2):
+class NetworkRestrictionVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "NetworkRestriction_VersionStructure"
 

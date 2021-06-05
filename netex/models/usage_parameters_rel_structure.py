@@ -552,7 +552,7 @@ class UsageParametersRelStructure(OneToManyRelationshipStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    usage_parameter: List[UsageParameter2] = field(
+    usage_parameter: List[UsageParameter1] = field(
         default_factory=list,
         metadata={
             "name": "UsageParameter",
@@ -560,7 +560,7 @@ class UsageParametersRelStructure(OneToManyRelationshipStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_usage_parameter: List[UsageParameter1] = field(
+    netex_org_uk_netex_usage_parameter: List[UsageParameter2] = field(
         default_factory=list,
         metadata={
             "name": "UsageParameter_",

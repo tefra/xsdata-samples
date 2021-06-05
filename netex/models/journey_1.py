@@ -1,11 +1,11 @@
 from dataclasses import dataclass
-from netex.models.link_sequence_version_structure import LinkSequenceVersionStructure
+from netex.models.journey_version_structure import JourneyVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class Journey1(LinkSequenceVersionStructure):
+class Journey1(JourneyVersionStructure):
     class Meta:
-        name = "Journey_"
+        name = "Journey"
         namespace = "http://www.netex.org.uk/netex"

@@ -42,7 +42,7 @@ class CustomerEligibilitiesRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    customer_eligibility: List[CustomerEligibility2] = field(
+    customer_eligibility: List[CustomerEligibility1] = field(
         default_factory=list,
         metadata={
             "name": "CustomerEligibility",
@@ -51,7 +51,7 @@ class CustomerEligibilitiesRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_customer_eligibility: List[CustomerEligibility1] = field(
+    netex_org_uk_netex_customer_eligibility: List[CustomerEligibility2] = field(
         default_factory=list,
         metadata={
             "name": "CustomerEligibility_",

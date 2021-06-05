@@ -1,18 +1,10 @@
-from dataclasses import dataclass, field
-from typing import Optional
-from netex.models.priceable_object_ref_structure import PriceableObjectRefStructure
+from dataclasses import dataclass
+from netex.models.series_constraint_ref_structure_2 import SeriesConstraintRefStructure2
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class SeriesConstraintRefStructure1(PriceableObjectRefStructure):
+class SeriesConstraintRefStructure1(SeriesConstraintRefStructure2):
     class Meta:
-        name = "SeriesConstraintRefStructure_"
-
-    order: Optional[int] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
+        name = "SeriesConstraintRefStructure"

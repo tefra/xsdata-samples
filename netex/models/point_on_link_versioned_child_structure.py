@@ -293,7 +293,7 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
             "sequential": True,
         }
     )
-    parking_point: List[ParkingPoint2] = field(
+    parking_point: List[ParkingPoint1] = field(
         default_factory=list,
         metadata={
             "name": "ParkingPoint",
@@ -313,7 +313,7 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
             "sequential": True,
         }
     )
-    netex_org_uk_netex_parking_point: List[ParkingPoint1] = field(
+    netex_org_uk_netex_parking_point: List[ParkingPoint2] = field(
         default_factory=list,
         metadata={
             "name": "ParkingPoint_",
@@ -323,7 +323,7 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
             "sequential": True,
         }
     )
-    relief_point: List[ReliefPoint2] = field(
+    relief_point: List[ReliefPoint1] = field(
         default_factory=list,
         metadata={
             "name": "ReliefPoint",
@@ -333,7 +333,7 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
             "sequential": True,
         }
     )
-    netex_org_uk_netex_relief_point: List[ReliefPoint1] = field(
+    netex_org_uk_netex_relief_point: List[ReliefPoint2] = field(
         default_factory=list,
         metadata={
             "name": "ReliefPoint_",
@@ -343,7 +343,7 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
             "sequential": True,
         }
     )
-    timing_point: List[TimingPoint2] = field(
+    timing_point: List[TimingPoint1] = field(
         default_factory=list,
         metadata={
             "name": "TimingPoint",
@@ -353,7 +353,7 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
             "sequential": True,
         }
     )
-    netex_org_uk_netex_timing_point: List[TimingPoint1] = field(
+    netex_org_uk_netex_timing_point: List[TimingPoint2] = field(
         default_factory=list,
         metadata={
             "name": "TimingPoint_",
@@ -423,7 +423,7 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
             "sequential": True,
         }
     )
-    activation_point: List[ActivationPoint2] = field(
+    activation_point: List[ActivationPoint1] = field(
         default_factory=list,
         metadata={
             "name": "ActivationPoint",
@@ -433,7 +433,7 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
             "sequential": True,
         }
     )
-    netex_org_uk_netex_activation_point: List[ActivationPoint1] = field(
+    netex_org_uk_netex_activation_point: List[ActivationPoint2] = field(
         default_factory=list,
         metadata={
             "name": "ActivationPoint_",

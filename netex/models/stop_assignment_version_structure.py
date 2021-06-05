@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.assignment_version_structure_2 import AssignmentVersionStructure2
+from netex.models.assignment_version_structure_1 import AssignmentVersionStructure1
 from netex.models.fare_scheduled_stop_point_ref import FareScheduledStopPointRef
 from netex.models.private_code import PrivateCode
 from netex.models.scheduled_stop_point import ScheduledStopPoint
@@ -10,7 +10,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class StopAssignmentVersionStructure(AssignmentVersionStructure2):
+class StopAssignmentVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "StopAssignment_VersionStructure"
 

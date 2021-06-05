@@ -22,7 +22,7 @@ class LinesInFrameRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    line: List[Line2] = field(
+    line: List[Line1] = field(
         default_factory=list,
         metadata={
             "name": "Line",
@@ -31,7 +31,7 @@ class LinesInFrameRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_line: List[Line1] = field(
+    netex_org_uk_netex_line: List[Line2] = field(
         default_factory=list,
         metadata={
             "name": "Line_",
