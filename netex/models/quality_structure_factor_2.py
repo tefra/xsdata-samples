@@ -1,11 +1,11 @@
 from dataclasses import dataclass
-from netex.models.quality_structure_factor_version_structure import QualityStructureFactorVersionStructure
+from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class QualityStructureFactor2(QualityStructureFactorVersionStructure):
+class QualityStructureFactor2(DataManagedObjectStructure):
     class Meta:
-        name = "QualityStructureFactor"
+        name = "QualityStructureFactor_"
         namespace = "http://www.netex.org.uk/netex"

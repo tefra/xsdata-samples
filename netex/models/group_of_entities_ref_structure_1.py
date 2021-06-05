@@ -1,19 +1,10 @@
-from dataclasses import dataclass, field
-from typing import Optional
-from netex.models.version_of_object_ref_structure import VersionOfObjectRefStructure
+from dataclasses import dataclass
+from netex.models.group_of_entities_ref_structure_2 import GroupOfEntitiesRefStructure2
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class GroupOfEntitiesRefStructure1(VersionOfObjectRefStructure):
+class GroupOfEntitiesRefStructure1(GroupOfEntitiesRefStructure2):
     class Meta:
-        name = "GroupOfEntitiesRefStructure_"
-
-    name_of_member_class: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "nameOfMemberClass",
-            "type": "Attribute",
-        }
-    )
+        name = "GroupOfEntitiesRefStructure"

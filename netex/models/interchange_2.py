@@ -1,11 +1,11 @@
 from dataclasses import dataclass
-from netex.models.interchange_version_structure import InterchangeVersionStructure
+from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class Interchange2(InterchangeVersionStructure):
+class Interchange2(DataManagedObjectStructure):
     class Meta:
-        name = "Interchange"
+        name = "Interchange_"
         namespace = "http://www.netex.org.uk/netex"

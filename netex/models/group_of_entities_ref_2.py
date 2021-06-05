@@ -1,11 +1,11 @@
 from dataclasses import dataclass
-from netex.models.group_of_entities_ref_structure_2 import GroupOfEntitiesRefStructure2
+from netex.models.version_of_object_ref_structure import VersionOfObjectRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class GroupOfEntitiesRef2(GroupOfEntitiesRefStructure2):
+class GroupOfEntitiesRef2(VersionOfObjectRefStructure):
     class Meta:
-        name = "GroupOfEntitiesRef"
+        name = "GroupOfEntitiesRef_"
         namespace = "http://www.netex.org.uk/netex"

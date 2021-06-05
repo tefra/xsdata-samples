@@ -60,7 +60,7 @@ from netex.models.stop_place_entrance_ref import StopPlaceEntranceRef
 from netex.models.stop_place_ref import StopPlaceRef
 from netex.models.stop_place_space_ref import StopPlaceSpaceRef
 from netex.models.stop_place_vehicle_entrance_ref import StopPlaceVehicleEntranceRef
-from netex.models.tariff_zone_ref_2 import TariffZoneRef2
+from netex.models.tariff_zone_ref_1 import TariffZoneRef1
 from netex.models.template_service_journey_ref import TemplateServiceJourneyRef
 from netex.models.topographic_place_ref import TopographicPlaceRef
 from netex.models.train_component_label_assignment_ref import TrainComponentLabelAssignmentRef
@@ -205,7 +205,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequential": True,
         }
     )
-    tariff_zone_ref: List[TariffZoneRef2] = field(
+    tariff_zone_ref: List[TariffZoneRef1] = field(
         default_factory=list,
         metadata={
             "name": "TariffZoneRef",

@@ -1,11 +1,11 @@
 from dataclasses import dataclass
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
+from netex.models.line_version_structure import LineVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class Line1(DataManagedObjectStructure):
+class Line1(LineVersionStructure):
     class Meta:
-        name = "Line_"
+        name = "Line"
         namespace = "http://www.netex.org.uk/netex"

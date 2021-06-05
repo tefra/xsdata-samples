@@ -22,7 +22,7 @@ class PointsOnSectionRelStructure(StrictContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    point_on_section: List[PointOnSection2] = field(
+    point_on_section: List[PointOnSection1] = field(
         default_factory=list,
         metadata={
             "name": "PointOnSection",
@@ -31,7 +31,7 @@ class PointsOnSectionRelStructure(StrictContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_point_on_section: List[PointOnSection1] = field(
+    netex_org_uk_netex_point_on_section: List[PointOnSection2] = field(
         default_factory=list,
         metadata={
             "name": "PointOnSection_",

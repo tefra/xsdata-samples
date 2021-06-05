@@ -379,7 +379,7 @@ class FarePriceVersionedChildStructure(VersionedChildStructure):
             "sequential": True,
         }
     )
-    pricing_rule: List[PricingRule2] = field(
+    pricing_rule: List[PricingRule1] = field(
         default_factory=list,
         metadata={
             "name": "PricingRule",
@@ -389,7 +389,7 @@ class FarePriceVersionedChildStructure(VersionedChildStructure):
             "sequential": True,
         }
     )
-    netex_org_uk_netex_pricing_rule: Optional[PricingRule1] = field(
+    netex_org_uk_netex_pricing_rule: Optional[PricingRule2] = field(
         default=None,
         metadata={
             "name": "PricingRule_",

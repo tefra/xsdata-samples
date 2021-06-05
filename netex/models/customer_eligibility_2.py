@@ -1,11 +1,11 @@
 from dataclasses import dataclass
-from netex.models.customer_eligibility_versioned_child_structure import CustomerEligibilityVersionedChildStructure
+from netex.models.alternative_texts_rel_structure import VersionedChildStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class CustomerEligibility2(CustomerEligibilityVersionedChildStructure):
+class CustomerEligibility2(VersionedChildStructure):
     class Meta:
-        name = "CustomerEligibility"
+        name = "CustomerEligibility_"
         namespace = "http://www.netex.org.uk/netex"

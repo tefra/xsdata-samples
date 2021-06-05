@@ -42,7 +42,7 @@ class CallsRelStructure(StrictContainmentAggregationStructure):
             "min_occurs": 2,
         }
     )
-    call: List[Call2] = field(
+    call: List[Call1] = field(
         default_factory=list,
         metadata={
             "name": "Call",
@@ -51,7 +51,7 @@ class CallsRelStructure(StrictContainmentAggregationStructure):
             "min_occurs": 2,
         }
     )
-    netex_org_uk_netex_call: List[Call1] = field(
+    netex_org_uk_netex_call: List[Call2] = field(
         default_factory=list,
         metadata={
             "name": "Call_",

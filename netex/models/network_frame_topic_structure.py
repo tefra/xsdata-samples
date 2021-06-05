@@ -5,8 +5,8 @@ from netex.models.alternative_texts_rel_structure import (
     AvailabilityCondition,
     SimpleAvailabilityCondition,
     ValidDuring,
-    ValidityCondition2,
     ValidityCondition1,
+    ValidityCondition2,
     ValidityRuleParameter,
     ValidityTrigger,
 )
@@ -237,7 +237,7 @@ class NetworkFrameTopicStructure(TopicStructure):
                 "namespace": "http://www.netex.org.uk/netex",
             }
         )
-        validity_condition: List[ValidityCondition2] = field(
+        validity_condition: List[ValidityCondition1] = field(
             default_factory=list,
             metadata={
                 "name": "ValidityCondition",
@@ -245,7 +245,7 @@ class NetworkFrameTopicStructure(TopicStructure):
                 "namespace": "http://www.netex.org.uk/netex",
             }
         )
-        netex_org_uk_netex_validity_condition: List[ValidityCondition1] = field(
+        netex_org_uk_netex_validity_condition: List[ValidityCondition2] = field(
             default_factory=list,
             metadata={
                 "name": "ValidityCondition_",

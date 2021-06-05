@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
 from netex.models.alternative_texts_rel_structure import (
-    DayType2,
     DayType1,
+    DayType2,
     FareDayType,
     OrganisationDayType,
 )
@@ -34,7 +34,7 @@ class DayTypesInFrameRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    day_type: List[DayType2] = field(
+    day_type: List[DayType1] = field(
         default_factory=list,
         metadata={
             "name": "DayType",
@@ -43,7 +43,7 @@ class DayTypesInFrameRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_day_type: List[DayType1] = field(
+    netex_org_uk_netex_day_type: List[DayType2] = field(
         default_factory=list,
         metadata={
             "name": "DayType_",

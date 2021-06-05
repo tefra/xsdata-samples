@@ -312,7 +312,7 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    cell_ref: List[CellRef2] = field(
+    cell_ref: List[CellRef1] = field(
         default_factory=list,
         metadata={
             "name": "CellRef",
@@ -321,7 +321,7 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
             "max_occurs": 3,
         }
     )
-    netex_org_uk_netex_cell_ref: Optional[CellRef1] = field(
+    netex_org_uk_netex_cell_ref: Optional[CellRef2] = field(
         default=None,
         metadata={
             "name": "CellRef_",

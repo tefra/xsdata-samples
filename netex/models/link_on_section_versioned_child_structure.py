@@ -161,7 +161,7 @@ class LinkOnSectionVersionedChildStructure(LinkInLinkSequenceVersionedChildStruc
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    infrastructure_link: Optional[InfrastructureLink2] = field(
+    infrastructure_link: Optional[InfrastructureLink1] = field(
         default=None,
         metadata={
             "name": "InfrastructureLink",
@@ -193,7 +193,7 @@ class LinkOnSectionVersionedChildStructure(LinkInLinkSequenceVersionedChildStruc
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_infrastructure_link: Optional[InfrastructureLink1] = field(
+    netex_org_uk_netex_infrastructure_link: Optional[InfrastructureLink2] = field(
         default=None,
         metadata={
             "name": "InfrastructureLink_",

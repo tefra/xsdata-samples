@@ -86,7 +86,7 @@ class FareContractEntriesRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    travel_specification: List[TravelSpecification2] = field(
+    travel_specification: List[TravelSpecification1] = field(
         default_factory=list,
         metadata={
             "name": "TravelSpecification",
@@ -94,7 +94,7 @@ class FareContractEntriesRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_travel_specification: List[TravelSpecification1] = field(
+    netex_org_uk_netex_travel_specification: List[TravelSpecification2] = field(
         default_factory=list,
         metadata={
             "name": "TravelSpecification_",
@@ -102,7 +102,7 @@ class FareContractEntriesRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    fare_contract_entry: List[FareContractEntry2] = field(
+    fare_contract_entry: List[FareContractEntry1] = field(
         default_factory=list,
         metadata={
             "name": "FareContractEntry",
@@ -110,7 +110,7 @@ class FareContractEntriesRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_fare_contract_entry: List[FareContractEntry1] = field(
+    netex_org_uk_netex_fare_contract_entry: List[FareContractEntry2] = field(
         default_factory=list,
         metadata={
             "name": "FareContractEntry_",

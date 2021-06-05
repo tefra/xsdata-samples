@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.assignment_version_structure_2 import AssignmentVersionStructure2
+from netex.models.assignment_version_structure_1 import AssignmentVersionStructure1
 from netex.models.common_section_ref import CommonSectionRef
 from netex.models.dated_special_service_ref import DatedSpecialServiceRef
 from netex.models.dated_vehicle_journey_ref import DatedVehicleJourneyRef
@@ -34,7 +34,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class NoticeAssignmentVersionStructure(AssignmentVersionStructure2):
+class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "NoticeAssignment_VersionStructure"
 

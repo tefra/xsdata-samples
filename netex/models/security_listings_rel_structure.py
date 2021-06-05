@@ -62,7 +62,7 @@ class SecurityListingsRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    security_listing: List[SecurityListing2] = field(
+    security_listing: List[SecurityListing1] = field(
         default_factory=list,
         metadata={
             "name": "SecurityListing",
@@ -71,7 +71,7 @@ class SecurityListingsRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_security_listing: List[SecurityListing1] = field(
+    netex_org_uk_netex_security_listing: List[SecurityListing2] = field(
         default_factory=list,
         metadata={
             "name": "SecurityListing_",

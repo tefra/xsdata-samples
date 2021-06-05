@@ -769,7 +769,7 @@ class ComplexFeatureMemberVersionedChildStructure(AbstractGroupMemberVersionedCh
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    cell_ref: Optional[CellRef2] = field(
+    cell_ref: Optional[CellRef1] = field(
         default=None,
         metadata={
             "name": "CellRef",
@@ -777,7 +777,7 @@ class ComplexFeatureMemberVersionedChildStructure(AbstractGroupMemberVersionedCh
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_cell_ref: Optional[CellRef1] = field(
+    netex_org_uk_netex_cell_ref: Optional[CellRef2] = field(
         default=None,
         metadata={
             "name": "CellRef_",
@@ -2889,7 +2889,7 @@ class ComplexFeatureMemberVersionedChildStructure(AbstractGroupMemberVersionedCh
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    place_ref: Optional[PlaceRef1] = field(
+    place_ref: Optional[PlaceRef2] = field(
         default=None,
         metadata={
             "name": "PlaceRef_",
@@ -3385,7 +3385,7 @@ class ComplexFeatureMemberVersionedChildStructure(AbstractGroupMemberVersionedCh
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    group_of_entities_ref: Optional[GroupOfEntitiesRef2] = field(
+    group_of_entities_ref: Optional[GroupOfEntitiesRef1] = field(
         default=None,
         metadata={
             "name": "GroupOfEntitiesRef",
@@ -3593,7 +3593,7 @@ class ComplexFeatureMemberVersionedChildStructure(AbstractGroupMemberVersionedCh
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_place_ref: Optional[PlaceRef2] = field(
+    netex_org_uk_netex_place_ref: Optional[PlaceRef1] = field(
         default=None,
         metadata={
             "name": "PlaceRef",
@@ -3601,7 +3601,7 @@ class ComplexFeatureMemberVersionedChildStructure(AbstractGroupMemberVersionedCh
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    group_of_points_ref: Optional[GroupOfPointsRef2] = field(
+    group_of_points_ref: Optional[GroupOfPointsRef1] = field(
         default=None,
         metadata={
             "name": "GroupOfPointsRef",
@@ -3649,7 +3649,7 @@ class ComplexFeatureMemberVersionedChildStructure(AbstractGroupMemberVersionedCh
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    tariff_zone_ref: Optional[TariffZoneRef2] = field(
+    tariff_zone_ref: Optional[TariffZoneRef1] = field(
         default=None,
         metadata={
             "name": "TariffZoneRef",
@@ -3657,7 +3657,7 @@ class ComplexFeatureMemberVersionedChildStructure(AbstractGroupMemberVersionedCh
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_tariff_zone_ref: Optional[TariffZoneRef1] = field(
+    netex_org_uk_netex_tariff_zone_ref: Optional[TariffZoneRef2] = field(
         default=None,
         metadata={
             "name": "TariffZoneRef_",
@@ -3673,7 +3673,7 @@ class ComplexFeatureMemberVersionedChildStructure(AbstractGroupMemberVersionedCh
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_group_of_points_ref: Optional[GroupOfPointsRef1] = field(
+    netex_org_uk_netex_group_of_points_ref: Optional[GroupOfPointsRef2] = field(
         default=None,
         metadata={
             "name": "GroupOfPointsRef_",
@@ -3713,7 +3713,7 @@ class ComplexFeatureMemberVersionedChildStructure(AbstractGroupMemberVersionedCh
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_group_of_entities_ref: Optional[GroupOfEntitiesRef1] = field(
+    netex_org_uk_netex_group_of_entities_ref: Optional[GroupOfEntitiesRef2] = field(
         default=None,
         metadata={
             "name": "GroupOfEntitiesRef_",

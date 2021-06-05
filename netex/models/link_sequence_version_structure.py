@@ -294,7 +294,7 @@ class SectionVersionStructure(LinkSequenceVersionStructure):
 
 
 @dataclass
-class Section1(LinkSequenceVersionStructure):
+class Section2(LinkSequenceVersionStructure):
     class Meta:
         name = "Section_"
         namespace = "http://www.netex.org.uk/netex"
@@ -346,7 +346,7 @@ class GeneralSectionVersionStructure(SectionVersionStructure):
 
 
 @dataclass
-class JourneyPattern2(JourneyPatternVersionStructure):
+class JourneyPattern1(JourneyPatternVersionStructure):
     class Meta:
         name = "JourneyPattern"
         namespace = "http://www.netex.org.uk/netex"
@@ -444,7 +444,7 @@ class LineSectionVersionStructure(SectionVersionStructure):
 
 
 @dataclass
-class Section2(SectionVersionStructure):
+class Section1(SectionVersionStructure):
     class Meta:
         name = "Section"
         namespace = "http://www.netex.org.uk/netex"
@@ -499,7 +499,7 @@ class FareSectionVersionStructure(GeneralSectionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    journey_pattern: Optional[JourneyPattern2] = field(
+    journey_pattern: Optional[JourneyPattern1] = field(
         default=None,
         metadata={
             "name": "JourneyPattern",
@@ -646,7 +646,7 @@ class SectionInSequenceVersionedChildStructure(LinkInLinkSequenceVersionedChildS
             "sequential": True,
         }
     )
-    section: List[Section2] = field(
+    section: List[Section1] = field(
         default_factory=list,
         metadata={
             "name": "Section",
@@ -656,7 +656,7 @@ class SectionInSequenceVersionedChildStructure(LinkInLinkSequenceVersionedChildS
             "sequential": True,
         }
     )
-    netex_org_uk_netex_section: Optional[Section1] = field(
+    netex_org_uk_netex_section: Optional[Section2] = field(
         default=None,
         metadata={
             "name": "Section_",

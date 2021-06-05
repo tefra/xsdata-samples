@@ -24379,7 +24379,7 @@ class NonWeatherRelatedRoadConditions(RoadConditions):
 
 
 @dataclass
-class ParkingSpace2(ParkingSpaceBasics):
+class ParkingSpace1(ParkingSpaceBasics):
     """A single parking space.
 
     It is possible to define the same parking space more than once with
@@ -24569,7 +24569,7 @@ class WeatherRelatedRoadConditions(RoadConditions):
 
 
 @dataclass
-class GroupOfParkingSpaces1:
+class GroupOfParkingSpaces2:
     class Meta:
         name = "_GroupOfParkingSpaces"
 
@@ -24593,7 +24593,7 @@ class GroupOfParkingSpaces1:
 
 
 @dataclass
-class ParkingSpace1:
+class ParkingSpace2:
     class Meta:
         name = "_ParkingSpace"
 
@@ -24904,7 +24904,7 @@ class ParkingRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         }
     )
-    parking_space: List[ParkingSpace1] = field(
+    parking_space: List[ParkingSpace2] = field(
         default_factory=list,
         metadata={
             "name": "parkingSpace",
@@ -24912,7 +24912,7 @@ class ParkingRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         }
     )
-    group_of_parking_spaces: List[GroupOfParkingSpaces1] = field(
+    group_of_parking_spaces: List[GroupOfParkingSpaces2] = field(
         default_factory=list,
         metadata={
             "name": "groupOfParkingSpaces",
@@ -25022,7 +25022,7 @@ class GroupOfParkingSpacesParkingSpaceIndexParkingSpace:
     class Meta:
         name = "_GroupOfParkingSpacesParkingSpaceIndexParkingSpace"
 
-    parking_space: Optional[ParkingSpace2] = field(
+    parking_space: Optional[ParkingSpace1] = field(
         default=None,
         metadata={
             "name": "parkingSpace",
@@ -25042,7 +25042,7 @@ class GroupOfParkingSpacesParkingSpaceIndexParkingSpace:
 
 
 @dataclass
-class GroupOfParkingSpaces2(ParkingSpaceBasics):
+class GroupOfParkingSpaces1(ParkingSpaceBasics):
     """A group of parking spaces.
 
     All information provided has to be identical for all places in this

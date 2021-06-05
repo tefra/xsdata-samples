@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from netex.models.all_modes_enumeration import AllModesEnumeration
-from netex.models.assignment_version_structure_2 import AssignmentVersionStructure2
+from netex.models.assignment_version_structure_1 import AssignmentVersionStructure1
 from netex.models.dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
 from netex.models.direction_ref import DirectionRef
 from netex.models.display_assignment_type_enumeration import DisplayAssignmentTypeEnumeration
@@ -18,7 +18,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class DisplayAssignmentVersionStructure(AssignmentVersionStructure2):
+class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "DisplayAssignment_VersionStructure"
 

@@ -102,7 +102,7 @@ class OrganisationsInFrameRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    organisation: List[Organisation2] = field(
+    organisation: List[Organisation1] = field(
         default_factory=list,
         metadata={
             "name": "Organisation",
@@ -111,7 +111,7 @@ class OrganisationsInFrameRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_organisation: List[Organisation1] = field(
+    netex_org_uk_netex_organisation: List[Organisation2] = field(
         default_factory=list,
         metadata={
             "name": "Organisation_",

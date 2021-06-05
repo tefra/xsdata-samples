@@ -20,7 +20,7 @@ from netex.models.parking_entrance_ref import ParkingEntranceRef
 from netex.models.parking_passenger_entrance_ref import ParkingPassengerEntranceRef
 from netex.models.parking_ref import ParkingRef
 from netex.models.path_junction_ref import PathJunctionRef
-from netex.models.place_ref_1 import PlaceRef1
+from netex.models.place_ref_2 import PlaceRef2
 from netex.models.point_of_interest_entrance_ref import PointOfInterestEntranceRef
 from netex.models.point_of_interest_ref import PointOfInterestRef
 from netex.models.point_of_interest_space_ref import PointOfInterestSpaceRef
@@ -360,7 +360,7 @@ class NetworkFilterByValueStructure(ObjectFilterByValueStructure):
                 "namespace": "http://www.netex.org.uk/netex",
             }
         )
-        place_ref: List[PlaceRef1] = field(
+        place_ref: List[PlaceRef2] = field(
             default_factory=list,
             metadata={
                 "name": "PlaceRef_",

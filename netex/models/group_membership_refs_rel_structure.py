@@ -3,7 +3,7 @@ from typing import List
 from netex.models.access_zone_ref import AccessZoneRef
 from netex.models.administrative_zone_ref import AdministrativeZoneRef
 from netex.models.fare_zone_ref import FareZoneRef
-from netex.models.group_of_points_ref_1 import GroupOfPointsRef1
+from netex.models.group_of_points_ref_2 import GroupOfPointsRef2
 from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
 from netex.models.stop_area_ref import StopAreaRef
 from netex.models.tariff_zone_ref_1 import TariffZoneRef1
@@ -64,7 +64,7 @@ class GroupMembershipRefsRelStructure(OneToManyRelationshipStructure):
             "min_occurs": 1,
         }
     )
-    tariff_zone_ref: List[TariffZoneRef2] = field(
+    tariff_zone_ref: List[TariffZoneRef1] = field(
         default_factory=list,
         metadata={
             "name": "TariffZoneRef",
@@ -73,7 +73,7 @@ class GroupMembershipRefsRelStructure(OneToManyRelationshipStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_tariff_zone_ref: List[TariffZoneRef1] = field(
+    netex_org_uk_netex_tariff_zone_ref: List[TariffZoneRef2] = field(
         default_factory=list,
         metadata={
             "name": "TariffZoneRef_",
@@ -91,7 +91,7 @@ class GroupMembershipRefsRelStructure(OneToManyRelationshipStructure):
             "min_occurs": 1,
         }
     )
-    group_of_points_ref: List[GroupOfPointsRef1] = field(
+    group_of_points_ref: List[GroupOfPointsRef2] = field(
         default_factory=list,
         metadata={
             "name": "GroupOfPointsRef_",

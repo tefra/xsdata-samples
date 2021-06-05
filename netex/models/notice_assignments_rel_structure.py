@@ -22,7 +22,7 @@ class NoticeAssignmentsRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    notice_assignment: List[NoticeAssignment2] = field(
+    notice_assignment: List[NoticeAssignment1] = field(
         default_factory=list,
         metadata={
             "name": "NoticeAssignment",
@@ -30,7 +30,7 @@ class NoticeAssignmentsRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_notice_assignment: List[NoticeAssignment1] = field(
+    netex_org_uk_netex_notice_assignment: List[NoticeAssignment2] = field(
         default_factory=list,
         metadata={
             "name": "NoticeAssignment_",

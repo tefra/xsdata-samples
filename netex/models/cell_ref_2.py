@@ -1,11 +1,11 @@
 from dataclasses import dataclass
-from netex.models.cell_ref_structure import CellRefStructure
+from netex.models.version_of_object_ref_structure import VersionOfObjectRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class CellRef2(CellRefStructure):
+class CellRef2(VersionOfObjectRefStructure):
     class Meta:
-        name = "CellRef"
+        name = "CellRef_"
         namespace = "http://www.netex.org.uk/netex"

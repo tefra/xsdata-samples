@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.assignment_version_structure_2 import AssignmentVersionStructure2
+from netex.models.assignment_version_structure_1 import AssignmentVersionStructure1
 from netex.models.sales_offer_package_ref import SalesOfferPackageRef
 from netex.models.sales_offer_package_ref_structure import SalesOfferPackageRefStructure
 
@@ -8,7 +8,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class SalesOfferPackageSubstitutionVersionStructure(AssignmentVersionStructure2):
+class SalesOfferPackageSubstitutionVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "SalesOfferPackageSubstitution_VersionStructure"
 

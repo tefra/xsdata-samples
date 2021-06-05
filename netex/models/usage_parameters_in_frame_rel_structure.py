@@ -302,7 +302,7 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
             "min_occurs": 1,
         }
     )
-    usage_parameter: List[UsageParameter2] = field(
+    usage_parameter: List[UsageParameter1] = field(
         default_factory=list,
         metadata={
             "name": "UsageParameter",
@@ -311,7 +311,7 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_usage_parameter: List[UsageParameter1] = field(
+    netex_org_uk_netex_usage_parameter: List[UsageParameter2] = field(
         default_factory=list,
         metadata={
             "name": "UsageParameter_",

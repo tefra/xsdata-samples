@@ -22,7 +22,7 @@ class ActivationPointsInFrameRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    activation_point: List[ActivationPoint2] = field(
+    activation_point: List[ActivationPoint1] = field(
         default_factory=list,
         metadata={
             "name": "ActivationPoint",
@@ -31,7 +31,7 @@ class ActivationPointsInFrameRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_activation_point: List[ActivationPoint1] = field(
+    netex_org_uk_netex_activation_point: List[ActivationPoint2] = field(
         default_factory=list,
         metadata={
             "name": "ActivationPoint_",

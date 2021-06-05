@@ -4,9 +4,9 @@ from netex.models.access_space import AccessSpace
 from netex.models.access_zone import AccessZone
 from netex.models.address import Address
 from netex.models.addressable_place import AddressablePlace
-from netex.models.administrative_zone_1 import AdministrativeZone1
+from netex.models.administrative_zone_2 import AdministrativeZone2
 from netex.models.administrative_zone_version_structure import (
-    AdministrativeZone2,
+    AdministrativeZone1,
     TransportAdministrativeZone,
 )
 from netex.models.boarding_position import BoardingPosition
@@ -459,7 +459,7 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    administrative_zone: List[AdministrativeZone2] = field(
+    administrative_zone: List[AdministrativeZone1] = field(
         default_factory=list,
         metadata={
             "name": "AdministrativeZone",
@@ -468,7 +468,7 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_administrative_zone: List[AdministrativeZone1] = field(
+    netex_org_uk_netex_administrative_zone: List[AdministrativeZone2] = field(
         default_factory=list,
         metadata={
             "name": "AdministrativeZone_",
@@ -486,7 +486,7 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    tariff_zone: List[TariffZone2] = field(
+    tariff_zone: List[TariffZone1] = field(
         default_factory=list,
         metadata={
             "name": "TariffZone",
@@ -495,7 +495,7 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_tariff_zone: List[TariffZone1] = field(
+    netex_org_uk_netex_tariff_zone: List[TariffZone2] = field(
         default_factory=list,
         metadata={
             "name": "TariffZone_",

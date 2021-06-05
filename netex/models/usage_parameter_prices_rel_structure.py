@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.cell_ref_2 import CellRef2
+from netex.models.cell_ref_1 import CellRef1
 from netex.models.strict_containment_aggregation_structure import StrictContainmentAggregationStructure
 from netex.models.usage_parameter_price import UsageParameterPrice
 from netex.models.usage_parameter_price_ref import UsageParameterPriceRef
@@ -29,7 +29,7 @@ class UsageParameterPricesRelStructure(StrictContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    cell_ref: List[CellRef2] = field(
+    cell_ref: List[CellRef1] = field(
         default_factory=list,
         metadata={
             "name": "CellRef",

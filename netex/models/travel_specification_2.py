@@ -1,11 +1,11 @@
 from dataclasses import dataclass
-from netex.models.travel_specification_version_structure import TravelSpecificationVersionStructure
+from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class TravelSpecification2(TravelSpecificationVersionStructure):
+class TravelSpecification2(DataManagedObjectStructure):
     class Meta:
-        name = "TravelSpecification"
+        name = "TravelSpecification_"
         namespace = "http://www.netex.org.uk/netex"

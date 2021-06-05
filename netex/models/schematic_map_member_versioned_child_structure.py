@@ -834,7 +834,7 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
             "sequential": True,
         }
     )
-    cell_ref: List[CellRef2] = field(
+    cell_ref: List[CellRef1] = field(
         default_factory=list,
         metadata={
             "name": "CellRef",
@@ -844,7 +844,7 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
             "sequential": True,
         }
     )
-    netex_org_uk_netex_cell_ref: List[CellRef1] = field(
+    netex_org_uk_netex_cell_ref: List[CellRef2] = field(
         default_factory=list,
         metadata={
             "name": "CellRef_",
@@ -3484,7 +3484,7 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
             "sequential": True,
         }
     )
-    place_ref: List[PlaceRef1] = field(
+    place_ref: List[PlaceRef2] = field(
         default_factory=list,
         metadata={
             "name": "PlaceRef_",
@@ -4104,7 +4104,7 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
             "sequential": True,
         }
     )
-    group_of_entities_ref: List[GroupOfEntitiesRef2] = field(
+    group_of_entities_ref: List[GroupOfEntitiesRef1] = field(
         default_factory=list,
         metadata={
             "name": "GroupOfEntitiesRef",
@@ -4364,7 +4364,7 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
             "sequential": True,
         }
     )
-    netex_org_uk_netex_place_ref: List[PlaceRef2] = field(
+    netex_org_uk_netex_place_ref: List[PlaceRef1] = field(
         default_factory=list,
         metadata={
             "name": "PlaceRef",
@@ -4374,7 +4374,7 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
             "sequential": True,
         }
     )
-    group_of_points_ref: List[GroupOfPointsRef2] = field(
+    group_of_points_ref: List[GroupOfPointsRef1] = field(
         default_factory=list,
         metadata={
             "name": "GroupOfPointsRef",
@@ -4434,7 +4434,7 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
             "sequential": True,
         }
     )
-    tariff_zone_ref: List[TariffZoneRef2] = field(
+    tariff_zone_ref: List[TariffZoneRef1] = field(
         default_factory=list,
         metadata={
             "name": "TariffZoneRef",
@@ -4444,7 +4444,7 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
             "sequential": True,
         }
     )
-    netex_org_uk_netex_tariff_zone_ref: List[TariffZoneRef1] = field(
+    netex_org_uk_netex_tariff_zone_ref: List[TariffZoneRef2] = field(
         default_factory=list,
         metadata={
             "name": "TariffZoneRef_",
@@ -4464,7 +4464,7 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
             "sequential": True,
         }
     )
-    netex_org_uk_netex_group_of_points_ref: List[GroupOfPointsRef1] = field(
+    netex_org_uk_netex_group_of_points_ref: List[GroupOfPointsRef2] = field(
         default_factory=list,
         metadata={
             "name": "GroupOfPointsRef_",
@@ -4514,7 +4514,7 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
             "sequential": True,
         }
     )
-    netex_org_uk_netex_group_of_entities_ref: List[GroupOfEntitiesRef1] = field(
+    netex_org_uk_netex_group_of_entities_ref: List[GroupOfEntitiesRef2] = field(
         default_factory=list,
         metadata={
             "name": "GroupOfEntitiesRef_",

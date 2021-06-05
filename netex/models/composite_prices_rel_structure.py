@@ -4,7 +4,7 @@ from netex.models.capping_rule_price import CappingRulePrice
 from netex.models.capping_rule_price_ref import CappingRulePriceRef
 from netex.models.cell_versioned_child_structure import (
     ParkingPrice,
-    PriceGroup2,
+    PriceGroup1,
 )
 from netex.models.controllable_element_price import ControllableElementPrice
 from netex.models.controllable_element_price_ref import ControllableElementPriceRef
@@ -26,7 +26,7 @@ from netex.models.geographical_interval_price_ref import GeographicalIntervalPri
 from netex.models.geographical_unit_price import GeographicalUnitPrice
 from netex.models.geographical_unit_price_ref import GeographicalUnitPriceRef
 from netex.models.parking_price_ref import ParkingPriceRef
-from netex.models.price_group_1 import PriceGroup1
+from netex.models.price_group_2 import PriceGroup2
 from netex.models.price_group_ref import PriceGroupRef
 from netex.models.quality_structure_factor_price import QualityStructureFactorPrice
 from netex.models.quality_structure_factor_price_ref import QualityStructureFactorPriceRef
@@ -340,7 +340,7 @@ class CompositePricesRelStructure(StrictContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    fare_price: List[FarePrice2] = field(
+    fare_price: List[FarePrice1] = field(
         default_factory=list,
         metadata={
             "name": "FarePrice",
@@ -348,7 +348,7 @@ class CompositePricesRelStructure(StrictContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_fare_price: List[FarePrice1] = field(
+    netex_org_uk_netex_fare_price: List[FarePrice2] = field(
         default_factory=list,
         metadata={
             "name": "FarePrice_",
@@ -356,7 +356,7 @@ class CompositePricesRelStructure(StrictContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    price_group: List[PriceGroup2] = field(
+    price_group: List[PriceGroup1] = field(
         default_factory=list,
         metadata={
             "name": "PriceGroup",
@@ -364,7 +364,7 @@ class CompositePricesRelStructure(StrictContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_price_group: List[PriceGroup1] = field(
+    netex_org_uk_netex_price_group: List[PriceGroup2] = field(
         default_factory=list,
         metadata={
             "name": "PriceGroup_",

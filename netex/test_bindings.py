@@ -7,7 +7,6 @@ from xsdata.formats.dataclass.serializers import XmlSerializer
 
 from netex.models import PublicationDelivery
 
-ids = []
 here = Path(__file__).parent
 output = here.joinpath("output")
 functions = here.joinpath("NeTEx/examples/functions")

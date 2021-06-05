@@ -59,7 +59,7 @@ class AccessRightParameterAssignmentsInFrameRelStructure(FrameContainmentStructu
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    access_right_parameter_assignment: List[AccessRightParameterAssignment2] = field(
+    access_right_parameter_assignment: List[AccessRightParameterAssignment1] = field(
         default_factory=list,
         metadata={
             "name": "AccessRightParameterAssignment",
@@ -67,7 +67,7 @@ class AccessRightParameterAssignmentsInFrameRelStructure(FrameContainmentStructu
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_access_right_parameter_assignment: List[AccessRightParameterAssignment1] = field(
+    netex_org_uk_netex_access_right_parameter_assignment: List[AccessRightParameterAssignment2] = field(
         default_factory=list,
         metadata={
             "name": "AccessRightParameterAssignment_",

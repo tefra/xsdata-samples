@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
 from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.route_2 import Route2
+from netex.models.route_1 import Route1
 from netex.models.route_ref import RouteRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -20,7 +20,7 @@ class RoutesRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    route: List[Route2] = field(
+    route: List[Route1] = field(
         default_factory=list,
         metadata={
             "name": "Route",

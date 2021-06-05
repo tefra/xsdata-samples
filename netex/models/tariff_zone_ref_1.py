@@ -1,11 +1,11 @@
 from dataclasses import dataclass
-from netex.models.zone_ref_structure import ZoneRefStructure
+from netex.models.tariff_zone_ref_structure import TariffZoneRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class TariffZoneRef1(ZoneRefStructure):
+class TariffZoneRef1(TariffZoneRefStructure):
     class Meta:
-        name = "TariffZoneRef_"
+        name = "TariffZoneRef"
         namespace = "http://www.netex.org.uk/netex"

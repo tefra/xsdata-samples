@@ -1,18 +1,10 @@
-from dataclasses import dataclass, field
-from typing import Optional
-from netex.models.point_ref_structure import PointRefStructure
+from dataclasses import dataclass
+from netex.models.point_on_link_ref_structure_2 import PointOnLinkRefStructure2
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class PointOnLinkRefStructure1(PointRefStructure):
+class PointOnLinkRefStructure1(PointOnLinkRefStructure2):
     class Meta:
-        name = "PointOnLinkRefStructure_"
-
-    order: Optional[int] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
+        name = "PointOnLinkRefStructure"

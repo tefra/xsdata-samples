@@ -57,7 +57,7 @@ class QualityStructureFactorsRelStructure(StrictContainmentAggregationStructure)
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    quality_structure_factor: List[QualityStructureFactor2] = field(
+    quality_structure_factor: List[QualityStructureFactor1] = field(
         default_factory=list,
         metadata={
             "name": "QualityStructureFactor",
@@ -65,7 +65,7 @@ class QualityStructureFactorsRelStructure(StrictContainmentAggregationStructure)
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_quality_structure_factor: List[QualityStructureFactor1] = field(
+    netex_org_uk_netex_quality_structure_factor: List[QualityStructureFactor2] = field(
         default_factory=list,
         metadata={
             "name": "QualityStructureFactor_",

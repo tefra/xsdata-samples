@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDate
-from netex.models.assignment_version_structure_2 import AssignmentVersionStructure2
+from netex.models.assignment_version_structure_1 import AssignmentVersionStructure1
 from netex.models.day_type_ref import DayTypeRef
 from netex.models.fare_day_type_ref import FareDayTypeRef
 from netex.models.operating_day_ref import OperatingDayRef
@@ -13,7 +13,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class DayTypeAssignmentVersionStructure(AssignmentVersionStructure2):
+class DayTypeAssignmentVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "DayTypeAssignment_VersionStructure"
 

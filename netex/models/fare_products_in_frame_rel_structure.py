@@ -82,7 +82,7 @@ class FareProductsInFrameRelStructure(FrameContainmentStructure):
             "min_occurs": 1,
         }
     )
-    fare_product: List[FareProduct2] = field(
+    fare_product: List[FareProduct1] = field(
         default_factory=list,
         metadata={
             "name": "FareProduct",
@@ -91,7 +91,7 @@ class FareProductsInFrameRelStructure(FrameContainmentStructure):
             "min_occurs": 1,
         }
     )
-    netex_org_uk_netex_fare_product: List[FareProduct1] = field(
+    netex_org_uk_netex_fare_product: List[FareProduct2] = field(
         default_factory=list,
         metadata={
             "name": "FareProduct_",

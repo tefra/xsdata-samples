@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.administrative_zone_1 import AdministrativeZone1
+from netex.models.administrative_zone_2 import AdministrativeZone2
 from netex.models.administrative_zone_ref import AdministrativeZoneRef
 from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
 from netex.models.authority_ref import AuthorityRef
@@ -158,7 +158,7 @@ class AdministrativeZoneVersionStructure(ZoneVersionStructure):
 
 
 @dataclass
-class AdministrativeZone2(AdministrativeZoneVersionStructure):
+class AdministrativeZone1(AdministrativeZoneVersionStructure):
     class Meta:
         name = "AdministrativeZone"
         namespace = "http://www.netex.org.uk/netex"
@@ -207,7 +207,7 @@ class AdministrativeZonesRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    administrative_zone: List[AdministrativeZone2] = field(
+    administrative_zone: List[AdministrativeZone1] = field(
         default_factory=list,
         metadata={
             "name": "AdministrativeZone",
@@ -215,7 +215,7 @@ class AdministrativeZonesRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_administrative_zone: List[AdministrativeZone1] = field(
+    netex_org_uk_netex_administrative_zone: List[AdministrativeZone2] = field(
         default_factory=list,
         metadata={
             "name": "AdministrativeZone_",

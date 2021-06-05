@@ -1,14 +1,14 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDuration
-from netex.models.assignment_version_structure_2 import AssignmentVersionStructure2
+from netex.models.assignment_version_structure_1 import AssignmentVersionStructure1
 from netex.models.check_constraint_ref import CheckConstraintRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class CheckConstraintThroughputVersionStructure(AssignmentVersionStructure2):
+class CheckConstraintThroughputVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "CheckConstraintThroughput_VersionStructure"
 
