@@ -13,7 +13,6 @@ from common_types.models.hl7_v3.ne2008.core.voc import (
     PostalAddressUse,
     SetOperator,
     TelecommunicationAddressUse,
-    TimingEvent,
 )
 
 __NAMESPACE__ = "urn:hl7-org:v3"
@@ -3127,12 +3126,6 @@ class EivlEvent(Ce):
     class Meta:
         name = "EIVL.event"
 
-    code: Optional[TimingEvent] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
     code_system: str = field(
         init=False,
         default="2.16.840.1.113883.5.139",
