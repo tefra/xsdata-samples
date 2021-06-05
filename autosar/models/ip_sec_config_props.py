@@ -36,9 +36,8 @@ class IpSecConfigProps:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -55,33 +54,33 @@ class IpSecConfigProps:
         atpVariation stereotype.
     :ivar ah_cipher_suite_names:
     :ivar dpd_action: This attribute defines what to do if the peer is
-        considered dead.   If not configured "restart" shall be assumed.
+        considered dead. If not configured "restart" shall be assumed.
     :ivar dpd_delay: This attribute describes the interval to check the
         liveness of a peer actively using IKEv2 INFORMATIONAL exchanges.
         Active DPD checking is only enforced if no IKE or ESP/AH packet
-        has been received for the configured DPD delay.  In not
+        has been received for the configured DPD delay. In not
         configured the value "5 minutes" shall be assumed.
     :ivar esp_cipher_suite_names:
     :ivar ike_cipher_suite_name: IKE encryption/authentication
         algorithms to be used for the connection.
     :ivar ike_over_time: This attribute describes the hard deadline when
-        an SA becomes invalid in percentage.   Example: ikeOverTime of
-        max(ikeReauthTime, ikeRekeyTime).   Default: 10 %
+        an SA becomes invalid in percentage. Example: ikeOverTime of
+        max(ikeReauthTime, ikeRekeyTime). Default: 10 %
     :ivar ike_rand_time: This attribute defines in percentage by how
         long before the expiration of ikeReauthTime and ikeRekeyTime
-        will be rekeyed/reauthenticated.  Default: 10%
+        will be rekeyed/reauthenticated. Default: 10%
     :ivar ike_reauth_time: This attribute defines the absolute time
-        after which an IKE SA will be reauthenticated.  0 means
+        after which an IKE SA will be reauthenticated. 0 means
         reauthentication is disabled.
     :ivar ike_rekey_time: This attribute defines the absolute time after
-        which an IKE SA will be rekeyed.  0 means rekey is disabled.
+        which an IKE SA will be rekeyed. 0 means rekey is disabled.
     :ivar sa_over_time: This attribute describes the hard deadline when
-        an IPsec SA becomes invalid in percentage.   Example: saOverTime
-        * saRekeyTime.   Default: 110%
+        an IPsec SA becomes invalid in percentage. Example: saOverTime *
+        saRekeyTime. Default: 110%
     :ivar sa_rand_time: This attribute defines by how long before the
         expiration of saRekeyTime will be rekeyed.
     :ivar sa_rekey_time: This attribute defines the absolute time after
-        which an IPsec SA will be rekeyed.  0 means rekey is disabled.
+        which an IPsec SA will be rekeyed. 0 means rekey is disabled.
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if
         an ArObject has changed. The checksum has no semantic meaning
@@ -98,14 +97,14 @@ class IpSecConfigProps:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

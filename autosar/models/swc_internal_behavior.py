@@ -67,9 +67,8 @@ class SwcInternalBehavior:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -84,10 +83,10 @@ class SwcInternalBehavior:
         design notes.
     :ivar constant_memorys: Describes a read only memory object
         containing characteristic value(s)  implemented by this
-        InternalBehavior.   The shortName of ParameterDataPrototype has
-        to be equal to the ''C' identifier of the described constant.
-        The characteristic value(s) might be shared between
-        SwComponentPrototypes of the same SwComponentType.  The
+        InternalBehavior. The shortName of ParameterDataPrototype has to
+        be equal to the ''C' identifier of the described constant. The
+        characteristic value(s) might be shared between
+        SwComponentPrototypes of the same SwComponentType. The
         aggregation of constantMemory is subject to variability with the
         purpose to support variability in the software component or
         module implementations. Typically different algorithms in the
@@ -105,7 +104,7 @@ class SwcInternalBehavior:
         resp. module. The aggregation of ExclusiveAreas is subject to
         variability. Note: the number of ExclusiveAreas might vary due
         to the conditional existence of RunnableEntities or
-        BswModuleEntities.  The upper multiplicity of this role has been
+        BswModuleEntities. The upper multiplicity of this role has been
         increased to * due to resolving an atpVariation stereotype. The
         previous value was -1.
     :ivar exclusive_area_nesting_orders: This represents the set of
@@ -114,23 +113,23 @@ class SwcInternalBehavior:
         resolving an atpVariation stereotype. The previous value was -1.
     :ivar static_memorys: Describes a read and writeable static memory
         object representing measurerment variables implemented by this
-        software component.  The term "static" is used in the meaning of
+        software component. The term "static" is used in the meaning of
         "non-temporary" and does not necessarily specify a linker
         encapsulation. This kind of memory is only supported if
-        supportsMultipleInstantiation is FALSE.  The shortName of the
+        supportsMultipleInstantiation is FALSE. The shortName of the
         VariableDataPrototype has to be equal with the ''C' identifier
-        of the described variable.  The aggregation of staticMemory is
+        of the described variable. The aggregation of staticMemory is
         subject to variability with the purpose to support variability
-        in the software component's implementations.   Typically
-        different algorithms in the implementation are requiring
-        different number of memory objects. The upper multiplicity of
-        this role has been increased to * due to resolving an
-        atpVariation stereotype. The previous value was -1.
+        in the software component's implementations. Typically different
+        algorithms in the implementation are requiring different number
+        of memory objects. The upper multiplicity of this role has been
+        increased to * due to resolving an atpVariation stereotype. The
+        previous value was -1.
     :ivar ar_typed_per_instance_memorys: Defines an AUTOSAR typed
         memory-block that needs to be available for each instance of the
-        SW-component.   This is typically only useful if
+        SW-component. This is typically only useful if
         supportsMultipleInstantiation is set to "true" or if the
-        component defines NVRAM access via permanent blocks.  The
+        component defines NVRAM access via permanent blocks. The
         aggregation of arTypedPerInstanceMemory is subject to
         variability with the purpose to support variability in the
         software component's implementations. Typically different
@@ -139,12 +138,12 @@ class SwcInternalBehavior:
         increased to * due to resolving an atpVariation stereotype. The
         previous value was -1.
     :ivar events: This is a RTEEvent specified for the particular
-        SwcInternalBehavior.  The aggregation of RTEEvent is subject to
+        SwcInternalBehavior. The aggregation of RTEEvent is subject to
         variability with the purpose to support the conditional
         existence of RTE events. Note: the number of RTE events might
         vary due to the conditional existence of PortPrototypes using
         DataReceivedEvents or due to different scheduling needs of
-        algorithms.  The upper multiplicity of this role has been
+        algorithms. The upper multiplicity of this role has been
         increased to * due to resolving an atpVariation stereotype. The
         previous value was -1.
     :ivar exclusive_area_policys: Options how to generate the
@@ -181,12 +180,12 @@ class SwcInternalBehavior:
         represents the included ModeDeclarationGroups
     :ivar instantiation_data_def_propss: The purpose of this is that
         within the context  of a given SwComponentType some data def
-        properties of individual instantiations can be  modified.  The
+        properties of individual instantiations can be  modified. The
         aggregation of InstantiationDataDefProps is subject to
         variability with the purpose to support the conditional
         existence of PortPrototypes and component local memories like
-        "perInstanceParameter" or "arTypedPerInstanceMemory".   The
-        upper multiplicity of this role has been increased to * due to
+        "perInstanceParameter" or "arTypedPerInstanceMemory". The upper
+        multiplicity of this role has been increased to * due to
         resolving an atpVariation stereotype. The previous value was -1.
     :ivar per_instance_memorys: Defines a per-instance memory object
         needed by this software component. The aggregation of
@@ -210,11 +209,11 @@ class SwcInternalBehavior:
     :ivar port_api_options: Options for generating the signature of
         port-related calls from a runnable to the RTE and vice versa.
         The aggregation of PortPrototypes is subject to variability with
-        the purpose to support the conditional existence of ports.  The
+        the purpose to support the conditional existence of ports. The
         upper multiplicity of this role has been increased to * due to
         resolving an atpVariation stereotype. The previous value was -1.
     :ivar runnables: This is a RunnableEntity specified for the
-        particular SwcInternalBehavior.  The aggregation of
+        particular SwcInternalBehavior. The aggregation of
         RunnableEntity is subject to variability with the purpose to
         support the conditional existence of RunnableEntities. Note: the
         number of RunnableEntities might vary due to the conditional
@@ -223,13 +222,13 @@ class SwcInternalBehavior:
         of this role has been increased to * due to resolving an
         atpVariation stereotype. The previous value was -1.
     :ivar service_dependencys: Defines the requirements on AUTOSAR
-        Services for a particular item.  The aggregation of
+        Services for a particular item. The aggregation of
         SwcServiceDependency is subject to variability with the purpose
         to support the conditional existence of ports as well as the
-        conditional existence of ServiceNeeds.  The SwcServiceDependency
+        conditional existence of ServiceNeeds. The SwcServiceDependency
         owned by an SwcInternalBehavior can be located in a different
         physical file in order to support that SwcServiceDependency
-        might be provided in later development  steps or even by
+        might be provided in later development steps or even by
         different expert domain (e.g OBD expert for Obd related  Service
         Needs) tools. Therefore the aggregation is
         &lt;&lt;atpSplitable&gt;&gt;. The upper multiplicity of this
@@ -269,14 +268,14 @@ class SwcInternalBehavior:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

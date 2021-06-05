@@ -10,7 +10,7 @@ class Ipv4AddressSourceEnumSimple(Enum):
     :cvar AUTO_IP_DOIP: Linklocal IPv4 Address Assignment using DoIP
         Parameters
     :cvar AUTO_IPDHCPV_4: This enum literal is deprecated and will be
-        removed in future.  Old description:  The IpAddress is declared
+        removed in future. Old description: The IpAddress is declared
         via AutoIp or dhcp.
     :cvar DHCPV_4: DHCP is a service for the automatic IP configuration
         of a client.

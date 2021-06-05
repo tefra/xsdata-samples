@@ -37,9 +37,8 @@ class LinFrameTriggering:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -53,9 +52,9 @@ class LinFrameTriggering:
         Values). These are not intended as documentation but are mere
         design notes.
     :ivar frame_port_refs: References to the FramePort on every ECU of
-        the system which sends and/or receives the frame.  References
-        for both the sender and the receiver side shall be included when
-        the system is completely defined.
+        the system which sends and/or receives the frame. References for
+        both the sender and the receiver side shall be included when the
+        system is completely defined.
     :ivar frame_ref: One frame can be triggered several times, e.g. on
         different channels. If a frame has no frame triggering, it won't
         be sent at all. A frame triggering has assigned exactly one
@@ -86,14 +85,14 @@ class LinFrameTriggering:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

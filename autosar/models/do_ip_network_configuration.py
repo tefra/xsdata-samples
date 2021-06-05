@@ -18,8 +18,8 @@ class DoIpNetworkConfiguration:
         network interface is used as eid. True: MAC is used False: eid
         needs to be configured manually by DoIpInstantiation.eid.
     :ivar is_activation_line_dependent: This attribute defines whether
-        the network interface  * is started "on-demand" when an
-        activation line is sensed or  * is always available.
+        the network interface * is started "on-demand" when an
+        activation line is sensed or * is always available.
     :ivar max_initial_vehicle_announcement_time: Upper bound for the
         time to wait in [s] for sending first vehicle anouncement
         message after IP address assignment. Represents parameter

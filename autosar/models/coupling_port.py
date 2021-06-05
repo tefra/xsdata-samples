@@ -48,9 +48,8 @@ class CouplingPort:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -76,7 +75,7 @@ class CouplingPort:
         the VLAN segment to which this port is connected. Also, if a
         CouplingPort has not been configured with any VLAN memberships,
         the virtual switch's Port VLAN ID (pvid) becomes the default
-        VLAN ID for the ports connection.  This identifier/tag is added
+        VLAN ID for the ports connection. This identifier/tag is added
         for incoming untagged messages at the port (ingress tagging).
         For outgoing messages with this identifier, the tag is removed
         at the port (egress untagging, depending on the
@@ -101,8 +100,8 @@ class CouplingPort:
     :ivar vlan_modifier_ref: All incoming messages at this CouplingPort
         shall be tagged with this VLAN Id. This tagging is performed
         regardless whether the message already has a VLAN tag or is
-        untagged, an existing VLAN tag will be overwritten.  This
-        feature is XOR with CoupligPort.defaultVlan.
+        untagged, an existing VLAN tag will be overwritten. This feature
+        is XOR with CoupligPort.defaultVlan.
     :ivar wakeup_sleep_on_dataline_config_ref: Optional reference to
         EthernetWakeupSleepOnDatalineConfig.
     :ivar variation_point: This element was generated/modified due to an
@@ -123,14 +122,14 @@ class CouplingPort:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

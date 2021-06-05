@@ -10,9 +10,9 @@ class Identifier:
     appearance, satisfying the requirements typical programming languages
     define for their Identifiers.
 
-    This datatype represents a string, that can be used as a c-Identifier.
-
-    It shall start with a letter, may consist of letters, digits and underscores.
+    This datatype represents a string, that can be used as a
+    c-Identifier. It shall start with a letter, may consist of letters,
+    digits and underscores.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an
@@ -30,7 +30,7 @@ class Identifier:
         blueprint.
     :ivar name_pattern: This attribute represents a pattern which shall
         be used to define the value of the identifier if the identifier
-        in question is part of a blueprint.   For more details refer to
+        in question is part of a blueprint. For more details refer to
         TPS_StandardizationTemplate.
     """
     class Meta:

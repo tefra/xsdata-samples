@@ -42,9 +42,8 @@ class UdpNmNode:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -77,10 +76,10 @@ class UdpNmNode:
     :ivar variation_point: This element was generated/modified due to an
         atpVariation stereotype.
     :ivar all_nm_messages_keep_awake: Specifies if Nm drops irrelevant
-        NM PDUs.  false: Only NM PDUs with a Partial Network Information
+        NM PDUs. false: Only NM PDUs with a Partial Network Information
         Bit (PNI) = true and containing a Partial Network request for
         this ECU trigger the standard RX indication handling and thus
-        keep the ECU awake  true: Every NM PDU triggers the standard RX
+        keep the ECU awake true: Every NM PDU triggers the standard RX
         indication handling and keeps the ECU awake
     :ivar communication_connector_ref: Reference to the
         CommunicationConnector that represents the UdpNmNode in the
@@ -107,14 +106,14 @@ class UdpNmNode:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

@@ -13,9 +13,13 @@ class DiagnosticEnvModeCondition:
     of the active ModeDeclaration in a ModeDeclarationGroupProtoype with the
     constant value of a ModeDeclaration.
 
-    The formulation of this condition uses only one DiagnosticEnvElement, which contains enough information to deduce the variable part (i.e. the part that changes at runtime) as well as the constant part of the comparison.
-
-    Only DiagnosticCompareTypeEnum.isEqual or DiagnosticCompareTypeEnum.isNotEqual are eligible values for DiagnosticAtomicCondition.compareType.
+    The formulation of this condition uses only one
+    DiagnosticEnvElement, which contains enough information to deduce
+    the variable part (i.e. the part that changes at runtime) as well as
+    the constant part of the comparison. Only
+    DiagnosticCompareTypeEnum.isEqual or
+    DiagnosticCompareTypeEnum.isNotEqual are eligible values for
+    DiagnosticAtomicCondition.compareType.
 
     :ivar compare_type: This attributes represents the concrete type of
         the comparison.

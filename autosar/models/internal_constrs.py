@@ -25,9 +25,8 @@ class InternalConstrs:
     :ivar monotony: This element specifies the monotony characteristics
         of the current internal or physical limits. The following table
         shows the monotony characteristics which are to be filled
-        through the corresponding values.   If the element has no
-        contents or if it is omitted, "noMonotony" is the default
-        content.
+        through the corresponding values. If the element has no contents
+        or if it is omitted, "noMonotony" is the default content.
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if
         an ArObject has changed. The checksum has no semantic meaning

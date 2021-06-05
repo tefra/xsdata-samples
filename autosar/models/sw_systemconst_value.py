@@ -17,7 +17,7 @@ class SwSystemconstValue:
         value applies.
     :ivar value: This is the particular value of a system constant. It
         is specified as Numerical. Further restrictions may apply by the
-        definition of the system constant.  The value attribute defines
+        definition of the system constant. The value attribute defines
         the internal value of the SwSystemconst as it is processed  in
         the Formula Language.
     :ivar annotations: This provides the ability to add information why

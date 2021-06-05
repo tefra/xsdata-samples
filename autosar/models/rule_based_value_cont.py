@@ -18,7 +18,7 @@ class RuleBasedValueCont:
         values.
     :ivar sw_arraysize: This attribute defines the size of each
         dimension for compound primitives CURVE, MAP, CUBOID, CUBE_4,
-        CUBE_5, COM_AXIS, RES_AXIS, VAL_BLK.  For each dimension one
+        CUBE_5, COM_AXIS, RES_AXIS, VAL_BLK. For each dimension one
         value has to be defined, e.g. one in case of COM_AXIS and two or
         more in case of MAP.
     :ivar rule_based_values: This represents the rule based value

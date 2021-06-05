@@ -6,17 +6,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class Date:
-    """A datatype representing a timestamp. The smallest granularity is 1
-    second.
+    """A datatype representing a timestamp.
 
+    The smallest granularity is 1 second.
     This datatype represents a timestamp in the format yyyy-mm-dd followed by an optional time. The lead-in character for the time is "T" and the format is hh:mm:ss. In addition, a time zone designator shall be specified. The time zone designator can either be "Z" (for UTC) or the time offset to UTC, i.e. (+|-)hh:mm.
-
     Examples:
-
     2009-07-23
-
     2009-07-23T14:38:00+01:00
-
     2009-07-23T13:38:00Z
 
     :ivar value:

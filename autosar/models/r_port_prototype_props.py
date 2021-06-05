@@ -14,9 +14,9 @@ class RPortPrototypeProps:
         intention of the developer of the enclosing software-component
         in terms of whether the respective PortPrototype shall be use to
         search for a specific service instance or all instances of the
-        given service.  Please note that the value of this attribute
-        does not create a binding contract. The actual search behavior
-        is defined as part of the service instance manifest.
+        given service. Please note that the value of this attribute does
+        not create a binding contract. The actual search behavior is
+        defined as part of the service instance manifest.
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if
         an ArObject has changed. The checksum has no semantic meaning

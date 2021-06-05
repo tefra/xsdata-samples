@@ -45,13 +45,13 @@ class ClientServerToSignalMapping:
     :ivar length_client_id: This attribute defines the length of the
         used client identifier in bits.  If the attribute does not exist
         or its value is set to 0 this means that the client identifier
-        is not used.  Please note that this attribute is deprecated and
+        is not used. Please note that this attribute is deprecated and
         will be removed in future (Value is fixed to UInt16).
     :ivar length_sequence_counter: The purpose of a sequence counter is
         to map a response to the correct request of a known client. This
         attribute describes the length of the used sequence counter in
         bits. If the attribute does not exist or its value is set to 0
-        this means that the sequence counter is not used.  Please note
+        this means that the sequence counter is not used. Please note
         that this attribute is deprecated and will be removed in future
         (Value is fixed to UInt16).
     :ivar return_signal_ref: Reference to the returnSignal to which the

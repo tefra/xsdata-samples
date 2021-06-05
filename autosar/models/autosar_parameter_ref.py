@@ -9,25 +9,15 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class AutosarParameterRef:
-    """This class represents a reference to a parameter within AUTOSAR which
-    can be one of the following use cases:
-
+    """This class represents a reference to a parameter within AUTOSAR which can be one of the following use cases:
     localParameter:
-
     * localParameter which is used as whole (e.g.  sharedAxis for curve)
-
     autosarVariable:
-
     * a parameter provided via PortPrototype which is used as whole (e.g. parameterAccess)
-
     * an element inside of a composite local parameter typed by ApplicationDatatype (e.g. sharedAxis for a curve)
-
     * an element inside of a composite parameter provided via Port and typed by ApplicationDatatype (e.g. sharedAxis for a curve)
-
     autosarParameterInImplDatatype:
-
     * an element inside of a composite local parameter typed by ImplementationDatatype
-
     * an element inside of a composite parameter provided via PortPrototype and typed by ImplementationDatatype
 
     :ivar autosar_parameter_iref: This instance reference is used if the
@@ -38,14 +28,13 @@ class AutosarParameterRef:
         VariableDataPrototypes. Pointing the reference to a
         VariableDataPrototype is limited to special use cases, e.g. if
         the AutosarParameterRef is used in the context of an
-        SwAxisGrouped.  This reference is used if the arParameter is
-        local to the current component.   Of course, it would
-        technically also be feasible to use an InstanceRef for this
-        case. However, the InstanceRef would not have a contextElement
-        (because the current instance is the context).  Hence, the local
-        instance is a special case which may provide further
-        optimization. Therefore an explicit reference is provided for
-        this case.
+        SwAxisGrouped. This reference is used if the arParameter is
+        local to the current component. Of course, it would technically
+        also be feasible to use an InstanceRef for this case. However,
+        the InstanceRef would not have a contextElement (because the
+        current instance is the context). Hence, the local instance is a
+        special case which may provide further optimization. Therefore
+        an explicit reference is provided for this case.
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if
         an ArObject has changed. The checksum has no semantic meaning

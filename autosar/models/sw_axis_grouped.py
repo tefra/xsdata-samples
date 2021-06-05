@@ -30,11 +30,11 @@ class SwAxisGrouped:
         parameter providing the shared axis.
     :ivar sw_axis_index: Describes which axis of the referenced
         calibration parameter provides the values for the group axis.
-        The index satisfies the following convention:  * 0 = value axis.
+        The index satisfies the following convention: * 0 = value axis.
         in this case, the interpolation result of the referenced
-        parameter is used as a base point index.  * The index should
-        only be specified if the parameter under swCalprm contains more
-        than one axis. It is standard practice for the axis index of
+        parameter is used as a base point index. * The index should only
+        be specified if the parameter under swCalprm contains more than
+        one axis. It is standard practice for the axis index of
         parameters with more than one axis, to be set to 1, if data has
         not been assigned to swAxisIndex.
     :ivar ar_parameter: This represents a Parameter within AUTOSAR. Note
@@ -42,8 +42,8 @@ class SwAxisGrouped:
         be an ApplicationDataType of category VALUE.
     :ivar mc_data_instance_ref: This reference is used in the McSupport
         file to express the final instance of group axis etc. It is not
-        allowed to use this outside of an McDataInstance.  The
-        referenced mcDataInstance shall be originated from a
+        allowed to use this outside of an McDataInstance. The referenced
+        mcDataInstance shall be originated from a
         ParameterDataPrototype.
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if

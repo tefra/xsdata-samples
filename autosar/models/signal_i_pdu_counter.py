@@ -14,8 +14,8 @@ class SignalIPduCounter:
     The counter is incremented when a Pdu is transmitted. The receivers
     check if the received Pdu is the next one in sequence.
 
-    :ivar pdu_counter_size: Size of PduCounter expressed in bits.
-        Range: 1..8
+    :ivar pdu_counter_size: Size of PduCounter expressed in bits. Range:
+        1..8
     :ivar pdu_counter_start_position: Position of PduCounter expressed
         in bits. Note that PduCounter is not allowed to cross a byte
         border.

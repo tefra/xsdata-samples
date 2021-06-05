@@ -24,7 +24,7 @@ class Ipv6Configuration:
         addressing (i.e. to one of multiple receivers).
     :ivar hop_count: The distance between two hosts. The hop count n
         means that n gateways separate the source host from the
-        destination host  (Range 0..255)
+        destination host (Range 0..255)
     :ivar ip_address_keep_behavior: Defines the lifetime of a
         dynamically fetched IP address.
     :ivar ip_address_prefix_length: IPv6 prefix length defines the part

@@ -13,9 +13,12 @@ class ArVariableInImplementationDataInstanceRef:
     """This class represents the ability to navigate into a data element inside
     of an VariableDataPrototype which is typed  by an ImplementationDatatype.
 
-    Note that it shall not be used if the target is the VariableDataPrototype itself (e.g. if its a primitive).
-
-    Note that this class follows the pattern of an InstanceRef but is not implemented based on the abstract classes because the ImplementationDataType isn't either, especially because ImplementationDataTypeElement isn't derived from AtpPrototype.
+    Note that it shall not be used if the target is the
+    VariableDataPrototype itself (e.g. if its a primitive). Note that
+    this class follows the pattern of an InstanceRef but is not
+    implemented based on the abstract classes because the
+    ImplementationDataType isn't either, especially because
+    ImplementationDataTypeElement isn't derived from AtpPrototype.
 
     :ivar port_prototype_ref: This is the port providing/receiving the
         root of the variable

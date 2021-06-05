@@ -24,11 +24,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ImplementationDataTypeElement:
     """Declares a data object which is locally aggregated. Such an element can
-    only be used within the scope where it is aggregated.
+    only be used within the scope where it is aggregated. This element either
+    consists of further subElements or it is further defined via its
+    swDataDefProps. There are several use cases within the system of
+    ImplementationDataTypes fur such a local declaration:
 
-    This element either consists of further subElements or it is further defined via its swDataDefProps.
-
-    There are several use cases within the system of ImplementationDataTypes fur such a local declaration:
     * It can represent the elements of an array, defining the element type and array size
     * It can represent an element of a struct, defining its type
     * It can be the local declaration of a debug element.
@@ -44,9 +44,8 @@ class ImplementationDataTypeElement:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -73,17 +72,17 @@ class ImplementationDataTypeElement:
     :ivar is_optional: This attribute represents the ability to declare
         the enclosing ImplementationDataTypeElement as optional. This
         means that, at runtime, the ImplementationDataTypeElement may or
-        may not have a valid value and shall therefore be ignored.  The
+        may not have a valid value and shall therefore be ignored. The
         underlying runtime software provides means to set the
         CppImplementationDataTypeElement as not valid at the sending end
         of a communication and determine its validity at the receiving
         end.
     :ivar sub_elements: Element of an array, struct, or union in case of
-        a nested declaration (i.e. without using "typedefs").  The
+        a nested declaration (i.e. without using "typedefs"). The
         aggregation of ImplementionDataTypeElement is subject to
         variability with the purpose to support the conditional
         existence of elements inside a ImplementationDataType
-        representing a structure.  The upper multiplicity of this role
+        representing a structure. The upper multiplicity of this role
         has been increased to * due to resolving an atpVariation
         stereotype. The previous value was -1.
     :ivar sw_data_def_props: The properties of this
@@ -106,14 +105,14 @@ class ImplementationDataTypeElement:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

@@ -9,9 +9,10 @@ class VerbatimStringPlain:
     """This primitive represents a string in which white-space needs to be
     preserved.
 
-    This primitive is applied in cases where xml:space attribute cannot be provided by the primitive type but needs to be provided by the container class.
-
-    This is in particular the case in applications of TR_APRXML_00024.
+    This primitive is applied in cases where xml:space attribute cannot
+    be provided by the primitive type but needs to be provided by the
+    container class. This is in particular the case in applications of
+    TR_APRXML_00024.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

@@ -14,9 +14,11 @@ class TdEventOccurrenceExpressionFormula:
     """This is an extension of the FormulaExpression for the AUTOSAR Timing
     Extensions.
 
-    A TDEventOccurrenceExpressionFormula provides the means to express the temporal characteristics of timing event occurrences in correlation with specific variable and argument values.
-
-    The formal definition of the extended functions (ExtUnaryFunctions) is described in detail in the AUTOSAR Timing Extensions.
+    A TDEventOccurrenceExpressionFormula provides the means to express
+    the temporal characteristics of timing event occurrences in
+    correlation with specific variable and argument values. The formal
+    definition of the extended functions (ExtUnaryFunctions) is
+    described in detail in the AUTOSAR Timing Extensions.
 
     :ivar content:
     :ivar argument_ref: This is one particular argument value used in

@@ -29,7 +29,6 @@ class PncMapping:
     """@RESTRICT_TO_STANDARD:CP!
     Describes a mapping between one or several Virtual Function Clusters onto Partial Network Clusters. A Virtual Function Cluster is realized by a PortGroup. A Partial Network Cluster is realized by one or more IPduGroups.
     @END_RESTRICT_TO_STANDARD!
-
     @RESTRICT_TO_STANDARD:AP!
     Describes a mapping between one or several Virtual Function Clusters onto Partial Network Clusters. A Virtual Function Cluster is realized by a PortGroup. A Partial Network Cluster is realized by one or more ServiceInstances.
     @END_RESTRICT_TO_STANDARD!
@@ -38,7 +37,7 @@ class PncMapping:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in particlar
+        object in question. More elaborate documentation, (in particlar
         how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Describable. It affects the expected existence

@@ -40,9 +40,8 @@ class SwcToEcuMapping:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -59,7 +58,7 @@ class SwcToEcuMapping:
         instances that are mapped to the referenced ECUInstance. If the
         component prototype referenced is a composition, this indicates
         that all atomic software components within the composition are
-        mapped to the ECU.   If there is aditionally a mapping of some
+        mapped to the ECU. If there is aditionally a mapping of some
         SwComponentPrototype INSIDE the Composition to another ECU
         Instance the inner mapping overrides the outer mapping.
     :ivar controlled_hw_element_ref: Optional mapping of
@@ -70,11 +69,11 @@ class SwcToEcuMapping:
         description.
     :ivar partition_ref: This reference has the status "removed" and is
         replaced by the SwcToApplicationPartitionMapping and
-        ApplicationPartitionToEcuPartitionMapping.  Old description: An
-        optional mapping of SWCs to Partitions.  With this mapping an
-        OEM has the option to predefine an allocation in the System
-        Design phase. The final and complete assignment is described in
-        the OS Configuration.
+        ApplicationPartitionToEcuPartitionMapping. Old description: An
+        optional mapping of SWCs to Partitions. With this mapping an OEM
+        has the option to predefine an allocation in the System Design
+        phase. The final and complete assignment is described in the OS
+        Configuration.
     :ivar processing_unit_ref: Optional mapping of software components
         to individual microcontroller cores residing in one ECU. A
         microcontroller core is described in the ECU Resource Template
@@ -97,14 +96,14 @@ class SwcToEcuMapping:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

@@ -32,7 +32,7 @@ class TtcanClusterConditional:
     :ivar protocol_name: The name of the protocol used.
     :ivar protocol_version: The version of the protocol used.
     :ivar speed: This attribute is deprecated and is replaced by the
-        attribute "baudrate".   Old description: Channels speed in kbps.
+        attribute "baudrate". Old description: Channels speed in kbps.
     :ivar bus_off_recovery: CAN bus off monitoring / recovery at system
         level.
     :ivar can_fd_baudrate: Specifies the data segment baud rate of the
@@ -41,7 +41,7 @@ class TtcanClusterConditional:
     :ivar ntu: Unit measuring all times and providing a constant of the
         whole network. For level 1, this is always the CAN bit time.
         Unit: seconds.
-    :ivar operation_mode: Possible operation modes  True: Time-Triggered
+    :ivar operation_mode: Possible operation modes True: Time-Triggered
         False: Event-Synchronised-Time-Triggered
     :ivar variation_point: This element was generated/modified due to an
         atpVariation stereotype.

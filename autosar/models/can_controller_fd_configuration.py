@@ -33,8 +33,8 @@ class CanControllerFdConfiguration:
         Delay Compensation Offset in seconds. If not specified
         Transceiver Delay Compensation is disabled.
     :ivar tx_bit_rate_switch: Specifies if the bit rate switching shall
-        be used for transmissions.   TRUE: CAN FD frames shall be sent
-        with bit rate switching.  FALSE: CAN FD frames shall be sent
+        be used for transmissions. TRUE: CAN FD frames shall be sent
+        with bit rate switching. FALSE: CAN FD frames shall be sent
         without bit rate switching.
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if

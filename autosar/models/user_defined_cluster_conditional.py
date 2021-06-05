@@ -29,7 +29,7 @@ class UserDefinedClusterConditional:
     :ivar protocol_name: The name of the protocol used.
     :ivar protocol_version: The version of the protocol used.
     :ivar speed: This attribute is deprecated and is replaced by the
-        attribute "baudrate".   Old description: Channels speed in kbps.
+        attribute "baudrate". Old description: Channels speed in kbps.
     :ivar variation_point: This element was generated/modified due to an
         atpVariation stereotype.
     :ivar s: Checksum calculated by the user's tool environment for an

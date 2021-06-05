@@ -30,7 +30,7 @@ class CanClusterConditional:
     :ivar protocol_name: The name of the protocol used.
     :ivar protocol_version: The version of the protocol used.
     :ivar speed: This attribute is deprecated and is replaced by the
-        attribute "baudrate".   Old description: Channels speed in kbps.
+        attribute "baudrate". Old description: Channels speed in kbps.
     :ivar bus_off_recovery: CAN bus off monitoring / recovery at system
         level.
     :ivar can_fd_baudrate: Specifies the data segment baud rate of the

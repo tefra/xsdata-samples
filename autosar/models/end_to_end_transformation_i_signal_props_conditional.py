@@ -33,7 +33,7 @@ class EndToEndTransformationISignalPropsConditional:
     :ivar source_id: This attribute represents a unique numerical
         identifier identifying the source of a certain transmission. In
         case of C/S communication, this ID uniquely identifies the
-        client.  Note: ID is used for protection against masquerading.
+        client. Note: ID is used for protection against masquerading.
         The details concerning the maximum number of values (this
         information is specific for each E2E profile) applicable for
         this attribute are controlled by a semantic constraint that

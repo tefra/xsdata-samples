@@ -13,7 +13,7 @@ class CycleRepetition:
     attributes baseCycle and cycleRepetition.
 
     :ivar base_cycle: The first communication cycle where the frame is
-        sent.  This value is incremented at the beginning of each new
+        sent. This value is incremented at the beginning of each new
         cycle, ranging from 0 to 63, and is reset to 0 after a sequence
         of 64 cycles.
     :ivar cycle_repetition: The number of communication cycles (after

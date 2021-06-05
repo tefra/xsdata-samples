@@ -10,14 +10,14 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class InterpolationRoutineMapping:
     """This meta-class provides a mapping between one record layout and its
-    matching interpolation routines. This allows to formally specify the
-    semantics of the interpolation routines.
+    matching interpolation routines.
 
-    The use case is such that the curves/Maps define an interpolation
-    method. This mapping table specifies which interpolation routine
-    implements methods for a particular record layout. Using this
-    information, the implementer of a software-component can select the
-    appropriate interpolation routine.
+    This allows to formally specify the semantics of the interpolation
+    routines. The use case is such that the curves/Maps define an
+    interpolation method. This mapping table specifies which
+    interpolation routine implements methods for a particular record
+    layout. Using this information, the implementer of a software-
+    component can select the appropriate interpolation routine.
 
     :ivar interpolation_routines: This is one particular interpolation
         routine which is mapped to the record layout.

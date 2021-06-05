@@ -14,7 +14,7 @@ class BswEntryRelationship:
     relationship.
 
     :ivar from_ref: Type of relationship that refers to the abstract
-        BswModuleEntry.  Please notice that in this case the
+        BswModuleEntry. Please notice that in this case the
         bswEntryRelationshipType shall be set to drivedFrom.
     :ivar to_ref: Type of relationship that refers to the concrete
         BswModuleEntry

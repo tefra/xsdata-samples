@@ -18,7 +18,7 @@ class TextValueSpecification:
         record type.
     :ivar variation_point: This element was generated/modified due to an
         atpVariation stereotype.
-    :ivar value: This is the value itself.  Note that vt uses the |
+    :ivar value: This is the value itself. Note that vt uses the |
         operator to separate the values for the different bitfield masks
         in case that the semantics of the related DataPrototype is
         described by means of a BITFIELD_TEXTTABLE in the associated

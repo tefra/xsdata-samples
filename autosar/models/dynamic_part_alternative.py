@@ -19,7 +19,7 @@ class DynamicPartAlternative:
     :ivar i_pdu_ref: Reference to a Com IPdu which is routed to the
         IPduM module and is combined to a multiplexedPdu.
     :ivar initial_dynamic_part: Dynamic part that shall be used to
-        initialize this multiplexed IPdu.  Constraint: Only one
+        initialize this multiplexed IPdu. Constraint: Only one
         "DynamicPartAlternative" in a "DynamicPart" shall be the
         initialDynamicPart.
     :ivar selector_field_code: The selector field is part of a

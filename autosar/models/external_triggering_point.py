@@ -14,7 +14,7 @@ class ExternalTriggeringPoint:
     an ExternalTriggerOccurredEvent.
 
     :ivar ident: The aggregation in the role ident provides the ability
-        to make the ExternalTriggeringPoint identifiable.  From the
+        to make the ExternalTriggeringPoint identifiable. From the
         semantical point of view, the ExternalTriggeringPoint is
         considered a first-class Identifiable and therefore the
         aggregation in the role ident shall always exist (until it may

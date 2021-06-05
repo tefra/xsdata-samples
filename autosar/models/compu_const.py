@@ -15,7 +15,7 @@ class CompuConst:
 
     :ivar vf: Value calculated via a system constant. This element is
         included in every case where parameters should be generated from
-        numerical values during compile time (not runtime!).   Thus for
+        numerical values during compile time (not runtime!). Thus for
         example, the influence of the cylinder number on conversion
         formulae can be introduced in a repeatable manner.
     :ivar v: This represents the numerical value.

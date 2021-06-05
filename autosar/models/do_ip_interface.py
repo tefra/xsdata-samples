@@ -39,9 +39,8 @@ class DoIpInterface:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -85,8 +84,8 @@ class DoIpInterface:
         message after IP address assignment. Represents parameter
         A_DoIP_Announce_Wait of ISO 13400-2:2012
     :ivar is_activation_line_dependent: This attribute defines whether
-        the network interface  * is started "on-demand" when an
-        activation line is sensed or  * is always available.
+        the network interface * is started "on-demand" when an
+        activation line is sensed or * is always available.
     :ivar max_tester_connections: Maximum amount of tester connections
         that shall be maintained at one time before alive check is
         performed.
@@ -95,9 +94,9 @@ class DoIpInterface:
         over TCP or UDP.
     :ivar use_mac_address_for_identification: This attribute defines
         whether a configured EID at vehicle identification
-        response/vehicle announcement is used or the MAC address.  TRUE:
+        response/vehicle announcement is used or the MAC address. TRUE:
         Use MAC Address instead of EID for Vehicle
-        identification/announcement.  FALSE: Use configured EID for
+        identification/announcement. FALSE: Use configured EID for
         vehicle identification/announcement.
     :ivar use_vehicle_identification_sync_status: This attribute defines
         if the optional VIN/GID synchronization status is used
@@ -125,14 +124,14 @@ class DoIpInterface:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

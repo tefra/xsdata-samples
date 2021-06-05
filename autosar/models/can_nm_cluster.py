@@ -41,9 +41,8 @@ class CanNmCluster:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -59,7 +58,7 @@ class CanNmCluster:
     :ivar communication_cluster_ref: Association to a
         CommunicationCluster in the topology description.
     :ivar nm_channel_id: This attribute has the status "removed" and
-        shall not be used any longer.   Old description: Channel
+        shall not be used any longer. Old description: Channel
         identification number of the corresponding channel. Must be
         unique over all NmClusters.
     :ivar nm_channel_sleep_master: This parameter shall be set to
@@ -87,27 +86,26 @@ class CanNmCluster:
     :ivar nm_car_wake_up_bit_position: Specifies the bit position of the
         CarWakeUp within the NmPdu.
     :ivar nm_car_wake_up_filter_enabled: Please note that this parameter
-        is deprecated and will be removed in future.   Old description:
-        If this attribute is set to true the CareWakeUp filtering is
+        is deprecated and will be removed in future. Old description: If
+        this attribute is set to true the CareWakeUp filtering is
         supported. In this case only the CarWakeUp bit within the NmPdu
         with source node identifier nmCarWakeUpFilterNodeId is
         considered as CarWakeUp request.
     :ivar nm_car_wake_up_filter_node_id: Source node identifier for
         CarWakeUp filtering.
     :ivar nm_car_wake_up_rx_enabled: Please note that this parameter is
-        deprecated and will be removed in future.  Old description: If
+        deprecated and will be removed in future. Old description: If
         set to true this attribute enables the support of CarWakeUp bit
         evaluation in received NmPdus.
     :ivar nm_cbv_position: Defines the position of the control bit
         vector within the NmPdu (Byte position). If this attribute is
         not configured, the Control Bit Vector is not used.
     :ivar nm_channel_active: Please note that this attribute is
-        deprecated and will be removed in future.  This switch
-        determines if the respective CanNm channel is active or not.
-        Indicates whether a particular CanNm channel shall be
-        initialized (TRUE) or not (FALSE). If this parameter is set to
-        FALSE the respective NM instance shall not be used during
-        runtime.
+        deprecated and will be removed in future. This switch determines
+        if the respective CanNm channel is active or not. Indicates
+        whether a particular CanNm channel shall be initialized (TRUE)
+        or not (FALSE). If this parameter is set to FALSE the respective
+        NM instance shall not be used during runtime.
     :ivar nm_immediate_nm_cycle_time: Defines the immediate NmPdu cycle
         time in seconds which is used for nmImmediateNmTransmissions
         NmPdu transmissions. This parameter is only valid if
@@ -138,7 +136,7 @@ class CanNmCluster:
         seconds. Defines the time how long the NM shall stay in the
         Repeat Message State.
     :ivar nm_user_data_length: Defines the length of the user data
-        contained in the NmPdu.  Please note that this attribute is
+        contained in the NmPdu. Please note that this attribute is
         deprecated and will be removed in future.
     :ivar nm_wait_bus_sleep_time: Timeout for bus calm down phase in
         seconds. It denotes the time how long the CanNm shall stay in
@@ -160,14 +158,14 @@ class CanNmCluster:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

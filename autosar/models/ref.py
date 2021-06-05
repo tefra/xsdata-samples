@@ -12,7 +12,6 @@ class Ref:
     * first slash (relative or absolute reference) [optional]
     * Identifier  [required]
     * a sequence of slashes and Identifiers [optional]
-
     This primitive is used by the meta-model tools to create the references.
 
     :ivar value:

@@ -32,7 +32,7 @@ class J1939TpPg:
         different transport protocols (BAM, CMDT, direct) on the same
         J1939TpConnection.
     :ivar tp_sdu_ref: Reference to IPdus that are segmented by the
-        Transport Protocol.   To support the low-level routing of NPdu's
+        Transport Protocol. To support the low-level routing of NPdu's
         the NPdu is a specialization of an IPdu. More details can be
         found in the NPdu class description. Nevertheless the
         J1939TpConnection must not reference a NPdu with this tpSdu

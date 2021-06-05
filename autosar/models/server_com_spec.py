@@ -15,7 +15,6 @@ class ServerComSpec:
     """@RESTRICT_TO_STANDARD:CP!
     Communication attributes for a server port (PPortPrototype and ClientServerInterface).
     @END_RESTRICT_TO_STANDARD!
-
     @RESTRICT_TO_STANDARD:AP!
     Server-specific communication attributes (PPortPrototype typed by ServiceInterface) that are relevant for methods and field getters and setters.
     @END_RESTRICT_TO_STANDARD!
@@ -29,8 +28,8 @@ class ServerComSpec:
         value shall be greater or equal to 1. Setting the value of
         queueLength to 1 implies that incoming requests are rejected
         while another request that arrived earlier is being processed.
-        @END_RESTRICT_TO_STANDARD!  @RESTRICT_TO_STANDARD:AP! Length of
-        call queue on the server side.  @END_RESTRICT_TO_STANDARD!
+        @END_RESTRICT_TO_STANDARD! @RESTRICT_TO_STANDARD:AP! Length of
+        call queue on the server side. @END_RESTRICT_TO_STANDARD!
     :ivar setter_ref: The existence of this reference indicates that the
         ServerComSpec refers to the setter of a Field.
     :ivar transformation_com_spec_propss: This references the

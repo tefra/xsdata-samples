@@ -44,9 +44,8 @@ class NvBlockDescriptor:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -64,8 +63,8 @@ class NvBlockDescriptor:
         for which kind of service or notification. In case of
         notifications one common callback function is provided by the
         RTE for each individual kind of notification defined by the
-        "role".  The aggregation of RoleBasedPortAssignment is subject
-        to variability with the purpose to support the conditional
+        "role". The aggregation of RoleBasedPortAssignment is subject to
+        variability with the purpose to support the conditional
         existence of ports. The upper multiplicity of this role has been
         increased to * due to resolving an atpVariation stereotype. The
         previous value was -1.
@@ -77,10 +76,10 @@ class NvBlockDescriptor:
     :ivar instantiation_data_def_propss: The purpose of
         InstantiationDataDefProps are the refinement of some data def
         properties of individual instantiations within the context of a
-        NvBlockSwComponentType.   The aggregation of
+        NvBlockSwComponentType. The aggregation of
         InstantiationDataDefProps is subject to variability with the
         purpose to support the conditional existence of ports, component
-        internal memory objects and those attributes.  The upper
+        internal memory objects and those attributes. The upper
         multiplicity of this role has been increased to * due to
         resolving an atpVariation stereotype. The previous value was -1.
     :ivar mode_switch_event_triggered_activitys: This represents the
@@ -90,16 +89,16 @@ class NvBlockDescriptor:
         stereotype. The previous value was -1.
     :ivar nv_block_data_mappings: Defines the mapping between the
         VariableDataPrototypes in the NvBlockComponents ports and the
-        VariableDataPrototypes of the RAM Block.  The aggregation of
+        VariableDataPrototypes of the RAM Block. The aggregation of
         NvBlockDataMapping is subject to variability with the purpose to
-        support the conditional existence of nv data ports.  The upper
+        support the conditional existence of nv data ports. The upper
         multiplicity of this role has been increased to * due to
         resolving an atpVariation stereotype. The previous value was -1.
     :ivar nv_block_needs: Specifies the abstract needs on the
         configuration of the NVRAM Manager for the single NVRAM Block
-        described by this NvBlockDescriptor.  In addition, it may define
+        described by this NvBlockDescriptor. In addition, it may define
         requirements for writing strategies in an implementation of an
-        NvBlockSwComponentType by the RTE.  Please note that the
+        NvBlockSwComponentType by the RTE. Please note that the
         attributes nDataSets and nRomBlocks are not relevant for this
         aggregation because the RTE will allocate just one block anyway.
         In a different context, however, they do make sense.
@@ -133,14 +132,14 @@ class NvBlockDescriptor:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

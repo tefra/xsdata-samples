@@ -18,15 +18,15 @@ class BuildEngineeringObject:
         Note that it is modeled as NameToken and not as Identifier since
         in ASAM-CC it is also a NameToken.
     :ivar category: This denotes the role of the engineering object in
-        the development cycle.  Categories are such as  * SWSRC for
-        source code * SWOBJ for object code * SWHDR for a C-header file
-        Further roles need to be defined via Methodology.
+        the development cycle. Categories are such as * SWSRC for source
+        code * SWOBJ for object code * SWHDR for a C-header file Further
+        roles need to be defined via Methodology.
     :ivar revision_labels:
     :ivar domain: This denotes the domain in which the engineering
         object is stored. This allows to indicate various segments in
         the repository keeping the engineering objects. The domain may
         segregate companies, as well as automotive domains. Details need
-        to be defined by the Methodology.  Attribute is optional to
+        to be defined by the Methodology. Attribute is optional to
         support a default domain.
     :ivar file_type: This attribute indicates the file type which shall
         used for the engineering object. Note that an engineering object
@@ -36,8 +36,8 @@ class BuildEngineeringObject:
         file if it is created newly. Note that engineering object
         resolves category + ShortLabel indicate mainly to refer to an
         existing file. If the file is created newly, the filename can
-        either be determined by built in policy or predefined here.
-        Note that extensions shall part of file name even if it could be
+        either be determined by built in policy or predefined here. Note
+        that extensions shall part of file name even if it could be
         derived from fileType.
     :ivar parent_category: This represents the category of the parent
         object.

@@ -14,7 +14,7 @@ class MemoryAllocationKeywordPolicyTypeSimple(Enum):
         shortNames of referring MemorySections and therefore the
         belonging Memory Allocation Keywords in the code are build with
         the shortName of the SwAddrMethod and a variable alignment
-        postfix.  Thereby the alignment postfix needs to be consistent
+        postfix. Thereby the alignment postfix needs to be consistent
         with the alignment attribute of the related MemorySection.
     """
     ADDR_METHOD_SHORT_NAME = "ADDR-METHOD-SHORT-NAME"

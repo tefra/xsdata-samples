@@ -28,12 +28,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticEventNeeds:
     """Specifies the abstract needs on the configuration of the Diagnostic
-    Event Manager for one diagnostic event. Its shortName can be regarded as a
-    symbol identifying the diagnostic event from the viewpoint of the component
-    or module which owns this element.
+    Event Manager for one diagnostic event.
 
-    In case the diagnostic event specifies a production error, the
-    shortName shall be the name of the production error.
+    Its shortName can be regarded as a symbol identifying the diagnostic
+    event from the viewpoint of the component or module which owns this
+    element. In case the diagnostic event specifies a production error,
+    the shortName shall be the name of the production error.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended
@@ -46,9 +46,8 @@ class DiagnosticEventNeeds:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -63,13 +62,13 @@ class DiagnosticEventNeeds:
         design notes.
     :ivar audiences:
     :ivar diag_requirement: This denotes the requirement identifier to
-        which the object can be linked to.  Note that with the
+        which the object can be linked to. Note that with the
         implementation of a generic tracing concept in AUTOSAR this
         attribute might become obsolete.
     :ivar security_access_level: This attribute denotes the level of
         security which is touched by the diagnostic object. The higher
-        the level the more relevance for the security exists.  This
-        level shall be mapped to the security level in the ECU.
+        the level the more relevance for the security exists. This level
+        shall be mapped to the security level in the ECU.
     :ivar consider_pto_status: PTO (Power Take Off) has an impact on the
         respective emission-related event (OBD). This information shall
         be provided by SW-C description in order to consider the PTO
@@ -82,7 +81,7 @@ class DiagnosticEventNeeds:
     :ivar diag_event_debounce_algorithm: Specifies the abstract need on
         the Debounce Algorithm applied by the Diagnostic Event Manager.
     :ivar dtc_kind: This attribute indicates the kind of the diagnostic
-        monitor according to the SWS Diagnostic Event Manger.   This
+        monitor according to the SWS Diagnostic Event Manger. This
         attribute applies for the UDS diagnostics use case.
     :ivar dtc_number: This represents a reasonable Diagnostic Trouble
         Code. This allows to predefine the Diagnostic Trouble Code if
@@ -100,7 +99,7 @@ class DiagnosticEventNeeds:
     :ivar obd_dtc_number: This represents a reasonable Diagnostic
         Trouble Code. This allows to predefine the Diagnostic Trouble
         Code, e.g. if the a function developer has received a particular
-        requirement from the OEM or from a standardization body.  This
+        requirement from the OEM or from a standardization body. This
         attribute applies for the OBD diagnostics use case.
     :ivar prestored_freezeframe_stored_in_nvm: If the Event uses a
         prestored freeze-frame (using the operations PrestoreFreezeFrame
@@ -115,7 +114,7 @@ class DiagnosticEventNeeds:
     :ivar uds_dtc_number: This represents a reasonable Diagnostic
         Trouble Code. This allows to predefine the Diagnostic Trouble
         Code, e.g. if the a function developer has received a particular
-        requirement from the OEM or from a standardization body.  This
+        requirement from the OEM or from a standardization body. This
         attribute applies for the UDS diagnostics use case.
     :ivar uses_monitor_data: This attribute defines whether additional
         monitor data shall be added to the reporting of events.
@@ -135,14 +134,14 @@ class DiagnosticEventNeeds:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

@@ -12,7 +12,7 @@ class EcucConfigurationClassEnumSimple(Enum):
     :cvar PRE_COMPILE: PreCompile Time: after compilation a
         configuration parameter can not be changed any more.
     :cvar PUBLISHED_INFORMATION: PublishedInformation is used to specify
-        the fact that certain  information is fixed even before the pre-
+        the fact that certain information is fixed even before the pre-
         compile stage.
     """
     LINK = "LINK"

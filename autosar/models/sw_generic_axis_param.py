@@ -9,13 +9,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SwGenericAxisParam:
-    """This meta-class describes a specific parameter of a generic axis. The
-    name of the parameter is defined through a reference to a parameter type
-    defined on a corresponding axis type.
+    """This meta-class describes a specific parameter of a generic axis.
 
-    The value of the parameter is given here in case that it is not
-    changeable during calibration. Example is shift / offset in a fixed
-    axis.
+    The name of the parameter is defined through a reference to a
+    parameter type defined on a corresponding axis type. The value of
+    the parameter is given here in case that it is not changeable during
+    calibration. Example is shift / offset in a fixed axis.
 
     :ivar sw_generic_axis_param_type_ref: Parameter type defined on a
         corresponding axis type. References can only be made to axis

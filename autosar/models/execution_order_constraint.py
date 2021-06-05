@@ -27,20 +27,33 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ExecutionOrderConstraint:
     """This constraint is used to restrict the order of execution for a set of
-    ExecutableEntities. The ExecutionOrderConstraint can be used in any timing
-    view.
+    ExecutableEntities.
 
-    The various scopes for ExecutionOrderConstraint are described below. Generally, each ExecutionOrderConstraint has a scope of software components and can reference all executable entities available in the corresponding internal behavior (RunnableEntity and BswModuleEntity) either directly or by the events activating respectively starting them (RteEvent and BswEvent).
-
-    On VFB level an ExecutionOrderConstraint can be specified for RunnableEntities part of the composition hierarchy referenced by the VfbTiming. The ExecutionOrderConstraint is aggregated by the VfbTiming.
-
-    On SW-C level an ExecutionOrderConstraint can be specified for RunnableEntities part of the InternalBehavior referenced by the SwcTiming. The ExecutionOrderConstraint is aggregated by the SwcTiming.
-
-    On System level an ExecutionOrderConstraint can be specified for RunnableEntities part of the composition hierarchy of the system referenced by the SystemTiming. The ExecutionOrderConstraint is aggregated by the SystemTiming.
-
-    On BSW Module level, an ExectionOrderConstraint can be specified for BswModuleEntities part of an BswInternalBehavior referenced by the BswModuleTiming. The ExecutionOrderConstraint is aggregated by the BswModuleTiming.
-
-    On ECU level an ExecutionOrderConstraint can be specified for all ExecutableEntities and Events available via the EcucValueCollection, covering ECU Extract and BSW Module Configuration, referenced by the EcuTiming. The ExecutionOrderConstraint is aggregated by the EcuTiming.
+    The ExecutionOrderConstraint can be used in any timing view. The
+    various scopes for ExecutionOrderConstraint are described below.
+    Generally, each ExecutionOrderConstraint has a scope of software
+    components and can reference all executable entities available in
+    the corresponding internal behavior (RunnableEntity and
+    BswModuleEntity) either directly or by the events activating
+    respectively starting them (RteEvent and BswEvent). On VFB level an
+    ExecutionOrderConstraint can be specified for RunnableEntities part
+    of the composition hierarchy referenced by the VfbTiming. The
+    ExecutionOrderConstraint is aggregated by the VfbTiming. On SW-C
+    level an ExecutionOrderConstraint can be specified for
+    RunnableEntities part of the InternalBehavior referenced by the
+    SwcTiming. The ExecutionOrderConstraint is aggregated by the
+    SwcTiming. On System level an ExecutionOrderConstraint can be
+    specified for RunnableEntities part of the composition hierarchy of
+    the system referenced by the SystemTiming. The
+    ExecutionOrderConstraint is aggregated by the SystemTiming. On BSW
+    Module level, an ExectionOrderConstraint can be specified for
+    BswModuleEntities part of an BswInternalBehavior referenced by the
+    BswModuleTiming. The ExecutionOrderConstraint is aggregated by the
+    BswModuleTiming. On ECU level an ExecutionOrderConstraint can be
+    specified for all ExecutableEntities and Events available via the
+    EcucValueCollection, covering ECU Extract and BSW Module
+    Configuration, referenced by the EcuTiming. The
+    ExecutionOrderConstraint is aggregated by the EcuTiming.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended
@@ -53,9 +66,8 @@ class ExecutionOrderConstraint:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -70,7 +82,7 @@ class ExecutionOrderConstraint:
         design notes.
     :ivar trace_refs: This assocation represents the ability to trace to
         upstream requirements / constraints. This supports for example
-        the bottom up tracing   ProjectObjectives &lt;- MainRequirements
+        the bottom up tracing ProjectObjectives &lt;- MainRequirements
         &lt;- Features &lt;- RequirementSpecs &lt;- BSW/AI
     :ivar timing_condition_ref: A timing condition the timing constraint
         depends on. In other words it specifies the condition the timing
@@ -110,14 +122,14 @@ class ExecutionOrderConstraint:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

@@ -14,9 +14,9 @@ class PersistencyRedundancyEnumSimple(Enum):
         qualified and subject to integrator decisions.
     :cvar REDUNDANT_PER_ELEMENT: This value represents the requirement
         that redundancy measures are applied on key-value level of a
-        key-value storage or on file level of a file storage.  The
-        nature of the redundancy used on the persistent storage is not
-        further qualified and subject to integrator decisions.
+        key-value storage or on file level of a file storage. The nature
+        of the redundancy used on the persistent storage is not further
+        qualified and subject to integrator decisions.
     """
     NONE_VALUE = "NONE"
     REDUNDANT = "REDUNDANT"

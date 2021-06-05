@@ -17,9 +17,9 @@ class VlanMembership:
     represents the handling of untagged frames.
 
     :ivar default_priority: Standard output-priority outgoing Frames
-        will be tagged with.  Defines the priority that received frames
+        will be tagged with. Defines the priority that received frames
         are assigned together with the VLAN Id (defaultVlan). The values
-        from 0 (best effort) to 7 (highest) are allowed.  In case
+        from 0 (best effort) to 7 (highest) are allowed. In case
         modifyVlan and an already tagged received frame, the actual
         priority of the received frame is not modified.
     :ivar dhcp_address_assignment: Specifies the IP Address which will

@@ -25,7 +25,7 @@ class CIdentifier:
         blueprint.
     :ivar name_pattern: This attribute represents a pattern which shall
         be used to define the value of the identifier if the CIdentifier
-        in question is part of a blueprint.   For more details refer to
+        in question is part of a blueprint. For more details refer to
         TPS_StandardizationTemplate.
     """
     class Meta:

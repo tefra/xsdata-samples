@@ -43,9 +43,8 @@ class IdsmInstance:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -89,11 +88,11 @@ class IdsmInstance:
     :ivar timestamp_format: The existence of this attribute specifies
         that the IdsM shall add a timestamp to the QSEv messages it
         sends onto the network. I.e., if this attribute does not exist,
-        no timestamp shall be added to the QSEv messages.  The content
-        of this attribute further specifies the timestamp format as
+        no timestamp shall be added to the QSEv messages. The content of
+        this attribute further specifies the timestamp format as
         follows: - "AUTOSAR" defines AUTOSAR standardized timestamp
         format according to the Synchronized Time-Base Manager - Any
-        other string defines a proprietary timestamp format.  Note: A
+        other string defines a proprietary timestamp format. Note: A
         string defining a proprietary timestamp format shall be prefixed
         by a company-specific name fragment to avoid collisions.
     :ivar traffic_limitation_filters: This reference identifies the
@@ -116,14 +115,14 @@ class IdsmInstance:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

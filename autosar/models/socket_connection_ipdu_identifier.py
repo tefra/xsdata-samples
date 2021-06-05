@@ -35,8 +35,8 @@ class SocketConnectionIpduIdentifier:
         contributes to the triggering of the socket transmission if Pdu
         collection is enabled for this socket.
     :ivar pdu_ref: This reference is deprecated and will be removed in
-        future.   Old description: Reference to an IPdu that is mapped
-        to a socket connection.
+        future. Old description: Reference to an IPdu that is mapped to
+        a socket connection.
     :ivar pdu_triggering_ref: Reference to a Pdu that is mapped to a
         socket connection.
     :ivar routing_group_refs: Reference to RoutingGroups that can be

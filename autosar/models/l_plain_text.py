@@ -26,7 +26,7 @@ class LPlainText:
     :ivar l: 'This attribute denotes the language in which the language
         specific document entity is given. Note that "FOR-ALL" means,
         that the entity is applicable to all languages. It is language
-        neutral.  It follows ISO 639-1:2002 and is specified in upper
+        neutral. It follows ISO 639-1:2002 and is specified in upper
         case.
     :ivar space: This attribute is used to signal an intention that in
         that element, white space should be preserved by applications.

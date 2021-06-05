@@ -8,12 +8,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class Area:
-    """This element specifies a region in an image map. Image maps enable
-    authors to specify regions in an object (e.g. a graphic) and to assign a
-    specific activity to each region (e.g. load a document, launch a program
-    etc.).
+    """This element specifies a region in an image map.
 
-    For more details refer to the specification of HTML.
+    Image maps enable authors to specify regions in an object (e.g. a
+    graphic) and to assign a specific activity to each region (e.g. load
+    a document, launch a program etc.). For more details refer to the
+    specification of HTML.
 
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if
@@ -44,50 +44,48 @@ class Area:
     :ivar nohref: If this attribute is set, the Area has no associated
         link.
     :ivar onblur: The ONBLUR-Event occurs, when focus is switched away
-        from an element.   A script can be stored in this attribute to
-        be performed in the Event.
+        from an element. A script can be stored in this attribute to be
+        performed in the Event.
     :ivar onclick: The ONCLICK-Event occurs, if the current element is
-        clicked-on.   A script can be stored in this attribute to be
+        clicked-on. A script can be stored in this attribute to be
         performed in the Event.
     :ivar ondblclick: The ONCLICK-Event occurs, if the current element
-        is "double" clicked-on.   A script can be stored in this
-        attribute to be performed in the Event.
+        is "double" clicked-on. A script can be stored in this attribute
+        to be performed in the Event.
     :ivar onfocus: The ONFOCUS-Event occurs, if an element comes into
-        focus (e.g., through navigation using the tab button).   A
-        script can be stored in this attribute to be performed in the
-        Event.
+        focus (e.g., through navigation using the tab button). A script
+        can be stored in this attribute to be performed in the Event.
     :ivar onkeydown: The ONKEYDOWN-Event occurs, if a button on the
-        current element is pressed down.   A script can be stored in
-        this attribute to be performed in the event.
+        current element is pressed down. A script can be stored in this
+        attribute to be performed in the event.
     :ivar onkeypress: The ONKEYPRESS-Event occurs, if a button on the
-        current element is pressed down and released.   A script can be
+        current element is pressed down and released. A script can be
         stored in this attribute to be performed in the Event.
     :ivar onkeyup: The ONKEYUP-Event occurs, if a button on the current
-        element is released.   A script can be stored in this attribute
-        to be performed in the Event.
+        element is released. A script can be stored in this attribute to
+        be performed in the Event.
     :ivar onmousedown: The ONMOUSEDOWN-Event occurs, if the mouse button
-        used for clicking is held down on the current element.   A
-        script can be stored in this attribute to be performed in the
-        Event.
+        used for clicking is held down on the current element. A script
+        can be stored in this attribute to be performed in the Event.
     :ivar onmousemove: The ONMOUSEMOVE-Event occurs, if the mouse
-        pointer is moved on the current  element (i.e. it is located on
-        the current element).   A script can be stored in this attribute
+        pointer is moved on the current element (i.e. it is located on
+        the current element). A script can be stored in this attribute
         to be performed in the Event.
     :ivar onmouseout: The ONMOUSEOUT-Event occurs, if the mouse pointer
-        is moved from the current element.  A script can be stored in
+        is moved from the current element. A script can be stored in
         this attribute to be performed in the Event.
     :ivar onmouseover: The ONMOUSEOVER-Event occurs, if the mouse
         pointer is moved to the current element from another location
-        outside it.   A script can be stored in this attribute to be
+        outside it. A script can be stored in this attribute to be
         performed in the Event.
     :ivar onmouseup: The ONMOUSEUP-Event occurs if the mouse button used
-        for clicking is released on the current element.   A script can
-        be stored in this attribute to be performed in the Event.
+        for clicking is released on the current element. A script can be
+        stored in this attribute to be performed in the Event.
     :ivar shape: The shape of the area. Note that in HTML this is
         defaulted to RECT.
     :ivar style: Information on the associated style
     :ivar tabindex: This attribute specifies the position of the current
-        element in tabbing-order for the corresponding document.  The
+        element in tabbing-order for the corresponding document. The
         value shall lie between 0 and 32767. The Tabbing Order defines
         the sequence in which elements are focused on, when the user
         navigates using the keyboard.

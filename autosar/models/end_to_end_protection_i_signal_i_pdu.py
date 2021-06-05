@@ -13,15 +13,16 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 class EndToEndProtectionISignalIPdu:
     """It is possible to protect the inter-ECU data exchange of safety-related
     ISignalGroups at the level of COM IPdus using protection mechanisms
-    provided by E2E Library. For each ISignalGroup to be protected, a separate
-    EndToEndProtectionISignalIPdu element shall be created within the
-    EndToEndProtectionSet.
+    provided by E2E Library.
 
-    The EndToEndProtectionISignalIPdu element refers to the ISignalGroup
-    that is to be protected and to the ISignalIPdu that transmits the
-    protected ISignalGroup. The information how the referenced
-    ISignalGroup shall be protected (through which E2E Profile and with
-    which E2E settings) is defined in the EndToEndDescription element.
+    For each ISignalGroup to be protected, a separate
+    EndToEndProtectionISignalIPdu element shall be created within the
+    EndToEndProtectionSet. The EndToEndProtectionISignalIPdu element
+    refers to the ISignalGroup that is to be protected and to the
+    ISignalIPdu that transmits the protected ISignalGroup. The
+    information how the referenced ISignalGroup shall be protected
+    (through which E2E Profile and with which E2E settings) is defined
+    in the EndToEndDescription element.
 
     :ivar data_offset: This attribute defines the beginning offset (in
         bits) of the Array representation of the Signal Group (including

@@ -24,13 +24,18 @@ class EvaluatedVariantSet:
     """This meta class represents the ability to express if a set of ARElements
     is able to support one or more particular variants.
 
-    In other words, for a given set of evaluatedElements this meta class represents a table of evaluated variants, where each PredefinedVariant represents one column. In this column each descendant swSystemconstantValue resp. postbuildVariantCriterionValue represents one entry.
-
-    In a graphical representation each swSystemconstantValueSet / postBuildVariantCriterionValueSet could be used as an intermediate headline in the table column.
-
-    If the approvalStatus is "APPROVED" it expresses that the collection of CollectableElements is known be valid for the given evaluatedVariants.
-
-    Note that the EvaluatedVariantSet is a CollectableElement. This allows to establish a hierarchy of EvaluatedVariantSets.
+    In other words, for a given set of evaluatedElements this meta class
+    represents a table of evaluated variants, where each
+    PredefinedVariant represents one column. In this column each
+    descendant swSystemconstantValue resp.
+    postbuildVariantCriterionValue represents one entry. In a graphical
+    representation each swSystemconstantValueSet /
+    postBuildVariantCriterionValueSet could be used as an intermediate
+    headline in the table column. If the approvalStatus is "APPROVED" it
+    expresses that the collection of CollectableElements is known be
+    valid for the given evaluatedVariants. Note that the
+    EvaluatedVariantSet is a CollectableElement. This allows to
+    establish a hierarchy of EvaluatedVariantSets.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended
@@ -43,9 +48,8 @@ class EvaluatedVariantSet:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -61,9 +65,9 @@ class EvaluatedVariantSet:
     :ivar variation_point: This element was generated/modified due to an
         atpVariation stereotype.
     :ivar approval_status: Defines the approval status of a predefined
-        variant. Two values are predefined: "APPROVED" and "REJECTED":
-        * Approved variants are known to work. * Rejected variants are
-        known NOT to work.  Further values can be approved on a per-
+        variant. Two values are predefined: "APPROVED" and "REJECTED": *
+        Approved variants are known to work. * Rejected variants are
+        known NOT to work. Further values can be approved on a per-
         company basis; within AUTOSAR only "APPROVED" and "REJECTED"
         should be recognized.
     :ivar evaluated_element_refs: This represents a particular element
@@ -90,14 +94,14 @@ class EvaluatedVariantSet:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

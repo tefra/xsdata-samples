@@ -55,9 +55,8 @@ class CompositionSwComponentType:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -77,12 +76,12 @@ class CompositionSwComponentType:
     :ivar short_name_pattern: This attribute represents the pattern
         which shall be used to build the shortName of the derived
         elements. As of now it is modeled as a String.  In general it
-        should follow the pattern:    pattern = (placeholder |
-        namePart)*   placeholder = "{" namePart "}"   namePart =
-        identifier | "_"  This is subject to be refined in subsequent
-        versions.  Note that this is marked as obsolete. Use the xml
-        attribute namePattern instead as it applies to Identifier and
-        CIdentifier (shortName, symbol etc.)
+        should follow the pattern: pattern = (placeholder | namePart)*
+        placeholder = "{" namePart "}" namePart = identifier | "_" This
+        is subject to be refined in subsequent versions. Note that this
+        is marked as obsolete. Use the xml attribute namePattern instead
+        as it applies to Identifier and CIdentifier (shortName, symbol
+        etc.)
     :ivar sw_component_documentations: This adds a documentation to the
         SwComponentType. The upper multiplicity of this role has been
         increased to * due to resolving an atpVariation stereotype. The
@@ -92,7 +91,7 @@ class CompositionSwComponentType:
         upper multiplicity of this role has been increased to * due to
         resolving an atpVariation stereotype. The previous value was -1.
     :ivar ports: The PortPrototypes through which this SwComponentType
-        can communicate.  The aggregation of PortPrototype is subject to
+        can communicate. The aggregation of PortPrototype is subject to
         variability with the purpose to support the conditional
         existence of PortPrototypes. The upper multiplicity of this role
         has been increased to * due to resolving an atpVariation
@@ -111,12 +110,12 @@ class CompositionSwComponentType:
         SwComponentPrototypes is resolved post-build the deselected
         SwComponentPrototypes are still contained in the ECUs build but
         the instances are inactive in in that they are not scheduled by
-        the RTE.  The aggregation is marked as atpSplitable in order to
+        the RTE. The aggregation is marked as atpSplitable in order to
         allow the addition of service components to the ECU extract
-        during the ECU integration.  The use case for having 0
-        components owned by the CompositionSwComponentType could be to
-        deliver an empty CompositionSwComponentType to e.g. a supplier
-        for filling the internal structure. @END_RESTRICT_TO_STANDARD!
+        during the ECU integration. The use case for having 0 components
+        owned by the CompositionSwComponentType could be to deliver an
+        empty CompositionSwComponentType to e.g. a supplier for filling
+        the internal structure. @END_RESTRICT_TO_STANDARD!
         @RESTRICT_TO_STANDARD:AP! The instantiated components that are
         part of this composition. @END_RESTRICT_TO_STANDARD! The upper
         multiplicity of this role has been increased to * due to
@@ -124,9 +123,9 @@ class CompositionSwComponentType:
     :ivar connectors: SwConnectors have the principal ability to
         establish a connection among PortPrototypes. They can have many
         roles in the context of a CompositionSwComponentType. Details
-        are refined by subclasses.  The aggregation of SwConnectors is
+        are refined by subclasses. The aggregation of SwConnectors is
         subject to variability with the purpose to support variant data
-        flow.  @RESTRICT_TO_STANDARD:CP:AP! The aggregation is marked as
+        flow. @RESTRICT_TO_STANDARD:CP:AP! The aggregation is marked as
         atpSplitable in order to allow the extension of the ECU extract
         with AssemblySwConnectors between ApplicationSwComponentTypes
         and ServiceSwComponentTypes during the ECU integration.
@@ -138,20 +137,19 @@ class CompositionSwComponentType:
         PPortComSpecs and RPortComSpec.
     :ivar data_type_mapping_refs: @RESTRICT_TO_STANDARD:CP! Reference to
         the DataTypeMapping to be applied for the used
-        ApplicationDataTypes in PortInterfaces.  Background: when
+        ApplicationDataTypes in PortInterfaces. Background: when
         developing subsystems it may happen that ApplicationDataTypes
         are used on the surface of CompositionSwComponentTypes. In this
         case it would be reasonable to be able to also provide the
         intended mapping to the ImplementationDataTypes. However, this
         mapping shall be informal and not technically binding for the
         implementors mainly because the RTE generator is not concerned
-        about the CompositionSwComponentTypes.   Rationale: if the
-        mapping of ApplicationDataTypes on the delegated and inner
-        PortPrototype matches then the mapping to
-        ImplementationDataTypes is not impacting compatibility.
-        @END_RESTRICT_TO_STANDARD!  @RESTRICT_TO_STANDARD:AP! Reference
-        to the DataTypeMapping to be applied for the used
-        ApplicationDataTypes in ServiceInterfaces.
+        about the CompositionSwComponentTypes. Rationale: if the mapping
+        of ApplicationDataTypes on the delegated and inner PortPrototype
+        matches then the mapping to ImplementationDataTypes is not
+        impacting compatibility. @END_RESTRICT_TO_STANDARD!
+        @RESTRICT_TO_STANDARD:AP! Reference to the DataTypeMapping to be
+        applied for the used ApplicationDataTypes in ServiceInterfaces.
         @END_RESTRICT_TO_STANDARD!
     :ivar instantiation_rte_event_propss: This allows to define
         instantiation specific properties for RTE Events, in particular
@@ -174,14 +172,14 @@ class CompositionSwComponentType:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

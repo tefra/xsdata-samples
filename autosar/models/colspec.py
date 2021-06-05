@@ -28,7 +28,7 @@ class Colspec:
     :ivar colsep: Indicates whether a line should be displayed right of
         this column in the column specification.
     :ivar colwidth: Width of the column. You can enter absolute values
-        such as 4 cm,  or relative values marked with * (e.g.,  2* for
+        such as 4 cm, or relative values marked with * (e.g.,  2* for
         column widths double those of other columns with 1*). The unit
         can be added to the number in the string. Possible units are:
         cm, mm, px, pt.

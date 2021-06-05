@@ -29,19 +29,17 @@ class MemorySection:
     Description of the module or component, which actually allocates the memory
     in its code. This means in case of data prototypes which are allocated by
     the RTE, that the generated Implementation Description of the RTE shall
-    contain the corresponding MemorySections.
-
-    The attribute "symbol" (if symbol is missing: "shortName") defines the module or component specific section name used in the code. For details see the document "Specification of Memory Mapping".
-    Typically the section name is build according the pattern:
+    contain the corresponding MemorySections. The attribute "symbol" (if symbol
+    is missing: "shortName") defines the module or component specific section
+    name used in the code. For details see the document "Specification of
+    Memory Mapping". Typically the section name is build according the pattern:
 
     &lt;SwAddrMethod shortName&gt;[_&lt;further specialization nominator&gt;][_&lt;alignment&gt;]
     where
     * '''[&lt;SwAddrMethod shortName&gt;]''' is the shortName of the referenced SwAddrMethod
     * '''[_&lt;further specialization nominator&gt;]''' is an optional infix to indicate the specialization in the case that several MemorySections for different purpose of the same Implementation Description referring to the same or equally named SwAddrMethods.
     * '''[_&lt;alignment&gt;]''' is the alignment attributes value and is only applicable in the case that the memoryAllocationKeywordPolicy value of the referenced SwAddrMethod is set to addrMethodShortNameAndAlignment
-
     MemorySection used to Implement the code of RunnableEntitys and BswSchedulableEntitys shall have a symbol (if missing: shortName) identical to the referred SwAddrMethod to conform to the generated RTE header files.
-
     In addition to the section name described above, a prefix is used in the corresponding macro code in order to define a name space. This prefix is by default given by the shortName of the BswModuleDescription resp. the SwComponentType. It can be superseded by  the prefix attribute.
 
     :ivar short_name: This specifies an identifying shortName for the
@@ -55,9 +53,8 @@ class MemorySection:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -75,12 +72,12 @@ class MemorySection:
     :ivar executable_entity_refs: Reference to the ExecutableEntitites
         located in this section. This allows to locate different
         ExecutableEntitities in different sections even if the
-        associated SwAddrmethod is the same.  This is applicable to code
+        associated SwAddrmethod is the same. This is applicable to code
         sections only.
     :ivar mem_class_symbol: Defines a specific  symbol in order to
         generate the compiler abstraction  "memclass" code for this
         MemorySection. The existence of this attribute supersedes the
-        usage of swAddrmethod.shortName for this purpose.   The complete
+        usage of swAddrmethod.shortName for this purpose. The complete
         name of the  "memclass" preprocessor symbol is constructed as
         &lt;prefix&gt;_&lt;memClassSymbol&gt; where prefix is defined in
         the same way as for the enclosing MemorySection. See also
@@ -98,14 +95,14 @@ class MemorySection:
         SwAddrMethod, referred by the upstream declarations (e.g.
         calibration parameters, data element prototypes, code entities)
         which share a common addressing strategy. This can be evaluated
-        for the ECU configuration of the build support.   This
-        association shall always be declared by the Implementation
-        description of the module or component, which allocates the
-        memory in its code. This means in case of data prototypes which
-        are allocated by the RTE, that the software components only
-        declare the grouping of its data prototypes to SwAddrMethods,
-        and the generated Implementation Description of the RTE actually
-        sets up this association.
+        for the ECU configuration of the build support. This association
+        shall always be declared by the Implementation description of
+        the module or component, which allocates the memory in its code.
+        This means in case of data prototypes which are allocated by the
+        RTE, that the software components only declare the grouping of
+        its data prototypes to SwAddrMethods, and the generated
+        Implementation Description of the RTE actually sets up this
+        association.
     :ivar symbol: Defines the section name as explained in the main
         description. By using this attribute for code generation
         (instead of the shortName) it is possible to define several
@@ -129,14 +126,14 @@ class MemorySection:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
@@ -354,16 +351,16 @@ class MemorySection:
         :ivar option: This attribute introduces the ability to specify
             further intended properties of this MemorySection. The
             following two values are standardized (to be used for code
-            sections only and exclusively to each other):  * INLINE -
-            The code section is declared with the compiler abstraction
-            macro INLINE.  * LOCAL_INLINE  - The code section is
-            declared with the compiler abstraction macro LOCAL_INLINE
-            In both cases (INLINE and LOCAL_INLINE) the inline expansion
-            depends on the compiler specific implementation of these
-            macros. Depending on this, the code section either
-            corresponds to an actual section in memory or is put into
-            the section of the caller. See
-            AUTOSAR_SWS_CompilerAbstraction for more details.
+            sections only and exclusively to each other): * INLINE - The
+            code section is declared with the compiler abstraction macro
+            INLINE. * LOCAL_INLINE  - The code section is declared with
+            the compiler abstraction macro LOCAL_INLINE In both cases
+            (INLINE and LOCAL_INLINE) the inline expansion depends on
+            the compiler specific implementation of these macros.
+            Depending on this, the code section either corresponds to an
+            actual section in memory or is put into the section of the
+            caller. See AUTOSAR_SWS_CompilerAbstraction for more
+            details.
         """
         option: List[Identifier] = field(
             default_factory=list,

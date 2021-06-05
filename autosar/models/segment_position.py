@@ -21,9 +21,9 @@ class SegmentPosition:
         restricting the usage of this attribute.
     :ivar segment_length: Data Length of the segment in bits.
     :ivar segment_position: Segments bit position relatively to the
-        beginning of a multiplexed IPdu.  Note that the absolute
-        position of the segment in the MultiplexedIPdu is determined by
-        the definition of the segmentByteOrder attribute of the
+        beginning of a multiplexed IPdu. Note that the absolute position
+        of the segment in the MultiplexedIPdu is determined by the
+        definition of the segmentByteOrder attribute of the
         SegmentPosition. If Big Endian is specified, the start position
         indicates the bit position of the most significant bit in the
         IPdu. If Little Endian is specified, the start position

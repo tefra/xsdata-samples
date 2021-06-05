@@ -26,7 +26,7 @@ class SomeipServiceDiscovery:
         security protocol and its configuration settings that will
         provide communication security for Service Discovery messages
         that are transmitted using unicast, e.g. OfferService as answer
-        to a FindService message.   .
+        to a FindService message. .
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if
         an ArObject has changed. The checksum has no semantic meaning

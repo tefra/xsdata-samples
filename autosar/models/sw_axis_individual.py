@@ -38,18 +38,18 @@ class SwAxisIndividual:
         where the input value is finalized at the access point.
     :ivar sw_variable_refs: Refers to input variables of the axis. It is
         possible to specify more than one variable. Here the following
-        is valid:  * The variable with the highest priority shall be
+        is valid: * The variable with the highest priority shall be
         given first. It is used in the generation of the code and is
-        also displayed first in the application system.  * All variables
+        also displayed first in the application system. * All variables
         referenced shall be of the same physical nature. This is usually
         detected in that the conversion formulae affected refer back to
         the same SI-units. In AUTOSAR this ensured by the constraint,
         that the referenced input variables shall use a type compatible
-        to "inputVariableType".  * This multiple referencing allows a
+        to "inputVariableType". * This multiple referencing allows a
         base point distribution for more than one input variable to be
         used. One example of this are the temperature curves which can
         depend both on the induction air temperature and the engine
-        temperature.  These variables can be displayed simultaneously by
+        temperature. These variables can be displayed simultaneously by
         MCD systems (adjustment systems), enabling operating points to
         be shown in the curves.
     :ivar compu_method_ref: This is the compuMethod which is expected
@@ -197,7 +197,7 @@ class SwAxisIndividual:
         :ivar mc_data_instance_var_ref: This reference is used in the
             McSupport file to express the final instance of input values
             etc. It is not allowed to use this outside of an
-            McDataInstance.  The referenced mcDataInstance shall be
+            McDataInstance. The referenced mcDataInstance shall be
             originated from a VariableDataPrototype.
         """
         autosar_variable: List[AutosarVariableRef] = field(

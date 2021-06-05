@@ -31,7 +31,7 @@ class End2EndMethodProtectionProps:
         header in bits.
     :ivar source_id: This represents a unique numerical identifier
         identifying the source of a certain transmission. In case of C/S
-        communication, this ID uniquely identifies the client.  Note: ID
+        communication, this ID uniquely identifies the client. Note: ID
         is used for protection against masquerading. The details
         concerning the maximum number of values (this information is
         specific for each E2E profile) applicable for this attribute are
@@ -136,7 +136,7 @@ class End2EndMethodProtectionProps:
         """
         :ivar data_id: This represents a numerical identifier that is
             included in the CRC calculation. This dataId is used for
-            call and response.  Note: ID is used for protection against
+            call and response. Note: ID is used for protection against
             masquerading. The details concerning the maximum number of
             values (this information is specific for each E2E profile)
             applicable for this attribute are controlled by a semantic

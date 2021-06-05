@@ -12,19 +12,19 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SenderRecRecordElementMapping:
-    """Mapping of a primitive record element to a SystemSignal. If the
-    VariableDataPrototype that is referenced by
-    SenderReceiverToSignalGroupMapping is typed by an ApplicationDataType the
-    reference applicationRecordElement shall be used. If the
-    VariableDataPrototype is typed by the ImplementationDataType the reference
-    implementationRecordElement shall be used. Either the
-    implementationRecordElement or applicationRecordElement reference shall be
-    used.
+    """Mapping of a primitive record element to a SystemSignal.
 
-    If the element is composite, there will be no mapping to the
-    SystemSignal (multiplicity 0). In this case the RecordElementMapping
-    element will aggregate the complexTypeMapping element. In that way
-    also the composite datatypes can be mapped to SystemSignals.
+    If the VariableDataPrototype that is referenced by
+    SenderReceiverToSignalGroupMapping is typed by an
+    ApplicationDataType the reference applicationRecordElement shall be
+    used. If the VariableDataPrototype is typed by the
+    ImplementationDataType the reference implementationRecordElement
+    shall be used. Either the implementationRecordElement or
+    applicationRecordElement reference shall be used. If the element is
+    composite, there will be no mapping to the SystemSignal
+    (multiplicity 0). In this case the RecordElementMapping element will
+    aggregate the complexTypeMapping element. In that way also the
+    composite datatypes can be mapped to SystemSignals.
 
     :ivar application_record_element_ref: Reference to an
         ApplicationRecordElement in the context of the dataElement or in
@@ -235,17 +235,21 @@ class SenderRecRecordTypeMapping:
 
 @dataclass
 class SenderRecArrayElementMapping:
-    """The SenderRecArrayElement may be a primitive one or a composite one. If
-    the element is primitive, it will be mapped to the SystemSignal
+    """The SenderRecArrayElement may be a primitive one or a composite one.
+
+    If the element is primitive, it will be mapped to the SystemSignal
     (multiplicity 1). If the VariableDataPrototype that is referenced by
-    SenderReceiverToSignalGroupMapping is typed by an ApplicationDataType the
-    reference to the ApplicationArrayElement shall be used. If the
-    VariableDataPrototype is typed by the ImplementationDataType the reference
-    to the ImplementationArrayElement shall be used.
-
-    If the element is composite, there will be no mapping to the SystemSignal (multiplicity 0). In this case the ArrayElementMapping element will aggregate the TypeMapping element. In that way also the composite datatypes can be mapped to SystemSignals.
-
-    Regardless whether composite or primitive array element is mapped the indexed element always needs to be specified.
+    SenderReceiverToSignalGroupMapping is typed by an
+    ApplicationDataType the reference to the ApplicationArrayElement
+    shall be used. If the VariableDataPrototype is typed by the
+    ImplementationDataType the reference to the
+    ImplementationArrayElement shall be used. If the element is
+    composite, there will be no mapping to the SystemSignal
+    (multiplicity 0). In this case the ArrayElementMapping element will
+    aggregate the TypeMapping element. In that way also the composite
+    datatypes can be mapped to SystemSignals. Regardless whether
+    composite or primitive array element is mapped the indexed element
+    always needs to be specified.
 
     :ivar complex_type_mapping: This aggregation will be used if the
         element is composite.

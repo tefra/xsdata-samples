@@ -18,7 +18,7 @@ class ModeAccessPoint:
     ModeDeclarationGroup.
 
     :ivar ident: The aggregation in the role ident provides the ability
-        to make the ModeAccessPoint identifiable.  From the semantical
+        to make the ModeAccessPoint identifiable. From the semantical
         point of view, the ModeAccessPoint is considered a first-class
         Identifiable and therefore the aggregation in the role ident
         shall always exist (until it may be possible to let

@@ -39,7 +39,7 @@ class TcpProps:
     :ivar tcp_max_rtx: Maximum number of times that a TCP segment is
         retransmitted before the TCP connection is closed. This
         parameter is only valid if tcpRetransmissionTimeout is
-        configured.  Note: This parameter also applies for FIN
+        configured. Note: This parameter also applies for FIN
         retransmissions.
     :ivar tcp_msl: Maximum segment lifetime in [s].
     :ivar tcp_nagle_enabled: Enables (TRUE) or disables (FALSE) support

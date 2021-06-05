@@ -12,8 +12,8 @@ class TransmissionModeTiming:
     TransmissionModeTiming element in the role of transmissionModeFalseTiming.
     If the COM Transmission Mode is true the timing is aggregated by the
     TransmissionModeTiming element in the role of transmissionModeTrueTiming.
-
     COM supports the following Transmission Modes:
+
     * Periodic (Cyclic Timing)
     * Direct /n-times (EventControlledTiming)
     * Mixed (Cyclic and EventControlledTiming are assigned)

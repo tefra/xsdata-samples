@@ -25,9 +25,9 @@ class SectionNamePrefix:
         case) either a complete replacement or a prefix.
     :ivar implemented_in_ref: Optional reference that allows to Indicate
         the code artifact (header file) containing the preprocessor
-        implementation of memory sections with this prefix.  The usage
-        of this link supersedes the usage of a memory mapping header
-        with the default name (derived from the BswModuleDescription's
+        implementation of memory sections with this prefix. The usage of
+        this link supersedes the usage of a memory mapping header with
+        the default name (derived from the BswModuleDescription's
         shortName).
     :ivar variation_point: This element was generated/modified due to an
         atpVariation stereotype.

@@ -10,12 +10,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class Limit:
-    """This class represents the ability to express a numerical limit.  Note
-    that this is in fact a NumericalValuationPoint but has the additional
-    attribute intervalType.
+    """This class represents the ability to express a numerical limit.
 
-    Note that the xml.name is "LIMIT" for backward compatibility
-    reasons.
+    Note that this is in fact a NumericalValuationPoint but has the
+    additional attribute intervalType. Note that the xml.name is "LIMIT"
+    for backward compatibility reasons.
 
     :ivar content:
     :ivar sysc_string_ref: syscString indicates that the referenced
@@ -34,7 +33,7 @@ class Limit:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     :ivar binding_time: This is the binding time in which the attribute
-        value needs to be bound.  If this attribute is missing, the
+        value needs to be bound. If this attribute is missing, the
         attribute is not a variation point. In particular this means
         that It needs to be a single value according to the type
         specified in the pure model. It is an error if it is still a

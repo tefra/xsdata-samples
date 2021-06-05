@@ -10,9 +10,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SwAxisGeneric:
-    """This meta-class defines a generic axis. In a generic axis the axispoints
-    points are calculated in the ECU.
+    """This meta-class defines a generic axis.
 
+    In a generic axis the axispoints points are calculated in the ECU.
     The ECU is equipped with a fixed calculation algorithm. Parameters
     for the algorithm can be stored in the data component of the ECU.
     Therefore these parameters are specified in the data declaration,
@@ -22,11 +22,11 @@ class SwAxisGeneric:
     :ivar sw_number_of_axis_points: The number of base points to be
         calculated for this axis. This element exists to enable the
         number of axis points to be stored explicitly, although it could
-        also be described as swGenericAxisParam.  This attribute has
-        been deprecated, note that the value of
-        SwAxisIndividual.swMaxAxisPoints shall be taken instead.  In
-        case of a generated axis, the number of axis points to be
-        generated shall be taken from SwAxisIndividual.swMaxAxisPoints.
+        also be described as swGenericAxisParam. This attribute has been
+        deprecated, note that the value of
+        SwAxisIndividual.swMaxAxisPoints shall be taken instead. In case
+        of a generated axis, the number of axis points to be  generated
+        shall be taken from SwAxisIndividual.swMaxAxisPoints.
     :ivar sw_generic_axis_params: Specific parameter of a generic axis.
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if

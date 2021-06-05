@@ -55,15 +55,16 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 class SwPointerTargetProps:
     """This element defines, that the data object (which is specified by the
     aggregating element) contains a reference to another data object or to a
-    function in the CPU code. This corresponds to a pointer in the C-language.
+    function in the CPU code.
 
-    The attributes of this element describe the category and the
-    detailed properties of the target which is either a data description
-    or a function signature.
+    This corresponds to a pointer in the C-language. The attributes of
+    this element describe the category and the detailed properties of
+    the target which is either a data description or a function
+    signature.
 
-    :ivar target_category: This specifies the category of the target:  *
+    :ivar target_category: This specifies the category of the target: *
         In case of a data pointer, it shall specify the category of the
-        referenced data.  * In case of a function pointer, it could be
+        referenced data. * In case of a function pointer, it could be
         used to denote the category of the referenced BswModuleEntry.
         Since currently no categories for BswModuleEntry are defined it
         will be empty.
@@ -150,11 +151,11 @@ class SwDataDefPropsConditional:
         using up/down keys while calibrating.
     :ivar sw_value_block_size_mults: This attribute is used to specify
         the dimensions of a value block (VAL_BLK) for the case that that
-        value block has more than one dimension.   The dimensions given
-        in this attribute are ordered such that the first entry
-        represents the first dimension, the second entry represents the
-        second dimension, and so on.   For one-dimensional value blocks
-        the attribute swValueBlockSize shall be used and this attribute
+        value block has more than one dimension. The dimensions given in
+        this attribute are ordered such that the first entry represents
+        the first dimension, the second entry represents the second
+        dimension, and so on. For one-dimensional value blocks the
+        attribute swValueBlockSize shall be used and this attribute
         shall not exist.
     :ivar annotations: This aggregation allows to add annotations
         (yellow pads ...) related to the current data object.
@@ -193,7 +194,7 @@ class SwDataDefPropsConditional:
     :ivar implementation_data_type_ref: This association denotes the
         ImplementationDataType of a data declaration via its aggregated
         SwDataDefProps. It is used whenever a data declaration is not
-        directly referring to a base type. Especially  * redefinition of
+        directly referring to a base type. Especially * redefinition of
         an ImplementationDataType via a "typedef" to another
         ImplementationDatatype * the target type of a pointer (see
         SwPointerTargetProps), if it does not refer to a base type
@@ -214,13 +215,13 @@ class SwDataDefPropsConditional:
         into one string.
     :ivar sw_intended_resolution: The purpose of this element is to
         describe the requested quantization of data objects early on in
-        the design process.   The resolution ultimately occurs via the
+        the design process. The resolution ultimately occurs via the
         conversion formula present (compuMethod), which specifies the
         transition from the physical world to the standardized world
         (and vice-versa) (here, "the slope per bit" is present
-        implicitly in the conversion formula).   In the case of a
+        implicitly in the conversion formula). In the case of a
         development phase without a fixed conversion formula, a pre-
-        specification can occur through swIntendedResolution.  The
+        specification can occur through swIntendedResolution. The
         resolution is specified in the physical domain according to the
         property "unit".
     :ivar sw_interpolation_method: This is a keyword identifying the
@@ -233,11 +234,11 @@ class SwDataDefPropsConditional:
         of the MC system) to which this data object belongs. This
         corresponds to the Function in ASAM MCD 2MC /ASAP2 which defines
         the characteristic resp. which provides the measurement as
-        output.  The function name is only used for support of MC
+        output. The function name is only used for support of MC
         systems. It can be predefined on the level of software component
         design. If it  is not  predefined, it could be filled out with a
         reasonable name, e.g. the component  prototype name, from the
-        ECU extract.   Note: This attribute is deprecated because an
+        ECU extract. Note: This attribute is deprecated because an
         explicit model of MC functions can be set up by using the meta-
         class McFunction.
     :ivar sw_is_virtual: This element distinguishes virtual objects.
@@ -251,7 +252,7 @@ class SwDataDefPropsConditional:
         which the object involved shall be or is called or calculated.
         This timing can be collected from the task in which write access
         processes to the variable run. But this cannot be done by the
-        MCD system.   So this attribute can be used in an early phase to
+        MCD system. So this attribute can be used in an early phase to
         express the desired refresh timing and later on to specify the
         real refresh timing.
     :ivar unit_ref: Physical unit associated with the semantics of this
@@ -604,7 +605,7 @@ class SwDataDefPropsConditional:
         :ivar mc_data_instance_var_ref: This reference is used in the
             McSupport file to express the final instance of input values
             etc. It is not allowed to use this outside of an
-            McDataInstance.  The referenced mcDataInstance shall be
+            McDataInstance. The referenced mcDataInstance shall be
             originated from a VariableDataPrototype.
         """
         autosar_variable: List[AutosarVariableRef] = field(
@@ -810,17 +811,11 @@ class SwDataDefProps:
 
     @RESTRICT_TO_STANDARD:CP:AP!
     Note that not all of the attributes or associated elements are useful all of the time. Hence, the process definition (e.g. expressed with an OCL or a Document Control Instance MSR-DCI) has the task of implementing limitations.
-
     SwDataDefProps covers various aspects:
-
     * Structure of the data element for calibration use cases: is it a single value, a curve, or a map, but also the recordLayouts which specify how such elements are mapped/converted to the DataTypes in the programming language (or in AUTOSAR). This is mainly expressed by properties like swRecordLayout and swCalprmAxisSet
-
     * Implementation aspects, mainly expressed by swImplPolicy, swVariableAccessImplPolicy, swAddrMethod, swPointerTagetProps, baseType, implementationDataType and additionalNativeTypeQualifier
-
     * Access policy for the MCD system, mainly expressed by swCalibrationAccess
-
     * Semantics of the data element, mainly expressed by compuMethod and/or unit, dataConstr, invalidValue
-
     * Code generation policy provided by swRecordLayout
     @END_RESTRICT_TO_STANDARD!
 

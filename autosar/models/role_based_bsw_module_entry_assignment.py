@@ -24,8 +24,8 @@ class RoleBasedBswModuleEntryAssignment:
     :ivar role: This is the role of the assigned BswModuleEntry in the
         given context. The attribute is required (for example) because
         different kind of callbacks may be associated with the same
-        ServiceNeeds (e.g. end-notification vs. error-notification).
-        The value shall be the role name of a configurable function call
+        ServiceNeeds (e.g. end-notification vs. error-notification). The
+        value shall be the role name of a configurable function call
         (usually a callback) as standardized in the Software
         Specification of the related AUTOSAR Service.
     :ivar variation_point: This element was generated/modified due to an

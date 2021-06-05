@@ -42,9 +42,8 @@ class ProvidedServiceInstance:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -89,14 +88,14 @@ class ProvidedServiceInstance:
         balancing weight in the service offer. Higher value means higher
         probability to be chosen.
     :ivar local_unicast_addresss: The local address over which the PSI
-        is provided (udp, tcp or both).  This property was modified due
+        is provided (udp, tcp or both). This property was modified due
         to atpVariation (DirectedAssociationPattern).
     :ivar minor_version: Minor Version of the Service that is provided
         by this ProvidedServiceInstance.
     :ivar priority: Defines the frame priority where values from 0 (best
         effort) to 7 (highest) are allowed.
     :ivar remote_unicast_addresss: This reference defines the remote
-        addresses of service consumers.  This reference shall ONLY be
+        addresses of service consumers. This reference shall ONLY be
         used if the remote address of the clients is determined from the
         configuration and not at runtime. This property was modified due
         to atpVariation (DirectedAssociationPattern).
@@ -123,14 +122,14 @@ class ProvidedServiceInstance:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

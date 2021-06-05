@@ -19,8 +19,8 @@ class EndToEndDescription:
         EndToEndDescription.
     :ivar data_ids:
     :ivar data_id_mode: There are three inclusion modes how the implicit
-        two-byte Data ID is included in the one-byte CRC:  * dataIDMode
-        = 0: Two bytes are included in the CRC (double ID configuration)
+        two-byte Data ID is included in the one-byte CRC: * dataIDMode =
+        0: Two bytes are included in the CRC (double ID configuration)
         This is used in variant 1A. * dataIDMode = 1: One of the two
         bytes byte is included, alternating high and low byte, depending
         on parity of the counter (alternating ID configuration). For
@@ -41,7 +41,7 @@ class EndToEndDescription:
         i.e. how many subsequent lost data is accepted. For example, if
         the receiver gets Data with counter 1 and MaxDeltaCounterInit is
         1, then at the next reception the receiver can accept Counters
-        with values 2 and 3, but not 4.  Note that if the receiver does
+        with values 2 and 3, but not 4. Note that if the receiver does
         not receive new Data at a consecutive read, then the receiver
         increments the tolerance by 1.
     :ivar crc_offset: Bit offset of CRC from the beginning of the Array
@@ -64,7 +64,7 @@ class EndToEndDescription:
         normal communication conditions.
     :ivar sync_counter_init: Number of Data required for validating the
         consistency of the counter that shall be received with a valid
-        counter  (i.e. counter within the allowed lock-in range) after
+        counter (i.e. counter within the allowed lock-in range) after
         the detection of an unexpected behavior of a received counter.
     :ivar data_id_nibble_offset: Bit offset of the low nibble of the
         high byte of Data ID. The applicability of this attribute is

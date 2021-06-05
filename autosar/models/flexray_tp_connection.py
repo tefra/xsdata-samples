@@ -16,14 +16,15 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class FlexrayTpConnection:
     """A connection identifies the sender and the receiver of this particular
-    communication. The FlexRayTp module routes a Pdu through this connection.
+    communication.
 
-    In a System Description the references to the PduPools are
-    mandatory. In an ECU Extract these references can be optional: On
-    unicast connections these references are always mandatory. On
-    multicast the txPduPool is mandatory on the sender side. The
-    rxPduPool is mandatory on the receiver side. On Gateway ECUs both
-    references are mandatory.
+    The FlexRayTp module routes a Pdu through this connection. In a
+    System Description the references to the PduPools are mandatory. In
+    an ECU Extract these references can be optional: On unicast
+    connections these references are always mandatory. On multicast the
+    txPduPool is mandatory on the sender side. The rxPduPool is
+    mandatory on the receiver side. On Gateway ECUs both references are
+    mandatory.
 
     :ivar ident: This adds the ability to become referrable to
         TpConnection.
@@ -39,7 +40,7 @@ class FlexrayTpConnection:
         the additional second direction.
     :ivar rx_pdu_pool_ref: A connection has a reference to a set of
         NPdus (FrTpRxPduPool) which are defined for receiving data via
-        this particular connection.   The following constraint is valid
+        this particular connection. The following constraint is valid
         only for the System Extract/ECU Extract: In case this connection
         is applied to the transmitter the rxPduPool holds the actually
         received NPdus. In case this connection is applied to the
@@ -49,7 +50,7 @@ class FlexrayTpConnection:
     :ivar transmitter_ref: The source of the TP connection.
     :ivar tx_pdu_pool_ref: A connection has a reference to a set of
         NPdus (FrTpTxPduPool) which are defined for sending data via
-        this particular connection.  The following constraint is valid
+        this particular connection. The following constraint is valid
         only for the System Extract/ECU Extract: In case this connection
         is applied to the transmitter the txPduPool holds the actually
         sent NPdus. In case this connection is applied to the receiver

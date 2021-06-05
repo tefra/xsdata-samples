@@ -25,7 +25,7 @@ class FlexrayTpEcu:
     :ivar full_duplex_enabled: The full duplex mechanisms is enabled if
         this attribute is set to true. Otherwise half duplex is enabled.
     :ivar transmit_cancellation: This attribute states whether Transmit
-        Cancellation is supported on this ECU.  Please note that this
+        Cancellation is supported on this ECU. Please note that this
         attribute is deprecated and will be removed in future.
     :ivar variation_point: This element was generated/modified due to an
         atpVariation stereotype.

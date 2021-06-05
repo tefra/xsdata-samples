@@ -29,7 +29,7 @@ class SwcToEcuMappingConstraint:
         the dedicated or exclusive mapping is defined.
     :ivar ecu_instance_refs: If the dedicated mapping is described, the
         SwComponentPrototypes can only be mapped to these referenced
-        ECUInstances.   If the exclusive mapping is described, the
+        ECUInstances. If the exclusive mapping is described, the
         SwComponentPrototypes cannot be mapped to these referenced
         ECUInstances.
     :ivar swc_to_ecu_mapping_constraint_type: This attribute determines

@@ -36,9 +36,8 @@ class NvBlockNeeds:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -66,7 +65,7 @@ class NvBlockNeeds:
     :ivar ram_block_status_control: This attribute defines how the
         management of the RAM Block status is controlled.
     :ivar readonly: True: data of this NVRAM Block are write protected
-        for normal operation (but protection can be disabled)  false: no
+        for normal operation (but protection can be disabled) false: no
         restriction
     :ivar reliability: Reliability against data loss on the non-volatile
         medium.
@@ -103,7 +102,7 @@ class NvBlockNeeds:
     :ivar write_only_once: Defines write protection after first write:
         true: This block is prevented from being changed/erased or being
         replaced with the default ROM data after first initialization by
-        the software-component.  false: No such restriction.
+        the software-component. false: No such restriction.
     :ivar write_verification: Defines if Write Verification shall be
         enabled for this NVRAM Block.
     :ivar writing_frequency: Provides the amount of updates to this
@@ -127,14 +126,14 @@ class NvBlockNeeds:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

@@ -35,9 +35,8 @@ class PduToFrameMapping:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -51,13 +50,13 @@ class PduToFrameMapping:
         Values). These are not intended as documentation but are mere
         design notes.
     :ivar packing_byte_order: This attribute defines the order of the
-        bytes of the Pdu and the packing into the Frame.  Please
-        consider that [constr_3246] and [constr_3222] are restricting
-        the usage of this attribute.
+        bytes of the Pdu and the packing into the Frame. Please consider
+        that [constr_3246] and [constr_3222] are restricting the usage
+        of this attribute.
     :ivar pdu_ref: Reference to a I-Pdu, N-Pdu or NmPdu that is
         transmitted in the Frame.
     :ivar start_position: This attribute describes the bitposition of a
-        Pdu within a Frame.   Please note that the absolute position of
+        Pdu within a Frame. Please note that the absolute position of
         the Pdu in the Frame is determined by the definition of the
         packingByteOrder attribute. If Big Endian is specified, the
         start position indicates the bit position of the most
@@ -65,14 +64,14 @@ class PduToFrameMapping:
         start position indicates the bit position of the least
         significant bit in the Frame. The bit counting in byte 0 starts
         with bit 0 (least significant bit). The most significant bit in
-        byte 0 is bit 7.  The Pdus are byte aligned in a Frame and only
+        byte 0 is bit 7. The Pdus are byte aligned in a Frame and only
         the values  0, 8, 16, 24,... (for little endian) and  7, 15, 23,
         ... (for big endian) are allowed.
     :ivar update_indication_bit_position: Indication to the receivers
-        that the corresponding Pdu was updated by the sender.  This
+        that the corresponding Pdu was updated by the sender. This
         attribute describes the position of the update bit in the frame
         that aggregates this PDUToFrameMapping. Length is always one
-        bit.  Note that the exact bit position of the
+        bit. Note that the exact bit position of the
         updateIndicationBitPosition is linked to the value of the
         attribute packingByteOrder because the method of finding the bit
         position is different for the values mostSignificantByteFirst
@@ -80,14 +79,14 @@ class PduToFrameMapping:
         packingByteOrder is changed while the value of
         updateIndicationBitPosition remains unchanged the exact bit
         position of updateIndicationBitPosition within the enclosing
-        Frame still undergoes a change.  This attribute denotes the
-        least significant bit for "Little Endian" and the most
-        significant bit for "Big Endian" packed signals within the IPdu
-        (see the description of the packingByteOrder attribute). In
-        AUTOSAR the bit counting is always set to "sawtooth" and the bit
-        order is set to "Decreasing". The bit counting in byte 0 starts
-        with bit 0 (least significant bit). The most significant bit in
-        byte 0 is bit 7.
+        Frame still undergoes a change. This attribute denotes the least
+        significant bit for "Little Endian" and the most significant bit
+        for "Big Endian" packed signals within the IPdu (see the
+        description of the packingByteOrder attribute). In AUTOSAR the
+        bit counting is always set to "sawtooth" and the bit order is
+        set to "Decreasing". The bit counting in byte 0 starts with bit
+        0 (least significant bit). The most significant bit in byte 0 is
+        bit 7.
     :ivar variation_point: This element was generated/modified due to an
         atpVariation stereotype.
     :ivar s: Checksum calculated by the user's tool environment for an
@@ -106,14 +105,14 @@ class PduToFrameMapping:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

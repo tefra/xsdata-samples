@@ -32,7 +32,7 @@ class EthernetClusterConditional:
     :ivar protocol_name: The name of the protocol used.
     :ivar protocol_version: The version of the protocol used.
     :ivar speed: This attribute is deprecated and is replaced by the
-        attribute "baudrate".   Old description: Channels speed in kbps.
+        attribute "baudrate". Old description: Channels speed in kbps.
     :ivar coupling_port_connections: The upper multiplicity of this role
         has been increased to * due to resolving an atpVariation
         stereotype. The previous value was -1.

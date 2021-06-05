@@ -18,15 +18,15 @@ class Graphic:
         Note that it is modeled as NameToken and not as Identifier since
         in ASAM-CC it is also a NameToken.
     :ivar category: This denotes the role of the engineering object in
-        the development cycle.  Categories are such as  * SWSRC for
-        source code * SWOBJ for object code * SWHDR for a C-header file
-        Further roles need to be defined via Methodology.
+        the development cycle. Categories are such as * SWSRC for source
+        code * SWOBJ for object code * SWHDR for a C-header file Further
+        roles need to be defined via Methodology.
     :ivar revision_labels:
     :ivar domain: This denotes the domain in which the engineering
         object is stored. This allows to indicate various segments in
         the repository keeping the engineering objects. The domain may
         segregate companies, as well as automotive domains. Details need
-        to be defined by the Methodology.  Attribute is optional to
+        to be defined by the Methodology. Attribute is optional to
         support a default domain.
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if
@@ -54,12 +54,12 @@ class Graphic:
         attribute is supported in ASAM FSX and kept in AUTOSAR in order
         to support cut and paste.
     :ivar fit: It determines the way in which the graphic should be
-        inserted.  Enter the attribute value "AS-IS" , to insert a
-        graphic in its original dimensions.  The graphic is adapted, if
-        it is too big for the space for which it was intended.  Default
+        inserted. Enter the attribute value "AS-IS" , to insert a
+        graphic in its original dimensions. The graphic is adapted, if
+        it is too big for the space for which it was intended. Default
         is "AS-IS"
     :ivar generator: This attribute specifies the generator which is
-        used to generate the image.   Use case is that when editing a
+        used to generate the image. Use case is that when editing a
         documentation, a figure (to be delivered by the  modeling tool)
         is inserted by the authoring tool as reference (this is the role
         of graphic). But the real figure maybe injected during document

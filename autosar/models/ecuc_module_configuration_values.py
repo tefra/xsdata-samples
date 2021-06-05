@@ -24,16 +24,18 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class EcucModuleConfigurationValues:
-    """Head of the configuration of one Module. A Module can be a BSW module as
-    well as the RTE and ECU Infrastructure.
+    """Head of the configuration of one Module.
 
-    As part of the BSW module description, the EcucModuleConfigurationValues element has two different roles:
-
-    The recommendedConfiguration contains parameter values recommended by the BSW module vendor.
-
-    The preconfiguredConfiguration contains values for those parameters which are fixed by the implementation and cannot be changed.
-
-    These two EcucModuleConfigurationValues are used when the base EcucModuleConfigurationValues (as part of the base ECU configuration) is created to fill parameters with initial values.
+    A Module can be a BSW module as well as the RTE and ECU
+    Infrastructure. As part of the BSW module description, the
+    EcucModuleConfigurationValues element has two different roles: The
+    recommendedConfiguration contains parameter values recommended by
+    the BSW module vendor. The preconfiguredConfiguration contains
+    values for those parameters which are fixed by the implementation
+    and cannot be changed. These two EcucModuleConfigurationValues are
+    used when the base EcucModuleConfigurationValues (as part of the
+    base ECU configuration) is created to fill parameters with initial
+    values.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended
@@ -46,9 +48,8 @@ class EcucModuleConfigurationValues:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -68,7 +69,7 @@ class EcucModuleConfigurationValues:
         vendor specific module configuration.
     :ivar ecuc_def_edition: This is the version info of the ModuleDef
         ECUC Parameter definition to which this values conform to / are
-        based on.  For the Definition of ModuleDef ECUC Parameters the
+        based on. For the Definition of ModuleDef ECUC Parameters the
         AdminData shall be used to express the semantic changes. The
         compatibility rules between the definition and value revision
         labels is up to the module's vendor.
@@ -92,7 +93,7 @@ class EcucModuleConfigurationValues:
         yes, FALSE means no. If the attribute is not defined, FALSE
         semantics shall be assumed.
     :ivar containers: Aggregates all containers that belong to this
-        module configuration.  atpVariation: [RS_ECUC_00078] The upper
+        module configuration. atpVariation: [RS_ECUC_00078] The upper
         multiplicity of this role has been increased to * due to
         resolving an atpVariation stereotype. The previous value was -1.
     :ivar s: Checksum calculated by the user's tool environment for an
@@ -111,14 +112,14 @@ class EcucModuleConfigurationValues:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

@@ -46,13 +46,13 @@ class SwRecordLayoutV:
     :ivar sw_record_layout_v_axis: This attribute gives the index of the
         axis of which values that are stored in the record.
         swRecordVIndex refers to the symbolic names of the iterators for
-        which the axis value shall be stored in the record.   In case of
+        which the axis value shall be stored in the record. In case of
         nested iterators (mainly for multidimensional objects) the
         iterator names are specified as whitespace-separated names.
         These symbolic names relate to swRecordLayoutGroupIndex. The
         iterators are processed from left to right in such a manner that
-        they symbolize the loop index from the outside to the inside.
-        It is considered an error if more components are specified than
+        they symbolize the loop index from the outside to the inside. It
+        is considered an error if more components are specified than
         axes exist in the related ApplicationDataType.
     :ivar sw_record_layout_v_prop: This attribute describes the kind of
         values to be stored. More details see below. The standardized
@@ -60,10 +60,10 @@ class SwRecordLayoutV:
         [TPS_SWCT_01489].
     :ivar sw_record_layout_v_index: The symbolic value for iteration, or
         the symbolic values separated by whitespaces, refer to the
-        symbolic values given in swRecordLayoutGroupIndex .   The
+        symbolic values given in swRecordLayoutGroupIndex . The
         iterators are processed from left to right, in such a manner
         that they symbolize the loop index from the outside to the
-        inside.  It is considered an error if the record layout is
+        inside. It is considered an error if the record layout is
         referenced by an entity which has less number of axes than index
         names referenced here.
     :ivar sw_generic_axis_param_type_ref: This association supports the

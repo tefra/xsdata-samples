@@ -7,16 +7,16 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class McdIdentifier:
     """This primitive denotes a name used for measurement and calibration
-    systems and shall follow the restrictions for an ASAM ASAP2 ident. For
-    detailed syntax see the xsd.pattern. The size limitations are not captured.
+    systems and shall follow the restrictions for an ASAM ASAP2 ident.
 
-    McdIdentifiers are random names which may contain characters A
-    through Z, a through z, underscore (_), numerals 0 through 9, points
-    ('.') and brackets ( '[',']' ). However, the following limitations
-    apply: the first character shall be a letter or an underscore,
-    brackets shall occur in pairs at the end of a partial string and
-    shall contain a number or an alpha-numerical string (description of
-    the index of an array element).
+    For detailed syntax see the xsd.pattern. The size limitations are
+    not captured. McdIdentifiers are random names which may contain
+    characters A through Z, a through z, underscore (_), numerals 0
+    through 9, points ('.') and brackets ( '[',']' ). However, the
+    following limitations apply: the first character shall be a letter
+    or an underscore, brackets shall occur in pairs at the end of a
+    partial string and shall contain a number or an alpha-numerical
+    string (description of the index of an array element).
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

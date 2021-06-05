@@ -41,9 +41,8 @@ class BuildAction:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -61,19 +60,19 @@ class BuildAction:
     :ivar short_name_pattern: This attribute represents the pattern
         which shall be used to build the shortName of the derived
         elements. As of now it is modeled as a String.  In general it
-        should follow the pattern:    pattern = (placeholder |
-        namePart)*   placeholder = "{" namePart "}"   namePart =
-        identifier | "_"  This is subject to be refined in subsequent
-        versions.  Note that this is marked as obsolete. Use the xml
-        attribute namePattern instead as it applies to Identifier and
-        CIdentifier (shortName, symbol etc.)
+        should follow the pattern: pattern = (placeholder | namePart)*
+        placeholder = "{" namePart "}" namePart = identifier | "_" This
+        is subject to be refined in subsequent versions. Note that this
+        is marked as obsolete. Use the xml attribute namePattern instead
+        as it applies to Identifier and CIdentifier (shortName, symbol
+        etc.)
     :ivar delivery_artifacts: This denotes the delivery artifacts for
         the entity for reference purposes.
     :ivar invocation: This specifies how to invoke a build action in the
         given environment.
     :ivar predecessor_action_refs: This association specifies a set of
         predecessors. These actions shall be finished before but
-        necessarily immediately after the given action..  These actions
+        necessarily immediately after the given action.. These actions
         need to be performed in the specified order.
     :ivar follow_up_action_refs: This association specifies a set of
         follow up actions.
@@ -103,14 +102,14 @@ class BuildAction:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

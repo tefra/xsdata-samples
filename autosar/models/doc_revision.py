@@ -20,7 +20,7 @@ class DocRevision:
     :ivar revision_label_p_1: This attribute represents the version
         number of the first predecessor  of the object.
     :ivar revision_label_p_2: This attribute represents the version
-        number of the second predecessor of the object.  This attribute
+        number of the second predecessor of the object. This attribute
         is used if the object is the result of a merge process in which
         two branches are merged in to one new revision.
     :ivar state: The attribute state represents the current state of the

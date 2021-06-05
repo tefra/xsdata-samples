@@ -22,12 +22,12 @@ class SaveConfigurationEntry:
     :ivar position_in_table: Relative position in the schedule table.
         The first entry index in the schedule table is 0.
     :ivar assigned_controller_ref: The LIN slaves controller who is
-        target of this assignment.  Optional in case
+        target of this assignment. Optional in case
         LinConfigurationEntry.assignedLinSlaveConfig exists.
     :ivar assigned_lin_slave_config_ref: The LIN slave that is target of
-        this assignment.   Please note that this reference is redundant
-        to the assignedController reference.   In an Ecu Extract of the
-        LinMaster the LinSlave Ecus shall not be available.  The
+        this assignment. Please note that this reference is redundant to
+        the assignedController reference. In an Ecu Extract of the
+        LinMaster the LinSlave Ecus shall not be available. The
         information that is described here is necessary in the ECU
         Extract for the configuration of the LinMaster.
     :ivar s: Checksum calculated by the user's tool environment for an

@@ -18,8 +18,8 @@ class EthernetCommunicationControllerConditional:
     This element was generated/modified due to an atpVariation stereotype.
 
     :ivar wake_up_by_controller_supported: Defines whether the ECU shall
-        be woken up by this CommunicationController.  TRUE: wake up is
-        possible  FALSE: wake up is not supported  Note: If
+        be woken up by this CommunicationController. TRUE: wake up is
+        possible FALSE: wake up is not supported Note: If
         wakeUpByControllerSupported is set to TRUE the feature shall be
         supported by both hardware and basic software.
     :ivar coupling_ports: Optional CouplingPort that can be used to
@@ -33,7 +33,7 @@ class EthernetCommunicationControllerConditional:
         buffer length (frame length) in bytes.
     :ivar maximum_transmission_unit: This attribute is deprecated and
         will be removed in future. It is replaced by
-        EthernetCommunicationConnector.maximumTransmissionUnit.  Old
+        EthernetCommunicationConnector.maximumTransmissionUnit. Old
         description: This attribute specifies the maximum transmission
         unit in bytes.
     :ivar maximum_transmit_buffer_length: Determines the maximum

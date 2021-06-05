@@ -21,7 +21,7 @@ class SwImplPolicyEnumSimple(Enum):
     :cvar QUEUED: The content of the data element is queued and the data
         element has 'event' semantics, i.e. data elements are stored in
         a queue and all data  elements are processed in 'first in first
-        out' order.  The queuing is intended to be implemented by RTE
+        out' order. The queuing is intended to be implemented by RTE
         Generator. This value is not applicable for parameters.
     :cvar STANDARD: This is applicable for all kinds of data elements.
         For variable  data prototypes the 'last is best' semantics

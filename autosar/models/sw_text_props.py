@@ -17,10 +17,10 @@ class SwTextProps:
 
     :ivar array_size_semantics: This attribute controls the semantics of
         the arraysize for the array representing the string in an
-        ImplementationDataType.   It is there to support a safe
-        conversion between ApplicationDatatype and
-        ImplementationDatatype, even for variable length strings as
-        required e.g. for Support of SAE J1939.
+        ImplementationDataType. It is there to support a safe conversion
+        between ApplicationDatatype and ImplementationDatatype, even for
+        variable length strings as required e.g. for Support of SAE
+        J1939.
     :ivar sw_max_text_size: Specifies the maximum text size in
         characters. Note the size in bytes depends on the encoding in
         the corresponding baseType.
@@ -29,12 +29,12 @@ class SwTextProps:
         encoding of the characters in the string  on level of
         ApplicationDataType.
     :ivar sw_fill_character: Filler character for text parameter to pad
-        up to the maximum length swMaxTextSize.  The value will be
+        up to the maximum length swMaxTextSize. The value will be
         interpreted according to the encoding specified in the
         associated base type of the data object, e.g. 0x30 (hex)
         represents the ASCII character zero as filler character and 0
-        (dec) represents an end of string as filler character.  The
-        usage of the fill character depends on the arraySizeSemantics.
+        (dec) represents an end of string as filler character. The usage
+        of the fill character depends on the arraySizeSemantics.
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if
         an ArObject has changed. The checksum has no semantic meaning

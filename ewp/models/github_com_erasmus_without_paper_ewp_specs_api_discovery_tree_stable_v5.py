@@ -12,41 +12,41 @@ __NAMESPACE__ = "https://github.com/erasmus-without-paper/ewp-specs-api-discover
 class Host:
     """Defines a single EWP Host.
 
-    EWP Host defines relationships between HEIs, APIs, server administrators and
-    client credentials. One EWP Host defines a single Cartesian product (a "join")
-    of all these sets. (E.g. if a client certificate X and a HEI Y is present in
-    the same host, then it means that server which signs its requests with X is
-    allowed to request resources visible to HEI Y. Similar statement is true for
-    every other pair of sets.)
-
-    Most partners will have exactly one `host` entry. However, in some cases you
-    might need to describe more than one. For example, when you server covers
-    two HEIs, but one of your APIs is available for only one of these two HEIs,
-    then it's impossible to describe such relationship with a single Cartesian
-    product. You will need to use a sum of at least two Cartesian products. (which
-    is expressed by two `host` entries).
+    EWP Host defines relationships between HEIs, APIs, server
+    administrators and client credentials. One EWP Host defines a single
+    Cartesian product (a "join") of all these sets. (E.g. if a client
+    certificate X and a HEI Y is present in the same host, then it means
+    that server which signs its requests with X is allowed to request
+    resources visible to HEI Y. Similar statement is true for every
+    other pair of sets.) Most partners will have exactly one `host`
+    entry. However, in some cases you might need to describe more than
+    one. For example, when you server covers two HEIs, but one of your
+    APIs is available for only one of these two HEIs, then it's
+    impossible to describe such relationship with a single Cartesian
+    product. You will need to use a sum of at least two Cartesian
+    products. (which is expressed by two `host` entries).
 
     :ivar admin_email: RECOMMENDED element. Address of a developer or
         server administrator who may be contacted in case of problems
         (e.g. invalid Manifest file, invalid certificates, server
-        errors, etc.). Multiple addresses may be provided.  Please note,
+        errors, etc.). Multiple addresses may be provided. Please note,
         that additional `admin-email` elements can also be included
         inside specific APIs sections (this allows you to add extra
         admins to specific APIs without the need of creating extra
         `host` entries).
     :ivar admin_notes: Additional information provided by administrators
         and/or developers of this host for Registry maintainers and
-        client developers. Must be provided in English.  E.g. "This host
+        client developers. Must be provided in English. E.g. "This host
         is a DEMO server. We plan to keep it online for testing.".
     :ivar apis_implemented:
     :ivar institutions_covered: A list of HEIs (Higher Education
-        Institutions) that are covered by this host.  In conjunction
-        with `apis-implemented`, enlisting a HEI here indicates that the
+        Institutions) that are covered by this host. In conjunction with
+        `apis-implemented`, enlisting a HEI here indicates that the
         partner wants to receive specific HEI-related API queries
         regarding this HEI, and that it will be able to understand them.
         In conjunction with `client-credentials-in-use`, enlisting a HEI
         here indicates that these credentials can be used to request
-        resources "in the name of" this HEI.  Be advised, that the
+        resources "in the name of" this HEI. Be advised, that the
         Registry Service MAY ignore some (or all) of the items published
         here, for example if it believes that this HEI does not *want*
         to be covered by you. If, for some reason, your items are not
@@ -55,11 +55,11 @@ class Host:
         thread: https://github.com/erasmus-without-paper/ewp-specs-api-
         discovery/issues/12
     :ivar client_credentials_in_use: The list of client credentials used
-        by this host to make requests to other EWP hosts.  You should
+        by this host to make requests to other EWP hosts. You should
         have this element present if you intend to perform requests
         within the EWP Network. However, it's worth noting, that not
         having it is also valid (if you want your EWP Host to be "server
-        only").  Be advised, that the Registry Service MAY ignore some
+        only"). Be advised, that the Registry Service MAY ignore some
         (or all) of the credentials submitted here, for example if it
         finds they do not meet proper security standards. If, for some
         reason, your credentials are not being imported, and you're not
@@ -67,7 +67,7 @@ class Host:
     :ivar server_credentials_in_use: The list of server credentials used
         by this host to authenticate its servers when communicating to
         other EWP hosts. Note, that only *some* methods of server
-        authentication make use of these credentials.  As opposed to
+        authentication make use of these credentials. As opposed to
         client authentication, the keys used in server authentication
         are bound to specific endpoints (URLs), **not HEIs**. (Remember,
         that some services in EWP are not necessarily bound to any HEI,
@@ -75,12 +75,11 @@ class Host:
         multiple manifests - then each of your endpoints MAY use a
         different key for signing its responses. However, in most cases,
         you will want to use only a single key for all your APIs and
-        endpoints.  Be advised, that the Registry Service MAY ignore
-        some (or all) of the credentials submitted here, for example if
-        it finds they do not meet proper security standards. If, for
-        some reason, your credentials are not being imported, and you're
-        not sure why, please contact the Registry Service
-        administrators.
+        endpoints. Be advised, that the Registry Service MAY ignore some
+        (or all) of the credentials submitted here, for example if it
+        finds they do not meet proper security standards. If, for some
+        reason, your credentials are not being imported, and you're not
+        sure why, please contact the Registry Service administrators.
     """
     class Meta:
         name = "host"
@@ -149,13 +148,13 @@ class Host:
         :ivar certificate: Base64-encoded X.509 certificate used by the
             partner for TLS Client Authentication, as described here:
             https://github.com/erasmus-without-paper/ewp-specs-sec-
-            cliauth-tlscert  If your private key is compromised, you
-            MUST immediately remove all certificates based on this key
-            from your manifest.
+            cliauth-tlscert If your private key is compromised, you MUST
+            immediately remove all certificates based on this key from
+            your manifest.
         :ivar rsa_public_key: Base64-encoded RSA public key used by the
             partner for HTTP Signature Client Authentication, as
-            described here:  https://github.com/erasmus-without-
-            paper/ewp-specs-sec-cliauth-httpsig  If your private key is
+            described here: https://github.com/erasmus-without-
+            paper/ewp-specs-sec-cliauth-httpsig If your private key is
             compromised, you MUST immediately remove all public keys
             related to this key from your manifest.
         """
@@ -180,8 +179,8 @@ class Host:
         """
         :ivar rsa_public_key: Base64-encoded RSA public key used by the
             partner for HTTP Signature Server Authentication, as
-            described here:  https://github.com/erasmus-without-
-            paper/ewp-specs-sec-cliauth-httpsig  If your private key is
+            described here: https://github.com/erasmus-without-
+            paper/ewp-specs-sec-cliauth-httpsig If your private key is
             compromised, you MUST immediately remove all public keys
             related to this key from your manifest.
         """

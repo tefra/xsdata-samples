@@ -32,7 +32,7 @@ class EcucTextualParamValue:
         ECU Configuration but will be (re-)calculated by the code
         generator and stored in the value attribute afterwards. These
         implicit updated values might require a re-generation of other
-        modules which reference these values.  If isAutoValue is not
+        modules which reference these values. If isAutoValue is not
         present the default is "false".
     :ivar variation_point: This element was generated/modified due to an
         atpVariation stereotype.

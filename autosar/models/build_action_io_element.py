@@ -21,15 +21,15 @@ class BuildActionIoElement:
     :ivar category: This element assigns a category to the parent
         element. It is intended to specialize the usage and/or the
         content of the object. Such a specialization may also impose
-        particular semantic constraints on the entire substructure.  See
+        particular semantic constraints on the entire substructure. See
         also Identifiable.
     :ivar sdgs: This special data group allows to denote specific data.
         The structure is subject of mutual agreement.
     :ivar ecuc_definition_ref: This association denotes an ECUC
         parameter definition. The such referenced parameters are subject
-        of the build action input/ouptut.  Note that the reference to
-        the definition denotes the right for a build action to read
-        and/or write values for the given defintion and all contained
+        of the build action input/ouptut. Note that the reference to the
+        definition denotes the right for a build action to read and/or
+        write values for the given defintion and all contained
         definitions.
     :ivar engineering_object: This represents an artifact applicable to
         the build action.

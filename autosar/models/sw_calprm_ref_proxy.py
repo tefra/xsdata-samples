@@ -17,8 +17,8 @@ class SwCalprmRefProxy:
         be an ApplicationDataType of category VALUE.
     :ivar mc_data_instance_ref: This reference is used in the McSupport
         file to express the final instance of group axis etc. It is not
-        allowed to use this outside of an McDataInstance.  The
-        referenced mcDataInstance shall be originated from a
+        allowed to use this outside of an McDataInstance. The referenced
+        mcDataInstance shall be originated from a
         ParameterDataPrototype.
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if

@@ -44,9 +44,8 @@ class ProvidedSomeipServiceInstance:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -81,12 +80,12 @@ class ProvidedSomeipServiceInstance:
         that are provided by the ServiceInstance.
     :ivar load_balancing_priority: This attribute is used to specify the
         priority in the load balancing option of SOME/IP that is added
-        to the OfferService.  When a client searches for all service
+        to the OfferService. When a client searches for all service
         instances of a service, the client shall choose the service
         instance with highest priority if one is defined.
     :ivar load_balancing_weight: This attribute is used to specify the
         weight in the load balancing option of SOME/IP that is added to
-        the OfferService.  When a client searches for all service
+        the OfferService. When a client searches for all service
         instances of a service, the client shall choose the service
         instance with highest priority if one is defined. If several
         service instances exist with the highest priority the service
@@ -100,7 +99,7 @@ class ProvidedSomeipServiceInstance:
         relevant for the SOME/IP service discovery.
     :ivar service_instance_id: Identification number that is used by
         SOME/IP service discovery to identify the instance of the
-        service.  The value 4294967295 for service instance id is
+        service. The value 4294967295 for service instance id is
         reserved and should not be used.
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if
@@ -118,14 +117,14 @@ class ProvidedSomeipServiceInstance:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

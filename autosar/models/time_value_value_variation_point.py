@@ -30,7 +30,7 @@ class TimeValueValueVariationPoint:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     :ivar binding_time: This is the binding time in which the attribute
-        value needs to be bound.  If this attribute is missing, the
+        value needs to be bound. If this attribute is missing, the
         attribute is not a variation point. In particular this means
         that It needs to be a single value according to the type
         specified in the pure model. It is an error if it is still a

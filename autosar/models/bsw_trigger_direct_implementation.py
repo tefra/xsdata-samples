@@ -23,7 +23,7 @@ class BswTriggerDirectImplementation:
         triggered ExecutableEntitys. The ISR name is required by the
         integrator to map the BswEvents and RTEEvents to  this ISR.
     :ivar mastered_trigger_ref: The trigger which is directly mastered
-        by this module.  There may be several different
+        by this module. There may be several different
         BswTriggerDirectImplementations mastering the same Trigger. This
         may be required e.g. due to memory partitioning.
     :ivar task: The name of the OS task, which is controlled by the

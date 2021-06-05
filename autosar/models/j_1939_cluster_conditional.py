@@ -32,7 +32,7 @@ class J1939ClusterConditional:
     :ivar protocol_name: The name of the protocol used.
     :ivar protocol_version: The version of the protocol used.
     :ivar speed: This attribute is deprecated and is replaced by the
-        attribute "baudrate".   Old description: Channels speed in kbps.
+        attribute "baudrate". Old description: Channels speed in kbps.
     :ivar bus_off_recovery: CAN bus off monitoring / recovery at system
         level.
     :ivar can_fd_baudrate: Specifies the data segment baud rate of the
@@ -43,9 +43,9 @@ class J1939ClusterConditional:
         (RQST2).
     :ivar uses_address_arbitration: Defines whether the nodes attached
         to this channel use an initial address claim, and whether they
-        react to contending address claims of other nodes.  True: The
+        react to contending address claims of other nodes. True: The
         initial address claim is sent, and the node reacts to address
-        claims of other nodes.  False: The node only sends an address
+        claims of other nodes. False: The node only sends an address
         claim upon request, and does not care for contending address
         claims.
     :ivar variation_point: This element was generated/modified due to an

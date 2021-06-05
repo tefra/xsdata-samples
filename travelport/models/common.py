@@ -124,13 +124,13 @@ class AddSvc:
     rfic: 1P - Reason for issuance
     rfisc: 1P - Resaon for issuance sub-code
     svc_description: 1P - SVC fee description
-    origin: Origin location - Airport code. If this value not
-        provided, the last air segment arrival location is taken as
-        default. 1P only.
+    origin: Origin location - Airport code. If this value not provided,
+        the last air segment arrival location is taken as default. 1P
+        only.
     destination: Destination location - Airport code.
-    start_date: The start date of the SVC segment. If the value
-        not specified, the default value is set as the date next to the
-        last airsegment arrival date. 1P only
+    start_date: The start date of the SVC segment. If the value not
+        specified, the default value is set as the date next to the last
+        airsegment arrival date. 1P only
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -534,9 +534,8 @@ class BookingSourceType(Enum):
     CUSTOMER_ID:
     BOOKING_SOURCE_OVERRIDE: The Booking Source Override is usually used
         when the car supplier has assigned a number (which can be
-        alpha/numeric)
-        to the agency/e-commerce to use in place of an IATA number.
-        Supported provider(s) : 1P/1J
+        alpha/numeric) to the agency/e-commerce to use in place of an
+        IATA number. Supported provider(s) : 1P/1J
     """
     PSEUDO_CITY_CODE = "PseudoCityCode"
     ARC_NUMBER = "ArcNumber"
@@ -849,9 +848,9 @@ class CorporateDiscountId:
     Parameters
     ----------
     value:
-    negotiated_rate_code: When set to true,
-        the data in the CorporateDiscountID is a negotiated rate code.
-        Otherwise, this data is a Corporate Discount ID rate.
+    negotiated_rate_code: When set to true, the data in the
+        CorporateDiscountID is a negotiated rate code. Otherwise, this
+        data is a Corporate Discount ID rate.
     """
     class Meta:
         name = "CorporateDiscountID"
@@ -1542,11 +1541,9 @@ class MiscFormOfPayment:
         specific
     category: Indicates what Category the Miscellaneous Form Of Payment
         is being used for payment - The category may vary by GDS.
-        Allowable values are                         "Text"
-        "Credit"                         "CreditCard"
-        "FreeFormCreditCard"                         "Invoice"
-        "NonRefundable"                         "MultipleReceivables"
-        "Exchange"                         "Cash"
+        Allowable values are "Text" "Credit" "CreditCard"
+        "FreeFormCreditCard" "Invoice" "NonRefundable"
+        "MultipleReceivables" "Exchange" "Cash"
     acceptance_override: Override airline restriction on the credit
         card.
     """
@@ -1905,12 +1902,11 @@ class PaymentAdvice:
 
     Parameters
     ----------
-    type: Other Payment Yype. Possible Values: AGC - Agency
-        Check, AGG - Agency Guarantee, AWC - Award Check, CSH - Cash
-        Equivalent, DBC - Denied Boarding Compensation, MCO -
-        Miscellaneous Charge Order, TOO - Tour Order, TOV - Tour Voucher
-    document_number: Payment Document Number Examples: 1234567890,
-        R7777
+    type: Other Payment Yype. Possible Values: AGC - Agency Check, AGG -
+        Agency Guarantee, AWC - Award Check, CSH - Cash Equivalent, DBC
+        - Denied Boarding Compensation, MCO - Miscellaneous Charge
+        Order, TOO - Tour Order, TOV - Tour Voucher
+    document_number: Payment Document Number Examples: 1234567890, R7777
     issue_date: Document Issuance date
     issue_city: City code of document issuance
     original_fop: Original form of payment Examples: CHECK 3500
@@ -2702,10 +2698,9 @@ class ShopInformation:
 
     Parameters
     ----------
-    search_request: Search parameters that were used in LFS
-        request
-    flights_offered: Flights with lowest logical airfare
-        returned as response to LFS request
+    search_request: Search parameters that were used in LFS request
+    flights_offered: Flights with lowest logical airfare returned as
+        response to LFS request
     cabin_shopped:
     cabin_selected:
     lowest_fare_offered:
@@ -2758,10 +2753,9 @@ class ShopInformation:
         ----------
         origin:
         destination:
-        departure_time: Date and Time at which this entity
-            departs. This does not include Time Zone information since
-            it
-            can be derived from origin location
+        departure_time: Date and Time at which this entity departs. This
+            does not include Time Zone information since it can be
+            derived from origin location
         class_of_service:
         """
         origin: Optional[str] = field(
@@ -2806,10 +2800,9 @@ class ShopInformation:
         ----------
         origin:
         destination:
-        departure_time: Date and Time at which this entity
-            departs. This does not include Time Zone information since
-            it
-            can be derived from origin location
+        departure_time: Date and Time at which this entity departs. This
+            does not include Time Zone information since it can be
+            derived from origin location
         travel_order:
         carrier:
         flight_number:
@@ -4522,18 +4515,18 @@ class AccountingRemark:
     remark_data: Actual remarks data.
     booking_traveler_ref: Reference to Booking Traveler.
     key:
-    category: A category to group and organize the various
-        remarks. This is not required, but it is recommended.
+    category: A category to group and organize the various remarks. This
+        is not required, but it is recommended.
     type_in_gds:
     provider_reservation_info_ref: Provider reservation reference key.
-    provider_code: Contains the Provider Code of the provider
-        for which this accounting remark is used
+    provider_code: Contains the Provider Code of the provider for which
+        this accounting remark is used
     use_provider_native_mode: Will be true when terminal process
-        required,                     else false
+        required, else false
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -4648,9 +4641,9 @@ class ActionStatus:
     account_code: Used with TAW. Used to specify a corporate or in house
         account code to the PNR as part of ticketing arrangement field.
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -4890,9 +4883,9 @@ class AppliedProfile:
     immediate_parent_name: The name of the immediate parent that was
         applied
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -5332,18 +5325,17 @@ class CommissionRemark:
     Parameters
     ----------
     provider_reservation_level: Specify commission which is applicable
-        to                                                         PNR
-        level.
-    passenger_type_level: Specify commission which is applicable to
-        per PTC level.
+        to PNR level.
+    passenger_type_level: Specify commission which is applicable to per
+        PTC level.
     key: Key to be used for internal processing.
     provider_reservation_info_ref: Provider reservation reference key.
-    provider_code: Contains the Provider Code of the provider
-        for which this accounting remark is used
+    provider_code: Contains the Provider Code of the provider for which
+        this accounting remark is used
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -5496,9 +5488,9 @@ class ConsolidatorRemark:
     provider_code: Contains the Provider Code of the provider for which
         this element is used
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -5612,9 +5604,9 @@ class DiscountCard:
     description:
     number:
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -5723,9 +5715,9 @@ class DriversLicense:
     key:
     license_number: The driving license number of the booking traveler.
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -5778,9 +5770,9 @@ class Email:
     comment:
     email_id:
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -5946,9 +5938,9 @@ class GeneralRemark:
     use_provider_native_mode: Will be true when terminal process
         required, else false
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -6083,9 +6075,9 @@ class HostToken:
     key: Unique identifier for this token - use this key when a single
         HostToken is shared by multiple elements.
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -6140,9 +6132,9 @@ class LinkedUniversalRecord:
         current Universal Record.
     key:
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -6195,9 +6187,9 @@ class LoyaltyProgram:
     membership_program: Loyalty Program membership Id of the traveler
         specific to Amtrak(2V) Guest Rewards
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -6369,9 +6361,9 @@ class NameRemark:
     category: A category to group and organize the various remarks. This
         is not required, but it is recommended.
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -6440,9 +6432,9 @@ class Osi:
     provider_code: Contains the Provider Code of the provider for which
         this OSI is used
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -6568,10 +6560,8 @@ class OtherGuaranteeInfo:
     Parameters
     ----------
     value:
-    type: 1) IATA/ARC Number
-        2) Agency Address
-        2) Deposit Taken
-        3) Others
+    type: 1) IATA/ARC Number 2) Agency Address 2) Deposit Taken 3)
+        Others
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -6654,9 +6644,9 @@ class Payment:
     status: Status to indicate the business association of the payment
         element.
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -6775,9 +6765,9 @@ class PhoneNumber:
     extension:
     text:
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -6881,8 +6871,7 @@ class PolicyInformation:
     Parameters
     ----------
     reason_code: Reason Code
-    type: Policy Type - Air, Hotel, Car, Rail,
-        Ticketing
+    type: Policy Type - Air, Hotel, Car, Rail, Ticketing
     name: Policy Name
     out_of_policy: In Policy / Out of Policy Indicator
     segment_ref:
@@ -7199,9 +7188,9 @@ class RailSeatAssignment:
     rail_segment_ref:
     coach_number:
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -7431,9 +7420,9 @@ class ReviewBooking:
     remarks: Remark or reminder message. It can be truncated depending
         on the provider.
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -7550,9 +7539,9 @@ class Ssr:
     ssrrule_ref: UniqueID to associate a rule to the SSR
     url:
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -7763,9 +7752,9 @@ class SeatAssignment:
     segment_ref:
     flight_details_ref:
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -7880,9 +7869,9 @@ class Segment:
         for Air/Car/Hotel/Rail segments/reservations in the provider
         reservation.
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -7957,9 +7946,9 @@ class SpecialEquipment:
     key:
     type: Special equipment associated with a specific vehicle
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -8073,9 +8062,9 @@ class ThirdPartyInformation:
     key: Unique identifier of the third party supplier. Key can be used
         to modify or delete saved third party information.
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -8170,9 +8159,9 @@ class TravelComplianceData:
         association of Travel Compliance Data with the uAPI reservation
         locator code, mainly relevant to Hotel and Vehicle.
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -8348,9 +8337,9 @@ class UnassociatedRemark(TypeRemarkWithTravelerRef):
     ----------
     key:
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -8404,9 +8393,9 @@ class Xmlremark:
     category: A category to group and organize the various remarks. This
         is not required, but it is recommended.
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -8484,9 +8473,9 @@ class TypeAssociatedRemark(TypeRemarkWithTravelerRef):
     ----------
     key:
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -8622,17 +8611,17 @@ class TypeFeeInfo:
     amount:
     code:
     fee_token:
-    payment_ref: The reference to the one of the air
-        reservation payments if fee included in charge
+    payment_ref: The reference to the one of the air reservation
+        payments if fee included in charge
     booking_traveler_ref: Reference to booking traveler
     passenger_type_code:
     text: Additional Information returned from Supplier.(ACH  only)
     provider_code:
     supplier_code:
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -9098,9 +9087,9 @@ class TypeStructuredAddress:
         with Address.
     key: Key for update/delete of the element
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -9205,24 +9194,22 @@ class TypeTaxInfo:
     tax_detail:
     included_in_base:
     key: The tax key represents a valid key of tax
-    category: The tax category represents a valid IATA tax
-        code.
+    category: The tax category represents a valid IATA tax code.
     carrier_defined_category: Optional category, where a carrier has
         used a non-standard IATA tax category. The tax category will be
         set to "DU"
     segment_ref: The segment to which that tax is relative (if
         applicable)
-    flight_details_ref: The flight details that this tax is relative
-        to (if applicable)
-    coupon_ref: The coupon to which that tax is relative (if
-        applicable)
+    flight_details_ref: The flight details that this tax is relative to
+        (if applicable)
+    coupon_ref: The coupon to which that tax is relative (if applicable)
     amount:
     origin_airport:
     destination_airport:
     country_code:
     fare_info_ref:
-    tax_exempted: This indicates whether the tax specified by
-        tax category is exempted.
+    tax_exempted: This indicates whether the tax specified by tax
+        category is exempted.
     provider_code: Code of the provider returning this TaxInfo.
     supplier_code: Code of the supplier returning this TaxInfo.
     text: Additional Information returned from Supplier.(ACH  only)
@@ -9630,10 +9617,8 @@ class AirExchangeInfo:
     paid_tax:
     ticket_fee_info: Used for rapid reprice. Providers: 1G/1V/1P/1S/1A
     reason: Used for rapid reprice. The reason code or text is returned
-        if the
-        PricingTag is not equal to A, and explains why A was not
-        returned.
-        Providers: 1G/1V/1P/1S/1A
+        if the PricingTag is not equal to A, and explains why A was not
+        returned. Providers: 1G/1V/1P/1S/1A
     fee_info:
     tax_info: Itinerary level taxes
     exchange_amount:
@@ -10313,9 +10298,9 @@ class LoyaltyCard:
     membership_program: Loyalty Program membership Id of the traveler
         specific to Amtrak(2V) Guest Rewards
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -10715,8 +10700,8 @@ class ServiceData:
         offering only pertains to that passenger. If no passenger
         reference is present this means this offering is for all
         passengers.
-    stop_over: Indicates that there is a significant
-        delay between flights (usually 12 hours or more)
+    stop_over: Indicates that there is a significant delay between
+        flights (usually 12 hours or more)
     traveler_type: Passenger Type Code.
     emdsummary_ref: Reference to the corresponding EMD issued. Supported
         providers are 1G/1V/1P/1J
@@ -11092,8 +11077,8 @@ class TravelerInformation:
         ----------
         phone_number:
         name: Name of Emergency Contact Person
-        relationship: Relationship between Traveler and
-            Emergency Contact Person
+        relationship: Relationship between Traveler and Emergency
+            Contact Person
         """
         phone_number: Optional[PhoneNumber] = field(
             default=None,
@@ -11258,8 +11243,8 @@ class TypePaymentCard:
     Parameters
     ----------
     phone_number:
-    billing_address: The address to where the billing statements
-        for this card are sent. Used for address verification purposes.
+    billing_address: The address to where the billing statements for
+        this card are sent. Used for address verification purposes.
     type: The 2 letter credit/ debit card type.
     number:
     exp_date: The Expiration date of this card in YYYY-MM format.
@@ -11623,9 +11608,9 @@ class BookingTraveler:
     nationality: Specify ISO country code for nationality of the Booking
         Traveler
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -12041,8 +12026,8 @@ class FileFinishingInfo:
     Parameters
     ----------
     shop_information:
-    policy_information: Policy Information required for File
-        Finishing. Would repeat per Policy Type
+    policy_information: Policy Information required for File Finishing.
+        Would repeat per Policy Type
     account_information:
     agency_information:
     traveler_information:
@@ -12113,14 +12098,14 @@ class Group:
     address:
     booking_traveler_ref: Reference Element for Booking Traveler.
     key:
-    traveler_type: Defines the type of traveler used for booking
-        which could be a non-defining type (Companion, Web-fare, etc),
-        or a                     standard type (Adult, Child, etc).
+    traveler_type: Defines the type of traveler used for booking which
+        could be a non-defining type (Companion, Web-fare, etc), or a
+        standard type (Adult, Child, etc).
     group_size: Represents size of the group
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -13135,20 +13120,13 @@ class FormOfPayment:
     type:
     fulfillment_type: Defines how the client wishes to receive travel
         documents. Type does not define where or how payment is made.
-        The supported values are  "Ticket on Departure",
-        "Travel Agency",
-        "Courier",
-        "Standard Mail",
-        "Ticketless",
-        "Ticket Office",
-        "Express Mail",
-        "Corporate Kiosk",
-        "Train Station Service Desk",
-        "Direct Printing of Ticket",
-        "Ticket by Email",
-        "Digital Printing of Ticket at Home",
-        "Retrieve Ticket at Eurostar in London" Collect booking ticket
-        at a Kiosk, print in agency.
+        The supported values are  "Ticket on Departure", "Travel
+        Agency", "Courier", "Standard Mail", "Ticketless", "Ticket
+        Office", "Express Mail", "Corporate Kiosk", "Train Station
+        Service Desk", "Direct Printing of Ticket", "Ticket by Email",
+        "Digital Printing of Ticket at Home", "Retrieve Ticket at
+        Eurostar in London" Collect booking ticket at a Kiosk, print in
+        agency.
     fulfillment_location: Information about the location of the printer.
     fulfillment_idtype: Identification type, e.g. credit card, to define
         how the customer will identify himself when collecting the
@@ -13171,9 +13149,9 @@ class FormOfPayment:
     profile_key: The Key assigned to the payment details value from the
         specified profile.
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -13433,9 +13411,9 @@ class Guarantee:
     reusable: Indicates whether the form of payment can be reused or
         not. Currently applicable for Credit and Debit form of payment
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -13631,9 +13609,9 @@ class ServiceFeeInfo:
         with this entity. See the associated Service Fee TaxInfo array
         for a breakdown of the individual taxes.
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.

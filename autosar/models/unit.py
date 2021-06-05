@@ -23,15 +23,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 class Unit:
     """This is a physical measurement unit. All units that might be defined
     should stem from SI units. In order to convert one unit into another factor
-    and offset are defined.
-
-    For the calculation from SI-unit to the defined unit the factor (factorSiToUnit ) and the offset
-    (offsetSiToUnit ) are applied as follows:
+    and offset are defined. For the calculation from SI-unit to the defined
+    unit the factor (factorSiToUnit ) and the offset (offsetSiToUnit ) are
+    applied as follows:
 
     x  [{unit}]  :=  y * [{siUnit}] * factorSiToUnit [[unit]/{siUnit}] + offsetSiToUnit [{unit}]
-
     For the calculation from a unit to SI-unit the reciprocal of the factor (factorSiToUnit ) and the negation of the offset (offsetSiToUnit ) are applied.
-
     y {siUnit} := (x*{unit} - offsetSiToUnit [{unit}]) / (factorSiToUnit [[unit]/{siUnit}]
 
     :ivar short_name: This specifies an identifying shortName for the
@@ -45,9 +42,8 @@ class Unit:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -66,8 +62,8 @@ class Unit:
         in documents or in user interfaces of tools.The displayName
         corresponds to the Unit.Display in an ASAM MCD-2MC file.
     :ivar factor_si_to_unit: This is the factor for the conversion from
-        SI Units to units.   The inverse is used for conversion from
-        units to SI Units.
+        SI Units to units. The inverse is used for conversion from units
+        to SI Units.
     :ivar offset_si_to_unit: This is the offset for the conversion from
         and to siUnits.
     :ivar physical_dimension_ref: This association represents the
@@ -90,14 +86,14 @@ class Unit:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

@@ -24,28 +24,28 @@ class RoleBasedDataAssignment:
     :ivar role: This is the role of the assigned data in the given
         context, for example for an NVRAM Block it is used to
         distinguish between an mirror block and a ROM default block.
-        Possible values need to be specified on M1 level.  This also is
+        Possible values need to be specified on M1 level. This also is
         intended to support the so called "Signal based Approach" of the
         DCM. In this use case the name of the involved data element is
         required. This name shall be taken from the DataElement
-        referenced by the property usedDataElement.  The following
-        values are standardized: * '''ramBlock''' indicates data to be
-        used as a mirror for an NVRAM Block. * '''defaultValue'''
-        indicates constant data to be used as default in the context of
-        this ServiceNeeds, e.g. for an NVRAM Block. *
+        referenced by the property usedDataElement. The following values
+        are standardized: * '''ramBlock''' indicates data to be used as
+        a mirror for an NVRAM Block. * '''defaultValue''' indicates
+        constant data to be used as default in the context of this
+        ServiceNeeds, e.g. for an NVRAM Block. *
         '''signalBasedDiagnostics''' indicates the
         RoleBasedDataAssignment shall be used for signal based
         diagnostics.
     :ivar used_data_element: The VariableDataPrototype used in this
-        role, e.g.   * Permanent RAM Block of an NVRAM Block which shall
-        belong to the same SwcInternalBehavior or BswInternalBehavior.
-        * In the role signalBasedDiagnostics it has to refer to a
+        role, e.g. * Permanent RAM Block of an NVRAM Block which shall
+        belong to the same SwcInternalBehavior or BswInternalBehavior. *
+        In the role signalBasedDiagnostics it has to refer to a
         VariableDataPrototype in a SenderReceiverInterface or a
         NvDataInterface.
     :ivar used_parameter_element: The ParameterDataPrototype used in
-        this role, e.g.   * ROM Block of an NVRAM Block. It shall belong
-        to the same SwcInternalBehavior or BswInternalbehavior.  * In
-        the role signalBasedDiagnostics it has to refer to a
+        this role, e.g. * ROM Block of an NVRAM Block. It shall belong
+        to the same SwcInternalBehavior or BswInternalbehavior. * In the
+        role signalBasedDiagnostics it has to refer to a
         ParameterDataPrototype in a ParameterInterface.
     :ivar used_pim_ref: The (untyped) PerInstanceMemory used in this
         role (e.g. as a Permanent RAM Block for an NVRAM Block).

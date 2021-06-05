@@ -39,9 +39,8 @@ class DiagnosticEvent:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -61,8 +60,8 @@ class DiagnosticEvent:
     :ivar associated_event_identification: This attribute represents the
         identification number that is associated with the enclosing
         DiagnosticEvent and allows to identify it when placed into a
-        snapshot record or extended data record storage.   This value
-        can be reported as internal data element in snapshot records or
+        snapshot record or extended data record storage. This value can
+        be reported as internal data element in snapshot records or
         extended data records.
     :ivar clear_event_allowed_behavior: This attribute defines the
         resulting UDS status byte for the related event, which shall not
@@ -70,7 +69,7 @@ class DiagnosticEvent:
     :ivar clear_event_behavior: @RESTRICT_TO_STANDARD:AP! This attribute
         defines the resulting UDS DTC status byte for the related event,
         which shall not be cleared according to the ClearEventAllowed
-        callback. @END_RESTRICT_TO_STANDARD!   @RESTRICT_TO_STANDARD:CP!
+        callback. @END_RESTRICT_TO_STANDARD! @RESTRICT_TO_STANDARD:CP!
         This attribute defines the resulting UDS status byte for the
         related event, which shall not be cleared according to the
         ClearEventAllowed callback. @END_RESTRICT_TO_STANDARD!
@@ -97,7 +96,7 @@ class DiagnosticEvent:
         and BSW events.
     :ivar prestorage_freeze_frame: This attribute describes whether the
         Prestorage of FreezeFrames is supported by the assigned event or
-        not.  True: Prestorage of FreezeFrames is supported  False:
+        not. True: Prestorage of FreezeFrames is supported False:
         Prestorage of FreezeFrames is not supported
     :ivar prestored_freezeframe_stored_in_nvm: If the Event uses a
         prestored freeze-frame (using the operations PrestoreFreezeFrame
@@ -127,14 +126,14 @@ class DiagnosticEvent:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

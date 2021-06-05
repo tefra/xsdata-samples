@@ -37,9 +37,8 @@ class LinTpNode:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -53,22 +52,22 @@ class LinTpNode:
         Values). These are not intended as documentation but are mere
         design notes.
     :ivar connector_ref: Association to a CommunicationConnector in the
-        topology description.   In a System Description this reference
-        is mandatory. In an ECU Extract this reference is optional
+        topology description. In a System Description this reference is
+        mandatory. In an ECU Extract this reference is optional
         (references to ECUs that are not part of the ECU Extract shall
         be avoided).
     :ivar max_number_of_resp_pending_frames: Configures the maximum
-        number of allowed response pending frames.  Please note that
-        this attribute is replaced by
+        number of allowed response pending frames. Please note that this
+        attribute is replaced by
         LinTpConnection.maxNumberOfRespPendingFrames and shall no longer
         be used.
     :ivar p_2_max: After reception of a response pending frame the P2
-        timeout counter is reloaded with the timeout time P2max.  Please
+        timeout counter is reloaded with the timeout time P2max. Please
         note that this attribute is replaced by LinTpConnection.p2Max
         and shall no longer be used.
-    :ivar p_2_timing: P2 timeout observation parameter.   Please note
-        that this attribute is replaced by LinTpConnection.p2Timing and
-        shall no longer be used.
+    :ivar p_2_timing: P2 timeout observation parameter. Please note that
+        this attribute is replaced by LinTpConnection.p2Timing and shall
+        no longer be used.
     :ivar tp_address_ref: Reference to the TP Address that is used by
         the TpNode. This reference is optional in case that the
         multicast TP Address is used (reference from TpConnection).
@@ -90,14 +89,14 @@ class LinTpNode:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
