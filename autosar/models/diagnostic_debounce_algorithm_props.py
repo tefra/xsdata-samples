@@ -28,9 +28,8 @@ class DiagnosticDebounceAlgorithmProps:
         not fulfilled or ControlDTCSetting of the related event is
         disabled.
     :ivar debounce_counter_storage: Switch to store the debounce counter
-        value non-volatile or not.  true: debounce counter value shall
-        be stored non-volatile   false: debounce counter value is
-        volatile
+        value non-volatile or not. true: debounce counter value shall be
+        stored non-volatile false: debounce counter value is volatile
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if
         an ArObject has changed. The checksum has no semantic meaning

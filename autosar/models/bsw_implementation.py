@@ -52,9 +52,8 @@ class BswImplementation:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -125,7 +124,7 @@ class BswImplementation:
     :ivar ar_release_version: Version of the AUTOSAR Release on which
         this implementation is based. The numbering contains three
         levels (major, minor, revision) which are defined by AUTOSAR.
-    :ivar behavior_ref: The behavior of this implementation.  This
+    :ivar behavior_ref: The behavior of this implementation. This
         relation is made as an association because * it follows the
         pattern of the SWCT * since ARElement cannot be splitted, but we
         want supply the implementation later, the BswImplementation is
@@ -136,11 +135,10 @@ class BswImplementation:
         1.
     :ivar preconfigured_configuration_refs: Reference to the set of
         preconfigured (i.e. fixed) configuration values for this
-        BswImplementation.  If the BswImplementation represents a
-        cluster of several modules, more than one
-        EcucModuleConfigurationValues element can be referred (at most
-        one per module), otherwise at most one such element can be
-        referred.
+        BswImplementation. If the BswImplementation represents a cluster
+        of several modules, more than one EcucModuleConfigurationValues
+        element can be referred (at most one per module), otherwise at
+        most one such element can be referred.
     :ivar recommended_configuration_refs: Reference to one or more sets
         of recommended configuration values for this module or module
         cluster.
@@ -148,21 +146,21 @@ class BswImplementation:
         several times on a single ECU, SRS_BSW_00347 requires that the
         names of files, APIs, published parameters and memory allocation
         keywords are extended by the vendorId and a vendor specific
-        name.  This parameter is used to specify the vendor specific
+        name. This parameter is used to specify the vendor specific
         name. In total, the implementation specific API name is
         generated as follows: &lt;ModuleName&gt;_&lt;vendorId&gt;_
-        &lt;vendorApiInfix&gt;_&lt;API name from SWS&gt;.  E.g.
-        assuming that the vendorId of the implementer is 123 and the
-        implementer chose a vendorApiInfix of "v11r456" an API name
-        Can_Write defined in the SWS will translate to
-        Can_123_v11r456_Write.   This attribute is mandatory for all
-        modules with upper multiplicity &gt; 1. It shall not be used for
-        modules with upper multiplicity =1.  See also SWS_BSW_00102.
-    :ivar vendor_specific_module_def_refs: Reference to   * the vendor
+        &lt;vendorApiInfix&gt;_&lt;API name from SWS&gt;. E.g.  assuming
+        that the vendorId of the implementer is 123 and the implementer
+        chose a vendorApiInfix of "v11r456" an API name Can_Write
+        defined in the SWS will translate to Can_123_v11r456_Write. This
+        attribute is mandatory for all modules with upper multiplicity
+        &gt; 1. It shall not be used for modules with upper multiplicity
+        =1. See also SWS_BSW_00102.
+    :ivar vendor_specific_module_def_refs: Reference to * the vendor
         specific EcucModuleDef used in this BswImplementation if it
-        represents a single module  * several EcucModuleDefs used in
-        this BswImplementation if it  represents a cluster of modules  *
-        one or no EcucModuleDefs used in this BswImplementation if it
+        represents a single module * several EcucModuleDefs used in this
+        BswImplementation if it  represents a cluster of modules * one
+        or no EcucModuleDefs used in this BswImplementation if it
         represents a library
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if
@@ -180,14 +178,14 @@ class BswImplementation:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

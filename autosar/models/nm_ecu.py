@@ -40,9 +40,8 @@ class NmEcu:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -56,8 +55,8 @@ class NmEcu:
         Values). These are not intended as documentation but are mere
         design notes.
     :ivar bus_dependent_nm_ecus: Cluster specific NmEcu attributes
-    :ivar bus_specific_nm_ecu: Busspecific NmEcu attributes.  Please
-        note that this aggregation is deprecated and is replaced by the
+    :ivar bus_specific_nm_ecu: Busspecific NmEcu attributes. Please note
+        that this aggregation is deprecated and is replaced by the
         busDependentNmEcu aggregation.
     :ivar ecu_instance_ref: Association to an ECUInstance in the
         topology description.
@@ -75,10 +74,10 @@ class NmEcu:
         Please note that this attribute is deprecated and will be
         removed in future. It is replaced by the channel specific
         attribute located in NmCluster.
-    :ivar nm_node_id_enabled: Enables the source node identifier.
-        Please note that this attribute is deprecated and will be
-        removed in future. It is replaced by the channel specific
-        attribute located in NmCluster.
+    :ivar nm_node_id_enabled: Enables the source node identifier. Please
+        note that this attribute is deprecated and will be removed in
+        future. It is replaced by the channel specific attribute located
+        in NmCluster.
     :ivar nm_passive_mode_enabled: This attribute enables the support of
         the Passive Mode.
     :ivar nm_pdu_rx_indication_enabled: Switch for enabling the PDU Rx
@@ -86,7 +85,7 @@ class NmEcu:
     :ivar nm_remote_sleep_ind_enabled: Switch for enabling remote sleep
         indication support.
     :ivar nm_repeat_msg_ind_enabled: Switch for enabling the Repeat
-        Message Bit Indication.  Please note that this attribute is
+        Message Bit Indication. Please note that this attribute is
         deprecated and will be removed in future. It is replaced by the
         channel specific attribute located in NmCluster.
     :ivar nm_state_change_ind_enabled: Enables the CAN Network
@@ -110,14 +109,14 @@ class NmEcu:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

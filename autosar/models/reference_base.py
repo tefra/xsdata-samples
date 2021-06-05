@@ -24,16 +24,16 @@ class ReferenceBase:
     :ivar is_global: This indicates that the target of the applicable
         reference can be resolved via the non-qualified shortName. This
         requires that the shortName of the target is unique within the
-        package referenced in the reference base.  The default is false.
+        package referenced in the reference base. The default is false.
         Note that the reference base also maintains a list of elements
         which may be referenced using a "global Reference".
     :ivar base_is_this_package: This indicates that this base is
         established by the current package. In this case  the
         association "package" can be derived as the qualified shortName
-        of the enclosing package.   If  the value of baseIsThisPackage
-        is set to true then one of the following shall be true:  *
-        target of the association "package" shall be the enclosing
-        package. * association "package" is omitted.
+        of the enclosing package. If  the value of baseIsThisPackage is
+        set to true then one of the following shall be true: * target of
+        the association "package" shall be the enclosing package. *
+        association "package" is omitted.
     :ivar global_in_package_refs: This represents the ability to express
         that global elements live in various packages which do not have
         a common ancestor package. Packages mentioned by
@@ -41,7 +41,7 @@ class ReferenceBase:
         ReferenceBase.package.
     :ivar global_elements:
     :ivar package_ref: This association specifies the basis of all
-        relative references with the base equals shortLabel.  This
+        relative references with the base equals shortLabel. This
         association shall exist unless the value of baseIsThisPackage is
         set to true.
     :ivar s: Checksum calculated by the user's tool environment for an

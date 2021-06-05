@@ -20,7 +20,7 @@ class CryptoKeySlotAllowedModification:
     :ivar max_number_of_allowed_updates: This attribute describes the
         maximum updates that are allowed to the slot.
     :ivar restrict_update: This attribute defines whether restrictions
-        on the number of updates are defined or not.  False: no
+        on the number of updates are defined or not. False: no
         restriction is placed on the number of updates. True:
         restrictions are placed on the number of updates with the
         attribute maxNumberOfAllowedUpdates.

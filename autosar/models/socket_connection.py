@@ -36,7 +36,7 @@ class SocketConnection:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in particlar
+        object in question. More elaborate documentation, (in particlar
         how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Describable. It affects the expected existence
@@ -81,10 +81,10 @@ class SocketConnection:
         SocketConnection.
     :ivar local_port_ref: This reference is obsolete and will be removed
         in the future. The serverPort reference in
-        SocketConnectionBundle shall be used instead.  Old description:
+        SocketConnectionBundle shall be used instead. Old description:
         Local Port for TCP/UDP connection.
     :ivar n_pdu_ref: Reference to data packets that are transmitted over
-        Ethernet. Each data packet can contain multiple IPdus.   Please
+        Ethernet. Each data packet can contain multiple IPdus. Please
         note that this reference is deprecated.
     :ivar pdus: PDUs handed over by the PDU Router (Transmission over
         the Ethernet) or PDUs handed over by SoAd (Reception over
@@ -99,12 +99,12 @@ class SocketConnection:
         into the socket buffer.
     :ivar remote_port_ref: This reference is obsolete and will be
         removed in the future. The clientPort reference shall be used
-        instead.  Old description: Remote Port for TCP/UDP connection.
+        instead. Old description: Remote Port for TCP/UDP connection.
         May be different for each Frame or use the same remote port. In
         second case headerId attribute needs to be considered.
     :ivar runtime_ip_address_configuration: This attribute determines
         which protocol is used by the client to obtain the IP Address
-        information.  If this attribute is not set to none the value
+        information. If this attribute is not set to none the value
         determines the service used by the client to obtain the IP
         Address information for the SocketConnection. If this attribute
         is set to none the client used the statically configured IP

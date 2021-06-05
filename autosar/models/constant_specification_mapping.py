@@ -9,12 +9,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ConstantSpecificationMapping:
     """This meta-class is used to create an association of two
-    ConstantSpecifications. One ConstantSpecification is supposed to be defined
-    in the application domain while the other should be defined in the
-    implementation domain.
+    ConstantSpecifications.
 
-    Hence the ConstantSpecificationMapping needs to be used where a ConstantSpecification defined in one domain needs to be associated to a ConstantSpecification in the other domain.
-
+    One ConstantSpecification is supposed to be defined in the
+    application domain while the other should be defined in the
+    implementation domain. Hence the ConstantSpecificationMapping needs
+    to be used where a ConstantSpecification defined in one domain needs
+    to be associated to a ConstantSpecification in the other domain.
     This information is crucial for the RTE generator.
 
     :ivar appl_constant_ref: A ConstantSpecification defined in the

@@ -15,9 +15,9 @@ class TimeSyncCorrection:
 
     :ivar allow_provider_rate_correction: Defines whether the rate
         correction value of a Time Base can be set by means of the
-        method setRateCorrection().  false: rate correction cannot be
-        set by method setRateCorrection().  true: rate correction can be
-        set by method setRateCorrection().
+        method setRateCorrection(). false: rate correction cannot be set
+        by method setRateCorrection(). true: rate correction can be set
+        by method setRateCorrection().
     :ivar offset_correction_adaption_interval: Defines the interval
         during which the adaptive rate correction cancels out the rate
         and time deviation. Unit: seconds.

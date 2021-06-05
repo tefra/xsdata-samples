@@ -6,18 +6,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DisplayFormatString:
-    """This is a display format specifier for the display of values  e.g. in
-    documents or in measurement and calibration systems.
-
+    """This is a display format specifier for the display of values  e.g. in documents or in measurement and calibration systems.
     The display format specifier is a subset of the ANSI C printf specifiers with the following
     form:
-
     % [flags] [width] [.prec] type character
-
     For more details refer to "ASAM-HarmonizedDataObjects-V1.1.pdf" chapter 13.3.2 DISPLAY OF DATA.
-
     Due to the numerical nature of value settings, only the following type characters are allowed:
-
     * d:  Signed decimal integer
     * i:  Signed decimal integer
     * o:  Unsigned octal integer

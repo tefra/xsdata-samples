@@ -23,7 +23,7 @@ class ApplicationRuleBasedValueSpecification:
     :ivar category: This represents the category of the
         RuleBasedValueSpecification
     :ivar sw_axis_conts: This represents the axis values of a Compound
-        Primitive Data Type (curve or map).  The first swAxisCont
+        Primitive Data Type (curve or map). The first swAxisCont
         describes the x-axis, the second swAxisCont describes the
         y-axis, the third swAxisCont describes the z-axis. In addition
         to this, the axis can be denoted in swAxisIndex.

@@ -1725,8 +1725,8 @@ class TicketingInfoRsType:
         ticket_type: TicketType - Indicates the type of ticket (Paper,
             eTicket)
         valid_interline: ValidInterline - Indicates validation of
-            interline ticketing aggrement,         possible values (Yes,
-            No, Unknown), default=unknown
+            interline ticketing aggrement, possible values (Yes, No,
+            Unknown), default=unknown
     """
     class Meta:
         name = "TicketingInfoRS_Type"
@@ -4293,11 +4293,10 @@ class AirItineraryPricingInfoType:
         last_ticket_date: Last day to ticket.
         private_fare_type: Private fare type symbol.
         spanish_family_discount_indicator: Spanish Discount indicator
-            with values of "A", "B", "C" where
-            "A" indicates Spanish Large Family discount only
-            "B" indicates Spanish Large Family discount + Spanish
-            Islander discount
-            "C" indicates Spanish Islander discount only
+            with values of "A", "B", "C" where "A" indicates Spanish
+            Large Family discount only "B" indicates Spanish Large
+            Family discount + Spanish Islander discount "C" indicates
+            Spanish Islander discount only
         flexible_fare_id: If the fare is an additional flexible fare,
             this is the fare group ID
         previous_exchange_date: Previous Exchange Date

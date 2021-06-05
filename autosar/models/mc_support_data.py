@@ -33,7 +33,7 @@ class McSupportData:
         previous value was -1.
     :ivar measurable_system_constant_values_refs: Sets of system
         constant values to be transferred to the MCD system, because the
-        system constants have been specified with  "swCalibrationAccess"
+        system constants have been specified with "swCalibrationAccess"
         = readonly.
     :ivar rpt_support_data: The rapid prototyping support data belonging
         to this implementation. The aggregtion is

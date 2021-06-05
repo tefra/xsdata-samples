@@ -20,7 +20,7 @@ class SwRecordLayoutGroupContent:
         reusable "sub"-record layouts. In particluar, the contents of
         the referenced record layout shall be used as if the record
         layout group in the referenced record layout was aggregated in
-        the current record layout group.   So, semantically it would be
+        the current record layout group. So, semantically it would be
         equivalent to replace the particluar association with an
         aggregation of the  swRecordLayoutGroup of the referenced
         SwRecordLayout.

@@ -16,8 +16,8 @@ class DataConstrRule:
     :ivar constr_level: This attribute describes the category of a
         constraint. One of its functions is in the area of constraint
         violation, where it can be used from a certain level, to produce
-        error messages.  The lower the level, the more stringent the
-        check.   Used to distinguish hard or soft limits.
+        error messages. The lower the level, the more stringent the
+        check. Used to distinguish hard or soft limits.
     :ivar phys_constrs: Describes the limitations applicable on the
         physical domain (as opposed to the internal domain).
     :ivar internal_constrs: Describes the limitations applicable on the

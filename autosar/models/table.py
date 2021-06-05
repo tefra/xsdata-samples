@@ -56,7 +56,7 @@ class Table:
         defined by the applied help system respectively help system
         generator.
     :ivar orient: Indicate whether a table should be represented as
-        landscape or portrait.  * land : landscape * port : portrait
+        landscape or portrait. * land : landscape * port : portrait
     :ivar pgwide: Used to indicate wether the figure should take the
         complete page width (value = "pgwide") or not (value =
         "noPgwide").

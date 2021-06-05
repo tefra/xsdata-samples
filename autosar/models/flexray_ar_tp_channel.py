@@ -26,8 +26,8 @@ class FlexrayArTpChannel:
     :ivar ack_type: Type of Acknowledgement.
     :ivar cancellation: With this switch Tx and Rx Cancellation can be
         turned on or off.
-    :ivar extended_addressing: Adressing Type of this connection:  true:
-        Two Bytes  false: One Byte
+    :ivar extended_addressing: Adressing Type of this connection: true:
+        Two Bytes false: One Byte
     :ivar flow_control_pdu_ref: Reference to the  Flow Control NPdu.
         Please note that this reference is deprecated and will be
         removed in future.
@@ -41,14 +41,14 @@ class FlexrayArTpChannel:
         between two FCs (block size). Valid values are 1 .. 16 when
         retry is activated, and 0 .. 255 otherwise.
     :ivar max_buffer_request: Please note that this attribute is
-        deprecated and will be removed in future.  maxFcWait will be
-        used instead to configure the maximum number of wait frames on
+        deprecated and will be removed in future. maxFcWait will be used
+        instead to configure the maximum number of wait frames on
         receiver side. On the sender side, timeCs defines the maximum
         time for retries.
     :ivar max_fc_wait: This attribute defines the maximal number of wait
         frames to be sent for a pending connection. Range is 0..255.
     :ivar max_fr_if: Please note that this attribute is deprecated and
-        will be removed in future.  Old description: This attribute
+        will be removed in future. Old description: This attribute
         defines the maximum number of trying to send a frame when the
         FrIf returns an error.
     :ivar max_retries: This attribute defines the maximum number of
@@ -65,24 +65,24 @@ class FlexrayArTpChannel:
         minimumMulticastSeparationTime = n * cycle * m, where n is an
         integer &gt;= 0, cycle is FlexrayCluster.cycle, and m is the
         cycle multiplexor of those cycles where PDUs of the PDU pool are
-        scheduled.  Please note: Due to the scheduling strategies of
+        scheduled. Please note: Due to the scheduling strategies of
         FrTp, minimumMulticastSeparationTime can only be kept to a
         degree defined by the maximum temporal distance of the PDUs of a
-        PDU pool within one FlexRay cycle.  Range: 0 .. 0.127
+        PDU pool within one FlexRay cycle. Range: 0 .. 0.127
     :ivar minimum_separation_time: This attribute defines the minimum
         amount of time between two succeeding CFs of a 1:1 segmented
         transmission in seconds. Valid values are 0, 100µs, 200µs ..
         900µs, 1ms, 2ms .. 127ms. The value can be changed at runtime
-        using the FrArTp_ChangeParameter interface.  The
+        using the FrArTp_ChangeParameter interface. The
         minimumSeparationTime shall be an integer multiple of the cycle
         length multiplied with the multiplexing factor, i.e.
         minimumSeparationTime = n * cycle * m, where n is an integer
         &gt;=0, cycle is FlexrayCluster.cycle, and m is the cycle
         multiplexor of those cycles where PDUs of the PDU pool are
-        scheduled.  Please note: Due to the scheduling strategies of
+        scheduled. Please note: Due to the scheduling strategies of
         FrTp, minimumSeparationTime can only be kept to a degree defined
         by the maximum temporal distance of the PDUs of a PDU pool
-        within one FlexRay cycle.  Range: 0 .. 0.127
+        within one FlexRay cycle. Range: 0 .. 0.127
     :ivar multicast_segmentation: This attribute defines whether
         segmentation within a 1:n connection is allowed or not.
     :ivar n_pdu_refs: A FlexRayTpChannel references a set of NPdus.
@@ -90,13 +90,13 @@ class FlexrayArTpChannel:
         another pool of Tx NPdus. It shall be ensured that a second
         channel either references all NPdus of such a pool, or none.
     :ivar pdu_pools: Please note that this aggregation is deprecated and
-        will be removed in future.  The nPdu reference will be used
+        will be removed in future. The nPdu reference will be used
         instead.
     :ivar time_br: This attribute defines the time in seconds between
         receiving the last CF of a block or an FF-x (or SF-x) and
         sending out an FC or AF.
     :ivar time_buffer: Please note that this attribute is deprecated and
-        will be removed in future.  timeBr will be used instead to
+        will be removed in future. timeBr will be used instead to
         configure the delay between two wait frames (and thus two buffer
         requests) on receiver side. On sender side, the main task cycle
         will be used.
@@ -107,7 +107,7 @@ class FlexrayArTpChannel:
         sending of the next consecutive frame or a  flow control (for
         Transmit Cancellation).
     :ivar time_fr_if: Please note that this attribute is deprecated and
-        will be removed in future.  Old description: This attribute
+        will be removed in future. Old description: This attribute
         defines the time in seconds of waiting for the next try (if
         retry is activated) to send via FrIf_Transmit. Specified in
         seconds.

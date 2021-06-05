@@ -26,14 +26,14 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class MultiplexedIPdu:
     """A MultiplexedPdu (i.e. NOT a COM I-PDU) contains a DynamicPart, an
-    optional StaticPart and a selectorField. In case of multiplexing this IPdu
-    is routed between the Pdu Multiplexer and the Interface Layer.
+    optional StaticPart and a selectorField.
 
-    A multiplexer is used to define variable parts within an IPdu that
-    may carry different signals. The receivers of such a IPdu can
-    determine which signalPdus are transmitted by evaluating the
-    selector field, which carries a unique selector code for each sub-
-    part.
+    In case of multiplexing this IPdu is routed between the Pdu
+    Multiplexer and the Interface Layer. A multiplexer is used to define
+    variable parts within an IPdu that may carry different signals. The
+    receivers of such a IPdu can determine which signalPdus are
+    transmitted by evaluating the selector field, which carries a unique
+    selector code for each sub-part.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended
@@ -46,9 +46,8 @@ class MultiplexedIPdu:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -70,7 +69,7 @@ class MultiplexedIPdu:
         (containing a dynamical length signal), this value indicates the
         maximum data length. It should be noted that in former AUTOSAR
         releases (Rel 2.1, Rel 3.0, Rel 3.1, Rel 4.0 Rev. 1) this
-        parameter was defined in bits.   The Pdu length of zero bytes is
+        parameter was defined in bits. The Pdu length of zero bytes is
         allowed.
     :ivar meta_data_length: Number of additional bytes of MetaData in
         the PDU data field. The MetaData contains auxiliary information
@@ -83,15 +82,15 @@ class MultiplexedIPdu:
     :ivar selector_field_byte_order: This attribute defines the order of
         the bytes of the selectorField and the packing into the
         MultiplexedIPdu. Please consider that [constr_3247] and
-        [constr_3223] are restricting the usage of this attribute.    In
-        a complete System Description this attribute is mandatory. If a
+        [constr_3223] are restricting the usage of this attribute. In a
+        complete System Description this attribute is mandatory. If a
         MultiplexedPdu is received by a Pdu Gateway and is not delivered
         to the IPduM but routed directly to a bus interface then the
         content of the MulitplexedPdu doesn't need to be described in
         the System Extract/Ecu Extract. To support this use case the
         multiplicity is set to 0..1.
     :ivar selector_field_length: The size in bits of the selector field
-        shall be configurable in a range of 1-16 bits.  In a complete
+        shall be configurable in a range of 1-16 bits. In a complete
         System Description this attribute is mandatory. If a
         MultiplexedPdu is received by a Pdu Gateway and is not delivered
         to the IPduM but routed directly to a bus interface then the
@@ -110,7 +109,7 @@ class MultiplexedIPdu:
         the bit counting is always set to "sawtooth" and the bit order
         is set to "Decreasing". The bit counting in byte 0 starts with
         bit 0 (least significant bit). The most significant bit in byte
-        0 is bit 7.  In a complete System Description this attribute is
+        0 is bit 7. In a complete System Description this attribute is
         mandatory. If a MultiplexedPdu is received by a Pdu Gateway and
         is not delivered to the IPduM but routed directly to a bus
         interface then the content of the MulitplexedPdu doesn't need to
@@ -122,7 +121,7 @@ class MultiplexedIPdu:
     :ivar trigger_mode: IPduM can be configured to send a transmission
         request for the new multiplexed IPdu to the PDU-Router because
         of the trigger conditions/ modes that are described in the
-        TriggerMode enumeration.  In a complete System Description this
+        TriggerMode enumeration. In a complete System Description this
         attribute is mandatory. If a MultiplexedPdu is received by a Pdu
         Gateway and is not delivered to the IPduM but routed directly to
         a bus interface then the content of the MulitplexedPdu doesn't
@@ -131,7 +130,7 @@ class MultiplexedIPdu:
     :ivar unused_bit_pattern: AUTOSAR COM and AUTOSAR IPDUM are filling
         not used areas of an IPdu with this bit-pattern. This attribute
         is mandatory to avoid undefined behavior. This byte-pattern will
-        be repeated throughout the IPdu.   In a complete System
+        be repeated throughout the IPdu. In a complete System
         Description this attribute is mandatory. If a MultiplexedPdu is
         received by a Pdu Gateway and is not delivered to the IPduM but
         routed directly to a bus interface then the content of the
@@ -154,14 +153,14 @@ class MultiplexedIPdu:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

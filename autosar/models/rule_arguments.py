@@ -24,7 +24,7 @@ class RuleArguments:
         RuleBasedValueSpecification.
     :ivar vtf: This aggregation represents the ability to provide a
         value that is either numerical or text which existence is
-        subject to variability.  The upper multiplicity of this role has
+        subject to variability. The upper multiplicity of this role has
         been increased to * due to resolving an atpVariation stereotype.
         The previous value was 1.
     :ivar variation_point: This element was generated/modified due to an

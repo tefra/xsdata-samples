@@ -20,7 +20,7 @@ class NmCoordinator:
     :ivar index: Identification of the NMCoordinator.
     :ivar nm_active_coordinator: Please note that this attribute is
         obsolete and is no longer supported. It is replaced by the
-        attribute NmCoordinatorRole in NmNode.  Old description: This
+        attribute NmCoordinatorRole in NmNode. Old description: This
         attribute indicates whether a NM Coordinator is an active
         gateway (true) or a passive gateway (false).
     :ivar nm_coord_sync_support: Switch for enabling NmCoordinatorSync
@@ -31,7 +31,7 @@ class NmCoordinator:
     :ivar nm_node_refs: reference to busses (via NmNodes) that are
         coordinated by the NmCoordinator.
     :ivar nm_shutdown_delay_timer: Please note that this attribute is
-        obsolete and is no longer supported.  Old description: This
+        obsolete and is no longer supported. Old description: This
         parameter defines the time in seconds which the NM Coordination
         algorithm shall delay the release of the referenced cluster.
     :ivar s: Checksum calculated by the user's tool environment for an

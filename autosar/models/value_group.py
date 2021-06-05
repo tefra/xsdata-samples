@@ -20,7 +20,7 @@ class ValueGroup:
         name. It can be usel if the Values are rendered as a table.
     :ivar vtf: Thias aggregation represents the ability to provide a
         value that is either numerical or text which existence is
-        subject to variability.  From the formal point of view, the
+        subject to variability. From the formal point of view, the
         aggregation needs to have the multiplicity 1 because SwValues is
         modelled with stereotype &lt;&lt;atpMixed&gt;&gt;. Nevertheless,
         the existence of vtf is optional and subject to constraints. The

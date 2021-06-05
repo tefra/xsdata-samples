@@ -28,10 +28,10 @@ class LifeCycleInfo:
         does not have the denoted life cycle state lcState any more. If
         no periodEnd is given then the default period begin of
         LifeCycleInfoSet is assumed.
-    :ivar remark: Remark describing for example  * why the element was
+    :ivar remark: Remark describing for example * why the element was
         given the specified life cycle * the semantics of useInstead
     :ivar use_instead_refs: Element(s) that should be used instead of
-        the one denoted in  referrable.   Only relevant in case of life
+        the one denoted in  referrable. Only relevant in case of life
         cycle states lcState unlike "valid". In case there are multiple
         references the exact semantics shall be individually described
         in the remark.

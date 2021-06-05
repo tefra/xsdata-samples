@@ -7,12 +7,14 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class AsamRecordLayoutSemantics:
     """This meta-class is used to denote the semantics in particular in terms
-    of the corresponding A2L-Keyword. This is to support the mapping of the
-    more general record layouts in AUTOSAR/MSR to the specific A2L keywords.
+    of the corresponding A2L-Keyword.
 
-    It is possible to express the specific semantics of A2l RecordLayout keywords in SwRecordlayoutGroup but not always vice versa. Therefore the mapping is provided in this optional attribute.
-
-    It is specified as NMTOKEN to reduce the direct dependency of ASAM an AUTOSAR standards.
+    This is to support the mapping of the more general record layouts in
+    AUTOSAR/MSR to the specific A2L keywords. It is possible to express
+    the specific semantics of A2l RecordLayout keywords in
+    SwRecordlayoutGroup but not always vice versa. Therefore the mapping
+    is provided in this optional attribute. It is specified as NMTOKEN
+    to reduce the direct dependency of ASAM an AUTOSAR standards.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

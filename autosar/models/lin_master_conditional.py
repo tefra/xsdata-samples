@@ -15,24 +15,24 @@ class LinMasterConditional:
     This element was generated/modified due to an atpVariation stereotype.
 
     :ivar wake_up_by_controller_supported: Defines whether the ECU shall
-        be woken up by this CommunicationController.  TRUE: wake up is
-        possible  FALSE: wake up is not supported  Note: If
+        be woken up by this CommunicationController. TRUE: wake up is
+        possible FALSE: wake up is not supported Note: If
         wakeUpByControllerSupported is set to TRUE the feature shall be
         supported by both hardware and basic software.
     :ivar protocol_version: Version specifier for a communication
         protocol.
     :ivar lin_slaves: LinSlaves that are handled by the LinMaster.
     :ivar time_base: Time base is mandatory for the master. It is not
-        used for slaves.   LIN 2.0 Spec states: "The time_base value
+        used for slaves. LIN 2.0 Spec states: "The time_base value
         specifies the used time base in the master node to generate the
-        maximum allowed frame transfer time."   The time base shall be
+        maximum allowed frame transfer time." The time base shall be
         specified AUTOSAR conform in seconds.
     :ivar time_base_jitter: The attribute timeBaseJitter is a mandatory
-        attribute for the master and not used for slaves.   LIN 2.0 Spec
+        attribute for the master and not used for slaves. LIN 2.0 Spec
         states: "The jitter value specifies the differences between the
         maximum and minimum delay from time base start point to the
         frame header sending start point (falling edge of BREAK
-        signal)."   The jitter shall be specified AUTOSAR conform in
+        signal)." The jitter shall be specified AUTOSAR conform in
         seconds.
     :ivar variation_point: This element was generated/modified due to an
         atpVariation stereotype.

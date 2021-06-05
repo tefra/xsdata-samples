@@ -16,9 +16,7 @@ class AxisIndexType:
     * 4 input axis 3 (Z4 input axis e.g. of a CUBE_4)
     * 5 input axis 3 (Z5 input axis e.g. of a CUBE_5)
     * 6..9 etc.
-
     The output "axis" provides access to the output value of the parameter. Note that this access is usually performed via an index according to the input axis.
-
     In addition to this, the Values STRING and ARRAY support specific iterations.
 
     :ivar value:

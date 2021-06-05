@@ -71,9 +71,8 @@ class BswInternalBehavior:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -88,10 +87,10 @@ class BswInternalBehavior:
         design notes.
     :ivar constant_memorys: Describes a read only memory object
         containing characteristic value(s)  implemented by this
-        InternalBehavior.   The shortName of ParameterDataPrototype has
-        to be equal to the ''C' identifier of the described constant.
-        The characteristic value(s) might be shared between
-        SwComponentPrototypes of the same SwComponentType.  The
+        InternalBehavior. The shortName of ParameterDataPrototype has to
+        be equal to the ''C' identifier of the described constant. The
+        characteristic value(s) might be shared between
+        SwComponentPrototypes of the same SwComponentType. The
         aggregation of constantMemory is subject to variability with the
         purpose to support variability in the software component or
         module implementations. Typically different algorithms in the
@@ -109,7 +108,7 @@ class BswInternalBehavior:
         resp. module. The aggregation of ExclusiveAreas is subject to
         variability. Note: the number of ExclusiveAreas might vary due
         to the conditional existence of RunnableEntities or
-        BswModuleEntities.  The upper multiplicity of this role has been
+        BswModuleEntities. The upper multiplicity of this role has been
         increased to * due to resolving an atpVariation stereotype. The
         previous value was -1.
     :ivar exclusive_area_nesting_orders: This represents the set of
@@ -118,21 +117,21 @@ class BswInternalBehavior:
         resolving an atpVariation stereotype. The previous value was -1.
     :ivar static_memorys: Describes a read and writeable static memory
         object representing measurerment variables implemented by this
-        software component.  The term "static" is used in the meaning of
+        software component. The term "static" is used in the meaning of
         "non-temporary" and does not necessarily specify a linker
         encapsulation. This kind of memory is only supported if
-        supportsMultipleInstantiation is FALSE.  The shortName of the
+        supportsMultipleInstantiation is FALSE. The shortName of the
         VariableDataPrototype has to be equal with the ''C' identifier
-        of the described variable.  The aggregation of staticMemory is
+        of the described variable. The aggregation of staticMemory is
         subject to variability with the purpose to support variability
-        in the software component's implementations.   Typically
-        different algorithms in the implementation are requiring
-        different number of memory objects. The upper multiplicity of
-        this role has been increased to * due to resolving an
-        atpVariation stereotype. The previous value was -1.
+        in the software component's implementations. Typically different
+        algorithms in the implementation are requiring different number
+        of memory objects. The upper multiplicity of this role has been
+        increased to * due to resolving an atpVariation stereotype. The
+        previous value was -1.
     :ivar ar_typed_per_instance_memorys: Defines an AUTOSAR typed
         memory-block that needs to be available for each instance of the
-        Basic Software Module.  The aggregation of
+        Basic Software Module. The aggregation of
         arTypedPerInstanceMemory is subject to variability with the
         purpose to support variability in the Basic Software Module's
         implementations. Typically different algorithms in the
@@ -200,10 +199,10 @@ class BswInternalBehavior:
         increased to * due to resolving an atpVariation stereotype. The
         previous value was -1.
     :ivar service_dependencys: Defines the requirements on AUTOSAR
-        Services for a particular item.  The aggregation is subject to
+        Services for a particular item. The aggregation is subject to
         variability with the purpose to support the conditional
-        existence of ServiceNeeds.  The aggregation is splitable in
-        order to support that ServiceNeeds might be provided in later
+        existence of ServiceNeeds. The aggregation is splitable in order
+        to support that ServiceNeeds might be provided in later
         development steps. The upper multiplicity of this role has been
         increased to * due to resolving an atpVariation stereotype. The
         previous value was -1.
@@ -211,11 +210,11 @@ class BswInternalBehavior:
         containing characteristic value(s)  needed by this
         BswInternalBehavior. The role name perInstanceParameter is
         chosen in analogy to the similar role in the context of
-        SwcInternalBehavior.  In contrast to constantMemory, this object
+        SwcInternalBehavior. In contrast to constantMemory, this object
         is not allocated locally by the module's code, but by the BSW
         Scheduler and it is accessed from the BSW module via the BSW
         Scheduler API. The main use case is the support of software
-        emulation of calibration data.  The aggregation is subject to
+        emulation of calibration data. The aggregation is subject to
         variability with the purpose to support implementation variants.
         The upper multiplicity of this role has been increased to * due
         to resolving an atpVariation stereotype. The previous value was
@@ -249,14 +248,14 @@ class BswInternalBehavior:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

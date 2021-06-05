@@ -37,7 +37,7 @@ class TopicContentOrMsrQuery:
     :ivar verbatim: This represents one particular verbatim text. The
         upper multiplicity of this role has been increased to * due to
         resolving an atpVariation stereotype. The previous value was 1.
-    :ivar list_value: This represents numbered or unnumbered list.  The
+    :ivar list_value: This represents numbered or unnumbered list. The
         upper multiplicity of this role has been increased to * due to
         resolving an atpVariation stereotype. The previous value was 1.
     :ivar def_list: This represents a definition list in the
@@ -59,7 +59,7 @@ class TopicContentOrMsrQuery:
         resolving an atpVariation stereotype. The previous value was 1.
     :ivar trace: This represents traceable text in the documentation
         block. This allows to specify requirements/constraints in any
-        documentation block.  The kind of the trace is specified in the
+        documentation block. The kind of the trace is specified in the
         category. The upper multiplicity of this role has been increased
         to * due to resolving an atpVariation stereotype. The previous
         value was 1.

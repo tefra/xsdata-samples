@@ -22,7 +22,7 @@ class Ipv4DhcpServerConfiguration:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in particlar
+        object in question. More elaborate documentation, (in particlar
         how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Describable. It affects the expected existence

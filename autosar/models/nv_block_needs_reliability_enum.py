@@ -7,12 +7,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class NvBlockNeedsReliabilityEnum:
-    """Reliability against data loss on the non-volatile medium. These
-    requirements give only a relative indication, for example on the required
-    degree of redundancy for storage.
+    """Reliability against data loss on the non-volatile medium.
 
-    They do, however, not specify by which means (e.g. software or
-    hardware) the reliability is actually achieved.
+    These requirements give only a relative indication, for example on
+    the required degree of redundancy for storage. They do, however, not
+    specify by which means (e.g. software or hardware) the reliability
+    is actually achieved.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

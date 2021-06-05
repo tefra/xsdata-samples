@@ -7,8 +7,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class Ip6AddressString:
     """This is used to specify an IP6 address.
-    Notation:  FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF
 
+    Notation:  FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF
     Alternative notations, short-cuts with duplicate colons like ::, etc. or mixtures using colons and dots, are not allowed.
 
     :ivar value:

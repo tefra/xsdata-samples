@@ -64,9 +64,8 @@ class EcuInstance:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -83,7 +82,7 @@ class EcuInstance:
         atpVariation stereotype.
     :ivar associated_com_i_pdu_group_refs: With this reference it is
         possible to identify which ISignalIPduGroups are applicable for
-        which CommunicationConnector/ ECU.   Only top level
+        which CommunicationConnector/ ECU. Only top level
         ISignalIPduGroups shall be referenced by an EcuInstance. If an
         ISignalIPduGroup contains other ISignalIPduGroups than these
         contained ISignalIPduGroups shall not be referenced by the
@@ -98,7 +97,7 @@ class EcuInstance:
         possible to identify which PduR IPdu Groups are applicable for
         which CommunicationConnector/ ECU.
     :ivar can_tp_address_refs: Please note that this reference is
-        deprecated and will be removed in future.  A Tp Address can be
+        deprecated and will be removed in future. A Tp Address can be
         assigned to an ECU without an existing TP Configuration. If
         TpNodes are described this reference shall not be used.
     :ivar client_id_range: Restriction of the Client Identifier for this
@@ -151,15 +150,15 @@ class EcuInstance:
         channel wakeup occurs. This is ensured by adding all PNCs to all
         channel wakeup sources during upstream mapping.
     :ivar sleep_mode_supported: Specifies whether the ECU instance may
-        be put to a "low power mode"  * true: sleep mode is supported  *
-        false: sleep mode is not supported   Note: This flag may only be
+        be put to a "low power mode" * true: sleep mode is supported *
+        false: sleep mode is not supported Note: This flag may only be
         set to "true" if the feature is supported by both hardware and
         basic software.
     :ivar tcp_ip_icmp_props_ref: EcuInstance specific ICMP (Internet
         Control Message Protocol) attributes
     :ivar tcp_ip_props_ref: EcuInstance specific TcpIp Stack attributes.
     :ivar tp_address_refs: Please note that this reference is deprecated
-        and will be removed in future.  A Tp Address can be assigned to
+        and will be removed in future. A Tp Address can be assigned to
         an ECU without an existing TP Configuration. If TpNodes are
         described this reference shall not be used.
     :ivar v_2_x_supported: This attribute is used to control the
@@ -182,14 +181,14 @@ class EcuInstance:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

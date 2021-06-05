@@ -44,13 +44,13 @@ class Xref:
     :ivar show_resource_alias_name: This indicates if the alias names of
         the referenced objects shall be rendered. This means this is
         some kind of backward searching: look whether there is an  alias
-        for the referenced object, if yes, print it.   If there is more
-        than one AliasNameSet, Xref might render all of those.  If no
+        for the referenced object, if yes, print it. If there is more
+        than one AliasNameSet, Xref might render all of those. If no
         alilas is found and showResourceShortName is set to
         NoShowShortName, then the shortName of the reference target
         shall be displayed. By this showResourceAliasName is similar to
         showResourceShortName but shows the aliasName instead of the
-        shortName.  Default is NO-SHOW-ALIAS-NAME.
+        shortName. Default is NO-SHOW-ALIAS-NAME.
     :ivar show_resource_category: Indicates if the category of the
         referenced resource shall be rendered. Default is "NO-SHOW-
         CATEGORY".

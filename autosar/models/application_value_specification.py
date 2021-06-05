@@ -27,7 +27,7 @@ class ApplicationValueSpecification:
         semantics of the contained values, see [constr_1006] and
         [constr_2051].
     :ivar sw_axis_conts: This represents the axis values of a Compound
-        Primitive Data Type (curve or map).  The first swAxisCont
+        Primitive Data Type (curve or map). The first swAxisCont
         describes the x-axis, the second swAxisCont describes the
         y-axis, the third swAxisCont describes the z-axis. In addition
         to this, the axis can be denoted in swAxisIndex.

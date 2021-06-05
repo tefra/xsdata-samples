@@ -32,7 +32,7 @@ class FlexrayClusterConditional:
     :ivar protocol_name: The name of the protocol used.
     :ivar protocol_version: The version of the protocol used.
     :ivar speed: This attribute is deprecated and is replaced by the
-        attribute "baudrate".   Old description: Channels speed in kbps.
+        attribute "baudrate". Old description: Channels speed in kbps.
     :ivar action_point_offset: The offset of the action point in
         networks
     :ivar bit: Nominal bit time (= 1 / fx:SPEED). gdBit = cSamplesPerBit
@@ -105,26 +105,26 @@ class FlexrayClusterConditional:
         t_TrcvStdbyDelay in seconds. The granularity of this parameter
         shall be restricted to full FlexRay cycles (cycle). The
         transceiver status setting to STANDBY shall be delayed by this
-        value.  Not specifying a value or a value of 0 shall imply that
+        value. Not specifying a value or a value of 0 shall imply that
         the timer is not used.
     :ivar transmission_start_sequence_duration: Number of bits in the
         Transmission Start Sequence [gdBits].
     :ivar wakeup_rx_idle: Number of bits used by the node to test the
         duration of the 'idle' or HIGH phase of a received wakeup.
-        Unit:bitDuration  Remarks: This parameter maps to FlexRay
+        Unit:bitDuration Remarks: This parameter maps to FlexRay
         Protocol 2.1 Rev. A parameter gdWakeupSymbolRxIdle.
     :ivar wakeup_rx_low: Number of bits used by the node to test the
         duration of the LOW phase of a received wakeup. Unit:bitDuration
         Remarks: This parameter maps to FlexRay Protocol 2.1 Rev. A
         parameter gdWakeupSymbolRxLow.
     :ivar wakeup_rx_window: The size of the window used to detect
-        wakeups [gdBit].  Remarks: This parameter maps to FlexRay
+        wakeups [gdBit]. Remarks: This parameter maps to FlexRay
         Protocol 2.1 Rev. A parameter gdWakeupSymbolRxWindow.
     :ivar wakeup_tx_active: Number of bits used by the node to transmit
         the LOW phase of awakeup symbol and  the HIGH and LOW phases of
         a WUDOP. Unit:bitDuration
     :ivar wakeup_tx_idle: Number of bits used by the node to transmit
-        the 'idle' part of a wakeup symbol.  Unit: gDbit
+        the 'idle' part of a wakeup symbol. Unit: gDbit
     :ivar variation_point: This element was generated/modified due to an
         atpVariation stereotype.
     :ivar s: Checksum calculated by the user's tool environment for an

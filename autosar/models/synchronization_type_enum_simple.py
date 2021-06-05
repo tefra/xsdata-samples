@@ -9,7 +9,7 @@ class SynchronizationTypeEnumSimple(Enum):
         Timing Constraint is specified for event chains, the response
         events of the associated event chains shall occur synchronously
         with respect to the specified tolerance. All associated event
-        chains shall have the same stimulus event.  In case that the
+        chains shall have the same stimulus event. In case that the
         Synchronization Timing Constraint is specified for events, the
         associated events shall occur synchronously with respect to the
         specified tolerance. All associated events represent the
@@ -20,7 +20,7 @@ class SynchronizationTypeEnumSimple(Enum):
         Timing Constraint is specified for event chains, the stimulus
         events of the associated event chains shall occur synchronously
         with respect to the specified tolerance. All associated event
-        chains shall have the same response event.  In case that the
+        chains shall have the same response event. In case that the
         Synchronization Timing Constraint is specified for events, the
         associated events shall occur synchronously with respect to the
         specified tolerance. All associated events represent the

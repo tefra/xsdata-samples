@@ -7,12 +7,12 @@ class DataTypePolicyEnumSimple(Enum):
     """
     :cvar LEGACY: In case the System Description doesn't use a complete
         Software Component Description (VFB View) this value can be
-        chosen. This supports the inclusion of legacy signals.   The
+        chosen. This supports the inclusion of legacy signals. The
         aggregation of SwDataDefProps shall be used to configure the
         "ComSignalDataInvalidValue" and the Data Semantics.
     :cvar NETWORK_REPRESENTATION_FROM_COM_SPEC: Ignore any
         networkRepresentationProps of this ISignal and use the
-        networkRepresentation from the ComSpec.  Please note that the
+        networkRepresentation from the ComSpec. Please note that the
         usage does not imply the existence of the SwDataDefProps in the
         role networkRepresentation aggregated by the SenderComSpec or
         ReceiverComSpec if an ImplementationDataType is defined.
@@ -22,7 +22,7 @@ class DataTypePolicyEnumSimple(Enum):
         networkRepresentation is specified by the aggregated
         swDataDefProps.
     :cvar PORT_INTERFACE_DEFINITION: This enumeration literal is
-        deprecated and will be removed in future.  Old description:
+        deprecated and will be removed in future. Old description:
         Ignore any networkRepresentationProps of this ISignal and use
         the networkRepresentation specified in the
         VariableDataPrototypes owned by PortInterface

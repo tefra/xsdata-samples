@@ -38,9 +38,8 @@ class ISignalToIPduMapping:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -54,16 +53,16 @@ class ISignalToIPduMapping:
         Values). These are not intended as documentation but are mere
         design notes.
     :ivar i_signal_group_ref: Reference to an ISignalGroup that is
-        mapped into the SignalIPdu.  If an ISignalToIPduMapping for an
+        mapped into the SignalIPdu. If an ISignalToIPduMapping for an
         ISignalGroup is defined, only the UpdateIndicationBitPosition
         and the transferProperty is relevant. The startPosition and the
-        packingByteOrder shall be ignored.   Each ISignal contained in
-        the ISignalGroup shall be mapped into an IPdu by an own
+        packingByteOrder shall be ignored. Each ISignal contained in the
+        ISignalGroup shall be mapped into an IPdu by an own
         ISignalToIPduMapping. The references to the ISignal and to the
         ISignalGroup in an ISignalToIPduMapping are mutually exclusive.
     :ivar i_signal_ref: Reference to a ISignal that is mapped into the
-        ISignalIPdu.   Each ISignal contained in the ISignalGroup shall
-        be mapped into an IPdu by an own ISignalToIPduMapping. The
+        ISignalIPdu. Each ISignal contained in the ISignalGroup shall be
+        mapped into an IPdu by an own ISignalToIPduMapping. The
         references to the ISignal and to the ISignalGroup in an
         ISignalToIPduMapping are mutually exclusive.
     :ivar packing_byte_order: This parameter defines the order of the
@@ -73,7 +72,7 @@ class ISignalToIPduMapping:
         For opaque data endianness conversion shall be configured to
         Opaque. The value of this attribute impacts the absolute
         position of the signal into the SignalIPdu (see the
-        startPosition attribute description).   For an ISignalGroup the
+        startPosition attribute description). For an ISignalGroup the
         packingByteOrder is irrelevant and shall be ignored.
     :ivar start_position: This parameter is necessary to describe the
         bitposition of a signal within an SignalIPdu. It denotes the
@@ -83,9 +82,9 @@ class ISignalToIPduMapping:
         AUTOSAR the bit counting is always set to "sawtooth" and the bit
         order is set to "Decreasing". The bit counting in byte 0 starts
         with bit 0 (least significant bit). The most significant bit in
-        byte 0 is bit 7.  Please note that the way the bytes will be
+        byte 0 is bit 7. Please note that the way the bytes will be
         actually sent on the bus does not impact this representation:
-        they will always be seen by the software as a byte array.  If a
+        they will always be seen by the software as a byte array. If a
         mapping for the ISignalGroup is defined, this attribute is
         irrelevant and shall be ignored.
     :ivar transfer_property: Defines how the referenced ISignal
@@ -104,8 +103,8 @@ class ISignalToIPduMapping:
         packingByteOrder is changed while the value of
         updateIndicationBitPosition remains unchanged the exact bit
         position of updateIndicationBitPosition within the enclosing
-        ISignalIPdu still undergoes a change.  This attribute denotes
-        the least significant bit for "Little Endian" and the most
+        ISignalIPdu still undergoes a change. This attribute denotes the
+        least significant bit for "Little Endian" and the most
         significant bit for "Big Endian" packed signals within the IPdu
         (see the description of the packingByteOrder attribute). In
         AUTOSAR the bit counting is always set to "sawtooth" and the bit
@@ -130,14 +129,14 @@ class ISignalToIPduMapping:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

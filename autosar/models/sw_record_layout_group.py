@@ -29,7 +29,7 @@ class SwRecordLayoutGroup:
     :ivar category: This attribute denotes the semantics in particular
         in terms of the corresponding A2L-Keyword. This is to support
         the mapping of the more general record layouts in AUTOSAR/MSR to
-        the specific A2l keywords.   It is possible to express the
+        the specific A2l keywords. It is possible to express the
         specific semantics of A2l recordlayout keywords in
         swRecordlayoutGroup but not always vice versa. Therefore the
         mapping is provided in this optional attribute.
@@ -55,31 +55,31 @@ class SwRecordLayoutGroup:
         aggregated.
     :ivar sw_record_layout_group_from: This attribute specifies the
         iterator index for the point in the axis from which a record
-        layout group is commenced.   Negative values are also possible,
+        layout group is commenced. Negative values are also possible,
         i.e. the value -4 counts from the fourth value from the end. If
         this property is missing, the iteration starts with '1'.
     :ivar sw_record_layout_group_to: This attribute specifies the end
         point for the iteration. Negative values are also possible, i.e.
         the value -4 counts up to the fourth value from the end. If this
         property is not there, the iteration ends at "-1" which is the
-        last element.  Note that depending on the arraySizeSemantics of
+        last element. Note that depending on the arraySizeSemantics of
         SwTextProps the iteration ends at the value specified in
         swMaxTextSize.
     :ivar sw_record_layout_group_step: This attribute specifies the step
         width for the iterator index that is used for the current record
-        layout group.   Note that negative values are also possible, in
+        layout group. Note that negative values are also possible, in
         case of the starting point is higher than the endpoint. If the
         property is missing, the step width is "1".
     :ivar sw_record_layout_component: This attribute is used to denote
         the component to which the group in question applies. Thus, the
-        record layout supports structured objects.   This secures
+        record layout supports structured objects. This secures
         independence from the sequence of components, because they can
         be referred to via name.
     :ivar sw_record_layout_ref: This association allows to support
         reusable "sub"-record layouts. In particluar, the contents of
         the referenced record layout shall be used as if the record
         layout group in the referenced record layout was aggregated in
-        the current record layout group.   So, semantically it would be
+        the current record layout group. So, semantically it would be
         equivalent to replace the particluar association with an
         aggregation of the  swRecordLayoutGroup of the referenced
         SwRecordLayout.

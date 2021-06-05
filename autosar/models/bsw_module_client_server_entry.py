@@ -27,15 +27,15 @@ class BswModuleClientServerEntry:
         Referrable.shortName is composed of several shortNameFragments.
     :ivar encapsulated_entry_ref: The underlying BswModuleEntry.
     :ivar is_reentrant: Reentrancy from the viewpoint of clients
-        invoking the service via the BSW Scheduler:  * True: Enables the
-        service to be invoked again, before the service has finished.
-        * False: It is prohibited to invoke the service again before is
+        invoking the service via the BSW Scheduler: * True: Enables the
+        service to be invoked again, before the service has finished. *
+        False: It is prohibited to invoke the service again before is
         has finished.
     :ivar is_synchronous: Synchronicity from the viewpoint of clients
-        invoking the service via the BSW Scheduler:  * True: This calls
-        a synchronous service, i.e. the service is completed when the
-        call returns.  * False: The service (on semantical level) may
-        not be complete when the call returns.
+        invoking the service via the BSW Scheduler: * True: This calls a
+        synchronous service, i.e. the service is completed when the call
+        returns. * False: The service (on semantical level) may not be
+        complete when the call returns.
     :ivar variation_point: This element was generated/modified due to an
         atpVariation stereotype.
     :ivar s: Checksum calculated by the user's tool environment for an

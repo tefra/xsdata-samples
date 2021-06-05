@@ -6,10 +6,10 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 class MemorySectionTypeSimple(Enum):
     """
     :cvar CALIBRATION_OFFLINE: Program data which can only be used for
-        offline calibration.  '''Note''': This value is deprecated and
+        offline calibration. '''Note''': This value is deprecated and
         shall be substituted by calPrm.
     :cvar CALIBRATION_ONLINE: Program data which can be used for online
-        calibration.  '''Note''': This value is deprecated and shall be
+        calibration. '''Note''': This value is deprecated and shall be
         substituted by calPrm.
     :cvar CALIBRATION_VARIABLES: This memory section is reserved for
         "virtual variables" that are computed by an MCD system during a
@@ -25,13 +25,13 @@ class MemorySectionTypeSimple(Enum):
         "virtual parameters" that are taken for computing the values of
         so-called dependent parameter of an MCD system. Dependent
         Parameters that are not at the same time "virtual parameters"
-        are allocated in the ECU memory.  Virtual parameters, on the
+        are allocated in the ECU memory. Virtual parameters, on the
         other hand, are not allocated in the ECU memory. Virtual
         parameters exist in the ECU Hex file for the purpose of being
         considered (for computing the values of dependent parameters)
         during an offline-calibration session.
     :cvar USER_DEFINED: No specific categorization of sectionType
-        possible.  '''Note''': This value is deprecated and shall be
+        possible. '''Note''': This value is deprecated and shall be
         substituted by var, code, const, calprm, configData,
         excludeFromFlash and the appropriate values of the orthogonal
         attributes sectionInitializationPolicy,
@@ -44,15 +44,15 @@ class MemorySectionTypeSimple(Enum):
         wise - frequently used - high number of accesses in source code
         Some platforms allow the use of bit instructions for variables
         located in this specific RAM area as well as shorter addressing
-        instructions. This saves code and runtime.  '''Note''': This
+        instructions. This saves code and runtime. '''Note''': This
         value is deprecated and shall be substituted by var and the
         appropriate values of the orthogonal attributes
         sectionInitializationPolicy, memoryAllocationKeywordPolicy and
         option.
     :cvar VAR_NO_INIT: To be used for all global or static variables
-        that are never initialized.  '''Note''': This value is
-        deprecated and shall be substituted by var and the appropriate
-        values of the orthogonal attributes sectionInitializationPolicy,
+        that are never initialized. '''Note''': This value is deprecated
+        and shall be substituted by var and the appropriate values of
+        the orthogonal attributes sectionInitializationPolicy,
         memoryAllocationKeywordPolicy and option.
     :cvar VAR_POWER_ON_INIT: To be used for all global or static
         variables that are initialized only after power on reset.

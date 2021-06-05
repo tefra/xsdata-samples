@@ -14,9 +14,9 @@ class BuildActionInvocator:
 
     :ivar command: This represents the command to invocate the
         processor. Note that this is a generic string which can be
-        interpreted properly in the processor environment.  Note that it
+        interpreted properly in the processor environment. Note that it
         is optional due to the fact that some actions are hardwired in
-        the environment and do not need an explicit command.  On the
+        the environment and do not need an explicit command. On the
         other hand the properties of an invocator can be complex and not
         standardized.
     :ivar sdgs: This represents a general data structure  intended to

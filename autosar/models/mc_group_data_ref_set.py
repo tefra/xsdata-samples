@@ -14,7 +14,6 @@ class McGroupDataRefSet:
     * or by data instances that are part of MC support data.
     These two possibilities can be mixed within a given McGroupDataRefSet.
     Which one to use depends on the process and tool environment.
-
     The set is subject to variability because the same functional model may be used with various representation of the data.
 
     :ivar mc_group_data_ref_set_variants: This element was

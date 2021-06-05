@@ -47,18 +47,18 @@ class IoHwAbstractionServerAnnotation:
         signal. This means especially, that an additional client-server
         port has to be created. Tools can use this information to cross-
         check whether for each data-element in a SET operation with
-        FailureMonitoring enabled an additional port is created  The
+        FailureMonitoring enabled an additional port is created The
         referenced port monitors a failure in the to be monitored
         VariableDataPrototype of the IoHwAbstraction layer. The
         referenced port has to be another port of the same Actuator or
         Sensor Component.
     :ivar filtering_debouncing: This attribute is used to indicate what
         kind of filtering/debouncing has been put to the signal in the
-        IoHwAbstraction layer.   rawData means that no modification of
-        the signal has been applied. This is the default value
-        debounceData means that the signal is a mean value waitTimeData
-        means that the signal is delivered by a GET operation after a
-        certain amount of time
+        IoHwAbstraction layer. rawData means that no modification of the
+        signal has been applied. This is the default value debounceData
+        means that the signal is a mean value waitTimeData means that
+        the signal is delivered by a GET operation after a certain
+        amount of time
     :ivar pulse_test: This attribute indicates to the connected
         SensorActuatorSwComponentType whether the VariableDataPrototype
         can be used to generate pulse test sequences using the

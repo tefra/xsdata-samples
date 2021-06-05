@@ -11,7 +11,6 @@ class RevisionLabelString:
 
     * supports three integers representing from left to right MajorVersion, MinorVersion, PatchVersion.
     * may add an application specific suffix separated by one of ".", "_", ";".
-
     Legal patterns are for example:
     * 4.0.0
     * 4.0.0.1234565

@@ -24,11 +24,14 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class PduTriggering:
     """The PduTriggering describes on which channel the IPdu is transmitted.
+
     The Pdu routing by the PduR is only allowed for subclasses of IPdu.
-
-    Depending on its relation to entities such channels and clusters it can be unambiguously deduced whether a fan-out is handled by the Pdu router or the Bus Interface.
-
-    If the fan-out is specified between different clusters it shall be handled by the Pdu Router. If the fan-out is specified between different channels of the same cluster it shall be handled by the Bus Interface.
+    Depending on its relation to entities such channels and clusters it
+    can be unambiguously deduced whether a fan-out is handled by the Pdu
+    router or the Bus Interface. If the fan-out is specified between
+    different clusters it shall be handled by the Pdu Router. If the
+    fan-out is specified between different channels of the same cluster
+    it shall be handled by the Bus Interface.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended
@@ -41,9 +44,8 @@ class PduTriggering:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -57,20 +59,20 @@ class PduTriggering:
         Values). These are not intended as documentation but are mere
         design notes.
     :ivar i_pdu_port_refs: References to the IPduPort on every ECU of
-        the system which sends and/or receives the I-PDU.  References
-        for both the sender and the receiver side shall be included when
-        the system is completely defined.
+        the system which sends and/or receives the I-PDU. References for
+        both the sender and the receiver side shall be included when the
+        system is completely defined.
     :ivar i_pdu_ref: Reference to the Pdu for which the PduTriggering is
         defined. One I-Pdu can be triggered on different channels (PduR
         fan-out). The Pdu routing by the PduR is only allowed for
-        subclasses of IPdu.   Nevertheless is the reference to the Pdu
+        subclasses of IPdu. Nevertheless is the reference to the Pdu
         element necessary since the PduTriggering element is also used
         to specify the sending and receiving connections to EcuPorts.
     :ivar i_signal_triggerings: This property was modified due to
         atpVariation (DirectedAssociationPattern).
     :ivar sec_oc_crypto_mapping_ref: This reference identifies the
         crypto profile applicable to  the usage (send, receive) of the
-        also referenced SecuredIPdu.   Obviously, this reference is only
+        also referenced SecuredIPdu. Obviously, this reference is only
         applicable if the Pdutriggering also references a SecuredIPdu in
         the role iPdu.
     :ivar trigger_i_pdu_send_conditions: Defines the trigger for the
@@ -95,14 +97,14 @@ class PduTriggering:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

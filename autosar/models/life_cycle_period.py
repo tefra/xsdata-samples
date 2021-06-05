@@ -15,7 +15,7 @@ class LifeCyclePeriod:
 
     :ivar date: Date within period.
     :ivar ar_release_version: Version of the AUTOSAR Release the element
-        referred to is part of.    The numbering contains three levels
+        referred to is part of. The numbering contains three levels
         (major, minor, revision) which are defined by AUTOSAR.
     :ivar product_release: Version of the product within the period.
     :ivar s: Checksum calculated by the user's tool environment for an

@@ -20,8 +20,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class CanTpConnection:
     """A connection identifies the sender and the receiver of this particular
-    communication. The CanTp module routes a Pdu through this connection.
+    communication.
 
+    The CanTp module routes a Pdu through this connection.
     atpVariation: Derived, because TpNode can vary.
 
     :ivar ident: This adds the ability to become referrable to
@@ -39,16 +40,16 @@ class CanTpConnection:
         receiver allows the sender to send, before waiting for an
         authorization to continue transmission of the following N-PDUs.
         For further details on this parameter value see ISO 15765-2
-        specification.  Note: For reasons of buffer length, the CAN
+        specification. Note: For reasons of buffer length, the CAN
         Transport Layer can adapt the BS value within the limit of this
         maximum BS
     :ivar multicast_ref: TP address for 1:n connections.
     :ivar padding_activation: This specifies wheter or not Sfs, FCs and
         the last CF shall be padded to 8 bytes length in case it
-        contains less payload.  true: The N-PDU received uses padding
-        for SF, FC and the last CF. (N-PDU length is always 8 bytes)
-        false: The N-PDU received does not use padding for SF, CF and
-        the last CF. (N-PDU length is dynamic)
+        contains less payload. true: The N-PDU received uses padding for
+        SF, FC and the last CF. (N-PDU length is always 8 bytes) false:
+        The N-PDU received does not use padding for SF, CF and the last
+        CF. (N-PDU length is dynamic)
     :ivar receiver_refs: The target of the TP connection.
     :ivar ta_type: Network Target Address type.
     :ivar timeout_br: Value in seconds of the performance requirement
@@ -68,7 +69,7 @@ class CanTpConnection:
     :ivar tp_sdu_ref: Reference to an IPdu that is segmented by the
         Transport Protocol.
     :ivar transmit_cancellation: With this switch Transmit Cancellation
-        can be turned on or off for this channel.  Please note that this
+        can be turned on or off for this channel. Please note that this
         attribute is deprecated and will be removed in future.
     :ivar transmitter_ref: The source of the TP connection.
     :ivar variation_point: This element was generated/modified due to an

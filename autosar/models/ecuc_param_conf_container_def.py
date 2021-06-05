@@ -56,9 +56,8 @@ class EcucParamConfContainerDef:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -80,18 +79,17 @@ class EcucParamConfContainerDef:
         definition shall be processed as specified. Otherwise the
         parameter definition shall be ignored.
     :ivar lower_multiplicity: The lower multiplicity of the specified
-        element.  0: optional  1: at least one occurrence  n: at least n
-        occurrences  atpVariation: [RS_ECUC_00082]
+        element. 0: optional 1: at least one occurrence n: at least n
+        occurrences atpVariation: [RS_ECUC_00082]
     :ivar upper_multiplicity: The upper multiplicity of the specified
-        element.  0: no occurrence (used for VSMD)  1: at most one
-        occurrence  m: at most m occurrences  If upperMultiplicity is
-        set than upperMultiplicityInfinite shall not be used.
-        atpVariation: [RS_ECUC_00082]
+        element. 0: no occurrence (used for VSMD) 1: at most one
+        occurrence m: at most m occurrences If upperMultiplicity is set
+        than upperMultiplicityInfinite shall not be used. atpVariation:
+        [RS_ECUC_00082]
     :ivar upper_multiplicity_infinite: To express an infinite number of
         occurrences of this element this attribute has to be set to
-        true.   If upperMultiplicityInfinite is set than
-        upperMultiplicity shall not be used.  atpVariation:
-        [RS_ECUC_00082]
+        true. If upperMultiplicityInfinite is set than upperMultiplicity
+        shall not be used. atpVariation: [RS_ECUC_00082]
     :ivar scope: Specifies the scope of this configuration element.
     :ivar destination_uri_refs: Several destinationUris can be defined
         for an EcucContainerDef. With such destinationUris an
@@ -110,12 +108,12 @@ class EcucParamConfContainerDef:
         This attribute is only applicable to containers which may appear
         multiple times in the configuration set, i.e. their
         upperMultiplicity is greater than lowerMultiplicity and their
-        upperMultiplicity is greater than 1.  If a value of this
+        upperMultiplicity is greater than 1. If a value of this
         attribute is not defined in the EcucModuleDef with category
         STANDARDIZED_MODULE_DEFINITION, it shall be defined in the
         EcucModuleDef with category VENDOR_SPECIFIC_MODULE_DEFINITION
         for all containers with upperMultiplicity greater than
-        lowerMultiplicity and upperMultiplicity greater than 1.  This
+        lowerMultiplicity and upperMultiplicity greater than 1. This
         attribute is removed from the specifications and shall not be
         used.
     :ivar post_build_variant_multiplicity: Indicates if a container may
@@ -150,14 +148,14 @@ class EcucParamConfContainerDef:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
@@ -623,9 +621,8 @@ class EcucChoiceContainerDef:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -647,18 +644,17 @@ class EcucChoiceContainerDef:
         definition shall be processed as specified. Otherwise the
         parameter definition shall be ignored.
     :ivar lower_multiplicity: The lower multiplicity of the specified
-        element.  0: optional  1: at least one occurrence  n: at least n
-        occurrences  atpVariation: [RS_ECUC_00082]
+        element. 0: optional 1: at least one occurrence n: at least n
+        occurrences atpVariation: [RS_ECUC_00082]
     :ivar upper_multiplicity: The upper multiplicity of the specified
-        element.  0: no occurrence (used for VSMD)  1: at most one
-        occurrence  m: at most m occurrences  If upperMultiplicity is
-        set than upperMultiplicityInfinite shall not be used.
-        atpVariation: [RS_ECUC_00082]
+        element. 0: no occurrence (used for VSMD) 1: at most one
+        occurrence m: at most m occurrences If upperMultiplicity is set
+        than upperMultiplicityInfinite shall not be used. atpVariation:
+        [RS_ECUC_00082]
     :ivar upper_multiplicity_infinite: To express an infinite number of
         occurrences of this element this attribute has to be set to
-        true.   If upperMultiplicityInfinite is set than
-        upperMultiplicity shall not be used.  atpVariation:
-        [RS_ECUC_00082]
+        true. If upperMultiplicityInfinite is set than upperMultiplicity
+        shall not be used. atpVariation: [RS_ECUC_00082]
     :ivar scope: Specifies the scope of this configuration element.
     :ivar destination_uri_refs: Several destinationUris can be defined
         for an EcucContainerDef. With such destinationUris an
@@ -677,12 +673,12 @@ class EcucChoiceContainerDef:
         This attribute is only applicable to containers which may appear
         multiple times in the configuration set, i.e. their
         upperMultiplicity is greater than lowerMultiplicity and their
-        upperMultiplicity is greater than 1.  If a value of this
+        upperMultiplicity is greater than 1. If a value of this
         attribute is not defined in the EcucModuleDef with category
         STANDARDIZED_MODULE_DEFINITION, it shall be defined in the
         EcucModuleDef with category VENDOR_SPECIFIC_MODULE_DEFINITION
         for all containers with upperMultiplicity greater than
-        lowerMultiplicity and upperMultiplicity greater than 1.  This
+        lowerMultiplicity and upperMultiplicity greater than 1. This
         attribute is removed from the specifications and shall not be
         used.
     :ivar post_build_variant_multiplicity: Indicates if a container may
@@ -708,14 +704,14 @@ class EcucChoiceContainerDef:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

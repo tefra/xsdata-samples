@@ -15,8 +15,8 @@ class TtcanCommunicationControllerConditional:
     This element was generated/modified due to an atpVariation stereotype.
 
     :ivar wake_up_by_controller_supported: Defines whether the ECU shall
-        be woken up by this CommunicationController.  TRUE: wake up is
-        possible  FALSE: wake up is not supported  Note: If
+        be woken up by this CommunicationController. TRUE: wake up is
+        possible FALSE: wake up is not supported Note: If
         wakeUpByControllerSupported is set to TRUE the feature shall be
         supported by both hardware and basic software.
     :ivar can_controller_attributes: CAN Bit Timing configuration

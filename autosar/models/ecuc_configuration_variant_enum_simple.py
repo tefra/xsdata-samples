@@ -17,7 +17,7 @@ class EcucConfigurationVariantEnumSimple(Enum):
         configuration parameters.
     :cvar VARIANT_POST_BUILD_LOADABLE: Specifies that the BSW Module
         implementation may use PreCompileTime, LinkTime and PostBuild
-        loadable configuration parameters (supported in the VSMD).  This
+        loadable configuration parameters (supported in the VSMD). This
         attribute is removed from the specifications and shall not be
         used.
     :cvar VARIANT_POST_BUILD_SELECTABLE: Specifies that the BSW Module

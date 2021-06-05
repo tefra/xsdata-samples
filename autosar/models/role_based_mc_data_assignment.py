@@ -12,15 +12,15 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class RoleBasedMcDataAssignment:
     """This meta-class allows to define links that specify logical
-    relationships between single McDataInstances. The details on the existence
-    and semantics of such links are not standardized.
+    relationships between single McDataInstances.
 
-    Possible Use Case: Rapid Prototyping solutions in which additional
-    communication buffers and switches are implemented  in the RTE that
-    allow to switch between the usage of the original and the bypass
-    buffers. The different buffers and the switch can be represented by
-    McDataInstances (in order to be accessed by MC tools) which have
-    relationships to each other.
+    The details on the existence and semantics of such links are not
+    standardized. Possible Use Case: Rapid Prototyping solutions in
+    which additional communication buffers and switches are implemented
+    in the RTE that allow to switch between the usage of the original
+    and the bypass buffers. The different buffers and the switch can be
+    represented by McDataInstances (in order to be accessed by MC tools)
+    which have relationships to each other.
 
     :ivar execution_context_refs: Determines the executionContext in
         which the McDataInstance describing a local (e.g Task-Local)

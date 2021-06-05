@@ -51,9 +51,8 @@ class EcucModuleDef:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -73,12 +72,12 @@ class EcucModuleDef:
     :ivar short_name_pattern: This attribute represents the pattern
         which shall be used to build the shortName of the derived
         elements. As of now it is modeled as a String.  In general it
-        should follow the pattern:    pattern = (placeholder |
-        namePart)*   placeholder = "{" namePart "}"   namePart =
-        identifier | "_"  This is subject to be refined in subsequent
-        versions.  Note that this is marked as obsolete. Use the xml
-        attribute namePattern instead as it applies to Identifier and
-        CIdentifier (shortName, symbol etc.)
+        should follow the pattern: pattern = (placeholder | namePart)*
+        placeholder = "{" namePart "}" namePart = identifier | "_" This
+        is subject to be refined in subsequent versions. Note that this
+        is marked as obsolete. Use the xml attribute namePattern instead
+        as it applies to Identifier and CIdentifier (shortName, symbol
+        etc.)
     :ivar related_trace_item_ref: This contains a sloppy reference to
         the Autosar compatible identifier of the element (EcucId).
     :ivar ecuc_validation_conds: Collection of validation conditions
@@ -88,21 +87,20 @@ class EcucModuleDef:
         definition shall be processed as specified. Otherwise the
         parameter definition shall be ignored.
     :ivar lower_multiplicity: The lower multiplicity of the specified
-        element.  0: optional  1: at least one occurrence  n: at least n
-        occurrences  atpVariation: [RS_ECUC_00082]
+        element. 0: optional 1: at least one occurrence n: at least n
+        occurrences atpVariation: [RS_ECUC_00082]
     :ivar upper_multiplicity: The upper multiplicity of the specified
-        element.  0: no occurrence (used for VSMD)  1: at most one
-        occurrence  m: at most m occurrences  If upperMultiplicity is
-        set than upperMultiplicityInfinite shall not be used.
-        atpVariation: [RS_ECUC_00082]
+        element. 0: no occurrence (used for VSMD) 1: at most one
+        occurrence m: at most m occurrences If upperMultiplicity is set
+        than upperMultiplicityInfinite shall not be used. atpVariation:
+        [RS_ECUC_00082]
     :ivar upper_multiplicity_infinite: To express an infinite number of
         occurrences of this element this attribute has to be set to
-        true.   If upperMultiplicityInfinite is set than
-        upperMultiplicity shall not be used.  atpVariation:
-        [RS_ECUC_00082]
+        true. If upperMultiplicityInfinite is set than upperMultiplicity
+        shall not be used. atpVariation: [RS_ECUC_00082]
     :ivar scope: Specifies the scope of this configuration element.
     :ivar api_service_prefix: For CDD modules this attribute holds the
-        apiServicePrefix.  The shortName of the module definition of a
+        apiServicePrefix. The shortName of the module definition of a
         Complex Driver is always "Cdd". Therefore for CDD modules the
         module apiServicePrefix is described with this attribute.
     :ivar post_build_variant_support: Indicates if a module supports
@@ -110,8 +108,8 @@ class EcucModuleDef:
         selectable configuration sets). TRUE means yes, FALSE means no.
     :ivar refined_module_def_ref: Optional reference from the Vendor
         Specific Module Definition to the Standardized Module Definition
-        it refines.  In case this EcucModuleDef has the category
-        STANDARDIZED_MODULE_DEFINITION  this reference shall not be
+        it refines. In case this EcucModuleDef has the category
+        STANDARDIZED_MODULE_DEFINITION this reference shall not be
         provided. In case this EcucModuleDef has the category
         VENDOR_SPECIFIC_MODULE_DEFINITION this reference is mandatory.
     :ivar supported_config_variants:
@@ -133,14 +131,14 @@ class EcucModuleDef:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

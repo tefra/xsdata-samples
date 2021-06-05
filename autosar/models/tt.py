@@ -25,8 +25,8 @@ class Tt:
     :ivar tex_render: This attribute holds information how the content
         (represented by attribute "term") of the particular technical
         term is rendered using LaTeX. This allows to inject specific
-        LaTeX commands such as \sep{}.  An example is to render
-        "MyClass" as "My\sep{}Class". Default is the value of the
+        LaTeX commands such as \\sep{}.  An example is to render
+        "MyClass" as "My\\sep{}Class". Default is the value of the
         attribute "term".
     :ivar type: This attribute specifies the type of the technical term.
         Values are such as "VARIABLE" "CALPRM". It is no longer an enum

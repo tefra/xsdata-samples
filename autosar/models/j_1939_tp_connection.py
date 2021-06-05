@@ -32,19 +32,19 @@ class J1939TpConnection:
         attribute describes in percent of available buffer that shall be
         used for retry.
     :ivar cancellation: Enable support for Tx/Rx cancellation.
-    :ivar data_pdu_ref: Data Message (TP.DT) used by CMDT and BAM.  The
+    :ivar data_pdu_ref: Data Message (TP.DT) used by CMDT and BAM. The
         DataNPdu has a fixed length of 8 bytes.
     :ivar direct_pdu_ref: Please note that this reference is deprecated
         and will be removed in the future. This reference is replaced by
-        the J1939TpPg.directPdu reference.  Old description: In case of
+        the J1939TpPg.directPdu reference. Old description: In case of
         variable length IPdus (with system signals of variable length),
         an additional NPdu (with the PGN in the CAN ID) is used for
         messages with up to 8 bytes.
     :ivar dynamic_bs: Enable support for dynamic block size calculation.
     :ivar flow_control_pdu_refs: Reference to the Command NPdus (TP.CM)
         that are used in the CMDT (Connection Mode Data Transfer) in
-        both directions.   BAM uses one TP.CM (Transport Protocol
-        Command).   The flowControlNPdu has a fixed length of 8 bytes.
+        both directions. BAM uses one TP.CM (Transport Protocol
+        Command). The flowControlNPdu has a fixed length of 8 bytes.
         Please note that the role name "flowControlIPdu" is misleading
         and is kept for backward compatibilty reasons.
     :ivar max_bs: Set maximum block size (number of packets in
@@ -57,8 +57,8 @@ class J1939TpConnection:
         transferred via this connection.
     :ivar tp_sdu_refs: Please note that this reference is deprecated and
         will be removed in the future. This reference is replaced by the
-        J1939TpPg.tpSdu reference.  Old description: Reference to IPdus
-        that are segmented by the Transport Protocol.   To support the
+        J1939TpPg.tpSdu reference. Old description: Reference to IPdus
+        that are segmented by the Transport Protocol. To support the
         low-level routing of NPdu's the NPdu is a specialization of an
         IPdu. More details can be found in the NPdu class description.
         Nevertheless the J1939TpConnection must not reference a NPdu

@@ -10,7 +10,7 @@ class BindingTimeEnumSimple(Enum):
         model may contain variants. * Only code for the selected
         variant(s) is actually generated.
     :cvar LINK_TIME: Configure what is included in object code, and what
-        is omitted Based on which variant(s) are selected  E.g. for
+        is omitted Based on which variant(s) are selected E.g. for
         modules that are delivered as object code (as opposed to those
         that are delivered as source code)
     :cvar PRE_COMPILE_TIME: This is typically the C-Preprocessor.

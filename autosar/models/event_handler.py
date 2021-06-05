@@ -39,18 +39,18 @@ class EventHandler:
         in SOME/IP Service Discovery messages.
     :ivar event_multicast_addresss: Multicast Address that is used for
         event communication in the IP-Multicast case. It is the
-        destination address to which the server sends the  multicast
-        event messages if the mulicastThreshold is exceeded.  This
+        destination address to which the server sends the multicast
+        event messages if the mulicastThreshold is exceeded. This
         address is transmitted in the SD-SubscribeEventGroupAck Message
-        to client (answer to SD-SubscribeEventGroup).  This property was
+        to client (answer to SD-SubscribeEventGroup). This property was
         modified due to atpVariation (DirectedAssociationPattern).
     :ivar multicast_threshold: Specifies the number of subscribed
         clients that trigger the server to change the transmission of
-        events to multicast.  If configured to 0 only unicast will be
+        events to multicast. If configured to 0 only unicast will be
         used. If configured to 1 the first client will be already served
         by multicast. If configured to 2 the first client will be server
         with unicast and as soon as the second client arrives both will
-        be served by multicast.  This does not influence the handling of
+        be served by multicast. This does not influence the handling of
         initial events, which are served using unicast only.
     :ivar pdu_activation_routing_groups: The ServiceDiscovery module is
         able to activate and deactivate the PDU routing for events.
@@ -59,7 +59,7 @@ class EventHandler:
     :ivar sd_server_config: Server configuration parameter for Service-
         Discovery.
     :ivar sd_server_eg_timing_configs: Server Timing configuration
-        settings that are EventGroup specific.  This property was
+        settings that are EventGroup specific. This property was
         modified due to atpVariation (DirectedAssociationPattern).
     :ivar variation_point: This element was generated/modified due to an
         atpVariation stereotype.

@@ -44,9 +44,8 @@ class CryptoKeySlotInterface:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -66,18 +65,18 @@ class CryptoKeySlotInterface:
     :ivar short_name_pattern: This attribute represents the pattern
         which shall be used to build the shortName of the derived
         elements. As of now it is modeled as a String.  In general it
-        should follow the pattern:    pattern = (placeholder |
-        namePart)*   placeholder = "{" namePart "}"   namePart =
-        identifier | "_"  This is subject to be refined in subsequent
-        versions.  Note that this is marked as obsolete. Use the xml
-        attribute namePattern instead as it applies to Identifier and
-        CIdentifier (shortName, symbol etc.)
+        should follow the pattern: pattern = (placeholder | namePart)*
+        placeholder = "{" namePart "}" namePart = identifier | "_" This
+        is subject to be refined in subsequent versions. Note that this
+        is marked as obsolete. Use the xml attribute namePattern instead
+        as it applies to Identifier and CIdentifier (shortName, symbol
+        etc.)
     :ivar is_service: This flag is set if the PortInterface is to be
         used for communication between an * ApplicationSwComponentType
         or * ServiceProxySwComponentType or *
         SensorActuatorSwComponentType or *
         ComplexDeviceDriverSwComponentType * ServiceSwComponentType *
-        EcuAbstractionSwComponentType  and a ServiceSwComponentType
+        EcuAbstractionSwComponentType and a ServiceSwComponentType
         (namely an AUTOSAR Service) located on the same ECU. Otherwise
         the flag is not set.
     :ivar namespaces: This represents the SymbolProps used for the
@@ -101,8 +100,8 @@ class CryptoKeySlotInterface:
         of a crypto algorithm shall follow the rules defined in the
         specification of cryptography for Adaptive Platform.
     :ivar crypto_object_type: Object type that can be stored in the
-        slot.  If this field contains "Undefined" then mSlotCapacity
-        must be provided and larger then 0
+        slot. If this field contains "Undefined" then mSlotCapacity must
+        be provided and larger then 0
     :ivar key_slot_allowed_modification: Restricts how this keySlot may
         be used
     :ivar key_slot_content_allowed_usages: Restriction of allowed usage
@@ -110,8 +109,8 @@ class CryptoKeySlotInterface:
     :ivar slot_capacity: Capacity of the slot in bytes to be reserved by
         the stack vendor. One use case is to define this value in case
         that the cryptoObjectType is undefined and the slot size can not
-        be deduced from cryptoObjectType and cryptoAlgId.  "0" means
-        slot size can be deduced from cryptoObjectType and cryptoAlgId.
+        be deduced from cryptoObjectType and cryptoAlgId. "0" means slot
+        size can be deduced from cryptoObjectType and cryptoAlgId.
     :ivar slot_type: This attribute defines whether the keySlot is
         exclusively used by the Application; or whether it is used by
         Stack Services and managed by a Key Manager Application.
@@ -131,14 +130,14 @@ class CryptoKeySlotInterface:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

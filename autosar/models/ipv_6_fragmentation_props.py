@@ -16,19 +16,19 @@ class Ipv6FragmentationProps:
         be used for fragment reassembly. In case of a reassembly error
         or if not all fragments are received in time this buffer will be
         blocked until the specified "Fragment Reassembly Timeout" has
-        been exceeded.   A value of 0 disables fragment reassembly.
+        been exceeded. A value of 0 disables fragment reassembly.
     :ivar tcp_ip_ip_reassembly_buffer_size: Size of each fragment tx
         buffer in bytes.
     :ivar tcp_ip_ip_reassembly_segment_count: Specifies the maximum
         number of consecutive data segments that can be managed in each
         reassembly buffer. If all fragments are received in order, only
-        one segment will be needed.  To deal with fragments received out
+        one segment will be needed. To deal with fragments received out
         of order this value should be configured bigger than 1.
     :ivar tcp_ip_ip_reassembly_timeout: Specifies the timeout in seconds
         after which an incomplete datagram gets discarded.
     :ivar tcp_ip_ip_tx_fragment_buffer_count: These buffers will be used
         if the IpV6 receives packets from the upper layer that do not
-        fit into the MTU and thus must be fragmented.  A value of 0
+        fit into the MTU and thus must be fragmented. A value of 0
         disables tx fragmentation.
     :ivar tcp_ip_ip_tx_fragment_buffer_size: Size of each fragment tx
         buffer in bytes.

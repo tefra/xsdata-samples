@@ -31,13 +31,13 @@ class BaseTypeDirectDefinition:
         of such a base type in the native programming language,
         primarily in the Programming language C. This can then be used
         by a code generator to include the necessary declarations into a
-        header file. For example  BaseType with    shortName:
-        "MyUnsignedInt"    nativeDeclaration: "unsigned short"  Results
-        in    typedef unsigned short MyUnsignedInt;  If the attribute is
-        not defined the referring ImplementationDataTypes will not be
-        generated as a typedef by RTE.  If a nativeDeclaration type is
+        header file. For example BaseType with shortName:
+        "MyUnsignedInt" nativeDeclaration: "unsigned short" Results in
+        typedef unsigned short MyUnsignedInt; If the attribute is not
+        defined the referring ImplementationDataTypes will not be
+        generated as a typedef by RTE. If a nativeDeclaration type is
         given it shall fulfill the characteristic given by
-        basetypeEncoding and baseTypeSize.  This is required to ensure
+        basetypeEncoding and baseTypeSize. This is required to ensure
         the consistent handling and interpretation by software
         components, RTE, COM and MCM systems.
     :ivar s: Checksum calculated by the user's tool environment for an

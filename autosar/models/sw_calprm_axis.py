@@ -18,8 +18,8 @@ class SwCalprmAxis:
     This element specifies an individual input parameter axis (abscissa).
 
     :ivar sw_axis_index: This attribute specifies which axis is
-        specified by the containing SwCalprmAxis.  For example in a
-        curve this is usually "1". In a map this is "1" or "2".
+        specified by the containing SwCalprmAxis. For example in a curve
+        this is usually "1". In a map this is "1" or "2".
     :ivar category: This property specifies the category of a particular
         axis.
     :ivar sw_axis_grouped:

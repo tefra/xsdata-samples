@@ -25,7 +25,7 @@ class DiagnosticCommonPropsConditional:
 
     :ivar aging_requires_tested_cycle: Defines whether the aging cycle
         counter is processed every aging cycles or else only tested
-        aging cycle are considered.  If the attribute is set to TRUE:
+        aging cycle are considered. If the attribute is set to TRUE:
         only tested aging cycle are considered for aging cycle counter.
         If the attribute is set to FALSE: aging cycle counter is
         processed every aging cycle.
@@ -72,21 +72,20 @@ class DiagnosticCommonPropsConditional:
         0xFF (Response IDs).
     :ivar response_on_second_declined_request: Defines the reaction upon
         a second request (ClientB) that can not be processed (e.g. due
-        to priority assessment).  TRUE: when the second request (Client
+        to priority assessment). TRUE: when the second request (Client
         B) can not be processed, it shall be answered with NRC21
-        BusyRepeatRequest.  FALSE: when the second request (Client B)
-        can not be processed, it shall not be responded.
+        BusyRepeatRequest. FALSE: when the second request (Client B) can
+        not be processed, it shall not be responded.
     :ivar security_delay_time_on_boot: Start delay timer on power on in
-        seconds.   This delay indicates the time at ECU boot power-on
-        time where the Dcm remains in the default session and does not
-        accept a security access.
+        seconds. This delay indicates the time at ECU boot power-on time
+        where the Dcm remains in the default session and does not accept
+        a security access.
     :ivar status_bit_handling_test_failed_since_last_clear: This
         attribute defines, whether the aging and displacement mechanism
         shall be applied to the "TestFailedSinceLastClear" status bits.
     :ivar status_bit_storage_test_failed: This parameter is used to
         activate/deactivate the permanent storage of the "TestFailed"
-        status bits.  true: storage activated   false: storage
-        deactivated
+        status bits. true: storage activated false: storage deactivated
     :ivar type_of_dtc_supported: This attribute defines the format
         returned by Dem_DcmGetTranslationType and does not relate
         to/influence the supported Dem functionality.

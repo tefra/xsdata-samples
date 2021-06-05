@@ -24,12 +24,16 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 class DiagnosticValueNeeds:
     """Specifies the general needs on the configuration of the  Diagnostic
     Communication Manager (DCM) which are not related to a particular item
-    (e.g. a PID). The main use case is the mapping of service ports to the DCM
-    which are not related to a particular item.
+    (e.g. a PID).
 
-    In the case of using a sender receiver communicated value, the related value shall be taken via assignedData in the role "signalBasedDiagnostics".
-
-    In case of using a client/server communicated value, the related value shall be communicated via the port referenced by asssignedPort. The details of this communication (e.g. appropriate naming conventions) are specified in the related software specifications (SWS).
+    The main use case is the mapping of service ports to the DCM which
+    are not related to a particular item. In the case of using a sender
+    receiver communicated value, the related value shall be taken via
+    assignedData in the role "signalBasedDiagnostics". In case of using
+    a client/server communicated value, the related value shall be
+    communicated via the port referenced by asssignedPort. The details
+    of this communication (e.g. appropriate naming conventions) are
+    specified in the related software specifications (SWS).
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended
@@ -42,9 +46,8 @@ class DiagnosticValueNeeds:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -59,15 +62,15 @@ class DiagnosticValueNeeds:
         design notes.
     :ivar audiences:
     :ivar diag_requirement: This denotes the requirement identifier to
-        which the object can be linked to.  Note that with the
+        which the object can be linked to. Note that with the
         implementation of a generic tracing concept in AUTOSAR this
         attribute might become obsolete.
     :ivar security_access_level: This attribute denotes the level of
         security which is touched by the diagnostic object. The higher
-        the level the more relevance for the security exists.  This
-        level shall be mapped to the security level in the ECU.
+        the level the more relevance for the security exists. This level
+        shall be mapped to the security level in the ECU.
     :ivar data_length: This attribute is applicable only if the
-        ServiceNeed is aggregated within BswModuleDependency.  This
+        ServiceNeed is aggregated within BswModuleDependency. This
         attribute represents the length of data (in bytes) provided for
         this particular PID signal.
     :ivar diagnostic_value_access: This attribute controls whether the
@@ -100,14 +103,14 @@ class DiagnosticValueNeeds:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

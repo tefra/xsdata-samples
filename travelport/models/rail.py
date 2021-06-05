@@ -981,9 +981,9 @@ class RailFareId:
     key:
     category:
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -1041,9 +1041,9 @@ class RailFareNote:
     key:
     note_name:
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -1504,9 +1504,9 @@ class RailFare:
     rail_loc_destination: RCH specific destination code (a.k.a UCodes)
         which uniquely identifies a train station.
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -2087,9 +2087,9 @@ class RailJourney:
     route_reference: RouteReference is required in seat assignment
         purpose
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.
@@ -2414,9 +2414,9 @@ class RailPricingInfo:
     approximate_taxes: The Converted tax amount in Default Currency.
     approximate_fees: The Converted fee amount in Default Currency.
     el_stat: This attribute is used to show the action results of an
-        element.               Possible values are "A" (when elements
-        have been added to the UR) and "M" (when existing elements have
-        been modified). Response only.
+        element. Possible values are "A" (when elements have been added
+        to the UR) and "M" (when existing elements have been modified).
+        Response only.
     key_override: If a duplicate key is found where we are adding
         elements in some cases like URAdd, then instead of erroring out
         set this attribute to true.

@@ -16,7 +16,6 @@ class ClientComSpec:
     """@RESTRICT_TO_STANDARD:CP!
     Client-specific communication attributes (RPortPrototype typed by ClientServerInterface).
     @END_RESTRICT_TO_STANDARD!
-
     @RESTRICT_TO_STANDARD:AP!
     Client-specific communication attributes (RPortPrototype typed by ServiceInterface) that are relevant for methods and field getters and setters.
     @END_RESTRICT_TO_STANDARD!

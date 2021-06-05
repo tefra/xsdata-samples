@@ -12,9 +12,14 @@ class TransmissionModeDeclaration:
     """AUTOSAR COM provides the possibility to define two different
     TRANSMISSION MODES (True and False) for each I-PDU.
 
-    As TransmissionMode selector the signal content can be evaluated via transmissionModeCondition (implemented directly in the COM module) or mode conditions can be defined with the modeDrivenTrueCondition or modeDrivenFalseCondition (evaluated by BswM and invoking Com_SwitchIpduTxMode COM API). If modeDrivenTrueCondition and modeDrivenFalseCondition are defined they shall never evaluate to true both at the same time.
-
-    The mixing of Transmission Mode Switch via API and signal value is not allowed.
+    As TransmissionMode selector the signal content can be evaluated via
+    transmissionModeCondition (implemented directly in the COM module)
+    or mode conditions can be defined with the modeDrivenTrueCondition
+    or modeDrivenFalseCondition (evaluated by BswM and invoking
+    Com_SwitchIpduTxMode COM API). If modeDrivenTrueCondition and
+    modeDrivenFalseCondition are defined they shall never evaluate to
+    true both at the same time. The mixing of Transmission Mode Switch
+    via API and signal value is not allowed.
 
     :ivar mode_driven_false_conditions: Defines the trigger for the
         Com_SwitchIpduTxMode Transmission Mode switch. Only if all
@@ -37,10 +42,10 @@ class TransmissionModeDeclaration:
         "Com_SwitchIpduTxMode" there is no need for the
         "TransmissionModeCondition" and its sub-structure.
     :ivar transmission_mode_false_timing: Timing Specification if the
-        COM Transmission Mode is false.   The Transmission Mode Selector
+        COM Transmission Mode is false. The Transmission Mode Selector
         is defined to be false, if all Conditions evaluate to false.
     :ivar transmission_mode_true_timing: Timing Specification if the COM
-        Transmission Mode is true.   The Transmission Mode Selector is
+        Transmission Mode is true. The Transmission Mode Selector is
         defined to be true, if at least one Condition evaluates to true.
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if

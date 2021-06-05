@@ -11,8 +11,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class TtcanAbsolutelyScheduledTiming:
     """Each frame in TTCAN is identified by its slot id and communication
-    cycle. A description is provided by the usage of AbsolutelyScheduledTiming.
+    cycle.
 
+    A description is provided by the usage of AbsolutelyScheduledTiming.
     A frame can be sent multiple times within one communication cycle.
     For describing this case multiple AbsolutelyScheduledTimings have to
     be used. The main use case would be that a frame is sent twice

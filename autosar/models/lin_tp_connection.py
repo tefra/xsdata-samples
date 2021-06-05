@@ -28,17 +28,17 @@ class LinTpConnection:
     :ivar ident: This adds the ability to become referrable to
         TpConnection.
     :ivar data_pdu_ref: Reference to an NPdu (Single Frame, First Frame
-        or Consecutive Frame).  The Single Frame network protocol data
+        or Consecutive Frame). The Single Frame network protocol data
         unit (SF N_PDU) shall be sent out by the sending network entity
         and can be received by one or multiple receiving network
         entities. The Single Frame (SF N_PDU) shall be sent out to
         transfer a service data unit that can be transferred via a
         single service request to the data link layer. This network
         protocol data unit shall be sent to transfer unsegmented
-        messages.  The First Frame network protocol data unit (FF N_PDU)
+        messages. The First Frame network protocol data unit (FF N_PDU)
         identifies the first network protocol data unit (N_PDU) of a
         segmented message transmitted by a network sending entity and
-        received by a receiving network entity.   The Consecutive Frame
+        received by a receiving network entity. The Consecutive Frame
         network protocol data unit (CF N_PDU) transfers segments
         (N_Data) of the service data unit message data
         (&lt;MessageData&gt;). All network protocol data units (N_PDUs)
@@ -47,7 +47,7 @@ class LinTpConnection:
         Frames network protocol data units (CF N_PDUs).
     :ivar drop_not_requested_nad: Configures if TP Frames of not
         requested LIN-Slaves are dropped or not.
-    :ivar flow_control_ref: Reference to the  Flow Control NPdu.  The
+    :ivar flow_control_ref: Reference to the  Flow Control NPdu. The
         Flow Control network protocol data unit (FC N_PDU) is identified
         by the Flow Control protocol control information (FC N_PCI). The
         Flow Control network protocol data unit (FC N_PDU) instructs a
@@ -55,8 +55,8 @@ class LinTpConnection:
         CF N_PDUs. The Flow Control network protocol data unit shall be
         sent by the receiving network layer entity to the sending
         network layer entity, when ready to receive more data, after
-        correct reception of:  a) First Frame network protocol data unit
-        (FF N_PDU)   b) the last Consecutive Frame network protocol data
+        correct reception of: a) First Frame network protocol data unit
+        (FF N_PDU) b) the last Consecutive Frame network protocol data
         unit (CF N_PDU) of a block of Consecutive Frames (CF N_PDU) if
         further Consecutive Frame network protocol data unit (CF N_PDU)
         need(s) to be sent.

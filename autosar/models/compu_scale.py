@@ -30,10 +30,10 @@ class CompuScale:
     :ivar mask: In difference to all the other computational methods
         every COMPU-SCALE will be applied including the bit MASK.
         Therefore it is allowed for this type of COMPU-METHOD, that
-        COMPU-SCALES overlap.   To calculate the string reverse to a
+        COMPU-SCALES overlap. To calculate the string reverse to a
         value, the string has to be split and the according value for
         each substring has to be summed up. The sum is finally
-        transmitted.  The processing has to be done in order of the
+        transmitted. The processing has to be done in order of the
         COMPU-SCALE elements.
     :ivar lower_limit: This specifies the lower limit of the scale.
     :ivar upper_limit: This specifies the upper limit of a of the scale.

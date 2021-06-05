@@ -325,7 +325,7 @@ class ArrayValueSpecification:
     :ivar intended_partial_initialization_count: This attribute shall
         only have a meaning for dynamic arrays and shall be taken as a
         sanity check: the number filled in the attribute shall be
-        identical to the number of ArrayValueSpecification.element.   If
+        identical to the number of ArrayValueSpecification.element. If
         the attribute does not exist it means that no partial
         initialization is intended.
     :ivar s: Checksum calculated by the user's tool environment for an

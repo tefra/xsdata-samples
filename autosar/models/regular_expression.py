@@ -6,10 +6,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class RegularExpression:
-    """This is a regular expression as defined in.
-
-    http://www.w3.org/TR/xmlschema-2
-
+    """
+    This is a regular expression as defined in http://www.w3.org/TR/xmlschema-2
     As of now it is still produced as a string in XSD.
 
     :ivar value:

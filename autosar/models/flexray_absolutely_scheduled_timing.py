@@ -10,8 +10,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class FlexrayAbsolutelyScheduledTiming:
     """Each frame in FlexRay is identified by its slot id and communication
-    cycle. A description is provided by the usage of AbsolutelyScheduledTiming.
+    cycle.
 
+    A description is provided by the usage of AbsolutelyScheduledTiming.
     In the static segment a frame can be sent multiple times within one
     communication cycle. For describing this case multiple
     AbsolutelyScheduledTimings have to be used. The main use case would
@@ -20,13 +21,13 @@ class FlexrayAbsolutelyScheduledTiming:
     :ivar communication_cycle: The communication cycle where the frame
         is sent.
     :ivar slot_id: In the static part the SlotID defines the slot in
-        which the frame is transmitted.  The SlotID also determines, in
+        which the frame is transmitted. The SlotID also determines, in
         combination with FlexrayCluster::numberOfStaticSlots, whether
-        the frame is sent in static or dynamic segment.  In the dynamic
+        the frame is sent in static or dynamic segment. In the dynamic
         part, the slot id is equivalent to a priority. Lower dynamic
         slot ids are all sent until the end of the dynamic segment.
         Higher numbers, which were ignored that time, have to wait one
-        cycle and then shall try again.  minValue: 1  maxValue: 2047
+        cycle and then shall try again. minValue: 1 maxValue: 2047
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if
         an ArObject has changed. The checksum has no semantic meaning

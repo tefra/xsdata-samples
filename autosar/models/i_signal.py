@@ -42,15 +42,17 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ISignal:
-    """Signal of the Interaction Layer. The RTE supports a "signal fan-out"
-    where the same System Signal is sent in different SignalIPdus to multiple
-    receivers.
+    """Signal of the Interaction Layer.
 
-    To support the RTE "signal fan-out" each SignalIPdu  contains ISignals. If the same System Signal is to be mapped into several SignalIPdus there is one ISignal needed for each ISignalToIPduMapping.
-
-    ISignals describe the Interface between the Precompile configured RTE and the potentially Postbuild configured Com Stack (see ECUC Parameter Mapping).
-
-    In case of the SystemSignalGroup an ISignal shall be created for each SystemSignal contained in the SystemSignalGroup.
+    The RTE supports a "signal fan-out" where the same System Signal is
+    sent in different SignalIPdus to multiple receivers. To support the
+    RTE "signal fan-out" each SignalIPdu  contains ISignals. If the same
+    System Signal is to be mapped into several SignalIPdus there is one
+    ISignal needed for each ISignalToIPduMapping. ISignals describe the
+    Interface between the Precompile configured RTE and the potentially
+    Postbuild configured Com Stack (see ECUC Parameter Mapping). In case
+    of the SystemSignalGroup an ISignal shall be created for each
+    SystemSignal contained in the SystemSignalGroup.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended
@@ -63,9 +65,8 @@ class ISignal:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -87,12 +88,12 @@ class ISignal:
         representation follows a particular policy. Note that this
         causes some redundancy which is intended and can be used to
         support flexible development methodology as well as subsequent
-        integrity checks.   If the policy
+        integrity checks. If the policy
         "networkRepresentationFromComSpec" is chosen the network
         representation from the ComSpec that is aggregated by the
-        PortPrototype shall be used.  If the "override" policy is chosen
+        PortPrototype shall be used. If the "override" policy is chosen
         the requirements specified in the PortInterface and in the
-        ComSpec are not fulfilled by the networkRepresentationProps.  In
+        ComSpec are not fulfilled by the networkRepresentationProps. In
         case the System Description doesn't use a complete Software
         Component Description (VFB View) the "legacy" policy can be
         chosen.
@@ -104,30 +105,30 @@ class ISignal:
     :ivar init_value: Optional definition of a ISignal's initValue in
         case the System Description doesn't use a complete Software
         Component Description (VFB View). This supports the inclusion of
-        legacy system signals.   This value can be used to configure the
-        Signal's "InitValue".   If a full DataMapping exist for the
+        legacy system signals. This value can be used to configure the
+        Signal's "InitValue". If a full DataMapping exist for the
         SystemSignal this information may be available from a configured
-        SenderComSpec and ReceiverComSpec.  In this case the initvalues
+        SenderComSpec and ReceiverComSpec. In this case the initvalues
         in SenderComSpec and/or ReceiverComSpec override this optional
         value specification. Further restrictions apply from the RTE
         specification.
     :ivar length: Size of the signal in bits. The size needs to be
         derived from the mapped VariableDataPrototype according to the
         mapping of primitive DataTypes to BaseTypes as used in the RTE.
-        Indicates maximum size for dynamic length signals.   The ISignal
+        Indicates maximum size for dynamic length signals. The ISignal
         length of zero bits is allowed.
     :ivar network_representation_props: Specification of the actual
         network representation. The usage of SwDataDefProps for this
         purpose is restricted to the attributes compuMethod and
         baseType. The optional baseType attributes "memAllignment" and
-        "byteOrder" shall not be used.   The attribute "dataTypePolicy"
-        in the SystemTemplate element defines whether this network
+        "byteOrder" shall not be used. The attribute "dataTypePolicy" in
+        the SystemTemplate element defines whether this network
         representation shall be ignored and the information shall be
-        taken over from  the network representation of the ComSpec.   If
+        taken over from  the network representation of the ComSpec. If
         "override" is chosen by the system integrator the network
         representation can violate against the requirements defined in
         the PortInterface and in the network representation of the
-        ComSpec.   In case that the System Description doesn't use a
+        ComSpec. In case that the System Description doesn't use a
         complete Software Component Description (VFB View) this element
         is used to configure "ComSignalDataInvalidValue" and the Data
         Semantics.
@@ -157,14 +158,14 @@ class ISignal:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

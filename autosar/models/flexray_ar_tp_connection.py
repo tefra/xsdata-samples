@@ -24,20 +24,20 @@ class FlexrayArTpConnection:
         PDUs that shall be reserved for this connection when it is
         active. The range is 1-255.
     :ivar direct_tp_sdu_ref: Reference to the IPdu that is segmented by
-        the Transport Protocol.   The source address of the transmitted
+        the Transport Protocol. The source address of the transmitted
         NPdu is determined by the configured source
         CommunicationConnector. The target address of the transmitted
         NPdu is determined by the configured target
         CommunicationConnector.
     :ivar flow_control_pdu_ref: Please note that this reference is
-        deprecated and will be removed in future.  The PDU pool
+        deprecated and will be removed in future. The PDU pool
         referenced by the FlexRayArTpChannel as nPdu will be used
         instead.
     :ivar multicast_ref: TP address for 1:n connections.
     :ivar reversed_tp_sdu_ref: Reference to the IPdu that is segmented
-        by the Transport Protocol.  If support of both sending and
+        by the Transport Protocol. If support of both sending and
         receiving is used, this association references the IPdu used for
-        the additional second direction.  The source address of the
+        the additional second direction. The source address of the
         transmitted NPdu is determined by the configured target
         CommunicationConnector. The target address of the transmitted
         NPdu is determined by the configured source
@@ -45,7 +45,7 @@ class FlexrayArTpConnection:
     :ivar source_ref: The source of the TP connection.
     :ivar target_refs: The target of the TP connection.
     :ivar transmit_pdu_refs: Please note that this reference is
-        deprecated and will be removed in future.  The PDU pool
+        deprecated and will be removed in future. The PDU pool
         referenced by the FlexRayArTpChannel as nPdu will be used
         instead.
     :ivar s: Checksum calculated by the user's tool environment for an

@@ -15,14 +15,16 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class PermissibleSignalPath:
     """The PermissibleSignalPath describes the way a data element shall take in
-    the topology. The path is described by ordered references to
-    PhysicalChannels.
+    the topology.
 
-    If more than one PermissibleSignalPath is defined for the same
-    signal/operation attributes, any of them can be chosen. Such a signal path can be a constraint for the communication matrix . This path describes that one data element should take path A (e.g. 1. CAN channel, 2. LIN channel)
-    and not path B (1. CAN channel, FlexRay channel A).
-
-    This has an effect on the frame generation and the frame path.
+    The path is described by ordered references to PhysicalChannels. If
+    more than one PermissibleSignalPath is defined for the same
+    signal/operation attributes, any of them can be chosen. Such a
+    signal path can be a constraint for the communication matrix . This
+    path describes that one data element should take path A (e.g. 1. CAN
+    channel, 2. LIN channel) and not path B (1. CAN channel, FlexRay
+    channel A). This has an effect on the frame generation and the frame
+    path.
 
     :ivar introduction: This represents introductory documentation about
         the signal path constraint.

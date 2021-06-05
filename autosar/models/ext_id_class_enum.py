@@ -6,12 +6,14 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ExtIdClassEnum:
-    """This is in fact an enumerator. The possible values are all legal XML
-    names of identifiable objects even those of other XML files.
+    """This is in fact an enumerator.
 
-    If the schemas of all questionable files are generated from a common meta-model, this is something like an IdentifiableSubtypesEnum. Maybe a future version of the Schema generator can generate such an enum.
-
-    As of now it is specified as string.
+    The possible values are all legal XML names of identifiable objects
+    even those of other XML files. If the schemas of all questionable
+    files are generated from a common meta-model, this is something like
+    an IdentifiableSubtypesEnum. Maybe a future version of the Schema
+    generator can generate such an enum. As of now it is specified as
+    string.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

@@ -17,15 +17,15 @@ class AutosarEngineeringObject:
         Note that it is modeled as NameToken and not as Identifier since
         in ASAM-CC it is also a NameToken.
     :ivar category: This denotes the role of the engineering object in
-        the development cycle.  Categories are such as  * SWSRC for
-        source code * SWOBJ for object code * SWHDR for a C-header file
-        Further roles need to be defined via Methodology.
+        the development cycle. Categories are such as * SWSRC for source
+        code * SWOBJ for object code * SWHDR for a C-header file Further
+        roles need to be defined via Methodology.
     :ivar revision_labels:
     :ivar domain: This denotes the domain in which the engineering
         object is stored. This allows to indicate various segments in
         the repository keeping the engineering objects. The domain may
         segregate companies, as well as automotive domains. Details need
-        to be defined by the Methodology.  Attribute is optional to
+        to be defined by the Methodology. Attribute is optional to
         support a default domain.
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if

@@ -10,7 +10,6 @@ class TableSeparatorString:
     exchange table.
 
     * '''0''': no line is displayed
-
     * '''1''': line is displayed
 
     :ivar value:

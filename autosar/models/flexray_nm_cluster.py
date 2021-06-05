@@ -41,9 +41,8 @@ class FlexrayNmCluster:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -59,7 +58,7 @@ class FlexrayNmCluster:
     :ivar communication_cluster_ref: Association to a
         CommunicationCluster in the topology description.
     :ivar nm_channel_id: This attribute has the status "removed" and
-        shall not be used any longer.   Old description: Channel
+        shall not be used any longer. Old description: Channel
         identification number of the corresponding channel. Must be
         unique over all NmClusters.
     :ivar nm_channel_sleep_master: This parameter shall be set to
@@ -102,7 +101,7 @@ class FlexrayNmCluster:
         to transmit the Nm Data PDUs of all FlexRay Nm Ecus of this
         FlexRayNmCluster.
     :ivar nm_data_enabled: Switch to enable the separated sending of NM-
-        Data.  True: enables False: disables
+        Data. True: enables False: disables
     :ivar nm_detection_lock: The time for which a node will not set the
         repeat message request bit even in the presence of a repeat
         message request (in seconds).
@@ -115,7 +114,7 @@ class FlexrayNmCluster:
     :ivar nm_ready_sleep_count: This attribute is deprecated and will be
         removed in future. nmReadySleepTime in the
         FlexrayCommunicationConnector shall be used instead to influence
-        the shutdown behavior of the FlexRay Nm.  Old description:
+        the shutdown behavior of the FlexRay Nm. Old description:
         Numbers of repetitions in the ready sleep state before NM
         switches to bus sleep mode. On a value of "1", the NM-State
         Machine will leave the Ready Sleep State after one NM Repetition
@@ -151,14 +150,14 @@ class FlexrayNmCluster:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

@@ -10,25 +10,24 @@ class OtherHeiIdValue(Enum):
     """
     :cvar PREVIOUS_SCHAC: A previously used SCHAC identifier. Servers
         MUST provide all SCHAC identifiers their HEI have used in the
-        past.  https://github.com/erasmus-without-paper/ewp-specs-api-
+        past. https://github.com/erasmus-without-paper/ewp-specs-api-
         discovery/issues/4
     :cvar PIC: PIC identifier.
         https://ec.europa.eu/research/participants/portal/desktop/en/organisations/register.html
     :cvar ERASMUS: Erasmus institutional code.
     :cvar EUC: DEPRECATED, use "erasmus-charter" instead. Erasmus
-        University Charter number (aka EUC number).  - Newer clients
+        University Charter number (aka EUC number). - Newer clients
         SHOULD treat this as an alias for "erasmus-charter" (for
-        backward compatibility).  - Servers MAY still publish "euc"
-        identifiers in their manifests. They also MAY   decide not to
-        publish any "euc" identifiers, and only publish   "erasmus-
-        charter" identifiers.  - If the server decides to publish "euc"
-        identifiers, it still SHOULD NOT   publish newer Erasmus Charter
-        numbers (such as ECHE numbers) under the "euc"   identifier
-        type. It is RECOMMENDED to publish them via "erasmus-charter"
-        instead, to avoid confusion.  See this thread:
-        https://github.com/erasmus-without-paper/ewp-specs-api-
-        registry/issues/3
-    :cvar ERASMUS_CHARTER: Erasmus Charter number (EUC/ECHE/etc.)  This
+        backward compatibility). - Servers MAY still publish "euc"
+        identifiers in their manifests. They also MAY decide not to
+        publish any "euc" identifiers, and only publish "erasmus-
+        charter" identifiers. - If the server decides to publish "euc"
+        identifiers, it still SHOULD NOT publish newer Erasmus Charter
+        numbers (such as ECHE numbers) under the "euc" identifier type.
+        It is RECOMMENDED to publish them via "erasmus-charter" instead,
+        to avoid confusion. See this thread: https://github.com/erasmus-
+        without-paper/ewp-specs-api-registry/issues/3
+    :cvar ERASMUS_CHARTER: Erasmus Charter number (EUC/ECHE/etc.) This
         MAY contain both EUC numbers (Erasmus University Charter) or
         ECHE numbers (Erasmus Charter for Higher Education). In the
         future, it also MAY contain other similar identifiers, if the
@@ -53,12 +52,12 @@ class ApisImplemented:
 
     :ivar other_element: Manifest entries for each of the APIs are
         defined in separate schemas, within repositories describing
-        these APIs (usually in a file named `manifest-entry.xsd`).  We
+        these APIs (usually in a file named `manifest-entry.xsd`). We
         encourage you to include non-EWP-related APIs too, if you think
         that other partners in the EWP Network might make use of them!
         It is RECOMMENDED (but NOT strictly required) that all such API
         descriptions extend the `ApiEntry` complexType defined in
-        common-types.xsd schema:  https://github.com/erasmus-without-
+        common-types.xsd schema: https://github.com/erasmus-without-
         paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd
     """
     class Meta:
@@ -109,20 +108,20 @@ class Hei:
         described below) is the primary HEI identifier, but manifest
         authors are encouraged to provide all identifiers they can think
         of. (Otherwise, other EWP Hosts may not be able to recognize
-        their HEIs.)  Note that there can be multiple IDs given, even
+        their HEIs.) Note that there can be multiple IDs given, even
         within a single type. This won't happen often, but you should be
         aware of this. It is safer for the Registry to include both
         conflicting values (as they were found in the manifest files),
         than pick one at random.
     :ivar name: The name of the institution. Multiple values may be
-        provided, and in multiple languages.  Note that there can be
+        provided, and in multiple languages. Note that there can be
         multiple names given even *for the same language*. This won't
         happen often, but you should be aware of this. It is safer for
         the Registry to include both such conflicting values (as they
         were found in the manifest files), than pick one at random.
     :ivar id: SCHAC identifier of this HEI. As described in the SCHAC
         documentation for the "schacHomeOrganization" element (e.g.
-        "uw.edu.pl").  This attribute is REQUIRED. Manifest authors need
+        "uw.edu.pl"). This attribute is REQUIRED. Manifest authors need
         to acquire a proper SCHAC identifier for all HEIs they intend to
         add to their manifest (acquiring them manually is usually quite
         simple).
@@ -165,9 +164,9 @@ class Catalogue:
 
     :ivar host: This element describes a single EWP Host.
     :ivar institutions: The list of institutions referenced in the
-        `host` sections above.  The list is using the Manifest's XML
+        `host` sections above. The list is using the Manifest's XML
         namespace, but the actual data MAY come from other sources too.
-    :ivar binaries: This elements keeps a map of binaries.  Each binary
+    :ivar binaries: This elements keeps a map of binaries. Each binary
         object on this list is identified by its own SHA-256 digest.
         Note, that is would be possible for the Registry Service to
         simply include the actual binary content wherever it is referred
@@ -212,34 +211,34 @@ class Catalogue:
             Institutions) covered by this host. The hosts states that
             all of its implemented institution-related APIs will be able
             to understand requests regarding all institutions listed
-            here.  IMPORTANT: A single institution can be covered by
+            here. IMPORTANT: A single institution can be covered by
             multiple hosts. E.g. If you are looking for a particular API
             implementation for a particular institution, then you MUST
             use both of these selectors in your XPath query. Also, keep
             in mind, that a single API may be served in multiple
             versions, as described here: https://github.com/erasmus-
-            without-paper/ewp-specs-architecture/issues/6.  Note, that
+            without-paper/ewp-specs-architecture/issues/6. Note, that
             this element is not the same element as the one used in the
             Discovery Manifest API (it has the same name, but a
             different namespace and contents).
         :ivar client_credentials_in_use: A list of client credentials
             used by this host to make requests to other EWP hosts in the
-            name of all of the covered institutions.  Note, that this
+            name of all of the covered institutions. Note, that this
             element is not the same element as the one used in the
             Discovery Manifest API (it has the same name, but a
             different namespace and contents).
         :ivar server_credentials_in_use: A list of credentials used by
             this host's server endpoints (URLs) for authenticating
             themselves. Note, that only *some* methods of server
-            authentication make use of these credentials.  As opposed to
+            authentication make use of these credentials. As opposed to
             client authentication, the keys used in server
             authentication are bound to specific endpoints (URLs), **not
             HEIs**. Clients can make use of these credentials for
             authenticating the servers when connecting to any of the
             APIs implemented by this host (in the `../apis-implemented`
-            element).  Note, that this element is not the same element
-            as the one used in the Discovery Manifest API (it has the
-            same name, but a different namespace and contents).
+            element). Note, that this element is not the same element as
+            the one used in the Discovery Manifest API (it has the same
+            name, but a different namespace and contents).
         """
         admin_email: List[str] = field(
             default_factory=list,
@@ -311,22 +310,21 @@ class Catalogue:
                 within the network using the TLS Client Certificate
                 Authentication described here:
                 https://github.com/erasmus-without-paper/ewp-specs-sec-
-                cliauth-tlscert  The client which signs his
-                communication with the private key matching this
-                certificate is allowed to make requests in the name of
-                the institutions listed in the adjacent `institutions-
-                covered` element.  Note, that the Registry does NOT
-                serve the actual certificate. Servers MUST use the
-                `sha-256` attribute to match certificates the client
-                actually uses.
+                cliauth-tlscert The client which signs his communication
+                with the private key matching this certificate is
+                allowed to make requests in the name of the institutions
+                listed in the adjacent `institutions-covered` element.
+                Note, that the Registry does NOT serve the actual
+                certificate. Servers MUST use the `sha-256` attribute to
+                match certificates the client actually uses.
             :ivar rsa_public_key: Identifies an RSA key-pair which has
                 been allowed to make requests within the network using
                 the HTTP Signature Client Authentication described here:
                 https://github.com/erasmus-without-paper/ewp-specs-sec-
-                cliauth-httpsig  The client who is in possession of the
+                cliauth-httpsig The client who is in possession of the
                 private part of this key is allowed to make requests in
                 the name of the institutions listed in the adjacent
-                `institutions-covered` element.  Please note, that the
+                `institutions-covered` element. Please note, that the
                 Registry also serves the *actual content* of the public
                 part for this key-pair, but this content is not included
                 here. Instead, you can look up it's SHA-256 digest in
@@ -384,19 +382,18 @@ class Catalogue:
                 listed in the `../apis-implemented` element, as part of
                 the HTTP Signature Server Authentication described here:
                 https://github.com/erasmus-without-paper/ewp-specs-sec-
-                cliauth-httpsig  Clients which intend to authenticate
-                the server behind the URL X via this method, MUST verify
-                if the response is signed with *any* of the keys
-                supplied here. The list of valid keys MUST be extracted
-                only from the single `host` entry being the parent of
-                the element in the URL X has been discovered - the
-                client MUST NOT treat keys found in other hosts as
-                valid, even if these hosts claim to serve their APIs at
-                the same URL as X.  Please note, that the Registry also
-                serves the *actual content* of the public part for this
-                key-pair, but this content is not included here.
-                Instead, you can look up it's SHA-256 digest in the
-                `binaries` section below.
+                cliauth-httpsig Clients which intend to authenticate the
+                server behind the URL X via this method, MUST verify if
+                the response is signed with *any* of the keys supplied
+                here. The list of valid keys MUST be extracted only from
+                the single `host` entry being the parent of the element
+                in the URL X has been discovered - the client MUST NOT
+                treat keys found in other hosts as valid, even if these
+                hosts claim to serve their APIs at the same URL as X.
+                Please note, that the Registry also serves the *actual
+                content* of the public part for this key-pair, but this
+                content is not included here. Instead, you can look up
+                it's SHA-256 digest in the `binaries` section below.
             """
             rsa_public_key: List["Catalogue.Host.ServerCredentialsInUse.RsaPublicKey"] = field(
                 default_factory=list,
@@ -449,13 +446,12 @@ class Catalogue:
             """
             :ivar value:
             :ivar sha_256: The SHA-256 digest of the key's binary
-                content.  You might have noticed that this is
-                information is kind of redundant (because it can be
-                evaluated from the content itself). However, the
-                Registry publishes it nonetheless (e.g. to reduce the
-                work required to perform by the clients, and to make it
-                easier for manual matching by humans when debugging
-                XML).
+                content. You might have noticed that this is information
+                is kind of redundant (because it can be evaluated from
+                the content itself). However, the Registry publishes it
+                nonetheless (e.g. to reduce the work required to perform
+                by the clients, and to make it easier for manual
+                matching by humans when debugging XML).
             """
             value: Optional[bytes] = field(
                 default=None,

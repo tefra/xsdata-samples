@@ -9,11 +9,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ModeDrivenTransmissionModeCondition:
     """The condition defined by this class evaluates to true if one of the
-    referenced modeDeclarations (OR associated) is active. All referenced
-    modeDeclarations shall be from the same ModeDeclarationGroup.
+    referenced modeDeclarations (OR associated) is active.
 
-    The condition is used to define which TransmissionMode shall be
-    activated using Com_SwitchIpduTxMode.
+    All referenced modeDeclarations shall be from the same
+    ModeDeclarationGroup. The condition is used to define which
+    TransmissionMode shall be activated using Com_SwitchIpduTxMode.
 
     :ivar mode_declaration_refs: Reference to one modeDeclaration which
         is OR associated in the context of the

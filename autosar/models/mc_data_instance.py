@@ -29,13 +29,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class McDataInstance:
     """Describes the specific properties of one data instance in order to
-    support measurement and/or calibration of this data instance.
+    support measurement and/or calibration of this data instance. The most
+    important attributes are:
 
-    The most important attributes are:
     * Its shortName is copied from the ECU Flat map (if applicable) and will be used as identifier and for display by the MC system.
     * The category is copied from the corresponding data type (ApplicationDataType if defined, otherwise ImplementationDataType) as far as applicable.
     * The symbol is the one used in the programming language. It will be used to find out the actual memory address by the final generation tool with the help of linker generated information.
-
     It is assumed that in the M1 model this part and all the aggregated and referred elements (with the exception of the Flat Map and the references from ImplementationElementInParameterInstanceRef and McAccessDetails) are completely generated from "upstream" information. This means, that even if an element like e.g. a CompuMethod is only used via reference here, it will be copied into the M1 artifact which holds the complete McSupportData for a given Implementation.
 
     :ivar short_name: This specifies an identifying shortName for the
@@ -49,9 +48,8 @@ class McDataInstance:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -73,7 +71,7 @@ class McDataInstance:
         the ECU Flat Map. This allows to trace back to the original
         specification of the generated data instance. This link shall be
         added by the RTE generator mainly for documentation purposes.
-        The reference is optional because  * The McDataInstance may
+        The reference is optional because * The McDataInstance may
         represent an array or struct in which only the subElements
         correspond to FlatMap entries. * The McDataInstance may
         represent a task local buffer for rapid prototyping access which
@@ -114,14 +112,14 @@ class McDataInstance:
         during final generation of the MC configuration data (e.g. "A2L"
         file) . It shall be the name of the element in the programming
         language such that it can be identified in linker generated
-        information.   In case the McDataInstance is part of composite
+        information. In case the McDataInstance is part of composite
         data in the programming language, the symbol String may include
         parts denoting the element context, unless the context is given
         by the symbol attribute of an enclosing McDataInstance. This
         means in particular for the C language that the "." character
         shall be used as a separator between the name of a "struct"
-        variable the name of one of its elements.  The symbol can differ
-        from the shortName in case of generated C data declarations.  It
+        variable the name of one of its elements. The symbol can differ
+        from the shortName in case of generated C data declarations. It
         is an optional attribute since it may be missing in case the
         instance represents an element (e.g. a single array element)
         which has no name in the linker map.
@@ -143,14 +141,14 @@ class McDataInstance:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

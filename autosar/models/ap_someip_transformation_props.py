@@ -35,9 +35,8 @@ class ApSomeipTransformationProps:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -60,40 +59,40 @@ class ApSomeipTransformationProps:
         indicates that Strings in the SOME/IP message shall NOT be
         serialized according to the SOME/IP specification for Strings.
         If this attribute is set to true, BOM and null-termination shall
-        NOT be added in the serialization for Strings in the payload.
-        If this attribute is set to false (or not set)  BOM and null-
+        NOT be added in the serialization for Strings in the payload. If
+        this attribute is set to false (or not set)  BOM and null-
         termination shall be added in the serialization for Strings in
         the payload according to the SOME/IP specification for Strings.
         NOTE! This attribute is not future safe, and will be removed in
         an upcoming AUTOSAR release!
     :ivar is_dynamic_length_field_size: This attribute represents the
         ability to control the setting of the wire type for TLV
-        encoding.   If the attribute is set to True then wire type 5-7
-        shall be used.   If the attribute does not exist or is set to
+        encoding. If the attribute is set to True then wire type 5-7
+        shall be used. If the attribute does not exist or is set to
         False then wire type 4 shall be used.
     :ivar session_handling: Defines whether the SOME/IP transformer
         shall use session handling for Sender/Receiver communication.
     :ivar size_of_array_length_field: Configures the SOME/IP
         serialization for the referenced dataPrototype in case of a
         variable size Array (Vector), fixed-size Array or an
-        Associative_Map.    It describes the size of the length field
-        (in Bytes) that will be put in front of the Array or
-        Associative_Map in the SOME/IP message.
+        Associative_Map. It describes the size of the length field (in
+        Bytes) that will be put in front of the Array or Associative_Map
+        in the SOME/IP message.
     :ivar size_of_string_length_field: Configures the SOME/IP
         serialization for the referenced dataPrototype in case of a
-        String.   It describes the size of the length field (in Bytes)
+        String. It describes the size of the length field (in Bytes)
         that will be put in front of the String in the SOME/IP message.
     :ivar size_of_struct_length_field: Configures the SOME/IP
         serialization for the referenced dataPrototype in case of an
-        Struct.   It describes the size of the length field (in Bytes)
+        Struct. It describes the size of the length field (in Bytes)
         that will be put in front of the Struct in the SOME/IP message.
     :ivar size_of_union_length_field: Configures the SOME/IP
         serialization for the referenced dataPrototype in case of a
-        Union.   It describes the size of the length field (in Bytes)
-        that will be put in front of the Union in the SOME/IP message.
+        Union. It describes the size of the length field (in Bytes) that
+        will be put in front of the Union in the SOME/IP message.
     :ivar size_of_union_type_selector_field: Configures the SOME/IP
         serialization for the referenced dataPrototype in case of a
-        Union.   It describes the size of the type selector field (in
+        Union. It describes the size of the type selector field (in
         Bytes) that will be put in front of the Union in the SOME/IP
         message.
     :ivar string_encoding: Configures the encoding for SOME/IP
@@ -115,14 +114,14 @@ class ApSomeipTransformationProps:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

@@ -41,9 +41,8 @@ class SwAddrMethod:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -63,12 +62,12 @@ class SwAddrMethod:
     :ivar short_name_pattern: This attribute represents the pattern
         which shall be used to build the shortName of the derived
         elements. As of now it is modeled as a String.  In general it
-        should follow the pattern:    pattern = (placeholder |
-        namePart)*   placeholder = "{" namePart "}"   namePart =
-        identifier | "_"  This is subject to be refined in subsequent
-        versions.  Note that this is marked as obsolete. Use the xml
-        attribute namePattern instead as it applies to Identifier and
-        CIdentifier (shortName, symbol etc.)
+        should follow the pattern: pattern = (placeholder | namePart)*
+        placeholder = "{" namePart "}" namePart = identifier | "_" This
+        is subject to be refined in subsequent versions. Note that this
+        is marked as obsolete. Use the xml attribute namePattern instead
+        as it applies to Identifier and CIdentifier (shortName, symbol
+        etc.)
     :ivar memory_allocation_keyword_policy: Enumeration to specify the
         name pattern of the Memory Allocation Keyword.
     :ivar options:
@@ -78,7 +77,7 @@ class SwAddrMethod:
         implementation constraint for initialization code of BSW modules
         (especially RTE) as well as the start-up code which initializes
         the memory segment to which the AutosarDataPrototypes referring
-        to the SwAddrMethod's are later on mapped.  If the attribute is
+        to the SwAddrMethod's are later on mapped. If the attribute is
         not defined it has the identical semantic as the attribute value
         "INIT"
     :ivar section_type: Defines the type of memory sections which can be
@@ -99,14 +98,14 @@ class SwAddrMethod:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
@@ -312,11 +311,11 @@ class SwAddrMethod:
         """
         :ivar option: This attribute introduces the ability to specify
             further intended properties of the MemorySection in with the
-            related objects shall be placed.   These properties are
+            related objects shall be placed. These properties are
             handled as to be selected. The intended options are
-            mentioned in the list.   In the Memory Mapping
-            configuration, this option list is used to determine an
-            appropriate MemMapAddressingModeSet.
+            mentioned in the list. In the Memory Mapping configuration,
+            this option list is used to determine an appropriate
+            MemMapAddressingModeSet.
         """
         option: List[Identifier] = field(
             default_factory=list,

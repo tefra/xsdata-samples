@@ -1514,7 +1514,7 @@ class TravelDateTimeType:
             length_of_stay: Amount of days between previous leg's
                 DEPARTURE date and current leg's DEPARTURE date. NOTE:
                 Allowed only in 2nd or further
-                "OriginDestinationInformation".  Example: for outbound
+                "OriginDestinationInformation". Example: for outbound
                 departing on Jan 20, LengthOfStay/@Days="2" means
                 inbound departing on Jan 22.
             length_of_stay_range: See comment on "LengthOfStay" element.

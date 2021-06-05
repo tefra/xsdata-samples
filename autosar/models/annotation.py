@@ -845,7 +845,7 @@ class MlFigure:
         policy. In particular it defines if the containing text block
         shall be kept together with the previous block.
     :ivar frame: Used to defined the frame line around a figure. It can
-        assume the following values:  * TOP - Border at the top of the
+        assume the following values: * TOP - Border at the top of the
         figure * BOTTOM - Border at the bottom of the figure * TOPBOT -
         Borders at the top and bottom of  the figure * ALL - Borders all
         around the figure * SIDES - Borders at the sides of the figure *
@@ -1106,10 +1106,10 @@ class MlFormula:
 
 @dataclass
 class StructuredReq:
-    """This represents a structured requirement. This is intended for a case
-    where specific requirements for features are collected.
+    """This represents a structured requirement.
 
-    Note that this can be rendered as a labeled list.
+    This is intended for a case where specific requirements for features
+    are collected. Note that this can be rendered as a labeled list.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended
@@ -1122,9 +1122,8 @@ class StructuredReq:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -1139,7 +1138,7 @@ class StructuredReq:
         design notes.
     :ivar trace_refs: This assocation represents the ability to trace to
         upstream requirements / constraints. This supports for example
-        the bottom up tracing   ProjectObjectives &lt;- MainRequirements
+        the bottom up tracing ProjectObjectives &lt;- MainRequirements
         &lt;- Features &lt;- RequirementSpecs &lt;- BSW/AI
     :ivar date: This represents the date when the requirement was
         initiated.
@@ -1187,14 +1186,14 @@ class StructuredReq:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
@@ -1537,9 +1536,7 @@ class StructuredReq:
 @dataclass
 class TraceableText:
     """This meta-class represents the ability to denote a traceable text item
-    such as requirements etc.
-
-    The following approach applies:
+    such as requirements etc. The following approach applies:
 
     * '''shortName''' represents the tag for tracing
     * '''longName''' represents the head line
@@ -1556,9 +1553,8 @@ class TraceableText:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -1573,7 +1569,7 @@ class TraceableText:
         design notes.
     :ivar trace_refs: This assocation represents the ability to trace to
         upstream requirements / constraints. This supports for example
-        the bottom up tracing   ProjectObjectives &lt;- MainRequirements
+        the bottom up tracing ProjectObjectives &lt;- MainRequirements
         &lt;- Features &lt;- RequirementSpecs &lt;- BSW/AI
     :ivar msr_query_p_2: This represents automatically contributed
         contents provided by an msrquery in the context of
@@ -1584,7 +1580,7 @@ class TraceableText:
     :ivar verbatim: This represents one particular verbatim text. The
         upper multiplicity of this role has been increased to * due to
         resolving an atpVariation stereotype. The previous value was 1.
-    :ivar list_value: This represents numbered or unnumbered list.  The
+    :ivar list_value: This represents numbered or unnumbered list. The
         upper multiplicity of this role has been increased to * due to
         resolving an atpVariation stereotype. The previous value was 1.
     :ivar def_list: This represents a definition list in the
@@ -1606,7 +1602,7 @@ class TraceableText:
         resolving an atpVariation stereotype. The previous value was 1.
     :ivar trace: This represents traceable text in the documentation
         block. This allows to specify requirements/constraints in any
-        documentation block.  The kind of the trace is specified in the
+        documentation block. The kind of the trace is specified in the
         category. The upper multiplicity of this role has been increased
         to * due to resolving an atpVariation stereotype. The previous
         value was 1.
@@ -1632,14 +1628,14 @@ class TraceableText:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
@@ -1958,7 +1954,7 @@ class Note:
     :ivar verbatim: This represents one particular verbatim text. The
         upper multiplicity of this role has been increased to * due to
         resolving an atpVariation stereotype. The previous value was 1.
-    :ivar list_value: This represents numbered or unnumbered list.  The
+    :ivar list_value: This represents numbered or unnumbered list. The
         upper multiplicity of this role has been increased to * due to
         resolving an atpVariation stereotype. The previous value was 1.
     :ivar def_list: This represents a definition list in the
@@ -1980,7 +1976,7 @@ class Note:
         resolving an atpVariation stereotype. The previous value was 1.
     :ivar trace: This represents traceable text in the documentation
         block. This allows to specify requirements/constraints in any
-        documentation block.  The kind of the trace is specified in the
+        documentation block. The kind of the trace is specified in the
         category. The upper multiplicity of this role has been increased
         to * due to resolving an atpVariation stereotype. The previous
         value was 1.
@@ -2201,7 +2197,7 @@ class LabeledItem:
     :ivar verbatim: This represents one particular verbatim text. The
         upper multiplicity of this role has been increased to * due to
         resolving an atpVariation stereotype. The previous value was 1.
-    :ivar list_value: This represents numbered or unnumbered list.  The
+    :ivar list_value: This represents numbered or unnumbered list. The
         upper multiplicity of this role has been increased to * due to
         resolving an atpVariation stereotype. The previous value was 1.
     :ivar def_list: This represents a definition list in the
@@ -2223,7 +2219,7 @@ class LabeledItem:
         resolving an atpVariation stereotype. The previous value was 1.
     :ivar trace: This represents traceable text in the documentation
         block. This allows to specify requirements/constraints in any
-        documentation block.  The kind of the trace is specified in the
+        documentation block. The kind of the trace is specified in the
         category. The upper multiplicity of this role has been increased
         to * due to resolving an atpVariation stereotype. The previous
         value was 1.
@@ -2561,7 +2557,7 @@ class Item:
     :ivar verbatim: This represents one particular verbatim text. The
         upper multiplicity of this role has been increased to * due to
         resolving an atpVariation stereotype. The previous value was 1.
-    :ivar list_value: This represents numbered or unnumbered list.  The
+    :ivar list_value: This represents numbered or unnumbered list. The
         upper multiplicity of this role has been increased to * due to
         resolving an atpVariation stereotype. The previous value was 1.
     :ivar def_list: This represents a definition list in the
@@ -2583,7 +2579,7 @@ class Item:
         resolving an atpVariation stereotype. The previous value was 1.
     :ivar trace: This represents traceable text in the documentation
         block. This allows to specify requirements/constraints in any
-        documentation block.  The kind of the trace is specified in the
+        documentation block. The kind of the trace is specified in the
         category. The upper multiplicity of this role has been increased
         to * due to resolving an atpVariation stereotype. The previous
         value was 1.
@@ -2900,7 +2896,7 @@ class DocumentationBlock:
     :ivar verbatim: This represents one particular verbatim text. The
         upper multiplicity of this role has been increased to * due to
         resolving an atpVariation stereotype. The previous value was 1.
-    :ivar list_value: This represents numbered or unnumbered list.  The
+    :ivar list_value: This represents numbered or unnumbered list. The
         upper multiplicity of this role has been increased to * due to
         resolving an atpVariation stereotype. The previous value was 1.
     :ivar def_list: This represents a definition list in the
@@ -2922,7 +2918,7 @@ class DocumentationBlock:
         resolving an atpVariation stereotype. The previous value was 1.
     :ivar trace: This represents traceable text in the documentation
         block. This allows to specify requirements/constraints in any
-        documentation block.  The kind of the trace is specified in the
+        documentation block. The kind of the trace is specified in the
         category. The upper multiplicity of this role has been increased
         to * due to resolving an atpVariation stereotype. The previous
         value was 1.
@@ -3126,7 +3122,7 @@ class VariationPoint:
         variation point.
     :ivar blueprint_condition: This represents a description that
         documents how the variation point shall be resolved when
-        deriving objects from the blueprint.  Note that variationPoints
+        deriving objects from the blueprint. Note that variationPoints
         are not allowed within a blueprintCondition.
     :ivar formal_blueprint_condition: This denotes a formal
         blueprintCondition. This shall be not in contradiction with
@@ -3134,7 +3130,7 @@ class VariationPoint:
         recommended only to use one of the two.
     :ivar formal_blueprint_generator: This represents a description that
         documents how the variation point shall be resolved when
-        deriving objects from the blueprint by using ARMQL.  Note that
+        deriving objects from the blueprint by using ARMQL. Note that
         variationPoints are not allowed within a
         formalBlueprintGenerator.
     :ivar sw_syscond: This condition acts as Binding Function for the
@@ -3325,9 +3321,12 @@ class Sdg:
     """Sdg (SpecialDataGroup) is a generic model which can be used to keep
     arbitrary information which is not explicitly modeled in the meta-model.
 
-    Sdg can have various contents as defined by sdgContentsType. Special Data should only be used moderately since all elements should be defined in the meta-model.
-
-    Thereby SDG should be considered as a temporary solution when no explicit model is available. If an sdgCaption is available, it is possible to establish a reference to the sdg structure.
+    Sdg can have various contents as defined by sdgContentsType. Special
+    Data should only be used moderately since all elements should be
+    defined in the meta-model. Thereby SDG should be considered as a
+    temporary solution when no explicit model is available. If an
+    sdgCaption is available, it is possible to establish a reference to
+    the sdg structure.
 
     :ivar sdg_caption: This aggregation allows to assign the properties
         of Identifiable to the sdg. By this, a shortName etc. can be
@@ -3488,9 +3487,7 @@ class AdminData:
     kinds of meta-data.
 
     * The language and/or used languages.
-
     * Revision information covering e.g. revision number, state, release date, changes. Note that this information can be given in general as well as related to a particular company.
-
     * Document meta-data specific for a company
 
     :ivar language: This attribute  specifies the master language of the
@@ -3507,7 +3504,7 @@ class AdminData:
         for illustration of the language. The used language itself
         depends on the language attribute in the entry.
     :ivar doc_revisions: This allows to denote information about the
-        current revision of the object.   Note that information about
+        current revision of the object. Note that information about
         previous revisions can also be logged here. The entries shall be
         sorted descendant by date in order to reflect the history.
         Therefore the most recent entry representing the current version

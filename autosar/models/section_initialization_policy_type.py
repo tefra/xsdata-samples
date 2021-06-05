@@ -15,7 +15,6 @@ class SectionInitializationPolicyType:
     * '''POWER-ON-INIT''': To be used for data that are initialized by "Power On" to the specified value (initValue). Note: there might be several resets between power on resets.
     * '''CLEARED''': To be used for data that are initialized by every reset to zero.
     * '''POWER-ON-CLEARED''': To be used for data that are initialized by "Power On" to zero. Note: there might be several resets between power on resets.
-
     Please note that the values are defined similar to the representation of enumeration types in the XML schema to ensure backward compatibility.
 
     :ivar value:

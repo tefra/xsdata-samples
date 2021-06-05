@@ -7,13 +7,12 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class NumericalValue:
-    """This primitive specifies a numerical value. It can be denoted in
-    different formats such as Decimal, Octal, Hexadecimal, Float. See the xsd
-    pattern for details.
+    """This primitive specifies a numerical value.
 
-    The value can be expressed in octal, hexadecimal, binary
-    representation. Negative numbers can only be expressed in decimal or
-    float notation.
+    It can be denoted in different formats such as Decimal, Octal,
+    Hexadecimal, Float. See the xsd pattern for details. The value can
+    be expressed in octal, hexadecimal, binary representation. Negative
+    numbers can only be expressed in decimal or float notation.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

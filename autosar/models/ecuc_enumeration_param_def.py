@@ -45,9 +45,8 @@ class EcucEnumerationParamDef:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in
-        particular how the object is built or used) should go to
-        "introduction".
+        object in question. More elaborate documentation, (in particular
+        how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Identifiable. It affects the expected existence
         of attributes and the applicability of constraints.
@@ -69,24 +68,23 @@ class EcucEnumerationParamDef:
         definition shall be processed as specified. Otherwise the
         parameter definition shall be ignored.
     :ivar lower_multiplicity: The lower multiplicity of the specified
-        element.  0: optional  1: at least one occurrence  n: at least n
-        occurrences  atpVariation: [RS_ECUC_00082]
+        element. 0: optional 1: at least one occurrence n: at least n
+        occurrences atpVariation: [RS_ECUC_00082]
     :ivar upper_multiplicity: The upper multiplicity of the specified
-        element.  0: no occurrence (used for VSMD)  1: at most one
-        occurrence  m: at most m occurrences  If upperMultiplicity is
-        set than upperMultiplicityInfinite shall not be used.
-        atpVariation: [RS_ECUC_00082]
+        element. 0: no occurrence (used for VSMD) 1: at most one
+        occurrence m: at most m occurrences If upperMultiplicity is set
+        than upperMultiplicityInfinite shall not be used. atpVariation:
+        [RS_ECUC_00082]
     :ivar upper_multiplicity_infinite: To express an infinite number of
         occurrences of this element this attribute has to be set to
-        true.   If upperMultiplicityInfinite is set than
-        upperMultiplicity shall not be used.  atpVariation:
-        [RS_ECUC_00082]
+        true. If upperMultiplicityInfinite is set than upperMultiplicity
+        shall not be used. atpVariation: [RS_ECUC_00082]
     :ivar scope: Specifies the scope of this configuration element.
     :ivar configuration_class_affection: Specifies whether changes on
         this parameter have some affection on other parameters.
     :ivar implementation_config_classes: Specifies in which
         ConfigurationClass this parameter or reference is available for
-        which ConfigurationVariant.  This aggregation is optional if the
+        which ConfigurationVariant. This aggregation is optional if the
         surrounding EcucModuleDef has the category
         STANDARDIZED_MODULE_DEFINITION. If the category attribute of the
         EcucModuleDef is set to VENDOR_SPECIFIC_MODULE_DEFINITION then
@@ -127,21 +125,21 @@ class EcucEnumerationParamDef:
         symbolic name definition. See chapter "Representation of
         Symbolic Names" in Ecuc specification for more details.
     :ivar with_auto: Specifies whether it shall be allowed on the value
-        side to specify this parameter value as "AUTO".  If withAuto is
+        side to specify this parameter value as "AUTO". If withAuto is
         "true" it shall be possible to set the "isAutoValue" attribute
         of the respective parameter to "true". This means that the
         actual value will not be considered during ECU Configuration but
         will be (re-)calculated by the code generator and stored in the
         value attribute afterwards. These implicit updated values might
         require a re-generation of other modules which reference these
-        values.  If withAuto is "false" it shall not be possible to set
+        values. If withAuto is "false" it shall not be possible to set
         the "isAutoValue" attribute of the respective parameter to
-        "true".  If withAuto is not present the default is "false".
+        "true". If withAuto is not present the default is "false".
     :ivar default_value: Default value of the enumeration configuration
         parameter. This string needs to be one of the literals specified
         for this enumeration.
     :ivar literals: Aggregation on the literals used to define this
-        enumeration parameter.  This aggregation is optional if the
+        enumeration parameter. This aggregation is optional if the
         surrounding EcucModuleDef has the category
         STANDARDIZED_MODULE_DEFINITION. If the category attribute of the
         EcucModuleDef is set to VENDOR_SPECIFIC_MODULE_DEFINITION then
@@ -162,14 +160,14 @@ class EcucEnumerationParamDef:
         type of identifier.  For example, to include a DCE UUID as
         defined by The Open Group, the UUID would be preceded by "DCE:".
         The values of this attribute may be used to support merging of
-        different AUTOSAR models.  The form of the UUID (Universally
+        different AUTOSAR models. The form of the UUID (Universally
         Unique Identifier) is taken from a standard defined by the Open
         Group (was Open Software Foundation). This standard is widely
         used, including by Microsoft for COM (GUIDs) and by many
         companies for DCE, which is based on CORBA. The method for
         generating these 128-bit IDs is published in the standard and
         the effectiveness and uniqueness of the IDs is not in practice
-        disputed. If the id namespace is omitted, DCE is assumed.  An
+        disputed. If the id namespace is omitted, DCE is assumed. An
         example is "DCE:2fac1234-31f8-11b4-a222-08002b34c003". The uuid
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.

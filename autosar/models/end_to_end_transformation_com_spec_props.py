@@ -24,7 +24,7 @@ class EndToEndTransformationComSpecProps:
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in particlar
+        object in question. More elaborate documentation, (in particlar
         how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Describable. It affects the expected existence
@@ -50,38 +50,38 @@ class EndToEndTransformationComSpecProps:
         can accept Counters with values 2, 3 or 4.
     :ivar max_error_state_init: Maximal number of checks in which
         ProfileStatus equal to E2E_P_ERROR was determined, within the
-        last WindowSize checks, for the state E2E_SM_INIT.  The minimum
+        last WindowSize checks, for the state E2E_SM_INIT. The minimum
         value is 0.
     :ivar max_error_state_invalid: Maximal number of checks in which
         ProfileStatus equal to E2E_P_ERROR was determined, within the
-        last WindowSize checks, for the state E2E_SM_INVALID.  The
+        last WindowSize checks, for the state E2E_SM_INVALID. The
         minimum value is 0.
     :ivar max_error_state_valid: Maximal number of checks in which
         ProfileStatus equal to E2E_P_ERROR was determined, within the
-        last WindowSize checks, for the state E2E_SM_VALID.  The minimum
+        last WindowSize checks, for the state E2E_SM_VALID. The minimum
         value is 0.
     :ivar max_no_new_or_repeated_data: EndToEndTransformationDescription
         holds these attributes which are profile specific and have the
         same value for all E2E transformers.
     :ivar min_ok_state_init: Minimal number of checks in which
         ProfileStatus equal to E2E_P_OK was determined, within the last
-        WindowSize checks, for the state E2E_SM_INIT.  The minimum value
+        WindowSize checks, for the state E2E_SM_INIT. The minimum value
         is 1.
     :ivar min_ok_state_invalid: Minimal number of checks in which
         ProfileStatus equal to E2E_P_OK was determined, within the last
-        WindowSize checks, for the state E2E_SM_INVALID.  The minimum
+        WindowSize checks, for the state E2E_SM_INVALID. The minimum
         value is 1.
     :ivar min_ok_state_valid: Minimal number of checks in which
         ProfileStatus equal to E2E_P_OK was determined, within the last
-        WindowSize checks, for the state E2E_SM_VALID.  The minimum
-        value is 1.
+        WindowSize checks, for the state E2E_SM_VALID. The minimum value
+        is 1.
     :ivar sync_counter_init: EndToEndTransformationDescription holds
         these attributes which are profile specific and have the same
         value for all E2E transformers.
     :ivar window_size: Size of the monitoring window for the E2E state
-        machine.  The meaning is the number of correct cycles (E2E_P_OK)
+        machine. The meaning is the number of correct cycles (E2E_P_OK)
         that are required in E2E_SM_INITCOM before the transition to
-        E2E_SM_VALID.   The minimum allowed value is 1.
+        E2E_SM_VALID. The minimum allowed value is 1.
     :ivar window_size_init: Size of the monitoring window of state Init
         for the E2E state machine.
     :ivar window_size_invalid: Size of the monitoring window of state

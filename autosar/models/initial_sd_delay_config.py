@@ -15,7 +15,7 @@ class InitialSdDelayConfig:
     :ivar initial_delay_max_value: @RESTRICT_TO_STANDARD:CP! Max Value
         in seconds to delay randomly the first offer (if aggregated by
         SdServerConfig) or the transmission of a find message (if
-        aggregated by SdClientConfig).  @END_RESTRICT_TO_STANDARD!
+        aggregated by SdClientConfig). @END_RESTRICT_TO_STANDARD!
         @RESTRICT_TO_STANDARD:AP! Max Value in seconds to delay randomly
         the first offer (if aggregated in role initialOfferBehavior by
         SomeipSdServerServiceInstanceConfig) or the transmission of a
@@ -24,13 +24,12 @@ class InitialSdDelayConfig:
     :ivar initial_delay_min_value: @RESTRICT_TO_STANDARD:CP! Min Value
         in seconds to delay randomly the first offer  or the
         transmission of a find message (if aggregated by
-        SdClientConfig).  @END_RESTRICT_TO_STANDARD!
+        SdClientConfig). @END_RESTRICT_TO_STANDARD!
         @RESTRICT_TO_STANDARD:AP! Min Value in seconds to delay randomly
         the first offer (if aggregated in role initialOfferBehavior by
         SomeipSdServerServiceInstanceConfig) or the transmission of a
         find message  (if aggregated in role initialFindBehavior by
-        SomeipSdClientServiceInstanceConfig).
-        @END_RESTRICT_TO_STANDARD!
+        SomeipSdClientServiceInstanceConfig). @END_RESTRICT_TO_STANDARD!
     :ivar initial_repetitions_base_delay: @RESTRICT_TO_STANDARD:CP! The
         base delay for offer repetitions (if aggregated by
         SdServerConfig) or find repetitions (if aggregated by

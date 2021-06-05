@@ -37,7 +37,7 @@ class CalprmAxisCategoryEnumSimple(Enum):
         axis. This value is obsolete.
     :cvar STD_AXIS_1: STD_AXIS means that input and output axis
         definition are stored within this CURVE, MAP, CUBOID, CUBE_4,
-        and CUBE_5.  There is no shared or calculated axis.
+        and CUBE_5. There is no shared or calculated axis.
     """
     COM_AXIS = "COM-AXIS"
     COM_AXIS_1 = "COM_AXIS"

@@ -18,15 +18,20 @@ class IPduTiming:
     """AUTOSAR COM provides the possibility to define two different
     TRANSMISSION MODES for each IPdu.
 
-    The Transmission Mode of an IPdu that is valid at a specific point in time is selected using the values of the signals that are mapped to this IPdu. For each IPdu a Transmission Mode Selector is defined. The Transmission Mode Selector is calculated by evaluating the conditions for a subset of signals  (class TransmissionModeCondition in the System Template).
-
-    The Transmission Mode Selector is defined to be true, if at least one Condition evaluates to true and is defined to be false, if all Conditions evaluate to false.
+    The Transmission Mode of an IPdu that is valid at a specific point
+    in time is selected using the values of the signals that are mapped
+    to this IPdu. For each IPdu a Transmission Mode Selector is defined.
+    The Transmission Mode Selector is calculated by evaluating the
+    conditions for a subset of signals  (class TransmissionModeCondition
+    in the System Template). The Transmission Mode Selector is defined
+    to be true, if at least one Condition evaluates to true and is
+    defined to be false, if all Conditions evaluate to false.
 
     :ivar desc: This represents a general but brief (one paragraph)
         description what the object in question is about. It is only one
         paragraph! Desc is intended to be collected into overview
         tables. This property helps a human reader to identify the
-        object in question.  More elaborate documentation, (in particlar
+        object in question. More elaborate documentation, (in particlar
         how the object is built or used) should go to "introduction".
     :ivar category: The category is a keyword that specializes the
         semantics of the Describable. It affects the expected existence

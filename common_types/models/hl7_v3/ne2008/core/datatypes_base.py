@@ -97,11 +97,10 @@ class EnxpExplicit:
     :ivar content:
     :ivar part_type: Indicates whether the name part is a given name,
         family name, prefix, suffix, etc.
-    :ivar qualifier: is a set of codes each of which specifies
-        a certain subcategory of the name part in addition to
-        the main name part type. For example, a given name may
-        be flagged as a nickname, a family name may be a
-        pseudonym or a name of public records.
+    :ivar qualifier: is a set of codes each of which specifies a certain
+        subcategory of the name part in addition to the main name part
+        type. For example, a given name may be flagged as a nickname, a
+        family name may be a pseudonym or a name of public records.
     """
     class Meta:
         name = "ENXP_explicit"
@@ -1101,7 +1100,7 @@ class AdExplicit:
     :ivar is_not_ordered: A boolean value specifying whether the order
         of the address parts is known or not. While the address parts
         are always a Sequence, the order in which they are presented may
-        or may not be known. Where this matters,  can be used to convey
+        or may not be known. Where this matters, can be used to convey
         this information.
     """
     class Meta:
@@ -2724,11 +2723,10 @@ class Enxp(St):
 
     :ivar part_type: Indicates whether the name part is a given name,
         family name, prefix, suffix, etc.
-    :ivar qualifier: is a set of codes each of which specifies
-        a certain subcategory of the name part in addition to
-        the main name part type. For example, a given name may
-        be flagged as a nickname, a family name may be a
-        pseudonym or a name of public records.
+    :ivar qualifier: is a set of codes each of which specifies a certain
+        subcategory of the name part in addition to the main name part
+        type. For example, a given name may be flagged as a nickname, a
+        family name may be a pseudonym or a name of public records.
     """
     class Meta:
         name = "ENXP"
@@ -3670,7 +3668,7 @@ class Ad(Any):
     :ivar is_not_ordered: A boolean value specifying whether the order
         of the address parts is known or not. While the address parts
         are always a Sequence, the order in which they are presented may
-        or may not be known. Where this matters,  can be used to convey
+        or may not be known. Where this matters, can be used to convey
         this information.
     """
     class Meta:

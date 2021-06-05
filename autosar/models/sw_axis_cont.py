@@ -16,12 +16,13 @@ class SwAxisCont:
     """This represents the values for the axis of a compound primitive (curve,
     map).
 
-    For standard and fix axes,  SwAxisCont contains the values of the axis directly.
+    For standard and fix axes,  SwAxisCont contains the values of the
+    axis directly. The axis values of SwAxisCont with the category
+    COM_AXIS, RES_AXIS are for display only. For editing and processing,
+    only the values in the related GroupAxis are binding.
 
-    The axis values of SwAxisCont with the category COM_AXIS, RES_AXIS are for display only. For editing and processing, only the values in the related GroupAxis are binding.
-
-    :ivar category: This category specifies the particular axis types:
-        * STD_AXIS  * COM_AXIS   * RES_AXIS  (swArraysize necessary)
+    :ivar category: This category specifies the particular axis types: *
+        STD_AXIS * COM_AXIS * RES_AXIS  (swArraysize necessary)
     :ivar unit_ref: This represents the physical unit of the provided
         values.
     :ivar unit_display_name: This represents the display name which is
@@ -32,7 +33,7 @@ class SwAxisCont:
         the axis association from the sequence of the parent.
     :ivar sw_arraysize: For multidimensional compound primitivies
         (curve, map ...) it is necessary to know the dimensions.They are
-        specified using swArraySize.  * RES_AXIS
+        specified using swArraySize. * RES_AXIS
     :ivar sw_values_phys: swValuesPhys represents the values in the
         physical domain.
     :ivar s: Checksum calculated by the user's tool environment for an

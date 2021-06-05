@@ -44,35 +44,34 @@ class Map:
         clicked on. A script can be stored in this attribute to be
         performed in the Event.
     :ivar ondblclick: The ONDBLCLICK-Event occurs, if the current Event
-        is "double" clicked-on.  A script can be stored in this
-        attribute to be performed in the Event.
+        is "double" clicked-on. A script can be stored in this attribute
+        to be performed in the Event.
     :ivar onkeydown: The ONKEYDOWN-Event occurs, if a button on the
-        current element is pressed down.   A script can be stored in
-        this attribute to be performed in the event.
+        current element is pressed down. A script can be stored in this
+        attribute to be performed in the event.
     :ivar onkeypress: The ONKEYPRESS-Event occurs, if a button on the
-        current element is pressed down and released.   A script can be
+        current element is pressed down and released. A script can be
         stored in this attribute to be performed in the Event.
     :ivar onkeyup: The ONKEYUP-Event occurs, if a button on the current
-        element is released.   A script can be stored in this attribute
-        to be performed in the Event.
+        element is released. A script can be stored in this attribute to
+        be performed in the Event.
     :ivar onmousedown: The ONMOUSEDOWN-Event occurs, if the mouse button
-        used for clicking is held down on the current element.   A
-        script can be stored in this attribute to be performed in the
-        Event.
+        used for clicking is held down on the current element. A script
+        can be stored in this attribute to be performed in the Event.
     :ivar onmousemove: The ONMOUSEMOVE-Event occurs, if the mouse
-        pointer is moved on the current  element (i.e. it is located on
-        the current element).   A script can be stored in this attribute
+        pointer is moved on the current element (i.e. it is located on
+        the current element). A script can be stored in this attribute
         to be performed in the Event.
     :ivar onmouseout: The ONMOUSEOUT-Event occurs, if the mouse pointer
-        is moved from the current element.  A script can be stored in
+        is moved from the current element. A script can be stored in
         this attribute to be performed in the Event.
     :ivar onmouseover: The ONMOUSEOVER-Event occurs, if the mouse
         pointer is moved to the current element from another location
-        outside it.   A script can be stored in this attribute to be
+        outside it. A script can be stored in this attribute to be
         performed in the Event.
     :ivar onmouseup: The ONMOUSEUP-Event occurs if the mouse button used
-        for clicking is released on the current element.   A script can
-        be stored in this attribute to be performed in the Event.
+        for clicking is released on the current element. A script can be
+        stored in this attribute to be performed in the Event.
     :ivar style: This attribute specifies formatting style information
         for the current element. The content of this attribute is called
         inline CSS. The style attribute is deprecated (considered

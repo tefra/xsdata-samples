@@ -23,7 +23,7 @@ class RoleBasedPortAssignment:
         ServiceDependency or to the same NvBlockSwComponentType as the
         NvBlockDescriptor.
     :ivar role: This is the role of the assigned Port in the given
-        context.  The value shall be a shortName of the Blueprint of a
+        context. The value shall be a shortName of the Blueprint of a
         PortInterface as standardized in the Software Specification of
         the related AUTOSAR Service.
     :ivar variation_point: This element was generated/modified due to an

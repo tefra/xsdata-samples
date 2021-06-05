@@ -30,14 +30,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ChapterModel:
     """This is the basic content model of a chapter except the Chapter title.
+
     This can be utilized in general chapters as well as in predefined chapters.
-
     A chapter has content on three levels:
-
     1. chapter content
-
     2. topics
-
     3. subchapters
 
     :ivar msr_query_p_1: This represents automatically contributed
@@ -51,7 +48,7 @@ class ChapterModel:
     :ivar verbatim: This represents one particular verbatim text. The
         upper multiplicity of this role has been increased to * due to
         resolving an atpVariation stereotype. The previous value was 1.
-    :ivar list_value: This represents numbered or unnumbered list.  The
+    :ivar list_value: This represents numbered or unnumbered list. The
         upper multiplicity of this role has been increased to * due to
         resolving an atpVariation stereotype. The previous value was 1.
     :ivar def_list: This represents a definition list in the
@@ -73,7 +70,7 @@ class ChapterModel:
         resolving an atpVariation stereotype. The previous value was 1.
     :ivar trace: This represents traceable text in the documentation
         block. This allows to specify requirements/constraints in any
-        documentation block.  The kind of the trace is specified in the
+        documentation block. The kind of the trace is specified in the
         category. The upper multiplicity of this role has been increased
         to * due to resolving an atpVariation stereotype. The previous
         value was 1.

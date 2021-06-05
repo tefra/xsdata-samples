@@ -24,7 +24,7 @@ class EthernetPhysicalLayerTypeEnumSimple(Enum):
         layer
     :cvar X_MII: Media Independent Interface (MII) physical layer
     :cvar X_MMI: This enumeration literal is set to obsolete and will be
-        removed in future. Please use xMII instead.   Old description:
+        removed in future. Please use xMII instead. Old description:
         Media Independent Interface (MII) physical layer
     """
     VALUE_1000_BASE_T = "1000BASE-T"

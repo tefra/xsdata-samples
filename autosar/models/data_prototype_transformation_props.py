@@ -25,7 +25,7 @@ class DataPrototypeTransformationProps:
         transported in the serialized ISignal.
     :ivar network_representation_props: Specification of the actual
         network representation for the referenced primitive
-        DataPrototype.  If a network representation is provided then the
+        DataPrototype. If a network representation is provided then the
         baseType shall be used by the Transformer as input for the
         serialization/deserilaization.
     :ivar transformation_props_ref: Collection of AutosarDataPrototype

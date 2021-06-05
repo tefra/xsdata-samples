@@ -31,7 +31,7 @@ class QueuedReceiverComSpec:
         ApplicationCompositeDataTypes.
     :ivar data_element_ref: Data element these attributes belong to.
     :ivar data_update_period: This attribute defines the period in which
-        the application shall check for updated data.  This attribute is
+        the application shall check for updated data. This attribute is
         used for the configuration of the E2E protection, but may also
         indicate a general data reception period.
     :ivar external_replacement_ref: This reference is used to reference
@@ -47,9 +47,9 @@ class QueuedReceiverComSpec:
         i.e. how many subsequent lost data is accepted. For example, if
         the receiver gets Data with counter 1 and MaxDeltaCounterInit is
         1, then at the next reception the receiver can accept Counters
-        with values 2 and 3, but not 4.  Note that if the receiver does
+        with values 2 and 3, but not 4. Note that if the receiver does
         not receive new Data at a consecutive read, then the receiver
-        increments the tolerance by 1.  Caveat: The E2E wrapper approach
+        increments the tolerance by 1. Caveat: The E2E wrapper approach
         involves technologies that are not subjected to the AUTOSAR
         standard and is superseded by the superior E2E transformer
         approach (which is fully standardized by AUTOSAR). Hence, new
@@ -57,7 +57,7 @@ class QueuedReceiverComSpec:
         shall use the fully standardized E2E transformer approach.
     :ivar max_no_new_or_repeated_data: The maximum amount of missing or
         repeated Data which the receiver does not expect to exceed under
-        normal communication conditions.  Caveat: The E2E wrapper
+        normal communication conditions. Caveat: The E2E wrapper
         approach involves technologies that are not subjected to the
         AUTOSAR standard and is superseded by the superior E2E
         transformer approach (which is fully standardized by AUTOSAR).
@@ -92,7 +92,7 @@ class QueuedReceiverComSpec:
         configuration for data transformation.
     :ivar uses_end_to_end_protection: This indicates whether the
         corresponding dataElement shall be transmitted using end-to-end
-        protection.  Caveat: The E2E wrapper approach involves
+        protection. Caveat: The E2E wrapper approach involves
         technologies that are not subjected to the AUTOSAR standard and
         is superseded by the superior E2E transformer approach (which is
         fully standardized by AUTOSAR). Hence, new projects (without

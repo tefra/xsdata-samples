@@ -16,8 +16,8 @@ class FlexrayCommunicationControllerConditional:
     This element was generated/modified due to an atpVariation stereotype.
 
     :ivar wake_up_by_controller_supported: Defines whether the ECU shall
-        be woken up by this CommunicationController.  TRUE: wake up is
-        possible  FALSE: wake up is not supported  Note: If
+        be woken up by this CommunicationController. TRUE: wake up is
+        possible FALSE: wake up is not supported Note: If
         wakeUpByControllerSupported is set to TRUE the feature shall be
         supported by both hardware and basic software.
     :ivar accepted_startup_range: Expanded range of measured clock
@@ -25,8 +25,8 @@ class FlexrayCommunicationControllerConditional:
         Unit:microtick
     :ivar allow_halt_due_to_clock: Boolean flag that controls the
         transition to the POC:halt state due to a clock synchronization
-        errors.  If set to true, the Communication Controller is allowed
-        to transition to POC:halt.  If set to false, the Communication
+        errors. If set to true, the Communication Controller is allowed
+        to transition to POC:halt. If set to false, the Communication
         Controller will not transition to the POC:halt state but will
         enter or remain in the normal POC (passive State).
     :ivar allow_passive_to_active: Number of consecutive even/odd cycle
@@ -120,8 +120,8 @@ class FlexrayCommunicationControllerConditional:
     :ivar rate_correction_out: Magnitude of the maximum permissible rate
         correction value and the maximum drift offset between two nodes
         operating with unsynchronized clocks for one communication
-        cycle. Unit:Microticks (pRateCorrectionOut)  Remarks: This
-        parameter maps to FlexRay  Protocol 2.1 Rev. A parameter
+        cycle. Unit:Microticks (pRateCorrectionOut) Remarks: This
+        parameter maps to FlexRay Protocol 2.1 Rev. A parameter
         pdMaxDrift.
     :ivar samples_per_microtick: Number of samples per microtick
     :ivar second_key_slot_id: ID of the second Key slot, in which a
