@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.accessibility_limitations_rel_structure import AccessibilityLimitationsRelStructure
-from netex.models.alternative_texts_rel_structure import VersionedChildStructure
-from netex.models.limitation_status_enumeration import LimitationStatusEnumeration
-from netex.models.multilingual_string import MultilingualString
-from netex.models.suitabilities_rel_structure import SuitabilitiesRelStructure
+from .accessibility_limitations_rel_structure import AccessibilityLimitationsRelStructure
+from .alternative_texts_rel_structure import VersionedChildStructure
+from .limitation_status_enumeration import LimitationStatusEnumeration
+from .multilingual_string import MultilingualString
+from .suitabilities_rel_structure import SuitabilitiesRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

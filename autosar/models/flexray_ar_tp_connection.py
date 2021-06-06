@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.flexray_ar_tp_node_subtypes_enum import FlexrayArTpNodeSubtypesEnum
-from autosar.models.i_pdu_subtypes_enum import IPduSubtypesEnum
-from autosar.models.integer import Integer
-from autosar.models.n_pdu_subtypes_enum import NPduSubtypesEnum
-from autosar.models.ref import Ref
-from autosar.models.tp_address_subtypes_enum import TpAddressSubtypesEnum
-from autosar.models.tp_connection_ident import TpConnectionIdent
+from .flexray_ar_tp_node_subtypes_enum import FlexrayArTpNodeSubtypesEnum
+from .i_pdu_subtypes_enum import IPduSubtypesEnum
+from .integer import Integer
+from .n_pdu_subtypes_enum import NPduSubtypesEnum
+from .ref import Ref
+from .tp_address_subtypes_enum import TpAddressSubtypesEnum
+from .tp_connection_ident import TpConnectionIdent
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

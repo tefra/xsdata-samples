@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.organisation_part_version_structure import OrganisationPartVersionStructure
-from netex.models.organisational_unit_refs_rel_structure import OrganisationalUnitRefsRelStructure
-from netex.models.type_of_operation_ref import TypeOfOperationRef
+from .organisation_part_version_structure import OrganisationPartVersionStructure
+from .organisational_unit_refs_rel_structure import OrganisationalUnitRefsRelStructure
+from .type_of_operation_ref import TypeOfOperationRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

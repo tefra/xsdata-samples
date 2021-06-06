@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.responsibility_set import ResponsibilitySet
-from netex.models.responsibility_set_ref import ResponsibilitySetRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .responsibility_set import ResponsibilitySet
+from .responsibility_set_ref import ResponsibilitySetRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

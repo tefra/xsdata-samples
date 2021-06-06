@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.commercial_profile_eligibility import CommercialProfileEligibility
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.customer_eligibility_1 import CustomerEligibility1
-from netex.models.customer_eligibility_2 import CustomerEligibility2
-from netex.models.residential_qualification_eligibility import ResidentialQualificationEligibility
-from netex.models.user_profile_eligibility import UserProfileEligibility
+from .commercial_profile_eligibility import CommercialProfileEligibility
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .customer_eligibility_1 import CustomerEligibility1
+from .customer_eligibility_2 import CustomerEligibility2
+from .residential_qualification_eligibility import ResidentialQualificationEligibility
+from .user_profile_eligibility import UserProfileEligibility
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

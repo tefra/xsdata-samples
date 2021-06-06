@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.blacklist_ref_structure import BlacklistRefStructure
+from .blacklist_ref_structure import BlacklistRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

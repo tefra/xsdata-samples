@@ -1,15 +1,15 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDate, XmlDuration, XmlTime
-from netex.models.activation_means_enumeration import ActivationMeansEnumeration
-from netex.models.alternative_texts_rel_structure import DayTypesRelStructure
-from netex.models.blackout_start_enumeration import BlackoutStartEnumeration
-from netex.models.fixed_start_window_structure import FixedStartWindowStructure
-from netex.models.usage_end_enumeration import UsageEndEnumeration
-from netex.models.usage_parameter_version_structure import UsageParameterVersionStructure
-from netex.models.usage_start_constraint_type_enumeration import UsageStartConstraintTypeEnumeration
-from netex.models.usage_trigger_enumeration import UsageTriggerEnumeration
-from netex.models.usage_validity_type_enumeration import UsageValidityTypeEnumeration
+from .activation_means_enumeration import ActivationMeansEnumeration
+from .alternative_texts_rel_structure import DayTypesRelStructure
+from .blackout_start_enumeration import BlackoutStartEnumeration
+from .fixed_start_window_structure import FixedStartWindowStructure
+from .usage_end_enumeration import UsageEndEnumeration
+from .usage_parameter_version_structure import UsageParameterVersionStructure
+from .usage_start_constraint_type_enumeration import UsageStartConstraintTypeEnumeration
+from .usage_trigger_enumeration import UsageTriggerEnumeration
+from .usage_validity_type_enumeration import UsageValidityTypeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

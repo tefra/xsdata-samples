@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.topographic_place import TopographicPlace
-from netex.models.topographic_place_ref import TopographicPlaceRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .topographic_place import TopographicPlace
+from .topographic_place_ref import TopographicPlaceRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.autosar_data_prototype_subtypes_enum import AutosarDataPrototypeSubtypesEnum
-from autosar.models.implementation_data_type_element_subtypes_enum import ImplementationDataTypeElementSubtypesEnum
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
+from .autosar_data_prototype_subtypes_enum import AutosarDataPrototypeSubtypesEnum
+from .implementation_data_type_element_subtypes_enum import ImplementationDataTypeElementSubtypesEnum
+from .positive_integer import PositiveInteger
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

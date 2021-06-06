@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.boarding_position import BoardingPosition
-from netex.models.boarding_position_ref import BoardingPositionRef
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
+from .boarding_position import BoardingPosition
+from .boarding_position_ref import BoardingPositionRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,21 +1,21 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlTime
-from netex.models.accessibility_assessment import AccessibilityAssessment
-from netex.models.check_constraint import CheckConstraint
-from netex.models.duty_part_ref import DutyPartRef
-from netex.models.dynamic_stop_assignment import DynamicStopAssignment
-from netex.models.dynamic_stop_assignment_ref import DynamicStopAssignmentRef
-from netex.models.interchange_rules_rel_structure import InterchangeRulesRelStructure
-from netex.models.journey_meeting_views_rel_structure import JourneyMeetingViewsRelStructure
-from netex.models.journey_part_ref import JourneyPartRef
-from netex.models.notice_assignments_rel_structure import NoticeAssignmentsRelStructure
-from netex.models.passenger_stop_assignment_ref import PassengerStopAssignmentRef
-from netex.models.quay_assignment_view import QuayAssignmentView
-from netex.models.service_journey_interchanges_rel_structure import ServiceJourneyInterchangesRelStructure
-from netex.models.time_demand_type_ref import TimeDemandTypeRef
-from netex.models.timeband_ref import TimebandRef
-from netex.models.vehicle_journey_stop_assignment_ref import VehicleJourneyStopAssignmentRef
+from .accessibility_assessment import AccessibilityAssessment
+from .check_constraint import CheckConstraint
+from .duty_part_ref import DutyPartRef
+from .dynamic_stop_assignment import DynamicStopAssignment
+from .dynamic_stop_assignment_ref import DynamicStopAssignmentRef
+from .interchange_rules_rel_structure import InterchangeRulesRelStructure
+from .journey_meeting_views_rel_structure import JourneyMeetingViewsRelStructure
+from .journey_part_ref import JourneyPartRef
+from .notice_assignments_rel_structure import NoticeAssignmentsRelStructure
+from .passenger_stop_assignment_ref import PassengerStopAssignmentRef
+from .quay_assignment_view import QuayAssignmentView
+from .service_journey_interchanges_rel_structure import ServiceJourneyInterchangesRelStructure
+from .time_demand_type_ref import TimeDemandTypeRef
+from .timeband_ref import TimebandRef
+from .vehicle_journey_stop_assignment_ref import VehicleJourneyStopAssignmentRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

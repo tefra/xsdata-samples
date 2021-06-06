@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.access_count import AccessCount
-from autosar.models.annotation import VariationPoint
-from autosar.models.nmtoken_string import NmtokenString
+from .access_count import AccessCount
+from .annotation import VariationPoint
+from .nmtoken_string import NmtokenString
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

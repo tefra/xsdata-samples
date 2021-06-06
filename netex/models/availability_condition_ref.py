@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.availability_condition_ref_structure import AvailabilityConditionRefStructure
+from .availability_condition_ref_structure import AvailabilityConditionRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.group_of_points_version_structure import GroupOfPointsVersionStructure
-from netex.models.polygon import Polygon
-from netex.models.projections_rel_structure import ProjectionsRelStructure
-from netex.models.simple_point_version_structure import SimplePointVersionStructure
-from netex.models.type_of_zone_refs_rel_structure import TypeOfZoneRefsRelStructure
-from netex.models.zone_ref_structure import ZoneRefStructure
+from .group_of_points_version_structure import GroupOfPointsVersionStructure
+from .polygon import Polygon
+from .projections_rel_structure import ProjectionsRelStructure
+from .simple_point_version_structure import SimplePointVersionStructure
+from .type_of_zone_refs_rel_structure import TypeOfZoneRefsRelStructure
+from .zone_ref_structure import ZoneRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

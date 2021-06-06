@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.ethernet_connection_negotiation_enum_simple import EthernetConnectionNegotiationEnumSimple
+from .ethernet_connection_negotiation_enum_simple import EthernetConnectionNegotiationEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

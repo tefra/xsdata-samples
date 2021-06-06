@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.allowed_line_direction import AllowedLineDirection
-from netex.models.allowed_line_direction_ref import AllowedLineDirectionRef
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
+from .allowed_line_direction import AllowedLineDirection
+from .allowed_line_direction_ref import AllowedLineDirectionRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,24 +1,24 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.alternative_texts_rel_structure import VersionedChildStructure
-from netex.models.dated_special_service_ref import DatedSpecialServiceRef
-from netex.models.dated_vehicle_journey_ref import DatedVehicleJourneyRef
-from netex.models.dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
-from netex.models.dead_run_ref import DeadRunRef
-from netex.models.journey_pattern_ref import JourneyPatternRef
-from netex.models.journey_ref import JourneyRef
-from netex.models.link_sequence_ref import LinkSequenceRef
-from netex.models.multilingual_string import MultilingualString
-from netex.models.navigation_path_ref import NavigationPathRef
-from netex.models.projections_rel_structure import ProjectionsRelStructure
-from netex.models.route_ref import RouteRef
-from netex.models.service_journey_pattern_ref import ServiceJourneyPatternRef
-from netex.models.service_journey_ref import ServiceJourneyRef
-from netex.models.service_pattern_ref import ServicePatternRef
-from netex.models.special_service_ref import SpecialServiceRef
-from netex.models.template_service_journey_ref import TemplateServiceJourneyRef
-from netex.models.timing_pattern_ref import TimingPatternRef
-from netex.models.vehicle_journey_ref import VehicleJourneyRef
+from .alternative_texts_rel_structure import VersionedChildStructure
+from .dated_special_service_ref import DatedSpecialServiceRef
+from .dated_vehicle_journey_ref import DatedVehicleJourneyRef
+from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
+from .dead_run_ref import DeadRunRef
+from .journey_pattern_ref import JourneyPatternRef
+from .journey_ref import JourneyRef
+from .link_sequence_ref import LinkSequenceRef
+from .multilingual_string import MultilingualString
+from .navigation_path_ref import NavigationPathRef
+from .projections_rel_structure import ProjectionsRelStructure
+from .route_ref import RouteRef
+from .service_journey_pattern_ref import ServiceJourneyPatternRef
+from .service_journey_ref import ServiceJourneyRef
+from .service_pattern_ref import ServicePatternRef
+from .special_service_ref import SpecialServiceRef
+from .template_service_journey_ref import TemplateServiceJourneyRef
+from .timing_pattern_ref import TimingPatternRef
+from .vehicle_journey_ref import VehicleJourneyRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

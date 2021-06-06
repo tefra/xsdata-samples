@@ -1,21 +1,21 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
 )
-from autosar.models.boolean import Boolean
-from autosar.models.category_string import CategoryString
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.nv_block_needs_reliability_enum import NvBlockNeedsReliabilityEnum
-from autosar.models.nv_block_needs_writing_priority_enum import NvBlockNeedsWritingPriorityEnum
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ram_block_status_control_enum import RamBlockStatusControlEnum
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.time_value import TimeValue
+from .boolean import Boolean
+from .category_string import CategoryString
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .nv_block_needs_reliability_enum import NvBlockNeedsReliabilityEnum
+from .nv_block_needs_writing_priority_enum import NvBlockNeedsWritingPriorityEnum
+from .positive_integer import PositiveInteger
+from .ram_block_status_control_enum import RamBlockStatusControlEnum
+from .short_name_fragment import ShortNameFragment
+from .time_value import TimeValue
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.signal_service_translation_control_enum_simple import SignalServiceTranslationControlEnumSimple
+from .signal_service_translation_control_enum_simple import SignalServiceTranslationControlEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

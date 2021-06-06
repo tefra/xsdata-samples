@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from netex.models.hire_facility_enumeration import HireFacilityEnumeration
+from .hire_facility_enumeration import HireFacilityEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

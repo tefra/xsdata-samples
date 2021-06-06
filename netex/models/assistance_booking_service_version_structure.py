@@ -1,17 +1,17 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.all_modes_enumeration import AllModesEnumeration
-from netex.models.assistance_availability_enumeration import AssistanceAvailabilityEnumeration
-from netex.models.authority_ref import AuthorityRef
-from netex.models.booking_arrangements_structure import BookingArrangementsStructure
-from netex.models.contact_structure import ContactStructure
-from netex.models.flexible_line_ref import FlexibleLineRef
-from netex.models.line_ref import LineRef
-from netex.models.local_service_version_structure import LocalServiceVersionStructure
-from netex.models.notice_assignments_rel_structure import NoticeAssignmentsRelStructure
-from netex.models.operator_ref import OperatorRef
-from netex.models.transport_organisation_ref import TransportOrganisationRef
-from netex.models.version_of_object_ref_structure import VersionOfObjectRefStructure
+from .all_modes_enumeration import AllModesEnumeration
+from .assistance_availability_enumeration import AssistanceAvailabilityEnumeration
+from .authority_ref import AuthorityRef
+from .booking_arrangements_structure import BookingArrangementsStructure
+from .contact_structure import ContactStructure
+from .flexible_line_ref import FlexibleLineRef
+from .line_ref import LineRef
+from .local_service_version_structure import LocalServiceVersionStructure
+from .notice_assignments_rel_structure import NoticeAssignmentsRelStructure
+from .operator_ref import OperatorRef
+from .transport_organisation_ref import TransportOrganisationRef
+from .version_of_object_ref_structure import VersionOfObjectRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

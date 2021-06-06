@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.transmission_mode_definition_enum_simple import TransmissionModeDefinitionEnumSimple
+from .transmission_mode_definition_enum_simple import TransmissionModeDefinitionEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

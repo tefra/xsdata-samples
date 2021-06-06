@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.ticketing_equipment_version_structure import TicketingEquipmentVersionStructure
+from .ticketing_equipment_version_structure import TicketingEquipmentVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

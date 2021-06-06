@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.boolean import Boolean
-from autosar.models.mode_declaration_group_prototype_subtypes_enum import ModeDeclarationGroupPrototypeSubtypesEnum
-from autosar.models.mode_switched_ack_request import ModeSwitchedAckRequest
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
+from .boolean import Boolean
+from .mode_declaration_group_prototype_subtypes_enum import ModeDeclarationGroupPrototypeSubtypesEnum
+from .mode_switched_ack_request import ModeSwitchedAckRequest
+from .positive_integer import PositiveInteger
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

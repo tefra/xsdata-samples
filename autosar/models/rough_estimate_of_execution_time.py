@@ -1,26 +1,26 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.dependency_on_artifact_subtypes_enum import DependencyOnArtifactSubtypesEnum
-from autosar.models.exclusive_area_subtypes_enum import ExclusiveAreaSubtypesEnum
-from autosar.models.executable_entity_subtypes_enum import ExecutableEntitySubtypesEnum
-from autosar.models.hardware_configuration import HardwareConfiguration
-from autosar.models.hw_element_subtypes_enum import HwElementSubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.memory_section_location import MemorySectionLocation
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multidimensional_time import MultidimensionalTime
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.software_context import SoftwareContext
-from autosar.models.string import String
+from .category_string import CategoryString
+from .dependency_on_artifact_subtypes_enum import DependencyOnArtifactSubtypesEnum
+from .exclusive_area_subtypes_enum import ExclusiveAreaSubtypesEnum
+from .executable_entity_subtypes_enum import ExecutableEntitySubtypesEnum
+from .hardware_configuration import HardwareConfiguration
+from .hw_element_subtypes_enum import HwElementSubtypesEnum
+from .identifier import Identifier
+from .memory_section_location import MemorySectionLocation
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multidimensional_time import MultidimensionalTime
+from .multilanguage_long_name import MultilanguageLongName
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
+from .software_context import SoftwareContext
+from .string import String
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.link_sequence_version_structure import JourneyPatternVersionStructure
-from netex.models.service_journey_pattern_type_enumeration import ServiceJourneyPatternTypeEnumeration
+from .link_sequence_version_structure import JourneyPatternVersionStructure
+from .service_journey_pattern_type_enumeration import ServiceJourneyPatternTypeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

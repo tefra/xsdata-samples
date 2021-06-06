@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.software_cluster_dependency_logical_operator_enum_simple import SoftwareClusterDependencyLogicalOperatorEnumSimple
+from .software_cluster_dependency_logical_operator_enum_simple import SoftwareClusterDependencyLogicalOperatorEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

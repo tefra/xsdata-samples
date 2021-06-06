@@ -1,15 +1,15 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.control_centre import ControlCentre
-from netex.models.control_centre_ref import ControlCentreRef
-from netex.models.department import Department
-from netex.models.department_ref import DepartmentRef
-from netex.models.operating_department import OperatingDepartment
-from netex.models.organisation_part_1 import OrganisationPart1
-from netex.models.organisation_part_2 import OrganisationPart2
-from netex.models.organisation_part_ref import OrganisationPartRef
-from netex.models.organisational_unit_ref import OrganisationalUnitRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .control_centre import ControlCentre
+from .control_centre_ref import ControlCentreRef
+from .department import Department
+from .department_ref import DepartmentRef
+from .operating_department import OperatingDepartment
+from .organisation_part_1 import OrganisationPart1
+from .organisation_part_2 import OrganisationPart2
+from .organisation_part_ref import OrganisationPartRef
+from .organisational_unit_ref import OrganisationalUnitRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

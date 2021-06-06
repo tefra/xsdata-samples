@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import Sdg
-from autosar.models.verbatim_string import VerbatimString
+from .annotation import Sdg
+from .verbatim_string import VerbatimString
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

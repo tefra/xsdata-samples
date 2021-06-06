@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.round_trip_version_structure import RoundTripVersionStructure
+from .round_trip_version_structure import RoundTripVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

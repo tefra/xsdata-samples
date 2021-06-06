@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.alternative_texts_rel_structure import VersionedChildStructure
-from netex.models.fare_table_ref import FareTableRef
-from netex.models.multilingual_string import MultilingualString
-from netex.models.notice_assignments_rel_structure import NoticeAssignmentsRelStructure
-from netex.models.object_refs_rel_structure import ObjectRefsRelStructure
-from netex.models.standard_fare_table_ref import StandardFareTableRef
-from netex.models.strict_containment_aggregation_structure import StrictContainmentAggregationStructure
+from .alternative_texts_rel_structure import VersionedChildStructure
+from .fare_table_ref import FareTableRef
+from .multilingual_string import MultilingualString
+from .notice_assignments_rel_structure import NoticeAssignmentsRelStructure
+from .object_refs_rel_structure import ObjectRefsRelStructure
+from .standard_fare_table_ref import StandardFareTableRef
+from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

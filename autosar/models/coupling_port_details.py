@@ -1,14 +1,14 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.coupling_port_fifo import CouplingPortFifo
-from autosar.models.coupling_port_rate_policy import CouplingPortRatePolicy
-from autosar.models.coupling_port_scheduler import CouplingPortScheduler
-from autosar.models.coupling_port_scheduler_subtypes_enum import CouplingPortSchedulerSubtypesEnum
-from autosar.models.coupling_port_shaper import CouplingPortShaper
-from autosar.models.coupling_port_traffic_class_assignment import CouplingPortTrafficClassAssignment
-from autosar.models.ethernet_priority_regeneration import EthernetPriorityRegeneration
-from autosar.models.global_time_coupling_port_props import GlobalTimeCouplingPortProps
-from autosar.models.ref import Ref
+from .coupling_port_fifo import CouplingPortFifo
+from .coupling_port_rate_policy import CouplingPortRatePolicy
+from .coupling_port_scheduler import CouplingPortScheduler
+from .coupling_port_scheduler_subtypes_enum import CouplingPortSchedulerSubtypesEnum
+from .coupling_port_shaper import CouplingPortShaper
+from .coupling_port_traffic_class_assignment import CouplingPortTrafficClassAssignment
+from .ethernet_priority_regeneration import EthernetPriorityRegeneration
+from .global_time_coupling_port_props import GlobalTimeCouplingPortProps
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

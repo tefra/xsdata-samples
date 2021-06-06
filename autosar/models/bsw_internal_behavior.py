@@ -1,53 +1,53 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
 )
-from autosar.models.bsw_asynchronous_server_call_returns_event import BswAsynchronousServerCallReturnsEvent
-from autosar.models.bsw_background_event import BswBackgroundEvent
-from autosar.models.bsw_called_entity import BswCalledEntity
-from autosar.models.bsw_client_policy import BswClientPolicy
-from autosar.models.bsw_data_received_event import BswDataReceivedEvent
-from autosar.models.bsw_data_send_policy import BswDataSendPolicy
-from autosar.models.bsw_distinguished_partition import BswDistinguishedPartition
-from autosar.models.bsw_exclusive_area_policy import BswExclusiveAreaPolicy
-from autosar.models.bsw_external_trigger_occurred_event import BswExternalTriggerOccurredEvent
-from autosar.models.bsw_internal_trigger_occurred_event import BswInternalTriggerOccurredEvent
-from autosar.models.bsw_internal_triggering_point import BswInternalTriggeringPoint
-from autosar.models.bsw_internal_triggering_point_policy import BswInternalTriggeringPointPolicy
-from autosar.models.bsw_interrupt_entity import BswInterruptEntity
-from autosar.models.bsw_mode_manager_error_event import BswModeManagerErrorEvent
-from autosar.models.bsw_mode_receiver_policy import BswModeReceiverPolicy
-from autosar.models.bsw_mode_sender_policy import BswModeSenderPolicy
-from autosar.models.bsw_mode_switch_event import BswModeSwitchEvent
-from autosar.models.bsw_mode_switched_ack_event import BswModeSwitchedAckEvent
-from autosar.models.bsw_operation_invoked_event import BswOperationInvokedEvent
-from autosar.models.bsw_os_task_execution_event import BswOsTaskExecutionEvent
-from autosar.models.bsw_parameter_policy import BswParameterPolicy
-from autosar.models.bsw_per_instance_memory_policy import BswPerInstanceMemoryPolicy
-from autosar.models.bsw_queued_data_reception_policy import BswQueuedDataReceptionPolicy
-from autosar.models.bsw_released_trigger_policy import BswReleasedTriggerPolicy
-from autosar.models.bsw_schedulable_entity import BswSchedulableEntity
-from autosar.models.bsw_scheduler_name_prefix import BswSchedulerNamePrefix
-from autosar.models.bsw_service_dependency import BswServiceDependency
-from autosar.models.bsw_timing_event import BswTimingEvent
-from autosar.models.bsw_trigger_direct_implementation import BswTriggerDirectImplementation
-from autosar.models.category_string import CategoryString
-from autosar.models.constant_specification_mapping_set_subtypes_enum import ConstantSpecificationMappingSetSubtypesEnum
-from autosar.models.data_type_mapping_set_subtypes_enum import DataTypeMappingSetSubtypesEnum
-from autosar.models.exclusive_area import ExclusiveArea
-from autosar.models.exclusive_area_nesting_order import ExclusiveAreaNestingOrder
-from autosar.models.identifier import Identifier
-from autosar.models.included_data_type_set import IncludedDataTypeSet
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.parameter_data_prototype import ParameterDataPrototype
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.variable_data_prototype import VariableDataPrototype
-from autosar.models.variation_point_proxy import VariationPointProxy
+from .bsw_asynchronous_server_call_returns_event import BswAsynchronousServerCallReturnsEvent
+from .bsw_background_event import BswBackgroundEvent
+from .bsw_called_entity import BswCalledEntity
+from .bsw_client_policy import BswClientPolicy
+from .bsw_data_received_event import BswDataReceivedEvent
+from .bsw_data_send_policy import BswDataSendPolicy
+from .bsw_distinguished_partition import BswDistinguishedPartition
+from .bsw_exclusive_area_policy import BswExclusiveAreaPolicy
+from .bsw_external_trigger_occurred_event import BswExternalTriggerOccurredEvent
+from .bsw_internal_trigger_occurred_event import BswInternalTriggerOccurredEvent
+from .bsw_internal_triggering_point import BswInternalTriggeringPoint
+from .bsw_internal_triggering_point_policy import BswInternalTriggeringPointPolicy
+from .bsw_interrupt_entity import BswInterruptEntity
+from .bsw_mode_manager_error_event import BswModeManagerErrorEvent
+from .bsw_mode_receiver_policy import BswModeReceiverPolicy
+from .bsw_mode_sender_policy import BswModeSenderPolicy
+from .bsw_mode_switch_event import BswModeSwitchEvent
+from .bsw_mode_switched_ack_event import BswModeSwitchedAckEvent
+from .bsw_operation_invoked_event import BswOperationInvokedEvent
+from .bsw_os_task_execution_event import BswOsTaskExecutionEvent
+from .bsw_parameter_policy import BswParameterPolicy
+from .bsw_per_instance_memory_policy import BswPerInstanceMemoryPolicy
+from .bsw_queued_data_reception_policy import BswQueuedDataReceptionPolicy
+from .bsw_released_trigger_policy import BswReleasedTriggerPolicy
+from .bsw_schedulable_entity import BswSchedulableEntity
+from .bsw_scheduler_name_prefix import BswSchedulerNamePrefix
+from .bsw_service_dependency import BswServiceDependency
+from .bsw_timing_event import BswTimingEvent
+from .bsw_trigger_direct_implementation import BswTriggerDirectImplementation
+from .category_string import CategoryString
+from .constant_specification_mapping_set_subtypes_enum import ConstantSpecificationMappingSetSubtypesEnum
+from .data_type_mapping_set_subtypes_enum import DataTypeMappingSetSubtypesEnum
+from .exclusive_area import ExclusiveArea
+from .exclusive_area_nesting_order import ExclusiveAreaNestingOrder
+from .identifier import Identifier
+from .included_data_type_set import IncludedDataTypeSet
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .parameter_data_prototype import ParameterDataPrototype
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
+from .variable_data_prototype import VariableDataPrototype
+from .variation_point_proxy import VariationPointProxy
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

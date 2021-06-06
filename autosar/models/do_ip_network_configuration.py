@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.boolean import Boolean
-from autosar.models.platform_module_ethernet_endpoint_configuration_subtypes_enum import PlatformModuleEthernetEndpointConfigurationSubtypesEnum
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.time_value import TimeValue
+from .boolean import Boolean
+from .platform_module_ethernet_endpoint_configuration_subtypes_enum import PlatformModuleEthernetEndpointConfigurationSubtypesEnum
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .time_value import TimeValue
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

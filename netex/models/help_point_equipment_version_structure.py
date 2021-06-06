@@ -2,8 +2,8 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
 from xsdata.models.datatype import XmlDuration
-from netex.models.accessibility_assessment import AccessibilityAssessment
-from netex.models.passenger_equipment_version_structure import PassengerEquipmentVersionStructure
+from .accessibility_assessment import AccessibilityAssessment
+from .passenger_equipment_version_structure import PassengerEquipmentVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

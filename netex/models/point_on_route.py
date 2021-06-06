@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.point_on_route_versioned_child_structure import PointOnRouteVersionedChildStructure
+from .point_on_route_versioned_child_structure import PointOnRouteVersionedChildStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

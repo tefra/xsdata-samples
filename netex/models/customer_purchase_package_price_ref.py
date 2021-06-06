@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.customer_purchase_package_price_ref_structure import CustomerPurchasePackagePriceRefStructure
+from .customer_purchase_package_price_ref_structure import CustomerPurchasePackagePriceRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

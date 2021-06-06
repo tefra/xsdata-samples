@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.class_of_use_ref import ClassOfUseRef
-from netex.models.fare_class_enumeration import FareClassEnumeration
-from netex.models.sanitary_facility_enumeration import SanitaryFacilityEnumeration
-from netex.models.waiting_equipment_version_structure import WaitingEquipmentVersionStructure
+from .class_of_use_ref import ClassOfUseRef
+from .fare_class_enumeration import FareClassEnumeration
+from .sanitary_facility_enumeration import SanitaryFacilityEnumeration
+from .waiting_equipment_version_structure import WaitingEquipmentVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

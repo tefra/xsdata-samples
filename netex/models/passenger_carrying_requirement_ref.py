@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.passenger_carrying_requirement_ref_structure import PassengerCarryingRequirementRefStructure
+from .passenger_carrying_requirement_ref_structure import PassengerCarryingRequirementRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

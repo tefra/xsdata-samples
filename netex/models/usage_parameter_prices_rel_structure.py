@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.cell_ref_1 import CellRef1
-from netex.models.strict_containment_aggregation_structure import StrictContainmentAggregationStructure
-from netex.models.usage_parameter_price import UsageParameterPrice
-from netex.models.usage_parameter_price_ref import UsageParameterPriceRef
+from .cell_ref_1 import CellRef1
+from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
+from .usage_parameter_price import UsageParameterPrice
+from .usage_parameter_price_ref import UsageParameterPriceRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

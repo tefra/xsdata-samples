@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.access_right_in_product import AccessRightInProduct
-from netex.models.access_right_in_product_ref import AccessRightInProductRef
-from netex.models.strict_containment_aggregation_structure import StrictContainmentAggregationStructure
+from .access_right_in_product import AccessRightInProduct
+from .access_right_in_product_ref import AccessRightInProductRef
+from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

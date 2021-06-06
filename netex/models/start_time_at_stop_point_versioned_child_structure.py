@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlTime
-from netex.models.alternative_texts_rel_structure import VersionedChildStructure
-from netex.models.fare_demand_factor_ref import FareDemandFactorRef
-from netex.models.fare_scheduled_stop_point_ref import FareScheduledStopPointRef
-from netex.models.scheduled_stop_point_ref import ScheduledStopPointRef
+from .alternative_texts_rel_structure import VersionedChildStructure
+from .fare_demand_factor_ref import FareDemandFactorRef
+from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
+from .scheduled_stop_point_ref import ScheduledStopPointRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

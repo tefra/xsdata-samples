@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.link_in_link_sequence_versioned_child_structure import LinkInLinkSequenceVersionedChildStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.path_heading_enumeration import PathHeadingEnumeration
-from netex.models.path_link_ref import PathLinkRef
-from netex.models.path_link_view import PathLinkView
-from netex.models.transition_enumeration import TransitionEnumeration
+from .link_in_link_sequence_versioned_child_structure import LinkInLinkSequenceVersionedChildStructure
+from .multilingual_string import MultilingualString
+from .path_heading_enumeration import PathHeadingEnumeration
+from .path_link_ref import PathLinkRef
+from .path_link_view import PathLinkView
+from .transition_enumeration import TransitionEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

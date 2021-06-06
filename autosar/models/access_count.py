@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.abstract_access_point_subtypes_enum import AbstractAccessPointSubtypesEnum
-from autosar.models.annotation import VariationPoint
-from autosar.models.positive_integer_value_variation_point import PositiveIntegerValueVariationPoint
-from autosar.models.ref import Ref
+from .abstract_access_point_subtypes_enum import AbstractAccessPointSubtypesEnum
+from .annotation import VariationPoint
+from .positive_integer_value_variation_point import PositiveIntegerValueVariationPoint
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

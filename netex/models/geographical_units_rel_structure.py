@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.geographical_unit import GeographicalUnit
-from netex.models.geographical_unit_ref import GeographicalUnitRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .geographical_unit import GeographicalUnit
+from .geographical_unit_ref import GeographicalUnitRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

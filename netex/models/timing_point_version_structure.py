@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDuration
-from netex.models.point_version_structure import PointVersionStructure
-from netex.models.timing_point_status_enumeration import TimingPointStatusEnumeration
+from .point_version_structure import PointVersionStructure
+from .timing_point_status_enumeration import TimingPointStatusEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

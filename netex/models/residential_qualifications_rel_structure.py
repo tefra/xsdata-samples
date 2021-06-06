@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
-from netex.models.residential_qualification import ResidentialQualification
-from netex.models.residential_qualification_ref import ResidentialQualificationRef
+from .one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .residential_qualification import ResidentialQualification
+from .residential_qualification_ref import ResidentialQualificationRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

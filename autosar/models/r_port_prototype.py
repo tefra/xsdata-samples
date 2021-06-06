@@ -1,36 +1,36 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.client_com_spec import ClientComSpec
-from autosar.models.client_server_annotation import ClientServerAnnotation
-from autosar.models.crypto_r_port_com_spec import CryptoRPortComSpec
-from autosar.models.delegated_port_annotation import DelegatedPortAnnotation
-from autosar.models.identifier import Identifier
-from autosar.models.io_hw_abstraction_server_annotation import IoHwAbstractionServerAnnotation
-from autosar.models.mode_port_annotation import ModePortAnnotation
-from autosar.models.mode_switch_receiver_com_spec import ModeSwitchReceiverComSpec
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.nonqueued_receiver_com_spec import NonqueuedReceiverComSpec
-from autosar.models.nv_data_port_annotation import NvDataPortAnnotation
-from autosar.models.nv_require_com_spec import NvRequireComSpec
-from autosar.models.parameter_port_annotation import ParameterPortAnnotation
-from autosar.models.parameter_require_com_spec import ParameterRequireComSpec
-from autosar.models.persistency_data_required_com_spec import PersistencyDataRequiredComSpec
-from autosar.models.port_interface_subtypes_enum import PortInterfaceSubtypesEnum
-from autosar.models.queued_receiver_com_spec import QueuedReceiverComSpec
-from autosar.models.r_port_prototype_props import RPortPrototypeProps
-from autosar.models.receiver_annotation import ReceiverAnnotation
-from autosar.models.ref import Ref
-from autosar.models.sender_annotation import SenderAnnotation
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.trigger_port_annotation import TriggerPortAnnotation
+from .category_string import CategoryString
+from .client_com_spec import ClientComSpec
+from .client_server_annotation import ClientServerAnnotation
+from .crypto_r_port_com_spec import CryptoRPortComSpec
+from .delegated_port_annotation import DelegatedPortAnnotation
+from .identifier import Identifier
+from .io_hw_abstraction_server_annotation import IoHwAbstractionServerAnnotation
+from .mode_port_annotation import ModePortAnnotation
+from .mode_switch_receiver_com_spec import ModeSwitchReceiverComSpec
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .nonqueued_receiver_com_spec import NonqueuedReceiverComSpec
+from .nv_data_port_annotation import NvDataPortAnnotation
+from .nv_require_com_spec import NvRequireComSpec
+from .parameter_port_annotation import ParameterPortAnnotation
+from .parameter_require_com_spec import ParameterRequireComSpec
+from .persistency_data_required_com_spec import PersistencyDataRequiredComSpec
+from .port_interface_subtypes_enum import PortInterfaceSubtypesEnum
+from .queued_receiver_com_spec import QueuedReceiverComSpec
+from .r_port_prototype_props import RPortPrototypeProps
+from .receiver_annotation import ReceiverAnnotation
+from .ref import Ref
+from .sender_annotation import SenderAnnotation
+from .short_name_fragment import ShortNameFragment
+from .trigger_port_annotation import TriggerPortAnnotation
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

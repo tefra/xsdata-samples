@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.data_object_delivery_structure import DataObjectDeliveryStructure
+from .data_object_delivery_structure import DataObjectDeliveryStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

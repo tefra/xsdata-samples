@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from netex.models.parking_component_version_structure import ParkingComponentVersionStructure
-from netex.models.parking_vehicle_enumeration import ParkingVehicleEnumeration
+from .parking_component_version_structure import ParkingComponentVersionStructure
+from .parking_vehicle_enumeration import ParkingVehicleEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

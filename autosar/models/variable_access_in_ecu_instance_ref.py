@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.ref import Ref
-from autosar.models.root_sw_composition_prototype_subtypes_enum import RootSwCompositionPrototypeSubtypesEnum
-from autosar.models.sw_component_prototype_subtypes_enum import SwComponentPrototypeSubtypesEnum
-from autosar.models.variable_access_subtypes_enum import VariableAccessSubtypesEnum
+from .ref import Ref
+from .root_sw_composition_prototype_subtypes_enum import RootSwCompositionPrototypeSubtypesEnum
+from .sw_component_prototype_subtypes_enum import SwComponentPrototypeSubtypesEnum
+from .variable_access_subtypes_enum import VariableAccessSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.blacklist import Blacklist
-from netex.models.blacklist_ref import BlacklistRef
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
+from .blacklist import Blacklist
+from .blacklist_ref import BlacklistRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

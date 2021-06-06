@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.diagnostic_compare_type_enum import DiagnosticCompareTypeEnum
-from autosar.models.diagnostic_env_mode_element_subtypes_enum import DiagnosticEnvModeElementSubtypesEnum
-from autosar.models.ref import Ref
+from .diagnostic_compare_type_enum import DiagnosticCompareTypeEnum
+from .diagnostic_env_mode_element_subtypes_enum import DiagnosticEnvModeElementSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.array_size_semantics_enum import ArraySizeSemanticsEnum
-from autosar.models.integer import Integer
-from autosar.models.integer_value_variation_point import IntegerValueVariationPoint
-from autosar.models.ref import Ref
-from autosar.models.sw_base_type_subtypes_enum import SwBaseTypeSubtypesEnum
+from .array_size_semantics_enum import ArraySizeSemanticsEnum
+from .integer import Integer
+from .integer_value_variation_point import IntegerValueVariationPoint
+from .ref import Ref
+from .sw_base_type_subtypes_enum import SwBaseTypeSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.journey_frequency_group_version_structure import JourneyFrequencyGroupVersionStructure
+from .journey_frequency_group_version_structure import JourneyFrequencyGroupVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

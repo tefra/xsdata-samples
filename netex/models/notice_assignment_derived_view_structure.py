@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.derived_view_structure import DerivedViewStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.notice_ref import NoticeRef
-from netex.models.private_code import PrivateCode
-from netex.models.publicity_channel_enumeration import PublicityChannelEnumeration
-from netex.models.type_of_notice_ref import TypeOfNoticeRef
+from .derived_view_structure import DerivedViewStructure
+from .multilingual_string import MultilingualString
+from .notice_ref import NoticeRef
+from .private_code import PrivateCode
+from .publicity_channel_enumeration import PublicityChannelEnumeration
+from .type_of_notice_ref import TypeOfNoticeRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.boarding_positions_rel_structure import BoardingPositionsRelStructure
-from netex.models.compass_bearing8_enumeration import CompassBearing8Enumeration
-from netex.models.destination_display_views_rel_structure import DestinationDisplayViewsRelStructure
-from netex.models.quay_ref_structure import QuayRefStructure
-from netex.models.quay_type_enumeration import QuayTypeEnumeration
-from netex.models.stop_place_space_version_structure import StopPlaceSpaceVersionStructure
+from .boarding_positions_rel_structure import BoardingPositionsRelStructure
+from .compass_bearing8_enumeration import CompassBearing8Enumeration
+from .destination_display_views_rel_structure import DestinationDisplayViewsRelStructure
+from .quay_ref_structure import QuayRefStructure
+from .quay_type_enumeration import QuayTypeEnumeration
+from .stop_place_space_version_structure import StopPlaceSpaceVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

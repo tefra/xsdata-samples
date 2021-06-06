@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.notice_assignment_1 import NoticeAssignment1
-from netex.models.notice_assignment_2 import NoticeAssignment2
-from netex.models.sales_notice_assignment import SalesNoticeAssignment
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .notice_assignment_1 import NoticeAssignment1
+from .notice_assignment_2 import NoticeAssignment2
+from .sales_notice_assignment import SalesNoticeAssignment
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

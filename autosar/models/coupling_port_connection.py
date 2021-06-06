@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.coupling_port_ref_conditional import CouplingPortRefConditional
-from autosar.models.coupling_port_subtypes_enum import CouplingPortSubtypesEnum
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
+from .annotation import VariationPoint
+from .coupling_port_ref_conditional import CouplingPortRefConditional
+from .coupling_port_subtypes_enum import CouplingPortSubtypesEnum
+from .positive_integer import PositiveInteger
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.distribution_channel import DistributionChannel
-from netex.models.frame_containment_structure import FrameContainmentStructure
+from .distribution_channel import DistributionChannel
+from .frame_containment_structure import FrameContainmentStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

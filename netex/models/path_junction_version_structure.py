@@ -1,14 +1,14 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.covered_enumeration import CoveredEnumeration
-from netex.models.gated_enumeration import GatedEnumeration
-from netex.models.lighting_enumeration import LightingEnumeration
-from netex.models.multilingual_string import MultilingualString
-from netex.models.point_version_structure import PointVersionStructure
-from netex.models.public_use_enumeration import PublicUseEnumeration
-from netex.models.site_component_ref_structure import SiteComponentRefStructure
-from netex.models.site_facility_sets_rel_structure import SiteFacilitySetsRelStructure
-from netex.models.zone_ref_structure import ZoneRefStructure
+from .covered_enumeration import CoveredEnumeration
+from .gated_enumeration import GatedEnumeration
+from .lighting_enumeration import LightingEnumeration
+from .multilingual_string import MultilingualString
+from .point_version_structure import PointVersionStructure
+from .public_use_enumeration import PublicUseEnumeration
+from .site_component_ref_structure import SiteComponentRefStructure
+from .site_facility_sets_rel_structure import SiteFacilitySetsRelStructure
+from .zone_ref_structure import ZoneRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

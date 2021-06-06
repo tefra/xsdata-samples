@@ -1,20 +1,20 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
 )
-from autosar.models.binding_time_enum import BindingTimeEnum
-from autosar.models.category_string import CategoryString
-from autosar.models.fm_attribute_value import FmAttributeValue
-from autosar.models.fm_feature_selection_state import FmFeatureSelectionState
-from autosar.models.fm_feature_subtypes_enum import FmFeatureSubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
+from .binding_time_enum import BindingTimeEnum
+from .category_string import CategoryString
+from .fm_attribute_value import FmAttributeValue
+from .fm_feature_selection_state import FmFeatureSelectionState
+from .fm_feature_subtypes_enum import FmFeatureSubtypesEnum
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

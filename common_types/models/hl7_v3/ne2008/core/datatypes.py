@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
-from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
+from .datatypes_base import (
     Any,
     Cd,
     Ce,
@@ -14,7 +14,7 @@ from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
     SxcmTs,
     Ts,
 )
-from common_types.models.hl7_v3.ne2008.core.voc import (
+from .voc import (
     CalendarCycleOneLetter,
     CalendarCycleTwoLetterValue,
     ProbabilityDistributionType,

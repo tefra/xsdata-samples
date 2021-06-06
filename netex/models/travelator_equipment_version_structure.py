@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from netex.models.access_equipment_version_structure import AccessEquipmentVersionStructure
+from .access_equipment_version_structure import AccessEquipmentVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.frequency_of_use_version_structure import FrequencyOfUseVersionStructure
+from .frequency_of_use_version_structure import FrequencyOfUseVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

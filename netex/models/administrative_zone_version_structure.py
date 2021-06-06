@@ -1,23 +1,23 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.administrative_zone_2 import AdministrativeZone2
-from netex.models.administrative_zone_ref import AdministrativeZoneRef
-from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
-from netex.models.authority_ref import AuthorityRef
-from netex.models.codespace_assignments_rel_structure import CodespaceAssignmentsRelStructure
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.general_organisation_ref import GeneralOrganisationRef
-from netex.models.management_agent_ref import ManagementAgentRef
-from netex.models.operator_ref import OperatorRef
-from netex.models.organisation_ref import OrganisationRef
-from netex.models.other_organisation_ref import OtherOrganisationRef
-from netex.models.private_code_structure import PrivateCodeStructure
-from netex.models.responsibility_sets_rel_structure import ResponsibilitySetsRelStructure
-from netex.models.retail_consortium_ref import RetailConsortiumRef
-from netex.models.serviced_organisation_ref import ServicedOrganisationRef
-from netex.models.transport_organisation_ref import TransportOrganisationRef
-from netex.models.travel_agent_ref import TravelAgentRef
-from netex.models.zone_version_structure import ZoneVersionStructure
+from .administrative_zone_2 import AdministrativeZone2
+from .administrative_zone_ref import AdministrativeZoneRef
+from .all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
+from .authority_ref import AuthorityRef
+from .codespace_assignments_rel_structure import CodespaceAssignmentsRelStructure
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .general_organisation_ref import GeneralOrganisationRef
+from .management_agent_ref import ManagementAgentRef
+from .operator_ref import OperatorRef
+from .organisation_ref import OrganisationRef
+from .other_organisation_ref import OtherOrganisationRef
+from .private_code_structure import PrivateCodeStructure
+from .responsibility_sets_rel_structure import ResponsibilitySetsRelStructure
+from .retail_consortium_ref import RetailConsortiumRef
+from .serviced_organisation_ref import ServicedOrganisationRef
+from .transport_organisation_ref import TransportOrganisationRef
+from .travel_agent_ref import TravelAgentRef
+from .zone_version_structure import ZoneVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.condition_summary_structure import ConditionSummaryStructure
+from .condition_summary_structure import ConditionSummaryStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

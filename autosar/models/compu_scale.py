@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.c_identifier import CIdentifier
-from autosar.models.compu_const import CompuConst
-from autosar.models.compu_rational_coeffs import CompuRationalCoeffs
-from autosar.models.identifier import Identifier
-from autosar.models.limit import Limit
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.positive_integer import PositiveInteger
+from .annotation import VariationPoint
+from .c_identifier import CIdentifier
+from .compu_const import CompuConst
+from .compu_rational_coeffs import CompuRationalCoeffs
+from .identifier import Identifier
+from .limit import Limit
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .positive_integer import PositiveInteger
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

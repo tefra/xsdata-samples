@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.line_string_type import LineStringType
+from .line_string_type import LineStringType
 
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 

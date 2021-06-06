@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.authority_ref import AuthorityRef
-from netex.models.group_of_lines_version_structure import GroupOfLinesVersionStructure
-from netex.models.groups_of_lines_in_frame_rel_structure import GroupsOfLinesInFrameRelStructure
-from netex.models.groups_of_transport_organisations_refs_rel_structure import GroupsOfTransportOrganisationsRefsRelStructure
-from netex.models.operator_ref import OperatorRef
-from netex.models.tariff_zone_refs_rel_structure import TariffZoneRefsRelStructure
-from netex.models.transport_organisation_ref import TransportOrganisationRef
+from .authority_ref import AuthorityRef
+from .group_of_lines_version_structure import GroupOfLinesVersionStructure
+from .groups_of_lines_in_frame_rel_structure import GroupsOfLinesInFrameRelStructure
+from .groups_of_transport_organisations_refs_rel_structure import GroupsOfTransportOrganisationsRefsRelStructure
+from .operator_ref import OperatorRef
+from .tariff_zone_refs_rel_structure import TariffZoneRefsRelStructure
+from .transport_organisation_ref import TransportOrganisationRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

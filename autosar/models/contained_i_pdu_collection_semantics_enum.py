@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.contained_i_pdu_collection_semantics_enum_simple import ContainedIPduCollectionSemanticsEnumSimple
+from .contained_i_pdu_collection_semantics_enum_simple import ContainedIPduCollectionSemanticsEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

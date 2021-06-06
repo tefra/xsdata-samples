@@ -1,35 +1,35 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.blueprint_policy_list import BlueprintPolicyList
-from autosar.models.blueprint_policy_not_modifiable import BlueprintPolicyNotModifiable
-from autosar.models.blueprint_policy_single import BlueprintPolicySingle
-from autosar.models.boolean import Boolean
-from autosar.models.boolean_value_variation_point import BooleanValueVariationPoint
-from autosar.models.c_identifier import CIdentifier
-from autosar.models.category_string import CategoryString
-from autosar.models.ecuc_condition_specification import EcucConditionSpecification
-from autosar.models.ecuc_configuration_variant_enum import EcucConfigurationVariantEnum
-from autosar.models.ecuc_module_def_subtypes_enum import EcucModuleDefSubtypesEnum
-from autosar.models.ecuc_param_conf_container_def import (
+from .blueprint_policy_list import BlueprintPolicyList
+from .blueprint_policy_not_modifiable import BlueprintPolicyNotModifiable
+from .blueprint_policy_single import BlueprintPolicySingle
+from .boolean import Boolean
+from .boolean_value_variation_point import BooleanValueVariationPoint
+from .c_identifier import CIdentifier
+from .category_string import CategoryString
+from .ecuc_condition_specification import EcucConditionSpecification
+from .ecuc_configuration_variant_enum import EcucConfigurationVariantEnum
+from .ecuc_module_def_subtypes_enum import EcucModuleDefSubtypesEnum
+from .ecuc_param_conf_container_def import (
     EcucChoiceContainerDef,
     EcucParamConfContainerDef,
 )
-from autosar.models.ecuc_scope_enum import EcucScopeEnum
-from autosar.models.ecuc_validation_condition import EcucValidationCondition
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.positive_integer_value_variation_point import PositiveIntegerValueVariationPoint
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.string import String
-from autosar.models.traceable_subtypes_enum import TraceableSubtypesEnum
+from .ecuc_scope_enum import EcucScopeEnum
+from .ecuc_validation_condition import EcucValidationCondition
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .positive_integer_value_variation_point import PositiveIntegerValueVariationPoint
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
+from .string import String
+from .traceable_subtypes_enum import TraceableSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

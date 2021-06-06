@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.reentrancy_level_enum_simple import ReentrancyLevelEnumSimple
+from .reentrancy_level_enum_simple import ReentrancyLevelEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

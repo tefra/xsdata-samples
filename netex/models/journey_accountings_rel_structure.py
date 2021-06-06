@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.journey_accounting import JourneyAccounting
-from netex.models.journey_accounting_ref import JourneyAccountingRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .journey_accounting import JourneyAccounting
+from .journey_accounting_ref import JourneyAccountingRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

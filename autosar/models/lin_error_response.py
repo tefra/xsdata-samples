@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.i_signal_triggering_subtypes_enum import ISignalTriggeringSubtypesEnum
-from autosar.models.integer import Integer
-from autosar.models.lin_frame_triggering_subtypes_enum import LinFrameTriggeringSubtypesEnum
-from autosar.models.ref import Ref
+from .i_signal_triggering_subtypes_enum import ISignalTriggeringSubtypesEnum
+from .integer import Integer
+from .lin_frame_triggering_subtypes_enum import LinFrameTriggeringSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from netex.models.funicular_submode_enumeration import FunicularSubmodeEnumeration
+from .funicular_submode_enumeration import FunicularSubmodeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

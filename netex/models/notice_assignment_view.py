@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.notice_assignment_derived_view_structure import NoticeAssignmentDerivedViewStructure
+from .notice_assignment_derived_view_structure import NoticeAssignmentDerivedViewStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

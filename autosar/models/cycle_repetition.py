@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.cycle_repetition_type import CycleRepetitionType
-from autosar.models.integer import Integer
+from .cycle_repetition_type import CycleRepetitionType
+from .integer import Integer
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

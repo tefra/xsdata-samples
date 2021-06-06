@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.autosar_data_prototype_subtypes_enum import AutosarDataPrototypeSubtypesEnum
-from autosar.models.implementation_data_type_element_subtypes_enum import ImplementationDataTypeElementSubtypesEnum
-from autosar.models.port_prototype_subtypes_enum import PortPrototypeSubtypesEnum
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.sw_component_prototype_subtypes_enum import SwComponentPrototypeSubtypesEnum
-from autosar.models.system_subtypes_enum import SystemSubtypesEnum
+from .autosar_data_prototype_subtypes_enum import AutosarDataPrototypeSubtypesEnum
+from .implementation_data_type_element_subtypes_enum import ImplementationDataTypeElementSubtypesEnum
+from .port_prototype_subtypes_enum import PortPrototypeSubtypesEnum
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .sw_component_prototype_subtypes_enum import SwComponentPrototypeSubtypesEnum
+from .system_subtypes_enum import SystemSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

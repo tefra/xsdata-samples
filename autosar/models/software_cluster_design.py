@@ -1,26 +1,26 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.ar_element_subtypes_enum import ArElementSubtypesEnum
-from autosar.models.category_string import CategoryString
-from autosar.models.diagnostic_contribution_set_subtypes_enum import DiagnosticContributionSetSubtypesEnum
-from autosar.models.fibex_element_subtypes_enum import FibexElementSubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.machine_design_subtypes_enum import MachineDesignSubtypesEnum
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.process_design_subtypes_enum import ProcessDesignSubtypesEnum
-from autosar.models.ref import Ref
-from autosar.models.root_sw_cluster_design_component_prototype import RootSwClusterDesignComponentPrototype
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.software_cluster_design_subtypes_enum import SoftwareClusterDesignSubtypesEnum
-from autosar.models.software_cluster_doip_diagnostic_address import SoftwareClusterDoipDiagnosticAddress
-from autosar.models.uploadable_package_element_subtypes_enum import UploadablePackageElementSubtypesEnum
+from .ar_element_subtypes_enum import ArElementSubtypesEnum
+from .category_string import CategoryString
+from .diagnostic_contribution_set_subtypes_enum import DiagnosticContributionSetSubtypesEnum
+from .fibex_element_subtypes_enum import FibexElementSubtypesEnum
+from .identifier import Identifier
+from .machine_design_subtypes_enum import MachineDesignSubtypesEnum
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .process_design_subtypes_enum import ProcessDesignSubtypesEnum
+from .ref import Ref
+from .root_sw_cluster_design_component_prototype import RootSwClusterDesignComponentPrototype
+from .short_name_fragment import ShortNameFragment
+from .software_cluster_design_subtypes_enum import SoftwareClusterDesignSubtypesEnum
+from .software_cluster_doip_diagnostic_address import SoftwareClusterDoipDiagnosticAddress
+from .uploadable_package_element_subtypes_enum import UploadablePackageElementSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

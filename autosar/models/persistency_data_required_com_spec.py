@@ -1,21 +1,21 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.application_rule_based_value_specification import ApplicationRuleBasedValueSpecification
-from autosar.models.application_value_specification import ApplicationValueSpecification
-from autosar.models.constant_reference import ConstantReference
-from autosar.models.not_available_value_specification import NotAvailableValueSpecification
-from autosar.models.numerical_rule_based_value_specification import NumericalRuleBasedValueSpecification
-from autosar.models.numerical_value_specification import NumericalValueSpecification
-from autosar.models.persistency_data_element_subtypes_enum import PersistencyDataElementSubtypesEnum
-from autosar.models.record_value_specification import (
+from .application_rule_based_value_specification import ApplicationRuleBasedValueSpecification
+from .application_value_specification import ApplicationValueSpecification
+from .constant_reference import ConstantReference
+from .not_available_value_specification import NotAvailableValueSpecification
+from .numerical_rule_based_value_specification import NumericalRuleBasedValueSpecification
+from .numerical_value_specification import NumericalValueSpecification
+from .persistency_data_element_subtypes_enum import PersistencyDataElementSubtypesEnum
+from .record_value_specification import (
     ApplicationAssocMapValueSpecification,
     ArrayValueSpecification,
     CompositeRuleBasedValueSpecification,
     RecordValueSpecification,
 )
-from autosar.models.ref import Ref
-from autosar.models.reference_value_specification import ReferenceValueSpecification
-from autosar.models.text_value_specification import TextValueSpecification
+from .ref import Ref
+from .reference_value_specification import ReferenceValueSpecification
+from .text_value_specification import TextValueSpecification
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

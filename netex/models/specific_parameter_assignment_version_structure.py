@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.boolean_operator_enumeration import BooleanOperatorEnumeration
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.distribution_assignment_ref import DistributionAssignmentRef
-from netex.models.organisation_ref_structure import OrganisationRefStructure
-from netex.models.point_ref_structure import PointRefStructure
-from netex.models.validity_parameter_assignment_version_structure import ValidityParameterAssignmentVersionStructure
+from .boolean_operator_enumeration import BooleanOperatorEnumeration
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .distribution_assignment_ref import DistributionAssignmentRef
+from .organisation_ref_structure import OrganisationRefStructure
+from .point_ref_structure import PointRefStructure
+from .validity_parameter_assignment_version_structure import ValidityParameterAssignmentVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

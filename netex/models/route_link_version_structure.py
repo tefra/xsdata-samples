@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.link_version_structure import LinkVersionStructure
-from netex.models.operational_context_ref import OperationalContextRef
-from netex.models.route_point_ref_structure import RoutePointRefStructure
+from .link_version_structure import LinkVersionStructure
+from .operational_context_ref import OperationalContextRef
+from .route_point_ref_structure import RoutePointRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

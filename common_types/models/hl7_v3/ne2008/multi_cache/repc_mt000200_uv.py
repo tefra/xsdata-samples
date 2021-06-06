@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
-from common_types.models.hl7_v3.ne2008.core.datatypes import (
+from ..core.datatypes import (
     IvlInt,
     IvlPq,
     RtoPqPq,
 )
-from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
+from ..core.datatypes_base import (
     Any,
     Bl,
     Cd,
@@ -20,7 +20,7 @@ from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
     Ts,
     TsExplicit,
 )
-from common_types.models.hl7_v3.ne2008.core.voc import (
+from ..core.voc import (
     ActClass,
     ActClassCareProvision,
     ActClassObservation,
@@ -72,12 +72,12 @@ from common_types.models.hl7_v3.ne2008.core.voc import (
     XRoleClassPayeePolicyRelationship,
     XSuccReplPrev,
 )
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt050000_uv01 import CoctMt050000Uv01Patient
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt090000_uv01 import CoctMt090000Uv01AssignedEntity
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt090100_uv01 import CoctMt090100Uv01AssignedPerson
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt090400_uv import CoctMt090400UvAssignedParty
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt230100_uv import CoctMt230100UvMedication
-from common_types.models.hl7_v3.ne2008.multi_cache.repc_mt000100_uv01 import (
+from .coct_mt050000_uv01 import CoctMt050000Uv01Patient
+from .coct_mt090000_uv01 import CoctMt090000Uv01AssignedEntity
+from .coct_mt090100_uv01 import CoctMt090100Uv01AssignedPerson
+from .coct_mt090400_uv import CoctMt090400UvAssignedParty
+from .coct_mt230100_uv import CoctMt230100UvMedication
+from .repc_mt000100_uv01 import (
     RepcMt000100Uv01Act,
     RepcMt000100Uv01ActReference,
     RepcMt000100Uv01Encounter,
@@ -87,7 +87,7 @@ from common_types.models.hl7_v3.ne2008.multi_cache.repc_mt000100_uv01 import (
     RepcMt000100Uv01SubstanceAdministration,
     RepcMt000100Uv01Supply,
 )
-from common_types.models.hl7_v3.ne2008.multi_cache.repc_mt000300_uv01 import RepcMt000300Uv01Concern
+from .repc_mt000300_uv01 import RepcMt000300Uv01Concern
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

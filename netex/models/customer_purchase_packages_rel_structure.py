@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.customer_purchase_package import CustomerPurchasePackage
-from netex.models.customer_purchase_package_ref import CustomerPurchasePackageRef
-from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .customer_purchase_package import CustomerPurchasePackage
+from .customer_purchase_package_ref import CustomerPurchasePackageRef
+from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

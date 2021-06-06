@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.parking_tariff_ref_structure import ParkingTariffRefStructure
+from .parking_tariff_ref_structure import ParkingTariffRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

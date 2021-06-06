@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.place_sign_ref_structure import PlaceSignRefStructure
+from .place_sign_ref_structure import PlaceSignRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

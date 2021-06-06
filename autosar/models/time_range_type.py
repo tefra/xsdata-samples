@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.absolute_tolerance import AbsoluteTolerance
-from autosar.models.relative_tolerance import RelativeTolerance
-from autosar.models.time_value import TimeValue
+from .absolute_tolerance import AbsoluteTolerance
+from .relative_tolerance import RelativeTolerance
+from .time_value import TimeValue
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

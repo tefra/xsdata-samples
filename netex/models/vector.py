@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.vector_type import VectorType
+from .vector_type import VectorType
 
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 

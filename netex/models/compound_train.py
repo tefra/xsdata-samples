@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.compound_train_version_structure import CompoundTrainVersionStructure
+from .compound_train_version_structure import CompoundTrainVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

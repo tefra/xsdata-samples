@@ -1,14 +1,14 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.boolean import Boolean
-from autosar.models.i_pdu_subtypes_enum import IPduSubtypesEnum
-from autosar.models.j_1939_tp_node_subtypes_enum import J1939TpNodeSubtypesEnum
-from autosar.models.j_1939_tp_pg import J1939TpPg
-from autosar.models.n_pdu_subtypes_enum import NPduSubtypesEnum
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.tp_connection_ident import TpConnectionIdent
+from .annotation import VariationPoint
+from .boolean import Boolean
+from .i_pdu_subtypes_enum import IPduSubtypesEnum
+from .j_1939_tp_node_subtypes_enum import J1939TpNodeSubtypesEnum
+from .j_1939_tp_pg import J1939TpPg
+from .n_pdu_subtypes_enum import NPduSubtypesEnum
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .tp_connection_ident import TpConnectionIdent
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

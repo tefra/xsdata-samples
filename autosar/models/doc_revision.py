@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.date import Date
-from autosar.models.modification import Modification
-from autosar.models.nmtoken_string import NmtokenString
-from autosar.models.revision_label_string import RevisionLabelString
-from autosar.models.string import String
+from .date import Date
+from .modification import Modification
+from .nmtoken_string import NmtokenString
+from .revision_label_string import RevisionLabelString
+from .string import String
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

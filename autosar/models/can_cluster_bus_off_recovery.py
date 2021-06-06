@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.time_value import TimeValue
+from .positive_integer import PositiveInteger
+from .time_value import TimeValue
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

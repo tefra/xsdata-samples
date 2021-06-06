@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.commercial_profile_version_structure import CommercialProfileVersionStructure
+from .commercial_profile_version_structure import CommercialProfileVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

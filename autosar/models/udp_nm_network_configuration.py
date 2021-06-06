@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.ip4_address_string import Ip4AddressString
-from autosar.models.ip6_address_string import Ip6AddressString
-from autosar.models.positive_integer import PositiveInteger
+from .ip4_address_string import Ip4AddressString
+from .ip6_address_string import Ip6AddressString
+from .positive_integer import PositiveInteger
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

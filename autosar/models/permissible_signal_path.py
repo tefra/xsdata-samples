@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.physical_channel_subtypes_enum import PhysicalChannelSubtypesEnum
-from autosar.models.ref import Ref
-from autosar.models.swc_to_swc_operation_arguments import SwcToSwcOperationArguments
-from autosar.models.swc_to_swc_signal import SwcToSwcSignal
+from .physical_channel_subtypes_enum import PhysicalChannelSubtypesEnum
+from .ref import Ref
+from .swc_to_swc_operation_arguments import SwcToSwcOperationArguments
+from .swc_to_swc_signal import SwcToSwcSignal
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

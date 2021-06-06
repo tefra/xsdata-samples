@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.ref import Ref
-from autosar.models.someip_sd_client_service_instance_config_subtypes_enum import SomeipSdClientServiceInstanceConfigSubtypesEnum
+from .annotation import VariationPoint
+from .ref import Ref
+from .someip_sd_client_service_instance_config_subtypes_enum import SomeipSdClientServiceInstanceConfigSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

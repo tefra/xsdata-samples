@@ -1,28 +1,28 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.boolean import Boolean
-from autosar.models.can_addressing_mode_type import CanAddressingModeType
-from autosar.models.can_frame_rx_behavior_enum import CanFrameRxBehaviorEnum
-from autosar.models.can_frame_tx_behavior_enum import CanFrameTxBehaviorEnum
-from autosar.models.category_string import CategoryString
-from autosar.models.frame_port_subtypes_enum import FramePortSubtypesEnum
-from autosar.models.frame_subtypes_enum import FrameSubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.integer import Integer
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.pdu_triggering_ref_conditional import PduTriggeringRefConditional
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.rx_identifier_range import RxIdentifierRange
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.ttcan_absolutely_scheduled_timing import TtcanAbsolutelyScheduledTiming
+from .boolean import Boolean
+from .can_addressing_mode_type import CanAddressingModeType
+from .can_frame_rx_behavior_enum import CanFrameRxBehaviorEnum
+from .can_frame_tx_behavior_enum import CanFrameTxBehaviorEnum
+from .category_string import CategoryString
+from .frame_port_subtypes_enum import FramePortSubtypesEnum
+from .frame_subtypes_enum import FrameSubtypesEnum
+from .identifier import Identifier
+from .integer import Integer
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .pdu_triggering_ref_conditional import PduTriggeringRefConditional
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .rx_identifier_range import RxIdentifierRange
+from .short_name_fragment import ShortNameFragment
+from .ttcan_absolutely_scheduled_timing import TtcanAbsolutelyScheduledTiming
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

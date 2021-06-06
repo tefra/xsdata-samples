@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.ref import Ref
-from autosar.models.security_event_filter_chain_subtypes_enum import SecurityEventFilterChainSubtypesEnum
+from .annotation import VariationPoint
+from .ref import Ref
+from .security_event_filter_chain_subtypes_enum import SecurityEventFilterChainSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

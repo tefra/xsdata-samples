@@ -1,20 +1,20 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.air_submode_enumeration import AirSubmodeEnumeration
-from netex.models.all_modes_enumeration import AllModesEnumeration
-from netex.models.bus_submode_enumeration import BusSubmodeEnumeration
-from netex.models.coach_submode_enumeration import CoachSubmodeEnumeration
-from netex.models.funicular_submode_enumeration import FunicularSubmodeEnumeration
-from netex.models.metro_submode_enumeration import MetroSubmodeEnumeration
-from netex.models.rail_submode_enumeration import RailSubmodeEnumeration
-from netex.models.self_drive_submode_enumeration import SelfDriveSubmodeEnumeration
-from netex.models.snow_and_ice_submode_enumeration import SnowAndIceSubmodeEnumeration
-from netex.models.submode_ref import SubmodeRef
-from netex.models.taxi_submode_enumeration import TaxiSubmodeEnumeration
-from netex.models.telecabin_submode_enumeration import TelecabinSubmodeEnumeration
-from netex.models.tram_submode_enumeration import TramSubmodeEnumeration
-from netex.models.type_of_value_version_structure import TypeOfValueVersionStructure
-from netex.models.water_submode_enumeration import WaterSubmodeEnumeration
+from .air_submode_enumeration import AirSubmodeEnumeration
+from .all_modes_enumeration import AllModesEnumeration
+from .bus_submode_enumeration import BusSubmodeEnumeration
+from .coach_submode_enumeration import CoachSubmodeEnumeration
+from .funicular_submode_enumeration import FunicularSubmodeEnumeration
+from .metro_submode_enumeration import MetroSubmodeEnumeration
+from .rail_submode_enumeration import RailSubmodeEnumeration
+from .self_drive_submode_enumeration import SelfDriveSubmodeEnumeration
+from .snow_and_ice_submode_enumeration import SnowAndIceSubmodeEnumeration
+from .submode_ref import SubmodeRef
+from .taxi_submode_enumeration import TaxiSubmodeEnumeration
+from .telecabin_submode_enumeration import TelecabinSubmodeEnumeration
+from .tram_submode_enumeration import TramSubmodeEnumeration
+from .type_of_value_version_structure import TypeOfValueVersionStructure
+from .water_submode_enumeration import WaterSubmodeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

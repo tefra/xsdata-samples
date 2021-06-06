@@ -1,14 +1,14 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
-from netex.models.group_of_entities_version_structure import GroupOfEntitiesVersionStructure
-from netex.models.group_of_lines_type_enumeration import GroupOfLinesTypeEnumeration
-from netex.models.line_ref_structure import LineRefStructure
-from netex.models.line_refs_rel_structure import LineRefsRelStructure
-from netex.models.payment_method_enumeration import PaymentMethodEnumeration
-from netex.models.purchase_moment_enumeration import PurchaseMomentEnumeration
-from netex.models.transport_submode import TransportSubmode
-from netex.models.type_of_payment_method_value_structure import TypeOfPaymentMethodValueStructure
+from .all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
+from .group_of_entities_version_structure import GroupOfEntitiesVersionStructure
+from .group_of_lines_type_enumeration import GroupOfLinesTypeEnumeration
+from .line_ref_structure import LineRefStructure
+from .line_refs_rel_structure import LineRefsRelStructure
+from .payment_method_enumeration import PaymentMethodEnumeration
+from .purchase_moment_enumeration import PurchaseMomentEnumeration
+from .transport_submode import TransportSubmode
+from .type_of_payment_method_value_structure import TypeOfPaymentMethodValueStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

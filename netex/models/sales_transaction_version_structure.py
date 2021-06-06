@@ -1,19 +1,19 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from netex.models.customer_purchase_packages_rel_structure import CustomerPurchasePackagesRelStructure
-from netex.models.fare_contract_entry_version_structure import FareContractEntryVersionStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.organisational_unit_ref import OrganisationalUnitRef
-from netex.models.payment_method_enumeration import PaymentMethodEnumeration
-from netex.models.point_version_structure import PointVersionStructure
-from netex.models.price_rule_step_results_rel_structure import PriceRuleStepResultsRelStructure
-from netex.models.price_unit_ref import PriceUnitRef
-from netex.models.private_code_structure import PrivateCodeStructure
-from netex.models.retail_device_ref import RetailDeviceRef
-from netex.models.travel_documents_rel_structure import TravelDocumentsRelStructure
-from netex.models.travel_specifications_rel_structure import TravelSpecificationsRelStructure
-from netex.models.type_of_payment_method_ref import TypeOfPaymentMethodRef
+from .customer_purchase_packages_rel_structure import CustomerPurchasePackagesRelStructure
+from .fare_contract_entry_version_structure import FareContractEntryVersionStructure
+from .multilingual_string import MultilingualString
+from .organisational_unit_ref import OrganisationalUnitRef
+from .payment_method_enumeration import PaymentMethodEnumeration
+from .point_version_structure import PointVersionStructure
+from .price_rule_step_results_rel_structure import PriceRuleStepResultsRelStructure
+from .price_unit_ref import PriceUnitRef
+from .private_code_structure import PrivateCodeStructure
+from .retail_device_ref import RetailDeviceRef
+from .travel_documents_rel_structure import TravelDocumentsRelStructure
+from .travel_specifications_rel_structure import TravelSpecificationsRelStructure
+from .type_of_payment_method_ref import TypeOfPaymentMethodRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

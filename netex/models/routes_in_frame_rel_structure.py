@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.flexible_route import FlexibleRoute
-from netex.models.route_1 import Route1
-from netex.models.route_2 import Route2
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .flexible_route import FlexibleRoute
+from .route_1 import Route1
+from .route_2 import Route2
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

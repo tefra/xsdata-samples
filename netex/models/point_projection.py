@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.point_projection_version_structure import PointProjectionVersionStructure
+from .point_projection_version_structure import PointProjectionVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

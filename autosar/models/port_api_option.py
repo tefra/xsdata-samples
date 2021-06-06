@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.boolean import Boolean
-from autosar.models.communication_buffer_locking import CommunicationBufferLocking
-from autosar.models.data_transformation_error_handling_enum import DataTransformationErrorHandlingEnum
-from autosar.models.data_transformation_status_forwarding_enum import DataTransformationStatusForwardingEnum
-from autosar.models.port_defined_argument_value import PortDefinedArgumentValue
-from autosar.models.port_prototype_subtypes_enum import PortPrototypeSubtypesEnum
-from autosar.models.ref import Ref
+from .annotation import VariationPoint
+from .boolean import Boolean
+from .communication_buffer_locking import CommunicationBufferLocking
+from .data_transformation_error_handling_enum import DataTransformationErrorHandlingEnum
+from .data_transformation_status_forwarding_enum import DataTransformationStatusForwardingEnum
+from .port_defined_argument_value import PortDefinedArgumentValue
+from .port_prototype_subtypes_enum import PortPrototypeSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

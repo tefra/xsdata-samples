@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.access_zone import AccessZone
-from netex.models.access_zone_ref import AccessZoneRef
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
+from .access_zone import AccessZone
+from .access_zone_ref import AccessZoneRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,26 +1,26 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
 )
-from autosar.models.boolean import Boolean
-from autosar.models.category_string import CategoryString
-from autosar.models.identifier import Identifier
-from autosar.models.meta_class_name import MetaClassName
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.nmtoken_string import NmtokenString
-from autosar.models.ref import Ref
-from autosar.models.sdg_aggregation_with_variation import SdgAggregationWithVariation
-from autosar.models.sdg_foreign_reference import SdgForeignReference
-from autosar.models.sdg_foreign_reference_with_variation import SdgForeignReferenceWithVariation
-from autosar.models.sdg_primitive_attribute import SdgPrimitiveAttribute
-from autosar.models.sdg_primitive_attribute_with_variation import SdgPrimitiveAttributeWithVariation
-from autosar.models.sdg_reference import SdgReference
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.traceable_text_subtypes_enum import TraceableTextSubtypesEnum
+from .boolean import Boolean
+from .category_string import CategoryString
+from .identifier import Identifier
+from .meta_class_name import MetaClassName
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .nmtoken_string import NmtokenString
+from .ref import Ref
+from .sdg_aggregation_with_variation import SdgAggregationWithVariation
+from .sdg_foreign_reference import SdgForeignReference
+from .sdg_foreign_reference_with_variation import SdgForeignReferenceWithVariation
+from .sdg_primitive_attribute import SdgPrimitiveAttribute
+from .sdg_primitive_attribute_with_variation import SdgPrimitiveAttributeWithVariation
+from .sdg_reference import SdgReference
+from .short_name_fragment import ShortNameFragment
+from .traceable_text_subtypes_enum import TraceableTextSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

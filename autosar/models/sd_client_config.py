@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.initial_sd_delay_config import InitialSdDelayConfig
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.request_response_delay import RequestResponseDelay
-from autosar.models.tag_with_optional_value import TagWithOptionalValue
+from .initial_sd_delay_config import InitialSdDelayConfig
+from .positive_integer import PositiveInteger
+from .request_response_delay import RequestResponseDelay
+from .tag_with_optional_value import TagWithOptionalValue
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

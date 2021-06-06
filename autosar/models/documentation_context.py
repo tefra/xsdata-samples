@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.any_instance_ref import AnyInstanceRef
-from autosar.models.identifiable_subtypes_enum import IdentifiableSubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
+from .any_instance_ref import AnyInstanceRef
+from .identifiable_subtypes_enum import IdentifiableSubtypesEnum
+from .identifier import Identifier
+from .multilanguage_long_name import MultilanguageLongName
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

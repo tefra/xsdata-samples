@@ -1,25 +1,25 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.administrative_zone_version_structure import AdministrativeZonesRelStructure
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.authority_ref import AuthorityRef
-from netex.models.contact_structure import ContactStructure
-from netex.models.general_organisation_ref import GeneralOrganisationRef
-from netex.models.location_structure_2 import LocationStructure2
-from netex.models.management_agent_ref import ManagementAgentRef
-from netex.models.multilingual_string import MultilingualString
-from netex.models.operator_ref import OperatorRef
-from netex.models.organisation_ref import OrganisationRef
-from netex.models.organisation_refs_rel_structure import OrganisationRefsRelStructure
-from netex.models.other_organisation_ref import OtherOrganisationRef
-from netex.models.private_code import PrivateCode
-from netex.models.private_code_structure import PrivateCodeStructure
-from netex.models.responsibility_sets_rel_structure import ResponsibilitySetsRelStructure
-from netex.models.retail_consortium_ref import RetailConsortiumRef
-from netex.models.serviced_organisation_ref import ServicedOrganisationRef
-from netex.models.transport_organisation_ref import TransportOrganisationRef
-from netex.models.travel_agent_ref import TravelAgentRef
-from netex.models.type_of_organisation_part_ref import TypeOfOrganisationPartRef
+from .administrative_zone_version_structure import AdministrativeZonesRelStructure
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .authority_ref import AuthorityRef
+from .contact_structure import ContactStructure
+from .general_organisation_ref import GeneralOrganisationRef
+from .location_structure_2 import LocationStructure2
+from .management_agent_ref import ManagementAgentRef
+from .multilingual_string import MultilingualString
+from .operator_ref import OperatorRef
+from .organisation_ref import OrganisationRef
+from .organisation_refs_rel_structure import OrganisationRefsRelStructure
+from .other_organisation_ref import OtherOrganisationRef
+from .private_code import PrivateCode
+from .private_code_structure import PrivateCodeStructure
+from .responsibility_sets_rel_structure import ResponsibilitySetsRelStructure
+from .retail_consortium_ref import RetailConsortiumRef
+from .serviced_organisation_ref import ServicedOrganisationRef
+from .transport_organisation_ref import TransportOrganisationRef
+from .travel_agent_ref import TravelAgentRef
+from .type_of_organisation_part_ref import TypeOfOrganisationPartRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

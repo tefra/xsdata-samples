@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.e_2_e_profile_configuration_subtypes_enum import E2EProfileConfigurationSubtypesEnum
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.service_method_deployment_subtypes_enum import ServiceMethodDeploymentSubtypesEnum
-from autosar.models.time_value import TimeValue
+from .e_2_e_profile_configuration_subtypes_enum import E2EProfileConfigurationSubtypesEnum
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .service_method_deployment_subtypes_enum import ServiceMethodDeploymentSubtypesEnum
+from .time_value import TimeValue
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

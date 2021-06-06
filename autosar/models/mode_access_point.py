@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.mode_access_point_ident import ModeAccessPointIdent
-from autosar.models.p_mode_group_in_atomic_swc_instance_ref import PModeGroupInAtomicSwcInstanceRef
-from autosar.models.r_mode_group_in_atomic_swc_instance_ref import RModeGroupInAtomicSwcInstanceRef
+from .annotation import VariationPoint
+from .mode_access_point_ident import ModeAccessPointIdent
+from .p_mode_group_in_atomic_swc_instance_ref import PModeGroupInAtomicSwcInstanceRef
+from .r_mode_group_in_atomic_swc_instance_ref import RModeGroupInAtomicSwcInstanceRef
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

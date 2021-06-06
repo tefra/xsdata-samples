@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.type_of_usage_parameter_version_structure import TypeOfUsageParameterVersionStructure
+from .type_of_usage_parameter_version_structure import TypeOfUsageParameterVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

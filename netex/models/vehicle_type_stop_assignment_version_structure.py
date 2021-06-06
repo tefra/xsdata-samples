@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.assignment_version_structure_1 import AssignmentVersionStructure1
-from netex.models.compound_train_ref import CompoundTrainRef
-from netex.models.dead_run_ref import DeadRunRef
-from netex.models.train_ref import TrainRef
-from netex.models.vehicle_journey_ref import VehicleJourneyRef
-from netex.models.vehicle_orientation_enumeration import VehicleOrientationEnumeration
-from netex.models.vehicle_stopping_position_ref import VehicleStoppingPositionRef
-from netex.models.vehicle_type_ref import VehicleTypeRef
+from .assignment_version_structure_1 import AssignmentVersionStructure1
+from .compound_train_ref import CompoundTrainRef
+from .dead_run_ref import DeadRunRef
+from .train_ref import TrainRef
+from .vehicle_journey_ref import VehicleJourneyRef
+from .vehicle_orientation_enumeration import VehicleOrientationEnumeration
+from .vehicle_stopping_position_ref import VehicleStoppingPositionRef
+from .vehicle_type_ref import VehicleTypeRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

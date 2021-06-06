@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.previous_call_versioned_child_structure import PreviousCallVersionedChildStructure
+from .previous_call_versioned_child_structure import PreviousCallVersionedChildStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

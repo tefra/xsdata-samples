@@ -1,14 +1,14 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
-from netex.models.derived_view_structure import DerivedViewStructure
-from netex.models.direction_view import DirectionView
-from netex.models.flexible_line_ref import FlexibleLineRef
-from netex.models.line_ref import LineRef
-from netex.models.line_view import LineView
-from netex.models.link_sequence_projection_ref import LinkSequenceProjectionRef
-from netex.models.multilingual_string import MultilingualString
-from netex.models.route_ref import RouteRef
+from .all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
+from .derived_view_structure import DerivedViewStructure
+from .direction_view import DirectionView
+from .flexible_line_ref import FlexibleLineRef
+from .line_ref import LineRef
+from .line_view import LineView
+from .link_sequence_projection_ref import LinkSequenceProjectionRef
+from .multilingual_string import MultilingualString
+from .route_ref import RouteRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

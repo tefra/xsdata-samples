@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.serialization_technology_enum_simple import SerializationTechnologyEnumSimple
+from .serialization_technology_enum_simple import SerializationTechnologyEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

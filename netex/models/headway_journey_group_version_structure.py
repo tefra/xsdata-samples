@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDuration
-from netex.models.headway_use_enumeration import HeadwayUseEnumeration
-from netex.models.journey_frequency_group_version_structure import JourneyFrequencyGroupVersionStructure
+from .headway_use_enumeration import HeadwayUseEnumeration
+from .journey_frequency_group_version_structure import JourneyFrequencyGroupVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

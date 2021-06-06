@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.ike_authentication_method_enum_simple import IkeAuthenticationMethodEnumSimple
+from .ike_authentication_method_enum_simple import IkeAuthenticationMethodEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

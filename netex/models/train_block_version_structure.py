@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.block_version_structure import BlockVersionStructure
-from netex.models.coupled_journeys_rel_structure import CoupledJourneysRelStructure
+from .block_version_structure import BlockVersionStructure
+from .coupled_journeys_rel_structure import CoupledJourneysRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

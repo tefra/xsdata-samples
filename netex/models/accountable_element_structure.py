@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDuration
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.multilingual_string import MultilingualString
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .multilingual_string import MultilingualString
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

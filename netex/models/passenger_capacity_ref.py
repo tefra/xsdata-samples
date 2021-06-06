@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.passenger_capacity_ref_structure import PassengerCapacityRefStructure
+from .passenger_capacity_ref_structure import PassengerCapacityRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.controllable_element import ControllableElement
-from netex.models.controllable_element_ref import ControllableElementRef
-from netex.models.strict_containment_aggregation_structure import StrictContainmentAggregationStructure
+from .controllable_element import ControllableElement
+from .controllable_element_ref import ControllableElementRef
+from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

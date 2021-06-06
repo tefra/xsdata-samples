@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.j_1939_controller_application_subtypes_enum import J1939ControllerApplicationSubtypesEnum
-from autosar.models.j_1939_nm_node_subtypes_enum import J1939NmNodeSubtypesEnum
-from autosar.models.ref import Ref
+from .j_1939_controller_application_subtypes_enum import J1939ControllerApplicationSubtypesEnum
+from .j_1939_nm_node_subtypes_enum import J1939NmNodeSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

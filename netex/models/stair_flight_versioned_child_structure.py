@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from netex.models.alternative_texts_rel_structure import VersionedChildStructure
-from netex.models.handrail_enumeration import HandrailEnumeration
-from netex.models.stair_end_structure import StairEndStructure
+from .alternative_texts_rel_structure import VersionedChildStructure
+from .handrail_enumeration import HandrailEnumeration
+from .stair_end_structure import StairEndStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

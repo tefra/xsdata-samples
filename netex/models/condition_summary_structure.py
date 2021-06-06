@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.fare_structure_type_enumeration import FareStructureTypeEnumeration
-from netex.models.operator_restrictions_enumeration import OperatorRestrictionsEnumeration
-from netex.models.tariff_basis_enumeration import TariffBasisEnumeration
-from netex.models.train_restrictions_enumeration import TrainRestrictionsEnumeration
+from .fare_structure_type_enumeration import FareStructureTypeEnumeration
+from .operator_restrictions_enumeration import OperatorRestrictionsEnumeration
+from .tariff_basis_enumeration import TariffBasisEnumeration
+from .train_restrictions_enumeration import TrainRestrictionsEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

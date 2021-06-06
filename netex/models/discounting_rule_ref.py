@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.discounting_rule_ref_structure import DiscountingRuleRefStructure
+from .discounting_rule_ref_structure import DiscountingRuleRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

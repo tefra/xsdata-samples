@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.train_component_derived_view_structure import TrainComponentDerivedViewStructure
+from .train_component_derived_view_structure import TrainComponentDerivedViewStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

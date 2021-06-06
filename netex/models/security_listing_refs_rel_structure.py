@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.customer_account_security_listing_ref import CustomerAccountSecurityListingRef
-from netex.models.customer_security_listing_ref import CustomerSecurityListingRef
-from netex.models.fare_contract_security_listing_ref import FareContractSecurityListingRef
-from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
-from netex.models.retail_device_security_listing_ref import RetailDeviceSecurityListingRef
-from netex.models.security_listing_ref import SecurityListingRef
-from netex.models.travel_document_security_listing_ref import TravelDocumentSecurityListingRef
+from .customer_account_security_listing_ref import CustomerAccountSecurityListingRef
+from .customer_security_listing_ref import CustomerSecurityListingRef
+from .fare_contract_security_listing_ref import FareContractSecurityListingRef
+from .one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .retail_device_security_listing_ref import RetailDeviceSecurityListingRef
+from .security_listing_ref import SecurityListingRef
+from .travel_document_security_listing_ref import TravelDocumentSecurityListingRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

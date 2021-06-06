@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.pricing_service_versioned_structure import PricingServiceVersionedStructure
+from .pricing_service_versioned_structure import PricingServiceVersionedStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

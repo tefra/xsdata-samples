@@ -1,20 +1,20 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.identifier import Identifier
-from autosar.models.implementation_data_type_element import ImplementationDataTypeElement
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.parameter_data_prototype_subtypes_enum import ParameterDataPrototypeSubtypesEnum
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.variable_data_prototype_subtypes_enum import VariableDataPrototypeSubtypesEnum
+from .category_string import CategoryString
+from .identifier import Identifier
+from .implementation_data_type_element import ImplementationDataTypeElement
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .parameter_data_prototype_subtypes_enum import ParameterDataPrototypeSubtypesEnum
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
+from .variable_data_prototype_subtypes_enum import VariableDataPrototypeSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

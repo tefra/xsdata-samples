@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlTime
-from netex.models.block_part_version_structure import BlockPartVersionStructure
+from .block_part_version_structure import BlockPartVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.validable_element_ref_structure import ValidableElementRefStructure
+from .validable_element_ref_structure import ValidableElementRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

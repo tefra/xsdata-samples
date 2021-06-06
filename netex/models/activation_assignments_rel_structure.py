@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.activation_assignment import ActivationAssignment
-from netex.models.activation_assignment_ref import ActivationAssignmentRef
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
+from .activation_assignment import ActivationAssignment
+from .activation_assignment_ref import ActivationAssignmentRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

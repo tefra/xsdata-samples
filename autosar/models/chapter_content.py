@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     DefList,
     LabeledList,
     ListType,
@@ -13,10 +13,10 @@ from autosar.models.annotation import (
     StructuredReq,
     TraceableText,
 )
-from autosar.models.msr_query_p_1 import MsrQueryP1
-from autosar.models.prms import Prms
-from autosar.models.table import Table
-from autosar.models.traceable_table import TraceableTable
+from .msr_query_p_1 import MsrQueryP1
+from .prms import Prms
+from .table import Table
+from .traceable_table import TraceableTable
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

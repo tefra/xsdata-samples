@@ -1,28 +1,28 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.blueprint_policy_list import BlueprintPolicyList
-from autosar.models.blueprint_policy_not_modifiable import BlueprintPolicyNotModifiable
-from autosar.models.blueprint_policy_single import BlueprintPolicySingle
-from autosar.models.boolean import Boolean
-from autosar.models.bsw_call_type import BswCallType
-from autosar.models.bsw_entry_kind_enum import BswEntryKindEnum
-from autosar.models.bsw_execution_context import BswExecutionContext
-from autosar.models.category_string import CategoryString
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.nmtoken_string import NmtokenString
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.string import String
-from autosar.models.sw_service_arg import SwServiceArg
-from autosar.models.sw_service_impl_policy_enum import SwServiceImplPolicyEnum
+from .blueprint_policy_list import BlueprintPolicyList
+from .blueprint_policy_not_modifiable import BlueprintPolicyNotModifiable
+from .blueprint_policy_single import BlueprintPolicySingle
+from .boolean import Boolean
+from .bsw_call_type import BswCallType
+from .bsw_entry_kind_enum import BswEntryKindEnum
+from .bsw_execution_context import BswExecutionContext
+from .category_string import CategoryString
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .nmtoken_string import NmtokenString
+from .positive_integer import PositiveInteger
+from .short_name_fragment import ShortNameFragment
+from .string import String
+from .sw_service_arg import SwServiceArg
+from .sw_service_impl_policy_enum import SwServiceImplPolicyEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

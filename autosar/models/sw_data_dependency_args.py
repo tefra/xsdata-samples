@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.autosar_parameter_ref import AutosarParameterRef
-from autosar.models.autosar_variable_ref import AutosarVariableRef
-from autosar.models.mc_data_instance_subtypes_enum import McDataInstanceSubtypesEnum
-from autosar.models.ref import Ref
+from .autosar_parameter_ref import AutosarParameterRef
+from .autosar_variable_ref import AutosarVariableRef
+from .mc_data_instance_subtypes_enum import McDataInstanceSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

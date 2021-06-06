@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.boolean import Boolean
-from autosar.models.i_signal_i_pdu_subtypes_enum import ISignalIPduSubtypesEnum
-from autosar.models.integer import Integer
-from autosar.models.ref import Ref
+from .boolean import Boolean
+from .i_signal_i_pdu_subtypes_enum import ISignalIPduSubtypesEnum
+from .integer import Integer
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

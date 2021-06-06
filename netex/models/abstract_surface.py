@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.abstract_surface_type import AbstractSurfaceType
+from .abstract_surface_type import AbstractSurfaceType
 
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 

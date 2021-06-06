@@ -1,22 +1,22 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDateTime, XmlDuration
-from netex.models.class_of_use_ref import ClassOfUseRef
-from netex.models.companion_profile_ref import CompanionProfileRef
-from netex.models.fare_class_enumeration import FareClassEnumeration
-from netex.models.group_of_operators_ref import GroupOfOperatorsRef
-from netex.models.group_ticket_ref import GroupTicketRef
-from netex.models.operator_ref import OperatorRef
-from netex.models.passenger_seat_ref import PassengerSeatRef
-from netex.models.series_constraint_refs_rel_structure import SeriesConstraintRefsRelStructure
-from netex.models.service_facility_set import ServiceFacilitySet
-from netex.models.train_component_label_assignment_ref import TrainComponentLabelAssignmentRef
-from netex.models.train_element_ref import TrainElementRef
-from netex.models.travel_specification_journey_refs_rel_structure import TravelSpecificationJourneyRefsRelStructure
-from netex.models.travel_specification_summary_endpoint_structure import TravelSpecificationSummaryEndpointStructure
-from netex.models.type_of_fare_product_ref import TypeOfFareProductRef
-from netex.models.type_of_product_category_ref import TypeOfProductCategoryRef
-from netex.models.user_profile_ref import UserProfileRef
+from .class_of_use_ref import ClassOfUseRef
+from .companion_profile_ref import CompanionProfileRef
+from .fare_class_enumeration import FareClassEnumeration
+from .group_of_operators_ref import GroupOfOperatorsRef
+from .group_ticket_ref import GroupTicketRef
+from .operator_ref import OperatorRef
+from .passenger_seat_ref import PassengerSeatRef
+from .series_constraint_refs_rel_structure import SeriesConstraintRefsRelStructure
+from .service_facility_set import ServiceFacilitySet
+from .train_component_label_assignment_ref import TrainComponentLabelAssignmentRef
+from .train_element_ref import TrainElementRef
+from .travel_specification_journey_refs_rel_structure import TravelSpecificationJourneyRefsRelStructure
+from .travel_specification_summary_endpoint_structure import TravelSpecificationSummaryEndpointStructure
+from .type_of_fare_product_ref import TypeOfFareProductRef
+from .type_of_product_category_ref import TypeOfProductCategoryRef
+from .user_profile_ref import UserProfileRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

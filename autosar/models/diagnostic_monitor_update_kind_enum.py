@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.diagnostic_monitor_update_kind_enum_simple import DiagnosticMonitorUpdateKindEnumSimple
+from .diagnostic_monitor_update_kind_enum_simple import DiagnosticMonitorUpdateKindEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

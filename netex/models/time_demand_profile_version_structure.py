@@ -1,16 +1,16 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
-from netex.models.dead_run_ref import DeadRunRef
-from netex.models.journey_pattern_ref import JourneyPatternRef
-from netex.models.multilingual_string import MultilingualString
-from netex.models.service_journey_pattern_ref import ServiceJourneyPatternRef
-from netex.models.service_pattern_ref import ServicePatternRef
-from netex.models.time_demand_profile_members_rel_structure import TimeDemandProfileMembersRelStructure
-from netex.models.time_demand_type_ref import TimeDemandTypeRef
-from netex.models.timeband_ref import TimebandRef
-from netex.models.vehicle_journey_ref import VehicleJourneyRef
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
+from .dead_run_ref import DeadRunRef
+from .journey_pattern_ref import JourneyPatternRef
+from .multilingual_string import MultilingualString
+from .service_journey_pattern_ref import ServiceJourneyPatternRef
+from .service_pattern_ref import ServicePatternRef
+from .time_demand_profile_members_rel_structure import TimeDemandProfileMembersRelStructure
+from .time_demand_type_ref import TimeDemandTypeRef
+from .timeband_ref import TimebandRef
+from .vehicle_journey_ref import VehicleJourneyRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

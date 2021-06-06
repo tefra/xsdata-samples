@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.autosar_parameter_ref import AutosarParameterRef
-from autosar.models.autosar_variable_ref import AutosarVariableRef
-from autosar.models.identifier import Identifier
-from autosar.models.per_instance_memory_subtypes_enum import PerInstanceMemorySubtypesEnum
-from autosar.models.ref import Ref
+from .annotation import VariationPoint
+from .autosar_parameter_ref import AutosarParameterRef
+from .autosar_variable_ref import AutosarVariableRef
+from .identifier import Identifier
+from .per_instance_memory_subtypes_enum import PerInstanceMemorySubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

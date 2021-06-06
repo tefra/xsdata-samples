@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.access_equipment_version_structure import AccessEquipmentVersionStructure
-from netex.models.crossing_type_enumeration import CrossingTypeEnumeration
-from netex.models.tactile_warning_strip_enumeration import TactileWarningStripEnumeration
+from .access_equipment_version_structure import AccessEquipmentVersionStructure
+from .crossing_type_enumeration import CrossingTypeEnumeration
+from .tactile_warning_strip_enumeration import TactileWarningStripEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

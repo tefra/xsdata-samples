@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDuration, XmlTime
-from netex.models.booking_access_enumeration import BookingAccessEnumeration
-from netex.models.booking_method_enumeration import BookingMethodEnumeration
-from netex.models.contact_structure import ContactStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.purchase_moment_enumeration import PurchaseMomentEnumeration
-from netex.models.purchase_when_enumeration import PurchaseWhenEnumeration
+from .booking_access_enumeration import BookingAccessEnumeration
+from .booking_method_enumeration import BookingMethodEnumeration
+from .contact_structure import ContactStructure
+from .multilingual_string import MultilingualString
+from .purchase_moment_enumeration import PurchaseMomentEnumeration
+from .purchase_when_enumeration import PurchaseWhenEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,24 +1,24 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.diag_requirement_id_string import DiagRequirementIdString
-from autosar.models.diagnostic_audience_enum import DiagnosticAudienceEnum
-from autosar.models.diagnostic_denominator_condition_enum import DiagnosticDenominatorConditionEnum
-from autosar.models.diagnostic_event_needs_subtypes_enum import DiagnosticEventNeedsSubtypesEnum
-from autosar.models.function_inhibition_needs_subtypes_enum import FunctionInhibitionNeedsSubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.nmtoken_string import NmtokenString
-from autosar.models.obd_ratio_connection_kind_enum import ObdRatioConnectionKindEnum
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
+from .category_string import CategoryString
+from .diag_requirement_id_string import DiagRequirementIdString
+from .diagnostic_audience_enum import DiagnosticAudienceEnum
+from .diagnostic_denominator_condition_enum import DiagnosticDenominatorConditionEnum
+from .diagnostic_event_needs_subtypes_enum import DiagnosticEventNeedsSubtypesEnum
+from .function_inhibition_needs_subtypes_enum import FunctionInhibitionNeedsSubtypesEnum
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .nmtoken_string import NmtokenString
+from .obd_ratio_connection_kind_enum import ObdRatioConnectionKindEnum
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

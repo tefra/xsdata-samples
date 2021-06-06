@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.access_feature_enumeration import AccessFeatureEnumeration
-from netex.models.alternative_texts_rel_structure import VersionedChildStructure
-from netex.models.transition_enumeration import TransitionEnumeration
+from .access_feature_enumeration import AccessFeatureEnumeration
+from .alternative_texts_rel_structure import VersionedChildStructure
+from .transition_enumeration import TransitionEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,16 +1,16 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.boolean import Boolean
-from autosar.models.flexray_ar_tp_connection import FlexrayArTpConnection
-from autosar.models.fr_ar_tp_ack_type import FrArTpAckType
-from autosar.models.integer import Integer
-from autosar.models.maximum_message_length_type import MaximumMessageLengthType
-from autosar.models.n_pdu import NPdu
-from autosar.models.n_pdu_subtypes_enum import NPduSubtypesEnum
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.time_value import TimeValue
+from .annotation import VariationPoint
+from .boolean import Boolean
+from .flexray_ar_tp_connection import FlexrayArTpConnection
+from .fr_ar_tp_ack_type import FrArTpAckType
+from .integer import Integer
+from .maximum_message_length_type import MaximumMessageLengthType
+from .n_pdu import NPdu
+from .n_pdu_subtypes_enum import NPduSubtypesEnum
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .time_value import TimeValue
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

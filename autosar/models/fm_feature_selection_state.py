@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.fm_feature_selection_state_simple import FmFeatureSelectionStateSimple
+from .fm_feature_selection_state_simple import FmFeatureSelectionStateSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

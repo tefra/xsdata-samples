@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.inline_property_type import InlinePropertyType
+from .inline_property_type import InlinePropertyType
 
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 

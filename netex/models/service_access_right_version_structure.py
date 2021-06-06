@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.cell_versioned_child_structure import PriceableObjectVersionStructure
-from netex.models.info_links_rel_structure import InfoLinksRelStructure
-from netex.models.private_code import PrivateCode
+from .cell_versioned_child_structure import PriceableObjectVersionStructure
+from .info_links_rel_structure import InfoLinksRelStructure
+from .private_code import PrivateCode
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

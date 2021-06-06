@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.hire_service_version_structure import HireServiceVersionStructure
+from .hire_service_version_structure import HireServiceVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,31 +1,31 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlDuration, XmlTime
-from netex.models.availability_condition_ref import AvailabilityConditionRef
-from netex.models.branding_ref import BrandingRef
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.day_of_week_enumeration import DayOfWeekEnumeration
-from netex.models.day_type_ref import DayTypeRef
-from netex.models.entity_structure import EntityStructure
-from netex.models.extensions_2 import Extensions2
-from netex.models.fare_day_type_ref import FareDayTypeRef
-from netex.models.key_list import KeyList
-from netex.models.modification_enumeration import ModificationEnumeration
-from netex.models.multilingual_string import MultilingualString
-from netex.models.operating_day_ref import OperatingDayRef
-from netex.models.private_code import PrivateCode
-from netex.models.properties_of_day_rel_structure import PropertiesOfDayRelStructure
-from netex.models.relative_operator_enumeration import RelativeOperatorEnumeration
-from netex.models.service_calendar_ref import ServiceCalendarRef
-from netex.models.serviced_organisation_ref import ServicedOrganisationRef
-from netex.models.status_enumeration import StatusEnumeration
-from netex.models.strict_containment_aggregation_structure import StrictContainmentAggregationStructure
-from netex.models.timeband_ref import TimebandRef
-from netex.models.validity_condition_ref import ValidityConditionRef
-from netex.models.validity_condition_ref_structure import ValidityConditionRefStructure
-from netex.models.validity_rule_parameter_ref import ValidityRuleParameterRef
-from netex.models.validity_trigger_ref import ValidityTriggerRef
-from netex.models.version_of_object_ref_structure import VersionOfObjectRefStructure
+from .availability_condition_ref import AvailabilityConditionRef
+from .branding_ref import BrandingRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .day_of_week_enumeration import DayOfWeekEnumeration
+from .day_type_ref import DayTypeRef
+from .entity_structure import EntityStructure
+from .extensions_2 import Extensions2
+from .fare_day_type_ref import FareDayTypeRef
+from .key_list import KeyList
+from .modification_enumeration import ModificationEnumeration
+from .multilingual_string import MultilingualString
+from .operating_day_ref import OperatingDayRef
+from .private_code import PrivateCode
+from .properties_of_day_rel_structure import PropertiesOfDayRelStructure
+from .relative_operator_enumeration import RelativeOperatorEnumeration
+from .service_calendar_ref import ServiceCalendarRef
+from .serviced_organisation_ref import ServicedOrganisationRef
+from .status_enumeration import StatusEnumeration
+from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
+from .timeband_ref import TimebandRef
+from .validity_condition_ref import ValidityConditionRef
+from .validity_condition_ref_structure import ValidityConditionRefStructure
+from .validity_rule_parameter_ref import ValidityRuleParameterRef
+from .validity_trigger_ref import ValidityTriggerRef
+from .version_of_object_ref_structure import VersionOfObjectRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

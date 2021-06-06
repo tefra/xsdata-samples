@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.tariff_zone_version_structure import TariffZoneVersionStructure
+from .tariff_zone_version_structure import TariffZoneVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

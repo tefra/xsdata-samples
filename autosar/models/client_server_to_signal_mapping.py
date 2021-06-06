@@ -1,18 +1,18 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.abstract_service_instance_subtypes_enum import AbstractServiceInstanceSubtypesEnum
-from autosar.models.annotation import (
+from .abstract_service_instance_subtypes_enum import AbstractServiceInstanceSubtypesEnum
+from .annotation import (
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.communication_direction_type import CommunicationDirectionType
-from autosar.models.consumed_event_group_subtypes_enum import ConsumedEventGroupSubtypesEnum
-from autosar.models.event_handler_subtypes_enum import EventHandlerSubtypesEnum
-from autosar.models.operation_in_system_instance_ref import OperationInSystemInstanceRef
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.serialization_technology_subtypes_enum import SerializationTechnologySubtypesEnum
-from autosar.models.system_signal_subtypes_enum import SystemSignalSubtypesEnum
+from .communication_direction_type import CommunicationDirectionType
+from .consumed_event_group_subtypes_enum import ConsumedEventGroupSubtypesEnum
+from .event_handler_subtypes_enum import EventHandlerSubtypesEnum
+from .operation_in_system_instance_ref import OperationInSystemInstanceRef
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .serialization_technology_subtypes_enum import SerializationTechnologySubtypesEnum
+from .system_signal_subtypes_enum import SystemSignalSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

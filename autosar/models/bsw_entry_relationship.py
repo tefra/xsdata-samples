@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.bsw_entry_relationship_enum import BswEntryRelationshipEnum
-from autosar.models.bsw_module_entry_subtypes_enum import BswModuleEntrySubtypesEnum
-from autosar.models.ref import Ref
+from .bsw_entry_relationship_enum import BswEntryRelationshipEnum
+from .bsw_module_entry_subtypes_enum import BswModuleEntrySubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

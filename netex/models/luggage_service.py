@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.luggage_service_version_structure import LuggageServiceVersionStructure
+from .luggage_service_version_structure import LuggageServiceVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

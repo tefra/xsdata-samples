@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.boolean import Boolean
-from autosar.models.coupling_port_subtypes_enum import CouplingPortSubtypesEnum
-from autosar.models.ref import Ref
-from autosar.models.time_value import TimeValue
+from .boolean import Boolean
+from .coupling_port_subtypes_enum import CouplingPortSubtypesEnum
+from .ref import Ref
+from .time_value import TimeValue
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

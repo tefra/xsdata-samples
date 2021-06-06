@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.per_instance_memory_subtypes_enum import PerInstanceMemorySubtypesEnum
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.positive_integer_value_variation_point import PositiveIntegerValueVariationPoint
-from autosar.models.ref import Ref
+from .annotation import VariationPoint
+from .per_instance_memory_subtypes_enum import PerInstanceMemorySubtypesEnum
+from .positive_integer import PositiveInteger
+from .positive_integer_value_variation_point import PositiveIntegerValueVariationPoint
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

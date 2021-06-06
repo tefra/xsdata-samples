@@ -1,14 +1,14 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.boolean import Boolean
-from autosar.models.flexray_tp_connection_control_subtypes_enum import FlexrayTpConnectionControlSubtypesEnum
-from autosar.models.flexray_tp_node_subtypes_enum import FlexrayTpNodeSubtypesEnum
-from autosar.models.flexray_tp_pdu_pool_subtypes_enum import FlexrayTpPduPoolSubtypesEnum
-from autosar.models.i_pdu_subtypes_enum import IPduSubtypesEnum
-from autosar.models.ref import Ref
-from autosar.models.tp_address_subtypes_enum import TpAddressSubtypesEnum
-from autosar.models.tp_connection_ident import TpConnectionIdent
+from .annotation import VariationPoint
+from .boolean import Boolean
+from .flexray_tp_connection_control_subtypes_enum import FlexrayTpConnectionControlSubtypesEnum
+from .flexray_tp_node_subtypes_enum import FlexrayTpNodeSubtypesEnum
+from .flexray_tp_pdu_pool_subtypes_enum import FlexrayTpPduPoolSubtypesEnum
+from .i_pdu_subtypes_enum import IPduSubtypesEnum
+from .ref import Ref
+from .tp_address_subtypes_enum import TpAddressSubtypesEnum
+from .tp_connection_ident import TpConnectionIdent
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.event_acceptance_status_enum_simple import EventAcceptanceStatusEnumSimple
+from .event_acceptance_status_enum_simple import EventAcceptanceStatusEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

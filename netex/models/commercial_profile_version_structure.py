@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from netex.models.general_group_of_entities_ref import GeneralGroupOfEntitiesRef
-from netex.models.type_of_concession_ref import TypeOfConcessionRef
-from netex.models.usage_parameter_version_structure import UsageParameterVersionStructure
+from .general_group_of_entities_ref import GeneralGroupOfEntitiesRef
+from .type_of_concession_ref import TypeOfConcessionRef
+from .usage_parameter_version_structure import UsageParameterVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

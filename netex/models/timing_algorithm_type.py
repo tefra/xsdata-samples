@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.timing_algorithm_type_value_structure import TimingAlgorithmTypeValueStructure
+from .timing_algorithm_type_value_structure import TimingAlgorithmTypeValueStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.service_site_ref_structure import ServiceSiteRefStructure
+from .service_site_ref_structure import ServiceSiteRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

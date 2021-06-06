@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.frequency_groups_rel_structure import FrequencyGroupsRelStructure
-from netex.models.journey_version_structure import JourneyVersionStructure
-from netex.models.template_vehicle_journey_type_enumeration import TemplateVehicleJourneyTypeEnumeration
+from .frequency_groups_rel_structure import FrequencyGroupsRelStructure
+from .journey_version_structure import JourneyVersionStructure
+from .template_vehicle_journey_type_enumeration import TemplateVehicleJourneyTypeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

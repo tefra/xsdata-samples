@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.customer_purchase_package_ref import CustomerPurchasePackageRef
-from netex.models.marked_as_enumeration import MarkedAsEnumeration
-from netex.models.multilingual_string import MultilingualString
-from netex.models.private_code import PrivateCode
-from netex.models.type_of_travel_document_ref import TypeOfTravelDocumentRef
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .customer_purchase_package_ref import CustomerPurchasePackageRef
+from .marked_as_enumeration import MarkedAsEnumeration
+from .multilingual_string import MultilingualString
+from .private_code import PrivateCode
+from .type_of_travel_document_ref import TypeOfTravelDocumentRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

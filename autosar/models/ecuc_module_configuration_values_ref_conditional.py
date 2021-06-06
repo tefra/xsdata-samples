@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.ecuc_module_configuration_values_subtypes_enum import EcucModuleConfigurationValuesSubtypesEnum
-from autosar.models.ref import Ref
+from .annotation import VariationPoint
+from .ecuc_module_configuration_values_subtypes_enum import EcucModuleConfigurationValuesSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

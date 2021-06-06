@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.boolean import Boolean
-from autosar.models.bsw_mode_switch_ack_request import BswModeSwitchAckRequest
-from autosar.models.mode_declaration_group_prototype_subtypes_enum import ModeDeclarationGroupPrototypeSubtypesEnum
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
+from .annotation import VariationPoint
+from .boolean import Boolean
+from .bsw_mode_switch_ack_request import BswModeSwitchAckRequest
+from .mode_declaration_group_prototype_subtypes_enum import ModeDeclarationGroupPrototypeSubtypesEnum
+from .positive_integer import PositiveInteger
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

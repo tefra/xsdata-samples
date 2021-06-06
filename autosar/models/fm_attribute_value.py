@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.fm_attribute_def_subtypes_enum import FmAttributeDefSubtypesEnum
-from autosar.models.numerical_value import NumericalValue
-from autosar.models.ref import Ref
+from .fm_attribute_def_subtypes_enum import FmAttributeDefSubtypesEnum
+from .numerical_value import NumericalValue
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

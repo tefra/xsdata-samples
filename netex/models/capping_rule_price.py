@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.capping_rule_price_versioned_child_structure import CappingRulePriceVersionedChildStructure
+from .capping_rule_price_versioned_child_structure import CappingRulePriceVersionedChildStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

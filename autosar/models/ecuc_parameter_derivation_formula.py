@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.ecuc_query_subtypes_enum import EcucQuerySubtypesEnum
-from autosar.models.ref import Ref
+from .ecuc_query_subtypes_enum import EcucQuerySubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

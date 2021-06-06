@@ -1,17 +1,17 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.abstract_service_instance_subtypes_enum import AbstractServiceInstanceSubtypesEnum
-from autosar.models.annotation import (
+from .abstract_service_instance_subtypes_enum import AbstractServiceInstanceSubtypesEnum
+from .annotation import (
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.communication_direction_type import CommunicationDirectionType
-from autosar.models.consumed_event_group_subtypes_enum import ConsumedEventGroupSubtypesEnum
-from autosar.models.event_handler_subtypes_enum import EventHandlerSubtypesEnum
-from autosar.models.ref import Ref
-from autosar.models.system_signal_subtypes_enum import SystemSignalSubtypesEnum
-from autosar.models.text_table_mapping import TextTableMapping
-from autosar.models.variable_data_prototype_in_system_instance_ref import VariableDataPrototypeInSystemInstanceRef
+from .communication_direction_type import CommunicationDirectionType
+from .consumed_event_group_subtypes_enum import ConsumedEventGroupSubtypesEnum
+from .event_handler_subtypes_enum import EventHandlerSubtypesEnum
+from .ref import Ref
+from .system_signal_subtypes_enum import SystemSignalSubtypesEnum
+from .text_table_mapping import TextTableMapping
+from .variable_data_prototype_in_system_instance_ref import VariableDataPrototypeInSystemInstanceRef
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

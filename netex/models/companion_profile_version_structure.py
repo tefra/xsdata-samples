@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.companion_profile_ref import CompanionProfileRef
-from netex.models.companion_relationship_enumeration import CompanionRelationshipEnumeration
-from netex.models.discount_basis_enumeration import DiscountBasisEnumeration
-from netex.models.usage_parameter_ref_structure import UsageParameterRefStructure
-from netex.models.usage_parameter_version_structure import UsageParameterVersionStructure
-from netex.models.user_profile_ref import UserProfileRef
+from .companion_profile_ref import CompanionProfileRef
+from .companion_relationship_enumeration import CompanionRelationshipEnumeration
+from .discount_basis_enumeration import DiscountBasisEnumeration
+from .usage_parameter_ref_structure import UsageParameterRefStructure
+from .usage_parameter_version_structure import UsageParameterVersionStructure
+from .user_profile_ref import UserProfileRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

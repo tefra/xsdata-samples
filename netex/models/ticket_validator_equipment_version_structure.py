@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.installed_equipment_version_structure import InstalledEquipmentVersionStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.ticket_validator_enumeration import TicketValidatorEnumeration
+from .installed_equipment_version_structure import InstalledEquipmentVersionStructure
+from .multilingual_string import MultilingualString
+from .ticket_validator_enumeration import TicketValidatorEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

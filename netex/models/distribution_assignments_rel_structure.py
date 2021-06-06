@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.distribution_assignment import DistributionAssignment
-from netex.models.distribution_assignment_ref import DistributionAssignmentRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .distribution_assignment import DistributionAssignment
+from .distribution_assignment_ref import DistributionAssignmentRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,31 +1,31 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
-from netex.models.capping_rule_price_ref import CappingRulePriceRef
-from netex.models.controllable_element_price_ref import ControllableElementPriceRef
-from netex.models.customer_purchase_package_price_ref import CustomerPurchasePackagePriceRef
-from netex.models.discounting_rule_ref import DiscountingRuleRef
-from netex.models.distance_matrix_element_price_ref import DistanceMatrixElementPriceRef
-from netex.models.fare_price_ref import FarePriceRef
-from netex.models.fare_product_price_ref import FareProductPriceRef
-from netex.models.fare_structure_element_price_ref import FareStructureElementPriceRef
-from netex.models.fulfilment_method_price_ref import FulfilmentMethodPriceRef
-from netex.models.geographical_interval_price_ref import GeographicalIntervalPriceRef
-from netex.models.geographical_unit_price_ref import GeographicalUnitPriceRef
-from netex.models.limiting_rule_ref import LimitingRuleRef
-from netex.models.multilingual_string import MultilingualString
-from netex.models.parking_price_ref import ParkingPriceRef
-from netex.models.price_unit_ref import PriceUnitRef
-from netex.models.pricing_rule_ref import PricingRuleRef
-from netex.models.quality_structure_factor_price_ref import QualityStructureFactorPriceRef
-from netex.models.rounding_ref import RoundingRef
-from netex.models.rounding_step_ref import RoundingStepRef
-from netex.models.sales_offer_package_price_ref import SalesOfferPackagePriceRef
-from netex.models.series_constraint_price_ref import SeriesConstraintPriceRef
-from netex.models.time_interval_price_ref import TimeIntervalPriceRef
-from netex.models.time_unit_price_ref import TimeUnitPriceRef
-from netex.models.usage_parameter_price_ref import UsageParameterPriceRef
-from netex.models.validable_element_price_ref import ValidableElementPriceRef
+from .capping_rule_price_ref import CappingRulePriceRef
+from .controllable_element_price_ref import ControllableElementPriceRef
+from .customer_purchase_package_price_ref import CustomerPurchasePackagePriceRef
+from .discounting_rule_ref import DiscountingRuleRef
+from .distance_matrix_element_price_ref import DistanceMatrixElementPriceRef
+from .fare_price_ref import FarePriceRef
+from .fare_product_price_ref import FareProductPriceRef
+from .fare_structure_element_price_ref import FareStructureElementPriceRef
+from .fulfilment_method_price_ref import FulfilmentMethodPriceRef
+from .geographical_interval_price_ref import GeographicalIntervalPriceRef
+from .geographical_unit_price_ref import GeographicalUnitPriceRef
+from .limiting_rule_ref import LimitingRuleRef
+from .multilingual_string import MultilingualString
+from .parking_price_ref import ParkingPriceRef
+from .price_unit_ref import PriceUnitRef
+from .pricing_rule_ref import PricingRuleRef
+from .quality_structure_factor_price_ref import QualityStructureFactorPriceRef
+from .rounding_ref import RoundingRef
+from .rounding_step_ref import RoundingStepRef
+from .sales_offer_package_price_ref import SalesOfferPackagePriceRef
+from .series_constraint_price_ref import SeriesConstraintPriceRef
+from .time_interval_price_ref import TimeIntervalPriceRef
+from .time_unit_price_ref import TimeUnitPriceRef
+from .usage_parameter_price_ref import UsageParameterPriceRef
+from .validable_element_price_ref import ValidableElementPriceRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

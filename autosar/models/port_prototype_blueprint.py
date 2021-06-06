@@ -1,38 +1,38 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.blueprint_policy_list import BlueprintPolicyList
-from autosar.models.blueprint_policy_not_modifiable import BlueprintPolicyNotModifiable
-from autosar.models.blueprint_policy_single import BlueprintPolicySingle
-from autosar.models.category_string import CategoryString
-from autosar.models.client_com_spec import ClientComSpec
-from autosar.models.crypto_r_port_com_spec import CryptoRPortComSpec
-from autosar.models.field_sender_com_spec import FieldSenderComSpec
-from autosar.models.identifier import Identifier
-from autosar.models.mode_switch_receiver_com_spec import ModeSwitchReceiverComSpec
-from autosar.models.mode_switch_sender_com_spec import ModeSwitchSenderComSpec
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.nonqueued_receiver_com_spec import NonqueuedReceiverComSpec
-from autosar.models.nonqueued_sender_com_spec import NonqueuedSenderComSpec
-from autosar.models.nv_provide_com_spec import NvProvideComSpec
-from autosar.models.nv_require_com_spec import NvRequireComSpec
-from autosar.models.parameter_provide_com_spec import ParameterProvideComSpec
-from autosar.models.parameter_require_com_spec import ParameterRequireComSpec
-from autosar.models.persistency_data_required_com_spec import PersistencyDataRequiredComSpec
-from autosar.models.port_interface_subtypes_enum import PortInterfaceSubtypesEnum
-from autosar.models.port_prototype_blueprint_init_value import PortPrototypeBlueprintInitValue
-from autosar.models.queued_receiver_com_spec import QueuedReceiverComSpec
-from autosar.models.queued_sender_com_spec import QueuedSenderComSpec
-from autosar.models.ref import Ref
-from autosar.models.server_com_spec import ServerComSpec
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.string import String
+from .blueprint_policy_list import BlueprintPolicyList
+from .blueprint_policy_not_modifiable import BlueprintPolicyNotModifiable
+from .blueprint_policy_single import BlueprintPolicySingle
+from .category_string import CategoryString
+from .client_com_spec import ClientComSpec
+from .crypto_r_port_com_spec import CryptoRPortComSpec
+from .field_sender_com_spec import FieldSenderComSpec
+from .identifier import Identifier
+from .mode_switch_receiver_com_spec import ModeSwitchReceiverComSpec
+from .mode_switch_sender_com_spec import ModeSwitchSenderComSpec
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .nonqueued_receiver_com_spec import NonqueuedReceiverComSpec
+from .nonqueued_sender_com_spec import NonqueuedSenderComSpec
+from .nv_provide_com_spec import NvProvideComSpec
+from .nv_require_com_spec import NvRequireComSpec
+from .parameter_provide_com_spec import ParameterProvideComSpec
+from .parameter_require_com_spec import ParameterRequireComSpec
+from .persistency_data_required_com_spec import PersistencyDataRequiredComSpec
+from .port_interface_subtypes_enum import PortInterfaceSubtypesEnum
+from .port_prototype_blueprint_init_value import PortPrototypeBlueprintInitValue
+from .queued_receiver_com_spec import QueuedReceiverComSpec
+from .queued_sender_com_spec import QueuedSenderComSpec
+from .ref import Ref
+from .server_com_spec import ServerComSpec
+from .short_name_fragment import ShortNameFragment
+from .string import String
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

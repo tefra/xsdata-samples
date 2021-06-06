@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.train_components_rel_structure import TrainComponentsRelStructure
-from netex.models.train_size import TrainSize
-from netex.models.vehicle_type_version_structure import VehicleTypeVersionStructure
+from .train_components_rel_structure import TrainComponentsRelStructure
+from .train_size import TrainSize
+from .vehicle_type_version_structure import VehicleTypeVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.all_modes_enumeration import AllModesEnumeration
-from netex.models.link_version_structure import LinkVersionStructure
-from netex.models.operational_context_ref import OperationalContextRef
-from netex.models.scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
+from .all_modes_enumeration import AllModesEnumeration
+from .link_version_structure import LinkVersionStructure
+from .operational_context_ref import OperationalContextRef
+from .scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.control_centre_version_structure import ControlCentreVersionStructure
+from .control_centre_version_structure import ControlCentreVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

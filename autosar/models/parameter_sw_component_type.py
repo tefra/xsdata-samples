@@ -1,31 +1,31 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.blueprint_policy_list import BlueprintPolicyList
-from autosar.models.blueprint_policy_not_modifiable import BlueprintPolicyNotModifiable
-from autosar.models.blueprint_policy_single import BlueprintPolicySingle
-from autosar.models.category_string import CategoryString
-from autosar.models.consistency_needs import ConsistencyNeeds
-from autosar.models.constant_specification_mapping_set_subtypes_enum import ConstantSpecificationMappingSetSubtypesEnum
-from autosar.models.data_type_mapping_set_subtypes_enum import DataTypeMappingSetSubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.instantiation_data_def_props import InstantiationDataDefProps
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.p_port_prototype import PPortPrototype
-from autosar.models.port_group import PortGroup
-from autosar.models.pr_port_prototype import PrPortPrototype
-from autosar.models.r_port_prototype import RPortPrototype
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.string import String
-from autosar.models.sw_component_documentation import SwComponentDocumentation
-from autosar.models.unit_group_subtypes_enum import UnitGroupSubtypesEnum
+from .blueprint_policy_list import BlueprintPolicyList
+from .blueprint_policy_not_modifiable import BlueprintPolicyNotModifiable
+from .blueprint_policy_single import BlueprintPolicySingle
+from .category_string import CategoryString
+from .consistency_needs import ConsistencyNeeds
+from .constant_specification_mapping_set_subtypes_enum import ConstantSpecificationMappingSetSubtypesEnum
+from .data_type_mapping_set_subtypes_enum import DataTypeMappingSetSubtypesEnum
+from .identifier import Identifier
+from .instantiation_data_def_props import InstantiationDataDefProps
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .p_port_prototype import PPortPrototype
+from .port_group import PortGroup
+from .pr_port_prototype import PrPortPrototype
+from .r_port_prototype import RPortPrototype
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
+from .string import String
+from .sw_component_documentation import SwComponentDocumentation
+from .unit_group_subtypes_enum import UnitGroupSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

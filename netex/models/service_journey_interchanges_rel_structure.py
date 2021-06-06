@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.service_journey_interchange import ServiceJourneyInterchange
-from netex.models.service_journey_interchange_ref import ServiceJourneyInterchangeRef
-from netex.models.service_journey_interchange_view import ServiceJourneyInterchangeView
-from netex.models.strict_containment_aggregation_structure import StrictContainmentAggregationStructure
+from .service_journey_interchange import ServiceJourneyInterchange
+from .service_journey_interchange_ref import ServiceJourneyInterchangeRef
+from .service_journey_interchange_view import ServiceJourneyInterchangeView
+from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

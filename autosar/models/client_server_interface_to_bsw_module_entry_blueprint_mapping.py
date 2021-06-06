@@ -1,24 +1,24 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.blueprint_policy_list import BlueprintPolicyList
-from autosar.models.blueprint_policy_not_modifiable import BlueprintPolicyNotModifiable
-from autosar.models.blueprint_policy_single import BlueprintPolicySingle
-from autosar.models.category_string import CategoryString
-from autosar.models.client_server_interface_subtypes_enum import ClientServerInterfaceSubtypesEnum
-from autosar.models.client_server_operation_blueprint_mapping import ClientServerOperationBlueprintMapping
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.port_defined_argument_blueprint import PortDefinedArgumentBlueprint
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.string import String
+from .blueprint_policy_list import BlueprintPolicyList
+from .blueprint_policy_not_modifiable import BlueprintPolicyNotModifiable
+from .blueprint_policy_single import BlueprintPolicySingle
+from .category_string import CategoryString
+from .client_server_interface_subtypes_enum import ClientServerInterfaceSubtypesEnum
+from .client_server_operation_blueprint_mapping import ClientServerOperationBlueprintMapping
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .port_defined_argument_blueprint import PortDefinedArgumentBlueprint
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
+from .string import String
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

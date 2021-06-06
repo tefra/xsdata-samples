@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.equipment_version_structure import EquipmentVersionStructure
-from netex.models.type_of_service_feature_refs_rel_structure import TypeOfServiceFeatureRefsRelStructure
+from .equipment_version_structure import EquipmentVersionStructure
+from .type_of_service_feature_refs_rel_structure import TypeOfServiceFeatureRefsRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

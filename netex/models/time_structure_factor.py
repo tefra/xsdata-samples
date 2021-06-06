@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.cell_versioned_child_structure import TimeStructureFactorVersionStructure
+from .cell_versioned_child_structure import TimeStructureFactorVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

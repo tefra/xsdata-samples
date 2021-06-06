@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.ordered_master import OrderedMaster
-from autosar.models.time_sync_technology_enum import TimeSyncTechnologyEnum
+from .ordered_master import OrderedMaster
+from .time_sync_technology_enum import TimeSyncTechnologyEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

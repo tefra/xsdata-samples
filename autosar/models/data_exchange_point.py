@@ -1,20 +1,20 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.baseline import Baseline
-from autosar.models.category_string import CategoryString
-from autosar.models.data_exchange_point_kind import DataExchangePointKind
-from autosar.models.data_format_tailoring import DataFormatTailoring
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.specification_scope import SpecificationScope
+from .baseline import Baseline
+from .category_string import CategoryString
+from .data_exchange_point_kind import DataExchangePointKind
+from .data_format_tailoring import DataFormatTailoring
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .short_name_fragment import ShortNameFragment
+from .specification_scope import SpecificationScope
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

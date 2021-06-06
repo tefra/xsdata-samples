@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
-from netex.models.derived_view_structure import DerivedViewStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.network_ref import NetworkRef
+from .all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
+from .derived_view_structure import DerivedViewStructure
+from .multilingual_string import MultilingualString
+from .network_ref import NetworkRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.abstract_ring_type import AbstractRingType
+from .abstract_ring_type import AbstractRingType
 
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 

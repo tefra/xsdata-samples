@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.array_impl_policy_enum_simple import ArrayImplPolicyEnumSimple
+from .array_impl_policy_enum_simple import ArrayImplPolicyEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

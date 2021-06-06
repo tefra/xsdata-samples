@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.type_of_delivery_variant_value_structure import TypeOfDeliveryVariantValueStructure
+from .type_of_delivery_variant_value_structure import TypeOfDeliveryVariantValueStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.common_section_point_member import CommonSectionPointMember
-from netex.models.line_section_point_member import LineSectionPointMember
-from netex.models.strict_containment_aggregation_structure import StrictContainmentAggregationStructure
+from .common_section_point_member import CommonSectionPointMember
+from .line_section_point_member import LineSectionPointMember
+from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

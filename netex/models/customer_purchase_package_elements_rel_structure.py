@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.customer_purchase_package_element import CustomerPurchasePackageElement
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .customer_purchase_package_element import CustomerPurchasePackageElement
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

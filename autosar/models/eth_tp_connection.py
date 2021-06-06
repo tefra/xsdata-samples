@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.pdu_triggering_subtypes_enum import PduTriggeringSubtypesEnum
-from autosar.models.ref import Ref
-from autosar.models.tp_connection_ident import TpConnectionIdent
+from .pdu_triggering_subtypes_enum import PduTriggeringSubtypesEnum
+from .ref import Ref
+from .tp_connection_ident import TpConnectionIdent
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

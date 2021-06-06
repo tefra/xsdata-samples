@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.request_structure import RequestStructure
-from netex.models.subscription_context_structure import SubscriptionContextStructure
+from .request_structure import RequestStructure
+from .subscription_context_structure import SubscriptionContextStructure
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

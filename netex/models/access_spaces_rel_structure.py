@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.access_space import AccessSpace
-from netex.models.access_space_ref import AccessSpaceRef
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
+from .access_space import AccessSpace
+from .access_space_ref import AccessSpaceRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

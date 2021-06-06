@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.driver_trip import DriverTrip
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .driver_trip import DriverTrip
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

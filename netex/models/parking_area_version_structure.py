@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.entrance_refs_rel_structure import EntranceRefsRelStructure
-from netex.models.parking_bays_rel_structure import ParkingBaysRelStructure
-from netex.models.parking_component_version_structure import ParkingComponentVersionStructure
-from netex.models.parking_properties import ParkingProperties
-from netex.models.parking_properties_rel_structure import ParkingPropertiesRelStructure
+from .entrance_refs_rel_structure import EntranceRefsRelStructure
+from .parking_bays_rel_structure import ParkingBaysRelStructure
+from .parking_component_version_structure import ParkingComponentVersionStructure
+from .parking_properties import ParkingProperties
+from .parking_properties_rel_structure import ParkingPropertiesRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

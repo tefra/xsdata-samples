@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.point_on_line_section import PointOnLineSection
-from netex.models.point_on_section_1 import PointOnSection1
-from netex.models.point_on_section_2 import PointOnSection2
-from netex.models.strict_containment_aggregation_structure import StrictContainmentAggregationStructure
+from .point_on_line_section import PointOnLineSection
+from .point_on_section_1 import PointOnSection1
+from .point_on_section_2 import PointOnSection2
+from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

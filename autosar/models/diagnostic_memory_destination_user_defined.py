@@ -1,20 +1,20 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.diagnostic_event_displacement_strategy_enum import DiagnosticEventDisplacementStrategyEnum
-from autosar.models.diagnostic_memory_entry_storage_trigger_enum import DiagnosticMemoryEntryStorageTriggerEnum
-from autosar.models.diagnostic_type_of_freeze_frame_record_numeration_enum import DiagnosticTypeOfFreezeFrameRecordNumerationEnum
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.short_name_fragment import ShortNameFragment
+from .category_string import CategoryString
+from .diagnostic_event_displacement_strategy_enum import DiagnosticEventDisplacementStrategyEnum
+from .diagnostic_memory_entry_storage_trigger_enum import DiagnosticMemoryEntryStorageTriggerEnum
+from .diagnostic_type_of_freeze_frame_record_numeration_enum import DiagnosticTypeOfFreezeFrameRecordNumerationEnum
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .positive_integer import PositiveInteger
+from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

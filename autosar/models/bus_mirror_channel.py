@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.physical_channel_ref_conditional import PhysicalChannelRefConditional
-from autosar.models.positive_integer import PositiveInteger
+from .physical_channel_ref_conditional import PhysicalChannelRefConditional
+from .positive_integer import PositiveInteger
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

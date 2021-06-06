@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
+from ..core.datatypes_base import (
     Ce,
     Cs,
     EdExplicit,
@@ -10,7 +10,7 @@ from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
     IvlTsExplicit,
     Sc,
 )
-from common_types.models.hl7_v3.ne2008.core.voc import (
+from ..core.voc import (
     ActRelationshipReason,
     ContextControl,
     NullFlavor,
@@ -19,9 +19,9 @@ from common_types.models.hl7_v3.ne2008.core.voc import (
     XParticipationAuthorPerformer,
     XParticipationVrfRespSprfWit,
 )
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt090100_uv01 import CoctMt090100Uv01AssignedPerson
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt090300_uv01 import CoctMt090300Uv01AssignedDevice
-from common_types.models.hl7_v3.ne2008.multi_cache.mcai_mt900001_uv01 import McaiMt900001Uv01DetectedIssueEvent
+from .coct_mt090100_uv01 import CoctMt090100Uv01AssignedPerson
+from .coct_mt090300_uv01 import CoctMt090300Uv01AssignedDevice
+from .mcai_mt900001_uv01 import McaiMt900001Uv01DetectedIssueEvent
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

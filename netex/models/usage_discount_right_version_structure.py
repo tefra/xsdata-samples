@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.fare_product_version_structure import FareProductVersionStructure
-from netex.models.usage_discount_right_enumeration import UsageDiscountRightEnumeration
+from .fare_product_version_structure import FareProductVersionStructure
+from .usage_discount_right_enumeration import UsageDiscountRightEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

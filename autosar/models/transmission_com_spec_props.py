@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.time_value import TimeValue
-from autosar.models.transmission_mode_definition_enum import TransmissionModeDefinitionEnum
+from .time_value import TimeValue
+from .transmission_mode_definition_enum import TransmissionModeDefinitionEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

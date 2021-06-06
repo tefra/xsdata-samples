@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDuration
-from netex.models.booking_arrangements_structure import BookingArrangementsStructure
-from netex.models.per_basis_enumeration import PerBasisEnumeration
-from netex.models.reservation_charge_type_enumeration import ReservationChargeTypeEnumeration
-from netex.models.reservation_enumeration import ReservationEnumeration
-from netex.models.seat_allocation_method_enumeration import SeatAllocationMethodEnumeration
-from netex.models.usage_parameter_version_structure import UsageParameterVersionStructure
+from .booking_arrangements_structure import BookingArrangementsStructure
+from .per_basis_enumeration import PerBasisEnumeration
+from .reservation_charge_type_enumeration import ReservationChargeTypeEnumeration
+from .reservation_enumeration import ReservationEnumeration
+from .seat_allocation_method_enumeration import SeatAllocationMethodEnumeration
+from .usage_parameter_version_structure import UsageParameterVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

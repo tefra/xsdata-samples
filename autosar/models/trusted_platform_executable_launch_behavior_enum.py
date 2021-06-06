@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.trusted_platform_executable_launch_behavior_enum_simple import TrustedPlatformExecutableLaunchBehaviorEnumSimple
+from .trusted_platform_executable_launch_behavior_enum_simple import TrustedPlatformExecutableLaunchBehaviorEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

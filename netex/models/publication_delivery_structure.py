@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDateTime, XmlDuration
-from netex.models.data_objects_rel_structure import DataObjectsRelStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.publication_request_structure import PublicationRequestStructure
+from .data_objects_rel_structure import DataObjectsRelStructure
+from .multilingual_string import MultilingualString
+from .publication_request_structure import PublicationRequestStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

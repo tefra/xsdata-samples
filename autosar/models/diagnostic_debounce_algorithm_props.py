@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.boolean import Boolean
-from autosar.models.diag_event_debounce_counter_based import DiagEventDebounceCounterBased
-from autosar.models.diag_event_debounce_monitor_internal import DiagEventDebounceMonitorInternal
-from autosar.models.diag_event_debounce_time_based import DiagEventDebounceTimeBased
-from autosar.models.diagnostic_debounce_behavior_enum_value_variation_point import DiagnosticDebounceBehaviorEnumValueVariationPoint
-from autosar.models.identifier import Identifier
-from autosar.models.short_name_fragment import ShortNameFragment
+from .boolean import Boolean
+from .diag_event_debounce_counter_based import DiagEventDebounceCounterBased
+from .diag_event_debounce_monitor_internal import DiagEventDebounceMonitorInternal
+from .diag_event_debounce_time_based import DiagEventDebounceTimeBased
+from .diagnostic_debounce_behavior_enum_value_variation_point import DiagnosticDebounceBehaviorEnumValueVariationPoint
+from .identifier import Identifier
+from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

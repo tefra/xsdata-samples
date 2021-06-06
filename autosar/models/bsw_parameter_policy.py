@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.boolean import Boolean
-from autosar.models.parameter_data_prototype_subtypes_enum import ParameterDataPrototypeSubtypesEnum
-from autosar.models.ref import Ref
+from .annotation import VariationPoint
+from .boolean import Boolean
+from .parameter_data_prototype_subtypes_enum import ParameterDataPrototypeSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

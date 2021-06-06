@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.rte_api_return_value_provision_enum_simple import RteApiReturnValueProvisionEnumSimple
+from .rte_api_return_value_provision_enum_simple import RteApiReturnValueProvisionEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

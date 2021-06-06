@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.fare_contract_security_listing_versioned_child_structure import FareContractSecurityListingVersionedChildStructure
+from .fare_contract_security_listing_versioned_child_structure import FareContractSecurityListingVersionedChildStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

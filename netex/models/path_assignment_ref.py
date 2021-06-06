@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.path_assignment_ref_structure import PathAssignmentRefStructure
+from .path_assignment_ref_structure import PathAssignmentRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

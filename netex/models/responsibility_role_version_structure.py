@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.type_of_responsibility_role_ref import TypeOfResponsibilityRoleRef
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .multilingual_string import MultilingualString
+from .type_of_responsibility_role_ref import TypeOfResponsibilityRoleRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

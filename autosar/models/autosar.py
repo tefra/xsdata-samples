@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     DocumentationBlock,
 )
-from autosar.models.ar_package import ArPackage
-from autosar.models.file_info_comment import FileInfoComment
+from .ar_package import ArPackage
+from .file_info_comment import FileInfoComment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

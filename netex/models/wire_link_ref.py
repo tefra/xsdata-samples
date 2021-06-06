@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.wire_link_ref_structure import WireLinkRefStructure
+from .wire_link_ref_structure import WireLinkRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

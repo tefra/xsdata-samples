@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.diagnostic_clear_dtc_limitation_enum_simple import DiagnosticClearDtcLimitationEnumSimple
+from .diagnostic_clear_dtc_limitation_enum_simple import DiagnosticClearDtcLimitationEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

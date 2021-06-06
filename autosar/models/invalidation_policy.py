@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.handle_invalid_enum import HandleInvalidEnum
-from autosar.models.ref import Ref
-from autosar.models.variable_data_prototype_subtypes_enum import VariableDataPrototypeSubtypesEnum
+from .handle_invalid_enum import HandleInvalidEnum
+from .ref import Ref
+from .variable_data_prototype_subtypes_enum import VariableDataPrototypeSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

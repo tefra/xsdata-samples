@@ -1,28 +1,28 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.byte_order_enum import ByteOrderEnum
-from autosar.models.category_string import CategoryString
-from autosar.models.client_id_definition_set_subtypes_enum import ClientIdDefinitionSetSubtypesEnum
-from autosar.models.cp_software_cluster_ref_conditional import CpSoftwareClusterRefConditional
-from autosar.models.fibex_element_ref_conditional import FibexElementRefConditional
-from autosar.models.identifier import Identifier
-from autosar.models.interpolation_routine_mapping_set_subtypes_enum import InterpolationRoutineMappingSetSubtypesEnum
-from autosar.models.j_1939_shared_address_cluster import J1939SharedAddressCluster
-from autosar.models.msr_query_result_chapter import Chapter
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.revision_label_string import RevisionLabelString
-from autosar.models.root_sw_composition_prototype import RootSwCompositionPrototype
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.system_mapping import SystemMapping
+from .byte_order_enum import ByteOrderEnum
+from .category_string import CategoryString
+from .client_id_definition_set_subtypes_enum import ClientIdDefinitionSetSubtypesEnum
+from .cp_software_cluster_ref_conditional import CpSoftwareClusterRefConditional
+from .fibex_element_ref_conditional import FibexElementRefConditional
+from .identifier import Identifier
+from .interpolation_routine_mapping_set_subtypes_enum import InterpolationRoutineMappingSetSubtypesEnum
+from .j_1939_shared_address_cluster import J1939SharedAddressCluster
+from .msr_query_result_chapter import Chapter
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .revision_label_string import RevisionLabelString
+from .root_sw_composition_prototype import RootSwCompositionPrototype
+from .short_name_fragment import ShortNameFragment
+from .system_mapping import SystemMapping
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

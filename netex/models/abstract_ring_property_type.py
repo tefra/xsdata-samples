@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.abstract_ring import AbstractRing
-from netex.models.linear_ring import LinearRing
+from .abstract_ring import AbstractRing
+from .linear_ring import LinearRing
 
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 

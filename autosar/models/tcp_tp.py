@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.boolean import Boolean
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.time_value import TimeValue
-from autosar.models.tp_port import TpPort
+from .boolean import Boolean
+from .positive_integer import PositiveInteger
+from .time_value import TimeValue
+from .tp_port import TpPort
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

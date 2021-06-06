@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.send_indication_enum_simple import SendIndicationEnumSimple
+from .send_indication_enum_simple import SendIndicationEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

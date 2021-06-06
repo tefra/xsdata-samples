@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.assignment_version_structure_1 import AssignmentVersionStructure1
-from netex.models.scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
-from netex.models.transfer_constraint_type_enumeration import TransferConstraintTypeEnumeration
-from netex.models.type_of_transfer_ref import TypeOfTransferRef
+from .assignment_version_structure_1 import AssignmentVersionStructure1
+from .scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
+from .transfer_constraint_type_enumeration import TransferConstraintTypeEnumeration
+from .type_of_transfer_ref import TypeOfTransferRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

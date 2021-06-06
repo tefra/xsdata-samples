@@ -1,28 +1,28 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.boolean import Boolean
-from autosar.models.category_string import CategoryString
-from autosar.models.diagnostic_aging_subtypes_enum import DiagnosticAgingSubtypesEnum
-from autosar.models.diagnostic_data_identifier_set_ref_conditional import DiagnosticDataIdentifierSetRefConditional
-from autosar.models.diagnostic_data_identifier_set_subtypes_enum import DiagnosticDataIdentifierSetSubtypesEnum
-from autosar.models.diagnostic_extended_data_record_ref_conditional import DiagnosticExtendedDataRecordRefConditional
-from autosar.models.diagnostic_freeze_frame_ref_conditional import DiagnosticFreezeFrameRefConditional
-from autosar.models.diagnostic_memory_destination_subtypes_enum import DiagnosticMemoryDestinationSubtypesEnum
-from autosar.models.diagnostic_significance_enum import DiagnosticSignificanceEnum
-from autosar.models.environment_capture_to_reporting_enum import EnvironmentCaptureToReportingEnum
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.positive_integer_value_variation_point import PositiveIntegerValueVariationPoint
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
+from .boolean import Boolean
+from .category_string import CategoryString
+from .diagnostic_aging_subtypes_enum import DiagnosticAgingSubtypesEnum
+from .diagnostic_data_identifier_set_ref_conditional import DiagnosticDataIdentifierSetRefConditional
+from .diagnostic_data_identifier_set_subtypes_enum import DiagnosticDataIdentifierSetSubtypesEnum
+from .diagnostic_extended_data_record_ref_conditional import DiagnosticExtendedDataRecordRefConditional
+from .diagnostic_freeze_frame_ref_conditional import DiagnosticFreezeFrameRefConditional
+from .diagnostic_memory_destination_subtypes_enum import DiagnosticMemoryDestinationSubtypesEnum
+from .diagnostic_significance_enum import DiagnosticSignificanceEnum
+from .environment_capture_to_reporting_enum import EnvironmentCaptureToReportingEnum
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .positive_integer import PositiveInteger
+from .positive_integer_value_variation_point import PositiveIntegerValueVariationPoint
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

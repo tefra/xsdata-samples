@@ -1,18 +1,18 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.activation_link_ref import ActivationLinkRef
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.infrastructure_link_ref import InfrastructureLinkRef
-from netex.models.line_link_ref import LineLinkRef
-from netex.models.link_ref import LinkRef
-from netex.models.multilingual_string import MultilingualString
-from netex.models.path_link_ref import PathLinkRef
-from netex.models.railway_link_ref import RailwayLinkRef
-from netex.models.road_link_ref import RoadLinkRef
-from netex.models.route_link_ref import RouteLinkRef
-from netex.models.service_link_ref import ServiceLinkRef
-from netex.models.timing_link_ref import TimingLinkRef
-from netex.models.wire_link_ref import WireLinkRef
+from .activation_link_ref import ActivationLinkRef
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .infrastructure_link_ref import InfrastructureLinkRef
+from .line_link_ref import LineLinkRef
+from .link_ref import LinkRef
+from .multilingual_string import MultilingualString
+from .path_link_ref import PathLinkRef
+from .railway_link_ref import RailwayLinkRef
+from .road_link_ref import RoadLinkRef
+from .route_link_ref import RouteLinkRef
+from .service_link_ref import ServiceLinkRef
+from .timing_link_ref import TimingLinkRef
+from .wire_link_ref import WireLinkRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

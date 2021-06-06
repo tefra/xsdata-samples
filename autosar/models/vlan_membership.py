@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.dhcp_server_configuration import DhcpServerConfiguration
-from autosar.models.ethernet_physical_channel_subtypes_enum import EthernetPhysicalChannelSubtypesEnum
-from autosar.models.ethernet_switch_vlan_egress_tagging_enum import EthernetSwitchVlanEgressTaggingEnum
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
+from .dhcp_server_configuration import DhcpServerConfiguration
+from .ethernet_physical_channel_subtypes_enum import EthernetPhysicalChannelSubtypesEnum
+from .ethernet_switch_vlan_egress_tagging_enum import EthernetSwitchVlanEgressTaggingEnum
+from .positive_integer import PositiveInteger
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

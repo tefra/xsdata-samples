@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.base_type_encoding_string import BaseTypeEncodingString
-from autosar.models.byte_order_enum import ByteOrderEnum
-from autosar.models.native_declaration_string import NativeDeclarationString
-from autosar.models.positive_integer import PositiveInteger
+from .base_type_encoding_string import BaseTypeEncodingString
+from .byte_order_enum import ByteOrderEnum
+from .native_declaration_string import NativeDeclarationString
+from .positive_integer import PositiveInteger
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.abstract_implementation_data_type_subtypes_enum import AbstractImplementationDataTypeSubtypesEnum
-from autosar.models.mode_declaration_group_subtypes_enum import ModeDeclarationGroupSubtypesEnum
-from autosar.models.ref import Ref
+from .abstract_implementation_data_type_subtypes_enum import AbstractImplementationDataTypeSubtypesEnum
+from .mode_declaration_group_subtypes_enum import ModeDeclarationGroupSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

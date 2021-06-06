@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.do_ip_interface import DoIpInterface
-from autosar.models.do_ip_logic_address import DoIpLogicAddress
+from .do_ip_interface import DoIpInterface
+from .do_ip_logic_address import DoIpLogicAddress
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

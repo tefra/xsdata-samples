@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
+from ..core.datatypes_base import (
     Any,
     Ce,
     Cs,
@@ -10,7 +10,7 @@ from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
     IvlTsExplicit,
     St,
 )
-from common_types.models.hl7_v3.ne2008.core.voc import (
+from ..core.voc import (
     ActClass,
     ActClassPosition,
     ActMood,
@@ -20,8 +20,8 @@ from common_types.models.hl7_v3.ne2008.core.voc import (
     ParticipationTargetDevice,
     ParticipationType,
 )
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt090108_uv import CoctMt090108UvAssignedPerson
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt090303_uv01 import CoctMt090303Uv01AssignedDevice
+from .coct_mt090108_uv import CoctMt090108UvAssignedPerson
+from .coct_mt090303_uv01 import CoctMt090303Uv01AssignedDevice
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

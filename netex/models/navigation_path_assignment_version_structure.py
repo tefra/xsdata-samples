@@ -1,15 +1,15 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.connection_ref import ConnectionRef
-from netex.models.default_connection_ref import DefaultConnectionRef
-from netex.models.navigation_path_ref import NavigationPathRef
-from netex.models.parking_ref import ParkingRef
-from netex.models.point_of_interest_ref import PointOfInterestRef
-from netex.models.service_site_ref import ServiceSiteRef
-from netex.models.site_connection_ref import SiteConnectionRef
-from netex.models.site_ref import SiteRef
-from netex.models.stop_assignment_version_structure import StopAssignmentVersionStructure
-from netex.models.stop_place_ref import StopPlaceRef
+from .connection_ref import ConnectionRef
+from .default_connection_ref import DefaultConnectionRef
+from .navigation_path_ref import NavigationPathRef
+from .parking_ref import ParkingRef
+from .point_of_interest_ref import PointOfInterestRef
+from .service_site_ref import ServiceSiteRef
+from .site_connection_ref import SiteConnectionRef
+from .site_ref import SiteRef
+from .stop_assignment_version_structure import StopAssignmentVersionStructure
+from .stop_place_ref import StopPlaceRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

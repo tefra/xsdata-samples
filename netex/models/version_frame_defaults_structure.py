@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.codespace_ref_structure import CodespaceRefStructure
-from netex.models.data_source_ref_structure import DataSourceRefStructure
-from netex.models.locale_structure import LocaleStructure
-from netex.models.responsibility_set_ref_structure import ResponsibilitySetRefStructure
-from netex.models.system_of_units import SystemOfUnits
+from .codespace_ref_structure import CodespaceRefStructure
+from .data_source_ref_structure import DataSourceRefStructure
+from .locale_structure import LocaleStructure
+from .responsibility_set_ref_structure import ResponsibilitySetRefStructure
+from .system_of_units import SystemOfUnits
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

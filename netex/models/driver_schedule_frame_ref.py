@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.driver_schedule_frame_ref_structure import DriverScheduleFrameRefStructure
+from .driver_schedule_frame_ref_structure import DriverScheduleFrameRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

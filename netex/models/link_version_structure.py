@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.line_string import LineString
-from netex.models.link_type_refs_rel_structure import LinkTypeRefsRelStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.points_on_link_rel_structure import PointsOnLinkRelStructure
-from netex.models.projections_rel_structure import ProjectionsRelStructure
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .line_string import LineString
+from .link_type_refs_rel_structure import LinkTypeRefsRelStructure
+from .multilingual_string import MultilingualString
+from .points_on_link_rel_structure import PointsOnLinkRelStructure
+from .projections_rel_structure import ProjectionsRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

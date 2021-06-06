@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.partial_refund_basis_enumeration import PartialRefundBasisEnumeration
-from netex.models.payment_method_enumeration import PaymentMethodEnumeration
-from netex.models.refund_policy_enumeration import RefundPolicyEnumeration
-from netex.models.refund_type_enumeration import RefundTypeEnumeration
-from netex.models.reselling_version_structure import ResellingVersionStructure
+from .partial_refund_basis_enumeration import PartialRefundBasisEnumeration
+from .payment_method_enumeration import PaymentMethodEnumeration
+from .refund_policy_enumeration import RefundPolicyEnumeration
+from .refund_type_enumeration import RefundTypeEnumeration
+from .reselling_version_structure import ResellingVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

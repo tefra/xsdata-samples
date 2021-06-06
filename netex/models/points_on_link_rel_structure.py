@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.line_string_type import LineStringType
-from netex.models.point_on_link import PointOnLink
-from netex.models.strict_containment_aggregation_structure import StrictContainmentAggregationStructure
+from .line_string_type import LineStringType
+from .point_on_link import PointOnLink
+from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

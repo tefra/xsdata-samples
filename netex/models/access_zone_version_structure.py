@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.accessibility_assessment_versioned_child_structure import AccessibilityAssessmentVersionedChildStructure
-from netex.models.zone_version_structure import ZoneVersionStructure
+from .accessibility_assessment_versioned_child_structure import AccessibilityAssessmentVersionedChildStructure
+from .zone_version_structure import ZoneVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

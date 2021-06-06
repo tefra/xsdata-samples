@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.display_assignment_version_structure import DisplayAssignmentVersionStructure
-from netex.models.status_enumeration import StatusEnumeration
+from .display_assignment_version_structure import DisplayAssignmentVersionStructure
+from .status_enumeration import StatusEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

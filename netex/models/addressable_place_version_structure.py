@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.place_version_structure import PlaceVersionStructure
-from netex.models.postal_address import PostalAddress
-from netex.models.road_address import RoadAddress
+from .place_version_structure import PlaceVersionStructure
+from .postal_address import PostalAddress
+from .road_address import RoadAddress
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

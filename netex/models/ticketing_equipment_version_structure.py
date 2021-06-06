@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
-from netex.models.installed_equipment_version_structure import InstalledEquipmentVersionStructure
-from netex.models.payment_method_enumeration import PaymentMethodEnumeration
-from netex.models.queue_management_enumeration import QueueManagementEnumeration
-from netex.models.ticket_type_enumeration import TicketTypeEnumeration
-from netex.models.ticketing_facility_enumeration import TicketingFacilityEnumeration
-from netex.models.ticketing_service_facility_enumeration import TicketingServiceFacilityEnumeration
-from netex.models.vehicle_mode_enumeration import VehicleModeEnumeration
+from .installed_equipment_version_structure import InstalledEquipmentVersionStructure
+from .payment_method_enumeration import PaymentMethodEnumeration
+from .queue_management_enumeration import QueueManagementEnumeration
+from .ticket_type_enumeration import TicketTypeEnumeration
+from .ticketing_facility_enumeration import TicketingFacilityEnumeration
+from .ticketing_service_facility_enumeration import TicketingServiceFacilityEnumeration
+from .vehicle_mode_enumeration import VehicleModeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.requested_travel_specification_ref_structure import RequestedTravelSpecificationRefStructure
+from .requested_travel_specification_ref_structure import RequestedTravelSpecificationRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

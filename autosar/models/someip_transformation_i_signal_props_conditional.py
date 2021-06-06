@@ -1,16 +1,16 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.boolean import Boolean
-from autosar.models.cs_transformer_error_reaction_enum import CsTransformerErrorReactionEnum
-from autosar.models.data_prototype_transformation_props import DataPrototypeTransformationProps
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.someip_message_type_enum import SomeipMessageTypeEnum
-from autosar.models.someip_transformer_session_handling_enum import SomeipTransformerSessionHandlingEnum
-from autosar.models.tlv_data_id_definition import TlvDataIdDefinition
-from autosar.models.tlv_data_id_definition_set_subtypes_enum import TlvDataIdDefinitionSetSubtypesEnum
-from autosar.models.transformation_technology_subtypes_enum import TransformationTechnologySubtypesEnum
+from .annotation import VariationPoint
+from .boolean import Boolean
+from .cs_transformer_error_reaction_enum import CsTransformerErrorReactionEnum
+from .data_prototype_transformation_props import DataPrototypeTransformationProps
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .someip_message_type_enum import SomeipMessageTypeEnum
+from .someip_transformer_session_handling_enum import SomeipTransformerSessionHandlingEnum
+from .tlv_data_id_definition import TlvDataIdDefinition
+from .tlv_data_id_definition_set_subtypes_enum import TlvDataIdDefinitionSetSubtypesEnum
+from .transformation_technology_subtypes_enum import TransformationTechnologySubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

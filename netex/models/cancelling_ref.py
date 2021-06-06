@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.cancelling_ref_structure import CancellingRefStructure
+from .cancelling_ref_structure import CancellingRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

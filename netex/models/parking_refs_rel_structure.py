@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
-from netex.models.parking_ref import ParkingRef
+from .one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .parking_ref import ParkingRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

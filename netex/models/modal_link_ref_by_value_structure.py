@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.all_modes_enumeration import AllModesEnumeration
-from netex.models.link_ref_by_value_structure import LinkRefByValueStructure
+from .all_modes_enumeration import AllModesEnumeration
+from .link_ref_by_value_structure import LinkRefByValueStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

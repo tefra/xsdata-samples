@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.time_unit import TimeUnit
-from netex.models.time_unit_ref import TimeUnitRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .time_unit import TimeUnit
+from .time_unit_ref import TimeUnitRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

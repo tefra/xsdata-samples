@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDuration
-from netex.models.alternative_texts_rel_structure import VersionedChildStructure
-from netex.models.parking_area_refs_rel_structure import ParkingAreaRefsRelStructure
-from netex.models.parking_capacities_rel_structure import ParkingCapacitiesRelStructure
-from netex.models.parking_ref import ParkingRef
-from netex.models.parking_stay_enumeration import ParkingStayEnumeration
-from netex.models.parking_user_enumeration import ParkingUserEnumeration
-from netex.models.parking_vehicle_enumeration import ParkingVehicleEnumeration
+from .alternative_texts_rel_structure import VersionedChildStructure
+from .parking_area_refs_rel_structure import ParkingAreaRefsRelStructure
+from .parking_capacities_rel_structure import ParkingCapacitiesRelStructure
+from .parking_ref import ParkingRef
+from .parking_stay_enumeration import ParkingStayEnumeration
+from .parking_user_enumeration import ParkingUserEnumeration
+from .parking_vehicle_enumeration import ParkingVehicleEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

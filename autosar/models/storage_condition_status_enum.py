@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.storage_condition_status_enum_simple import StorageConditionStatusEnumSimple
+from .storage_condition_status_enum_simple import StorageConditionStatusEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

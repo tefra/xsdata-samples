@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.rpt_access_enum_simple import RptAccessEnumSimple
+from .rpt_access_enum_simple import RptAccessEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

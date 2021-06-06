@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.customer_account_status import CustomerAccountStatus
-from netex.models.customer_account_status_ref import CustomerAccountStatusRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .customer_account_status import CustomerAccountStatus
+from .customer_account_status_ref import CustomerAccountStatusRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

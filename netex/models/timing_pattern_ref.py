@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.timing_pattern_ref_structure import TimingPatternRefStructure
+from .timing_pattern_ref_structure import TimingPatternRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

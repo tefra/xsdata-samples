@@ -1,19 +1,19 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.composite_frame_ref import CompositeFrameRef
-from netex.models.driver_schedule_frame_ref import DriverScheduleFrameRef
-from netex.models.fare_frame_ref import FareFrameRef
-from netex.models.general_frame_ref import GeneralFrameRef
-from netex.models.infrastructure_frame_ref import InfrastructureFrameRef
-from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
-from netex.models.resource_frame_ref import ResourceFrameRef
-from netex.models.sales_transaction_frame_ref import SalesTransactionFrameRef
-from netex.models.service_calendar_frame_ref import ServiceCalendarFrameRef
-from netex.models.service_frame_ref import ServiceFrameRef
-from netex.models.site_frame_ref import SiteFrameRef
-from netex.models.timetable_frame_ref import TimetableFrameRef
-from netex.models.vehicle_schedule_frame_ref import VehicleScheduleFrameRef
-from netex.models.version_frame_ref import VersionFrameRef
+from .composite_frame_ref import CompositeFrameRef
+from .driver_schedule_frame_ref import DriverScheduleFrameRef
+from .fare_frame_ref import FareFrameRef
+from .general_frame_ref import GeneralFrameRef
+from .infrastructure_frame_ref import InfrastructureFrameRef
+from .one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .resource_frame_ref import ResourceFrameRef
+from .sales_transaction_frame_ref import SalesTransactionFrameRef
+from .service_calendar_frame_ref import ServiceCalendarFrameRef
+from .service_frame_ref import ServiceFrameRef
+from .site_frame_ref import SiteFrameRef
+from .timetable_frame_ref import TimetableFrameRef
+from .vehicle_schedule_frame_ref import VehicleScheduleFrameRef
+from .version_frame_ref import VersionFrameRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

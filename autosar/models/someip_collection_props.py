@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.time_value import TimeValue
-from autosar.models.udp_collection_trigger_enum import UdpCollectionTriggerEnum
+from .time_value import TimeValue
+from .udp_collection_trigger_enum import UdpCollectionTriggerEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

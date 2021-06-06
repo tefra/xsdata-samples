@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.other_error_structure import OtherErrorStructure
+from .other_error_structure import OtherErrorStructure
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

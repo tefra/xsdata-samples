@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
-from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
+from ..core.datatypes_base import (
     Cd,
     Ce,
     Cs,
@@ -11,7 +11,7 @@ from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
     St,
     TsExplicit,
 )
-from common_types.models.hl7_v3.ne2008.core.voc import (
+from ..core.voc import (
     ActClass,
     ActClassControlAct,
     ActMood,
@@ -37,13 +37,13 @@ from common_types.models.hl7_v3.ne2008.core.voc import (
     XActReplaceOrRevise,
     XSuccReplPrev,
 )
-from common_types.models.hl7_v3.ne2008.multi_cache.mcci_mt000100_uv01 import (
+from .mcci_mt000100_uv01 import (
     McciMt000100Uv01AttentionLine,
     McciMt000100Uv01Receiver,
     McciMt000100Uv01RespondTo,
     McciMt000100Uv01Sender,
 )
-from common_types.models.hl7_v3.ne2008.multi_cache.mfmi_mt700701_uv01 import (
+from .mfmi_mt700701_uv01 import (
     MfmiMt700701Uv01Author2,
     MfmiMt700701Uv01AuthorOrPerformer,
     MfmiMt700701Uv01Custodian,
@@ -55,7 +55,7 @@ from common_types.models.hl7_v3.ne2008.multi_cache.mfmi_mt700701_uv01 import (
     MfmiMt700701Uv01Reason,
     MfmiMt700701Uv01ReplacementOf,
 )
-from common_types.models.hl7_v3.ne2008.multi_cache.prpa_mt201303_uv02 import PrpaMt201303Uv02Patient
+from .prpa_mt201303_uv02 import PrpaMt201303Uv02Patient
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

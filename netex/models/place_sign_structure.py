@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.multilingual_string import MultilingualString
-from netex.models.place_ref_1 import PlaceRef1
-from netex.models.sign_equipment_version_structure import SignEquipmentVersionStructure
+from .multilingual_string import MultilingualString
+from .place_ref_1 import PlaceRef1
+from .sign_equipment_version_structure import SignEquipmentVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

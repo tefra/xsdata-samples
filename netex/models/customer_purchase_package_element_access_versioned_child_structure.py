@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.alternative_texts_rel_structure import VersionedChildStructure
-from netex.models.customer_purchase_package_element_ref import CustomerPurchasePackageElementRef
-from netex.models.customer_purchase_parameter_assignments_rel_structure import CustomerPurchaseParameterAssignmentsRelStructure
-from netex.models.fare_structure_element_in_sequence_ref import FareStructureElementInSequenceRef
-from netex.models.fare_structure_element_ref import FareStructureElementRef
-from netex.models.marked_as_enumeration import MarkedAsEnumeration
-from netex.models.validable_element_ref import ValidableElementRef
+from .alternative_texts_rel_structure import VersionedChildStructure
+from .customer_purchase_package_element_ref import CustomerPurchasePackageElementRef
+from .customer_purchase_parameter_assignments_rel_structure import CustomerPurchaseParameterAssignmentsRelStructure
+from .fare_structure_element_in_sequence_ref import FareStructureElementInSequenceRef
+from .fare_structure_element_ref import FareStructureElementRef
+from .marked_as_enumeration import MarkedAsEnumeration
+from .validable_element_ref import ValidableElementRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

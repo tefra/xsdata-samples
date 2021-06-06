@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.diagnostic_operation_cycle_type_enum_simple import DiagnosticOperationCycleTypeEnumSimple
+from .diagnostic_operation_cycle_type_enum_simple import DiagnosticOperationCycleTypeEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

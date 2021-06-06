@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.consumer_response_endpoint_structure import ConsumerResponseEndpointStructure
-from netex.models.other_error import OtherError
-from netex.models.unknown_subscription_error import UnknownSubscriptionError
+from .consumer_response_endpoint_structure import ConsumerResponseEndpointStructure
+from .other_error import OtherError
+from .unknown_subscription_error import UnknownSubscriptionError
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

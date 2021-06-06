@@ -1,37 +1,37 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.alternative_names_rel_structure import AlternativeNamesRelStructure
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.authority_ref import AuthorityRef
-from netex.models.cell_versioned_child_structure import (
+from .alternative_names_rel_structure import AlternativeNamesRelStructure
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .authority_ref import AuthorityRef
+from .cell_versioned_child_structure import (
     FareTablesRelStructure,
     PriceGroupsRelStructure,
 )
-from netex.models.general_organisation_ref import GeneralOrganisationRef
-from netex.models.group_of_operators_ref import GroupOfOperatorsRef
-from netex.models.info_links_rel_structure import InfoLinksRelStructure
-from netex.models.management_agent_ref import ManagementAgentRef
-from netex.models.multilingual_string import MultilingualString
-from netex.models.notice_assignments_rel_structure import NoticeAssignmentsRelStructure
-from netex.models.operator_ref import OperatorRef
-from netex.models.organisation_ref import OrganisationRef
-from netex.models.other_organisation_ref import OtherOrganisationRef
-from netex.models.parking_charge_bands_rel_structure import ParkingChargeBandsRelStructure
-from netex.models.parking_refs_rel_structure import ParkingRefsRelStructure
-from netex.models.parking_stay_enumeration import ParkingStayEnumeration
-from netex.models.parking_user_enumeration import ParkingUserEnumeration
-from netex.models.parking_vehicle_enumeration import ParkingVehicleEnumeration
-from netex.models.price_unit_ref import PriceUnitRef
-from netex.models.quality_structure_factors_rel_structure import QualityStructureFactorsRelStructure
-from netex.models.retail_consortium_ref import RetailConsortiumRef
-from netex.models.serviced_organisation_ref import ServicedOrganisationRef
-from netex.models.time_intervals_rel_structure import TimeIntervalsRelStructure
-from netex.models.time_structure_factors_rel_structure import TimeStructureFactorsRelStructure
-from netex.models.time_unit_ref import TimeUnitRef
-from netex.models.transport_organisation_ref import TransportOrganisationRef
-from netex.models.travel_agent_ref import TravelAgentRef
-from netex.models.type_of_tariff_ref import TypeOfTariffRef
-from netex.models.vehicle_type_refs_rel_structure import VehicleTypeRefsRelStructure
+from .general_organisation_ref import GeneralOrganisationRef
+from .group_of_operators_ref import GroupOfOperatorsRef
+from .info_links_rel_structure import InfoLinksRelStructure
+from .management_agent_ref import ManagementAgentRef
+from .multilingual_string import MultilingualString
+from .notice_assignments_rel_structure import NoticeAssignmentsRelStructure
+from .operator_ref import OperatorRef
+from .organisation_ref import OrganisationRef
+from .other_organisation_ref import OtherOrganisationRef
+from .parking_charge_bands_rel_structure import ParkingChargeBandsRelStructure
+from .parking_refs_rel_structure import ParkingRefsRelStructure
+from .parking_stay_enumeration import ParkingStayEnumeration
+from .parking_user_enumeration import ParkingUserEnumeration
+from .parking_vehicle_enumeration import ParkingVehicleEnumeration
+from .price_unit_ref import PriceUnitRef
+from .quality_structure_factors_rel_structure import QualityStructureFactorsRelStructure
+from .retail_consortium_ref import RetailConsortiumRef
+from .serviced_organisation_ref import ServicedOrganisationRef
+from .time_intervals_rel_structure import TimeIntervalsRelStructure
+from .time_structure_factors_rel_structure import TimeStructureFactorsRelStructure
+from .time_unit_ref import TimeUnitRef
+from .transport_organisation_ref import TransportOrganisationRef
+from .travel_agent_ref import TravelAgentRef
+from .type_of_tariff_ref import TypeOfTariffRef
+from .vehicle_type_refs_rel_structure import VehicleTypeRefsRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,24 +1,24 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.activation_point_ref import ActivationPointRef
-from netex.models.alternative_texts_rel_structure import VersionedChildStructure
-from netex.models.beacon_point_ref import BeaconPointRef
-from netex.models.border_point_ref import BorderPointRef
-from netex.models.fare_scheduled_stop_point_ref import FareScheduledStopPointRef
-from netex.models.garage_point_ref import GaragePointRef
-from netex.models.infrastructure_point_ref import InfrastructurePointRef
-from netex.models.parking_point_ref import ParkingPointRef
-from netex.models.point_on_link_ref import PointOnLinkRef
-from netex.models.point_on_route_ref import PointOnRouteRef
-from netex.models.point_ref import PointRef
-from netex.models.railway_point_ref import RailwayPointRef
-from netex.models.relief_point_ref import ReliefPointRef
-from netex.models.road_point_ref import RoadPointRef
-from netex.models.route_point_ref import RoutePointRef
-from netex.models.scheduled_stop_point_ref import ScheduledStopPointRef
-from netex.models.timing_point_ref import TimingPointRef
-from netex.models.traffic_control_point_ref import TrafficControlPointRef
-from netex.models.wire_point_ref import WirePointRef
+from .activation_point_ref import ActivationPointRef
+from .alternative_texts_rel_structure import VersionedChildStructure
+from .beacon_point_ref import BeaconPointRef
+from .border_point_ref import BorderPointRef
+from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
+from .garage_point_ref import GaragePointRef
+from .infrastructure_point_ref import InfrastructurePointRef
+from .parking_point_ref import ParkingPointRef
+from .point_on_link_ref import PointOnLinkRef
+from .point_on_route_ref import PointOnRouteRef
+from .point_ref import PointRef
+from .railway_point_ref import RailwayPointRef
+from .relief_point_ref import ReliefPointRef
+from .road_point_ref import RoadPointRef
+from .route_point_ref import RoutePointRef
+from .scheduled_stop_point_ref import ScheduledStopPointRef
+from .timing_point_ref import TimingPointRef
+from .traffic_control_point_ref import TrafficControlPointRef
+from .wire_point_ref import WirePointRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

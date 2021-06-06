@@ -1,23 +1,23 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.boolean import Boolean
-from autosar.models.bsw_implementation_subtypes_enum import BswImplementationSubtypesEnum
-from autosar.models.category_string import CategoryString
-from autosar.models.ecuc_configuration_variant_enum import EcucConfigurationVariantEnum
-from autosar.models.ecuc_container_value import EcucContainerValue
-from autosar.models.ecuc_module_def_subtypes_enum import EcucModuleDefSubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.ref import Ref
-from autosar.models.revision_label_string import RevisionLabelString
-from autosar.models.short_name_fragment import ShortNameFragment
+from .boolean import Boolean
+from .bsw_implementation_subtypes_enum import BswImplementationSubtypesEnum
+from .category_string import CategoryString
+from .ecuc_configuration_variant_enum import EcucConfigurationVariantEnum
+from .ecuc_container_value import EcucContainerValue
+from .ecuc_module_def_subtypes_enum import EcucModuleDefSubtypesEnum
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .ref import Ref
+from .revision_label_string import RevisionLabelString
+from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

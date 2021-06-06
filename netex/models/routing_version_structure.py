@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.usage_parameter_version_structure import UsageParameterVersionStructure
+from .usage_parameter_version_structure import UsageParameterVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

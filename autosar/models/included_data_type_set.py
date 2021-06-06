@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.autosar_data_type_subtypes_enum import AutosarDataTypeSubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.ref import Ref
+from .autosar_data_type_subtypes_enum import AutosarDataTypeSubtypesEnum
+from .identifier import Identifier
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

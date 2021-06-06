@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.service_calendar_ref_structure import ServiceCalendarRefStructure
+from .service_calendar_ref_structure import ServiceCalendarRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.address import Address
-from autosar.models.symbol_string import SymbolString
+from .address import Address
+from .symbol_string import SymbolString
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

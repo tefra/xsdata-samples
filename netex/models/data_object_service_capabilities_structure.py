@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.abstract_capabilities_structure import AbstractCapabilitiesStructure
-from netex.models.data_object_capability_request_policy_structure import DataObjectCapabilityRequestPolicyStructure
+from .abstract_capabilities_structure import AbstractCapabilitiesStructure
+from .data_object_capability_request_policy_structure import DataObjectCapabilityRequestPolicyStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

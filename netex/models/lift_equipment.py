@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.lift_equipment_version_structure import LiftEquipmentVersionStructure
+from .lift_equipment_version_structure import LiftEquipmentVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

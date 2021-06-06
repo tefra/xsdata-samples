@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.point_of_interest_classification_derived_view_structure import PointOfInterestClassificationDerivedViewStructure
+from .point_of_interest_classification_derived_view_structure import PointOfInterestClassificationDerivedViewStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.garage_point_ref_structure import GaragePointRefStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.vehicle_service_ref import VehicleServiceRef
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .garage_point_ref_structure import GaragePointRefStructure
+from .multilingual_string import MultilingualString
+from .vehicle_service_ref import VehicleServiceRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

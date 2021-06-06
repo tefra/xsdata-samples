@@ -1,14 +1,14 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlTime
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.block_ref import BlockRef
-from netex.models.journey_part_ref_structure import JourneyPartRefStructure
-from netex.models.journey_part_refs_rel_structure import JourneyPartRefsRelStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
-from netex.models.train_block_ref import TrainBlockRef
-from netex.models.train_number_ref import TrainNumberRef
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .block_ref import BlockRef
+from .journey_part_ref_structure import JourneyPartRefStructure
+from .journey_part_refs_rel_structure import JourneyPartRefsRelStructure
+from .multilingual_string import MultilingualString
+from .scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
+from .train_block_ref import TrainBlockRef
+from .train_number_ref import TrainNumberRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

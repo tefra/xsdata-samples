@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.boolean import Boolean
-from autosar.models.diagnostic_event_window_time_enum import DiagnosticEventWindowTimeEnum
+from .boolean import Boolean
+from .diagnostic_event_window_time_enum import DiagnosticEventWindowTimeEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

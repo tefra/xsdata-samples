@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.fare_scheduled_stop_point_ref import FareScheduledStopPointRef
-from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
-from netex.models.scheduled_stop_point_ref import ScheduledStopPointRef
+from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
+from .one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .scheduled_stop_point_ref import ScheduledStopPointRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -2,15 +2,15 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
 from xsdata.models.datatype import XmlDuration
-from netex.models.effective_from_enumeration import EffectiveFromEnumeration
-from netex.models.empty_type_2 import EmptyType2
-from netex.models.payment_method_enumeration import PaymentMethodEnumeration
-from netex.models.per_basis_enumeration import PerBasisEnumeration
-from netex.models.resell_type_enumeration import ResellTypeEnumeration
-from netex.models.resell_when_enumeration import ResellWhenEnumeration
-from netex.models.time_interval_ref_structure import TimeIntervalRefStructure
-from netex.models.type_of_payment_method_refs_rel_structure import TypeOfPaymentMethodRefsRelStructure
-from netex.models.usage_parameter_version_structure import UsageParameterVersionStructure
+from .effective_from_enumeration import EffectiveFromEnumeration
+from .empty_type_2 import EmptyType2
+from .payment_method_enumeration import PaymentMethodEnumeration
+from .per_basis_enumeration import PerBasisEnumeration
+from .resell_type_enumeration import ResellTypeEnumeration
+from .resell_when_enumeration import ResellWhenEnumeration
+from .time_interval_ref_structure import TimeIntervalRefStructure
+from .type_of_payment_method_refs_rel_structure import TypeOfPaymentMethodRefsRelStructure
+from .usage_parameter_version_structure import UsageParameterVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.eligibility_change_policy_version_structure import EligibilityChangePolicyVersionStructure
+from .eligibility_change_policy_version_structure import EligibilityChangePolicyVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

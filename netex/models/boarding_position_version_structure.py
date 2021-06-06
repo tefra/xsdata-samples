@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.boarding_position_type_enumeration import BoardingPositionTypeEnumeration
-from netex.models.entrance_refs_rel_structure import EntranceRefsRelStructure
-from netex.models.stop_place_space_version_structure import StopPlaceSpaceVersionStructure
+from .boarding_position_type_enumeration import BoardingPositionTypeEnumeration
+from .entrance_refs_rel_structure import EntranceRefsRelStructure
+from .stop_place_space_version_structure import StopPlaceSpaceVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

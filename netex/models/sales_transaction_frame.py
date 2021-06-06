@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.sales_transaction_frame_version_frame_structure import SalesTransactionFrameVersionFrameStructure
+from .sales_transaction_frame_version_frame_structure import SalesTransactionFrameVersionFrameStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from netex.models.passenger_capacity import PassengerCapacity
-from netex.models.vehicle_requirement_version_structure import VehicleRequirementVersionStructure
+from .passenger_capacity import PassengerCapacity
+from .vehicle_requirement_version_structure import VehicleRequirementVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

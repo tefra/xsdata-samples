@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.atp_blueprint_subtypes_enum import AtpBlueprintSubtypesEnum
-from autosar.models.atp_blueprintable_subtypes_enum import AtpBlueprintableSubtypesEnum
-from autosar.models.ref import Ref
+from .atp_blueprint_subtypes_enum import AtpBlueprintSubtypesEnum
+from .atp_blueprintable_subtypes_enum import AtpBlueprintableSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

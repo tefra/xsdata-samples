@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.dead_run_ref import DeadRunRef
-from netex.models.journey_wait_time_versioned_child_structure import JourneyWaitTimeVersionedChildStructure
-from netex.models.vehicle_journey_ref import VehicleJourneyRef
+from .dead_run_ref import DeadRunRef
+from .journey_wait_time_versioned_child_structure import JourneyWaitTimeVersionedChildStructure
+from .vehicle_journey_ref import VehicleJourneyRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

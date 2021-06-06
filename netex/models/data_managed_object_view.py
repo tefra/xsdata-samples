@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.data_managed_object_view_structure import DataManagedObjectViewStructure
+from .data_managed_object_view_structure import DataManagedObjectViewStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDateTime, XmlDuration
-from netex.models.response_structure import ResponseStructure
-from netex.models.service_delivery_error_condition_structure import ServiceDeliveryErrorConditionStructure
+from .response_structure import ResponseStructure
+from .service_delivery_error_condition_structure import ServiceDeliveryErrorConditionStructure
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

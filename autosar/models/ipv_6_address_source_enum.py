@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.ipv_6_address_source_enum_simple import Ipv6AddressSourceEnumSimple
+from .ipv_6_address_source_enum_simple import Ipv6AddressSourceEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

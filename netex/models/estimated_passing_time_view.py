@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.estimated_passing_time_view_structure import EstimatedPassingTimeViewStructure
+from .estimated_passing_time_view_structure import EstimatedPassingTimeViewStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

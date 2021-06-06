@@ -1,18 +1,18 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
-from netex.models.capped_discount_right_ref import CappedDiscountRightRef
-from netex.models.capping_period_enumeration import CappingPeriodEnumeration
-from netex.models.capping_rule_prices_rel_structure import CappingRulePricesRelStructure
-from netex.models.cell_versioned_child_structure import PriceableObjectVersionStructure
-from netex.models.generic_parameter_assignment_version_structure import (
+from .capped_discount_right_ref import CappedDiscountRightRef
+from .capping_period_enumeration import CappingPeriodEnumeration
+from .capping_rule_prices_rel_structure import CappingRulePricesRelStructure
+from .cell_versioned_child_structure import PriceableObjectVersionStructure
+from .generic_parameter_assignment_version_structure import (
     GenericParameterAssignment,
     GenericParameterAssignmentInContext,
     GenericParameterAssignmentsRelStructure,
 )
-from netex.models.preassigned_fare_product_ref import PreassignedFareProductRef
-from netex.models.supplement_product_ref import SupplementProductRef
-from netex.models.validable_element_ref import ValidableElementRef
+from .preassigned_fare_product_ref import PreassignedFareProductRef
+from .supplement_product_ref import SupplementProductRef
+from .validable_element_ref import ValidableElementRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

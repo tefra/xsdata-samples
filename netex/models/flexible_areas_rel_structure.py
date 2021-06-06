@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.flexible_area import FlexibleArea
-from netex.models.flexible_area_ref import FlexibleAreaRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .flexible_area import FlexibleArea
+from .flexible_area_ref import FlexibleAreaRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

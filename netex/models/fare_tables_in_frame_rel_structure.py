@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.cell_versioned_child_structure import (
+from .cell_versioned_child_structure import (
     FareTableInContext,
     FareTable1,
 )
-from netex.models.fare_table_2 import FareTable2
-from netex.models.frame_containment_structure import FrameContainmentStructure
-from netex.models.standard_fare_table import StandardFareTable
+from .fare_table_2 import FareTable2
+from .frame_containment_structure import FrameContainmentStructure
+from .standard_fare_table import StandardFareTable
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

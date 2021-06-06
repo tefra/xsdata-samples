@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.ref import Ref
-from autosar.models.software_package_storing_enum import SoftwarePackageStoringEnum
-from autosar.models.software_package_subtypes_enum import SoftwarePackageSubtypesEnum
+from .ref import Ref
+from .software_package_storing_enum import SoftwarePackageStoringEnum
+from .software_package_subtypes_enum import SoftwarePackageSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

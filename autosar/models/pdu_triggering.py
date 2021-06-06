@@ -1,22 +1,22 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.i_pdu_port_subtypes_enum import IPduPortSubtypesEnum
-from autosar.models.i_signal_triggering_ref_conditional import ISignalTriggeringRefConditional
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.pdu_subtypes_enum import PduSubtypesEnum
-from autosar.models.ref import Ref
-from autosar.models.sec_oc_crypto_service_mapping_subtypes_enum import SecOcCryptoServiceMappingSubtypesEnum
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.trigger_i_pdu_send_condition import TriggerIPduSendCondition
+from .category_string import CategoryString
+from .i_pdu_port_subtypes_enum import IPduPortSubtypesEnum
+from .i_signal_triggering_ref_conditional import ISignalTriggeringRefConditional
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .pdu_subtypes_enum import PduSubtypesEnum
+from .ref import Ref
+from .sec_oc_crypto_service_mapping_subtypes_enum import SecOcCryptoServiceMappingSubtypesEnum
+from .short_name_fragment import ShortNameFragment
+from .trigger_i_pdu_send_condition import TriggerIPduSendCondition
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

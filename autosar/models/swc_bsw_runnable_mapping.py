@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.bsw_module_entity_subtypes_enum import BswModuleEntitySubtypesEnum
-from autosar.models.ref import Ref
-from autosar.models.runnable_entity_subtypes_enum import RunnableEntitySubtypesEnum
+from .annotation import VariationPoint
+from .bsw_module_entity_subtypes_enum import BswModuleEntitySubtypesEnum
+from .ref import Ref
+from .runnable_entity_subtypes_enum import RunnableEntitySubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

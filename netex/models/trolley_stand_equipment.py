@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.trolley_stand_equipment_version_structure import TrolleyStandEquipmentVersionStructure
+from .trolley_stand_equipment_version_structure import TrolleyStandEquipmentVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

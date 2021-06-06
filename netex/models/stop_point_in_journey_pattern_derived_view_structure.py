@@ -1,20 +1,20 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDuration
-from netex.models.derived_view_structure import DerivedViewStructure
-from netex.models.fare_point_in_pattern_ref import FarePointInPatternRef
-from netex.models.fare_scheduled_stop_point_ref import FareScheduledStopPointRef
-from netex.models.onward_service_link_view import OnwardServiceLinkView
-from netex.models.onward_timing_link_view import OnwardTimingLinkView
-from netex.models.point_in_journey_pattern_ref import PointInJourneyPatternRef
-from netex.models.scheduled_stop_point_ref import ScheduledStopPointRef
-from netex.models.scheduled_stop_point_view import ScheduledStopPointView
-from netex.models.service_link_ref_structure import ServiceLinkRefStructure
-from netex.models.stop_point_in_journey_pattern_ref import StopPointInJourneyPatternRef
-from netex.models.time_demand_type_ref import TimeDemandTypeRef
-from netex.models.timeband_ref import TimebandRef
-from netex.models.timing_point_in_journey_pattern_ref import TimingPointInJourneyPatternRef
-from netex.models.timing_point_status_enumeration import TimingPointStatusEnumeration
+from .derived_view_structure import DerivedViewStructure
+from .fare_point_in_pattern_ref import FarePointInPatternRef
+from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
+from .onward_service_link_view import OnwardServiceLinkView
+from .onward_timing_link_view import OnwardTimingLinkView
+from .point_in_journey_pattern_ref import PointInJourneyPatternRef
+from .scheduled_stop_point_ref import ScheduledStopPointRef
+from .scheduled_stop_point_view import ScheduledStopPointView
+from .service_link_ref_structure import ServiceLinkRefStructure
+from .stop_point_in_journey_pattern_ref import StopPointInJourneyPatternRef
+from .time_demand_type_ref import TimeDemandTypeRef
+from .timeband_ref import TimebandRef
+from .timing_point_in_journey_pattern_ref import TimingPointInJourneyPatternRef
+from .timing_point_status_enumeration import TimingPointStatusEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

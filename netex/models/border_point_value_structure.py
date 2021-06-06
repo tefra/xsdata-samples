@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.group_of_operators import GroupOfOperators
-from netex.models.group_of_operators_ref import GroupOfOperatorsRef
-from netex.models.multilingual_string import MultilingualString
-from netex.models.timing_point_version_structure import TimingPointVersionStructure
+from .group_of_operators import GroupOfOperators
+from .group_of_operators_ref import GroupOfOperatorsRef
+from .multilingual_string import MultilingualString
+from .timing_point_version_structure import TimingPointVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

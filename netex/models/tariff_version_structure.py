@@ -1,43 +1,43 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.alternative_names_rel_structure import AlternativeNamesRelStructure
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.authority_ref import AuthorityRef
-from netex.models.cell_versioned_child_structure import (
+from .alternative_names_rel_structure import AlternativeNamesRelStructure
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .authority_ref import AuthorityRef
+from .cell_versioned_child_structure import (
     FareTablesRelStructure,
     PriceGroupsRelStructure,
 )
-from netex.models.distance_matrix_elements_rel_structure import DistanceMatrixElementsRelStructure
-from netex.models.fare_structure_elements_rel_structure import FareStructureElementsRelStructure
-from netex.models.flexible_line_ref import FlexibleLineRef
-from netex.models.general_organisation_ref import GeneralOrganisationRef
-from netex.models.geographical_intervals_rel_structure import GeographicalIntervalsRelStructure
-from netex.models.geographical_structure_factors_rel_structure import GeographicalStructureFactorsRelStructure
-from netex.models.geographical_unit_ref import GeographicalUnitRef
-from netex.models.group_of_lines_ref import GroupOfLinesRef
-from netex.models.group_of_operators_ref import GroupOfOperatorsRef
-from netex.models.groups_of_distance_matrix_elements_rel_structure import GroupsOfDistanceMatrixElementsRelStructure
-from netex.models.info_links_rel_structure import InfoLinksRelStructure
-from netex.models.line_ref import LineRef
-from netex.models.management_agent_ref import ManagementAgentRef
-from netex.models.multilingual_string import MultilingualString
-from netex.models.network_ref import NetworkRef
-from netex.models.notice_assignments_rel_structure import NoticeAssignmentsRelStructure
-from netex.models.operator_ref import OperatorRef
-from netex.models.organisation_ref import OrganisationRef
-from netex.models.other_organisation_ref import OtherOrganisationRef
-from netex.models.price_unit_ref import PriceUnitRef
-from netex.models.private_code import PrivateCode
-from netex.models.quality_structure_factors_rel_structure import QualityStructureFactorsRelStructure
-from netex.models.retail_consortium_ref import RetailConsortiumRef
-from netex.models.serviced_organisation_ref import ServicedOrganisationRef
-from netex.models.tariff_basis_enumeration import TariffBasisEnumeration
-from netex.models.time_intervals_rel_structure import TimeIntervalsRelStructure
-from netex.models.time_structure_factors_rel_structure import TimeStructureFactorsRelStructure
-from netex.models.time_unit_ref import TimeUnitRef
-from netex.models.transport_organisation_ref import TransportOrganisationRef
-from netex.models.travel_agent_ref import TravelAgentRef
-from netex.models.type_of_tariff_ref import TypeOfTariffRef
+from .distance_matrix_elements_rel_structure import DistanceMatrixElementsRelStructure
+from .fare_structure_elements_rel_structure import FareStructureElementsRelStructure
+from .flexible_line_ref import FlexibleLineRef
+from .general_organisation_ref import GeneralOrganisationRef
+from .geographical_intervals_rel_structure import GeographicalIntervalsRelStructure
+from .geographical_structure_factors_rel_structure import GeographicalStructureFactorsRelStructure
+from .geographical_unit_ref import GeographicalUnitRef
+from .group_of_lines_ref import GroupOfLinesRef
+from .group_of_operators_ref import GroupOfOperatorsRef
+from .groups_of_distance_matrix_elements_rel_structure import GroupsOfDistanceMatrixElementsRelStructure
+from .info_links_rel_structure import InfoLinksRelStructure
+from .line_ref import LineRef
+from .management_agent_ref import ManagementAgentRef
+from .multilingual_string import MultilingualString
+from .network_ref import NetworkRef
+from .notice_assignments_rel_structure import NoticeAssignmentsRelStructure
+from .operator_ref import OperatorRef
+from .organisation_ref import OrganisationRef
+from .other_organisation_ref import OtherOrganisationRef
+from .price_unit_ref import PriceUnitRef
+from .private_code import PrivateCode
+from .quality_structure_factors_rel_structure import QualityStructureFactorsRelStructure
+from .retail_consortium_ref import RetailConsortiumRef
+from .serviced_organisation_ref import ServicedOrganisationRef
+from .tariff_basis_enumeration import TariffBasisEnumeration
+from .time_intervals_rel_structure import TimeIntervalsRelStructure
+from .time_structure_factors_rel_structure import TimeStructureFactorsRelStructure
+from .time_unit_ref import TimeUnitRef
+from .transport_organisation_ref import TransportOrganisationRef
+from .travel_agent_ref import TravelAgentRef
+from .type_of_tariff_ref import TypeOfTariffRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

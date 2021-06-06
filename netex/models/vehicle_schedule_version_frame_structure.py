@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.blocks_in_frame_rel_structure import BlocksInFrameRelStructure
-from netex.models.common_version_frame_structure import CommonVersionFrameStructure
-from netex.models.courses_of_journeys_in_frame_rel_structure import CoursesOfJourneysInFrameRelStructure
-from netex.models.relief_opportunities_in_frame_rel_structure import ReliefOpportunitiesInFrameRelStructure
-from netex.models.service_calendar_frame_ref import ServiceCalendarFrameRef
-from netex.models.vehicle_services_in_frame_rel_structure import VehicleServicesInFrameRelStructure
+from .blocks_in_frame_rel_structure import BlocksInFrameRelStructure
+from .common_version_frame_structure import CommonVersionFrameStructure
+from .courses_of_journeys_in_frame_rel_structure import CoursesOfJourneysInFrameRelStructure
+from .relief_opportunities_in_frame_rel_structure import ReliefOpportunitiesInFrameRelStructure
+from .service_calendar_frame_ref import ServiceCalendarFrameRef
+from .vehicle_services_in_frame_rel_structure import VehicleServicesInFrameRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

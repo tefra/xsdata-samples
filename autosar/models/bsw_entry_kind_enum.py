@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.bsw_entry_kind_enum_simple import BswEntryKindEnumSimple
+from .bsw_entry_kind_enum_simple import BswEntryKindEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

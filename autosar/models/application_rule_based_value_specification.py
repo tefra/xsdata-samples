@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.identifier import Identifier
-from autosar.models.rule_based_axis_cont import RuleBasedAxisCont
-from autosar.models.rule_based_value_cont import RuleBasedValueCont
+from .annotation import VariationPoint
+from .identifier import Identifier
+from .rule_based_axis_cont import RuleBasedAxisCont
+from .rule_based_value_cont import RuleBasedValueCont
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

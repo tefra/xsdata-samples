@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.delivery_variants_rel_structure import DeliveryVariantsRelStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.private_code import PrivateCode
-from netex.models.type_of_notice_ref import TypeOfNoticeRef
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .delivery_variants_rel_structure import DeliveryVariantsRelStructure
+from .multilingual_string import MultilingualString
+from .private_code import PrivateCode
+from .type_of_notice_ref import TypeOfNoticeRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

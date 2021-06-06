@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.boolean import Boolean
-from autosar.models.coupling_port import CouplingPort
-from autosar.models.ethernet_mac_layer_type_enum import EthernetMacLayerTypeEnum
-from autosar.models.integer import Integer
-from autosar.models.mac_address_string import MacAddressString
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.time_value import TimeValue
+from .annotation import VariationPoint
+from .boolean import Boolean
+from .coupling_port import CouplingPort
+from .ethernet_mac_layer_type_enum import EthernetMacLayerTypeEnum
+from .integer import Integer
+from .mac_address_string import MacAddressString
+from .positive_integer import PositiveInteger
+from .time_value import TimeValue
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

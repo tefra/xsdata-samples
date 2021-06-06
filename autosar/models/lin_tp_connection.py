@@ -1,15 +1,15 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.boolean import Boolean
-from autosar.models.i_pdu_subtypes_enum import IPduSubtypesEnum
-from autosar.models.lin_tp_node_subtypes_enum import LinTpNodeSubtypesEnum
-from autosar.models.n_pdu_subtypes_enum import NPduSubtypesEnum
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.time_value import TimeValue
-from autosar.models.tp_address_subtypes_enum import TpAddressSubtypesEnum
-from autosar.models.tp_connection_ident import TpConnectionIdent
+from .annotation import VariationPoint
+from .boolean import Boolean
+from .i_pdu_subtypes_enum import IPduSubtypesEnum
+from .lin_tp_node_subtypes_enum import LinTpNodeSubtypesEnum
+from .n_pdu_subtypes_enum import NPduSubtypesEnum
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .time_value import TimeValue
+from .tp_address_subtypes_enum import TpAddressSubtypesEnum
+from .tp_connection_ident import TpConnectionIdent
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

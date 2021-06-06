@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.discovery_technology_enum import DiscoveryTechnologyEnum
-from autosar.models.string import String
+from .discovery_technology_enum import DiscoveryTechnologyEnum
+from .string import String
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

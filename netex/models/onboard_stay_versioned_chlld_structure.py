@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDuration
-from netex.models.alternative_texts_rel_structure import VersionedChildStructure
-from netex.models.boarding_permission_enumeration import BoardingPermissionEnumeration
-from netex.models.class_of_use_ref import ClassOfUseRef
-from netex.models.fare_class_enumeration import FareClassEnumeration
-from netex.models.multilingual_string import MultilingualString
-from netex.models.service_facility_set_ref import ServiceFacilitySetRef
+from .alternative_texts_rel_structure import VersionedChildStructure
+from .boarding_permission_enumeration import BoardingPermissionEnumeration
+from .class_of_use_ref import ClassOfUseRef
+from .fare_class_enumeration import FareClassEnumeration
+from .multilingual_string import MultilingualString
+from .service_facility_set_ref import ServiceFacilitySetRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

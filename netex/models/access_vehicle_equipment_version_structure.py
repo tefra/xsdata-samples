@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
-from netex.models.actual_vehicle_equipment_version_structure import ActualVehicleEquipmentVersionStructure
-from netex.models.assistance_needed_enumeration import AssistanceNeededEnumeration
-from netex.models.assisted_boarding_location_enumeration import AssistedBoardingLocationEnumeration
-from netex.models.mobility_enumeration import MobilityEnumeration
-from netex.models.type_of_entity_version_structure import TypeOfEntityVersionStructure
+from .actual_vehicle_equipment_version_structure import ActualVehicleEquipmentVersionStructure
+from .assistance_needed_enumeration import AssistanceNeededEnumeration
+from .assisted_boarding_location_enumeration import AssistedBoardingLocationEnumeration
+from .mobility_enumeration import MobilityEnumeration
+from .type_of_entity_version_structure import TypeOfEntityVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

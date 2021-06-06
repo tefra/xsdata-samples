@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDateTime, XmlDuration
-from netex.models.extensions_1 import Extensions1
-from netex.models.other_error import OtherError
-from netex.models.producer_response_structure import ProducerResponseStructure
-from netex.models.service_not_available_error import ServiceNotAvailableError
+from .extensions_1 import Extensions1
+from .other_error import OtherError
+from .producer_response_structure import ProducerResponseStructure
+from .service_not_available_error import ServiceNotAvailableError
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

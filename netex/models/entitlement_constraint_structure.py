@@ -1,16 +1,16 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.same_class_of_use_enumeration import SameClassOfUseEnumeration
-from netex.models.same_journey_enumeration import SameJourneyEnumeration
-from netex.models.same_operator_enumeration import SameOperatorEnumeration
-from netex.models.same_period_enumeration import SamePeriodEnumeration
-from netex.models.same_route_enumeration import SameRouteEnumeration
-from netex.models.same_stop_enumeration import SameStopEnumeration
-from netex.models.same_type_of_product_category_enumeration import SameTypeOfProductCategoryEnumeration
-from netex.models.same_type_of_travel_document_enumeration import SameTypeOfTravelDocumentEnumeration
-from netex.models.same_user_enumeration import SameUserEnumeration
-from netex.models.same_zone_enumeration import SameZoneEnumeration
-from netex.models.user_profile_refs_rel_structure import UserProfileRefsRelStructure
+from .same_class_of_use_enumeration import SameClassOfUseEnumeration
+from .same_journey_enumeration import SameJourneyEnumeration
+from .same_operator_enumeration import SameOperatorEnumeration
+from .same_period_enumeration import SamePeriodEnumeration
+from .same_route_enumeration import SameRouteEnumeration
+from .same_stop_enumeration import SameStopEnumeration
+from .same_type_of_product_category_enumeration import SameTypeOfProductCategoryEnumeration
+from .same_type_of_travel_document_enumeration import SameTypeOfTravelDocumentEnumeration
+from .same_user_enumeration import SameUserEnumeration
+from .same_zone_enumeration import SameZoneEnumeration
+from .user_profile_refs_rel_structure import UserProfileRefsRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

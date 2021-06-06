@@ -1,14 +1,14 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.dead_run_endpoint_structure import DeadRunEndpointStructure
-from netex.models.dead_run_type_enumeration import DeadRunTypeEnumeration
-from netex.models.direction_type_enumeration import DirectionTypeEnumeration
-from netex.models.flexible_line_ref import FlexibleLineRef
-from netex.models.group_of_services_refs_rel_structure import GroupOfServicesRefsRelStructure
-from netex.models.line_ref import LineRef
-from netex.models.operator_ref import OperatorRef
-from netex.models.train_number_refs_rel_structure import TrainNumberRefsRelStructure
-from netex.models.vehicle_journey_version_structure import VehicleJourneyVersionStructure
+from .dead_run_endpoint_structure import DeadRunEndpointStructure
+from .dead_run_type_enumeration import DeadRunTypeEnumeration
+from .direction_type_enumeration import DirectionTypeEnumeration
+from .flexible_line_ref import FlexibleLineRef
+from .group_of_services_refs_rel_structure import GroupOfServicesRefsRelStructure
+from .line_ref import LineRef
+from .operator_ref import OperatorRef
+from .train_number_refs_rel_structure import TrainNumberRefsRelStructure
+from .vehicle_journey_version_structure import VehicleJourneyVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

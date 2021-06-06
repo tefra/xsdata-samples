@@ -1,15 +1,15 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDate, XmlTime
-from netex.models.authority_ref import AuthorityRef
-from netex.models.day_type_ref import DayTypeRef
-from netex.models.direction_ref import DirectionRef
-from netex.models.fare_day_type_ref import FareDayTypeRef
-from netex.models.flexible_line_ref import FlexibleLineRef
-from netex.models.line_ref import LineRef
-from netex.models.operator_ref import OperatorRef
-from netex.models.timing_point_ref_structure import TimingPointRefStructure
-from netex.models.transport_organisation_ref import TransportOrganisationRef
+from .authority_ref import AuthorityRef
+from .day_type_ref import DayTypeRef
+from .direction_ref import DirectionRef
+from .fare_day_type_ref import FareDayTypeRef
+from .flexible_line_ref import FlexibleLineRef
+from .line_ref import LineRef
+from .operator_ref import OperatorRef
+from .timing_point_ref_structure import TimingPointRefStructure
+from .transport_organisation_ref import TransportOrganisationRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

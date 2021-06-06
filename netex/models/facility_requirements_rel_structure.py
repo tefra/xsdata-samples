@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.facility_requirement import FacilityRequirement
-from netex.models.facility_requirement_ref import FacilityRequirementRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .facility_requirement import FacilityRequirement
+from .facility_requirement_ref import FacilityRequirementRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,16 +1,16 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.br import Br
-from autosar.models.emphasis_text import EmphasisText
-from autosar.models.index_entry import IndexEntry
-from autosar.models.l_enum_simple import LEnumSimple
-from autosar.models.ref import Ref
-from autosar.models.sl_overview_paragraph import SlOverviewParagraph
-from autosar.models.supscript import Supscript
-from autosar.models.traceable_subtypes_enum import TraceableSubtypesEnum
-from autosar.models.tt import Tt
-from autosar.models.xref import Xref
-from autosar.models.xref_target import XrefTarget
+from .br import Br
+from .emphasis_text import EmphasisText
+from .index_entry import IndexEntry
+from .l_enum_simple import LEnumSimple
+from .ref import Ref
+from .sl_overview_paragraph import SlOverviewParagraph
+from .supscript import Supscript
+from .traceable_subtypes_enum import TraceableSubtypesEnum
+from .tt import Tt
+from .xref import Xref
+from .xref_target import XrefTarget
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

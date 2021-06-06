@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
-from netex.models.derived_view_structure import DerivedViewStructure
-from netex.models.flexible_line_ref import FlexibleLineRef
-from netex.models.line_ref import LineRef
-from netex.models.multilingual_string import MultilingualString
-from netex.models.operator_ref import OperatorRef
-from netex.models.transport_submode import TransportSubmode
-from netex.models.type_of_line_ref import TypeOfLineRef
+from .all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
+from .derived_view_structure import DerivedViewStructure
+from .flexible_line_ref import FlexibleLineRef
+from .line_ref import LineRef
+from .multilingual_string import MultilingualString
+from .operator_ref import OperatorRef
+from .transport_submode import TransportSubmode
+from .type_of_line_ref import TypeOfLineRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

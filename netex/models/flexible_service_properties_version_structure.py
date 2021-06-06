@@ -1,23 +1,23 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDuration, XmlTime
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.booking_access_enumeration import BookingAccessEnumeration
-from netex.models.booking_method_enumeration import BookingMethodEnumeration
-from netex.models.contact_structure import ContactStructure
-from netex.models.dated_special_service_ref import DatedSpecialServiceRef
-from netex.models.dated_vehicle_journey_ref import DatedVehicleJourneyRef
-from netex.models.dead_run_ref import DeadRunRef
-from netex.models.flexible_service_enumeration import FlexibleServiceEnumeration
-from netex.models.journey_ref import JourneyRef
-from netex.models.multilingual_string import MultilingualString
-from netex.models.purchase_moment_enumeration import PurchaseMomentEnumeration
-from netex.models.purchase_when_enumeration import PurchaseWhenEnumeration
-from netex.models.service_journey_ref import ServiceJourneyRef
-from netex.models.special_service_ref import SpecialServiceRef
-from netex.models.template_service_journey_ref import TemplateServiceJourneyRef
-from netex.models.type_of_flexible_service_ref import TypeOfFlexibleServiceRef
-from netex.models.vehicle_journey_ref import VehicleJourneyRef
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .booking_access_enumeration import BookingAccessEnumeration
+from .booking_method_enumeration import BookingMethodEnumeration
+from .contact_structure import ContactStructure
+from .dated_special_service_ref import DatedSpecialServiceRef
+from .dated_vehicle_journey_ref import DatedVehicleJourneyRef
+from .dead_run_ref import DeadRunRef
+from .flexible_service_enumeration import FlexibleServiceEnumeration
+from .journey_ref import JourneyRef
+from .multilingual_string import MultilingualString
+from .purchase_moment_enumeration import PurchaseMomentEnumeration
+from .purchase_when_enumeration import PurchaseWhenEnumeration
+from .service_journey_ref import ServiceJourneyRef
+from .special_service_ref import SpecialServiceRef
+from .template_service_journey_ref import TemplateServiceJourneyRef
+from .type_of_flexible_service_ref import TypeOfFlexibleServiceRef
+from .vehicle_journey_ref import VehicleJourneyRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

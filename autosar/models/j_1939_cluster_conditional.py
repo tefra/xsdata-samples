@@ -1,18 +1,18 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.boolean import Boolean
-from autosar.models.can_cluster_bus_off_recovery import CanClusterBusOffRecovery
-from autosar.models.can_physical_channel import CanPhysicalChannel
-from autosar.models.ethernet_physical_channel import EthernetPhysicalChannel
-from autosar.models.flexray_physical_channel import FlexrayPhysicalChannel
-from autosar.models.integer import Integer
-from autosar.models.lin_physical_channel import LinPhysicalChannel
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.positive_unlimited_integer import PositiveUnlimitedInteger
-from autosar.models.string import String
-from autosar.models.ttcan_physical_channel import TtcanPhysicalChannel
-from autosar.models.user_defined_physical_channel import UserDefinedPhysicalChannel
+from .annotation import VariationPoint
+from .boolean import Boolean
+from .can_cluster_bus_off_recovery import CanClusterBusOffRecovery
+from .can_physical_channel import CanPhysicalChannel
+from .ethernet_physical_channel import EthernetPhysicalChannel
+from .flexray_physical_channel import FlexrayPhysicalChannel
+from .integer import Integer
+from .lin_physical_channel import LinPhysicalChannel
+from .positive_integer import PositiveInteger
+from .positive_unlimited_integer import PositiveUnlimitedInteger
+from .string import String
+from .ttcan_physical_channel import TtcanPhysicalChannel
+from .user_defined_physical_channel import UserDefinedPhysicalChannel
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

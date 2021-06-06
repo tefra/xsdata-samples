@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.contained_i_pdu_collection_semantics_enum import ContainedIPduCollectionSemanticsEnum
-from autosar.models.pdu_collection_trigger_enum import PduCollectionTriggerEnum
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.time_value import TimeValue
+from .contained_i_pdu_collection_semantics_enum import ContainedIPduCollectionSemanticsEnum
+from .pdu_collection_trigger_enum import PduCollectionTriggerEnum
+from .positive_integer import PositiveInteger
+from .time_value import TimeValue
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

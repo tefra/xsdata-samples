@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.refunding_ref_structure import RefundingRefStructure
+from .refunding_ref_structure import RefundingRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

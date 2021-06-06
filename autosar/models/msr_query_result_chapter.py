@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DefList,
@@ -17,20 +17,20 @@ from autosar.models.annotation import (
     TraceableText,
     VariationPoint,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.chapter_enum_break_simple import ChapterEnumBreakSimple
-from autosar.models.identifier import Identifier
-from autosar.models.keep_with_previous_enum_simple import KeepWithPreviousEnumSimple
-from autosar.models.msr_query_p_1 import MsrQueryP1
-from autosar.models.msr_query_props import MsrQueryProps
-from autosar.models.msr_query_topic_1 import MsrQueryTopic1
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.prms import Prms
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.table import Table
-from autosar.models.topic_1 import Topic1
-from autosar.models.traceable_table import TraceableTable
+from .category_string import CategoryString
+from .chapter_enum_break_simple import ChapterEnumBreakSimple
+from .identifier import Identifier
+from .keep_with_previous_enum_simple import KeepWithPreviousEnumSimple
+from .msr_query_p_1 import MsrQueryP1
+from .msr_query_props import MsrQueryProps
+from .msr_query_topic_1 import MsrQueryTopic1
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .prms import Prms
+from .short_name_fragment import ShortNameFragment
+from .table import Table
+from .topic_1 import Topic1
+from .traceable_table import TraceableTable
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

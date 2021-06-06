@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Config xmlns="http://pypi.org/project/xsdata" version="21.1">
-  <Output wsdl="false" maxLineLength="79">
+<Config xmlns="http://pypi.org/project/xsdata" version="21.6">
+  <Output maxLineLength="79">
     <Package>reqif.models</Package>
-    <Format>pydata</Format>
+    <Format relativeImports="false">dataclasses</Format>
     <Structure>namespaces</Structure>
     <DocstringStyle>reStructuredText</DocstringStyle>
     <CompoundFields>false</CompoundFields>
@@ -10,6 +10,7 @@
   <Conventions>
     <ClassName case="pascalCase" safePrefix="type"/>
     <FieldName case="snakeCase" safePrefix="value"/>
+    <ConstantName case="screamingSnakeCase" safePrefix="value"/>
     <ModuleName case="snakeCase" safePrefix="mod"/>
     <PackageName case="snakeCase" safePrefix="pkg"/>
   </Conventions>

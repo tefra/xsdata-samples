@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.destination_display_variant_version_structure import DestinationDisplayVariantVersionStructure
+from .destination_display_variant_version_structure import DestinationDisplayVariantVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.run_mode_simple import RunModeSimple
+from .run_mode_simple import RunModeSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

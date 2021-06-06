@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.access_vehicle_equipment import AccessVehicleEquipment
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.wheelchair_vehicle_equipment import WheelchairVehicleEquipment
+from .access_vehicle_equipment import AccessVehicleEquipment
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .wheelchair_vehicle_equipment import WheelchairVehicleEquipment
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

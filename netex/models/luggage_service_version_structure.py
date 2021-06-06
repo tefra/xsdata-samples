@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
-from netex.models.local_service_version_structure import LocalServiceVersionStructure
-from netex.models.luggage_service_facility_enumeration import LuggageServiceFacilityEnumeration
+from .local_service_version_structure import LocalServiceVersionStructure
+from .luggage_service_facility_enumeration import LuggageServiceFacilityEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

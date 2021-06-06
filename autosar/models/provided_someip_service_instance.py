@@ -1,27 +1,27 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.end_2_end_event_protection_props import End2EndEventProtectionProps
-from autosar.models.end_2_end_method_protection_props import End2EndMethodProtectionProps
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.service_interface_deployment_subtypes_enum import ServiceInterfaceDeploymentSubtypesEnum
-from autosar.models.service_interface_element_secure_com_config import ServiceInterfaceElementSecureComConfig
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.someip_event_props import SomeipEventProps
-from autosar.models.someip_method_props import SomeipMethodProps
-from autosar.models.someip_provided_event_group import SomeipProvidedEventGroup
-from autosar.models.someip_sd_server_service_instance_config_subtypes_enum import SomeipSdServerServiceInstanceConfigSubtypesEnum
-from autosar.models.tag_with_optional_value import TagWithOptionalValue
+from .category_string import CategoryString
+from .end_2_end_event_protection_props import End2EndEventProtectionProps
+from .end_2_end_method_protection_props import End2EndMethodProtectionProps
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .service_interface_deployment_subtypes_enum import ServiceInterfaceDeploymentSubtypesEnum
+from .service_interface_element_secure_com_config import ServiceInterfaceElementSecureComConfig
+from .short_name_fragment import ShortNameFragment
+from .someip_event_props import SomeipEventProps
+from .someip_method_props import SomeipMethodProps
+from .someip_provided_event_group import SomeipProvidedEventGroup
+from .someip_sd_server_service_instance_config_subtypes_enum import SomeipSdServerServiceInstanceConfigSubtypesEnum
+from .tag_with_optional_value import TagWithOptionalValue
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

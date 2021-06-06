@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.direction_type_enumeration import DirectionTypeEnumeration
-from netex.models.link_sequence_version_structure import LinkSequenceVersionStructure
-from netex.models.route_ref_structure import RouteRefStructure
-from netex.models.time_demand_type_ref import TimeDemandTypeRef
-from netex.models.timeband_ref import TimebandRef
-from netex.models.timing_links_rel_structure import TimingLinksRelStructure
-from netex.models.timing_points_in_journey_pattern_rel_structure import TimingPointsInJourneyPatternRelStructure
-from netex.models.timing_points_rel_structure import TimingPointsRelStructure
+from .direction_type_enumeration import DirectionTypeEnumeration
+from .link_sequence_version_structure import LinkSequenceVersionStructure
+from .route_ref_structure import RouteRefStructure
+from .time_demand_type_ref import TimeDemandTypeRef
+from .timeband_ref import TimebandRef
+from .timing_links_rel_structure import TimingLinksRelStructure
+from .timing_points_in_journey_pattern_rel_structure import TimingPointsInJourneyPatternRelStructure
+from .timing_points_rel_structure import TimingPointsRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

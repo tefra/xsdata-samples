@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.application_array_element_subtypes_enum import ApplicationArrayElementSubtypesEnum
-from autosar.models.implementation_data_type_element_subtypes_enum import ImplementationDataTypeElementSubtypesEnum
-from autosar.models.integer import Integer
-from autosar.models.ref import Ref
+from .application_array_element_subtypes_enum import ApplicationArrayElementSubtypesEnum
+from .implementation_data_type_element_subtypes_enum import ImplementationDataTypeElementSubtypesEnum
+from .integer import Integer
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

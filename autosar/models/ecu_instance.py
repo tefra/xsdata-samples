@@ -1,47 +1,47 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.boolean import Boolean
-from autosar.models.can_communication_connector import CanCommunicationConnector
-from autosar.models.can_communication_controller import CanCommunicationController
-from autosar.models.can_tp_address_subtypes_enum import CanTpAddressSubtypesEnum
-from autosar.models.category_string import CategoryString
-from autosar.models.client_id_range import ClientIdRange
-from autosar.models.consumed_provided_service_instance_group_ref_conditional import ConsumedProvidedServiceInstanceGroupRefConditional
-from autosar.models.diagnostic_ecu_props import DiagnosticEcuProps
-from autosar.models.dlt_config import DltConfig
-from autosar.models.do_ip_config import DoIpConfig
-from autosar.models.ecu_instance_props import EcuInstanceProps
-from autosar.models.ecu_partition import EcuPartition
-from autosar.models.eth_tcp_ip_icmp_props_subtypes_enum import EthTcpIpIcmpPropsSubtypesEnum
-from autosar.models.eth_tcp_ip_props_subtypes_enum import EthTcpIpPropsSubtypesEnum
-from autosar.models.ethernet_communication_connector import EthernetCommunicationConnector
-from autosar.models.ethernet_communication_controller import EthernetCommunicationController
-from autosar.models.flexray_communication_connector import FlexrayCommunicationConnector
-from autosar.models.flexray_communication_controller import FlexrayCommunicationController
-from autosar.models.i_signal_i_pdu_group_subtypes_enum import ISignalIPduGroupSubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.integer import Integer
-from autosar.models.lin_communication_connector import LinCommunicationConnector
-from autosar.models.lin_master import LinMaster
-from autosar.models.lin_slave import LinSlave
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.pdur_i_pdu_group_subtypes_enum import PdurIPduGroupSubtypesEnum
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.time_value import TimeValue
-from autosar.models.tp_address_subtypes_enum import TpAddressSubtypesEnum
-from autosar.models.ttcan_communication_connector import TtcanCommunicationConnector
-from autosar.models.ttcan_communication_controller import TtcanCommunicationController
-from autosar.models.user_defined_communication_connector import UserDefinedCommunicationConnector
-from autosar.models.user_defined_communication_controller import UserDefinedCommunicationController
-from autosar.models.v_2_x_support_enum import V2XSupportEnum
+from .boolean import Boolean
+from .can_communication_connector import CanCommunicationConnector
+from .can_communication_controller import CanCommunicationController
+from .can_tp_address_subtypes_enum import CanTpAddressSubtypesEnum
+from .category_string import CategoryString
+from .client_id_range import ClientIdRange
+from .consumed_provided_service_instance_group_ref_conditional import ConsumedProvidedServiceInstanceGroupRefConditional
+from .diagnostic_ecu_props import DiagnosticEcuProps
+from .dlt_config import DltConfig
+from .do_ip_config import DoIpConfig
+from .ecu_instance_props import EcuInstanceProps
+from .ecu_partition import EcuPartition
+from .eth_tcp_ip_icmp_props_subtypes_enum import EthTcpIpIcmpPropsSubtypesEnum
+from .eth_tcp_ip_props_subtypes_enum import EthTcpIpPropsSubtypesEnum
+from .ethernet_communication_connector import EthernetCommunicationConnector
+from .ethernet_communication_controller import EthernetCommunicationController
+from .flexray_communication_connector import FlexrayCommunicationConnector
+from .flexray_communication_controller import FlexrayCommunicationController
+from .i_signal_i_pdu_group_subtypes_enum import ISignalIPduGroupSubtypesEnum
+from .identifier import Identifier
+from .integer import Integer
+from .lin_communication_connector import LinCommunicationConnector
+from .lin_master import LinMaster
+from .lin_slave import LinSlave
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .pdur_i_pdu_group_subtypes_enum import PdurIPduGroupSubtypesEnum
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
+from .time_value import TimeValue
+from .tp_address_subtypes_enum import TpAddressSubtypesEnum
+from .ttcan_communication_connector import TtcanCommunicationConnector
+from .ttcan_communication_controller import TtcanCommunicationController
+from .user_defined_communication_connector import UserDefinedCommunicationConnector
+from .user_defined_communication_controller import UserDefinedCommunicationController
+from .v_2_x_support_enum import V2XSupportEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

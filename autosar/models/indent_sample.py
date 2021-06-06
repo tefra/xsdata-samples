@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.item_label_pos_enum_simple import ItemLabelPosEnumSimple
-from autosar.models.l_overview_paragraph import LOverviewParagraph
+from .item_label_pos_enum_simple import ItemLabelPosEnumSimple
+from .l_overview_paragraph import LOverviewParagraph
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.identifier import Identifier
-from autosar.models.pdu_collection_semantics_enum import PduCollectionSemanticsEnum
-from autosar.models.pdu_collection_trigger_enum import PduCollectionTriggerEnum
-from autosar.models.pdu_triggering_subtypes_enum import PduTriggeringSubtypesEnum
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.time_value import TimeValue
+from .identifier import Identifier
+from .pdu_collection_semantics_enum import PduCollectionSemanticsEnum
+from .pdu_collection_trigger_enum import PduCollectionTriggerEnum
+from .pdu_triggering_subtypes_enum import PduTriggeringSubtypesEnum
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
+from .time_value import TimeValue
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

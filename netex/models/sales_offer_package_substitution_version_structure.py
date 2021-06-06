@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.assignment_version_structure_1 import AssignmentVersionStructure1
-from netex.models.sales_offer_package_ref import SalesOfferPackageRef
-from netex.models.sales_offer_package_ref_structure import SalesOfferPackageRefStructure
+from .assignment_version_structure_1 import AssignmentVersionStructure1
+from .sales_offer_package_ref import SalesOfferPackageRef
+from .sales_offer_package_ref_structure import SalesOfferPackageRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

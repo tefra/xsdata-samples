@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     Sdg,
     VariationPoint,
 )
-from autosar.models.any_instance_ref import AnyInstanceRef
-from autosar.models.c_identifier import CIdentifier
-from autosar.models.nmtoken_string import NmtokenString
+from .any_instance_ref import AnyInstanceRef
+from .c_identifier import CIdentifier
+from .nmtoken_string import NmtokenString
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

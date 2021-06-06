@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.schematic_map_version_structure import SchematicMapVersionStructure
+from .schematic_map_version_structure import SchematicMapVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

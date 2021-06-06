@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.rpt_enabler_impl_type_enum import RptEnablerImplTypeEnum
-from autosar.models.rpt_preparation_enum import RptPreparationEnum
+from .rpt_enabler_impl_type_enum import RptEnablerImplTypeEnum
+from .rpt_preparation_enum import RptPreparationEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

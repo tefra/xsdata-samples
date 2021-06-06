@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.boolean import Boolean
-from autosar.models.lin_slave_config import LinSlaveConfig
-from autosar.models.string import String
-from autosar.models.time_value import TimeValue
+from .annotation import VariationPoint
+from .boolean import Boolean
+from .lin_slave_config import LinSlaveConfig
+from .string import String
+from .time_value import TimeValue
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

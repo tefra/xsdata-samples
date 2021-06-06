@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.type_of_usage_parameter import TypeOfUsageParameter
-from netex.models.type_of_usage_parameter_ref import TypeOfUsageParameterRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .type_of_usage_parameter import TypeOfUsageParameter
+from .type_of_usage_parameter_ref import TypeOfUsageParameterRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

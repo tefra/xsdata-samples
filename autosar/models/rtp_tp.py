@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.tcp_tp import TcpTp
-from autosar.models.udp_tp import UdpTp
+from .positive_integer import PositiveInteger
+from .tcp_tp import TcpTp
+from .udp_tp import UdpTp
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.diagnostic_event_window_time_enum_simple import DiagnosticEventWindowTimeEnumSimple
+from .diagnostic_event_window_time_enum_simple import DiagnosticEventWindowTimeEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

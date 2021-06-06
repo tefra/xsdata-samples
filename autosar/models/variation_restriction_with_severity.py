@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.boolean import Boolean
-from autosar.models.full_binding_time_enum import FullBindingTimeEnum
-from autosar.models.severity_enum import SeverityEnum
+from .boolean import Boolean
+from .full_binding_time_enum import FullBindingTimeEnum
+from .severity_enum import SeverityEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

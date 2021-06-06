@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.fare_product_prices_rel_structure import FareProductPricesRelStructure
-from netex.models.general_organisation_ref import GeneralOrganisationRef
-from netex.models.service_access_right_version_structure import ServiceAccessRightVersionStructure
+from .fare_product_prices_rel_structure import FareProductPricesRelStructure
+from .general_organisation_ref import GeneralOrganisationRef
+from .service_access_right_version_structure import ServiceAccessRightVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

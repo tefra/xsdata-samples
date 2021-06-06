@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.mode_driven_transmission_mode_condition import ModeDrivenTransmissionModeCondition
-from autosar.models.transmission_mode_condition import TransmissionModeCondition
-from autosar.models.transmission_mode_timing import TransmissionModeTiming
+from .mode_driven_transmission_mode_condition import ModeDrivenTransmissionModeCondition
+from .transmission_mode_condition import TransmissionModeCondition
+from .transmission_mode_timing import TransmissionModeTiming
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDuration
-from netex.models.dead_run_ref import DeadRunRef
-from netex.models.journey_timing_versioned_child_structure import JourneyTimingVersionedChildStructure
+from .dead_run_ref import DeadRunRef
+from .journey_timing_versioned_child_structure import JourneyTimingVersionedChildStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

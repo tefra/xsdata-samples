@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from netex.models.self_drive_submode_enumeration import SelfDriveSubmodeEnumeration
+from .self_drive_submode_enumeration import SelfDriveSubmodeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.distance_matrix_element_inverse_ref import DistanceMatrixElementInverseRef
-from netex.models.distance_matrix_element_ref import DistanceMatrixElementRef
-from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .distance_matrix_element_inverse_ref import DistanceMatrixElementInverseRef
+from .distance_matrix_element_ref import DistanceMatrixElementRef
+from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

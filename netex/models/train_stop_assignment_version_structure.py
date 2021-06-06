@@ -1,14 +1,14 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.boarding_position_ref_structure import BoardingPositionRefStructure
-from netex.models.dynamic_stop_assignment_ref import DynamicStopAssignmentRef
-from netex.models.multilingual_string import MultilingualString
-from netex.models.passenger_stop_assignment_ref import PassengerStopAssignmentRef
-from netex.models.stop_assignment_version_structure import StopAssignmentVersionStructure
-from netex.models.train_component_ref import TrainComponentRef
-from netex.models.train_component_view import TrainComponentView
-from netex.models.train_ref import TrainRef
-from netex.models.vehicle_journey_stop_assignment_ref import VehicleJourneyStopAssignmentRef
+from .boarding_position_ref_structure import BoardingPositionRefStructure
+from .dynamic_stop_assignment_ref import DynamicStopAssignmentRef
+from .multilingual_string import MultilingualString
+from .passenger_stop_assignment_ref import PassengerStopAssignmentRef
+from .stop_assignment_version_structure import StopAssignmentVersionStructure
+from .train_component_ref import TrainComponentRef
+from .train_component_view import TrainComponentView
+from .train_ref import TrainRef
+from .vehicle_journey_stop_assignment_ref import VehicleJourneyStopAssignmentRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.accommodation_ref_structure import AccommodationRefStructure
+from .accommodation_ref_structure import AccommodationRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

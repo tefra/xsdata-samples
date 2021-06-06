@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from netex.models.direction_of_use_enumeration import DirectionOfUseEnumeration
-from netex.models.installed_equipment_version_structure import InstalledEquipmentVersionStructure
+from .direction_of_use_enumeration import DirectionOfUseEnumeration
+from .installed_equipment_version_structure import InstalledEquipmentVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.diagnostic_processing_style_enum_simple import DiagnosticProcessingStyleEnumSimple
+from .diagnostic_processing_style_enum_simple import DiagnosticProcessingStyleEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

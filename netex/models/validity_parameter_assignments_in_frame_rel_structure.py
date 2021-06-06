@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.frame_containment_structure import FrameContainmentStructure
-from netex.models.validity_parameter_assignment import ValidityParameterAssignment
+from .frame_containment_structure import FrameContainmentStructure
+from .validity_parameter_assignment import ValidityParameterAssignment
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

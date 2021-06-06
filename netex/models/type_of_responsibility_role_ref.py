@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.type_of_responsibility_role_ref_structure import TypeOfResponsibilityRoleRefStructure
+from .type_of_responsibility_role_ref_structure import TypeOfResponsibilityRoleRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

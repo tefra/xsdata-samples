@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.autosar_parameter_ref import AutosarParameterRef
-from autosar.models.autosar_variable_ref import AutosarVariableRef
-from autosar.models.sw_pointer_target_props import SwDataDefProps
+from .annotation import VariationPoint
+from .autosar_parameter_ref import AutosarParameterRef
+from .autosar_variable_ref import AutosarVariableRef
+from .sw_pointer_target_props import SwDataDefProps
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDateTime
-from netex.models.alternative_texts_rel_structure import (
+from .alternative_texts_rel_structure import (
     AvailabilityCondition,
     SimpleAvailabilityCondition,
     ValidDuring,
@@ -10,24 +10,24 @@ from netex.models.alternative_texts_rel_structure import (
     ValidityRuleParameter,
     ValidityTrigger,
 )
-from netex.models.closed_timestamp_range_structure import ClosedTimestampRangeStructure
-from netex.models.composite_frame_ref import CompositeFrameRef
-from netex.models.driver_schedule_frame_ref import DriverScheduleFrameRef
-from netex.models.empty_type_2 import EmptyType2
-from netex.models.fare_frame_ref import FareFrameRef
-from netex.models.general_frame_ref import GeneralFrameRef
-from netex.models.infrastructure_frame_ref import InfrastructureFrameRef
-from netex.models.network_filter_by_value_structure import NetworkFilterByValueStructure
-from netex.models.resource_frame_ref import ResourceFrameRef
-from netex.models.sales_transaction_frame_ref import SalesTransactionFrameRef
-from netex.models.service_calendar_frame_ref import ServiceCalendarFrameRef
-from netex.models.service_frame_ref import ServiceFrameRef
-from netex.models.site_frame_ref import SiteFrameRef
-from netex.models.timetable_frame_ref import TimetableFrameRef
-from netex.models.topic_structure import TopicStructure
-from netex.models.type_of_frame_ref import TypeOfFrameRef
-from netex.models.vehicle_schedule_frame_ref import VehicleScheduleFrameRef
-from netex.models.version_frame_ref import VersionFrameRef
+from .closed_timestamp_range_structure import ClosedTimestampRangeStructure
+from .composite_frame_ref import CompositeFrameRef
+from .driver_schedule_frame_ref import DriverScheduleFrameRef
+from .empty_type_2 import EmptyType2
+from .fare_frame_ref import FareFrameRef
+from .general_frame_ref import GeneralFrameRef
+from .infrastructure_frame_ref import InfrastructureFrameRef
+from .network_filter_by_value_structure import NetworkFilterByValueStructure
+from .resource_frame_ref import ResourceFrameRef
+from .sales_transaction_frame_ref import SalesTransactionFrameRef
+from .service_calendar_frame_ref import ServiceCalendarFrameRef
+from .service_frame_ref import ServiceFrameRef
+from .site_frame_ref import SiteFrameRef
+from .timetable_frame_ref import TimetableFrameRef
+from .topic_structure import TopicStructure
+from .type_of_frame_ref import TypeOfFrameRef
+from .vehicle_schedule_frame_ref import VehicleScheduleFrameRef
+from .version_frame_ref import VersionFrameRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

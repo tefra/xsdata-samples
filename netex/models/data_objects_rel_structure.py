@@ -1,20 +1,20 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.common_frame import CommonFrame
-from netex.models.driver_schedule_frame import DriverScheduleFrame
-from netex.models.entities_in_version_rel_structure import (
+from .common_frame import CommonFrame
+from .driver_schedule_frame import DriverScheduleFrame
+from .entities_in_version_rel_structure import (
     CompositeFrame,
     GeneralFrame,
 )
-from netex.models.fare_frame import FareFrame
-from netex.models.infrastructure_frame import InfrastructureFrame
-from netex.models.resource_frame import ResourceFrame
-from netex.models.sales_transaction_frame import SalesTransactionFrame
-from netex.models.service_calendar_frame import ServiceCalendarFrame
-from netex.models.service_frame import ServiceFrame
-from netex.models.site_frame import SiteFrame
-from netex.models.timetable_frame import TimetableFrame
-from netex.models.vehicle_schedule_frame import VehicleScheduleFrame
+from .fare_frame import FareFrame
+from .infrastructure_frame import InfrastructureFrame
+from .resource_frame import ResourceFrame
+from .sales_transaction_frame import SalesTransactionFrame
+from .service_calendar_frame import ServiceCalendarFrame
+from .service_frame import ServiceFrame
+from .site_frame import SiteFrame
+from .timetable_frame import TimetableFrame
+from .vehicle_schedule_frame import VehicleScheduleFrame
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

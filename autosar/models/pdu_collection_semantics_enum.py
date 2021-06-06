@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.pdu_collection_semantics_enum_simple import PduCollectionSemanticsEnumSimple
+from .pdu_collection_semantics_enum_simple import PduCollectionSemanticsEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

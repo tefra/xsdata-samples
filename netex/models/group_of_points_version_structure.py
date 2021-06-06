@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.group_of_entities_version_structure import GroupOfEntitiesVersionStructure
-from netex.models.point_refs_rel_structure import PointRefsRelStructure
+from .group_of_entities_version_structure import GroupOfEntitiesVersionStructure
+from .point_refs_rel_structure import PointRefsRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.alternative_texts_rel_structure import VersionedChildStructure
-from netex.models.class_ref_structure import ClassRefStructure
-from netex.models.purpose_of_grouping_ref_structure import PurposeOfGroupingRefStructure
-from netex.models.type_of_value_ref_structure import TypeOfValueRefStructure
+from .alternative_texts_rel_structure import VersionedChildStructure
+from .class_ref_structure import ClassRefStructure
+from .purpose_of_grouping_ref_structure import PurposeOfGroupingRefStructure
+from .type_of_value_ref_structure import TypeOfValueRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

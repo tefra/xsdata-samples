@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.responsibility_role_assignment_versioned_child_structure import ResponsibilityRoleAssignmentVersionedChildStructure
+from .responsibility_role_assignment_versioned_child_structure import ResponsibilityRoleAssignmentVersionedChildStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

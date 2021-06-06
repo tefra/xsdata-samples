@@ -1,19 +1,19 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDuration, XmlTime
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.block_parts_rel_structure import BlockPartsRelStructure
-from netex.models.compound_train_ref import CompoundTrainRef
-from netex.models.courses_of_journeys_rel_structure import CoursesOfJourneysRelStructure
-from netex.models.day_type_refs_rel_structure import DayTypeRefsRelStructure
-from netex.models.journey_refs_rel_structure import JourneyRefsRelStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.point_ref_structure import PointRefStructure
-from netex.models.private_code import PrivateCode
-from netex.models.relief_opportunities_rel_structure import ReliefOpportunitiesRelStructure
-from netex.models.train_ref import TrainRef
-from netex.models.vehicle_service_part_ref import VehicleServicePartRef
-from netex.models.vehicle_type_ref import VehicleTypeRef
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .block_parts_rel_structure import BlockPartsRelStructure
+from .compound_train_ref import CompoundTrainRef
+from .courses_of_journeys_rel_structure import CoursesOfJourneysRelStructure
+from .day_type_refs_rel_structure import DayTypeRefsRelStructure
+from .journey_refs_rel_structure import JourneyRefsRelStructure
+from .multilingual_string import MultilingualString
+from .point_ref_structure import PointRefStructure
+from .private_code import PrivateCode
+from .relief_opportunities_rel_structure import ReliefOpportunitiesRelStructure
+from .train_ref import TrainRef
+from .vehicle_service_part_ref import VehicleServicePartRef
+from .vehicle_type_ref import VehicleTypeRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

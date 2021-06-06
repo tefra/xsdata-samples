@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.nv_block_needs_writing_priority_enum_simple import NvBlockNeedsWritingPriorityEnumSimple
+from .nv_block_needs_writing_priority_enum_simple import NvBlockNeedsWritingPriorityEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

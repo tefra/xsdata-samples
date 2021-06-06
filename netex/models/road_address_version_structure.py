@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.address_version_structure import AddressVersionStructure
-from netex.models.compass_bearing16_enumeration import CompassBearing16Enumeration
-from netex.models.multilingual_string import MultilingualString
-from netex.models.road_number_range_structure import RoadNumberRangeStructure
+from .address_version_structure import AddressVersionStructure
+from .compass_bearing16_enumeration import CompassBearing16Enumeration
+from .multilingual_string import MultilingualString
+from .road_number_range_structure import RoadNumberRangeStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

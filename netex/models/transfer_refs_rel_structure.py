@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.access_ref import AccessRef
-from netex.models.connection_ref import ConnectionRef
-from netex.models.default_connection_ref import DefaultConnectionRef
-from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
-from netex.models.site_connection_ref import SiteConnectionRef
-from netex.models.transfer_ref import TransferRef
+from .access_ref import AccessRef
+from .connection_ref import ConnectionRef
+from .default_connection_ref import DefaultConnectionRef
+from .one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .site_connection_ref import SiteConnectionRef
+from .transfer_ref import TransferRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

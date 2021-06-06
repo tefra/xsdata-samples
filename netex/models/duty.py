@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.duty_version_structure import DutyVersionStructure
+from .duty_version_structure import DutyVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

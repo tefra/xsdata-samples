@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.boarding_permission_enumeration import BoardingPermissionEnumeration
+from .boarding_permission_enumeration import BoardingPermissionEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,4 +1,4 @@
-from common_types.models.www.w3.org.pkg_2005.pkg_08.addressing.ws_addr import (
+from .ws_addr import (
     Action,
     AttributedQnameType,
     AttributedUritype,

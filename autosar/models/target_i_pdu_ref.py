@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.pdu_mapping_default_value import PduMappingDefaultValue
-from autosar.models.pdu_triggering_subtypes_enum import PduTriggeringSubtypesEnum
-from autosar.models.ref import Ref
+from .pdu_mapping_default_value import PduMappingDefaultValue
+from .pdu_triggering_subtypes_enum import PduTriggeringSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

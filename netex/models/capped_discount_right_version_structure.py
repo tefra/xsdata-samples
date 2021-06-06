@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.capping_rules_rel_structure import CappingRulesRelStructure
-from netex.models.sale_discount_right_version_structure import SaleDiscountRightVersionStructure
+from .capping_rules_rel_structure import CappingRulesRelStructure
+from .sale_discount_right_version_structure import SaleDiscountRightVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

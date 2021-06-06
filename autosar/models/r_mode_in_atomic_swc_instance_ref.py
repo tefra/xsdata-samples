@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.abstract_required_port_prototype_subtypes_enum import AbstractRequiredPortPrototypeSubtypesEnum
-from autosar.models.mode_declaration_group_prototype_subtypes_enum import ModeDeclarationGroupPrototypeSubtypesEnum
-from autosar.models.mode_declaration_subtypes_enum import ModeDeclarationSubtypesEnum
-from autosar.models.ref import Ref
+from .abstract_required_port_prototype_subtypes_enum import AbstractRequiredPortPrototypeSubtypesEnum
+from .mode_declaration_group_prototype_subtypes_enum import ModeDeclarationGroupPrototypeSubtypesEnum
+from .mode_declaration_subtypes_enum import ModeDeclarationSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

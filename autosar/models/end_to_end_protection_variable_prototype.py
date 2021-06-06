@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.identifier import Identifier
-from autosar.models.variable_data_prototype_in_system_instance_ref import VariableDataPrototypeInSystemInstanceRef
+from .annotation import VariationPoint
+from .identifier import Identifier
+from .variable_data_prototype_in_system_instance_ref import VariableDataPrototypeInSystemInstanceRef
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

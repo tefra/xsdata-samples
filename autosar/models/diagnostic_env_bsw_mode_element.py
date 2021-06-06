@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.identifier import Identifier
-from autosar.models.mode_in_bsw_module_description_instance_ref import ModeInBswModuleDescriptionInstanceRef
-from autosar.models.short_name_fragment import ShortNameFragment
+from .identifier import Identifier
+from .mode_in_bsw_module_description_instance_ref import ModeInBswModuleDescriptionInstanceRef
+from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

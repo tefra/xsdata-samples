@@ -1,30 +1,30 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.authority_ref import AuthorityRef
-from netex.models.equipment_places_rel_structure import EquipmentPlacesRelStructure
-from netex.models.general_organisation_ref import GeneralOrganisationRef
-from netex.models.levels_rel_structure import LevelsRelStructure
-from netex.models.local_services_rel_structure import LocalServicesRelStructure
-from netex.models.locale import Locale
-from netex.models.management_agent_ref import ManagementAgentRef
-from netex.models.operator_ref import OperatorRef
-from netex.models.organisation_derived_view_structure import OrganisationDerivedViewStructure
-from netex.models.organisation_ref import OrganisationRef
-from netex.models.other_organisation_ref import OtherOrganisationRef
-from netex.models.place_equipments_rel_structure import PlaceEquipmentsRelStructure
-from netex.models.retail_consortium_ref import RetailConsortiumRef
-from netex.models.serviced_organisation_ref import ServicedOrganisationRef
-from netex.models.site_element_version_structure import SiteElementVersionStructure
-from netex.models.site_entrances_rel_structure import SiteEntrancesRelStructure
-from netex.models.site_ref_structure import SiteRefStructure
-from netex.models.site_refs_rel_structure import SiteRefsRelStructure
-from netex.models.site_type_enumeration import SiteTypeEnumeration
-from netex.models.topographic_place_ref import TopographicPlaceRef
-from netex.models.topographic_place_ref_structure import TopographicPlaceRefStructure
-from netex.models.topographic_place_refs_rel_structure import TopographicPlaceRefsRelStructure
-from netex.models.topographic_place_view import TopographicPlaceView
-from netex.models.transport_organisation_ref import TransportOrganisationRef
-from netex.models.travel_agent_ref import TravelAgentRef
+from .authority_ref import AuthorityRef
+from .equipment_places_rel_structure import EquipmentPlacesRelStructure
+from .general_organisation_ref import GeneralOrganisationRef
+from .levels_rel_structure import LevelsRelStructure
+from .local_services_rel_structure import LocalServicesRelStructure
+from .locale import Locale
+from .management_agent_ref import ManagementAgentRef
+from .operator_ref import OperatorRef
+from .organisation_derived_view_structure import OrganisationDerivedViewStructure
+from .organisation_ref import OrganisationRef
+from .other_organisation_ref import OtherOrganisationRef
+from .place_equipments_rel_structure import PlaceEquipmentsRelStructure
+from .retail_consortium_ref import RetailConsortiumRef
+from .serviced_organisation_ref import ServicedOrganisationRef
+from .site_element_version_structure import SiteElementVersionStructure
+from .site_entrances_rel_structure import SiteEntrancesRelStructure
+from .site_ref_structure import SiteRefStructure
+from .site_refs_rel_structure import SiteRefsRelStructure
+from .site_type_enumeration import SiteTypeEnumeration
+from .topographic_place_ref import TopographicPlaceRef
+from .topographic_place_ref_structure import TopographicPlaceRefStructure
+from .topographic_place_refs_rel_structure import TopographicPlaceRefsRelStructure
+from .topographic_place_view import TopographicPlaceView
+from .transport_organisation_ref import TransportOrganisationRef
+from .travel_agent_ref import TravelAgentRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

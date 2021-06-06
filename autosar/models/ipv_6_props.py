@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.dhcpv_6_props import Dhcpv6Props
-from autosar.models.ipv_6_fragmentation_props import Ipv6FragmentationProps
-from autosar.models.ipv_6_ndp_props import Ipv6NdpProps
+from .dhcpv_6_props import Dhcpv6Props
+from .ipv_6_fragmentation_props import Ipv6FragmentationProps
+from .ipv_6_ndp_props import Ipv6NdpProps
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

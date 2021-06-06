@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.point_version_structure import PointVersionStructure
+from .point_version_structure import PointVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.minimum_stay_ref_structure import MinimumStayRefStructure
+from .minimum_stay_ref_structure import MinimumStayRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

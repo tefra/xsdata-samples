@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.interchange_rule_timing import InterchangeRuleTiming
-from netex.models.interchange_rule_timing_ref import InterchangeRuleTimingRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .interchange_rule_timing import InterchangeRuleTiming
+from .interchange_rule_timing_ref import InterchangeRuleTimingRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

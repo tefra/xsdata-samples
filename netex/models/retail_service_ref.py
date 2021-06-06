@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.retail_service_ref_structure import RetailServiceRefStructure
+from .retail_service_ref_structure import RetailServiceRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

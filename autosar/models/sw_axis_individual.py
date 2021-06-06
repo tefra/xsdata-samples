@@ -1,16 +1,16 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.application_primitive_data_type_subtypes_enum import ApplicationPrimitiveDataTypeSubtypesEnum
-from autosar.models.autosar_variable_ref import AutosarVariableRef
-from autosar.models.compu_method_subtypes_enum import CompuMethodSubtypesEnum
-from autosar.models.data_constr_subtypes_enum import DataConstrSubtypesEnum
-from autosar.models.float_mod import FloatType
-from autosar.models.integer_value_variation_point import IntegerValueVariationPoint
-from autosar.models.mc_data_instance_subtypes_enum import McDataInstanceSubtypesEnum
-from autosar.models.monotony_enum import MonotonyEnum
-from autosar.models.ref import Ref
-from autosar.models.sw_axis_generic import SwAxisGeneric
-from autosar.models.unit_subtypes_enum import UnitSubtypesEnum
+from .application_primitive_data_type_subtypes_enum import ApplicationPrimitiveDataTypeSubtypesEnum
+from .autosar_variable_ref import AutosarVariableRef
+from .compu_method_subtypes_enum import CompuMethodSubtypesEnum
+from .data_constr_subtypes_enum import DataConstrSubtypesEnum
+from .float_mod import FloatType
+from .integer_value_variation_point import IntegerValueVariationPoint
+from .mc_data_instance_subtypes_enum import McDataInstanceSubtypesEnum
+from .monotony_enum import MonotonyEnum
+from .ref import Ref
+from .sw_axis_generic import SwAxisGeneric
+from .unit_subtypes_enum import UnitSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

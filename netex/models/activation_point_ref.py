@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.activation_point_ref_structure import ActivationPointRefStructure
+from .activation_point_ref_structure import ActivationPointRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.point_1 import Point1
+from .point_1 import Point1
 
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 

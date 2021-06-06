@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
 from xsdata.models.datatype import XmlDuration
-from netex.models.customer_service_version_structure import CustomerServiceVersionStructure
+from .customer_service_version_structure import CustomerServiceVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

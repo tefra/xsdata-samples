@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.request_type_enum import RequestTypeEnum
+from .positive_integer import PositiveInteger
+from .request_type_enum import RequestTypeEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

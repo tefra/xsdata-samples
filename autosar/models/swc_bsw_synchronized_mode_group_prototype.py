@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.mode_declaration_group_prototype_subtypes_enum import ModeDeclarationGroupPrototypeSubtypesEnum
-from autosar.models.p_mode_group_in_atomic_swc_instance_ref import PModeGroupInAtomicSwcInstanceRef
-from autosar.models.ref import Ref
+from .annotation import VariationPoint
+from .mode_declaration_group_prototype_subtypes_enum import ModeDeclarationGroupPrototypeSubtypesEnum
+from .p_mode_group_in_atomic_swc_instance_ref import PModeGroupInAtomicSwcInstanceRef
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

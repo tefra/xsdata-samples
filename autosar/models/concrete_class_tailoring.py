@@ -1,28 +1,28 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.aggregation_condition import AggregationCondition
-from autosar.models.annotation import (
+from .aggregation_condition import AggregationCondition
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
 )
-from autosar.models.boolean import Boolean
-from autosar.models.category_string import CategoryString
-from autosar.models.constraint_tailoring import ConstraintTailoring
-from autosar.models.identifier import Identifier
-from autosar.models.invert_condition import InvertCondition
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.multiplicity_restriction_with_severity import MultiplicityRestrictionWithSeverity
-from autosar.models.primitive_attribute_condition import PrimitiveAttributeCondition
-from autosar.models.primitive_attribute_tailoring import PrimitiveAttributeTailoring
-from autosar.models.reference_condition import ReferenceCondition
-from autosar.models.sdg_tailoring import SdgTailoring
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.string import String
-from autosar.models.textual_condition import TextualCondition
-from autosar.models.unresolved_reference_restriction_with_severity import UnresolvedReferenceRestrictionWithSeverity
-from autosar.models.variation_restriction_with_severity import VariationRestrictionWithSeverity
+from .boolean import Boolean
+from .category_string import CategoryString
+from .constraint_tailoring import ConstraintTailoring
+from .identifier import Identifier
+from .invert_condition import InvertCondition
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .multiplicity_restriction_with_severity import MultiplicityRestrictionWithSeverity
+from .primitive_attribute_condition import PrimitiveAttributeCondition
+from .primitive_attribute_tailoring import PrimitiveAttributeTailoring
+from .reference_condition import ReferenceCondition
+from .sdg_tailoring import SdgTailoring
+from .short_name_fragment import ShortNameFragment
+from .string import String
+from .textual_condition import TextualCondition
+from .unresolved_reference_restriction_with_severity import UnresolvedReferenceRestrictionWithSeverity
+from .variation_restriction_with_severity import VariationRestrictionWithSeverity
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

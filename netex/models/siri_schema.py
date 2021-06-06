@@ -1,23 +1,23 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.abstract_discovery_delivery import AbstractDiscoveryDelivery
-from netex.models.abstract_discovery_request import AbstractDiscoveryRequest
-from netex.models.capabilities_request import CapabilitiesRequest
-from netex.models.capabilities_response import CapabilitiesResponse
-from netex.models.check_status_request import CheckStatusRequest
-from netex.models.check_status_response import CheckStatusResponse
-from netex.models.data_ready_acknowledgement import DataReadyAcknowledgement
-from netex.models.data_ready_notification import DataReadyNotification
-from netex.models.data_received_acknowledgement import DataReceivedAcknowledgement
-from netex.models.data_supply_request import DataSupplyRequest
-from netex.models.extensions_1 import Extensions1
-from netex.models.heartbeat_notification import HeartbeatNotification
-from netex.models.service_delivery import ServiceDelivery
-from netex.models.service_request import ServiceRequest
-from netex.models.subscription_request import SubscriptionRequest
-from netex.models.subscription_response import SubscriptionResponse
-from netex.models.terminate_subscription_request import TerminateSubscriptionRequest
-from netex.models.terminate_subscription_response import TerminateSubscriptionResponse
+from .abstract_discovery_delivery import AbstractDiscoveryDelivery
+from .abstract_discovery_request import AbstractDiscoveryRequest
+from .capabilities_request import CapabilitiesRequest
+from .capabilities_response import CapabilitiesResponse
+from .check_status_request import CheckStatusRequest
+from .check_status_response import CheckStatusResponse
+from .data_ready_acknowledgement import DataReadyAcknowledgement
+from .data_ready_notification import DataReadyNotification
+from .data_received_acknowledgement import DataReceivedAcknowledgement
+from .data_supply_request import DataSupplyRequest
+from .extensions_1 import Extensions1
+from .heartbeat_notification import HeartbeatNotification
+from .service_delivery import ServiceDelivery
+from .service_request import ServiceRequest
+from .subscription_request import SubscriptionRequest
+from .subscription_response import SubscriptionResponse
+from .terminate_subscription_request import TerminateSubscriptionRequest
+from .terminate_subscription_response import TerminateSubscriptionResponse
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

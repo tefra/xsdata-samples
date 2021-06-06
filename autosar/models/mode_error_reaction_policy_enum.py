@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.mode_error_reaction_policy_enum_simple import ModeErrorReactionPolicyEnumSimple
+from .mode_error_reaction_policy_enum_simple import ModeErrorReactionPolicyEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

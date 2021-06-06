@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.cs_transformer_error_reaction_enum_simple import CsTransformerErrorReactionEnumSimple
+from .cs_transformer_error_reaction_enum_simple import CsTransformerErrorReactionEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

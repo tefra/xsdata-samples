@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.day_type_assignment import DayTypeAssignment
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .day_type_assignment import DayTypeAssignment
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

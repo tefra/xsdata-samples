@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.identifier import Identifier
-from autosar.models.sw_axis_cont import SwAxisCont
-from autosar.models.sw_value_cont import SwValueCont
+from .annotation import VariationPoint
+from .identifier import Identifier
+from .sw_axis_cont import SwAxisCont
+from .sw_value_cont import SwValueCont
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

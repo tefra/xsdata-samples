@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from netex.models.water_submode_enumeration import WaterSubmodeEnumeration
+from .water_submode_enumeration import WaterSubmodeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

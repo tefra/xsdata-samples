@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.so_ad_connector_type_simple import SoAdConnectorTypeSimple
+from .so_ad_connector_type_simple import SoAdConnectorTypeSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

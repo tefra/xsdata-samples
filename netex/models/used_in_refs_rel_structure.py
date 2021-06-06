@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.group_of_distance_matrix_elements_ref import GroupOfDistanceMatrixElementsRef
-from netex.models.group_of_sales_offer_packages_ref import GroupOfSalesOfferPackagesRef
-from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
-from netex.models.parking_tariff_ref import ParkingTariffRef
-from netex.models.tariff_ref import TariffRef
+from .group_of_distance_matrix_elements_ref import GroupOfDistanceMatrixElementsRef
+from .group_of_sales_offer_packages_ref import GroupOfSalesOfferPackagesRef
+from .one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .parking_tariff_ref import ParkingTariffRef
+from .tariff_ref import TariffRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

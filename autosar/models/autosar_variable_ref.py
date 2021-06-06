@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.ar_variable_in_implementation_data_instance_ref import ArVariableInImplementationDataInstanceRef
-from autosar.models.ref import Ref
-from autosar.models.variable_data_prototype_subtypes_enum import VariableDataPrototypeSubtypesEnum
-from autosar.models.variable_in_atomic_swc_type_instance_ref import VariableInAtomicSwcTypeInstanceRef
+from .ar_variable_in_implementation_data_instance_ref import ArVariableInImplementationDataInstanceRef
+from .ref import Ref
+from .variable_data_prototype_subtypes_enum import VariableDataPrototypeSubtypesEnum
+from .variable_in_atomic_swc_type_instance_ref import VariableInAtomicSwcTypeInstanceRef
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDuration
-from netex.models.entitlement_constraint_structure import EntitlementConstraintStructure
-from netex.models.entitlement_type_enumeration import EntitlementTypeEnumeration
-from netex.models.sales_offer_package_ref import SalesOfferPackageRef
-from netex.models.usage_parameter_version_structure import UsageParameterVersionStructure
+from .entitlement_constraint_structure import EntitlementConstraintStructure
+from .entitlement_type_enumeration import EntitlementTypeEnumeration
+from .sales_offer_package_ref import SalesOfferPackageRef
+from .usage_parameter_version_structure import UsageParameterVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

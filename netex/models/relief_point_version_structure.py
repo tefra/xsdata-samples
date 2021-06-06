@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.crew_base_ref import CrewBaseRef
-from netex.models.timing_point_version_structure import TimingPointVersionStructure
+from .crew_base_ref import CrewBaseRef
+from .timing_point_version_structure import TimingPointVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

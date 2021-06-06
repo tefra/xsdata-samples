@@ -1,14 +1,14 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.byte_order_enum import ByteOrderEnum
-from autosar.models.category_string import CategoryString
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.positive_integer import PositiveInteger
+from .byte_order_enum import ByteOrderEnum
+from .category_string import CategoryString
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .positive_integer import PositiveInteger
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

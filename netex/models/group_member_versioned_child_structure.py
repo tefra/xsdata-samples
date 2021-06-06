@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.abstract_group_member_versioned_child_structure import AbstractGroupMemberVersionedChildStructure
-from netex.models.version_of_object_ref_structure import VersionOfObjectRefStructure
+from .abstract_group_member_versioned_child_structure import AbstractGroupMemberVersionedChildStructure
+from .version_of_object_ref_structure import VersionOfObjectRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

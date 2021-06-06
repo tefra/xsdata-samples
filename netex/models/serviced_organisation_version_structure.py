@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.other_organisation_version_structure import OtherOrganisationVersionStructure
-from netex.models.service_calendar_ref import ServiceCalendarRef
-from netex.models.serviced_organisation_type_enumeration import ServicedOrganisationTypeEnumeration
+from .other_organisation_version_structure import OtherOrganisationVersionStructure
+from .service_calendar_ref import ServiceCalendarRef
+from .serviced_organisation_type_enumeration import ServicedOrganisationTypeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

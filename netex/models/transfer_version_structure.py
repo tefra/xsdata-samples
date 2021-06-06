@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.transfer_duration_structure import TransferDurationStructure
-from netex.models.type_of_transfer_ref import TypeOfTransferRef
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .multilingual_string import MultilingualString
+from .transfer_duration_structure import TransferDurationStructure
+from .type_of_transfer_ref import TypeOfTransferRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

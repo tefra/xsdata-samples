@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.execution_state_reporting_behavior_enum_simple import ExecutionStateReportingBehaviorEnumSimple
+from .execution_state_reporting_behavior_enum_simple import ExecutionStateReportingBehaviorEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

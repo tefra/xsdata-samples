@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.heartbeat_notification_structure import HeartbeatNotificationStructure
+from .heartbeat_notification_structure import HeartbeatNotificationStructure
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

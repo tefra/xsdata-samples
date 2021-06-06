@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.ip_transport_protocol_enum_simple import IpTransportProtocolEnumSimple
+from .ip_transport_protocol_enum_simple import IpTransportProtocolEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

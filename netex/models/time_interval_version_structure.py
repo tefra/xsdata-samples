@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDuration, XmlTime
-from netex.models.fare_interval_version_structure import FareIntervalVersionStructure
-from netex.models.time_interval_prices_rel_structure import TimeIntervalPricesRelStructure
-from netex.models.time_structure_factors_rel_structure import TimeStructureFactorsRelStructure
+from .fare_interval_version_structure import FareIntervalVersionStructure
+from .time_interval_prices_rel_structure import TimeIntervalPricesRelStructure
+from .time_structure_factors_rel_structure import TimeStructureFactorsRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.physical_dimension_subtypes_enum import PhysicalDimensionSubtypesEnum
-from autosar.models.ref import Ref
+from .physical_dimension_subtypes_enum import PhysicalDimensionSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

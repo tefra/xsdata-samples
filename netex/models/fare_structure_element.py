@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.fare_structure_element_version_structure import FareStructureElementVersionStructure
+from .fare_structure_element_version_structure import FareStructureElementVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

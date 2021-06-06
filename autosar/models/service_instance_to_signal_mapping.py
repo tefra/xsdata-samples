@@ -1,20 +1,20 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.adaptive_platform_service_instance_subtypes_enum import AdaptivePlatformServiceInstanceSubtypesEnum
-from autosar.models.annotation import (
+from .adaptive_platform_service_instance_subtypes_enum import AdaptivePlatformServiceInstanceSubtypesEnum
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.signal_based_event_element_to_i_signal_triggering_mapping import SignalBasedEventElementToISignalTriggeringMapping
-from autosar.models.signal_based_field_to_i_signal_triggering_mapping import SignalBasedFieldToISignalTriggeringMapping
-from autosar.models.signal_based_method_to_i_signal_triggering_mapping import SignalBasedMethodToISignalTriggeringMapping
+from .category_string import CategoryString
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
+from .signal_based_event_element_to_i_signal_triggering_mapping import SignalBasedEventElementToISignalTriggeringMapping
+from .signal_based_field_to_i_signal_triggering_mapping import SignalBasedFieldToISignalTriggeringMapping
+from .signal_based_method_to_i_signal_triggering_mapping import SignalBasedMethodToISignalTriggeringMapping
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

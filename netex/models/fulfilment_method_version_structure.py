@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.cell_versioned_child_structure import PriceableObjectVersionStructure
-from netex.models.fulfilment_method_prices_rel_structure import FulfilmentMethodPricesRelStructure
-from netex.models.fulfilment_method_type_enumeration import FulfilmentMethodTypeEnumeration
-from netex.models.type_of_travel_document_refs_rel_structure import TypeOfTravelDocumentRefsRelStructure
+from .cell_versioned_child_structure import PriceableObjectVersionStructure
+from .fulfilment_method_prices_rel_structure import FulfilmentMethodPricesRelStructure
+from .fulfilment_method_type_enumeration import FulfilmentMethodTypeEnumeration
+from .type_of_travel_document_refs_rel_structure import TypeOfTravelDocumentRefsRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.general_zone_version_structure import GeneralZoneVersionStructure
+from .general_zone_version_structure import GeneralZoneVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

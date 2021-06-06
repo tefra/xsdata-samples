@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.diagnostic_obd_support_enum_simple import DiagnosticObdSupportEnumSimple
+from .diagnostic_obd_support_enum_simple import DiagnosticObdSupportEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

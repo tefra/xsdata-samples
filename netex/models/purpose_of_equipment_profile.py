@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.purpose_of_equipment_profile_value_structure import PurposeOfEquipmentProfileValueStructure
+from .purpose_of_equipment_profile_value_structure import PurposeOfEquipmentProfileValueStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.msr_query_arg import MsrQueryArg
-from autosar.models.string import String
+from .msr_query_arg import MsrQueryArg
+from .string import String
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

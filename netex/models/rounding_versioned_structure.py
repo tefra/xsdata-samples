@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.rounding_method_enumeration import RoundingMethodEnumeration
-from netex.models.rounding_steps_rel_structure import RoundingStepsRelStructure
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .multilingual_string import MultilingualString
+from .rounding_method_enumeration import RoundingMethodEnumeration
+from .rounding_steps_rel_structure import RoundingStepsRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

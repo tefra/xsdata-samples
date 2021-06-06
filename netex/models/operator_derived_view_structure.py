@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.alternative_names_rel_structure import AlternativeNamesRelStructure
-from netex.models.derived_view_structure import DerivedViewStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.operator_ref import OperatorRef
+from .alternative_names_rel_structure import AlternativeNamesRelStructure
+from .derived_view_structure import DerivedViewStructure
+from .multilingual_string import MultilingualString
+from .operator_ref import OperatorRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

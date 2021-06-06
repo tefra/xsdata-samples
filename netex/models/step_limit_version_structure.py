@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.step_limit_unit_enumeration import StepLimitUnitEnumeration
-from netex.models.usage_parameter_version_structure import UsageParameterVersionStructure
+from .step_limit_unit_enumeration import StepLimitUnitEnumeration
+from .usage_parameter_version_structure import UsageParameterVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

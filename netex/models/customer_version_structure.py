@@ -2,14 +2,14 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
 from xsdata.models.datatype import XmlDate
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.customer_accounts_rel_structure import CustomerAccountsRelStructure
-from netex.models.customer_eligibilities_rel_structure import CustomerEligibilitiesRelStructure
-from netex.models.fare_contracts_rel_structure import FareContractsRelStructure
-from netex.models.gender_enumeration import GenderEnumeration
-from netex.models.postal_address import PostalAddress
-from netex.models.private_code_structure import PrivateCodeStructure
-from netex.models.telephone_contact_structure import TelephoneContactStructure
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .customer_accounts_rel_structure import CustomerAccountsRelStructure
+from .customer_eligibilities_rel_structure import CustomerEligibilitiesRelStructure
+from .fare_contracts_rel_structure import FareContractsRelStructure
+from .gender_enumeration import GenderEnumeration
+from .postal_address import PostalAddress
+from .private_code_structure import PrivateCodeStructure
+from .telephone_contact_structure import TelephoneContactStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

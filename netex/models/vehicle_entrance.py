@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.vehicle_entrance_version_structure import VehicleEntranceVersionStructure
+from .vehicle_entrance_version_structure import VehicleEntranceVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.fare_price_versioned_child_structure import FarePriceVersionedChildStructure
-from netex.models.geographical_interval_ref import GeographicalIntervalRef
+from .fare_price_versioned_child_structure import FarePriceVersionedChildStructure
+from .geographical_interval_ref import GeographicalIntervalRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

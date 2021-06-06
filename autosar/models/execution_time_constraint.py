@@ -1,23 +1,23 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.component_in_composition_instance_ref import ComponentInCompositionInstanceRef
-from autosar.models.executable_entity_subtypes_enum import ExecutableEntitySubtypesEnum
-from autosar.models.execution_time_type_enum import ExecutionTimeTypeEnum
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multidimensional_time import MultidimensionalTime
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.timing_condition_subtypes_enum import TimingConditionSubtypesEnum
-from autosar.models.traceable_subtypes_enum import TraceableSubtypesEnum
+from .category_string import CategoryString
+from .component_in_composition_instance_ref import ComponentInCompositionInstanceRef
+from .executable_entity_subtypes_enum import ExecutableEntitySubtypesEnum
+from .execution_time_type_enum import ExecutionTimeTypeEnum
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multidimensional_time import MultidimensionalTime
+from .multilanguage_long_name import MultilanguageLongName
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
+from .timing_condition_subtypes_enum import TimingConditionSubtypesEnum
+from .traceable_subtypes_enum import TraceableSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

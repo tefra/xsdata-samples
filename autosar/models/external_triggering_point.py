@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.external_triggering_point_ident import ExternalTriggeringPointIdent
-from autosar.models.p_trigger_in_atomic_swc_type_instance_ref import PTriggerInAtomicSwcTypeInstanceRef
+from .annotation import VariationPoint
+from .external_triggering_point_ident import ExternalTriggeringPointIdent
+from .p_trigger_in_atomic_swc_type_instance_ref import PTriggerInAtomicSwcTypeInstanceRef
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

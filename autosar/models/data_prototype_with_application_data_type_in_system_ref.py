@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.application_data_prototype_in_system_instance_ref import ApplicationDataPrototypeInSystemInstanceRef
-from autosar.models.positive_integer import PositiveInteger
+from .application_data_prototype_in_system_instance_ref import ApplicationDataPrototypeInSystemInstanceRef
+from .positive_integer import PositiveInteger
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

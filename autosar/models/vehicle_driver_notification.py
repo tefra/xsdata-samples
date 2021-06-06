@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.boolean import Boolean
-from autosar.models.vehicle_driver_notification_enum import VehicleDriverNotificationEnum
+from .boolean import Boolean
+from .vehicle_driver_notification_enum import VehicleDriverNotificationEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

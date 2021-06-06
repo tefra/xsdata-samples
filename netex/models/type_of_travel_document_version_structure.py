@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.alternative_names_rel_structure import AlternativeNamesRelStructure
-from netex.models.machine_readable_enumeration import MachineReadableEnumeration
-from netex.models.media_type_enumeration import MediaTypeEnumeration
-from netex.models.type_of_entity_version_structure import TypeOfEntityVersionStructure
-from netex.models.types_of_machine_readabilities_rel_structure import TypesOfMachineReadabilitiesRelStructure
+from .alternative_names_rel_structure import AlternativeNamesRelStructure
+from .machine_readable_enumeration import MachineReadableEnumeration
+from .media_type_enumeration import MediaTypeEnumeration
+from .type_of_entity_version_structure import TypeOfEntityVersionStructure
+from .types_of_machine_readabilities_rel_structure import TypesOfMachineReadabilitiesRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

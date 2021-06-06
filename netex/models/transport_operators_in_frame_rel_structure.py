@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.authority import Authority
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.operator import Operator
+from .authority import Authority
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .operator import Operator
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

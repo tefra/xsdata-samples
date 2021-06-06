@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.dated_special_service_ref import DatedSpecialServiceRef
-from netex.models.special_service import SpecialService
-from netex.models.special_service_ref import SpecialServiceRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .dated_special_service_ref import DatedSpecialServiceRef
+from .special_service import SpecialService
+from .special_service_ref import SpecialServiceRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

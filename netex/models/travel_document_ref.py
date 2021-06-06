@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.travel_document_ref_structure import TravelDocumentRefStructure
+from .travel_document_ref_structure import TravelDocumentRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

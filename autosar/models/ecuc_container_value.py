@@ -1,24 +1,24 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.ecuc_add_info_param_value import EcucAddInfoParamValue
-from autosar.models.ecuc_container_def_subtypes_enum import EcucContainerDefSubtypesEnum
-from autosar.models.ecuc_instance_reference_value import EcucInstanceReferenceValue
-from autosar.models.ecuc_numerical_param_value import EcucNumericalParamValue
-from autosar.models.ecuc_reference_value import EcucReferenceValue
-from autosar.models.ecuc_textual_param_value import EcucTextualParamValue
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
+from .category_string import CategoryString
+from .ecuc_add_info_param_value import EcucAddInfoParamValue
+from .ecuc_container_def_subtypes_enum import EcucContainerDefSubtypesEnum
+from .ecuc_instance_reference_value import EcucInstanceReferenceValue
+from .ecuc_numerical_param_value import EcucNumericalParamValue
+from .ecuc_reference_value import EcucReferenceValue
+from .ecuc_textual_param_value import EcucTextualParamValue
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from netex.models.amount_of_price_unit_enumeration import AmountOfPriceUnitEnumeration
-from netex.models.fare_product_version_structure import FareProductVersionStructure
-from netex.models.price_unit_ref import PriceUnitRef
+from .amount_of_price_unit_enumeration import AmountOfPriceUnitEnumeration
+from .fare_product_version_structure import FareProductVersionStructure
+from .price_unit_ref import PriceUnitRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

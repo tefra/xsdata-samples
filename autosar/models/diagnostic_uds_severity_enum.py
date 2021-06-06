@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.diagnostic_uds_severity_enum_simple import DiagnosticUdsSeverityEnumSimple
+from .diagnostic_uds_severity_enum_simple import DiagnosticUdsSeverityEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

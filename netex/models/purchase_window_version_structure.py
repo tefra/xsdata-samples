@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDuration, XmlTime
-from netex.models.purchase_action_enumeration import PurchaseActionEnumeration
-from netex.models.purchase_moment_enumeration import PurchaseMomentEnumeration
-from netex.models.purchase_when_enumeration import PurchaseWhenEnumeration
-from netex.models.time_interval_ref_structure import TimeIntervalRefStructure
-from netex.models.usage_parameter_version_structure import UsageParameterVersionStructure
+from .purchase_action_enumeration import PurchaseActionEnumeration
+from .purchase_moment_enumeration import PurchaseMomentEnumeration
+from .purchase_when_enumeration import PurchaseWhenEnumeration
+from .time_interval_ref_structure import TimeIntervalRefStructure
+from .usage_parameter_version_structure import UsageParameterVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

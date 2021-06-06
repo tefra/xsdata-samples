@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.time_interval_version_structure import TimeIntervalVersionStructure
+from .time_interval_version_structure import TimeIntervalVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

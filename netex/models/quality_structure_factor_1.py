@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.quality_structure_factor_version_structure import QualityStructureFactorVersionStructure
+from .quality_structure_factor_version_structure import QualityStructureFactorVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

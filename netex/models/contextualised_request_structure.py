@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDateTime
-from netex.models.service_request_context_structure import ServiceRequestContextStructure
+from .service_request_context_structure import ServiceRequestContextStructure
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

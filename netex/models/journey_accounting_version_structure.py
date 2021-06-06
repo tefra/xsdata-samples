@@ -2,11 +2,11 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
 from xsdata.models.datatype import XmlDuration
-from netex.models.assignment_version_structure_1 import AssignmentVersionStructure1
-from netex.models.journey_accounting_enumeration import JourneyAccountingEnumeration
-from netex.models.organisation_ref_structure import OrganisationRefStructure
-from netex.models.supply_contract_ref import SupplyContractRef
-from netex.models.version_of_object_ref_structure import VersionOfObjectRefStructure
+from .assignment_version_structure_1 import AssignmentVersionStructure1
+from .journey_accounting_enumeration import JourneyAccountingEnumeration
+from .organisation_ref_structure import OrganisationRefStructure
+from .supply_contract_ref import SupplyContractRef
+from .version_of_object_ref_structure import VersionOfObjectRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

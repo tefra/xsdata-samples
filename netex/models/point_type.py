@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.abstract_geometric_primitive_type import AbstractGeometricPrimitiveType
-from netex.models.pos import Pos
+from .abstract_geometric_primitive_type import AbstractGeometricPrimitiveType
+from .pos import Pos
 
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 

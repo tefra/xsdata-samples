@@ -1,15 +1,15 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.asam_record_layout_semantics import AsamRecordLayoutSemantics
-from autosar.models.axis_index_type import AxisIndexType
-from autosar.models.identifier import Identifier
-from autosar.models.integer import Integer
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.nmtoken_string import NmtokenString
-from autosar.models.nmtokens_string import NmtokensString
-from autosar.models.ref import Ref
-from autosar.models.sw_base_type_subtypes_enum import SwBaseTypeSubtypesEnum
-from autosar.models.sw_generic_axis_param_type_subtypes_enum import SwGenericAxisParamTypeSubtypesEnum
+from .asam_record_layout_semantics import AsamRecordLayoutSemantics
+from .axis_index_type import AxisIndexType
+from .identifier import Identifier
+from .integer import Integer
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .nmtoken_string import NmtokenString
+from .nmtokens_string import NmtokensString
+from .ref import Ref
+from .sw_base_type_subtypes_enum import SwBaseTypeSubtypesEnum
+from .sw_generic_axis_param_type_subtypes_enum import SwGenericAxisParamTypeSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

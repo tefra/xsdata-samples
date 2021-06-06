@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.check_constraint_delay_version_structure import CheckConstraintDelayVersionStructure
+from .check_constraint_delay_version_structure import CheckConstraintDelayVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

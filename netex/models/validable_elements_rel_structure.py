@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.strict_containment_aggregation_structure import StrictContainmentAggregationStructure
-from netex.models.validable_element import ValidableElement
-from netex.models.validable_element_ref import ValidableElementRef
+from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
+from .validable_element import ValidableElement
+from .validable_element_ref import ValidableElementRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

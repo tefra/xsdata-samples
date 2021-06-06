@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.additional_binding_time_enum_simple import AdditionalBindingTimeEnumSimple
+from .additional_binding_time_enum_simple import AdditionalBindingTimeEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

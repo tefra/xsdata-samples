@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.sales_offer_package_substitution import SalesOfferPackageSubstitution
-from netex.models.sales_offer_package_substitution_ref import SalesOfferPackageSubstitutionRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .sales_offer_package_substitution import SalesOfferPackageSubstitution
+from .sales_offer_package_substitution_ref import SalesOfferPackageSubstitutionRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

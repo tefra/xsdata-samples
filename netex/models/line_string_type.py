@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.abstract_curve_type import AbstractCurveType
-from netex.models.point_property import PointProperty
-from netex.models.pos import Pos
-from netex.models.pos_list import PosList
+from .abstract_curve_type import AbstractCurveType
+from .point_property import PointProperty
+from .pos import Pos
+from .pos_list import PosList
 
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 

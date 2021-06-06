@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
+from ..core.datatypes_base import (
     Cd,
     Ce,
     Cs,
@@ -11,19 +11,19 @@ from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
     St,
     TsExplicit,
 )
-from common_types.models.hl7_v3.ne2008.core.voc import (
+from ..core.voc import (
     ActClassControlAct,
     NullFlavor,
     XActMoodIntentEvent,
 )
-from common_types.models.hl7_v3.ne2008.multi_cache.mcci_mt000100_uv01 import (
+from .mcci_mt000100_uv01 import (
     McciMt000100Uv01AttentionLine,
     McciMt000100Uv01Receiver,
     McciMt000100Uv01RespondTo,
     McciMt000100Uv01Sender,
 )
-from common_types.models.hl7_v3.ne2008.multi_cache.prpa_mt201307_uv02 import PrpaMt201307Uv02QueryByParameter
-from common_types.models.hl7_v3.ne2008.multi_cache.quqi_mt021001_uv01 import (
+from .prpa_mt201307_uv02 import PrpaMt201307Uv02QueryByParameter
+from .quqi_mt021001_uv01 import (
     QuqiMt021001Uv01AuthorOrPerformer,
     QuqiMt021001Uv01DataEnterer,
     QuqiMt021001Uv01InformationRecipient,

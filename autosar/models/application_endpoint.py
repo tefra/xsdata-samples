@@ -1,30 +1,30 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.consumed_service_instance import ConsumedServiceInstance
-from autosar.models.discovery_technology import DiscoveryTechnology
-from autosar.models.generic_tp import GenericTp
-from autosar.models.http_tp import HttpTp
-from autosar.models.identifier import Identifier
-from autosar.models.ieee_1722_tp import Ieee1722Tp
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.network_endpoint_subtypes_enum import NetworkEndpointSubtypesEnum
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.provided_service_instance import ProvidedServiceInstance
-from autosar.models.ref import Ref
-from autosar.models.remoting_technology import RemotingTechnology
-from autosar.models.rtp_tp import RtpTp
-from autosar.models.serialization_technology_subtypes_enum import SerializationTechnologySubtypesEnum
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.tcp_tp import TcpTp
-from autosar.models.tls_crypto_service_mapping_subtypes_enum import TlsCryptoServiceMappingSubtypesEnum
-from autosar.models.udp_tp import UdpTp
+from .category_string import CategoryString
+from .consumed_service_instance import ConsumedServiceInstance
+from .discovery_technology import DiscoveryTechnology
+from .generic_tp import GenericTp
+from .http_tp import HttpTp
+from .identifier import Identifier
+from .ieee_1722_tp import Ieee1722Tp
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .network_endpoint_subtypes_enum import NetworkEndpointSubtypesEnum
+from .positive_integer import PositiveInteger
+from .provided_service_instance import ProvidedServiceInstance
+from .ref import Ref
+from .remoting_technology import RemotingTechnology
+from .rtp_tp import RtpTp
+from .serialization_technology_subtypes_enum import SerializationTechnologySubtypesEnum
+from .short_name_fragment import ShortNameFragment
+from .tcp_tp import TcpTp
+from .tls_crypto_service_mapping_subtypes_enum import TlsCryptoServiceMappingSubtypesEnum
+from .udp_tp import UdpTp
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

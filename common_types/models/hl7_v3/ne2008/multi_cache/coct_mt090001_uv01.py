@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
+from ..core.datatypes_base import (
     Ce,
     Cs,
     Ii,
 )
-from common_types.models.hl7_v3.ne2008.core.voc import (
+from ..core.voc import (
     NullFlavor,
     RoleClassAssignedEntity,
 )

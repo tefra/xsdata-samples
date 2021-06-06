@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.vehicle_manoeuvring_requirement_version_structure import VehicleManoeuvringRequirementVersionStructure
+from .vehicle_manoeuvring_requirement_version_structure import VehicleManoeuvringRequirementVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

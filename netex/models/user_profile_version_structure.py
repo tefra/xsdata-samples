@@ -1,15 +1,15 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlPeriod
-from netex.models.companion_profiles_rel_structure import CompanionProfilesRelStructure
-from netex.models.discount_basis_enumeration import DiscountBasisEnumeration
-from netex.models.gender_limitation_enumeration import GenderLimitationEnumeration
-from netex.models.proof_of_identity_enumeration import ProofOfIdentityEnumeration
-from netex.models.residential_qualifications_rel_structure import ResidentialQualificationsRelStructure
-from netex.models.type_of_concession_ref import TypeOfConcessionRef
-from netex.models.usage_parameter_version_structure import UsageParameterVersionStructure
-from netex.models.user_profile_ref_structure import UserProfileRefStructure
-from netex.models.user_type_enumeration import UserTypeEnumeration
+from .companion_profiles_rel_structure import CompanionProfilesRelStructure
+from .discount_basis_enumeration import DiscountBasisEnumeration
+from .gender_limitation_enumeration import GenderLimitationEnumeration
+from .proof_of_identity_enumeration import ProofOfIdentityEnumeration
+from .residential_qualifications_rel_structure import ResidentialQualificationsRelStructure
+from .type_of_concession_ref import TypeOfConcessionRef
+from .usage_parameter_version_structure import UsageParameterVersionStructure
+from .user_profile_ref_structure import UserProfileRefStructure
+from .user_type_enumeration import UserTypeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

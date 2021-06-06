@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.alternative_texts_rel_structure import VersionedChildStructure
-from netex.models.blacklist_ref import BlacklistRef
-from netex.models.multilingual_string import MultilingualString
-from netex.models.security_list_ref import SecurityListRef
-from netex.models.whitelist_ref import WhitelistRef
+from .alternative_texts_rel_structure import VersionedChildStructure
+from .blacklist_ref import BlacklistRef
+from .multilingual_string import MultilingualString
+from .security_list_ref import SecurityListRef
+from .whitelist_ref import WhitelistRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

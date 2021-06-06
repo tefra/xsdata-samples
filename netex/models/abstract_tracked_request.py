@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.request_structure import RequestStructure
+from .request_structure import RequestStructure
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

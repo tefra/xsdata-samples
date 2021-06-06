@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.dated_service_journey import DatedServiceJourney
-from netex.models.service_journey_1 import ServiceJourney1
-from netex.models.special_service import SpecialService
-from netex.models.template_service_journey import TemplateServiceJourney
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .dated_service_journey import DatedServiceJourney
+from .service_journey_1 import ServiceJourney1
+from .special_service import SpecialService
+from .template_service_journey import TemplateServiceJourney
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

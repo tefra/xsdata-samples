@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.strict_containment_aggregation_structure import StrictContainmentAggregationStructure
-from netex.models.train_in_compound_train_versioned_child_structure import TrainInCompoundTrainVersionedChildStructure
+from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
+from .train_in_compound_train_versioned_child_structure import TrainInCompoundTrainVersionedChildStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

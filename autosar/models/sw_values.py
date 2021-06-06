@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.numerical_or_text import NumericalOrText
-from autosar.models.numerical_value import NumericalValue
-from autosar.models.numerical_value_variation_point import NumericalValueVariationPoint
-from autosar.models.value_group import ValueGroup
-from autosar.models.verbatim_string import VerbatimString
+from .numerical_or_text import NumericalOrText
+from .numerical_value import NumericalValue
+from .numerical_value_variation_point import NumericalValueVariationPoint
+from .value_group import ValueGroup
+from .verbatim_string import VerbatimString
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.path_link_in_sequence import PathLinkInSequence
-from netex.models.strict_containment_aggregation_structure import StrictContainmentAggregationStructure
+from .path_link_in_sequence import PathLinkInSequence
+from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

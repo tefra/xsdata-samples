@@ -1,18 +1,18 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.alternative_texts_rel_structure import VersionedChildStructure
-from netex.models.border_point_ref import BorderPointRef
-from netex.models.destination_display_ref import DestinationDisplayRef
-from netex.models.destination_display_view import DestinationDisplayView
-from netex.models.fare_scheduled_stop_point_ref import FareScheduledStopPointRef
-from netex.models.garage_point_ref import GaragePointRef
-from netex.models.multilingual_string import MultilingualString
-from netex.models.parking_point_ref import ParkingPointRef
-from netex.models.relief_point_ref import ReliefPointRef
-from netex.models.route_point_ref import RoutePointRef
-from netex.models.scheduled_stop_point_ref import ScheduledStopPointRef
-from netex.models.timing_point_ref import TimingPointRef
-from netex.models.via_type_enumeration import ViaTypeEnumeration
+from .alternative_texts_rel_structure import VersionedChildStructure
+from .border_point_ref import BorderPointRef
+from .destination_display_ref import DestinationDisplayRef
+from .destination_display_view import DestinationDisplayView
+from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
+from .garage_point_ref import GaragePointRef
+from .multilingual_string import MultilingualString
+from .parking_point_ref import ParkingPointRef
+from .relief_point_ref import ReliefPointRef
+from .route_point_ref import RoutePointRef
+from .scheduled_stop_point_ref import ScheduledStopPointRef
+from .timing_point_ref import TimingPointRef
+from .via_type_enumeration import ViaTypeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

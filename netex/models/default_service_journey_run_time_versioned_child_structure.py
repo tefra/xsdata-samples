@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDuration
-from netex.models.journey_timing_versioned_child_structure import JourneyTimingVersionedChildStructure
-from netex.models.service_journey_ref import ServiceJourneyRef
-from netex.models.template_service_journey_ref import TemplateServiceJourneyRef
+from .journey_timing_versioned_child_structure import JourneyTimingVersionedChildStructure
+from .service_journey_ref import ServiceJourneyRef
+from .template_service_journey_ref import TemplateServiceJourneyRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

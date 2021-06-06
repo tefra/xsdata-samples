@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.derived_view_structure import DerivedViewStructure
-from netex.models.destination_display_ref import DestinationDisplayRef
-from netex.models.key_list import KeyList
-from netex.models.multilingual_string import MultilingualString
-from netex.models.private_code import PrivateCode
+from .derived_view_structure import DerivedViewStructure
+from .destination_display_ref import DestinationDisplayRef
+from .key_list import KeyList
+from .multilingual_string import MultilingualString
+from .private_code import PrivateCode
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

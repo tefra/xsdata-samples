@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.boolean import Boolean
-from autosar.models.cpp_implementation_data_type_subtypes_enum import CppImplementationDataTypeSubtypesEnum
-from autosar.models.ref import Ref
+from .boolean import Boolean
+from .cpp_implementation_data_type_subtypes_enum import CppImplementationDataTypeSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

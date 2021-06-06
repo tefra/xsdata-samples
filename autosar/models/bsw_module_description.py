@@ -1,29 +1,29 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.blueprint_policy_list import BlueprintPolicyList
-from autosar.models.blueprint_policy_not_modifiable import BlueprintPolicyNotModifiable
-from autosar.models.blueprint_policy_single import BlueprintPolicySingle
-from autosar.models.bsw_internal_behavior import BswInternalBehavior
-from autosar.models.bsw_module_client_server_entry import BswModuleClientServerEntry
-from autosar.models.bsw_module_dependency import BswModuleDependency
-from autosar.models.bsw_module_entry_ref_conditional import BswModuleEntryRefConditional
-from autosar.models.category_string import CategoryString
-from autosar.models.identifier import Identifier
-from autosar.models.mode_declaration_group_prototype import ModeDeclarationGroupPrototype
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.string import String
-from autosar.models.sw_component_documentation import SwComponentDocumentation
-from autosar.models.trigger import Trigger
-from autosar.models.variable_data_prototype import VariableDataPrototype
+from .blueprint_policy_list import BlueprintPolicyList
+from .blueprint_policy_not_modifiable import BlueprintPolicyNotModifiable
+from .blueprint_policy_single import BlueprintPolicySingle
+from .bsw_internal_behavior import BswInternalBehavior
+from .bsw_module_client_server_entry import BswModuleClientServerEntry
+from .bsw_module_dependency import BswModuleDependency
+from .bsw_module_entry_ref_conditional import BswModuleEntryRefConditional
+from .category_string import CategoryString
+from .identifier import Identifier
+from .mode_declaration_group_prototype import ModeDeclarationGroupPrototype
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .positive_integer import PositiveInteger
+from .short_name_fragment import ShortNameFragment
+from .string import String
+from .sw_component_documentation import SwComponentDocumentation
+from .trigger import Trigger
+from .variable_data_prototype import VariableDataPrototype
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

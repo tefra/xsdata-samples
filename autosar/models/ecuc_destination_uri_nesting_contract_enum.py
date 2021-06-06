@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.ecuc_destination_uri_nesting_contract_enum_simple import EcucDestinationUriNestingContractEnumSimple
+from .ecuc_destination_uri_nesting_contract_enum_simple import EcucDestinationUriNestingContractEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.multilingual_string import MultilingualString
-from netex.models.point_version_structure import PointVersionStructure
-from netex.models.private_code import PrivateCode
-from netex.models.type_of_activation_ref import TypeOfActivationRef
+from .multilingual_string import MultilingualString
+from .point_version_structure import PointVersionStructure
+from .private_code import PrivateCode
+from .type_of_activation_ref import TypeOfActivationRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

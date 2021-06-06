@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.type_of_zone_ref_structure import TypeOfZoneRefStructure
+from .type_of_zone_ref_structure import TypeOfZoneRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

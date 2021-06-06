@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.coupling_port_rate_policy_action_enum import CouplingPortRatePolicyActionEnum
-from autosar.models.ethernet_physical_channel_subtypes_enum import EthernetPhysicalChannelSubtypesEnum
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.time_value import TimeValue
+from .coupling_port_rate_policy_action_enum import CouplingPortRatePolicyActionEnum
+from .ethernet_physical_channel_subtypes_enum import EthernetPhysicalChannelSubtypesEnum
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .time_value import TimeValue
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

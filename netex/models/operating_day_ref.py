@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.operating_day_ref_structure import OperatingDayRefStructure
+from .operating_day_ref_structure import OperatingDayRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

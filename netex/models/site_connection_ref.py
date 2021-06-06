@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.site_connection_ref_structure import SiteConnectionRefStructure
+from .site_connection_ref_structure import SiteConnectionRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

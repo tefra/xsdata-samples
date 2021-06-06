@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
-from common_types.models.hl7_v3.ne2008.core.datatypes import (
+from ..core.datatypes import (
     RtoMoPq,
     RtoPqPq,
 )
-from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
+from ..core.datatypes_base import (
     AdExplicit,
     Cd,
     Ce,
@@ -21,7 +21,7 @@ from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
     TelExplicit,
     TsExplicit,
 )
-from common_types.models.hl7_v3.ne2008.core.voc import (
+from ..core.voc import (
     ActClass,
     ActClassCareProvision,
     ActClassObservation,
@@ -71,19 +71,19 @@ from common_types.models.hl7_v3.ne2008.core.voc import (
     XRoleClassPayeePolicyRelationship,
     XSuccReplPrev,
 )
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt030007_uv import (
+from .coct_mt030007_uv import (
     CoctMt030007UvNonPersonLivingSubject,
     CoctMt030007UvPerson,
 )
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt050000_uv01 import CoctMt050000Uv01Patient
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt060000_uv01 import CoctMt060000Uv01Transportation
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt150000_uv02 import CoctMt150000Uv02Organization
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt280000_uv04 import CoctMt280000Uv04CrossReference
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt290000_uv06 import CoctMt290000Uv06BillableClinicalService
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt300000_uv04 import CoctMt300000Uv04SupplyEvent
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt310000_uv04 import CoctMt310000Uv04AccomodationSupplied
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt490000_uv04 import CoctMt490000Uv04BillableClinicalProduct
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt530000_uv import (
+from .coct_mt050000_uv01 import CoctMt050000Uv01Patient
+from .coct_mt060000_uv01 import CoctMt060000Uv01Transportation
+from .coct_mt150000_uv02 import CoctMt150000Uv02Organization
+from .coct_mt280000_uv04 import CoctMt280000Uv04CrossReference
+from .coct_mt290000_uv06 import CoctMt290000Uv06BillableClinicalService
+from .coct_mt300000_uv04 import CoctMt300000Uv04SupplyEvent
+from .coct_mt310000_uv04 import CoctMt310000Uv04AccomodationSupplied
+from .coct_mt490000_uv04 import CoctMt490000Uv04BillableClinicalProduct
+from .coct_mt530000_uv import (
     CoctMt530000UvAct,
     CoctMt530000UvActReference,
     CoctMt530000UvEncounter,
@@ -93,9 +93,9 @@ from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt530000_uv import (
     CoctMt530000UvSubstanceAdministration,
     CoctMt530000UvSupply,
 )
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt600000_uv06 import CoctMt600000Uv06SupplyEvent
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt740000_uv04 import CoctMt740000Uv04OralHealthService
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt810000_uv import CoctMt810000UvVerification
+from .coct_mt600000_uv06 import CoctMt600000Uv06SupplyEvent
+from .coct_mt740000_uv04 import CoctMt740000Uv04OralHealthService
+from .coct_mt810000_uv import CoctMt810000UvVerification
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

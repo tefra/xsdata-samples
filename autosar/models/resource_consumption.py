@@ -1,29 +1,29 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.access_count_set import AccessCountSet
-from autosar.models.analyzed_execution_time import AnalyzedExecutionTime
-from autosar.models.annotation import (
+from .access_count_set import AccessCountSet
+from .analyzed_execution_time import AnalyzedExecutionTime
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.identifier import Identifier
-from autosar.models.measured_execution_time import MeasuredExecutionTime
-from autosar.models.measured_heap_usage import MeasuredHeapUsage
-from autosar.models.measured_stack_usage import MeasuredStackUsage
-from autosar.models.memory_section import MemorySection
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.rough_estimate_heap_usage import RoughEstimateHeapUsage
-from autosar.models.rough_estimate_of_execution_time import RoughEstimateOfExecutionTime
-from autosar.models.rough_estimate_stack_usage import RoughEstimateStackUsage
-from autosar.models.section_name_prefix import SectionNamePrefix
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.simulated_execution_time import SimulatedExecutionTime
-from autosar.models.system_memory_usage import SystemMemoryUsage
-from autosar.models.worst_case_heap_usage import WorstCaseHeapUsage
-from autosar.models.worst_case_stack_usage import WorstCaseStackUsage
+from .category_string import CategoryString
+from .identifier import Identifier
+from .measured_execution_time import MeasuredExecutionTime
+from .measured_heap_usage import MeasuredHeapUsage
+from .measured_stack_usage import MeasuredStackUsage
+from .memory_section import MemorySection
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .rough_estimate_heap_usage import RoughEstimateHeapUsage
+from .rough_estimate_of_execution_time import RoughEstimateOfExecutionTime
+from .rough_estimate_stack_usage import RoughEstimateStackUsage
+from .section_name_prefix import SectionNamePrefix
+from .short_name_fragment import ShortNameFragment
+from .simulated_execution_time import SimulatedExecutionTime
+from .system_memory_usage import SystemMemoryUsage
+from .worst_case_heap_usage import WorstCaseHeapUsage
+from .worst_case_stack_usage import WorstCaseStackUsage
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

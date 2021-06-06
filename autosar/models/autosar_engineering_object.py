@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.nmtoken_string import NmtokenString
-from autosar.models.revision_label_string import RevisionLabelString
+from .nmtoken_string import NmtokenString
+from .revision_label_string import RevisionLabelString
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

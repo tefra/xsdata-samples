@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.chapter_enum_break_simple import ChapterEnumBreakSimple
-from autosar.models.entry import Entry
-from autosar.models.keep_with_previous_enum_simple import KeepWithPreviousEnumSimple
-from autosar.models.valign_enum_simple import ValignEnumSimple
+from .annotation import VariationPoint
+from .chapter_enum_break_simple import ChapterEnumBreakSimple
+from .entry import Entry
+from .keep_with_previous_enum_simple import KeepWithPreviousEnumSimple
+from .valign_enum_simple import ValignEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

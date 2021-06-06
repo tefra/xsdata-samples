@@ -1,23 +1,23 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.entrance import Entrance
-from netex.models.entrance_ref import EntranceRef
-from netex.models.parking_entrance_for_vehicles import ParkingEntranceForVehicles
-from netex.models.parking_entrance_for_vehicles_ref import ParkingEntranceForVehiclesRef
-from netex.models.parking_entrance_ref import ParkingEntranceRef
-from netex.models.parking_passenger_entrance import ParkingPassengerEntrance
-from netex.models.parking_passenger_entrance_ref import ParkingPassengerEntranceRef
-from netex.models.point_of_interest_entrance import PointOfInterestEntrance
-from netex.models.point_of_interest_entrance_ref import PointOfInterestEntranceRef
-from netex.models.point_of_interest_vehicle_entrance import PointOfInterestVehicleEntrance
-from netex.models.point_of_interest_vehicle_entrance_ref import PointOfInterestVehicleEntranceRef
-from netex.models.stop_place_entrance import StopPlaceEntrance
-from netex.models.stop_place_entrance_ref import StopPlaceEntranceRef
-from netex.models.stop_place_vehicle_entrance import StopPlaceVehicleEntrance
-from netex.models.stop_place_vehicle_entrance_ref import StopPlaceVehicleEntranceRef
-from netex.models.vehicle_entrance import VehicleEntrance
-from netex.models.vehicle_entrance_ref import VehicleEntranceRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .entrance import Entrance
+from .entrance_ref import EntranceRef
+from .parking_entrance_for_vehicles import ParkingEntranceForVehicles
+from .parking_entrance_for_vehicles_ref import ParkingEntranceForVehiclesRef
+from .parking_entrance_ref import ParkingEntranceRef
+from .parking_passenger_entrance import ParkingPassengerEntrance
+from .parking_passenger_entrance_ref import ParkingPassengerEntranceRef
+from .point_of_interest_entrance import PointOfInterestEntrance
+from .point_of_interest_entrance_ref import PointOfInterestEntranceRef
+from .point_of_interest_vehicle_entrance import PointOfInterestVehicleEntrance
+from .point_of_interest_vehicle_entrance_ref import PointOfInterestVehicleEntranceRef
+from .stop_place_entrance import StopPlaceEntrance
+from .stop_place_entrance_ref import StopPlaceEntranceRef
+from .stop_place_vehicle_entrance import StopPlaceVehicleEntrance
+from .stop_place_vehicle_entrance_ref import StopPlaceVehicleEntranceRef
+from .vehicle_entrance import VehicleEntrance
+from .vehicle_entrance_ref import VehicleEntranceRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

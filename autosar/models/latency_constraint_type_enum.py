@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.latency_constraint_type_enum_simple import LatencyConstraintTypeEnumSimple
+from .latency_constraint_type_enum_simple import LatencyConstraintTypeEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

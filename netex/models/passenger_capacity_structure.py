@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.fare_class_enumeration import FareClassEnumeration
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .fare_class_enumeration import FareClassEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

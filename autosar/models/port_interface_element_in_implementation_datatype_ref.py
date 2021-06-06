@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.autosar_data_prototype_subtypes_enum import AutosarDataPrototypeSubtypesEnum
-from autosar.models.cpp_implementation_data_type_context_target_subtypes_enum import CppImplementationDataTypeContextTargetSubtypesEnum
-from autosar.models.port_interface_subtypes_enum import PortInterfaceSubtypesEnum
-from autosar.models.ref import Ref
+from .autosar_data_prototype_subtypes_enum import AutosarDataPrototypeSubtypesEnum
+from .cpp_implementation_data_type_context_target_subtypes_enum import CppImplementationDataTypeContextTargetSubtypesEnum
+from .port_interface_subtypes_enum import PortInterfaceSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.whitelist_ref_structure import WhitelistRefStructure
+from .whitelist_ref_structure import WhitelistRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

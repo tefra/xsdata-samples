@@ -1,18 +1,18 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.crypto_certificate import CryptoCertificate
-from autosar.models.crypto_certificate_to_crypto_key_slot_mapping import CryptoCertificateToCryptoKeySlotMapping
-from autosar.models.crypto_provider import CryptoProvider
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.short_name_fragment import ShortNameFragment
+from .category_string import CategoryString
+from .crypto_certificate import CryptoCertificate
+from .crypto_certificate_to_crypto_key_slot_mapping import CryptoCertificateToCryptoKeySlotMapping
+from .crypto_provider import CryptoProvider
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

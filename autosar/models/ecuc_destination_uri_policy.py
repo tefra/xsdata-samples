@@ -1,25 +1,25 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.ecuc_add_info_param_def import EcucAddInfoParamDef
-from autosar.models.ecuc_boolean_param_def import EcucBooleanParamDef
-from autosar.models.ecuc_choice_reference_def import EcucChoiceReferenceDef
-from autosar.models.ecuc_destination_uri_nesting_contract_enum import EcucDestinationUriNestingContractEnum
-from autosar.models.ecuc_enumeration_param_def import EcucEnumerationParamDef
-from autosar.models.ecuc_float_param_def import EcucFloatParamDef
-from autosar.models.ecuc_foreign_reference_def import EcucForeignReferenceDef
-from autosar.models.ecuc_function_name_def import EcucFunctionNameDef
-from autosar.models.ecuc_instance_reference_def import EcucInstanceReferenceDef
-from autosar.models.ecuc_integer_param_def import EcucIntegerParamDef
-from autosar.models.ecuc_linker_symbol_def import EcucLinkerSymbolDef
-from autosar.models.ecuc_multiline_string_param_def import EcucMultilineStringParamDef
-from autosar.models.ecuc_param_conf_container_def import (
+from .ecuc_add_info_param_def import EcucAddInfoParamDef
+from .ecuc_boolean_param_def import EcucBooleanParamDef
+from .ecuc_choice_reference_def import EcucChoiceReferenceDef
+from .ecuc_destination_uri_nesting_contract_enum import EcucDestinationUriNestingContractEnum
+from .ecuc_enumeration_param_def import EcucEnumerationParamDef
+from .ecuc_float_param_def import EcucFloatParamDef
+from .ecuc_foreign_reference_def import EcucForeignReferenceDef
+from .ecuc_function_name_def import EcucFunctionNameDef
+from .ecuc_instance_reference_def import EcucInstanceReferenceDef
+from .ecuc_integer_param_def import EcucIntegerParamDef
+from .ecuc_linker_symbol_def import EcucLinkerSymbolDef
+from .ecuc_multiline_string_param_def import EcucMultilineStringParamDef
+from .ecuc_param_conf_container_def import (
     EcucChoiceContainerDef,
     EcucParamConfContainerDef,
 )
-from autosar.models.ecuc_reference_def import EcucReferenceDef
-from autosar.models.ecuc_string_param_def import EcucStringParamDef
-from autosar.models.ecuc_symbolic_name_reference_def import EcucSymbolicNameReferenceDef
-from autosar.models.ecuc_uri_reference_def import EcucUriReferenceDef
+from .ecuc_reference_def import EcucReferenceDef
+from .ecuc_string_param_def import EcucStringParamDef
+from .ecuc_symbolic_name_reference_def import EcucSymbolicNameReferenceDef
+from .ecuc_uri_reference_def import EcucUriReferenceDef
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

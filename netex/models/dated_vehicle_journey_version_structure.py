@@ -1,20 +1,20 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.dated_calls_rel_structure import DatedCallsRelStructure
-from netex.models.dated_special_service_ref import DatedSpecialServiceRef
-from netex.models.dated_vehicle_journey_ref import DatedVehicleJourneyRef
-from netex.models.dead_run_ref import DeadRunRef
-from netex.models.driver_ref import DriverRef
-from netex.models.external_object_ref_structure import ExternalObjectRefStructure
-from netex.models.journey_pattern_ref_structure import JourneyPatternRefStructure
-from netex.models.journey_ref import JourneyRef
-from netex.models.operating_day_ref import OperatingDayRef
-from netex.models.service_journey_ref import ServiceJourneyRef
-from netex.models.special_service_ref import SpecialServiceRef
-from netex.models.target_passing_times_rel_structure import TargetPassingTimesRelStructure
-from netex.models.template_service_journey_ref import TemplateServiceJourneyRef
-from netex.models.vehicle_journey_ref import VehicleJourneyRef
-from netex.models.vehicle_journey_version_structure import VehicleJourneyVersionStructure
+from .dated_calls_rel_structure import DatedCallsRelStructure
+from .dated_special_service_ref import DatedSpecialServiceRef
+from .dated_vehicle_journey_ref import DatedVehicleJourneyRef
+from .dead_run_ref import DeadRunRef
+from .driver_ref import DriverRef
+from .external_object_ref_structure import ExternalObjectRefStructure
+from .journey_pattern_ref_structure import JourneyPatternRefStructure
+from .journey_ref import JourneyRef
+from .operating_day_ref import OperatingDayRef
+from .service_journey_ref import ServiceJourneyRef
+from .special_service_ref import SpecialServiceRef
+from .target_passing_times_rel_structure import TargetPassingTimesRelStructure
+from .template_service_journey_ref import TemplateServiceJourneyRef
+from .vehicle_journey_ref import VehicleJourneyRef
+from .vehicle_journey_version_structure import VehicleJourneyVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

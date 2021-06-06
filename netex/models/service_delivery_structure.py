@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.abstract_functional_service_delivery import AbstractFunctionalServiceDelivery
-from netex.models.capability_not_supported_error import CapabilityNotSupportedError
-from netex.models.data_object_delivery import DataObjectDelivery
-from netex.models.other_error import OtherError
-from netex.models.producer_response_structure import ProducerResponseStructure
+from .abstract_functional_service_delivery import AbstractFunctionalServiceDelivery
+from .capability_not_supported_error import CapabilityNotSupportedError
+from .data_object_delivery import DataObjectDelivery
+from .other_error import OtherError
+from .producer_response_structure import ProducerResponseStructure
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

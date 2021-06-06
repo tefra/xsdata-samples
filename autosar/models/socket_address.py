@@ -1,28 +1,28 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.application_endpoint import ApplicationEndpoint
-from autosar.models.boolean import Boolean
-from autosar.models.category_string import CategoryString
-from autosar.models.ethernet_communication_connector_subtypes_enum import EthernetCommunicationConnectorSubtypesEnum
-from autosar.models.i_pv_6_ext_header_filter_list_subtypes_enum import IPv6ExtHeaderFilterListSubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.integer import Integer
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.static_socket_connection import StaticSocketConnection
-from autosar.models.string import String
-from autosar.models.tcp_option_filter_list_subtypes_enum import TcpOptionFilterListSubtypesEnum
-from autosar.models.time_value import TimeValue
-from autosar.models.udp_checksum_calculation_enum import UdpChecksumCalculationEnum
+from .application_endpoint import ApplicationEndpoint
+from .boolean import Boolean
+from .category_string import CategoryString
+from .ethernet_communication_connector_subtypes_enum import EthernetCommunicationConnectorSubtypesEnum
+from .i_pv_6_ext_header_filter_list_subtypes_enum import IPv6ExtHeaderFilterListSubtypesEnum
+from .identifier import Identifier
+from .integer import Integer
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
+from .static_socket_connection import StaticSocketConnection
+from .string import String
+from .tcp_option_filter_list_subtypes_enum import TcpOptionFilterListSubtypesEnum
+from .time_value import TimeValue
+from .udp_checksum_calculation_enum import UdpChecksumCalculationEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

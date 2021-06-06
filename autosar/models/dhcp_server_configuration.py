@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.ipv_4_dhcp_server_configuration import Ipv4DhcpServerConfiguration
-from autosar.models.ipv_6_dhcp_server_configuration import Ipv6DhcpServerConfiguration
+from .ipv_4_dhcp_server_configuration import Ipv4DhcpServerConfiguration
+from .ipv_6_dhcp_server_configuration import Ipv6DhcpServerConfiguration
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

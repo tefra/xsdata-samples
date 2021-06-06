@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.data_filter import DataFilter
-from autosar.models.i_signal_to_i_pdu_mapping_subtypes_enum import ISignalToIPduMappingSubtypesEnum
-from autosar.models.ref import Ref
+from .data_filter import DataFilter
+from .i_signal_to_i_pdu_mapping_subtypes_enum import ISignalToIPduMappingSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

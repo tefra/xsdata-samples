@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.boolean import Boolean
-from autosar.models.ref import Ref
-from autosar.models.software_cluster_dependency_operator_enum import SoftwareClusterDependencyOperatorEnum
-from autosar.models.software_cluster_subtypes_enum import SoftwareClusterSubtypesEnum
-from autosar.models.strong_revision_label_string import StrongRevisionLabelString
+from .boolean import Boolean
+from .ref import Ref
+from .software_cluster_dependency_operator_enum import SoftwareClusterDependencyOperatorEnum
+from .software_cluster_subtypes_enum import SoftwareClusterSubtypesEnum
+from .strong_revision_label_string import StrongRevisionLabelString
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

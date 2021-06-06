@@ -1,26 +1,26 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.block_state import BlockState
-from autosar.models.category_string import CategoryString
-from autosar.models.ecu_instance_ref_conditional import EcuInstanceRefConditional
-from autosar.models.identifier import Identifier
-from autosar.models.idsm_module_instantiation_subtypes_enum import IdsmModuleInstantiationSubtypesEnum
-from autosar.models.idsm_rate_limitation_ref_conditional import IdsmRateLimitationRefConditional
-from autosar.models.idsm_signature_support_ap import IdsmSignatureSupportAp
-from autosar.models.idsm_signature_support_cp import IdsmSignatureSupportCp
-from autosar.models.idsm_traffic_limitation_ref_conditional import IdsmTrafficLimitationRefConditional
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.string import String
+from .block_state import BlockState
+from .category_string import CategoryString
+from .ecu_instance_ref_conditional import EcuInstanceRefConditional
+from .identifier import Identifier
+from .idsm_module_instantiation_subtypes_enum import IdsmModuleInstantiationSubtypesEnum
+from .idsm_rate_limitation_ref_conditional import IdsmRateLimitationRefConditional
+from .idsm_signature_support_ap import IdsmSignatureSupportAp
+from .idsm_signature_support_cp import IdsmSignatureSupportCp
+from .idsm_traffic_limitation_ref_conditional import IdsmTrafficLimitationRefConditional
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
+from .string import String
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

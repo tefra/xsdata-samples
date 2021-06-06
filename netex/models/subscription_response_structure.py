@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDateTime
-from netex.models.extensions_1 import Extensions1
-from netex.models.response_endpoint_structure import ResponseEndpointStructure
-from netex.models.response_status import ResponseStatus
+from .extensions_1 import Extensions1
+from .response_endpoint_structure import ResponseEndpointStructure
+from .response_status import ResponseStatus
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

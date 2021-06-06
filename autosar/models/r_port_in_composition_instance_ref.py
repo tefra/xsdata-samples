@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.abstract_required_port_prototype_subtypes_enum import AbstractRequiredPortPrototypeSubtypesEnum
-from autosar.models.ref import Ref
-from autosar.models.sw_component_prototype_subtypes_enum import SwComponentPrototypeSubtypesEnum
+from .abstract_required_port_prototype_subtypes_enum import AbstractRequiredPortPrototypeSubtypesEnum
+from .ref import Ref
+from .sw_component_prototype_subtypes_enum import SwComponentPrototypeSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

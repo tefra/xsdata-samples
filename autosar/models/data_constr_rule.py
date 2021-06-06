@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.integer import Integer
-from autosar.models.internal_constrs import InternalConstrs
-from autosar.models.phys_constrs import PhysConstrs
+from .integer import Integer
+from .internal_constrs import InternalConstrs
+from .phys_constrs import PhysConstrs
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

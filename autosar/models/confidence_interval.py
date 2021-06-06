@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.float_mod import FloatType
-from autosar.models.multidimensional_time import MultidimensionalTime
+from .float_mod import FloatType
+from .multidimensional_time import MultidimensionalTime
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

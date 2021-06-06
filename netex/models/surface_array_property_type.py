@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.abstract_surface import AbstractSurface
-from netex.models.polygon import Polygon
+from .abstract_surface import AbstractSurface
+from .polygon import Polygon
 
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 

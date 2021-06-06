@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.data_prototype_subtypes_enum import DataPrototypeSubtypesEnum
-from autosar.models.parameter_in_atomic_swc_type_instance_ref import ParameterInAtomicSwcTypeInstanceRef
-from autosar.models.ref import Ref
+from .data_prototype_subtypes_enum import DataPrototypeSubtypesEnum
+from .parameter_in_atomic_swc_type_instance_ref import ParameterInAtomicSwcTypeInstanceRef
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

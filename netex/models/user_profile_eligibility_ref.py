@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.user_profile_eligibility_ref_structure import UserProfileEligibilityRefStructure
+from .user_profile_eligibility_ref_structure import UserProfileEligibilityRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

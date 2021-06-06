@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.autosar_data_prototype_subtypes_enum import AutosarDataPrototypeSubtypesEnum
-from autosar.models.data_transformation_subtypes_enum import DataTransformationSubtypesEnum
-from autosar.models.ref import Ref
-from autosar.models.sub_element_mapping import SubElementMapping
-from autosar.models.text_table_mapping import TextTableMapping
+from .autosar_data_prototype_subtypes_enum import AutosarDataPrototypeSubtypesEnum
+from .data_transformation_subtypes_enum import DataTransformationSubtypesEnum
+from .ref import Ref
+from .sub_element_mapping import SubElementMapping
+from .text_table_mapping import TextTableMapping
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

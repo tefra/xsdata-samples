@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     Annotation,
     VariationPoint,
 )
-from autosar.models.any_instance_ref import AnyInstanceRef
-from autosar.models.ecuc_abstract_reference_def_subtypes_enum import EcucAbstractReferenceDefSubtypesEnum
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
+from .any_instance_ref import AnyInstanceRef
+from .ecuc_abstract_reference_def_subtypes_enum import EcucAbstractReferenceDefSubtypesEnum
+from .positive_integer import PositiveInteger
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

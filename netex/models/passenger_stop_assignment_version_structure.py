@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.boarding_position import BoardingPosition
-from netex.models.boarding_position_ref import BoardingPositionRef
-from netex.models.quay import Quay
-from netex.models.quay_ref import QuayRef
-from netex.models.stop_assignment_version_structure import StopAssignmentVersionStructure
-from netex.models.stop_place import StopPlace
-from netex.models.stop_place_ref import StopPlaceRef
-from netex.models.train_stop_assignments_rel_structure import TrainStopAssignmentsRelStructure
+from .boarding_position import BoardingPosition
+from .boarding_position_ref import BoardingPositionRef
+from .quay import Quay
+from .quay_ref import QuayRef
+from .stop_assignment_version_structure import StopAssignmentVersionStructure
+from .stop_place import StopPlace
+from .stop_place_ref import StopPlaceRef
+from .train_stop_assignments_rel_structure import TrainStopAssignmentsRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

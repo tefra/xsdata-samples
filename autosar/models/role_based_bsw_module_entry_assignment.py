@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.bsw_module_entry_subtypes_enum import BswModuleEntrySubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.ref import Ref
+from .annotation import VariationPoint
+from .bsw_module_entry_subtypes_enum import BswModuleEntrySubtypesEnum
+from .identifier import Identifier
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

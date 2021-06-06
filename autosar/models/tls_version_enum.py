@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.tls_version_enum_simple import TlsVersionEnumSimple
+from .tls_version_enum_simple import TlsVersionEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

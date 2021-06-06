@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.http_accept_encoding_enum_simple import HttpAcceptEncodingEnumSimple
+from .http_accept_encoding_enum_simple import HttpAcceptEncodingEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

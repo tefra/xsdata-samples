@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.boolean import Boolean
-from autosar.models.can_nm_cluster_subtypes_enum import CanNmClusterSubtypesEnum
-from autosar.models.ref import Ref
+from .annotation import VariationPoint
+from .boolean import Boolean
+from .can_nm_cluster_subtypes_enum import CanNmClusterSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

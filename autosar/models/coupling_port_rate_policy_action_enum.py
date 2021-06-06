@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.coupling_port_rate_policy_action_enum_simple import CouplingPortRatePolicyActionEnumSimple
+from .coupling_port_rate_policy_action_enum_simple import CouplingPortRatePolicyActionEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

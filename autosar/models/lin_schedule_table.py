@@ -1,27 +1,27 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.application_entry import ApplicationEntry
-from autosar.models.assign_frame_id import AssignFrameId
-from autosar.models.assign_frame_id_range import AssignFrameIdRange
-from autosar.models.assign_nad import AssignNad
-from autosar.models.category_string import CategoryString
-from autosar.models.conditional_change_nad import ConditionalChangeNad
-from autosar.models.data_dump_entry import DataDumpEntry
-from autosar.models.free_format import FreeFormat
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.resume_position import ResumePosition
-from autosar.models.run_mode import RunMode
-from autosar.models.save_configuration_entry import SaveConfigurationEntry
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.unassign_frame_id import UnassignFrameId
+from .application_entry import ApplicationEntry
+from .assign_frame_id import AssignFrameId
+from .assign_frame_id_range import AssignFrameIdRange
+from .assign_nad import AssignNad
+from .category_string import CategoryString
+from .conditional_change_nad import ConditionalChangeNad
+from .data_dump_entry import DataDumpEntry
+from .free_format import FreeFormat
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .resume_position import ResumePosition
+from .run_mode import RunMode
+from .save_configuration_entry import SaveConfigurationEntry
+from .short_name_fragment import ShortNameFragment
+from .unassign_frame_id import UnassignFrameId
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

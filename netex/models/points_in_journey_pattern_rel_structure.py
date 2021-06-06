@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.point_in_journey_pattern import PointInJourneyPattern
-from netex.models.stop_point_in_journey_pattern import StopPointInJourneyPattern
-from netex.models.strict_containment_aggregation_structure import StrictContainmentAggregationStructure
-from netex.models.timing_point_in_journey_pattern import TimingPointInJourneyPattern
+from .point_in_journey_pattern import PointInJourneyPattern
+from .stop_point_in_journey_pattern import StopPointInJourneyPattern
+from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
+from .timing_point_in_journey_pattern import TimingPointInJourneyPattern
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
+from ..core.datatypes_base import (
     AdExplicit,
     Ce,
     Cs,
@@ -12,7 +12,7 @@ from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
     OnExplicit,
     TelExplicit,
 )
-from common_types.models.hl7_v3.ne2008.core.voc import (
+from ..core.voc import (
     EntityClass,
     EntityClassOrganization,
     EntityDeterminer,
@@ -20,7 +20,7 @@ from common_types.models.hl7_v3.ne2008.core.voc import (
     RoleClassContact,
     RoleClassPartitivePartByBot,
 )
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt070000_uv01 import CoctMt070000Uv01LocatedEntity
+from .coct_mt070000_uv01 import CoctMt070000Uv01LocatedEntity
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

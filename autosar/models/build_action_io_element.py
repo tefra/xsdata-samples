@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import Sdg
-from autosar.models.build_engineering_object import BuildEngineeringObject
-from autosar.models.ecuc_definition_element_subtypes_enum import EcucDefinitionElementSubtypesEnum
-from autosar.models.foreign_model_reference import ForeignModelReference
-from autosar.models.generic_model_reference import GenericModelReference
-from autosar.models.identifier import Identifier
-from autosar.models.nmtoken_string import NmtokenString
-from autosar.models.ref import Ref
+from .annotation import Sdg
+from .build_engineering_object import BuildEngineeringObject
+from .ecuc_definition_element_subtypes_enum import EcucDefinitionElementSubtypesEnum
+from .foreign_model_reference import ForeignModelReference
+from .generic_model_reference import GenericModelReference
+from .identifier import Identifier
+from .nmtoken_string import NmtokenString
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

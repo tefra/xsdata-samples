@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.ref import Ref
-from autosar.models.rest_element_def_subtypes_enum import RestElementDefSubtypesEnum
+from .ref import Ref
+from .rest_element_def_subtypes_enum import RestElementDefSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

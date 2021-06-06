@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from netex.models.fare_interval_version_structure import FareIntervalVersionStructure
-from netex.models.geographical_interval_prices_rel_structure import GeographicalIntervalPricesRelStructure
-from netex.models.geographical_unit_ref import GeographicalUnitRef
-from netex.models.interval_type_enumeration import IntervalTypeEnumeration
+from .fare_interval_version_structure import FareIntervalVersionStructure
+from .geographical_interval_prices_rel_structure import GeographicalIntervalPricesRelStructure
+from .geographical_unit_ref import GeographicalUnitRef
+from .interval_type_enumeration import IntervalTypeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

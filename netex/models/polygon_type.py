@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.abstract_surface_type import AbstractSurfaceType
-from netex.models.exterior import Exterior
-from netex.models.interior import Interior
+from .abstract_surface_type import AbstractSurfaceType
+from .exterior import Exterior
+from .interior import Interior
 
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 

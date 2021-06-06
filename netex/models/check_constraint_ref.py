@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.check_constraint_ref_structure import CheckConstraintRefStructure
+from .check_constraint_ref_structure import CheckConstraintRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

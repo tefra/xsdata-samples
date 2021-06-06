@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.type_of_security_list import TypeOfSecurityList
-from netex.models.type_of_security_list_ref import TypeOfSecurityListRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .type_of_security_list import TypeOfSecurityList
+from .type_of_security_list_ref import TypeOfSecurityListRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

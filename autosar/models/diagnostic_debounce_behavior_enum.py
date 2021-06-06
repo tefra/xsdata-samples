@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.diagnostic_debounce_behavior_enum_simple import DiagnosticDebounceBehaviorEnumSimple
+from .diagnostic_debounce_behavior_enum_simple import DiagnosticDebounceBehaviorEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

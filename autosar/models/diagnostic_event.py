@@ -1,24 +1,24 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.boolean import Boolean
-from autosar.models.category_string import CategoryString
-from autosar.models.diagnostic_clear_event_allowed_behavior_enum import DiagnosticClearEventAllowedBehaviorEnum
-from autosar.models.diagnostic_clear_event_behavior_enum import DiagnosticClearEventBehaviorEnum
-from autosar.models.diagnostic_connected_indicator import DiagnosticConnectedIndicator
-from autosar.models.diagnostic_event_clear_allowed_enum import DiagnosticEventClearAllowedEnum
-from autosar.models.diagnostic_event_kind_enum import DiagnosticEventKindEnum
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.positive_integer_value_variation_point import PositiveIntegerValueVariationPoint
-from autosar.models.short_name_fragment import ShortNameFragment
+from .boolean import Boolean
+from .category_string import CategoryString
+from .diagnostic_clear_event_allowed_behavior_enum import DiagnosticClearEventAllowedBehaviorEnum
+from .diagnostic_clear_event_behavior_enum import DiagnosticClearEventBehaviorEnum
+from .diagnostic_connected_indicator import DiagnosticConnectedIndicator
+from .diagnostic_event_clear_allowed_enum import DiagnosticEventClearAllowedEnum
+from .diagnostic_event_kind_enum import DiagnosticEventKindEnum
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .positive_integer import PositiveInteger
+from .positive_integer_value_variation_point import PositiveIntegerValueVariationPoint
+from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.companion_profiles_rel_structure import CompanionProfilesRelStructure
-from netex.models.group_booking_enumeration import GroupBookingEnumeration
-from netex.models.group_check_in_enumeration import GroupCheckInEnumeration
-from netex.models.group_size_changes_enumeration import GroupSizeChangesEnumeration
-from netex.models.group_ticketing_enumeration import GroupTicketingEnumeration
-from netex.models.per_basis_enumeration import PerBasisEnumeration
-from netex.models.type_of_concession_ref import TypeOfConcessionRef
-from netex.models.usage_parameter_version_structure import UsageParameterVersionStructure
+from .companion_profiles_rel_structure import CompanionProfilesRelStructure
+from .group_booking_enumeration import GroupBookingEnumeration
+from .group_check_in_enumeration import GroupCheckInEnumeration
+from .group_size_changes_enumeration import GroupSizeChangesEnumeration
+from .group_ticketing_enumeration import GroupTicketingEnumeration
+from .per_basis_enumeration import PerBasisEnumeration
+from .type_of_concession_ref import TypeOfConcessionRef
+from .usage_parameter_version_structure import UsageParameterVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

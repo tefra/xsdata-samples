@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from netex.models.direction_type_enumeration import DirectionTypeEnumeration
+from .direction_type_enumeration import DirectionTypeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

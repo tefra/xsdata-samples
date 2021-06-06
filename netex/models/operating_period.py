@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.operating_period_version_structure import OperatingPeriodVersionStructure
+from .operating_period_version_structure import OperatingPeriodVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

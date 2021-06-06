@@ -1,26 +1,26 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDuration, XmlTime
-from netex.models.connecting_journey_view import ConnectingJourneyView
-from netex.models.connection_certainty_enumeration import ConnectionCertaintyEnumeration
-from netex.models.connection_ref_structure import ConnectionRefStructure
-from netex.models.dated_special_service_ref import DatedSpecialServiceRef
-from netex.models.dated_vehicle_journey_ref import DatedVehicleJourneyRef
-from netex.models.dead_run_ref import DeadRunRef
-from netex.models.derived_view_structure import DerivedViewStructure
-from netex.models.flexible_line_ref import FlexibleLineRef
-from netex.models.journey_meeting_ref import JourneyMeetingRef
-from netex.models.journey_ref import JourneyRef
-from netex.models.line_derived_view_structure import LineDerivedViewStructure
-from netex.models.line_ref import LineRef
-from netex.models.multilingual_string import MultilingualString
-from netex.models.reason_for_meeting_enumeration import ReasonForMeetingEnumeration
-from netex.models.scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
-from netex.models.service_journey_ref import ServiceJourneyRef
-from netex.models.special_service_ref import SpecialServiceRef
-from netex.models.template_service_journey_ref import TemplateServiceJourneyRef
-from netex.models.transfer_duration_structure import TransferDurationStructure
-from netex.models.vehicle_journey_ref import VehicleJourneyRef
+from .connecting_journey_view import ConnectingJourneyView
+from .connection_certainty_enumeration import ConnectionCertaintyEnumeration
+from .connection_ref_structure import ConnectionRefStructure
+from .dated_special_service_ref import DatedSpecialServiceRef
+from .dated_vehicle_journey_ref import DatedVehicleJourneyRef
+from .dead_run_ref import DeadRunRef
+from .derived_view_structure import DerivedViewStructure
+from .flexible_line_ref import FlexibleLineRef
+from .journey_meeting_ref import JourneyMeetingRef
+from .journey_ref import JourneyRef
+from .line_derived_view_structure import LineDerivedViewStructure
+from .line_ref import LineRef
+from .multilingual_string import MultilingualString
+from .reason_for_meeting_enumeration import ReasonForMeetingEnumeration
+from .scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
+from .service_journey_ref import ServiceJourneyRef
+from .special_service_ref import SpecialServiceRef
+from .template_service_journey_ref import TemplateServiceJourneyRef
+from .transfer_duration_structure import TransferDurationStructure
+from .vehicle_journey_ref import VehicleJourneyRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

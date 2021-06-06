@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.service_journey_interchange import ServiceJourneyInterchange
-from netex.models.service_journey_pattern_interchange import ServiceJourneyPatternInterchange
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .service_journey_interchange import ServiceJourneyInterchange
+from .service_journey_pattern_interchange import ServiceJourneyPatternInterchange
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

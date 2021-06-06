@@ -1,21 +1,21 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.identifier import Identifier
-from autosar.models.ip4_address_string import Ip4AddressString
-from autosar.models.ip6_address_string import Ip6AddressString
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.someip_event_group_subtypes_enum import SomeipEventGroupSubtypesEnum
-from autosar.models.someip_sd_server_event_group_timing_config_subtypes_enum import SomeipSdServerEventGroupTimingConfigSubtypesEnum
+from .category_string import CategoryString
+from .identifier import Identifier
+from .ip4_address_string import Ip4AddressString
+from .ip6_address_string import Ip6AddressString
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
+from .someip_event_group_subtypes_enum import SomeipEventGroupSubtypesEnum
+from .someip_sd_server_event_group_timing_config_subtypes_enum import SomeipSdServerEventGroupTimingConfigSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

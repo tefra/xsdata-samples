@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.diagnostic_initial_event_status_enum import DiagnosticInitialEventStatusEnum
-from autosar.models.positive_integer import PositiveInteger
+from .diagnostic_initial_event_status_enum import DiagnosticInitialEventStatusEnum
+from .positive_integer import PositiveInteger
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

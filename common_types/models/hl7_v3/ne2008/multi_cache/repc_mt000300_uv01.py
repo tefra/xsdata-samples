@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
-from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
+from ..core.datatypes_base import (
     AdExplicit,
     Ce,
     Cs,
@@ -15,7 +15,7 @@ from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
     TelExplicit,
     TsExplicit,
 )
-from common_types.models.hl7_v3.ne2008.core.voc import (
+from ..core.voc import (
     ActClassControlAct,
     ActClassRoot,
     ActMood,
@@ -50,16 +50,16 @@ from common_types.models.hl7_v3.ne2008.core.voc import (
     XActReplaceOrRevise,
     XSuccReplPrev,
 )
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt040200_uv01 import CoctMt040200Uv01ResponsibleParty
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt050000_uv01 import CoctMt050000Uv01Patient
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt090102_uv02 import CoctMt090102Uv02AssignedPerson
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt910000_uv import (
+from .coct_mt040200_uv01 import CoctMt040200Uv01ResponsibleParty
+from .coct_mt050000_uv01 import CoctMt050000Uv01Patient
+from .coct_mt090102_uv02 import CoctMt090102Uv02AssignedPerson
+from .coct_mt910000_uv import (
     CoctMt910000UvCareGiver,
     CoctMt910000UvEmployee,
     CoctMt910000UvPersonalRelationship,
     CoctMt910000UvStudent,
 )
-from common_types.models.hl7_v3.ne2008.multi_cache.repc_mt000100_uv01 import (
+from .repc_mt000100_uv01 import (
     RepcMt000100Uv01Act,
     RepcMt000100Uv01ActReference,
     RepcMt000100Uv01Encounter,
@@ -69,7 +69,7 @@ from common_types.models.hl7_v3.ne2008.multi_cache.repc_mt000100_uv01 import (
     RepcMt000100Uv01SubstanceAdministration,
     RepcMt000100Uv01Supply,
 )
-from common_types.models.hl7_v3.ne2008.multi_cache.repc_mt000700_uv01 import RepcMt000700Uv01MaintainedEntity
+from .repc_mt000700_uv01 import RepcMt000700Uv01MaintainedEntity
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

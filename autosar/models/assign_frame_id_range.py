@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import DocumentationBlock
-from autosar.models.frame_pid import FramePid
-from autosar.models.integer import Integer
-from autosar.models.lin_slave_config_ident_subtypes_enum import LinSlaveConfigIdentSubtypesEnum
-from autosar.models.lin_slave_subtypes_enum import LinSlaveSubtypesEnum
-from autosar.models.ref import Ref
-from autosar.models.time_value import TimeValue
+from .annotation import DocumentationBlock
+from .frame_pid import FramePid
+from .integer import Integer
+from .lin_slave_config_ident_subtypes_enum import LinSlaveConfigIdentSubtypesEnum
+from .lin_slave_subtypes_enum import LinSlaveSubtypesEnum
+from .ref import Ref
+from .time_value import TimeValue
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

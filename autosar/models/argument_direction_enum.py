@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.argument_direction_enum_simple import ArgumentDirectionEnumSimple
+from .argument_direction_enum_simple import ArgumentDirectionEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

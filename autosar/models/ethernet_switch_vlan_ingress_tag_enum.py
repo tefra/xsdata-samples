@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.ethernet_switch_vlan_ingress_tag_enum_simple import EthernetSwitchVlanIngressTagEnumSimple
+from .ethernet_switch_vlan_ingress_tag_enum_simple import EthernetSwitchVlanIngressTagEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

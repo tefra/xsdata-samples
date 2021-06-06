@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.alternative_texts_rel_structure import VersionedChildStructure
-from netex.models.point_of_interest_classification_ref_structure import PointOfInterestClassificationRefStructure
-from netex.models.point_of_interest_hierarchy_ref import PointOfInterestHierarchyRef
+from .alternative_texts_rel_structure import VersionedChildStructure
+from .point_of_interest_classification_ref_structure import PointOfInterestClassificationRefStructure
+from .point_of_interest_hierarchy_ref import PointOfInterestHierarchyRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

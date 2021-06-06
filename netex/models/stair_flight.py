@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.stair_flight_versioned_child_structure import StairFlightVersionedChildStructure
+from .stair_flight_versioned_child_structure import StairFlightVersionedChildStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

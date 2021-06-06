@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.direct_position_type import DirectPositionType
-from netex.models.pos import Pos
+from .direct_position_type import DirectPositionType
+from .pos import Pos
 
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 

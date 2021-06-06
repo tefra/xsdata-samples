@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.codespace_ref import CodespaceRef
-from netex.models.data_sources_rel_structure import DataSourcesRelStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.responsibility_role_assignment import ResponsibilityRoleAssignment
+from .codespace_ref import CodespaceRef
+from .data_sources_rel_structure import DataSourcesRelStructure
+from .multilingual_string import MultilingualString
+from .responsibility_role_assignment import ResponsibilityRoleAssignment
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

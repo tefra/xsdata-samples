@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.pgwide_enum_simple import PgwideEnumSimple
+from .pgwide_enum_simple import PgwideEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

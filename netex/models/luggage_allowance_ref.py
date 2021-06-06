@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.luggage_allowance_ref_structure import LuggageAllowanceRefStructure
+from .luggage_allowance_ref_structure import LuggageAllowanceRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.equipment_position_ref_structure import EquipmentPositionRefStructure
+from .equipment_position_ref_structure import EquipmentPositionRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

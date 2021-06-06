@@ -1,25 +1,25 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.adaptive_platform_service_instance_subtypes_enum import AdaptivePlatformServiceInstanceSubtypesEnum
-from autosar.models.annotation import (
+from .adaptive_platform_service_instance_subtypes_enum import AdaptivePlatformServiceInstanceSubtypesEnum
+from .annotation import (
     AdminData,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.boolean import Boolean
-from autosar.models.category_string import CategoryString
-from autosar.models.consumed_provided_service_instance_group_ref_conditional import ConsumedProvidedServiceInstanceGroupRefConditional
-from autosar.models.ecu_instance_subtypes_enum import EcuInstanceSubtypesEnum
-from autosar.models.frame_triggering_subtypes_enum import FrameTriggeringSubtypesEnum
-from autosar.models.i_signal_i_pdu_group_subtypes_enum import ISignalIPduGroupSubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.pdur_i_pdu_group_subtypes_enum import PdurIPduGroupSubtypesEnum
-from autosar.models.physical_channel_subtypes_enum import PhysicalChannelSubtypesEnum
-from autosar.models.pnc_mapping_ident import PncMappingIdent
-from autosar.models.port_group_in_system_instance_ref import PortGroupInSystemInstanceRef
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
+from .boolean import Boolean
+from .category_string import CategoryString
+from .consumed_provided_service_instance_group_ref_conditional import ConsumedProvidedServiceInstanceGroupRefConditional
+from .ecu_instance_subtypes_enum import EcuInstanceSubtypesEnum
+from .frame_triggering_subtypes_enum import FrameTriggeringSubtypesEnum
+from .i_signal_i_pdu_group_subtypes_enum import ISignalIPduGroupSubtypesEnum
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .pdur_i_pdu_group_subtypes_enum import PdurIPduGroupSubtypesEnum
+from .physical_channel_subtypes_enum import PhysicalChannelSubtypesEnum
+from .pnc_mapping_ident import PncMappingIdent
+from .port_group_in_system_instance_ref import PortGroupInSystemInstanceRef
+from .positive_integer import PositiveInteger
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

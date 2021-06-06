@@ -1,15 +1,15 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.autosar_data_prototype_subtypes_enum import AutosarDataPrototypeSubtypesEnum
-from autosar.models.boolean_value_variation_point import BooleanValueVariationPoint
-from autosar.models.composite_network_representation import CompositeNetworkRepresentation
-from autosar.models.handle_out_of_range_enum import HandleOutOfRangeEnum
-from autosar.models.ref import Ref
-from autosar.models.sender_intent_enum import SenderIntentEnum
-from autosar.models.sw_pointer_target_props import SwDataDefProps
-from autosar.models.time_value import TimeValue
-from autosar.models.transmission_acknowledgement_request import TransmissionAcknowledgementRequest
-from autosar.models.transmission_com_spec_props import TransmissionComSpecProps
+from .autosar_data_prototype_subtypes_enum import AutosarDataPrototypeSubtypesEnum
+from .boolean_value_variation_point import BooleanValueVariationPoint
+from .composite_network_representation import CompositeNetworkRepresentation
+from .handle_out_of_range_enum import HandleOutOfRangeEnum
+from .ref import Ref
+from .sender_intent_enum import SenderIntentEnum
+from .sw_pointer_target_props import SwDataDefProps
+from .time_value import TimeValue
+from .transmission_acknowledgement_request import TransmissionAcknowledgementRequest
+from .transmission_com_spec_props import TransmissionComSpecProps
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

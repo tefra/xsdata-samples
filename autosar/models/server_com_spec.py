@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.client_server_operation_subtypes_enum import ClientServerOperationSubtypesEnum
-from autosar.models.end_to_end_transformation_com_spec_props import EndToEndTransformationComSpecProps
-from autosar.models.field_subtypes_enum import FieldSubtypesEnum
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.user_defined_transformation_com_spec_props import UserDefinedTransformationComSpecProps
+from .client_server_operation_subtypes_enum import ClientServerOperationSubtypesEnum
+from .end_to_end_transformation_com_spec_props import EndToEndTransformationComSpecProps
+from .field_subtypes_enum import FieldSubtypesEnum
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .user_defined_transformation_com_spec_props import UserDefinedTransformationComSpecProps
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

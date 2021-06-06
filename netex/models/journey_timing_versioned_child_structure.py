@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.all_modes_enumeration import AllModesEnumeration
-from netex.models.alternative_texts_rel_structure import VersionedChildStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.operational_context_ref import OperationalContextRef
-from netex.models.time_demand_type_ref import TimeDemandTypeRef
-from netex.models.timeband_ref import TimebandRef
+from .all_modes_enumeration import AllModesEnumeration
+from .alternative_texts_rel_structure import VersionedChildStructure
+from .multilingual_string import MultilingualString
+from .operational_context_ref import OperationalContextRef
+from .time_demand_type_ref import TimeDemandTypeRef
+from .timeband_ref import TimebandRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

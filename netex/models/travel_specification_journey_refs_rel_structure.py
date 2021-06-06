@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
-from netex.models.service_journey_ref import ServiceJourneyRef
-from netex.models.template_service_journey_ref import TemplateServiceJourneyRef
-from netex.models.train_number_ref import TrainNumberRef
+from .one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .service_journey_ref import ServiceJourneyRef
+from .template_service_journey_ref import TemplateServiceJourneyRef
+from .train_number_ref import TrainNumberRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

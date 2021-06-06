@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.diagnostic_service_request_callback_type_enum_simple import DiagnosticServiceRequestCallbackTypeEnumSimple
+from .diagnostic_service_request_callback_type_enum_simple import DiagnosticServiceRequestCallbackTypeEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

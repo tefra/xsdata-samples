@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.geographical_interval import GeographicalInterval
-from netex.models.geographical_interval_ref import GeographicalIntervalRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .geographical_interval import GeographicalInterval
+from .geographical_interval_ref import GeographicalIntervalRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

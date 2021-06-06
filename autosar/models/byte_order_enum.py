@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.byte_order_enum_simple import ByteOrderEnumSimple
+from .byte_order_enum_simple import ByteOrderEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

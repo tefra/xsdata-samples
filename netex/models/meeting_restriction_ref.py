@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.meeting_restriction_ref_structure import MeetingRestrictionRefStructure
+from .meeting_restriction_ref_structure import MeetingRestrictionRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

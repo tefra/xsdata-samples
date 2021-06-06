@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.subscribing_ref_structure import SubscribingRefStructure
+from .subscribing_ref_structure import SubscribingRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

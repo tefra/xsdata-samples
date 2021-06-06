@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.p_trigger_in_atomic_swc_type_instance_ref import PTriggerInAtomicSwcTypeInstanceRef
-from autosar.models.ref import Ref
-from autosar.models.trigger_subtypes_enum import TriggerSubtypesEnum
+from .annotation import VariationPoint
+from .p_trigger_in_atomic_swc_type_instance_ref import PTriggerInAtomicSwcTypeInstanceRef
+from .ref import Ref
+from .trigger_subtypes_enum import TriggerSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

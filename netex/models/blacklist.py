@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.blacklist_version_structure import BlacklistVersionStructure
+from .blacklist_version_structure import BlacklistVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

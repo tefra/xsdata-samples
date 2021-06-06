@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.stair_equipment_version_structure import StairEquipmentVersionStructure
+from .stair_equipment_version_structure import StairEquipmentVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

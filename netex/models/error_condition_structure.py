@@ -1,16 +1,16 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.access_not_allowed_error import AccessNotAllowedError
-from netex.models.allowed_resource_usage_exceeded_error import AllowedResourceUsageExceededError
-from netex.models.beyond_data_horizon import BeyondDataHorizon
-from netex.models.capability_not_supported_error import CapabilityNotSupportedError
-from netex.models.invalid_data_references_error import InvalidDataReferencesError
-from netex.models.natural_language_string_structure import NaturalLanguageStringStructure
-from netex.models.no_info_for_topic_error import NoInfoForTopicError
-from netex.models.other_error import OtherError
-from netex.models.parameters_ignored_error import ParametersIgnoredError
-from netex.models.service_not_available_error import ServiceNotAvailableError
-from netex.models.unknown_extensions_error import UnknownExtensionsError
+from .access_not_allowed_error import AccessNotAllowedError
+from .allowed_resource_usage_exceeded_error import AllowedResourceUsageExceededError
+from .beyond_data_horizon import BeyondDataHorizon
+from .capability_not_supported_error import CapabilityNotSupportedError
+from .invalid_data_references_error import InvalidDataReferencesError
+from .natural_language_string_structure import NaturalLanguageStringStructure
+from .no_info_for_topic_error import NoInfoForTopicError
+from .other_error import OtherError
+from .parameters_ignored_error import ParametersIgnoredError
+from .service_not_available_error import ServiceNotAvailableError
+from .unknown_extensions_error import UnknownExtensionsError
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

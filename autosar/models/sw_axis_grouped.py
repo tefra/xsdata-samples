@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.application_primitive_data_type_subtypes_enum import ApplicationPrimitiveDataTypeSubtypesEnum
-from autosar.models.autosar_parameter_ref import AutosarParameterRef
-from autosar.models.axis_index_type import AxisIndexType
-from autosar.models.float_mod import FloatType
-from autosar.models.mc_data_instance_subtypes_enum import McDataInstanceSubtypesEnum
-from autosar.models.monotony_enum import MonotonyEnum
-from autosar.models.ref import Ref
+from .application_primitive_data_type_subtypes_enum import ApplicationPrimitiveDataTypeSubtypesEnum
+from .autosar_parameter_ref import AutosarParameterRef
+from .axis_index_type import AxisIndexType
+from .float_mod import FloatType
+from .mc_data_instance_subtypes_enum import McDataInstanceSubtypesEnum
+from .monotony_enum import MonotonyEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

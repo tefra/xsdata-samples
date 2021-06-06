@@ -1,15 +1,15 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.access_right_parameter_assignment_1 import AccessRightParameterAssignment1
-from netex.models.access_right_parameter_assignment_2 import AccessRightParameterAssignment2
-from netex.models.customer_purchase_parameter_assignment import CustomerPurchaseParameterAssignment
-from netex.models.frame_containment_structure import FrameContainmentStructure
-from netex.models.generic_parameter_assignment_version_structure import (
+from .access_right_parameter_assignment_1 import AccessRightParameterAssignment1
+from .access_right_parameter_assignment_2 import AccessRightParameterAssignment2
+from .customer_purchase_parameter_assignment import CustomerPurchaseParameterAssignment
+from .frame_containment_structure import FrameContainmentStructure
+from .generic_parameter_assignment_version_structure import (
     GenericParameterAssignment,
     GenericParameterAssignmentInContext,
 )
-from netex.models.specific_parameter_assignment_version_structure import SpecificParameterAssignment
-from netex.models.validity_parameter_assignment import ValidityParameterAssignment
+from .specific_parameter_assignment_version_structure import SpecificParameterAssignment
+from .validity_parameter_assignment import ValidityParameterAssignment
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

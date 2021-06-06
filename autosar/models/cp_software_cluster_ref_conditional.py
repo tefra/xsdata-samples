@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.cp_software_cluster_subtypes_enum import CpSoftwareClusterSubtypesEnum
-from autosar.models.ref import Ref
+from .annotation import VariationPoint
+from .cp_software_cluster_subtypes_enum import CpSoftwareClusterSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

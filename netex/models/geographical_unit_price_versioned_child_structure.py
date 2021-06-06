@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.cell_ref_1 import CellRef1
-from netex.models.cell_ref_2 import CellRef2
-from netex.models.fare_price_versioned_child_structure import FarePriceVersionedChildStructure
-from netex.models.geographical_unit_price_ref import GeographicalUnitPriceRef
-from netex.models.geographical_unit_ref import GeographicalUnitRef
-from netex.models.strict_containment_aggregation_structure import StrictContainmentAggregationStructure
+from .cell_ref_1 import CellRef1
+from .cell_ref_2 import CellRef2
+from .fare_price_versioned_child_structure import FarePriceVersionedChildStructure
+from .geographical_unit_price_ref import GeographicalUnitPriceRef
+from .geographical_unit_ref import GeographicalUnitRef
+from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

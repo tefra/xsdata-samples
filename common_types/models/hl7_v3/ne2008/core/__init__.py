@@ -1,4 +1,4 @@
-from common_types.models.hl7_v3.ne2008.core.datatypes import (
+from .datatypes import (
     BxitCd,
     BxitIvlPq,
     EivlPpdTs,
@@ -37,7 +37,7 @@ from common_types.models.hl7_v3.ne2008.core.datatypes import (
     SxprTs,
     UvpTs,
 )
-from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
+from .datatypes_base import (
     Ad,
     Adxp,
     AdxpExplicit,
@@ -161,7 +161,7 @@ from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
     Thumbnail,
     ThumbnailExplicit,
 )
-from common_types.models.hl7_v3.ne2008.core.narrative_block import (
+from .narrative_block import (
     StrucDocBr,
     StrucDocCaption,
     StrucDocCol,
@@ -210,14 +210,14 @@ from common_types.models.hl7_v3.ne2008.core.narrative_block import (
     StrucDocTrAlign,
     StrucDocTrValign,
 )
-from common_types.models.hl7_v3.ne2008.core.sdtc import (
+from .sdtc import (
     BirthTime,
     DeceasedInd,
     DeceasedTime,
     DischargeDispositionCode,
     Id,
 )
-from common_types.models.hl7_v3.ne2008.core.voc import (
+from .voc import (
     Abenakian,
     AcknowledgementCondition,
     AcknowledgementDetailCode,

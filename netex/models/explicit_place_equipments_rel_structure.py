@@ -1,26 +1,26 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.crossing_equipment import CrossingEquipment
-from netex.models.entrance_equipment import EntranceEquipment
-from netex.models.escalator_equipment import EscalatorEquipment
-from netex.models.general_sign_structure import GeneralSignStructure
-from netex.models.heading_sign_structure import HeadingSignStructure
-from netex.models.help_point_equipment import HelpPointEquipment
-from netex.models.lift_equipment import LiftEquipment
-from netex.models.other_place_equipment import OtherPlaceEquipment
-from netex.models.passenger_safety_equipment import PassengerSafetyEquipment
-from netex.models.place_lighting import PlaceLighting
-from netex.models.place_sign_structure import PlaceSignStructure
-from netex.models.queueing_equipment import QueueingEquipment
-from netex.models.ramp_equipment import RampEquipment
-from netex.models.rough_surface import RoughSurface
-from netex.models.rubbish_disposal_equipment import RubbishDisposalEquipment
-from netex.models.sanitary_equipment import SanitaryEquipment
-from netex.models.staircase_equipment import StaircaseEquipment
-from netex.models.ticket_validator_equipment import TicketValidatorEquipment
-from netex.models.ticketing_equipment import TicketingEquipment
-from netex.models.travelator_equipment import TravelatorEquipment
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .crossing_equipment import CrossingEquipment
+from .entrance_equipment import EntranceEquipment
+from .escalator_equipment import EscalatorEquipment
+from .general_sign_structure import GeneralSignStructure
+from .heading_sign_structure import HeadingSignStructure
+from .help_point_equipment import HelpPointEquipment
+from .lift_equipment import LiftEquipment
+from .other_place_equipment import OtherPlaceEquipment
+from .passenger_safety_equipment import PassengerSafetyEquipment
+from .place_lighting import PlaceLighting
+from .place_sign_structure import PlaceSignStructure
+from .queueing_equipment import QueueingEquipment
+from .ramp_equipment import RampEquipment
+from .rough_surface import RoughSurface
+from .rubbish_disposal_equipment import RubbishDisposalEquipment
+from .sanitary_equipment import SanitaryEquipment
+from .staircase_equipment import StaircaseEquipment
+from .ticket_validator_equipment import TicketValidatorEquipment
+from .ticketing_equipment import TicketingEquipment
+from .travelator_equipment import TravelatorEquipment
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

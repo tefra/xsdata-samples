@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.extensions_1 import Extensions1
-from netex.models.producer_response_structure import ProducerResponseStructure
+from .extensions_1 import Extensions1
+from .producer_response_structure import ProducerResponseStructure
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

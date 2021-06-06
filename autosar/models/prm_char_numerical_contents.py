@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.numerical_value import NumericalValue
-from autosar.models.single_language_unit_names import SingleLanguageUnitNames
+from .numerical_value import NumericalValue
+from .single_language_unit_names import SingleLanguageUnitNames
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

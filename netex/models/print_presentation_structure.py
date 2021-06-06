@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.font_size_enumeration import FontSizeEnumeration
+from .font_size_enumeration import FontSizeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

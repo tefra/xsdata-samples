@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.presentation_structure import PresentationStructure
-from netex.models.print_presentation_structure import PrintPresentationStructure
-from netex.models.zone_version_structure import ZoneVersionStructure
+from .presentation_structure import PresentationStructure
+from .print_presentation_structure import PrintPresentationStructure
+from .zone_version_structure import ZoneVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

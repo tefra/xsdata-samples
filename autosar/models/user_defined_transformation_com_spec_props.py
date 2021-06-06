@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     DocumentationBlock,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .category_string import CategoryString
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

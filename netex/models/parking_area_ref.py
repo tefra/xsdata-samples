@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.parking_area_ref_structure import ParkingAreaRefStructure
+from .parking_area_ref_structure import ParkingAreaRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

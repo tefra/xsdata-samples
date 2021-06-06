@@ -1,23 +1,23 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.cp_software_cluster_communication_resource_subtypes_enum import CpSoftwareClusterCommunicationResourceSubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.mode_declaration_group_prototype_in_system_instance_ref import ModeDeclarationGroupPrototypeInSystemInstanceRef
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.operation_in_system_instance_ref import OperationInSystemInstanceRef
-from autosar.models.parameter_data_prototype_in_system_instance_ref import ParameterDataPrototypeInSystemInstanceRef
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.trigger_in_system_instance_ref import TriggerInSystemInstanceRef
-from autosar.models.variable_data_prototype_in_system_instance_ref import VariableDataPrototypeInSystemInstanceRef
+from .category_string import CategoryString
+from .cp_software_cluster_communication_resource_subtypes_enum import CpSoftwareClusterCommunicationResourceSubtypesEnum
+from .identifier import Identifier
+from .mode_declaration_group_prototype_in_system_instance_ref import ModeDeclarationGroupPrototypeInSystemInstanceRef
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .operation_in_system_instance_ref import OperationInSystemInstanceRef
+from .parameter_data_prototype_in_system_instance_ref import ParameterDataPrototypeInSystemInstanceRef
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
+from .trigger_in_system_instance_ref import TriggerInSystemInstanceRef
+from .variable_data_prototype_in_system_instance_ref import VariableDataPrototypeInSystemInstanceRef
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

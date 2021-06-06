@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.train_block_ref_structure import TrainBlockRefStructure
+from .train_block_ref_structure import TrainBlockRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

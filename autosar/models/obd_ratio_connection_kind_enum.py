@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.obd_ratio_connection_kind_enum_simple import ObdRatioConnectionKindEnumSimple
+from .obd_ratio_connection_kind_enum_simple import ObdRatioConnectionKindEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

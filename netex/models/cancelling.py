@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.cancelling_version_structure import CancellingVersionStructure
+from .cancelling_version_structure import CancellingVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

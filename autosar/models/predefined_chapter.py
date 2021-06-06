@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     DefList,
     LabeledList,
     ListType,
@@ -13,16 +13,16 @@ from autosar.models.annotation import (
     StructuredReq,
     TraceableText,
 )
-from autosar.models.msr_query_p_1 import MsrQueryP1
-from autosar.models.msr_query_result_chapter import (
+from .msr_query_p_1 import MsrQueryP1
+from .msr_query_result_chapter import (
     Chapter,
     MsrQueryChapter,
 )
-from autosar.models.msr_query_topic_1 import MsrQueryTopic1
-from autosar.models.prms import Prms
-from autosar.models.table import Table
-from autosar.models.topic_1 import Topic1
-from autosar.models.traceable_table import TraceableTable
+from .msr_query_topic_1 import MsrQueryTopic1
+from .prms import Prms
+from .table import Table
+from .topic_1 import Topic1
+from .traceable_table import TraceableTable
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

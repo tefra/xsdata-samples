@@ -1,14 +1,14 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDateTime
-from netex.models.account_status_type_enumeration import AccountStatusTypeEnumeration
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.customer_account_status_ref import CustomerAccountStatusRef
-from netex.models.customer_purchase_package_refs_rel_structure import CustomerPurchasePackageRefsRelStructure
-from netex.models.customer_ref import CustomerRef
-from netex.models.fare_contracts_rel_structure import FareContractsRelStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.type_of_customer_account_ref import TypeOfCustomerAccountRef
+from .account_status_type_enumeration import AccountStatusTypeEnumeration
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .customer_account_status_ref import CustomerAccountStatusRef
+from .customer_purchase_package_refs_rel_structure import CustomerPurchasePackageRefsRelStructure
+from .customer_ref import CustomerRef
+from .fare_contracts_rel_structure import FareContractsRelStructure
+from .multilingual_string import MultilingualString
+from .type_of_customer_account_ref import TypeOfCustomerAccountRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

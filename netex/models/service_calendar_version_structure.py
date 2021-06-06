@@ -1,15 +1,15 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDate, XmlDuration, XmlTime
-from netex.models.alternative_texts_rel_structure import (
+from .alternative_texts_rel_structure import (
     DataManagedObjectStructure,
     DayTypesRelStructure,
     OperatingDaysRelStructure,
     TimebandsRelStructure,
 )
-from netex.models.day_type_assignments_rel_structure import DayTypeAssignmentsRelStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.operating_periods_rel_structure import OperatingPeriodsRelStructure
+from .day_type_assignments_rel_structure import DayTypeAssignmentsRelStructure
+from .multilingual_string import MultilingualString
+from .operating_periods_rel_structure import OperatingPeriodsRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.direction_value_structure import DirectionValueStructure
+from .direction_value_structure import DirectionValueStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

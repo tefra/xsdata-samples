@@ -1,21 +1,21 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.adaptive_platform_service_instance_subtypes_enum import AdaptivePlatformServiceInstanceSubtypesEnum
-from autosar.models.annotation import (
+from .adaptive_platform_service_instance_subtypes_enum import AdaptivePlatformServiceInstanceSubtypesEnum
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.communication_connector_subtypes_enum import CommunicationConnectorSubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.ref import Ref
-from autosar.models.sec_oc_secure_com_props_subtypes_enum import SecOcSecureComPropsSubtypesEnum
-from autosar.models.secure_com_props_subtypes_enum import SecureComPropsSubtypesEnum
-from autosar.models.short_name_fragment import ShortNameFragment
+from .category_string import CategoryString
+from .communication_connector_subtypes_enum import CommunicationConnectorSubtypesEnum
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .ref import Ref
+from .sec_oc_secure_com_props_subtypes_enum import SecOcSecureComPropsSubtypesEnum
+from .secure_com_props_subtypes_enum import SecureComPropsSubtypesEnum
+from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

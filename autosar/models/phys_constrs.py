@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.limit import Limit
-from autosar.models.monotony_enum import MonotonyEnum
-from autosar.models.numerical_value import NumericalValue
-from autosar.models.ref import Ref
-from autosar.models.scale_constr import ScaleConstr
-from autosar.models.unit_subtypes_enum import UnitSubtypesEnum
+from .limit import Limit
+from .monotony_enum import MonotonyEnum
+from .numerical_value import NumericalValue
+from .ref import Ref
+from .scale_constr import ScaleConstr
+from .unit_subtypes_enum import UnitSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

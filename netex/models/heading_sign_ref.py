@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.heading_sign_ref_structure import HeadingSignRefStructure
+from .heading_sign_ref_structure import HeadingSignRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

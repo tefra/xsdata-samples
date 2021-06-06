@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import (
+from .annotation import (
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.implementation_data_type_subtypes_enum import ImplementationDataTypeSubtypesEnum
-from autosar.models.ref import Ref
+from .implementation_data_type_subtypes_enum import ImplementationDataTypeSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,14 +1,14 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.alternative_names_rel_structure import AlternativeNamesRelStructure
-from netex.models.flexible_area import FlexibleArea
-from netex.models.flexible_area_ref import FlexibleAreaRef
-from netex.models.hail_and_ride_area import HailAndRideArea
-from netex.models.hail_and_ride_area_ref import HailAndRideAreaRef
-from netex.models.line_refs_rel_structure import LineRefsRelStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.place_version_structure import PlaceVersionStructure
-from netex.models.vehicle_mode_enumeration import VehicleModeEnumeration
+from .alternative_names_rel_structure import AlternativeNamesRelStructure
+from .flexible_area import FlexibleArea
+from .flexible_area_ref import FlexibleAreaRef
+from .hail_and_ride_area import HailAndRideArea
+from .hail_and_ride_area_ref import HailAndRideAreaRef
+from .line_refs_rel_structure import LineRefsRelStructure
+from .multilingual_string import MultilingualString
+from .place_version_structure import PlaceVersionStructure
+from .vehicle_mode_enumeration import VehicleModeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

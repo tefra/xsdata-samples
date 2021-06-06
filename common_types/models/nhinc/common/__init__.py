@@ -1,4 +1,4 @@
-from common_types.models.nhinc.common.nhinc_common import (
+from .nhinc_common import (
     Acknowledgement,
     AcknowledgementType,
     Address,

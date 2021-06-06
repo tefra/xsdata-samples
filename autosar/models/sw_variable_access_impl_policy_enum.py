@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.sw_variable_access_impl_policy_enum_simple import SwVariableAccessImplPolicyEnumSimple
+from .sw_variable_access_impl_policy_enum_simple import SwVariableAccessImplPolicyEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

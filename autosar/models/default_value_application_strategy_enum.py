@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.default_value_application_strategy_enum_simple import DefaultValueApplicationStrategyEnumSimple
+from .default_value_application_strategy_enum_simple import DefaultValueApplicationStrategyEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

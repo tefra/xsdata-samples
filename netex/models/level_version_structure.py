@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.accessibility_assessment_versioned_child_structure import AccessibilityAssessmentVersionedChildStructure
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.parking_ref import ParkingRef
-from netex.models.point_of_interest_ref import PointOfInterestRef
-from netex.models.service_site_ref import ServiceSiteRef
-from netex.models.site_ref import SiteRef
-from netex.models.stop_place_ref import StopPlaceRef
+from .accessibility_assessment_versioned_child_structure import AccessibilityAssessmentVersionedChildStructure
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .multilingual_string import MultilingualString
+from .parking_ref import ParkingRef
+from .point_of_interest_ref import PointOfInterestRef
+from .service_site_ref import ServiceSiteRef
+from .site_ref import SiteRef
+from .stop_place_ref import StopPlaceRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

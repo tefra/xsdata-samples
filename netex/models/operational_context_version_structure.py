@@ -1,14 +1,14 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.all_modes_enumeration import AllModesEnumeration
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.control_centre_ref import ControlCentreRef
-from netex.models.department_ref import DepartmentRef
-from netex.models.multilingual_string import MultilingualString
-from netex.models.organisation_part_ref import OrganisationPartRef
-from netex.models.organisational_unit_ref import OrganisationalUnitRef
-from netex.models.private_code import PrivateCode
-from netex.models.transport_submode import TransportSubmode
+from .all_modes_enumeration import AllModesEnumeration
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .control_centre_ref import ControlCentreRef
+from .department_ref import DepartmentRef
+from .multilingual_string import MultilingualString
+from .organisation_part_ref import OrganisationPartRef
+from .organisational_unit_ref import OrganisationalUnitRef
+from .private_code import PrivateCode
+from .transport_submode import TransportSubmode
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

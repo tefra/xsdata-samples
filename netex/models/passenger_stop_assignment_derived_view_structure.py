@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.derived_view_structure import DerivedViewStructure
-from netex.models.dynamic_stop_assignment_ref import DynamicStopAssignmentRef
-from netex.models.multilingual_string import MultilingualString
-from netex.models.passenger_stop_assignment_ref import PassengerStopAssignmentRef
-from netex.models.quay_ref_structure import QuayRefStructure
-from netex.models.stop_place_ref import StopPlaceRef
-from netex.models.vehicle_journey_stop_assignment_ref import VehicleJourneyStopAssignmentRef
+from .derived_view_structure import DerivedViewStructure
+from .dynamic_stop_assignment_ref import DynamicStopAssignmentRef
+from .multilingual_string import MultilingualString
+from .passenger_stop_assignment_ref import PassengerStopAssignmentRef
+from .quay_ref_structure import QuayRefStructure
+from .stop_place_ref import StopPlaceRef
+from .vehicle_journey_stop_assignment_ref import VehicleJourneyStopAssignmentRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

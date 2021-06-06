@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.byte_order_enum import ByteOrderEnum
-from autosar.models.integer import Integer
+from .byte_order_enum import ByteOrderEnum
+from .integer import Integer
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

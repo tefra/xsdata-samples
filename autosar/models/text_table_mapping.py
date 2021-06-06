@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.boolean import Boolean
-from autosar.models.mapping_direction_enum import MappingDirectionEnum
-from autosar.models.positive_integer_value_variation_point import PositiveIntegerValueVariationPoint
-from autosar.models.text_table_value_pair import TextTableValuePair
+from .boolean import Boolean
+from .mapping_direction_enum import MappingDirectionEnum
+from .positive_integer_value_variation_point import PositiveIntegerValueVariationPoint
+from .text_table_value_pair import TextTableValuePair
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

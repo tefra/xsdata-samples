@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.control_centre_ref import ControlCentreRef
-from netex.models.interchange_rule_parameter_structure import InterchangeRuleParameterStructure
-from netex.models.interchange_rule_timings_rel_structure import InterchangeRuleTimingsRelStructure
-from netex.models.interchange_version_structure import InterchangeVersionStructure
-from netex.models.zone_ref_structure import ZoneRefStructure
+from .control_centre_ref import ControlCentreRef
+from .interchange_rule_parameter_structure import InterchangeRuleParameterStructure
+from .interchange_rule_timings_rel_structure import InterchangeRuleTimingsRelStructure
+from .interchange_version_structure import InterchangeVersionStructure
+from .zone_ref_structure import ZoneRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

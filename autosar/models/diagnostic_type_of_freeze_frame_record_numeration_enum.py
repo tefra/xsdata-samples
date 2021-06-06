@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.diagnostic_type_of_freeze_frame_record_numeration_enum_simple import DiagnosticTypeOfFreezeFrameRecordNumerationEnumSimple
+from .diagnostic_type_of_freeze_frame_record_numeration_enum_simple import DiagnosticTypeOfFreezeFrameRecordNumerationEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

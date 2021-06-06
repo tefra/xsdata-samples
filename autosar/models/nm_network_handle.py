@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.ethernet_communication_connector_subtypes_enum import EthernetCommunicationConnectorSubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.pnc_mapping_ident_subtypes_enum import PncMappingIdentSubtypesEnum
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
+from .ethernet_communication_connector_subtypes_enum import EthernetCommunicationConnectorSubtypesEnum
+from .identifier import Identifier
+from .pnc_mapping_ident_subtypes_enum import PncMappingIdentSubtypesEnum
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.someip_message_type_enum_simple import SomeipMessageTypeEnumSimple
+from .someip_message_type_enum_simple import SomeipMessageTypeEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

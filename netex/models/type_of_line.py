@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from netex.models.type_of_line_value_structure import TypeOfLineValueStructure
+from .type_of_line_value_structure import TypeOfLineValueStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

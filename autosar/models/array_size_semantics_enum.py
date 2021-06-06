@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.array_size_semantics_enum_simple import ArraySizeSemanticsEnumSimple
+from .array_size_semantics_enum_simple import ArraySizeSemanticsEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

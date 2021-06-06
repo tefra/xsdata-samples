@@ -1,16 +1,16 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.dated_special_service_ref import DatedSpecialServiceRef
-from netex.models.dated_vehicle_journey_ref import DatedVehicleJourneyRef
-from netex.models.dead_run_ref import DeadRunRef
-from netex.models.journey_designator import JourneyDesignator
-from netex.models.journey_ref import JourneyRef
-from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
-from netex.models.service_designator import ServiceDesignator
-from netex.models.service_journey_ref import ServiceJourneyRef
-from netex.models.special_service_ref import SpecialServiceRef
-from netex.models.template_service_journey_ref import TemplateServiceJourneyRef
-from netex.models.vehicle_journey_ref import VehicleJourneyRef
+from .dated_special_service_ref import DatedSpecialServiceRef
+from .dated_vehicle_journey_ref import DatedVehicleJourneyRef
+from .dead_run_ref import DeadRunRef
+from .journey_designator import JourneyDesignator
+from .journey_ref import JourneyRef
+from .one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .service_designator import ServiceDesignator
+from .service_journey_ref import ServiceJourneyRef
+from .special_service_ref import SpecialServiceRef
+from .template_service_journey_ref import TemplateServiceJourneyRef
+from .vehicle_journey_ref import VehicleJourneyRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.distance_matrix_element import DistanceMatrixElement
-from netex.models.frame_containment_structure import FrameContainmentStructure
+from .distance_matrix_element import DistanceMatrixElement
+from .frame_containment_structure import FrameContainmentStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

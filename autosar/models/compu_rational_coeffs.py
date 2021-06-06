@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.compu_nominator_denominator import CompuNominatorDenominator
+from .compu_nominator_denominator import CompuNominatorDenominator
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

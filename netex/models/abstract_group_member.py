@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.abstract_group_member_versioned_child_structure import AbstractGroupMemberVersionedChildStructure
+from .abstract_group_member_versioned_child_structure import AbstractGroupMemberVersionedChildStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.access_equipment_version_structure import AccessEquipmentVersionStructure
-from netex.models.entrance_attention_enumeration import EntranceAttentionEnumeration
-from netex.models.necessary_force_enumeration import NecessaryForceEnumeration
-from netex.models.staffing_enumeration import StaffingEnumeration
+from .access_equipment_version_structure import AccessEquipmentVersionStructure
+from .entrance_attention_enumeration import EntranceAttentionEnumeration
+from .necessary_force_enumeration import NecessaryForceEnumeration
+from .staffing_enumeration import StaffingEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

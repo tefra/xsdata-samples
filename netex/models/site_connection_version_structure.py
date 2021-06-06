@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.navigation_paths_rel_structure import NavigationPathsRelStructure
-from netex.models.site_connection_end_structure import SiteConnectionEndStructure
-from netex.models.transfer_version_structure import TransferVersionStructure
+from .navigation_paths_rel_structure import NavigationPathsRelStructure
+from .site_connection_end_structure import SiteConnectionEndStructure
+from .transfer_version_structure import TransferVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

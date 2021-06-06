@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.cell_versioned_child_structure import ParkingChargeBand
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.parking_charge_band_ref import ParkingChargeBandRef
+from .cell_versioned_child_structure import ParkingChargeBand
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .parking_charge_band_ref import ParkingChargeBandRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

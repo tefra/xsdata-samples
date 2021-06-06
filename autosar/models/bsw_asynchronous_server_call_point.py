@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.bsw_distinguished_partition_subtypes_enum import BswDistinguishedPartitionSubtypesEnum
-from autosar.models.bsw_module_client_server_entry_subtypes_enum import BswModuleClientServerEntrySubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
+from .annotation import VariationPoint
+from .bsw_distinguished_partition_subtypes_enum import BswDistinguishedPartitionSubtypesEnum
+from .bsw_module_client_server_entry_subtypes_enum import BswModuleClientServerEntrySubtypesEnum
+from .identifier import Identifier
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

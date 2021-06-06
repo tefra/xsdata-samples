@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.ethernet_mac_layer_type_enum_simple import EthernetMacLayerTypeEnumSimple
+from .ethernet_mac_layer_type_enum_simple import EthernetMacLayerTypeEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

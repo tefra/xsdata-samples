@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDuration
-from netex.models.derived_view_structure import DerivedViewStructure
-from netex.models.timing_link_in_journey_pattern_ref import TimingLinkInJourneyPatternRef
-from netex.models.timing_link_ref import TimingLinkRef
-from netex.models.timing_point_ref_structure import TimingPointRefStructure
+from .derived_view_structure import DerivedViewStructure
+from .timing_link_in_journey_pattern_ref import TimingLinkInJourneyPatternRef
+from .timing_link_ref import TimingLinkRef
+from .timing_point_ref_structure import TimingPointRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

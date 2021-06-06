@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDuration
-from netex.models.data_name_spaces_structure import DataNameSpacesStructure
-from netex.models.delivery_method_enumeration import DeliveryMethodEnumeration
-from netex.models.empty_type_1 import EmptyType1
-from netex.models.predictors_enumeration import PredictorsEnumeration
+from .data_name_spaces_structure import DataNameSpacesStructure
+from .delivery_method_enumeration import DeliveryMethodEnumeration
+from .empty_type_1 import EmptyType1
+from .predictors_enumeration import PredictorsEnumeration
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

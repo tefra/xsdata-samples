@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.navigation_path_assignment_version_structure import NavigationPathAssignmentVersionStructure
+from .navigation_path_assignment_version_structure import NavigationPathAssignmentVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

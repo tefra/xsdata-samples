@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.vehicle_journey_stop_assignment import VehicleJourneyStopAssignment
-from netex.models.vehicle_journey_stop_assignment_ref import VehicleJourneyStopAssignmentRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .vehicle_journey_stop_assignment import VehicleJourneyStopAssignment
+from .vehicle_journey_stop_assignment_ref import VehicleJourneyStopAssignmentRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

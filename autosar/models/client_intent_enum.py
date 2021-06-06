@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.client_intent_enum_simple import ClientIntentEnumSimple
+from .client_intent_enum_simple import ClientIntentEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.nmtoken_string import NmtokenString
-from autosar.models.positive_integer import PositiveInteger
+from .nmtoken_string import NmtokenString
+from .positive_integer import PositiveInteger
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

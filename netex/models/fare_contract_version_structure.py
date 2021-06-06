@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDateTime
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.customer_account_ref import CustomerAccountRef
-from netex.models.customer_ref import CustomerRef
-from netex.models.fare_contract_entries_rel_structure import FareContractEntriesRelStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.type_of_fare_contract_ref import TypeOfFareContractRef
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .customer_account_ref import CustomerAccountRef
+from .customer_ref import CustomerRef
+from .fare_contract_entries_rel_structure import FareContractEntriesRelStructure
+from .multilingual_string import MultilingualString
+from .type_of_fare_contract_ref import TypeOfFareContractRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

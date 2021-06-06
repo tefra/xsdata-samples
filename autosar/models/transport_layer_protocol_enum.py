@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.transport_layer_protocol_enum_simple import TransportLayerProtocolEnumSimple
+from .transport_layer_protocol_enum_simple import TransportLayerProtocolEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

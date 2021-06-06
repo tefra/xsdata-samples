@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.train_size_structure import TrainSizeStructure
+from .train_size_structure import TrainSizeStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

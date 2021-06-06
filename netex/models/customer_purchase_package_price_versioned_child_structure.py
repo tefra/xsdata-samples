@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.customer_purchase_package_element_ref import CustomerPurchasePackageElementRef
-from netex.models.customer_purchase_package_ref import CustomerPurchasePackageRef
-from netex.models.fare_price_versioned_child_structure import FarePriceVersionedChildStructure
+from .customer_purchase_package_element_ref import CustomerPurchasePackageElementRef
+from .customer_purchase_package_ref import CustomerPurchasePackageRef
+from .fare_price_versioned_child_structure import FarePriceVersionedChildStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

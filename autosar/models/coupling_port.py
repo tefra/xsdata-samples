@@ -1,30 +1,30 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.coupling_port_details import CouplingPortDetails
-from autosar.models.coupling_port_role_enum import CouplingPortRoleEnum
-from autosar.models.ethernet_connection_negotiation_enum import EthernetConnectionNegotiationEnum
-from autosar.models.ethernet_mac_layer_type_enum import EthernetMacLayerTypeEnum
-from autosar.models.ethernet_physical_channel_subtypes_enum import EthernetPhysicalChannelSubtypesEnum
-from autosar.models.ethernet_physical_layer_type_enum import EthernetPhysicalLayerTypeEnum
-from autosar.models.ethernet_switch_vlan_ingress_tag_enum import EthernetSwitchVlanIngressTagEnum
-from autosar.models.ethernet_wakeup_sleep_on_dataline_config_subtypes_enum import EthernetWakeupSleepOnDatalineConfigSubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.mac_multicast_group_subtypes_enum import MacMulticastGroupSubtypesEnum
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.plca_props import PlcaProps
-from autosar.models.pnc_mapping_ident_subtypes_enum import PncMappingIdentSubtypesEnum
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.vlan_membership import VlanMembership
+from .category_string import CategoryString
+from .coupling_port_details import CouplingPortDetails
+from .coupling_port_role_enum import CouplingPortRoleEnum
+from .ethernet_connection_negotiation_enum import EthernetConnectionNegotiationEnum
+from .ethernet_mac_layer_type_enum import EthernetMacLayerTypeEnum
+from .ethernet_physical_channel_subtypes_enum import EthernetPhysicalChannelSubtypesEnum
+from .ethernet_physical_layer_type_enum import EthernetPhysicalLayerTypeEnum
+from .ethernet_switch_vlan_ingress_tag_enum import EthernetSwitchVlanIngressTagEnum
+from .ethernet_wakeup_sleep_on_dataline_config_subtypes_enum import EthernetWakeupSleepOnDatalineConfigSubtypesEnum
+from .identifier import Identifier
+from .mac_multicast_group_subtypes_enum import MacMulticastGroupSubtypesEnum
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .plca_props import PlcaProps
+from .pnc_mapping_ident_subtypes_enum import PncMappingIdentSubtypesEnum
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
+from .vlan_membership import VlanMembership
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

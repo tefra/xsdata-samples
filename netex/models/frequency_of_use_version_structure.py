@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDuration
-from netex.models.discount_basis_enumeration import DiscountBasisEnumeration
-from netex.models.frequency_of_use_type_enumeration import FrequencyOfUseTypeEnumeration
-from netex.models.time_interval_ref import TimeIntervalRef
-from netex.models.usage_parameter_version_structure import UsageParameterVersionStructure
+from .discount_basis_enumeration import DiscountBasisEnumeration
+from .frequency_of_use_type_enumeration import FrequencyOfUseTypeEnumeration
+from .time_interval_ref import TimeIntervalRef
+from .usage_parameter_version_structure import UsageParameterVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

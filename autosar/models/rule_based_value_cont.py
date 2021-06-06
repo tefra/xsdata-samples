@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.ref import Ref
-from autosar.models.rule_based_value_specification import RuleBasedValueSpecification
-from autosar.models.unit_subtypes_enum import UnitSubtypesEnum
-from autosar.models.value_list import ValueList
+from .ref import Ref
+from .rule_based_value_specification import RuleBasedValueSpecification
+from .unit_subtypes_enum import UnitSubtypesEnum
+from .value_list import ValueList
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.data_managed_object_view_structure import DataManagedObjectViewStructure
+from .data_managed_object_view_structure import DataManagedObjectViewStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

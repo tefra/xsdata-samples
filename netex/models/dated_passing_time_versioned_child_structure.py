@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.journey_ref_structure import JourneyRefStructure
-from netex.models.passing_time_versioned_child_structure import PassingTimeVersionedChildStructure
+from .journey_ref_structure import JourneyRefStructure
+from .passing_time_versioned_child_structure import PassingTimeVersionedChildStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

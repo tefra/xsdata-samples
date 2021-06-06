@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.identifier import Identifier
-from autosar.models.integer import Integer
-from autosar.models.rule_arguments import RuleArguments
+from .identifier import Identifier
+from .integer import Integer
+from .rule_arguments import RuleArguments
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

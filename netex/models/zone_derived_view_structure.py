@@ -1,16 +1,16 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.access_zone_ref import AccessZoneRef
-from netex.models.administrative_zone_ref import AdministrativeZoneRef
-from netex.models.derived_view_structure import DerivedViewStructure
-from netex.models.fare_zone_ref import FareZoneRef
-from netex.models.multilingual_string import MultilingualString
-from netex.models.stop_area_ref import StopAreaRef
-from netex.models.tariff_zone_ref_1 import TariffZoneRef1
-from netex.models.tariff_zone_ref_2 import TariffZoneRef2
-from netex.models.transport_administrative_zone_ref import TransportAdministrativeZoneRef
-from netex.models.type_of_zone_ref import TypeOfZoneRef
-from netex.models.zone_ref import ZoneRef
+from .access_zone_ref import AccessZoneRef
+from .administrative_zone_ref import AdministrativeZoneRef
+from .derived_view_structure import DerivedViewStructure
+from .fare_zone_ref import FareZoneRef
+from .multilingual_string import MultilingualString
+from .stop_area_ref import StopAreaRef
+from .tariff_zone_ref_1 import TariffZoneRef1
+from .tariff_zone_ref_2 import TariffZoneRef2
+from .transport_administrative_zone_ref import TransportAdministrativeZoneRef
+from .type_of_zone_ref import TypeOfZoneRef
+from .zone_ref import ZoneRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.flexible_area_ref import FlexibleAreaRef
-from netex.models.flexible_quay import FlexibleQuay
-from netex.models.flexible_quay_ref import FlexibleQuayRef
-from netex.models.hail_and_ride_area_ref import HailAndRideAreaRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .flexible_area_ref import FlexibleAreaRef
+from .flexible_quay import FlexibleQuay
+from .flexible_quay_ref import FlexibleQuayRef
+from .hail_and_ride_area_ref import HailAndRideAreaRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

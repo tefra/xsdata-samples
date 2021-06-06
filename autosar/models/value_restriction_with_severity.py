@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.limit_value import LimitValue
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.regular_expression import RegularExpression
-from autosar.models.severity_enum import SeverityEnum
+from .limit_value import LimitValue
+from .positive_integer import PositiveInteger
+from .regular_expression import RegularExpression
+from .severity_enum import SeverityEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

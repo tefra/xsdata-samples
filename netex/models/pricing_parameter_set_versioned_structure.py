@@ -1,16 +1,16 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.day_type_ref import DayTypeRef
-from netex.models.fare_day_type_ref import FareDayTypeRef
-from netex.models.month_validity_offsets_rel_structure import MonthValidityOffsetsRelStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.price_unit_ref import PriceUnitRef
-from netex.models.price_units_rel_structure import PriceUnitsRelStructure
-from netex.models.pricing_rules_rel_structure import PricingRulesRelStructure
-from netex.models.pricing_services_rel_structure import PricingServicesRelStructure
-from netex.models.rounding_ref import RoundingRef
-from netex.models.roundings_rel_structure import RoundingsRelStructure
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .day_type_ref import DayTypeRef
+from .fare_day_type_ref import FareDayTypeRef
+from .month_validity_offsets_rel_structure import MonthValidityOffsetsRelStructure
+from .multilingual_string import MultilingualString
+from .price_unit_ref import PriceUnitRef
+from .price_units_rel_structure import PriceUnitsRelStructure
+from .pricing_rules_rel_structure import PricingRulesRelStructure
+from .pricing_services_rel_structure import PricingServicesRelStructure
+from .rounding_ref import RoundingRef
+from .roundings_rel_structure import RoundingsRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

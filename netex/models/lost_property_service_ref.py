@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.lost_property_service_ref_structure import LostPropertyServiceRefStructure
+from .lost_property_service_ref_structure import LostPropertyServiceRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

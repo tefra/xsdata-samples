@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.ethernet_coupling_port_scheduler_enum_simple import EthernetCouplingPortSchedulerEnumSimple
+from .ethernet_coupling_port_scheduler_enum_simple import EthernetCouplingPortSchedulerEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

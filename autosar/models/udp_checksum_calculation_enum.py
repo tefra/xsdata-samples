@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.udp_checksum_calculation_enum_simple import UdpChecksumCalculationEnumSimple
+from .udp_checksum_calculation_enum_simple import UdpChecksumCalculationEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

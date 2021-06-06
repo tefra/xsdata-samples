@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.direction_ref import DirectionRef
-from netex.models.flexible_line_ref import FlexibleLineRef
-from netex.models.line_ref import LineRef
-from netex.models.presentation_structure import PresentationStructure
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .direction_ref import DirectionRef
+from .flexible_line_ref import FlexibleLineRef
+from .line_ref import LineRef
+from .presentation_structure import PresentationStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

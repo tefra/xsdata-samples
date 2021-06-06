@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.ref import Ref
-from autosar.models.socket_address_subtypes_enum import SocketAddressSubtypesEnum
+from .annotation import VariationPoint
+from .ref import Ref
+from .socket_address_subtypes_enum import SocketAddressSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

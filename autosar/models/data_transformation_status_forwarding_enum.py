@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.data_transformation_status_forwarding_enum_simple import DataTransformationStatusForwardingEnumSimple
+from .data_transformation_status_forwarding_enum_simple import DataTransformationStatusForwardingEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

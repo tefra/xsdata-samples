@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.resolution_policy_enum_simple import ResolutionPolicyEnumSimple
+from .resolution_policy_enum_simple import ResolutionPolicyEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

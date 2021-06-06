@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.diagnostic_clear_event_behavior_enum_simple import DiagnosticClearEventBehaviorEnumSimple
+from .diagnostic_clear_event_behavior_enum_simple import DiagnosticClearEventBehaviorEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

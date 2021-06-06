@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.postal_address_version_structure import PostalAddressVersionStructure
+from .postal_address_version_structure import PostalAddressVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.delivery_variant_type_enumeration import DeliveryVariantTypeEnumeration
-from netex.models.destination_display_context_enumeration import DestinationDisplayContextEnumeration
-from netex.models.destination_display_ref import DestinationDisplayRef
-from netex.models.multilingual_string import MultilingualString
-from netex.models.vias_rel_structure import ViasRelStructure
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .delivery_variant_type_enumeration import DeliveryVariantTypeEnumeration
+from .destination_display_context_enumeration import DestinationDisplayContextEnumeration
+from .destination_display_ref import DestinationDisplayRef
+from .multilingual_string import MultilingualString
+from .vias_rel_structure import ViasRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

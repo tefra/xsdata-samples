@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
-from netex.models.passenger_capacity import PassengerCapacity
-from netex.models.passenger_capacity_ref import PassengerCapacityRef
+from .one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .passenger_capacity import PassengerCapacity
+from .passenger_capacity_ref import PassengerCapacityRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

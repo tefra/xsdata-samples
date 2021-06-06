@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.class_in_frame_ref import ClassInFrameRef
-from netex.models.class_ref import ClassRef
-from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .class_in_frame_ref import ClassInFrameRef
+from .class_ref import ClassRef
+from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.operation_in_system_instance_ref import OperationInSystemInstanceRef
-from autosar.models.swc_to_swc_operation_arguments_direction_enum import SwcToSwcOperationArgumentsDirectionEnum
+from .operation_in_system_instance_ref import OperationInSystemInstanceRef
+from .swc_to_swc_operation_arguments_direction_enum import SwcToSwcOperationArgumentsDirectionEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.shelter_equipment_version_structure import ShelterEquipmentVersionStructure
+from .shelter_equipment_version_structure import ShelterEquipmentVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

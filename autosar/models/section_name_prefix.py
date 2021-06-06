@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.c_identifier import CIdentifier
-from autosar.models.dependency_on_artifact_subtypes_enum import DependencyOnArtifactSubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
+from .annotation import VariationPoint
+from .c_identifier import CIdentifier
+from .dependency_on_artifact_subtypes_enum import DependencyOnArtifactSubtypesEnum
+from .identifier import Identifier
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

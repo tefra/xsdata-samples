@@ -1,23 +1,23 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.data_transformation_ref_conditional import DataTransformationRefConditional
-from autosar.models.end_to_end_transformation_i_signal_props import EndToEndTransformationISignalProps
-from autosar.models.i_signal_subtypes_enum import ISignalSubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.someip_transformation_i_signal_props import SomeipTransformationISignalProps
-from autosar.models.system_signal_group_subtypes_enum import SystemSignalGroupSubtypesEnum
-from autosar.models.user_defined_transformation_i_signal_props import UserDefinedTransformationISignalProps
+from .category_string import CategoryString
+from .data_transformation_ref_conditional import DataTransformationRefConditional
+from .end_to_end_transformation_i_signal_props import EndToEndTransformationISignalProps
+from .i_signal_subtypes_enum import ISignalSubtypesEnum
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
+from .someip_transformation_i_signal_props import SomeipTransformationISignalProps
+from .system_signal_group_subtypes_enum import SystemSignalGroupSubtypesEnum
+from .user_defined_transformation_i_signal_props import UserDefinedTransformationISignalProps
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

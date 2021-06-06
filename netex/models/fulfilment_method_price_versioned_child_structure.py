@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.fare_price_versioned_child_structure import FarePriceVersionedChildStructure
-from netex.models.fulfilment_method_ref import FulfilmentMethodRef
+from .fare_price_versioned_child_structure import FarePriceVersionedChildStructure
+from .fulfilment_method_ref import FulfilmentMethodRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

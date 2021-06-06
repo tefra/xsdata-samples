@@ -1,18 +1,18 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.all_modes_enumeration import AllModesEnumeration
-from netex.models.assignment_version_structure_1 import AssignmentVersionStructure1
-from netex.models.dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
-from netex.models.direction_ref import DirectionRef
-from netex.models.display_assignment_type_enumeration import DisplayAssignmentTypeEnumeration
-from netex.models.fare_scheduled_stop_point_ref import FareScheduledStopPointRef
-from netex.models.flexible_line_ref import FlexibleLineRef
-from netex.models.journey_pattern_ref import JourneyPatternRef
-from netex.models.line_ref import LineRef
-from netex.models.logical_display_ref import LogicalDisplayRef
-from netex.models.scheduled_stop_point_ref import ScheduledStopPointRef
-from netex.models.service_journey_pattern_ref import ServiceJourneyPatternRef
-from netex.models.service_pattern_ref import ServicePatternRef
+from .all_modes_enumeration import AllModesEnumeration
+from .assignment_version_structure_1 import AssignmentVersionStructure1
+from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
+from .direction_ref import DirectionRef
+from .display_assignment_type_enumeration import DisplayAssignmentTypeEnumeration
+from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
+from .flexible_line_ref import FlexibleLineRef
+from .journey_pattern_ref import JourneyPatternRef
+from .line_ref import LineRef
+from .logical_display_ref import LogicalDisplayRef
+from .scheduled_stop_point_ref import ScheduledStopPointRef
+from .service_journey_pattern_ref import ServiceJourneyPatternRef
+from .service_pattern_ref import ServicePatternRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

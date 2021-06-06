@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.signal_fan_enum_simple import SignalFanEnumSimple
+from .signal_fan_enum_simple import SignalFanEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

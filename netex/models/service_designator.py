@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.service_designator_structure import ServiceDesignatorStructure
+from .service_designator_structure import ServiceDesignatorStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

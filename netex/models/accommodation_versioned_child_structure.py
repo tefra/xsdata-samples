@@ -1,17 +1,17 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.accommodation_facility_enumeration import AccommodationFacilityEnumeration
-from netex.models.alternative_texts_rel_structure import VersionedChildStructure
-from netex.models.berth_facility_enumeration import BerthFacilityEnumeration
-from netex.models.class_of_use_ref import ClassOfUseRef
-from netex.models.couchette_facility_enumeration import CouchetteFacilityEnumeration
-from netex.models.fare_class_enumeration import FareClassEnumeration
-from netex.models.gender_limitation_enumeration import GenderLimitationEnumeration
-from netex.models.multilingual_string import MultilingualString
-from netex.models.nuisance_facility_enumeration import NuisanceFacilityEnumeration
-from netex.models.passenger_comms_facility_enumeration import PassengerCommsFacilityEnumeration
-from netex.models.sanitary_facility_enumeration import SanitaryFacilityEnumeration
-from netex.models.service_facility_set_ref import ServiceFacilitySetRef
+from .accommodation_facility_enumeration import AccommodationFacilityEnumeration
+from .alternative_texts_rel_structure import VersionedChildStructure
+from .berth_facility_enumeration import BerthFacilityEnumeration
+from .class_of_use_ref import ClassOfUseRef
+from .couchette_facility_enumeration import CouchetteFacilityEnumeration
+from .fare_class_enumeration import FareClassEnumeration
+from .gender_limitation_enumeration import GenderLimitationEnumeration
+from .multilingual_string import MultilingualString
+from .nuisance_facility_enumeration import NuisanceFacilityEnumeration
+from .passenger_comms_facility_enumeration import PassengerCommsFacilityEnumeration
+from .sanitary_facility_enumeration import SanitaryFacilityEnumeration
+from .service_facility_set_ref import ServiceFacilitySetRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

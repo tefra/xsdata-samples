@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.check_constraint import CheckConstraint
-from netex.models.check_constraint_ref import CheckConstraintRef
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
+from .check_constraint import CheckConstraint
+from .check_constraint_ref import CheckConstraintRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

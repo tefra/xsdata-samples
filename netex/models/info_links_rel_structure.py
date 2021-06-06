@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.info_link import InfoLink
+from .info_link import InfoLink
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

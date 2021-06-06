@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.chapter_enum_break_simple import ChapterEnumBreakSimple
-from autosar.models.general_parameter import GeneralParameter
-from autosar.models.keep_with_previous_enum_simple import KeepWithPreviousEnumSimple
-from autosar.models.multilanguage_long_name import MultilanguageLongName
+from .chapter_enum_break_simple import ChapterEnumBreakSimple
+from .general_parameter import GeneralParameter
+from .keep_with_previous_enum_simple import KeepWithPreviousEnumSimple
+from .multilanguage_long_name import MultilanguageLongName
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

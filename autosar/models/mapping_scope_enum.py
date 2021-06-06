@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.mapping_scope_enum_simple import MappingScopeEnumSimple
+from .mapping_scope_enum_simple import MappingScopeEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

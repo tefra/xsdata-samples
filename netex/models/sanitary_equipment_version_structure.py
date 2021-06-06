@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
-from netex.models.accessibility_assessment import AccessibilityAssessment
-from netex.models.gender_limitation_enumeration import GenderLimitationEnumeration
-from netex.models.passenger_equipment_version_structure import PassengerEquipmentVersionStructure
-from netex.models.payment_method_enumeration import PaymentMethodEnumeration
-from netex.models.sanitary_facility_enumeration import SanitaryFacilityEnumeration
-from netex.models.staffing_enumeration import StaffingEnumeration
+from .accessibility_assessment import AccessibilityAssessment
+from .gender_limitation_enumeration import GenderLimitationEnumeration
+from .passenger_equipment_version_structure import PassengerEquipmentVersionStructure
+from .payment_method_enumeration import PaymentMethodEnumeration
+from .sanitary_facility_enumeration import SanitaryFacilityEnumeration
+from .staffing_enumeration import StaffingEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

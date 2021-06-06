@@ -1,21 +1,21 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
-from netex.models.derived_view_structure import DerivedViewStructure
-from netex.models.destination_display_ref import DestinationDisplayRef
-from netex.models.destination_display_view import DestinationDisplayView
-from netex.models.direction_ref import DirectionRef
-from netex.models.direction_type_enumeration import DirectionTypeEnumeration
-from netex.models.direction_view import DirectionView
-from netex.models.journey_pattern_ref import JourneyPatternRef
-from netex.models.notice_assignments_rel_structure import NoticeAssignmentsRelStructure
-from netex.models.operational_context_ref import OperationalContextRef
-from netex.models.route_ref import RouteRef
-from netex.models.route_view import RouteView
-from netex.models.service_journey_pattern_ref import ServiceJourneyPatternRef
-from netex.models.service_pattern_ref import ServicePatternRef
-from netex.models.timing_pattern_ref import TimingPatternRef
-from netex.models.type_of_journey_pattern_ref import TypeOfJourneyPatternRef
+from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
+from .derived_view_structure import DerivedViewStructure
+from .destination_display_ref import DestinationDisplayRef
+from .destination_display_view import DestinationDisplayView
+from .direction_ref import DirectionRef
+from .direction_type_enumeration import DirectionTypeEnumeration
+from .direction_view import DirectionView
+from .journey_pattern_ref import JourneyPatternRef
+from .notice_assignments_rel_structure import NoticeAssignmentsRelStructure
+from .operational_context_ref import OperationalContextRef
+from .route_ref import RouteRef
+from .route_view import RouteView
+from .service_journey_pattern_ref import ServiceJourneyPatternRef
+from .service_pattern_ref import ServicePatternRef
+from .timing_pattern_ref import TimingPatternRef
+from .type_of_journey_pattern_ref import TypeOfJourneyPatternRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

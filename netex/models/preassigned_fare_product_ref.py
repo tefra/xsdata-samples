@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.preassigned_fare_product_ref_structure import PreassignedFareProductRefStructure
+from .preassigned_fare_product_ref_structure import PreassignedFareProductRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

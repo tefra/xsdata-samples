@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from netex.models.line_string import LineString
-from netex.models.link_sequence_ref_structure import LinkSequenceRefStructure
-from netex.models.point_refs_rel_structure import PointRefsRelStructure
-from netex.models.projection_version_structure import ProjectionVersionStructure
+from .line_string import LineString
+from .link_sequence_ref_structure import LinkSequenceRefStructure
+from .point_refs_rel_structure import PointRefsRelStructure
+from .projection_version_structure import ProjectionVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

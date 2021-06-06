@@ -1,37 +1,37 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.application_rule_based_value_specification import ApplicationRuleBasedValueSpecification
-from autosar.models.application_value_specification import ApplicationValueSpecification
-from autosar.models.autosar_data_prototype_subtypes_enum import AutosarDataPrototypeSubtypesEnum
-from autosar.models.boolean import Boolean
-from autosar.models.boolean_value_variation_point import BooleanValueVariationPoint
-from autosar.models.composite_network_representation import CompositeNetworkRepresentation
-from autosar.models.constant_reference import ConstantReference
-from autosar.models.data_filter import DataFilter
-from autosar.models.end_to_end_transformation_com_spec_props import EndToEndTransformationComSpecProps
-from autosar.models.handle_out_of_range_enum import HandleOutOfRangeEnum
-from autosar.models.handle_out_of_range_status_enum import HandleOutOfRangeStatusEnum
-from autosar.models.handle_timeout_enum import HandleTimeoutEnum
-from autosar.models.not_available_value_specification import NotAvailableValueSpecification
-from autosar.models.numerical_rule_based_value_specification import NumericalRuleBasedValueSpecification
-from autosar.models.numerical_value_specification import NumericalValueSpecification
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.positive_integer_value_variation_point import PositiveIntegerValueVariationPoint
-from autosar.models.receiver_intent_enum import ReceiverIntentEnum
-from autosar.models.reception_com_spec_props import ReceptionComSpecProps
-from autosar.models.record_value_specification import (
+from .application_rule_based_value_specification import ApplicationRuleBasedValueSpecification
+from .application_value_specification import ApplicationValueSpecification
+from .autosar_data_prototype_subtypes_enum import AutosarDataPrototypeSubtypesEnum
+from .boolean import Boolean
+from .boolean_value_variation_point import BooleanValueVariationPoint
+from .composite_network_representation import CompositeNetworkRepresentation
+from .constant_reference import ConstantReference
+from .data_filter import DataFilter
+from .end_to_end_transformation_com_spec_props import EndToEndTransformationComSpecProps
+from .handle_out_of_range_enum import HandleOutOfRangeEnum
+from .handle_out_of_range_status_enum import HandleOutOfRangeStatusEnum
+from .handle_timeout_enum import HandleTimeoutEnum
+from .not_available_value_specification import NotAvailableValueSpecification
+from .numerical_rule_based_value_specification import NumericalRuleBasedValueSpecification
+from .numerical_value_specification import NumericalValueSpecification
+from .positive_integer import PositiveInteger
+from .positive_integer_value_variation_point import PositiveIntegerValueVariationPoint
+from .receiver_intent_enum import ReceiverIntentEnum
+from .reception_com_spec_props import ReceptionComSpecProps
+from .record_value_specification import (
     ApplicationAssocMapValueSpecification,
     ArrayValueSpecification,
     CompositeRuleBasedValueSpecification,
     RecordValueSpecification,
 )
-from autosar.models.ref import Ref
-from autosar.models.reference_value_specification import ReferenceValueSpecification
-from autosar.models.sw_pointer_target_props import SwDataDefProps
-from autosar.models.text_value_specification import TextValueSpecification
-from autosar.models.time_value import TimeValue
-from autosar.models.user_defined_transformation_com_spec_props import UserDefinedTransformationComSpecProps
-from autosar.models.variable_access import VariableAccess
+from .ref import Ref
+from .reference_value_specification import ReferenceValueSpecification
+from .sw_pointer_target_props import SwDataDefProps
+from .text_value_specification import TextValueSpecification
+from .time_value import TimeValue
+from .user_defined_transformation_com_spec_props import UserDefinedTransformationComSpecProps
+from .variable_access import VariableAccess
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

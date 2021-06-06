@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.catering_service_enumeration import CateringServiceEnumeration
-from netex.models.local_service_version_structure import LocalServiceVersionStructure
+from .catering_service_enumeration import CateringServiceEnumeration
+from .local_service_version_structure import LocalServiceVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

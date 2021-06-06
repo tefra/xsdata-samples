@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.concrete_class_tailoring import (
+from .concrete_class_tailoring import (
     AbstractClassTailoring,
     ConcreteClassTailoring,
 )
-from autosar.models.constraint_tailoring import ConstraintTailoring
+from .constraint_tailoring import ConstraintTailoring
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

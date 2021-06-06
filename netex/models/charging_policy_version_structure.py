@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDuration
-from netex.models.travel_billing_policy_enumeration import TravelBillingPolicyEnumeration
-from netex.models.travel_credit_policy_enumeration import TravelCreditPolicyEnumeration
-from netex.models.usage_parameter_version_structure import UsageParameterVersionStructure
+from .travel_billing_policy_enumeration import TravelBillingPolicyEnumeration
+from .travel_credit_policy_enumeration import TravelCreditPolicyEnumeration
+from .usage_parameter_version_structure import UsageParameterVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

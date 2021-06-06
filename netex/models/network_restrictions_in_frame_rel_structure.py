@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.infrastructure_link_restriction import InfrastructureLinkRestriction
-from netex.models.meeting_restriction import MeetingRestriction
-from netex.models.network_restriction import NetworkRestriction
-from netex.models.overtaking_possibility import OvertakingPossibility
-from netex.models.restricted_manoeuvre import RestrictedManoeuvre
-from netex.models.vehicle_type_at_point import VehicleTypeAtPoint
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .infrastructure_link_restriction import InfrastructureLinkRestriction
+from .meeting_restriction import MeetingRestriction
+from .network_restriction import NetworkRestriction
+from .overtaking_possibility import OvertakingPossibility
+from .restricted_manoeuvre import RestrictedManoeuvre
+from .vehicle_type_at_point import VehicleTypeAtPoint
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.operating_period import OperatingPeriod
-from netex.models.operating_period_ref import OperatingPeriodRef
-from netex.models.uic_operating_period import UicOperatingPeriod
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .operating_period import OperatingPeriod
+from .operating_period_ref import OperatingPeriodRef
+from .uic_operating_period import UicOperatingPeriod
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

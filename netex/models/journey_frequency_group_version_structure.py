@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlTime
-from netex.models.explicit_journey_refs_rel_structure import ExplicitJourneyRefsRelStructure
-from netex.models.group_of_entities_version_structure import GroupOfEntitiesVersionStructure
-from netex.models.time_demand_type_refs_rel_structure import TimeDemandTypeRefsRelStructure
+from .explicit_journey_refs_rel_structure import ExplicitJourneyRefsRelStructure
+from .group_of_entities_version_structure import GroupOfEntitiesVersionStructure
+from .time_demand_type_refs_rel_structure import TimeDemandTypeRefsRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

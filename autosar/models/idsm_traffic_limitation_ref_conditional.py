@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.idsm_traffic_limitation_subtypes_enum import IdsmTrafficLimitationSubtypesEnum
-from autosar.models.ref import Ref
+from .annotation import VariationPoint
+from .idsm_traffic_limitation_subtypes_enum import IdsmTrafficLimitationSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

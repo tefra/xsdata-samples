@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.flexible_area_ref import FlexibleAreaRef
-from netex.models.flexible_quay_ref import FlexibleQuayRef
-from netex.models.flexible_stop_place_ref import FlexibleStopPlaceRef
-from netex.models.hail_and_ride_area_ref import HailAndRideAreaRef
-from netex.models.stop_assignment_version_structure import StopAssignmentVersionStructure
+from .flexible_area_ref import FlexibleAreaRef
+from .flexible_quay_ref import FlexibleQuayRef
+from .flexible_stop_place_ref import FlexibleStopPlaceRef
+from .hail_and_ride_area_ref import HailAndRideAreaRef
+from .stop_assignment_version_structure import StopAssignmentVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,14 +1,14 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.access_right_parameter_assignment_version_structure import AccessRightParameterAssignmentVersionStructure
-from netex.models.fare_demand_factor_ref import FareDemandFactorRef
-from netex.models.fare_quota_factor_ref import FareQuotaFactorRef
-from netex.models.geographical_interval_ref import GeographicalIntervalRef
-from netex.models.geographical_structure_factor_ref import GeographicalStructureFactorRef
-from netex.models.parking_charge_band_ref import ParkingChargeBandRef
-from netex.models.quality_structure_factor_ref import QualityStructureFactorRef
-from netex.models.time_interval_ref import TimeIntervalRef
-from netex.models.time_structure_factor_ref import TimeStructureFactorRef
+from .access_right_parameter_assignment_version_structure import AccessRightParameterAssignmentVersionStructure
+from .fare_demand_factor_ref import FareDemandFactorRef
+from .fare_quota_factor_ref import FareQuotaFactorRef
+from .geographical_interval_ref import GeographicalIntervalRef
+from .geographical_structure_factor_ref import GeographicalStructureFactorRef
+from .parking_charge_band_ref import ParkingChargeBandRef
+from .quality_structure_factor_ref import QualityStructureFactorRef
+from .time_interval_ref import TimeIntervalRef
+from .time_structure_factor_ref import TimeStructureFactorRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

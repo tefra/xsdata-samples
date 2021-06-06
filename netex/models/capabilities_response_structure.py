@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.abstract_functional_service_capabilities_response import AbstractFunctionalServiceCapabilitiesResponse
-from netex.models.data_object_capabilities_response import DataObjectCapabilitiesResponse
-from netex.models.producer_response_structure import ProducerResponseStructure
+from .abstract_functional_service_capabilities_response import AbstractFunctionalServiceCapabilitiesResponse
+from .data_object_capabilities_response import DataObjectCapabilitiesResponse
+from .producer_response_structure import ProducerResponseStructure
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

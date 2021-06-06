@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.infrastructure_link_restriction_version_structure import InfrastructureLinkRestrictionVersionStructure
-from netex.models.vehicle_type_ref_structure import VehicleTypeRefStructure
+from .infrastructure_link_restriction_version_structure import InfrastructureLinkRestrictionVersionStructure
+from .vehicle_type_ref_structure import VehicleTypeRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

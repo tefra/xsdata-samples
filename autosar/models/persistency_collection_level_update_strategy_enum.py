@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.persistency_collection_level_update_strategy_enum_simple import PersistencyCollectionLevelUpdateStrategyEnumSimple
+from .persistency_collection_level_update_strategy_enum_simple import PersistencyCollectionLevelUpdateStrategyEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

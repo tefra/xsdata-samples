@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
-from netex.models.abstract_curve import AbstractCurve
-from netex.models.abstract_geometric_primitive import AbstractGeometricPrimitive
-from netex.models.abstract_geometry import AbstractGeometry
-from netex.models.abstract_surface import AbstractSurface
-from netex.models.line_string import LineString
-from netex.models.nil_reason_enumeration_value import NilReasonEnumerationValue
-from netex.models.point_1 import Point1
-from netex.models.polygon import Polygon
+from .abstract_curve import AbstractCurve
+from .abstract_geometric_primitive import AbstractGeometricPrimitive
+from .abstract_geometry import AbstractGeometry
+from .abstract_surface import AbstractSurface
+from .line_string import LineString
+from .nil_reason_enumeration_value import NilReasonEnumerationValue
+from .point_1 import Point1
+from .polygon import Polygon
 
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 

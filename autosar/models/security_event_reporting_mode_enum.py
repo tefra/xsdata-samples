@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.security_event_reporting_mode_enum_simple import SecurityEventReportingModeEnumSimple
+from .security_event_reporting_mode_enum_simple import SecurityEventReportingModeEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

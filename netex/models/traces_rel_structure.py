@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.trace import Trace
+from .trace import Trace
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

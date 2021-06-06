@@ -1,41 +1,41 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.application_rule_based_value_specification import ApplicationRuleBasedValueSpecification
-from autosar.models.application_value_specification import ApplicationValueSpecification
-from autosar.models.category_string import CategoryString
-from autosar.models.constant_reference import ConstantReference
-from autosar.models.data_transformation_ref_conditional import DataTransformationRefConditional
-from autosar.models.data_type_policy_enum import DataTypePolicyEnum
-from autosar.models.end_to_end_transformation_i_signal_props import EndToEndTransformationISignalProps
-from autosar.models.i_signal_props import ISignalProps
-from autosar.models.i_signal_type_enum import ISignalTypeEnum
-from autosar.models.identifier import Identifier
-from autosar.models.integer import Integer
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.not_available_value_specification import NotAvailableValueSpecification
-from autosar.models.numerical_rule_based_value_specification import NumericalRuleBasedValueSpecification
-from autosar.models.numerical_value_specification import NumericalValueSpecification
-from autosar.models.record_value_specification import (
+from .application_rule_based_value_specification import ApplicationRuleBasedValueSpecification
+from .application_value_specification import ApplicationValueSpecification
+from .category_string import CategoryString
+from .constant_reference import ConstantReference
+from .data_transformation_ref_conditional import DataTransformationRefConditional
+from .data_type_policy_enum import DataTypePolicyEnum
+from .end_to_end_transformation_i_signal_props import EndToEndTransformationISignalProps
+from .i_signal_props import ISignalProps
+from .i_signal_type_enum import ISignalTypeEnum
+from .identifier import Identifier
+from .integer import Integer
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .not_available_value_specification import NotAvailableValueSpecification
+from .numerical_rule_based_value_specification import NumericalRuleBasedValueSpecification
+from .numerical_value_specification import NumericalValueSpecification
+from .record_value_specification import (
     ApplicationAssocMapValueSpecification,
     ArrayValueSpecification,
     CompositeRuleBasedValueSpecification,
     RecordValueSpecification,
 )
-from autosar.models.ref import Ref
-from autosar.models.reference_value_specification import ReferenceValueSpecification
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.someip_transformation_i_signal_props import SomeipTransformationISignalProps
-from autosar.models.sw_pointer_target_props import SwDataDefProps
-from autosar.models.system_signal_subtypes_enum import SystemSignalSubtypesEnum
-from autosar.models.text_value_specification import TextValueSpecification
-from autosar.models.user_defined_transformation_i_signal_props import UserDefinedTransformationISignalProps
+from .ref import Ref
+from .reference_value_specification import ReferenceValueSpecification
+from .short_name_fragment import ShortNameFragment
+from .someip_transformation_i_signal_props import SomeipTransformationISignalProps
+from .sw_pointer_target_props import SwDataDefProps
+from .system_signal_subtypes_enum import SystemSignalSubtypesEnum
+from .text_value_specification import TextValueSpecification
+from .user_defined_transformation_i_signal_props import UserDefinedTransformationISignalProps
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

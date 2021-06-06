@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.boolean import Boolean
-from autosar.models.ip6_address_string import Ip6AddressString
-from autosar.models.ip_address_keep_enum import IpAddressKeepEnum
-from autosar.models.ipv_6_address_source_enum import Ipv6AddressSourceEnum
-from autosar.models.positive_integer import PositiveInteger
+from .boolean import Boolean
+from .ip6_address_string import Ip6AddressString
+from .ip_address_keep_enum import IpAddressKeepEnum
+from .ipv_6_address_source_enum import Ipv6AddressSourceEnum
+from .positive_integer import PositiveInteger
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

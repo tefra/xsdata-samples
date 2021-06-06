@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.boolean import Boolean
-from autosar.models.flexray_fifo_configuration import FlexrayFifoConfiguration
-from autosar.models.integer import Integer
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.time_value import TimeValue
+from .annotation import VariationPoint
+from .boolean import Boolean
+from .flexray_fifo_configuration import FlexrayFifoConfiguration
+from .integer import Integer
+from .positive_integer import PositiveInteger
+from .time_value import TimeValue
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

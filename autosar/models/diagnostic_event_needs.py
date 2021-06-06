@@ -1,26 +1,26 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
 )
-from autosar.models.boolean import Boolean
-from autosar.models.category_string import CategoryString
-from autosar.models.diag_event_debounce_counter_based import DiagEventDebounceCounterBased
-from autosar.models.diag_event_debounce_monitor_internal import DiagEventDebounceMonitorInternal
-from autosar.models.diag_event_debounce_time_based import DiagEventDebounceTimeBased
-from autosar.models.diag_requirement_id_string import DiagRequirementIdString
-from autosar.models.diagnostic_audience_enum import DiagnosticAudienceEnum
-from autosar.models.dtc_kind_enum import DtcKindEnum
-from autosar.models.function_inhibition_needs_subtypes_enum import FunctionInhibitionNeedsSubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.report_behavior_enum import ReportBehaviorEnum
-from autosar.models.short_name_fragment import ShortNameFragment
+from .boolean import Boolean
+from .category_string import CategoryString
+from .diag_event_debounce_counter_based import DiagEventDebounceCounterBased
+from .diag_event_debounce_monitor_internal import DiagEventDebounceMonitorInternal
+from .diag_event_debounce_time_based import DiagEventDebounceTimeBased
+from .diag_requirement_id_string import DiagRequirementIdString
+from .diagnostic_audience_enum import DiagnosticAudienceEnum
+from .dtc_kind_enum import DtcKindEnum
+from .function_inhibition_needs_subtypes_enum import FunctionInhibitionNeedsSubtypesEnum
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .report_behavior_enum import ReportBehaviorEnum
+from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

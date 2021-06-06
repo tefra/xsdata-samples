@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.e_enum_font_simple import EEnumFontSimple
-from autosar.models.e_enum_simple import EEnumSimple
-from autosar.models.supscript import Supscript
-from autosar.models.tt import Tt
+from .e_enum_font_simple import EEnumFontSimple
+from .e_enum_simple import EEnumSimple
+from .supscript import Supscript
+from .tt import Tt
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

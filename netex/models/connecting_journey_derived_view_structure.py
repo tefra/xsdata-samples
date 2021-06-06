@@ -1,17 +1,17 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlTime
-from netex.models.day_type_ref import DayTypeRef
-from netex.models.dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
-from netex.models.derived_view_structure import DerivedViewStructure
-from netex.models.destination_display_view import DestinationDisplayView
-from netex.models.fare_day_type_ref import FareDayTypeRef
-from netex.models.frequency_structure import FrequencyStructure
-from netex.models.journey_pattern_ref import JourneyPatternRef
-from netex.models.multilingual_string import MultilingualString
-from netex.models.service_journey_pattern_ref import ServiceJourneyPatternRef
-from netex.models.service_journey_ref_structure import ServiceJourneyRefStructure
-from netex.models.service_pattern_ref import ServicePatternRef
+from .day_type_ref import DayTypeRef
+from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
+from .derived_view_structure import DerivedViewStructure
+from .destination_display_view import DestinationDisplayView
+from .fare_day_type_ref import FareDayTypeRef
+from .frequency_structure import FrequencyStructure
+from .journey_pattern_ref import JourneyPatternRef
+from .multilingual_string import MultilingualString
+from .service_journey_pattern_ref import ServiceJourneyPatternRef
+from .service_journey_ref_structure import ServiceJourneyRefStructure
+from .service_pattern_ref import ServicePatternRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

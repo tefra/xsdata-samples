@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.call_1 import Call1
-from netex.models.call_2 import Call2
-from netex.models.call_z import CallZ
-from netex.models.dated_call import DatedCall
-from netex.models.dated_call_z import DatedCallZ
-from netex.models.strict_containment_aggregation_structure import StrictContainmentAggregationStructure
+from .call_1 import Call1
+from .call_2 import Call2
+from .call_z import CallZ
+from .dated_call import DatedCall
+from .dated_call_z import DatedCallZ
+from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

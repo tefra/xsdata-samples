@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.flexible_line_ref import FlexibleLineRef
-from netex.models.group_of_lines_ref import GroupOfLinesRef
-from netex.models.line_ref import LineRef
-from netex.models.line_sections_rel_structure import LineSectionsRelStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.network_ref import NetworkRef
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .flexible_line_ref import FlexibleLineRef
+from .group_of_lines_ref import GroupOfLinesRef
+from .line_ref import LineRef
+from .line_sections_rel_structure import LineSectionsRelStructure
+from .multilingual_string import MultilingualString
+from .network_ref import NetworkRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

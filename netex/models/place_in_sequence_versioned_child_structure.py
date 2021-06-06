@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.path_links_in_sequence_rel_structure import PathLinksInSequenceRelStructure
-from netex.models.place_ref_structure import PlaceRefStructure
-from netex.models.point_in_link_sequence_versioned_child_structure import PointInLinkSequenceVersionedChildStructure
+from .path_links_in_sequence_rel_structure import PathLinksInSequenceRelStructure
+from .place_ref_structure import PlaceRefStructure
+from .point_in_link_sequence_versioned_child_structure import PointInLinkSequenceVersionedChildStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

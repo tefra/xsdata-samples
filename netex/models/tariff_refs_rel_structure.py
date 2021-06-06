@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
-from netex.models.parking_tariff_ref import ParkingTariffRef
-from netex.models.tariff_ref import TariffRef
+from .one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .parking_tariff_ref import ParkingTariffRef
+from .tariff_ref import TariffRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from netex.models.locker_type_enumeration import LockerTypeEnumeration
-from netex.models.locking_type_enumeration import LockingTypeEnumeration
-from netex.models.site_equipment_version_structure import SiteEquipmentVersionStructure
+from .locker_type_enumeration import LockerTypeEnumeration
+from .locking_type_enumeration import LockingTypeEnumeration
+from .site_equipment_version_structure import SiteEquipmentVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

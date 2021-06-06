@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.application_error_subtypes_enum import ApplicationErrorSubtypesEnum
-from autosar.models.ref import Ref
+from .application_error_subtypes_enum import ApplicationErrorSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

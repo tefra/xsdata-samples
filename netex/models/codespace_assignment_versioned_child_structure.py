@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDate
-from netex.models.administrative_zone_ref import AdministrativeZoneRef
-from netex.models.alternative_texts_rel_structure import VersionedChildStructure
-from netex.models.codespace import Codespace
-from netex.models.codespace_ref import CodespaceRef
-from netex.models.multilingual_string import MultilingualString
-from netex.models.type_of_codespace_assignment_ref import TypeOfCodespaceAssignmentRef
+from .administrative_zone_ref import AdministrativeZoneRef
+from .alternative_texts_rel_structure import VersionedChildStructure
+from .codespace import Codespace
+from .codespace_ref import CodespaceRef
+from .multilingual_string import MultilingualString
+from .type_of_codespace_assignment_ref import TypeOfCodespaceAssignmentRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

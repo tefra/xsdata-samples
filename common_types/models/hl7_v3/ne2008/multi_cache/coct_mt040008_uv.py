@@ -1,18 +1,18 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
+from ..core.datatypes_base import (
     Ce,
     Cs,
     Ii,
     IvlTsExplicit,
 )
-from common_types.models.hl7_v3.ne2008.core.voc import (
+from ..core.voc import (
     NullFlavor,
     RoleClassAgent,
 )
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt030207_uv import CoctMt030207UvPerson
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt140007_uv import CoctMt140007UvDevice
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt150007_uv import CoctMt150007UvOrganization
+from .coct_mt030207_uv import CoctMt030207UvPerson
+from .coct_mt140007_uv import CoctMt140007UvDevice
+from .coct_mt150007_uv import CoctMt150007UvOrganization
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

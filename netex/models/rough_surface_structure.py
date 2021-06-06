@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.access_equipment_version_structure import AccessEquipmentVersionStructure
-from netex.models.surface_type_enumeration import SurfaceTypeEnumeration
+from .access_equipment_version_structure import AccessEquipmentVersionStructure
+from .surface_type_enumeration import SurfaceTypeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

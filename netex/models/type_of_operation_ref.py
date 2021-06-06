@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.type_of_operation_ref_structure import TypeOfOperationRefStructure
+from .type_of_operation_ref_structure import TypeOfOperationRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

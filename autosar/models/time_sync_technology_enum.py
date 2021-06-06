@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.time_sync_technology_enum_simple import TimeSyncTechnologyEnumSimple
+from .time_sync_technology_enum_simple import TimeSyncTechnologyEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
