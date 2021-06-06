@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.diagnostic_periodic_rate_category_enum_simple import DiagnosticPeriodicRateCategoryEnumSimple
+from .diagnostic_periodic_rate_category_enum_simple import DiagnosticPeriodicRateCategoryEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

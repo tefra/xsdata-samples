@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.td_event_bsw_internal_behavior_type_enum_simple import TdEventBswInternalBehaviorTypeEnumSimple
+from .td_event_bsw_internal_behavior_type_enum_simple import TdEventBswInternalBehaviorTypeEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

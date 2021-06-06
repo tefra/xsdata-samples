@@ -1,20 +1,20 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.security_event_aggregation_filter import SecurityEventAggregationFilter
-from autosar.models.security_event_one_every_n_filter import SecurityEventOneEveryNFilter
-from autosar.models.security_event_state_filter import SecurityEventStateFilter
-from autosar.models.security_event_threshold_filter import SecurityEventThresholdFilter
-from autosar.models.short_name_fragment import ShortNameFragment
+from .category_string import CategoryString
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .security_event_aggregation_filter import SecurityEventAggregationFilter
+from .security_event_one_every_n_filter import SecurityEventOneEveryNFilter
+from .security_event_state_filter import SecurityEventStateFilter
+from .security_event_threshold_filter import SecurityEventThresholdFilter
+from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

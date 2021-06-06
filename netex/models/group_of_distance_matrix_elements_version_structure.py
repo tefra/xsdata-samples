@@ -1,15 +1,15 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from netex.models.cell_versioned_child_structure import (
+from .cell_versioned_child_structure import (
     FareTablesRelStructure,
     PriceGroupsRelStructure,
 )
-from netex.models.distance_matrix_element_prices_rel_structure import DistanceMatrixElementPricesRelStructure
-from netex.models.distance_matrix_elements_rel_structure import DistanceMatrixElementsRelStructure
-from netex.models.geographical_structure_factors_rel_structure import GeographicalStructureFactorsRelStructure
-from netex.models.group_of_entities_version_structure import GroupOfEntitiesVersionStructure
-from netex.models.notice_assignments_rel_structure import NoticeAssignmentsRelStructure
+from .distance_matrix_element_prices_rel_structure import DistanceMatrixElementPricesRelStructure
+from .distance_matrix_elements_rel_structure import DistanceMatrixElementsRelStructure
+from .geographical_structure_factors_rel_structure import GeographicalStructureFactorsRelStructure
+from .group_of_entities_version_structure import GroupOfEntitiesVersionStructure
+from .notice_assignments_rel_structure import NoticeAssignmentsRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

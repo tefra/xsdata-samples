@@ -1,21 +1,21 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.alternative_names_rel_structure import AlternativeNamesRelStructure
-from netex.models.alternative_texts_rel_structure import (
+from .alternative_names_rel_structure import AlternativeNamesRelStructure
+from .alternative_texts_rel_structure import (
     DataManagedObjectStructure,
     ValidBetweenVersionStructure,
 )
-from netex.models.contact_structure import ContactStructure
-from netex.models.external_object_ref_structure import ExternalObjectRefStructure
-from netex.models.locale import Locale
-from netex.models.multilingual_string import MultilingualString
-from netex.models.organisation_parts_rel_structure import OrganisationPartsRelStructure
-from netex.models.organisation_refs_rel_structure import OrganisationRefsRelStructure
-from netex.models.organisation_type_enumeration import OrganisationTypeEnumeration
-from netex.models.private_code import PrivateCode
-from netex.models.private_code_structure import PrivateCodeStructure
-from netex.models.responsibility_sets_rel_structure import ResponsibilitySetsRelStructure
-from netex.models.type_of_organisation_refs_rel_structure import TypeOfOrganisationRefsRelStructure
+from .contact_structure import ContactStructure
+from .external_object_ref_structure import ExternalObjectRefStructure
+from .locale import Locale
+from .multilingual_string import MultilingualString
+from .organisation_parts_rel_structure import OrganisationPartsRelStructure
+from .organisation_refs_rel_structure import OrganisationRefsRelStructure
+from .organisation_type_enumeration import OrganisationTypeEnumeration
+from .private_code import PrivateCode
+from .private_code_structure import PrivateCodeStructure
+from .responsibility_sets_rel_structure import ResponsibilitySetsRelStructure
+from .type_of_organisation_refs_rel_structure import TypeOfOrganisationRefsRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

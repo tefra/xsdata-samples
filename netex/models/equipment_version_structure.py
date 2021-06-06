@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.info_links_rel_structure import InfoLinksRelStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.private_code import PrivateCode
-from netex.models.private_code_structure import PrivateCodeStructure
-from netex.models.type_of_equipment_ref import TypeOfEquipmentRef
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .info_links_rel_structure import InfoLinksRelStructure
+from .multilingual_string import MultilingualString
+from .private_code import PrivateCode
+from .private_code_structure import PrivateCodeStructure
+from .type_of_equipment_ref import TypeOfEquipmentRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

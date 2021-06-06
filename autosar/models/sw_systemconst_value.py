@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import Annotation
-from autosar.models.numerical_value_variation_point import NumericalValueVariationPoint
-from autosar.models.ref import Ref
-from autosar.models.sw_systemconst_subtypes_enum import SwSystemconstSubtypesEnum
+from .annotation import Annotation
+from .numerical_value_variation_point import NumericalValueVariationPoint
+from .ref import Ref
+from .sw_systemconst_subtypes_enum import SwSystemconstSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

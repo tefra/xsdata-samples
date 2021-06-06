@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDateTime
-from netex.models.capability_not_supported_error import CapabilityNotSupportedError
-from netex.models.other_error import OtherError
-from netex.models.unknown_subscriber_error import UnknownSubscriberError
-from netex.models.unknown_subscription_error import UnknownSubscriptionError
+from .capability_not_supported_error import CapabilityNotSupportedError
+from .other_error import OtherError
+from .unknown_subscriber_error import UnknownSubscriberError
+from .unknown_subscription_error import UnknownSubscriptionError
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

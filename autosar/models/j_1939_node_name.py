@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.boolean import Boolean
-from autosar.models.integer import Integer
+from .boolean import Boolean
+from .integer import Integer
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

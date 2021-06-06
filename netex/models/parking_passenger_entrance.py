@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.parking_passenger_entrance_version_structure import ParkingPassengerEntranceVersionStructure
+from .parking_passenger_entrance_version_structure import ParkingPassengerEntranceVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

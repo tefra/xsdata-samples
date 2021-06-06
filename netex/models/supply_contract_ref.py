@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.supply_contract_ref_structure import SupplyContractRefStructure
+from .supply_contract_ref_structure import SupplyContractRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

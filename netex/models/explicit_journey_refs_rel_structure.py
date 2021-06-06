@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.dead_run_ref import DeadRunRef
-from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
-from netex.models.service_journey_ref import ServiceJourneyRef
-from netex.models.template_service_journey_ref import TemplateServiceJourneyRef
-from netex.models.vehicle_journey_ref import VehicleJourneyRef
+from .dead_run_ref import DeadRunRef
+from .one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .service_journey_ref import ServiceJourneyRef
+from .template_service_journey_ref import TemplateServiceJourneyRef
+from .vehicle_journey_ref import VehicleJourneyRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

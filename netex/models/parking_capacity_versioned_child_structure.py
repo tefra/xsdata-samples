@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.alternative_texts_rel_structure import VersionedChildStructure
-from netex.models.parking_properties_ref import ParkingPropertiesRef
-from netex.models.parking_properties_ref_structure import ParkingPropertiesRefStructure
-from netex.models.parking_ref import ParkingRef
-from netex.models.parking_stay_enumeration import ParkingStayEnumeration
-from netex.models.parking_user_enumeration import ParkingUserEnumeration
-from netex.models.parking_vehicle_enumeration import ParkingVehicleEnumeration
+from .alternative_texts_rel_structure import VersionedChildStructure
+from .parking_properties_ref import ParkingPropertiesRef
+from .parking_properties_ref_structure import ParkingPropertiesRefStructure
+from .parking_ref import ParkingRef
+from .parking_stay_enumeration import ParkingStayEnumeration
+from .parking_user_enumeration import ParkingUserEnumeration
+from .parking_vehicle_enumeration import ParkingVehicleEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

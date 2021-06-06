@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.luggage_locker_facility_enumeration import LuggageLockerFacilityEnumeration
+from .luggage_locker_facility_enumeration import LuggageLockerFacilityEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

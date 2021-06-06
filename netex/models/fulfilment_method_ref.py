@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.fulfilment_method_ref_structure import FulfilmentMethodRefStructure
+from .fulfilment_method_ref_structure import FulfilmentMethodRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

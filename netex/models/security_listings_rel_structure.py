@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.customer_account_security_listing import CustomerAccountSecurityListing
-from netex.models.customer_security_listing import CustomerSecurityListing
-from netex.models.fare_contract_security_listing import FareContractSecurityListing
-from netex.models.retail_device_security_listing import RetailDeviceSecurityListing
-from netex.models.security_listing_1 import SecurityListing1
-from netex.models.security_listing_2 import SecurityListing2
-from netex.models.travel_document_security_listing import TravelDocumentSecurityListing
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .customer_account_security_listing import CustomerAccountSecurityListing
+from .customer_security_listing import CustomerSecurityListing
+from .fare_contract_security_listing import FareContractSecurityListing
+from .retail_device_security_listing import RetailDeviceSecurityListing
+from .security_listing_1 import SecurityListing1
+from .security_listing_2 import SecurityListing2
+from .travel_document_security_listing import TravelDocumentSecurityListing
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

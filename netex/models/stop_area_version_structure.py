@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.stop_area_ref_structure import StopAreaRefStructure
-from netex.models.topographic_place_ref import TopographicPlaceRef
-from netex.models.topographic_place_view import TopographicPlaceView
-from netex.models.zone_version_structure import ZoneVersionStructure
+from .stop_area_ref_structure import StopAreaRefStructure
+from .topographic_place_ref import TopographicPlaceRef
+from .topographic_place_view import TopographicPlaceView
+from .zone_version_structure import ZoneVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

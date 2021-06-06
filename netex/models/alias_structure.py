@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.private_code import PrivateCode
+from .private_code import PrivateCode
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

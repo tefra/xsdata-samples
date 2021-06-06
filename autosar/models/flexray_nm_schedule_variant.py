@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.flexray_nm_schedule_variant_simple import FlexrayNmScheduleVariantSimple
+from .flexray_nm_schedule_variant_simple import FlexrayNmScheduleVariantSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

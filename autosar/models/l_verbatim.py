@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.br import Br
-from autosar.models.emphasis_text import EmphasisText
-from autosar.models.l_enum_simple import LEnumSimple
-from autosar.models.space_value import SpaceValue
-from autosar.models.tt import Tt
-from autosar.models.xref import Xref
+from .br import Br
+from .emphasis_text import EmphasisText
+from .l_enum_simple import LEnumSimple
+from .space_value import SpaceValue
+from .tt import Tt
+from .xref import Xref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

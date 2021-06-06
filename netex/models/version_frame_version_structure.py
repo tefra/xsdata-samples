@@ -1,18 +1,18 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.alternative_texts_rel_structure import (
+from .alternative_texts_rel_structure import (
     DataManagedObjectStructure,
     ValidityConditionsRelStructure,
 )
-from netex.models.codespaces_rel_structure import CodespacesRelStructure
-from netex.models.layer_refs_rel_structure import LayerRefsRelStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.traces_rel_structure import TracesRelStructure
-from netex.models.type_of_frame_ref import TypeOfFrameRef
-from netex.models.version_frame_defaults_structure import VersionFrameDefaultsStructure
-from netex.models.version_frame_refs_rel_structure import VersionFrameRefsRelStructure
-from netex.models.version_ref_structure import VersionRefStructure
-from netex.models.versions_rel_structure import VersionsRelStructure
+from .codespaces_rel_structure import CodespacesRelStructure
+from .layer_refs_rel_structure import LayerRefsRelStructure
+from .multilingual_string import MultilingualString
+from .traces_rel_structure import TracesRelStructure
+from .type_of_frame_ref import TypeOfFrameRef
+from .version_frame_defaults_structure import VersionFrameDefaultsStructure
+from .version_frame_refs_rel_structure import VersionFrameRefsRelStructure
+from .version_ref_structure import VersionRefStructure
+from .versions_rel_structure import VersionsRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

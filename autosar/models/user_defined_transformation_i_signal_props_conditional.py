@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.cs_transformer_error_reaction_enum import CsTransformerErrorReactionEnum
-from autosar.models.data_prototype_transformation_props import DataPrototypeTransformationProps
-from autosar.models.ref import Ref
-from autosar.models.transformation_technology_subtypes_enum import TransformationTechnologySubtypesEnum
+from .annotation import VariationPoint
+from .cs_transformer_error_reaction_enum import CsTransformerErrorReactionEnum
+from .data_prototype_transformation_props import DataPrototypeTransformationProps
+from .ref import Ref
+from .transformation_technology_subtypes_enum import TransformationTechnologySubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

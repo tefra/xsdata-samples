@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.access_end_structure import AccessEndStructure
-from netex.models.transfer_version_structure import TransferVersionStructure
+from .access_end_structure import AccessEndStructure
+from .transfer_version_structure import TransferVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

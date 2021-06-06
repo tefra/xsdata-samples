@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.request_method_enum import RequestMethodEnum
-from autosar.models.string import String
-from autosar.models.tcp_tp import TcpTp
-from autosar.models.uri_string import UriString
+from .request_method_enum import RequestMethodEnum
+from .string import String
+from .tcp_tp import TcpTp
+from .uri_string import UriString
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

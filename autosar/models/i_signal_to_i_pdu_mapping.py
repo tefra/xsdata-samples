@@ -1,22 +1,22 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.byte_order_enum import ByteOrderEnum
-from autosar.models.category_string import CategoryString
-from autosar.models.i_signal_group_subtypes_enum import ISignalGroupSubtypesEnum
-from autosar.models.i_signal_subtypes_enum import ISignalSubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.integer import Integer
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.transfer_property_enum import TransferPropertyEnum
+from .byte_order_enum import ByteOrderEnum
+from .category_string import CategoryString
+from .i_signal_group_subtypes_enum import ISignalGroupSubtypesEnum
+from .i_signal_subtypes_enum import ISignalSubtypesEnum
+from .identifier import Identifier
+from .integer import Integer
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
+from .transfer_property_enum import TransferPropertyEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

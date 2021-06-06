@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.dynamic_stop_assignment import DynamicStopAssignment
-from netex.models.flexible_stop_assignment import FlexibleStopAssignment
-from netex.models.navigation_path_assignment import NavigationPathAssignment
-from netex.models.passenger_stop_assignment import PassengerStopAssignment
-from netex.models.stop_assignment import StopAssignment
-from netex.models.train_stop_assignment import TrainStopAssignment
-from netex.models.vehicle_journey_stop_assignment import VehicleJourneyStopAssignment
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .dynamic_stop_assignment import DynamicStopAssignment
+from .flexible_stop_assignment import FlexibleStopAssignment
+from .navigation_path_assignment import NavigationPathAssignment
+from .passenger_stop_assignment import PassengerStopAssignment
+from .stop_assignment import StopAssignment
+from .train_stop_assignment import TrainStopAssignment
+from .vehicle_journey_stop_assignment import VehicleJourneyStopAssignment
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

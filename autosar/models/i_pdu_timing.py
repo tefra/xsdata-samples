@@ -1,14 +1,14 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.time_value import TimeValue
-from autosar.models.transmission_mode_declaration import TransmissionModeDeclaration
+from .category_string import CategoryString
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .time_value import TimeValue
+from .transmission_mode_declaration import TransmissionModeDeclaration
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.local_service_version_structure import LocalServiceVersionStructure
-from netex.models.payment_method_enumeration import PaymentMethodEnumeration
-from netex.models.ticket_type_enumeration import TicketTypeEnumeration
-from netex.models.ticketing_service_facility_enumeration import TicketingServiceFacilityEnumeration
-from netex.models.vehicle_mode_enumeration import VehicleModeEnumeration
+from .local_service_version_structure import LocalServiceVersionStructure
+from .payment_method_enumeration import PaymentMethodEnumeration
+from .ticket_type_enumeration import TicketTypeEnumeration
+from .ticketing_service_facility_enumeration import TicketingServiceFacilityEnumeration
+from .vehicle_mode_enumeration import VehicleModeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

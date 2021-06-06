@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
-from netex.models.travel_document_security_listing_ref import TravelDocumentSecurityListingRef
+from .one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .travel_document_security_listing_ref import TravelDocumentSecurityListingRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

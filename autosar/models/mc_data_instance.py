@@ -1,27 +1,27 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.flat_instance_descriptor_subtypes_enum import FlatInstanceDescriptorSubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.implementation_element_in_parameter_instance_ref import ImplementationElementInParameterInstanceRef
-from autosar.models.mc_data_access_details import McDataAccessDetails
-from autosar.models.mcd_identifier import McdIdentifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.role_based_mc_data_assignment import RoleBasedMcDataAssignment
-from autosar.models.rpt_impl_policy import RptImplPolicy
-from autosar.models.rpt_sw_prototyping_access import RptSwPrototypingAccess
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.sw_pointer_target_props import SwDataDefProps
-from autosar.models.symbol_string import SymbolString
+from .category_string import CategoryString
+from .flat_instance_descriptor_subtypes_enum import FlatInstanceDescriptorSubtypesEnum
+from .identifier import Identifier
+from .implementation_element_in_parameter_instance_ref import ImplementationElementInParameterInstanceRef
+from .mc_data_access_details import McDataAccessDetails
+from .mcd_identifier import McdIdentifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .role_based_mc_data_assignment import RoleBasedMcDataAssignment
+from .rpt_impl_policy import RptImplPolicy
+from .rpt_sw_prototyping_access import RptSwPrototypingAccess
+from .short_name_fragment import ShortNameFragment
+from .sw_pointer_target_props import SwDataDefProps
+from .symbol_string import SymbolString
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

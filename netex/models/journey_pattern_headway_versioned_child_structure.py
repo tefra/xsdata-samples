@@ -1,17 +1,17 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.border_point_ref import BorderPointRef
-from netex.models.dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
-from netex.models.fare_scheduled_stop_point_ref import FareScheduledStopPointRef
-from netex.models.garage_point_ref import GaragePointRef
-from netex.models.journey_headway_versioned_child_structure import JourneyHeadwayVersionedChildStructure
-from netex.models.journey_pattern_ref import JourneyPatternRef
-from netex.models.parking_point_ref import ParkingPointRef
-from netex.models.relief_point_ref import ReliefPointRef
-from netex.models.scheduled_stop_point_ref import ScheduledStopPointRef
-from netex.models.service_journey_pattern_ref import ServiceJourneyPatternRef
-from netex.models.service_pattern_ref import ServicePatternRef
-from netex.models.timing_point_ref import TimingPointRef
+from .border_point_ref import BorderPointRef
+from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
+from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
+from .garage_point_ref import GaragePointRef
+from .journey_headway_versioned_child_structure import JourneyHeadwayVersionedChildStructure
+from .journey_pattern_ref import JourneyPatternRef
+from .parking_point_ref import ParkingPointRef
+from .relief_point_ref import ReliefPointRef
+from .scheduled_stop_point_ref import ScheduledStopPointRef
+from .service_journey_pattern_ref import ServiceJourneyPatternRef
+from .service_pattern_ref import ServicePatternRef
+from .timing_point_ref import TimingPointRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.graphic_notation_enum_simple import GraphicNotationEnumSimple
+from .graphic_notation_enum_simple import GraphicNotationEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

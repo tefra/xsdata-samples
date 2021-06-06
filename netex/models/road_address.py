@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.road_address_version_structure import RoadAddressVersionStructure
+from .road_address_version_structure import RoadAddressVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

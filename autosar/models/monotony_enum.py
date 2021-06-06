@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.monotony_enum_simple import MonotonyEnumSimple
+from .monotony_enum_simple import MonotonyEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

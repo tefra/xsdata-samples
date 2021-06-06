@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.dead_run_ref import DeadRunRef
-from netex.models.dynamic_stop_assignment_ref import DynamicStopAssignmentRef
-from netex.models.passenger_stop_assignment_ref import PassengerStopAssignmentRef
-from netex.models.passenger_stop_assignment_version_structure import PassengerStopAssignmentVersionStructure
-from netex.models.vehicle_journey_ref import VehicleJourneyRef
-from netex.models.vehicle_journey_stop_assignment_ref import VehicleJourneyStopAssignmentRef
+from .dead_run_ref import DeadRunRef
+from .dynamic_stop_assignment_ref import DynamicStopAssignmentRef
+from .passenger_stop_assignment_ref import PassengerStopAssignmentRef
+from .passenger_stop_assignment_version_structure import PassengerStopAssignmentVersionStructure
+from .vehicle_journey_ref import VehicleJourneyRef
+from .vehicle_journey_stop_assignment_ref import VehicleJourneyStopAssignmentRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

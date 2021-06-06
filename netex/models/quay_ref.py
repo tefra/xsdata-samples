@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.quay_ref_structure import QuayRefStructure
+from .quay_ref_structure import QuayRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

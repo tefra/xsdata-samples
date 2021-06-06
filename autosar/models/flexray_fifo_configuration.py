@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.boolean import Boolean
-from autosar.models.flexray_fifo_range import FlexrayFifoRange
-from autosar.models.flexray_physical_channel_subtypes_enum import FlexrayPhysicalChannelSubtypesEnum
-from autosar.models.integer import Integer
-from autosar.models.ref import Ref
+from .boolean import Boolean
+from .flexray_fifo_range import FlexrayFifoRange
+from .flexray_physical_channel_subtypes_enum import FlexrayPhysicalChannelSubtypesEnum
+from .integer import Integer
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

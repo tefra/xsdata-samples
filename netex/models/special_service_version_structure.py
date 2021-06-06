@@ -1,26 +1,26 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDuration, XmlTime
-from netex.models.booking_access_enumeration import BookingAccessEnumeration
-from netex.models.booking_method_enumeration import BookingMethodEnumeration
-from netex.models.compound_train_ref import CompoundTrainRef
-from netex.models.contact_structure import ContactStructure
-from netex.models.day_type_refs_rel_structure import DayTypeRefsRelStructure
-from netex.models.dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
-from netex.models.dynamic_advertisement_enumeration import DynamicAdvertisementEnumeration
-from netex.models.flexible_service_enumeration import FlexibleServiceEnumeration
-from netex.models.frequency_structure import FrequencyStructure
-from netex.models.journey_endpoint_structure import JourneyEndpointStructure
-from netex.models.journey_pattern_ref import JourneyPatternRef
-from netex.models.journey_version_structure import JourneyVersionStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.purchase_moment_enumeration import PurchaseMomentEnumeration
-from netex.models.purchase_when_enumeration import PurchaseWhenEnumeration
-from netex.models.service_journey_pattern_ref import ServiceJourneyPatternRef
-from netex.models.service_pattern_ref import ServicePatternRef
-from netex.models.train_ref import TrainRef
-from netex.models.type_of_flexible_service_ref import TypeOfFlexibleServiceRef
-from netex.models.vehicle_type_ref import VehicleTypeRef
+from .booking_access_enumeration import BookingAccessEnumeration
+from .booking_method_enumeration import BookingMethodEnumeration
+from .compound_train_ref import CompoundTrainRef
+from .contact_structure import ContactStructure
+from .day_type_refs_rel_structure import DayTypeRefsRelStructure
+from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
+from .dynamic_advertisement_enumeration import DynamicAdvertisementEnumeration
+from .flexible_service_enumeration import FlexibleServiceEnumeration
+from .frequency_structure import FrequencyStructure
+from .journey_endpoint_structure import JourneyEndpointStructure
+from .journey_pattern_ref import JourneyPatternRef
+from .journey_version_structure import JourneyVersionStructure
+from .multilingual_string import MultilingualString
+from .purchase_moment_enumeration import PurchaseMomentEnumeration
+from .purchase_when_enumeration import PurchaseWhenEnumeration
+from .service_journey_pattern_ref import ServiceJourneyPatternRef
+from .service_pattern_ref import ServicePatternRef
+from .train_ref import TrainRef
+from .type_of_flexible_service_ref import TypeOfFlexibleServiceRef
+from .vehicle_type_ref import VehicleTypeRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.discounting_rule import DiscountingRule
-from netex.models.frame_containment_structure import FrameContainmentStructure
-from netex.models.limiting_rule import LimitingRule
-from netex.models.limiting_rule_in_context import LimitingRuleInContext
-from netex.models.pricing_rule_1 import PricingRule1
-from netex.models.pricing_rule_2 import PricingRule2
+from .discounting_rule import DiscountingRule
+from .frame_containment_structure import FrameContainmentStructure
+from .limiting_rule import LimitingRule
+from .limiting_rule_in_context import LimitingRuleInContext
+from .pricing_rule_1 import PricingRule1
+from .pricing_rule_2 import PricingRule2
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

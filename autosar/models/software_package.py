@@ -1,25 +1,25 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.boolean import Boolean
-from autosar.models.category_string import CategoryString
-from autosar.models.crypto_service_certificate_subtypes_enum import CryptoServiceCertificateSubtypesEnum
-from autosar.models.function_group_state_in_function_group_set_instance_ref import FunctionGroupStateInFunctionGroupSetInstanceRef
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.revision_label_string import RevisionLabelString
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.software_cluster_subtypes_enum import SoftwareClusterSubtypesEnum
-from autosar.models.software_package_action_type_enum import SoftwarePackageActionTypeEnum
-from autosar.models.strong_revision_label_string import StrongRevisionLabelString
+from .boolean import Boolean
+from .category_string import CategoryString
+from .crypto_service_certificate_subtypes_enum import CryptoServiceCertificateSubtypesEnum
+from .function_group_state_in_function_group_set_instance_ref import FunctionGroupStateInFunctionGroupSetInstanceRef
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .revision_label_string import RevisionLabelString
+from .short_name_fragment import ShortNameFragment
+from .software_cluster_subtypes_enum import SoftwareClusterSubtypesEnum
+from .software_package_action_type_enum import SoftwarePackageActionTypeEnum
+from .strong_revision_label_string import StrongRevisionLabelString
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

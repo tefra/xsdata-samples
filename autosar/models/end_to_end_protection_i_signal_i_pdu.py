@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.i_signal_group_subtypes_enum import ISignalGroupSubtypesEnum
-from autosar.models.i_signal_i_pdu_subtypes_enum import ISignalIPduSubtypesEnum
-from autosar.models.integer import Integer
-from autosar.models.ref import Ref
+from .annotation import VariationPoint
+from .i_signal_group_subtypes_enum import ISignalGroupSubtypesEnum
+from .i_signal_i_pdu_subtypes_enum import ISignalIPduSubtypesEnum
+from .integer import Integer
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

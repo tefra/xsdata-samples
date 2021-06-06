@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.diagnostic_common_props_conditional import DiagnosticCommonPropsConditional
+from .diagnostic_common_props_conditional import DiagnosticCommonPropsConditional
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

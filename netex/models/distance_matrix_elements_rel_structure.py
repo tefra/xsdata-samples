@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.distance_matrix_element import DistanceMatrixElement
-from netex.models.distance_matrix_element_ref import DistanceMatrixElementRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .distance_matrix_element import DistanceMatrixElement
+from .distance_matrix_element_ref import DistanceMatrixElementRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

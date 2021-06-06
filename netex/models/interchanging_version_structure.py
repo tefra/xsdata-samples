@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDuration
-from netex.models.register_break_of_journey_enumeration import RegisterBreakOfJourneyEnumeration
-from netex.models.usage_parameter_version_structure import UsageParameterVersionStructure
-from netex.models.vehicle_mode_enumeration import VehicleModeEnumeration
+from .register_break_of_journey_enumeration import RegisterBreakOfJourneyEnumeration
+from .usage_parameter_version_structure import UsageParameterVersionStructure
+from .vehicle_mode_enumeration import VehicleModeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

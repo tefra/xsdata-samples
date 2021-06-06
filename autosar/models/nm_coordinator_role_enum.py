@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.nm_coordinator_role_enum_simple import NmCoordinatorRoleEnumSimple
+from .nm_coordinator_role_enum_simple import NmCoordinatorRoleEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.time_interval import TimeInterval
-from netex.models.time_interval_ref import TimeIntervalRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .time_interval import TimeInterval
+from .time_interval_ref import TimeIntervalRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

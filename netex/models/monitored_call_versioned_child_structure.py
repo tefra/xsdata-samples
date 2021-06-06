@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.call_versioned_child_structure import CallVersionedChildStructure
-from netex.models.estimated_passing_time_view import EstimatedPassingTimeView
-from netex.models.observed_passing_time_view import ObservedPassingTimeView
-from netex.models.onward_calls_rel_structure import OnwardCallsRelStructure
-from netex.models.previous_calls_rel_structure import PreviousCallsRelStructure
-from netex.models.target_passing_time_view import TargetPassingTimeView
+from .call_versioned_child_structure import CallVersionedChildStructure
+from .estimated_passing_time_view import EstimatedPassingTimeView
+from .observed_passing_time_view import ObservedPassingTimeView
+from .onward_calls_rel_structure import OnwardCallsRelStructure
+from .previous_calls_rel_structure import PreviousCallsRelStructure
+from .target_passing_time_view import TargetPassingTimeView
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.purpose_of_journey_partition_value_structure import PurposeOfJourneyPartitionValueStructure
+from .purpose_of_journey_partition_value_structure import PurposeOfJourneyPartitionValueStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

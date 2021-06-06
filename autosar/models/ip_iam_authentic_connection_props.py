@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.ethernet_physical_channel_subtypes_enum import EthernetPhysicalChannelSubtypesEnum
-from autosar.models.ip_transport_protocol_enum import IpTransportProtocolEnum
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
+from .ethernet_physical_channel_subtypes_enum import EthernetPhysicalChannelSubtypesEnum
+from .ip_transport_protocol_enum import IpTransportProtocolEnum
+from .positive_integer import PositiveInteger
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

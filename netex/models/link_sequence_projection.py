@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.link_sequence_projection_version_structure import LinkSequenceProjectionVersionStructure
+from .link_sequence_projection_version_structure import LinkSequenceProjectionVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

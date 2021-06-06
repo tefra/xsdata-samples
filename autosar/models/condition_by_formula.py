@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.binding_time_enum_simple import BindingTimeEnumSimple
-from autosar.models.ref import Ref
-from autosar.models.sw_systemconst_subtypes_enum import SwSystemconstSubtypesEnum
+from .binding_time_enum_simple import BindingTimeEnumSimple
+from .ref import Ref
+from .sw_systemconst_subtypes_enum import SwSystemconstSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

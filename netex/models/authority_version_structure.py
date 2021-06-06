@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.country_ref import CountryRef
-from netex.models.organisation_version_structure import OrganisationVersionStructure
-from netex.models.postal_address_version_structure import PostalAddressVersionStructure
-from netex.models.type_of_organisation_refs_rel_structure import TypeOfOrganisationRefsRelStructure
+from .country_ref import CountryRef
+from .organisation_version_structure import OrganisationVersionStructure
+from .postal_address_version_structure import PostalAddressVersionStructure
+from .type_of_organisation_refs_rel_structure import TypeOfOrganisationRefsRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

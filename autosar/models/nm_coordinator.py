@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.boolean import Boolean
-from autosar.models.integer import Integer
-from autosar.models.nm_node_subtypes_enum import NmNodeSubtypesEnum
-from autosar.models.ref import Ref
-from autosar.models.time_value import TimeValue
+from .boolean import Boolean
+from .integer import Integer
+from .nm_node_subtypes_enum import NmNodeSubtypesEnum
+from .ref import Ref
+from .time_value import TimeValue
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

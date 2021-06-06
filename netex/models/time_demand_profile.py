@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.time_demand_profile_version_structure import TimeDemandProfileVersionStructure
+from .time_demand_profile_version_structure import TimeDemandProfileVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.log_version_structure import LogVersionStructure
+from .log_version_structure import LogVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

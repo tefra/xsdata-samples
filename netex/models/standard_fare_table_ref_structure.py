@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.fare_table_ref_structure import FareTableRefStructure
+from .fare_table_ref_structure import FareTableRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

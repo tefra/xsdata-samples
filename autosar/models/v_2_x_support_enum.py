@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.v_2_x_support_enum_simple import V2XSupportEnumSimple
+from .v_2_x_support_enum_simple import V2XSupportEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

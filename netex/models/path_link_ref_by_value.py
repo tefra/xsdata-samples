@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.path_link_ref_by_value_structure import PathLinkRefByValueStructure
+from .path_link_ref_by_value_structure import PathLinkRefByValueStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

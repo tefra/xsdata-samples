@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.diagnostic_event_displacement_strategy_enum_simple import DiagnosticEventDisplacementStrategyEnumSimple
+from .diagnostic_event_displacement_strategy_enum_simple import DiagnosticEventDisplacementStrategyEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

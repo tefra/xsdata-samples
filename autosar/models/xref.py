@@ -1,18 +1,18 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.ref import Ref
-from autosar.models.referrable_subtypes_enum import ReferrableSubtypesEnum
-from autosar.models.resolution_policy_enum_simple import ResolutionPolicyEnumSimple
-from autosar.models.show_content_enum_simple import ShowContentEnumSimple
-from autosar.models.show_resource_alias_name_enum_simple import ShowResourceAliasNameEnumSimple
-from autosar.models.show_resource_category_enum_simple import ShowResourceCategoryEnumSimple
-from autosar.models.show_resource_long_name_enum_simple import ShowResourceLongNameEnumSimple
-from autosar.models.show_resource_number_enum_simple import ShowResourceNumberEnumSimple
-from autosar.models.show_resource_page_enum_simple import ShowResourcePageEnumSimple
-from autosar.models.show_resource_short_name_enum_simple import ShowResourceShortNameEnumSimple
-from autosar.models.show_resource_type_enum_simple import ShowResourceTypeEnumSimple
-from autosar.models.show_see_enum_simple import ShowSeeEnumSimple
-from autosar.models.single_language_long_name import SingleLanguageLongName
+from .ref import Ref
+from .referrable_subtypes_enum import ReferrableSubtypesEnum
+from .resolution_policy_enum_simple import ResolutionPolicyEnumSimple
+from .show_content_enum_simple import ShowContentEnumSimple
+from .show_resource_alias_name_enum_simple import ShowResourceAliasNameEnumSimple
+from .show_resource_category_enum_simple import ShowResourceCategoryEnumSimple
+from .show_resource_long_name_enum_simple import ShowResourceLongNameEnumSimple
+from .show_resource_number_enum_simple import ShowResourceNumberEnumSimple
+from .show_resource_page_enum_simple import ShowResourcePageEnumSimple
+from .show_resource_short_name_enum_simple import ShowResourceShortNameEnumSimple
+from .show_resource_type_enum_simple import ShowResourceTypeEnumSimple
+from .show_see_enum_simple import ShowSeeEnumSimple
+from .single_language_long_name import SingleLanguageLongName
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

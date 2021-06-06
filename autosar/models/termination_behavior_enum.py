@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.termination_behavior_enum_simple import TerminationBehaviorEnumSimple
+from .termination_behavior_enum_simple import TerminationBehaviorEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

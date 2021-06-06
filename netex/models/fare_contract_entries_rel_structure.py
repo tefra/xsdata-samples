@@ -1,18 +1,18 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.fare_contract_entry_1 import FareContractEntry1
-from netex.models.fare_contract_entry_2 import FareContractEntry2
-from netex.models.fare_contract_entry_ref import FareContractEntryRef
-from netex.models.offered_travel_specification import OfferedTravelSpecification
-from netex.models.offered_travel_specification_ref import OfferedTravelSpecificationRef
-from netex.models.requested_travel_specification import RequestedTravelSpecification
-from netex.models.requested_travel_specification_ref import RequestedTravelSpecificationRef
-from netex.models.sales_transaction import SalesTransaction
-from netex.models.sales_transaction_ref import SalesTransactionRef
-from netex.models.travel_specification_1 import TravelSpecification1
-from netex.models.travel_specification_2 import TravelSpecification2
-from netex.models.travel_specification_ref import TravelSpecificationRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .fare_contract_entry_1 import FareContractEntry1
+from .fare_contract_entry_2 import FareContractEntry2
+from .fare_contract_entry_ref import FareContractEntryRef
+from .offered_travel_specification import OfferedTravelSpecification
+from .offered_travel_specification_ref import OfferedTravelSpecificationRef
+from .requested_travel_specification import RequestedTravelSpecification
+from .requested_travel_specification_ref import RequestedTravelSpecificationRef
+from .sales_transaction import SalesTransaction
+from .sales_transaction_ref import SalesTransactionRef
+from .travel_specification_1 import TravelSpecification1
+from .travel_specification_2 import TravelSpecification2
+from .travel_specification_ref import TravelSpecificationRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

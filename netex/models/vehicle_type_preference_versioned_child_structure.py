@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.day_type_ref import DayTypeRef
-from netex.models.fare_day_type_ref import FareDayTypeRef
-from netex.models.journey_timing_versioned_child_structure import JourneyTimingVersionedChildStructure
-from netex.models.vehicle_type_preference_ref import VehicleTypePreferenceRef
+from .day_type_ref import DayTypeRef
+from .fare_day_type_ref import FareDayTypeRef
+from .journey_timing_versioned_child_structure import JourneyTimingVersionedChildStructure
+from .vehicle_type_preference_ref import VehicleTypePreferenceRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

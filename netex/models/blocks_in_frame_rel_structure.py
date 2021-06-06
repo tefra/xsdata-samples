@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.block import Block
-from netex.models.compound_block import CompoundBlock
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.train_block import TrainBlock
+from .block import Block
+from .compound_block import CompoundBlock
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .train_block import TrainBlock
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.diagnostic_indicator_type_enum_simple import DiagnosticIndicatorTypeEnumSimple
+from .diagnostic_indicator_type_enum_simple import DiagnosticIndicatorTypeEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

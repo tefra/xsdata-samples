@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.compu_generic_math import CompuGenericMath
-from autosar.models.sw_data_dependency_args import SwDataDependencyArgs
+from .compu_generic_math import CompuGenericMath
+from .sw_data_dependency_args import SwDataDependencyArgs
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

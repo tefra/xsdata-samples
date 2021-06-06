@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.point_in_journey_pattern_versioned_child_structure import PointInJourneyPatternVersionedChildStructure
-from netex.models.scheduled_stop_point_view import ScheduledStopPointView
-from netex.models.series_presentation_enumeration import SeriesPresentationEnumeration
+from .point_in_journey_pattern_versioned_child_structure import PointInJourneyPatternVersionedChildStructure
+from .scheduled_stop_point_view import ScheduledStopPointView
+from .series_presentation_enumeration import SeriesPresentationEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

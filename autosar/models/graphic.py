@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.graphic_fit_enum_simple import GraphicFitEnumSimple
-from autosar.models.graphic_notation_enum_simple import GraphicNotationEnumSimple
-from autosar.models.nmtoken_string import NmtokenString
-from autosar.models.revision_label_string import RevisionLabelString
+from .graphic_fit_enum_simple import GraphicFitEnumSimple
+from .graphic_notation_enum_simple import GraphicNotationEnumSimple
+from .nmtoken_string import NmtokenString
+from .revision_label_string import RevisionLabelString
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

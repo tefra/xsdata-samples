@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.alternative_texts_rel_structure import VersionedChildStructure
-from netex.models.boarding_position_ref import BoardingPositionRef
-from netex.models.stop_place_entrance_ref import StopPlaceEntranceRef
-from netex.models.vehicle_stopping_position_ref import VehicleStoppingPositionRef
+from .alternative_texts_rel_structure import VersionedChildStructure
+from .boarding_position_ref import BoardingPositionRef
+from .stop_place_entrance_ref import StopPlaceEntranceRef
+from .vehicle_stopping_position_ref import VehicleStoppingPositionRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

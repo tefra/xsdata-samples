@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.suspending_ref_structure import SuspendingRefStructure
+from .suspending_ref_structure import SuspendingRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

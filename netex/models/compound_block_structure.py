@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.block_parts_rel_structure import BlockPartsRelStructure
-from netex.models.compound_train_ref import CompoundTrainRef
-from netex.models.multilingual_string import MultilingualString
-from netex.models.timing_point_in_journey_pattern_ref_structure import TimingPointInJourneyPatternRefStructure
-from netex.models.train_ref import TrainRef
-from netex.models.vehicle_type_ref import VehicleTypeRef
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .block_parts_rel_structure import BlockPartsRelStructure
+from .compound_train_ref import CompoundTrainRef
+from .multilingual_string import MultilingualString
+from .timing_point_in_journey_pattern_ref_structure import TimingPointInJourneyPatternRefStructure
+from .train_ref import TrainRef
+from .vehicle_type_ref import VehicleTypeRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

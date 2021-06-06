@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDate
-from netex.models.call_versioned_child_structure import CallVersionedChildStructure
-from netex.models.driver_ref import DriverRef
+from .call_versioned_child_structure import CallVersionedChildStructure
+from .driver_ref import DriverRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

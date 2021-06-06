@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.data_prototype_in_service_interface_instance_ref import DataPrototypeInServiceInterfaceInstanceRef
-from autosar.models.port_interface_element_in_implementation_datatype_ref import PortInterfaceElementInImplementationDatatypeRef
+from .data_prototype_in_service_interface_instance_ref import DataPrototypeInServiceInterfaceInstanceRef
+from .port_interface_element_in_implementation_datatype_ref import PortInterfaceElementInImplementationDatatypeRef
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

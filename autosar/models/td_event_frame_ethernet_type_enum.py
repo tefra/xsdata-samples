@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.td_event_frame_ethernet_type_enum_simple import TdEventFrameEthernetTypeEnumSimple
+from .td_event_frame_ethernet_type_enum_simple import TdEventFrameEthernetTypeEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

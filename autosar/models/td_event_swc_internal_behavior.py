@@ -1,22 +1,22 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.component_in_composition_instance_ref import ComponentInCompositionInstanceRef
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.ref import Ref
-from autosar.models.runnable_entity_subtypes_enum import RunnableEntitySubtypesEnum
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.td_event_occurrence_expression import TdEventOccurrenceExpression
-from autosar.models.td_event_swc_internal_behavior_type_enum import TdEventSwcInternalBehaviorTypeEnum
-from autosar.models.variable_access_subtypes_enum import VariableAccessSubtypesEnum
+from .category_string import CategoryString
+from .component_in_composition_instance_ref import ComponentInCompositionInstanceRef
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .ref import Ref
+from .runnable_entity_subtypes_enum import RunnableEntitySubtypesEnum
+from .short_name_fragment import ShortNameFragment
+from .td_event_occurrence_expression import TdEventOccurrenceExpression
+from .td_event_swc_internal_behavior_type_enum import TdEventSwcInternalBehaviorTypeEnum
+from .variable_access_subtypes_enum import VariableAccessSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

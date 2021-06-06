@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.direction_ref_structure import DirectionRefStructure
-from netex.models.direction_type_enumeration import DirectionTypeEnumeration
-from netex.models.external_object_ref_structure import ExternalObjectRefStructure
-from netex.models.type_of_value_version_structure import TypeOfValueVersionStructure
+from .direction_ref_structure import DirectionRefStructure
+from .direction_type_enumeration import DirectionTypeEnumeration
+from .external_object_ref_structure import ExternalObjectRefStructure
+from .type_of_value_version_structure import TypeOfValueVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

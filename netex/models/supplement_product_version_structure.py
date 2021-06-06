@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.fare_product_ref_structure import FareProductRefStructure
-from netex.models.fare_product_refs_rel_structure import FareProductRefsRelStructure
-from netex.models.preassigned_fare_product_version_structure import PreassignedFareProductVersionStructure
-from netex.models.supplement_product_enumeration import SupplementProductEnumeration
+from .fare_product_ref_structure import FareProductRefStructure
+from .fare_product_refs_rel_structure import FareProductRefsRelStructure
+from .preassigned_fare_product_version_structure import PreassignedFareProductVersionStructure
+from .supplement_product_enumeration import SupplementProductEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

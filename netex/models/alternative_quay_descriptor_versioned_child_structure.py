@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.alternative_name_versioned_child_structure import AlternativeNameVersionedChildStructure
-from netex.models.multilingual_string import MultilingualString
+from .alternative_name_versioned_child_structure import AlternativeNameVersionedChildStructure
+from .multilingual_string import MultilingualString
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

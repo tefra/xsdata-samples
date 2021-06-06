@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.argument_data_prototype_subtypes_enum import ArgumentDataPrototypeSubtypesEnum
-from autosar.models.ref import Ref
-from autosar.models.system_signal_subtypes_enum import SystemSignalSubtypesEnum
+from .argument_data_prototype_subtypes_enum import ArgumentDataPrototypeSubtypesEnum
+from .ref import Ref
+from .system_signal_subtypes_enum import SystemSignalSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.abstract_functional_service_capabilities_request import AbstractFunctionalServiceCapabilitiesRequest
-from netex.models.data_object_capabilities_request import DataObjectCapabilitiesRequest
-from netex.models.request_structure import RequestStructure
+from .abstract_functional_service_capabilities_request import AbstractFunctionalServiceCapabilitiesRequest
+from .data_object_capabilities_request import DataObjectCapabilitiesRequest
+from .request_structure import RequestStructure
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

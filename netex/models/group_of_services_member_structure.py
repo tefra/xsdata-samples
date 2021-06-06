@@ -1,19 +1,19 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.abstract_group_member_versioned_child_structure import AbstractGroupMemberVersionedChildStructure
-from netex.models.dated_special_service_ref import DatedSpecialServiceRef
-from netex.models.dated_vehicle_journey_ref import DatedVehicleJourneyRef
-from netex.models.dead_run_ref import DeadRunRef
-from netex.models.group_of_services_ref_structure import GroupOfServicesRefStructure
-from netex.models.journey_designator import JourneyDesignator
-from netex.models.journey_ref import JourneyRef
-from netex.models.notice_assignment_views_rel_structure import NoticeAssignmentViewsRelStructure
-from netex.models.service_designator import ServiceDesignator
-from netex.models.service_journey_ref import ServiceJourneyRef
-from netex.models.special_service_ref import SpecialServiceRef
-from netex.models.template_service_journey_ref import TemplateServiceJourneyRef
-from netex.models.train_number_ref import TrainNumberRef
-from netex.models.vehicle_journey_ref import VehicleJourneyRef
+from .abstract_group_member_versioned_child_structure import AbstractGroupMemberVersionedChildStructure
+from .dated_special_service_ref import DatedSpecialServiceRef
+from .dated_vehicle_journey_ref import DatedVehicleJourneyRef
+from .dead_run_ref import DeadRunRef
+from .group_of_services_ref_structure import GroupOfServicesRefStructure
+from .journey_designator import JourneyDesignator
+from .journey_ref import JourneyRef
+from .notice_assignment_views_rel_structure import NoticeAssignmentViewsRelStructure
+from .service_designator import ServiceDesignator
+from .service_journey_ref import ServiceJourneyRef
+from .special_service_ref import SpecialServiceRef
+from .template_service_journey_ref import TemplateServiceJourneyRef
+from .train_number_ref import TrainNumberRef
+from .vehicle_journey_ref import VehicleJourneyRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

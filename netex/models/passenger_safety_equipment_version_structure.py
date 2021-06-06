@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from netex.models.audio_announcement_type_enumeration import AudioAnnouncementTypeEnumeration
-from netex.models.audio_trigger_method_enumeration import AudioTriggerMethodEnumeration
-from netex.models.lighting_enumeration import LightingEnumeration
-from netex.models.passenger_equipment_version_structure import PassengerEquipmentVersionStructure
+from .audio_announcement_type_enumeration import AudioAnnouncementTypeEnumeration
+from .audio_trigger_method_enumeration import AudioTriggerMethodEnumeration
+from .lighting_enumeration import LightingEnumeration
+from .passenger_equipment_version_structure import PassengerEquipmentVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

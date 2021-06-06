@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.autosar_operation_argument_instance import AutosarOperationArgumentInstance
-from autosar.models.autosar_variable_instance import AutosarVariableInstance
-from autosar.models.td_event_occurrence_expression_formula import TdEventOccurrenceExpressionFormula
-from autosar.models.timing_mode_instance import TimingModeInstance
+from .autosar_operation_argument_instance import AutosarOperationArgumentInstance
+from .autosar_variable_instance import AutosarVariableInstance
+from .td_event_occurrence_expression_formula import TdEventOccurrenceExpressionFormula
+from .timing_mode_instance import TimingModeInstance
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

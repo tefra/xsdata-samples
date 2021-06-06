@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.chapter_enum_break_simple import ChapterEnumBreakSimple
-from autosar.models.keep_with_previous_enum_simple import KeepWithPreviousEnumSimple
-from autosar.models.msr_query_props import MsrQueryProps
-from autosar.models.msr_query_result_topic_1 import MsrQueryResultTopic1
+from .chapter_enum_break_simple import ChapterEnumBreakSimple
+from .keep_with_previous_enum_simple import KeepWithPreviousEnumSimple
+from .msr_query_props import MsrQueryProps
+from .msr_query_result_topic_1 import MsrQueryResultTopic1
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

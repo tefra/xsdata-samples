@@ -1,20 +1,20 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.alive_supervision import AliveSupervision
-from autosar.models.annotation import (
+from .alive_supervision import AliveSupervision
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.checkpoint_transition import CheckpointTransition
-from autosar.models.deadline_supervision import DeadlineSupervision
-from autosar.models.identifier import Identifier
-from autosar.models.logical_supervision import LogicalSupervision
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.short_name_fragment import ShortNameFragment
+from .category_string import CategoryString
+from .checkpoint_transition import CheckpointTransition
+from .deadline_supervision import DeadlineSupervision
+from .identifier import Identifier
+from .logical_supervision import LogicalSupervision
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .positive_integer import PositiveInteger
+from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

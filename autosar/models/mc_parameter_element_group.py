@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.identifier import Identifier
-from autosar.models.parameter_data_prototype_subtypes_enum import ParameterDataPrototypeSubtypesEnum
-from autosar.models.ref import Ref
-from autosar.models.variable_data_prototype_subtypes_enum import VariableDataPrototypeSubtypesEnum
+from .identifier import Identifier
+from .parameter_data_prototype_subtypes_enum import ParameterDataPrototypeSubtypesEnum
+from .ref import Ref
+from .variable_data_prototype_subtypes_enum import VariableDataPrototypeSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.access_right_parameter_assignments_rel_structure import AccessRightParameterAssignmentsRelStructure
-from netex.models.controllable_element_ref import ControllableElementRef
-from netex.models.fare_element_in_sequence_versioned_child_structure import FareElementInSequenceVersionedChildStructure
-from netex.models.fare_structure_element_ref import FareStructureElementRef
+from .access_right_parameter_assignments_rel_structure import AccessRightParameterAssignmentsRelStructure
+from .controllable_element_ref import ControllableElementRef
+from .fare_element_in_sequence_versioned_child_structure import FareElementInSequenceVersionedChildStructure
+from .fare_structure_element_ref import FareStructureElementRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

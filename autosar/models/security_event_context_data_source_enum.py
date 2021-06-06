@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.security_event_context_data_source_enum_simple import SecurityEventContextDataSourceEnumSimple
+from .security_event_context_data_source_enum_simple import SecurityEventContextDataSourceEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

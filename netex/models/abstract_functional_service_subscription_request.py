@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.abstract_subscription_structure import AbstractSubscriptionStructure
+from .abstract_subscription_structure import AbstractSubscriptionStructure
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

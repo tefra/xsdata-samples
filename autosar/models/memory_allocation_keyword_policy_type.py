@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.memory_allocation_keyword_policy_type_simple import MemoryAllocationKeywordPolicyTypeSimple
+from .memory_allocation_keyword_policy_type_simple import MemoryAllocationKeywordPolicyTypeSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.alternative_names_rel_structure import AlternativeNamesRelStructure
-from netex.models.flexible_stop_place_ref import FlexibleStopPlaceRef
-from netex.models.multilingual_string import MultilingualString
-from netex.models.place_version_structure import PlaceVersionStructure
-from netex.models.vehicle_mode_enumeration import VehicleModeEnumeration
+from .alternative_names_rel_structure import AlternativeNamesRelStructure
+from .flexible_stop_place_ref import FlexibleStopPlaceRef
+from .multilingual_string import MultilingualString
+from .place_version_structure import PlaceVersionStructure
+from .vehicle_mode_enumeration import VehicleModeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

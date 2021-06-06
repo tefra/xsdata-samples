@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import DocumentationBlock
-from autosar.models.boolean import Boolean
-from autosar.models.data_limit_kind_enum import DataLimitKindEnum
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.processing_kind_enum import ProcessingKindEnum
-from autosar.models.ref import Ref
-from autosar.models.string import String
-from autosar.models.variable_data_prototype_subtypes_enum import VariableDataPrototypeSubtypesEnum
+from .annotation import DocumentationBlock
+from .boolean import Boolean
+from .data_limit_kind_enum import DataLimitKindEnum
+from .multilanguage_long_name import MultilanguageLongName
+from .processing_kind_enum import ProcessingKindEnum
+from .ref import Ref
+from .string import String
+from .variable_data_prototype_subtypes_enum import VariableDataPrototypeSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

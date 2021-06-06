@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.customer_account_version_structure import CustomerAccountVersionStructure
+from .customer_account_version_structure import CustomerAccountVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDuration
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .multilingual_string import MultilingualString
+from .scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.compu_const import CompuConst
+from .compu_const import CompuConst
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

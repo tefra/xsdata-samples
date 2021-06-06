@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.ticketing_service_ref_structure import TicketingServiceRefStructure
+from .ticketing_service_ref_structure import TicketingServiceRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

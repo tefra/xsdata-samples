@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.dynamic_part_alternative import DynamicPartAlternative
-from autosar.models.segment_position import SegmentPosition
+from .annotation import VariationPoint
+from .dynamic_part_alternative import DynamicPartAlternative
+from .segment_position import SegmentPosition
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

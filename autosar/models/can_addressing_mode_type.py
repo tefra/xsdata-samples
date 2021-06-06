@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.can_addressing_mode_type_simple import CanAddressingModeTypeSimple
+from .can_addressing_mode_type_simple import CanAddressingModeTypeSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import List, Optional, Union
-from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
+from ..core.datatypes_base import (
     AdExplicit,
     Any,
     Bl,
@@ -21,7 +21,7 @@ from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
     Ts,
     TsExplicit,
 )
-from common_types.models.hl7_v3.ne2008.core.voc import (
+from ..core.voc import (
     ActClassObservation,
     ActMood,
     EntityClass,
@@ -48,19 +48,19 @@ from common_types.models.hl7_v3.ne2008.core.voc import (
     XRoleClassCredentialedEntity,
     XRoleClassPayeePolicyRelationship,
 )
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt030007_uv import (
+from .coct_mt030007_uv import (
     CoctMt030007UvNonPersonLivingSubject,
     CoctMt030007UvPerson,
 )
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt030207_uv import CoctMt030207UvPerson
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt150002_uv01 import CoctMt150002Uv01Organization
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt150003_uv03 import CoctMt150003Uv03Organization
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt150007_uv import CoctMt150007UvOrganization
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt510000_uv06 import CoctMt510000Uv06CoverageRecord
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt670000_uv04 import CoctMt670000Uv04GuarantorRole
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt710007_uv import CoctMt710007UvPlace
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt820000_uv import CoctMt820000UvCareProvision
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt960000_uv05 import CoctMt960000Uv05Position
+from .coct_mt030207_uv import CoctMt030207UvPerson
+from .coct_mt150002_uv01 import CoctMt150002Uv01Organization
+from .coct_mt150003_uv03 import CoctMt150003Uv03Organization
+from .coct_mt150007_uv import CoctMt150007UvOrganization
+from .coct_mt510000_uv06 import CoctMt510000Uv06CoverageRecord
+from .coct_mt670000_uv04 import CoctMt670000Uv04GuarantorRole
+from .coct_mt710007_uv import CoctMt710007UvPlace
+from .coct_mt820000_uv import CoctMt820000UvCareProvision
+from .coct_mt960000_uv05 import CoctMt960000Uv05Position
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

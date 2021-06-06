@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.nmtoken_string import NmtokenString
-from autosar.models.regular_expression import RegularExpression
-from autosar.models.revision_label_string import RevisionLabelString
-from autosar.models.uri_string import UriString
+from .nmtoken_string import NmtokenString
+from .regular_expression import RegularExpression
+from .revision_label_string import RevisionLabelString
+from .uri_string import UriString
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.identifier import Identifier
-from autosar.models.limit import Limit
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.scale_constr_validity_enum_simple import ScaleConstrValidityEnumSimple
+from .identifier import Identifier
+from .limit import Limit
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .scale_constr_validity_enum_simple import ScaleConstrValidityEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

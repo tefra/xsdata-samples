@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.application_record_element_subtypes_enum import ApplicationRecordElementSubtypesEnum
-from autosar.models.argument_data_prototype_subtypes_enum import ArgumentDataPrototypeSubtypesEnum
-from autosar.models.cpp_implementation_data_type_element_subtypes_enum import CppImplementationDataTypeElementSubtypesEnum
-from autosar.models.implementation_data_type_element_subtypes_enum import ImplementationDataTypeElementSubtypesEnum
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
+from .application_record_element_subtypes_enum import ApplicationRecordElementSubtypesEnum
+from .argument_data_prototype_subtypes_enum import ArgumentDataPrototypeSubtypesEnum
+from .cpp_implementation_data_type_element_subtypes_enum import CppImplementationDataTypeElementSubtypesEnum
+from .implementation_data_type_element_subtypes_enum import ImplementationDataTypeElementSubtypesEnum
+from .positive_integer import PositiveInteger
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

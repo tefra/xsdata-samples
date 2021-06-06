@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.td_event_service_instance_field_type_enum_simple import TdEventServiceInstanceFieldTypeEnumSimple
+from .td_event_service_instance_field_type_enum_simple import TdEventServiceInstanceFieldTypeEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

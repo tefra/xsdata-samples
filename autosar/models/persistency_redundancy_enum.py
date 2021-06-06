@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.persistency_redundancy_enum_simple import PersistencyRedundancyEnumSimple
+from .persistency_redundancy_enum_simple import PersistencyRedundancyEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

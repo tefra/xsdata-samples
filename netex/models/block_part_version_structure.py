@@ -1,15 +1,15 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.block_ref import BlockRef
-from netex.models.compound_block_ref import CompoundBlockRef
-from netex.models.compound_train_ref import CompoundTrainRef
-from netex.models.journey_part_couple_ref import JourneyPartCoupleRef
-from netex.models.journey_part_refs_rel_structure import JourneyPartRefsRelStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.train_block_ref import TrainBlockRef
-from netex.models.train_ref import TrainRef
-from netex.models.vehicle_type_ref import VehicleTypeRef
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .block_ref import BlockRef
+from .compound_block_ref import CompoundBlockRef
+from .compound_train_ref import CompoundTrainRef
+from .journey_part_couple_ref import JourneyPartCoupleRef
+from .journey_part_refs_rel_structure import JourneyPartRefsRelStructure
+from .multilingual_string import MultilingualString
+from .train_block_ref import TrainBlockRef
+from .train_ref import TrainRef
+from .vehicle_type_ref import VehicleTypeRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

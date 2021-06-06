@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.suitable_enumeration import SuitableEnumeration
-from netex.models.user_need_versioned_child_structure import UserNeedVersionedChildStructure
+from .suitable_enumeration import SuitableEnumeration
+from .user_need_versioned_child_structure import UserNeedVersionedChildStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

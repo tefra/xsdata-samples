@@ -1,21 +1,21 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.executable_entity_activation_reason_subtypes_enum import ExecutableEntityActivationReasonSubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.r_mode_in_atomic_swc_instance_ref import RModeInAtomicSwcInstanceRef
-from autosar.models.r_trigger_in_atomic_swc_instance_ref import RTriggerInAtomicSwcInstanceRef
-from autosar.models.ref import Ref
-from autosar.models.runnable_entity_subtypes_enum import RunnableEntitySubtypesEnum
-from autosar.models.short_name_fragment import ShortNameFragment
+from .category_string import CategoryString
+from .executable_entity_activation_reason_subtypes_enum import ExecutableEntityActivationReasonSubtypesEnum
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .r_mode_in_atomic_swc_instance_ref import RModeInAtomicSwcInstanceRef
+from .r_trigger_in_atomic_swc_instance_ref import RTriggerInAtomicSwcInstanceRef
+from .ref import Ref
+from .runnable_entity_subtypes_enum import RunnableEntitySubtypesEnum
+from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

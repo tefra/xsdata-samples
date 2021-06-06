@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.customer_purchase_parameter_assignment_version_structure import CustomerPurchaseParameterAssignmentVersionStructure
+from .customer_purchase_parameter_assignment_version_structure import CustomerPurchaseParameterAssignmentVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

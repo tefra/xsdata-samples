@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import (
+from .annotation import (
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.bsw_module_entry_subtypes_enum import BswModuleEntrySubtypesEnum
-from autosar.models.client_server_operation_subtypes_enum import ClientServerOperationSubtypesEnum
-from autosar.models.ref import Ref
+from .bsw_module_entry_subtypes_enum import BswModuleEntrySubtypesEnum
+from .client_server_operation_subtypes_enum import ClientServerOperationSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

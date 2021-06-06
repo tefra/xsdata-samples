@@ -1,15 +1,15 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.alternative_texts_rel_structure import VersionedChildStructure
-from netex.models.data_role_type_enumeration import DataRoleTypeEnumeration
-from netex.models.multilingual_string import MultilingualString
-from netex.models.organisation_part_ref_structure import OrganisationPartRefStructure
-from netex.models.organisation_ref_structure import OrganisationRefStructure
-from netex.models.responsibility_role_ref import ResponsibilityRoleRef
-from netex.models.responsibility_set_ref import ResponsibilitySetRef
-from netex.models.stakeholder_role_type_enumeration import StakeholderRoleTypeEnumeration
-from netex.models.type_of_responsibility_role_ref import TypeOfResponsibilityRoleRef
-from netex.models.version_of_object_ref_structure import VersionOfObjectRefStructure
+from .alternative_texts_rel_structure import VersionedChildStructure
+from .data_role_type_enumeration import DataRoleTypeEnumeration
+from .multilingual_string import MultilingualString
+from .organisation_part_ref_structure import OrganisationPartRefStructure
+from .organisation_ref_structure import OrganisationRefStructure
+from .responsibility_role_ref import ResponsibilityRoleRef
+from .responsibility_set_ref import ResponsibilitySetRef
+from .stakeholder_role_type_enumeration import StakeholderRoleTypeEnumeration
+from .type_of_responsibility_role_ref import TypeOfResponsibilityRoleRef
+from .version_of_object_ref_structure import VersionOfObjectRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

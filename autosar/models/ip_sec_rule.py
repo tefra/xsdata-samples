@@ -1,27 +1,27 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.communication_direction_type import CommunicationDirectionType
-from autosar.models.crypto_service_certificate_subtypes_enum import CryptoServiceCertificateSubtypesEnum
-from autosar.models.crypto_service_key_subtypes_enum import CryptoServiceKeySubtypesEnum
-from autosar.models.i_psec_header_type_enum import IPsecHeaderTypeEnum
-from autosar.models.i_psec_ip_protocol_enum import IPsecIpProtocolEnum
-from autosar.models.i_psec_mode_enum import IPsecModeEnum
-from autosar.models.i_psec_policy_enum import IPsecPolicyEnum
-from autosar.models.identifier import Identifier
-from autosar.models.ike_authentication_method_enum import IkeAuthenticationMethodEnum
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.network_endpoint_subtypes_enum import NetworkEndpointSubtypesEnum
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.string import String
+from .category_string import CategoryString
+from .communication_direction_type import CommunicationDirectionType
+from .crypto_service_certificate_subtypes_enum import CryptoServiceCertificateSubtypesEnum
+from .crypto_service_key_subtypes_enum import CryptoServiceKeySubtypesEnum
+from .i_psec_header_type_enum import IPsecHeaderTypeEnum
+from .i_psec_ip_protocol_enum import IPsecIpProtocolEnum
+from .i_psec_mode_enum import IPsecModeEnum
+from .i_psec_policy_enum import IPsecPolicyEnum
+from .identifier import Identifier
+from .ike_authentication_method_enum import IkeAuthenticationMethodEnum
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .network_endpoint_subtypes_enum import NetworkEndpointSubtypesEnum
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
+from .string import String
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

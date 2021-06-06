@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.gender_limitation_enumeration import GenderLimitationEnumeration
+from .gender_limitation_enumeration import GenderLimitationEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

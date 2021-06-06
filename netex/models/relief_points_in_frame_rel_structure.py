@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.garage_point import GaragePoint
-from netex.models.parking_point_1 import ParkingPoint1
-from netex.models.parking_point_2 import ParkingPoint2
-from netex.models.relief_point_1 import ReliefPoint1
-from netex.models.relief_point_2 import ReliefPoint2
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .garage_point import GaragePoint
+from .parking_point_1 import ParkingPoint1
+from .parking_point_2 import ParkingPoint2
+from .relief_point_1 import ReliefPoint1
+from .relief_point_2 import ReliefPoint2
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

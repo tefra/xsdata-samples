@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.customer_account_security_listing_versioned_child_structure import CustomerAccountSecurityListingVersionedChildStructure
+from .customer_account_security_listing_versioned_child_structure import CustomerAccountSecurityListingVersionedChildStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

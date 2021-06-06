@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.interpolation_routine import InterpolationRoutine
-from autosar.models.ref import Ref
-from autosar.models.sw_record_layout_subtypes_enum import SwRecordLayoutSubtypesEnum
+from .interpolation_routine import InterpolationRoutine
+from .ref import Ref
+from .sw_record_layout_subtypes_enum import SwRecordLayoutSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

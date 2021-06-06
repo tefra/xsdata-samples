@@ -1,15 +1,15 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.equipments_rel_structure import EquipmentsRelStructure
-from netex.models.fare_class_enumeration import FareClassEnumeration
-from netex.models.multilingual_string import MultilingualString
-from netex.models.passenger_capacities_rel_structure import PassengerCapacitiesRelStructure
-from netex.models.passenger_capacity_structure import PassengerCapacityStructure
-from netex.models.service_facility_sets_rel_structure import ServiceFacilitySetsRelStructure
-from netex.models.train_element_type_enumeration import TrainElementTypeEnumeration
-from netex.models.train_size import TrainSize
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .equipments_rel_structure import EquipmentsRelStructure
+from .fare_class_enumeration import FareClassEnumeration
+from .multilingual_string import MultilingualString
+from .passenger_capacities_rel_structure import PassengerCapacitiesRelStructure
+from .passenger_capacity_structure import PassengerCapacityStructure
+from .service_facility_sets_rel_structure import ServiceFacilitySetsRelStructure
+from .train_element_type_enumeration import TrainElementTypeEnumeration
+from .train_size import TrainSize
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

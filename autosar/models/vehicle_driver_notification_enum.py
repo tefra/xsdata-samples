@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.vehicle_driver_notification_enum_simple import VehicleDriverNotificationEnumSimple
+from .vehicle_driver_notification_enum_simple import VehicleDriverNotificationEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

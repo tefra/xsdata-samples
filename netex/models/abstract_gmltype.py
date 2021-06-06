@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.description_reference import DescriptionReference
-from netex.models.identifier import Identifier
-from netex.models.name import Name
+from .description_reference import DescriptionReference
+from .identifier import Identifier
+from .name import Name
 
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 

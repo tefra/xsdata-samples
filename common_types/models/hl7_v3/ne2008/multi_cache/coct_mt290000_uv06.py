@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
-from common_types.models.hl7_v3.ne2008.core.datatypes import IvlInt
-from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
+from ..core.datatypes import IvlInt
+from ..core.datatypes_base import (
     AdExplicit,
     Any,
     Cd,
@@ -21,7 +21,7 @@ from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
     Tn,
     TsExplicit,
 )
-from common_types.models.hl7_v3.ne2008.core.voc import (
+from ..core.voc import (
     ActClass,
     ActClassCareProvision,
     ActClassObservation,
@@ -83,9 +83,9 @@ from common_types.models.hl7_v3.ne2008.core.voc import (
     XRoleClassPayeePolicyRelationship,
     XSuccReplPrev,
 )
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt050000_uv01 import CoctMt050000Uv01Patient
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt240003_uv02 import CoctMt240003Uv02ServiceDeliveryLocation
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt960000_uv05 import CoctMt960000Uv05Position
+from .coct_mt050000_uv01 import CoctMt050000Uv01Patient
+from .coct_mt240003_uv02 import CoctMt240003Uv02ServiceDeliveryLocation
+from .coct_mt960000_uv05 import CoctMt960000Uv05Position
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

@@ -1,17 +1,17 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import DocumentationBlock
-from autosar.models.argument_data_prototype_subtypes_enum import ArgumentDataPrototypeSubtypesEnum
-from autosar.models.filter_debouncing_enum import FilterDebouncingEnum
-from autosar.models.float_mod import FloatType
-from autosar.models.multidimensional_time import MultidimensionalTime
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.port_prototype_subtypes_enum import PortPrototypeSubtypesEnum
-from autosar.models.pulse_test_enum import PulseTestEnum
-from autosar.models.ref import Ref
-from autosar.models.string import String
-from autosar.models.trigger_subtypes_enum import TriggerSubtypesEnum
-from autosar.models.variable_data_prototype_subtypes_enum import VariableDataPrototypeSubtypesEnum
+from .annotation import DocumentationBlock
+from .argument_data_prototype_subtypes_enum import ArgumentDataPrototypeSubtypesEnum
+from .filter_debouncing_enum import FilterDebouncingEnum
+from .float_mod import FloatType
+from .multidimensional_time import MultidimensionalTime
+from .multilanguage_long_name import MultilanguageLongName
+from .port_prototype_subtypes_enum import PortPrototypeSubtypesEnum
+from .pulse_test_enum import PulseTestEnum
+from .ref import Ref
+from .string import String
+from .trigger_subtypes_enum import TriggerSubtypesEnum
+from .variable_data_prototype_subtypes_enum import VariableDataPrototypeSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

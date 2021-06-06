@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.key_value_structure import KeyValueStructure
+from .key_value_structure import KeyValueStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

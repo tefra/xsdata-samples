@@ -1,54 +1,54 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.age_constraint import AgeConstraint
-from autosar.models.annotation import (
+from .age_constraint import AgeConstraint
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.arbitrary_event_triggering import ArbitraryEventTriggering
-from autosar.models.burst_pattern_event_triggering import BurstPatternEventTriggering
-from autosar.models.category_string import CategoryString
-from autosar.models.concrete_pattern_event_triggering import ConcretePatternEventTriggering
-from autosar.models.executable_subtypes_enum import ExecutableSubtypesEnum
-from autosar.models.execution_order_constraint import ExecutionOrderConstraint
-from autosar.models.execution_time_constraint import ExecutionTimeConstraint
-from autosar.models.identifier import Identifier
-from autosar.models.latency_timing_constraint import LatencyTimingConstraint
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.offset_timing_constraint import OffsetTimingConstraint
-from autosar.models.periodic_event_triggering import PeriodicEventTriggering
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.sporadic_event_triggering import SporadicEventTriggering
-from autosar.models.synchronization_point_constraint import SynchronizationPointConstraint
-from autosar.models.synchronization_timing_constraint import SynchronizationTimingConstraint
-from autosar.models.td_event_bsw_internal_behavior import TdEventBswInternalBehavior
-from autosar.models.td_event_bsw_mode_declaration import TdEventBswModeDeclaration
-from autosar.models.td_event_bsw_module import TdEventBswModule
-from autosar.models.td_event_complex import TdEventComplex
-from autosar.models.td_event_fr_cluster_cycle_start import TdEventFrClusterCycleStart
-from autosar.models.td_event_frame import TdEventFrame
-from autosar.models.td_event_frame_ethernet import TdEventFrameEthernet
-from autosar.models.td_event_i_pdu import TdEventIPdu
-from autosar.models.td_event_i_signal import TdEventISignal
-from autosar.models.td_event_mode_declaration import TdEventModeDeclaration
-from autosar.models.td_event_operation import TdEventOperation
-from autosar.models.td_event_service_instance_discovery import TdEventServiceInstanceDiscovery
-from autosar.models.td_event_service_instance_event import TdEventServiceInstanceEvent
-from autosar.models.td_event_service_instance_field import TdEventServiceInstanceField
-from autosar.models.td_event_service_instance_method import TdEventServiceInstanceMethod
-from autosar.models.td_event_swc_internal_behavior import TdEventSwcInternalBehavior
-from autosar.models.td_event_swc_internal_behavior_reference import TdEventSwcInternalBehaviorReference
-from autosar.models.td_event_trigger import TdEventTrigger
-from autosar.models.td_event_tt_can_cycle_start import TdEventTtCanCycleStart
-from autosar.models.td_event_variable_data_prototype import TdEventVariableDataPrototype
-from autosar.models.td_event_vfb_reference import TdEventVfbReference
-from autosar.models.timing_condition import TimingCondition
-from autosar.models.timing_description_event_chain import TimingDescriptionEventChain
-from autosar.models.timing_extension_resource import TimingExtensionResource
+from .arbitrary_event_triggering import ArbitraryEventTriggering
+from .burst_pattern_event_triggering import BurstPatternEventTriggering
+from .category_string import CategoryString
+from .concrete_pattern_event_triggering import ConcretePatternEventTriggering
+from .executable_subtypes_enum import ExecutableSubtypesEnum
+from .execution_order_constraint import ExecutionOrderConstraint
+from .execution_time_constraint import ExecutionTimeConstraint
+from .identifier import Identifier
+from .latency_timing_constraint import LatencyTimingConstraint
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .offset_timing_constraint import OffsetTimingConstraint
+from .periodic_event_triggering import PeriodicEventTriggering
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
+from .sporadic_event_triggering import SporadicEventTriggering
+from .synchronization_point_constraint import SynchronizationPointConstraint
+from .synchronization_timing_constraint import SynchronizationTimingConstraint
+from .td_event_bsw_internal_behavior import TdEventBswInternalBehavior
+from .td_event_bsw_mode_declaration import TdEventBswModeDeclaration
+from .td_event_bsw_module import TdEventBswModule
+from .td_event_complex import TdEventComplex
+from .td_event_fr_cluster_cycle_start import TdEventFrClusterCycleStart
+from .td_event_frame import TdEventFrame
+from .td_event_frame_ethernet import TdEventFrameEthernet
+from .td_event_i_pdu import TdEventIPdu
+from .td_event_i_signal import TdEventISignal
+from .td_event_mode_declaration import TdEventModeDeclaration
+from .td_event_operation import TdEventOperation
+from .td_event_service_instance_discovery import TdEventServiceInstanceDiscovery
+from .td_event_service_instance_event import TdEventServiceInstanceEvent
+from .td_event_service_instance_field import TdEventServiceInstanceField
+from .td_event_service_instance_method import TdEventServiceInstanceMethod
+from .td_event_swc_internal_behavior import TdEventSwcInternalBehavior
+from .td_event_swc_internal_behavior_reference import TdEventSwcInternalBehaviorReference
+from .td_event_trigger import TdEventTrigger
+from .td_event_tt_can_cycle_start import TdEventTtCanCycleStart
+from .td_event_variable_data_prototype import TdEventVariableDataPrototype
+from .td_event_vfb_reference import TdEventVfbReference
+from .timing_condition import TimingCondition
+from .timing_description_event_chain import TimingDescriptionEventChain
+from .timing_extension_resource import TimingExtensionResource
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

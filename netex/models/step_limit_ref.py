@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.step_limit_ref_structure import StepLimitRefStructure
+from .step_limit_ref_structure import StepLimitRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

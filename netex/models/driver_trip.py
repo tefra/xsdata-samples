@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.driver_trip_version_structure import DriverTripVersionStructure
+from .driver_trip_version_structure import DriverTripVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

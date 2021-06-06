@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.offered_travel_specification_ref import OfferedTravelSpecificationRef
-from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
-from netex.models.requested_travel_specification_ref import RequestedTravelSpecificationRef
-from netex.models.travel_specification_ref import TravelSpecificationRef
+from .offered_travel_specification_ref import OfferedTravelSpecificationRef
+from .one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .requested_travel_specification_ref import RequestedTravelSpecificationRef
+from .travel_specification_ref import TravelSpecificationRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

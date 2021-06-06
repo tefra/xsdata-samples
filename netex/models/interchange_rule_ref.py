@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.interchange_rule_ref_structure import InterchangeRuleRefStructure
+from .interchange_rule_ref_structure import InterchangeRuleRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

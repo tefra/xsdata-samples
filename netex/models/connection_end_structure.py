@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
-from netex.models.scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
+from .all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
+from .scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

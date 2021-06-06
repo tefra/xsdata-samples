@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.check_constraint_throughput_ref_structure import CheckConstraintThroughputRefStructure
+from .check_constraint_throughput_ref_structure import CheckConstraintThroughputRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

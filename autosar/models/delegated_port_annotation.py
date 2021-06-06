@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import DocumentationBlock
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.signal_fan_enum import SignalFanEnum
-from autosar.models.string import String
+from .annotation import DocumentationBlock
+from .multilanguage_long_name import MultilanguageLongName
+from .signal_fan_enum import SignalFanEnum
+from .string import String
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

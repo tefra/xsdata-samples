@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.line_section_ref_structure import LineSectionRefStructure
+from .line_section_ref_structure import LineSectionRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

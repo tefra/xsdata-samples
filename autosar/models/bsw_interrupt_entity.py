@@ -1,36 +1,36 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.bsw_asynchronous_server_call_point import BswAsynchronousServerCallPoint
-from autosar.models.bsw_asynchronous_server_call_result_point import BswAsynchronousServerCallResultPoint
-from autosar.models.bsw_direct_call_point import BswDirectCallPoint
-from autosar.models.bsw_internal_triggering_point_ref_conditional import BswInternalTriggeringPointRefConditional
-from autosar.models.bsw_interrupt_category import BswInterruptCategory
-from autosar.models.bsw_module_entry_ref_conditional import BswModuleEntryRefConditional
-from autosar.models.bsw_module_entry_subtypes_enum import BswModuleEntrySubtypesEnum
-from autosar.models.bsw_scheduler_name_prefix_subtypes_enum import BswSchedulerNamePrefixSubtypesEnum
-from autosar.models.bsw_synchronous_server_call_point import BswSynchronousServerCallPoint
-from autosar.models.bsw_variable_access import BswVariableAccess
-from autosar.models.category_string import CategoryString
-from autosar.models.exclusive_area_nesting_order_subtypes_enum import ExclusiveAreaNestingOrderSubtypesEnum
-from autosar.models.exclusive_area_subtypes_enum import ExclusiveAreaSubtypesEnum
-from autosar.models.executable_entity_activation_reason import ExecutableEntityActivationReason
-from autosar.models.identifier import Identifier
-from autosar.models.mode_declaration_group_prototype_ref_conditional import ModeDeclarationGroupPrototypeRefConditional
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.reentrancy_level_enum import ReentrancyLevelEnum
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.string import String
-from autosar.models.sw_addr_method_subtypes_enum import SwAddrMethodSubtypesEnum
-from autosar.models.time_value import TimeValue
-from autosar.models.trigger_ref_conditional import TriggerRefConditional
+from .bsw_asynchronous_server_call_point import BswAsynchronousServerCallPoint
+from .bsw_asynchronous_server_call_result_point import BswAsynchronousServerCallResultPoint
+from .bsw_direct_call_point import BswDirectCallPoint
+from .bsw_internal_triggering_point_ref_conditional import BswInternalTriggeringPointRefConditional
+from .bsw_interrupt_category import BswInterruptCategory
+from .bsw_module_entry_ref_conditional import BswModuleEntryRefConditional
+from .bsw_module_entry_subtypes_enum import BswModuleEntrySubtypesEnum
+from .bsw_scheduler_name_prefix_subtypes_enum import BswSchedulerNamePrefixSubtypesEnum
+from .bsw_synchronous_server_call_point import BswSynchronousServerCallPoint
+from .bsw_variable_access import BswVariableAccess
+from .category_string import CategoryString
+from .exclusive_area_nesting_order_subtypes_enum import ExclusiveAreaNestingOrderSubtypesEnum
+from .exclusive_area_subtypes_enum import ExclusiveAreaSubtypesEnum
+from .executable_entity_activation_reason import ExecutableEntityActivationReason
+from .identifier import Identifier
+from .mode_declaration_group_prototype_ref_conditional import ModeDeclarationGroupPrototypeRefConditional
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .reentrancy_level_enum import ReentrancyLevelEnum
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
+from .string import String
+from .sw_addr_method_subtypes_enum import SwAddrMethodSubtypesEnum
+from .time_value import TimeValue
+from .trigger_ref_conditional import TriggerRefConditional
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

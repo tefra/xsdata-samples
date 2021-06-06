@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.blacklist_refs_rel_structure import BlacklistRefsRelStructure
-from netex.models.organisation_refs_rel_structure import OrganisationRefsRelStructure
-from netex.models.organisation_version_structure import OrganisationVersionStructure
-from netex.models.postal_address import PostalAddress
-from netex.models.retail_devices_rel_structure import RetailDevicesRelStructure
-from netex.models.whitelist_refs_rel_structure import WhitelistRefsRelStructure
+from .blacklist_refs_rel_structure import BlacklistRefsRelStructure
+from .organisation_refs_rel_structure import OrganisationRefsRelStructure
+from .organisation_version_structure import OrganisationVersionStructure
+from .postal_address import PostalAddress
+from .retail_devices_rel_structure import RetailDevicesRelStructure
+from .whitelist_refs_rel_structure import WhitelistRefsRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

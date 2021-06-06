@@ -1,16 +1,16 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.authority_ref import AuthorityRef
-from netex.models.general_organisation_ref import GeneralOrganisationRef
-from netex.models.management_agent_ref import ManagementAgentRef
-from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
-from netex.models.operator_ref import OperatorRef
-from netex.models.organisation_ref import OrganisationRef
-from netex.models.other_organisation_ref import OtherOrganisationRef
-from netex.models.retail_consortium_ref import RetailConsortiumRef
-from netex.models.serviced_organisation_ref import ServicedOrganisationRef
-from netex.models.transport_organisation_ref import TransportOrganisationRef
-from netex.models.travel_agent_ref import TravelAgentRef
+from .authority_ref import AuthorityRef
+from .general_organisation_ref import GeneralOrganisationRef
+from .management_agent_ref import ManagementAgentRef
+from .one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .operator_ref import OperatorRef
+from .organisation_ref import OrganisationRef
+from .other_organisation_ref import OtherOrganisationRef
+from .retail_consortium_ref import RetailConsortiumRef
+from .serviced_organisation_ref import ServicedOrganisationRef
+from .transport_organisation_ref import TransportOrganisationRef
+from .travel_agent_ref import TravelAgentRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

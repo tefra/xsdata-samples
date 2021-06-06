@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.point_of_interest_classification_ref_structure import PointOfInterestClassificationRefStructure
+from .point_of_interest_classification_ref_structure import PointOfInterestClassificationRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.ar_package_subtypes_enum import ArPackageSubtypesEnum
-from autosar.models.boolean import Boolean
-from autosar.models.identifier import Identifier
-from autosar.models.ref import Ref
-from autosar.models.referrable_subtypes_enum import ReferrableSubtypesEnum
+from .ar_package_subtypes_enum import ArPackageSubtypesEnum
+from .boolean import Boolean
+from .identifier import Identifier
+from .ref import Ref
+from .referrable_subtypes_enum import ReferrableSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

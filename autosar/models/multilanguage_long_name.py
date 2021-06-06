@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.l_long_name import LLongName
+from .l_long_name import LLongName
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

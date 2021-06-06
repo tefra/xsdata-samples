@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.regular_expression import RegularExpression
-from autosar.models.verbatim_string import VerbatimString
+from .annotation import VariationPoint
+from .positive_integer import PositiveInteger
+from .regular_expression import RegularExpression
+from .verbatim_string import VerbatimString
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

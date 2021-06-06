@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.entrance_ref_structure import EntranceRefStructure
-from netex.models.level_ref_structure import LevelRefStructure
-from netex.models.place_ref_structure import PlaceRefStructure
+from .entrance_ref_structure import EntranceRefStructure
+from .level_ref_structure import LevelRefStructure
+from .place_ref_structure import PlaceRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.destination_display_derived_view_structure import DestinationDisplayDerivedViewStructure
+from .destination_display_derived_view_structure import DestinationDisplayDerivedViewStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.composite_frame_ref_structure import CompositeFrameRefStructure
+from .composite_frame_ref_structure import CompositeFrameRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

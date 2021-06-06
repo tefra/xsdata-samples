@@ -1,21 +1,21 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.identifier import Identifier
-from autosar.models.machine_subtypes_enum import MachineSubtypesEnum
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.non_os_module_instantiation_subtypes_enum import NonOsModuleInstantiationSubtypesEnum
-from autosar.models.process_design_to_machine_design_mapping_subtypes_enum import ProcessDesignToMachineDesignMappingSubtypesEnum
-from autosar.models.process_subtypes_enum import ProcessSubtypesEnum
-from autosar.models.processor_core_subtypes_enum import ProcessorCoreSubtypesEnum
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
+from .category_string import CategoryString
+from .identifier import Identifier
+from .machine_subtypes_enum import MachineSubtypesEnum
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .non_os_module_instantiation_subtypes_enum import NonOsModuleInstantiationSubtypesEnum
+from .process_design_to_machine_design_mapping_subtypes_enum import ProcessDesignToMachineDesignMappingSubtypesEnum
+from .process_subtypes_enum import ProcessSubtypesEnum
+from .processor_core_subtypes_enum import ProcessorCoreSubtypesEnum
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

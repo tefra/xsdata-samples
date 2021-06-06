@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDateTime
-from netex.models.all_modes_enumeration import AllModesEnumeration
-from netex.models.point_ref_structure import PointRefStructure
-from netex.models.type_of_link_ref import TypeOfLinkRef
+from .all_modes_enumeration import AllModesEnumeration
+from .point_ref_structure import PointRefStructure
+from .type_of_link_ref import TypeOfLinkRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

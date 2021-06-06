@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.fare_contract import FareContract
-from netex.models.fare_contract_ref import FareContractRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .fare_contract import FareContract
+from .fare_contract_ref import FareContractRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDate
-from netex.models.assignment_version_structure_1 import AssignmentVersionStructure1
-from netex.models.day_type_ref import DayTypeRef
-from netex.models.fare_day_type_ref import FareDayTypeRef
-from netex.models.operating_day_ref import OperatingDayRef
-from netex.models.operating_period_ref import OperatingPeriodRef
-from netex.models.service_calendar_ref import ServiceCalendarRef
-from netex.models.timeband_ref import TimebandRef
+from .assignment_version_structure_1 import AssignmentVersionStructure1
+from .day_type_ref import DayTypeRef
+from .fare_day_type_ref import FareDayTypeRef
+from .operating_day_ref import OperatingDayRef
+from .operating_period_ref import OperatingPeriodRef
+from .service_calendar_ref import ServiceCalendarRef
+from .timeband_ref import TimebandRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

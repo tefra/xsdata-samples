@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
-from netex.models.place_ref_structure import PlaceRefStructure
-from netex.models.point_ref_structure import PointRefStructure
+from .all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
+from .place_ref_structure import PlaceRefStructure
+from .point_ref_structure import PointRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

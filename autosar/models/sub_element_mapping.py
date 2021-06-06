@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.application_composite_data_type_sub_element_ref import ApplicationCompositeDataTypeSubElementRef
-from autosar.models.implementation_data_type_sub_element_ref import ImplementationDataTypeSubElementRef
-from autosar.models.text_table_mapping import TextTableMapping
+from .application_composite_data_type_sub_element_ref import ApplicationCompositeDataTypeSubElementRef
+from .implementation_data_type_sub_element_ref import ImplementationDataTypeSubElementRef
+from .text_table_mapping import TextTableMapping
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

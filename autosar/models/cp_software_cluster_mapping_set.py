@@ -1,20 +1,20 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.cp_software_cluster_resource_to_application_partition_mapping import CpSoftwareClusterResourceToApplicationPartitionMapping
-from autosar.models.cp_software_cluster_to_resource_mapping import CpSoftwareClusterToResourceMapping
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.port_element_to_communication_resource_mapping import PortElementToCommunicationResourceMapping
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.swc_to_application_partition_mapping import SwcToApplicationPartitionMapping
+from .category_string import CategoryString
+from .cp_software_cluster_resource_to_application_partition_mapping import CpSoftwareClusterResourceToApplicationPartitionMapping
+from .cp_software_cluster_to_resource_mapping import CpSoftwareClusterToResourceMapping
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .port_element_to_communication_resource_mapping import PortElementToCommunicationResourceMapping
+from .short_name_fragment import ShortNameFragment
+from .swc_to_application_partition_mapping import SwcToApplicationPartitionMapping
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

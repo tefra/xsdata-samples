@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import DocumentationBlock
-from autosar.models.client_server_operation_subtypes_enum import ClientServerOperationSubtypesEnum
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.ref import Ref
-from autosar.models.string import String
+from .annotation import DocumentationBlock
+from .client_server_operation_subtypes_enum import ClientServerOperationSubtypesEnum
+from .multilanguage_long_name import MultilanguageLongName
+from .ref import Ref
+from .string import String
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

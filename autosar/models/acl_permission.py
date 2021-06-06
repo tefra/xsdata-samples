@@ -1,26 +1,26 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.acl_object_set_subtypes_enum import AclObjectSetSubtypesEnum
-from autosar.models.acl_operation_subtypes_enum import AclOperationSubtypesEnum
-from autosar.models.acl_role_subtypes_enum import AclRoleSubtypesEnum
-from autosar.models.acl_scope_enum import AclScopeEnum
-from autosar.models.annotation import (
+from .acl_object_set_subtypes_enum import AclObjectSetSubtypesEnum
+from .acl_operation_subtypes_enum import AclOperationSubtypesEnum
+from .acl_role_subtypes_enum import AclRoleSubtypesEnum
+from .acl_scope_enum import AclScopeEnum
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.blueprint_policy_list import BlueprintPolicyList
-from autosar.models.blueprint_policy_not_modifiable import BlueprintPolicyNotModifiable
-from autosar.models.blueprint_policy_single import BlueprintPolicySingle
-from autosar.models.category_string import CategoryString
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.nmtoken_string import NmtokenString
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.string import String
+from .blueprint_policy_list import BlueprintPolicyList
+from .blueprint_policy_not_modifiable import BlueprintPolicyNotModifiable
+from .blueprint_policy_single import BlueprintPolicySingle
+from .category_string import CategoryString
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .nmtoken_string import NmtokenString
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
+from .string import String
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

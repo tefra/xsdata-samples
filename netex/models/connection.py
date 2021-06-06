@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.connection_version_structure import ConnectionVersionStructure
+from .connection_version_structure import ConnectionVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

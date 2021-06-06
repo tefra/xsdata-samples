@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.complex_feature_ref_structure import ComplexFeatureRefStructure
+from .complex_feature_ref_structure import ComplexFeatureRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,24 +1,24 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.blueprint_policy_list import BlueprintPolicyList
-from autosar.models.blueprint_policy_not_modifiable import BlueprintPolicyNotModifiable
-from autosar.models.blueprint_policy_single import BlueprintPolicySingle
-from autosar.models.category_string import CategoryString
-from autosar.models.client_server_interface_mapping import ClientServerInterfaceMapping
-from autosar.models.identifier import Identifier
-from autosar.models.mode_interface_mapping import ModeInterfaceMapping
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.string import String
-from autosar.models.trigger_interface_mapping import TriggerInterfaceMapping
-from autosar.models.variable_and_parameter_interface_mapping import VariableAndParameterInterfaceMapping
+from .blueprint_policy_list import BlueprintPolicyList
+from .blueprint_policy_not_modifiable import BlueprintPolicyNotModifiable
+from .blueprint_policy_single import BlueprintPolicySingle
+from .category_string import CategoryString
+from .client_server_interface_mapping import ClientServerInterfaceMapping
+from .identifier import Identifier
+from .mode_interface_mapping import ModeInterfaceMapping
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .short_name_fragment import ShortNameFragment
+from .string import String
+from .trigger_interface_mapping import TriggerInterfaceMapping
+from .variable_and_parameter_interface_mapping import VariableAndParameterInterfaceMapping
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

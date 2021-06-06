@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.fare_scheduled_stop_point_ref_structure import FareScheduledStopPointRefStructure
+from .fare_scheduled_stop_point_ref_structure import FareScheduledStopPointRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

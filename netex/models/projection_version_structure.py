@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.complex_feature_ref import ComplexFeatureRef
-from netex.models.multilingual_string import MultilingualString
-from netex.models.simple_feature_ref import SimpleFeatureRef
-from netex.models.spatial_feature_ref import SpatialFeatureRef
-from netex.models.type_of_projection_ref_structure import TypeOfProjectionRefStructure
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .complex_feature_ref import ComplexFeatureRef
+from .multilingual_string import MultilingualString
+from .simple_feature_ref import SimpleFeatureRef
+from .spatial_feature_ref import SpatialFeatureRef
+from .type_of_projection_ref_structure import TypeOfProjectionRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

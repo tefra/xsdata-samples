@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.dated_vehicle_journey_version_structure import DatedVehicleJourneyVersionStructure
-from netex.models.service_alteration_enumeration import ServiceAlterationEnumeration
+from .dated_vehicle_journey_version_structure import DatedVehicleJourneyVersionStructure
+from .service_alteration_enumeration import ServiceAlterationEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.check_constraint_version_structure import CheckConstraintVersionStructure
+from .check_constraint_version_structure import CheckConstraintVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

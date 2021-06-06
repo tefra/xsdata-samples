@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.dhcp_server_configuration import DhcpServerConfiguration
-from autosar.models.do_ip_entity import DoIpEntity
-from autosar.models.time_synchronization import TimeSynchronization
+from .dhcp_server_configuration import DhcpServerConfiguration
+from .do_ip_entity import DoIpEntity
+from .time_synchronization import TimeSynchronization
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

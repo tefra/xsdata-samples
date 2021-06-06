@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.date import Date
-from autosar.models.identifier import Identifier
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.single_language_long_name import SingleLanguageLongName
-from autosar.models.string import String
-from autosar.models.url import Url
+from .date import Date
+from .identifier import Identifier
+from .short_name_fragment import ShortNameFragment
+from .single_language_long_name import SingleLanguageLongName
+from .string import String
+from .url import Url
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

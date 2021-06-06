@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.line_link_ref_by_value_structure import LineLinkRefByValueStructure
+from .line_link_ref_by_value_structure import LineLinkRefByValueStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

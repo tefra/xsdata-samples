@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.mc_data_instance import McDataInstance
-from autosar.models.mc_sw_emulation_method_support import McSwEmulationMethodSupport
-from autosar.models.ref import Ref
-from autosar.models.rpt_support_data import RptSupportData
-from autosar.models.sw_systemconstant_value_set_subtypes_enum import SwSystemconstantValueSetSubtypesEnum
+from .mc_data_instance import McDataInstance
+from .mc_sw_emulation_method_support import McSwEmulationMethodSupport
+from .ref import Ref
+from .rpt_support_data import RptSupportData
+from .sw_systemconstant_value_set_subtypes_enum import SwSystemconstantValueSetSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

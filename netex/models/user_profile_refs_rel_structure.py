@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.companion_profile_ref import CompanionProfileRef
-from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
-from netex.models.user_profile_ref import UserProfileRef
+from .companion_profile_ref import CompanionProfileRef
+from .one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .user_profile_ref import UserProfileRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

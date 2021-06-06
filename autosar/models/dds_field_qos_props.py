@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.ref import Ref
-from autosar.models.service_field_deployment_subtypes_enum import ServiceFieldDeploymentSubtypesEnum
-from autosar.models.string import String
+from .ref import Ref
+from .service_field_deployment_subtypes_enum import ServiceFieldDeploymentSubtypesEnum
+from .string import String
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

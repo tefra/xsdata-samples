@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.boolean import Boolean
-from autosar.models.can_controller_configuration import CanControllerConfiguration
-from autosar.models.can_controller_configuration_requirements import CanControllerConfigurationRequirements
-from autosar.models.integer import Integer
+from .annotation import VariationPoint
+from .boolean import Boolean
+from .can_controller_configuration import CanControllerConfiguration
+from .can_controller_configuration_requirements import CanControllerConfigurationRequirements
+from .integer import Integer
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

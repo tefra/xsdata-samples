@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.vehicle_equipment_profile import VehicleEquipmentProfile
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .vehicle_equipment_profile import VehicleEquipmentProfile
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

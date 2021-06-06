@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.class_attribute_in_frame import ClassAttributeInFrame
-from netex.models.class_ref_type_enumeration import ClassRefTypeEnumeration
-from netex.models.class_relationship_in_frame import ClassRelationshipInFrame
-from netex.models.mandatory_enumeration import MandatoryEnumeration
+from .class_attribute_in_frame import ClassAttributeInFrame
+from .class_ref_type_enumeration import ClassRefTypeEnumeration
+from .class_relationship_in_frame import ClassRelationshipInFrame
+from .mandatory_enumeration import MandatoryEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

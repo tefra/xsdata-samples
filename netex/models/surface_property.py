@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.surface_property_type import SurfacePropertyType
+from .surface_property_type import SurfacePropertyType
 
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 

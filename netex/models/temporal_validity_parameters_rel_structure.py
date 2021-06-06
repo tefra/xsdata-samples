@@ -1,15 +1,15 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.availability_condition_ref import AvailabilityConditionRef
-from netex.models.day_type_ref import DayTypeRef
-from netex.models.fare_day_type_ref import FareDayTypeRef
-from netex.models.group_of_timebands_ref import GroupOfTimebandsRef
-from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
-from netex.models.operating_day_ref import OperatingDayRef
-from netex.models.operating_period_ref import OperatingPeriodRef
-from netex.models.validity_condition_ref import ValidityConditionRef
-from netex.models.validity_rule_parameter_ref import ValidityRuleParameterRef
-from netex.models.validity_trigger_ref import ValidityTriggerRef
+from .availability_condition_ref import AvailabilityConditionRef
+from .day_type_ref import DayTypeRef
+from .fare_day_type_ref import FareDayTypeRef
+from .group_of_timebands_ref import GroupOfTimebandsRef
+from .one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .operating_day_ref import OperatingDayRef
+from .operating_period_ref import OperatingPeriodRef
+from .validity_condition_ref import ValidityConditionRef
+from .validity_rule_parameter_ref import ValidityRuleParameterRef
+from .validity_trigger_ref import ValidityTriggerRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

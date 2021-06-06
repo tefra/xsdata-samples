@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from common_types.models.hl7_v3.ne2008.multi_cache.prpa_in201305_uv02 import PrpaIn201305Uv02
-from common_types.models.nhinc.common.nhinc_common import (
+from ...hl7_v3.ne2008.multi_cache.prpa_in201305_uv02 import PrpaIn201305Uv02
+from ..common.nhinc_common import (
     AssertionType,
     NhinTargetSystemType,
 )

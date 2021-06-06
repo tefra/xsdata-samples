@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.alternative_texts_rel_structure import VersionedChildStructure
-from netex.models.fare_table_column_ref_structure import FareTableColumnRefStructure
-from netex.models.fare_table_ref import FareTableRef
-from netex.models.fare_table_row_ref_structure import FareTableRowRefStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.standard_fare_table_ref import StandardFareTableRef
+from .alternative_texts_rel_structure import VersionedChildStructure
+from .fare_table_column_ref_structure import FareTableColumnRefStructure
+from .fare_table_ref import FareTableRef
+from .fare_table_row_ref_structure import FareTableRowRefStructure
+from .multilingual_string import MultilingualString
+from .standard_fare_table_ref import StandardFareTableRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.sales_offer_package_entitlement_given_version_structure import SalesOfferPackageEntitlementGivenVersionStructure
+from .sales_offer_package_entitlement_given_version_structure import SalesOfferPackageEntitlementGivenVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

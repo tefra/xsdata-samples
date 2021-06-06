@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.boarding_position_version_structure import BoardingPositionVersionStructure
+from .boarding_position_version_structure import BoardingPositionVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

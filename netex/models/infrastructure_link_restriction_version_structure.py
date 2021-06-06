@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.link_ref_structure import LinkRefStructure
-from netex.models.network_restriction_version_structure import NetworkRestrictionVersionStructure
+from .link_ref_structure import LinkRefStructure
+from .network_restriction_version_structure import NetworkRestrictionVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

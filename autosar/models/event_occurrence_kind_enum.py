@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.event_occurrence_kind_enum_simple import EventOccurrenceKindEnumSimple
+from .event_occurrence_kind_enum_simple import EventOccurrenceKindEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

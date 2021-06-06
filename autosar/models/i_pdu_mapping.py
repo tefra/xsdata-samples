@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import (
+from .annotation import (
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.pdu_triggering_subtypes_enum import PduTriggeringSubtypesEnum
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.target_i_pdu_ref import TargetIPduRef
+from .pdu_triggering_subtypes_enum import PduTriggeringSubtypesEnum
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .target_i_pdu_ref import TargetIPduRef
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

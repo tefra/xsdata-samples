@@ -1,18 +1,18 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlTime
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.block_part_ref import BlockPartRef
-from netex.models.journey_part_couple_ref import JourneyPartCoupleRef
-from netex.models.journey_part_couple_ref_structure import JourneyPartCoupleRefStructure
-from netex.models.journey_part_positions_rel_structure import JourneyPartPositionsRelStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.purpose_of_journey_partition_ref import PurposeOfJourneyPartitionRef
-from netex.models.scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
-from netex.models.service_facility_sets_rel_structure import ServiceFacilitySetsRelStructure
-from netex.models.train_block_part_ref import TrainBlockPartRef
-from netex.models.train_number_ref import TrainNumberRef
-from netex.models.vehicle_journey_ref_structure import VehicleJourneyRefStructure
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .block_part_ref import BlockPartRef
+from .journey_part_couple_ref import JourneyPartCoupleRef
+from .journey_part_couple_ref_structure import JourneyPartCoupleRefStructure
+from .journey_part_positions_rel_structure import JourneyPartPositionsRelStructure
+from .multilingual_string import MultilingualString
+from .purpose_of_journey_partition_ref import PurposeOfJourneyPartitionRef
+from .scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
+from .service_facility_sets_rel_structure import ServiceFacilitySetsRelStructure
+from .train_block_part_ref import TrainBlockPartRef
+from .train_number_ref import TrainNumberRef
+from .vehicle_journey_ref_structure import VehicleJourneyRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

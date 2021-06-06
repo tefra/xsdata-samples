@@ -1,17 +1,17 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
+from ..core.datatypes_base import (
     AdExplicit,
     Cs,
     Ii,
     IvlTsExplicit,
     TelExplicit,
 )
-from common_types.models.hl7_v3.ne2008.core.voc import (
+from ..core.voc import (
     NullFlavor,
     RoleClassLocatedEntity,
 )
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt710000_uv01 import CoctMt710000Uv01Place
+from .coct_mt710000_uv01 import CoctMt710000Uv01Place
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

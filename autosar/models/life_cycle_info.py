@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import DocumentationBlock
-from autosar.models.life_cycle_period import LifeCyclePeriod
-from autosar.models.life_cycle_state_subtypes_enum import LifeCycleStateSubtypesEnum
-from autosar.models.ref import Ref
-from autosar.models.referrable_subtypes_enum import ReferrableSubtypesEnum
+from .annotation import DocumentationBlock
+from .life_cycle_period import LifeCyclePeriod
+from .life_cycle_state_subtypes_enum import LifeCycleStateSubtypesEnum
+from .ref import Ref
+from .referrable_subtypes_enum import ReferrableSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

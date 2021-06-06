@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.relief_point_ref_structure import ReliefPointRefStructure
+from .relief_point_ref_structure import ReliefPointRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

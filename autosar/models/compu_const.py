@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.numerical_value import NumericalValue
-from autosar.models.numerical_value_variation_point import NumericalValueVariationPoint
-from autosar.models.verbatim_string import VerbatimString
+from .numerical_value import NumericalValue
+from .numerical_value_variation_point import NumericalValueVariationPoint
+from .verbatim_string import VerbatimString
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

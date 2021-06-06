@@ -1,20 +1,20 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.addressable_place_version_structure import AddressablePlaceVersionStructure
-from netex.models.authority_ref import AuthorityRef
-from netex.models.contact_structure import ContactStructure
-from netex.models.crew_base_refs_rel_structure import CrewBaseRefsRelStructure
-from netex.models.garage_points_rel_structure import GaragePointsRelStructure
-from netex.models.general_organisation_ref import GeneralOrganisationRef
-from netex.models.management_agent_ref import ManagementAgentRef
-from netex.models.operator_ref import OperatorRef
-from netex.models.organisation_ref import OrganisationRef
-from netex.models.other_organisation_ref import OtherOrganisationRef
-from netex.models.retail_consortium_ref import RetailConsortiumRef
-from netex.models.serviced_organisation_ref import ServicedOrganisationRef
-from netex.models.transport_organisation_ref import TransportOrganisationRef
-from netex.models.transport_organisation_refs_rel_structure import TransportOrganisationRefsRelStructure
-from netex.models.travel_agent_ref import TravelAgentRef
+from .addressable_place_version_structure import AddressablePlaceVersionStructure
+from .authority_ref import AuthorityRef
+from .contact_structure import ContactStructure
+from .crew_base_refs_rel_structure import CrewBaseRefsRelStructure
+from .garage_points_rel_structure import GaragePointsRelStructure
+from .general_organisation_ref import GeneralOrganisationRef
+from .management_agent_ref import ManagementAgentRef
+from .operator_ref import OperatorRef
+from .organisation_ref import OrganisationRef
+from .other_organisation_ref import OtherOrganisationRef
+from .retail_consortium_ref import RetailConsortiumRef
+from .serviced_organisation_ref import ServicedOrganisationRef
+from .transport_organisation_ref import TransportOrganisationRef
+from .transport_organisation_refs_rel_structure import TransportOrganisationRefsRelStructure
+from .travel_agent_ref import TravelAgentRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

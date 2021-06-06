@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.swc_to_ecu_mapping_constraint_type_simple import SwcToEcuMappingConstraintTypeSimple
+from .swc_to_ecu_mapping_constraint_type_simple import SwcToEcuMappingConstraintTypeSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.mac_multicast_group_subtypes_enum import MacMulticastGroupSubtypesEnum
-from autosar.models.ref import Ref
+from .mac_multicast_group_subtypes_enum import MacMulticastGroupSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.default_dead_run_run_time import DefaultDeadRunRunTime
-from netex.models.strict_containment_aggregation_structure import StrictContainmentAggregationStructure
+from .default_dead_run_run_time import DefaultDeadRunRunTime
+from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

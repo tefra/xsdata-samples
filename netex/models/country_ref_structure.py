@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.iana_country_tld_enumeration import IanaCountryTldEnumeration
+from .iana_country_tld_enumeration import IanaCountryTldEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

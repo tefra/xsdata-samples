@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.component_in_system_instance_ref import ComponentInSystemInstanceRef
-from autosar.models.mapping_scope_enum import MappingScopeEnum
+from .component_in_system_instance_ref import ComponentInSystemInstanceRef
+from .mapping_scope_enum import MappingScopeEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

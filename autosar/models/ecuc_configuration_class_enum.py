@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.ecuc_configuration_class_enum_simple import EcucConfigurationClassEnumSimple
+from .ecuc_configuration_class_enum_simple import EcucConfigurationClassEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

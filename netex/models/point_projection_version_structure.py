@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from netex.models.link_ref_structure import LinkRefStructure
-from netex.models.point_ref_structure import PointRefStructure
-from netex.models.projection_version_structure import ProjectionVersionStructure
+from .link_ref_structure import LinkRefStructure
+from .point_ref_structure import PointRefStructure
+from .projection_version_structure import ProjectionVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

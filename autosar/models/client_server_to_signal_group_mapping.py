@@ -1,25 +1,25 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.abstract_service_instance_subtypes_enum import AbstractServiceInstanceSubtypesEnum
-from autosar.models.annotation import (
+from .abstract_service_instance_subtypes_enum import AbstractServiceInstanceSubtypesEnum
+from .annotation import (
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.application_error_mapping import ApplicationErrorMapping
-from autosar.models.client_id_mapping import ClientIdMapping
-from autosar.models.client_server_primitive_type_mapping import ClientServerPrimitiveTypeMapping
-from autosar.models.client_server_record_element_mapping import (
+from .application_error_mapping import ApplicationErrorMapping
+from .client_id_mapping import ClientIdMapping
+from .client_server_primitive_type_mapping import ClientServerPrimitiveTypeMapping
+from .client_server_record_element_mapping import (
     ClientServerArrayTypeMapping,
     ClientServerRecordTypeMapping,
 )
-from autosar.models.communication_direction_type import CommunicationDirectionType
-from autosar.models.consumed_event_group_subtypes_enum import ConsumedEventGroupSubtypesEnum
-from autosar.models.empty_signal_mapping import EmptySignalMapping
-from autosar.models.event_handler_subtypes_enum import EventHandlerSubtypesEnum
-from autosar.models.operation_in_system_instance_ref import OperationInSystemInstanceRef
-from autosar.models.ref import Ref
-from autosar.models.sequence_counter_mapping import SequenceCounterMapping
-from autosar.models.system_signal_group_subtypes_enum import SystemSignalGroupSubtypesEnum
+from .communication_direction_type import CommunicationDirectionType
+from .consumed_event_group_subtypes_enum import ConsumedEventGroupSubtypesEnum
+from .empty_signal_mapping import EmptySignalMapping
+from .event_handler_subtypes_enum import EventHandlerSubtypesEnum
+from .operation_in_system_instance_ref import OperationInSystemInstanceRef
+from .ref import Ref
+from .sequence_counter_mapping import SequenceCounterMapping
+from .system_signal_group_subtypes_enum import SystemSignalGroupSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

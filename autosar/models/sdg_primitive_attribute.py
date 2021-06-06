@@ -1,20 +1,20 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
 )
-from autosar.models.boolean import Boolean
-from autosar.models.category_string import CategoryString
-from autosar.models.identifier import Identifier
-from autosar.models.limit_value import LimitValue
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.nmtoken_string import NmtokenString
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.regular_expression import RegularExpression
-from autosar.models.short_name_fragment import ShortNameFragment
+from .boolean import Boolean
+from .category_string import CategoryString
+from .identifier import Identifier
+from .limit_value import LimitValue
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .nmtoken_string import NmtokenString
+from .positive_integer import PositiveInteger
+from .regular_expression import RegularExpression
+from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

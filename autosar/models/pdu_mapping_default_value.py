@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.default_value_element import DefaultValueElement
+from .default_value_element import DefaultValueElement
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

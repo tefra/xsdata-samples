@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.external_object_ref_structure import ExternalObjectRefStructure
-from netex.models.type_of_entity_version_structure import TypeOfEntityVersionStructure
+from .external_object_ref_structure import ExternalObjectRefStructure
+from .type_of_entity_version_structure import TypeOfEntityVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

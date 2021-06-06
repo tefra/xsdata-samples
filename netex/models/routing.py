@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.routing_version_structure import RoutingVersionStructure
+from .routing_version_structure import RoutingVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

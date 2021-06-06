@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.road_element_version_structure import RoadElementVersionStructure
+from .road_element_version_structure import RoadElementVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

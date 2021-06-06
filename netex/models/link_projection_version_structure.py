@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.link_ref_structure import LinkRefStructure
-from netex.models.point_on_link_by_value_structure import PointOnLinkByValueStructure
-from netex.models.point_on_link_ref_structure_1 import PointOnLinkRefStructure1
-from netex.models.projection_version_structure import ProjectionVersionStructure
+from .link_ref_structure import LinkRefStructure
+from .point_on_link_by_value_structure import PointOnLinkByValueStructure
+from .point_on_link_ref_structure_1 import PointOnLinkRefStructure1
+from .projection_version_structure import ProjectionVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

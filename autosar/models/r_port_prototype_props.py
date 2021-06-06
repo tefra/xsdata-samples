@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.search_intention_enum import SearchIntentionEnum
+from .search_intention_enum import SearchIntentionEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

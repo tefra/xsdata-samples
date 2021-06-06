@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.capabilities_response_structure import CapabilitiesResponseStructure
+from .capabilities_response_structure import CapabilitiesResponseStructure
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

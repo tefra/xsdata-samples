@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
-from netex.models.validity_trigger_ref import ValidityTriggerRef
+from .one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .validity_trigger_ref import ValidityTriggerRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

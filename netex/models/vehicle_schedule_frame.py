@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.vehicle_schedule_version_frame_structure import VehicleScheduleVersionFrameStructure
+from .vehicle_schedule_version_frame_structure import VehicleScheduleVersionFrameStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

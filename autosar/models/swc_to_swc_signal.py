@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.variable_data_prototype_in_system_instance_ref import VariableDataPrototypeInSystemInstanceRef
+from .variable_data_prototype_in_system_instance_ref import VariableDataPrototypeInSystemInstanceRef
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

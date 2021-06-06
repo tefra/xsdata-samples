@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.derived_view_structure import DerivedViewStructure
-from netex.models.fare_class_enumeration import FareClassEnumeration
-from netex.models.multilingual_string import MultilingualString
-from netex.models.train_component_ref import TrainComponentRef
-from netex.models.train_element_ref import TrainElementRef
-from netex.models.train_element_type_enumeration import TrainElementTypeEnumeration
+from .derived_view_structure import DerivedViewStructure
+from .fare_class_enumeration import FareClassEnumeration
+from .multilingual_string import MultilingualString
+from .train_component_ref import TrainComponentRef
+from .train_element_ref import TrainElementRef
+from .train_element_type_enumeration import TrainElementTypeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

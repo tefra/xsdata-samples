@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.data_filter_type_enum import DataFilterTypeEnum
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.unlimited_integer import UnlimitedInteger
+from .data_filter_type_enum import DataFilterTypeEnum
+from .positive_integer import PositiveInteger
+from .unlimited_integer import UnlimitedInteger
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

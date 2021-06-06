@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.bsw_internal_triggering_point_subtypes_enum import BswInternalTriggeringPointSubtypesEnum
-from autosar.models.ref import Ref
+from .annotation import VariationPoint
+from .bsw_internal_triggering_point_subtypes_enum import BswInternalTriggeringPointSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

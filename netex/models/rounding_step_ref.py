@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.rounding_step_ref_structure import RoundingStepRefStructure
+from .rounding_step_ref_structure import RoundingStepRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

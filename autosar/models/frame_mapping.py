@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import (
+from .annotation import (
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.frame_triggering_subtypes_enum import FrameTriggeringSubtypesEnum
-from autosar.models.ref import Ref
+from .frame_triggering_subtypes_enum import FrameTriggeringSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

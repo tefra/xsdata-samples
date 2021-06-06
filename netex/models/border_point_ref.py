@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.border_point_ref_structure import BorderPointRefStructure
+from .border_point_ref_structure import BorderPointRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

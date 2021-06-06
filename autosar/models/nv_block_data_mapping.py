@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.autosar_variable_ref import AutosarVariableRef
-from autosar.models.positive_integer import PositiveInteger
+from .annotation import VariationPoint
+from .autosar_variable_ref import AutosarVariableRef
+from .positive_integer import PositiveInteger
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.category_string import CategoryString
-from autosar.models.software_cluster_dependency_compare_condition import SoftwareClusterDependencyCompareCondition
-from autosar.models.software_cluster_dependency_logical_operator_enum import SoftwareClusterDependencyLogicalOperatorEnum
+from .category_string import CategoryString
+from .software_cluster_dependency_compare_condition import SoftwareClusterDependencyCompareCondition
+from .software_cluster_dependency_logical_operator_enum import SoftwareClusterDependencyLogicalOperatorEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

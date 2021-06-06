@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDuration
-from netex.models.payment_method_enumeration import PaymentMethodEnumeration
-from netex.models.subscription_renewal_policy_enumeration import SubscriptionRenewalPolicyEnumeration
-from netex.models.subscription_term_type_enumeration import SubscriptionTermTypeEnumeration
-from netex.models.time_interval_refs_rel_structure import TimeIntervalRefsRelStructure
-from netex.models.type_of_payment_method_refs_rel_structure import TypeOfPaymentMethodRefsRelStructure
-from netex.models.usage_parameter_version_structure import UsageParameterVersionStructure
+from .payment_method_enumeration import PaymentMethodEnumeration
+from .subscription_renewal_policy_enumeration import SubscriptionRenewalPolicyEnumeration
+from .subscription_term_type_enumeration import SubscriptionTermTypeEnumeration
+from .time_interval_refs_rel_structure import TimeIntervalRefsRelStructure
+from .type_of_payment_method_refs_rel_structure import TypeOfPaymentMethodRefsRelStructure
+from .usage_parameter_version_structure import UsageParameterVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

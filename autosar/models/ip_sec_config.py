@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.ip_sec_config_props_subtypes_enum import IpSecConfigPropsSubtypesEnum
-from autosar.models.ip_sec_rule import IpSecRule
-from autosar.models.ref import Ref
+from .ip_sec_config_props_subtypes_enum import IpSecConfigPropsSubtypesEnum
+from .ip_sec_rule import IpSecRule
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.object_filter_by_value_structure import ObjectFilterByValueStructure
+from .object_filter_by_value_structure import ObjectFilterByValueStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

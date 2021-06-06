@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.fare_demand_factor import FareDemandFactor
-from netex.models.fare_demand_factor_ref import FareDemandFactorRef
-from netex.models.fare_quota_factor import FareQuotaFactor
-from netex.models.fare_quota_factor_ref import FareQuotaFactorRef
-from netex.models.quality_structure_factor_1 import QualityStructureFactor1
-from netex.models.quality_structure_factor_2 import QualityStructureFactor2
-from netex.models.quality_structure_factor_ref import QualityStructureFactorRef
-from netex.models.strict_containment_aggregation_structure import StrictContainmentAggregationStructure
+from .fare_demand_factor import FareDemandFactor
+from .fare_demand_factor_ref import FareDemandFactorRef
+from .fare_quota_factor import FareQuotaFactor
+from .fare_quota_factor_ref import FareQuotaFactorRef
+from .quality_structure_factor_1 import QualityStructureFactor1
+from .quality_structure_factor_2 import QualityStructureFactor2
+from .quality_structure_factor_ref import QualityStructureFactorRef
+from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

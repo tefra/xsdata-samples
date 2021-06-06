@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.time_sync_client_configuration import TimeSyncClientConfiguration
-from autosar.models.time_sync_server_configuration import TimeSyncServerConfiguration
+from .time_sync_client_configuration import TimeSyncClientConfiguration
+from .time_sync_server_configuration import TimeSyncServerConfiguration
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.frame_containment_structure import FrameContainmentStructure
-from netex.models.type_of_travel_document import TypeOfTravelDocument
+from .frame_containment_structure import FrameContainmentStructure
+from .type_of_travel_document import TypeOfTravelDocument
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

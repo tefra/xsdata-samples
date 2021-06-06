@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.assignment_version_structure_1 import AssignmentVersionStructure1
-from netex.models.journey_pattern_ref_structure import JourneyPatternRefStructure
-from netex.models.journey_pattern_refs_rel_structure import JourneyPatternRefsRelStructure
-from netex.models.scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
+from .assignment_version_structure_1 import AssignmentVersionStructure1
+from .journey_pattern_ref_structure import JourneyPatternRefStructure
+from .journey_pattern_refs_rel_structure import JourneyPatternRefsRelStructure
+from .scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

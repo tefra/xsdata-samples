@@ -1,26 +1,26 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.boolean import Boolean
-from autosar.models.category_string import CategoryString
-from autosar.models.contained_i_pdu_props import ContainedIPduProps
-from autosar.models.container_i_pdu_header_type_enum import ContainerIPduHeaderTypeEnum
-from autosar.models.container_i_pdu_trigger_enum import ContainerIPduTriggerEnum
-from autosar.models.identifier import Identifier
-from autosar.models.integer import Integer
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.pdu_triggering_subtypes_enum import PduTriggeringSubtypesEnum
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.rx_accept_contained_i_pdu_enum import RxAcceptContainedIPduEnum
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.time_value import TimeValue
+from .boolean import Boolean
+from .category_string import CategoryString
+from .contained_i_pdu_props import ContainedIPduProps
+from .container_i_pdu_header_type_enum import ContainerIPduHeaderTypeEnum
+from .container_i_pdu_trigger_enum import ContainerIPduTriggerEnum
+from .identifier import Identifier
+from .integer import Integer
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .pdu_triggering_subtypes_enum import PduTriggeringSubtypesEnum
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .rx_accept_contained_i_pdu_enum import RxAcceptContainedIPduEnum
+from .short_name_fragment import ShortNameFragment
+from .time_value import TimeValue
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

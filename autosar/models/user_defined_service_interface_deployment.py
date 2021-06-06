@@ -1,26 +1,26 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.dds_event_deployment import DdsEventDeployment
-from autosar.models.dds_field_deployment import DdsFieldDeployment
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.ref import Ref
-from autosar.models.service_interface_subtypes_enum import ServiceInterfaceSubtypesEnum
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.someip_event_deployment import SomeipEventDeployment
-from autosar.models.someip_field_deployment import SomeipFieldDeployment
-from autosar.models.someip_method_deployment import SomeipMethodDeployment
-from autosar.models.user_defined_event_deployment import UserDefinedEventDeployment
-from autosar.models.user_defined_field_deployment import UserDefinedFieldDeployment
-from autosar.models.user_defined_method_deployment import UserDefinedMethodDeployment
+from .category_string import CategoryString
+from .dds_event_deployment import DdsEventDeployment
+from .dds_field_deployment import DdsFieldDeployment
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .ref import Ref
+from .service_interface_subtypes_enum import ServiceInterfaceSubtypesEnum
+from .short_name_fragment import ShortNameFragment
+from .someip_event_deployment import SomeipEventDeployment
+from .someip_field_deployment import SomeipFieldDeployment
+from .someip_method_deployment import SomeipMethodDeployment
+from .user_defined_event_deployment import UserDefinedEventDeployment
+from .user_defined_field_deployment import UserDefinedFieldDeployment
+from .user_defined_method_deployment import UserDefinedMethodDeployment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

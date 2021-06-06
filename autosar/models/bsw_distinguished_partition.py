@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.identifier import Identifier
-from autosar.models.short_name_fragment import ShortNameFragment
+from .annotation import VariationPoint
+from .identifier import Identifier
+from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

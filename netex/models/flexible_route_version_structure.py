@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.flexible_route_type_enumeration import FlexibleRouteTypeEnumeration
-from netex.models.route_version_structure import RouteVersionStructure
+from .flexible_route_type_enumeration import FlexibleRouteTypeEnumeration
+from .route_version_structure import RouteVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

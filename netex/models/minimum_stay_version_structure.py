@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.day_of_week_enumeration import DayOfWeekEnumeration
-from netex.models.minimum_stay_type_enumeration import MinimumStayTypeEnumeration
-from netex.models.usage_parameter_version_structure import UsageParameterVersionStructure
+from .day_of_week_enumeration import DayOfWeekEnumeration
+from .minimum_stay_type_enumeration import MinimumStayTypeEnumeration
+from .usage_parameter_version_structure import UsageParameterVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

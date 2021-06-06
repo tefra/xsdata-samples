@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import (
+from .annotation import (
     Annotation,
     VariationPoint,
 )
-from autosar.models.hw_attribute_def_subtypes_enum import HwAttributeDefSubtypesEnum
-from autosar.models.numerical_value_variation_point import NumericalValueVariationPoint
-from autosar.models.ref import Ref
-from autosar.models.verbatim_string import VerbatimString
+from .hw_attribute_def_subtypes_enum import HwAttributeDefSubtypesEnum
+from .numerical_value_variation_point import NumericalValueVariationPoint
+from .ref import Ref
+from .verbatim_string import VerbatimString
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

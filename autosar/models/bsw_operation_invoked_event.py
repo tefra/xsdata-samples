@@ -1,22 +1,22 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.bsw_distinguished_partition_subtypes_enum import BswDistinguishedPartitionSubtypesEnum
-from autosar.models.bsw_module_client_server_entry_subtypes_enum import BswModuleClientServerEntrySubtypesEnum
-from autosar.models.bsw_module_entity_subtypes_enum import BswModuleEntitySubtypesEnum
-from autosar.models.category_string import CategoryString
-from autosar.models.executable_entity_activation_reason_subtypes_enum import ExecutableEntityActivationReasonSubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.mode_in_bsw_module_description_instance_ref import ModeInBswModuleDescriptionInstanceRef
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
+from .bsw_distinguished_partition_subtypes_enum import BswDistinguishedPartitionSubtypesEnum
+from .bsw_module_client_server_entry_subtypes_enum import BswModuleClientServerEntrySubtypesEnum
+from .bsw_module_entity_subtypes_enum import BswModuleEntitySubtypesEnum
+from .category_string import CategoryString
+from .executable_entity_activation_reason_subtypes_enum import ExecutableEntityActivationReasonSubtypesEnum
+from .identifier import Identifier
+from .mode_in_bsw_module_description_instance_ref import ModeInBswModuleDescriptionInstanceRef
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

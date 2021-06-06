@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.overtaking_possibility_version_structure import OvertakingPossibilityVersionStructure
+from .overtaking_possibility_version_structure import OvertakingPossibilityVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

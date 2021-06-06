@@ -1,20 +1,20 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.communication_connector_ref_conditional import CommunicationConnectorRefConditional
-from autosar.models.identifier import Identifier
-from autosar.models.idsm_instance_ref_conditional import IdsmInstanceRefConditional
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.security_event_context_props import SecurityEventContextProps
-from autosar.models.security_event_filter_chain_ref_conditional import SecurityEventFilterChainRefConditional
-from autosar.models.short_name_fragment import ShortNameFragment
+from .category_string import CategoryString
+from .communication_connector_ref_conditional import CommunicationConnectorRefConditional
+from .identifier import Identifier
+from .idsm_instance_ref_conditional import IdsmInstanceRefConditional
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .security_event_context_props import SecurityEventContextProps
+from .security_event_filter_chain_ref_conditional import SecurityEventFilterChainRefConditional
+from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

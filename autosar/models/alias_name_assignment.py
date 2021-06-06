@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.flat_instance_descriptor_subtypes_enum import FlatInstanceDescriptorSubtypesEnum
-from autosar.models.identifiable_subtypes_enum import IdentifiableSubtypesEnum
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.ref import Ref
-from autosar.models.string import String
+from .annotation import VariationPoint
+from .flat_instance_descriptor_subtypes_enum import FlatInstanceDescriptorSubtypesEnum
+from .identifiable_subtypes_enum import IdentifiableSubtypesEnum
+from .multilanguage_long_name import MultilanguageLongName
+from .ref import Ref
+from .string import String
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

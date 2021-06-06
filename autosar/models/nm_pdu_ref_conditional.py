@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.nm_pdu_subtypes_enum import NmPduSubtypesEnum
-from autosar.models.ref import Ref
+from .annotation import VariationPoint
+from .nm_pdu_subtypes_enum import NmPduSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

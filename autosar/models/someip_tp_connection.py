@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.pdu_triggering_subtypes_enum import PduTriggeringSubtypesEnum
-from autosar.models.ref import Ref
-from autosar.models.someip_tp_channel_subtypes_enum import SomeipTpChannelSubtypesEnum
-from autosar.models.time_value import TimeValue
+from .pdu_triggering_subtypes_enum import PduTriggeringSubtypesEnum
+from .ref import Ref
+from .someip_tp_channel_subtypes_enum import SomeipTpChannelSubtypesEnum
+from .time_value import TimeValue
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

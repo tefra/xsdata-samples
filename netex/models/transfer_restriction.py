@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.transfer_restriction_version_structure import TransferRestrictionVersionStructure
+from .transfer_restriction_version_structure import TransferRestrictionVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

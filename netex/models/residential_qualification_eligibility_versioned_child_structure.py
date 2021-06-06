@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDate
-from netex.models.customer_eligibility_versioned_child_structure import CustomerEligibilityVersionedChildStructure
-from netex.models.residence_type_enumeration import ResidenceTypeEnumeration
-from netex.models.residential_qualification_ref import ResidentialQualificationRef
+from .customer_eligibility_versioned_child_structure import CustomerEligibilityVersionedChildStructure
+from .residence_type_enumeration import ResidenceTypeEnumeration
+from .residential_qualification_ref import ResidentialQualificationRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.transferability_ref_structure import TransferabilityRefStructure
+from .transferability_ref_structure import TransferabilityRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.connection_end_structure import ConnectionEndStructure
+from .connection_end_structure import ConnectionEndStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

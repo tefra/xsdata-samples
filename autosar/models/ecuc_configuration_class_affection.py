@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.ecuc_affection_enum import EcucAffectionEnum
-from autosar.models.ecuc_common_attributes_subtypes_enum import EcucCommonAttributesSubtypesEnum
-from autosar.models.ref import Ref
+from .ecuc_affection_enum import EcucAffectionEnum
+from .ecuc_common_attributes_subtypes_enum import EcucCommonAttributesSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

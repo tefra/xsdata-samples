@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.curve_property_type import CurvePropertyType
+from .curve_property_type import CurvePropertyType
 
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 

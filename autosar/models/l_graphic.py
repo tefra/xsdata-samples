@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.graphic import Graphic
-from autosar.models.l_enum_simple import LEnumSimple
-from autosar.models.map import Map
+from .graphic import Graphic
+from .l_enum_simple import LEnumSimple
+from .map import Map
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

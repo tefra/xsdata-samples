@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.geographical_unit_version_structure import GeographicalUnitVersionStructure
+from .geographical_unit_version_structure import GeographicalUnitVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

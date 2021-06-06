@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.abstract_functional_service_subscription_request import AbstractFunctionalServiceSubscriptionRequest
-from netex.models.abstract_subscription_request_structure import AbstractSubscriptionRequestStructure
-from netex.models.data_object_subscription_request import DataObjectSubscriptionRequest
+from .abstract_functional_service_subscription_request import AbstractFunctionalServiceSubscriptionRequest
+from .abstract_subscription_request_structure import AbstractSubscriptionRequestStructure
+from .data_object_subscription_request import DataObjectSubscriptionRequest
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

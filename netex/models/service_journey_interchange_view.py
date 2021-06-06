@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.service_journey_interchange_derived_view_structure import ServiceJourneyInterchangeDerivedViewStructure
+from .service_journey_interchange_derived_view_structure import ServiceJourneyInterchangeDerivedViewStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

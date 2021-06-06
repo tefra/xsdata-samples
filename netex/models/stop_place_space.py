@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.stop_place_space_version_structure import StopPlaceSpaceVersionStructure
+from .stop_place_space_version_structure import StopPlaceSpaceVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

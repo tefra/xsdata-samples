@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.booking_arrangements_structure import BookingArrangementsStructure
-from netex.models.usage_parameter_version_structure import UsageParameterVersionStructure
+from .booking_arrangements_structure import BookingArrangementsStructure
+from .usage_parameter_version_structure import UsageParameterVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

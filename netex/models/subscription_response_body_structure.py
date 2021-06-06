@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDateTime
-from netex.models.response_status import ResponseStatus
+from .response_status import ResponseStatus
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

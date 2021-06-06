@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.integer_value_variation_point import IntegerValueVariationPoint
-from autosar.models.ref import Ref
-from autosar.models.sw_axis_type_subtypes_enum import SwAxisTypeSubtypesEnum
-from autosar.models.sw_generic_axis_param import SwGenericAxisParam
+from .integer_value_variation_point import IntegerValueVariationPoint
+from .ref import Ref
+from .sw_axis_type_subtypes_enum import SwAxisTypeSubtypesEnum
+from .sw_generic_axis_param import SwGenericAxisParam
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

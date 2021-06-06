@@ -1,15 +1,15 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     DocumentationBlock,
 )
-from autosar.models.boolean import Boolean
-from autosar.models.category_string import CategoryString
-from autosar.models.e_2_e_profile_compatibility_props_subtypes_enum import E2EProfileCompatibilityPropsSubtypesEnum
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
+from .boolean import Boolean
+from .category_string import CategoryString
+from .e_2_e_profile_compatibility_props_subtypes_enum import E2EProfileCompatibilityPropsSubtypesEnum
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .positive_integer import PositiveInteger
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

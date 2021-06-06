@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDuration, XmlTime
-from netex.models.accountable_element_structure import AccountableElementStructure
-from netex.models.duty_ref import DutyRef
-from netex.models.timing_point_ref_structure import TimingPointRefStructure
+from .accountable_element_structure import AccountableElementStructure
+from .duty_ref import DutyRef
+from .timing_point_ref_structure import TimingPointRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

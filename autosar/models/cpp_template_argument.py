@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.allocator_subtypes_enum import AllocatorSubtypesEnum
-from autosar.models.boolean import Boolean
-from autosar.models.category_string import CategoryString
-from autosar.models.cpp_implementation_data_type_subtypes_enum import CppImplementationDataTypeSubtypesEnum
-from autosar.models.ref import Ref
+from .allocator_subtypes_enum import AllocatorSubtypesEnum
+from .boolean import Boolean
+from .category_string import CategoryString
+from .cpp_implementation_data_type_subtypes_enum import CppImplementationDataTypeSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

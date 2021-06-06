@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.type_of_passenger_information_equipment_value_structure import TypeOfPassengerInformationEquipmentValueStructure
+from .type_of_passenger_information_equipment_value_structure import TypeOfPassengerInformationEquipmentValueStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

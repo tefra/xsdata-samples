@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.alternative_texts_rel_structure import (
+from .alternative_texts_rel_structure import (
     DayType1,
     DayType2,
     FareDayType,
     OrganisationDayType,
 )
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
+from .containment_aggregation_structure import ContainmentAggregationStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

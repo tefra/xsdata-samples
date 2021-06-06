@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.compass_bearing16_enumeration import CompassBearing16Enumeration
-from netex.models.multilingual_string import MultilingualString
-from netex.models.path_heading_enumeration import PathHeadingEnumeration
-from netex.models.point_on_route_ref import PointOnRouteRef
-from netex.models.simple_feature_ref import SimpleFeatureRef
-from netex.models.transition_enumeration import TransitionEnumeration
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .compass_bearing16_enumeration import CompassBearing16Enumeration
+from .multilingual_string import MultilingualString
+from .path_heading_enumeration import PathHeadingEnumeration
+from .point_on_route_ref import PointOnRouteRef
+from .simple_feature_ref import SimpleFeatureRef
+from .transition_enumeration import TransitionEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

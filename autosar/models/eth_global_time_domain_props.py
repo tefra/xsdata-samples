@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.eth_global_time_managed_coupling_port import EthGlobalTimeManagedCouplingPort
-from autosar.models.eth_global_time_message_format_enum import EthGlobalTimeMessageFormatEnum
-from autosar.models.eth_t_syn_crc_flags import EthTSynCrcFlags
-from autosar.models.mac_address_string import MacAddressString
-from autosar.models.positive_integer import PositiveInteger
+from .annotation import VariationPoint
+from .eth_global_time_managed_coupling_port import EthGlobalTimeManagedCouplingPort
+from .eth_global_time_message_format_enum import EthGlobalTimeMessageFormatEnum
+from .eth_t_syn_crc_flags import EthTSynCrcFlags
+from .mac_address_string import MacAddressString
+from .positive_integer import PositiveInteger
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

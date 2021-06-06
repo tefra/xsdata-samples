@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
+from ..core.datatypes_base import (
     Cd,
     Ce,
     Cs,
@@ -11,16 +11,16 @@ from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
     St,
     TsExplicit,
 )
-from common_types.models.hl7_v3.ne2008.core.voc import (
+from ..core.voc import (
     ActClass,
     ActMood,
     ActRelationshipHasComponent,
     NullFlavor,
     ParticipationType,
 )
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt040200_uv01 import CoctMt040200Uv01ResponsibleParty
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt090100_uv01 import CoctMt090100Uv01AssignedPerson
-from common_types.models.hl7_v3.ne2008.multi_cache.repc_mt000100_uv01 import (
+from .coct_mt040200_uv01 import CoctMt040200Uv01ResponsibleParty
+from .coct_mt090100_uv01 import CoctMt090100Uv01AssignedPerson
+from .repc_mt000100_uv01 import (
     RepcMt000100Uv01Act,
     RepcMt000100Uv01ActReference,
     RepcMt000100Uv01Encounter,

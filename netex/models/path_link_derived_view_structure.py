@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.derived_view_structure import DerivedViewStructure
+from .derived_view_structure import DerivedViewStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

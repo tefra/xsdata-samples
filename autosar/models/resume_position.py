@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.resume_position_simple import ResumePositionSimple
+from .resume_position_simple import ResumePositionSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

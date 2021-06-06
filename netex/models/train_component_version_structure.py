@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.train_element import TrainElement
-from netex.models.train_element_ref import TrainElementRef
-from netex.models.train_ref import TrainRef
-from netex.models.vehicle_orientation_enumeration import VehicleOrientationEnumeration
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .multilingual_string import MultilingualString
+from .train_element import TrainElement
+from .train_element_ref import TrainElementRef
+from .train_ref import TrainRef
+from .vehicle_orientation_enumeration import VehicleOrientationEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

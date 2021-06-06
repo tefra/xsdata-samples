@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.cycle_storage_enumeration import CycleStorageEnumeration
-from netex.models.place_equipment_version_structure import PlaceEquipmentVersionStructure
+from .cycle_storage_enumeration import CycleStorageEnumeration
+from .place_equipment_version_structure import PlaceEquipmentVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

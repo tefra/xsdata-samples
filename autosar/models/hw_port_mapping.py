@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.communication_connector_subtypes_enum import CommunicationConnectorSubtypesEnum
-from autosar.models.hw_pin_group_subtypes_enum import HwPinGroupSubtypesEnum
-from autosar.models.ref import Ref
+from .communication_connector_subtypes_enum import CommunicationConnectorSubtypesEnum
+from .hw_pin_group_subtypes_enum import HwPinGroupSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.hw_element_subtypes_enum import HwElementSubtypesEnum
-from autosar.models.memory_section_subtypes_enum import MemorySectionSubtypesEnum
-from autosar.models.ref import Ref
+from .hw_element_subtypes_enum import HwElementSubtypesEnum
+from .memory_section_subtypes_enum import MemorySectionSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.association_role_type import AssociationRoleType
+from .association_role_type import AssociationRoleType
 
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 

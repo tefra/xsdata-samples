@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.stair_equipment_version_structure import StairEquipmentVersionStructure
-from netex.models.stair_flights_rel_structure import StairFlightsRelStructure
+from .stair_equipment_version_structure import StairEquipmentVersionStructure
+from .stair_flights_rel_structure import StairFlightsRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

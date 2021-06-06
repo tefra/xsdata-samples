@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.emphasis_text import EmphasisText
-from autosar.models.index_entry import IndexEntry
-from autosar.models.supscript import Supscript
-from autosar.models.tt import Tt
+from .emphasis_text import EmphasisText
+from .index_entry import IndexEntry
+from .supscript import Supscript
+from .tt import Tt
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

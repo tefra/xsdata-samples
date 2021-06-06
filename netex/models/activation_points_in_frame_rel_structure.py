@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.activation_point_1 import ActivationPoint1
-from netex.models.activation_point_2 import ActivationPoint2
-from netex.models.beacon_point import BeaconPoint
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
+from .activation_point_1 import ActivationPoint1
+from .activation_point_2 import ActivationPoint2
+from .beacon_point import BeaconPoint
+from .containment_aggregation_structure import ContainmentAggregationStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

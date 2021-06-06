@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.ref import Ref
-from autosar.models.someip_collection_props import SomeipCollectionProps
-from autosar.models.someip_event_deployment_subtypes_enum import SomeipEventDeploymentSubtypesEnum
+from .ref import Ref
+from .someip_collection_props import SomeipCollectionProps
+from .someip_event_deployment_subtypes_enum import SomeipEventDeploymentSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

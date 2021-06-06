@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.activated_equipment_ref_structure import ActivatedEquipmentRefStructure
-from netex.models.activation_link_ref_structure import ActivationLinkRefStructure
-from netex.models.activation_point_ref_structure import ActivationPointRefStructure
-from netex.models.assignment_version_structure_1 import AssignmentVersionStructure1
+from .activated_equipment_ref_structure import ActivatedEquipmentRefStructure
+from .activation_link_ref_structure import ActivationLinkRefStructure
+from .activation_point_ref_structure import ActivationPointRefStructure
+from .assignment_version_structure_1 import AssignmentVersionStructure1
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

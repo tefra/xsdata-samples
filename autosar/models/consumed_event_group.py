@@ -1,25 +1,25 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.application_endpoint_ref_conditional import ApplicationEndpointRefConditional
-from autosar.models.application_endpoint_subtypes_enum import ApplicationEndpointSubtypesEnum
-from autosar.models.boolean import Boolean
-from autosar.models.category_string import CategoryString
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.pdu_activation_routing_group import PduActivationRoutingGroup
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.sd_client_config import SdClientConfig
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.so_ad_routing_group_subtypes_enum import SoAdRoutingGroupSubtypesEnum
-from autosar.models.someip_sd_client_event_group_timing_config_ref_conditional import SomeipSdClientEventGroupTimingConfigRefConditional
+from .application_endpoint_ref_conditional import ApplicationEndpointRefConditional
+from .application_endpoint_subtypes_enum import ApplicationEndpointSubtypesEnum
+from .boolean import Boolean
+from .category_string import CategoryString
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .pdu_activation_routing_group import PduActivationRoutingGroup
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .sd_client_config import SdClientConfig
+from .short_name_fragment import ShortNameFragment
+from .so_ad_routing_group_subtypes_enum import SoAdRoutingGroupSubtypesEnum
+from .someip_sd_client_event_group_timing_config_ref_conditional import SomeipSdClientEventGroupTimingConfigRefConditional
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

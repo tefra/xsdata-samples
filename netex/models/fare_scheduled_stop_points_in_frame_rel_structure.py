@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.fare_scheduled_stop_point import FareScheduledStopPoint
-from netex.models.frame_containment_structure import FrameContainmentStructure
-from netex.models.scheduled_stop_point import ScheduledStopPoint
+from .fare_scheduled_stop_point import FareScheduledStopPoint
+from .frame_containment_structure import FrameContainmentStructure
+from .scheduled_stop_point import ScheduledStopPoint
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

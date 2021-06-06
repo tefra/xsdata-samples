@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.container_i_pdu_header_type_enum_simple import ContainerIPduHeaderTypeEnumSimple
+from .container_i_pdu_header_type_enum_simple import ContainerIPduHeaderTypeEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

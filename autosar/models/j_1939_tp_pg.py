@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.boolean import Boolean
-from autosar.models.i_pdu_subtypes_enum import IPduSubtypesEnum
-from autosar.models.integer import Integer
-from autosar.models.n_pdu_subtypes_enum import NPduSubtypesEnum
-from autosar.models.ref import Ref
+from .boolean import Boolean
+from .i_pdu_subtypes_enum import IPduSubtypesEnum
+from .integer import Integer
+from .n_pdu_subtypes_enum import NPduSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,36 +1,36 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.asynchronous_server_call_point import AsynchronousServerCallPoint
-from autosar.models.asynchronous_server_call_result_point import AsynchronousServerCallResultPoint
-from autosar.models.boolean import Boolean
-from autosar.models.c_identifier import CIdentifier
-from autosar.models.category_string import CategoryString
-from autosar.models.exclusive_area_nesting_order_subtypes_enum import ExclusiveAreaNestingOrderSubtypesEnum
-from autosar.models.exclusive_area_subtypes_enum import ExclusiveAreaSubtypesEnum
-from autosar.models.executable_entity_activation_reason import ExecutableEntityActivationReason
-from autosar.models.external_triggering_point import ExternalTriggeringPoint
-from autosar.models.identifier import Identifier
-from autosar.models.internal_triggering_point import InternalTriggeringPoint
-from autosar.models.mode_access_point import ModeAccessPoint
-from autosar.models.mode_switch_point import ModeSwitchPoint
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.parameter_access import ParameterAccess
-from autosar.models.reentrancy_level_enum import ReentrancyLevelEnum
-from autosar.models.ref import Ref
-from autosar.models.runnable_entity_argument import RunnableEntityArgument
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.sw_addr_method_subtypes_enum import SwAddrMethodSubtypesEnum
-from autosar.models.synchronous_server_call_point import SynchronousServerCallPoint
-from autosar.models.time_value import TimeValue
-from autosar.models.variable_access import VariableAccess
-from autosar.models.wait_point import WaitPoint
+from .asynchronous_server_call_point import AsynchronousServerCallPoint
+from .asynchronous_server_call_result_point import AsynchronousServerCallResultPoint
+from .boolean import Boolean
+from .c_identifier import CIdentifier
+from .category_string import CategoryString
+from .exclusive_area_nesting_order_subtypes_enum import ExclusiveAreaNestingOrderSubtypesEnum
+from .exclusive_area_subtypes_enum import ExclusiveAreaSubtypesEnum
+from .executable_entity_activation_reason import ExecutableEntityActivationReason
+from .external_triggering_point import ExternalTriggeringPoint
+from .identifier import Identifier
+from .internal_triggering_point import InternalTriggeringPoint
+from .mode_access_point import ModeAccessPoint
+from .mode_switch_point import ModeSwitchPoint
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .parameter_access import ParameterAccess
+from .reentrancy_level_enum import ReentrancyLevelEnum
+from .ref import Ref
+from .runnable_entity_argument import RunnableEntityArgument
+from .short_name_fragment import ShortNameFragment
+from .sw_addr_method_subtypes_enum import SwAddrMethodSubtypesEnum
+from .synchronous_server_call_point import SynchronousServerCallPoint
+from .time_value import TimeValue
+from .variable_access import VariableAccess
+from .wait_point import WaitPoint
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

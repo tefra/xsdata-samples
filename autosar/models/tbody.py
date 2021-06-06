@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.row import Row
-from autosar.models.valign_enum_simple import ValignEnumSimple
+from .row import Row
+from .valign_enum_simple import ValignEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

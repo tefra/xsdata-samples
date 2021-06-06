@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.api_principle_enum import ApiPrincipleEnum
-from autosar.models.boolean import Boolean
-from autosar.models.exclusive_area_subtypes_enum import ExclusiveAreaSubtypesEnum
-from autosar.models.ref import Ref
+from .annotation import VariationPoint
+from .api_principle_enum import ApiPrincipleEnum
+from .boolean import Boolean
+from .exclusive_area_subtypes_enum import ExclusiveAreaSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

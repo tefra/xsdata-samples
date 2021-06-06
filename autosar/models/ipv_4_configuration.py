@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.ip4_address_string import Ip4AddressString
-from autosar.models.ip_address_keep_enum import IpAddressKeepEnum
-from autosar.models.ipv_4_address_source_enum import Ipv4AddressSourceEnum
-from autosar.models.positive_integer import PositiveInteger
+from .ip4_address_string import Ip4AddressString
+from .ip_address_keep_enum import IpAddressKeepEnum
+from .ipv_4_address_source_enum import Ipv4AddressSourceEnum
+from .positive_integer import PositiveInteger
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

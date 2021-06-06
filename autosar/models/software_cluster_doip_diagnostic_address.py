@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.software_cluster_diagnostic_address_semantics_enum import SoftwareClusterDiagnosticAddressSemanticsEnum
+from .positive_integer import PositiveInteger
+from .software_cluster_diagnostic_address_semantics_enum import SoftwareClusterDiagnosticAddressSemanticsEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

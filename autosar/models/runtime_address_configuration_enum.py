@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.runtime_address_configuration_enum_simple import RuntimeAddressConfigurationEnumSimple
+from .runtime_address_configuration_enum_simple import RuntimeAddressConfigurationEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.diag_pdu_type_simple import DiagPduTypeSimple
+from .diag_pdu_type_simple import DiagPduTypeSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

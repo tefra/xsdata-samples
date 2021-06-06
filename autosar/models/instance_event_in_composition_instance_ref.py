@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.ref import Ref
-from autosar.models.rte_event_subtypes_enum import RteEventSubtypesEnum
-from autosar.models.sw_component_prototype_subtypes_enum import SwComponentPrototypeSubtypesEnum
+from .ref import Ref
+from .rte_event_subtypes_enum import RteEventSubtypesEnum
+from .sw_component_prototype_subtypes_enum import SwComponentPrototypeSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.series_constraint_ref_structure_2 import SeriesConstraintRefStructure2
+from .series_constraint_ref_structure_2 import SeriesConstraintRefStructure2
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

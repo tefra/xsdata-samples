@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.time_sync_server_configuration_subtypes_enum import TimeSyncServerConfigurationSubtypesEnum
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .time_sync_server_configuration_subtypes_enum import TimeSyncServerConfigurationSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

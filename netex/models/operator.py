@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.operator_version_structure import OperatorVersionStructure
+from .operator_version_structure import OperatorVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

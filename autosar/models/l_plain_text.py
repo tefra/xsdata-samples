@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.l_enum_simple import LEnumSimple
-from autosar.models.space_value import SpaceValue
+from .l_enum_simple import LEnumSimple
+from .space_value import SpaceValue
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

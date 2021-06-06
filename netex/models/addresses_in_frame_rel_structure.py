@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.address import Address
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.postal_address import PostalAddress
-from netex.models.road_address import RoadAddress
+from .address import Address
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .postal_address import PostalAddress
+from .road_address import RoadAddress
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

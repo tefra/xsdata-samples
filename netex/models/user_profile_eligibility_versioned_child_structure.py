@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.companion_profile_ref import CompanionProfileRef
-from netex.models.customer_eligibility_versioned_child_structure import CustomerEligibilityVersionedChildStructure
-from netex.models.user_profile_ref import UserProfileRef
+from .companion_profile_ref import CompanionProfileRef
+from .customer_eligibility_versioned_child_structure import CustomerEligibilityVersionedChildStructure
+from .user_profile_ref import UserProfileRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

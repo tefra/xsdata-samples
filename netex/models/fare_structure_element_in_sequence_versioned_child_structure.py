@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.fare_element_in_sequence_versioned_child_structure import FareElementInSequenceVersionedChildStructure
-from netex.models.fare_structure_element_ref import FareStructureElementRef
-from netex.models.generic_parameter_assignment_version_structure import (
+from .fare_element_in_sequence_versioned_child_structure import FareElementInSequenceVersionedChildStructure
+from .fare_structure_element_ref import FareStructureElementRef
+from .generic_parameter_assignment_version_structure import (
     GenericParameterAssignment,
     GenericParameterAssignmentInContext,
     GenericParameterAssignmentsRelStructure,
 )
-from netex.models.validable_element_ref import ValidableElementRef
+from .validable_element_ref import ValidableElementRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,18 +1,18 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.boolean import Boolean
-from autosar.models.can_tp_address_subtypes_enum import CanTpAddressSubtypesEnum
-from autosar.models.can_tp_addressing_format_type import CanTpAddressingFormatType
-from autosar.models.can_tp_channel_subtypes_enum import CanTpChannelSubtypesEnum
-from autosar.models.can_tp_node_subtypes_enum import CanTpNodeSubtypesEnum
-from autosar.models.i_pdu_subtypes_enum import IPduSubtypesEnum
-from autosar.models.integer import Integer
-from autosar.models.n_pdu_subtypes_enum import NPduSubtypesEnum
-from autosar.models.network_target_address_type import NetworkTargetAddressType
-from autosar.models.ref import Ref
-from autosar.models.time_value import TimeValue
-from autosar.models.tp_connection_ident import TpConnectionIdent
+from .annotation import VariationPoint
+from .boolean import Boolean
+from .can_tp_address_subtypes_enum import CanTpAddressSubtypesEnum
+from .can_tp_addressing_format_type import CanTpAddressingFormatType
+from .can_tp_channel_subtypes_enum import CanTpChannelSubtypesEnum
+from .can_tp_node_subtypes_enum import CanTpNodeSubtypesEnum
+from .i_pdu_subtypes_enum import IPduSubtypesEnum
+from .integer import Integer
+from .n_pdu_subtypes_enum import NPduSubtypesEnum
+from .network_target_address_type import NetworkTargetAddressType
+from .ref import Ref
+from .time_value import TimeValue
+from .tp_connection_ident import TpConnectionIdent
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

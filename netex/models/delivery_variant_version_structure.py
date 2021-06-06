@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.delivery_variant_type_enumeration import DeliveryVariantTypeEnumeration
-from netex.models.multilingual_string import MultilingualString
-from netex.models.type_of_delivery_variant_ref import TypeOfDeliveryVariantRef
-from netex.models.version_of_object_ref_structure import VersionOfObjectRefStructure
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .delivery_variant_type_enumeration import DeliveryVariantTypeEnumeration
+from .multilingual_string import MultilingualString
+from .type_of_delivery_variant_ref import TypeOfDeliveryVariantRef
+from .version_of_object_ref_structure import VersionOfObjectRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

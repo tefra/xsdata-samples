@@ -1,13 +1,16 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<Config xmlns="http://pypi.org/project/xsdata" version="20.9">
-  <Output wsdl="false">
+<?xml version="1.0" encoding="UTF-8"?>
+<Config xmlns="http://pypi.org/project/xsdata" version="21.6">
+  <Output maxLineLength="79">
     <Package>common_types.models</Package>
-    <Format>pydata</Format>
+    <Format relativeImports="true">dataclasses</Format>
     <Structure>filenames</Structure>
+    <DocstringStyle>reStructuredText</DocstringStyle>
+    <CompoundFields>false</CompoundFields>
   </Output>
   <Conventions>
     <ClassName case="pascalCase" safePrefix="type"/>
     <FieldName case="snakeCase" safePrefix="value"/>
+    <ConstantName case="screamingSnakeCase" safePrefix="value"/>
     <ModuleName case="snakeCase" safePrefix="mod"/>
     <PackageName case="snakeCase" safePrefix="pkg"/>
   </Conventions>

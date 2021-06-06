@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.simple_feature_version_structure import SimpleFeatureVersionStructure
+from .simple_feature_version_structure import SimpleFeatureVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

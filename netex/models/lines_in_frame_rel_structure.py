@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.flexible_line import FlexibleLine
-from netex.models.line_1 import Line1
-from netex.models.line_2 import Line2
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .flexible_line import FlexibleLine
+from .line_1 import Line1
+from .line_2 import Line2
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

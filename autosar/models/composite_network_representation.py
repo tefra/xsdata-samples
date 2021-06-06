@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.application_composite_element_in_port_interface_instance_ref import ApplicationCompositeElementInPortInterfaceInstanceRef
-from autosar.models.sw_pointer_target_props import SwDataDefProps
+from .application_composite_element_in_port_interface_instance_ref import ApplicationCompositeElementInPortInterfaceInstanceRef
+from .sw_pointer_target_props import SwDataDefProps
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

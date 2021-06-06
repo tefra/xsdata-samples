@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.check_constraint_delay import CheckConstraintDelay
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
+from .check_constraint_delay import CheckConstraintDelay
+from .containment_aggregation_structure import ContainmentAggregationStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

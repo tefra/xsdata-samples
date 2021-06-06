@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.cycle_counter import CycleCounter
-from autosar.models.cycle_repetition import CycleRepetition
-from autosar.models.positive_integer import PositiveInteger
+from .cycle_counter import CycleCounter
+from .cycle_repetition import CycleRepetition
+from .positive_integer import PositiveInteger
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

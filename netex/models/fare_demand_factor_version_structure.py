@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.fare_demand_type_enumeration import FareDemandTypeEnumeration
-from netex.models.quality_structure_factor_version_structure import QualityStructureFactorVersionStructure
-from netex.models.start_time_at_stop_points_rel_structure import StartTimeAtStopPointsRelStructure
-from netex.models.stop_use_constraint_enumeration import StopUseConstraintEnumeration
-from netex.models.time_demand_type_ref import TimeDemandTypeRef
+from .fare_demand_type_enumeration import FareDemandTypeEnumeration
+from .quality_structure_factor_version_structure import QualityStructureFactorVersionStructure
+from .start_time_at_stop_points_rel_structure import StartTimeAtStopPointsRelStructure
+from .stop_use_constraint_enumeration import StopUseConstraintEnumeration
+from .time_demand_type_ref import TimeDemandTypeRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

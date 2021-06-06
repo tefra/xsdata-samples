@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.network_endpoint_subtypes_enum import NetworkEndpointSubtypesEnum
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.secure_com_props_subtypes_enum import SecureComPropsSubtypesEnum
+from .network_endpoint_subtypes_enum import NetworkEndpointSubtypesEnum
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .secure_com_props_subtypes_enum import SecureComPropsSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

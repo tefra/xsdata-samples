@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.abstract_subscription_structure import AbstractSubscriptionStructure
-from netex.models.data_object_request import DataObjectRequest
-from netex.models.extensions_1 import Extensions1
-from netex.models.network_frame_subscription_policy_structure import NetworkFrameSubscriptionPolicyStructure
+from .abstract_subscription_structure import AbstractSubscriptionStructure
+from .data_object_request import DataObjectRequest
+from .extensions_1 import Extensions1
+from .network_frame_subscription_policy_structure import NetworkFrameSubscriptionPolicyStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

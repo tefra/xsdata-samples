@@ -1,21 +1,21 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.access_feature_enumeration import AccessFeatureEnumeration
-from netex.models.access_mode_enumeration import AccessModeEnumeration
-from netex.models.access_summaries_rel_structure import AccessSummariesRelStructure
-from netex.models.accessibility_assessment import AccessibilityAssessment
-from netex.models.covered_enumeration import CoveredEnumeration
-from netex.models.gated_enumeration import GatedEnumeration
-from netex.models.lighting_enumeration import LightingEnumeration
-from netex.models.link_sequence_version_structure import LinkSequenceVersionStructure
-from netex.models.navigation_type_enumeration import NavigationTypeEnumeration
-from netex.models.path_link_end_structure import PathLinkEndStructure
-from netex.models.path_links_in_sequence_rel_structure import PathLinksInSequenceRelStructure
-from netex.models.places_in_sequence_rel_structure import PlacesInSequenceRelStructure
-from netex.models.public_use_enumeration import PublicUseEnumeration
-from netex.models.site_facility_sets_rel_structure import SiteFacilitySetsRelStructure
-from netex.models.transfer_duration_structure import TransferDurationStructure
-from netex.models.transfer_refs_rel_structure import TransferRefsRelStructure
+from .access_feature_enumeration import AccessFeatureEnumeration
+from .access_mode_enumeration import AccessModeEnumeration
+from .access_summaries_rel_structure import AccessSummariesRelStructure
+from .accessibility_assessment import AccessibilityAssessment
+from .covered_enumeration import CoveredEnumeration
+from .gated_enumeration import GatedEnumeration
+from .lighting_enumeration import LightingEnumeration
+from .link_sequence_version_structure import LinkSequenceVersionStructure
+from .navigation_type_enumeration import NavigationTypeEnumeration
+from .path_link_end_structure import PathLinkEndStructure
+from .path_links_in_sequence_rel_structure import PathLinksInSequenceRelStructure
+from .places_in_sequence_rel_structure import PlacesInSequenceRelStructure
+from .public_use_enumeration import PublicUseEnumeration
+from .site_facility_sets_rel_structure import SiteFacilitySetsRelStructure
+from .transfer_duration_structure import TransferDurationStructure
+from .transfer_refs_rel_structure import TransferRefsRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

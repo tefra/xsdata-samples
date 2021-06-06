@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.default_service_journey_time_ref_structure import DefaultServiceJourneyTimeRefStructure
+from .default_service_journey_time_ref_structure import DefaultServiceJourneyTimeRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

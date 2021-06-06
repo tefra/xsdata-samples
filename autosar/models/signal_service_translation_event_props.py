@@ -1,20 +1,20 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.abstract_signal_based_to_i_signal_triggering_mapping_subtypes_enum import AbstractSignalBasedToISignalTriggeringMappingSubtypesEnum
-from autosar.models.annotation import (
+from .abstract_signal_based_to_i_signal_triggering_mapping_subtypes_enum import AbstractSignalBasedToISignalTriggeringMappingSubtypesEnum
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
 )
-from autosar.models.boolean import Boolean
-from autosar.models.category_string import CategoryString
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.signal_service_translation_element_props import SignalServiceTranslationElementProps
-from autosar.models.variable_data_prototype_in_system_instance_ref import VariableDataPrototypeInSystemInstanceRef
+from .boolean import Boolean
+from .category_string import CategoryString
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
+from .signal_service_translation_element_props import SignalServiceTranslationElementProps
+from .variable_data_prototype_in_system_instance_ref import VariableDataPrototypeInSystemInstanceRef
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

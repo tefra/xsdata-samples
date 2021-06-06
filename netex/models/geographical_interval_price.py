@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.geographical_interval_price_versioned_child_structure import GeographicalIntervalPriceVersionedChildStructure
+from .geographical_interval_price_versioned_child_structure import GeographicalIntervalPriceVersionedChildStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.operator_view import OperatorView
-from netex.models.vehicle_mode_enumeration import VehicleModeEnumeration
+from .operator_view import OperatorView
+from .vehicle_mode_enumeration import VehicleModeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.entitlement_product_version_structure import EntitlementProductVersionStructure
+from .entitlement_product_version_structure import EntitlementProductVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

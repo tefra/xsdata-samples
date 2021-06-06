@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDuration
-from netex.models.penalty_policy_type_enumeration import PenaltyPolicyTypeEnumeration
-from netex.models.same_station_reentry_policy_enumeration import SameStationReentryPolicyEnumeration
-from netex.models.usage_parameter_version_structure import UsageParameterVersionStructure
+from .penalty_policy_type_enumeration import PenaltyPolicyTypeEnumeration
+from .same_station_reentry_policy_enumeration import SameStationReentryPolicyEnumeration
+from .usage_parameter_version_structure import UsageParameterVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

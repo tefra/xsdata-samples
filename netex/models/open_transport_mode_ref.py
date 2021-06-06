@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.open_transport_mode_ref_structure import OpenTransportModeRefStructure
+from .open_transport_mode_ref_structure import OpenTransportModeRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

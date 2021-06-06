@@ -1,10 +1,10 @@
-from common_types.models.nhinc.hl7.async_adapter_patient_discovery_error_request import (
+from .async_adapter_patient_discovery_error_request import (
     AsyncAdapterPatientDiscoveryErrorRequest,
     AsyncAdapterPatientDiscoveryErrorRequestType,
     AsyncAdapterPatientDiscoveryErrorSecuredRequest,
     AsyncAdapterPatientDiscoveryErrorSecuredRequestType,
 )
-from common_types.models.nhinc.hl7.hl7_common_data_layer_messages import (
+from .hl7_common_data_layer_messages import (
     CareRecordQupcIn043100Uv01AdmissionsRequest,
     CareRecordQupcIn043100Uv01AllergiesRequest,
     CareRecordQupcIn043100Uv01AppointmentsRequest,
@@ -34,7 +34,7 @@ from common_types.models.nhinc.hl7.hl7_common_data_layer_messages import (
     PatientDemographicsPrpaMt201303Uv02Response,
     PatientDemographicsPrpaMt201303Uv02ResponseType,
 )
-from common_types.models.nhinc.hl7.hl7_messages import (
+from .hl7_messages import (
     Create201302Request,
     Create201302RequestType,
     Create201305Request,
@@ -62,7 +62,7 @@ from common_types.models.nhinc.hl7.hl7_messages import (
     PixconsumerPrpaIn201310UvsecuredRequest,
     PixconsumerPrpaIn201310UvsecuredRequestType,
 )
-from common_types.models.nhinc.hl7.hl7_proxy_patient_discovery_messages import (
+from .hl7_proxy_patient_discovery_messages import (
     PixconsumerPrpaIn201301UvproxyRequest,
     PixconsumerPrpaIn201301UvproxyRequestType,
     PixconsumerPrpaIn201301UvproxySecuredRequest,
@@ -80,7 +80,7 @@ from common_types.models.nhinc.hl7.hl7_proxy_patient_discovery_messages import (
     PixconsumerPrpaIn201309UvproxySecuredRequest,
     PixconsumerPrpaIn201309UvproxySecuredRequestType,
 )
-from common_types.models.nhinc.hl7.pixconsumer_prpa_request import (
+from .pixconsumer_prpa_request import (
     PixconsumerPrpaIn201301Uvrequest,
     PixconsumerPrpaIn201301UvrequestType,
     PixconsumerPrpaIn201301UvsecuredRequest,
@@ -90,31 +90,31 @@ from common_types.models.nhinc.hl7.pixconsumer_prpa_request import (
     PixconsumerPrpaIn201302UvsecuredRequest,
     PixconsumerPrpaIn201302UvsecuredRequestType,
 )
-from common_types.models.nhinc.hl7.proxy_prpa_in201305_uvproxy_request import (
+from .proxy_prpa_in201305_uvproxy_request import (
     ProxyPrpaIn201305UvproxyRequest,
     ProxyPrpaIn201305UvproxyRequestType,
     ProxyPrpaIn201305UvproxySecuredRequest,
     ProxyPrpaIn201305UvproxySecuredRequestType,
 )
-from common_types.models.nhinc.hl7.proxy_prpa_in201306_uvproxy_request import (
+from .proxy_prpa_in201306_uvproxy_request import (
     ProxyPrpaIn201306UvproxyRequest,
     ProxyPrpaIn201306UvproxyRequestType,
     ProxyPrpaIn201306UvproxySecuredRequest,
     ProxyPrpaIn201306UvproxySecuredRequestType,
 )
-from common_types.models.nhinc.hl7.responding_gateway_prpa_in201305_uv02_request import (
+from .responding_gateway_prpa_in201305_uv02_request import (
     RespondingGatewayPrpaIn201305Uv02Request,
     RespondingGatewayPrpaIn201305Uv02RequestType,
     RespondingGatewayPrpaIn201305Uv02SecuredRequest,
     RespondingGatewayPrpaIn201305Uv02SecuredRequestType,
 )
-from common_types.models.nhinc.hl7.responding_gateway_prpa_in201306_uv02_request import (
+from .responding_gateway_prpa_in201306_uv02_request import (
     RespondingGatewayPrpaIn201306Uv02Request,
     RespondingGatewayPrpaIn201306Uv02RequestType,
     RespondingGatewayPrpaIn201306Uv02SecuredRequest,
     RespondingGatewayPrpaIn201306Uv02SecuredRequestType,
 )
-from common_types.models.nhinc.hl7.responding_gateway_prpa_in201306_uv02_response import (
+from .responding_gateway_prpa_in201306_uv02_response import (
     CommunityPrpaIn201306Uv02ResponseType,
     RespondingGatewayPrpaIn201306Uv02Response,
     RespondingGatewayPrpaIn201306Uv02ResponseType,

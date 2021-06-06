@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.transfer_property_enum_simple import TransferPropertyEnumSimple
+from .transfer_property_enum_simple import TransferPropertyEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.headway_ref_structure import HeadwayRefStructure
+from .headway_ref_structure import HeadwayRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

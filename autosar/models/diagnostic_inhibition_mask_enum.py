@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.diagnostic_inhibition_mask_enum_simple import DiagnosticInhibitionMaskEnumSimple
+from .diagnostic_inhibition_mask_enum_simple import DiagnosticInhibitionMaskEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

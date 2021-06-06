@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.data_prototype_group_subtypes_enum import DataPrototypeGroupSubtypesEnum
-from autosar.models.ref import Ref
-from autosar.models.sw_component_prototype_subtypes_enum import SwComponentPrototypeSubtypesEnum
+from .annotation import VariationPoint
+from .data_prototype_group_subtypes_enum import DataPrototypeGroupSubtypesEnum
+from .ref import Ref
+from .sw_component_prototype_subtypes_enum import SwComponentPrototypeSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

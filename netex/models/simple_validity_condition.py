@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.alternative_texts_rel_structure import ValidBetweenVersionStructure
+from .alternative_texts_rel_structure import ValidBetweenVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

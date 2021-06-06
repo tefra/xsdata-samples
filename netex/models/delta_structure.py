@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDateTime
-from netex.models.delta_values_rel_structure import DeltaValuesRelStructure
-from netex.models.modification_enumeration import ModificationEnumeration
-from netex.models.simple_object_ref import SimpleObjectRef
+from .delta_values_rel_structure import DeltaValuesRelStructure
+from .modification_enumeration import ModificationEnumeration
+from .simple_object_ref import SimpleObjectRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

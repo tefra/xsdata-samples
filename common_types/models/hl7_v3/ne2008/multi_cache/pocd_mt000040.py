@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
-from common_types.models.hl7_v3.ne2008.core.datatypes import (
+from ..core.datatypes import (
     IvlInt,
     IvlPq,
     RtoPqPq,
 )
-from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
+from ..core.datatypes_base import (
     AdExplicit,
     Any,
     Bl,
@@ -29,15 +29,15 @@ from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
     Ts,
     TsExplicit,
 )
-from common_types.models.hl7_v3.ne2008.core.narrative_block import StrucDocText
-from common_types.models.hl7_v3.ne2008.core.sdtc import (
+from ..core.narrative_block import StrucDocText
+from ..core.sdtc import (
     BirthTime,
     DeceasedInd,
     DeceasedTime,
     DischargeDispositionCode,
     Id,
 )
-from common_types.models.hl7_v3.ne2008.core.voc import (
+from ..core.voc import (
     ActClass,
     ActClassClinicalDocument,
     ActClassDocument,

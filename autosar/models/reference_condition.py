@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.boolean import Boolean
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.reference_tailoring_subtypes_enum import ReferenceTailoringSubtypesEnum
+from .boolean import Boolean
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .reference_tailoring_subtypes_enum import ReferenceTailoringSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

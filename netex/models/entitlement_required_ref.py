@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.entitlement_required_ref_structure import EntitlementRequiredRefStructure
+from .entitlement_required_ref_structure import EntitlementRequiredRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

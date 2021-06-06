@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.diagnostic_status_bit_handling_test_failed_since_last_clear_enum_simple import DiagnosticStatusBitHandlingTestFailedSinceLastClearEnumSimple
+from .diagnostic_status_bit_handling_test_failed_since_last_clear_enum_simple import DiagnosticStatusBitHandlingTestFailedSinceLastClearEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.transfer_restriction import TransferRestriction
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .transfer_restriction import TransferRestriction
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

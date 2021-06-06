@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.check_constraints_rel_structure import CheckConstraintsRelStructure
-from netex.models.class_of_use_ref import ClassOfUseRef
-from netex.models.equipment_places_rel_structure import EquipmentPlacesRelStructure
-from netex.models.level_ref import LevelRef
-from netex.models.local_services_rel_structure import LocalServicesRelStructure
-from netex.models.place_equipments_rel_structure import PlaceEquipmentsRelStructure
-from netex.models.site_element_version_structure import SiteElementVersionStructure
-from netex.models.site_ref_structure import SiteRefStructure
+from .check_constraints_rel_structure import CheckConstraintsRelStructure
+from .class_of_use_ref import ClassOfUseRef
+from .equipment_places_rel_structure import EquipmentPlacesRelStructure
+from .level_ref import LevelRef
+from .local_services_rel_structure import LocalServicesRelStructure
+from .place_equipments_rel_structure import PlaceEquipmentsRelStructure
+from .site_element_version_structure import SiteElementVersionStructure
+from .site_ref_structure import SiteRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

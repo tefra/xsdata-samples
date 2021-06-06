@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.strict_containment_aggregation_structure import StrictContainmentAggregationStructure
-from netex.models.target_passing_time import TargetPassingTime
+from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
+from .target_passing_time import TargetPassingTime
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

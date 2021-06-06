@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.type_of_projection_value_structure import TypeOfProjectionValueStructure
+from .type_of_projection_value_structure import TypeOfProjectionValueStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,32 +1,32 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.build_action_manifest_ref_conditional import BuildActionManifestRefConditional
-from autosar.models.category_string import CategoryString
-from autosar.models.code import Code
-from autosar.models.compiler import Compiler
-from autosar.models.dependency_on_artifact import DependencyOnArtifact
-from autosar.models.hw_element_subtypes_enum import HwElementSubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.linker import Linker
-from autosar.models.mc_support_data import McSupportData
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.per_instance_memory_size import PerInstanceMemorySize
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.programminglanguage_enum import ProgramminglanguageEnum
-from autosar.models.ref import Ref
-from autosar.models.resource_consumption import ResourceConsumption
-from autosar.models.revision_label_string import RevisionLabelString
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.string import String
-from autosar.models.swc_bsw_mapping_subtypes_enum import SwcBswMappingSubtypesEnum
-from autosar.models.swc_internal_behavior_subtypes_enum import SwcInternalBehaviorSubtypesEnum
+from .build_action_manifest_ref_conditional import BuildActionManifestRefConditional
+from .category_string import CategoryString
+from .code import Code
+from .compiler import Compiler
+from .dependency_on_artifact import DependencyOnArtifact
+from .hw_element_subtypes_enum import HwElementSubtypesEnum
+from .identifier import Identifier
+from .linker import Linker
+from .mc_support_data import McSupportData
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .per_instance_memory_size import PerInstanceMemorySize
+from .positive_integer import PositiveInteger
+from .programminglanguage_enum import ProgramminglanguageEnum
+from .ref import Ref
+from .resource_consumption import ResourceConsumption
+from .revision_label_string import RevisionLabelString
+from .short_name_fragment import ShortNameFragment
+from .string import String
+from .swc_bsw_mapping_subtypes_enum import SwcBswMappingSubtypesEnum
+from .swc_internal_behavior_subtypes_enum import SwcInternalBehaviorSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

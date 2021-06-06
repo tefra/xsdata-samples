@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.relief_opportunity import ReliefOpportunity
-from netex.models.relief_opportunity_ref import ReliefOpportunityRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .relief_opportunity import ReliefOpportunity
+from .relief_opportunity_ref import ReliefOpportunityRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

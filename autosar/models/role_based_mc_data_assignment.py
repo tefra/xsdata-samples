@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.identifier import Identifier
-from autosar.models.mc_data_instance_subtypes_enum import McDataInstanceSubtypesEnum
-from autosar.models.ref import Ref
-from autosar.models.rpt_execution_context_subtypes_enum import RptExecutionContextSubtypesEnum
+from .annotation import VariationPoint
+from .identifier import Identifier
+from .mc_data_instance_subtypes_enum import McDataInstanceSubtypesEnum
+from .ref import Ref
+from .rpt_execution_context_subtypes_enum import RptExecutionContextSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

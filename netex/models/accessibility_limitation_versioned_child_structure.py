@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.alternative_texts_rel_structure import VersionedChildStructure
-from netex.models.limitation_status_enumeration import LimitationStatusEnumeration
+from .alternative_texts_rel_structure import VersionedChildStructure
+from .limitation_status_enumeration import LimitationStatusEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

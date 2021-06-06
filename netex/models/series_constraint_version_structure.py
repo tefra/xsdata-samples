@@ -1,17 +1,17 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
-from netex.models.cell_versioned_child_structure import PriceableObjectVersionStructure
-from netex.models.connection_ref_structure import ConnectionRefStructure
-from netex.models.fare_basis_enumeration import FareBasisEnumeration
-from netex.models.fare_points_in_pattern_rel_structure import FarePointsInPatternRelStructure
-from netex.models.journey_pattern_refs_rel_structure import JourneyPatternRefsRelStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.private_code import PrivateCode
-from netex.models.routing_type_enumeration import RoutingTypeEnumeration
-from netex.models.series_constraint_prices_rel_structure import SeriesConstraintPricesRelStructure
-from netex.models.series_constraint_refs_rel_structure import SeriesConstraintRefsRelStructure
-from netex.models.series_type_enumeration import SeriesTypeEnumeration
+from .cell_versioned_child_structure import PriceableObjectVersionStructure
+from .connection_ref_structure import ConnectionRefStructure
+from .fare_basis_enumeration import FareBasisEnumeration
+from .fare_points_in_pattern_rel_structure import FarePointsInPatternRelStructure
+from .journey_pattern_refs_rel_structure import JourneyPatternRefsRelStructure
+from .multilingual_string import MultilingualString
+from .private_code import PrivateCode
+from .routing_type_enumeration import RoutingTypeEnumeration
+from .series_constraint_prices_rel_structure import SeriesConstraintPricesRelStructure
+from .series_constraint_refs_rel_structure import SeriesConstraintRefsRelStructure
+from .series_type_enumeration import SeriesTypeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

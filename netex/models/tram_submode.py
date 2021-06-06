@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from netex.models.tram_submode_enumeration import TramSubmodeEnumeration
+from .tram_submode_enumeration import TramSubmodeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

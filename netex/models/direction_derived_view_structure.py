@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.derived_view_structure import DerivedViewStructure
-from netex.models.direction_ref import DirectionRef
-from netex.models.multilingual_string import MultilingualString
+from .derived_view_structure import DerivedViewStructure
+from .direction_ref import DirectionRef
+from .multilingual_string import MultilingualString
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

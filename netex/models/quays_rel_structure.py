@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.quay import Quay
-from netex.models.quay_ref import QuayRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .quay import Quay
+from .quay_ref import QuayRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

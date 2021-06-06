@@ -1,14 +1,14 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDuration
-from netex.models.connecting_journey_view import ConnectingJourneyView
-from netex.models.connection_certainty_enumeration import ConnectionCertaintyEnumeration
-from netex.models.derived_view_structure import DerivedViewStructure
-from netex.models.line_derived_view_structure import LineDerivedViewStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.notice_assignments_rel_structure import NoticeAssignmentsRelStructure
-from netex.models.service_journey_interchange_ref import ServiceJourneyInterchangeRef
-from netex.models.vehicle_journey_ref_structure import VehicleJourneyRefStructure
+from .connecting_journey_view import ConnectingJourneyView
+from .connection_certainty_enumeration import ConnectionCertaintyEnumeration
+from .derived_view_structure import DerivedViewStructure
+from .line_derived_view_structure import LineDerivedViewStructure
+from .multilingual_string import MultilingualString
+from .notice_assignments_rel_structure import NoticeAssignmentsRelStructure
+from .service_journey_interchange_ref import ServiceJourneyInterchangeRef
+from .vehicle_journey_ref_structure import VehicleJourneyRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

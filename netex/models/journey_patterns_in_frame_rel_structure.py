@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.dead_run_journey_pattern import DeadRunJourneyPattern
-from netex.models.journey_pattern_2 import JourneyPattern2
-from netex.models.journey_pattern_view import JourneyPatternView
-from netex.models.link_sequence_version_structure import JourneyPattern1
-from netex.models.service_journey_pattern import ServiceJourneyPattern
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .dead_run_journey_pattern import DeadRunJourneyPattern
+from .journey_pattern_2 import JourneyPattern2
+from .journey_pattern_view import JourneyPatternView
+from .link_sequence_version_structure import JourneyPattern1
+from .service_journey_pattern import ServiceJourneyPattern
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

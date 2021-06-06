@@ -1,26 +1,26 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.blueprint_policy_list import BlueprintPolicyList
-from autosar.models.blueprint_policy_not_modifiable import BlueprintPolicyNotModifiable
-from autosar.models.blueprint_policy_single import BlueprintPolicySingle
-from autosar.models.boolean import Boolean
-from autosar.models.category_string import CategoryString
-from autosar.models.identifier import Identifier
-from autosar.models.invalidation_policy import InvalidationPolicy
-from autosar.models.meta_data_item_set import MetaDataItemSet
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.service_provider_enum import ServiceProviderEnum
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.string import String
-from autosar.models.symbol_props import SymbolProps
-from autosar.models.variable_data_prototype import VariableDataPrototype
+from .blueprint_policy_list import BlueprintPolicyList
+from .blueprint_policy_not_modifiable import BlueprintPolicyNotModifiable
+from .blueprint_policy_single import BlueprintPolicySingle
+from .boolean import Boolean
+from .category_string import CategoryString
+from .identifier import Identifier
+from .invalidation_policy import InvalidationPolicy
+from .meta_data_item_set import MetaDataItemSet
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .service_provider_enum import ServiceProviderEnum
+from .short_name_fragment import ShortNameFragment
+from .string import String
+from .symbol_props import SymbolProps
+from .variable_data_prototype import VariableDataPrototype
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.headway_journey_group import HeadwayJourneyGroup
-from netex.models.headway_journey_group_ref import HeadwayJourneyGroupRef
-from netex.models.rhythmical_journey_group import RhythmicalJourneyGroup
-from netex.models.rhythmical_journey_group_ref import RhythmicalJourneyGroupRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .headway_journey_group import HeadwayJourneyGroup
+from .headway_journey_group_ref import HeadwayJourneyGroupRef
+from .rhythmical_journey_group import RhythmicalJourneyGroup
+from .rhythmical_journey_group_ref import RhythmicalJourneyGroupRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

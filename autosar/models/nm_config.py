@@ -1,25 +1,25 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.can_nm_cluster import CanNmCluster
-from autosar.models.can_nm_cluster_coupling import CanNmClusterCoupling
-from autosar.models.category_string import CategoryString
-from autosar.models.flexray_nm_cluster import FlexrayNmCluster
-from autosar.models.flexray_nm_cluster_coupling import FlexrayNmClusterCoupling
-from autosar.models.identifier import Identifier
-from autosar.models.j_1939_nm_cluster import J1939NmCluster
-from autosar.models.lin_nm_cluster import LinNmCluster
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.nm_ecu import NmEcu
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.udp_nm_cluster import UdpNmCluster
-from autosar.models.udp_nm_cluster_coupling import UdpNmClusterCoupling
+from .can_nm_cluster import CanNmCluster
+from .can_nm_cluster_coupling import CanNmClusterCoupling
+from .category_string import CategoryString
+from .flexray_nm_cluster import FlexrayNmCluster
+from .flexray_nm_cluster_coupling import FlexrayNmClusterCoupling
+from .identifier import Identifier
+from .j_1939_nm_cluster import J1939NmCluster
+from .lin_nm_cluster import LinNmCluster
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .nm_ecu import NmEcu
+from .short_name_fragment import ShortNameFragment
+from .udp_nm_cluster import UdpNmCluster
+from .udp_nm_cluster_coupling import UdpNmClusterCoupling
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

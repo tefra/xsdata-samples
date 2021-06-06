@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.locale_structure import LocaleStructure
+from .locale_structure import LocaleStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.frame_containment_structure import FrameContainmentStructure
-from netex.models.whitelist import Whitelist
+from .frame_containment_structure import FrameContainmentStructure
+from .whitelist import Whitelist
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

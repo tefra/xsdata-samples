@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.abstract_curve_type import AbstractCurveType
+from .abstract_curve_type import AbstractCurveType
 
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 

@@ -1,14 +1,14 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDuration
-from netex.models.access_mode_enumeration import AccessModeEnumeration
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.connection_certainty_enumeration import ConnectionCertaintyEnumeration
-from netex.models.connection_ref_structure import ConnectionRefStructure
-from netex.models.external_object_ref_structure import ExternalObjectRefStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.notice_assignments_rel_structure import NoticeAssignmentsRelStructure
-from netex.models.private_code import PrivateCode
+from .access_mode_enumeration import AccessModeEnumeration
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .connection_certainty_enumeration import ConnectionCertaintyEnumeration
+from .connection_ref_structure import ConnectionRefStructure
+from .external_object_ref_structure import ExternalObjectRefStructure
+from .multilingual_string import MultilingualString
+from .notice_assignments_rel_structure import NoticeAssignmentsRelStructure
+from .private_code import PrivateCode
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

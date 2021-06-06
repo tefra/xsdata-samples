@@ -1,29 +1,29 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.access_control_enum import AccessControlEnum
-from autosar.models.annotation import (
+from .access_control_enum import AccessControlEnum
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.can_communication_connector import CanCommunicationConnector
-from autosar.models.category_string import CategoryString
-from autosar.models.eth_ip_props_subtypes_enum import EthIpPropsSubtypesEnum
-from autosar.models.eth_tcp_ip_icmp_props_subtypes_enum import EthTcpIpIcmpPropsSubtypesEnum
-from autosar.models.eth_tcp_ip_props_subtypes_enum import EthTcpIpPropsSubtypesEnum
-from autosar.models.ethernet_communication_connector import EthernetCommunicationConnector
-from autosar.models.flexray_communication_connector import FlexrayCommunicationConnector
-from autosar.models.identifier import Identifier
-from autosar.models.lin_communication_connector import LinCommunicationConnector
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.someip_service_discovery import SomeipServiceDiscovery
-from autosar.models.time_value import TimeValue
-from autosar.models.ttcan_communication_connector import TtcanCommunicationConnector
-from autosar.models.user_defined_communication_connector import UserDefinedCommunicationConnector
+from .can_communication_connector import CanCommunicationConnector
+from .category_string import CategoryString
+from .eth_ip_props_subtypes_enum import EthIpPropsSubtypesEnum
+from .eth_tcp_ip_icmp_props_subtypes_enum import EthTcpIpIcmpPropsSubtypesEnum
+from .eth_tcp_ip_props_subtypes_enum import EthTcpIpPropsSubtypesEnum
+from .ethernet_communication_connector import EthernetCommunicationConnector
+from .flexray_communication_connector import FlexrayCommunicationConnector
+from .identifier import Identifier
+from .lin_communication_connector import LinCommunicationConnector
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
+from .someip_service_discovery import SomeipServiceDiscovery
+from .time_value import TimeValue
+from .ttcan_communication_connector import TtcanCommunicationConnector
+from .user_defined_communication_connector import UserDefinedCommunicationConnector
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

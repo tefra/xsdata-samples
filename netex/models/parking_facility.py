@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.parking_facility_enumeration import ParkingFacilityEnumeration
+from .parking_facility_enumeration import ParkingFacilityEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

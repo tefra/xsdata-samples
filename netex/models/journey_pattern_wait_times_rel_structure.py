@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.journey_pattern_wait_time import JourneyPatternWaitTime
-from netex.models.journey_pattern_wait_time_ref import JourneyPatternWaitTimeRef
-from netex.models.strict_containment_aggregation_structure import StrictContainmentAggregationStructure
+from .journey_pattern_wait_time import JourneyPatternWaitTime
+from .journey_pattern_wait_time_ref import JourneyPatternWaitTimeRef
+from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

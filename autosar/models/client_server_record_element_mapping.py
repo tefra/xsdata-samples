@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.application_record_element_subtypes_enum import ApplicationRecordElementSubtypesEnum
-from autosar.models.argument_data_prototype_subtypes_enum import ArgumentDataPrototypeSubtypesEnum
-from autosar.models.implementation_data_type_element_subtypes_enum import ImplementationDataTypeElementSubtypesEnum
-from autosar.models.indexed_array_element import IndexedArrayElement
-from autosar.models.ref import Ref
-from autosar.models.system_signal_subtypes_enum import SystemSignalSubtypesEnum
+from .application_record_element_subtypes_enum import ApplicationRecordElementSubtypesEnum
+from .argument_data_prototype_subtypes_enum import ArgumentDataPrototypeSubtypesEnum
+from .implementation_data_type_element_subtypes_enum import ImplementationDataTypeElementSubtypesEnum
+from .indexed_array_element import IndexedArrayElement
+from .ref import Ref
+from .system_signal_subtypes_enum import SystemSignalSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

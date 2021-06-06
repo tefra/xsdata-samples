@@ -1,19 +1,19 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.country_ref import CountryRef
-from netex.models.external_object_ref_structure import ExternalObjectRefStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.presentation_structure import PresentationStructure
-from netex.models.private_code import PrivateCode
-from netex.models.private_code_structure import PrivateCodeStructure
-from netex.models.request_method_type_enumeration import RequestMethodTypeEnumeration
-from netex.models.stop_area_refs_rel_structure import StopAreaRefsRelStructure
-from netex.models.stop_type_enumeration import StopTypeEnumeration
-from netex.models.tariff_zone_refs_rel_structure import TariffZoneRefsRelStructure
-from netex.models.timing_point_version_structure import TimingPointVersionStructure
-from netex.models.topographic_place_ref import TopographicPlaceRef
-from netex.models.topographic_place_view import TopographicPlaceView
-from netex.models.vehicle_mode_enumeration import VehicleModeEnumeration
+from .country_ref import CountryRef
+from .external_object_ref_structure import ExternalObjectRefStructure
+from .multilingual_string import MultilingualString
+from .presentation_structure import PresentationStructure
+from .private_code import PrivateCode
+from .private_code_structure import PrivateCodeStructure
+from .request_method_type_enumeration import RequestMethodTypeEnumeration
+from .stop_area_refs_rel_structure import StopAreaRefsRelStructure
+from .stop_type_enumeration import StopTypeEnumeration
+from .tariff_zone_refs_rel_structure import TariffZoneRefsRelStructure
+from .timing_point_version_structure import TimingPointVersionStructure
+from .topographic_place_ref import TopographicPlaceRef
+from .topographic_place_view import TopographicPlaceView
+from .vehicle_mode_enumeration import VehicleModeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

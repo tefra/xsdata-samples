@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.capping_rule_price import CappingRulePrice
-from netex.models.capping_rule_price_ref import CappingRulePriceRef
-from netex.models.cell_ref_1 import CellRef1
-from netex.models.cell_ref_2 import CellRef2
-from netex.models.strict_containment_aggregation_structure import StrictContainmentAggregationStructure
+from .capping_rule_price import CappingRulePrice
+from .capping_rule_price_ref import CappingRulePriceRef
+from .cell_ref_1 import CellRef1
+from .cell_ref_2 import CellRef2
+from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

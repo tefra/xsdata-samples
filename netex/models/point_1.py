@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.point_type import PointType
+from .point_type import PointType
 
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 

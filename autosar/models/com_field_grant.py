@@ -1,22 +1,22 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.abstract_iam_remote_subject_subtypes_enum import AbstractIamRemoteSubjectSubtypesEnum
-from autosar.models.adaptive_platform_service_instance_subtypes_enum import AdaptivePlatformServiceInstanceSubtypesEnum
-from autosar.models.annotation import (
+from .abstract_iam_remote_subject_subtypes_enum import AbstractIamRemoteSubjectSubtypesEnum
+from .adaptive_platform_service_instance_subtypes_enum import AdaptivePlatformServiceInstanceSubtypesEnum
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.com_field_grant_design_subtypes_enum import ComFieldGrantDesignSubtypesEnum
-from autosar.models.field_access_enum import FieldAccessEnum
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.ref import Ref
-from autosar.models.service_field_deployment_subtypes_enum import ServiceFieldDeploymentSubtypesEnum
-from autosar.models.short_name_fragment import ShortNameFragment
+from .category_string import CategoryString
+from .com_field_grant_design_subtypes_enum import ComFieldGrantDesignSubtypesEnum
+from .field_access_enum import FieldAccessEnum
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .ref import Ref
+from .service_field_deployment_subtypes_enum import ServiceFieldDeploymentSubtypesEnum
+from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

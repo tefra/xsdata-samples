@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDateTime
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.holiday_type_enumeration import HolidayTypeEnumeration
-from netex.models.multilingual_string import MultilingualString
-from netex.models.operating_day_ref_structure import OperatingDayRefStructure
-from netex.models.season_enumeration import SeasonEnumeration
-from netex.models.service_calendar_ref import ServiceCalendarRef
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .holiday_type_enumeration import HolidayTypeEnumeration
+from .multilingual_string import MultilingualString
+from .operating_day_ref_structure import OperatingDayRefStructure
+from .season_enumeration import SeasonEnumeration
+from .service_calendar_ref import ServiceCalendarRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

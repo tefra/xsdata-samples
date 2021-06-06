@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.road_link_ref_structure import RoadLinkRefStructure
+from .road_link_ref_structure import RoadLinkRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

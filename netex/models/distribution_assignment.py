@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.distribution_assignment_version_structure import DistributionAssignmentVersionStructure
+from .distribution_assignment_version_structure import DistributionAssignmentVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

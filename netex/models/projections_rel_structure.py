@@ -1,20 +1,20 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.complex_feature_projection import ComplexFeatureProjection
-from netex.models.complex_feature_projection_ref import ComplexFeatureProjectionRef
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.link_projection import LinkProjection
-from netex.models.link_projection_ref import LinkProjectionRef
-from netex.models.link_sequence_projection import LinkSequenceProjection
-from netex.models.link_sequence_projection_ref import LinkSequenceProjectionRef
-from netex.models.point_projection import PointProjection
-from netex.models.point_projection_ref import PointProjectionRef
-from netex.models.projection import Projection
-from netex.models.projection_ref import ProjectionRef
-from netex.models.topographic_projection import TopographicProjection
-from netex.models.topographic_projection_ref import TopographicProjectionRef
-from netex.models.zone_projection import ZoneProjection
-from netex.models.zone_projection_ref import ZoneProjectionRef
+from .complex_feature_projection import ComplexFeatureProjection
+from .complex_feature_projection_ref import ComplexFeatureProjectionRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .link_projection import LinkProjection
+from .link_projection_ref import LinkProjectionRef
+from .link_sequence_projection import LinkSequenceProjection
+from .link_sequence_projection_ref import LinkSequenceProjectionRef
+from .point_projection import PointProjection
+from .point_projection_ref import PointProjectionRef
+from .projection import Projection
+from .projection_ref import ProjectionRef
+from .topographic_projection import TopographicProjection
+from .topographic_projection_ref import TopographicProjectionRef
+from .zone_projection import ZoneProjection
+from .zone_projection_ref import ZoneProjectionRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

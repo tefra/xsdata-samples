@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
-from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
+from ..core.datatypes_base import (
     Cd,
     Ce,
     Cs,
@@ -10,7 +10,7 @@ from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
     St,
     TsExplicit,
 )
-from common_types.models.hl7_v3.ne2008.core.voc import (
+from ..core.voc import (
     ActClass,
     ActClassControlAct,
     ActMood,
@@ -35,14 +35,14 @@ from common_types.models.hl7_v3.ne2008.core.voc import (
     XActReplaceOrRevise,
     XSuccReplPrev,
 )
-from common_types.models.hl7_v3.ne2008.multi_cache.mcci_mt000300_uv01 import (
+from .mcci_mt000300_uv01 import (
     McciMt000300Uv01Acknowledgement,
     McciMt000300Uv01AttentionLine,
     McciMt000300Uv01Receiver,
     McciMt000300Uv01RespondTo,
     McciMt000300Uv01Sender,
 )
-from common_types.models.hl7_v3.ne2008.multi_cache.mfmi_mt700712_uv01 import (
+from .mfmi_mt700712_uv01 import (
     MfmiMt700712Uv01Author2,
     MfmiMt700712Uv01AuthorOrPerformer,
     MfmiMt700712Uv01Custodian,
@@ -55,8 +55,8 @@ from common_types.models.hl7_v3.ne2008.multi_cache.mfmi_mt700712_uv01 import (
     MfmiMt700712Uv01Reason,
     MfmiMt700712Uv01ReplacementOf,
 )
-from common_types.models.hl7_v3.ne2008.multi_cache.qupc_mt040300_uv01 import QupcMt040300Uv01ParameterList
-from common_types.models.hl7_v3.ne2008.multi_cache.repc_mt004000_uv01 import RepcMt004000Uv01CareProvisionEvent
+from .qupc_mt040300_uv01 import QupcMt040300Uv01ParameterList
+from .repc_mt004000_uv01 import RepcMt004000Uv01CareProvisionEvent
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

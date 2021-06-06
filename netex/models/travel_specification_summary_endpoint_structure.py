@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.address_ref import AddressRef
-from netex.models.boarding_position_ref import BoardingPositionRef
-from netex.models.postal_address_ref import PostalAddressRef
-from netex.models.quay_ref import QuayRef
-from netex.models.road_address_ref import RoadAddressRef
-from netex.models.scheduled_stop_point_view import ScheduledStopPointView
-from netex.models.tariff_zone_ref_1 import TariffZoneRef1
-from netex.models.topographic_place_view import TopographicPlaceView
+from .address_ref import AddressRef
+from .boarding_position_ref import BoardingPositionRef
+from .postal_address_ref import PostalAddressRef
+from .quay_ref import QuayRef
+from .road_address_ref import RoadAddressRef
+from .scheduled_stop_point_view import ScheduledStopPointView
+from .tariff_zone_ref_1 import TariffZoneRef1
+from .topographic_place_view import TopographicPlaceView
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.point_of_interest_vehicle_entrance_ref_structure import PointOfInterestVehicleEntranceRefStructure
+from .point_of_interest_vehicle_entrance_ref_structure import PointOfInterestVehicleEntranceRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

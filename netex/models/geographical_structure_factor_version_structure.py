@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
-from netex.models.cell_versioned_child_structure import FareStructureFactorVersionStructure
-from netex.models.distance_matrix_element_ref import DistanceMatrixElementRef
-from netex.models.geographical_interval_ref import GeographicalIntervalRef
-from netex.models.geographical_unit_ref import GeographicalUnitRef
-from netex.models.parking_tariff_ref import ParkingTariffRef
-from netex.models.tariff_ref import TariffRef
+from .cell_versioned_child_structure import FareStructureFactorVersionStructure
+from .distance_matrix_element_ref import DistanceMatrixElementRef
+from .geographical_interval_ref import GeographicalIntervalRef
+from .geographical_unit_ref import GeographicalUnitRef
+from .parking_tariff_ref import ParkingTariffRef
+from .tariff_ref import TariffRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,17 +1,17 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from common_types.models.hl7_v3.ne2008.core.datatypes import (
+from ..core.datatypes import (
     RtoMoPq,
     RtoPqPq,
 )
-from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
+from ..core.datatypes_base import (
     Cd,
     Cs,
     Ii,
     IvlTsExplicit,
     Mo,
 )
-from common_types.models.hl7_v3.ne2008.core.voc import (
+from ..core.voc import (
     ActClass,
     ActMood,
     NullFlavor,

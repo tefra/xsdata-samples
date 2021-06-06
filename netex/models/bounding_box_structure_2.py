@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.location_structure_2 import LocationStructure2
+from .location_structure_2 import LocationStructure2
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

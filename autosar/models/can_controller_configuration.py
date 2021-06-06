@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.can_controller_fd_configuration import CanControllerFdConfiguration
-from autosar.models.can_controller_fd_configuration_requirements import CanControllerFdConfigurationRequirements
-from autosar.models.integer import Integer
+from .can_controller_fd_configuration import CanControllerFdConfiguration
+from .can_controller_fd_configuration_requirements import CanControllerFdConfigurationRequirements
+from .integer import Integer
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.vehicle_type_stop_assignment_ref_structure import VehicleTypeStopAssignmentRefStructure
+from .vehicle_type_stop_assignment_ref_structure import VehicleTypeStopAssignmentRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

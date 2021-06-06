@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.error_condition_structure import ErrorConditionStructure
+from .error_condition_structure import ErrorConditionStructure
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

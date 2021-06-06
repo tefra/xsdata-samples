@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.align_enum_simple import AlignEnumSimple
-from autosar.models.colspec import Colspec
-from autosar.models.tbody import Tbody
+from .align_enum_simple import AlignEnumSimple
+from .colspec import Colspec
+from .tbody import Tbody
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
-from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
+from ..core.datatypes_base import (
     AdExplicit,
     Any,
     Cd,
@@ -18,7 +18,7 @@ from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
     Tn,
     TsExplicit,
 )
-from common_types.models.hl7_v3.ne2008.core.voc import (
+from ..core.voc import (
     ActClassContract,
     ActClassObservation,
     ActClassRoot,
@@ -54,7 +54,7 @@ from common_types.models.hl7_v3.ne2008.core.voc import (
     XRoleClassCredentialedEntity,
     XRoleClassPayeePolicyRelationship,
 )
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt440001_uv import CoctMt440001UvValuedItem
+from .coct_mt440001_uv import CoctMt440001UvValuedItem
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

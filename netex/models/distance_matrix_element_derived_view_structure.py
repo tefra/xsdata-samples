@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.derived_view_structure import DerivedViewStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
-from netex.models.tariff_zone_ref_structure import TariffZoneRefStructure
+from .derived_view_structure import DerivedViewStructure
+from .multilingual_string import MultilingualString
+from .scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
+from .tariff_zone_ref_structure import TariffZoneRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

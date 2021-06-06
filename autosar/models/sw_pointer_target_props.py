@@ -1,52 +1,52 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.abstract_implementation_data_type_subtypes_enum import AbstractImplementationDataTypeSubtypesEnum
-from autosar.models.alignment_type import AlignmentType
-from autosar.models.annotation import (
+from .abstract_implementation_data_type_subtypes_enum import AbstractImplementationDataTypeSubtypesEnum
+from .alignment_type import AlignmentType
+from .annotation import (
     Annotation,
     VariationPoint,
 )
-from autosar.models.application_primitive_data_type_subtypes_enum import ApplicationPrimitiveDataTypeSubtypesEnum
-from autosar.models.application_rule_based_value_specification import ApplicationRuleBasedValueSpecification
-from autosar.models.application_value_specification import ApplicationValueSpecification
-from autosar.models.autosar_variable_ref import AutosarVariableRef
-from autosar.models.boolean import Boolean
-from autosar.models.bsw_module_entry_subtypes_enum import BswModuleEntrySubtypesEnum
-from autosar.models.compu_method_subtypes_enum import CompuMethodSubtypesEnum
-from autosar.models.constant_reference import ConstantReference
-from autosar.models.data_constr_subtypes_enum import DataConstrSubtypesEnum
-from autosar.models.display_format_string import DisplayFormatString
-from autosar.models.display_presentation_enum import DisplayPresentationEnum
-from autosar.models.float_mod import FloatType
-from autosar.models.identifier import Identifier
-from autosar.models.mc_data_instance_subtypes_enum import McDataInstanceSubtypesEnum
-from autosar.models.multidimensional_time import MultidimensionalTime
-from autosar.models.native_declaration_string import NativeDeclarationString
-from autosar.models.not_available_value_specification import NotAvailableValueSpecification
-from autosar.models.numerical_rule_based_value_specification import NumericalRuleBasedValueSpecification
-from autosar.models.numerical_value import NumericalValue
-from autosar.models.numerical_value_specification import NumericalValueSpecification
-from autosar.models.numerical_value_variation_point import NumericalValueVariationPoint
-from autosar.models.record_value_specification import (
+from .application_primitive_data_type_subtypes_enum import ApplicationPrimitiveDataTypeSubtypesEnum
+from .application_rule_based_value_specification import ApplicationRuleBasedValueSpecification
+from .application_value_specification import ApplicationValueSpecification
+from .autosar_variable_ref import AutosarVariableRef
+from .boolean import Boolean
+from .bsw_module_entry_subtypes_enum import BswModuleEntrySubtypesEnum
+from .compu_method_subtypes_enum import CompuMethodSubtypesEnum
+from .constant_reference import ConstantReference
+from .data_constr_subtypes_enum import DataConstrSubtypesEnum
+from .display_format_string import DisplayFormatString
+from .display_presentation_enum import DisplayPresentationEnum
+from .float_mod import FloatType
+from .identifier import Identifier
+from .mc_data_instance_subtypes_enum import McDataInstanceSubtypesEnum
+from .multidimensional_time import MultidimensionalTime
+from .native_declaration_string import NativeDeclarationString
+from .not_available_value_specification import NotAvailableValueSpecification
+from .numerical_rule_based_value_specification import NumericalRuleBasedValueSpecification
+from .numerical_value import NumericalValue
+from .numerical_value_specification import NumericalValueSpecification
+from .numerical_value_variation_point import NumericalValueVariationPoint
+from .record_value_specification import (
     ApplicationAssocMapValueSpecification,
     ArrayValueSpecification,
     CompositeRuleBasedValueSpecification,
     RecordValueSpecification,
 )
-from autosar.models.ref import Ref
-from autosar.models.reference_value_specification import ReferenceValueSpecification
-from autosar.models.sw_addr_method_subtypes_enum import SwAddrMethodSubtypesEnum
-from autosar.models.sw_base_type_subtypes_enum import SwBaseTypeSubtypesEnum
-from autosar.models.sw_bit_representation import SwBitRepresentation
-from autosar.models.sw_calibration_access_enum import SwCalibrationAccessEnum
-from autosar.models.sw_calprm_axis_set import SwCalprmAxisSet
-from autosar.models.sw_data_dependency import SwDataDependency
-from autosar.models.sw_impl_policy_enum import SwImplPolicyEnum
-from autosar.models.sw_record_layout_subtypes_enum import SwRecordLayoutSubtypesEnum
-from autosar.models.sw_text_props import SwTextProps
-from autosar.models.sw_variable_ref_proxy import SwVariableRefProxy
-from autosar.models.text_value_specification import TextValueSpecification
-from autosar.models.unit_subtypes_enum import UnitSubtypesEnum
+from .ref import Ref
+from .reference_value_specification import ReferenceValueSpecification
+from .sw_addr_method_subtypes_enum import SwAddrMethodSubtypesEnum
+from .sw_base_type_subtypes_enum import SwBaseTypeSubtypesEnum
+from .sw_bit_representation import SwBitRepresentation
+from .sw_calibration_access_enum import SwCalibrationAccessEnum
+from .sw_calprm_axis_set import SwCalprmAxisSet
+from .sw_data_dependency import SwDataDependency
+from .sw_impl_policy_enum import SwImplPolicyEnum
+from .sw_record_layout_subtypes_enum import SwRecordLayoutSubtypesEnum
+from .sw_text_props import SwTextProps
+from .sw_variable_ref_proxy import SwVariableRefProxy
+from .text_value_specification import TextValueSpecification
+from .unit_subtypes_enum import UnitSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

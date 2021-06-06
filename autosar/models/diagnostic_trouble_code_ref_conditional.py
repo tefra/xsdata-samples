@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.diagnostic_trouble_code_subtypes_enum import DiagnosticTroubleCodeSubtypesEnum
-from autosar.models.ref import Ref
+from .annotation import VariationPoint
+from .diagnostic_trouble_code_subtypes_enum import DiagnosticTroubleCodeSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,22 +1,22 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
+from ..core.datatypes_base import (
     Cd,
     Cs,
     Ii,
     IntType,
     IvlTsExplicit,
 )
-from common_types.models.hl7_v3.ne2008.core.voc import (
+from ..core.voc import (
     ActClass,
     ActMood,
     NullFlavor,
     ParticipationTargetSubject,
     ParticipationType,
 )
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt050002_uv04 import CoctMt050002Uv04Patient
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt090100_uv01 import CoctMt090100Uv01AssignedPerson
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt090200_uv01 import CoctMt090200Uv01AssignedOrganization
+from .coct_mt050002_uv04 import CoctMt050002Uv04Patient
+from .coct_mt090100_uv01 import CoctMt090100Uv01AssignedPerson
+from .coct_mt090200_uv01 import CoctMt090200Uv01AssignedOrganization
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.customer_ref import CustomerRef
-from netex.models.security_listing_versioned_child_structure import SecurityListingVersionedChildStructure
+from .customer_ref import CustomerRef
+from .security_listing_versioned_child_structure import SecurityListingVersionedChildStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

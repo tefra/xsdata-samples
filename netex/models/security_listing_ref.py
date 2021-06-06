@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.security_listing_ref_structure import SecurityListingRefStructure
+from .security_listing_ref_structure import SecurityListingRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

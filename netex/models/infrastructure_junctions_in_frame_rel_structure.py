@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.railway_junction import RailwayJunction
-from netex.models.road_junction import RoadJunction
-from netex.models.wire_junction import WireJunction
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .railway_junction import RailwayJunction
+from .road_junction import RoadJunction
+from .wire_junction import WireJunction
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

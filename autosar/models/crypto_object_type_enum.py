@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.crypto_object_type_enum_simple import CryptoObjectTypeEnumSimple
+from .crypto_object_type_enum_simple import CryptoObjectTypeEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

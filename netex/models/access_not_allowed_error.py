@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.access_not_allowed_error_structure import AccessNotAllowedErrorStructure
+from .access_not_allowed_error_structure import AccessNotAllowedErrorStructure
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

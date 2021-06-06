@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import DocumentationBlock
-from autosar.models.integer import Integer
-from autosar.models.time_value import TimeValue
+from .annotation import DocumentationBlock
+from .integer import Integer
+from .time_value import TimeValue
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

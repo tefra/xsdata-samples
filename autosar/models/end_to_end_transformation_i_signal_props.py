@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     DocumentationBlock,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.end_to_end_transformation_i_signal_props_conditional import EndToEndTransformationISignalPropsConditional
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .category_string import CategoryString
+from .end_to_end_transformation_i_signal_props_conditional import EndToEndTransformationISignalPropsConditional
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

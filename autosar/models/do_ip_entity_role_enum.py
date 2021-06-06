@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.do_ip_entity_role_enum_simple import DoIpEntityRoleEnumSimple
+from .do_ip_entity_role_enum_simple import DoIpEntityRoleEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

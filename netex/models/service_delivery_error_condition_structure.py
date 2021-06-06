@@ -1,20 +1,20 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.access_not_allowed_error import AccessNotAllowedError
-from netex.models.allowed_resource_usage_exceeded_error import AllowedResourceUsageExceededError
-from netex.models.beyond_data_horizon import BeyondDataHorizon
-from netex.models.capability_not_supported_error import CapabilityNotSupportedError
-from netex.models.endpoint_denied_access_error import EndpointDeniedAccessError
-from netex.models.endpoint_not_available_access_error import EndpointNotAvailableAccessError
-from netex.models.invalid_data_references_error import InvalidDataReferencesError
-from netex.models.no_info_for_topic_error import NoInfoForTopicError
-from netex.models.other_error import OtherError
-from netex.models.parameters_ignored_error import ParametersIgnoredError
-from netex.models.service_not_available_error import ServiceNotAvailableError
-from netex.models.unapproved_key_access_error import UnapprovedKeyAccessError
-from netex.models.unknown_endpoint_error import UnknownEndpointError
-from netex.models.unknown_extensions_error import UnknownExtensionsError
-from netex.models.unknown_participant_error import UnknownParticipantError
+from .access_not_allowed_error import AccessNotAllowedError
+from .allowed_resource_usage_exceeded_error import AllowedResourceUsageExceededError
+from .beyond_data_horizon import BeyondDataHorizon
+from .capability_not_supported_error import CapabilityNotSupportedError
+from .endpoint_denied_access_error import EndpointDeniedAccessError
+from .endpoint_not_available_access_error import EndpointNotAvailableAccessError
+from .invalid_data_references_error import InvalidDataReferencesError
+from .no_info_for_topic_error import NoInfoForTopicError
+from .other_error import OtherError
+from .parameters_ignored_error import ParametersIgnoredError
+from .service_not_available_error import ServiceNotAvailableError
+from .unapproved_key_access_error import UnapprovedKeyAccessError
+from .unknown_endpoint_error import UnknownEndpointError
+from .unknown_extensions_error import UnknownExtensionsError
+from .unknown_participant_error import UnknownParticipantError
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

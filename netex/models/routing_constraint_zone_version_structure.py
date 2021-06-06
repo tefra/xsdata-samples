@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.group_of_lines_ref import GroupOfLinesRef
-from netex.models.line_refs_rel_structure import LineRefsRelStructure
-from netex.models.network_ref import NetworkRef
-from netex.models.points_in_journey_pattern_rel_structure import PointsInJourneyPatternRelStructure
-from netex.models.zone_use_enumeration import ZoneUseEnumeration
-from netex.models.zone_version_structure import ZoneVersionStructure
+from .group_of_lines_ref import GroupOfLinesRef
+from .line_refs_rel_structure import LineRefsRelStructure
+from .network_ref import NetworkRef
+from .points_in_journey_pattern_rel_structure import PointsInJourneyPatternRelStructure
+from .zone_use_enumeration import ZoneUseEnumeration
+from .zone_version_structure import ZoneVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

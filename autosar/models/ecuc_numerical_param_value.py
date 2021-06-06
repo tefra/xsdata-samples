@@ -1,14 +1,14 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     Annotation,
     VariationPoint,
 )
-from autosar.models.boolean import Boolean
-from autosar.models.ecuc_parameter_def_subtypes_enum import EcucParameterDefSubtypesEnum
-from autosar.models.numerical_value_variation_point import NumericalValueVariationPoint
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
+from .boolean import Boolean
+from .ecuc_parameter_def_subtypes_enum import EcucParameterDefSubtypesEnum
+from .numerical_value_variation_point import NumericalValueVariationPoint
+from .positive_integer import PositiveInteger
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

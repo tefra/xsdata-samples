@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDateTime
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.type_of_version_ref import TypeOfVersionRef
-from netex.models.version_ref_structure import VersionRefStructure
-from netex.models.version_status_enumeration import VersionStatusEnumeration
-from netex.models.version_type_enumeration import VersionTypeEnumeration
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .multilingual_string import MultilingualString
+from .type_of_version_ref import TypeOfVersionRef
+from .version_ref_structure import VersionRefStructure
+from .version_status_enumeration import VersionStatusEnumeration
+from .version_type_enumeration import VersionTypeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

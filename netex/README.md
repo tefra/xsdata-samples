@@ -3,7 +3,7 @@
 
 ## Notes
 
-- Auto generated models with custers style
+- Auto generated models with clusters style and relative imports
 - Verify bindings from samples
 
 

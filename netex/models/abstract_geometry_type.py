@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.abstract_gmltype import AbstractGmltype
+from .abstract_gmltype import AbstractGmltype
 
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 

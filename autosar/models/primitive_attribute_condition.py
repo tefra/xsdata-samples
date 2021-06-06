@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.boolean import Boolean
-from autosar.models.limit_value import LimitValue
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.primitive_attribute_tailoring_subtypes_enum import PrimitiveAttributeTailoringSubtypesEnum
-from autosar.models.ref import Ref
-from autosar.models.regular_expression import RegularExpression
+from .boolean import Boolean
+from .limit_value import LimitValue
+from .positive_integer import PositiveInteger
+from .primitive_attribute_tailoring_subtypes_enum import PrimitiveAttributeTailoringSubtypesEnum
+from .ref import Ref
+from .regular_expression import RegularExpression
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.stop_finder_request_ref_structure import StopFinderRequestRefStructure
+from .stop_finder_request_ref_structure import StopFinderRequestRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

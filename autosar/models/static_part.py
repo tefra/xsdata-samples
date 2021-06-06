@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.i_signal_i_pdu_subtypes_enum import ISignalIPduSubtypesEnum
-from autosar.models.ref import Ref
-from autosar.models.segment_position import SegmentPosition
+from .annotation import VariationPoint
+from .i_signal_i_pdu_subtypes_enum import ISignalIPduSubtypesEnum
+from .ref import Ref
+from .segment_position import SegmentPosition
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

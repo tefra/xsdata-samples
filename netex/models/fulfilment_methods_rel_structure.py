@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.fulfilment_method import FulfilmentMethod
-from netex.models.fulfilment_method_ref import FulfilmentMethodRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .fulfilment_method import FulfilmentMethod
+from .fulfilment_method_ref import FulfilmentMethodRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

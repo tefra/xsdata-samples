@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.service_capabilities_request_structure import ServiceCapabilitiesRequestStructure
+from .service_capabilities_request_structure import ServiceCapabilitiesRequestStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

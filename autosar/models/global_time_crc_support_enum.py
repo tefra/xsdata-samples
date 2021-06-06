@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.global_time_crc_support_enum_simple import GlobalTimeCrcSupportEnumSimple
+from .global_time_crc_support_enum_simple import GlobalTimeCrcSupportEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

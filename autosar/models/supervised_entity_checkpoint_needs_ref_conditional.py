@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.ref import Ref
-from autosar.models.supervised_entity_checkpoint_needs_subtypes_enum import SupervisedEntityCheckpointNeedsSubtypesEnum
+from .annotation import VariationPoint
+from .ref import Ref
+from .supervised_entity_checkpoint_needs_subtypes_enum import SupervisedEntityCheckpointNeedsSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

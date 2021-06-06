@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
-from netex.models.parking_ref import ParkingRef
-from netex.models.point_of_interest_ref import PointOfInterestRef
-from netex.models.service_site_ref import ServiceSiteRef
-from netex.models.site_ref import SiteRef
-from netex.models.stop_place_ref import StopPlaceRef
+from .one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .parking_ref import ParkingRef
+from .point_of_interest_ref import PointOfInterestRef
+from .service_site_ref import ServiceSiteRef
+from .site_ref import SiteRef
+from .stop_place_ref import StopPlaceRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

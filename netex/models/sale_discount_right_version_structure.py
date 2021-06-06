@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.fare_product_version_structure import FareProductVersionStructure
-from netex.models.general_group_of_entities import GeneralGroupOfEntities
-from netex.models.general_group_of_entities_ref import GeneralGroupOfEntitiesRef
-from netex.models.sale_discount_right_enumeration import SaleDiscountRightEnumeration
+from .fare_product_version_structure import FareProductVersionStructure
+from .general_group_of_entities import GeneralGroupOfEntities
+from .general_group_of_entities_ref import GeneralGroupOfEntitiesRef
+from .sale_discount_right_enumeration import SaleDiscountRightEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

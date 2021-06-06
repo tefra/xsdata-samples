@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.event_group_control_type_enum_simple import EventGroupControlTypeEnumSimple
+from .event_group_control_type_enum_simple import EventGroupControlTypeEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

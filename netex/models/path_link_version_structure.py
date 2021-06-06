@@ -1,27 +1,27 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
-from netex.models.access_feature_enumeration import AccessFeatureEnumeration
-from netex.models.access_mode_enumeration import AccessModeEnumeration
-from netex.models.accessibility_assessment import AccessibilityAssessment
-from netex.models.accessibility_assessment_ref import AccessibilityAssessmentRef
-from netex.models.border_type_enumeration import BorderTypeEnumeration
-from netex.models.covered_enumeration import CoveredEnumeration
-from netex.models.flooring_type_enumeration import FlooringTypeEnumeration
-from netex.models.gated_enumeration import GatedEnumeration
-from netex.models.gradient_enumeration import GradientEnumeration
-from netex.models.lighting_enumeration import LightingEnumeration
-from netex.models.link_version_structure import LinkVersionStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.passage_type_enumeration import PassageTypeEnumeration
-from netex.models.path_direction_enumeration import PathDirectionEnumeration
-from netex.models.path_link_end_structure import PathLinkEndStructure
-from netex.models.public_use_enumeration import PublicUseEnumeration
-from netex.models.site_facility_sets_rel_structure import SiteFacilitySetsRelStructure
-from netex.models.tactile_warning_strip_enumeration import TactileWarningStripEnumeration
-from netex.models.tilt_type_enumeration import TiltTypeEnumeration
-from netex.models.transfer_duration_structure import TransferDurationStructure
-from netex.models.transition_enumeration import TransitionEnumeration
+from .access_feature_enumeration import AccessFeatureEnumeration
+from .access_mode_enumeration import AccessModeEnumeration
+from .accessibility_assessment import AccessibilityAssessment
+from .accessibility_assessment_ref import AccessibilityAssessmentRef
+from .border_type_enumeration import BorderTypeEnumeration
+from .covered_enumeration import CoveredEnumeration
+from .flooring_type_enumeration import FlooringTypeEnumeration
+from .gated_enumeration import GatedEnumeration
+from .gradient_enumeration import GradientEnumeration
+from .lighting_enumeration import LightingEnumeration
+from .link_version_structure import LinkVersionStructure
+from .multilingual_string import MultilingualString
+from .passage_type_enumeration import PassageTypeEnumeration
+from .path_direction_enumeration import PathDirectionEnumeration
+from .path_link_end_structure import PathLinkEndStructure
+from .public_use_enumeration import PublicUseEnumeration
+from .site_facility_sets_rel_structure import SiteFacilitySetsRelStructure
+from .tactile_warning_strip_enumeration import TactileWarningStripEnumeration
+from .tilt_type_enumeration import TiltTypeEnumeration
+from .transfer_duration_structure import TransferDurationStructure
+from .transition_enumeration import TransitionEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

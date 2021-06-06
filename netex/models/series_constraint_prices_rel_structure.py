@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.cell_ref_1 import CellRef1
-from netex.models.cell_ref_2 import CellRef2
-from netex.models.series_constraint_price_ref import SeriesConstraintPriceRef
-from netex.models.series_constraint_price_versioned_child_structure import SeriesConstraintPriceVersionedChildStructure
-from netex.models.strict_containment_aggregation_structure import StrictContainmentAggregationStructure
+from .cell_ref_1 import CellRef1
+from .cell_ref_2 import CellRef2
+from .series_constraint_price_ref import SeriesConstraintPriceRef
+from .series_constraint_price_versioned_child_structure import SeriesConstraintPriceVersionedChildStructure
+from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

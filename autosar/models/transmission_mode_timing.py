@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.cyclic_timing import CyclicTiming
-from autosar.models.event_controlled_timing import EventControlledTiming
+from .cyclic_timing import CyclicTiming
+from .event_controlled_timing import EventControlledTiming
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

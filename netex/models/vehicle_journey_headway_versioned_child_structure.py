@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.dead_run_ref import DeadRunRef
-from netex.models.journey_headway_versioned_child_structure import JourneyHeadwayVersionedChildStructure
-from netex.models.timing_point_in_journey_pattern_ref import TimingPointInJourneyPatternRef
-from netex.models.vehicle_journey_ref import VehicleJourneyRef
+from .dead_run_ref import DeadRunRef
+from .journey_headway_versioned_child_structure import JourneyHeadwayVersionedChildStructure
+from .timing_point_in_journey_pattern_ref import TimingPointInJourneyPatternRef
+from .vehicle_journey_ref import VehicleJourneyRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,25 +1,25 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.boolean import Boolean
-from autosar.models.category_string import CategoryString
-from autosar.models.composition_sw_component_type_subtypes_enum import CompositionSwComponentTypeSubtypesEnum
-from autosar.models.eoc_event_ref import EocEventRef
-from autosar.models.eoc_executable_entity_ref import EocExecutableEntityRef
-from autosar.models.eoc_executable_entity_ref_group import EocExecutableEntityRefGroup
-from autosar.models.execution_order_constraint_type_enum import ExecutionOrderConstraintTypeEnum
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.timing_condition_subtypes_enum import TimingConditionSubtypesEnum
-from autosar.models.traceable_subtypes_enum import TraceableSubtypesEnum
+from .boolean import Boolean
+from .category_string import CategoryString
+from .composition_sw_component_type_subtypes_enum import CompositionSwComponentTypeSubtypesEnum
+from .eoc_event_ref import EocEventRef
+from .eoc_executable_entity_ref import EocExecutableEntityRef
+from .eoc_executable_entity_ref_group import EocExecutableEntityRefGroup
+from .execution_order_constraint_type_enum import ExecutionOrderConstraintTypeEnum
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
+from .timing_condition_subtypes_enum import TimingConditionSubtypesEnum
+from .traceable_subtypes_enum import TraceableSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

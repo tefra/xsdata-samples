@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.availability_condition_ref import AvailabilityConditionRef
-from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
-from netex.models.validity_condition_ref import ValidityConditionRef
-from netex.models.validity_rule_parameter_ref import ValidityRuleParameterRef
-from netex.models.validity_trigger_ref import ValidityTriggerRef
+from .availability_condition_ref import AvailabilityConditionRef
+from .one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .validity_condition_ref import ValidityConditionRef
+from .validity_rule_parameter_ref import ValidityRuleParameterRef
+from .validity_trigger_ref import ValidityTriggerRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

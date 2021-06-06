@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.abstract_functional_service_request_structure import AbstractFunctionalServiceRequestStructure
+from .abstract_functional_service_request_structure import AbstractFunctionalServiceRequestStructure
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

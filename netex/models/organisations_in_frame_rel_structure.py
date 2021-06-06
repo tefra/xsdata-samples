@@ -1,17 +1,17 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.authority import Authority
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.general_organisation import GeneralOrganisation
-from netex.models.management_agent import ManagementAgent
-from netex.models.operator import Operator
-from netex.models.organisation_1 import Organisation1
-from netex.models.organisation_2 import Organisation2
-from netex.models.other_organisation import OtherOrganisation
-from netex.models.retail_consortium import RetailConsortium
-from netex.models.serviced_organisation import ServicedOrganisation
-from netex.models.transport_organisation import TransportOrganisation
-from netex.models.travel_agent import TravelAgent
+from .authority import Authority
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .general_organisation import GeneralOrganisation
+from .management_agent import ManagementAgent
+from .operator import Operator
+from .organisation_1 import Organisation1
+from .organisation_2 import Organisation2
+from .other_organisation import OtherOrganisation
+from .retail_consortium import RetailConsortium
+from .serviced_organisation import ServicedOrganisation
+from .transport_organisation import TransportOrganisation
+from .travel_agent import TravelAgent
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

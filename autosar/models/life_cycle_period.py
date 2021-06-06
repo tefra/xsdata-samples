@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.date import Date
-from autosar.models.revision_label_string import RevisionLabelString
+from .date import Date
+from .revision_label_string import RevisionLabelString
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

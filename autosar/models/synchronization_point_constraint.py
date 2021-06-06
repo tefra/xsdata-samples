@@ -1,21 +1,21 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.abstract_event_subtypes_enum import AbstractEventSubtypesEnum
-from autosar.models.annotation import (
+from .abstract_event_subtypes_enum import AbstractEventSubtypesEnum
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.eoc_executable_entity_ref_group_subtypes_enum import EocExecutableEntityRefGroupSubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.timing_condition_subtypes_enum import TimingConditionSubtypesEnum
-from autosar.models.traceable_subtypes_enum import TraceableSubtypesEnum
+from .category_string import CategoryString
+from .eoc_executable_entity_ref_group_subtypes_enum import EocExecutableEntityRefGroupSubtypesEnum
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
+from .timing_condition_subtypes_enum import TimingConditionSubtypesEnum
+from .traceable_subtypes_enum import TraceableSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

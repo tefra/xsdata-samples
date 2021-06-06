@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.trigger_mode_simple import TriggerModeSimple
+from .trigger_mode_simple import TriggerModeSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

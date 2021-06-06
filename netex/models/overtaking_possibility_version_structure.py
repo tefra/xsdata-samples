@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from netex.models.link_ref_structure import LinkRefStructure
-from netex.models.network_restriction_version_structure import NetworkRestrictionVersionStructure
-from netex.models.point_ref_structure import PointRefStructure
-from netex.models.vehicle_type_ref_structure import VehicleTypeRefStructure
+from .link_ref_structure import LinkRefStructure
+from .network_restriction_version_structure import NetworkRestrictionVersionStructure
+from .point_ref_structure import PointRefStructure
+from .vehicle_type_ref_structure import VehicleTypeRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

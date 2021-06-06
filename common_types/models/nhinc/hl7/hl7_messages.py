@@ -1,14 +1,14 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from common_types.models.hl7_v3.ne2008.core.datatypes_base import Ii
-from common_types.models.hl7_v3.ne2008.multi_cache.mcci_in000002_uv01 import McciIn000002Uv01
-from common_types.models.hl7_v3.ne2008.multi_cache.prpa_in201304_uv02 import PrpaIn201304Uv02
-from common_types.models.hl7_v3.ne2008.multi_cache.prpa_in201309_uv02 import PrpaIn201309Uv02
-from common_types.models.hl7_v3.ne2008.multi_cache.prpa_in201310_uv02 import PrpaIn201310Uv02
-from common_types.models.hl7_v3.ne2008.multi_cache.prpa_mt201301_uv02 import PrpaMt201301Uv02Patient
-from common_types.models.hl7_v3.ne2008.multi_cache.prpa_mt201307_uv02 import PrpaMt201307Uv02QueryByParameter
-from common_types.models.hl7_v3.ne2008.multi_cache.prpa_mt201310_uv02 import PrpaMt201310Uv02Patient
-from common_types.models.nhinc.common.nhinc_common import (
+from ...hl7_v3.ne2008.core.datatypes_base import Ii
+from ...hl7_v3.ne2008.multi_cache.mcci_in000002_uv01 import McciIn000002Uv01
+from ...hl7_v3.ne2008.multi_cache.prpa_in201304_uv02 import PrpaIn201304Uv02
+from ...hl7_v3.ne2008.multi_cache.prpa_in201309_uv02 import PrpaIn201309Uv02
+from ...hl7_v3.ne2008.multi_cache.prpa_in201310_uv02 import PrpaIn201310Uv02
+from ...hl7_v3.ne2008.multi_cache.prpa_mt201301_uv02 import PrpaMt201301Uv02Patient
+from ...hl7_v3.ne2008.multi_cache.prpa_mt201307_uv02 import PrpaMt201307Uv02QueryByParameter
+from ...hl7_v3.ne2008.multi_cache.prpa_mt201310_uv02 import PrpaMt201310Uv02Patient
+from ..common.nhinc_common import (
     AssertionType,
     NhinTargetCommunitiesType,
 )

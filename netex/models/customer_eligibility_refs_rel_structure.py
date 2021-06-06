@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.commercial_profile_eligibility_ref import CommercialProfileEligibilityRef
-from netex.models.customer_eligibility_ref import CustomerEligibilityRef
-from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
-from netex.models.residential_qualification_eligibility_ref import ResidentialQualificationEligibilityRef
-from netex.models.user_profile_eligibility_ref import UserProfileEligibilityRef
+from .commercial_profile_eligibility_ref import CommercialProfileEligibilityRef
+from .customer_eligibility_ref import CustomerEligibilityRef
+from .one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .residential_qualification_eligibility_ref import ResidentialQualificationEligibilityRef
+from .user_profile_eligibility_ref import UserProfileEligibilityRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

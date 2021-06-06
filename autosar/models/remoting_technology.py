@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.remoting_technology_enum import RemotingTechnologyEnum
-from autosar.models.string import String
+from .remoting_technology_enum import RemotingTechnologyEnum
+from .string import String
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

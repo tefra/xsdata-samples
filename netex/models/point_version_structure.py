@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.group_membership_refs_rel_structure import GroupMembershipRefsRelStructure
-from netex.models.location_structure_2 import LocationStructure2
-from netex.models.multilingual_string import MultilingualString
-from netex.models.projections_rel_structure import ProjectionsRelStructure
-from netex.models.type_of_point_refs_rel_structure import TypeOfPointRefsRelStructure
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .group_membership_refs_rel_structure import GroupMembershipRefsRelStructure
+from .location_structure_2 import LocationStructure2
+from .multilingual_string import MultilingualString
+from .projections_rel_structure import ProjectionsRelStructure
+from .type_of_point_refs_rel_structure import TypeOfPointRefsRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

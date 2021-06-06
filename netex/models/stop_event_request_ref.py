@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.stop_event_request_ref_structure import StopEventRequestRefStructure
+from .stop_event_request_ref_structure import StopEventRequestRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

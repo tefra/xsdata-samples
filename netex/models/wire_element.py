@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.wire_element_version_structure import WireElementVersionStructure
+from .wire_element_version_structure import WireElementVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

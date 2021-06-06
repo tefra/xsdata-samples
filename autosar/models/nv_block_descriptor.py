@@ -1,29 +1,29 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.boolean import Boolean
-from autosar.models.category_string import CategoryString
-from autosar.models.constant_specification_mapping_set_subtypes_enum import ConstantSpecificationMappingSetSubtypesEnum
-from autosar.models.data_type_mapping_set_subtypes_enum import DataTypeMappingSetSubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.instantiation_data_def_props import InstantiationDataDefProps
-from autosar.models.mode_switch_event_triggered_activity import ModeSwitchEventTriggeredActivity
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.nv_block_data_mapping import NvBlockDataMapping
-from autosar.models.nv_block_needs import NvBlockNeeds
-from autosar.models.parameter_data_prototype import ParameterDataPrototype
-from autosar.models.ref import Ref
-from autosar.models.role_based_data_assignment import RoleBasedDataAssignment
-from autosar.models.role_based_port_assignment import RoleBasedPortAssignment
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.timing_event_subtypes_enum import TimingEventSubtypesEnum
-from autosar.models.variable_data_prototype import VariableDataPrototype
+from .boolean import Boolean
+from .category_string import CategoryString
+from .constant_specification_mapping_set_subtypes_enum import ConstantSpecificationMappingSetSubtypesEnum
+from .data_type_mapping_set_subtypes_enum import DataTypeMappingSetSubtypesEnum
+from .identifier import Identifier
+from .instantiation_data_def_props import InstantiationDataDefProps
+from .mode_switch_event_triggered_activity import ModeSwitchEventTriggeredActivity
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .nv_block_data_mapping import NvBlockDataMapping
+from .nv_block_needs import NvBlockNeeds
+from .parameter_data_prototype import ParameterDataPrototype
+from .ref import Ref
+from .role_based_data_assignment import RoleBasedDataAssignment
+from .role_based_port_assignment import RoleBasedPortAssignment
+from .short_name_fragment import ShortNameFragment
+from .timing_event_subtypes_enum import TimingEventSubtypesEnum
+from .variable_data_prototype import VariableDataPrototype
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

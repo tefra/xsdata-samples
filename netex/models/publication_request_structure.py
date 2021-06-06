@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDateTime
-from netex.models.multilingual_string import MultilingualString
-from netex.models.network_frame_request_policy_structure import NetworkFrameRequestPolicyStructure
-from netex.models.network_frame_subscription_policy_structure import NetworkFrameSubscriptionPolicyStructure
-from netex.models.network_frame_topic_structure import NetworkFrameTopicStructure
+from .multilingual_string import MultilingualString
+from .network_frame_request_policy_structure import NetworkFrameRequestPolicyStructure
+from .network_frame_subscription_policy_structure import NetworkFrameSubscriptionPolicyStructure
+from .network_frame_topic_structure import NetworkFrameTopicStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from enum import Enum
 from typing import List, Optional, Union
-from common_types.models.hl7_v3.ne2008.core.voc import (
+from .voc import (
     AddressPartType,
     CompressionAlgorithm,
     EntityNamePartQualifier,

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from common_types.models.www.w3.org.pkg_2005.pkg_08.addressing.ws_addr import EndpointReferenceType
+from ...www.w3.org.pkg_2005.pkg_08.addressing.ws_addr import EndpointReferenceType
 
 __NAMESPACE__ = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 

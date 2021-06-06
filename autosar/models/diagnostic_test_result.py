@@ -1,22 +1,22 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.diagnostic_event_ref_conditional import DiagnosticEventRefConditional
-from autosar.models.diagnostic_event_subtypes_enum import DiagnosticEventSubtypesEnum
-from autosar.models.diagnostic_measurement_identifier_subtypes_enum import DiagnosticMeasurementIdentifierSubtypesEnum
-from autosar.models.diagnostic_test_identifier import DiagnosticTestIdentifier
-from autosar.models.diagnostic_test_result_update_enum_value_variation_point import DiagnosticTestResultUpdateEnumValueVariationPoint
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
+from .category_string import CategoryString
+from .diagnostic_event_ref_conditional import DiagnosticEventRefConditional
+from .diagnostic_event_subtypes_enum import DiagnosticEventSubtypesEnum
+from .diagnostic_measurement_identifier_subtypes_enum import DiagnosticMeasurementIdentifierSubtypesEnum
+from .diagnostic_test_identifier import DiagnosticTestIdentifier
+from .diagnostic_test_result_update_enum_value_variation_point import DiagnosticTestResultUpdateEnumValueVariationPoint
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

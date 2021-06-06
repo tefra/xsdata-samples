@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.block_part import BlockPart
-from netex.models.block_part_ref import BlockPartRef
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.train_block_part import TrainBlockPart
-from netex.models.train_block_part_ref import TrainBlockPartRef
+from .block_part import BlockPart
+from .block_part_ref import BlockPartRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .train_block_part import TrainBlockPart
+from .train_block_part_ref import TrainBlockPartRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

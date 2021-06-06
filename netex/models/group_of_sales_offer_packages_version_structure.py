@@ -1,24 +1,24 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.alternative_names_rel_structure import AlternativeNamesRelStructure
-from netex.models.cell_versioned_child_structure import (
+from .alternative_names_rel_structure import AlternativeNamesRelStructure
+from .cell_versioned_child_structure import (
     FareTablesRelStructure,
     PriceGroupsRelStructure,
 )
-from netex.models.condition_summary import ConditionSummary
-from netex.models.discounting_rule_ref import DiscountingRuleRef
-from netex.models.distribution_assignments_rel_structure import DistributionAssignmentsRelStructure
-from netex.models.generic_parameter_assignment_version_structure import GenericParameterAssignmentsRelStructure
-from netex.models.group_of_entities_version_structure import GroupOfEntitiesVersionStructure
-from netex.models.limiting_rule_ref import LimitingRuleRef
-from netex.models.notice_assignments_rel_structure import NoticeAssignmentsRelStructure
-from netex.models.pricing_rule_ref import PricingRuleRef
-from netex.models.pricing_service_ref import PricingServiceRef
-from netex.models.rounding_ref import RoundingRef
-from netex.models.sales_offer_package_elements_rel_structure import SalesOfferPackageElementsRelStructure
-from netex.models.sales_offer_package_prices_rel_structure import SalesOfferPackagePricesRelStructure
-from netex.models.sales_offer_package_refs_rel_structure import SalesOfferPackageRefsRelStructure
-from netex.models.type_of_sales_offer_package_ref import TypeOfSalesOfferPackageRef
+from .condition_summary import ConditionSummary
+from .discounting_rule_ref import DiscountingRuleRef
+from .distribution_assignments_rel_structure import DistributionAssignmentsRelStructure
+from .generic_parameter_assignment_version_structure import GenericParameterAssignmentsRelStructure
+from .group_of_entities_version_structure import GroupOfEntitiesVersionStructure
+from .limiting_rule_ref import LimitingRuleRef
+from .notice_assignments_rel_structure import NoticeAssignmentsRelStructure
+from .pricing_rule_ref import PricingRuleRef
+from .pricing_service_ref import PricingServiceRef
+from .rounding_ref import RoundingRef
+from .sales_offer_package_elements_rel_structure import SalesOfferPackageElementsRelStructure
+from .sales_offer_package_prices_rel_structure import SalesOfferPackagePricesRelStructure
+from .sales_offer_package_refs_rel_structure import SalesOfferPackageRefsRelStructure
+from .type_of_sales_offer_package_ref import TypeOfSalesOfferPackageRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

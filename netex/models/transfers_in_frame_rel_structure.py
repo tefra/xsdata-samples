@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.access import Access
-from netex.models.connection import Connection
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.default_connection import DefaultConnection
-from netex.models.site_connection import SiteConnection
-from netex.models.transfer import Transfer
+from .access import Access
+from .connection import Connection
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .default_connection import DefaultConnection
+from .site_connection import SiteConnection
+from .transfer import Transfer
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.point_of_interest_classification_hierarchy_member_structure import PointOfInterestClassificationHierarchyMemberStructure
-from netex.models.strict_containment_aggregation_structure import StrictContainmentAggregationStructure
+from .point_of_interest_classification_hierarchy_member_structure import PointOfInterestClassificationHierarchyMemberStructure
+from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

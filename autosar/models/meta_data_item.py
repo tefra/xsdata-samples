@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.text_value_specification import TextValueSpecification
+from .positive_integer import PositiveInteger
+from .text_value_specification import TextValueSpecification
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

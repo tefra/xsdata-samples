@@ -1,14 +1,14 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.contact_structure import ContactStructure
-from netex.models.country_ref import CountryRef
-from netex.models.departments_rel_structure import DepartmentsRelStructure
-from netex.models.operator_activities_enumeration import OperatorActivitiesEnumeration
-from netex.models.organisation_version_structure import OrganisationVersionStructure
-from netex.models.postal_address import PostalAddress
-from netex.models.postal_address_version_structure import PostalAddressVersionStructure
-from netex.models.road_address import RoadAddress
-from netex.models.vehicle_mode_enumeration import VehicleModeEnumeration
+from .contact_structure import ContactStructure
+from .country_ref import CountryRef
+from .departments_rel_structure import DepartmentsRelStructure
+from .operator_activities_enumeration import OperatorActivitiesEnumeration
+from .organisation_version_structure import OrganisationVersionStructure
+from .postal_address import PostalAddress
+from .postal_address_version_structure import PostalAddressVersionStructure
+from .road_address import RoadAddress
+from .vehicle_mode_enumeration import VehicleModeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

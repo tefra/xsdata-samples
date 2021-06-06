@@ -2,10 +2,10 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
 from xsdata.models.datatype import XmlDuration
-from netex.models.derived_view_structure import DerivedViewStructure
-from netex.models.scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
-from netex.models.service_link_in_journey_pattern import ServiceLinkInJourneyPattern
-from netex.models.service_link_ref import ServiceLinkRef
+from .derived_view_structure import DerivedViewStructure
+from .scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
+from .service_link_in_journey_pattern import ServiceLinkInJourneyPattern
+from .service_link_ref import ServiceLinkRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

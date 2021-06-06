@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.rpt_component import RptComponent
-from autosar.models.rpt_execution_context import RptExecutionContext
-from autosar.models.rpt_service_point import RptServicePoint
+from .rpt_component import RptComponent
+from .rpt_execution_context import RptExecutionContext
+from .rpt_service_point import RptServicePoint
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

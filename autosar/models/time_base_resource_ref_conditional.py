@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.ref import Ref
-from autosar.models.time_base_resource_subtypes_enum import TimeBaseResourceSubtypesEnum
+from .annotation import VariationPoint
+from .ref import Ref
+from .time_base_resource_subtypes_enum import TimeBaseResourceSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

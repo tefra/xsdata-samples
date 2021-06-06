@@ -1,34 +1,34 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.crypto_module_instantiation import CryptoModuleInstantiation
-from autosar.models.do_ip_instantiation import DoIpInstantiation
-from autosar.models.enter_exit_timeout import EnterExitTimeout
-from autosar.models.generic_module_instantiation import GenericModuleInstantiation
-from autosar.models.iam_module_instantiation import IamModuleInstantiation
-from autosar.models.identifier import Identifier
-from autosar.models.idsm_module_instantiation import IdsmModuleInstantiation
-from autosar.models.log_and_trace_instantiation import LogAndTraceInstantiation
-from autosar.models.machine_design_subtypes_enum import MachineDesignSubtypesEnum
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.nm_instantiation import NmInstantiation
-from autosar.models.os_module_instantiation import OsModuleInstantiation
-from autosar.models.processor import Processor
-from autosar.models.ref import Ref
-from autosar.models.sec_oc_deployment import SecOcDeployment
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.tag_with_optional_value import TagWithOptionalValue
-from autosar.models.time_sync_module_instantiation import TimeSyncModuleInstantiation
-from autosar.models.tls_deployment import TlsDeployment
-from autosar.models.trusted_platform_executable_launch_behavior_enum import TrustedPlatformExecutableLaunchBehaviorEnum
-from autosar.models.ucm_module_instantiation import UcmModuleInstantiation
+from .category_string import CategoryString
+from .crypto_module_instantiation import CryptoModuleInstantiation
+from .do_ip_instantiation import DoIpInstantiation
+from .enter_exit_timeout import EnterExitTimeout
+from .generic_module_instantiation import GenericModuleInstantiation
+from .iam_module_instantiation import IamModuleInstantiation
+from .identifier import Identifier
+from .idsm_module_instantiation import IdsmModuleInstantiation
+from .log_and_trace_instantiation import LogAndTraceInstantiation
+from .machine_design_subtypes_enum import MachineDesignSubtypesEnum
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .nm_instantiation import NmInstantiation
+from .os_module_instantiation import OsModuleInstantiation
+from .processor import Processor
+from .ref import Ref
+from .sec_oc_deployment import SecOcDeployment
+from .short_name_fragment import ShortNameFragment
+from .tag_with_optional_value import TagWithOptionalValue
+from .time_sync_module_instantiation import TimeSyncModuleInstantiation
+from .tls_deployment import TlsDeployment
+from .trusted_platform_executable_launch_behavior_enum import TrustedPlatformExecutableLaunchBehaviorEnum
+from .ucm_module_instantiation import UcmModuleInstantiation
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.diagnostic_occurrence_counter_processing_enum_simple import DiagnosticOccurrenceCounterProcessingEnumSimple
+from .diagnostic_occurrence_counter_processing_enum_simple import DiagnosticOccurrenceCounterProcessingEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

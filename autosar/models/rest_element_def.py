@@ -1,25 +1,25 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.rest_array_property_def import RestArrayPropertyDef
-from autosar.models.rest_boolean_property_def import RestBooleanPropertyDef
-from autosar.models.rest_endpoint_delete import RestEndpointDelete
-from autosar.models.rest_endpoint_get import RestEndpointGet
-from autosar.models.rest_endpoint_post import RestEndpointPost
-from autosar.models.rest_endpoint_put import RestEndpointPut
-from autosar.models.rest_integer_property_def import RestIntegerPropertyDef
-from autosar.models.rest_number_property_def import RestNumberPropertyDef
-from autosar.models.rest_object_ref import RestObjectRef
-from autosar.models.rest_string_property_def import RestStringPropertyDef
-from autosar.models.short_name_fragment import ShortNameFragment
+from .category_string import CategoryString
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .rest_array_property_def import RestArrayPropertyDef
+from .rest_boolean_property_def import RestBooleanPropertyDef
+from .rest_endpoint_delete import RestEndpointDelete
+from .rest_endpoint_get import RestEndpointGet
+from .rest_endpoint_post import RestEndpointPost
+from .rest_endpoint_put import RestEndpointPut
+from .rest_integer_property_def import RestIntegerPropertyDef
+from .rest_number_property_def import RestNumberPropertyDef
+from .rest_object_ref import RestObjectRef
+from .rest_string_property_def import RestStringPropertyDef
+from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

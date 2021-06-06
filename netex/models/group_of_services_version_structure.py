@@ -1,14 +1,14 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.day_type_ref_structure import DayTypeRefStructure
-from netex.models.destination_display_refs_rel_structure import DestinationDisplayRefsRelStructure
-from netex.models.direction_ref import DirectionRef
-from netex.models.direction_type_enumeration import DirectionTypeEnumeration
-from netex.models.direction_view import DirectionView
-from netex.models.group_of_entities_version_structure import GroupOfEntitiesVersionStructure
-from netex.models.group_of_services_end_point_derived_view_structure import GroupOfServicesEndPointDerivedViewStructure
-from netex.models.group_of_services_members_rel_structure import GroupOfServicesMembersRelStructure
-from netex.models.notice_assignments_rel_structure import NoticeAssignmentsRelStructure
+from .day_type_ref_structure import DayTypeRefStructure
+from .destination_display_refs_rel_structure import DestinationDisplayRefsRelStructure
+from .direction_ref import DirectionRef
+from .direction_type_enumeration import DirectionTypeEnumeration
+from .direction_view import DirectionView
+from .group_of_entities_version_structure import GroupOfEntitiesVersionStructure
+from .group_of_services_end_point_derived_view_structure import GroupOfServicesEndPointDerivedViewStructure
+from .group_of_services_members_rel_structure import GroupOfServicesMembersRelStructure
+from .notice_assignments_rel_structure import NoticeAssignmentsRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

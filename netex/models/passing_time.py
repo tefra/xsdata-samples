@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.passing_time_versioned_child_structure import PassingTimeVersionedChildStructure
+from .passing_time_versioned_child_structure import PassingTimeVersionedChildStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

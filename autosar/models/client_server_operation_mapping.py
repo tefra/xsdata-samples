@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.client_server_operation_subtypes_enum import ClientServerOperationSubtypesEnum
-from autosar.models.data_prototype_mapping import DataPrototypeMapping
-from autosar.models.data_transformation_subtypes_enum import DataTransformationSubtypesEnum
-from autosar.models.ref import Ref
+from .client_server_operation_subtypes_enum import ClientServerOperationSubtypesEnum
+from .data_prototype_mapping import DataPrototypeMapping
+from .data_transformation_subtypes_enum import DataTransformationSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

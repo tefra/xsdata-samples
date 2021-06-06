@@ -1,23 +1,23 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.alignment_type import AlignmentType
-from autosar.models.annotation import (
+from .alignment_type import AlignmentType
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.c_identifier import CIdentifier
-from autosar.models.category_string import CategoryString
-from autosar.models.executable_entity_subtypes_enum import ExecutableEntitySubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.section_name_prefix_subtypes_enum import SectionNamePrefixSubtypesEnum
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.sw_addr_method_subtypes_enum import SwAddrMethodSubtypesEnum
+from .c_identifier import CIdentifier
+from .category_string import CategoryString
+from .executable_entity_subtypes_enum import ExecutableEntitySubtypesEnum
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .section_name_prefix_subtypes_enum import SectionNamePrefixSubtypesEnum
+from .short_name_fragment import ShortNameFragment
+from .sw_addr_method_subtypes_enum import SwAddrMethodSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

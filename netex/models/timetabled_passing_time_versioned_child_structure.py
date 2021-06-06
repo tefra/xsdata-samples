@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDuration, XmlTime
-from netex.models.headway_interval_structure import HeadwayIntervalStructure
-from netex.models.passing_time_versioned_child_structure import PassingTimeVersionedChildStructure
+from .headway_interval_structure import HeadwayIntervalStructure
+from .passing_time_versioned_child_structure import PassingTimeVersionedChildStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

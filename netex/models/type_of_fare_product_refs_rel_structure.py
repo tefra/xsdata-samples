@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
-from netex.models.type_of_fare_product_ref import TypeOfFareProductRef
+from .one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .type_of_fare_product_ref import TypeOfFareProductRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

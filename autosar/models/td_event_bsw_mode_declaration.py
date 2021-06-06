@@ -1,22 +1,22 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.bsw_module_description_subtypes_enum import BswModuleDescriptionSubtypesEnum
-from autosar.models.category_string import CategoryString
-from autosar.models.identifier import Identifier
-from autosar.models.mode_declaration_group_prototype_subtypes_enum import ModeDeclarationGroupPrototypeSubtypesEnum
-from autosar.models.mode_declaration_subtypes_enum import ModeDeclarationSubtypesEnum
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.td_event_bsw_mode_declaration_type_enum import TdEventBswModeDeclarationTypeEnum
-from autosar.models.td_event_occurrence_expression import TdEventOccurrenceExpression
+from .bsw_module_description_subtypes_enum import BswModuleDescriptionSubtypesEnum
+from .category_string import CategoryString
+from .identifier import Identifier
+from .mode_declaration_group_prototype_subtypes_enum import ModeDeclarationGroupPrototypeSubtypesEnum
+from .mode_declaration_subtypes_enum import ModeDeclarationSubtypesEnum
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
+from .td_event_bsw_mode_declaration_type_enum import TdEventBswModeDeclarationTypeEnum
+from .td_event_occurrence_expression import TdEventOccurrenceExpression
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

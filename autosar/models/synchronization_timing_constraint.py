@@ -1,24 +1,24 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.event_occurrence_kind_enum import EventOccurrenceKindEnum
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multidimensional_time import MultidimensionalTime
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.synchronization_type_enum import SynchronizationTypeEnum
-from autosar.models.timing_condition_subtypes_enum import TimingConditionSubtypesEnum
-from autosar.models.timing_description_event_chain_subtypes_enum import TimingDescriptionEventChainSubtypesEnum
-from autosar.models.timing_description_event_subtypes_enum import TimingDescriptionEventSubtypesEnum
-from autosar.models.traceable_subtypes_enum import TraceableSubtypesEnum
+from .category_string import CategoryString
+from .event_occurrence_kind_enum import EventOccurrenceKindEnum
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multidimensional_time import MultidimensionalTime
+from .multilanguage_long_name import MultilanguageLongName
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
+from .synchronization_type_enum import SynchronizationTypeEnum
+from .timing_condition_subtypes_enum import TimingConditionSubtypesEnum
+from .timing_description_event_chain_subtypes_enum import TimingDescriptionEventChainSubtypesEnum
+from .timing_description_event_subtypes_enum import TimingDescriptionEventSubtypesEnum
+from .traceable_subtypes_enum import TraceableSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

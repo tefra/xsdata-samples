@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.limit import Limit
-from autosar.models.monotony_enum import MonotonyEnum
-from autosar.models.numerical_value import NumericalValue
-from autosar.models.scale_constr import ScaleConstr
+from .limit import Limit
+from .monotony_enum import MonotonyEnum
+from .numerical_value import NumericalValue
+from .scale_constr import ScaleConstr
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

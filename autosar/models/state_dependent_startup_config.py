@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.execution_dependency import ExecutionDependency
-from autosar.models.function_group_state_in_function_group_set_instance_ref import FunctionGroupStateInFunctionGroupSetInstanceRef
-from autosar.models.ref import Ref
-from autosar.models.resource_consumption import ResourceConsumption
-from autosar.models.resource_group_subtypes_enum import ResourceGroupSubtypesEnum
-from autosar.models.startup_config_subtypes_enum import StartupConfigSubtypesEnum
+from .execution_dependency import ExecutionDependency
+from .function_group_state_in_function_group_set_instance_ref import FunctionGroupStateInFunctionGroupSetInstanceRef
+from .ref import Ref
+from .resource_consumption import ResourceConsumption
+from .resource_group_subtypes_enum import ResourceGroupSubtypesEnum
+from .startup_config_subtypes_enum import StartupConfigSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

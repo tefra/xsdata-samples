@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.tp_ack_type_simple import TpAckTypeSimple
+from .tp_ack_type_simple import TpAckTypeSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

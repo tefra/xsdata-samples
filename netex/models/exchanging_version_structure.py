@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.class_of_use_ref_structure import ClassOfUseRefStructure
-from netex.models.exchangable_to_enumeration import ExchangableToEnumeration
-from netex.models.fare_class_enumeration import FareClassEnumeration
-from netex.models.reselling_version_structure import ResellingVersionStructure
+from .class_of_use_ref_structure import ClassOfUseRefStructure
+from .exchangable_to_enumeration import ExchangableToEnumeration
+from .fare_class_enumeration import FareClassEnumeration
+from .reselling_version_structure import ResellingVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

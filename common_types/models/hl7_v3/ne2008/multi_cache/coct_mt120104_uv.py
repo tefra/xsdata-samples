@@ -1,20 +1,20 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
+from ..core.datatypes_base import (
     Cd,
     Ce,
     Cs,
     Ii,
     IvlTsExplicit,
 )
-from common_types.models.hl7_v3.ne2008.core.voc import (
+from ..core.voc import (
     ActClassObservation,
     ActMood,
     ContextControl,
     NullFlavor,
     ParticipationType,
 )
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt090001_uv01 import CoctMt090001Uv01AssignedEntity
+from .coct_mt090001_uv01 import CoctMt090001Uv01AssignedEntity
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

@@ -1,39 +1,39 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.can_global_time_domain_props import CanGlobalTimeDomainProps
-from autosar.models.category_string import CategoryString
-from autosar.models.communication_cluster_subtypes_enum import CommunicationClusterSubtypesEnum
-from autosar.models.eth_global_time_domain_props import EthGlobalTimeDomainProps
-from autosar.models.fr_global_time_domain_props import FrGlobalTimeDomainProps
-from autosar.models.general_purpose_pdu_subtypes_enum import GeneralPurposePduSubtypesEnum
-from autosar.models.global_time_can_master import GlobalTimeCanMaster
-from autosar.models.global_time_can_slave import GlobalTimeCanSlave
-from autosar.models.global_time_correction_props import GlobalTimeCorrectionProps
-from autosar.models.global_time_domain_ref_conditional import GlobalTimeDomainRefConditional
-from autosar.models.global_time_domain_subtypes_enum import GlobalTimeDomainSubtypesEnum
-from autosar.models.global_time_eth_master import GlobalTimeEthMaster
-from autosar.models.global_time_eth_slave import GlobalTimeEthSlave
-from autosar.models.global_time_fr_master import GlobalTimeFrMaster
-from autosar.models.global_time_fr_slave import GlobalTimeFrSlave
-from autosar.models.global_time_gateway import GlobalTimeGateway
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.network_segment_identification import NetworkSegmentIdentification
-from autosar.models.pdu_triggering_ref_conditional import PduTriggeringRefConditional
-from autosar.models.pdu_triggering_subtypes_enum import PduTriggeringSubtypesEnum
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.time_value import TimeValue
-from autosar.models.user_defined_global_time_master import UserDefinedGlobalTimeMaster
-from autosar.models.user_defined_global_time_slave import UserDefinedGlobalTimeSlave
+from .can_global_time_domain_props import CanGlobalTimeDomainProps
+from .category_string import CategoryString
+from .communication_cluster_subtypes_enum import CommunicationClusterSubtypesEnum
+from .eth_global_time_domain_props import EthGlobalTimeDomainProps
+from .fr_global_time_domain_props import FrGlobalTimeDomainProps
+from .general_purpose_pdu_subtypes_enum import GeneralPurposePduSubtypesEnum
+from .global_time_can_master import GlobalTimeCanMaster
+from .global_time_can_slave import GlobalTimeCanSlave
+from .global_time_correction_props import GlobalTimeCorrectionProps
+from .global_time_domain_ref_conditional import GlobalTimeDomainRefConditional
+from .global_time_domain_subtypes_enum import GlobalTimeDomainSubtypesEnum
+from .global_time_eth_master import GlobalTimeEthMaster
+from .global_time_eth_slave import GlobalTimeEthSlave
+from .global_time_fr_master import GlobalTimeFrMaster
+from .global_time_fr_slave import GlobalTimeFrSlave
+from .global_time_gateway import GlobalTimeGateway
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .network_segment_identification import NetworkSegmentIdentification
+from .pdu_triggering_ref_conditional import PduTriggeringRefConditional
+from .pdu_triggering_subtypes_enum import PduTriggeringSubtypesEnum
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
+from .time_value import TimeValue
+from .user_defined_global_time_master import UserDefinedGlobalTimeMaster
+from .user_defined_global_time_slave import UserDefinedGlobalTimeSlave
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.vehicle_position_alignment_ref_structure import VehiclePositionAlignmentRefStructure
+from .vehicle_position_alignment_ref_structure import VehiclePositionAlignmentRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

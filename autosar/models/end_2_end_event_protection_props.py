@@ -1,20 +1,20 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.e_2_e_profile_configuration_subtypes_enum import E2EProfileConfigurationSubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.service_event_deployment_subtypes_enum import ServiceEventDeploymentSubtypesEnum
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.time_value import TimeValue
+from .category_string import CategoryString
+from .e_2_e_profile_configuration_subtypes_enum import E2EProfileConfigurationSubtypesEnum
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .service_event_deployment_subtypes_enum import ServiceEventDeploymentSubtypesEnum
+from .short_name_fragment import ShortNameFragment
+from .time_value import TimeValue
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

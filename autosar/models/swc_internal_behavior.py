@@ -1,50 +1,50 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.asynchronous_server_call_returns_event import AsynchronousServerCallReturnsEvent
-from autosar.models.background_event import BackgroundEvent
-from autosar.models.boolean import Boolean
-from autosar.models.category_string import CategoryString
-from autosar.models.constant_specification_mapping_set_subtypes_enum import ConstantSpecificationMappingSetSubtypesEnum
-from autosar.models.data_receive_error_event import DataReceiveErrorEvent
-from autosar.models.data_received_event import DataReceivedEvent
-from autosar.models.data_send_completed_event import DataSendCompletedEvent
-from autosar.models.data_type_mapping_set_subtypes_enum import DataTypeMappingSetSubtypesEnum
-from autosar.models.data_write_completed_event import DataWriteCompletedEvent
-from autosar.models.exclusive_area import ExclusiveArea
-from autosar.models.exclusive_area_nesting_order import ExclusiveAreaNestingOrder
-from autosar.models.external_trigger_occurred_event import ExternalTriggerOccurredEvent
-from autosar.models.handle_termination_and_restart_enum import HandleTerminationAndRestartEnum
-from autosar.models.identifier import Identifier
-from autosar.models.included_data_type_set import IncludedDataTypeSet
-from autosar.models.included_mode_declaration_group_set import IncludedModeDeclarationGroupSet
-from autosar.models.init_event import InitEvent
-from autosar.models.instantiation_data_def_props import InstantiationDataDefProps
-from autosar.models.internal_trigger_occurred_event import InternalTriggerOccurredEvent
-from autosar.models.mode_switched_ack_event import ModeSwitchedAckEvent
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.operation_invoked_event import OperationInvokedEvent
-from autosar.models.os_task_execution_event import OsTaskExecutionEvent
-from autosar.models.parameter_data_prototype import ParameterDataPrototype
-from autosar.models.per_instance_memory import PerInstanceMemory
-from autosar.models.port_api_option import PortApiOption
-from autosar.models.ref import Ref
-from autosar.models.runnable_entity import RunnableEntity
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.swc_exclusive_area_policy import SwcExclusiveAreaPolicy
-from autosar.models.swc_mode_manager_error_event import SwcModeManagerErrorEvent
-from autosar.models.swc_mode_switch_event import SwcModeSwitchEvent
-from autosar.models.swc_service_dependency import SwcServiceDependency
-from autosar.models.timing_event import TimingEvent
-from autosar.models.transformer_hard_error_event import TransformerHardErrorEvent
-from autosar.models.variable_data_prototype import VariableDataPrototype
-from autosar.models.variation_point_proxy import VariationPointProxy
+from .asynchronous_server_call_returns_event import AsynchronousServerCallReturnsEvent
+from .background_event import BackgroundEvent
+from .boolean import Boolean
+from .category_string import CategoryString
+from .constant_specification_mapping_set_subtypes_enum import ConstantSpecificationMappingSetSubtypesEnum
+from .data_receive_error_event import DataReceiveErrorEvent
+from .data_received_event import DataReceivedEvent
+from .data_send_completed_event import DataSendCompletedEvent
+from .data_type_mapping_set_subtypes_enum import DataTypeMappingSetSubtypesEnum
+from .data_write_completed_event import DataWriteCompletedEvent
+from .exclusive_area import ExclusiveArea
+from .exclusive_area_nesting_order import ExclusiveAreaNestingOrder
+from .external_trigger_occurred_event import ExternalTriggerOccurredEvent
+from .handle_termination_and_restart_enum import HandleTerminationAndRestartEnum
+from .identifier import Identifier
+from .included_data_type_set import IncludedDataTypeSet
+from .included_mode_declaration_group_set import IncludedModeDeclarationGroupSet
+from .init_event import InitEvent
+from .instantiation_data_def_props import InstantiationDataDefProps
+from .internal_trigger_occurred_event import InternalTriggerOccurredEvent
+from .mode_switched_ack_event import ModeSwitchedAckEvent
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .operation_invoked_event import OperationInvokedEvent
+from .os_task_execution_event import OsTaskExecutionEvent
+from .parameter_data_prototype import ParameterDataPrototype
+from .per_instance_memory import PerInstanceMemory
+from .port_api_option import PortApiOption
+from .ref import Ref
+from .runnable_entity import RunnableEntity
+from .short_name_fragment import ShortNameFragment
+from .swc_exclusive_area_policy import SwcExclusiveAreaPolicy
+from .swc_mode_manager_error_event import SwcModeManagerErrorEvent
+from .swc_mode_switch_event import SwcModeSwitchEvent
+from .swc_service_dependency import SwcServiceDependency
+from .timing_event import TimingEvent
+from .transformer_hard_error_event import TransformerHardErrorEvent
+from .variable_data_prototype import VariableDataPrototype
+from .variation_point_proxy import VariationPointProxy
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

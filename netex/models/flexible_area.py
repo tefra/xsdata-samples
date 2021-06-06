@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.flexible_area_version_structure import FlexibleAreaVersionStructure
+from .flexible_area_version_structure import FlexibleAreaVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

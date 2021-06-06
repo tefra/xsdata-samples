@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.diagnostic_trouble_code_j_1939_dtc_kind_enum_simple import DiagnosticTroubleCodeJ1939DtcKindEnumSimple
+from .diagnostic_trouble_code_j_1939_dtc_kind_enum_simple import DiagnosticTroubleCodeJ1939DtcKindEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

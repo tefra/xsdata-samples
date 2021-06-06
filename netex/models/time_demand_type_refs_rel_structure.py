@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
-from netex.models.time_demand_type_ref import TimeDemandTypeRef
+from .one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .time_demand_type_ref import TimeDemandTypeRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

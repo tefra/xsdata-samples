@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
+from ..core.datatypes_base import (
     Cs,
     Ii,
     St,
     TsExplicit,
 )
-from common_types.models.hl7_v3.ne2008.core.voc import NullFlavor
+from ..core.voc import NullFlavor
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

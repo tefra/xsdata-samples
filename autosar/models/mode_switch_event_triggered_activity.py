@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.identifier import Identifier
-from autosar.models.ref import Ref
-from autosar.models.swc_mode_switch_event_subtypes_enum import SwcModeSwitchEventSubtypesEnum
+from .annotation import VariationPoint
+from .identifier import Identifier
+from .ref import Ref
+from .swc_mode_switch_event_subtypes_enum import SwcModeSwitchEventSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

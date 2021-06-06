@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.pnc_gateway_type_enum_simple import PncGatewayTypeEnumSimple
+from .pnc_gateway_type_enum_simple import PncGatewayTypeEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

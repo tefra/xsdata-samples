@@ -1,18 +1,18 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.identifier import Identifier
-from autosar.models.inner_port_group_in_composition_instance_ref import InnerPortGroupInCompositionInstanceRef
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.port_prototype_ref_conditional import PortPrototypeRefConditional
-from autosar.models.short_name_fragment import ShortNameFragment
+from .category_string import CategoryString
+from .identifier import Identifier
+from .inner_port_group_in_composition_instance_ref import InnerPortGroupInCompositionInstanceRef
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .port_prototype_ref_conditional import PortPrototypeRefConditional
+from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

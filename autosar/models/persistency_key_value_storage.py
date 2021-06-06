@@ -1,24 +1,24 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.persistency_collection_level_update_strategy_enum import PersistencyCollectionLevelUpdateStrategyEnum
-from autosar.models.persistency_key_value_pair import PersistencyKeyValuePair
-from autosar.models.persistency_redundancy_crc import PersistencyRedundancyCrc
-from autosar.models.persistency_redundancy_hash import PersistencyRedundancyHash
-from autosar.models.persistency_redundancy_m_out_of_n import PersistencyRedundancyMOutOfN
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.positive_unlimited_integer import PositiveUnlimitedInteger
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.uri_string import UriString
+from .category_string import CategoryString
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .persistency_collection_level_update_strategy_enum import PersistencyCollectionLevelUpdateStrategyEnum
+from .persistency_key_value_pair import PersistencyKeyValuePair
+from .persistency_redundancy_crc import PersistencyRedundancyCrc
+from .persistency_redundancy_hash import PersistencyRedundancyHash
+from .persistency_redundancy_m_out_of_n import PersistencyRedundancyMOutOfN
+from .positive_integer import PositiveInteger
+from .positive_unlimited_integer import PositiveUnlimitedInteger
+from .short_name_fragment import ShortNameFragment
+from .uri_string import UriString
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

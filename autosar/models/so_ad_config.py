@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.logic_address import LogicAddress
-from autosar.models.socket_address import SocketAddress
-from autosar.models.socket_connection import SocketConnection
-from autosar.models.socket_connection_bundle import SocketConnectionBundle
+from .logic_address import LogicAddress
+from .socket_address import SocketAddress
+from .socket_connection import SocketConnection
+from .socket_connection_bundle import SocketConnectionBundle
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

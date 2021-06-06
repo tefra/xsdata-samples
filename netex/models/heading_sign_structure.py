@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.destination_display_ref import DestinationDisplayRef
-from netex.models.direction_ref import DirectionRef
-from netex.models.flexible_line_ref import FlexibleLineRef
-from netex.models.line_ref import LineRef
-from netex.models.multilingual_string import MultilingualString
-from netex.models.sign_equipment_version_structure import SignEquipmentVersionStructure
-from netex.models.transport_submode import TransportSubmode
-from netex.models.vehicle_mode_enumeration import VehicleModeEnumeration
+from .destination_display_ref import DestinationDisplayRef
+from .direction_ref import DirectionRef
+from .flexible_line_ref import FlexibleLineRef
+from .line_ref import LineRef
+from .multilingual_string import MultilingualString
+from .sign_equipment_version_structure import SignEquipmentVersionStructure
+from .transport_submode import TransportSubmode
+from .vehicle_mode_enumeration import VehicleModeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

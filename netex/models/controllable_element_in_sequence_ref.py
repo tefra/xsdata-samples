@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.controllable_element_in_sequence_ref_structure import ControllableElementInSequenceRefStructure
+from .controllable_element_in_sequence_ref_structure import ControllableElementInSequenceRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

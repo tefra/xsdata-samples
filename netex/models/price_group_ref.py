@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.price_group_ref_structure import PriceGroupRefStructure
+from .price_group_ref_structure import PriceGroupRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

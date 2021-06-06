@@ -1,15 +1,15 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlPeriod
-from netex.models.country_ref_structure import CountryRefStructure
-from netex.models.crowding_enumeration import CrowdingEnumeration
-from netex.models.day_event_enumeration import DayEventEnumeration
-from netex.models.day_of_week_enumeration import DayOfWeekEnumeration
-from netex.models.holiday_type_enumeration import HolidayTypeEnumeration
-from netex.models.multilingual_string import MultilingualString
-from netex.models.season_enumeration import SeasonEnumeration
-from netex.models.tide_enumeration import TideEnumeration
-from netex.models.week_of_month_enumeration import WeekOfMonthEnumeration
+from .country_ref_structure import CountryRefStructure
+from .crowding_enumeration import CrowdingEnumeration
+from .day_event_enumeration import DayEventEnumeration
+from .day_of_week_enumeration import DayOfWeekEnumeration
+from .holiday_type_enumeration import HolidayTypeEnumeration
+from .multilingual_string import MultilingualString
+from .season_enumeration import SeasonEnumeration
+from .tide_enumeration import TideEnumeration
+from .week_of_month_enumeration import WeekOfMonthEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

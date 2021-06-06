@@ -1,15 +1,15 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.boolean import Boolean
-from autosar.models.identifier import Identifier
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.socket_address_subtypes_enum import SocketAddressSubtypesEnum
-from autosar.models.socket_connection import SocketConnection
-from autosar.models.socket_connection_ipdu_identifier import SocketConnectionIpduIdentifier
-from autosar.models.udp_checksum_calculation_enum import UdpChecksumCalculationEnum
+from .annotation import VariationPoint
+from .boolean import Boolean
+from .identifier import Identifier
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
+from .socket_address_subtypes_enum import SocketAddressSubtypesEnum
+from .socket_connection import SocketConnection
+from .socket_connection_ipdu_identifier import SocketConnectionIpduIdentifier
+from .udp_checksum_calculation_enum import UdpChecksumCalculationEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.accommodation_access_enumeration import AccommodationAccessEnumeration
+from .accommodation_access_enumeration import AccommodationAccessEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

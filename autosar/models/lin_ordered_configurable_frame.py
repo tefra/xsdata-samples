@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.integer import Integer
-from autosar.models.lin_frame_subtypes_enum import LinFrameSubtypesEnum
-from autosar.models.ref import Ref
+from .integer import Integer
+from .lin_frame_subtypes_enum import LinFrameSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

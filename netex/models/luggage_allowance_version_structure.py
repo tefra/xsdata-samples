@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from netex.models.baggage_type_enumeration import BaggageTypeEnumeration
-from netex.models.baggage_use_type_enumeration import BaggageUseTypeEnumeration
-from netex.models.luggage_allowance_type_enumeration import LuggageAllowanceTypeEnumeration
-from netex.models.luggage_charging_basis_enumeration import LuggageChargingBasisEnumeration
-from netex.models.usage_parameter_version_structure import UsageParameterVersionStructure
+from .baggage_type_enumeration import BaggageTypeEnumeration
+from .baggage_use_type_enumeration import BaggageUseTypeEnumeration
+from .luggage_allowance_type_enumeration import LuggageAllowanceTypeEnumeration
+from .luggage_charging_basis_enumeration import LuggageChargingBasisEnumeration
+from .usage_parameter_version_structure import UsageParameterVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

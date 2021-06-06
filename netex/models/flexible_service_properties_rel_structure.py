@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.flexible_service_properties import FlexibleServiceProperties
-from netex.models.flexible_service_properties_ref import FlexibleServicePropertiesRef
-from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .flexible_service_properties import FlexibleServiceProperties
+from .flexible_service_properties_ref import FlexibleServicePropertiesRef
+from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

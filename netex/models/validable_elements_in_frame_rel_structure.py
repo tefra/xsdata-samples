@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.frame_containment_structure import FrameContainmentStructure
-from netex.models.validable_element import ValidableElement
+from .frame_containment_structure import FrameContainmentStructure
+from .validable_element import ValidableElement
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

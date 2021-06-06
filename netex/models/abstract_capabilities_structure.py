@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.capability_general_interaction_structure import CapabilityGeneralInteractionStructure
-from netex.models.transport_description_structure import TransportDescriptionStructure
+from .capability_general_interaction_structure import CapabilityGeneralInteractionStructure
+from .transport_description_structure import TransportDescriptionStructure
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

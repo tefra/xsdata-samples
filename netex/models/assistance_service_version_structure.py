@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.accessibility_tool_enumeration import AccessibilityToolEnumeration
-from netex.models.assistance_availability_enumeration import AssistanceAvailabilityEnumeration
-from netex.models.assistance_facility_enumeration import AssistanceFacilityEnumeration
-from netex.models.emergency_service_enumeration import EmergencyServiceEnumeration
-from netex.models.local_service_version_structure import LocalServiceVersionStructure
-from netex.models.safety_facility_enumeration import SafetyFacilityEnumeration
-from netex.models.staffing_enumeration import StaffingEnumeration
+from .accessibility_tool_enumeration import AccessibilityToolEnumeration
+from .assistance_availability_enumeration import AssistanceAvailabilityEnumeration
+from .assistance_facility_enumeration import AssistanceFacilityEnumeration
+from .emergency_service_enumeration import EmergencyServiceEnumeration
+from .local_service_version_structure import LocalServiceVersionStructure
+from .safety_facility_enumeration import SafetyFacilityEnumeration
+from .staffing_enumeration import StaffingEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

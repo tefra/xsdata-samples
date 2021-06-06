@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.cycle_repetition_type_simple import CycleRepetitionTypeSimple
+from .cycle_repetition_type_simple import CycleRepetitionTypeSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

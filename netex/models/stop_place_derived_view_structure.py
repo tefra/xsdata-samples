@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.derived_view_structure import DerivedViewStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.stop_place_ref import StopPlaceRef
-from netex.models.stop_type_enumeration import StopTypeEnumeration
-from netex.models.type_of_place_refs_rel_structure import TypeOfPlaceRefsRelStructure
-from netex.models.vehicle_mode_enumeration import VehicleModeEnumeration
+from .derived_view_structure import DerivedViewStructure
+from .multilingual_string import MultilingualString
+from .stop_place_ref import StopPlaceRef
+from .stop_type_enumeration import StopTypeEnumeration
+from .type_of_place_refs_rel_structure import TypeOfPlaceRefsRelStructure
+from .vehicle_mode_enumeration import VehicleModeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

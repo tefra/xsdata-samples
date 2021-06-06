@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.diagnostic_periodic_rate_category_enum import DiagnosticPeriodicRateCategoryEnum
-from autosar.models.time_value import TimeValue
+from .diagnostic_periodic_rate_category_enum import DiagnosticPeriodicRateCategoryEnum
+from .time_value import TimeValue
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

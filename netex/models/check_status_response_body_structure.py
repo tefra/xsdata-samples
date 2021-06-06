@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDateTime, XmlDuration
-from netex.models.other_error import OtherError
-from netex.models.service_not_available_error import ServiceNotAvailableError
+from .other_error import OtherError
+from .service_not_available_error import ServiceNotAvailableError
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

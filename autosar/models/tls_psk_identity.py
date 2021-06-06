@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.crypto_service_key_subtypes_enum import CryptoServiceKeySubtypesEnum
-from autosar.models.ref import Ref
-from autosar.models.string import String
+from .crypto_service_key_subtypes_enum import CryptoServiceKeySubtypesEnum
+from .ref import Ref
+from .string import String
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

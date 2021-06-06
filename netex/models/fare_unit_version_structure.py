@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.cell_versioned_child_structure import PriceableObjectVersionStructure
+from .cell_versioned_child_structure import PriceableObjectVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

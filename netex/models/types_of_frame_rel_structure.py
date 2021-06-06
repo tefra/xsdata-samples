@@ -1,14 +1,14 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.class_ref_structure import ClassRefStructure
-from netex.models.classes_in_repository_rel_structure import ClassesInRepositoryRelStructure
-from netex.models.layer_ref import LayerRef
-from netex.models.modification_set_enumeration import ModificationSetEnumeration
-from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
-from netex.models.type_of_entity_refs_rel_structure import TypeOfEntityRefsRelStructure
-from netex.models.type_of_entity_version_structure import TypeOfEntityVersionStructure
-from netex.models.type_of_frame_ref import TypeOfFrameRef
-from netex.models.type_of_validity_ref import TypeOfValidityRef
+from .class_ref_structure import ClassRefStructure
+from .classes_in_repository_rel_structure import ClassesInRepositoryRelStructure
+from .layer_ref import LayerRef
+from .modification_set_enumeration import ModificationSetEnumeration
+from .one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .type_of_entity_refs_rel_structure import TypeOfEntityRefsRelStructure
+from .type_of_entity_version_structure import TypeOfEntityVersionStructure
+from .type_of_frame_ref import TypeOfFrameRef
+from .type_of_validity_ref import TypeOfValidityRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.flexible_stop_place_ref_structure import FlexibleStopPlaceRefStructure
+from .flexible_stop_place_ref_structure import FlexibleStopPlaceRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

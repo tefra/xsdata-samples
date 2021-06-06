@@ -1,22 +1,22 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
 )
-from autosar.models.application_data_type_subtypes_enum import ApplicationDataTypeSubtypesEnum
-from autosar.models.category_string import CategoryString
-from autosar.models.diag_requirement_id_string import DiagRequirementIdString
-from autosar.models.diagnostic_audience_enum import DiagnosticAudienceEnum
-from autosar.models.diagnostic_event_needs_subtypes_enum import DiagnosticEventNeedsSubtypesEnum
-from autosar.models.diagnostic_monitor_update_kind_enum import DiagnosticMonitorUpdateKindEnum
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
+from .application_data_type_subtypes_enum import ApplicationDataTypeSubtypesEnum
+from .category_string import CategoryString
+from .diag_requirement_id_string import DiagRequirementIdString
+from .diagnostic_audience_enum import DiagnosticAudienceEnum
+from .diagnostic_event_needs_subtypes_enum import DiagnosticEventNeedsSubtypesEnum
+from .diagnostic_monitor_update_kind_enum import DiagnosticMonitorUpdateKindEnum
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

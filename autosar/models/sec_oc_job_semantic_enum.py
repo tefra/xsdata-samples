@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.sec_oc_job_semantic_enum_simple import SecOcJobSemanticEnumSimple
+from .sec_oc_job_semantic_enum_simple import SecOcJobSemanticEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.fare_demand_factor_ref import FareDemandFactorRef
-from netex.models.fare_price_versioned_child_structure import FarePriceVersionedChildStructure
-from netex.models.fare_quota_factor_ref import FareQuotaFactorRef
-from netex.models.quality_structure_factor_ref import QualityStructureFactorRef
+from .fare_demand_factor_ref import FareDemandFactorRef
+from .fare_price_versioned_child_structure import FarePriceVersionedChildStructure
+from .fare_quota_factor_ref import FareQuotaFactorRef
+from .quality_structure_factor_ref import QualityStructureFactorRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

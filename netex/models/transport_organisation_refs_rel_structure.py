@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.authority_ref import AuthorityRef
-from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
-from netex.models.operator_ref import OperatorRef
-from netex.models.transport_organisation_ref import TransportOrganisationRef
+from .authority_ref import AuthorityRef
+from .one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .operator_ref import OperatorRef
+from .transport_organisation_ref import TransportOrganisationRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

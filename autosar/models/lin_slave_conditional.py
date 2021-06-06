@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.boolean import Boolean
-from autosar.models.integer import Integer
-from autosar.models.lin_error_response import LinErrorResponse
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.string import String
-from autosar.models.time_value import TimeValue
+from .annotation import VariationPoint
+from .boolean import Boolean
+from .integer import Integer
+from .lin_error_response import LinErrorResponse
+from .positive_integer import PositiveInteger
+from .string import String
+from .time_value import TimeValue
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

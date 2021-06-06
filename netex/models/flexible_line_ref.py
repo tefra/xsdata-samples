@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.flexible_line_ref_structure import FlexibleLineRefStructure
+from .flexible_line_ref_structure import FlexibleLineRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

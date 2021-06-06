@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.bsw_interrupt_category_simple import BswInterruptCategorySimple
+from .bsw_interrupt_category_simple import BswInterruptCategorySimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

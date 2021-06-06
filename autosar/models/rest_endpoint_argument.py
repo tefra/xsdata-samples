@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.boolean import Boolean
-from autosar.models.rest_array_property_def import RestArrayPropertyDef
-from autosar.models.rest_boolean_property_def import RestBooleanPropertyDef
-from autosar.models.rest_integer_property_def import RestIntegerPropertyDef
-from autosar.models.rest_number_property_def import RestNumberPropertyDef
-from autosar.models.rest_object_ref import RestObjectRef
-from autosar.models.rest_string_property_def import RestStringPropertyDef
+from .boolean import Boolean
+from .rest_array_property_def import RestArrayPropertyDef
+from .rest_boolean_property_def import RestBooleanPropertyDef
+from .rest_integer_property_def import RestIntegerPropertyDef
+from .rest_number_property_def import RestNumberPropertyDef
+from .rest_object_ref import RestObjectRef
+from .rest_string_property_def import RestStringPropertyDef
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

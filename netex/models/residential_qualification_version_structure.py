@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDuration
-from netex.models.alternative_texts_rel_structure import VersionedChildStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.residence_type_enumeration import ResidenceTypeEnumeration
-from netex.models.topographic_place_ref import TopographicPlaceRef
-from netex.models.usage_parameter_ref_structure import UsageParameterRefStructure
+from .alternative_texts_rel_structure import VersionedChildStructure
+from .multilingual_string import MultilingualString
+from .residence_type_enumeration import ResidenceTypeEnumeration
+from .topographic_place_ref import TopographicPlaceRef
+from .usage_parameter_ref_structure import UsageParameterRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

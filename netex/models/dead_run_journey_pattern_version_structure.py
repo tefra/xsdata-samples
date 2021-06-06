@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.link_sequence_version_structure import JourneyPatternVersionStructure
+from .link_sequence_version_structure import JourneyPatternVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

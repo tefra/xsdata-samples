@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.response_structure import ResponseStructure
+from .response_structure import ResponseStructure
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

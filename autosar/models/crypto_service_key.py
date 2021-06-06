@@ -1,33 +1,33 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.application_rule_based_value_specification import ApplicationRuleBasedValueSpecification
-from autosar.models.application_value_specification import ApplicationValueSpecification
-from autosar.models.category_string import CategoryString
-from autosar.models.constant_reference import ConstantReference
-from autosar.models.crypto_service_key_generation_enum import CryptoServiceKeyGenerationEnum
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.not_available_value_specification import NotAvailableValueSpecification
-from autosar.models.numerical_rule_based_value_specification import NumericalRuleBasedValueSpecification
-from autosar.models.numerical_value_specification import NumericalValueSpecification
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.record_value_specification import (
+from .application_rule_based_value_specification import ApplicationRuleBasedValueSpecification
+from .application_value_specification import ApplicationValueSpecification
+from .category_string import CategoryString
+from .constant_reference import ConstantReference
+from .crypto_service_key_generation_enum import CryptoServiceKeyGenerationEnum
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .not_available_value_specification import NotAvailableValueSpecification
+from .numerical_rule_based_value_specification import NumericalRuleBasedValueSpecification
+from .numerical_value_specification import NumericalValueSpecification
+from .positive_integer import PositiveInteger
+from .record_value_specification import (
     ApplicationAssocMapValueSpecification,
     ArrayValueSpecification,
     CompositeRuleBasedValueSpecification,
     RecordValueSpecification,
 )
-from autosar.models.reference_value_specification import ReferenceValueSpecification
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.string import String
-from autosar.models.text_value_specification import TextValueSpecification
+from .reference_value_specification import ReferenceValueSpecification
+from .short_name_fragment import ShortNameFragment
+from .string import String
+from .text_value_specification import TextValueSpecification
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

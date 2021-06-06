@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.abstract_functional_service_request_structure import AbstractFunctionalServiceRequestStructure
-from netex.models.extensions_1 import Extensions1
-from netex.models.network_frame_request_policy_structure import NetworkFrameRequestPolicyStructure
-from netex.models.network_frame_topic import NetworkFrameTopic
+from .abstract_functional_service_request_structure import AbstractFunctionalServiceRequestStructure
+from .extensions_1 import Extensions1
+from .network_frame_request_policy_structure import NetworkFrameRequestPolicyStructure
+from .network_frame_topic import NetworkFrameTopic
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

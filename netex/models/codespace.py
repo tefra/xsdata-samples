@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.codespace_structure import CodespaceStructure
+from .codespace_structure import CodespaceStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

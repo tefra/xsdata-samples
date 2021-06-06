@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.bsw_entry_relationship_enum_simple import BswEntryRelationshipEnumSimple
+from .bsw_entry_relationship_enum_simple import BswEntryRelationshipEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

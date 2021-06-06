@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.lang_value import LangValue
+from .lang_value import LangValue
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

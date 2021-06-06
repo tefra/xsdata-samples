@@ -1,18 +1,18 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
 )
-from autosar.models.boolean_value_variation_point import BooleanValueVariationPoint
-from autosar.models.category_string import CategoryString
-from autosar.models.identifier import Identifier
-from autosar.models.integer import Integer
-from autosar.models.integer_value_variation_point import IntegerValueVariationPoint
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.short_name_fragment import ShortNameFragment
+from .boolean_value_variation_point import BooleanValueVariationPoint
+from .category_string import CategoryString
+from .identifier import Identifier
+from .integer import Integer
+from .integer_value_variation_point import IntegerValueVariationPoint
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

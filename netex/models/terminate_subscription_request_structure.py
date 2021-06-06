@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.authenticated_request_structure import AuthenticatedRequestStructure
-from netex.models.empty_type_1 import EmptyType1
-from netex.models.extensions_1 import Extensions1
+from .authenticated_request_structure import AuthenticatedRequestStructure
+from .empty_type_1 import EmptyType1
+from .extensions_1 import Extensions1
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

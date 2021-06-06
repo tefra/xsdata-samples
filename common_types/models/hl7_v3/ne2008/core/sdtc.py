@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
+from .datatypes_base import (
     Bl,
     Ce,
     Ii,

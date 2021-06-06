@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.identifier import Identifier
-from autosar.models.instance_event_in_composition_instance_ref import InstanceEventInCompositionInstanceRef
-from autosar.models.time_value import TimeValue
+from .annotation import VariationPoint
+from .identifier import Identifier
+from .instance_event_in_composition_instance_ref import InstanceEventInCompositionInstanceRef
+from .time_value import TimeValue
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

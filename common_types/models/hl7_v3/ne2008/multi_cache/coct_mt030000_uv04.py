@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
-from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
+from ..core.datatypes_base import (
     AdExplicit,
     Bl,
     Ce,
@@ -14,7 +14,7 @@ from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
     TelExplicit,
     TsExplicit,
 )
-from common_types.models.hl7_v3.ne2008.core.voc import (
+from ..core.voc import (
     EntityClass,
     EntityClassNonPersonLivingSubject,
     EntityClassRoot,
@@ -38,11 +38,11 @@ from common_types.models.hl7_v3.ne2008.core.voc import (
     XRoleClassCredentialedEntity,
     XRoleClassPayeePolicyRelationship,
 )
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt030202_uv01 import CoctMt030202Uv01Person
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt150000_uv02 import CoctMt150000Uv02Organization
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt150002_uv01 import CoctMt150002Uv01Organization
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt500000_uv04 import CoctMt500000Uv04CoveredParty
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt710000_uv01 import CoctMt710000Uv01Place
+from .coct_mt030202_uv01 import CoctMt030202Uv01Person
+from .coct_mt150000_uv02 import CoctMt150000Uv02Organization
+from .coct_mt150002_uv01 import CoctMt150002Uv01Organization
+from .coct_mt500000_uv04 import CoctMt500000Uv04CoveredParty
+from .coct_mt710000_uv01 import CoctMt710000Uv01Place
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

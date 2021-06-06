@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.empty_type_2 import EmptyType2
-from netex.models.strict_containment_aggregation_structure import StrictContainmentAggregationStructure
-from netex.models.via_versioned_child_structure import ViaVersionedChildStructure
+from .empty_type_2 import EmptyType2
+from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
+from .via_versioned_child_structure import ViaVersionedChildStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

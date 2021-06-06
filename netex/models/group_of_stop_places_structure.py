@@ -1,21 +1,21 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.air_submode_enumeration import AirSubmodeEnumeration
-from netex.models.alternative_names_rel_structure import AlternativeNamesRelStructure
-from netex.models.bus_submode_enumeration import BusSubmodeEnumeration
-from netex.models.coach_submode_enumeration import CoachSubmodeEnumeration
-from netex.models.funicular_submode_enumeration import FunicularSubmodeEnumeration
-from netex.models.group_of_entities_version_structure import GroupOfEntitiesVersionStructure
-from netex.models.metro_submode_enumeration import MetroSubmodeEnumeration
-from netex.models.polygon import Polygon
-from netex.models.rail_submode_enumeration import RailSubmodeEnumeration
-from netex.models.simple_point_version_structure import SimplePointVersionStructure
-from netex.models.snow_and_ice_submode_enumeration import SnowAndIceSubmodeEnumeration
-from netex.models.stop_place_refs_rel_structure import StopPlaceRefsRelStructure
-from netex.models.telecabin_submode_enumeration import TelecabinSubmodeEnumeration
-from netex.models.tram_submode_enumeration import TramSubmodeEnumeration
-from netex.models.vehicle_mode_enumeration import VehicleModeEnumeration
-from netex.models.water_submode_enumeration import WaterSubmodeEnumeration
+from .air_submode_enumeration import AirSubmodeEnumeration
+from .alternative_names_rel_structure import AlternativeNamesRelStructure
+from .bus_submode_enumeration import BusSubmodeEnumeration
+from .coach_submode_enumeration import CoachSubmodeEnumeration
+from .funicular_submode_enumeration import FunicularSubmodeEnumeration
+from .group_of_entities_version_structure import GroupOfEntitiesVersionStructure
+from .metro_submode_enumeration import MetroSubmodeEnumeration
+from .polygon import Polygon
+from .rail_submode_enumeration import RailSubmodeEnumeration
+from .simple_point_version_structure import SimplePointVersionStructure
+from .snow_and_ice_submode_enumeration import SnowAndIceSubmodeEnumeration
+from .stop_place_refs_rel_structure import StopPlaceRefsRelStructure
+from .telecabin_submode_enumeration import TelecabinSubmodeEnumeration
+from .tram_submode_enumeration import TramSubmodeEnumeration
+from .vehicle_mode_enumeration import VehicleModeEnumeration
+from .water_submode_enumeration import WaterSubmodeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

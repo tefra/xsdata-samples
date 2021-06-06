@@ -1,24 +1,24 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.boolean import Boolean
-from autosar.models.byte_order_enum import ByteOrderEnum
-from autosar.models.category_string import CategoryString
-from autosar.models.contained_i_pdu_props import ContainedIPduProps
-from autosar.models.dynamic_part import DynamicPart
-from autosar.models.identifier import Identifier
-from autosar.models.integer import Integer
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.static_part import StaticPart
-from autosar.models.trigger_mode import TriggerMode
+from .boolean import Boolean
+from .byte_order_enum import ByteOrderEnum
+from .category_string import CategoryString
+from .contained_i_pdu_props import ContainedIPduProps
+from .dynamic_part import DynamicPart
+from .identifier import Identifier
+from .integer import Integer
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .positive_integer import PositiveInteger
+from .short_name_fragment import ShortNameFragment
+from .static_part import StaticPart
+from .trigger_mode import TriggerMode
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.transport_submode_structure import TransportSubmodeStructure
+from .transport_submode_structure import TransportSubmodeStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

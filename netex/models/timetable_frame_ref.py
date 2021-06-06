@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.timetable_frame_ref_structure import TimetableFrameRefStructure
+from .timetable_frame_ref_structure import TimetableFrameRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

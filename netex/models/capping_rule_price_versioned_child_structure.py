@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.capping_rule_ref import CappingRuleRef
-from netex.models.fare_price_versioned_child_structure import FarePriceVersionedChildStructure
+from .capping_rule_ref import CappingRuleRef
+from .fare_price_versioned_child_structure import FarePriceVersionedChildStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

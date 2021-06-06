@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.assignment_version_structure_1 import AssignmentVersionStructure1
-from netex.models.fare_scheduled_stop_point_ref import FareScheduledStopPointRef
-from netex.models.private_code import PrivateCode
-from netex.models.scheduled_stop_point import ScheduledStopPoint
-from netex.models.scheduled_stop_point_ref import ScheduledStopPointRef
+from .assignment_version_structure_1 import AssignmentVersionStructure1
+from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
+from .private_code import PrivateCode
+from .scheduled_stop_point import ScheduledStopPoint
+from .scheduled_stop_point_ref import ScheduledStopPointRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

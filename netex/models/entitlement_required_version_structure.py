@@ -1,18 +1,18 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDuration
-from netex.models.amount_of_price_unit_product_ref import AmountOfPriceUnitProductRef
-from netex.models.capped_discount_right_ref import CappedDiscountRightRef
-from netex.models.entitlement_constraint_structure import EntitlementConstraintStructure
-from netex.models.entitlement_product_ref import EntitlementProductRef
-from netex.models.fare_product_ref import FareProductRef
-from netex.models.preassigned_fare_product_ref import PreassignedFareProductRef
-from netex.models.sale_discount_right_ref import SaleDiscountRightRef
-from netex.models.service_access_right_ref import ServiceAccessRightRef
-from netex.models.supplement_product_ref import SupplementProductRef
-from netex.models.third_party_product_ref import ThirdPartyProductRef
-from netex.models.usage_discount_right_ref import UsageDiscountRightRef
-from netex.models.usage_parameter_version_structure import UsageParameterVersionStructure
+from .amount_of_price_unit_product_ref import AmountOfPriceUnitProductRef
+from .capped_discount_right_ref import CappedDiscountRightRef
+from .entitlement_constraint_structure import EntitlementConstraintStructure
+from .entitlement_product_ref import EntitlementProductRef
+from .fare_product_ref import FareProductRef
+from .preassigned_fare_product_ref import PreassignedFareProductRef
+from .sale_discount_right_ref import SaleDiscountRightRef
+from .service_access_right_ref import ServiceAccessRightRef
+from .supplement_product_ref import SupplementProductRef
+from .third_party_product_ref import ThirdPartyProductRef
+from .usage_discount_right_ref import UsageDiscountRightRef
+from .usage_parameter_version_structure import UsageParameterVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

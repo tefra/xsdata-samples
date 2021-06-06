@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.coupling_element_enum_simple import CouplingElementEnumSimple
+from .coupling_element_enum_simple import CouplingElementEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

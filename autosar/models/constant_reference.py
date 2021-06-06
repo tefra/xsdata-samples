@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.constant_specification_subtypes_enum import ConstantSpecificationSubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.ref import Ref
+from .annotation import VariationPoint
+from .constant_specification_subtypes_enum import ConstantSpecificationSubtypesEnum
+from .identifier import Identifier
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

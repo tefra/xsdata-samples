@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.i_psec_header_type_enum_simple import IPsecHeaderTypeEnumSimple
+from .i_psec_header_type_enum_simple import IPsecHeaderTypeEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

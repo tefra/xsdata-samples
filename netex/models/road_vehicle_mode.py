@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.all_modes_enumeration import AllModesEnumeration
+from .all_modes_enumeration import AllModesEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

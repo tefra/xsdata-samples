@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.journey_run_times_rel_structure import JourneyRunTimesRelStructure
-from netex.models.link_in_link_sequence_versioned_child_structure import LinkInLinkSequenceVersionedChildStructure
-from netex.models.service_link_ref import ServiceLinkRef
-from netex.models.timing_link_ref import TimingLinkRef
+from .journey_run_times_rel_structure import JourneyRunTimesRelStructure
+from .link_in_link_sequence_versioned_child_structure import LinkInLinkSequenceVersionedChildStructure
+from .service_link_ref import ServiceLinkRef
+from .timing_link_ref import TimingLinkRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

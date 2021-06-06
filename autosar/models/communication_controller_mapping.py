@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.communication_controller_subtypes_enum import CommunicationControllerSubtypesEnum
-from autosar.models.hw_element_subtypes_enum import HwElementSubtypesEnum
-from autosar.models.ref import Ref
+from .communication_controller_subtypes_enum import CommunicationControllerSubtypesEnum
+from .hw_element_subtypes_enum import HwElementSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

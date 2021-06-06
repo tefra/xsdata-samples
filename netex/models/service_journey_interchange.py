@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.service_journey_interchange_version_structure import ServiceJourneyInterchangeVersionStructure
+from .service_journey_interchange_version_structure import ServiceJourneyInterchangeVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

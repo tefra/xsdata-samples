@@ -1,20 +1,20 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.autosar_data_prototype_subtypes_enum import AutosarDataPrototypeSubtypesEnum
-from autosar.models.boolean_value_variation_point import BooleanValueVariationPoint
-from autosar.models.composite_network_representation import CompositeNetworkRepresentation
-from autosar.models.end_to_end_transformation_com_spec_props import EndToEndTransformationComSpecProps
-from autosar.models.handle_out_of_range_enum import HandleOutOfRangeEnum
-from autosar.models.handle_out_of_range_status_enum import HandleOutOfRangeStatusEnum
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.positive_integer_value_variation_point import PositiveIntegerValueVariationPoint
-from autosar.models.receiver_intent_enum import ReceiverIntentEnum
-from autosar.models.reception_com_spec_props import ReceptionComSpecProps
-from autosar.models.ref import Ref
-from autosar.models.sw_pointer_target_props import SwDataDefProps
-from autosar.models.time_value import TimeValue
-from autosar.models.user_defined_transformation_com_spec_props import UserDefinedTransformationComSpecProps
-from autosar.models.variable_access import VariableAccess
+from .autosar_data_prototype_subtypes_enum import AutosarDataPrototypeSubtypesEnum
+from .boolean_value_variation_point import BooleanValueVariationPoint
+from .composite_network_representation import CompositeNetworkRepresentation
+from .end_to_end_transformation_com_spec_props import EndToEndTransformationComSpecProps
+from .handle_out_of_range_enum import HandleOutOfRangeEnum
+from .handle_out_of_range_status_enum import HandleOutOfRangeStatusEnum
+from .positive_integer import PositiveInteger
+from .positive_integer_value_variation_point import PositiveIntegerValueVariationPoint
+from .receiver_intent_enum import ReceiverIntentEnum
+from .reception_com_spec_props import ReceptionComSpecProps
+from .ref import Ref
+from .sw_pointer_target_props import SwDataDefProps
+from .time_value import TimeValue
+from .user_defined_transformation_com_spec_props import UserDefinedTransformationComSpecProps
+from .variable_access import VariableAccess
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

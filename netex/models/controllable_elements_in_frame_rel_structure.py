@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.controllable_element import ControllableElement
-from netex.models.frame_containment_structure import FrameContainmentStructure
+from .controllable_element import ControllableElement
+from .frame_containment_structure import FrameContainmentStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

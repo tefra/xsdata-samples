@@ -1,16 +1,16 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.authority_ref import AuthorityRef
-from netex.models.fare_sections_rel_structure import FareSectionsRelStructure
-from netex.models.fare_zone_ref_structure import FareZoneRefStructure
-from netex.models.fare_zone_refs_rel_structure import FareZoneRefsRelStructure
-from netex.models.group_of_operators_ref import GroupOfOperatorsRef
-from netex.models.operator_ref import OperatorRef
-from netex.models.scoping_method_enumeration import ScopingMethodEnumeration
-from netex.models.tariff_zone_refs_rel_structure import TariffZoneRefsRelStructure
-from netex.models.tariff_zone_version_structure import TariffZoneVersionStructure
-from netex.models.transport_organisation_ref import TransportOrganisationRef
-from netex.models.zone_topology_enumeration import ZoneTopologyEnumeration
+from .authority_ref import AuthorityRef
+from .fare_sections_rel_structure import FareSectionsRelStructure
+from .fare_zone_ref_structure import FareZoneRefStructure
+from .fare_zone_refs_rel_structure import FareZoneRefsRelStructure
+from .group_of_operators_ref import GroupOfOperatorsRef
+from .operator_ref import OperatorRef
+from .scoping_method_enumeration import ScopingMethodEnumeration
+from .tariff_zone_refs_rel_structure import TariffZoneRefsRelStructure
+from .tariff_zone_version_structure import TariffZoneVersionStructure
+from .transport_organisation_ref import TransportOrganisationRef
+from .zone_topology_enumeration import ZoneTopologyEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

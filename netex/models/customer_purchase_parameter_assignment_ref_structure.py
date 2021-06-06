@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.validity_parameter_assignment_ref_structure import ValidityParameterAssignmentRefStructure
+from .validity_parameter_assignment_ref_structure import ValidityParameterAssignmentRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.boolean import Boolean
-from autosar.models.dlt_log_channel import DltLogChannel
-from autosar.models.string import String
+from .boolean import Boolean
+from .dlt_log_channel import DltLogChannel
+from .string import String
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

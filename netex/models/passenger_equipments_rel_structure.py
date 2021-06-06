@@ -1,21 +1,21 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.access_vehicle_equipment_ref import AccessVehicleEquipmentRef
-from netex.models.actual_vehicle_equipment import ActualVehicleEquipment
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.help_point_equipment import HelpPointEquipment
-from netex.models.help_point_equipment_ref import HelpPointEquipmentRef
-from netex.models.passenger_equipment import PassengerEquipment
-from netex.models.passenger_equipment_ref import PassengerEquipmentRef
-from netex.models.passenger_information_equipment import PassengerInformationEquipment
-from netex.models.passenger_safety_equipment import PassengerSafetyEquipment
-from netex.models.passenger_safety_equipment_ref import PassengerSafetyEquipmentRef
-from netex.models.rubbish_disposal_equipment import RubbishDisposalEquipment
-from netex.models.rubbish_disposal_equipment_ref import RubbishDisposalEquipmentRef
-from netex.models.sanitary_equipment import SanitaryEquipment
-from netex.models.sanitary_equipment_ref import SanitaryEquipmentRef
-from netex.models.vehicle_equipment_ref import VehicleEquipmentRef
-from netex.models.wheelchair_vehicle_ref import WheelchairVehicleRef
+from .access_vehicle_equipment_ref import AccessVehicleEquipmentRef
+from .actual_vehicle_equipment import ActualVehicleEquipment
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .help_point_equipment import HelpPointEquipment
+from .help_point_equipment_ref import HelpPointEquipmentRef
+from .passenger_equipment import PassengerEquipment
+from .passenger_equipment_ref import PassengerEquipmentRef
+from .passenger_information_equipment import PassengerInformationEquipment
+from .passenger_safety_equipment import PassengerSafetyEquipment
+from .passenger_safety_equipment_ref import PassengerSafetyEquipmentRef
+from .rubbish_disposal_equipment import RubbishDisposalEquipment
+from .rubbish_disposal_equipment_ref import RubbishDisposalEquipmentRef
+from .sanitary_equipment import SanitaryEquipment
+from .sanitary_equipment_ref import SanitaryEquipmentRef
+from .vehicle_equipment_ref import VehicleEquipmentRef
+from .wheelchair_vehicle_ref import WheelchairVehicleRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

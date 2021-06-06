@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.tcp_role_enum_simple import TcpRoleEnumSimple
+from .tcp_role_enum_simple import TcpRoleEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

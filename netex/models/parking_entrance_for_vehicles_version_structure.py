@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.parking_area_refs_rel_structure import ParkingAreaRefsRelStructure
-from netex.models.site_entrance_version_structure import SiteEntranceVersionStructure
+from .parking_area_refs_rel_structure import ParkingAreaRefsRelStructure
+from .site_entrance_version_structure import SiteEntranceVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

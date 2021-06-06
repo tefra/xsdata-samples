@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.railway_junction_version_structure import RailwayJunctionVersionStructure
+from .railway_junction_version_structure import RailwayJunctionVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

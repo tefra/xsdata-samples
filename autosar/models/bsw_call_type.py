@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.bsw_call_type_simple import BswCallTypeSimple
+from .bsw_call_type_simple import BswCallTypeSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

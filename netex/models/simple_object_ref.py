@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.simple_object_ref_structure import SimpleObjectRefStructure
+from .simple_object_ref_structure import SimpleObjectRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

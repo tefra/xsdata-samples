@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.cycle_counter import CycleCounter
-from autosar.models.cycle_repetition import CycleRepetition
-from autosar.models.integer import Integer
-from autosar.models.ttcan_trigger_type import TtcanTriggerType
+from .cycle_counter import CycleCounter
+from .cycle_repetition import CycleRepetition
+from .integer import Integer
+from .ttcan_trigger_type import TtcanTriggerType
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.persistency_redundancy_handling_scope_enum import PersistencyRedundancyHandlingScopeEnum
-from autosar.models.positive_integer import PositiveInteger
+from .persistency_redundancy_handling_scope_enum import PersistencyRedundancyHandlingScopeEnum
+from .positive_integer import PositiveInteger
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

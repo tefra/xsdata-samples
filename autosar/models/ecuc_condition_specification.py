@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import MlFormula
-from autosar.models.ecuc_condition_formula import EcucConditionFormula
-from autosar.models.ecuc_query import EcucQuery
+from .annotation import MlFormula
+from .ecuc_condition_formula import EcucConditionFormula
+from .ecuc_query import EcucQuery
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

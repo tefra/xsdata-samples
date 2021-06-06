@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.fare_unit_version_structure import FareUnitVersionStructure
+from .fare_unit_version_structure import FareUnitVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

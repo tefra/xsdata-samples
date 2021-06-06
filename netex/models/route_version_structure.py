@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.direction_ref import DirectionRef
-from netex.models.direction_type_enumeration import DirectionTypeEnumeration
-from netex.models.flexible_line_ref import FlexibleLineRef
-from netex.models.line_ref import LineRef
-from netex.models.link_sequence_version_structure import LinkSequenceVersionStructure
-from netex.models.points_on_route_rel_structure import PointsOnRouteRelStructure
-from netex.models.route_ref_structure import RouteRefStructure
+from .direction_ref import DirectionRef
+from .direction_type_enumeration import DirectionTypeEnumeration
+from .flexible_line_ref import FlexibleLineRef
+from .line_ref import LineRef
+from .link_sequence_version_structure import LinkSequenceVersionStructure
+from .points_on_route_rel_structure import PointsOnRouteRelStructure
+from .route_ref_structure import RouteRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.modal_link_ref_by_value_structure import ModalLinkRefByValueStructure
+from .modal_link_ref_by_value_structure import ModalLinkRefByValueStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

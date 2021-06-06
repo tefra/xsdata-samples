@@ -1,15 +1,15 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.amount_of_price_unit_product import AmountOfPriceUnitProduct
-from netex.models.capped_discount_right import CappedDiscountRight
-from netex.models.fare_product_1 import FareProduct1
-from netex.models.fare_product_2 import FareProduct2
-from netex.models.frame_containment_structure import FrameContainmentStructure
-from netex.models.preassigned_fare_product import PreassignedFareProduct
-from netex.models.sale_discount_right import SaleDiscountRight
-from netex.models.supplement_product import SupplementProduct
-from netex.models.third_party_product import ThirdPartyProduct
-from netex.models.usage_discount_right import UsageDiscountRight
+from .amount_of_price_unit_product import AmountOfPriceUnitProduct
+from .capped_discount_right import CappedDiscountRight
+from .fare_product_1 import FareProduct1
+from .fare_product_2 import FareProduct2
+from .frame_containment_structure import FrameContainmentStructure
+from .preassigned_fare_product import PreassignedFareProduct
+from .sale_discount_right import SaleDiscountRight
+from .supplement_product import SupplementProduct
+from .third_party_product import ThirdPartyProduct
+from .usage_discount_right import UsageDiscountRight
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

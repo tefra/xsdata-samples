@@ -1,21 +1,21 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.consumed_event_group_subtypes_enum import ConsumedEventGroupSubtypesEnum
-from autosar.models.event_handler_subtypes_enum import EventHandlerSubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.pnc_mapping_ident_subtypes_enum import PncMappingIdentSubtypesEnum
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.signal_service_translation_control_enum import SignalServiceTranslationControlEnum
-from autosar.models.signal_service_translation_event_props import SignalServiceTranslationEventProps
+from .category_string import CategoryString
+from .consumed_event_group_subtypes_enum import ConsumedEventGroupSubtypesEnum
+from .event_handler_subtypes_enum import EventHandlerSubtypesEnum
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .pnc_mapping_ident_subtypes_enum import PncMappingIdentSubtypesEnum
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
+from .signal_service_translation_control_enum import SignalServiceTranslationControlEnum
+from .signal_service_translation_event_props import SignalServiceTranslationEventProps
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

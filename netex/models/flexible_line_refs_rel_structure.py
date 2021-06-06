@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.flexible_line_ref import FlexibleLineRef
-from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .flexible_line_ref import FlexibleLineRef
+from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

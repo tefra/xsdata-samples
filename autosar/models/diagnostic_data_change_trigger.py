@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.diagnostic_data_identifier_subtypes_enum import DiagnosticDataIdentifierSubtypesEnum
-from autosar.models.diagnostic_initial_event_status_enum import DiagnosticInitialEventStatusEnum
-from autosar.models.ref import Ref
+from .diagnostic_data_identifier_subtypes_enum import DiagnosticDataIdentifierSubtypesEnum
+from .diagnostic_initial_event_status_enum import DiagnosticInitialEventStatusEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

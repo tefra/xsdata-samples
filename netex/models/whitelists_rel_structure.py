@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.whitelist import Whitelist
-from netex.models.whitelist_ref import WhitelistRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .whitelist import Whitelist
+from .whitelist_ref import WhitelistRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

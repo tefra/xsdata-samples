@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.discounting_rule_ref import DiscountingRuleRef
-from netex.models.limiting_rule_ref import LimitingRuleRef
-from netex.models.multilingual_string import MultilingualString
-from netex.models.price_unit_ref import PriceUnitRef
-from netex.models.pricing_rule_ref import PricingRuleRef
-from netex.models.type_of_pricing_rule_ref import TypeOfPricingRuleRef
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .discounting_rule_ref import DiscountingRuleRef
+from .limiting_rule_ref import LimitingRuleRef
+from .multilingual_string import MultilingualString
+from .price_unit_ref import PriceUnitRef
+from .pricing_rule_ref import PricingRuleRef
+from .type_of_pricing_rule_ref import TypeOfPricingRuleRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

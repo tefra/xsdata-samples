@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.group_of_entities_version_structure import GroupOfEntitiesVersionStructure
-from netex.models.point_of_interest_classification_hierarchy_members_rel_structure import PointOfInterestClassificationHierarchyMembersRelStructure
+from .group_of_entities_version_structure import GroupOfEntitiesVersionStructure
+from .point_of_interest_classification_hierarchy_members_rel_structure import PointOfInterestClassificationHierarchyMembersRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

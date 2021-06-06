@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from netex.models.type_of_organisation_value_structure import TypeOfOrganisationValueStructure
+from .type_of_organisation_value_structure import TypeOfOrganisationValueStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

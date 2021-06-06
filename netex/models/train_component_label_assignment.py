@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.train_component_label_assignment_version_structure import TrainComponentLabelAssignmentVersionStructure
+from .train_component_label_assignment_version_structure import TrainComponentLabelAssignmentVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

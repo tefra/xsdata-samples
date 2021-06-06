@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.sw_calibration_access_enum_simple import SwCalibrationAccessEnumSimple
+from .sw_calibration_access_enum_simple import SwCalibrationAccessEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

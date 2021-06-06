@@ -1,16 +1,16 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.asam_record_layout_semantics import AsamRecordLayoutSemantics
-from autosar.models.axis_index_type import AxisIndexType
-from autosar.models.identifier import Identifier
-from autosar.models.integer import Integer
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.nmtoken_string import NmtokenString
-from autosar.models.record_layout_iterator_point import RecordLayoutIteratorPoint
-from autosar.models.ref import Ref
-from autosar.models.sw_generic_axis_param_type_subtypes_enum import SwGenericAxisParamTypeSubtypesEnum
-from autosar.models.sw_record_layout_subtypes_enum import SwRecordLayoutSubtypesEnum
-from autosar.models.sw_record_layout_v import SwRecordLayoutV
+from .asam_record_layout_semantics import AsamRecordLayoutSemantics
+from .axis_index_type import AxisIndexType
+from .identifier import Identifier
+from .integer import Integer
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .nmtoken_string import NmtokenString
+from .record_layout_iterator_point import RecordLayoutIteratorPoint
+from .ref import Ref
+from .sw_generic_axis_param_type_subtypes_enum import SwGenericAxisParamTypeSubtypesEnum
+from .sw_record_layout_subtypes_enum import SwRecordLayoutSubtypesEnum
+from .sw_record_layout_v import SwRecordLayoutV
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

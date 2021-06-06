@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xml.etree.ElementTree import QName
-from netex.models.containment_enumeration import ContainmentEnumeration
-from netex.models.mandatory_enumeration import MandatoryEnumeration
-from netex.models.modification_set_enumeration import ModificationSetEnumeration
-from netex.models.relationship_ref import RelationshipRef
+from .containment_enumeration import ContainmentEnumeration
+from .mandatory_enumeration import MandatoryEnumeration
+from .modification_set_enumeration import ModificationSetEnumeration
+from .relationship_ref import RelationshipRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

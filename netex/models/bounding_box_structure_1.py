@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.location_structure_1 import LocationStructure1
+from .location_structure_1 import LocationStructure1
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

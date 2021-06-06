@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.caption import Caption
-from autosar.models.chapter_enum_break_simple import ChapterEnumBreakSimple
-from autosar.models.float_enum_simple import FloatEnumSimple
-from autosar.models.frame_enum_simple import FrameEnumSimple
-from autosar.models.keep_with_previous_enum_simple import KeepWithPreviousEnumSimple
-from autosar.models.orient_enum_simple import OrientEnumSimple
-from autosar.models.tgroup import Tgroup
+from .annotation import VariationPoint
+from .caption import Caption
+from .chapter_enum_break_simple import ChapterEnumBreakSimple
+from .float_enum_simple import FloatEnumSimple
+from .frame_enum_simple import FrameEnumSimple
+from .keep_with_previous_enum_simple import KeepWithPreviousEnumSimple
+from .orient_enum_simple import OrientEnumSimple
+from .tgroup import Tgroup
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

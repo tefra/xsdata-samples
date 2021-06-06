@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.identifier import Identifier
-from autosar.models.rule_based_value_specification import RuleBasedValueSpecification
+from .annotation import VariationPoint
+from .identifier import Identifier
+from .rule_based_value_specification import RuleBasedValueSpecification
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

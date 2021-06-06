@@ -1,27 +1,27 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.boolean import Boolean
-from autosar.models.category_string import CategoryString
-from autosar.models.i_pv_6_ext_header_filter_list_subtypes_enum import IPv6ExtHeaderFilterListSubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.logic_address_subtypes_enum import LogicAddressSubtypesEnum
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.n_pdu_subtypes_enum import NPduSubtypesEnum
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.runtime_address_configuration_enum import RuntimeAddressConfigurationEnum
-from autosar.models.so_ad_connector_type import SoAdConnectorType
-from autosar.models.so_ad_protocol_type import SoAdProtocolType
-from autosar.models.socket_address_subtypes_enum import SocketAddressSubtypesEnum
-from autosar.models.socket_connection_ipdu_identifier import SocketConnectionIpduIdentifier
-from autosar.models.tcp_option_filter_list_subtypes_enum import TcpOptionFilterListSubtypesEnum
-from autosar.models.time_value import TimeValue
-from autosar.models.tp_connection_ident import TpConnectionIdent
+from .boolean import Boolean
+from .category_string import CategoryString
+from .i_pv_6_ext_header_filter_list_subtypes_enum import IPv6ExtHeaderFilterListSubtypesEnum
+from .identifier import Identifier
+from .logic_address_subtypes_enum import LogicAddressSubtypesEnum
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .n_pdu_subtypes_enum import NPduSubtypesEnum
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .runtime_address_configuration_enum import RuntimeAddressConfigurationEnum
+from .so_ad_connector_type import SoAdConnectorType
+from .so_ad_protocol_type import SoAdProtocolType
+from .socket_address_subtypes_enum import SocketAddressSubtypesEnum
+from .socket_connection_ipdu_identifier import SocketConnectionIpduIdentifier
+from .tcp_option_filter_list_subtypes_enum import TcpOptionFilterListSubtypesEnum
+from .time_value import TimeValue
+from .tp_connection_ident import TpConnectionIdent
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

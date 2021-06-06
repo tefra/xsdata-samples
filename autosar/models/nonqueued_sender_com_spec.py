@@ -1,30 +1,30 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.application_rule_based_value_specification import ApplicationRuleBasedValueSpecification
-from autosar.models.application_value_specification import ApplicationValueSpecification
-from autosar.models.autosar_data_prototype_subtypes_enum import AutosarDataPrototypeSubtypesEnum
-from autosar.models.boolean_value_variation_point import BooleanValueVariationPoint
-from autosar.models.composite_network_representation import CompositeNetworkRepresentation
-from autosar.models.constant_reference import ConstantReference
-from autosar.models.data_filter import DataFilter
-from autosar.models.handle_out_of_range_enum import HandleOutOfRangeEnum
-from autosar.models.not_available_value_specification import NotAvailableValueSpecification
-from autosar.models.numerical_rule_based_value_specification import NumericalRuleBasedValueSpecification
-from autosar.models.numerical_value_specification import NumericalValueSpecification
-from autosar.models.record_value_specification import (
+from .application_rule_based_value_specification import ApplicationRuleBasedValueSpecification
+from .application_value_specification import ApplicationValueSpecification
+from .autosar_data_prototype_subtypes_enum import AutosarDataPrototypeSubtypesEnum
+from .boolean_value_variation_point import BooleanValueVariationPoint
+from .composite_network_representation import CompositeNetworkRepresentation
+from .constant_reference import ConstantReference
+from .data_filter import DataFilter
+from .handle_out_of_range_enum import HandleOutOfRangeEnum
+from .not_available_value_specification import NotAvailableValueSpecification
+from .numerical_rule_based_value_specification import NumericalRuleBasedValueSpecification
+from .numerical_value_specification import NumericalValueSpecification
+from .record_value_specification import (
     ApplicationAssocMapValueSpecification,
     ArrayValueSpecification,
     CompositeRuleBasedValueSpecification,
     RecordValueSpecification,
 )
-from autosar.models.ref import Ref
-from autosar.models.reference_value_specification import ReferenceValueSpecification
-from autosar.models.sender_intent_enum import SenderIntentEnum
-from autosar.models.sw_pointer_target_props import SwDataDefProps
-from autosar.models.text_value_specification import TextValueSpecification
-from autosar.models.time_value import TimeValue
-from autosar.models.transmission_acknowledgement_request import TransmissionAcknowledgementRequest
-from autosar.models.transmission_com_spec_props import TransmissionComSpecProps
+from .ref import Ref
+from .reference_value_specification import ReferenceValueSpecification
+from .sender_intent_enum import SenderIntentEnum
+from .sw_pointer_target_props import SwDataDefProps
+from .text_value_specification import TextValueSpecification
+from .time_value import TimeValue
+from .transmission_acknowledgement_request import TransmissionAcknowledgementRequest
+from .transmission_com_spec_props import TransmissionComSpecProps
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

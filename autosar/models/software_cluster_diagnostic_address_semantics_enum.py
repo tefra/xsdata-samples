@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.software_cluster_diagnostic_address_semantics_enum_simple import SoftwareClusterDiagnosticAddressSemanticsEnumSimple
+from .software_cluster_diagnostic_address_semantics_enum_simple import SoftwareClusterDiagnosticAddressSemanticsEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

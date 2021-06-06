@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.schedule_request_ref_structure import ScheduleRequestRefStructure
+from .schedule_request_ref_structure import ScheduleRequestRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

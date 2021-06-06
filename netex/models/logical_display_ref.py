@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.logical_display_ref_structure import LogicalDisplayRefStructure
+from .logical_display_ref_structure import LogicalDisplayRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,15 +1,15 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.access_mode_enumeration import AccessModeEnumeration
-from netex.models.accessibility_assessment import AccessibilityAssessment
-from netex.models.addressable_place_version_structure import AddressablePlaceVersionStructure
-from netex.models.alternative_names_rel_structure import AlternativeNamesRelStructure
-from netex.models.covered_enumeration import CoveredEnumeration
-from netex.models.gated_enumeration import GatedEnumeration
-from netex.models.lighting_enumeration import LightingEnumeration
-from netex.models.multilingual_string import MultilingualString
-from netex.models.public_use_enumeration import PublicUseEnumeration
-from netex.models.site_facility_sets_rel_structure import SiteFacilitySetsRelStructure
+from .access_mode_enumeration import AccessModeEnumeration
+from .accessibility_assessment import AccessibilityAssessment
+from .addressable_place_version_structure import AddressablePlaceVersionStructure
+from .alternative_names_rel_structure import AlternativeNamesRelStructure
+from .covered_enumeration import CoveredEnumeration
+from .gated_enumeration import GatedEnumeration
+from .lighting_enumeration import LightingEnumeration
+from .multilingual_string import MultilingualString
+from .public_use_enumeration import PublicUseEnumeration
+from .site_facility_sets_rel_structure import SiteFacilitySetsRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

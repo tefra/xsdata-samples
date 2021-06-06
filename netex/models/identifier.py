@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.code_with_authority_type import CodeWithAuthorityType
+from .code_with_authority_type import CodeWithAuthorityType
 
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 

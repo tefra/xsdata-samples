@@ -1,22 +1,22 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDuration
-from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
-from netex.models.alternative_texts_rel_structure import VersionedChildStructure
-from netex.models.empty_type_2 import EmptyType2
-from netex.models.fare_scheduled_stop_point_ref import FareScheduledStopPointRef
-from netex.models.line_in_direction_ref import LineInDirectionRef
-from netex.models.lines_in_direction_refs_rel_structure import LinesInDirectionRefsRelStructure
-from netex.models.operator_ref import OperatorRef
-from netex.models.point_ref_structure import PointRefStructure
-from netex.models.scheduled_stop_point_ref import ScheduledStopPointRef
-from netex.models.scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
-from netex.models.service_designator import ServiceDesignator
-from netex.models.service_journey_ref_structure import ServiceJourneyRefStructure
-from netex.models.stop_area_ref_structure import StopAreaRefStructure
-from netex.models.stop_place_ref import StopPlaceRef
-from netex.models.stop_place_ref_structure import StopPlaceRefStructure
-from netex.models.time_demand_type_ref import TimeDemandTypeRef
+from .all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
+from .alternative_texts_rel_structure import VersionedChildStructure
+from .empty_type_2 import EmptyType2
+from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
+from .line_in_direction_ref import LineInDirectionRef
+from .lines_in_direction_refs_rel_structure import LinesInDirectionRefsRelStructure
+from .operator_ref import OperatorRef
+from .point_ref_structure import PointRefStructure
+from .scheduled_stop_point_ref import ScheduledStopPointRef
+from .scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
+from .service_designator import ServiceDesignator
+from .service_journey_ref_structure import ServiceJourneyRefStructure
+from .stop_area_ref_structure import StopAreaRefStructure
+from .stop_place_ref import StopPlaceRef
+from .stop_place_ref_structure import StopPlaceRefStructure
+from .time_demand_type_ref import TimeDemandTypeRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

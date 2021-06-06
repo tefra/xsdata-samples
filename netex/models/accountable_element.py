@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.accountable_element_structure import AccountableElementStructure
+from .accountable_element_structure import AccountableElementStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

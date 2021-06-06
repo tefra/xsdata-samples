@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.type_of_machine_readability_ref import TypeOfMachineReadabilityRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .type_of_machine_readability_ref import TypeOfMachineReadabilityRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

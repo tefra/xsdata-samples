@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.autosar_operation_argument_instance_subtypes_enum import AutosarOperationArgumentInstanceSubtypesEnum
-from autosar.models.autosar_variable_instance_subtypes_enum import AutosarVariableInstanceSubtypesEnum
-from autosar.models.ref import Ref
-from autosar.models.timing_condition_subtypes_enum import TimingConditionSubtypesEnum
-from autosar.models.timing_description_event_subtypes_enum import TimingDescriptionEventSubtypesEnum
-from autosar.models.timing_mode_instance_subtypes_enum import TimingModeInstanceSubtypesEnum
+from .autosar_operation_argument_instance_subtypes_enum import AutosarOperationArgumentInstanceSubtypesEnum
+from .autosar_variable_instance_subtypes_enum import AutosarVariableInstanceSubtypesEnum
+from .ref import Ref
+from .timing_condition_subtypes_enum import TimingConditionSubtypesEnum
+from .timing_description_event_subtypes_enum import TimingDescriptionEventSubtypesEnum
+from .timing_mode_instance_subtypes_enum import TimingModeInstanceSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

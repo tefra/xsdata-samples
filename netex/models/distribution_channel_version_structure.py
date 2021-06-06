@@ -1,24 +1,24 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.alternative_names_rel_structure import AlternativeNamesRelStructure
-from netex.models.authority_ref import AuthorityRef
-from netex.models.contact_structure import ContactStructure
-from netex.models.distribution_channel_type_enumeration import DistributionChannelTypeEnumeration
-from netex.models.distribution_rights_enumeration import DistributionRightsEnumeration
-from netex.models.general_group_of_entities_ref_structure import GeneralGroupOfEntitiesRefStructure
-from netex.models.general_organisation_ref import GeneralOrganisationRef
-from netex.models.management_agent_ref import ManagementAgentRef
-from netex.models.operator_ref import OperatorRef
-from netex.models.organisation_ref import OrganisationRef
-from netex.models.other_organisation_ref import OtherOrganisationRef
-from netex.models.payment_method_enumeration import PaymentMethodEnumeration
-from netex.models.point_refs_rel_structure import PointRefsRelStructure
-from netex.models.retail_consortium_ref import RetailConsortiumRef
-from netex.models.serviced_organisation_ref import ServicedOrganisationRef
-from netex.models.transport_organisation_ref import TransportOrganisationRef
-from netex.models.travel_agent_ref import TravelAgentRef
-from netex.models.type_of_payment_method_refs_rel_structure import TypeOfPaymentMethodRefsRelStructure
-from netex.models.type_of_value_version_structure import TypeOfValueVersionStructure
+from .alternative_names_rel_structure import AlternativeNamesRelStructure
+from .authority_ref import AuthorityRef
+from .contact_structure import ContactStructure
+from .distribution_channel_type_enumeration import DistributionChannelTypeEnumeration
+from .distribution_rights_enumeration import DistributionRightsEnumeration
+from .general_group_of_entities_ref_structure import GeneralGroupOfEntitiesRefStructure
+from .general_organisation_ref import GeneralOrganisationRef
+from .management_agent_ref import ManagementAgentRef
+from .operator_ref import OperatorRef
+from .organisation_ref import OrganisationRef
+from .other_organisation_ref import OtherOrganisationRef
+from .payment_method_enumeration import PaymentMethodEnumeration
+from .point_refs_rel_structure import PointRefsRelStructure
+from .retail_consortium_ref import RetailConsortiumRef
+from .serviced_organisation_ref import ServicedOrganisationRef
+from .transport_organisation_ref import TransportOrganisationRef
+from .travel_agent_ref import TravelAgentRef
+from .type_of_payment_method_refs_rel_structure import TypeOfPaymentMethodRefsRelStructure
+from .type_of_value_version_structure import TypeOfValueVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

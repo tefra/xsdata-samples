@@ -1,15 +1,15 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.derived_view_structure import DerivedViewStructure
-from netex.models.external_object_ref_structure import ExternalObjectRefStructure
-from netex.models.fare_scheduled_stop_point_ref import FareScheduledStopPointRef
-from netex.models.multilingual_string import MultilingualString
-from netex.models.presentation_structure import PresentationStructure
-from netex.models.private_code import PrivateCode
-from netex.models.private_code_structure import PrivateCodeStructure
-from netex.models.scheduled_stop_point_ref import ScheduledStopPointRef
-from netex.models.stop_type_enumeration import StopTypeEnumeration
-from netex.models.type_of_point_ref import TypeOfPointRef
+from .derived_view_structure import DerivedViewStructure
+from .external_object_ref_structure import ExternalObjectRefStructure
+from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
+from .multilingual_string import MultilingualString
+from .presentation_structure import PresentationStructure
+from .private_code import PrivateCode
+from .private_code_structure import PrivateCodeStructure
+from .scheduled_stop_point_ref import ScheduledStopPointRef
+from .stop_type_enumeration import StopTypeEnumeration
+from .type_of_point_ref import TypeOfPointRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

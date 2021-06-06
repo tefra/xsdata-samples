@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.management_agent_version_structure import ManagementAgentVersionStructure
+from .management_agent_version_structure import ManagementAgentVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

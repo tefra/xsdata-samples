@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from netex.models.pos import Pos
+from .pos import Pos
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

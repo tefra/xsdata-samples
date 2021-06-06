@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.driver_ref import DriverRef
-from netex.models.operating_day_ref import OperatingDayRef
-from netex.models.service_journey_version_structure import ServiceJourneyVersionStructure
-from netex.models.uic_operating_period import UicOperatingPeriod
+from .driver_ref import DriverRef
+from .operating_day_ref import OperatingDayRef
+from .service_journey_version_structure import ServiceJourneyVersionStructure
+from .uic_operating_period import UicOperatingPeriod
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

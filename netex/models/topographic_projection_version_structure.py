@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.country_ref import CountryRef
-from netex.models.projection_version_structure import ProjectionVersionStructure
-from netex.models.topographic_place_ref import TopographicPlaceRef
-from netex.models.version_of_object_ref_structure import VersionOfObjectRefStructure
+from .country_ref import CountryRef
+from .projection_version_structure import ProjectionVersionStructure
+from .topographic_place_ref import TopographicPlaceRef
+from .version_of_object_ref_structure import VersionOfObjectRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

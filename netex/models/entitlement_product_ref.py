@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.entitlement_product_ref_structure import EntitlementProductRefStructure
+from .entitlement_product_ref_structure import EntitlementProductRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

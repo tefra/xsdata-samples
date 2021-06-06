@@ -1,21 +1,21 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.ecu_instance_subtypes_enum import EcuInstanceSubtypesEnum
-from autosar.models.flexray_cluster_subtypes_enum import FlexrayClusterSubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.integer import Integer
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.td_event_occurrence_expression import TdEventOccurrenceExpression
+from .category_string import CategoryString
+from .ecu_instance_subtypes_enum import EcuInstanceSubtypesEnum
+from .flexray_cluster_subtypes_enum import FlexrayClusterSubtypesEnum
+from .identifier import Identifier
+from .integer import Integer
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
+from .td_event_occurrence_expression import TdEventOccurrenceExpression
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

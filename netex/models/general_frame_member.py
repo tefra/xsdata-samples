@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.general_frame_member_structure import GeneralFrameMemberStructure
+from .general_frame_member_structure import GeneralFrameMemberStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

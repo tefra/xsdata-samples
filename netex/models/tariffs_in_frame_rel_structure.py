@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.frame_containment_structure import FrameContainmentStructure
-from netex.models.tariff import Tariff
+from .frame_containment_structure import FrameContainmentStructure
+from .tariff import Tariff
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

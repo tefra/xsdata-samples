@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.integer_value_variation_point import IntegerValueVariationPoint
-from autosar.models.post_build_variant_criterion_subtypes_enum import PostBuildVariantCriterionSubtypesEnum
-from autosar.models.ref import Ref
+from .integer_value_variation_point import IntegerValueVariationPoint
+from .post_build_variant_criterion_subtypes_enum import PostBuildVariantCriterionSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

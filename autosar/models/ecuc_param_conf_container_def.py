@@ -1,40 +1,40 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
 )
-from autosar.models.boolean import Boolean
-from autosar.models.boolean_value_variation_point import BooleanValueVariationPoint
-from autosar.models.category_string import CategoryString
-from autosar.models.ecuc_add_info_param_def import EcucAddInfoParamDef
-from autosar.models.ecuc_boolean_param_def import EcucBooleanParamDef
-from autosar.models.ecuc_choice_reference_def import EcucChoiceReferenceDef
-from autosar.models.ecuc_condition_specification import EcucConditionSpecification
-from autosar.models.ecuc_destination_uri_def_subtypes_enum import EcucDestinationUriDefSubtypesEnum
-from autosar.models.ecuc_enumeration_param_def import EcucEnumerationParamDef
-from autosar.models.ecuc_float_param_def import EcucFloatParamDef
-from autosar.models.ecuc_foreign_reference_def import EcucForeignReferenceDef
-from autosar.models.ecuc_function_name_def import EcucFunctionNameDef
-from autosar.models.ecuc_instance_reference_def import EcucInstanceReferenceDef
-from autosar.models.ecuc_integer_param_def import EcucIntegerParamDef
-from autosar.models.ecuc_linker_symbol_def import EcucLinkerSymbolDef
-from autosar.models.ecuc_multiline_string_param_def import EcucMultilineStringParamDef
-from autosar.models.ecuc_multiplicity_configuration_class import EcucMultiplicityConfigurationClass
-from autosar.models.ecuc_reference_def import EcucReferenceDef
-from autosar.models.ecuc_scope_enum import EcucScopeEnum
-from autosar.models.ecuc_string_param_def import EcucStringParamDef
-from autosar.models.ecuc_symbolic_name_reference_def import EcucSymbolicNameReferenceDef
-from autosar.models.ecuc_uri_reference_def import EcucUriReferenceDef
-from autosar.models.ecuc_validation_condition import EcucValidationCondition
-from autosar.models.identifier import Identifier
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.positive_integer_value_variation_point import PositiveIntegerValueVariationPoint
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.traceable_subtypes_enum import TraceableSubtypesEnum
+from .boolean import Boolean
+from .boolean_value_variation_point import BooleanValueVariationPoint
+from .category_string import CategoryString
+from .ecuc_add_info_param_def import EcucAddInfoParamDef
+from .ecuc_boolean_param_def import EcucBooleanParamDef
+from .ecuc_choice_reference_def import EcucChoiceReferenceDef
+from .ecuc_condition_specification import EcucConditionSpecification
+from .ecuc_destination_uri_def_subtypes_enum import EcucDestinationUriDefSubtypesEnum
+from .ecuc_enumeration_param_def import EcucEnumerationParamDef
+from .ecuc_float_param_def import EcucFloatParamDef
+from .ecuc_foreign_reference_def import EcucForeignReferenceDef
+from .ecuc_function_name_def import EcucFunctionNameDef
+from .ecuc_instance_reference_def import EcucInstanceReferenceDef
+from .ecuc_integer_param_def import EcucIntegerParamDef
+from .ecuc_linker_symbol_def import EcucLinkerSymbolDef
+from .ecuc_multiline_string_param_def import EcucMultilineStringParamDef
+from .ecuc_multiplicity_configuration_class import EcucMultiplicityConfigurationClass
+from .ecuc_reference_def import EcucReferenceDef
+from .ecuc_scope_enum import EcucScopeEnum
+from .ecuc_string_param_def import EcucStringParamDef
+from .ecuc_symbolic_name_reference_def import EcucSymbolicNameReferenceDef
+from .ecuc_uri_reference_def import EcucUriReferenceDef
+from .ecuc_validation_condition import EcucValidationCondition
+from .identifier import Identifier
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .positive_integer_value_variation_point import PositiveIntegerValueVariationPoint
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
+from .traceable_subtypes_enum import TraceableSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

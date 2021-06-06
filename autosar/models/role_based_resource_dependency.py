@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.cp_software_cluster_resource_subtypes_enum import CpSoftwareClusterResourceSubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.ref import Ref
+from .cp_software_cluster_resource_subtypes_enum import CpSoftwareClusterResourceSubtypesEnum
+from .identifier import Identifier
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

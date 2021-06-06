@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.assignment_version_structure_1 import AssignmentVersionStructure1
-from netex.models.dead_run_ref import DeadRunRef
-from netex.models.multilingual_string import MultilingualString
-from netex.models.train_component_ref import TrainComponentRef
-from netex.models.vehicle_journey_ref import VehicleJourneyRef
+from .assignment_version_structure_1 import AssignmentVersionStructure1
+from .dead_run_ref import DeadRunRef
+from .multilingual_string import MultilingualString
+from .train_component_ref import TrainComponentRef
+from .vehicle_journey_ref import VehicleJourneyRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

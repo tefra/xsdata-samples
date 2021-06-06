@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.positive_integer_value_variation_point import PositiveIntegerValueVariationPoint
+from .positive_integer_value_variation_point import PositiveIntegerValueVariationPoint
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

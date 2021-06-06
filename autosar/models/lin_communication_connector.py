@@ -1,26 +1,26 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.boolean import Boolean
-from autosar.models.category_string import CategoryString
-from autosar.models.communication_controller_subtypes_enum import CommunicationControllerSubtypesEnum
-from autosar.models.frame_port import FramePort
-from autosar.models.i_pdu_port import IPduPort
-from autosar.models.i_signal_port import ISignalPort
-from autosar.models.identifier import Identifier
-from autosar.models.integer import Integer
-from autosar.models.lin_configurable_frame import LinConfigurableFrame
-from autosar.models.lin_ordered_configurable_frame import LinOrderedConfigurableFrame
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.pnc_gateway_type_enum import PncGatewayTypeEnum
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
+from .boolean import Boolean
+from .category_string import CategoryString
+from .communication_controller_subtypes_enum import CommunicationControllerSubtypesEnum
+from .frame_port import FramePort
+from .i_pdu_port import IPduPort
+from .i_signal_port import ISignalPort
+from .identifier import Identifier
+from .integer import Integer
+from .lin_configurable_frame import LinConfigurableFrame
+from .lin_ordered_configurable_frame import LinOrderedConfigurableFrame
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .pnc_gateway_type_enum import PncGatewayTypeEnum
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

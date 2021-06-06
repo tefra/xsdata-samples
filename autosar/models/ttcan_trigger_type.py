@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.ttcan_trigger_type_simple import TtcanTriggerTypeSimple
+from .ttcan_trigger_type_simple import TtcanTriggerTypeSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

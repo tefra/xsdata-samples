@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.type_of_notice_value_structure import TypeOfNoticeValueStructure
+from .type_of_notice_value_structure import TypeOfNoticeValueStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

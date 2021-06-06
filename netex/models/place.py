@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.place_version_structure import PlaceVersionStructure
+from .place_version_structure import PlaceVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

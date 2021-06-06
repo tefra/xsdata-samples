@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDuration
-from netex.models.alternative_texts_rel_structure import DataManagedObjectStructure
-from netex.models.duty_parts_rel_structure import DutyPartsRelStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.timetable_frame_ref import TimetableFrameRef
+from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .duty_parts_rel_structure import DutyPartsRelStructure
+from .multilingual_string import MultilingualString
+from .timetable_frame_ref import TimetableFrameRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

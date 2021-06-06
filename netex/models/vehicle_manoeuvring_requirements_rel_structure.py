@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.vehicle_manoeuvring_requirement import VehicleManoeuvringRequirement
-from netex.models.vehicle_manoeuvring_requirement_ref import VehicleManoeuvringRequirementRef
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .vehicle_manoeuvring_requirement import VehicleManoeuvringRequirement
+from .vehicle_manoeuvring_requirement_ref import VehicleManoeuvringRequirementRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

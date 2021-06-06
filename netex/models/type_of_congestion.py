@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from netex.models.type_of_congestion_value_structure import TypeOfCongestionValueStructure
+from .type_of_congestion_value_structure import TypeOfCongestionValueStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

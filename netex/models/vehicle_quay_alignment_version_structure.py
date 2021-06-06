@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.alternative_texts_rel_structure import VersionedChildStructure
-from netex.models.quay_ref import QuayRef
-from netex.models.vehicle_stopping_place_ref import VehicleStoppingPlaceRef
+from .alternative_texts_rel_structure import VersionedChildStructure
+from .quay_ref import QuayRef
+from .vehicle_stopping_place_ref import VehicleStoppingPlaceRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

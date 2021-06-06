@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.aggregation_condition import AggregationCondition
-from autosar.models.primitive_attribute_condition import PrimitiveAttributeCondition
-from autosar.models.reference_condition import ReferenceCondition
-from autosar.models.textual_condition import TextualCondition
+from .aggregation_condition import AggregationCondition
+from .primitive_attribute_condition import PrimitiveAttributeCondition
+from .reference_condition import ReferenceCondition
+from .textual_condition import TextualCondition
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

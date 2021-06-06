@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
-from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
+from ..core.datatypes_base import (
     AdExplicit,
     Ce,
     Cs,
@@ -8,7 +8,7 @@ from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
     Ii,
     TsExplicit,
 )
-from common_types.models.hl7_v3.ne2008.core.voc import (
+from ..core.voc import (
     EntityClass,
     EntityClassNonPersonLivingSubject,
     EntityDeterminer,
@@ -28,7 +28,7 @@ from common_types.models.hl7_v3.ne2008.core.voc import (
     XRoleClassCredentialedEntity,
     XRoleClassPayeePolicyRelationship,
 )
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt150003_uv03 import CoctMt150003Uv03Organization
+from .coct_mt150003_uv03 import CoctMt150003Uv03Organization
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

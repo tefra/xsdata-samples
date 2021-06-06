@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
-from netex.models.journey_layover_structure import JourneyLayoverStructure
-from netex.models.journey_pattern_ref import JourneyPatternRef
-from netex.models.service_journey_pattern_ref import ServiceJourneyPatternRef
-from netex.models.service_pattern_ref import ServicePatternRef
+from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
+from .journey_layover_structure import JourneyLayoverStructure
+from .journey_pattern_ref import JourneyPatternRef
+from .service_journey_pattern_ref import ServiceJourneyPatternRef
+from .service_pattern_ref import ServicePatternRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

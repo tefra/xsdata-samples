@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.country_ref import CountryRef
-from netex.models.derived_view_structure import DerivedViewStructure
-from netex.models.multilingual_string import MultilingualString
-from netex.models.topographic_place_ref import TopographicPlaceRef
+from .country_ref import CountryRef
+from .derived_view_structure import DerivedViewStructure
+from .multilingual_string import MultilingualString
+from .topographic_place_ref import TopographicPlaceRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

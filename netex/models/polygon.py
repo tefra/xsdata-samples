@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.polygon_type import PolygonType
+from .polygon_type import PolygonType
 
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 

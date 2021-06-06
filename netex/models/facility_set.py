@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.facility_set_version_structure import FacilitySetVersionStructure
+from .facility_set_version_structure import FacilitySetVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

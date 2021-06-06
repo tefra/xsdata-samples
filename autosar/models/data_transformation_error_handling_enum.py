@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.data_transformation_error_handling_enum_simple import DataTransformationErrorHandlingEnumSimple
+from .data_transformation_error_handling_enum_simple import DataTransformationErrorHandlingEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

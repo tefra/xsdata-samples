@@ -1,23 +1,23 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.enter_exit_timeout import EnterExitTimeout
-from autosar.models.identifier import Identifier
-from autosar.models.integer import Integer
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.process_argument import ProcessArgument
-from autosar.models.process_execution_error_subtypes_enum import ProcessExecutionErrorSubtypesEnum
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.string import String
-from autosar.models.tag_with_optional_value import TagWithOptionalValue
-from autosar.models.termination_behavior_enum import TerminationBehaviorEnum
+from .category_string import CategoryString
+from .enter_exit_timeout import EnterExitTimeout
+from .identifier import Identifier
+from .integer import Integer
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .process_argument import ProcessArgument
+from .process_execution_error_subtypes_enum import ProcessExecutionErrorSubtypesEnum
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
+from .string import String
+from .tag_with_optional_value import TagWithOptionalValue
+from .termination_behavior_enum import TerminationBehaviorEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

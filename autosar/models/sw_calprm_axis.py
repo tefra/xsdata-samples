@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.axis_index_type import AxisIndexType
-from autosar.models.calprm_axis_category_enum import CalprmAxisCategoryEnum
-from autosar.models.display_format_string import DisplayFormatString
-from autosar.models.ref import Ref
-from autosar.models.sw_axis_grouped import SwAxisGrouped
-from autosar.models.sw_axis_individual import SwAxisIndividual
-from autosar.models.sw_base_type_subtypes_enum import SwBaseTypeSubtypesEnum
-from autosar.models.sw_calibration_access_enum import SwCalibrationAccessEnum
+from .axis_index_type import AxisIndexType
+from .calprm_axis_category_enum import CalprmAxisCategoryEnum
+from .display_format_string import DisplayFormatString
+from .ref import Ref
+from .sw_axis_grouped import SwAxisGrouped
+from .sw_axis_individual import SwAxisIndividual
+from .sw_base_type_subtypes_enum import SwBaseTypeSubtypesEnum
+from .sw_calibration_access_enum import SwCalibrationAccessEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

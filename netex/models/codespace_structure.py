@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.entity_structure import EntityStructure
+from .entity_structure import EntityStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

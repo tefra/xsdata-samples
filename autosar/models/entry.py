@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.align_enum_simple import AlignEnumSimple
-from autosar.models.annotation import (
+from .align_enum_simple import AlignEnumSimple
+from .annotation import (
     DefList,
     LabeledList,
     ListType,
@@ -14,8 +14,8 @@ from autosar.models.annotation import (
     StructuredReq,
     TraceableText,
 )
-from autosar.models.string import String
-from autosar.models.valign_enum_simple import ValignEnumSimple
+from .string import String
+from .valign_enum_simple import ValignEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.consumer_request_endpoint_structure import ConsumerRequestEndpointStructure
+from .consumer_request_endpoint_structure import ConsumerRequestEndpointStructure
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

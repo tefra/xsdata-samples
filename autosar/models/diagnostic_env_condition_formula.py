@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.diagnostic_env_data_condition import DiagnosticEnvDataCondition
-from autosar.models.diagnostic_env_mode_condition import DiagnosticEnvModeCondition
-from autosar.models.diagnostic_logical_operator_enum import DiagnosticLogicalOperatorEnum
-from autosar.models.positive_integer import PositiveInteger
+from .diagnostic_env_data_condition import DiagnosticEnvDataCondition
+from .diagnostic_env_mode_condition import DiagnosticEnvModeCondition
+from .diagnostic_logical_operator_enum import DiagnosticLogicalOperatorEnum
+from .positive_integer import PositiveInteger
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

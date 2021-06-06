@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.request_type_enum_simple import RequestTypeEnumSimple
+from .request_type_enum_simple import RequestTypeEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

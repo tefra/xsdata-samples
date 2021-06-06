@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.abstract_request_structure import AbstractRequestStructure
+from .abstract_request_structure import AbstractRequestStructure
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

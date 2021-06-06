@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.diagnostic_compare_type_enum_simple import DiagnosticCompareTypeEnumSimple
+from .diagnostic_compare_type_enum_simple import DiagnosticCompareTypeEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

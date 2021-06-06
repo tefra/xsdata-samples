@@ -1,14 +1,14 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.access_facility_enumeration import AccessFacilityEnumeration
-from netex.models.emergency_service_enumeration import EmergencyServiceEnumeration
-from netex.models.facility_set_version_structure import FacilitySetVersionStructure
-from netex.models.hire_facility_enumeration import HireFacilityEnumeration
-from netex.models.luggage_locker_facility_enumeration import LuggageLockerFacilityEnumeration
-from netex.models.luggage_service_facility_enumeration import LuggageServiceFacilityEnumeration
-from netex.models.money_facility_enumeration import MoneyFacilityEnumeration
-from netex.models.parking_facility_enumeration import ParkingFacilityEnumeration
-from netex.models.staffing_enumeration import StaffingEnumeration
+from .access_facility_enumeration import AccessFacilityEnumeration
+from .emergency_service_enumeration import EmergencyServiceEnumeration
+from .facility_set_version_structure import FacilitySetVersionStructure
+from .hire_facility_enumeration import HireFacilityEnumeration
+from .luggage_locker_facility_enumeration import LuggageLockerFacilityEnumeration
+from .luggage_service_facility_enumeration import LuggageServiceFacilityEnumeration
+from .money_facility_enumeration import MoneyFacilityEnumeration
+from .parking_facility_enumeration import ParkingFacilityEnumeration
+from .staffing_enumeration import StaffingEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

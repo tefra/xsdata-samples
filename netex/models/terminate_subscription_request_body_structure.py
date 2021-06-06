@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.empty_type_1 import EmptyType1
+from .empty_type_1 import EmptyType1
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

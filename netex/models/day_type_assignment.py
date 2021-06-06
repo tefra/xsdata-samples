@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.day_type_assignment_version_structure import DayTypeAssignmentVersionStructure
+from .day_type_assignment_version_structure import DayTypeAssignmentVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

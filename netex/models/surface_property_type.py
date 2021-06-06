@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
-from netex.models.abstract_surface import AbstractSurface
-from netex.models.nil_reason_enumeration_value import NilReasonEnumerationValue
-from netex.models.polygon import Polygon
+from .abstract_surface import AbstractSurface
+from .nil_reason_enumeration_value import NilReasonEnumerationValue
+from .polygon import Polygon
 
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 

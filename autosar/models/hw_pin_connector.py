@@ -1,14 +1,14 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.hw_pin_subtypes_enum import HwPinSubtypesEnum
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.ref import Ref
+from .category_string import CategoryString
+from .hw_pin_subtypes_enum import HwPinSubtypesEnum
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

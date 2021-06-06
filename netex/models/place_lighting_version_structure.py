@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.access_equipment_version_structure import AccessEquipmentVersionStructure
-from netex.models.lighting_enumeration import LightingEnumeration
-from netex.models.lighting_on_method_enumeration import LightingOnMethodEnumeration
+from .access_equipment_version_structure import AccessEquipmentVersionStructure
+from .lighting_enumeration import LightingEnumeration
+from .lighting_on_method_enumeration import LightingOnMethodEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

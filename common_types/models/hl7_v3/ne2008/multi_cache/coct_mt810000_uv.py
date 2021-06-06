@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
+from ..core.datatypes_base import (
     Cd,
     Ce,
     Cs,
@@ -8,7 +8,7 @@ from common_types.models.hl7_v3.ne2008.core.datatypes_base import (
     Ii,
     TsExplicit,
 )
-from common_types.models.hl7_v3.ne2008.core.voc import (
+from ..core.voc import (
     ActClass,
     ActClassObservation,
     ActMood,
@@ -18,8 +18,8 @@ from common_types.models.hl7_v3.ne2008.core.voc import (
     ParticipationPhysicalPerformer,
     ParticipationType,
 )
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt040008_uv import CoctMt040008UvResponsible
-from common_types.models.hl7_v3.ne2008.multi_cache.coct_mt090002_uv01 import CoctMt090002Uv01AssignedEntity
+from .coct_mt040008_uv import CoctMt040008UvResponsible
+from .coct_mt090002_uv01 import CoctMt090002Uv01AssignedEntity
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

@@ -1,22 +1,22 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
 )
-from autosar.models.category_string import CategoryString
-from autosar.models.identifier import Identifier
-from autosar.models.infrastructure_services import InfrastructureServices
-from autosar.models.ip_sec_config import IpSecConfig
-from autosar.models.ipv_4_configuration import Ipv4Configuration
-from autosar.models.ipv_6_configuration import Ipv6Configuration
-from autosar.models.mac_multicast_configuration import MacMulticastConfiguration
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.string import String
+from .category_string import CategoryString
+from .identifier import Identifier
+from .infrastructure_services import InfrastructureServices
+from .ip_sec_config import IpSecConfig
+from .ipv_4_configuration import Ipv4Configuration
+from .ipv_6_configuration import Ipv6Configuration
+from .mac_multicast_configuration import MacMulticastConfiguration
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .positive_integer import PositiveInteger
+from .short_name_fragment import ShortNameFragment
+from .string import String
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

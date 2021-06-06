@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.delivery_variant import DeliveryVariant
-from netex.models.strict_containment_aggregation_structure import StrictContainmentAggregationStructure
+from .delivery_variant import DeliveryVariant
+from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

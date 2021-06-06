@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.on_becoming_enumeration import OnBecomingEnumeration
-from netex.models.on_ceasing_enumeration import OnCeasingEnumeration
-from netex.models.usage_parameter_version_structure import UsageParameterVersionStructure
+from .on_becoming_enumeration import OnBecomingEnumeration
+from .on_ceasing_enumeration import OnCeasingEnumeration
+from .usage_parameter_version_structure import UsageParameterVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

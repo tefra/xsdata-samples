@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.journey_pattern_ref_structure import JourneyPatternRefStructure
+from .journey_pattern_ref_structure import JourneyPatternRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

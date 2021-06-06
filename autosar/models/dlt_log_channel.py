@@ -1,27 +1,27 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
 )
-from autosar.models.boolean import Boolean
-from autosar.models.category_string import CategoryString
-from autosar.models.dlt_log_channel_design_subtypes_enum import DltLogChannelDesignSubtypesEnum
-from autosar.models.dlt_message_subtypes_enum import DltMessageSubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.log_trace_default_log_level_enum import LogTraceDefaultLogLevelEnum
-from autosar.models.log_trace_log_mode_enum import LogTraceLogModeEnum
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.pdu_triggering_subtypes_enum import PduTriggeringSubtypesEnum
-from autosar.models.platform_module_ethernet_endpoint_configuration_subtypes_enum import PlatformModuleEthernetEndpointConfigurationSubtypesEnum
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.service_instance_to_port_prototype_mapping_subtypes_enum import ServiceInstanceToPortPrototypeMappingSubtypesEnum
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.string import String
-from autosar.models.uri_string import UriString
+from .boolean import Boolean
+from .category_string import CategoryString
+from .dlt_log_channel_design_subtypes_enum import DltLogChannelDesignSubtypesEnum
+from .dlt_message_subtypes_enum import DltMessageSubtypesEnum
+from .identifier import Identifier
+from .log_trace_default_log_level_enum import LogTraceDefaultLogLevelEnum
+from .log_trace_log_mode_enum import LogTraceLogModeEnum
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .pdu_triggering_subtypes_enum import PduTriggeringSubtypesEnum
+from .platform_module_ethernet_endpoint_configuration_subtypes_enum import PlatformModuleEthernetEndpointConfigurationSubtypesEnum
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .service_instance_to_port_prototype_mapping_subtypes_enum import ServiceInstanceToPortPrototypeMappingSubtypesEnum
+from .short_name_fragment import ShortNameFragment
+from .string import String
+from .uri_string import UriString
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

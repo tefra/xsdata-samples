@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.tax_category_enumeration import TaxCategoryEnumeration
-from netex.models.type_of_value_version_structure import TypeOfValueVersionStructure
+from .tax_category_enumeration import TaxCategoryEnumeration
+from .type_of_value_version_structure import TypeOfValueVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

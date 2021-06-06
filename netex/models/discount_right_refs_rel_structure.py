@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.capped_discount_right_ref import CappedDiscountRightRef
-from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
-from netex.models.sale_discount_right_ref import SaleDiscountRightRef
-from netex.models.usage_discount_right_ref import UsageDiscountRightRef
+from .capped_discount_right_ref import CappedDiscountRightRef
+from .one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .sale_discount_right_ref import SaleDiscountRightRef
+from .usage_discount_right_ref import UsageDiscountRightRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

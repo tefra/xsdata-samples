@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.abstract_service_delivery_structure import AbstractServiceDeliveryStructure
-from netex.models.data_object_request import DataObjectRequest
-from netex.models.data_objects_rel_structure import DataObjectsRelStructure
-from netex.models.extensions_2 import Extensions2
+from .abstract_service_delivery_structure import AbstractServiceDeliveryStructure
+from .data_object_request import DataObjectRequest
+from .data_objects_rel_structure import DataObjectsRelStructure
+from .extensions_2 import Extensions2
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.line_section_ref import LineSectionRef
-from netex.models.link_sequence_version_structure import LineSection
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .line_section_ref import LineSectionRef
+from .link_sequence_version_structure import LineSection
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

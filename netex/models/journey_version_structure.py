@@ -1,16 +1,16 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.accessibility_assessment import AccessibilityAssessment
-from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
-from netex.models.external_object_ref_structure import ExternalObjectRefStructure
-from netex.models.journey_accountings_rel_structure import JourneyAccountingsRelStructure
-from netex.models.link_sequence_projection import LinkSequenceProjection
-from netex.models.link_sequence_projection_ref import LinkSequenceProjectionRef
-from netex.models.link_sequence_version_structure import LinkSequenceVersionStructure
-from netex.models.notice_assignments_rel_structure import NoticeAssignmentsRelStructure
-from netex.models.transport_submode import TransportSubmode
-from netex.models.type_of_product_category_ref import TypeOfProductCategoryRef
-from netex.models.type_of_service_ref import TypeOfServiceRef
+from .accessibility_assessment import AccessibilityAssessment
+from .all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
+from .external_object_ref_structure import ExternalObjectRefStructure
+from .journey_accountings_rel_structure import JourneyAccountingsRelStructure
+from .link_sequence_projection import LinkSequenceProjection
+from .link_sequence_projection_ref import LinkSequenceProjectionRef
+from .link_sequence_version_structure import LinkSequenceVersionStructure
+from .notice_assignments_rel_structure import NoticeAssignmentsRelStructure
+from .transport_submode import TransportSubmode
+from .type_of_product_category_ref import TypeOfProductCategoryRef
+from .type_of_service_ref import TypeOfServiceRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

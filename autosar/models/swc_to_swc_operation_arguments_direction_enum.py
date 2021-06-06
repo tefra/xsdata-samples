@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.swc_to_swc_operation_arguments_direction_enum_simple import SwcToSwcOperationArgumentsDirectionEnumSimple
+from .swc_to_swc_operation_arguments_direction_enum_simple import SwcToSwcOperationArgumentsDirectionEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

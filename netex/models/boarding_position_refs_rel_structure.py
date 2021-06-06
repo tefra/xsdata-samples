@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.boarding_position_ref import BoardingPositionRef
-from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .boarding_position_ref import BoardingPositionRef
+from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

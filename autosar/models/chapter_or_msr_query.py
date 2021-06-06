@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.msr_query_result_chapter import (
+from .msr_query_result_chapter import (
     Chapter,
     MsrQueryChapter,
 )

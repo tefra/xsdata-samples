@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.interchange_version_structure import InterchangeVersionStructure
-from netex.models.journey_pattern_ref_structure import JourneyPatternRefStructure
-from netex.models.scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
+from .interchange_version_structure import InterchangeVersionStructure
+from .journey_pattern_ref_structure import JourneyPatternRefStructure
+from .scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

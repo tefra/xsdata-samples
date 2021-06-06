@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.cell_versioned_child_structure import PriceableObjectVersionStructure
-from netex.models.type_of_usage_parameter_ref import TypeOfUsageParameterRef
-from netex.models.usage_parameter_prices_rel_structure import UsageParameterPricesRelStructure
+from .cell_versioned_child_structure import PriceableObjectVersionStructure
+from .type_of_usage_parameter_ref import TypeOfUsageParameterRef
+from .usage_parameter_prices_rel_structure import UsageParameterPricesRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

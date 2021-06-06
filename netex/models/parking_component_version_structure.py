@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from netex.models.multilingual_string import MultilingualString
-from netex.models.site_component_version_structure import SiteComponentVersionStructure
+from .multilingual_string import MultilingualString
+from .site_component_version_structure import SiteComponentVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

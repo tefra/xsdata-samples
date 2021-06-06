@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.suitability import Suitability
-from netex.models.user_need import UserNeed
+from .suitability import Suitability
+from .user_need import UserNeed
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

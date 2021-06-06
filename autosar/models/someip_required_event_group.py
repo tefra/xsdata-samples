@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.identifier import Identifier
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.someip_event_group_subtypes_enum import SomeipEventGroupSubtypesEnum
-from autosar.models.someip_sd_client_event_group_timing_config_subtypes_enum import SomeipSdClientEventGroupTimingConfigSubtypesEnum
+from .identifier import Identifier
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
+from .someip_event_group_subtypes_enum import SomeipEventGroupSubtypesEnum
+from .someip_sd_client_event_group_timing_config_subtypes_enum import SomeipSdClientEventGroupTimingConfigSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

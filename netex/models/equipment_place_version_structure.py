@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.equipment_positions_rel_structure import EquipmentPositionsRelStructure
-from netex.models.equipments_rel_structure import EquipmentsRelStructure
-from netex.models.place_version_structure import PlaceVersionStructure
+from .equipment_positions_rel_structure import EquipmentPositionsRelStructure
+from .equipments_rel_structure import EquipmentsRelStructure
+from .place_version_structure import PlaceVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.synchronization_type_enum_simple import SynchronizationTypeEnumSimple
+from .synchronization_type_enum_simple import SynchronizationTypeEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

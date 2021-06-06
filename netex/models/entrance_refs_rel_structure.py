@@ -1,15 +1,15 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.entrance_ref import EntranceRef
-from netex.models.one_to_many_relationship_structure import OneToManyRelationshipStructure
-from netex.models.parking_entrance_for_vehicles_ref import ParkingEntranceForVehiclesRef
-from netex.models.parking_entrance_ref import ParkingEntranceRef
-from netex.models.parking_passenger_entrance_ref import ParkingPassengerEntranceRef
-from netex.models.point_of_interest_entrance_ref import PointOfInterestEntranceRef
-from netex.models.point_of_interest_vehicle_entrance_ref import PointOfInterestVehicleEntranceRef
-from netex.models.stop_place_entrance_ref import StopPlaceEntranceRef
-from netex.models.stop_place_vehicle_entrance_ref import StopPlaceVehicleEntranceRef
-from netex.models.vehicle_entrance_ref import VehicleEntranceRef
+from .entrance_ref import EntranceRef
+from .one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .parking_entrance_for_vehicles_ref import ParkingEntranceForVehiclesRef
+from .parking_entrance_ref import ParkingEntranceRef
+from .parking_passenger_entrance_ref import ParkingPassengerEntranceRef
+from .point_of_interest_entrance_ref import PointOfInterestEntranceRef
+from .point_of_interest_vehicle_entrance_ref import PointOfInterestVehicleEntranceRef
+from .stop_place_entrance_ref import StopPlaceEntranceRef
+from .stop_place_vehicle_entrance_ref import StopPlaceVehicleEntranceRef
+from .vehicle_entrance_ref import VehicleEntranceRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

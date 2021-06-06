@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.dead_run_ref_structure import DeadRunRefStructure
+from .dead_run_ref_structure import DeadRunRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.distribution_channel_refs_rel_structure import DistributionChannelRefsRelStructure
-from netex.models.group_of_entities_version_structure import GroupOfEntitiesVersionStructure
+from .distribution_channel_refs_rel_structure import DistributionChannelRefsRelStructure
+from .group_of_entities_version_structure import GroupOfEntitiesVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

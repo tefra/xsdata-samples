@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     ReferrableRefConditional,
     Sdg,
 )
-from autosar.models.ref import Ref
-from autosar.models.referrable_subtypes_enum import ReferrableSubtypesEnum
-from autosar.models.sd import Sd
-from autosar.models.sdf import Sdf
+from .ref import Ref
+from .referrable_subtypes_enum import ReferrableSubtypesEnum
+from .sd import Sd
+from .sdf import Sdf
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.direction_ref import DirectionRef
-from netex.models.external_object_ref_structure import ExternalObjectRefStructure
-from netex.models.flexible_line_ref import FlexibleLineRef
-from netex.models.line_ref import LineRef
+from .direction_ref import DirectionRef
+from .external_object_ref_structure import ExternalObjectRefStructure
+from .flexible_line_ref import FlexibleLineRef
+from .line_ref import LineRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

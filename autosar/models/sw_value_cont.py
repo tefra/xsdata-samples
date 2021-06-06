@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.ref import Ref
-from autosar.models.single_language_unit_names import SingleLanguageUnitNames
-from autosar.models.sw_values import SwValues
-from autosar.models.unit_subtypes_enum import UnitSubtypesEnum
-from autosar.models.value_list import ValueList
+from .ref import Ref
+from .single_language_unit_names import SingleLanguageUnitNames
+from .sw_values import SwValues
+from .unit_subtypes_enum import UnitSubtypesEnum
+from .value_list import ValueList
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

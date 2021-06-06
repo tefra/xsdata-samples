@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.complaints_service_ref_structure import ComplaintsServiceRefStructure
+from .complaints_service_ref_structure import ComplaintsServiceRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

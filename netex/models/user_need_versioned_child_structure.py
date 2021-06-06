@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.alternative_texts_rel_structure import VersionedChildStructure
-from netex.models.encumbrance_enumeration import EncumbranceEnumeration
-from netex.models.medical_need_enumeration import MedicalNeedEnumeration
-from netex.models.mobility_enumeration import MobilityEnumeration
-from netex.models.pyschosensory_need_enumeration import PyschosensoryNeedEnumeration
+from .alternative_texts_rel_structure import VersionedChildStructure
+from .encumbrance_enumeration import EncumbranceEnumeration
+from .medical_need_enumeration import MedicalNeedEnumeration
+from .mobility_enumeration import MobilityEnumeration
+from .pyschosensory_need_enumeration import PyschosensoryNeedEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

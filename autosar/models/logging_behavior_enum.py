@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.logging_behavior_enum_simple import LoggingBehaviorEnumSimple
+from .logging_behavior_enum_simple import LoggingBehaviorEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

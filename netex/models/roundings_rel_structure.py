@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.frame_containment_structure import FrameContainmentStructure
-from netex.models.rounding import Rounding
+from .frame_containment_structure import FrameContainmentStructure
+from .rounding import Rounding
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

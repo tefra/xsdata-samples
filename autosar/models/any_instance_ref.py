@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import VariationPoint
-from autosar.models.atp_feature_subtypes_enum import AtpFeatureSubtypesEnum
-from autosar.models.ref import Ref
+from .annotation import VariationPoint
+from .atp_feature_subtypes_enum import AtpFeatureSubtypesEnum
+from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

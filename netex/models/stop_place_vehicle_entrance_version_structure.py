@@ -1,18 +1,18 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.air_submode_enumeration import AirSubmodeEnumeration
-from netex.models.bus_submode_enumeration import BusSubmodeEnumeration
-from netex.models.coach_submode_enumeration import CoachSubmodeEnumeration
-from netex.models.funicular_submode_enumeration import FunicularSubmodeEnumeration
-from netex.models.metro_submode_enumeration import MetroSubmodeEnumeration
-from netex.models.rail_submode_enumeration import RailSubmodeEnumeration
-from netex.models.snow_and_ice_submode_enumeration import SnowAndIceSubmodeEnumeration
-from netex.models.tariff_zone_refs_rel_structure import TariffZoneRefsRelStructure
-from netex.models.telecabin_submode_enumeration import TelecabinSubmodeEnumeration
-from netex.models.tram_submode_enumeration import TramSubmodeEnumeration
-from netex.models.vehicle_entrance_version_structure import VehicleEntranceVersionStructure
-from netex.models.vehicle_mode_enumeration import VehicleModeEnumeration
-from netex.models.water_submode_enumeration import WaterSubmodeEnumeration
+from .air_submode_enumeration import AirSubmodeEnumeration
+from .bus_submode_enumeration import BusSubmodeEnumeration
+from .coach_submode_enumeration import CoachSubmodeEnumeration
+from .funicular_submode_enumeration import FunicularSubmodeEnumeration
+from .metro_submode_enumeration import MetroSubmodeEnumeration
+from .rail_submode_enumeration import RailSubmodeEnumeration
+from .snow_and_ice_submode_enumeration import SnowAndIceSubmodeEnumeration
+from .tariff_zone_refs_rel_structure import TariffZoneRefsRelStructure
+from .telecabin_submode_enumeration import TelecabinSubmodeEnumeration
+from .tram_submode_enumeration import TramSubmodeEnumeration
+from .vehicle_entrance_version_structure import VehicleEntranceVersionStructure
+from .vehicle_mode_enumeration import VehicleModeEnumeration
+from .water_submode_enumeration import WaterSubmodeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

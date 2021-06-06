@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.component_in_system_instance_ref import ComponentInSystemInstanceRef
-from autosar.models.ecu_instance_subtypes_enum import EcuInstanceSubtypesEnum
-from autosar.models.ref import Ref
-from autosar.models.swc_to_ecu_mapping_constraint_type import SwcToEcuMappingConstraintType
+from .component_in_system_instance_ref import ComponentInSystemInstanceRef
+from .ecu_instance_subtypes_enum import EcuInstanceSubtypesEnum
+from .ref import Ref
+from .swc_to_ecu_mapping_constraint_type import SwcToEcuMappingConstraintType
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

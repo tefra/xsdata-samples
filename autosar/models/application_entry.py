@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.annotation import DocumentationBlock
-from autosar.models.integer import Integer
-from autosar.models.lin_frame_triggering_subtypes_enum import LinFrameTriggeringSubtypesEnum
-from autosar.models.ref import Ref
-from autosar.models.time_value import TimeValue
+from .annotation import DocumentationBlock
+from .integer import Integer
+from .lin_frame_triggering_subtypes_enum import LinFrameTriggeringSubtypesEnum
+from .ref import Ref
+from .time_value import TimeValue
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

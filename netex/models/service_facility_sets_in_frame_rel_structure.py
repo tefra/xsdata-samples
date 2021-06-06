@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
-from netex.models.containment_aggregation_structure import ContainmentAggregationStructure
-from netex.models.service_facility_set import ServiceFacilitySet
+from .containment_aggregation_structure import ContainmentAggregationStructure
+from .service_facility_set import ServiceFacilitySet
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.diagnostic_type_of_dtc_supported_enum_simple import DiagnosticTypeOfDtcSupportedEnumSimple
+from .diagnostic_type_of_dtc_supported_enum_simple import DiagnosticTypeOfDtcSupportedEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

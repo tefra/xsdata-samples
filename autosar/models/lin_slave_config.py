@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from autosar.models.integer import Integer
-from autosar.models.lin_error_response import LinErrorResponse
-from autosar.models.lin_slave_config_ident import LinSlaveConfigIdent
-from autosar.models.lin_slave_subtypes_enum import LinSlaveSubtypesEnum
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.string import String
+from .integer import Integer
+from .lin_error_response import LinErrorResponse
+from .lin_slave_config_ident import LinSlaveConfigIdent
+from .lin_slave_subtypes_enum import LinSlaveSubtypesEnum
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .string import String
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

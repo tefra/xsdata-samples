@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.type_of_transfer_ref_structure import TypeOfTransferRefStructure
+from .type_of_transfer_ref_structure import TypeOfTransferRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

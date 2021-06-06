@@ -1,27 +1,27 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from autosar.models.annotation import (
+from .annotation import (
     AdminData,
     Annotation,
     DocumentationBlock,
     VariationPoint,
 )
-from autosar.models.boolean import Boolean
-from autosar.models.can_nm_range_config import CanNmRangeConfig
-from autosar.models.category_string import CategoryString
-from autosar.models.communication_controller_subtypes_enum import CommunicationControllerSubtypesEnum
-from autosar.models.identifier import Identifier
-from autosar.models.integer import Integer
-from autosar.models.machine_design_subtypes_enum import MachineDesignSubtypesEnum
-from autosar.models.multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from autosar.models.multilanguage_long_name import MultilanguageLongName
-from autosar.models.nm_coordinator_role_enum import NmCoordinatorRoleEnum
-from autosar.models.nm_ecu_subtypes_enum import NmEcuSubtypesEnum
-from autosar.models.nm_pdu_subtypes_enum import NmPduSubtypesEnum
-from autosar.models.positive_integer import PositiveInteger
-from autosar.models.ref import Ref
-from autosar.models.short_name_fragment import ShortNameFragment
-from autosar.models.time_value import TimeValue
+from .boolean import Boolean
+from .can_nm_range_config import CanNmRangeConfig
+from .category_string import CategoryString
+from .communication_controller_subtypes_enum import CommunicationControllerSubtypesEnum
+from .identifier import Identifier
+from .integer import Integer
+from .machine_design_subtypes_enum import MachineDesignSubtypesEnum
+from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
+from .multilanguage_long_name import MultilanguageLongName
+from .nm_coordinator_role_enum import NmCoordinatorRoleEnum
+from .nm_ecu_subtypes_enum import NmEcuSubtypesEnum
+from .nm_pdu_subtypes_enum import NmPduSubtypesEnum
+from .positive_integer import PositiveInteger
+from .ref import Ref
+from .short_name_fragment import ShortNameFragment
+from .time_value import TimeValue
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 

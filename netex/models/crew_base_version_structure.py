@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from netex.models.garage_point_ref import GaragePointRef
-from netex.models.garage_refs_rel_structure import GarageRefsRelStructure
-from netex.models.group_of_entities_version_structure import GroupOfEntitiesVersionStructure
-from netex.models.parking_point_ref import ParkingPointRef
-from netex.models.relief_point_ref import ReliefPointRef
+from .garage_point_ref import GaragePointRef
+from .garage_refs_rel_structure import GarageRefsRelStructure
+from .group_of_entities_version_structure import GroupOfEntitiesVersionStructure
+from .parking_point_ref import ParkingPointRef
+from .relief_point_ref import ReliefPointRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

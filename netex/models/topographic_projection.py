@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.topographic_projection_version_structure import TopographicProjectionVersionStructure
+from .topographic_projection_version_structure import TopographicProjectionVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

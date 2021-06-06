@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.waiting_room_equipment_version_structure import WaitingRoomEquipmentVersionStructure
+from .waiting_room_equipment_version_structure import WaitingRoomEquipmentVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

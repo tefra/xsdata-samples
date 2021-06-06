@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from netex.models.topographic_place_derived_view_structure import TopographicPlaceDerivedViewStructure
+from .topographic_place_derived_view_structure import TopographicPlaceDerivedViewStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

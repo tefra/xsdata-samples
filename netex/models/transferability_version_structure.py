@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from netex.models.shared_usage_enumeration import SharedUsageEnumeration
-from netex.models.usage_parameter_version_structure import UsageParameterVersionStructure
+from .shared_usage_enumeration import SharedUsageEnumeration
+from .usage_parameter_version_structure import UsageParameterVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
