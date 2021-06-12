@@ -1,3 +1,5 @@
+OUTPUT_FORMAT ?= dataclasses
+
 build-amadeus: schema = amadeus/schemas
 build-sabre: schema = sabre/schemas
 build-travelport: schema = travelport/schemas/air_v48_0/Air.wsdl
@@ -78,7 +80,7 @@ mypy: $(mypies)
 build-%:
 	@echo "**** Generating models: $* ****"
 	@rm -rf $*/models
-	@xsdata $(schema) --config $*/.xsdata.xml
+	@xsdata $(schema) --config $*/.xsdata.xml --output $(OUTPUT_FORMAT)
 
 test-%:
 	@echo "**** Running tests: $* ****"
