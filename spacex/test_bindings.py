@@ -1,8 +1,6 @@
 from pathlib import Path
 from typing import List
 
-from xsdata.formats.dataclass.parsers import JsonParser
-from xsdata.formats.dataclass.serializers import JsonSerializer
 from xsdata.models.datatype import XmlDateTime
 
 from spacex.models import Cores
@@ -20,14 +18,12 @@ from spacex.models import SecondStage
 from spacex.models import Telemetry
 from spacex.models import Timeline
 
-parser = JsonParser()
-serializer = JsonSerializer(indent=4)
 here = Path(__file__).parent
 
 
-def test_parser():
+def test_parser(json_parser, json_serializer):
     sample = here.joinpath("launches.json")
-    launches = parser.from_path(sample, List[Launches])
+    launches = json_parser.from_path(sample, List[Launches])
 
     assert 109 == len(launches)
 

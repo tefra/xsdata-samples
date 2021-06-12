@@ -3,8 +3,6 @@ from pathlib import Path
 
 import pytest
 from lxml import etree
-from xsdata.formats.dataclass.parsers import XmlParser
-from xsdata.formats.dataclass.serializers import XmlSerializer
 
 from ubl.models.maindoc import *  # noqa
 
@@ -12,16 +10,12 @@ cases = []
 ids = []
 here = Path(__file__).parent
 schemas = here.joinpath("schemas/maindoc").resolve().glob("*")
-for schema in list(schemas):
-    _, name, _ = schema.name.split("-")
-    for sample in here.joinpath("samples").glob(f"UBL-{name}-*"):
-        if not sample.stem.endswith("xsdata"):
-            cases.append((str(schema), str(sample)))
-            ids.append(sample.name)
-
-parser = XmlParser()
-serializer = XmlSerializer()
-serializer.config.pretty_print = True
+for sch in list(schemas):
+    _, name, _ = sch.name.split("-")
+    for smp in here.joinpath("samples").glob(f"UBL-{name}-*"):
+        if not smp.stem.endswith("xsdata"):
+            cases.append((str(sch), str(smp)))
+            ids.append(smp.name)
 
 
 @functools.lru_cache(maxsize=5)
@@ -30,10 +24,10 @@ def get_validator(xsd: str):
 
 
 @pytest.mark.parametrize("schema,sample", cases, ids=ids)
-def test_serialize(schema, sample):
-    obj = parser.parse(sample)
-    result = serializer.render(obj, ns_map=parser.ns_map)
-    parser.ns_map.clear()
+def test_serialize(schema, sample, xml_parser, xml_serializer):
+    obj = xml_parser.parse(sample)
+    result = xml_serializer.render(obj, ns_map=xml_parser.ns_map)
+    xml_parser.ns_map.clear()
 
     expected = Path(sample).with_suffix(".xsdata.xml")
     if expected.exists():
