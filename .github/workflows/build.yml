@@ -8,27 +8,26 @@ on:
 
 jobs:
   build:
-    name: ${{ matrix.name }}
+    name: Python ${{ matrix.python }} - ${{ matrix.collection.name }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: true
       matrix:
-        include:
-          - { name: "Amadeus", id: "amadeus", xsdata: true, pytest: true, mypy: true }
-          - { name: "Sabre", id: "sabre", xsdata: true, pytest: true, mypy: true }
-          - { name: "Travelport", id: "travelport", xsdata: true, pytest: true, mypy: true }
-          - { name: "Exchange Rates", id: "bnm", pytest: true, mypy: true }
-          - { name: "Common Types", id: "common_types", xsdata: true, mypy: true }
-          - { name: "ReqIF", id: "reqif", xsdata: true, pytest: true, mypy: true }
-          - { name: "NPO API", id: "npo", xsdata: true, pytest: true, mypy: true }
-          - { name: "DateX II", id: "datexii", xsdata: true,  pytest: true, mypy: true  }
-          - { name: "EWP", id: "ewp", xsdata: true, pytest: true, mypy: true,  }
-          - { name: "UBL", id: "ubl", xsdata: true,  pytest: true, mypy: true }
-          - { name: "NeTEx", id: "netex", xsdata: true, pytest: true, mypy: true }
-          - { name: "DefXML", id: "defxml", xsdata: false, pytest: true, mypy: true }
-          - { name: "SpaceX", id: "spacex", xsdata: true, pytest: true, mypy: true }
-          - { name: "Autosar", id: "autosar", xsdata: true, pytest: true, mypy: true }
-
+        python: [ "3.7", "3.8", "3.9", "3.10.0-beta - 3.10" ]
+        collection:
+          - { name: "Amadeus", id: "amadeus" }
+          - { name: "Sabre", id: "sabre" }
+          - { name: "Travelport", id: "travelport" }
+          - { name: "Common Types", id: "common_types" }
+          - { name: "ReqIF", id: "reqif" }
+          - { name: "NPO API", id: "npo" }
+          - { name: "DateX II", id: "datexii" }
+          - { name: "EWP", id: "ewp" }
+          - { name: "UBL", id: "ubl" }
+          - { name: "NeTEx", id: "netex" }
+          - { name: "DefXML", id: "defxml" }
+          - { name: "SpaceX", id: "spacex" }
+          - { name: "Autosar", id: "autosar" }
     steps:
       - uses: actions/checkout@v2
         with:
@@ -36,17 +35,20 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.7
+          python-version: ${{ matrix.python }}
+      - name: Install libxml2
+        if: startsWith(matrix.python, 'pypy') || startsWith(matrix.python, '3.10')
+        run: |
+          sudo apt-get install libxml2-dev libxslt-dev
       - name: Install dependencies
         run: |
           pip install --upgrade pip
           pip install -r requirements.txt
       - name: Generate Code
-        if: matrix.xsdata
-        run: make build-${{ matrix.id }}
+        if: matrix.collection.id != 'defxml'
+        run: make build-${{ matrix.collection.id }}
       - name: Run Tests
-        if: matrix.pytest
-        run: make test-${{ matrix.id }}
+        if: matrix.collection.id != 'common_types'
+        run: make test-${{ matrix.collection.id }}
       - name: Run mypy
-        if: matrix.mypy
-        run: make mypy-${{ matrix.id }}
+        run: make mypy-${{ matrix.collection.id }}

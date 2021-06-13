@@ -78,14 +78,14 @@ test: $(tests)
 mypy: $(mypies)
 
 build-%:
-	@echo "**** Generating models: $* ****"
-	@rm -rf $*/models
-	@xsdata $(schema) --config $*/.xsdata.xml --output $(OUTPUT_FORMAT)
+	echo "**** Generating models: $* ****"
+	rm -rf $*/models
+	xsdata $(schema) --config $*/.xsdata.xml --output $(OUTPUT_FORMAT)
 
 test-%:
-	@echo "**** Running tests: $* ****"
-	@pytest $*/ ||:
+	echo "**** Running tests: $* ****"
+	pytest --output-format $(OUTPUT_FORMAT) $*/
 
 mypy-%:
-	@echo "**** Running static analysis: $* ****"
-	@mypy $*/models ||:
+	echo "**** Running static analysis: $* ****"
+	mypy $*/models
