@@ -143,7 +143,7 @@ def validate_bindings(schema: Path, clazz: Type, output_format: str):
 
     if output_json.exists():
         assert output_json.read_text() == actual_json
-        assert obj == JsonParser().from_string(actual_json, clazz)
+        assert obj == JsonParser(context=context).from_string(actual_json, clazz)
     else:
         output_json.write_text(actual_json, encoding="utf-8")
 
