@@ -3,7 +3,7 @@ from pathlib import Path
 
 from xsdata.formats.dataclass.serializers import DictFactory
 
-from ewp.models import Catalogue
+from ewp.models import Catalogue  # noqa
 
 cwd = Path(__file__).parent.absolute()
 
@@ -13,7 +13,7 @@ def test_bindings(xml_parser, json_serializer):
     xml_fixture = cwd.joinpath(f"{fixture}.xml")
     json_fixture = cwd.joinpath(f"{fixture}.json")
 
-    obj = xml_parser.from_path(xml_fixture, Catalogue)
+    obj = xml_parser.from_path(xml_fixture)
 
     json_serializer.dict_factory = DictFactory.FILTER_NONE
     result = json_serializer.render(obj)
