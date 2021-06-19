@@ -138,7 +138,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
                     "name": "Dynamic",
                     "type": DynamicAdvertisementEnumeration,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": "always",
+                    "default": DynamicAdvertisementEnumeration.ALWAYS,
                 },
                 {
                     "name": "TypeOfFlexibleServiceRef",

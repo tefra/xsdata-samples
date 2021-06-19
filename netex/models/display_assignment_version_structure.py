@@ -89,7 +89,7 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
                     "name": "DisplayAssignmentType",
                     "type": DisplayAssignmentTypeEnumeration,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": "all",
+                    "default": DisplayAssignmentTypeEnumeration.ALL,
                 },
                 {
                     "name": "NumberOfJourneysToShow",

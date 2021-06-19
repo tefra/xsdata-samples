@@ -55,7 +55,7 @@ class OperatorVersionStructure(OrganisationVersionStructure):
                     "type": List[OperatorActivitiesEnumeration],
                     "namespace": "http://www.netex.org.uk/netex",
                     "default_factory": lambda: [
-            "passenger",
+            OperatorActivitiesEnumeration.PASSENGER,
         ],
                     "tokens": True,
                 },

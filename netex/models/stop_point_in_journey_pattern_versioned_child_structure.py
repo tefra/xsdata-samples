@@ -128,7 +128,7 @@ class StopPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVersio
                     "name": "RequestMethod",
                     "type": RequestMethodTypeEnumeration,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": "noneRequired",
+                    "default": RequestMethodTypeEnumeration.NONE_REQUIRED,
                 },
                 {
                     "name": "StopUse",
@@ -150,7 +150,7 @@ class StopPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVersio
                     "name": "Dynamic",
                     "type": DynamicAdvertisementEnumeration,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": "always",
+                    "default": DynamicAdvertisementEnumeration.ALWAYS,
                 },
             ),
             "min_occurs": 2,

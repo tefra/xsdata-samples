@@ -184,7 +184,7 @@ class TariffVersionStructure(DataManagedObjectStructure):
                     "name": "TariffBasis",
                     "type": TariffBasisEnumeration,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": "route",
+                    "default": TariffBasisEnumeration.ROUTE,
                 },
                 {
                     "name": "ReturnFareTwiceSingle",

@@ -195,7 +195,7 @@ class AccessRightParameterAssignmentVersionStructure(AssignmentVersionStructure1
                     "name": "LimitationGroupingType",
                     "type": BooleanOperatorEnumeration,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": "AND",
+                    "default": BooleanOperatorEnumeration.AND_VALUE,
                 },
                 {
                     "name": "LimitationSetSelectionType",
@@ -211,13 +211,13 @@ class AccessRightParameterAssignmentVersionStructure(AssignmentVersionStructure1
                     "name": "ValidityParameterAssignmentType",
                     "type": RelativeOperatorEnumeration,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": "EQ",
+                    "default": RelativeOperatorEnumeration.EQ,
                 },
                 {
                     "name": "ValidityParameterGroupingType",
                     "type": BooleanOperatorEnumeration,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": "AND",
+                    "default": BooleanOperatorEnumeration.AND_VALUE,
                 },
                 {
                     "name": "ValidityParameterSetSelectionType",

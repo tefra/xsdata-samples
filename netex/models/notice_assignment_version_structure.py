@@ -209,7 +209,7 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
                     "name": "PublicityChannel",
                     "type": PublicityChannelEnumeration,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": "all",
+                    "default": PublicityChannelEnumeration.ALL,
                 },
                 {
                     "name": "Advertised",

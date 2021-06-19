@@ -194,7 +194,7 @@ class DeadRunCallVersionedChildStructure(VersionedChildStructure):
                     "name": "RequestMethod",
                     "type": RequestMethodTypeEnumeration,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": "noneRequired",
+                    "default": RequestMethodTypeEnumeration.NONE_REQUIRED,
                 },
                 {
                     "name": "StopUse",
@@ -216,7 +216,7 @@ class DeadRunCallVersionedChildStructure(VersionedChildStructure):
                     "name": "Dynamic",
                     "type": DynamicAdvertisementEnumeration,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": "always",
+                    "default": DynamicAdvertisementEnumeration.ALWAYS,
                 },
                 {
                     "name": "Note",

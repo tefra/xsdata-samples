@@ -369,7 +369,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
                     "name": "RoutingType",
                     "type": RoutingTypeEnumeration,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": "both",
+                    "default": RoutingTypeEnumeration.BOTH,
                 },
                 {
                     "name": "Directions",

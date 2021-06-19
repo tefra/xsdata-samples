@@ -42,7 +42,7 @@ class CompanionProfileVersionStructure(UsageParameterVersionStructure):
                     "name": "CompanionRelationshipType",
                     "type": CompanionRelationshipEnumeration,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": "anyone",
+                    "default": CompanionRelationshipEnumeration.ANYONE,
                 },
                 {
                     "name": "MinimumNumberOfPersons",
