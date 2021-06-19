@@ -1,10 +1,11 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type
+from typing import List, Optional
 from .alternative_names_rel_structure import AlternativeNamesRelStructure
 from .authority_ref import AuthorityRef
 from .contact_structure import ContactStructure
 from .distribution_channel_type_enumeration import DistributionChannelTypeEnumeration
 from .distribution_rights_enumeration import DistributionRightsEnumeration
+from .general_group_of_entities_ref_structure import GeneralGroupOfEntitiesRefStructure
 from .general_organisation_ref import GeneralOrganisationRef
 from .management_agent_ref import ManagementAgentRef
 from .operator_ref import OperatorRef
@@ -148,7 +149,7 @@ class DistributionChannelVersionStructure(TypeOfValueVersionStructure):
                 },
                 {
                     "name": "DistributionGroupRef",
-                    "type": Type["DistributionChannelVersionStructure.DistributionGroupRef"],
+                    "type": GeneralGroupOfEntitiesRefStructure,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

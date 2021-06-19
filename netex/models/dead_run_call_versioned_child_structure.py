@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type
+from typing import List, Optional
 from .activation_point_ref import ActivationPointRef
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .beacon_point_ref import BeaconPointRef
@@ -14,6 +14,7 @@ from .flexible_point_properties import FlexiblePointProperties
 from .garage_point_ref import GaragePointRef
 from .infrastructure_point_ref import InfrastructurePointRef
 from .multilingual_string import MultilingualString
+from .notice_assignments_rel_structure import NoticeAssignmentsRelStructure
 from .parking_point_ref import ParkingPointRef
 from .point_in_journey_pattern_ref_structure import PointInJourneyPatternRefStructure
 from .point_on_link_ref import PointOnLinkRef
@@ -181,7 +182,7 @@ class DeadRunCallVersionedChildStructure(VersionedChildStructure):
                 },
                 {
                     "name": "noticeAssignments",
-                    "type": Type["DeadRunCallVersionedChildStructure.NoticeAssignments"],
+                    "type": NoticeAssignmentsRelStructure,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

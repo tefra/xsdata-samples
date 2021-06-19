@@ -1,11 +1,12 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type
+from typing import List, Optional
 from .contact_structure import ContactStructure
 from .country_ref import CountryRef
 from .departments_rel_structure import DepartmentsRelStructure
 from .operator_activities_enumeration import OperatorActivitiesEnumeration
 from .organisation_version_structure import OrganisationVersionStructure
 from .postal_address import PostalAddress
+from .postal_address_version_structure import PostalAddressVersionStructure
 from .road_address import RoadAddress
 from .vehicle_mode_enumeration import VehicleModeEnumeration
 
@@ -42,7 +43,7 @@ class OperatorVersionStructure(OrganisationVersionStructure):
                 },
                 {
                     "name": "Address",
-                    "type": Type["OperatorVersionStructure.Address"],
+                    "type": PostalAddressVersionStructure,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

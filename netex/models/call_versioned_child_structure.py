@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type
+from typing import List, Optional
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .arrival_structure import ArrivalStructure
 from .booking_arrangements_structure import BookingArrangementsStructure
@@ -11,6 +11,7 @@ from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
 from .flexible_point_properties import FlexiblePointProperties
 from .frequency_structure import FrequencyStructure
 from .multilingual_string import MultilingualString
+from .notice_assignments_rel_structure import NoticeAssignmentsRelStructure
 from .onward_service_link_view import OnwardServiceLinkView
 from .onward_timing_link_view import OnwardTimingLinkView
 from .passenger_carrying_requirement_ref import PassengerCarryingRequirementRef
@@ -146,7 +147,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
                 },
                 {
                     "name": "noticeAssignments",
-                    "type": Type["CallVersionedChildStructure.NoticeAssignments"],
+                    "type": NoticeAssignmentsRelStructure,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

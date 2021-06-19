@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type
+from typing import List, Optional
 from .access_equipment_ref import AccessEquipmentRef
 from .access_feature_enumeration import AccessFeatureEnumeration
 from .access_vehicle_equipment_ref import AccessVehicleEquipmentRef
@@ -8,6 +8,8 @@ from .assignment_version_structure_1 import AssignmentVersionStructure1
 from .assistance_booking_service_ref import AssistanceBookingServiceRef
 from .assistance_service_ref import AssistanceServiceRef
 from .catering_service_ref import CateringServiceRef
+from .check_constraint_delays_rel_structure import CheckConstraintDelaysRelStructure
+from .check_constraint_throughputs_rel_structure import CheckConstraintThroughputsRelStructure
 from .check_direction_enumeration import CheckDirectionEnumeration
 from .check_process_type_enumeration import CheckProcessTypeEnumeration
 from .check_service_enumeration import CheckServiceEnumeration
@@ -431,12 +433,12 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
                 },
                 {
                     "name": "delays",
-                    "type": Type["CheckConstraintVersionStructure.Delays"],
+                    "type": CheckConstraintDelaysRelStructure,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
                     "name": "throughput",
-                    "type": Type["CheckConstraintVersionStructure.Throughput"],
+                    "type": CheckConstraintThroughputsRelStructure,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type
+from typing import List, Optional
 from .access_right_parameter_assignments_in_frame_rel_structure import AccessRightParameterAssignmentsInFrameRelStructure
 from .authority_ref import AuthorityRef
 from .border_points_in_frame_rel_structure import BorderPointsInFrameRelStructure
@@ -26,6 +26,7 @@ from .groups_of_sales_offer_packages_in_frame_rel_structure import GroupsOfSales
 from .notice_assignments_in_frame_rel_structure import NoticeAssignmentsInFrameRelStructure
 from .notices_in_frame_rel_structure import NoticesInFrameRelStructure
 from .operator_ref import OperatorRef
+from .parking_tariffs_in_frame_rel_structure import ParkingTariffsInFrameRelStructure
 from .pricing_parameter_set import PricingParameterSet
 from .quality_structure_factors_rel_structure import QualityStructureFactorsRelStructure
 from .sales_offer_package_elements_in_frame_rel_structure import SalesOfferPackageElementsInFrameRelStructure
@@ -254,7 +255,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
                 },
                 {
                     "name": "parkingTariffs",
-                    "type": Type["FareFrameVersionFrameStructure.ParkingTariffs"],
+                    "type": ParkingTariffsInFrameRelStructure,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

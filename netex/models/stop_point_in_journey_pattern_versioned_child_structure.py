@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Type
+from typing import List
 from xsdata.models.datatype import XmlDuration
 from .booking_arrangements_structure import BookingArrangementsStructure
 from .destination_display_ref import DestinationDisplayRef
@@ -9,6 +9,7 @@ from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
 from .flexible_point_properties import FlexiblePointProperties
 from .journey_pattern_headways_rel_structure import JourneyPatternHeadwaysRelStructure
 from .journey_pattern_wait_times_rel_structure import JourneyPatternWaitTimesRelStructure
+from .notice_assignments_rel_structure import NoticeAssignmentsRelStructure
 from .point_in_link_sequence_versioned_child_structure import PointInLinkSequenceVersionedChildStructure
 from .request_method_type_enumeration import RequestMethodTypeEnumeration
 from .scheduled_stop_point_ref import ScheduledStopPointRef
@@ -115,7 +116,7 @@ class StopPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVersio
                 },
                 {
                     "name": "noticeAssignments",
-                    "type": Type["StopPointInJourneyPatternVersionedChildStructure.NoticeAssignments"],
+                    "type": NoticeAssignmentsRelStructure,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

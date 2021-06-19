@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Type
+from typing import List
 from .activation_point_ref import ActivationPointRef
 from .beacon_point_ref import BeaconPointRef
 from .border_point_ref import BorderPointRef
@@ -9,6 +9,7 @@ from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
 from .flexible_point_properties import FlexiblePointProperties
 from .garage_point_ref import GaragePointRef
 from .infrastructure_point_ref import InfrastructurePointRef
+from .notice_assignments_rel_structure import NoticeAssignmentsRelStructure
 from .parking_point_ref import ParkingPointRef
 from .point_in_link_sequence_versioned_child_structure import PointInLinkSequenceVersionedChildStructure
 from .point_on_link_ref import PointOnLinkRef
@@ -153,7 +154,7 @@ class PointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVersionedC
                 },
                 {
                     "name": "noticeAssignments",
-                    "type": Type["PointInJourneyPatternVersionedChildStructure.NoticeAssignments"],
+                    "type": NoticeAssignmentsRelStructure,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

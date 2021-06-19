@@ -61,6 +61,7 @@ from .fare_table_column_versioned_child_structure import FareTableColumnsRelStru
 from .fare_table_ref import FareTableRef
 from .fare_table_row_ref_structure import FareTableRowRefStructure
 from .fare_table_row_versioned_child_structure import FareTableRowsRelStructure
+from .fare_table_specifics_structure import FareTableSpecificsStructure
 from .flexible_line_ref import FlexibleLineRef
 from .frequency_of_use_ref import FrequencyOfUseRef
 from .fulfilment_method_price import FulfilmentMethodPrice
@@ -1166,7 +1167,7 @@ class CellsRelStructure(StrictContainmentAggregationStructure):
                 },
                 {
                     "name": "CellInContext",
-                    "type": Type["CellsRelStructure.CellInContext"],
+                    "type": CellVersionedChildStructure,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -1479,7 +1480,7 @@ class FareTableVersionStructure(GroupOfEntitiesVersionStructure):
                 },
                 {
                     "name": "specifics",
-                    "type": Type["FareTableVersionStructure.Specifics"],
+                    "type": FareTableSpecificsStructure,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
