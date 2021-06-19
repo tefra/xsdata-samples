@@ -12,19 +12,21 @@ class ParkingEntrancesForVehiclesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "parkingEntrancesForVehicles_RelStructure"
 
-    parking_entrance_for_vehicles_ref: List[ParkingEntranceForVehiclesRef] = field(
+    parking_entrance_for_vehicles_ref_or_parking_entrance_for_vehicles: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "ParkingEntranceForVehiclesRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    parking_entrance_for_vehicles: List[ParkingEntranceForVehicles] = field(
-        default_factory=list,
-        metadata={
-            "name": "ParkingEntranceForVehicles",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ParkingEntranceForVehiclesRef",
+                    "type": ParkingEntranceForVehiclesRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingEntranceForVehicles",
+                    "type": ParkingEntranceForVehicles,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

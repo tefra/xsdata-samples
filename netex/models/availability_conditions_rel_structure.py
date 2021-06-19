@@ -16,35 +16,31 @@ class AvailabilityConditionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "availabilityConditions_RelStructure"
 
-    availability_condition_ref: List[AvailabilityConditionRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "AvailabilityConditionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    availability_condition: List[AvailabilityCondition] = field(
-        default_factory=list,
-        metadata={
-            "name": "AvailabilityCondition",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    valid_during: List[ValidDuring] = field(
-        default_factory=list,
-        metadata={
-            "name": "ValidDuring",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    valid_between: List[ValidBetween] = field(
-        default_factory=list,
-        metadata={
-            "name": "ValidBetween",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "AvailabilityConditionRef",
+                    "type": AvailabilityConditionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AvailabilityCondition",
+                    "type": AvailabilityCondition,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ValidDuring",
+                    "type": ValidDuring,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ValidBetween",
+                    "type": ValidBetween,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

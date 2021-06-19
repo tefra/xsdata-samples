@@ -22,20 +22,22 @@ class DefaultServiceJourneyRunTimeVersionedChildStructure(JourneyTimingVersioned
             "required": True,
         }
     )
-    template_service_journey_ref: List[TemplateServiceJourneyRef] = field(
+    template_service_journey_ref_or_service_journey_ref: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "TemplateServiceJourneyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-        }
-    )
-    service_journey_ref: Optional[ServiceJourneyRef] = field(
-        default=None,
-        metadata={
-            "name": "ServiceJourneyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TemplateServiceJourneyRef",
+                    "type": TemplateServiceJourneyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServiceJourneyRef",
+                    "type": ServiceJourneyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 3,
         }
     )

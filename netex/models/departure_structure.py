@@ -117,71 +117,52 @@ class DepartureStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    vehicle_journey_stop_assignment_ref: List[VehicleJourneyStopAssignmentRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "VehicleJourneyStopAssignmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    dynamic_stop_assignment_ref: List[DynamicStopAssignmentRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "DynamicStopAssignmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    passenger_stop_assignment_ref: Optional[PassengerStopAssignmentRef] = field(
-        default=None,
-        metadata={
-            "name": "PassengerStopAssignmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    quay_assignment_view: Optional[QuayAssignmentView] = field(
-        default=None,
-        metadata={
-            "name": "QuayAssignmentView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    dynamic_stop_assignment: Optional[DynamicStopAssignment] = field(
-        default=None,
-        metadata={
-            "name": "DynamicStopAssignment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    accessibility_assessment: Optional[AccessibilityAssessment] = field(
-        default=None,
-        metadata={
-            "name": "AccessibilityAssessment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    check_constraint: Optional[CheckConstraint] = field(
-        default=None,
-        metadata={
-            "name": "CheckConstraint",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    notice_assignments: Optional[NoticeAssignmentsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "noticeAssignments",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "VehicleJourneyStopAssignmentRef",
+                    "type": VehicleJourneyStopAssignmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DynamicStopAssignmentRef",
+                    "type": DynamicStopAssignmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PassengerStopAssignmentRef",
+                    "type": PassengerStopAssignmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "QuayAssignmentView",
+                    "type": QuayAssignmentView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DynamicStopAssignment",
+                    "type": DynamicStopAssignment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AccessibilityAssessment",
+                    "type": AccessibilityAssessment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CheckConstraint",
+                    "type": CheckConstraint,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "noticeAssignments",
+                    "type": NoticeAssignmentsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 12,
         }
     )

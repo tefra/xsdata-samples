@@ -17,59 +17,46 @@ class TravelSpecificationsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "travelSpecifications_RelStructure"
 
-    offered_travel_specification_ref: List[OfferedTravelSpecificationRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "OfferedTravelSpecificationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    requested_travel_specification_ref: List[RequestedTravelSpecificationRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "RequestedTravelSpecificationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    travel_specification_ref: List[TravelSpecificationRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TravelSpecificationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    offered_travel_specification: List[OfferedTravelSpecification] = field(
-        default_factory=list,
-        metadata={
-            "name": "OfferedTravelSpecification",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    requested_travel_specification: List[RequestedTravelSpecification] = field(
-        default_factory=list,
-        metadata={
-            "name": "RequestedTravelSpecification",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    travel_specification: List[TravelSpecification1] = field(
-        default_factory=list,
-        metadata={
-            "name": "TravelSpecification",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_travel_specification: List[TravelSpecification2] = field(
-        default_factory=list,
-        metadata={
-            "name": "TravelSpecification_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "OfferedTravelSpecificationRef",
+                    "type": OfferedTravelSpecificationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RequestedTravelSpecificationRef",
+                    "type": RequestedTravelSpecificationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TravelSpecificationRef",
+                    "type": TravelSpecificationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OfferedTravelSpecification",
+                    "type": OfferedTravelSpecification,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RequestedTravelSpecification",
+                    "type": RequestedTravelSpecification,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TravelSpecification",
+                    "type": TravelSpecification1,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TravelSpecification_",
+                    "type": TravelSpecification2,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

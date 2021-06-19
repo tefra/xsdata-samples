@@ -12,19 +12,21 @@ class TypesOfAccountStatusRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "typesOfAccountStatus_RelStructure"
 
-    customer_account_status_ref: List[CustomerAccountStatusRef] = field(
+    customer_account_status_ref_or_customer_account_status: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "CustomerAccountStatusRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    customer_account_status: List[CustomerAccountStatus] = field(
-        default_factory=list,
-        metadata={
-            "name": "CustomerAccountStatus",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "CustomerAccountStatusRef",
+                    "type": CustomerAccountStatusRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CustomerAccountStatus",
+                    "type": CustomerAccountStatus,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

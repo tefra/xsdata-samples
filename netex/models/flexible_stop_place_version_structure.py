@@ -67,35 +67,31 @@ class FlexibleStopPlaceVersionStructure(PlaceVersionStructure):
 
     @dataclass
     class Areas:
-        flexible_area: List[FlexibleArea] = field(
+        choice: List[object] = field(
             default_factory=list,
             metadata={
-                "name": "FlexibleArea",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        flexible_area_ref: List[FlexibleAreaRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FlexibleAreaRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        hail_and_ride_area: List[HailAndRideArea] = field(
-            default_factory=list,
-            metadata={
-                "name": "HailAndRideArea",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        hail_and_ride_area_ref: List[HailAndRideAreaRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "HailAndRideAreaRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
+                "type": "Elements",
+                "choices": (
+                    {
+                        "name": "FlexibleArea",
+                        "type": FlexibleArea,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FlexibleAreaRef",
+                        "type": FlexibleAreaRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "HailAndRideArea",
+                        "type": HailAndRideArea,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "HailAndRideAreaRef",
+                        "type": HailAndRideAreaRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                ),
             }
         )

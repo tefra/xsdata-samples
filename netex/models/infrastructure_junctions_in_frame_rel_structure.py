@@ -13,27 +13,26 @@ class InfrastructureJunctionsInFrameRelStructure(ContainmentAggregationStructure
     class Meta:
         name = "infrastructureJunctionsInFrame_RelStructure"
 
-    railway_junction: List[RailwayJunction] = field(
+    railway_junction_or_road_junction_or_wire_junction: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "RailwayJunction",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    road_junction: List[RoadJunction] = field(
-        default_factory=list,
-        metadata={
-            "name": "RoadJunction",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    wire_junction: List[WireJunction] = field(
-        default_factory=list,
-        metadata={
-            "name": "WireJunction",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "RailwayJunction",
+                    "type": RailwayJunction,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RoadJunction",
+                    "type": RoadJunction,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "WireJunction",
+                    "type": WireJunction,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

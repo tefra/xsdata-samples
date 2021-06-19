@@ -14,35 +14,31 @@ class ParkingPricesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "parkingPrices_RelStructure"
 
-    parking_price_ref: List[ParkingPriceRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "ParkingPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    cell_ref: List[CellRef1] = field(
-        default_factory=list,
-        metadata={
-            "name": "CellRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_cell_ref: List[CellRef2] = field(
-        default_factory=list,
-        metadata={
-            "name": "CellRef_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    parking_price: List[ParkingPriceVersionedChildStructure] = field(
-        default_factory=list,
-        metadata={
-            "name": "ParkingPrice",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ParkingPriceRef",
+                    "type": ParkingPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CellRef",
+                    "type": CellRef1,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CellRef_",
+                    "type": CellRef2,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingPrice",
+                    "type": ParkingPriceVersionedChildStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

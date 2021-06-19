@@ -18,67 +18,51 @@ class FareStructureFactorsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "fareStructureFactors_RelStructure"
 
-    parking_charge_band_ref: List[ParkingChargeBandRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "ParkingChargeBandRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    time_structure_factor_ref: List[TimeStructureFactorRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TimeStructureFactorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_quota_factor_ref: List[FareQuotaFactorRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareQuotaFactorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_demand_factor_ref: List[FareDemandFactorRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareDemandFactorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    quality_structure_factor_ref: List[QualityStructureFactorRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "QualityStructureFactorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    geographical_structure_factor_ref: List[GeographicalStructureFactorRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "GeographicalStructureFactorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_structure_factor_ref: List[FareStructureFactorRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareStructureFactorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_structure_factor: List[FareStructureFactor] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareStructureFactor",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ParkingChargeBandRef",
+                    "type": ParkingChargeBandRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TimeStructureFactorRef",
+                    "type": TimeStructureFactorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareQuotaFactorRef",
+                    "type": FareQuotaFactorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareDemandFactorRef",
+                    "type": FareDemandFactorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "QualityStructureFactorRef",
+                    "type": QualityStructureFactorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GeographicalStructureFactorRef",
+                    "type": GeographicalStructureFactorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareStructureFactorRef",
+                    "type": FareStructureFactorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareStructureFactor",
+                    "type": FareStructureFactor,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

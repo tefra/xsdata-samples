@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Type
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .fare_table_ref import FareTableRef
 from .multilingual_string import MultilingualString
@@ -32,43 +32,38 @@ class FareTableRowVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    standard_fare_table_ref: List[StandardFareTableRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "StandardFareTableRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-        }
-    )
-    fare_table_ref: Optional[FareTableRef] = field(
-        default=None,
-        metadata={
-            "name": "FareTableRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    notice_assignments: Optional[NoticeAssignmentsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "noticeAssignments",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    representing: Optional[ObjectRefsRelStructure] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    rows: Optional["FareTableRowsRelStructure"] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "StandardFareTableRef",
+                    "type": StandardFareTableRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareTableRef",
+                    "type": FareTableRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "noticeAssignments",
+                    "type": NoticeAssignmentsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "representing",
+                    "type": ObjectRefsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "rows",
+                    "type": Type["FareTableRowsRelStructure"],
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 6,
         }
     )
     order: Optional[int] = field(

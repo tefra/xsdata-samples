@@ -72,499 +72,321 @@ class UsageParametersRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "usageParameters_RelStructure"
 
-    sales_offer_package_entitlement_given_ref: List[SalesOfferPackageEntitlementGivenRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "SalesOfferPackageEntitlementGivenRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    sales_offer_package_entitlement_required_ref: List[SalesOfferPackageEntitlementRequiredRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "SalesOfferPackageEntitlementRequiredRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    minimum_stay_ref: List[MinimumStayRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "MinimumStayRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    interchanging_ref: List[InterchangingRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "InterchangingRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    frequency_of_use_ref: List[FrequencyOfUseRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "FrequencyOfUseRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    suspending_ref: List[SuspendingRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "SuspendingRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    usage_validity_period_ref: List[UsageValidityPeriodRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "UsageValidityPeriodRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    step_limit_ref: List[StepLimitRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "StepLimitRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    routing_ref: List[RoutingRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "RoutingRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    round_trip_ref: List[RoundTripRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "RoundTripRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    luggage_allowance_ref: List[LuggageAllowanceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "LuggageAllowanceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    entitlement_given_ref: List[EntitlementGivenRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "EntitlementGivenRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    entitlement_required_ref: List[EntitlementRequiredRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "EntitlementRequiredRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    eligibility_change_policy_ref: List[EligibilityChangePolicyRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "EligibilityChangePolicyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    group_ticket_ref: List[GroupTicketRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "GroupTicketRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    commercial_profile_ref: List[CommercialProfileRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "CommercialProfileRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    companion_profile_ref: List[CompanionProfileRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "CompanionProfileRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    user_profile_ref: List[UserProfileRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "UserProfileRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    profile_parameter_ref: List[ProfileParameterRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ProfileParameterRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    subscribing_ref: List[SubscribingRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "SubscribingRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    penalty_policy_ref: List[PenaltyPolicyRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "PenaltyPolicyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    charging_policy_ref: List[ChargingPolicyRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ChargingPolicyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    transferability_ref: List[TransferabilityRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TransferabilityRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    replacing_ref: List[ReplacingRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ReplacingRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    refunding_ref: List[RefundingRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "RefundingRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    exchanging_ref: List[ExchangingRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ExchangingRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    reselling_ref: List[ResellingRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ResellingRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    cancelling_ref: List[CancellingRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "CancellingRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    reserving_ref: List[ReservingRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ReservingRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    purchase_window_ref: List[PurchaseWindowRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "PurchaseWindowRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    usage_parameter_ref: List[UsageParameterRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "UsageParameterRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    sales_offer_package_entitlement_required: List[SalesOfferPackageEntitlementRequired] = field(
-        default_factory=list,
-        metadata={
-            "name": "SalesOfferPackageEntitlementRequired",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    sales_offer_package_entitlement_given: List[SalesOfferPackageEntitlementGiven] = field(
-        default_factory=list,
-        metadata={
-            "name": "SalesOfferPackageEntitlementGiven",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    minimum_stay: List[MinimumStay] = field(
-        default_factory=list,
-        metadata={
-            "name": "MinimumStay",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    interchanging: List[Interchanging] = field(
-        default_factory=list,
-        metadata={
-            "name": "Interchanging",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    suspending: List[Suspending] = field(
-        default_factory=list,
-        metadata={
-            "name": "Suspending",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    usage_validity_period: List[UsageValidityPeriod] = field(
-        default_factory=list,
-        metadata={
-            "name": "UsageValidityPeriod",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    frequency_of_use: List[FrequencyOfUse] = field(
-        default_factory=list,
-        metadata={
-            "name": "FrequencyOfUse",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    step_limit: List[StepLimit] = field(
-        default_factory=list,
-        metadata={
-            "name": "StepLimit",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    routing: List[Routing] = field(
-        default_factory=list,
-        metadata={
-            "name": "Routing",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    round_trip: List[RoundTrip] = field(
-        default_factory=list,
-        metadata={
-            "name": "RoundTrip",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    luggage_allowance: List[LuggageAllowance] = field(
-        default_factory=list,
-        metadata={
-            "name": "LuggageAllowance",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    entitlement_required: List[EntitlementRequired] = field(
-        default_factory=list,
-        metadata={
-            "name": "EntitlementRequired",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    entitlement_given: List[EntitlementGiven] = field(
-        default_factory=list,
-        metadata={
-            "name": "EntitlementGiven",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    eligibility_change_policy: List[EligibilityChangePolicy] = field(
-        default_factory=list,
-        metadata={
-            "name": "EligibilityChangePolicy",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    companion_profile: List[CompanionProfile] = field(
-        default_factory=list,
-        metadata={
-            "name": "CompanionProfile",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    group_ticket: List[GroupTicket] = field(
-        default_factory=list,
-        metadata={
-            "name": "GroupTicket",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    commercial_profile: List[CommercialProfile] = field(
-        default_factory=list,
-        metadata={
-            "name": "CommercialProfile",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    user_profile: List[UserProfile] = field(
-        default_factory=list,
-        metadata={
-            "name": "UserProfile",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    subscribing: List[Subscribing] = field(
-        default_factory=list,
-        metadata={
-            "name": "Subscribing",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    penalty_policy: List[PenaltyPolicy] = field(
-        default_factory=list,
-        metadata={
-            "name": "PenaltyPolicy",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    charging_policy: List[ChargingPolicy] = field(
-        default_factory=list,
-        metadata={
-            "name": "ChargingPolicy",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    cancelling: List[Cancelling] = field(
-        default_factory=list,
-        metadata={
-            "name": "Cancelling",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    reserving: List[Reserving] = field(
-        default_factory=list,
-        metadata={
-            "name": "Reserving",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    purchase_window: List[PurchaseWindow] = field(
-        default_factory=list,
-        metadata={
-            "name": "PurchaseWindow",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    transferability: List[Transferability] = field(
-        default_factory=list,
-        metadata={
-            "name": "Transferability",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    replacing: List[Replacing] = field(
-        default_factory=list,
-        metadata={
-            "name": "Replacing",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    refunding: List[Refunding] = field(
-        default_factory=list,
-        metadata={
-            "name": "Refunding",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    exchanging: List[Exchanging] = field(
-        default_factory=list,
-        metadata={
-            "name": "Exchanging",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    reselling: List[Reselling] = field(
-        default_factory=list,
-        metadata={
-            "name": "Reselling",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    usage_parameter: List[UsageParameter1] = field(
-        default_factory=list,
-        metadata={
-            "name": "UsageParameter",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_usage_parameter: List[UsageParameter2] = field(
-        default_factory=list,
-        metadata={
-            "name": "UsageParameter_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "SalesOfferPackageEntitlementGivenRef",
+                    "type": SalesOfferPackageEntitlementGivenRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SalesOfferPackageEntitlementRequiredRef",
+                    "type": SalesOfferPackageEntitlementRequiredRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MinimumStayRef",
+                    "type": MinimumStayRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "InterchangingRef",
+                    "type": InterchangingRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FrequencyOfUseRef",
+                    "type": FrequencyOfUseRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SuspendingRef",
+                    "type": SuspendingRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "UsageValidityPeriodRef",
+                    "type": UsageValidityPeriodRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "StepLimitRef",
+                    "type": StepLimitRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RoutingRef",
+                    "type": RoutingRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RoundTripRef",
+                    "type": RoundTripRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LuggageAllowanceRef",
+                    "type": LuggageAllowanceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "EntitlementGivenRef",
+                    "type": EntitlementGivenRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "EntitlementRequiredRef",
+                    "type": EntitlementRequiredRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "EligibilityChangePolicyRef",
+                    "type": EligibilityChangePolicyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GroupTicketRef",
+                    "type": GroupTicketRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CommercialProfileRef",
+                    "type": CommercialProfileRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CompanionProfileRef",
+                    "type": CompanionProfileRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "UserProfileRef",
+                    "type": UserProfileRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ProfileParameterRef",
+                    "type": ProfileParameterRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SubscribingRef",
+                    "type": SubscribingRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PenaltyPolicyRef",
+                    "type": PenaltyPolicyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ChargingPolicyRef",
+                    "type": ChargingPolicyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TransferabilityRef",
+                    "type": TransferabilityRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ReplacingRef",
+                    "type": ReplacingRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RefundingRef",
+                    "type": RefundingRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ExchangingRef",
+                    "type": ExchangingRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ResellingRef",
+                    "type": ResellingRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CancellingRef",
+                    "type": CancellingRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ReservingRef",
+                    "type": ReservingRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PurchaseWindowRef",
+                    "type": PurchaseWindowRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "UsageParameterRef",
+                    "type": UsageParameterRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SalesOfferPackageEntitlementRequired",
+                    "type": SalesOfferPackageEntitlementRequired,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SalesOfferPackageEntitlementGiven",
+                    "type": SalesOfferPackageEntitlementGiven,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MinimumStay",
+                    "type": MinimumStay,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Interchanging",
+                    "type": Interchanging,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Suspending",
+                    "type": Suspending,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "UsageValidityPeriod",
+                    "type": UsageValidityPeriod,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FrequencyOfUse",
+                    "type": FrequencyOfUse,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "StepLimit",
+                    "type": StepLimit,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Routing",
+                    "type": Routing,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RoundTrip",
+                    "type": RoundTrip,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LuggageAllowance",
+                    "type": LuggageAllowance,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "EntitlementRequired",
+                    "type": EntitlementRequired,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "EntitlementGiven",
+                    "type": EntitlementGiven,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "EligibilityChangePolicy",
+                    "type": EligibilityChangePolicy,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CompanionProfile",
+                    "type": CompanionProfile,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GroupTicket",
+                    "type": GroupTicket,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CommercialProfile",
+                    "type": CommercialProfile,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "UserProfile",
+                    "type": UserProfile,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Subscribing",
+                    "type": Subscribing,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PenaltyPolicy",
+                    "type": PenaltyPolicy,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ChargingPolicy",
+                    "type": ChargingPolicy,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Cancelling",
+                    "type": Cancelling,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Reserving",
+                    "type": Reserving,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PurchaseWindow",
+                    "type": PurchaseWindow,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Transferability",
+                    "type": Transferability,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Replacing",
+                    "type": Replacing,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Refunding",
+                    "type": Refunding,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Exchanging",
+                    "type": Exchanging,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Reselling",
+                    "type": Reselling,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "UsageParameter",
+                    "type": UsageParameter1,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "UsageParameter_",
+                    "type": UsageParameter2,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

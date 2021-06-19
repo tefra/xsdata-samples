@@ -12,19 +12,21 @@ class JourneyAccountingsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "journeyAccountings_RelStructure"
 
-    journey_accounting_ref: List[JourneyAccountingRef] = field(
+    journey_accounting_ref_or_journey_accounting: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "JourneyAccountingRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    journey_accounting: List[JourneyAccounting] = field(
-        default_factory=list,
-        metadata={
-            "name": "JourneyAccounting",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "JourneyAccountingRef",
+                    "type": JourneyAccountingRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "JourneyAccounting",
+                    "type": JourneyAccounting,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

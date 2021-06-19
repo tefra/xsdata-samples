@@ -35,73 +35,53 @@ class BlockPartVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    train_block_ref: List[TrainBlockRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "TrainBlockRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-        }
-    )
-    block_ref: Optional[BlockRef] = field(
-        default=None,
-        metadata={
-            "name": "BlockRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    compound_train_ref: List[CompoundTrainRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "CompoundTrainRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    train_ref: List[TrainRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TrainRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    vehicle_type_ref: Optional[VehicleTypeRef] = field(
-        default=None,
-        metadata={
-            "name": "VehicleTypeRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    compound_block_ref: Optional[CompoundBlockRef] = field(
-        default=None,
-        metadata={
-            "name": "CompoundBlockRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    journey_part_couple_ref: Optional[JourneyPartCoupleRef] = field(
-        default=None,
-        metadata={
-            "name": "JourneyPartCoupleRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    journey_parts: Optional[JourneyPartRefsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "journeyParts",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TrainBlockRef",
+                    "type": TrainBlockRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "BlockRef",
+                    "type": BlockRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CompoundTrainRef",
+                    "type": CompoundTrainRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TrainRef",
+                    "type": TrainRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleTypeRef",
+                    "type": VehicleTypeRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CompoundBlockRef",
+                    "type": CompoundBlockRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "JourneyPartCoupleRef",
+                    "type": JourneyPartCoupleRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "journeyParts",
+                    "type": JourneyPartRefsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 11,
         }
     )
     order: Optional[int] = field(

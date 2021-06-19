@@ -22,56 +22,43 @@ class TravelSpecificationSummaryEndpointStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    postal_address_ref: List[PostalAddressRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "PostalAddressRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    road_address_ref: List[RoadAddressRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "RoadAddressRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    address_ref: Optional[AddressRef] = field(
-        default=None,
-        metadata={
-            "name": "AddressRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    scheduled_stop_point_view: Optional[ScheduledStopPointView] = field(
-        default=None,
-        metadata={
-            "name": "ScheduledStopPointView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    quay_ref: Optional[QuayRef] = field(
-        default=None,
-        metadata={
-            "name": "QuayRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    boarding_position_ref: Optional[BoardingPositionRef] = field(
-        default=None,
-        metadata={
-            "name": "BoardingPositionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "PostalAddressRef",
+                    "type": PostalAddressRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RoadAddressRef",
+                    "type": RoadAddressRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AddressRef",
+                    "type": AddressRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ScheduledStopPointView",
+                    "type": ScheduledStopPointView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "QuayRef",
+                    "type": QuayRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "BoardingPositionRef",
+                    "type": BoardingPositionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 8,
         }
     )
     tariff_zone_ref: List[TariffZoneRef1] = field(

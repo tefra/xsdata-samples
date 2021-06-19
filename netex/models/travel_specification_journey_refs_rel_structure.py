@@ -13,27 +13,26 @@ class TravelSpecificationJourneyRefsRelStructure(OneToManyRelationshipStructure)
     class Meta:
         name = "travelSpecificationJourneyRefs_RelStructure"
 
-    template_service_journey_ref: List[TemplateServiceJourneyRef] = field(
+    template_service_journey_ref_or_service_journey_ref_or_train_number_ref: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "TemplateServiceJourneyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    service_journey_ref: List[ServiceJourneyRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ServiceJourneyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    train_number_ref: List[TrainNumberRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TrainNumberRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TemplateServiceJourneyRef",
+                    "type": TemplateServiceJourneyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServiceJourneyRef",
+                    "type": ServiceJourneyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TrainNumberRef",
+                    "type": TrainNumberRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

@@ -12,19 +12,21 @@ class TypeOfConcessionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "typeOfConcessions_RelStructure"
 
-    type_of_concession_ref: List[TypeOfConcessionRef] = field(
+    type_of_concession_ref_or_type_of_concession: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "TypeOfConcessionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_concession: List[TypeOfConcession] = field(
-        default_factory=list,
-        metadata={
-            "name": "TypeOfConcession",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TypeOfConcessionRef",
+                    "type": TypeOfConcessionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfConcession",
+                    "type": TypeOfConcession,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

@@ -12,19 +12,21 @@ class VehicleManoeuvringRequirementsRelStructure(ContainmentAggregationStructure
     class Meta:
         name = "vehicleManoeuvringRequirements_RelStructure"
 
-    vehicle_manoeuvring_requirement_ref: List[VehicleManoeuvringRequirementRef] = field(
+    vehicle_manoeuvring_requirement_ref_or_vehicle_manoeuvring_requirement: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "VehicleManoeuvringRequirementRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    vehicle_manoeuvring_requirement: List[VehicleManoeuvringRequirement] = field(
-        default_factory=list,
-        metadata={
-            "name": "VehicleManoeuvringRequirement",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "VehicleManoeuvringRequirementRef",
+                    "type": VehicleManoeuvringRequirementRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleManoeuvringRequirement",
+                    "type": VehicleManoeuvringRequirement,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

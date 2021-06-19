@@ -12,19 +12,21 @@ class FareScheduledStopPointsInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "fareScheduledStopPointsInFrame_RelStructure"
 
-    scheduled_stop_point: List[ScheduledStopPoint] = field(
+    scheduled_stop_point_or_fare_scheduled_stop_point: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "ScheduledStopPoint",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_scheduled_stop_point: List[FareScheduledStopPoint] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareScheduledStopPoint",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ScheduledStopPoint",
+                    "type": ScheduledStopPoint,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareScheduledStopPoint",
+                    "type": FareScheduledStopPoint,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

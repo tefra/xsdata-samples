@@ -12,19 +12,21 @@ class SitePathLinksRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "sitePathLinks_RelStructure"
 
-    path_link_ref: List[PathLinkRef] = field(
+    path_link_ref_or_site_path_link: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "PathLinkRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    site_path_link: List[SitePathLink] = field(
-        default_factory=list,
-        metadata={
-            "name": "SitePathLink",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "PathLinkRef",
+                    "type": PathLinkRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SitePathLink",
+                    "type": SitePathLink,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

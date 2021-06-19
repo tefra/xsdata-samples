@@ -12,19 +12,21 @@ class DistanceMatrixElementRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "distanceMatrixElementRefs_RelStructure"
 
-    distance_matrix_element_ref: List[DistanceMatrixElementRef] = field(
+    distance_matrix_element_ref_or_distance_matrix_element_inverse_ref: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "DistanceMatrixElementRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    distance_matrix_element_inverse_ref: List[DistanceMatrixElementInverseRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "DistanceMatrixElementInverseRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "DistanceMatrixElementRef",
+                    "type": DistanceMatrixElementRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DistanceMatrixElementInverseRef",
+                    "type": DistanceMatrixElementInverseRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

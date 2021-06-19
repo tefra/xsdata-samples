@@ -12,19 +12,21 @@ class DutyPartsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "dutyParts_RelStructure"
 
-    duty_part_ref: List[DutyPartRef] = field(
+    duty_part_ref_or_duty_part: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "DutyPartRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    duty_part: List[DutyPart] = field(
-        default_factory=list,
-        metadata={
-            "name": "DutyPart",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "DutyPartRef",
+                    "type": DutyPartRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DutyPart",
+                    "type": DutyPart,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

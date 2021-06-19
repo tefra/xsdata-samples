@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List
 from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
 from .dynamic_stop_assignment_ref import DynamicStopAssignmentRef
 from .journey_pattern_ref import JourneyPatternRef
@@ -17,69 +17,47 @@ class DynamicStopAssignmentVersionStructure(PassengerStopAssignmentVersionStruct
     class Meta:
         name = "DynamicStopAssignment_VersionStructure"
 
-    service_journey_pattern_ref: List[ServiceJourneyPatternRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "ServiceJourneyPatternRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    service_pattern_ref: List[ServicePatternRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ServicePatternRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    dead_run_journey_pattern_ref: List[DeadRunJourneyPatternRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "DeadRunJourneyPatternRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    journey_pattern_ref: Optional[JourneyPatternRef] = field(
-        default=None,
-        metadata={
-            "name": "JourneyPatternRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    vehicle_journey_stop_assignment_ref: List[VehicleJourneyStopAssignmentRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "VehicleJourneyStopAssignmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    dynamic_stop_assignment_ref: List[DynamicStopAssignmentRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "DynamicStopAssignmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    passenger_stop_assignment_ref: Optional[PassengerStopAssignmentRef] = field(
-        default=None,
-        metadata={
-            "name": "PassengerStopAssignmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ServiceJourneyPatternRef",
+                    "type": ServiceJourneyPatternRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServicePatternRef",
+                    "type": ServicePatternRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DeadRunJourneyPatternRef",
+                    "type": DeadRunJourneyPatternRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "JourneyPatternRef",
+                    "type": JourneyPatternRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleJourneyStopAssignmentRef",
+                    "type": VehicleJourneyStopAssignmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DynamicStopAssignmentRef",
+                    "type": DynamicStopAssignmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PassengerStopAssignmentRef",
+                    "type": PassengerStopAssignmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 12,
         }
     )

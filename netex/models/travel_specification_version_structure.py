@@ -56,375 +56,215 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    repeated_trip_fare_request_ref: List[RepeatedTripFareRequestRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "RepeatedTripFareRequestRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    single_trip_fare_request_ref: List[SingleTripFareRequestRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "SingleTripFareRequestRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    fare_request_ref: List[FareRequestRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareRequestRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    stop_finder_request_ref: List[StopFinderRequestRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "StopFinderRequestRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    stop_event_request_ref: List[StopEventRequestRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "StopEventRequestRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    schedule_request_ref: List[ScheduleRequestRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ScheduleRequestRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    trip_plan_request_ref: List[TripPlanRequestRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TripPlanRequestRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    passenger_information_request_ref: Optional[PassengerInformationRequestRef] = field(
-        default=None,
-        metadata={
-            "name": "PassengerInformationRequestRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    customer_purchase_package_price_ref: List[CustomerPurchasePackagePriceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "CustomerPurchasePackagePriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    parking_price_ref: List[ParkingPriceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ParkingPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    time_interval_price_ref: List[TimeIntervalPriceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TimeIntervalPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    time_unit_price_ref: List[TimeUnitPriceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TimeUnitPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    quality_structure_factor_price_ref: List[QualityStructureFactorPriceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "QualityStructureFactorPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    controllable_element_price_ref: List[ControllableElementPriceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ControllableElementPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    validable_element_price_ref: List[ValidableElementPriceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ValidableElementPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    geographical_interval_price_ref: List[GeographicalIntervalPriceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "GeographicalIntervalPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    geographical_unit_price_ref: List[GeographicalUnitPriceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "GeographicalUnitPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    usage_parameter_price_ref: List[UsageParameterPriceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "UsageParameterPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    sales_offer_package_price_ref: List[SalesOfferPackagePriceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "SalesOfferPackagePriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    distance_matrix_element_price_ref: List[DistanceMatrixElementPriceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "DistanceMatrixElementPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    fare_structure_element_price_ref: List[FareStructureElementPriceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareStructureElementPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    fulfilment_method_price_ref: List[FulfilmentMethodPriceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "FulfilmentMethodPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    series_constraint_price_ref: List[SeriesConstraintPriceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "SeriesConstraintPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    capping_rule_price_ref: List[CappingRulePriceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "CappingRulePriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    fare_product_price_ref: List[FareProductPriceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareProductPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    fare_price_ref: Optional[FarePriceRef] = field(
-        default=None,
-        metadata={
-            "name": "FarePriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    cell_ref: List[CellRef1] = field(
-        default_factory=list,
-        metadata={
-            "name": "CellRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-        }
-    )
-    netex_org_uk_netex_cell_ref: Optional[CellRef2] = field(
-        default=None,
-        metadata={
-            "name": "CellRef_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    amount: Optional[Decimal] = field(
-        default=None,
-        metadata={
-            "name": "Amount",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    currency: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "Currency",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "min_length": 3,
-            "max_length": 3,
-            "pattern": r"[A-Z][A-Z][A-Z]",
-        }
-    )
-    price_unit_ref: Optional[PriceUnitRef] = field(
-        default=None,
-        metadata={
-            "name": "PriceUnitRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    units: Optional[Decimal] = field(
-        default=None,
-        metadata={
-            "name": "Units",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    rule_step_results: Optional[PriceRuleStepResultsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "ruleStepResults",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    payment_method: Optional[PaymentMethodEnumeration] = field(
-        default=None,
-        metadata={
-            "name": "PaymentMethod",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_payment_method_ref: Optional[TypeOfPaymentMethodRef] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfPaymentMethodRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    start_of_validity: Optional[XmlDateTime] = field(
-        default=None,
-        metadata={
-            "name": "StartOfValidity",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    end_of_validity: Optional[XmlDateTime] = field(
-        default=None,
-        metadata={
-            "name": "EndOfValidity",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    travel_specification_summary_view: Optional[TravelSpecificationSummaryView] = field(
-        default=None,
-        metadata={
-            "name": "TravelSpecificationSummaryView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    specific_parameter_assignments: Optional[SpecificParameterAssignmentsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "specificParameterAssignments",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    notice_assignments: Optional[NoticeAssignmentsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "noticeAssignments",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "RepeatedTripFareRequestRef",
+                    "type": RepeatedTripFareRequestRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SingleTripFareRequestRef",
+                    "type": SingleTripFareRequestRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareRequestRef",
+                    "type": FareRequestRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "StopFinderRequestRef",
+                    "type": StopFinderRequestRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "StopEventRequestRef",
+                    "type": StopEventRequestRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ScheduleRequestRef",
+                    "type": ScheduleRequestRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TripPlanRequestRef",
+                    "type": TripPlanRequestRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PassengerInformationRequestRef",
+                    "type": PassengerInformationRequestRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CustomerPurchasePackagePriceRef",
+                    "type": CustomerPurchasePackagePriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingPriceRef",
+                    "type": ParkingPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TimeIntervalPriceRef",
+                    "type": TimeIntervalPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TimeUnitPriceRef",
+                    "type": TimeUnitPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "QualityStructureFactorPriceRef",
+                    "type": QualityStructureFactorPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ControllableElementPriceRef",
+                    "type": ControllableElementPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ValidableElementPriceRef",
+                    "type": ValidableElementPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GeographicalIntervalPriceRef",
+                    "type": GeographicalIntervalPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GeographicalUnitPriceRef",
+                    "type": GeographicalUnitPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "UsageParameterPriceRef",
+                    "type": UsageParameterPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SalesOfferPackagePriceRef",
+                    "type": SalesOfferPackagePriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DistanceMatrixElementPriceRef",
+                    "type": DistanceMatrixElementPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareStructureElementPriceRef",
+                    "type": FareStructureElementPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FulfilmentMethodPriceRef",
+                    "type": FulfilmentMethodPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SeriesConstraintPriceRef",
+                    "type": SeriesConstraintPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CappingRulePriceRef",
+                    "type": CappingRulePriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareProductPriceRef",
+                    "type": FareProductPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FarePriceRef",
+                    "type": FarePriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CellRef",
+                    "type": CellRef1,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CellRef_",
+                    "type": CellRef2,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Amount",
+                    "type": Decimal,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Currency",
+                    "type": str,
+                    "namespace": "http://www.netex.org.uk/netex",
+                    "min_length": 3,
+                    "max_length": 3,
+                    "pattern": r"[A-Z][A-Z][A-Z]",
+                },
+                {
+                    "name": "PriceUnitRef",
+                    "type": PriceUnitRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Units",
+                    "type": Decimal,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ruleStepResults",
+                    "type": PriceRuleStepResultsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PaymentMethod",
+                    "type": PaymentMethodEnumeration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfPaymentMethodRef",
+                    "type": TypeOfPaymentMethodRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "StartOfValidity",
+                    "type": XmlDateTime,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "EndOfValidity",
+                    "type": XmlDateTime,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TravelSpecificationSummaryView",
+                    "type": TravelSpecificationSummaryView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "specificParameterAssignments",
+                    "type": SpecificParameterAssignmentsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "noticeAssignments",
+                    "type": NoticeAssignmentsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 85,
         }
     )

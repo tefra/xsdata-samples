@@ -12,19 +12,21 @@ class VehicleJourneyStopAssignmentsRelStructure(ContainmentAggregationStructure)
     class Meta:
         name = "vehicleJourneyStopAssignments_RelStructure"
 
-    vehicle_journey_stop_assignment_ref: List[VehicleJourneyStopAssignmentRef] = field(
+    vehicle_journey_stop_assignment_ref_or_vehicle_journey_stop_assignment: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "VehicleJourneyStopAssignmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    vehicle_journey_stop_assignment: List[VehicleJourneyStopAssignment] = field(
-        default_factory=list,
-        metadata={
-            "name": "VehicleJourneyStopAssignment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "VehicleJourneyStopAssignmentRef",
+                    "type": VehicleJourneyStopAssignmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleJourneyStopAssignment",
+                    "type": VehicleJourneyStopAssignment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

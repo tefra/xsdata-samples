@@ -12,19 +12,21 @@ class FareStructureElementsInSequenceRelStructure(StrictContainmentAggregationSt
     class Meta:
         name = "fareStructureElementsInSequence_RelStructure"
 
-    fare_structure_element_in_sequence: List[FareStructureElementInSequence] = field(
+    fare_structure_element_in_sequence_or_controllable_element_in_sequence: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "FareStructureElementInSequence",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    controllable_element_in_sequence: List[ControllableElementInSequence] = field(
-        default_factory=list,
-        metadata={
-            "name": "ControllableElementInSequence",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FareStructureElementInSequence",
+                    "type": FareStructureElementInSequence,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ControllableElementInSequence",
+                    "type": ControllableElementInSequence,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

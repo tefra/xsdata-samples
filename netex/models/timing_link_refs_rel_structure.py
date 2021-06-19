@@ -12,19 +12,21 @@ class TimingLinkRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "timingLinkRefs_RelStructure"
 
-    timing_link_ref: List[TimingLinkRef] = field(
+    timing_link_ref_or_timing_link_ref_by_value: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "TimingLinkRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    timing_link_ref_by_value: List[TimingLinkRefByValue] = field(
-        default_factory=list,
-        metadata={
-            "name": "TimingLinkRefByValue",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TimingLinkRef",
+                    "type": TimingLinkRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TimingLinkRefByValue",
+                    "type": TimingLinkRefByValue,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

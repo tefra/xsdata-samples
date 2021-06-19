@@ -12,19 +12,21 @@ class InterchangeRuleTimingsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "interchangeRuleTimings_RelStructure"
 
-    interchange_rule_timing_ref: List[InterchangeRuleTimingRef] = field(
+    interchange_rule_timing_ref_or_interchange_rule_timing: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "InterchangeRuleTimingRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    interchange_rule_timing: List[InterchangeRuleTiming] = field(
-        default_factory=list,
-        metadata={
-            "name": "InterchangeRuleTiming",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "InterchangeRuleTimingRef",
+                    "type": InterchangeRuleTimingRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "InterchangeRuleTiming",
+                    "type": InterchangeRuleTiming,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

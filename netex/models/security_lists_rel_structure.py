@@ -14,35 +14,31 @@ class SecurityListsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "securityLists_RelStructure"
 
-    whitelist_ref: List[WhitelistRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "WhitelistRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    blacklist_ref: List[BlacklistRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "BlacklistRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    security_list_ref: List[SecurityListRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "SecurityListRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    security_list: List[SecurityList] = field(
-        default_factory=list,
-        metadata={
-            "name": "SecurityList",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "WhitelistRef",
+                    "type": WhitelistRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "BlacklistRef",
+                    "type": BlacklistRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SecurityListRef",
+                    "type": SecurityListRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SecurityList",
+                    "type": SecurityList,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

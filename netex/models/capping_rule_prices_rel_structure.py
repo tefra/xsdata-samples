@@ -14,35 +14,31 @@ class CappingRulePricesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "cappingRulePrices_RelStructure"
 
-    capping_rule_price_ref: List[CappingRulePriceRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "CappingRulePriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    cell_ref: List[CellRef1] = field(
-        default_factory=list,
-        metadata={
-            "name": "CellRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_cell_ref: List[CellRef2] = field(
-        default_factory=list,
-        metadata={
-            "name": "CellRef_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    capping_rule_price: List[CappingRulePrice] = field(
-        default_factory=list,
-        metadata={
-            "name": "CappingRulePrice",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "CappingRulePriceRef",
+                    "type": CappingRulePriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CellRef",
+                    "type": CellRef1,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CellRef_",
+                    "type": CellRef2,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CappingRulePrice",
+                    "type": CappingRulePrice,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

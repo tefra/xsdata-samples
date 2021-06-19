@@ -12,19 +12,21 @@ class TypesOfEquipmentRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "typesOfEquipment_RelStructure"
 
-    type_of_equipment_ref: List[TypeOfEquipmentRef] = field(
+    type_of_equipment_ref_or_type_of_equipment: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "TypeOfEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_equipment: List[TypeOfEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "TypeOfEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TypeOfEquipmentRef",
+                    "type": TypeOfEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfEquipment",
+                    "type": TypeOfEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

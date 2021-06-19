@@ -12,19 +12,21 @@ class JourneyPatternRunTimesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "journeyPatternRunTimes_RelStructure"
 
-    journey_pattern_run_time_ref: List[JourneyPatternRunTimeRef] = field(
+    journey_pattern_run_time_ref_or_journey_pattern_run_time: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "JourneyPatternRunTimeRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    journey_pattern_run_time: List[JourneyPatternRunTime] = field(
-        default_factory=list,
-        metadata={
-            "name": "JourneyPatternRunTime",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "JourneyPatternRunTimeRef",
+                    "type": JourneyPatternRunTimeRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "JourneyPatternRunTime",
+                    "type": JourneyPatternRunTime,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

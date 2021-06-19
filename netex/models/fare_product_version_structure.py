@@ -67,171 +67,107 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    authority_ref: List[AuthorityRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "AuthorityRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    operator_ref: List[OperatorRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "OperatorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    transport_organisation_ref: Optional[TransportOrganisationRef] = field(
-        default=None,
-        metadata={
-            "name": "TransportOrganisationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    condition_summary: Optional[ConditionSummary] = field(
-        default=None,
-        metadata={
-            "name": "ConditionSummary",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    supplement_product_ref: List[SupplementProductRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "SupplementProductRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 6,
-            "sequential": True,
-        }
-    )
-    preassigned_fare_product_ref: List[PreassignedFareProductRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "PreassignedFareProductRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    amount_of_price_unit_product_ref: List[AmountOfPriceUnitProductRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "AmountOfPriceUnitProductRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    usage_discount_right_ref: List[UsageDiscountRightRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "UsageDiscountRightRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    third_party_product_ref: List[ThirdPartyProductRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ThirdPartyProductRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    capped_discount_right_ref: List[CappedDiscountRightRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "CappedDiscountRightRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 6,
-            "sequential": True,
-        }
-    )
-    sale_discount_right_ref: List[SaleDiscountRightRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "SaleDiscountRightRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    fare_product_ref: Optional[FareProductRef] = field(
-        default=None,
-        metadata={
-            "name": "FareProductRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    validity_parameter_assignments: Optional[GenericParameterAssignmentsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "validityParameterAssignments",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    generic_parameter_assignment: Optional[GenericParameterAssignment] = field(
-        default=None,
-        metadata={
-            "name": "GenericParameterAssignment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    generic_parameter_assignment_in_context: Optional[GenericParameterAssignmentInContext] = field(
-        default=None,
-        metadata={
-            "name": "GenericParameterAssignmentInContext",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    validable_elements: Optional[ValidableElementsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "validableElements",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    access_rights_in_product: Optional[AccessRightsInProductRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "accessRightsInProduct",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    tariffs: Optional[TariffRefsRelStructure] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    prices: Optional[FareProductPricesRelStructure] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "AuthorityRef",
+                    "type": AuthorityRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OperatorRef",
+                    "type": OperatorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TransportOrganisationRef",
+                    "type": TransportOrganisationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ConditionSummary",
+                    "type": ConditionSummary,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SupplementProductRef",
+                    "type": SupplementProductRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PreassignedFareProductRef",
+                    "type": PreassignedFareProductRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AmountOfPriceUnitProductRef",
+                    "type": AmountOfPriceUnitProductRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "UsageDiscountRightRef",
+                    "type": UsageDiscountRightRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ThirdPartyProductRef",
+                    "type": ThirdPartyProductRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CappedDiscountRightRef",
+                    "type": CappedDiscountRightRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SaleDiscountRightRef",
+                    "type": SaleDiscountRightRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareProductRef",
+                    "type": FareProductRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "validityParameterAssignments",
+                    "type": GenericParameterAssignmentsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GenericParameterAssignment",
+                    "type": GenericParameterAssignment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GenericParameterAssignmentInContext",
+                    "type": GenericParameterAssignmentInContext,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "validableElements",
+                    "type": ValidableElementsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "accessRightsInProduct",
+                    "type": AccessRightsInProductRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "tariffs",
+                    "type": TariffRefsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "prices",
+                    "type": FareProductPricesRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 43,
         }
     )

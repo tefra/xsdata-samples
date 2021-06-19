@@ -29,109 +29,67 @@ class PricingServiceVersionedStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    retail_consortium_ref: List[RetailConsortiumRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "RetailConsortiumRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    authority_ref: List[AuthorityRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "AuthorityRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    operator_ref: List[OperatorRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "OperatorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    transport_organisation_ref: List[TransportOrganisationRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TransportOrganisationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    general_organisation_ref: List[GeneralOrganisationRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "GeneralOrganisationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    management_agent_ref: List[ManagementAgentRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ManagementAgentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    serviced_organisation_ref: List[ServicedOrganisationRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ServicedOrganisationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    travel_agent_ref: List[TravelAgentRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TravelAgentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    other_organisation_ref: List[OtherOrganisationRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "OtherOrganisationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    organisation_ref: Optional[OrganisationRef] = field(
-        default=None,
-        metadata={
-            "name": "OrganisationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    url: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "Url",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "RetailConsortiumRef",
+                    "type": RetailConsortiumRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AuthorityRef",
+                    "type": AuthorityRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OperatorRef",
+                    "type": OperatorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TransportOrganisationRef",
+                    "type": TransportOrganisationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GeneralOrganisationRef",
+                    "type": GeneralOrganisationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ManagementAgentRef",
+                    "type": ManagementAgentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServicedOrganisationRef",
+                    "type": ServicedOrganisationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TravelAgentRef",
+                    "type": TravelAgentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OtherOrganisationRef",
+                    "type": OtherOrganisationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OrganisationRef",
+                    "type": OrganisationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Url",
+                    "type": str,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 26,
         }
     )

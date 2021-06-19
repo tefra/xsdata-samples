@@ -81,230 +81,145 @@ class ParkingTariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    retail_consortium_ref: List[RetailConsortiumRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "RetailConsortiumRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    authority_ref: List[AuthorityRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "AuthorityRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 6,
-            "sequential": True,
-        }
-    )
-    operator_ref: List[OperatorRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "OperatorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 6,
-            "sequential": True,
-        }
-    )
-    transport_organisation_ref: List[TransportOrganisationRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TransportOrganisationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    general_organisation_ref: List[GeneralOrganisationRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "GeneralOrganisationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 6,
-            "sequential": True,
-        }
-    )
-    management_agent_ref: List[ManagementAgentRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ManagementAgentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 6,
-            "sequential": True,
-        }
-    )
-    serviced_organisation_ref: List[ServicedOrganisationRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ServicedOrganisationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 6,
-            "sequential": True,
-        }
-    )
-    travel_agent_ref: List[TravelAgentRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TravelAgentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 6,
-            "sequential": True,
-        }
-    )
-    other_organisation_ref: List[OtherOrganisationRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "OtherOrganisationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    organisation_ref: Optional[OrganisationRef] = field(
-        default=None,
-        metadata={
-            "name": "OrganisationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    group_of_operators_ref: Optional[GroupOfOperatorsRef] = field(
-        default=None,
-        metadata={
-            "name": "GroupOfOperatorsRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    time_unit_ref: Optional[TimeUnitRef] = field(
-        default=None,
-        metadata={
-            "name": "TimeUnitRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    time_intervals: Optional[TimeIntervalsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "timeIntervals",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    time_structure_factors: Optional[TimeStructureFactorsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "timeStructureFactors",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    quality_structure_factors: Optional[QualityStructureFactorsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "qualityStructureFactors",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    parking_user_type: Optional[ParkingUserEnumeration] = field(
-        default=None,
-        metadata={
-            "name": "ParkingUserType",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    parking_stay_type: Optional[ParkingStayEnumeration] = field(
-        default=None,
-        metadata={
-            "name": "ParkingStayType",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    parking_vehicle_types: List[ParkingVehicleEnumeration] = field(
-        default_factory=list,
-        metadata={
-            "name": "ParkingVehicleTypes",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
-        }
-    )
-    vehicle_types: Optional[VehicleTypeRefsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "vehicleTypes",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    applies_to: Optional[ParkingRefsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "appliesTo",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_tariff_ref: Optional[TypeOfTariffRef] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfTariffRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    additional_tax: Optional[bool] = field(
-        default=None,
-        metadata={
-            "name": "AdditionalTax",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    parking_charge_bands: Optional[ParkingChargeBandsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "parkingChargeBands",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    price_unit_ref: Optional[PriceUnitRef] = field(
-        default=None,
-        metadata={
-            "name": "PriceUnitRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    price_groups: Optional[PriceGroupsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "priceGroups",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_tables: Optional[FareTablesRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "fareTables",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "RetailConsortiumRef",
+                    "type": RetailConsortiumRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AuthorityRef",
+                    "type": AuthorityRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OperatorRef",
+                    "type": OperatorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TransportOrganisationRef",
+                    "type": TransportOrganisationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GeneralOrganisationRef",
+                    "type": GeneralOrganisationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ManagementAgentRef",
+                    "type": ManagementAgentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServicedOrganisationRef",
+                    "type": ServicedOrganisationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TravelAgentRef",
+                    "type": TravelAgentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OtherOrganisationRef",
+                    "type": OtherOrganisationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OrganisationRef",
+                    "type": OrganisationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GroupOfOperatorsRef",
+                    "type": GroupOfOperatorsRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TimeUnitRef",
+                    "type": TimeUnitRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "timeIntervals",
+                    "type": TimeIntervalsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "timeStructureFactors",
+                    "type": TimeStructureFactorsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "qualityStructureFactors",
+                    "type": QualityStructureFactorsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingUserType",
+                    "type": ParkingUserEnumeration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingStayType",
+                    "type": ParkingStayEnumeration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingVehicleTypes",
+                    "type": List[ParkingVehicleEnumeration],
+                    "namespace": "http://www.netex.org.uk/netex",
+                    "default_factory": list,
+                    "tokens": True,
+                },
+                {
+                    "name": "vehicleTypes",
+                    "type": VehicleTypeRefsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "appliesTo",
+                    "type": ParkingRefsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfTariffRef",
+                    "type": TypeOfTariffRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AdditionalTax",
+                    "type": bool,
+                    "namespace": "http://www.netex.org.uk/netex",
+                    "default": False,
+                },
+                {
+                    "name": "parkingChargeBands",
+                    "type": ParkingChargeBandsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PriceUnitRef",
+                    "type": PriceUnitRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "priceGroups",
+                    "type": PriceGroupsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "fareTables",
+                    "type": FareTablesRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 62,
         }
     )

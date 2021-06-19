@@ -31,32 +31,28 @@ class ProjectionVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    complex_feature_ref: List[ComplexFeatureRef] = field(
+    complex_feature_ref_or_simple_feature_ref_or_spatial_feature_ref: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "ComplexFeatureRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    simple_feature_ref: List[SimpleFeatureRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "SimpleFeatureRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    spatial_feature_ref: Optional[SpatialFeatureRef] = field(
-        default=None,
-        metadata={
-            "name": "SpatialFeatureRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ComplexFeatureRef",
+                    "type": ComplexFeatureRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SimpleFeatureRef",
+                    "type": SimpleFeatureRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SpatialFeatureRef",
+                    "type": SpatialFeatureRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 5,
         }
     )
     order: Optional[int] = field(

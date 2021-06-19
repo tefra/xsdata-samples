@@ -12,19 +12,21 @@ class ParkingCapacitiesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "parkingCapacities_RelStructure"
 
-    parking_capacity_ref: List[ParkingCapacityRef] = field(
+    parking_capacity_ref_or_parking_capacity: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "ParkingCapacityRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    parking_capacity: List[ParkingCapacity] = field(
-        default_factory=list,
-        metadata={
-            "name": "ParkingCapacity",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ParkingCapacityRef",
+                    "type": ParkingCapacityRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingCapacity",
+                    "type": ParkingCapacity,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

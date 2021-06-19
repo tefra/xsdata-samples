@@ -12,19 +12,21 @@ class DriverTripTimesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "driverTripTimes_RelStructure"
 
-    driver_trip_time_ref: List[DriverTripTimeRef] = field(
+    driver_trip_time_ref_or_driver_trip_time: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "DriverTripTimeRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    driver_trip_time: List[DriverTripTime] = field(
-        default_factory=list,
-        metadata={
-            "name": "DriverTripTime",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "DriverTripTimeRef",
+                    "type": DriverTripTimeRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DriverTripTime",
+                    "type": DriverTripTime,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

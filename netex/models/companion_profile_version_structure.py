@@ -23,52 +23,43 @@ class CompanionProfileVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    companion_profile_ref: List[CompanionProfileRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "CompanionProfileRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-        }
-    )
-    user_profile_ref: Optional[UserProfileRef] = field(
-        default=None,
-        metadata={
-            "name": "UserProfileRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    companion_relationship_type: Optional[CompanionRelationshipEnumeration] = field(
-        default=None,
-        metadata={
-            "name": "CompanionRelationshipType",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    minimum_number_of_persons: Optional[int] = field(
-        default=None,
-        metadata={
-            "name": "MinimumNumberOfPersons",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    maximum_number_of_persons: Optional[int] = field(
-        default=None,
-        metadata={
-            "name": "MaximumNumberOfPersons",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    discount_basis: Optional[DiscountBasisEnumeration] = field(
-        default=None,
-        metadata={
-            "name": "DiscountBasis",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "CompanionProfileRef",
+                    "type": CompanionProfileRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "UserProfileRef",
+                    "type": UserProfileRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CompanionRelationshipType",
+                    "type": CompanionRelationshipEnumeration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                    "default": "anyone",
+                },
+                {
+                    "name": "MinimumNumberOfPersons",
+                    "type": int,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MaximumNumberOfPersons",
+                    "type": int,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DiscountBasis",
+                    "type": DiscountBasisEnumeration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 7,
         }
     )

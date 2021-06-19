@@ -12,19 +12,21 @@ class ServiceFacilitySetsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "serviceFacilitySets_RelStructure"
 
-    service_facility_set_ref: List[ServiceFacilitySetRef] = field(
+    service_facility_set_ref_or_service_facility_set: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "ServiceFacilitySetRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    service_facility_set: List[ServiceFacilitySet] = field(
-        default_factory=list,
-        metadata={
-            "name": "ServiceFacilitySet",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ServiceFacilitySetRef",
+                    "type": ServiceFacilitySetRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServiceFacilitySet",
+                    "type": ServiceFacilitySet,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

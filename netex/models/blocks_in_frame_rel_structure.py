@@ -13,27 +13,26 @@ class BlocksInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "blocksInFrame_RelStructure"
 
-    block: List[Block] = field(
+    block_or_compound_block_or_train_block: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "Block",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    compound_block: List[CompoundBlock] = field(
-        default_factory=list,
-        metadata={
-            "name": "CompoundBlock",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    train_block: List[TrainBlock] = field(
-        default_factory=list,
-        metadata={
-            "name": "TrainBlock",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "Block",
+                    "type": Block,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CompoundBlock",
+                    "type": CompoundBlock,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TrainBlock",
+                    "type": TrainBlock,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

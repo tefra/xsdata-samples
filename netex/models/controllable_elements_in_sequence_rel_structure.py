@@ -12,19 +12,21 @@ class ControllableElementsInSequenceRelStructure(StrictContainmentAggregationStr
     class Meta:
         name = "controllableElementsInSequence_RelStructure"
 
-    controllable_element_in_sequence_ref: List[ControllableElementInSequenceRef] = field(
+    controllable_element_in_sequence_ref_or_controllable_element_in_sequence: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "ControllableElementInSequenceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    controllable_element_in_sequence: List[ControllableElementInSequence] = field(
-        default_factory=list,
-        metadata={
-            "name": "ControllableElementInSequence",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ControllableElementInSequenceRef",
+                    "type": ControllableElementInSequenceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ControllableElementInSequence",
+                    "type": ControllableElementInSequence,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

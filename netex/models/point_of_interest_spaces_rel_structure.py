@@ -12,19 +12,21 @@ class PointOfInterestSpacesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "pointOfInterestSpaces_RelStructure"
 
-    point_of_interest_space_ref: List[SiteComponentRefStructure] = field(
+    point_of_interest_space_ref_or_point_of_interest_space: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "PointOfInterestSpaceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    point_of_interest_space: List[PointOfInterestSpace] = field(
-        default_factory=list,
-        metadata={
-            "name": "PointOfInterestSpace",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "PointOfInterestSpaceRef",
+                    "type": SiteComponentRefStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PointOfInterestSpace",
+                    "type": PointOfInterestSpace,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

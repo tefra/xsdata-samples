@@ -12,19 +12,21 @@ class JourneyPatternWaitTimesRelStructure(StrictContainmentAggregationStructure)
     class Meta:
         name = "journeyPatternWaitTimes_RelStructure"
 
-    journey_pattern_wait_time_ref: List[JourneyPatternWaitTimeRef] = field(
+    journey_pattern_wait_time_ref_or_journey_pattern_wait_time: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "JourneyPatternWaitTimeRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    journey_pattern_wait_time: List[JourneyPatternWaitTime] = field(
-        default_factory=list,
-        metadata={
-            "name": "JourneyPatternWaitTime",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "JourneyPatternWaitTimeRef",
+                    "type": JourneyPatternWaitTimeRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "JourneyPatternWaitTime",
+                    "type": JourneyPatternWaitTime,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

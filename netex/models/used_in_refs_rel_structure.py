@@ -14,35 +14,31 @@ class UsedInRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "usedInRefs_RelStructure"
 
-    parking_tariff_ref: List[ParkingTariffRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "ParkingTariffRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    tariff_ref: List[TariffRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TariffRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    group_of_distance_matrix_elements_ref: List[GroupOfDistanceMatrixElementsRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "GroupOfDistanceMatrixElementsRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    group_of_sales_offer_packages_ref: List[GroupOfSalesOfferPackagesRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "GroupOfSalesOfferPackagesRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ParkingTariffRef",
+                    "type": ParkingTariffRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TariffRef",
+                    "type": TariffRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GroupOfDistanceMatrixElementsRef",
+                    "type": GroupOfDistanceMatrixElementsRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GroupOfSalesOfferPackagesRef",
+                    "type": GroupOfSalesOfferPackagesRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

@@ -14,35 +14,31 @@ class GeographicalIntervalPricesRelStructure(StrictContainmentAggregationStructu
     class Meta:
         name = "geographicalIntervalPrices_RelStructure"
 
-    geographical_interval_price_ref: List[GeographicalIntervalPriceRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "GeographicalIntervalPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    geographical_interval_price: List[GeographicalIntervalPriceVersionedChildStructure] = field(
-        default_factory=list,
-        metadata={
-            "name": "GeographicalIntervalPrice",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    cell_ref: List[CellRef1] = field(
-        default_factory=list,
-        metadata={
-            "name": "CellRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_cell_ref: List[CellRef2] = field(
-        default_factory=list,
-        metadata={
-            "name": "CellRef_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "GeographicalIntervalPriceRef",
+                    "type": GeographicalIntervalPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GeographicalIntervalPrice",
+                    "type": GeographicalIntervalPriceVersionedChildStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CellRef",
+                    "type": CellRef1,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CellRef_",
+                    "type": CellRef2,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

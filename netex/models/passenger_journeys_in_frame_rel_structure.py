@@ -14,35 +14,31 @@ class PassengerJourneysInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "passengerJourneysInFrame_RelStructure"
 
-    dated_service_journey: List[DatedServiceJourney] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "DatedServiceJourney",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    service_journey: List[ServiceJourney1] = field(
-        default_factory=list,
-        metadata={
-            "name": "ServiceJourney",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    special_service: List[SpecialService] = field(
-        default_factory=list,
-        metadata={
-            "name": "SpecialService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    template_service_journey: List[TemplateServiceJourney] = field(
-        default_factory=list,
-        metadata={
-            "name": "TemplateServiceJourney",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "DatedServiceJourney",
+                    "type": DatedServiceJourney,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServiceJourney",
+                    "type": ServiceJourney1,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SpecialService",
+                    "type": SpecialService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TemplateServiceJourney",
+                    "type": TemplateServiceJourney,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

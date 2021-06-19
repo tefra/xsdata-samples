@@ -12,19 +12,21 @@ class PassengerCarryingRequirementsRelStructure(ContainmentAggregationStructure)
     class Meta:
         name = "passengerCarryingRequirements_RelStructure"
 
-    passenger_carrying_requirement_ref: List[PassengerCarryingRequirementRef] = field(
+    passenger_carrying_requirement_ref_or_passenger_carrying_requirement: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "PassengerCarryingRequirementRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    passenger_carrying_requirement: List[PassengerCarryingRequirement] = field(
-        default_factory=list,
-        metadata={
-            "name": "PassengerCarryingRequirement",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "PassengerCarryingRequirementRef",
+                    "type": PassengerCarryingRequirementRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PassengerCarryingRequirement",
+                    "type": PassengerCarryingRequirement,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

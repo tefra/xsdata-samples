@@ -12,19 +12,21 @@ class PriceUnitsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "priceUnits_RelStructure"
 
-    price_unit_ref: List[PriceUnitRef] = field(
+    price_unit_ref_or_price_unit: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "PriceUnitRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    price_unit: List[PriceUnit] = field(
-        default_factory=list,
-        metadata={
-            "name": "PriceUnit",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "PriceUnitRef",
+                    "type": PriceUnitRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PriceUnit",
+                    "type": PriceUnit,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

@@ -13,27 +13,26 @@ class DiscountRightRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "discountRightRefs_RelStructure"
 
-    capped_discount_right_ref: List[CappedDiscountRightRef] = field(
+    capped_discount_right_ref_or_sale_discount_right_ref_or_usage_discount_right_ref: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "CappedDiscountRightRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    sale_discount_right_ref: List[SaleDiscountRightRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "SaleDiscountRightRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    usage_discount_right_ref: List[UsageDiscountRightRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "UsageDiscountRightRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "CappedDiscountRightRef",
+                    "type": CappedDiscountRightRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SaleDiscountRightRef",
+                    "type": SaleDiscountRightRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "UsageDiscountRightRef",
+                    "type": UsageDiscountRightRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

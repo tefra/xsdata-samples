@@ -12,19 +12,21 @@ class TravelDocumentsRelStructure(FrameContainmentStructure):
     class Meta:
         name = "travelDocuments_RelStructure"
 
-    travel_document_ref: List[TravelDocumentRef] = field(
+    travel_document_ref_or_travel_document: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "TravelDocumentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    travel_document: List[TravelDocument] = field(
-        default_factory=list,
-        metadata={
-            "name": "TravelDocument",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TravelDocumentRef",
+                    "type": TravelDocumentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TravelDocument",
+                    "type": TravelDocument,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

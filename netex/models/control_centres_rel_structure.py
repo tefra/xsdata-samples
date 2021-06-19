@@ -12,19 +12,21 @@ class ControlCentresRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "ControlCentres_RelStructure"
 
-    control_centre_ref: List[ControlCentreRef] = field(
+    control_centre_ref_or_control_centre: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "ControlCentreRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    control_centre: List[ControlCentre] = field(
-        default_factory=list,
-        metadata={
-            "name": "ControlCentre",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ControlCentreRef",
+                    "type": ControlCentreRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ControlCentre",
+                    "type": ControlCentre,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

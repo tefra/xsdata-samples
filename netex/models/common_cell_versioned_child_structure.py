@@ -31,37 +31,33 @@ class CommonCellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    standard_fare_table_ref: List[StandardFareTableRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "StandardFareTableRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-        }
-    )
-    fare_table_ref: Optional[FareTableRef] = field(
-        default=None,
-        metadata={
-            "name": "FareTableRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    column_ref: Optional[FareTableColumnRefStructure] = field(
-        default=None,
-        metadata={
-            "name": "ColumnRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    row_ref: Optional[FareTableRowRefStructure] = field(
-        default=None,
-        metadata={
-            "name": "RowRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "StandardFareTableRef",
+                    "type": StandardFareTableRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareTableRef",
+                    "type": FareTableRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ColumnRef",
+                    "type": FareTableColumnRefStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RowRef",
+                    "type": FareTableRowRefStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 6,
         }
     )
     order: Optional[int] = field(

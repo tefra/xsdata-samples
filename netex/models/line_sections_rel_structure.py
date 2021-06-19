@@ -12,19 +12,21 @@ class LineSectionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "lineSections_RelStructure"
 
-    line_section_ref: List[LineSectionRef] = field(
+    line_section_ref_or_line_section: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "LineSectionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    line_section: List[LineSection] = field(
-        default_factory=list,
-        metadata={
-            "name": "LineSection",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "LineSectionRef",
+                    "type": LineSectionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LineSection",
+                    "type": LineSection,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

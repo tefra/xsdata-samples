@@ -12,19 +12,21 @@ class TransportModesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "transportModes_RelStructure"
 
-    open_transport_mode_ref: List[OpenTransportModeRef] = field(
+    open_transport_mode_ref_or_transport_mode: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "OpenTransportModeRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    transport_mode: List[TransportModeStructure] = field(
-        default_factory=list,
-        metadata={
-            "name": "TransportMode",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "OpenTransportModeRef",
+                    "type": OpenTransportModeRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TransportMode",
+                    "type": TransportModeStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

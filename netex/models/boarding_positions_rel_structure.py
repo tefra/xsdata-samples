@@ -12,19 +12,21 @@ class BoardingPositionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "boardingPositions_RelStructure"
 
-    boarding_position_ref: List[BoardingPositionRef] = field(
+    boarding_position_ref_or_boarding_position: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "BoardingPositionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    boarding_position: List[BoardingPosition] = field(
-        default_factory=list,
-        metadata={
-            "name": "BoardingPosition",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "BoardingPositionRef",
+                    "type": BoardingPositionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "BoardingPosition",
+                    "type": BoardingPosition,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

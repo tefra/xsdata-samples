@@ -12,19 +12,21 @@ class ParkingBaysRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "parkingBays_RelStructure"
 
-    parking_bay_ref: List[ParkingBayRef] = field(
+    parking_bay_ref_or_parking_bay: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "ParkingBayRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    parking_bay: List[ParkingBay] = field(
-        default_factory=list,
-        metadata={
-            "name": "ParkingBay",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ParkingBayRef",
+                    "type": ParkingBayRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingBay",
+                    "type": ParkingBay,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

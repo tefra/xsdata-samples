@@ -1,12 +1,11 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Type
 from .contact_structure import ContactStructure
 from .country_ref import CountryRef
 from .departments_rel_structure import DepartmentsRelStructure
 from .operator_activities_enumeration import OperatorActivitiesEnumeration
 from .organisation_version_structure import OrganisationVersionStructure
 from .postal_address import PostalAddress
-from .postal_address_version_structure import PostalAddressVersionStructure
 from .road_address import RoadAddress
 from .vehicle_mode_enumeration import VehicleModeEnumeration
 
@@ -26,63 +25,51 @@ class OperatorVersionStructure(OrganisationVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    postal_address: List[PostalAddress] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "PostalAddress",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    road_address: List[RoadAddress] = field(
-        default_factory=list,
-        metadata={
-            "name": "RoadAddress",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    address: Optional[PostalAddressVersionStructure] = field(
-        default=None,
-        metadata={
-            "name": "Address",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    primary_mode: Optional[VehicleModeEnumeration] = field(
-        default=None,
-        metadata={
-            "name": "PrimaryMode",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    operator_activities: List[OperatorActivitiesEnumeration] = field(
-        default_factory=list,
-        metadata={
-            "name": "OperatorActivities",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
-        }
-    )
-    customer_service_contact_details: Optional[ContactStructure] = field(
-        default=None,
-        metadata={
-            "name": "CustomerServiceContactDetails",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    departments: Optional[DepartmentsRelStructure] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "PostalAddress",
+                    "type": PostalAddress,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RoadAddress",
+                    "type": RoadAddress,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Address",
+                    "type": Type["OperatorVersionStructure.Address"],
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PrimaryMode",
+                    "type": VehicleModeEnumeration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OperatorActivities",
+                    "type": List[OperatorActivitiesEnumeration],
+                    "namespace": "http://www.netex.org.uk/netex",
+                    "default_factory": lambda: [
+            "passenger",
+        ],
+                    "tokens": True,
+                },
+                {
+                    "name": "CustomerServiceContactDetails",
+                    "type": ContactStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "departments",
+                    "type": DepartmentsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 9,
         }
     )

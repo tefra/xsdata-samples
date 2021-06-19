@@ -12,19 +12,21 @@ class TransportOperatorsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "transportOperatorsInFrame_RelStructure"
 
-    authority: List[Authority] = field(
+    authority_or_operator: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "Authority",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    operator: List[Operator] = field(
-        default_factory=list,
-        metadata={
-            "name": "Operator",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "Authority",
+                    "type": Authority,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Operator",
+                    "type": Operator,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

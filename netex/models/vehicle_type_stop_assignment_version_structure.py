@@ -33,51 +33,38 @@ class VehicleTypeStopAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    dead_run_ref: List[DeadRunRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "DeadRunRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-        }
-    )
-    vehicle_journey_ref: Optional[VehicleJourneyRef] = field(
-        default=None,
-        metadata={
-            "name": "VehicleJourneyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    compound_train_ref: List[CompoundTrainRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "CompoundTrainRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    train_ref: List[TrainRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TrainRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    vehicle_type_ref: Optional[VehicleTypeRef] = field(
-        default=None,
-        metadata={
-            "name": "VehicleTypeRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "DeadRunRef",
+                    "type": DeadRunRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleJourneyRef",
+                    "type": VehicleJourneyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CompoundTrainRef",
+                    "type": CompoundTrainRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TrainRef",
+                    "type": TrainRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleTypeRef",
+                    "type": VehicleTypeRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "min_occurs": 3,
+            "max_occurs": 8,
         }
     )

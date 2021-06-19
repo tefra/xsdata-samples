@@ -13,27 +13,26 @@ class InfrastructureElementsInFrameRelStructure(ContainmentAggregationStructure)
     class Meta:
         name = "infrastructureElementsInFrame_RelStructure"
 
-    railway_element: List[RailwayElement] = field(
+    railway_element_or_road_element_or_wire_element: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "RailwayElement",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    road_element: List[RoadElement] = field(
-        default_factory=list,
-        metadata={
-            "name": "RoadElement",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    wire_element: List[WireElement] = field(
-        default_factory=list,
-        metadata={
-            "name": "WireElement",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "RailwayElement",
+                    "type": RailwayElement,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RoadElement",
+                    "type": RoadElement,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "WireElement",
+                    "type": WireElement,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

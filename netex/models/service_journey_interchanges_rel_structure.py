@@ -13,27 +13,26 @@ class ServiceJourneyInterchangesRelStructure(StrictContainmentAggregationStructu
     class Meta:
         name = "serviceJourneyInterchanges_RelStructure"
 
-    service_journey_interchange_ref: List[ServiceJourneyInterchangeRef] = field(
+    service_journey_interchange_ref_or_service_journey_interchange_or_service_journey_interchange_view: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "ServiceJourneyInterchangeRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    service_journey_interchange: List[ServiceJourneyInterchange] = field(
-        default_factory=list,
-        metadata={
-            "name": "ServiceJourneyInterchange",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    service_journey_interchange_view: List[ServiceJourneyInterchangeView] = field(
-        default_factory=list,
-        metadata={
-            "name": "ServiceJourneyInterchangeView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ServiceJourneyInterchangeRef",
+                    "type": ServiceJourneyInterchangeRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServiceJourneyInterchange",
+                    "type": ServiceJourneyInterchange,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServiceJourneyInterchangeView",
+                    "type": ServiceJourneyInterchangeView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

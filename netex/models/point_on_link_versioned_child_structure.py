@@ -75,380 +75,203 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    border_point_ref: List[BorderPointRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "BorderPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 4,
-            "sequential": True,
-        }
-    )
-    fare_scheduled_stop_point_ref: List[FareScheduledStopPointRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareScheduledStopPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 5,
-            "sequential": True,
-        }
-    )
-    scheduled_stop_point_ref: List[ScheduledStopPointRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ScheduledStopPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 4,
-            "sequential": True,
-        }
-    )
-    garage_point_ref: List[GaragePointRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "GaragePointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 6,
-            "sequential": True,
-        }
-    )
-    parking_point_ref: List[ParkingPointRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ParkingPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 5,
-            "sequential": True,
-        }
-    )
-    relief_point_ref: List[ReliefPointRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ReliefPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 4,
-            "sequential": True,
-        }
-    )
-    timing_point_ref: List[TimingPointRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TimingPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    route_point_ref: List[RoutePointRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "RoutePointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    wire_point_ref: List[WirePointRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "WirePointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    road_point_ref: List[RoadPointRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "RoadPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    railway_point_ref: List[RailwayPointRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "RailwayPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    infrastructure_point_ref: List[InfrastructurePointRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "InfrastructurePointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    traffic_control_point_ref: List[TrafficControlPointRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TrafficControlPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    beacon_point_ref: List[BeaconPointRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "BeaconPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    activation_point_ref: List[ActivationPointRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ActivationPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    point_on_link_ref: List[PointOnLinkRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "PointOnLinkRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    point_ref: Optional[PointRef] = field(
-        default=None,
-        metadata={
-            "name": "PointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    border_point: List[BorderPoint] = field(
-        default_factory=list,
-        metadata={
-            "name": "BorderPoint",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    fare_scheduled_stop_point: List[FareScheduledStopPoint] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareScheduledStopPoint",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    scheduled_stop_point: List[ScheduledStopPoint] = field(
-        default_factory=list,
-        metadata={
-            "name": "ScheduledStopPoint",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    path_junction: List[PathJunction] = field(
-        default_factory=list,
-        metadata={
-            "name": "PathJunction",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    route_point: List[RoutePoint] = field(
-        default_factory=list,
-        metadata={
-            "name": "RoutePoint",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    parking_point: List[ParkingPoint1] = field(
-        default_factory=list,
-        metadata={
-            "name": "ParkingPoint",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 4,
-            "sequential": True,
-        }
-    )
-    garage_point: List[GaragePoint] = field(
-        default_factory=list,
-        metadata={
-            "name": "GaragePoint",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 5,
-            "sequential": True,
-        }
-    )
-    netex_org_uk_netex_parking_point: List[ParkingPoint2] = field(
-        default_factory=list,
-        metadata={
-            "name": "ParkingPoint_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 4,
-            "sequential": True,
-        }
-    )
-    relief_point: List[ReliefPoint1] = field(
-        default_factory=list,
-        metadata={
-            "name": "ReliefPoint",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 4,
-            "sequential": True,
-        }
-    )
-    netex_org_uk_netex_relief_point: List[ReliefPoint2] = field(
-        default_factory=list,
-        metadata={
-            "name": "ReliefPoint_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    timing_point: List[TimingPoint1] = field(
-        default_factory=list,
-        metadata={
-            "name": "TimingPoint",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    netex_org_uk_netex_timing_point: List[TimingPoint2] = field(
-        default_factory=list,
-        metadata={
-            "name": "TimingPoint_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    wire_junction: List[WireJunction] = field(
-        default_factory=list,
-        metadata={
-            "name": "WireJunction",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    road_junction: List[RoadJunction] = field(
-        default_factory=list,
-        metadata={
-            "name": "RoadJunction",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    railway_junction: List[RailwayJunction] = field(
-        default_factory=list,
-        metadata={
-            "name": "RailwayJunction",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    infrastructure_point: List[InfrastructurePoint] = field(
-        default_factory=list,
-        metadata={
-            "name": "InfrastructurePoint",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    traffic_control_point: List[TrafficControlPoint] = field(
-        default_factory=list,
-        metadata={
-            "name": "TrafficControlPoint",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    beacon_point: List[BeaconPoint] = field(
-        default_factory=list,
-        metadata={
-            "name": "BeaconPoint",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    activation_point: List[ActivationPoint1] = field(
-        default_factory=list,
-        metadata={
-            "name": "ActivationPoint",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    netex_org_uk_netex_activation_point: List[ActivationPoint2] = field(
-        default_factory=list,
-        metadata={
-            "name": "ActivationPoint_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    point: Optional[Point2] = field(
-        default=None,
-        metadata={
-            "name": "Point",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "BorderPointRef",
+                    "type": BorderPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareScheduledStopPointRef",
+                    "type": FareScheduledStopPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ScheduledStopPointRef",
+                    "type": ScheduledStopPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GaragePointRef",
+                    "type": GaragePointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingPointRef",
+                    "type": ParkingPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ReliefPointRef",
+                    "type": ReliefPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TimingPointRef",
+                    "type": TimingPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RoutePointRef",
+                    "type": RoutePointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "WirePointRef",
+                    "type": WirePointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RoadPointRef",
+                    "type": RoadPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RailwayPointRef",
+                    "type": RailwayPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "InfrastructurePointRef",
+                    "type": InfrastructurePointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TrafficControlPointRef",
+                    "type": TrafficControlPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "BeaconPointRef",
+                    "type": BeaconPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ActivationPointRef",
+                    "type": ActivationPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PointOnLinkRef",
+                    "type": PointOnLinkRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PointRef",
+                    "type": PointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "BorderPoint",
+                    "type": BorderPoint,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareScheduledStopPoint",
+                    "type": FareScheduledStopPoint,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ScheduledStopPoint",
+                    "type": ScheduledStopPoint,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PathJunction",
+                    "type": PathJunction,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RoutePoint",
+                    "type": RoutePoint,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingPoint",
+                    "type": ParkingPoint1,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GaragePoint",
+                    "type": GaragePoint,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingPoint_",
+                    "type": ParkingPoint2,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ReliefPoint",
+                    "type": ReliefPoint1,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ReliefPoint_",
+                    "type": ReliefPoint2,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TimingPoint",
+                    "type": TimingPoint1,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TimingPoint_",
+                    "type": TimingPoint2,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "WireJunction",
+                    "type": WireJunction,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RoadJunction",
+                    "type": RoadJunction,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RailwayJunction",
+                    "type": RailwayJunction,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "InfrastructurePoint",
+                    "type": InfrastructurePoint,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TrafficControlPoint",
+                    "type": TrafficControlPoint,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "BeaconPoint",
+                    "type": BeaconPoint,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ActivationPoint",
+                    "type": ActivationPoint1,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ActivationPoint_",
+                    "type": ActivationPoint2,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Point",
+                    "type": Point2,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 111,
         }
     )
     order: Optional[int] = field(

@@ -14,35 +14,31 @@ class FrequencyGroupsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "frequencyGroups_RelStructure"
 
-    headway_journey_group_ref: List[HeadwayJourneyGroupRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "HeadwayJourneyGroupRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    headway_journey_group: List[HeadwayJourneyGroup] = field(
-        default_factory=list,
-        metadata={
-            "name": "HeadwayJourneyGroup",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    rhythmical_journey_group_ref: List[RhythmicalJourneyGroupRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "RhythmicalJourneyGroupRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    rhythmical_journey_group: List[RhythmicalJourneyGroup] = field(
-        default_factory=list,
-        metadata={
-            "name": "RhythmicalJourneyGroup",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "HeadwayJourneyGroupRef",
+                    "type": HeadwayJourneyGroupRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "HeadwayJourneyGroup",
+                    "type": HeadwayJourneyGroup,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RhythmicalJourneyGroupRef",
+                    "type": RhythmicalJourneyGroupRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RhythmicalJourneyGroup",
+                    "type": RhythmicalJourneyGroup,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

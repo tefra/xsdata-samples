@@ -12,19 +12,21 @@ class VehicleServicePartsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "vehicleServiceParts_RelStructure"
 
-    vehicle_service_part_ref: List[VehicleServicePartRef] = field(
+    vehicle_service_part_ref_or_vehicle_service_part: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "VehicleServicePartRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    vehicle_service_part: List[VehicleServicePart] = field(
-        default_factory=list,
-        metadata={
-            "name": "VehicleServicePart",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "VehicleServicePartRef",
+                    "type": VehicleServicePartRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleServicePart",
+                    "type": VehicleServicePart,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

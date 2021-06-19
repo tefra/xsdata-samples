@@ -12,19 +12,21 @@ class BlacklistsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "blacklists_RelStructure"
 
-    blacklist_ref: List[BlacklistRef] = field(
+    blacklist_ref_or_blacklist: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "BlacklistRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    blacklist: List[Blacklist] = field(
-        default_factory=list,
-        metadata={
-            "name": "Blacklist",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "BlacklistRef",
+                    "type": BlacklistRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Blacklist",
+                    "type": Blacklist,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

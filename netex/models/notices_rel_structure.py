@@ -12,19 +12,21 @@ class NoticesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "notices_RelStructure"
 
-    notice_ref: List[NoticeRef] = field(
+    notice_ref_or_notice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "NoticeRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    notice: List[Notice] = field(
-        default_factory=list,
-        metadata={
-            "name": "Notice",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "NoticeRef",
+                    "type": NoticeRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Notice",
+                    "type": Notice,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

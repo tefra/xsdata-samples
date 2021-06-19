@@ -12,19 +12,21 @@ class ResponsibilityRolesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "ResponsibilityRoles_RelStructure"
 
-    responsibility_role_ref: List[ResponsibilityRoleRef] = field(
+    responsibility_role_ref_or_responsibility_role: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "ResponsibilityRoleRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    responsibility_role: List[ResponsibilityRole] = field(
-        default_factory=list,
-        metadata={
-            "name": "ResponsibilityRole",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ResponsibilityRoleRef",
+                    "type": ResponsibilityRoleRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ResponsibilityRole",
+                    "type": ResponsibilityRole,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

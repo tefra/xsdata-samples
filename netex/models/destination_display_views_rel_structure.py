@@ -12,19 +12,21 @@ class DestinationDisplayViewsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "destinationDisplayViews_RelStructure"
 
-    destination_display_ref: List[DestinationDisplayRef] = field(
+    destination_display_ref_or_destination_display_view: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "DestinationDisplayRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    destination_display_view: List[DestinationDisplayView] = field(
-        default_factory=list,
-        metadata={
-            "name": "DestinationDisplayView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "DestinationDisplayRef",
+                    "type": DestinationDisplayRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DestinationDisplayView",
+                    "type": DestinationDisplayView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

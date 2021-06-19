@@ -12,19 +12,21 @@ class PointOfInterestClassificationsViewsRelStructure(OneToManyRelationshipStruc
     class Meta:
         name = "pointOfInterestClassificationsViews_RelStructure"
 
-    point_of_interest_classification_ref: List[PointOfInterestClassificationRef] = field(
+    point_of_interest_classification_ref_or_point_of_interest_classification_view: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "PointOfInterestClassificationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    point_of_interest_classification_view: List[PointOfInterestClassificationView] = field(
-        default_factory=list,
-        metadata={
-            "name": "PointOfInterestClassificationView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "PointOfInterestClassificationRef",
+                    "type": PointOfInterestClassificationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PointOfInterestClassificationView",
+                    "type": PointOfInterestClassificationView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

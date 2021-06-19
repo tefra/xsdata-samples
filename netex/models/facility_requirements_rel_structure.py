@@ -12,19 +12,21 @@ class FacilityRequirementsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "facilityRequirements_RelStructure"
 
-    facility_requirement_ref: List[FacilityRequirementRef] = field(
+    facility_requirement_ref_or_facility_requirement: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "FacilityRequirementRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    facility_requirement: List[FacilityRequirement] = field(
-        default_factory=list,
-        metadata={
-            "name": "FacilityRequirement",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FacilityRequirementRef",
+                    "type": FacilityRequirementRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FacilityRequirement",
+                    "type": FacilityRequirement,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

@@ -12,19 +12,21 @@ class SpatialFeaturesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "spatialFeaturesInFrame_RelStructure"
 
-    simple_feature: List[SimpleFeature] = field(
+    simple_feature_or_complex_feature: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "SimpleFeature",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    complex_feature: List[ComplexFeature] = field(
-        default_factory=list,
-        metadata={
-            "name": "ComplexFeature",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "SimpleFeature",
+                    "type": SimpleFeature,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ComplexFeature",
+                    "type": ComplexFeature,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

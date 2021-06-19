@@ -12,19 +12,21 @@ class FareQuotaFactorsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "fareQuotaFactors_RelStructure"
 
-    fare_quota_factor_ref: List[FareQuotaFactorRef] = field(
+    fare_quota_factor_ref_or_fare_quota_factor: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "FareQuotaFactorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_quota_factor: List[FareQuotaFactor] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareQuotaFactor",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FareQuotaFactorRef",
+                    "type": FareQuotaFactorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareQuotaFactor",
+                    "type": FareQuotaFactor,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

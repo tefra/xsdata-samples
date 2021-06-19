@@ -12,19 +12,21 @@ class DataSourcesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "dataSources_RelStructure"
 
-    data_source_ref: List[DataSourceRef] = field(
+    data_source_ref_or_data_source: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "DataSourceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    data_source: List[DataSource] = field(
-        default_factory=list,
-        metadata={
-            "name": "DataSource",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "DataSourceRef",
+                    "type": DataSourceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DataSource",
+                    "type": DataSource,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

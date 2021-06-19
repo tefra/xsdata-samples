@@ -12,19 +12,21 @@ class DisplayAssignmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "displayAssignments_RelStructure"
 
-    display_assignment_ref: List[DisplayAssignmentRef] = field(
+    display_assignment_ref_or_display_assignment: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "DisplayAssignmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    display_assignment: List[DisplayAssignment] = field(
-        default_factory=list,
-        metadata={
-            "name": "DisplayAssignment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "DisplayAssignmentRef",
+                    "type": DisplayAssignmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DisplayAssignment",
+                    "type": DisplayAssignment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

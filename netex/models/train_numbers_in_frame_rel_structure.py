@@ -12,19 +12,21 @@ class TrainNumbersInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "trainNumbersInFrame_RelStructure"
 
-    train_number: List[TrainNumber] = field(
+    train_number_or_train_number_ref: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "TrainNumber",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    train_number_ref: List[TrainNumberRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TrainNumberRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TrainNumber",
+                    "type": TrainNumber,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TrainNumberRef",
+                    "type": TrainNumberRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

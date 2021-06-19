@@ -49,65 +49,50 @@ class PricingRuleVersionedStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    limiting_rule_ref: List[LimitingRuleRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "LimitingRuleRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    discounting_rule_ref: List[DiscountingRuleRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "DiscountingRuleRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    pricing_rule_ref: Optional[PricingRuleRef] = field(
-        default=None,
-        metadata={
-            "name": "PricingRuleRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    factor: Optional[Decimal] = field(
-        default=None,
-        metadata={
-            "name": "Factor",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    currency: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "Currency",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "min_length": 3,
-            "max_length": 3,
-            "pattern": r"[A-Z][A-Z][A-Z]",
-        }
-    )
-    price_unit_ref: Optional[PriceUnitRef] = field(
-        default=None,
-        metadata={
-            "name": "PriceUnitRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    url: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "LimitingRuleRef",
+                    "type": LimitingRuleRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DiscountingRuleRef",
+                    "type": DiscountingRuleRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PricingRuleRef",
+                    "type": PricingRuleRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Factor",
+                    "type": Decimal,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Currency",
+                    "type": str,
+                    "namespace": "http://www.netex.org.uk/netex",
+                    "min_length": 3,
+                    "max_length": 3,
+                    "pattern": r"[A-Z][A-Z][A-Z]",
+                },
+                {
+                    "name": "PriceUnitRef",
+                    "type": PriceUnitRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "url",
+                    "type": str,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 10,
         }
     )

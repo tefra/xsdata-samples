@@ -12,19 +12,21 @@ class FlexibleStopPlacesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "flexibleStopPlaces_RelStructure"
 
-    flexible_stop_place_ref: List[FlexibleStopPlaceRef] = field(
+    flexible_stop_place_ref_or_flexible_stop_place: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "FlexibleStopPlaceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    flexible_stop_place: List[FlexibleStopPlace] = field(
-        default_factory=list,
-        metadata={
-            "name": "FlexibleStopPlace",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FlexibleStopPlaceRef",
+                    "type": FlexibleStopPlaceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FlexibleStopPlace",
+                    "type": FlexibleStopPlace,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

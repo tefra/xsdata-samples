@@ -12,19 +12,21 @@ class AccommodationsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "accommodations_RelStructure"
 
-    accommodation_ref: List[AccommodationRef] = field(
+    accommodation_ref_or_accommodation: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "AccommodationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    accommodation: List[Accommodation] = field(
-        default_factory=list,
-        metadata={
-            "name": "Accommodation",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "AccommodationRef",
+                    "type": AccommodationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Accommodation",
+                    "type": Accommodation,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

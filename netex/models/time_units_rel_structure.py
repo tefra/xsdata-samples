@@ -12,19 +12,21 @@ class TimeUnitsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "timeUnits_RelStructure"
 
-    time_unit_ref: List[TimeUnitRef] = field(
+    time_unit_ref_or_time_unit: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "TimeUnitRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    time_unit: List[TimeUnit] = field(
-        default_factory=list,
-        metadata={
-            "name": "TimeUnit",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TimeUnitRef",
+                    "type": TimeUnitRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TimeUnit",
+                    "type": TimeUnit,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

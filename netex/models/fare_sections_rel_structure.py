@@ -12,19 +12,21 @@ class FareSectionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "fareSections_RelStructure"
 
-    fare_section_ref: List[FareSectionRef] = field(
+    fare_section_ref_or_fare_section: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "FareSectionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_section: List[FareSection] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareSection",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FareSectionRef",
+                    "type": FareSectionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareSection",
+                    "type": FareSection,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

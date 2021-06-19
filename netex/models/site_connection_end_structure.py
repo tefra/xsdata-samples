@@ -129,55 +129,42 @@ class SiteConnectionEndStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    parking_entrance_for_vehicles_ref: List[ParkingEntranceForVehiclesRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "ParkingEntranceForVehiclesRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    parking_passenger_entrance_ref: List[ParkingPassengerEntranceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ParkingPassengerEntranceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    parking_entrance_ref: Optional[ParkingEntranceRef] = field(
-        default=None,
-        metadata={
-            "name": "ParkingEntranceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    operator_ref: Optional[OperatorRef] = field(
-        default=None,
-        metadata={
-            "name": "OperatorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    operator_view: Optional[OperatorView] = field(
-        default=None,
-        metadata={
-            "name": "OperatorView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    label: Optional[MultilingualString] = field(
-        default=None,
-        metadata={
-            "name": "Label",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ParkingEntranceForVehiclesRef",
+                    "type": ParkingEntranceForVehiclesRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingPassengerEntranceRef",
+                    "type": ParkingPassengerEntranceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingEntranceRef",
+                    "type": ParkingEntranceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OperatorRef",
+                    "type": OperatorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OperatorView",
+                    "type": OperatorView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Label",
+                    "type": MultilingualString,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 8,
         }
     )

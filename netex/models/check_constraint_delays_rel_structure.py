@@ -12,19 +12,21 @@ class CheckConstraintDelaysRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "checkConstraintDelays_RelStructure"
 
-    check_constraint_delay_ref: List[CheckConstraintDelayRef] = field(
+    check_constraint_delay_ref_or_check_constraint_delay: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "CheckConstraintDelayRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    check_constraint_delay: List[CheckConstraintDelay] = field(
-        default_factory=list,
-        metadata={
-            "name": "CheckConstraintDelay",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "CheckConstraintDelayRef",
+                    "type": CheckConstraintDelayRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CheckConstraintDelay",
+                    "type": CheckConstraintDelay,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

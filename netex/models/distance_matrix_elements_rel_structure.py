@@ -12,19 +12,21 @@ class DistanceMatrixElementsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "distanceMatrixElements_RelStructure"
 
-    distance_matrix_element_ref: List[DistanceMatrixElementRef] = field(
+    distance_matrix_element_ref_or_distance_matrix_element: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "DistanceMatrixElementRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    distance_matrix_element: List[DistanceMatrixElement] = field(
-        default_factory=list,
-        metadata={
-            "name": "DistanceMatrixElement",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "DistanceMatrixElementRef",
+                    "type": DistanceMatrixElementRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DistanceMatrixElement",
+                    "type": DistanceMatrixElement,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

@@ -12,19 +12,21 @@ class RetailDevicesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "RetailDevices_RelStructure"
 
-    retail_device_ref: List[RetailDeviceRef] = field(
+    retail_device_ref_or_retail_device: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "RetailDeviceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    retail_device: List[RetailDevice] = field(
-        default_factory=list,
-        metadata={
-            "name": "RetailDevice",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "RetailDeviceRef",
+                    "type": RetailDeviceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RetailDevice",
+                    "type": RetailDevice,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

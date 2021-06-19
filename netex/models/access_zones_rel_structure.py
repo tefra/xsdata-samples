@@ -12,19 +12,21 @@ class AccessZonesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "accessZones_RelStructure"
 
-    access_zone_ref: List[AccessZoneRef] = field(
+    access_zone_ref_or_access_zone: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "AccessZoneRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    access_zone: List[AccessZone] = field(
-        default_factory=list,
-        metadata={
-            "name": "AccessZone",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "AccessZoneRef",
+                    "type": AccessZoneRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AccessZone",
+                    "type": AccessZone,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

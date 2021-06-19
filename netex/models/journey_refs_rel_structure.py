@@ -20,83 +20,61 @@ class JourneyRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "journeyRefs_RelStructure"
 
-    dated_vehicle_journey_ref: List[DatedVehicleJourneyRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "DatedVehicleJourneyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    dated_special_service_ref: List[DatedSpecialServiceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "DatedSpecialServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    special_service_ref: List[SpecialServiceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "SpecialServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    template_service_journey_ref: List[TemplateServiceJourneyRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TemplateServiceJourneyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    service_journey_ref: List[ServiceJourneyRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ServiceJourneyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    dead_run_ref: List[DeadRunRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "DeadRunRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    vehicle_journey_ref: List[VehicleJourneyRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "VehicleJourneyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    journey_ref: List[JourneyRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "JourneyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    journey_designator: List[JourneyDesignator] = field(
-        default_factory=list,
-        metadata={
-            "name": "JourneyDesignator",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    service_designator: List[ServiceDesignator] = field(
-        default_factory=list,
-        metadata={
-            "name": "ServiceDesignator",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "DatedVehicleJourneyRef",
+                    "type": DatedVehicleJourneyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DatedSpecialServiceRef",
+                    "type": DatedSpecialServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SpecialServiceRef",
+                    "type": SpecialServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TemplateServiceJourneyRef",
+                    "type": TemplateServiceJourneyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServiceJourneyRef",
+                    "type": ServiceJourneyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DeadRunRef",
+                    "type": DeadRunRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleJourneyRef",
+                    "type": VehicleJourneyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "JourneyRef",
+                    "type": JourneyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "JourneyDesignator",
+                    "type": JourneyDesignator,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServiceDesignator",
+                    "type": ServiceDesignator,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

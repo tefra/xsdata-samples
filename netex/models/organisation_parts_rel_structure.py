@@ -19,75 +19,56 @@ class OrganisationPartsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "organisationParts_RelStructure"
 
-    control_centre_ref: List[ControlCentreRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "ControlCentreRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    organisational_unit_ref: List[OrganisationalUnitRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "OrganisationalUnitRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    department_ref: List[DepartmentRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "DepartmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    organisation_part_ref: List[OrganisationPartRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "OrganisationPartRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    control_centre: List[ControlCentre] = field(
-        default_factory=list,
-        metadata={
-            "name": "ControlCentre",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    operating_department: List[OperatingDepartment] = field(
-        default_factory=list,
-        metadata={
-            "name": "OperatingDepartment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    department: List[Department] = field(
-        default_factory=list,
-        metadata={
-            "name": "Department",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    organisation_part: List[OrganisationPart1] = field(
-        default_factory=list,
-        metadata={
-            "name": "OrganisationPart",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_organisation_part: List[OrganisationPart2] = field(
-        default_factory=list,
-        metadata={
-            "name": "OrganisationPart_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ControlCentreRef",
+                    "type": ControlCentreRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OrganisationalUnitRef",
+                    "type": OrganisationalUnitRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DepartmentRef",
+                    "type": DepartmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OrganisationPartRef",
+                    "type": OrganisationPartRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ControlCentre",
+                    "type": ControlCentre,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OperatingDepartment",
+                    "type": OperatingDepartment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Department",
+                    "type": Department,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OrganisationPart",
+                    "type": OrganisationPart1,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OrganisationPart_",
+                    "type": OrganisationPart2,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
