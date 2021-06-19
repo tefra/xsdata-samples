@@ -3,4 +3,4 @@ types-dataclasses
 pytest
 pre-commit
 requests
-git+https://github.com/tefra/xsdata@master#egg=xsdata[cli,lxml]
+git+https://github.com/tefra/xsdata@compound-fields-catchup#egg=xsdata[cli,lxml]
