@@ -172,6 +172,6 @@ class TravelSpecificationSummaryViewStructure:
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 9,
+            "max_occurs": 2,
         }
     )

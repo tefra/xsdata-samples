@@ -625,30 +625,6 @@ class DayType1(DayTypeVersionStructure):
         name = "DayType"
         namespace = "http://www.netex.org.uk/netex"
 
-    validity_conditions_or_valid_between: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "validityConditions",
-                    "type": Type["ValidityConditionsRelStructure"],
-                },
-                {
-                    "name": "ValidBetween",
-                    "type": Type["ValidBetween"],
-                },
-            ),
-        }
-    )
-    alternative_texts: Optional[AlternativeTextsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "alternativeTexts",
-            "type": "Element",
-        }
-    )
-
 
 @dataclass
 class FareDayTypeVersionedStructure(DayTypeVersionStructure):
@@ -660,30 +636,6 @@ class FareDayTypeVersionedStructure(DayTypeVersionStructure):
 class OperatingDay(OperatingDayVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
-
-    validity_conditions_or_valid_between: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "validityConditions",
-                    "type": Type["ValidityConditionsRelStructure"],
-                },
-                {
-                    "name": "ValidBetween",
-                    "type": Type["ValidBetween"],
-                },
-            ),
-        }
-    )
-    alternative_texts: Optional[AlternativeTextsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "alternativeTexts",
-            "type": "Element",
-        }
-    )
 
 
 @dataclass
@@ -893,59 +845,11 @@ class FareDayType(FareDayTypeVersionedStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    validity_conditions_or_valid_between: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "validityConditions",
-                    "type": Type["ValidityConditionsRelStructure"],
-                },
-                {
-                    "name": "ValidBetween",
-                    "type": Type["ValidBetween"],
-                },
-            ),
-        }
-    )
-    alternative_texts: Optional[AlternativeTextsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "alternativeTexts",
-            "type": "Element",
-        }
-    )
-
 
 @dataclass
 class OrganisationDayType(OrganisationDayTypeVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
-
-    validity_conditions_or_valid_between: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "validityConditions",
-                    "type": Type["ValidityConditionsRelStructure"],
-                },
-                {
-                    "name": "ValidBetween",
-                    "type": Type["ValidBetween"],
-                },
-            ),
-        }
-    )
-    alternative_texts: Optional[AlternativeTextsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "alternativeTexts",
-            "type": "Element",
-        }
-    )
 
 
 @dataclass
@@ -995,7 +899,7 @@ class ValidDuringVersionStructure(ValidBetweenVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 6,
+            "max_occurs": 2,
         }
     )
 
@@ -1028,38 +932,3 @@ class SimpleAvailabilityCondition(ValidDuringVersionStructure):
 class ValidDuring(ValidDuringVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
-
-    choice: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "FareDayTypeRef",
-                    "type": FareDayTypeRef,
-                },
-                {
-                    "name": "DayTypeRef",
-                    "type": DayTypeRef,
-                },
-                {
-                    "name": "DaysOfWeek",
-                    "type": List[DayOfWeekEnumeration],
-                    "default_factory": list,
-                    "tokens": True,
-                },
-                {
-                    "name": "Days",
-                    "type": str,
-                    "min_length": 7,
-                    "max_length": 7,
-                    "pattern": r"([Y | N])*",
-                },
-                {
-                    "name": "timebands",
-                    "type": Type["TimebandsRelStructure"],
-                },
-            ),
-            "max_occurs": 6,
-        }
-    )

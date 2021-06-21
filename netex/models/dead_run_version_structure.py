@@ -26,7 +26,7 @@ class DeadRunVersionStructure(VehicleJourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
+    choice_1: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -72,6 +72,6 @@ class DeadRunVersionStructure(VehicleJourneyVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 10,
+            "max_occurs": 3,
         }
     )

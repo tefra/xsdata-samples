@@ -102,6 +102,6 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 13,
+            "max_occurs": 9,
         }
     )

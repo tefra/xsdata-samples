@@ -36,6 +36,7 @@ class StartTimeAtStopPointVersionedChildStructure(VersionedChildStructure):
                     "name": "ScheduledStopPointRef",
                     "type": ScheduledStopPointRef,
                     "namespace": "http://www.netex.org.uk/netex",
+                    "required": True,
                 },
                 {
                     "name": "StartTime",
@@ -51,10 +52,9 @@ class StartTimeAtStopPointVersionedChildStructure(VersionedChildStructure):
                     "name": "DayOffset",
                     "type": int,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": 0,
                 },
             ),
-            "min_occurs": 2,
-            "max_occurs": 6,
+            "min_occurs": 1,
+            "max_occurs": 2,
         }
     )

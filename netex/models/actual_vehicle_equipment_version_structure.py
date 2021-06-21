@@ -372,6 +372,6 @@ class ActualVehicleEquipmentVersionStructure(PassengerEquipmentVersionStructure)
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 164,
+            "max_occurs": 161,
         }
     )

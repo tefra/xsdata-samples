@@ -124,13 +124,13 @@
                     <TypeOfAccessRightAssignmentRef ref="fxc:condition_of_use" versionRef="fxc:v1.0"/>
                     <LimitationGroupingType>AND</LimitationGroupingType>
                     <limitations modificationSet="all">
+                      <FrequencyOfUse id="myfares:Time_interval@conditions_of_travel@frequency" modification="new" version="1.0" status="active">
+                        <FrequencyOfUseType>unlimited</FrequencyOfUseType>
+                      </FrequencyOfUse>
                       <Interchanging id="myfares:Time_interval@conditions_of_travel@interchanging" modification="new" version="1.0" status="active">
                         <CanInterchange>true</CanInterchange>
                         <CanBreakJourney>true</CanBreakJourney>
                       </Interchanging>
-                      <FrequencyOfUse id="myfares:Time_interval@conditions_of_travel@frequency" modification="new" version="1.0" status="active">
-                        <FrequencyOfUseType>unlimited</FrequencyOfUseType>
-                      </FrequencyOfUse>
                     </limitations>
                   </GenericParameterAssignment>
                 </FareStructureElement>

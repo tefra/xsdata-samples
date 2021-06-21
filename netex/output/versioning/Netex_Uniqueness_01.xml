@@ -78,18 +78,18 @@
             <ServiceJourney id="bar:foo1" modification="new" version="001" status="active">
               <Name>JOURNEY</Name>
             </ServiceJourney>
+            <TemplateServiceJourney id="bar:foo2" modification="new" version="001" status="active">
+              <Name>JOURNEY</Name>
+            </TemplateServiceJourney>
+            <SpecialService id="bar:foo3" modification="new" version="001" status="active">
+              <Name>JOURNEY</Name>
+            </SpecialService>
             <DatedServiceJourney id="bar:foo4" modification="new" version="001" status="active">
               <Name>JOURNEY</Name>
             </DatedServiceJourney>
             <DeadRun id="bar:foo5" modification="new" version="001" status="active">
               <Name>JOURNEY</Name>
             </DeadRun>
-            <SpecialService id="bar:foo3" modification="new" version="001" status="active">
-              <Name>JOURNEY</Name>
-            </SpecialService>
-            <TemplateServiceJourney id="bar:foo2" modification="new" version="001" status="active">
-              <Name>JOURNEY</Name>
-            </TemplateServiceJourney>
           </vehicleJourneys>
           <serviceFacilitySets modificationSet="all">
             <ServiceFacilitySet id="bar:foo2" modification="new" version="001" status="active">
@@ -115,10 +115,10 @@
                 <EquipmentPlace id="bar:foo2-x" modification="new" version="001" status="active">
                   <Name>ZONE</Name>
                   <placeEquipments modificationSet="all">
-                    <PlaceLighting id="bar:foo2" modification="new" version="001" status="active"/>
                     <HeadingSign id="bar:foo2" modification="new" version="001" status="active">
                       <PlaceName>SIGN</PlaceName>
                     </HeadingSign>
+                    <PlaceLighting id="bar:foo2" modification="new" version="001" status="active"/>
                   </placeEquipments>
                 </EquipmentPlace>
               </equipmentPlaces>
@@ -192,17 +192,22 @@
         <InfrastructureFrame id="bar:foo" modification="new" version="001" status="active">
           <Name>My Network  (V1) </Name>
           <junctions modificationSet="all">
+            <WireJunction id="bar:foo" modification="new" version="001" status="active">
+              <Name>POINT</Name>
+            </WireJunction>
             <RailwayJunction id="bar:foo1" modification="new" version="001" status="active">
               <Name>POINT</Name>
             </RailwayJunction>
             <RoadJunction id="bar:foo2" modification="new" version="001" status="active">
               <Name>POINT</Name>
             </RoadJunction>
-            <WireJunction id="bar:foo" modification="new" version="001" status="active">
-              <Name>POINT</Name>
-            </WireJunction>
           </junctions>
           <elements modificationSet="all">
+            <WireElement id="bar:foo" modification="new" version="001" status="active">
+              <Name>LINK</Name>
+              <FromPointRef version="001" ref="bar:foo"/>
+              <ToPointRef version="001" ref="bar:foo"/>
+            </WireElement>
             <RailwayElement id="bar:foo1" modification="new" version="001" status="active">
               <Name>LINK</Name>
               <FromPointRef version="001" ref="bar:foo1"/>
@@ -213,11 +218,6 @@
               <FromPointRef version="001" ref="bar:foo2"/>
               <ToPointRef version="001" ref="bar:foo2"/>
             </RoadElement>
-            <WireElement id="bar:foo" modification="new" version="001" status="active">
-              <Name>LINK</Name>
-              <FromPointRef version="001" ref="bar:foo"/>
-              <ToPointRef version="001" ref="bar:foo"/>
-            </WireElement>
           </elements>
           <activationPoints modificationSet="all">
             <BeaconPoint id="bar:foo4" modification="new" version="001" status="active"/>
@@ -236,8 +236,8 @@
             <TravelAgent id="bar:foo4" modification="new" version="001" status="active"/>
             <OtherOrganisation id="bar:foo5" modification="new" version="001" status="active">
               <validityConditions modificationSet="all">
-                <ValidBetween id="bar:foo" modification="new" version="001" status="active"/>
-                <ValidDuring id="bar:foo" modification="new" version="001" status="active"/>
+                <ValidityCondition id="bar:foo" modification="new" version="001" status="active"/>
+                <ValidityTrigger id="bar:foo1" modification="new" version="001" status="active"/>
                 <AvailabilityCondition id="bar:foo3" modification="new" version="001" status="active">
                   <timebands modificationSet="all">
                     <Timeband id="bar:foo" modification="new" version="001" status="active">
@@ -250,8 +250,8 @@
                     </OperatingDay>
                   </operatingDays>
                 </AvailabilityCondition>
-                <ValidityTrigger id="bar:foo1" modification="new" version="001" status="active"/>
-                <ValidityCondition id="bar:foo" modification="new" version="001" status="active"/>
+                <ValidDuring id="bar:foo" modification="new" version="001" status="active"/>
+                <ValidBetween id="bar:foo" modification="new" version="001" status="active"/>
               </validityConditions>
               <alternativeTexts>
                 <AlternativeText id="bar:foo" modification="new" version="001" status="active" attributeName="Name" order="1">
@@ -271,14 +271,14 @@
                 </AlternativeName>
               </alternativeNames>
               <parts modificationSet="all">
-                <ControlCentre id="bar:foo" modification="new" version="001" status="active"/>
-                <OperatingDepartment id="bar:foo1" modification="new" version="001" status="active"/>
-                <Department id="bar:foo" modification="new" version="001" status="active"/>
                 <OrganisationPart id="bar:foo" modification="new" version="001" status="active">
                   <administrativeZones modificationSet="all">
                     <AdministrativeZone id="bar:foo" modification="new" version="001" status="active"/>
                   </administrativeZones>
                 </OrganisationPart>
+                <ControlCentre id="bar:foo" modification="new" version="001" status="active"/>
+                <Department id="bar:foo" modification="new" version="001" status="active"/>
+                <OperatingDepartment id="bar:foo1" modification="new" version="001" status="active"/>
               </parts>
               <ownResponsibilitySets modificationSet="all">
                 <ResponsibilitySet id="bar:foo" modification="new" version="001" status="active">
@@ -300,7 +300,6 @@
             <OperationalContext id="bar:foo" modification="new" version="001" status="active"/>
           </operationalContexts>
           <vehicleTypes modificationSet="all">
-            <CompoundTrain id="bar:foo" modification="new" version="001" status="active"/>
             <Train id="bar:foo" modification="new" version="001" status="active">
               <satisfiesFacilityRequirements modificationSet="all">
                 <FacilityRequirement id="bar:foo" modification="new" version="001" status="active"/>
@@ -322,6 +321,7 @@
                 </TrainComponent>
               </components>
             </Train>
+            <CompoundTrain id="bar:foo" modification="new" version="001" status="active"/>
           </vehicleTypes>
           <vehicleModels modificationSet="all">
             <VehicleModel id="bar:foo" modification="new" version="001" status="active"/>
@@ -346,12 +346,12 @@
                 <WirePointRef version="001" ref="bar:foo"/>
               </members>
               <projections modificationSet="all">
-                <ZoneProjection id="bar:foo" modification="new" version="001" status="active">
-                  <ProjectedZoneRef version="001" ref="bar:foo"/>
-                </ZoneProjection>
                 <PointProjection id="bar:foo" modification="new" version="001" status="active">
                   <ProjectToPointRef version="001" ref="bar:foo"/>
                 </PointProjection>
+                <ZoneProjection id="bar:foo" modification="new" version="001" status="active">
+                  <ProjectedZoneRef version="001" ref="bar:foo"/>
+                </ZoneProjection>
               </projections>
             </GeneralZone>
           </zones>

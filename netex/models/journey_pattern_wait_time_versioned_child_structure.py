@@ -14,7 +14,7 @@ class JourneyPatternWaitTimeVersionedChildStructure(JourneyWaitTimeVersionedChil
     class Meta:
         name = "JourneyPatternWaitTime_VersionedChildStructure"
 
-    choice: List[object] = field(
+    choice_1: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -40,6 +40,6 @@ class JourneyPatternWaitTimeVersionedChildStructure(JourneyWaitTimeVersionedChil
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 7,
+            "max_occurs": 6,
         }
     )

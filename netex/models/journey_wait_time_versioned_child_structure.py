@@ -62,9 +62,9 @@ class JourneyWaitTimeVersionedChildStructure(JourneyTimingVersionedChildStructur
                     "name": "WaitTime",
                     "type": XmlDuration,
                     "namespace": "http://www.netex.org.uk/netex",
+                    "required": True,
                 },
             ),
-            "min_occurs": 1,
-            "max_occurs": 18,
+            "max_occurs": 16,
         }
     )

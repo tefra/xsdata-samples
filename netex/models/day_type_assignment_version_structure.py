@@ -63,10 +63,11 @@ class DayTypeAssignmentVersionStructure(AssignmentVersionStructure1):
                     "name": "DayTypeRef",
                     "type": DayTypeRef,
                     "namespace": "http://www.netex.org.uk/netex",
+                    "required": True,
                 },
             ),
-            "min_occurs": 2,
-            "max_occurs": 3,
+            "min_occurs": 1,
+            "max_occurs": 2,
         }
     )
     timeband_ref: List[TimebandRef] = field(

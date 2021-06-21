@@ -75,21 +75,21 @@
                     <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:condition_of_use"/>
                     <LimitationGroupingType>AND</LimitationGroupingType>
                     <limitations modificationSet="all">
+                      <RoundTrip id="myfares:PointToPoint@conditions_of_travel@trip" modification="new" version="1.0" status="active">
+                        <Name>Single Trip</Name>
+                        <TripType>single</TripType>
+                      </RoundTrip>
+                      <FrequencyOfUse id="myfares:PointToPoint@conditions_of_travel@frequency" modification="new" version="1.0" status="active">
+                        <Name>One trip no transfers</Name>
+                        <FrequencyOfUseType>single</FrequencyOfUseType>
+                        <MaximalFrequency>1</MaximalFrequency>
+                      </FrequencyOfUse>
                       <Interchanging id="myfares:PointToPoint@conditions_of_travel@interchanging" modification="new" version="1.0" status="active">
                         <FromMode>bus</FromMode>
                         <ToMode>bus</ToMode>
                         <MaximumNumberOfInterchanges>0</MaximumNumberOfInterchanges>
                         <CanBreakJourney>false</CanBreakJourney>
                       </Interchanging>
-                      <FrequencyOfUse id="myfares:PointToPoint@conditions_of_travel@frequency" modification="new" version="1.0" status="active">
-                        <Name>One trip no transfers</Name>
-                        <FrequencyOfUseType>single</FrequencyOfUseType>
-                        <MaximalFrequency>1</MaximalFrequency>
-                      </FrequencyOfUse>
-                      <RoundTrip id="myfares:PointToPoint@conditions_of_travel@trip" modification="new" version="1.0" status="active">
-                        <Name>Single Trip</Name>
-                        <TripType>single</TripType>
-                      </RoundTrip>
                     </limitations>
                   </GenericParameterAssignment>
                 </FareStructureElement>

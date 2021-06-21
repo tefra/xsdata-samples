@@ -2443,19 +2443,10 @@
               <OtherTransportModes>metro tram</OtherTransportModes>
               <StopPlaceType>railStation</StopPlaceType>
               <unlocalisedEquipments modificationSet="all">
-                <AccessVehicleEquipment id="nptg:AccessVehicleEquipment:9100WIMBLDN_LS3" modification="new" version="any" status="active">
-                  <AssistedBoardingLocation>boardAtAnyDoor</AssistedBoardingLocation>
-                  <GuideDogsAllowed>true</GuideDogsAllowed>
-                </AccessVehicleEquipment>
                 <CycleStorageEquipment id="nptg:9100WIMBLDN_9n10-EL1st" modification="new" version="any" status="active">
                   <NumberOfSpaces>16</NumberOfSpaces>
                   <CycleStorageType>other</CycleStorageType>
                 </CycleStorageEquipment>
-                <AssistanceService id="nptg:9100WIMBLDN_LS3" modification="new" version="any" status="active">
-                  <AssistanceAvailability>availableIfBooked</AssistanceAvailability>
-                  <AccessibilityTrainedStaff>true</AccessibilityTrainedStaff>
-                  <SafetyFacilityList>ccTv sosPoints</SafetyFacilityList>
-                </AssistanceService>
                 <TicketingService id="nptg:TicketingService:9100WIMBLDN_LS1" modification="new" version="any" status="active">
                   <VehicleModes>rail</VehicleModes>
                   <TicketingServiceList>all</TicketingServiceList>
@@ -2470,6 +2461,15 @@
                   <OnlinePurchaseForSelfPrintTicket>false</OnlinePurchaseForSelfPrintTicket>
                   <PaymentMethods>cash creditCard debitCard travelCard</PaymentMethods>
                 </TicketingService>
+                <AssistanceService id="nptg:9100WIMBLDN_LS3" modification="new" version="any" status="active">
+                  <AssistanceAvailability>availableIfBooked</AssistanceAvailability>
+                  <AccessibilityTrainedStaff>true</AccessibilityTrainedStaff>
+                  <SafetyFacilityList>ccTv sosPoints</SafetyFacilityList>
+                </AssistanceService>
+                <AccessVehicleEquipment id="nptg:AccessVehicleEquipment:9100WIMBLDN_LS3" modification="new" version="any" status="active">
+                  <AssistedBoardingLocation>boardAtAnyDoor</AssistedBoardingLocation>
+                  <GuideDogsAllowed>true</GuideDogsAllowed>
+                </AccessVehicleEquipment>
               </unlocalisedEquipments>
               <servedPlaces modificationSet="all">
                 <TopographicPlaceRef created="2010-05-17T09:30:47Z" ref="nptgLocality:E0034695"/>
@@ -2914,8 +2914,8 @@
                     </EquipmentPlace>
                   </equipmentPlaces>
                   <entrances modificationSet="all">
-                    <StopPlaceEntranceRef version="001" ref="nptg:9100WIMBLDN_A5-EL1pl"/>
                     <EntranceRef version="001" ref="nptg:9100WIMBLDN_A2b-EL1g"/>
+                    <StopPlaceEntranceRef version="001" ref="nptg:9100WIMBLDN_A5-EL1pl"/>
                   </entrances>
                   <AccessSpaceType>lift</AccessSpaceType>
                 </AccessSpace>
@@ -6062,12 +6062,12 @@
                         </EquipmentPosition>
                       </equipmentPositions>
                       <placeEquipments modificationSet="all">
-                        <AssistanceService id="nptg:4900ZZLUWIM1n2" modification="new" version="any" status="active">
-                          <AssistanceFacilityList>none</AssistanceFacilityList>
-                        </AssistanceService>
                         <WaitingRoomEquipment id="nptg:4900ZZLUWIM1n2_Eq-Seats1" modification="new" version="any" status="active">
                           <Seats>8</Seats>
                         </WaitingRoomEquipment>
+                        <AssistanceService id="nptg:4900ZZLUWIM1n2" modification="new" version="any" status="active">
+                          <AssistanceFacilityList>none</AssistanceFacilityList>
+                        </AssistanceService>
                       </placeEquipments>
                     </EquipmentPlace>
                   </equipmentPlaces>
@@ -6136,12 +6136,12 @@
                         </EquipmentPosition>
                       </equipmentPositions>
                       <placeEquipments modificationSet="all">
-                        <AssistanceService id="nptg:4900ZZLUWIM3n4_Eq-Seats1" modification="new" version="any" status="active">
-                          <AssistanceFacilityList>none</AssistanceFacilityList>
-                        </AssistanceService>
                         <WaitingRoomEquipment id="nptg:4900ZZLUWIM3n4_Eq-Seats1" modification="new" version="any" status="active">
                           <Seats>8</Seats>
                         </WaitingRoomEquipment>
+                        <AssistanceService id="nptg:4900ZZLUWIM3n4_Eq-Seats1" modification="new" version="any" status="active">
+                          <AssistanceFacilityList>none</AssistanceFacilityList>
+                        </AssistanceService>
                       </placeEquipments>
                     </EquipmentPlace>
                   </equipmentPlaces>
@@ -8180,6 +8180,7 @@
                           <Description>Boroughs of Greater London </Description>
                         </CodespaceAssignment>
                       </codespaceAssignments>
+                      <VehicleModes>all</VehicleModes>
                     </TransportAdministrativeZone>
                   </administrativeZones>
                 </OrganisationPart>
@@ -8199,6 +8200,7 @@
                           <Description>UK NPTG Admin Area codes  </Description>
                         </CodespaceAssignment>
                       </codespaceAssignments>
+                      <VehicleModes>all</VehicleModes>
                     </TransportAdministrativeZone>
                     <TransportAdministrativeZone id="nptg:Administrative_Zone@110" modification="new" version="any" status="active">
                       <Name>UK Rail </Name>
@@ -8209,6 +8211,7 @@
                           <Description>UK Rail  </Description>
                         </CodespaceAssignment>
                       </codespaceAssignments>
+                      <VehicleModes>all</VehicleModes>
                     </TransportAdministrativeZone>
                     <TransportAdministrativeZone id="nptg:Administrative_Zone@144" modification="new" version="any" status="active">
                       <Name>UK Rail</Name>
@@ -8219,6 +8222,7 @@
                           <Description>UK Rail Alias</Description>
                         </CodespaceAssignment>
                       </codespaceAssignments>
+                      <VehicleModes>all</VehicleModes>
                     </TransportAdministrativeZone>
                     <TransportAdministrativeZone id="nptg:Administrative_Zone@147" modification="new" version="any" status="active">
                       <Name>UK Metro</Name>
@@ -8229,6 +8233,7 @@
                           <Description>UK Metro and Tram</Description>
                         </CodespaceAssignment>
                       </codespaceAssignments>
+                      <VehicleModes>all</VehicleModes>
                     </TransportAdministrativeZone>
                   </administrativeZones>
                 </OrganisationPart>
@@ -8274,7 +8279,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <HolidayTypes>WorkingDay</HolidayTypes>
+                  <Seasons>Perennially</Seasons>
+                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
               <timebands modificationSet="all">
@@ -8289,7 +8297,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Saturday</DaysOfWeek>
+                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <HolidayTypes>WorkingDay</HolidayTypes>
+                  <Seasons>Perennially</Seasons>
+                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
               <timebands modificationSet="all">
@@ -8304,6 +8315,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Sunday</DaysOfWeek>
+                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
+                  <HolidayTypes>AnyDay</HolidayTypes>
+                  <Seasons>Perennially</Seasons>
+                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
               <timebands modificationSet="all">
@@ -8317,7 +8332,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday Saturday</DaysOfWeek>
+                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <HolidayTypes>WorkingDay</HolidayTypes>
+                  <Seasons>Perennially</Seasons>
+                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
               <timebands modificationSet="all">
@@ -8331,7 +8349,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <HolidayTypes>WorkingDay</HolidayTypes>
+                  <Seasons>Perennially</Seasons>
+                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
               <timebands modificationSet="all">
@@ -8345,6 +8366,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Sunday</DaysOfWeek>
+                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
+                  <HolidayTypes>AnyDay</HolidayTypes>
+                  <Seasons>Perennially</Seasons>
+                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
               <timebands modificationSet="all">

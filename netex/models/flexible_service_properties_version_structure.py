@@ -142,6 +142,6 @@ class FlexibleServicePropertiesVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 31,
+            "max_occurs": 17,
         }
     )

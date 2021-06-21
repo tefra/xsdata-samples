@@ -9026,20 +9026,6 @@
                       </ServiceFacilitySet>
                     </facilities>
                     <equipments modificationSet="all">
-                      <WheelchairVehicleEquipment id="est:WheelchairVehicleEquipment:sfe_veheq_trne_LP01_10_02" modification="new" version="any" status="active">
-                        <AccessibilityAssessment id="est:acaa_sfe_veheq_trne_LP01_10_02" modification="new" version="any" status="active">
-                          <MobilityImpairedAccess>true</MobilityImpairedAccess>
-                          <suitabilities>
-                            <Suitability id="est:acsst_sfe_veheq_trne_LP01_10_02" modification="new" status="active">
-                              <MobilityNeed>wheelchair</MobilityNeed>
-                              <Suitable>notSuitable</Suitable>
-                            </Suitability>
-                          </suitabilities>
-                        </AccessibilityAssessment>
-                        <NumberOfWheelchairAreas>1</NumberOfWheelchairAreas>
-                        <WidthOfAccessArea>1.0</WidthOfAccessArea>
-                        <CompanionSeat>true</CompanionSeat>
-                      </WheelchairVehicleEquipment>
                       <SanitaryEquipment id="est:sfe_veheq_trne_LP01_10_01" modification="new" version="any" status="active">
                         <Name>WCD</Name>
                         <AccessibilityAssessment id="est:acaa_sfe_veheq_trne_LP01_10_01" modification="new" version="any" status="active">
@@ -9056,6 +9042,20 @@
                         <NumberOfToilets>1</NumberOfToilets>
                         <WheelchairTurningCircle>2.0</WheelchairTurningCircle>
                       </SanitaryEquipment>
+                      <WheelchairVehicleEquipment id="est:WheelchairVehicleEquipment:sfe_veheq_trne_LP01_10_02" modification="new" version="any" status="active">
+                        <AccessibilityAssessment id="est:acaa_sfe_veheq_trne_LP01_10_02" modification="new" version="any" status="active">
+                          <MobilityImpairedAccess>true</MobilityImpairedAccess>
+                          <suitabilities>
+                            <Suitability id="est:acsst_sfe_veheq_trne_LP01_10_02" modification="new" status="active">
+                              <MobilityNeed>wheelchair</MobilityNeed>
+                              <Suitable>notSuitable</Suitable>
+                            </Suitability>
+                          </suitabilities>
+                        </AccessibilityAssessment>
+                        <NumberOfWheelchairAreas>1</NumberOfWheelchairAreas>
+                        <WidthOfAccessArea>1.0</WidthOfAccessArea>
+                        <CompanionSeat>true</CompanionSeat>
+                      </WheelchairVehicleEquipment>
                     </equipments>
                   </TrainElement>
                 </TrainComponent>
@@ -9074,20 +9074,6 @@
                       <ServiceFacilitySetRef version="any" ref="es:sfs_firstAndDisabledCarriage"/>
                     </facilities>
                     <equipments modificationSet="all">
-                      <WheelchairVehicleEquipment id="est:WheelchairVehicleEquipment:sfe_veheq_trne_LP01_11_02" modification="new" version="any" status="active">
-                        <AccessibilityAssessment id="est:acaa_sfe_veheq_trne_LP01_11_02" modification="new" version="any" status="active">
-                          <MobilityImpairedAccess>true</MobilityImpairedAccess>
-                          <suitabilities>
-                            <Suitability id="est:acsst_sfe_veheq_trne_LP01_11_02" modification="new" status="active">
-                              <MobilityNeed>wheelchair</MobilityNeed>
-                              <Suitable>suitable</Suitable>
-                            </Suitability>
-                          </suitabilities>
-                        </AccessibilityAssessment>
-                        <NumberOfWheelchairAreas>1</NumberOfWheelchairAreas>
-                        <WidthOfAccessArea>1.0</WidthOfAccessArea>
-                        <CompanionSeat>true</CompanionSeat>
-                      </WheelchairVehicleEquipment>
                       <SanitaryEquipment id="est:sfe_veheq_trne_LP01_11_01" modification="new" version="any" status="active">
                         <Name>WCD</Name>
                         <AccessibilityAssessment id="est:acaa_sfe_veheq_trne_LP01_11_01" modification="new" version="any" status="active">
@@ -9104,6 +9090,20 @@
                         <NumberOfToilets>1</NumberOfToilets>
                         <WheelchairTurningCircle>2.0</WheelchairTurningCircle>
                       </SanitaryEquipment>
+                      <WheelchairVehicleEquipment id="est:WheelchairVehicleEquipment:sfe_veheq_trne_LP01_11_02" modification="new" version="any" status="active">
+                        <AccessibilityAssessment id="est:acaa_sfe_veheq_trne_LP01_11_02" modification="new" version="any" status="active">
+                          <MobilityImpairedAccess>true</MobilityImpairedAccess>
+                          <suitabilities>
+                            <Suitability id="est:acsst_sfe_veheq_trne_LP01_11_02" modification="new" status="active">
+                              <MobilityNeed>wheelchair</MobilityNeed>
+                              <Suitable>suitable</Suitable>
+                            </Suitability>
+                          </suitabilities>
+                        </AccessibilityAssessment>
+                        <NumberOfWheelchairAreas>1</NumberOfWheelchairAreas>
+                        <WidthOfAccessArea>1.0</WidthOfAccessArea>
+                        <CompanionSeat>true</CompanionSeat>
+                      </WheelchairVehicleEquipment>
                     </equipments>
                   </TrainElement>
                 </TrainComponent>
@@ -10806,6 +10806,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Everyday</DaysOfWeek>
+                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
+                  <HolidayTypes>AnyDay</HolidayTypes>
+                  <Seasons>Perennially</Seasons>
+                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -10814,6 +10818,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
+                  <HolidayTypes>AnyDay</HolidayTypes>
+                  <Seasons>Perennially</Seasons>
+                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -10822,6 +10830,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Tuesday Wednesday Thursday</DaysOfWeek>
+                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
+                  <HolidayTypes>AnyDay</HolidayTypes>
+                  <Seasons>Perennially</Seasons>
+                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -10830,6 +10842,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Friday</DaysOfWeek>
+                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
+                  <HolidayTypes>AnyDay</HolidayTypes>
+                  <Seasons>Perennially</Seasons>
+                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -10838,6 +10854,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Tuesday Wednesday Thursday</DaysOfWeek>
+                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
+                  <HolidayTypes>AnyDay</HolidayTypes>
+                  <Seasons>Perennially</Seasons>
+                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -10846,6 +10866,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Tuesday Wednesday Thursday</DaysOfWeek>
+                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
+                  <HolidayTypes>AnyDay</HolidayTypes>
+                  <Seasons>Perennially</Seasons>
+                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -10854,6 +10878,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Tuesday Wednesday Thursday</DaysOfWeek>
+                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
+                  <HolidayTypes>AnyDay</HolidayTypes>
+                  <Seasons>Perennially</Seasons>
+                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -10862,6 +10890,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Tuesday Wednesday Thursday</DaysOfWeek>
+                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
+                  <HolidayTypes>AnyDay</HolidayTypes>
+                  <Seasons>Perennially</Seasons>
+                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -10870,6 +10902,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Friday</DaysOfWeek>
+                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
+                  <HolidayTypes>AnyDay</HolidayTypes>
+                  <Seasons>Perennially</Seasons>
+                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -10878,6 +10914,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Saturday</DaysOfWeek>
+                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
+                  <HolidayTypes>AnyDay</HolidayTypes>
+                  <Seasons>Perennially</Seasons>
+                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -10886,6 +10926,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Sunday</DaysOfWeek>
+                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
+                  <HolidayTypes>AnyDay</HolidayTypes>
+                  <Seasons>Perennially</Seasons>
+                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -10893,7 +10937,10 @@
               <Name>No Service Day</Name>
               <properties>
                 <PropertyOfDay>
+                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <HolidayTypes>NationalHoliday</HolidayTypes>
+                  <Seasons>Perennially</Seasons>
+                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -10976,6 +11023,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Everyday</DaysOfWeek>
+                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
+                  <HolidayTypes>AnyDay</HolidayTypes>
+                  <Seasons>Perennially</Seasons>
+                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -10984,6 +11035,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Wednesday Thursday Friday Sunday</DaysOfWeek>
+                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
+                  <HolidayTypes>AnyDay</HolidayTypes>
+                  <Seasons>Perennially</Seasons>
+                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -11072,6 +11127,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Saturday</DaysOfWeek>
+                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
+                  <HolidayTypes>AnyDay</HolidayTypes>
+                  <Seasons>Perennially</Seasons>
+                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -11080,6 +11139,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Friday</DaysOfWeek>
+                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
+                  <HolidayTypes>AnyDay</HolidayTypes>
+                  <Seasons>Perennially</Seasons>
+                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -11088,6 +11151,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Saturday</DaysOfWeek>
+                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
+                  <HolidayTypes>AnyDay</HolidayTypes>
+                  <Seasons>Perennially</Seasons>
+                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -11096,6 +11163,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Saturday</DaysOfWeek>
+                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
+                  <HolidayTypes>AnyDay</HolidayTypes>
+                  <Seasons>Perennially</Seasons>
+                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>

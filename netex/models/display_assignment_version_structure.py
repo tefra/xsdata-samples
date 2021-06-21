@@ -44,6 +44,7 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
                     "name": "ScheduledStopPointRef",
                     "type": ScheduledStopPointRef,
                     "namespace": "http://www.netex.org.uk/netex",
+                    "required": True,
                 },
                 {
                     "name": "VehicleMode",
@@ -89,7 +90,6 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
                     "name": "DisplayAssignmentType",
                     "type": DisplayAssignmentTypeEnumeration,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": DisplayAssignmentTypeEnumeration.ALL,
                 },
                 {
                     "name": "NumberOfJourneysToShow",
@@ -102,7 +102,7 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "min_occurs": 2,
-            "max_occurs": 23,
+            "min_occurs": 1,
+            "max_occurs": 15,
         }
     )

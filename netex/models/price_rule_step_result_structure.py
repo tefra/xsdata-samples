@@ -254,6 +254,7 @@ class PriceRuleStepResultStructure:
                     "name": "PricingRuleRef",
                     "type": PricingRuleRef,
                     "namespace": "http://www.netex.org.uk/netex",
+                    "required": True,
                 },
                 {
                     "name": "RoundingRef",
@@ -271,8 +272,8 @@ class PriceRuleStepResultStructure:
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "min_occurs": 3,
-            "max_occurs": 9,
+            "min_occurs": 2,
+            "max_occurs": 5,
         }
     )
     id: Optional[str] = field(

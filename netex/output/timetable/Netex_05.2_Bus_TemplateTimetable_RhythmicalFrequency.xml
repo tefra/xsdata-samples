@@ -143,46 +143,6 @@
                 </Call>
               </calls>
             </ServiceJourney>
-            <ServiceJourney id="hde:sj_24o_04" modification="new" version="any" status="active">
-              <DepartureTime>18:00:00Z</DepartureTime>
-              <dayTypes modificationSet="all">
-                <DayTypeRef version="any" ref="hde:DT_02MTWTF"/>
-              </dayTypes>
-              <ServicePatternRef ref="hde:svp_24o">EXTERNAL</ServicePatternRef>
-              <TimeDemandTypeRef version="any" ref="hde:TDT_45"/>
-              <LineRef version="any" ref="mybus:LN_234"/>
-              <calls>
-                <Call id="hde:sj_24o_04_001" modification="new" version="any" status="active" order="1">
-                  <ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
-                  <Arrival>
-                    <ForAlighting>false</ForAlighting>
-                  </Arrival>
-                  <Departure>
-                    <Time>18:00:00Z</Time>
-                  </Departure>
-                </Call>
-                <Call id="hde:sj_24o_04_002" modification="new" version="any" status="active" order="2">
-                  <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
-                  <Arrival>
-                    <Time>19:00:00Z</Time>
-                  </Arrival>
-                  <Departure>
-                    <Time>19:02:00Z</Time>
-                    <ForBoarding>true</ForBoarding>
-                    <WaitTime>PT2M</WaitTime>
-                  </Departure>
-                </Call>
-                <Call id="hde:sj_24o_04_003" modification="new" version="any" status="active" order="3">
-                  <ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
-                  <Arrival>
-                    <Time>20:00:00Z</Time>
-                  </Arrival>
-                  <Departure>
-                    <ForBoarding>false</ForBoarding>
-                  </Departure>
-                </Call>
-              </calls>
-            </ServiceJourney>
             <TemplateServiceJourney id="hde:tvj_24o_02" modification="new" version="any" status="active">
               <DepartureTime>10:20:00Z</DepartureTime>
               <dayTypes modificationSet="all">
@@ -243,6 +203,46 @@
                 </RhythmicalJourneyGroup>
               </frequencyGroups>
             </TemplateServiceJourney>
+            <ServiceJourney id="hde:sj_24o_04" modification="new" version="any" status="active">
+              <DepartureTime>18:00:00Z</DepartureTime>
+              <dayTypes modificationSet="all">
+                <DayTypeRef version="any" ref="hde:DT_02MTWTF"/>
+              </dayTypes>
+              <ServicePatternRef ref="hde:svp_24o">EXTERNAL</ServicePatternRef>
+              <TimeDemandTypeRef version="any" ref="hde:TDT_45"/>
+              <LineRef version="any" ref="mybus:LN_234"/>
+              <calls>
+                <Call id="hde:sj_24o_04_001" modification="new" version="any" status="active" order="1">
+                  <ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
+                  <Arrival>
+                    <ForAlighting>false</ForAlighting>
+                  </Arrival>
+                  <Departure>
+                    <Time>18:00:00Z</Time>
+                  </Departure>
+                </Call>
+                <Call id="hde:sj_24o_04_002" modification="new" version="any" status="active" order="2">
+                  <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
+                  <Arrival>
+                    <Time>19:00:00Z</Time>
+                  </Arrival>
+                  <Departure>
+                    <Time>19:02:00Z</Time>
+                    <ForBoarding>true</ForBoarding>
+                    <WaitTime>PT2M</WaitTime>
+                  </Departure>
+                </Call>
+                <Call id="hde:sj_24o_04_003" modification="new" version="any" status="active" order="3">
+                  <ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
+                  <Arrival>
+                    <Time>20:00:00Z</Time>
+                  </Arrival>
+                  <Departure>
+                    <ForBoarding>false</ForBoarding>
+                  </Departure>
+                </Call>
+              </calls>
+            </ServiceJourney>
           </vehicleJourneys>
         </TimetableFrame>
         <ServiceCalendarFrame id="hde:SCF01" modification="new" version="any" status="active">
@@ -254,6 +254,10 @@
                 <properties>
                   <PropertyOfDay>
                     <DaysOfWeek>Everyday</DaysOfWeek>
+                    <WeeksOfMonth>EveryWeek</WeeksOfMonth>
+                    <HolidayTypes>AnyDay</HolidayTypes>
+                    <Seasons>Perennially</Seasons>
+                    <Tides>AllTides</Tides>
                   </PropertyOfDay>
                 </properties>
               </DayType>
@@ -262,6 +266,10 @@
                 <properties>
                   <PropertyOfDay>
                     <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+                    <WeeksOfMonth>EveryWeek</WeeksOfMonth>
+                    <HolidayTypes>AnyDay</HolidayTypes>
+                    <Seasons>Perennially</Seasons>
+                    <Tides>AllTides</Tides>
                   </PropertyOfDay>
                 </properties>
               </DayType>

@@ -164,6 +164,6 @@ class PassengerInformationEquipmentVersionStructure(PassengerEquipmentVersionStr
                     "tokens": True,
                 },
             ),
-            "max_occurs": 51,
+            "max_occurs": 47,
         }
     )

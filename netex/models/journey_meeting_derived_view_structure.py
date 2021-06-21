@@ -187,37 +187,31 @@ class JourneyMeetingDerivedViewStructure(DerivedViewStructure):
                     "name": "StaySeated",
                     "type": bool,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": False,
                 },
                 {
                     "name": "CrossBorder",
                     "type": bool,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": False,
                 },
                 {
                     "name": "Planned",
                     "type": bool,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": True,
                 },
                 {
                     "name": "Guaranteed",
                     "type": bool,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": False,
                 },
                 {
                     "name": "Advertised",
                     "type": bool,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": True,
                 },
                 {
                     "name": "Controlled",
                     "type": bool,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": True,
                 },
                 {
                     "name": "ConnectionCertainty",
@@ -230,6 +224,6 @@ class JourneyMeetingDerivedViewStructure(DerivedViewStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 31,
+            "max_occurs": 19,
         }
     )

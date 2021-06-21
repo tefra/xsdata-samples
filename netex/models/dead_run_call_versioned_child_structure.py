@@ -189,13 +189,11 @@ class DeadRunCallVersionedChildStructure(VersionedChildStructure):
                     "name": "RequestStop",
                     "type": bool,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": False,
                 },
                 {
                     "name": "RequestMethod",
                     "type": RequestMethodTypeEnumeration,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": RequestMethodTypeEnumeration.NONE_REQUIRED,
                 },
                 {
                     "name": "StopUse",
@@ -211,13 +209,11 @@ class DeadRunCallVersionedChildStructure(VersionedChildStructure):
                     "name": "Print",
                     "type": bool,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": True,
                 },
                 {
                     "name": "Dynamic",
                     "type": DynamicAdvertisementEnumeration,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": DynamicAdvertisementEnumeration.ALWAYS,
                 },
                 {
                     "name": "Note",
@@ -225,7 +221,7 @@ class DeadRunCallVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 72,
+            "max_occurs": 53,
         }
     )
     order: Optional[int] = field(

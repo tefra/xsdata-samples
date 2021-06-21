@@ -398,7 +398,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Everyday</DaysOfWeek>
+                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <HolidayTypes>NotHoliday</HolidayTypes>
+                  <Seasons>Perennially</Seasons>
+                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>

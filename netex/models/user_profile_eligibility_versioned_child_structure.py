@@ -28,6 +28,6 @@ class UserProfileEligibilityVersionedChildStructure(CustomerEligibilityVersioned
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 3,
+            "max_occurs": 2,
         }
     )

@@ -18,7 +18,7 @@ class FareProductPriceVersionedChildStructure(FarePriceVersionedChildStructure):
     class Meta:
         name = "FareProductPrice_VersionedChildStructure"
 
-    choice: List[object] = field(
+    choice_1: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -64,6 +64,6 @@ class FareProductPriceVersionedChildStructure(FarePriceVersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 17,
+            "max_occurs": 16,
         }
     )

@@ -41,7 +41,7 @@ class UsageParameterPriceVersionedChildStructure(FarePriceVersionedChildStructur
     class Meta:
         name = "UsageParameterPrice_VersionedChildStructure"
 
-    choice: List[object] = field(
+    choice_1: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -202,6 +202,6 @@ class UsageParameterPriceVersionedChildStructure(FarePriceVersionedChildStructur
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 69,
+            "max_occurs": 68,
         }
     )

@@ -154,13 +154,11 @@ class CallVersionedChildStructure(VersionedChildStructure):
                     "name": "RequestStop",
                     "type": bool,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": False,
                 },
                 {
                     "name": "RequestMethod",
                     "type": RequestMethodTypeEnumeration,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": RequestMethodTypeEnumeration.NONE_REQUIRED,
                 },
                 {
                     "name": "StopUse",
@@ -176,13 +174,11 @@ class CallVersionedChildStructure(VersionedChildStructure):
                     "name": "Print",
                     "type": bool,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": True,
                 },
                 {
                     "name": "Dynamic",
                     "type": DynamicAdvertisementEnumeration,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": DynamicAdvertisementEnumeration.ALWAYS,
                 },
                 {
                     "name": "PassengerCarryingRequirementRef",
@@ -210,7 +206,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 34,
+            "max_occurs": 5,
         }
     )
     order: Optional[int] = field(

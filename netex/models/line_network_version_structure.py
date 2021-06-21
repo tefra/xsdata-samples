@@ -63,6 +63,6 @@ class LineNetworkVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 7,
+            "max_occurs": 4,
         }
     )

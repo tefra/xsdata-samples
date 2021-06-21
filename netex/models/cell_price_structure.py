@@ -278,7 +278,6 @@ class CellPriceStructure:
                     "name": "CanBeCumulative",
                     "type": bool,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": True,
                 },
                 {
                     "name": "RoundingRef",
@@ -341,6 +340,6 @@ class CellPriceStructure:
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 88,
+            "max_occurs": 72,
         }
     )

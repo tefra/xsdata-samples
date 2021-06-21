@@ -162,7 +162,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <HolidayTypes>WorkingDay</HolidayTypes>
+                  <Seasons>Perennially</Seasons>
+                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -171,7 +174,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <HolidayTypes>AnyHoliday</HolidayTypes>
+                  <Seasons>Perennially</Seasons>
+                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>

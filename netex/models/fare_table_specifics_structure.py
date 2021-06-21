@@ -109,13 +109,11 @@ class FareTableSpecificsStructure:
                     "name": "DirectionType",
                     "type": RelativeDirectionEnumeration,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": RelativeDirectionEnumeration.BOTH,
                 },
                 {
                     "name": "RoutingType",
                     "type": RoutingTypeEnumeration,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": RoutingTypeEnumeration.BOTH,
                 },
                 {
                     "name": "FareClass",
@@ -203,6 +201,6 @@ class FareTableSpecificsStructure:
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 41,
+            "max_occurs": 20,
         }
     )

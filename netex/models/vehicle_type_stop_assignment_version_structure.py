@@ -62,9 +62,10 @@ class VehicleTypeStopAssignmentVersionStructure(AssignmentVersionStructure1):
                     "name": "VehicleTypeRef",
                     "type": VehicleTypeRef,
                     "namespace": "http://www.netex.org.uk/netex",
+                    "required": True,
                 },
             ),
-            "min_occurs": 3,
-            "max_occurs": 8,
+            "min_occurs": 2,
+            "max_occurs": 6,
         }
     )

@@ -33,6 +33,7 @@ class CrewBaseVersionStructure(GroupOfEntitiesVersionStructure):
                     "name": "ReliefPointRef",
                     "type": ReliefPointRef,
                     "namespace": "http://www.netex.org.uk/netex",
+                    "required": True,
                 },
                 {
                     "name": "garages",
@@ -40,7 +41,7 @@ class CrewBaseVersionStructure(GroupOfEntitiesVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "min_occurs": 3,
-            "max_occurs": 7,
+            "min_occurs": 2,
+            "max_occurs": 5,
         }
     )

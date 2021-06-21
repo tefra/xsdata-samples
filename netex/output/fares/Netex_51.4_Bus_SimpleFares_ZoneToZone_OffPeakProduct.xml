@@ -158,18 +158,18 @@
                     <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:condition_of_use"/>
                     <LimitationGroupingType>AND</LimitationGroupingType>
                     <limitations modificationSet="all">
-                      <Interchanging id="myfares:Tz2z@conditions_of_travel@no_transfers" modification="new" version="1.0" status="active">
-                        <MaximumNumberOfInterchanges>0</MaximumNumberOfInterchanges>
-                      </Interchanging>
+                      <RoundTrip id="myfares:Tz2z@conditions_of_travel@direction" modification="new" version="1.0" status="active">
+                        <Name>Single Trip</Name>
+                        <TripType>single</TripType>
+                      </RoundTrip>
                       <FrequencyOfUse id="myfares:Tz2z@conditions_of_travel@one_trip" modification="new" version="any" status="active">
                         <Name>One trip only, any route, unlimited transfers</Name>
                         <FrequencyOfUseType>single</FrequencyOfUseType>
                         <MaximalFrequency>1</MaximalFrequency>
                       </FrequencyOfUse>
-                      <RoundTrip id="myfares:Tz2z@conditions_of_travel@direction" modification="new" version="1.0" status="active">
-                        <Name>Single Trip</Name>
-                        <TripType>single</TripType>
-                      </RoundTrip>
+                      <Interchanging id="myfares:Tz2z@conditions_of_travel@no_transfers" modification="new" version="1.0" status="active">
+                        <MaximumNumberOfInterchanges>0</MaximumNumberOfInterchanges>
+                      </Interchanging>
                     </limitations>
                   </GenericParameterAssignment>
                 </FareStructureElement>
@@ -522,7 +522,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <HolidayTypes>NotHoliday</HolidayTypes>
+                  <Seasons>Perennially</Seasons>
+                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -531,7 +534,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Everyday</DaysOfWeek>
+                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <HolidayTypes>NotWorkingDay</HolidayTypes>
+                  <Seasons>Perennially</Seasons>
+                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>

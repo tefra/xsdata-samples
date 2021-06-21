@@ -271,7 +271,7 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 111,
+            "max_occurs": 109,
         }
     )
     order: Optional[int] = field(

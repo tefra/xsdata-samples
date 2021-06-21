@@ -282,7 +282,6 @@ class FarePriceVersionedChildStructure(VersionedChildStructure):
                     "name": "CanBeCumulative",
                     "type": bool,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": True,
                 },
                 {
                     "name": "RoundingRef",
@@ -295,6 +294,6 @@ class FarePriceVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 78,
+            "max_occurs": 72,
         }
     )

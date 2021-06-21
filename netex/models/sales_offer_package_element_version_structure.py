@@ -55,7 +55,7 @@ class SalesOfferPackageElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
+    choice_1: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -111,7 +111,7 @@ class SalesOfferPackageElementVersionStructure(PriceableObjectVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 19,
+            "max_occurs": 16,
         }
     )
     order: Optional[int] = field(

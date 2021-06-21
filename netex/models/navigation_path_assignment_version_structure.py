@@ -70,6 +70,6 @@ class NavigationPathAssignmentVersionStructure(StopAssignmentVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 15,
+            "max_occurs": 12,
         }
     )

@@ -218,7 +218,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice_choice: List[object] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -414,7 +414,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 73,
+            "max_occurs": 70,
         }
     )
     customer_purchase_package_element_ref: List[CustomerPurchasePackageElementRef] = field(
@@ -961,7 +961,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
+    choice_1: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -1132,7 +1132,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 73,
+            "max_occurs": 50,
         }
     )
     order: Optional[int] = field(
@@ -1519,7 +1519,7 @@ class FareTableVersionStructure(GroupOfEntitiesVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 55,
+            "max_occurs": 45,
         }
     )
 
@@ -1674,7 +1674,7 @@ class PriceableObjectVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 8,
+            "max_occurs": 5,
         }
     )
 
@@ -1715,7 +1715,7 @@ class TimeStructureFactorVersionStructure(FareStructureFactorVersionStructure):
     class Meta:
         name = "TimeStructureFactor_VersionStructure"
 
-    choice: List[object] = field(
+    choice_1: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -1756,7 +1756,7 @@ class TimeStructureFactorVersionStructure(FareStructureFactorVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 10,
+            "max_occurs": 6,
         }
     )
 
@@ -1782,7 +1782,7 @@ class ParkingChargeBandVersionStructure(TimeStructureFactorVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
+    choice_2: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -1813,7 +1813,7 @@ class ParkingChargeBandVersionStructure(TimeStructureFactorVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 7,
+            "max_occurs": 4,
         }
     )
 
@@ -2195,7 +2195,7 @@ class PriceGroupVersionStructure(GroupOfEntitiesVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 35,
+            "max_occurs": 34,
         }
     )
 

@@ -24,7 +24,7 @@ class DatedSpecialServiceVersionStructure(SpecialServiceVersionStructure):
     class Meta:
         name = "DatedSpecialService_VersionStructure"
 
-    choice: List[object] = field(
+    choice_1: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -73,6 +73,7 @@ class DatedSpecialServiceVersionStructure(SpecialServiceVersionStructure):
                     "name": "OperatingDayRef",
                     "type": OperatingDayRef,
                     "namespace": "http://www.netex.org.uk/netex",
+                    "required": True,
                 },
                 {
                     "name": "ExternalDatedVehicleJourneyRef",
@@ -100,7 +101,6 @@ class DatedSpecialServiceVersionStructure(SpecialServiceVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "min_occurs": 1,
-            "max_occurs": 37,
+            "max_occurs": 30,
         }
     )

@@ -97,7 +97,7 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
+    choice_1: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -168,7 +168,7 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 17,
+            "max_occurs": 6,
         }
     )
     name_of_class_of_unit: Optional[str] = field(

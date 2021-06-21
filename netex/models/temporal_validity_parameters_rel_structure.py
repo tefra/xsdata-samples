@@ -70,6 +70,6 @@ class TemporalValidityParametersRelStructure(OneToManyRelationshipStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 13,
+            "max_occurs": 8,
         }
     )

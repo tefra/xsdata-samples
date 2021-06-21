@@ -184,13 +184,11 @@ class TariffVersionStructure(DataManagedObjectStructure):
                     "name": "TariffBasis",
                     "type": TariffBasisEnumeration,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": TariffBasisEnumeration.ROUTE,
                 },
                 {
                     "name": "ReturnFareTwiceSingle",
                     "type": bool,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": True,
                 },
                 {
                     "name": "GeographicalUnitRef",
@@ -258,6 +256,6 @@ class TariffVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 71,
+            "max_occurs": 51,
         }
     )

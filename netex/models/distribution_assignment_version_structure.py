@@ -135,7 +135,6 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
                     "name": "AllowedInCountry",
                     "type": bool,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": True,
                 },
                 {
                     "name": "TopographicPlaceRef",
@@ -166,13 +165,11 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
                     "name": "AllowedInChannel",
                     "type": bool,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": True,
                 },
                 {
                     "name": "RestrictedToChannel",
                     "type": bool,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": True,
                 },
                 {
                     "name": "MandatoryProduct",
@@ -299,6 +296,6 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 178,
+            "max_occurs": 152,
         }
     )

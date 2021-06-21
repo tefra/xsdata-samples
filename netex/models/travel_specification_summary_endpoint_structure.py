@@ -58,7 +58,7 @@ class TravelSpecificationSummaryEndpointStructure:
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 8,
+            "max_occurs": 4,
         }
     )
     tariff_zone_ref: List[TariffZoneRef1] = field(

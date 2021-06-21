@@ -209,7 +209,6 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
                     "name": "PublicityChannel",
                     "type": PublicityChannelEnumeration,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": PublicityChannelEnumeration.ALL,
                 },
                 {
                     "name": "Advertised",
@@ -217,6 +216,6 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 113,
+            "max_occurs": 105,
         }
     )

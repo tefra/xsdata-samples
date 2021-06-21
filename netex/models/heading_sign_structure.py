@@ -79,6 +79,6 @@ class HeadingSignStructure(SignEquipmentVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 11,
+            "max_occurs": 2,
         }
     )

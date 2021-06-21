@@ -116,7 +116,6 @@
                 </GeographicalStructureFactor>
               </geographicalStructureFactors>
               <fareStructureElements modificationSet="all">
-                <FareStructureElementRef version="01" ref="tfc:TFC@ODs@p2p_OD"/>
                 <FareStructureElement id="tfc:TFC@Tariff@General@geographic_intervals" modification="new" version="01" status="active">
                   <Name>Available Intervals</Name>
                   <geographicalIntervals modificationSet="all">
@@ -222,6 +221,7 @@
                     </GeographicalInterval>
                   </geographicalIntervals>
                 </FareStructureElement>
+                <FareStructureElementRef version="01" ref="tfc:TFC@ODs@p2p_OD"/>
                 <FareStructureElement id="tfc:TFC@Tariff@General@train_types" modification="new" version="01" status="active">
                   <Name>Available Train Types</Name>
                   <GenericParameterAssignment id="tfc:TFC@Tariff@General@train_types" modification="new" version="01" status="active" order="1">
@@ -607,11 +607,11 @@ Free travel tickets for all train categories, for the booking fee, 2nd class, as
                         <TypeOfAccessRightAssignmentRef version="any" ref="eura:eligible"/>
                         <LimitationGroupingType>OR</LimitationGroupingType>
                         <limitations modificationSet="all">
-                          <CompanionProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@disabled@companion@adult"/>
                           <UserProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@youth"/>
                           <UserProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@senior"/>
                           <UserProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@disabled"/>
                           <UserProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@special_needs"/>
+                          <CompanionProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@disabled@companion@adult"/>
                           <UserProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@academic"/>
                         </limitations>
                         <IncludesGroupingType>AND</IncludesGroupingType>
@@ -629,12 +629,12 @@ Free travel tickets for all train categories, for the booking fee, 2nd class, as
                         <TypeOfAccessRightAssignmentRef version="any" ref="eura:eligible"/>
                         <LimitationGroupingType>OR</LimitationGroupingType>
                         <limitations modificationSet="all">
-                          <CompanionProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@political_victim@companion@adult"/>
-                          <CompanionProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@veteran@companion@adult"/>
                           <UserProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@adult"/>
                           <UserProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@infant"/>
                           <UserProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@child"/>
+                          <CompanionProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@political_victim@companion@adult"/>
                           <UserProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@veteran"/>
+                          <CompanionProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@veteran@companion@adult"/>
                           <UserProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@political_victim"/>
                           <UserProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@member_of_parliament"/>
                         </limitations>
@@ -1019,13 +1019,13 @@ Tickets will be issued for the distance traveled by a single train and the conti
                     <TypeOfAccessRightAssignmentRef version="any" ref="eura:can_purchase"/>
                     <LimitationGroupingType>AND</LimitationGroupingType>
                     <limitations modificationSet="all">
+                      <FrequencyOfUse id="tfc:TFC@Tariff@Trip@frequency@single" modification="new" version="any" status="active">
+                        <FrequencyOfUseType>single</FrequencyOfUseType>
+                      </FrequencyOfUse>
                       <Interchanging id="tfc:TFC@Tariff@Trip@frequency@single" modification="new" version="any" status="active">
                         <CanInterchange>true</CanInterchange>
                         <CanBreakJourney>false</CanBreakJourney>
                       </Interchanging>
-                      <FrequencyOfUse id="tfc:TFC@Tariff@Trip@frequency@single" modification="new" version="any" status="active">
-                        <FrequencyOfUseType>single</FrequencyOfUseType>
-                      </FrequencyOfUse>
                     </limitations>
                   </GenericParameterAssignment>
                 </FareStructureElement>
@@ -1099,8 +1099,8 @@ Tickets will be issued for the distance traveled by a single train and the conti
                   <ValidableElementRef version="01" ref="tfc:TFC@Trip_Common@leg">CHAIN on common leg </ValidableElementRef>
                   <LimitationGroupingType>AND</LimitationGroupingType>
                   <limitations modificationSet="all">
-                    <InterchangingRef version="any" ref="tfc:TFC@Tariff@Trip@frequency@single"/>
                     <FrequencyOfUseRef version="any" ref="tfc:TFC@Tariff@Trip@frequency@single"/>
+                    <InterchangingRef version="any" ref="tfc:TFC@Tariff@Trip@frequency@single"/>
                   </limitations>
                 </GenericParameterAssignment>
               </validityParameterAssignments>
@@ -1530,12 +1530,12 @@ Dear travelers, we inform you that no reservations are made at this time. Thank 
                       <TypeOfAccessRightAssignmentRef version="any" ref="eura:reservation_condition"/>
                       <LimitationGroupingType>AND</LimitationGroupingType>
                       <limitations modificationSet="all">
-                        <ReservingRef version="any" ref="tfc:TFC@Tariff@General@reserving@required"/>
                         <Routing id="tfc:TFC@Tariff@General@geographic_intervals@distance_more than_70km" modification="new" version="any" status="active">
                           <Name>Reservation required if more than 70 km</Name>
                           <Url>https://www.transferoviarcalatori.ro/tarife/tarif-de-rezervare.html</Url>
                           <LimitingRuleRef ref="txc:distance_more than_70km"/>
                         </Routing>
+                        <ReservingRef version="any" ref="tfc:TFC@Tariff@General@reserving@required"/>
                       </limitations>
                       <validityParameters modificationSet="all">
                         <LineRef version="01" ref="tfc:TFC@Lines@Bucharest+Buzau"/>
@@ -1547,12 +1547,12 @@ Dear travelers, we inform you that no reservations are made at this time. Thank 
                       <TypeOfAccessRightAssignmentRef version="any" ref="eura:reservation_condition"/>
                       <LimitationGroupingType>AND</LimitationGroupingType>
                       <limitations modificationSet="all">
-                        <ReservingRef version="any" ref="tfc:TFC@Tariff@General@reserving@required"/>
                         <Routing id="tfc:TFC@Tariff@General@geographic_intervals@distance_more than_50km" modification="new" version="any" status="active">
                           <Name>Reservation required if more than 50 km</Name>
                           <Url>https://www.transferoviarcalatori.ro/tarife/tarif-de-rezervare.html</Url>
                           <LimitingRuleRef ref="txc:distance_more than_50km"/>
                         </Routing>
+                        <ReservingRef version="any" ref="tfc:TFC@Tariff@General@reserving@required"/>
                       </limitations>
                       <validityParameters modificationSet="all">
                         <LineRef version="01" ref="tfc:TFC@Lines@Bucharest_North+Galati"/>
@@ -5449,9 +5449,9 @@ Dear travelers, we inform you that no reservations are made at this time. Thank 
                 <GenericParameterAssignment id="tfc:TFC@Season_pass-SOP@conditions" modification="new" version="01" status="active" order="1">
                   <TypeOfAccessRightAssignmentRef version="any" ref="eura:condition_of_use"/>
                   <limitations modificationSet="all">
-                    <TransferabilityRef version="any" ref="tfc:TFC@Common@condition@not_transferable"/>
-                    <RefundingRef version="any" ref="tfc:TFC@Common@condition@can_refund"/>
                     <ExchangingRef version="any" ref="tfc:TFC@Common@condition@can_exchange_for_free"/>
+                    <RefundingRef version="any" ref="tfc:TFC@Common@condition@can_refund"/>
+                    <TransferabilityRef version="any" ref="tfc:TFC@Common@condition@not_transferable"/>
                   </limitations>
                 </GenericParameterAssignment>
                 <GenericParameterAssignment id="tfc:TFC@Season_pass-SOP@purchaseWindow" modification="new" version="01" status="active" order="1">
@@ -6474,14 +6474,14 @@ Dear travelers, we inform you that no reservations are made at this time. Thank 
                     <TypeOfAccessRightAssignmentRef version="any" ref="eura:eligible"/>
                     <LimitationGroupingType>OR</LimitationGroupingType>
                     <limitations modificationSet="all">
+                      <UserProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@veteran"/>
                       <CompanionProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@veteran@companion@adult"/>
                       <CompanionProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@veteran@companion@personal_assistant"/>
+                      <UserProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@political_victim"/>
                       <CompanionProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@political_victim@companion@adult"/>
+                      <UserProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@disabled"/>
                       <CompanionProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@disabled@companion@adult"/>
                       <CompanionProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@disabled@companion@personal_assistant"/>
-                      <UserProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@veteran"/>
-                      <UserProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@political_victim"/>
-                      <UserProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@disabled"/>
                     </limitations>
                     <QualityStructureFactorRef version="1" ref="tfc:TFC@Tariff@Discount@Statutory_Right+Travel@multi_trip@12"/>
                   </GenericParameterAssignment>
@@ -6492,8 +6492,8 @@ Dear travelers, we inform you that no reservations are made at this time. Thank 
                     <TypeOfAccessRightAssignmentRef version="any" ref="eura:eligible"/>
                     <LimitationGroupingType>OR</LimitationGroupingType>
                     <limitations modificationSet="all">
-                      <CompanionProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@ethnic_victim@companion@adult"/>
                       <UserProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@ethnic_victim"/>
+                      <CompanionProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@ethnic_victim@companion@adult"/>
                     </limitations>
                     <QualityStructureFactorRef version="1" ref="tfc:TFC@Tariff@Discount@Statutory_Right+Travel@multi_trip@6"/>
                   </GenericParameterAssignment>
@@ -7435,6 +7435,10 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Everyday</DaysOfWeek>
+                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
+                  <HolidayTypes>AnyDay</HolidayTypes>
+                  <Seasons>Perennially</Seasons>
+                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </FareDayType>
@@ -7443,14 +7447,21 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Weekdays</DaysOfWeek>
+                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <HolidayTypes>NotHoliday</HolidayTypes>
+                  <Seasons>Perennially</Seasons>
+                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </FareDayType>
             <FareDayType id="tfc:January@1" modification="new" version="01" status="active">
               <properties>
                 <PropertyOfDay>
+                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <DayOfYear>--01-01</DayOfYear>
+                  <HolidayTypes>AnyDay</HolidayTypes>
+                  <Seasons>Perennially</Seasons>
+                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </FareDayType>
@@ -7566,10 +7577,10 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
                                     <ChargingMomentRef version="any" ref="eura:prepaid"/>
                                     <TypeOfFareProductRef version="any" ref="eura:product_type@single_trip"/>
                                     <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
+                                    <TypeOfFareProductRef version="any" ref="eura:standard_product@single_toc"/>
                                     <DistributionChannelRef version="01" ref="tfc:TFC@Common@self_service_ticket_machine"/>
                                     <FulfilmentMethodRef version="01" ref="eura:collect_at_counter"/>
                                     <TypeOfPaymentMethodRef version="01" ref="tfc:vodka_bottles" versionRef="EXTERNAL"/>
-                                    <TypeOfFareProductRef version="any" ref="eura:standard_product@single_toc"/>
                                   </validityParameters>
                                   <GeographicalIntervalRef version="01" ref="tfc:TFC@Tariff@General@geographic_intervals@d_121+140"/>
                                 </SpecificParameterAssignment>
@@ -7656,9 +7667,9 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
                                   <DistanceMatrixElementRef version="01" ref="tfc:dme_10108+50342">Bucharest to Buzau</DistanceMatrixElementRef>
                                   <SalesOfferPackageRef version="01" ref="tfc:TFC@Season_pass-SOP"/>
                                   <limitations modificationSet="all">
+                                    <UserProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@senior"/>
                                     <FrequencyOfUseRef version="any" ref="tfc:TFC@Tariff@Pass@Season@validity@unlimited_use"/>
                                     <UsageValidityPeriodRef version="any" ref="tfc:TFC@Tariff@Pass@Season@validity@month"/>
-                                    <UserProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@senior"/>
                                   </limitations>
                                   <validityParameters modificationSet="all">
                                     <Directions>both</Directions>
@@ -7668,10 +7679,10 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
                                     <ChargingMomentRef version="any" ref="eura:prepaid"/>
                                     <TypeOfFareProductRef version="any" ref="eura:product_type@period_pass"/>
                                     <TypeOfTravelDocumentRef version="01" ref="eura:pass"/>
+                                    <TypeOfFareProductRef version="any" ref="eura:standard_product@single_toc"/>
                                     <DistributionChannelRef version="01" ref="eura:at_counter"/>
                                     <FulfilmentMethodRef version="01" ref="eura:collect_at_counter"/>
                                     <TypeOfPaymentMethodRef version="01" ref="tfc:vodka_bottles" versionRef="EXTERNAL"/>
-                                    <TypeOfFareProductRef version="any" ref="eura:standard_product@single_toc"/>
                                   </validityParameters>
                                   <TimeIntervalRef version="01" ref="tfc:TFC@Tariff@Pass@Season@1M"/>
                                   <GeographicalIntervalRef version="01" ref="tfc:TFC@Tariff@General@geographic_intervals@d_121+140"/>
@@ -7753,9 +7764,9 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
                                   <SalesOfferPackageRef version="01" ref="tfc:TFC@Discount@Statutory_Right+Travel-SOP"/>
                                   <LimitationGroupingType>AND</LimitationGroupingType>
                                   <limitations modificationSet="all">
-                                    <UsageValidityPeriodRef version="any" ref="tfc:TFC@Discount@Statutory_Right+Travel@validity@use_within_1Y"/>
-                                    <CompanionProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@veteran@companion@personal_assistant"/>
                                     <UserProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@veteran"/>
+                                    <CompanionProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@veteran@companion@personal_assistant"/>
+                                    <UsageValidityPeriodRef version="any" ref="tfc:TFC@Discount@Statutory_Right+Travel@validity@use_within_1Y"/>
                                   </limitations>
                                   <validityParameters modificationSet="all">
                                     <DistributionChannelRef version="01" ref="eura:at_counter"/>
@@ -7781,10 +7792,10 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
                                   <DistanceMatrixElementRef version="01" ref="tfc:dme_10108+50342">Bucharest to Buzau</DistanceMatrixElementRef>
                                   <SalesOfferPackageRef version="01" ref="tfc:TFC@Trip_return-SOP"/>
                                   <limitations modificationSet="all">
-                                    <InterchangingRef version="any" ref="tfc:TFC@Tariff@Trip@frequency@single"/>
-                                    <FrequencyOfUseRef version="any" ref="tfc:TFC@Tariff@Trip@frequency@single"/>
-                                    <CompanionProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@veteran@companion@personal_assistant"/>
                                     <UserProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@veteran"/>
+                                    <CompanionProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@veteran@companion@personal_assistant"/>
+                                    <FrequencyOfUseRef version="any" ref="tfc:TFC@Tariff@Trip@frequency@single"/>
+                                    <InterchangingRef version="any" ref="tfc:TFC@Tariff@Trip@frequency@single"/>
                                   </limitations>
                                   <validityParameters modificationSet="all">
                                     <ClassOfUseRef version="any" ref="eura:first"/>
@@ -7794,9 +7805,9 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
                                     <ChargingMomentRef version="any" ref="eura:prepaid"/>
                                     <TypeOfFareProductRef version="any" ref="eura:interregional"/>
                                     <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
+                                    <TypeOfFareProductRef version="any" ref="eura:product_type@return_trip"/>
                                     <DistributionChannelRef version="01" ref="eura:at_counter"/>
                                     <TypeOfPaymentMethodRef version="01" ref="tfc:vodka_bottles" versionRef="EXTERNAL"/>
-                                    <TypeOfFareProductRef version="any" ref="eura:product_type@return_trip"/>
                                   </validityParameters>
                                 </SpecificParameterAssignment>
                                 <SpecificParameterAssignment id="Customer55678@contract0012@trans005@access@#2@product_purchase@trip@return@Bucharest+Buzau@out@seat_reservation@veteran" modification="new" version="any" status="active" order="2">
@@ -7862,10 +7873,10 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
                                   <DistanceMatrixElementRef version="01" ref="tfc:dme_50342+10108">Buzau to Bucharest</DistanceMatrixElementRef>
                                   <SalesOfferPackageRef version="01" ref="tfc:TFC@Trip_return-SOP"/>
                                   <limitations modificationSet="all">
-                                    <InterchangingRef version="any" ref="tfc:TFC@Tariff@Trip@frequency@single"/>
-                                    <FrequencyOfUseRef version="any" ref="tfc:TFC@Tariff@Trip@frequency@single"/>
-                                    <CompanionProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@veteran@companion@personal_assistant"/>
                                     <UserProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@veteran"/>
+                                    <CompanionProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@veteran@companion@personal_assistant"/>
+                                    <FrequencyOfUseRef version="any" ref="tfc:TFC@Tariff@Trip@frequency@single"/>
+                                    <InterchangingRef version="any" ref="tfc:TFC@Tariff@Trip@frequency@single"/>
                                   </limitations>
                                   <validityParameters modificationSet="all">
                                     <ClassOfUseRef version="any" ref="eura:first"/>
@@ -7876,10 +7887,10 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
                                     <ChargingMomentRef version="any" ref="eura:prepaid"/>
                                     <TypeOfFareProductRef version="any" ref="eura:product_type@return_trip"/>
                                     <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
+                                    <TypeOfFareProductRef version="any" ref="eura:standard_product@single_toc"/>
                                     <DistributionChannelRef version="01" ref="tfc:TFC@Common@self_service_ticket_machine"/>
                                     <FulfilmentMethodRef version="01" ref="eura:collect_at_counter"/>
                                     <TypeOfPaymentMethodRef version="01" ref="tfc:vodka_bottles" versionRef="EXTERNAL"/>
-                                    <TypeOfFareProductRef version="any" ref="eura:standard_product@single_toc"/>
                                   </validityParameters>
                                 </SpecificParameterAssignment>
                                 <SpecificParameterAssignment id="Customer55678@contract0012@trans005@discount@product_purchase@trip@return@back@Buzau+Bucharest@seat_reservation@veteran" modification="new" version="any" status="active" order="2">
@@ -8221,6 +8232,9 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
             </ResponsibilitySet>
           </responsibilitySets>
           <typesOfValue modificationSet="all">
+            <TypeOfFrame id="eura:Fare" modification="new" version="any" status="active" nameOfClassifiedEntityClass="VersionFrame">
+              <Name>Fares Frame</Name>
+            </TypeOfFrame>
             <ValueSet id="eura:Type_of_ProductCategory" modification="new" version="any" status="active" classOfValues="TypeOfProductCategory">
               <Name>Types of Product Category</Name>
               <values>
@@ -8466,9 +8480,6 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
                 </TypeOfAccessRightAssignment>
               </values>
             </ValueSet>
-            <TypeOfFrame id="eura:Fare" modification="new" version="any" status="active" nameOfClassifiedEntityClass="VersionFrame">
-              <Name>Fares Frame</Name>
-            </TypeOfFrame>
           </typesOfValue>
           <organisations modificationSet="all">
             <Operator id="uic:1170" modification="new" version="any" status="active">

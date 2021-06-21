@@ -11,7 +11,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class JourneyPatternLayoverStructure(JourneyLayoverStructure):
-    choice: List[object] = field(
+    choice_1: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -37,6 +37,6 @@ class JourneyPatternLayoverStructure(JourneyLayoverStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 7,
+            "max_occurs": 6,
         }
     )

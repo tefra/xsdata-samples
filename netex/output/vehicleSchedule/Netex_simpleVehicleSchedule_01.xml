@@ -639,13 +639,13 @@
                 </JourneyPatternRunTime>
               </runTimes>
               <pointsInSequence>
-                <StopPointInJourneyPattern id="kx:pijp_drjp_L24_01o_002" modification="new" version="any" status="active" order="2">
-                  <ScheduledStopPointRef version="any" ref="mybus:ssp_001"/>
-                </StopPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="kx:pijp_drjp_L24_01o_001" modification="new" version="any" status="active" order="1">
                   <GaragePointRef version="any" ref="mybus:grgpt1"/>
                   <OnwardTimingLinkRef version="any" ref="kx:tl_grg1_to_ssp_001"/>
                 </TimingPointInJourneyPattern>
+                <StopPointInJourneyPattern id="kx:pijp_drjp_L24_01o_002" modification="new" version="any" status="active" order="2">
+                  <ScheduledStopPointRef version="any" ref="mybus:ssp_001"/>
+                </StopPointInJourneyPattern>
               </pointsInSequence>
             </DeadRunJourneyPattern>
             <DeadRunJourneyPattern id="kx:drjp_L24_02o" modification="new" version="any" status="active">
@@ -683,13 +683,13 @@
                 </JourneyPatternRunTime>
               </runTimes>
               <pointsInSequence>
-                <StopPointInJourneyPattern id="kx:pijp_drjp_L24_03i_002" modification="new" version="any" status="active" order="2">
-                  <ScheduledStopPointRef version="any" ref="mybus:ssp_077"/>
-                </StopPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="kx:pijp_drjp_L24_03i_001" modification="new" version="any" status="active" order="1">
                   <ParkingPointRef version="any" ref="mybus:pkgpt1"/>
                   <OnwardTimingLinkRef version="any" ref="kx:tl_pkg1_to_ssp_077"/>
                 </TimingPointInJourneyPattern>
+                <StopPointInJourneyPattern id="kx:pijp_drjp_L24_03i_002" modification="new" version="any" status="active" order="2">
+                  <ScheduledStopPointRef version="any" ref="mybus:ssp_077"/>
+                </StopPointInJourneyPattern>
               </pointsInSequence>
             </DeadRunJourneyPattern>
             <DeadRunJourneyPattern id="kx:drjp_L24_04i" modification="new" version="any" status="active">
@@ -752,6 +752,36 @@
           <Name>Winter timetable for route 12  </Name>
           <VehicleModes>bus</VehicleModes>
           <vehicleJourneys modificationSet="all">
+            <DeadRun id="xj:DeadRun:dr_L24_01o" modification="new" version="any" status="active">
+              <Name>1st Dead Run out from Garage in Day  service</Name>
+              <DepartureTime>11:00:00Z</DepartureTime>
+              <dayTypes modificationSet="all">
+                <DayTypeRef version="any" ref="xj:DT_01"/>
+              </dayTypes>
+              <RouteRef version="any" ref="kx:rt_24o"/>
+              <DeadRunJourneyPatternRef version="any" ref="kx:drjp_L24_01o"/>
+              <TimeDemandTypeRef version="any" ref="kx:tdt_45_Day"/>
+              <BlockRef version="any" ref="ops:blk_L24_01"/>
+              <passingTimes>
+                <TimetabledPassingTime id="kx:tpt_dr_L24_01o_001" modification="new" status="active">
+                  <TimingPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_01o_001"/>
+                  <DepartureTime>11:00:00Z</DepartureTime>
+                </TimetabledPassingTime>
+                <TimetabledPassingTime id="kx:tpt_dr_L24_01o_002" modification="new" status="active">
+                  <StopPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_01o_002"/>
+                  <ArrivalTime>11:10:00Z</ArrivalTime>
+                  <WaitingTime>PT5M</WaitingTime>
+                </TimetabledPassingTime>
+              </passingTimes>
+              <DirectionType>outbound</DirectionType>
+              <Origin>
+                <PointRef version="any" ref="mybus:grgpt1"/>
+              </Origin>
+              <Destination>
+                <PointRef version="any" ref="mybus:ssp_001"/>
+              </Destination>
+              <DeadRunType>garageRunOut</DeadRunType>
+            </DeadRun>
             <ServiceJourney id="xj:vj_L24_01o" modification="new" version="any" status="active">
               <DepartureTime>11:10:00Z</DepartureTime>
               <dayTypes modificationSet="all">
@@ -897,6 +927,64 @@
                 </Call>
               </calls>
             </ServiceJourney>
+            <DeadRun id="xj:DeadRun:dr_L24_03o" modification="new" version="any" status="active">
+              <Name>Drive to Parking for first wait  service</Name>
+              <DepartureTime>12:50:00Z</DepartureTime>
+              <dayTypes modificationSet="all">
+                <DayTypeRef version="any" ref="xj:DT_01"/>
+              </dayTypes>
+              <RouteRef version="any" ref="kx:rt_24o"/>
+              <DeadRunJourneyPatternRef version="any" ref="kx:drjp_L24_02o"/>
+              <TimeDemandTypeRef version="any" ref="kx:tdt_45_Day"/>
+              <BlockRef version="any" ref="ops:blk_L24_01"/>
+              <passingTimes>
+                <TimetabledPassingTime id="kx:tpt_dr_L24_03o_001" modification="new" status="active">
+                  <StopPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_02o_001"/>
+                  <DepartureTime>12:50:00Z</DepartureTime>
+                </TimetabledPassingTime>
+                <TimetabledPassingTime id="kx:tpt_dr_L24_03o_002" modification="new" status="active">
+                  <TimingPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_02o_002"/>
+                  <ArrivalTime>12:55:00Z</ArrivalTime>
+                </TimetabledPassingTime>
+              </passingTimes>
+              <DirectionType>outbound</DirectionType>
+              <Origin>
+                <PointRef version="any" ref="mybus:ssp_077"/>
+              </Origin>
+              <Destination>
+                <PointRef version="any" ref="mybus:pkgpt1"/>
+              </Destination>
+              <DeadRunType>other</DeadRunType>
+            </DeadRun>
+            <DeadRun id="xj:DeadRun:dr_L24_04i" modification="new" version="any" status="active">
+              <Name>Return from Parking after first wait  service</Name>
+              <DepartureTime>11:00:00Z</DepartureTime>
+              <dayTypes modificationSet="all">
+                <DayTypeRef version="any" ref="xj:DT_01"/>
+              </dayTypes>
+              <RouteRef version="any" ref="kx:rt_24i"/>
+              <DeadRunJourneyPatternRef version="any" ref="kx:drjp_L24_03i"/>
+              <TimeDemandTypeRef version="any" ref="kx:tdt_45_Day"/>
+              <BlockRef version="any" ref="ops:blk_L24_02"/>
+              <passingTimes>
+                <TimetabledPassingTime id="kx:tpt_dr_L24_04i_001" modification="new" status="active">
+                  <TimingPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_03i_001"/>
+                  <DepartureTime>13:00:00Z</DepartureTime>
+                </TimetabledPassingTime>
+                <TimetabledPassingTime id="kx:tpt_dr_L24_04i_002" modification="new" status="active">
+                  <StopPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_03i_002"/>
+                  <ArrivalTime>13:05:00Z</ArrivalTime>
+                </TimetabledPassingTime>
+              </passingTimes>
+              <DirectionType>inbound</DirectionType>
+              <Origin>
+                <PointRef version="any" ref="mybus:pkgpt1"/>
+              </Origin>
+              <Destination>
+                <PointRef version="any" ref="mybus:ssp_077"/>
+              </Destination>
+              <DeadRunType>other</DeadRunType>
+            </DeadRun>
             <ServiceJourney id="xj:vj_L24_04i" modification="new" version="any" status="active">
               <DepartureTime>13:10:00Z</DepartureTime>
               <dayTypes modificationSet="all">
@@ -1089,6 +1177,64 @@
                 </Call>
               </calls>
             </ServiceJourney>
+            <DeadRun id="xj:DeadRun:dr_L24_07o" modification="new" version="any" status="active">
+              <Name>Drive to Parking for 2nd  wait  with Relief</Name>
+              <DepartureTime>16:25:00Z</DepartureTime>
+              <dayTypes modificationSet="all">
+                <DayTypeRef version="any" ref="xj:DT_01"/>
+              </dayTypes>
+              <RouteRef version="any" ref="kx:rt_24o"/>
+              <DeadRunJourneyPatternRef version="any" ref="kx:drjp_L24_02o"/>
+              <TimeDemandTypeRef version="any" ref="kx:tdt_45_Day"/>
+              <BlockRef version="any" ref="ops:blk_L24_02"/>
+              <passingTimes>
+                <TimetabledPassingTime id="kx:tpt_dr_L24_07o_001" modification="new" status="active">
+                  <StopPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_02o_001"/>
+                  <DepartureTime>16:25:00Z</DepartureTime>
+                </TimetabledPassingTime>
+                <TimetabledPassingTime id="kx:tpt_dr_L24_07o_002" modification="new" status="active">
+                  <TimingPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_02o_002"/>
+                  <ArrivalTime>16:30:00Z</ArrivalTime>
+                </TimetabledPassingTime>
+              </passingTimes>
+              <DirectionType>outbound</DirectionType>
+              <Origin>
+                <PointRef version="any" ref="mybus:ssp_077"/>
+              </Origin>
+              <Destination>
+                <PointRef version="any" ref="mybus:pkgpt1"/>
+              </Destination>
+              <DeadRunType>other</DeadRunType>
+            </DeadRun>
+            <DeadRun id="xj:DeadRun:dr_L24_08i" modification="new" version="any" status="active">
+              <Name>Return from Parking after 2nd  wait  with Relief</Name>
+              <DepartureTime>16:50:00Z</DepartureTime>
+              <dayTypes modificationSet="all">
+                <DayTypeRef version="any" ref="xj:DT_01"/>
+              </dayTypes>
+              <RouteRef version="any" ref="kx:rt_24i"/>
+              <DeadRunJourneyPatternRef version="any" ref="kx:drjp_L24_03i"/>
+              <TimeDemandTypeRef version="any" ref="kx:tdt_45_Day"/>
+              <BlockRef version="any" ref="ops:blk_L24_03"/>
+              <passingTimes>
+                <TimetabledPassingTime id="kx:tpt_dr_L24_08i_001" modification="new" status="active">
+                  <TimingPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_03i_001"/>
+                  <DepartureTime>16:50:00Z</DepartureTime>
+                </TimetabledPassingTime>
+                <TimetabledPassingTime id="kx:tpt_dr_L24_08i_002" modification="new" status="active">
+                  <StopPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_03i_002"/>
+                  <ArrivalTime>16:55:00Z</ArrivalTime>
+                </TimetabledPassingTime>
+              </passingTimes>
+              <DirectionType>inbound</DirectionType>
+              <Origin>
+                <PointRef version="any" ref="mybus:pkgpt1"/>
+              </Origin>
+              <Destination>
+                <PointRef version="any" ref="mybus:ssp_077"/>
+              </Destination>
+              <DeadRunType>other</DeadRunType>
+            </DeadRun>
             <ServiceJourney id="xj:vj_L24_08i" modification="new" version="any" status="active">
               <DepartureTime>16:55:00Z</DepartureTime>
               <dayTypes modificationSet="all">
@@ -1235,6 +1381,64 @@
                 </Call>
               </calls>
             </ServiceJourney>
+            <DeadRun id="xj:DeadRun:dr_L24_10i" modification="new" version="any" status="active">
+              <Name>Return to Garage after Day Service</Name>
+              <DepartureTime>11:00:00Z</DepartureTime>
+              <dayTypes modificationSet="all">
+                <DayTypeRef version="any" ref="xj:DT_01"/>
+              </dayTypes>
+              <RouteRef version="any" ref="kx:rt_24i"/>
+              <DeadRunJourneyPatternRef version="any" ref="kx:drjp_L24_04i"/>
+              <TimeDemandTypeRef version="any" ref="kx:tdt_45_Day"/>
+              <BlockRef version="any" ref="ops:blk_L24_03"/>
+              <passingTimes>
+                <TimetabledPassingTime id="kx:tpt_dr_L24_10i_001" modification="new" status="active">
+                  <StopPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_04i_001"/>
+                  <DepartureTime>16:35:00Z</DepartureTime>
+                </TimetabledPassingTime>
+                <TimetabledPassingTime id="kx:tpt_dr_L24_10i_002" modification="new" status="active">
+                  <TimingPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_04i_002"/>
+                  <ArrivalTime>16:45:00Z</ArrivalTime>
+                </TimetabledPassingTime>
+              </passingTimes>
+              <DirectionType>inbound</DirectionType>
+              <Origin>
+                <PointRef version="any" ref="mybus:ssp_001"/>
+              </Origin>
+              <Destination>
+                <PointRef version="any" ref="mybus:grgpt1"/>
+              </Destination>
+              <DeadRunType>garageRunIn</DeadRunType>
+            </DeadRun>
+            <DeadRun id="xj:DeadRun:dr_L24N_11o" modification="new" version="any" status="active">
+              <Name>1st Dead Run out from Garage to start Night   service</Name>
+              <DepartureTime>20:00:00Z</DepartureTime>
+              <dayTypes modificationSet="all">
+                <DayTypeRef version="any" ref="xj:DT_01"/>
+              </dayTypes>
+              <RouteRef version="any" ref="kx:rt_24o"/>
+              <DeadRunJourneyPatternRef version="any" ref="kx:drjp_L24_01o"/>
+              <TimeDemandTypeRef version="any" ref="kx:tdt_46_Night"/>
+              <BlockRef version="any" ref="ops:blk_L24N_04"/>
+              <passingTimes>
+                <TimetabledPassingTime id="kx:tpt_dr_L24N_11o_001" modification="new" status="active">
+                  <TimingPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_01o_001"/>
+                  <DepartureTime>16:25:00Z</DepartureTime>
+                </TimetabledPassingTime>
+                <TimetabledPassingTime id="kx:tpt_dr_L24N_11o_002" modification="new" status="active">
+                  <StopPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_01o_002"/>
+                  <ArrivalTime>16:30:00Z</ArrivalTime>
+                </TimetabledPassingTime>
+              </passingTimes>
+              <DirectionType>outbound</DirectionType>
+              <Origin>
+                <PointRef version="any" ref="mybus:grgpt1"/>
+              </Origin>
+              <Destination>
+                <PointRef version="any" ref="mybus:ssp_001"/>
+              </Destination>
+              <DeadRunType>other</DeadRunType>
+            </DeadRun>
             <ServiceJourney id="xj:vj_L24N_11o" modification="new" version="any" status="active">
               <DepartureTime>20:10:00Z</DepartureTime>
               <dayTypes modificationSet="all">
@@ -1332,210 +1536,6 @@
                 </Call>
               </calls>
             </ServiceJourney>
-            <DeadRun id="xj:DeadRun:dr_L24_01o" modification="new" version="any" status="active">
-              <Name>1st Dead Run out from Garage in Day  service</Name>
-              <DepartureTime>11:00:00Z</DepartureTime>
-              <dayTypes modificationSet="all">
-                <DayTypeRef version="any" ref="xj:DT_01"/>
-              </dayTypes>
-              <RouteRef version="any" ref="kx:rt_24o"/>
-              <DeadRunJourneyPatternRef version="any" ref="kx:drjp_L24_01o"/>
-              <TimeDemandTypeRef version="any" ref="kx:tdt_45_Day"/>
-              <BlockRef version="any" ref="ops:blk_L24_01"/>
-              <passingTimes>
-                <TimetabledPassingTime id="kx:tpt_dr_L24_01o_001" modification="new" status="active">
-                  <TimingPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_01o_001"/>
-                  <DepartureTime>11:00:00Z</DepartureTime>
-                </TimetabledPassingTime>
-                <TimetabledPassingTime id="kx:tpt_dr_L24_01o_002" modification="new" status="active">
-                  <StopPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_01o_002"/>
-                  <ArrivalTime>11:10:00Z</ArrivalTime>
-                  <WaitingTime>PT5M</WaitingTime>
-                </TimetabledPassingTime>
-              </passingTimes>
-              <DirectionType>outbound</DirectionType>
-              <Origin>
-                <PointRef version="any" ref="mybus:grgpt1"/>
-              </Origin>
-              <Destination>
-                <PointRef version="any" ref="mybus:ssp_001"/>
-              </Destination>
-              <DeadRunType>garageRunOut</DeadRunType>
-            </DeadRun>
-            <DeadRun id="xj:DeadRun:dr_L24_03o" modification="new" version="any" status="active">
-              <Name>Drive to Parking for first wait  service</Name>
-              <DepartureTime>12:50:00Z</DepartureTime>
-              <dayTypes modificationSet="all">
-                <DayTypeRef version="any" ref="xj:DT_01"/>
-              </dayTypes>
-              <RouteRef version="any" ref="kx:rt_24o"/>
-              <DeadRunJourneyPatternRef version="any" ref="kx:drjp_L24_02o"/>
-              <TimeDemandTypeRef version="any" ref="kx:tdt_45_Day"/>
-              <BlockRef version="any" ref="ops:blk_L24_01"/>
-              <passingTimes>
-                <TimetabledPassingTime id="kx:tpt_dr_L24_03o_001" modification="new" status="active">
-                  <StopPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_02o_001"/>
-                  <DepartureTime>12:50:00Z</DepartureTime>
-                </TimetabledPassingTime>
-                <TimetabledPassingTime id="kx:tpt_dr_L24_03o_002" modification="new" status="active">
-                  <TimingPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_02o_002"/>
-                  <ArrivalTime>12:55:00Z</ArrivalTime>
-                </TimetabledPassingTime>
-              </passingTimes>
-              <DirectionType>outbound</DirectionType>
-              <Origin>
-                <PointRef version="any" ref="mybus:ssp_077"/>
-              </Origin>
-              <Destination>
-                <PointRef version="any" ref="mybus:pkgpt1"/>
-              </Destination>
-              <DeadRunType>other</DeadRunType>
-            </DeadRun>
-            <DeadRun id="xj:DeadRun:dr_L24_04i" modification="new" version="any" status="active">
-              <Name>Return from Parking after first wait  service</Name>
-              <DepartureTime>11:00:00Z</DepartureTime>
-              <dayTypes modificationSet="all">
-                <DayTypeRef version="any" ref="xj:DT_01"/>
-              </dayTypes>
-              <RouteRef version="any" ref="kx:rt_24i"/>
-              <DeadRunJourneyPatternRef version="any" ref="kx:drjp_L24_03i"/>
-              <TimeDemandTypeRef version="any" ref="kx:tdt_45_Day"/>
-              <BlockRef version="any" ref="ops:blk_L24_02"/>
-              <passingTimes>
-                <TimetabledPassingTime id="kx:tpt_dr_L24_04i_001" modification="new" status="active">
-                  <TimingPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_03i_001"/>
-                  <DepartureTime>13:00:00Z</DepartureTime>
-                </TimetabledPassingTime>
-                <TimetabledPassingTime id="kx:tpt_dr_L24_04i_002" modification="new" status="active">
-                  <StopPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_03i_002"/>
-                  <ArrivalTime>13:05:00Z</ArrivalTime>
-                </TimetabledPassingTime>
-              </passingTimes>
-              <DirectionType>inbound</DirectionType>
-              <Origin>
-                <PointRef version="any" ref="mybus:pkgpt1"/>
-              </Origin>
-              <Destination>
-                <PointRef version="any" ref="mybus:ssp_077"/>
-              </Destination>
-              <DeadRunType>other</DeadRunType>
-            </DeadRun>
-            <DeadRun id="xj:DeadRun:dr_L24_07o" modification="new" version="any" status="active">
-              <Name>Drive to Parking for 2nd  wait  with Relief</Name>
-              <DepartureTime>16:25:00Z</DepartureTime>
-              <dayTypes modificationSet="all">
-                <DayTypeRef version="any" ref="xj:DT_01"/>
-              </dayTypes>
-              <RouteRef version="any" ref="kx:rt_24o"/>
-              <DeadRunJourneyPatternRef version="any" ref="kx:drjp_L24_02o"/>
-              <TimeDemandTypeRef version="any" ref="kx:tdt_45_Day"/>
-              <BlockRef version="any" ref="ops:blk_L24_02"/>
-              <passingTimes>
-                <TimetabledPassingTime id="kx:tpt_dr_L24_07o_001" modification="new" status="active">
-                  <StopPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_02o_001"/>
-                  <DepartureTime>16:25:00Z</DepartureTime>
-                </TimetabledPassingTime>
-                <TimetabledPassingTime id="kx:tpt_dr_L24_07o_002" modification="new" status="active">
-                  <TimingPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_02o_002"/>
-                  <ArrivalTime>16:30:00Z</ArrivalTime>
-                </TimetabledPassingTime>
-              </passingTimes>
-              <DirectionType>outbound</DirectionType>
-              <Origin>
-                <PointRef version="any" ref="mybus:ssp_077"/>
-              </Origin>
-              <Destination>
-                <PointRef version="any" ref="mybus:pkgpt1"/>
-              </Destination>
-              <DeadRunType>other</DeadRunType>
-            </DeadRun>
-            <DeadRun id="xj:DeadRun:dr_L24_08i" modification="new" version="any" status="active">
-              <Name>Return from Parking after 2nd  wait  with Relief</Name>
-              <DepartureTime>16:50:00Z</DepartureTime>
-              <dayTypes modificationSet="all">
-                <DayTypeRef version="any" ref="xj:DT_01"/>
-              </dayTypes>
-              <RouteRef version="any" ref="kx:rt_24i"/>
-              <DeadRunJourneyPatternRef version="any" ref="kx:drjp_L24_03i"/>
-              <TimeDemandTypeRef version="any" ref="kx:tdt_45_Day"/>
-              <BlockRef version="any" ref="ops:blk_L24_03"/>
-              <passingTimes>
-                <TimetabledPassingTime id="kx:tpt_dr_L24_08i_001" modification="new" status="active">
-                  <TimingPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_03i_001"/>
-                  <DepartureTime>16:50:00Z</DepartureTime>
-                </TimetabledPassingTime>
-                <TimetabledPassingTime id="kx:tpt_dr_L24_08i_002" modification="new" status="active">
-                  <StopPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_03i_002"/>
-                  <ArrivalTime>16:55:00Z</ArrivalTime>
-                </TimetabledPassingTime>
-              </passingTimes>
-              <DirectionType>inbound</DirectionType>
-              <Origin>
-                <PointRef version="any" ref="mybus:pkgpt1"/>
-              </Origin>
-              <Destination>
-                <PointRef version="any" ref="mybus:ssp_077"/>
-              </Destination>
-              <DeadRunType>other</DeadRunType>
-            </DeadRun>
-            <DeadRun id="xj:DeadRun:dr_L24_10i" modification="new" version="any" status="active">
-              <Name>Return to Garage after Day Service</Name>
-              <DepartureTime>11:00:00Z</DepartureTime>
-              <dayTypes modificationSet="all">
-                <DayTypeRef version="any" ref="xj:DT_01"/>
-              </dayTypes>
-              <RouteRef version="any" ref="kx:rt_24i"/>
-              <DeadRunJourneyPatternRef version="any" ref="kx:drjp_L24_04i"/>
-              <TimeDemandTypeRef version="any" ref="kx:tdt_45_Day"/>
-              <BlockRef version="any" ref="ops:blk_L24_03"/>
-              <passingTimes>
-                <TimetabledPassingTime id="kx:tpt_dr_L24_10i_001" modification="new" status="active">
-                  <StopPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_04i_001"/>
-                  <DepartureTime>16:35:00Z</DepartureTime>
-                </TimetabledPassingTime>
-                <TimetabledPassingTime id="kx:tpt_dr_L24_10i_002" modification="new" status="active">
-                  <TimingPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_04i_002"/>
-                  <ArrivalTime>16:45:00Z</ArrivalTime>
-                </TimetabledPassingTime>
-              </passingTimes>
-              <DirectionType>inbound</DirectionType>
-              <Origin>
-                <PointRef version="any" ref="mybus:ssp_001"/>
-              </Origin>
-              <Destination>
-                <PointRef version="any" ref="mybus:grgpt1"/>
-              </Destination>
-              <DeadRunType>garageRunIn</DeadRunType>
-            </DeadRun>
-            <DeadRun id="xj:DeadRun:dr_L24N_11o" modification="new" version="any" status="active">
-              <Name>1st Dead Run out from Garage to start Night   service</Name>
-              <DepartureTime>20:00:00Z</DepartureTime>
-              <dayTypes modificationSet="all">
-                <DayTypeRef version="any" ref="xj:DT_01"/>
-              </dayTypes>
-              <RouteRef version="any" ref="kx:rt_24o"/>
-              <DeadRunJourneyPatternRef version="any" ref="kx:drjp_L24_01o"/>
-              <TimeDemandTypeRef version="any" ref="kx:tdt_46_Night"/>
-              <BlockRef version="any" ref="ops:blk_L24N_04"/>
-              <passingTimes>
-                <TimetabledPassingTime id="kx:tpt_dr_L24N_11o_001" modification="new" status="active">
-                  <TimingPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_01o_001"/>
-                  <DepartureTime>16:25:00Z</DepartureTime>
-                </TimetabledPassingTime>
-                <TimetabledPassingTime id="kx:tpt_dr_L24N_11o_002" modification="new" status="active">
-                  <StopPointInJourneyPatternRef version="any" ref="kx:pijp_drjp_L24_01o_002"/>
-                  <ArrivalTime>16:30:00Z</ArrivalTime>
-                </TimetabledPassingTime>
-              </passingTimes>
-              <DirectionType>outbound</DirectionType>
-              <Origin>
-                <PointRef version="any" ref="mybus:grgpt1"/>
-              </Origin>
-              <Destination>
-                <PointRef version="any" ref="mybus:ssp_001"/>
-              </Destination>
-              <DeadRunType>other</DeadRunType>
-            </DeadRun>
             <DeadRun id="xj:DeadRun:dr_L24N_12i" modification="new" version="any" status="active">
               <Name>Last Dead Run back from Garage in Night  service</Name>
               <DepartureTime>21:15:00Z</DepartureTime>
@@ -1647,7 +1647,10 @@
                 <properties>
                   <PropertyOfDay>
                     <DaysOfWeek>Everyday</DaysOfWeek>
+                    <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                     <HolidayTypes>NotHoliday</HolidayTypes>
+                    <Seasons>Perennially</Seasons>
+                    <Tides>AllTides</Tides>
                   </PropertyOfDay>
                 </properties>
               </DayType>

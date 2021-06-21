@@ -339,6 +339,7 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
                     "name": "EquipmentRef",
                     "type": EquipmentRef,
                     "namespace": "http://www.netex.org.uk/netex",
+                    "required": True,
                 },
                 {
                     "name": "Description",
@@ -366,7 +367,7 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "min_occurs": 54,
-            "max_occurs": 163,
+            "min_occurs": 53,
+            "max_occurs": 157,
         }
     )

@@ -778,6 +778,10 @@
                 </JourneyPatternWaitTime>
               </waitTimes>
               <pointsInSequence>
+                <TimingPointInJourneyPattern id="ssp:PIP_JP001o_0001" modification="new" version="any" status="active" order="1">
+                  <TimingPointRef version="any" ref="tim:TP1"/>
+                  <IsWaitPoint>true</IsWaitPoint>
+                </TimingPointInJourneyPattern>
                 <StopPointInJourneyPattern id="ssp:PIP_JP001o_0002" modification="new" version="any" status="active" order="2">
                   <projections modificationSet="all">
                     <PointProjection id="tim:PIP_JP001o_0002" modification="new" version="any" status="active">
@@ -802,6 +806,10 @@
                   <ScheduledStopPointRef version="001" ref="ssp:SSP3"/>
                   <IsWaitPoint>true</IsWaitPoint>
                 </StopPointInJourneyPattern>
+                <TimingPointInJourneyPattern id="ssp:PIP_JP001o_0005" modification="new" version="any" status="active" order="5">
+                  <TimingPointRef version="any" ref="tim:TP3"/>
+                  <IsWaitPoint>true</IsWaitPoint>
+                </TimingPointInJourneyPattern>
                 <StopPointInJourneyPattern id="ssp:PIP_JP001o_0006" modification="new" version="any" status="active" order="6">
                   <ScheduledStopPointRef version="001" ref="ssp:SSP4"/>
                   <IsWaitPoint>true</IsWaitPoint>
@@ -810,10 +818,18 @@
                   <ScheduledStopPointRef version="001" ref="ssp:SSP5"/>
                   <IsWaitPoint>true</IsWaitPoint>
                 </StopPointInJourneyPattern>
+                <TimingPointInJourneyPattern id="ssp:PIP_JP001o_0008" modification="new" version="any" status="active" order="8">
+                  <TimingPointRef version="any" ref="tim:TP4"/>
+                  <IsWaitPoint>true</IsWaitPoint>
+                </TimingPointInJourneyPattern>
                 <StopPointInJourneyPattern id="ssp:PIP_JP001o_0009" modification="new" version="any" status="active" order="9">
                   <ScheduledStopPointRef version="001" ref="ssp:SSP6"/>
                   <IsWaitPoint>true</IsWaitPoint>
                 </StopPointInJourneyPattern>
+                <TimingPointInJourneyPattern id="ssp:PIP_JP001o_0010" modification="new" version="any" status="active" order="10">
+                  <TimingPointRef version="any" ref="tim:TP5"/>
+                  <IsWaitPoint>true</IsWaitPoint>
+                </TimingPointInJourneyPattern>
                 <StopPointInJourneyPattern id="ssp:PIP_JP001o_0011" modification="new" version="any" status="active" order="11">
                   <ScheduledStopPointRef version="001" ref="ssp:SSP7"/>
                   <IsWaitPoint>true</IsWaitPoint>
@@ -832,22 +848,6 @@
                   <ScheduledStopPointRef version="001" ref="ssp:SSP9"/>
                   <IsWaitPoint>true</IsWaitPoint>
                 </StopPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="ssp:PIP_JP001o_0001" modification="new" version="any" status="active" order="1">
-                  <TimingPointRef version="any" ref="tim:TP1"/>
-                  <IsWaitPoint>true</IsWaitPoint>
-                </TimingPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="ssp:PIP_JP001o_0005" modification="new" version="any" status="active" order="5">
-                  <TimingPointRef version="any" ref="tim:TP3"/>
-                  <IsWaitPoint>true</IsWaitPoint>
-                </TimingPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="ssp:PIP_JP001o_0008" modification="new" version="any" status="active" order="8">
-                  <TimingPointRef version="any" ref="tim:TP4"/>
-                  <IsWaitPoint>true</IsWaitPoint>
-                </TimingPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="ssp:PIP_JP001o_0010" modification="new" version="any" status="active" order="10">
-                  <TimingPointRef version="any" ref="tim:TP5"/>
-                  <IsWaitPoint>true</IsWaitPoint>
-                </TimingPointInJourneyPattern>
               </pointsInSequence>
             </ServiceJourneyPattern>
           </journeyPatterns>

@@ -162,6 +162,6 @@ class BlockVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 13,
+            "max_occurs": 6,
         }
     )

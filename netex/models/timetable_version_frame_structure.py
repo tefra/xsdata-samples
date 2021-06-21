@@ -257,6 +257,6 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 28,
+            "max_occurs": 6,
         }
     )

@@ -132,10 +132,9 @@ class InterchangeRuleFilterVersionedChildStructure(VersionedChildStructure):
                     "name": "TransportMode",
                     "type": AllVehicleModesOfTransportEnumeration,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": AllVehicleModesOfTransportEnumeration.ALL,
                 },
             ),
-            "max_occurs": 13,
+            "max_occurs": 3,
         }
     )
     order: Optional[int] = field(

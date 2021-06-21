@@ -16,7 +16,7 @@ class GeographicalStructureFactorVersionStructure(FareStructureFactorVersionStru
     class Meta:
         name = "GeographicalStructureFactor_VersionStructure"
 
-    choice: List[object] = field(
+    choice_1: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -57,6 +57,6 @@ class GeographicalStructureFactorVersionStructure(FareStructureFactorVersionStru
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 8,
+            "max_occurs": 2,
         }
     )

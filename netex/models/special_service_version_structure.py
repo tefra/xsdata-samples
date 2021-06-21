@@ -132,13 +132,11 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
                     "name": "Print",
                     "type": bool,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": True,
                 },
                 {
                     "name": "Dynamic",
                     "type": DynamicAdvertisementEnumeration,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": DynamicAdvertisementEnumeration.ALWAYS,
                 },
                 {
                     "name": "TypeOfFlexibleServiceRef",
@@ -210,6 +208,6 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 29,
+            "max_occurs": 10,
         }
     )

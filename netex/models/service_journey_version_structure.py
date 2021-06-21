@@ -273,13 +273,11 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
                     "name": "Print",
                     "type": bool,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": True,
                 },
                 {
                     "name": "Dynamic",
                     "type": DynamicAdvertisementEnumeration,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": DynamicAdvertisementEnumeration.ALWAYS,
                 },
                 {
                     "name": "waitTimes",
@@ -352,6 +350,6 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 64,
+            "max_occurs": 27,
         }
     )

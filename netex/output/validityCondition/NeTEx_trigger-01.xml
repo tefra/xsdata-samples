@@ -61,7 +61,10 @@
           <properties>
             <PropertyOfDay>
               <Name>Winter </Name>
+              <WeeksOfMonth>EveryWeek</WeeksOfMonth>
+              <HolidayTypes>AnyDay</HolidayTypes>
               <Seasons>Winter</Seasons>
+              <Tides>AllTides</Tides>
             </PropertyOfDay>
           </properties>
         </DayType>

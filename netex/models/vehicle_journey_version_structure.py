@@ -217,6 +217,6 @@ class VehicleJourneyVersionStructure(JourneyVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 49,
+            "max_occurs": 32,
         }
     )

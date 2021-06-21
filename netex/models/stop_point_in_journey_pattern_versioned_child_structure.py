@@ -26,7 +26,7 @@ class StopPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVersio
     class Meta:
         name = "StopPointInJourneyPattern_VersionedChildStructure"
 
-    choice: List[object] = field(
+    choice_1: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -40,6 +40,7 @@ class StopPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVersio
                     "name": "ScheduledStopPointRef",
                     "type": ScheduledStopPointRef,
                     "namespace": "http://www.netex.org.uk/netex",
+                    "required": True,
                 },
                 {
                     "name": "OnwardTimingLinkRef",
@@ -50,7 +51,6 @@ class StopPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVersio
                     "name": "IsWaitPoint",
                     "type": bool,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": False,
                 },
                 {
                     "name": "WaitTime",
@@ -76,13 +76,11 @@ class StopPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVersio
                     "name": "ForAlighting",
                     "type": bool,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": True,
                 },
                 {
                     "name": "ForBoarding",
                     "type": bool,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": True,
                 },
                 {
                     "name": "DestinationDisplayRef",
@@ -123,13 +121,11 @@ class StopPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVersio
                     "name": "RequestStop",
                     "type": bool,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": False,
                 },
                 {
                     "name": "RequestMethod",
                     "type": RequestMethodTypeEnumeration,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": RequestMethodTypeEnumeration.NONE_REQUIRED,
                 },
                 {
                     "name": "StopUse",
@@ -145,16 +141,14 @@ class StopPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVersio
                     "name": "Print",
                     "type": bool,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": True,
                 },
                 {
                     "name": "Dynamic",
                     "type": DynamicAdvertisementEnumeration,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": DynamicAdvertisementEnumeration.ALWAYS,
                 },
             ),
-            "min_occurs": 2,
-            "max_occurs": 25,
+            "min_occurs": 1,
+            "max_occurs": 3,
         }
     )

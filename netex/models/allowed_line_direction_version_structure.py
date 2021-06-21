@@ -33,6 +33,7 @@ class AllowedLineDirectionVersionStructure(DataManagedObjectStructure):
                     "name": "DirectionRef",
                     "type": DirectionRef,
                     "namespace": "http://www.netex.org.uk/netex",
+                    "required": True,
                 },
                 {
                     "name": "Presentation",
@@ -40,7 +41,6 @@ class AllowedLineDirectionVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "min_occurs": 1,
-            "max_occurs": 5,
+            "max_occurs": 2,
         }
     )

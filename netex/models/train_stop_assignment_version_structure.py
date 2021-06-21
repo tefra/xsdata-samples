@@ -69,6 +69,6 @@ class TrainStopAssignmentVersionStructure(StopAssignmentVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 11,
+            "max_occurs": 4,
         }
     )

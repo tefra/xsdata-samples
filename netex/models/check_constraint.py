@@ -1,5 +1,4 @@
-from dataclasses import dataclass, field
-from typing import Optional
+from dataclasses import dataclass
 from .check_constraint_version_structure import CheckConstraintVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -9,11 +8,3 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 class CheckConstraint(CheckConstraintVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
-
-    responsibility_set_ref: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "responsibilitySetRef",
-            "type": "Attribute",
-        }
-    )

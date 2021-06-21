@@ -197,7 +197,6 @@ class ParkingTariffVersionStructure(DataManagedObjectStructure):
                     "name": "AdditionalTax",
                     "type": bool,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": False,
                 },
                 {
                     "name": "parkingChargeBands",
@@ -220,6 +219,6 @@ class ParkingTariffVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 62,
+            "max_occurs": 45,
         }
     )

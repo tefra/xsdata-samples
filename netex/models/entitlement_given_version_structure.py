@@ -23,7 +23,7 @@ class EntitlementGivenVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "EntitlementGiven_VersionStructure"
 
-    choice: List[object] = field(
+    choice_1: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -77,6 +77,7 @@ class EntitlementGivenVersionStructure(UsageParameterVersionStructure):
                     "name": "ServiceAccessRightRef",
                     "type": ServiceAccessRightRef,
                     "namespace": "http://www.netex.org.uk/netex",
+                    "required": True,
                 },
                 {
                     "name": "MinimumQualificationPeriod",
@@ -94,7 +95,7 @@ class EntitlementGivenVersionStructure(UsageParameterVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "min_occurs": 10,
-            "max_occurs": 60,
+            "min_occurs": 9,
+            "max_occurs": 56,
         }
     )

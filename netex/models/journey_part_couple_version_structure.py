@@ -113,7 +113,7 @@ class JourneyPartCoupleVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 5,
+            "max_occurs": 2,
         }
     )
     order: Optional[int] = field(

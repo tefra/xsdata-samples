@@ -138,6 +138,7 @@ class StandardFareTableVersionStructure(GroupOfEntitiesVersionStructure):
                     "name": "SecondClassSingle",
                     "type": Decimal,
                     "namespace": "http://www.netex.org.uk/netex",
+                    "required": True,
                 },
                 {
                     "name": "FirstClassReturn",
@@ -150,7 +151,6 @@ class StandardFareTableVersionStructure(GroupOfEntitiesVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "min_occurs": 1,
-            "max_occurs": 50,
+            "max_occurs": 45,
         }
     )

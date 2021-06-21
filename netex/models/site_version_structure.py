@@ -183,6 +183,6 @@ class SiteVersionStructure(SiteElementVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 34,
+            "max_occurs": 24,
         }
     )

@@ -52,6 +52,6 @@ class NetworkVersionStructure(GroupOfLinesVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 8,
+            "max_occurs": 4,
         }
     )

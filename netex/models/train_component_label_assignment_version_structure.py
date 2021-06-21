@@ -41,9 +41,9 @@ class TrainComponentLabelAssignmentVersionStructure(AssignmentVersionStructure1)
                     "name": "TrainComponentRef",
                     "type": TrainComponentRef,
                     "namespace": "http://www.netex.org.uk/netex",
+                    "required": True,
                 },
             ),
-            "min_occurs": 1,
-            "max_occurs": 4,
+            "max_occurs": 2,
         }
     )

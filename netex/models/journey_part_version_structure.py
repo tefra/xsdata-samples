@@ -92,29 +92,28 @@ class JourneyPartVersionStructure(DataManagedObjectStructure):
                     "name": "StartTime",
                     "type": XmlTime,
                     "namespace": "http://www.netex.org.uk/netex",
+                    "required": True,
                 },
                 {
                     "name": "StartTimeDayOffset",
                     "type": int,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": 0,
                 },
                 {
                     "name": "EndTime",
                     "type": XmlTime,
                     "namespace": "http://www.netex.org.uk/netex",
+                    "required": True,
                 },
                 {
                     "name": "EndTimeDayOffset",
                     "type": int,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": 0,
                 },
                 {
                     "name": "VehicleOrientation",
                     "type": bool,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": True,
                 },
                 {
                     "name": "PurposeOfJourneyPartitionRef",
@@ -132,8 +131,7 @@ class JourneyPartVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "min_occurs": 2,
-            "max_occurs": 14,
+            "max_occurs": 3,
         }
     )
     order: Optional[int] = field(

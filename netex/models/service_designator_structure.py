@@ -123,6 +123,6 @@ class ServiceDesignatorStructure:
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 17,
+            "max_occurs": 12,
         }
     )

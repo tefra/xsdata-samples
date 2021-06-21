@@ -31,6 +31,10 @@
           <properties>
             <PropertyOfDay>
               <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+              <WeeksOfMonth>EveryWeek</WeeksOfMonth>
+              <HolidayTypes>AnyDay</HolidayTypes>
+              <Seasons>Perennially</Seasons>
+              <Tides>AllTides</Tides>
             </PropertyOfDay>
           </properties>
         </DayType>
@@ -39,6 +43,10 @@
           <properties>
             <PropertyOfDay>
               <DaysOfWeek>Saturday Sunday</DaysOfWeek>
+              <WeeksOfMonth>EveryWeek</WeeksOfMonth>
+              <HolidayTypes>AnyDay</HolidayTypes>
+              <Seasons>Perennially</Seasons>
+              <Tides>AllTides</Tides>
             </PropertyOfDay>
           </properties>
         </DayType>
@@ -47,6 +55,10 @@
           <properties>
             <PropertyOfDay>
               <DaysOfWeek>Monday Tuesday Wednesday Thursday</DaysOfWeek>
+              <WeeksOfMonth>EveryWeek</WeeksOfMonth>
+              <HolidayTypes>AnyDay</HolidayTypes>
+              <Seasons>Perennially</Seasons>
+              <Tides>AllTides</Tides>
             </PropertyOfDay>
           </properties>
         </DayType>
@@ -55,6 +67,10 @@
           <properties>
             <PropertyOfDay>
               <DaysOfWeek>Friday</DaysOfWeek>
+              <WeeksOfMonth>EveryWeek</WeeksOfMonth>
+              <HolidayTypes>AnyDay</HolidayTypes>
+              <Seasons>Perennially</Seasons>
+              <Tides>AllTides</Tides>
             </PropertyOfDay>
           </properties>
         </DayType>
@@ -63,6 +79,10 @@
           <properties>
             <PropertyOfDay>
               <DaysOfWeek>Saturday</DaysOfWeek>
+              <WeeksOfMonth>EveryWeek</WeeksOfMonth>
+              <HolidayTypes>AnyDay</HolidayTypes>
+              <Seasons>Perennially</Seasons>
+              <Tides>AllTides</Tides>
             </PropertyOfDay>
           </properties>
         </DayType>
@@ -71,6 +91,10 @@
           <properties>
             <PropertyOfDay>
               <DaysOfWeek>Sunday</DaysOfWeek>
+              <WeeksOfMonth>EveryWeek</WeeksOfMonth>
+              <HolidayTypes>AnyDay</HolidayTypes>
+              <Seasons>Perennially</Seasons>
+              <Tides>AllTides</Tides>
             </PropertyOfDay>
           </properties>
         </DayType>
@@ -79,6 +103,10 @@
           <properties>
             <PropertyOfDay>
               <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday Saturday</DaysOfWeek>
+              <WeeksOfMonth>EveryWeek</WeeksOfMonth>
+              <HolidayTypes>AnyDay</HolidayTypes>
+              <Seasons>Perennially</Seasons>
+              <Tides>AllTides</Tides>
             </PropertyOfDay>
           </properties>
         </DayType>
@@ -87,6 +115,10 @@
           <properties>
             <PropertyOfDay>
               <DaysOfWeek>Sunday</DaysOfWeek>
+              <WeeksOfMonth>EveryWeek</WeeksOfMonth>
+              <HolidayTypes>AnyDay</HolidayTypes>
+              <Seasons>Perennially</Seasons>
+              <Tides>AllTides</Tides>
             </PropertyOfDay>
           </properties>
         </DayType>
@@ -95,6 +127,10 @@
           <properties>
             <PropertyOfDay>
               <DaysOfWeek>Monday Tuesday</DaysOfWeek>
+              <WeeksOfMonth>EveryWeek</WeeksOfMonth>
+              <HolidayTypes>AnyDay</HolidayTypes>
+              <Seasons>Perennially</Seasons>
+              <Tides>AllTides</Tides>
             </PropertyOfDay>
           </properties>
         </DayType>
@@ -103,6 +139,10 @@
           <properties>
             <PropertyOfDay>
               <DaysOfWeek>Wednesday Thursday</DaysOfWeek>
+              <WeeksOfMonth>EveryWeek</WeeksOfMonth>
+              <HolidayTypes>AnyDay</HolidayTypes>
+              <Seasons>Perennially</Seasons>
+              <Tides>AllTides</Tides>
             </PropertyOfDay>
           </properties>
         </DayType>
@@ -111,6 +151,10 @@
           <properties>
             <PropertyOfDay>
               <DaysOfWeek>Friday</DaysOfWeek>
+              <WeeksOfMonth>EveryWeek</WeeksOfMonth>
+              <HolidayTypes>AnyDay</HolidayTypes>
+              <Seasons>Perennially</Seasons>
+              <Tides>AllTides</Tides>
             </PropertyOfDay>
           </properties>
         </DayType>

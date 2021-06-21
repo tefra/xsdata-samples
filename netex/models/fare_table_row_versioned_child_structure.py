@@ -63,7 +63,7 @@ class FareTableRowVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 6,
+            "max_occurs": 2,
         }
     )
     order: Optional[int] = field(

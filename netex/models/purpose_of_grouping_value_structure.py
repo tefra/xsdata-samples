@@ -252,6 +252,6 @@ class PurposeOfGroupingValueStructure(TypeOfValueVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 75,
+            "max_occurs": 74,
         }
     )

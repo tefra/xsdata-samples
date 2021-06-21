@@ -50,27 +50,6 @@
         <VehicleScheduleFrame id="ops:VSF_23_O" modification="new" version="any" status="active">
           <Name>BLOCKS Winter timetable for Asmterdam Example</Name>
           <blocks modificationSet="all">
-            <CompoundBlock id="bbd:XX-447_amsterdam-hannover" modification="new" version="any" status="active">
-              <Description>Amsterdam to Hannover</Description>
-              <CompoundTrainRef version="any" ref="bbd:ctrn_XX-447"/>
-              <parts modificationSet="all">
-                <TrainBlockPartRef version="any" ref="ops:blkpt_447_01_amsterdam-hannover"/>
-              </parts>
-            </CompoundBlock>
-            <CompoundBlock id="bbd:YY-447_hannover-berlin" modification="new" version="any" status="active">
-              <Description>Hannover to Berlin</Description>
-              <CompoundTrainRef version="any" ref="bbd:ctrn_YY-447"/>
-              <parts modificationSet="all">
-                <TrainBlockPartRef version="any" ref="ops:blkpt_447_02_hannover-berlin"/>
-              </parts>
-            </CompoundBlock>
-            <CompoundBlock id="bbd:cmpblk_ZZ-457_berlin-prague" modification="new" version="any" status="active">
-              <Description>Berlin to Prague</Description>
-              <CompoundTrainRef version="any" ref="bbd:ctrn_ZZ-457"/>
-              <parts modificationSet="all">
-                <TrainBlockPartRef version="any" ref="ops:blkpt_457_03_berlin-prague"/>
-              </parts>
-            </CompoundBlock>
             <TrainBlock id="ops:blk_447_amsterdam-warsaw" modification="new" version="any" status="active">
               <Description>Amsterdam - Hannover - Berrlin  Warsaw</Description>
               <PreparationDuration>PT10M</PreparationDuration>
@@ -132,6 +111,27 @@
                 </TrainBlockPart>
               </blockParts>
             </TrainBlock>
+            <CompoundBlock id="bbd:XX-447_amsterdam-hannover" modification="new" version="any" status="active">
+              <Description>Amsterdam to Hannover</Description>
+              <CompoundTrainRef version="any" ref="bbd:ctrn_XX-447"/>
+              <parts modificationSet="all">
+                <TrainBlockPartRef version="any" ref="ops:blkpt_447_01_amsterdam-hannover"/>
+              </parts>
+            </CompoundBlock>
+            <CompoundBlock id="bbd:YY-447_hannover-berlin" modification="new" version="any" status="active">
+              <Description>Hannover to Berlin</Description>
+              <CompoundTrainRef version="any" ref="bbd:ctrn_YY-447"/>
+              <parts modificationSet="all">
+                <TrainBlockPartRef version="any" ref="ops:blkpt_447_02_hannover-berlin"/>
+              </parts>
+            </CompoundBlock>
+            <CompoundBlock id="bbd:cmpblk_ZZ-457_berlin-prague" modification="new" version="any" status="active">
+              <Description>Berlin to Prague</Description>
+              <CompoundTrainRef version="any" ref="bbd:ctrn_ZZ-457"/>
+              <parts modificationSet="all">
+                <TrainBlockPartRef version="any" ref="ops:blkpt_457_03_berlin-prague"/>
+              </parts>
+            </CompoundBlock>
           </blocks>
         </VehicleScheduleFrame>
         <ServiceFrame id="myrail:svf_12" modification="new" version="any" status="active">
@@ -1593,7 +1593,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <HolidayTypes>NotHoliday</HolidayTypes>
+                  <Seasons>Perennially</Seasons>
+                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -1602,7 +1605,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Saturday Sunday</DaysOfWeek>
+                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <HolidayTypes>NotHoliday</HolidayTypes>
+                  <Seasons>Perennially</Seasons>
+                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>

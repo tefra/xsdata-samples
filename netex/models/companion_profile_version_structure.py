@@ -23,7 +23,7 @@ class CompanionProfileVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
+    choice_1: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -42,7 +42,6 @@ class CompanionProfileVersionStructure(UsageParameterVersionStructure):
                     "name": "CompanionRelationshipType",
                     "type": CompanionRelationshipEnumeration,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": CompanionRelationshipEnumeration.ANYONE,
                 },
                 {
                     "name": "MinimumNumberOfPersons",
@@ -60,6 +59,6 @@ class CompanionProfileVersionStructure(UsageParameterVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 7,
+            "max_occurs": 2,
         }
     )

@@ -81,7 +81,7 @@ class BlockPartVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 11,
+            "max_occurs": 6,
         }
     )
     order: Optional[int] = field(

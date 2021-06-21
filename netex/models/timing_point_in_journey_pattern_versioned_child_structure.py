@@ -22,7 +22,7 @@ class TimingPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVers
     class Meta:
         name = "TimingPointInJourneyPattern_VersionedChildStructure"
 
-    choice: List[object] = field(
+    choice_1: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -61,6 +61,7 @@ class TimingPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVers
                     "name": "TimingPointRef",
                     "type": TimingPointRef,
                     "namespace": "http://www.netex.org.uk/netex",
+                    "required": True,
                 },
                 {
                     "name": "OnwardTimingLinkRef",
@@ -71,7 +72,6 @@ class TimingPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVers
                     "name": "IsWaitPoint",
                     "type": bool,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default": False,
                 },
                 {
                     "name": "WaitTime",
@@ -94,7 +94,7 @@ class TimingPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVers
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "min_occurs": 7,
-            "max_occurs": 23,
+            "min_occurs": 6,
+            "max_occurs": 16,
         }
     )

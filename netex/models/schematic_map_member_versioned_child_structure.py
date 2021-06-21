@@ -2955,6 +2955,6 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 1602,
+            "max_occurs": 1595,
         }
     )
