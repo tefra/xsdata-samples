@@ -13,27 +13,26 @@ class SpecialServicesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "specialServices_RelStructure"
 
-    dated_special_service_ref: List[DatedSpecialServiceRef] = field(
+    dated_special_service_ref_or_special_service_ref_or_special_service: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "DatedSpecialServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    special_service_ref: List[SpecialServiceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "SpecialServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    special_service: List[SpecialService] = field(
-        default_factory=list,
-        metadata={
-            "name": "SpecialService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "DatedSpecialServiceRef",
+                    "type": DatedSpecialServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SpecialServiceRef",
+                    "type": SpecialServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SpecialService",
+                    "type": SpecialService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

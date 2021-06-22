@@ -2443,19 +2443,10 @@
               <OtherTransportModes>metro tram</OtherTransportModes>
               <StopPlaceType>railStation</StopPlaceType>
               <unlocalisedEquipments modificationSet="all">
-                <AccessVehicleEquipment id="nptg:AccessVehicleEquipment:9100WIMBLDN_LS3" modification="new" version="any" status="active">
-                  <AssistedBoardingLocation>boardAtAnyDoor</AssistedBoardingLocation>
-                  <GuideDogsAllowed>true</GuideDogsAllowed>
-                </AccessVehicleEquipment>
                 <CycleStorageEquipment id="nptg:9100WIMBLDN_9n10-EL1st" modification="new" version="any" status="active">
                   <NumberOfSpaces>16</NumberOfSpaces>
                   <CycleStorageType>other</CycleStorageType>
                 </CycleStorageEquipment>
-                <AssistanceService id="nptg:9100WIMBLDN_LS3" modification="new" version="any" status="active">
-                  <AssistanceAvailability>availableIfBooked</AssistanceAvailability>
-                  <AccessibilityTrainedStaff>true</AccessibilityTrainedStaff>
-                  <SafetyFacilityList>ccTv sosPoints</SafetyFacilityList>
-                </AssistanceService>
                 <TicketingService id="nptg:TicketingService:9100WIMBLDN_LS1" modification="new" version="any" status="active">
                   <VehicleModes>rail</VehicleModes>
                   <TicketingServiceList>all</TicketingServiceList>
@@ -2470,6 +2461,15 @@
                   <OnlinePurchaseForSelfPrintTicket>false</OnlinePurchaseForSelfPrintTicket>
                   <PaymentMethods>cash creditCard debitCard travelCard</PaymentMethods>
                 </TicketingService>
+                <AssistanceService id="nptg:9100WIMBLDN_LS3" modification="new" version="any" status="active">
+                  <AssistanceAvailability>availableIfBooked</AssistanceAvailability>
+                  <AccessibilityTrainedStaff>true</AccessibilityTrainedStaff>
+                  <SafetyFacilityList>ccTv sosPoints</SafetyFacilityList>
+                </AssistanceService>
+                <AccessVehicleEquipment id="nptg:AccessVehicleEquipment:9100WIMBLDN_LS3" modification="new" version="any" status="active">
+                  <AssistedBoardingLocation>boardAtAnyDoor</AssistedBoardingLocation>
+                  <GuideDogsAllowed>true</GuideDogsAllowed>
+                </AccessVehicleEquipment>
               </unlocalisedEquipments>
               <servedPlaces modificationSet="all">
                 <TopographicPlaceRef created="2010-05-17T09:30:47Z" ref="nptgLocality:E0034695"/>
@@ -2914,8 +2914,8 @@
                     </EquipmentPlace>
                   </equipmentPlaces>
                   <entrances modificationSet="all">
-                    <StopPlaceEntranceRef version="001" ref="nptg:9100WIMBLDN_A5-EL1pl"/>
                     <EntranceRef version="001" ref="nptg:9100WIMBLDN_A2b-EL1g"/>
+                    <StopPlaceEntranceRef version="001" ref="nptg:9100WIMBLDN_A5-EL1pl"/>
                   </entrances>
                   <AccessSpaceType>lift</AccessSpaceType>
                 </AccessSpace>
@@ -6062,12 +6062,12 @@
                         </EquipmentPosition>
                       </equipmentPositions>
                       <placeEquipments modificationSet="all">
-                        <AssistanceService id="nptg:4900ZZLUWIM1n2" modification="new" version="any" status="active">
-                          <AssistanceFacilityList>none</AssistanceFacilityList>
-                        </AssistanceService>
                         <WaitingRoomEquipment id="nptg:4900ZZLUWIM1n2_Eq-Seats1" modification="new" version="any" status="active">
                           <Seats>8</Seats>
                         </WaitingRoomEquipment>
+                        <AssistanceService id="nptg:4900ZZLUWIM1n2" modification="new" version="any" status="active">
+                          <AssistanceFacilityList>none</AssistanceFacilityList>
+                        </AssistanceService>
                       </placeEquipments>
                     </EquipmentPlace>
                   </equipmentPlaces>
@@ -6136,12 +6136,12 @@
                         </EquipmentPosition>
                       </equipmentPositions>
                       <placeEquipments modificationSet="all">
-                        <AssistanceService id="nptg:4900ZZLUWIM3n4_Eq-Seats1" modification="new" version="any" status="active">
-                          <AssistanceFacilityList>none</AssistanceFacilityList>
-                        </AssistanceService>
                         <WaitingRoomEquipment id="nptg:4900ZZLUWIM3n4_Eq-Seats1" modification="new" version="any" status="active">
                           <Seats>8</Seats>
                         </WaitingRoomEquipment>
+                        <AssistanceService id="nptg:4900ZZLUWIM3n4_Eq-Seats1" modification="new" version="any" status="active">
+                          <AssistanceFacilityList>none</AssistanceFacilityList>
+                        </AssistanceService>
                       </placeEquipments>
                     </EquipmentPlace>
                   </equipmentPlaces>

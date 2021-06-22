@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List
 from xsdata.models.datatype import XmlDuration
 from .border_point_ref import BorderPointRef
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
@@ -22,125 +22,78 @@ class TimingPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVers
     class Meta:
         name = "TimingPointInJourneyPattern_VersionedChildStructure"
 
-    border_point_ref: List[BorderPointRef] = field(
+    choice_1: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "BorderPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    fare_scheduled_stop_point_ref: List[FareScheduledStopPointRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareScheduledStopPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    scheduled_stop_point_ref: List[ScheduledStopPointRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ScheduledStopPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    garage_point_ref: List[GaragePointRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "GaragePointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
-            "max_occurs": 4,
-            "sequential": True,
-        }
-    )
-    parking_point_ref: List[ParkingPointRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ParkingPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    relief_point_ref: List[ReliefPointRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ReliefPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    timing_point_ref: Optional[TimingPointRef] = field(
-        default=None,
-        metadata={
-            "name": "TimingPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
-        }
-    )
-    onward_timing_link_ref: Optional[TimingLinkRefStructure] = field(
-        default=None,
-        metadata={
-            "name": "OnwardTimingLinkRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    is_wait_point: Optional[bool] = field(
-        default=None,
-        metadata={
-            "name": "IsWaitPoint",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    wait_time: Optional[XmlDuration] = field(
-        default=None,
-        metadata={
-            "name": "WaitTime",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    wait_times: Optional[JourneyPatternWaitTimesRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "waitTimes",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    headways: Optional[JourneyPatternHeadwaysRelStructure] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    notice_assignments: Optional[NoticeAssignmentsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "noticeAssignments",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "BorderPointRef",
+                    "type": BorderPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareScheduledStopPointRef",
+                    "type": FareScheduledStopPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ScheduledStopPointRef",
+                    "type": ScheduledStopPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GaragePointRef",
+                    "type": GaragePointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingPointRef",
+                    "type": ParkingPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ReliefPointRef",
+                    "type": ReliefPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TimingPointRef",
+                    "type": TimingPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OnwardTimingLinkRef",
+                    "type": TimingLinkRefStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "IsWaitPoint",
+                    "type": bool,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "WaitTime",
+                    "type": XmlDuration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "waitTimes",
+                    "type": JourneyPatternWaitTimesRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "headways",
+                    "type": JourneyPatternHeadwaysRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "noticeAssignments",
+                    "type": NoticeAssignmentsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "min_occurs": 7,
+            "max_occurs": 23,
         }
     )

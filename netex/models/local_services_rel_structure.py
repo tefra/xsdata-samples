@@ -40,243 +40,161 @@ class LocalServicesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "localServices_RelStructure"
 
-    assistance_booking_service_ref: List[AssistanceBookingServiceRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "AssistanceBookingServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    catering_service_ref: List[CateringServiceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "CateringServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    retail_service_ref: List[RetailServiceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "RetailServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    money_service_ref: List[MoneyServiceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "MoneyServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    hire_service_ref: List[HireServiceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "HireServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    communication_service_ref: List[CommunicationServiceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "CommunicationServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    meeting_point_service_ref: List[MeetingPointServiceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "MeetingPointServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    left_luggage_service_ref: List[LeftLuggageServiceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "LeftLuggageServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    luggage_service_ref: List[LuggageServiceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "LuggageServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    lost_property_service_ref: List[LostPropertyServiceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "LostPropertyServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    complaints_service_ref: List[ComplaintsServiceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ComplaintsServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    customer_service_ref: List[CustomerServiceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "CustomerServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    assistance_service_ref: List[AssistanceServiceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "AssistanceServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    ticketing_service_ref: List[TicketingServiceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TicketingServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    local_service_ref: List[LocalServiceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "LocalServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    assistance_booking_service: List[AssistanceBookingService] = field(
-        default_factory=list,
-        metadata={
-            "name": "AssistanceBookingService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    catering_service: List[CateringService] = field(
-        default_factory=list,
-        metadata={
-            "name": "CateringService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    retail_service: List[RetailService] = field(
-        default_factory=list,
-        metadata={
-            "name": "RetailService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    money_service: List[MoneyService] = field(
-        default_factory=list,
-        metadata={
-            "name": "MoneyService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    hire_service: List[HireService] = field(
-        default_factory=list,
-        metadata={
-            "name": "HireService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    communication_service: List[CommunicationService] = field(
-        default_factory=list,
-        metadata={
-            "name": "CommunicationService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    meeting_point_service: List[MeetingPointService] = field(
-        default_factory=list,
-        metadata={
-            "name": "MeetingPointService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    lost_property_service: List[LostPropertyService] = field(
-        default_factory=list,
-        metadata={
-            "name": "LostPropertyService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    left_luggage_service: List[LeftLuggageService] = field(
-        default_factory=list,
-        metadata={
-            "name": "LeftLuggageService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    complaints_service: List[ComplaintsService] = field(
-        default_factory=list,
-        metadata={
-            "name": "ComplaintsService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    customer_service: List[CustomerService] = field(
-        default_factory=list,
-        metadata={
-            "name": "CustomerService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    luggage_service: List[LuggageService] = field(
-        default_factory=list,
-        metadata={
-            "name": "LuggageService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    assistance_service: List[AssistanceService] = field(
-        default_factory=list,
-        metadata={
-            "name": "AssistanceService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    ticketing_service: List[TicketingService] = field(
-        default_factory=list,
-        metadata={
-            "name": "TicketingService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    local_service: List[LocalService] = field(
-        default_factory=list,
-        metadata={
-            "name": "LocalService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "AssistanceBookingServiceRef",
+                    "type": AssistanceBookingServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CateringServiceRef",
+                    "type": CateringServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RetailServiceRef",
+                    "type": RetailServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MoneyServiceRef",
+                    "type": MoneyServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "HireServiceRef",
+                    "type": HireServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CommunicationServiceRef",
+                    "type": CommunicationServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MeetingPointServiceRef",
+                    "type": MeetingPointServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LeftLuggageServiceRef",
+                    "type": LeftLuggageServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LuggageServiceRef",
+                    "type": LuggageServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LostPropertyServiceRef",
+                    "type": LostPropertyServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ComplaintsServiceRef",
+                    "type": ComplaintsServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CustomerServiceRef",
+                    "type": CustomerServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AssistanceServiceRef",
+                    "type": AssistanceServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TicketingServiceRef",
+                    "type": TicketingServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LocalServiceRef",
+                    "type": LocalServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AssistanceBookingService",
+                    "type": AssistanceBookingService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CateringService",
+                    "type": CateringService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RetailService",
+                    "type": RetailService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MoneyService",
+                    "type": MoneyService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "HireService",
+                    "type": HireService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CommunicationService",
+                    "type": CommunicationService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MeetingPointService",
+                    "type": MeetingPointService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LostPropertyService",
+                    "type": LostPropertyService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LeftLuggageService",
+                    "type": LeftLuggageService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ComplaintsService",
+                    "type": ComplaintsService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CustomerService",
+                    "type": CustomerService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LuggageService",
+                    "type": LuggageService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AssistanceService",
+                    "type": AssistanceService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TicketingService",
+                    "type": TicketingService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LocalService",
+                    "type": LocalService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

@@ -24,115 +24,81 @@ class ProjectionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "projections_RelStructure"
 
-    topographic_projection_ref: List[TopographicProjectionRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "TopographicProjectionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    complex_feature_projection_ref: List[ComplexFeatureProjectionRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ComplexFeatureProjectionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    link_sequence_projection_ref: List[LinkSequenceProjectionRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "LinkSequenceProjectionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    zone_projection_ref: List[ZoneProjectionRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ZoneProjectionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    link_projection_ref: List[LinkProjectionRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "LinkProjectionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    point_projection_ref: List[PointProjectionRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "PointProjectionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    projection_ref: List[ProjectionRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ProjectionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    topographic_projection: List[TopographicProjection] = field(
-        default_factory=list,
-        metadata={
-            "name": "TopographicProjection",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    zone_projection: List[ZoneProjection] = field(
-        default_factory=list,
-        metadata={
-            "name": "ZoneProjection",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    complex_feature_projection: List[ComplexFeatureProjection] = field(
-        default_factory=list,
-        metadata={
-            "name": "ComplexFeatureProjection",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    link_sequence_projection: List[LinkSequenceProjection] = field(
-        default_factory=list,
-        metadata={
-            "name": "LinkSequenceProjection",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    link_projection: List[LinkProjection] = field(
-        default_factory=list,
-        metadata={
-            "name": "LinkProjection",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    point_projection: List[PointProjection] = field(
-        default_factory=list,
-        metadata={
-            "name": "PointProjection",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    projection: List[Projection] = field(
-        default_factory=list,
-        metadata={
-            "name": "Projection",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TopographicProjectionRef",
+                    "type": TopographicProjectionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ComplexFeatureProjectionRef",
+                    "type": ComplexFeatureProjectionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LinkSequenceProjectionRef",
+                    "type": LinkSequenceProjectionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ZoneProjectionRef",
+                    "type": ZoneProjectionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LinkProjectionRef",
+                    "type": LinkProjectionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PointProjectionRef",
+                    "type": PointProjectionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ProjectionRef",
+                    "type": ProjectionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TopographicProjection",
+                    "type": TopographicProjection,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ZoneProjection",
+                    "type": ZoneProjection,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ComplexFeatureProjection",
+                    "type": ComplexFeatureProjection,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LinkSequenceProjection",
+                    "type": LinkSequenceProjection,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LinkProjection",
+                    "type": LinkProjection,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PointProjection",
+                    "type": PointProjection,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Projection",
+                    "type": Projection,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

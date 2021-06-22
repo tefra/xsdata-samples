@@ -12,19 +12,21 @@ class LinksInJourneyPatternRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "linksInJourneyPattern_RelStructure"
 
-    service_link_in_journey_pattern: List[ServiceLinkInJourneyPattern] = field(
+    service_link_in_journey_pattern_or_timing_link_in_journey_pattern: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "ServiceLinkInJourneyPattern",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    timing_link_in_journey_pattern: List[TimingLinkInJourneyPattern] = field(
-        default_factory=list,
-        metadata={
-            "name": "TimingLinkInJourneyPattern",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ServiceLinkInJourneyPattern",
+                    "type": ServiceLinkInJourneyPattern,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TimingLinkInJourneyPattern",
+                    "type": TimingLinkInJourneyPattern,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

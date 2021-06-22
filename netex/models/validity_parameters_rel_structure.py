@@ -124,40 +124,40 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequential": True,
         }
     )
-    all_operators_ref: List[AllOperatorsRef] = field(
+    all_operators_ref_or_operator_ref: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "AllOperatorsRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "AllOperatorsRef",
+                    "type": AllOperatorsRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OperatorRef",
+                    "type": OperatorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
-    operator_ref: List[OperatorRef] = field(
+    all_authorities_ref_or_authority_ref: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "OperatorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
-        }
-    )
-    all_authorities_ref: List[AllAuthoritiesRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "AllAuthoritiesRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
-        }
-    )
-    authority_ref: List[AuthorityRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "AuthorityRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "AllAuthoritiesRef",
+                    "type": AllAuthoritiesRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AuthorityRef",
+                    "type": AuthorityRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
     network_ref: List[NetworkRef] = field(
@@ -835,22 +835,22 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequential": True,
         }
     )
-    distribution_channel_ref: List[DistributionChannelRef] = field(
+    distribution_channel_ref_or_group_of_distribution_channels_ref: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "DistributionChannelRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
-        }
-    )
-    group_of_distribution_channels_ref: List[GroupOfDistributionChannelsRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "GroupOfDistributionChannelsRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "DistributionChannelRef",
+                    "type": DistributionChannelRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GroupOfDistributionChannelsRef",
+                    "type": GroupOfDistributionChannelsRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
     fulfilment_method_ref: List[FulfilmentMethodRef] = field(

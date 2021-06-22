@@ -12,19 +12,21 @@ class ResidentialQualificationsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "residentialQualifications_RelStructure"
 
-    residential_qualification_ref: List[ResidentialQualificationRef] = field(
+    residential_qualification_ref_or_residential_qualification: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "ResidentialQualificationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    residential_qualification: List[ResidentialQualification] = field(
-        default_factory=list,
-        metadata={
-            "name": "ResidentialQualification",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ResidentialQualificationRef",
+                    "type": ResidentialQualificationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ResidentialQualification",
+                    "type": ResidentialQualification,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

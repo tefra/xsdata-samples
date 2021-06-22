@@ -12,19 +12,21 @@ class JourneyInterchangesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "journeyInterchangesInFrame_RelStructure"
 
-    service_journey_pattern_interchange: List[ServiceJourneyPatternInterchange] = field(
+    service_journey_pattern_interchange_or_service_journey_interchange: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "ServiceJourneyPatternInterchange",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    service_journey_interchange: List[ServiceJourneyInterchange] = field(
-        default_factory=list,
-        metadata={
-            "name": "ServiceJourneyInterchange",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ServiceJourneyPatternInterchange",
+                    "type": ServiceJourneyPatternInterchange,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServiceJourneyInterchange",
+                    "type": ServiceJourneyInterchange,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

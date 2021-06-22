@@ -12,19 +12,21 @@ class FarePointsInPatternRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "farePointsInPattern_RelStructure"
 
-    fare_point_in_pattern_ref: List[FarePointInPatternRef] = field(
+    fare_point_in_pattern_ref_or_fare_point_in_pattern: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "FarePointInPatternRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_point_in_pattern: List[FarePointInPattern] = field(
-        default_factory=list,
-        metadata={
-            "name": "FarePointInPattern",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FarePointInPatternRef",
+                    "type": FarePointInPatternRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FarePointInPattern",
+                    "type": FarePointInPattern,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

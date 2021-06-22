@@ -49,207 +49,121 @@ class PassengerInformationEquipmentVersionStructure(PassengerEquipmentVersionStr
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    vehicle_stopping_position_ref: List[VehicleStoppingPositionRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "VehicleStoppingPositionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    vehicle_stopping_place_ref: List[VehicleStoppingPlaceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "VehicleStoppingPlaceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    boarding_position_ref: List[BoardingPositionRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "BoardingPositionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    access_space_ref: List[AccessSpaceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "AccessSpaceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    quay_ref: List[QuayRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "QuayRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    stop_place_space_ref: List[StopPlaceSpaceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "StopPlaceSpaceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    parking_bay_ref: List[ParkingBayRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ParkingBayRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    point_of_interest_space_ref: List[PointOfInterestSpaceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "PointOfInterestSpaceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    stop_place_vehicle_entrance_ref: List[StopPlaceVehicleEntranceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "StopPlaceVehicleEntranceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    stop_place_entrance_ref: List[StopPlaceEntranceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "StopPlaceEntranceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    parking_entrance_for_vehicles_ref: List[ParkingEntranceForVehiclesRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ParkingEntranceForVehiclesRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 4,
-            "sequential": True,
-        }
-    )
-    parking_passenger_entrance_ref: List[ParkingPassengerEntranceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ParkingPassengerEntranceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 4,
-            "sequential": True,
-        }
-    )
-    parking_entrance_ref: List[ParkingEntranceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ParkingEntranceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    point_of_interest_vehicle_entrance_ref: List[PointOfInterestVehicleEntranceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "PointOfInterestVehicleEntranceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    point_of_interest_entrance_ref: List[PointOfInterestEntranceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "PointOfInterestEntranceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    vehicle_entrance_ref: List[VehicleEntranceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "VehicleEntranceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    entrance_ref: List[EntranceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "EntranceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    site_component_ref: Optional[SiteComponentRef] = field(
-        default=None,
-        metadata={
-            "name": "SiteComponentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_passenger_information_equipment_ref: Optional[TypeOfPassengerInformationEquipmentRef] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfPassengerInformationEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    passenger_information_facility_list: List[PassengerInformationFacilityEnumeration] = field(
-        default_factory=list,
-        metadata={
-            "name": "PassengerInformationFacilityList",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
-        }
-    )
-    accessibility_info_facility_list: List[AccessibilityInfoFacilityEnumeration] = field(
-        default_factory=list,
-        metadata={
-            "name": "AccessibilityInfoFacilityList",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "VehicleStoppingPositionRef",
+                    "type": VehicleStoppingPositionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleStoppingPlaceRef",
+                    "type": VehicleStoppingPlaceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "BoardingPositionRef",
+                    "type": BoardingPositionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AccessSpaceRef",
+                    "type": AccessSpaceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "QuayRef",
+                    "type": QuayRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "StopPlaceSpaceRef",
+                    "type": StopPlaceSpaceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingBayRef",
+                    "type": ParkingBayRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PointOfInterestSpaceRef",
+                    "type": PointOfInterestSpaceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "StopPlaceVehicleEntranceRef",
+                    "type": StopPlaceVehicleEntranceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "StopPlaceEntranceRef",
+                    "type": StopPlaceEntranceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingEntranceForVehiclesRef",
+                    "type": ParkingEntranceForVehiclesRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingPassengerEntranceRef",
+                    "type": ParkingPassengerEntranceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingEntranceRef",
+                    "type": ParkingEntranceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PointOfInterestVehicleEntranceRef",
+                    "type": PointOfInterestVehicleEntranceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PointOfInterestEntranceRef",
+                    "type": PointOfInterestEntranceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleEntranceRef",
+                    "type": VehicleEntranceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "EntranceRef",
+                    "type": EntranceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SiteComponentRef",
+                    "type": SiteComponentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfPassengerInformationEquipmentRef",
+                    "type": TypeOfPassengerInformationEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PassengerInformationFacilityList",
+                    "type": List[PassengerInformationFacilityEnumeration],
+                    "namespace": "http://www.netex.org.uk/netex",
+                    "default_factory": list,
+                    "tokens": True,
+                },
+                {
+                    "name": "AccessibilityInfoFacilityList",
+                    "type": List[AccessibilityInfoFacilityEnumeration],
+                    "namespace": "http://www.netex.org.uk/netex",
+                    "default_factory": list,
+                    "tokens": True,
+                },
+            ),
+            "max_occurs": 51,
         }
     )

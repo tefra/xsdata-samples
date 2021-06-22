@@ -12,19 +12,21 @@ class AllowedLineDirectionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "allowedLineDirections_RelStructure"
 
-    allowed_line_direction_ref: List[AllowedLineDirectionRef] = field(
+    allowed_line_direction_ref_or_allowed_line_direction: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "AllowedLineDirectionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    allowed_line_direction: List[AllowedLineDirection] = field(
-        default_factory=list,
-        metadata={
-            "name": "AllowedLineDirection",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "AllowedLineDirectionRef",
+                    "type": AllowedLineDirectionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AllowedLineDirection",
+                    "type": AllowedLineDirection,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

@@ -124,14 +124,6 @@ class PocdMt000040InfrastructureRootTypeId(Ii):
             "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
         }
     )
-    extension: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "required": True,
-            "min_length": 1,
-        }
-    )
 
 
 @dataclass

@@ -25,123 +25,86 @@ class PassengerEquipmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "passengerEquipments_RelStructure"
 
-    rubbish_disposal_equipment_ref: List[RubbishDisposalEquipmentRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "RubbishDisposalEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    help_point_equipment_ref: List[HelpPointEquipmentRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "HelpPointEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    passenger_safety_equipment_ref: List[PassengerSafetyEquipmentRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "PassengerSafetyEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    sanitary_equipment_ref: List[SanitaryEquipmentRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "SanitaryEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    wheelchair_vehicle_ref: List[WheelchairVehicleRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "WheelchairVehicleRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    access_vehicle_equipment_ref: List[AccessVehicleEquipmentRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "AccessVehicleEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    vehicle_equipment_ref: List[VehicleEquipmentRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "VehicleEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    passenger_equipment_ref: List[PassengerEquipmentRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "PassengerEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    passenger_information_equipment: List[PassengerInformationEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "PassengerInformationEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    rubbish_disposal_equipment: List[RubbishDisposalEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "RubbishDisposalEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    help_point_equipment: List[HelpPointEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "HelpPointEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    passenger_safety_equipment: List[PassengerSafetyEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "PassengerSafetyEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    sanitary_equipment: List[SanitaryEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "SanitaryEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    actual_vehicle_equipment: List[ActualVehicleEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "ActualVehicleEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    passenger_equipment: List[PassengerEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "PassengerEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "RubbishDisposalEquipmentRef",
+                    "type": RubbishDisposalEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "HelpPointEquipmentRef",
+                    "type": HelpPointEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PassengerSafetyEquipmentRef",
+                    "type": PassengerSafetyEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SanitaryEquipmentRef",
+                    "type": SanitaryEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "WheelchairVehicleRef",
+                    "type": WheelchairVehicleRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AccessVehicleEquipmentRef",
+                    "type": AccessVehicleEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleEquipmentRef",
+                    "type": VehicleEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PassengerEquipmentRef",
+                    "type": PassengerEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PassengerInformationEquipment",
+                    "type": PassengerInformationEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RubbishDisposalEquipment",
+                    "type": RubbishDisposalEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "HelpPointEquipment",
+                    "type": HelpPointEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PassengerSafetyEquipment",
+                    "type": PassengerSafetyEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SanitaryEquipment",
+                    "type": SanitaryEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ActualVehicleEquipment",
+                    "type": ActualVehicleEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PassengerEquipment",
+                    "type": PassengerEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

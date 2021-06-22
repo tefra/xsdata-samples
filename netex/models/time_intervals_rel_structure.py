@@ -12,19 +12,21 @@ class TimeIntervalsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "timeIntervals_RelStructure"
 
-    time_interval_ref: List[TimeIntervalRef] = field(
+    time_interval_ref_or_time_interval: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "TimeIntervalRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    time_interval: List[TimeInterval] = field(
-        default_factory=list,
-        metadata={
-            "name": "TimeInterval",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TimeIntervalRef",
+                    "type": TimeIntervalRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TimeInterval",
+                    "type": TimeInterval,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

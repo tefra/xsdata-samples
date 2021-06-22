@@ -105,6 +105,13 @@
         </GeneralFrame>
         <GeneralFrame id="mybus:GeneralFrame:ntwkf003" created="2010-05-17T09:30:47Z" changed="2010-05-21T10:30:51Z" modification="revise" version="002" status="active" responsibilitySetRef="mybus:ResponsibilitySet:RS_10">
           <validityConditions modificationSet="all">
+            <ValidityRuleParameter id="mybus:ValidityRuleParameter:VC_ntwkf003_002_icy" created="2010-05-18T10:30:47Z" modification="new" version="any" status="active" responsibilitySetRef="mybus:ResponsibilitySet:RS_10">
+              <Description>Use when Icy</Description>
+              <RuleObjectRef nameOfRefClass="Weather" ref="Myobj:Cur001">EXTERNAL</RuleObjectRef>
+              <AttributeName>roadCondition</AttributeName>
+              <ComparisonOperator>EQ</ComparisonOperator>
+              <AttributeValue>icy</AttributeValue>
+            </ValidityRuleParameter>
             <AvailabilityCondition id="mybus:AvailabilityCondition:VC_ntwkf003_002_mf" created="2010-05-18T10:30:47Z" modification="new" version="any" status="active" responsibilitySetRef="mybus:ResponsibilitySet:RS_10">
               <Description>Use when winter MF</Description>
               <FromDate>2010-05-17T00:00:00Z</FromDate>
@@ -113,13 +120,6 @@
                 <DayTypeRef ref="mybus:DayType:DT001_MF"/>
               </dayTypes>
             </AvailabilityCondition>
-            <ValidityRuleParameter id="mybus:ValidityRuleParameter:VC_ntwkf003_002_icy" created="2010-05-18T10:30:47Z" modification="new" version="any" status="active" responsibilitySetRef="mybus:ResponsibilitySet:RS_10">
-              <Description>Use when Icy</Description>
-              <RuleObjectRef nameOfRefClass="Weather" ref="Myobj:Cur001">EXTERNAL</RuleObjectRef>
-              <AttributeName>roadCondition</AttributeName>
-              <ComparisonOperator>EQ</ComparisonOperator>
-              <AttributeValue>icy</AttributeValue>
-            </ValidityRuleParameter>
           </validityConditions>
           <Name>ntwkf003 Different Frame  with a different condition - a different frame</Name>
           <BaselineVersionFrameRef version="001" ref="mybus:GeneralFrame:ntwkf001"/>

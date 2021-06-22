@@ -58,20 +58,22 @@ class TerminateSubscriptionRequestStructure(AuthenticatedRequestStructure):
             "namespace": "http://www.siri.org.uk/siri",
         }
     )
-    all: Optional[EmptyType1] = field(
-        default=None,
-        metadata={
-            "name": "All",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        }
-    )
-    subscription_ref: List[str] = field(
+    all_or_subscription_ref: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "SubscriptionRef",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "All",
+                    "type": EmptyType1,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+                {
+                    "name": "SubscriptionRef",
+                    "type": str,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+            ),
         }
     )
     extensions: Optional[Extensions1] = field(

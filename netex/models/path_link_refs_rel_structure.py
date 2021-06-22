@@ -12,19 +12,21 @@ class PathLinkRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "pathLinkRefs_RelStructure"
 
-    path_link_ref: List[PathLinkRef] = field(
+    path_link_ref_or_path_link_ref_by_value: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "PathLinkRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    path_link_ref_by_value: List[PathLinkRefByValue] = field(
-        default_factory=list,
-        metadata={
-            "name": "PathLinkRefByValue",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "PathLinkRef",
+                    "type": PathLinkRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PathLinkRefByValue",
+                    "type": PathLinkRefByValue,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

@@ -12,19 +12,21 @@ class GeographicalUnitsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "geographicalUnits_RelStructure"
 
-    geographical_unit_ref: List[GeographicalUnitRef] = field(
+    geographical_unit_ref_or_geographical_unit: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "GeographicalUnitRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    geographical_unit: List[GeographicalUnit] = field(
-        default_factory=list,
-        metadata={
-            "name": "GeographicalUnit",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "GeographicalUnitRef",
+                    "type": GeographicalUnitRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GeographicalUnit",
+                    "type": GeographicalUnit,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

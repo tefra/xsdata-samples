@@ -12,19 +12,21 @@ class TrainStopAssignmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "trainStopAssignments_RelStructure"
 
-    train_stop_assignment_ref: List[TrainStopAssignmentRef] = field(
+    train_stop_assignment_ref_or_train_stop_assignment: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "TrainStopAssignmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    train_stop_assignment: List[TrainStopAssignment] = field(
-        default_factory=list,
-        metadata={
-            "name": "TrainStopAssignment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TrainStopAssignmentRef",
+                    "type": TrainStopAssignmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TrainStopAssignment",
+                    "type": TrainStopAssignment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

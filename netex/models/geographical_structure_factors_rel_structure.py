@@ -12,19 +12,21 @@ class GeographicalStructureFactorsRelStructure(StrictContainmentAggregationStruc
     class Meta:
         name = "geographicalStructureFactors_RelStructure"
 
-    geographical_structure_factor_ref: List[GeographicalStructureFactorRef] = field(
+    geographical_structure_factor_ref_or_geographical_structure_factor: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "GeographicalStructureFactorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    geographical_structure_factor: List[GeographicalStructureFactor] = field(
-        default_factory=list,
-        metadata={
-            "name": "GeographicalStructureFactor",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "GeographicalStructureFactorRef",
+                    "type": GeographicalStructureFactorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GeographicalStructureFactor",
+                    "type": GeographicalStructureFactor,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

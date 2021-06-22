@@ -12,19 +12,21 @@ class WhitelistsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "whitelists_RelStructure"
 
-    whitelist_ref: List[WhitelistRef] = field(
+    whitelist_ref_or_whitelist: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "WhitelistRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    whitelist: List[Whitelist] = field(
-        default_factory=list,
-        metadata={
-            "name": "Whitelist",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "WhitelistRef",
+                    "type": WhitelistRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Whitelist",
+                    "type": Whitelist,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List
 from .abstract_ring_type import AbstractRingType
 from .point_property import PointProperty
 from .pos import Pos
@@ -10,30 +10,27 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass
 class LinearRingType(AbstractRingType):
-    pos: List[Pos] = field(
+    pos_or_point_property_or_pos_list: List[object] = field(
         default_factory=list,
         metadata={
-            "type": "Element",
-            "namespace": "http://www.opengis.net/gml/3.2",
-            "min_occurs": 4,
-            "sequential": True,
-        }
-    )
-    point_property: List[PointProperty] = field(
-        default_factory=list,
-        metadata={
-            "name": "pointProperty",
-            "type": "Element",
-            "namespace": "http://www.opengis.net/gml/3.2",
-            "min_occurs": 4,
-            "sequential": True,
-        }
-    )
-    pos_list: Optional[PosList] = field(
-        default=None,
-        metadata={
-            "name": "posList",
-            "type": "Element",
-            "namespace": "http://www.opengis.net/gml/3.2",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "pos",
+                    "type": Pos,
+                    "namespace": "http://www.opengis.net/gml/3.2",
+                },
+                {
+                    "name": "pointProperty",
+                    "type": PointProperty,
+                    "namespace": "http://www.opengis.net/gml/3.2",
+                },
+                {
+                    "name": "posList",
+                    "type": PosList,
+                    "namespace": "http://www.opengis.net/gml/3.2",
+                },
+            ),
+            "min_occurs": 8,
         }
     )

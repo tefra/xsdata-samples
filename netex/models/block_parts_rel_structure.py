@@ -14,35 +14,31 @@ class BlockPartsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "blockParts_RelStructure"
 
-    train_block_part_ref: List[TrainBlockPartRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "TrainBlockPartRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    block_part_ref: List[BlockPartRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "BlockPartRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    block_part: List[BlockPart] = field(
-        default_factory=list,
-        metadata={
-            "name": "BlockPart",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    train_block_part: List[TrainBlockPart] = field(
-        default_factory=list,
-        metadata={
-            "name": "TrainBlockPart",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TrainBlockPartRef",
+                    "type": TrainBlockPartRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "BlockPartRef",
+                    "type": BlockPartRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "BlockPart",
+                    "type": BlockPart,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TrainBlockPart",
+                    "type": TrainBlockPart,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

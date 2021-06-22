@@ -13,27 +13,26 @@ class UsageParameterPricesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "usageParameterPrices_RelStructure"
 
-    usage_parameter_price_ref: List[UsageParameterPriceRef] = field(
+    usage_parameter_price_ref_or_usage_parameter_price_or_cell_ref: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "UsageParameterPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    usage_parameter_price: List[UsageParameterPrice] = field(
-        default_factory=list,
-        metadata={
-            "name": "UsageParameterPrice",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    cell_ref: List[CellRef1] = field(
-        default_factory=list,
-        metadata={
-            "name": "CellRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "UsageParameterPriceRef",
+                    "type": UsageParameterPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "UsageParameterPrice",
+                    "type": UsageParameterPrice,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CellRef",
+                    "type": CellRef1,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

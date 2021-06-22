@@ -12,19 +12,21 @@ class TypeOfFareProductsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "typeOfFareProducts_RelStructure"
 
-    type_of_fare_product_ref: List[TypeOfFareProductRef] = field(
+    type_of_fare_product_ref_or_type_of_fare_product: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "TypeOfFareProductRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_fare_product: List[TypeOfFareProduct] = field(
-        default_factory=list,
-        metadata={
-            "name": "TypeOfFareProduct",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TypeOfFareProductRef",
+                    "type": TypeOfFareProductRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfFareProduct",
+                    "type": TypeOfFareProduct,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

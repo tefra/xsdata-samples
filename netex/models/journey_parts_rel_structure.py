@@ -12,19 +12,21 @@ class JourneyPartsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "journeyParts_RelStructure"
 
-    journey_part_ref: List[JourneyPartRef] = field(
+    journey_part_ref_or_journey_part: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "JourneyPartRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    journey_part: List[JourneyPart] = field(
-        default_factory=list,
-        metadata={
-            "name": "JourneyPart",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "JourneyPartRef",
+                    "type": JourneyPartRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "JourneyPart",
+                    "type": JourneyPart,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

@@ -12,19 +12,21 @@ class GroupsOfDistanceMatrixElementsRelStructure(ContainmentAggregationStructure
     class Meta:
         name = "groupsOfDistanceMatrixElements_RelStructure"
 
-    group_of_distance_matrix_elements_ref: List[GroupOfDistanceMatrixElementsRef] = field(
+    group_of_distance_matrix_elements_ref_or_group_of_distance_matrix_elements: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "GroupOfDistanceMatrixElementsRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    group_of_distance_matrix_elements: List[GroupOfDistanceMatrixElements] = field(
-        default_factory=list,
-        metadata={
-            "name": "GroupOfDistanceMatrixElements",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "GroupOfDistanceMatrixElementsRef",
+                    "type": GroupOfDistanceMatrixElementsRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GroupOfDistanceMatrixElements",
+                    "type": GroupOfDistanceMatrixElements,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

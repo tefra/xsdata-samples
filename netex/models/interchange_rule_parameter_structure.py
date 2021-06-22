@@ -55,116 +55,90 @@ class InterchangeRuleParameterStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    all_lines: Optional[EmptyType2] = field(
-        default=None,
-        metadata={
-            "name": "AllLines",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    lines_in_direction_refs: Optional[LinesInDirectionRefsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "linesInDirectionRefs",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    line_in_direction_ref: List[LineInDirectionRef] = field(
+    all_lines_or_lines_in_direction_refs_or_line_in_direction_ref: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "LineInDirectionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "AllLines",
+                    "type": EmptyType2,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "linesInDirectionRefs",
+                    "type": LinesInDirectionRefsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LineInDirectionRef",
+                    "type": LineInDirectionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
-    fare_scheduled_stop_point_ref: List[FareScheduledStopPointRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "FareScheduledStopPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-        }
-    )
-    scheduled_stop_point_ref: Optional[ScheduledStopPointRef] = field(
-        default=None,
-        metadata={
-            "name": "ScheduledStopPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    adjacent_stop_point_ref: Optional[ScheduledStopPointRefStructure] = field(
-        default=None,
-        metadata={
-            "name": "AdjacentStopPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    adjacent_stop_place_ref: Optional[StopPlaceRefStructure] = field(
-        default=None,
-        metadata={
-            "name": "AdjacentStopPlaceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    adjacent_point_ref: Optional[PointRefStructure] = field(
-        default=None,
-        metadata={
-            "name": "AdjacentPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    end_stop_point_ref: Optional[ScheduledStopPointRefStructure] = field(
-        default=None,
-        metadata={
-            "name": "EndStopPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    time_demand_type_ref: Optional[TimeDemandTypeRef] = field(
-        default=None,
-        metadata={
-            "name": "TimeDemandTypeRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    service_journey_ref: Optional[ServiceJourneyRefStructure] = field(
-        default=None,
-        metadata={
-            "name": "ServiceJourneyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    journey_designator: Optional[JourneyDesignator] = field(
-        default=None,
-        metadata={
-            "name": "JourneyDesignator",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    service_designator: Optional[ServiceDesignator] = field(
-        default=None,
-        metadata={
-            "name": "ServiceDesignator",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    maximum_interchange_window: Optional[XmlDuration] = field(
-        default=None,
-        metadata={
-            "name": "MaximumInterchangeWindow",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FareScheduledStopPointRef",
+                    "type": FareScheduledStopPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ScheduledStopPointRef",
+                    "type": ScheduledStopPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AdjacentStopPointRef",
+                    "type": ScheduledStopPointRefStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AdjacentStopPlaceRef",
+                    "type": StopPlaceRefStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AdjacentPointRef",
+                    "type": PointRefStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "EndStopPointRef",
+                    "type": ScheduledStopPointRefStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TimeDemandTypeRef",
+                    "type": TimeDemandTypeRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServiceJourneyRef",
+                    "type": ServiceJourneyRefStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "JourneyDesignator",
+                    "type": JourneyDesignator,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServiceDesignator",
+                    "type": ServiceDesignator,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MaximumInterchangeWindow",
+                    "type": XmlDuration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 12,
         }
     )

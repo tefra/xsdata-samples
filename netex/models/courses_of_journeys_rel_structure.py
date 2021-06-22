@@ -12,19 +12,21 @@ class CoursesOfJourneysRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "coursesOfJourneys_RelStructure"
 
-    course_of_journeys_ref: List[CourseOfJourneysRef] = field(
+    course_of_journeys_ref_or_course_of_journeys: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "CourseOfJourneysRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    course_of_journeys: List[CourseOfJourneys] = field(
-        default_factory=list,
-        metadata={
-            "name": "CourseOfJourneys",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "CourseOfJourneysRef",
+                    "type": CourseOfJourneysRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CourseOfJourneys",
+                    "type": CourseOfJourneys,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

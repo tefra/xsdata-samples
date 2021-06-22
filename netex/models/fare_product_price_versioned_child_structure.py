@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List
 from .amount_of_price_unit_product_ref import AmountOfPriceUnitProductRef
 from .capped_discount_right_ref import CappedDiscountRightRef
 from .fare_price_versioned_child_structure import FarePriceVersionedChildStructure
@@ -18,81 +18,52 @@ class FareProductPriceVersionedChildStructure(FarePriceVersionedChildStructure):
     class Meta:
         name = "FareProductPrice_VersionedChildStructure"
 
-    supplement_product_ref: List[SupplementProductRef] = field(
+    choice_1: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "SupplementProductRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    preassigned_fare_product_ref: List[PreassignedFareProductRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "PreassignedFareProductRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    amount_of_price_unit_product_ref: List[AmountOfPriceUnitProductRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "AmountOfPriceUnitProductRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    usage_discount_right_ref: List[UsageDiscountRightRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "UsageDiscountRightRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    third_party_product_ref: List[ThirdPartyProductRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ThirdPartyProductRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    capped_discount_right_ref: List[CappedDiscountRightRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "CappedDiscountRightRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    sale_discount_right_ref: List[SaleDiscountRightRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "SaleDiscountRightRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    fare_product_ref: Optional[FareProductRef] = field(
-        default=None,
-        metadata={
-            "name": "FareProductRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "SupplementProductRef",
+                    "type": SupplementProductRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PreassignedFareProductRef",
+                    "type": PreassignedFareProductRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AmountOfPriceUnitProductRef",
+                    "type": AmountOfPriceUnitProductRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "UsageDiscountRightRef",
+                    "type": UsageDiscountRightRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ThirdPartyProductRef",
+                    "type": ThirdPartyProductRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CappedDiscountRightRef",
+                    "type": CappedDiscountRightRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SaleDiscountRightRef",
+                    "type": SaleDiscountRightRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareProductRef",
+                    "type": FareProductRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 17,
         }
     )

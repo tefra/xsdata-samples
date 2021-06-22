@@ -5,7 +5,7 @@
     <Format relativeImports="true">dataclasses</Format>
     <Structure>clusters</Structure>
     <DocstringStyle>Blank</DocstringStyle>
-    <CompoundFields>false</CompoundFields>
+    <CompoundFields>true</CompoundFields>
   </Output>
   <Conventions>
     <ClassName case="pascalCase" safePrefix="type"/>

@@ -12,19 +12,21 @@ class QuaysRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "quays_RelStructure"
 
-    quay_ref: List[QuayRef] = field(
+    quay_ref_or_quay: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "QuayRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    quay: List[Quay] = field(
-        default_factory=list,
-        metadata={
-            "name": "Quay",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "QuayRef",
+                    "type": QuayRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Quay",
+                    "type": Quay,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

@@ -12,19 +12,21 @@ class TypesOfCustomerAccountRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "typesOfCustomerAccount_RelStructure"
 
-    type_of_customer_account_ref: List[TypeOfCustomerAccountRef] = field(
+    type_of_customer_account_ref_or_type_of_customer_account: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "TypeOfCustomerAccountRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_customer_account: List[TypeOfCustomerAccount] = field(
-        default_factory=list,
-        metadata={
-            "name": "TypeOfCustomerAccount",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TypeOfCustomerAccountRef",
+                    "type": TypeOfCustomerAccountRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfCustomerAccount",
+                    "type": TypeOfCustomerAccount,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

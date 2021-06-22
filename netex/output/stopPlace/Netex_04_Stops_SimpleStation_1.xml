@@ -205,17 +205,17 @@
                   <ParentZoneRef version="01" ref="ztb:bh0023@A1"/>
                   <LevelRef version="01" ref="ztb:bh0023@Lvl_0"/>
                   <placeEquipments modificationSet="all">
-                    <EntranceEquipment id="ztb:bh0023@A1-E1@entrance" modification="new" version="any" status="active">
-                      <Door>true</Door>
-                      <KeptOpen>true</KeptOpen>
-                      <WheelchairPassable>true</WheelchairPassable>
-                    </EntranceEquipment>
                     <RampEquipment id="ztb:bh0023@A1-E1@ramp" modification="new" version="any" status="active">
                       <DirectionOfUse>both</DirectionOfUse>
                       <Gradient>22</Gradient>
                       <GradientType>steep</GradientType>
                       <VisualGuidanceBands>true</VisualGuidanceBands>
                     </RampEquipment>
+                    <EntranceEquipment id="ztb:bh0023@A1-E1@entrance" modification="new" version="any" status="active">
+                      <Door>true</Door>
+                      <KeptOpen>true</KeptOpen>
+                      <WheelchairPassable>true</WheelchairPassable>
+                    </EntranceEquipment>
                   </placeEquipments>
                   <Label lang="de">Eingang</Label>
                   <EntranceType>openDoor</EntranceType>
@@ -254,16 +254,16 @@
                   <ParentZoneRef version="01" ref="ztb:bh0023@Rail@Q1"/>
                   <LevelRef version="01" ref="ztb:bh0023@Lvl_0"/>
                   <placeEquipments modificationSet="all">
-                    <EntranceEquipment id="ztb:bh0023@Rail@Q1-E1tr@entrance" modification="new" version="any" status="active">
-                      <Door>false</Door>
-                      <KeptOpen>true</KeptOpen>
-                      <WheelchairPassable>true</WheelchairPassable>
-                    </EntranceEquipment>
                     <RampEquipment id="ztb:bh0023@Rail@Q1-E1tr@ramp" modification="new" version="any" status="active">
                       <DirectionOfUse>both</DirectionOfUse>
                       <Gradient>22</Gradient>
                       <VisualGuidanceBands>true</VisualGuidanceBands>
                     </RampEquipment>
+                    <EntranceEquipment id="ztb:bh0023@Rail@Q1-E1tr@entrance" modification="new" version="any" status="active">
+                      <Door>false</Door>
+                      <KeptOpen>true</KeptOpen>
+                      <WheelchairPassable>true</WheelchairPassable>
+                    </EntranceEquipment>
                   </placeEquipments>
                   <EntranceType>opening</EntranceType>
                   <IsExternal>true</IsExternal>
@@ -326,18 +326,18 @@
                         </EquipmentPosition>
                       </equipmentPositions>
                       <placeEquipments modificationSet="all">
-                        <GeneralSign id="ztb:bh0023@Rail@Q1@Sign_02" modification="new" version="any" status="active">
-                          <Height>1</Height>
-                          <Width>2</Width>
-                          <HeightFromFloor>1.5</HeightFromFloor>
-                          <Content>Ausgang</Content>
-                        </GeneralSign>
                         <PlaceSign id="ztb:bh0023@Rail@Q1@Sign_01" modification="new" version="any" status="active">
                           <Height>1</Height>
                           <Width>2</Width>
                           <HeightFromFloor>1.5</HeightFromFloor>
                           <PlaceName>Reid</PlaceName>
                         </PlaceSign>
+                        <GeneralSign id="ztb:bh0023@Rail@Q1@Sign_02" modification="new" version="any" status="active">
+                          <Height>1</Height>
+                          <Width>2</Width>
+                          <HeightFromFloor>1.5</HeightFromFloor>
+                          <Content>Ausgang</Content>
+                        </GeneralSign>
                       </placeEquipments>
                     </EquipmentPlace>
                   </equipmentPlaces>

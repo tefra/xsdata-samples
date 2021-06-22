@@ -12,19 +12,21 @@ class JourneyMeetingViewsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "journeyMeetingViews_RelStructure"
 
-    journey_meeting_ref: List[JourneyMeetingRef] = field(
+    journey_meeting_ref_or_journey_meeting_view: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "JourneyMeetingRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    journey_meeting_view: List[JourneyMeetingView] = field(
-        default_factory=list,
-        metadata={
-            "name": "JourneyMeetingView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "JourneyMeetingRef",
+                    "type": JourneyMeetingRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "JourneyMeetingView",
+                    "type": JourneyMeetingView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

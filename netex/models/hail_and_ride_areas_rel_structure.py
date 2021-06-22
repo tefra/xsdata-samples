@@ -12,19 +12,21 @@ class HailAndRideAreasRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "hailAndRideAreas_RelStructure"
 
-    hail_and_ride_area_ref: List[HailAndRideAreaRef] = field(
+    hail_and_ride_area_ref_or_hail_and_ride_area: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "HailAndRideAreaRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    hail_and_ride_area: List[HailAndRideArea] = field(
-        default_factory=list,
-        metadata={
-            "name": "HailAndRideArea",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "HailAndRideAreaRef",
+                    "type": HailAndRideAreaRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "HailAndRideArea",
+                    "type": HailAndRideArea,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

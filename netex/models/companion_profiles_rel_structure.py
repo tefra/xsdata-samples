@@ -12,19 +12,21 @@ class CompanionProfilesRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "companionProfiles_RelStructure"
 
-    companion_profile_ref: List[CompanionProfileRef] = field(
+    companion_profile_ref_or_companion_profile: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "CompanionProfileRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    companion_profile: List[CompanionProfile] = field(
-        default_factory=list,
-        metadata={
-            "name": "CompanionProfile",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "CompanionProfileRef",
+                    "type": CompanionProfileRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CompanionProfile",
+                    "type": CompanionProfile,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

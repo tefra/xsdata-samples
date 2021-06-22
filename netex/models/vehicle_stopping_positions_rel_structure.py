@@ -12,19 +12,21 @@ class VehicleStoppingPositionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "vehicleStoppingPositions_RelStructure"
 
-    vehicle_stopping_position_ref: List[VehicleStoppingPositionRef] = field(
+    vehicle_stopping_position_ref_or_vehicle_stopping_position: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "VehicleStoppingPositionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    vehicle_stopping_position: List[VehicleStoppingPosition] = field(
-        default_factory=list,
-        metadata={
-            "name": "VehicleStoppingPosition",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "VehicleStoppingPositionRef",
+                    "type": VehicleStoppingPositionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleStoppingPosition",
+                    "type": VehicleStoppingPosition,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

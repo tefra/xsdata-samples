@@ -12,19 +12,21 @@ class SalesOfferPackageElementsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "salesOfferPackageElements_RelStructure"
 
-    sales_offer_package_element_ref: List[SalesOfferPackageElementRef] = field(
+    sales_offer_package_element_ref_or_sales_offer_package_element: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "SalesOfferPackageElementRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    sales_offer_package_element: List[SalesOfferPackageElement] = field(
-        default_factory=list,
-        metadata={
-            "name": "SalesOfferPackageElement",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "SalesOfferPackageElementRef",
+                    "type": SalesOfferPackageElementRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SalesOfferPackageElement",
+                    "type": SalesOfferPackageElement,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

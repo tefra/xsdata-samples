@@ -12,19 +12,21 @@ class FareDemandFactorsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "fareDemandFactors_RelStructure"
 
-    fare_demand_factor_ref: List[FareDemandFactorRef] = field(
+    fare_demand_factor_ref_or_fare_demand_factor: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "FareDemandFactorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_demand_factor: List[FareDemandFactor] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareDemandFactor",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FareDemandFactorRef",
+                    "type": FareDemandFactorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareDemandFactor",
+                    "type": FareDemandFactor,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

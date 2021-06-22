@@ -12,19 +12,21 @@ class OfferedTravelSpecificationsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "offeredTravelSpecifications_RelStructure"
 
-    offered_travel_specification_ref: List[OfferedTravelSpecificationRef] = field(
+    offered_travel_specification_ref_or_offered_travel_specification: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "OfferedTravelSpecificationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    offered_travel_specification: List[OfferedTravelSpecification] = field(
-        default_factory=list,
-        metadata={
-            "name": "OfferedTravelSpecification",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "OfferedTravelSpecificationRef",
+                    "type": OfferedTravelSpecificationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OfferedTravelSpecification",
+                    "type": OfferedTravelSpecification,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

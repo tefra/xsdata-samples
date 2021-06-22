@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Type
 from .class_ref_structure import ClassRefStructure
 from .classes_in_repository_rel_structure import ClassesInRepositoryRelStructure
 from .layer_ref import LayerRef
@@ -18,20 +18,22 @@ class TypesOfFrameRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "typesOfFrame_RelStructure"
 
-    type_of_frame_ref: List[TypeOfFrameRef] = field(
+    type_of_frame_ref_or_type_of_frame: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "TypeOfFrameRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_frame: List["TypeOfFrame"] = field(
-        default_factory=list,
-        metadata={
-            "name": "TypeOfFrame",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TypeOfFrameRef",
+                    "type": TypeOfFrameRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfFrame",
+                    "type": Type["TypeOfFrame"],
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
 

@@ -18,6 +18,13 @@ class DisplayAssignment(DisplayAssignmentVersionStructure):
             "type": "Attribute",
         }
     )
+    data_source_ref: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "dataSourceRef",
+            "type": "Attribute",
+        }
+    )
     status: StatusEnumeration = field(
         default=StatusEnumeration.ACTIVE,
         metadata={
@@ -28,13 +35,6 @@ class DisplayAssignment(DisplayAssignmentVersionStructure):
         default=None,
         metadata={
             "name": "derivedFromVersionRef",
-            "type": "Attribute",
-        }
-    )
-    responsibility_set_ref: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "responsibilitySetRef",
             "type": "Attribute",
         }
     )

@@ -768,19 +768,19 @@
                   <OnwardTimingLinkRef version="any" ref="mybus:SSP_001_to_SSP_001_t1"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_24o_02" modification="new" version="any" status="active" order="2">
-                  <TimingPointRef version="any" ref="mybus:SSP_001_t1" xsi:type="TimingPointRefStructure"/>
+                  <TimingPointRef version="any" ref="mybus:SSP_001_t1"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:SSP_001_t1_to_SSP_001_t2"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_24o_03" modification="new" version="any" status="active" order="3">
-                  <TimingPointRef version="any" ref="mybus:SSP_001_t2" xsi:type="TimingPointRefStructure"/>
+                  <TimingPointRef version="any" ref="mybus:SSP_001_t2"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:SSP_001_t2_to_SSP_002"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_24o_04" modification="new" version="any" status="active" order="4">
-                  <TimingPointRef version="any" ref="mybus:SSP_002" xsi:type="TimingPointRefStructure"/>
+                  <TimingPointRef version="any" ref="mybus:SSP_002"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:SSP_002_to_SSP_002_t1"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_24o_05" modification="new" version="any" status="active" order="5">
-                  <TimingPointRef version="any" ref="mybus:SSP_002_t1" xsi:type="TimingPointRefStructure"/>
+                  <TimingPointRef version="any" ref="mybus:SSP_002_t1"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:SSP_002_t1_to_SSP_077"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_24o_06" modification="new" version="any" status="active" order="6">
@@ -798,7 +798,7 @@
                   <OnwardTimingLinkRef version="any" ref="mybus:SSP_077_to_SSP_002_t1"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_24i_02" modification="new" version="any" status="active" order="2">
-                  <TimingPointRef version="any" ref="mybus:SSP_002_t1" xsi:type="TimingPointRefStructure"/>
+                  <TimingPointRef version="any" ref="mybus:SSP_002_t1"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:SSP_002_t1_to_SSP_002"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_24i_03" modification="new" version="any" status="active" order="3">
@@ -806,11 +806,11 @@
                   <OnwardTimingLinkRef version="any" ref="mybus:SSP_002_to_SSP_001_t2"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_24i_04" modification="new" version="any" status="active" order="4">
-                  <TimingPointRef version="any" ref="mybus:SSP_001_t2" xsi:type="TimingPointRefStructure"/>
+                  <TimingPointRef version="any" ref="mybus:SSP_001_t2"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:SSP_001_t2_to_SSP_001_t1"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_24i_05" modification="new" version="any" status="active" order="5">
-                  <TimingPointRef version="any" ref="mybus:SSP_001_t1" xsi:type="TimingPointRefStructure"/>
+                  <TimingPointRef version="any" ref="mybus:SSP_001_t1"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:SSP_001_t1_to_SSP_001"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_24i_06" modification="new" version="any" status="active" order="6">
@@ -832,6 +832,10 @@
                 </JourneyPatternRunTime>
               </runTimes>
               <pointsInSequence>
+                <StopPointInJourneyPattern id="hde:pijp_24o_SSP_001" modification="new" version="any" status="active" order="1">
+                  <ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
+                  <OnwardServiceLinkRef version="any" ref="mybus:SSP_001_to_SSP_002"/>
+                </StopPointInJourneyPattern>
                 <PointInJourneyPattern id="hde:pijp_24o_RT_24_SSP_001@" modification="new" version="any" status="active" order="2">
                   <RoutePointRef version="any" ref="mybus:Rtpt_RT_24_SSP_001@"/>
                 </PointInJourneyPattern>
@@ -841,6 +845,10 @@
                 <PointInJourneyPattern id="hde:pijp_24o_RT_24_2" modification="new" version="any" status="active" order="4">
                   <RoutePointRef version="any" ref="mybus:Rtpt_RT_24_2"/>
                 </PointInJourneyPattern>
+                <StopPointInJourneyPattern id="hde:pijp_24o_SSP_002" modification="new" version="any" status="active" order="5">
+                  <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
+                  <OnwardServiceLinkRef version="any" ref="mybus:SSP_002_to_SSP_077"/>
+                </StopPointInJourneyPattern>
                 <PointInJourneyPattern id="hde:pijp_24o_RT_24_3" modification="new" version="any" status="active" order="6">
                   <RoutePointRef version="any" ref="mybus:Rtpt_RT_24_3"/>
                 </PointInJourneyPattern>
@@ -853,14 +861,6 @@
                 <PointInJourneyPattern id="hde:pijp_24o_RT_24_SSP_003@" modification="new" version="any" status="active" order="9">
                   <RoutePointRef version="any" ref="mybus:Rtpt_RT_24_SSP_003@"/>
                 </PointInJourneyPattern>
-                <StopPointInJourneyPattern id="hde:pijp_24o_SSP_001" modification="new" version="any" status="active" order="1">
-                  <ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
-                  <OnwardServiceLinkRef version="any" ref="mybus:SSP_001_to_SSP_002"/>
-                </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="hde:pijp_24o_SSP_002" modification="new" version="any" status="active" order="5">
-                  <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
-                  <OnwardServiceLinkRef version="any" ref="mybus:SSP_002_to_SSP_077"/>
-                </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern id="hde:pijp_24o_SSP_07" modification="new" version="any" status="active" order="10">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
                 </StopPointInJourneyPattern>
@@ -878,6 +878,10 @@
                 </JourneyPatternRunTime>
               </runTimes>
               <pointsInSequence>
+                <StopPointInJourneyPattern id="hde:pijp_24i_SSP_077" modification="new" version="any" status="active" order="1">
+                  <ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
+                  <OnwardServiceLinkRef version="any" ref="mybus:SSP_077_to_SSP_002"/>
+                </StopPointInJourneyPattern>
                 <PointInJourneyPattern id="hde:pijp_24i_SSP_003@" modification="new" version="any" status="active" order="2">
                   <RoutePointRef version="any" ref="mybus:Rtpt_RT_24_SSP_003@"/>
                 </PointInJourneyPattern>
@@ -890,6 +894,10 @@
                 <PointInJourneyPattern id="hde:pijp_24i_RT_24_3" modification="new" version="any" status="active" order="5">
                   <RoutePointRef version="any" ref="mybus:Rtpt_RT_24_3"/>
                 </PointInJourneyPattern>
+                <StopPointInJourneyPattern id="hde:pijp_24i_SSP_002" modification="new" version="any" status="active" order="6">
+                  <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
+                  <OnwardServiceLinkRef version="any" ref="mybus:SSP_002_to_SSP_001"/>
+                </StopPointInJourneyPattern>
                 <PointInJourneyPattern id="hde:pijp_24i_RT_24_2" modification="new" version="any" status="active" order="7">
                   <RoutePointRef version="any" ref="mybus:Rtpt_RT_24_2"/>
                 </PointInJourneyPattern>
@@ -899,14 +907,6 @@
                 <PointInJourneyPattern id="hde:pijp_24i_SSP_001@" modification="new" version="any" status="active" order="9">
                   <RoutePointRef version="any" ref="mybus:Rtpt_RT_24_SSP_001@"/>
                 </PointInJourneyPattern>
-                <StopPointInJourneyPattern id="hde:pijp_24i_SSP_077" modification="new" version="any" status="active" order="1">
-                  <ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
-                  <OnwardServiceLinkRef version="any" ref="mybus:SSP_077_to_SSP_002"/>
-                </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="hde:pijp_24i_SSP_002" modification="new" version="any" status="active" order="6">
-                  <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
-                  <OnwardServiceLinkRef version="any" ref="mybus:SSP_002_to_SSP_001"/>
-                </StopPointInJourneyPattern>
                 <StopPointInJourneyPattern id="hde:pijp_24i_SSP_001" modification="new" version="any" status="active" order="10">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
                 </StopPointInJourneyPattern>

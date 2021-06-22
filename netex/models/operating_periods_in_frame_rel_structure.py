@@ -12,19 +12,21 @@ class OperatingPeriodsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "operatingPeriodsInFrame_RelStructure"
 
-    operating_period: List[OperatingPeriod] = field(
+    operating_period_or_uic_operating_period: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "OperatingPeriod",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    uic_operating_period: List[UicOperatingPeriod] = field(
-        default_factory=list,
-        metadata={
-            "name": "UicOperatingPeriod",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "OperatingPeriod",
+                    "type": OperatingPeriod,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "UicOperatingPeriod",
+                    "type": UicOperatingPeriod,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

@@ -12,19 +12,21 @@ class AccessesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "accesses_RelStructure"
 
-    access_ref: List[AccessRef] = field(
+    access_ref_or_access: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "AccessRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    access: List[Access] = field(
-        default_factory=list,
-        metadata={
-            "name": "Access",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "AccessRef",
+                    "type": AccessRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Access",
+                    "type": Access,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

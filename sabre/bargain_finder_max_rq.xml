@@ -3,7 +3,7 @@
   <POS>
     <Source PseudoCityCode="C9QH" AbacusUser="false">
       <RequestorID Type="1" ID="1">
-        <CompanyName Code="TN"/>
+        <CompanyName xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Code="TN" PreferLevel="Preferred" xsi:type="CompanyNamePrefType"/>
       </RequestorID>
     </Source>
   </POS>

@@ -32,44 +32,37 @@ class LineNetworkVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    network_ref: List[NetworkRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "NetworkRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-        }
-    )
-    group_of_lines_ref: Optional[GroupOfLinesRef] = field(
-        default=None,
-        metadata={
-            "name": "GroupOfLinesRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    flexible_line_ref: List[FlexibleLineRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "FlexibleLineRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-        }
-    )
-    line_ref: Optional[LineRef] = field(
-        default=None,
-        metadata={
-            "name": "LineRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    sections: Optional[LineSectionsRelStructure] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "NetworkRef",
+                    "type": NetworkRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GroupOfLinesRef",
+                    "type": GroupOfLinesRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FlexibleLineRef",
+                    "type": FlexibleLineRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LineRef",
+                    "type": LineRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "sections",
+                    "type": LineSectionsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 7,
         }
     )

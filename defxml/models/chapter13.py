@@ -82,25 +82,11 @@ class ProductType(ItemType):
 
 @dataclass
 class SmallSizeType(SizeType):
-    system: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "required": True,
-        }
-    )
+    pass
 
 
 @dataclass
 class RestrictedProductType(ProductType):
-    routing_num: Optional[int] = field(
-        default=None,
-        metadata={
-            "name": "routingNum",
-            "type": "Attribute",
-            "required": True,
-        }
-    )
     eff_date: XmlDate = field(
         default=XmlDate(1900, 1, 1),
         metadata={

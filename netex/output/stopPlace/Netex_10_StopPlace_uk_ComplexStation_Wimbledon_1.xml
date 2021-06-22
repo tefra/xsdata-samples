@@ -2463,10 +2463,6 @@
                   <NumberOfSpaces>16</NumberOfSpaces>
                   <CycleStorageType>other</CycleStorageType>
                 </CycleStorageEquipment>
-                <AssistanceService id="tbd:9100WIMBLDN@LS3" modification="new" version="any" status="active">
-                  <AccessibilityTrainedStaff>true</AccessibilityTrainedStaff>
-                  <SafetyFacilityList>ccTv sosPoints</SafetyFacilityList>
-                </AssistanceService>
                 <TicketingService id="tbd:TicketingService:9100WIMBLDN@LS1" modification="new" version="any" status="active">
                   <VehicleModes>rail</VehicleModes>
                   <TicketingServiceList>all</TicketingServiceList>
@@ -2481,6 +2477,10 @@
                   <OnlinePurchaseForSelfPrintTicket>false</OnlinePurchaseForSelfPrintTicket>
                   <PaymentMethods>cash creditCard debitCard travelCard</PaymentMethods>
                 </TicketingService>
+                <AssistanceService id="tbd:9100WIMBLDN@LS3" modification="new" version="any" status="active">
+                  <AccessibilityTrainedStaff>true</AccessibilityTrainedStaff>
+                  <SafetyFacilityList>ccTv sosPoints</SafetyFacilityList>
+                </AssistanceService>
               </unlocalisedEquipments>
               <servedPlaces modificationSet="all">
                 <TopographicPlaceRef created="2010-05-17T09:30:47Z" ref="nptgLocality:E0034695"/>
@@ -2756,6 +2756,9 @@
                     </EquipmentPlace>
                   </equipmentPlaces>
                   <localServices modificationSet="all">
+                    <AssistanceService id="tbd:9100WIMBLDN@A1_SF" modification="new" version="any" status="active">
+                      <Staffing>fullTime</Staffing>
+                    </AssistanceService>
                     <AssistanceBookingService id="tbd:AssistanceBookingServiceersion:9100WIMBLDN@A1_SF" modification="new" version="any" status="active">
                       <BookingArrangements>
                         <LatestBookingTime>16:00:00</LatestBookingTime>
@@ -2769,9 +2772,6 @@
                     <RetailService id="tbd:RetailService:9100WIMBLDN@A1_SF" modification="new" version="any" status="active">
                       <ServiceList>newspaperTobacco food photoBooth</ServiceList>
                     </RetailService>
-                    <AssistanceService id="tbd:9100WIMBLDN@A1_SF" modification="new" version="any" status="active">
-                      <Staffing>fullTime</Staffing>
-                    </AssistanceService>
                   </localServices>
                   <entrances modificationSet="all">
                     <StopPlaceEntranceRef version="001" ref="tbd:9100WIMBLDN@A1-EE1"/>
@@ -2938,8 +2938,8 @@
                     </EquipmentPlace>
                   </equipmentPlaces>
                   <entrances modificationSet="all">
-                    <StopPlaceEntranceRef version="001" ref="tbd:9100WIMBLDN@A5-EL1pl"/>
                     <EntranceRef version="001" ref="tbd:9100WIMBLDN@A2b-EL1g"/>
+                    <StopPlaceEntranceRef version="001" ref="tbd:9100WIMBLDN@A5-EL1pl"/>
                   </entrances>
                   <AccessSpaceType>lift</AccessSpaceType>
                 </AccessSpace>
@@ -6086,12 +6086,12 @@
                         </EquipmentPosition>
                       </equipmentPositions>
                       <placeEquipments modificationSet="all">
-                        <AssistanceService id="tbd:4900ZZLUWIM1n2" modification="new" version="any" status="active">
-                          <AssistanceFacilityList>none</AssistanceFacilityList>
-                        </AssistanceService>
                         <WaitingRoomEquipment id="tbd:4900ZZLUWIM1n2_Eq-Seats1" modification="new" version="any" status="active">
                           <Seats>8</Seats>
                         </WaitingRoomEquipment>
+                        <AssistanceService id="tbd:4900ZZLUWIM1n2" modification="new" version="any" status="active">
+                          <AssistanceFacilityList>none</AssistanceFacilityList>
+                        </AssistanceService>
                       </placeEquipments>
                     </EquipmentPlace>
                   </equipmentPlaces>
@@ -6160,12 +6160,12 @@
                         </EquipmentPosition>
                       </equipmentPositions>
                       <placeEquipments modificationSet="all">
-                        <AssistanceService id="tbd:4900ZZLUWIM3n4_Eq-Seats1" modification="new" version="any" status="active">
-                          <AssistanceFacilityList>none</AssistanceFacilityList>
-                        </AssistanceService>
                         <WaitingRoomEquipment id="tbd:4900ZZLUWIM3n4_Eq-Seats1" modification="new" version="any" status="active">
                           <Seats>8</Seats>
                         </WaitingRoomEquipment>
+                        <AssistanceService id="tbd:4900ZZLUWIM3n4_Eq-Seats1" modification="new" version="any" status="active">
+                          <AssistanceFacilityList>none</AssistanceFacilityList>
+                        </AssistanceService>
                       </placeEquipments>
                     </EquipmentPlace>
                   </equipmentPlaces>

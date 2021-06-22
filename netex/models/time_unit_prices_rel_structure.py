@@ -14,35 +14,31 @@ class TimeUnitPricesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "timeUnitPrices_RelStructure"
 
-    time_unit_price_ref: List[TimeUnitPriceRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "TimeUnitPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    time_unit_price: List[TimeUnitPriceVersionedChildStructure] = field(
-        default_factory=list,
-        metadata={
-            "name": "TimeUnitPrice",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    cell_ref: List[CellRef1] = field(
-        default_factory=list,
-        metadata={
-            "name": "CellRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_cell_ref: List[CellRef2] = field(
-        default_factory=list,
-        metadata={
-            "name": "CellRef_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TimeUnitPriceRef",
+                    "type": TimeUnitPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TimeUnitPrice",
+                    "type": TimeUnitPriceVersionedChildStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CellRef",
+                    "type": CellRef1,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CellRef_",
+                    "type": CellRef2,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

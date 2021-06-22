@@ -15,43 +15,36 @@ class JourneyPatternsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "journeyPatternsInFrame_RelStructure"
 
-    service_journey_pattern: List[ServiceJourneyPattern] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "ServiceJourneyPattern",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    dead_run_journey_pattern: List[DeadRunJourneyPattern] = field(
-        default_factory=list,
-        metadata={
-            "name": "DeadRunJourneyPattern",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    journey_pattern: List[JourneyPattern1] = field(
-        default_factory=list,
-        metadata={
-            "name": "JourneyPattern",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_journey_pattern: List[JourneyPattern2] = field(
-        default_factory=list,
-        metadata={
-            "name": "JourneyPattern_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    journey_pattern_view: List[JourneyPatternView] = field(
-        default_factory=list,
-        metadata={
-            "name": "JourneyPatternView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ServiceJourneyPattern",
+                    "type": ServiceJourneyPattern,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DeadRunJourneyPattern",
+                    "type": DeadRunJourneyPattern,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "JourneyPattern",
+                    "type": JourneyPattern1,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "JourneyPattern_",
+                    "type": JourneyPattern2,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "JourneyPatternView",
+                    "type": JourneyPatternView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

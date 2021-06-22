@@ -12,19 +12,21 @@ class SeriesConstraintsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "SeriesConstraints_RelStructure"
 
-    series_constraint_ref: List[SeriesConstraintRef] = field(
+    series_constraint_ref_or_series_constraint: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "SeriesConstraintRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    series_constraint: List[SeriesConstraint] = field(
-        default_factory=list,
-        metadata={
-            "name": "SeriesConstraint",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "SeriesConstraintRef",
+                    "type": SeriesConstraintRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SeriesConstraint",
+                    "type": SeriesConstraint,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

@@ -42,57 +42,42 @@ class OperationalContextVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    control_centre_ref: List[ControlCentreRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "ControlCentreRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    organisational_unit_ref: List[OrganisationalUnitRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "OrganisationalUnitRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    department_ref: List[DepartmentRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "DepartmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    organisation_part_ref: Optional[OrganisationPartRef] = field(
-        default=None,
-        metadata={
-            "name": "OrganisationPartRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    vehicle_mode: Optional[AllModesEnumeration] = field(
-        default=None,
-        metadata={
-            "name": "VehicleMode",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    transport_submode: Optional[TransportSubmode] = field(
-        default=None,
-        metadata={
-            "name": "TransportSubmode",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ControlCentreRef",
+                    "type": ControlCentreRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OrganisationalUnitRef",
+                    "type": OrganisationalUnitRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DepartmentRef",
+                    "type": DepartmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OrganisationPartRef",
+                    "type": OrganisationPartRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleMode",
+                    "type": AllModesEnumeration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TransportSubmode",
+                    "type": TransportSubmode,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 9,
         }
     )

@@ -12,19 +12,21 @@ class ValidableElementsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "validableElements_RelStructure"
 
-    validable_element_ref: List[ValidableElementRef] = field(
+    validable_element_ref_or_validable_element: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "ValidableElementRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    validable_element: List[ValidableElement] = field(
-        default_factory=list,
-        metadata={
-            "name": "ValidableElement",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ValidableElementRef",
+                    "type": ValidableElementRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ValidableElement",
+                    "type": ValidableElement,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

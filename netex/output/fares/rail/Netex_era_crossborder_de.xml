@@ -1019,8 +1019,8 @@ All other animals and animals with infectious diseases are excluded from carriag
                   <TypeOfAccessRightAssignmentRef version="any" ref="eura:can_access"/>
                   <LimitationGroupingType>AND</LimitationGroupingType>
                   <limitations modificationSet="all">
-                    <FrequencyOfUseRef version="any" ref="db:DB@Tariff@Trip@frequency@single_use"/>
                     <RoundTripRef version="any" ref="db:DB@Tariff@Trip@trip_type@period_return@outbound"/>
+                    <FrequencyOfUseRef version="any" ref="db:DB@Tariff@Trip@frequency@single_use"/>
                   </limitations>
                 </GenericParameterAssignment>
               </validityParameterAssignments>
@@ -1035,8 +1035,8 @@ All other animals and animals with infectious diseases are excluded from carriag
                   <TypeOfAccessRightAssignmentRef version="any" ref="eura:can_access"/>
                   <LimitationGroupingType>AND</LimitationGroupingType>
                   <limitations modificationSet="all">
-                    <FrequencyOfUseRef version="any" ref="db:DB@Tariff@Trip@frequency@single_use"/>
                     <RoundTripRef version="any" ref="db:DB@Tariff@Trip@trip_type@period_return@inbound"/>
+                    <FrequencyOfUseRef version="any" ref="db:DB@Tariff@Trip@frequency@single_use"/>
                   </limitations>
                 </GenericParameterAssignment>
               </validityParameterAssignments>
@@ -1052,8 +1052,8 @@ All other animals and animals with infectious diseases are excluded from carriag
                   <TypeOfAccessRightAssignmentRef version="any" ref="eura:can_access"/>
                   <LimitationGroupingType>AND</LimitationGroupingType>
                   <limitations modificationSet="all">
-                    <FrequencyOfUseRef version="any" ref="db:DB@Tariff@Trip@frequency@single_use"/>
                     <RoundTripRef version="any" ref="db:DB@Tariff@Trip@trip_type@single"/>
+                    <FrequencyOfUseRef version="any" ref="db:DB@Tariff@Trip@frequency@single_use"/>
                   </limitations>
                 </GenericParameterAssignment>
               </validityParameterAssignments>
@@ -1138,15 +1138,15 @@ All other animals and animals with infectious diseases are excluded from carriag
                   <Name>The Dresden Wrocław Special is valid from the date of validity stated on the ticket and entitles you to a one-way return journey within 14 days. It is possible to change between the direct connections (Dresden - Wrocław) and the non-interchangeable KD trains (eg Węgliniec - Görlitz). Longer breaks (eg stopover during outward or return journey) are not permitted.</Name>
                   <TypeOfAccessRightAssignmentRef version="any" ref="eura:condition_of_use"/>
                   <limitations modificationSet="all">
-                    <Interchanging id="tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@return@interchanging" modification="new" version="01" status="active">
-                      <CanInterchange>true</CanInterchange>
-                      <CanBreakJourney>false</CanBreakJourney>
-                    </Interchanging>
                     <UsageValidityPeriod id="tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@return@validity" modification="new" version="01" status="active">
                       <UsageTrigger>purchase</UsageTrigger>
                       <UsageEnd>endOfTrip</UsageEnd>
                       <StandardDuration>P14D</StandardDuration>
                     </UsageValidityPeriod>
+                    <Interchanging id="tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@return@interchanging" modification="new" version="01" status="active">
+                      <CanInterchange>true</CanInterchange>
+                      <CanBreakJourney>false</CanBreakJourney>
+                    </Interchanging>
                   </limitations>
                 </GenericParameterAssignment>
               </validityParameterAssignments>
@@ -2017,13 +2017,13 @@ Example: If you are traveling with the trilex from Hainewalde to Zittau and tran
                         <CanInterchange>true</CanInterchange>
                         <CanBreakJourney>false</CanBreakJourney>
                       </Interchanging>
+                      <FrequencyOfUse id="db:DB@Tariff@Trip@frequency@single_use" modification="new" version="any" status="active">
+                        <FrequencyOfUseType>single</FrequencyOfUseType>
+                      </FrequencyOfUse>
                       <Interchanging id="db:DB@Tariff@Trip@interchanging@can_break_trip" modification="new" version="any" status="active">
                         <CanInterchange>true</CanInterchange>
                         <CanBreakJourney>true</CanBreakJourney>
                       </Interchanging>
-                      <FrequencyOfUse id="db:DB@Tariff@Trip@frequency@single_use" modification="new" version="any" status="active">
-                        <FrequencyOfUseType>single</FrequencyOfUseType>
-                      </FrequencyOfUse>
                     </limitations>
                   </GenericParameterAssignment>
                 </FareStructureElement>
@@ -2588,7 +2588,6 @@ An overview of the validity of EURO-NEISSE tickets can be found here. Further in
             <GroupOfDistanceMatrixElements id="dbn:DBN@ODs@de_cz" modification="new" version="01" status="active">
               <Name>OD Pairs</Name>
               <members modificationSet="all">
-                <DistanceMatrixElementRef version="01" ref="dbn:6113-to-54212">Zittau to Liberec</DistanceMatrixElementRef>
                 <DistanceMatrixElement id="dbn:6050-to-54212" modification="new" version="01" status="active">
                   <Name>Dresden hbf to Liberec</Name>
                   <StartStopPointRef version="01" ref="uic:6050"/>
@@ -2687,6 +2686,7 @@ An overview of the validity of EURO-NEISSE tickets can be found here. Further in
                   <StartStopPointRef version="01" ref="uic:96045"/>
                   <EndStopPointRef version="01" ref="uic:54212"/>
                 </DistanceMatrixElement>
+                <DistanceMatrixElementRef version="01" ref="dbn:6113-to-54212">Zittau to Liberec</DistanceMatrixElementRef>
               </members>
             </GroupOfDistanceMatrixElements>
             <GroupOfDistanceMatrixElements id="dbn:DBN@ODs@de_pl" modification="new" version="01" status="active">
@@ -2944,8 +2944,8 @@ An overview of the validity of EURO-NEISSE tickets can be found here. Further in
                           <FareStructureElementRef version="01" ref="tlx:Trilex@Tariff@Tagesticket@COMPOSITION"/>
                           <SalesOfferPackageRef version="01" ref="tlx:Trilex@Product@Pass@Tagesticket@period-SOP"/>
                           <limitations modificationSet="all">
-                            <GroupTicketRef version="01" ref="tlx:Trilex@Tariff@Tagesticket@group"/>
                             <UserProfileRef version="any" ref="db:adult"/>
+                            <GroupTicketRef version="01" ref="tlx:Trilex@Tariff@Tagesticket@group"/>
                           </limitations>
                           <validityParameters modificationSet="all">
                             <FareSectionRef version="01" ref="tlx:Trilex@Dresden-to-Goerlitz"/>
@@ -3256,6 +3256,9 @@ An overview of the validity of EURO-NEISSE tickets can be found here. Further in
             </ResponsibilitySet>
           </responsibilitySets>
           <typesOfValue modificationSet="all">
+            <TypeOfFrame id="eura:Fare" modification="new" version="any" status="active" nameOfClassifiedEntityClass="VersionFrame">
+              <Name>Fares Frame</Name>
+            </TypeOfFrame>
             <ValueSet id="eura:Types_of_ProductCategory" modification="new" version="any" status="active" classOfValues="TypeOfProductCategory">
               <Name>Types of Product Category</Name>
               <values>
@@ -3478,9 +3481,6 @@ An overview of the validity of EURO-NEISSE tickets can be found here. Further in
                 </TypeOfAccessRightAssignment>
               </values>
             </ValueSet>
-            <TypeOfFrame id="eura:Fare" modification="new" version="any" status="active" nameOfClassifiedEntityClass="VersionFrame">
-              <Name>Fares Frame</Name>
-            </TypeOfFrame>
           </typesOfValue>
           <organisations modificationSet="all">
             <Operator id="uic:0051" modification="new" version="any" status="active">

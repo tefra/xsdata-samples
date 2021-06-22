@@ -73,51 +73,37 @@ class LevelVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    stop_place_ref: List[StopPlaceRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "StopPlaceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    parking_ref: List[ParkingRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ParkingRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    point_of_interest_ref: List[PointOfInterestRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "PointOfInterestRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    service_site_ref: List[ServiceSiteRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ServiceSiteRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    site_ref: Optional[SiteRef] = field(
-        default=None,
-        metadata={
-            "name": "SiteRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "StopPlaceRef",
+                    "type": StopPlaceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingRef",
+                    "type": ParkingRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PointOfInterestRef",
+                    "type": PointOfInterestRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServiceSiteRef",
+                    "type": ServiceSiteRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SiteRef",
+                    "type": SiteRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 9,
         }
     )

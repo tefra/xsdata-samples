@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .direction_ref import DirectionRef
 from .flexible_line_ref import FlexibleLineRef
@@ -14,37 +14,33 @@ class AllowedLineDirectionVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "AllowedLineDirection_VersionStructure"
 
-    flexible_line_ref: List[FlexibleLineRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "FlexibleLineRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-        }
-    )
-    line_ref: Optional[LineRef] = field(
-        default=None,
-        metadata={
-            "name": "LineRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    direction_ref: Optional[DirectionRef] = field(
-        default=None,
-        metadata={
-            "name": "DirectionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
-        }
-    )
-    presentation: Optional[PresentationStructure] = field(
-        default=None,
-        metadata={
-            "name": "Presentation",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FlexibleLineRef",
+                    "type": FlexibleLineRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LineRef",
+                    "type": LineRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DirectionRef",
+                    "type": DirectionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Presentation",
+                    "type": PresentationStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "min_occurs": 1,
+            "max_occurs": 5,
         }
     )

@@ -82,44 +82,37 @@ class CourseOfJourneysVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    train_block_ref: List[TrainBlockRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "TrainBlockRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-        }
-    )
-    block_ref: Optional[BlockRef] = field(
-        default=None,
-        metadata={
-            "name": "BlockRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    flexible_line_ref: List[FlexibleLineRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "FlexibleLineRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-        }
-    )
-    line_ref: Optional[LineRef] = field(
-        default=None,
-        metadata={
-            "name": "LineRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    journeys: Optional[JourneyRefsRelStructure] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TrainBlockRef",
+                    "type": TrainBlockRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "BlockRef",
+                    "type": BlockRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FlexibleLineRef",
+                    "type": FlexibleLineRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LineRef",
+                    "type": LineRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "journeys",
+                    "type": JourneyRefsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 7,
         }
     )

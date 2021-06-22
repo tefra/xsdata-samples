@@ -6,6 +6,6 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 class FontSizeEnumeration(Enum):
     VERY_SMALL = "verySmall"
     SMALL = "small"
-    MEDUIM = "meduim"
+    MEDIUM = "medium"
     LARGE = "large"
     VERY_LARGE = "veryLarge"

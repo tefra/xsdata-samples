@@ -12,19 +12,21 @@ class PointOfInterestEntrancesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "pointOfInterestEntrances_RelStructure"
 
-    point_of_interest_entrance_ref: List[SiteComponentRefStructure] = field(
+    point_of_interest_entrance_ref_or_point_of_interest_entrance: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "PointOfInterestEntranceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    point_of_interest_entrance: List[PointOfInterestEntrance] = field(
-        default_factory=list,
-        metadata={
-            "name": "PointOfInterestEntrance",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "PointOfInterestEntranceRef",
+                    "type": SiteComponentRefStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PointOfInterestEntrance",
+                    "type": PointOfInterestEntrance,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

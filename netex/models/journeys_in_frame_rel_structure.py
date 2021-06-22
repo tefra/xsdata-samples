@@ -18,67 +18,51 @@ class JourneysInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "journeysInFrame_RelStructure"
 
-    vehicle_journey: List[VehicleJourney1] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "VehicleJourney",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    dated_vehicle_journey: List[DatedVehicleJourney] = field(
-        default_factory=list,
-        metadata={
-            "name": "DatedVehicleJourney",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    normal_dated_vehicle_journey: List[NormalDatedVehicleJourney] = field(
-        default_factory=list,
-        metadata={
-            "name": "NormalDatedVehicleJourney",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    service_journey: List[ServiceJourney1] = field(
-        default_factory=list,
-        metadata={
-            "name": "ServiceJourney",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    dated_service_journey: List[DatedServiceJourney] = field(
-        default_factory=list,
-        metadata={
-            "name": "DatedServiceJourney",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    dead_run: List[DeadRun] = field(
-        default_factory=list,
-        metadata={
-            "name": "DeadRun",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    special_service: List[SpecialService] = field(
-        default_factory=list,
-        metadata={
-            "name": "SpecialService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    template_service_journey: List[TemplateServiceJourney] = field(
-        default_factory=list,
-        metadata={
-            "name": "TemplateServiceJourney",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "VehicleJourney",
+                    "type": VehicleJourney1,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DatedVehicleJourney",
+                    "type": DatedVehicleJourney,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "NormalDatedVehicleJourney",
+                    "type": NormalDatedVehicleJourney,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServiceJourney",
+                    "type": ServiceJourney1,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DatedServiceJourney",
+                    "type": DatedServiceJourney,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DeadRun",
+                    "type": DeadRun,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SpecialService",
+                    "type": SpecialService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TemplateServiceJourney",
+                    "type": TemplateServiceJourney,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

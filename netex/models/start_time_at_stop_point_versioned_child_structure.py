@@ -22,46 +22,38 @@ class StartTimeAtStopPointVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    fare_scheduled_stop_point_ref: List[FareScheduledStopPointRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "FareScheduledStopPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
-            "max_occurs": 2,
-        }
-    )
-    scheduled_stop_point_ref: Optional[ScheduledStopPointRef] = field(
-        default=None,
-        metadata={
-            "name": "ScheduledStopPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
-        }
-    )
-    start_time: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "name": "StartTime",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    end_time: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "name": "EndTime",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    day_offset: Optional[int] = field(
-        default=None,
-        metadata={
-            "name": "DayOffset",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FareScheduledStopPointRef",
+                    "type": FareScheduledStopPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ScheduledStopPointRef",
+                    "type": ScheduledStopPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "StartTime",
+                    "type": XmlTime,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "EndTime",
+                    "type": XmlTime,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DayOffset",
+                    "type": int,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "min_occurs": 2,
+            "max_occurs": 6,
         }
     )

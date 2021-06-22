@@ -12,19 +12,21 @@ class PathJunctionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "pathJunctions_RelStructure"
 
-    path_junction_ref: List[PathJunctionRef] = field(
+    path_junction_ref_or_path_junction: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "PathJunctionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    path_junction: List[PathJunction] = field(
-        default_factory=list,
-        metadata={
-            "name": "PathJunction",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "PathJunctionRef",
+                    "type": PathJunctionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PathJunction",
+                    "type": PathJunction,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

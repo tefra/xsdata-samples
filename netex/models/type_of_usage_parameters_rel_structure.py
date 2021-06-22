@@ -12,19 +12,21 @@ class TypeOfUsageParametersRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "typeOfUsageParameters_RelStructure"
 
-    type_of_usage_parameter_ref: List[TypeOfUsageParameterRef] = field(
+    type_of_usage_parameter_ref_or_type_of_usage_parameter: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "TypeOfUsageParameterRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_usage_parameter: List[TypeOfUsageParameter] = field(
-        default_factory=list,
-        metadata={
-            "name": "TypeOfUsageParameter",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TypeOfUsageParameterRef",
+                    "type": TypeOfUsageParameterRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfUsageParameter",
+                    "type": TypeOfUsageParameter,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

@@ -13,27 +13,26 @@ class OperatingPeriodsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "operatingPeriods_RelStructure"
 
-    operating_period_ref: List[OperatingPeriodRef] = field(
+    operating_period_ref_or_operating_period_or_uic_operating_period: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "OperatingPeriodRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    operating_period: List[OperatingPeriod] = field(
-        default_factory=list,
-        metadata={
-            "name": "OperatingPeriod",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    uic_operating_period: List[UicOperatingPeriod] = field(
-        default_factory=list,
-        metadata={
-            "name": "UicOperatingPeriod",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "OperatingPeriodRef",
+                    "type": OperatingPeriodRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OperatingPeriod",
+                    "type": OperatingPeriod,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "UicOperatingPeriod",
+                    "type": UicOperatingPeriod,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

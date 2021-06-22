@@ -12,19 +12,21 @@ class StartTimeAtStopPointsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "startTimeAtStopPoints_RelStructure"
 
-    start_time_at_stop_point_ref: List[StartTimeAtStopPointRef] = field(
+    start_time_at_stop_point_ref_or_start_time_at_stop_point: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "StartTimeAtStopPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    start_time_at_stop_point: List[StartTimeAtStopPoint] = field(
-        default_factory=list,
-        metadata={
-            "name": "StartTimeAtStopPoint",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "StartTimeAtStopPointRef",
+                    "type": StartTimeAtStopPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "StartTimeAtStopPoint",
+                    "type": StartTimeAtStopPoint,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

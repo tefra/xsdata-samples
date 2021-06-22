@@ -12,19 +12,21 @@ class ServicePatternsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "servicePatternsInFrame_RelStructure"
 
-    service_pattern: List[ServicePattern] = field(
+    service_pattern_or_journey_pattern_view: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "ServicePattern",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    journey_pattern_view: List[JourneyPatternView] = field(
-        default_factory=list,
-        metadata={
-            "name": "JourneyPatternView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ServicePattern",
+                    "type": ServicePattern,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "JourneyPatternView",
+                    "type": JourneyPatternView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

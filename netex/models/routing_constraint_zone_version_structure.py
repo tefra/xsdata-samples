@@ -38,20 +38,22 @@ class RoutingConstraintZoneVersionStructure(ZoneVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    network_ref: List[NetworkRef] = field(
+    network_ref_or_group_of_lines_ref: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "NetworkRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-        }
-    )
-    group_of_lines_ref: Optional[GroupOfLinesRef] = field(
-        default=None,
-        metadata={
-            "name": "GroupOfLinesRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "NetworkRef",
+                    "type": NetworkRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GroupOfLinesRef",
+                    "type": GroupOfLinesRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 3,
         }
     )

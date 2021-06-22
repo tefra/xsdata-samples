@@ -12,19 +12,21 @@ class VehicleEquipmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "vehicleEquipments_RelStructure"
 
-    access_vehicle_equipment: List[AccessVehicleEquipment] = field(
+    access_vehicle_equipment_or_wheelchair_vehicle_equipment: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "AccessVehicleEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    wheelchair_vehicle_equipment: List[WheelchairVehicleEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "WheelchairVehicleEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "AccessVehicleEquipment",
+                    "type": AccessVehicleEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "WheelchairVehicleEquipment",
+                    "type": WheelchairVehicleEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

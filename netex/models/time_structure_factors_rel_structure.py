@@ -13,27 +13,26 @@ class TimeStructureFactorsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "timeStructureFactors_RelStructure"
 
-    parking_charge_band_ref: List[ParkingChargeBandRef] = field(
+    parking_charge_band_ref_or_time_structure_factor_ref_or_time_structure_factor: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "ParkingChargeBandRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    time_structure_factor_ref: List[TimeStructureFactorRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TimeStructureFactorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    time_structure_factor: List[TimeStructureFactor] = field(
-        default_factory=list,
-        metadata={
-            "name": "TimeStructureFactor",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ParkingChargeBandRef",
+                    "type": ParkingChargeBandRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TimeStructureFactorRef",
+                    "type": TimeStructureFactorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TimeStructureFactor",
+                    "type": TimeStructureFactor,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

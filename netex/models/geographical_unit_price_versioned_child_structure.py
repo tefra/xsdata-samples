@@ -37,35 +37,31 @@ class GeographicalUnitPricesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "geographicalUnitPrices_RelStructure"
 
-    geographical_unit_price_ref: List[GeographicalUnitPriceRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "GeographicalUnitPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    geographical_unit_price: List[GeographicalUnitPriceVersionedChildStructure] = field(
-        default_factory=list,
-        metadata={
-            "name": "GeographicalUnitPrice",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    cell_ref: List[CellRef1] = field(
-        default_factory=list,
-        metadata={
-            "name": "CellRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_cell_ref: List[CellRef2] = field(
-        default_factory=list,
-        metadata={
-            "name": "CellRef_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "GeographicalUnitPriceRef",
+                    "type": GeographicalUnitPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GeographicalUnitPrice",
+                    "type": GeographicalUnitPriceVersionedChildStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CellRef",
+                    "type": CellRef1,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CellRef_",
+                    "type": CellRef2,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

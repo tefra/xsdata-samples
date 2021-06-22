@@ -8,187 +8,10 @@
   </PublicationRequest>
   <PublicationRefreshInterval>PT5M0S</PublicationRefreshInterval>
   <dataObjects>
-    <FareFrame id="mypark:FF01" modification="new" version="any" status="active">
-      <Name>Parking Tariffs</Name>
-      <FrameDefaults>
-        <DefaultCurrency>GBP</DefaultCurrency>
-      </FrameDefaults>
-      <PricingParameterSet id="mypark:FF01" modification="new" version="any" status="active">
-        <pricingRules>
-          <DiscountingRule id="mypark:Vat" modification="new" version="any" status="active">
-            <Name>VAT Tax rate</Name>
-            <TypeOfPricingRuleRef version="any" ref="mypark:vat@parking"/>
-            <DiscountAsPercentage>115</DiscountAsPercentage>
-          </DiscountingRule>
-        </pricingRules>
-      </PricingParameterSet>
-      <parkingTariffs modificationSet="all">
-        <ParkingTariff id="mypark:PP01" modification="new" version="any" status="active">
-          <Description>Tariffs for central car park</Description>
-          <ParkingStayType>midTerm</ParkingStayType>
-          <ParkingVehicleTypes>passengerCar</ParkingVehicleTypes>
-          <appliesTo modificationSet="all">
-            <ParkingRef version="any" ref="mypark:PP01"/>
-          </appliesTo>
-          <parkingChargeBands modificationSet="all">
-            <ParkingChargeBand id="mypark:PP01@15M" modification="new" version="any" status="active">
-              <ParkingVehicleType>all</ParkingVehicleType>
-              <MaximumStay>PT15M</MaximumStay>
-              <prices>
-                <ParkingPrice id="mypark:PP01@15M" modification="new" version="any" status="active">
-                  <Amount>0.25</Amount>
-                  <DiscountingRuleRef version="any" ref="mypark:Vat"/>
-                </ParkingPrice>
-              </prices>
-            </ParkingChargeBand>
-            <ParkingChargeBand id="mypark:PP01@30M" modification="new" version="any" status="active">
-              <ParkingVehicleType>all</ParkingVehicleType>
-              <MaximumStay>PT30M</MaximumStay>
-              <prices>
-                <ParkingPrice id="mypark:PP01@30M" modification="new" version="any" status="active">
-                  <Amount>1.00</Amount>
-                  <DiscountingRuleRef version="any" ref="mypark:Vat"/>
-                </ParkingPrice>
-              </prices>
-            </ParkingChargeBand>
-            <ParkingChargeBand id="mypark:PP01@1H" modification="new" version="any" status="active">
-              <ParkingVehicleType>all</ParkingVehicleType>
-              <MaximumStay>PT1H</MaximumStay>
-              <prices>
-                <ParkingPrice id="mypark:PP01@1H" modification="new" version="any" status="active">
-                  <Amount>1.00</Amount>
-                  <DiscountingRuleRef version="any" ref="mypark:Vat"/>
-                </ParkingPrice>
-              </prices>
-            </ParkingChargeBand>
-            <ParkingChargeBand id="mypark:PP01@2H" modification="new" version="any" status="active">
-              <ParkingVehicleType>all</ParkingVehicleType>
-              <MaximumStay>PT2H</MaximumStay>
-              <prices>
-                <ParkingPrice id="mypark:PP01@2H" modification="new" version="any" status="active">
-                  <Amount>2.00</Amount>
-                  <DiscountingRuleRef version="any" ref="mypark:Vat"/>
-                </ParkingPrice>
-              </prices>
-            </ParkingChargeBand>
-            <ParkingChargeBand id="mypark:PP01@4H" modification="new" version="any" status="active">
-              <ParkingVehicleType>all</ParkingVehicleType>
-              <MaximumStay>PT4H</MaximumStay>
-              <prices>
-                <ParkingPrice id="mypark:PP01@4H" modification="new" version="any" status="active">
-                  <Amount>3.00</Amount>
-                  <DiscountingRuleRef version="any" ref="mypark:Vat"/>
-                </ParkingPrice>
-              </prices>
-            </ParkingChargeBand>
-            <ParkingChargeBand id="mypark:PP01@6H" modification="new" version="any" status="active">
-              <ParkingVehicleType>all</ParkingVehicleType>
-              <MaximumStay>PT6H</MaximumStay>
-              <prices>
-                <ParkingPrice id="mypark:PP01@6H" modification="new" version="any" status="active">
-                  <Amount>4.00</Amount>
-                  <DiscountingRuleRef version="any" ref="mypark:Vat"/>
-                </ParkingPrice>
-              </prices>
-            </ParkingChargeBand>
-            <ParkingChargeBand id="mypark:PP01@12H" modification="new" version="any" status="active">
-              <ParkingVehicleType>all</ParkingVehicleType>
-              <MaximumStay>PT12H</MaximumStay>
-              <prices>
-                <ParkingPrice id="mypark:PP01@12H" modification="new" version="any" status="active">
-                  <Amount>10.00</Amount>
-                  <DiscountingRuleRef version="any" ref="mypark:Vat"/>
-                </ParkingPrice>
-              </prices>
-            </ParkingChargeBand>
-            <ParkingChargeBand id="mypark:PP01@24H" modification="new" version="any" status="active">
-              <ParkingVehicleType>all</ParkingVehicleType>
-              <MaximumStay>PT24H</MaximumStay>
-              <prices>
-                <ParkingPrice id="mypark:PP01@24H" modification="new" version="any" status="active">
-                  <Amount>18.00</Amount>
-                  <DiscountingRuleRef version="any" ref="mypark:Vat"/>
-                </ParkingPrice>
-              </prices>
-            </ParkingChargeBand>
-            <ParkingChargeBand id="mypark:PP01@48H" modification="new" version="any" status="active">
-              <ParkingVehicleType>all</ParkingVehicleType>
-              <MaximumStay>PT2H</MaximumStay>
-              <prices>
-                <ParkingPrice id="mypark:PP01@48H" modification="new" version="any" status="active">
-                  <Amount>24.00</Amount>
-                  <DiscountingRuleRef version="any" ref="mypark:Vat"/>
-                </ParkingPrice>
-              </prices>
-            </ParkingChargeBand>
-          </parkingChargeBands>
-        </ParkingTariff>
-        <ParkingTariff id="mypark:PS22@other" modification="new" version="any" status="active">
-          <Description>Tariffs for on PARK AND RIDE Parking  Working dates</Description>
-          <ParkingUserType>other</ParkingUserType>
-          <ParkingStayType>shortStay</ParkingStayType>
-          <ParkingVehicleTypes>passengerCar</ParkingVehicleTypes>
-          <appliesTo modificationSet="all">
-            <ParkingRef version="any" ref="mypark:PNR01"/>
-          </appliesTo>
-          <parkingChargeBands modificationSet="all">
-            <ParkingChargeBand id="mypark:PS22@15M_working" modification="new" version="any" status="active">
-              <Description>25P an hour</Description>
-              <ParkingVehicleType>all</ParkingVehicleType>
-              <MaximumStay>PT15M</MaximumStay>
-              <prices>
-                <ParkingPrice id="mypark:PS22@15M_working" modification="new" version="any" status="active">
-                  <Amount>0.25</Amount>
-                  <DiscountingRuleRef version="any" ref="mypark:Vat"/>
-                </ParkingPrice>
-              </prices>
-            </ParkingChargeBand>
-          </parkingChargeBands>
-        </ParkingTariff>
-        <ParkingTariff id="mypark:PS22@disabled" modification="new" version="any" status="active">
-          <Description>Tariffs for on street Parking  Disabled</Description>
-          <ParkingUserType>registeredDisabled</ParkingUserType>
-          <ParkingStayType>shortStay</ParkingStayType>
-          <ParkingVehicleTypes>passengerCar</ParkingVehicleTypes>
-          <parkingChargeBands modificationSet="all">
-            <ParkingChargeBand id="mypark:PS22@15M_other" modification="new" version="any" status="active">
-              <Description>free</Description>
-              <ParkingVehicleType>all</ParkingVehicleType>
-              <MaximumStay>PT15M</MaximumStay>
-              <prices>
-                <ParkingPrice id="mypark:PS22@15M_other" modification="new" version="any" status="active">
-                  <Amount>0.0</Amount>
-                </ParkingPrice>
-              </prices>
-            </ParkingChargeBand>
-          </parkingChargeBands>
-        </ParkingTariff>
-        <ParkingTariff id="mypark:PNR01" modification="new" version="any" status="active">
-          <Description>Tariffs for on street Parking  Disabled</Description>
-          <ParkingUserType>all</ParkingUserType>
-          <ParkingStayType>shortStay</ParkingStayType>
-          <ParkingVehicleTypes>passengerCar</ParkingVehicleTypes>
-          <parkingChargeBands modificationSet="all">
-            <ParkingChargeBand id="mypark:PNR01@60M" modification="new" version="any" status="active">
-              <Description>10p an hour </Description>
-              <ParkingVehicleType>all</ParkingVehicleType>
-              <MaximumStay>PT1H</MaximumStay>
-              <prices>
-                <ParkingPrice id="mypark:PNR01@60M" modification="new" version="any" status="active">
-                  <Amount>0.10</Amount>
-                  <DiscountingRuleRef version="any" ref="mypark:Vat"/>
-                </ParkingPrice>
-              </prices>
-            </ParkingChargeBand>
-          </parkingChargeBands>
-        </ParkingTariff>
-      </parkingTariffs>
-    </FareFrame>
     <SiteFrame id="mypark:SF01" modification="new" version="any" status="active">
       <validityConditions modificationSet="all">
         <AvailabilityCondition id="mypark:PP01@Opening_Hours" modification="new" version="any" status="active">
           <dayTypes modificationSet="all">
-            <DayTypeRef ref=""/>
             <DayType id="mypark:EveryDay" modification="new" version="any" status="active">
               <Name>Every day</Name>
               <properties>
@@ -197,6 +20,7 @@
                 </PropertyOfDay>
               </properties>
             </DayType>
+            <DayTypeRef ref=""/>
           </dayTypes>
           <timebands modificationSet="all">
             <Timeband id="mypark:PP01@Opening_Hours@range" modification="new" version="any" status="active">
@@ -207,7 +31,6 @@
         </AvailabilityCondition>
         <AvailabilityCondition id="mypark:PP01@Exit_Hours" modification="new" version="any" status="active">
           <dayTypes modificationSet="all">
-            <DayTypeRef ref=""/>
             <DayType id="mypark:24_Hours_every_day" modification="new" version="any" status="active">
               <Name>Every day</Name>
               <properties>
@@ -216,6 +39,7 @@
                 </PropertyOfDay>
               </properties>
             </DayType>
+            <DayTypeRef ref=""/>
           </dayTypes>
         </AvailabilityCondition>
       </validityConditions>
@@ -335,17 +159,17 @@
               <ParentZoneRef version="any" ref="mypark:PP01"/>
               <LevelRef version="any" ref="mypark:PP01@Level@01"/>
               <placeEquipments modificationSet="all">
-                <EntranceEquipment id="mypark:PP01@EP01@entrance" modification="new" version="any" status="active">
-                  <Door>true</Door>
-                  <KeptOpen>true</KeptOpen>
-                  <WheelchairPassable>true</WheelchairPassable>
-                </EntranceEquipment>
                 <RampEquipment id="mypark:PP01@EP01@ramp" modification="new" version="any" status="active">
                   <DirectionOfUse>both</DirectionOfUse>
                   <Gradient>22</Gradient>
                   <GradientType>steep</GradientType>
                   <VisualGuidanceBands>true</VisualGuidanceBands>
                 </RampEquipment>
+                <EntranceEquipment id="mypark:PP01@EP01@entrance" modification="new" version="any" status="active">
+                  <Door>true</Door>
+                  <KeptOpen>true</KeptOpen>
+                  <WheelchairPassable>true</WheelchairPassable>
+                </EntranceEquipment>
               </placeEquipments>
               <Label>Eingang</Label>
               <EntranceType>openDoor</EntranceType>
@@ -751,7 +575,6 @@
               <Name>Charged Parking times</Name>
               <Description>Modnay to friday not PublicHolidays</Description>
               <dayTypes modificationSet="all">
-                <DayTypeRef ref=""/>
                 <DayType id="mypark:WorkingDay" modification="new" version="any" status="active">
                   <Name>Working day</Name>
                   <properties>
@@ -761,6 +584,7 @@
                     </PropertyOfDay>
                   </properties>
                 </DayType>
+                <DayTypeRef ref=""/>
               </dayTypes>
               <timebands modificationSet="all">
                 <Timeband id="mypark:Parking_Charge_Hours" modification="new" version="any" status="active">
@@ -1228,6 +1052,182 @@
         </Parking>
       </parkings>
     </SiteFrame>
+    <FareFrame id="mypark:FF01" modification="new" version="any" status="active">
+      <Name>Parking Tariffs</Name>
+      <FrameDefaults>
+        <DefaultCurrency>GBP</DefaultCurrency>
+      </FrameDefaults>
+      <PricingParameterSet id="mypark:FF01" modification="new" version="any" status="active">
+        <pricingRules>
+          <DiscountingRule id="mypark:Vat" modification="new" version="any" status="active">
+            <Name>VAT Tax rate</Name>
+            <TypeOfPricingRuleRef version="any" ref="mypark:vat@parking"/>
+            <DiscountAsPercentage>115</DiscountAsPercentage>
+          </DiscountingRule>
+        </pricingRules>
+      </PricingParameterSet>
+      <parkingTariffs modificationSet="all">
+        <ParkingTariff id="mypark:PP01" modification="new" version="any" status="active">
+          <Description>Tariffs for central car park</Description>
+          <ParkingStayType>midTerm</ParkingStayType>
+          <ParkingVehicleTypes>passengerCar</ParkingVehicleTypes>
+          <appliesTo modificationSet="all">
+            <ParkingRef version="any" ref="mypark:PP01"/>
+          </appliesTo>
+          <parkingChargeBands modificationSet="all">
+            <ParkingChargeBand id="mypark:PP01@15M" modification="new" version="any" status="active">
+              <ParkingVehicleType>all</ParkingVehicleType>
+              <MaximumStay>PT15M</MaximumStay>
+              <prices>
+                <ParkingPrice id="mypark:PP01@15M" modification="new" version="any" status="active">
+                  <Amount>0.25</Amount>
+                  <DiscountingRuleRef version="any" ref="mypark:Vat"/>
+                </ParkingPrice>
+              </prices>
+            </ParkingChargeBand>
+            <ParkingChargeBand id="mypark:PP01@30M" modification="new" version="any" status="active">
+              <ParkingVehicleType>all</ParkingVehicleType>
+              <MaximumStay>PT30M</MaximumStay>
+              <prices>
+                <ParkingPrice id="mypark:PP01@30M" modification="new" version="any" status="active">
+                  <Amount>1.00</Amount>
+                  <DiscountingRuleRef version="any" ref="mypark:Vat"/>
+                </ParkingPrice>
+              </prices>
+            </ParkingChargeBand>
+            <ParkingChargeBand id="mypark:PP01@1H" modification="new" version="any" status="active">
+              <ParkingVehicleType>all</ParkingVehicleType>
+              <MaximumStay>PT1H</MaximumStay>
+              <prices>
+                <ParkingPrice id="mypark:PP01@1H" modification="new" version="any" status="active">
+                  <Amount>1.00</Amount>
+                  <DiscountingRuleRef version="any" ref="mypark:Vat"/>
+                </ParkingPrice>
+              </prices>
+            </ParkingChargeBand>
+            <ParkingChargeBand id="mypark:PP01@2H" modification="new" version="any" status="active">
+              <ParkingVehicleType>all</ParkingVehicleType>
+              <MaximumStay>PT2H</MaximumStay>
+              <prices>
+                <ParkingPrice id="mypark:PP01@2H" modification="new" version="any" status="active">
+                  <Amount>2.00</Amount>
+                  <DiscountingRuleRef version="any" ref="mypark:Vat"/>
+                </ParkingPrice>
+              </prices>
+            </ParkingChargeBand>
+            <ParkingChargeBand id="mypark:PP01@4H" modification="new" version="any" status="active">
+              <ParkingVehicleType>all</ParkingVehicleType>
+              <MaximumStay>PT4H</MaximumStay>
+              <prices>
+                <ParkingPrice id="mypark:PP01@4H" modification="new" version="any" status="active">
+                  <Amount>3.00</Amount>
+                  <DiscountingRuleRef version="any" ref="mypark:Vat"/>
+                </ParkingPrice>
+              </prices>
+            </ParkingChargeBand>
+            <ParkingChargeBand id="mypark:PP01@6H" modification="new" version="any" status="active">
+              <ParkingVehicleType>all</ParkingVehicleType>
+              <MaximumStay>PT6H</MaximumStay>
+              <prices>
+                <ParkingPrice id="mypark:PP01@6H" modification="new" version="any" status="active">
+                  <Amount>4.00</Amount>
+                  <DiscountingRuleRef version="any" ref="mypark:Vat"/>
+                </ParkingPrice>
+              </prices>
+            </ParkingChargeBand>
+            <ParkingChargeBand id="mypark:PP01@12H" modification="new" version="any" status="active">
+              <ParkingVehicleType>all</ParkingVehicleType>
+              <MaximumStay>PT12H</MaximumStay>
+              <prices>
+                <ParkingPrice id="mypark:PP01@12H" modification="new" version="any" status="active">
+                  <Amount>10.00</Amount>
+                  <DiscountingRuleRef version="any" ref="mypark:Vat"/>
+                </ParkingPrice>
+              </prices>
+            </ParkingChargeBand>
+            <ParkingChargeBand id="mypark:PP01@24H" modification="new" version="any" status="active">
+              <ParkingVehicleType>all</ParkingVehicleType>
+              <MaximumStay>PT24H</MaximumStay>
+              <prices>
+                <ParkingPrice id="mypark:PP01@24H" modification="new" version="any" status="active">
+                  <Amount>18.00</Amount>
+                  <DiscountingRuleRef version="any" ref="mypark:Vat"/>
+                </ParkingPrice>
+              </prices>
+            </ParkingChargeBand>
+            <ParkingChargeBand id="mypark:PP01@48H" modification="new" version="any" status="active">
+              <ParkingVehicleType>all</ParkingVehicleType>
+              <MaximumStay>PT2H</MaximumStay>
+              <prices>
+                <ParkingPrice id="mypark:PP01@48H" modification="new" version="any" status="active">
+                  <Amount>24.00</Amount>
+                  <DiscountingRuleRef version="any" ref="mypark:Vat"/>
+                </ParkingPrice>
+              </prices>
+            </ParkingChargeBand>
+          </parkingChargeBands>
+        </ParkingTariff>
+        <ParkingTariff id="mypark:PS22@other" modification="new" version="any" status="active">
+          <Description>Tariffs for on PARK AND RIDE Parking  Working dates</Description>
+          <ParkingUserType>other</ParkingUserType>
+          <ParkingStayType>shortStay</ParkingStayType>
+          <ParkingVehicleTypes>passengerCar</ParkingVehicleTypes>
+          <appliesTo modificationSet="all">
+            <ParkingRef version="any" ref="mypark:PNR01"/>
+          </appliesTo>
+          <parkingChargeBands modificationSet="all">
+            <ParkingChargeBand id="mypark:PS22@15M_working" modification="new" version="any" status="active">
+              <Description>25P an hour</Description>
+              <ParkingVehicleType>all</ParkingVehicleType>
+              <MaximumStay>PT15M</MaximumStay>
+              <prices>
+                <ParkingPrice id="mypark:PS22@15M_working" modification="new" version="any" status="active">
+                  <Amount>0.25</Amount>
+                  <DiscountingRuleRef version="any" ref="mypark:Vat"/>
+                </ParkingPrice>
+              </prices>
+            </ParkingChargeBand>
+          </parkingChargeBands>
+        </ParkingTariff>
+        <ParkingTariff id="mypark:PS22@disabled" modification="new" version="any" status="active">
+          <Description>Tariffs for on street Parking  Disabled</Description>
+          <ParkingUserType>registeredDisabled</ParkingUserType>
+          <ParkingStayType>shortStay</ParkingStayType>
+          <ParkingVehicleTypes>passengerCar</ParkingVehicleTypes>
+          <parkingChargeBands modificationSet="all">
+            <ParkingChargeBand id="mypark:PS22@15M_other" modification="new" version="any" status="active">
+              <Description>free</Description>
+              <ParkingVehicleType>all</ParkingVehicleType>
+              <MaximumStay>PT15M</MaximumStay>
+              <prices>
+                <ParkingPrice id="mypark:PS22@15M_other" modification="new" version="any" status="active">
+                  <Amount>0.0</Amount>
+                </ParkingPrice>
+              </prices>
+            </ParkingChargeBand>
+          </parkingChargeBands>
+        </ParkingTariff>
+        <ParkingTariff id="mypark:PNR01" modification="new" version="any" status="active">
+          <Description>Tariffs for on street Parking  Disabled</Description>
+          <ParkingUserType>all</ParkingUserType>
+          <ParkingStayType>shortStay</ParkingStayType>
+          <ParkingVehicleTypes>passengerCar</ParkingVehicleTypes>
+          <parkingChargeBands modificationSet="all">
+            <ParkingChargeBand id="mypark:PNR01@60M" modification="new" version="any" status="active">
+              <Description>10p an hour </Description>
+              <ParkingVehicleType>all</ParkingVehicleType>
+              <MaximumStay>PT1H</MaximumStay>
+              <prices>
+                <ParkingPrice id="mypark:PNR01@60M" modification="new" version="any" status="active">
+                  <Amount>0.10</Amount>
+                  <DiscountingRuleRef version="any" ref="mypark:Vat"/>
+                </ParkingPrice>
+              </prices>
+            </ParkingChargeBand>
+          </parkingChargeBands>
+        </ParkingTariff>
+      </parkingTariffs>
+    </FareFrame>
     <ResourceFrame id="mypark:Resources" modification="new" version="any" status="active">
       <typesOfValue modificationSet="all">
         <ValueSet id="mypark:Types_off_VAT_Categopry" modification="new" version="any" status="active" classOfValues="TypeOfPricingRule">

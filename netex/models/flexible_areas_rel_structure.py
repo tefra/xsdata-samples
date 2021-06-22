@@ -12,19 +12,21 @@ class FlexibleAreasRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "flexibleAreas_RelStructure"
 
-    flexible_area_ref: List[FlexibleAreaRef] = field(
+    flexible_area_ref_or_flexible_area: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "FlexibleAreaRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    flexible_area: List[FlexibleArea] = field(
-        default_factory=list,
-        metadata={
-            "name": "FlexibleArea",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FlexibleAreaRef",
+                    "type": FlexibleAreaRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FlexibleArea",
+                    "type": FlexibleArea,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

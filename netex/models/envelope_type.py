@@ -8,27 +8,27 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass
 class EnvelopeType:
-    lower_corner: Optional[DirectPositionType] = field(
-        default=None,
-        metadata={
-            "name": "lowerCorner",
-            "type": "Element",
-            "namespace": "http://www.opengis.net/gml/3.2",
-        }
-    )
-    upper_corner: Optional[DirectPositionType] = field(
-        default=None,
-        metadata={
-            "name": "upperCorner",
-            "type": "Element",
-            "namespace": "http://www.opengis.net/gml/3.2",
-        }
-    )
-    pos: List[Pos] = field(
+    lower_corner_or_upper_corner_or_pos: List[object] = field(
         default_factory=list,
         metadata={
-            "type": "Element",
-            "namespace": "http://www.opengis.net/gml/3.2",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "lowerCorner",
+                    "type": DirectPositionType,
+                    "namespace": "http://www.opengis.net/gml/3.2",
+                },
+                {
+                    "name": "upperCorner",
+                    "type": DirectPositionType,
+                    "namespace": "http://www.opengis.net/gml/3.2",
+                },
+                {
+                    "name": "pos",
+                    "type": Pos,
+                    "namespace": "http://www.opengis.net/gml/3.2",
+                },
+            ),
             "max_occurs": 2,
         }
     )

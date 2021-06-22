@@ -12,19 +12,21 @@ class TypesOfSecurityListRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "typesOfSecurityList_RelStructure"
 
-    type_of_security_list_ref: List[TypeOfSecurityListRef] = field(
+    type_of_security_list_ref_or_type_of_security_list: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "TypeOfSecurityListRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_security_list: List[TypeOfSecurityList] = field(
-        default_factory=list,
-        metadata={
-            "name": "TypeOfSecurityList",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TypeOfSecurityListRef",
+                    "type": TypeOfSecurityListRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfSecurityList",
+                    "type": TypeOfSecurityList,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

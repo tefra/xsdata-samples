@@ -46,19 +46,21 @@ class GenericParameterAssignmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "genericParameterAssignments_RelStructure"
 
-    generic_parameter_assignment: List[GenericParameterAssignment] = field(
+    generic_parameter_assignment_or_generic_parameter_assignment_in_context: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "GenericParameterAssignment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    generic_parameter_assignment_in_context: List[GenericParameterAssignmentInContext] = field(
-        default_factory=list,
-        metadata={
-            "name": "GenericParameterAssignmentInContext",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "GenericParameterAssignment",
+                    "type": GenericParameterAssignment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GenericParameterAssignmentInContext",
+                    "type": GenericParameterAssignmentInContext,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

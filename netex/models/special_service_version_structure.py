@@ -78,207 +78,136 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    service_journey_pattern_ref: List[ServiceJourneyPatternRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "ServiceJourneyPatternRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    service_pattern_ref: List[ServicePatternRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ServicePatternRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    dead_run_journey_pattern_ref: List[DeadRunJourneyPatternRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "DeadRunJourneyPatternRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    journey_pattern_ref: Optional[JourneyPatternRef] = field(
-        default=None,
-        metadata={
-            "name": "JourneyPatternRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    compound_train_ref: List[CompoundTrainRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "CompoundTrainRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    train_ref: List[TrainRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TrainRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    vehicle_type_ref: Optional[VehicleTypeRef] = field(
-        default=None,
-        metadata={
-            "name": "VehicleTypeRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    origin: Optional[JourneyEndpointStructure] = field(
-        default=None,
-        metadata={
-            "name": "Origin",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    destination: Optional[JourneyEndpointStructure] = field(
-        default=None,
-        metadata={
-            "name": "Destination",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    print: Optional[bool] = field(
-        default=None,
-        metadata={
-            "name": "Print",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    dynamic: Optional[DynamicAdvertisementEnumeration] = field(
-        default=None,
-        metadata={
-            "name": "Dynamic",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_flexible_service_ref: Optional[TypeOfFlexibleServiceRef] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfFlexibleServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    flexible_service_type: Optional[FlexibleServiceEnumeration] = field(
-        default=None,
-        metadata={
-            "name": "FlexibleServiceType",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    cancellation_possible: Optional[bool] = field(
-        default=None,
-        metadata={
-            "name": "CancellationPossible",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    change_of_time_possible: Optional[bool] = field(
-        default=None,
-        metadata={
-            "name": "ChangeOfTimePossible",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    booking_contact: Optional[ContactStructure] = field(
-        default=None,
-        metadata={
-            "name": "BookingContact",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    booking_methods: List[BookingMethodEnumeration] = field(
-        default_factory=list,
-        metadata={
-            "name": "BookingMethods",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
-        }
-    )
-    booking_access: Optional[BookingAccessEnumeration] = field(
-        default=None,
-        metadata={
-            "name": "BookingAccess",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    book_when: Optional[PurchaseWhenEnumeration] = field(
-        default=None,
-        metadata={
-            "name": "BookWhen",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    buy_when: List[PurchaseMomentEnumeration] = field(
-        default_factory=list,
-        metadata={
-            "name": "BuyWhen",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
-        }
-    )
-    latest_booking_time: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "name": "LatestBookingTime",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    minimum_booking_period: Optional[XmlDuration] = field(
-        default=None,
-        metadata={
-            "name": "MinimumBookingPeriod",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    booking_url: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "BookingUrl",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    booking_note: Optional[MultilingualString] = field(
-        default=None,
-        metadata={
-            "name": "BookingNote",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ServiceJourneyPatternRef",
+                    "type": ServiceJourneyPatternRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServicePatternRef",
+                    "type": ServicePatternRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DeadRunJourneyPatternRef",
+                    "type": DeadRunJourneyPatternRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "JourneyPatternRef",
+                    "type": JourneyPatternRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CompoundTrainRef",
+                    "type": CompoundTrainRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TrainRef",
+                    "type": TrainRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleTypeRef",
+                    "type": VehicleTypeRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Origin",
+                    "type": JourneyEndpointStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Destination",
+                    "type": JourneyEndpointStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Print",
+                    "type": bool,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Dynamic",
+                    "type": DynamicAdvertisementEnumeration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfFlexibleServiceRef",
+                    "type": TypeOfFlexibleServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FlexibleServiceType",
+                    "type": FlexibleServiceEnumeration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CancellationPossible",
+                    "type": bool,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ChangeOfTimePossible",
+                    "type": bool,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "BookingContact",
+                    "type": ContactStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "BookingMethods",
+                    "type": List[BookingMethodEnumeration],
+                    "namespace": "http://www.netex.org.uk/netex",
+                    "default_factory": list,
+                    "tokens": True,
+                },
+                {
+                    "name": "BookingAccess",
+                    "type": BookingAccessEnumeration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "BookWhen",
+                    "type": PurchaseWhenEnumeration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "BuyWhen",
+                    "type": List[PurchaseMomentEnumeration],
+                    "namespace": "http://www.netex.org.uk/netex",
+                    "default_factory": list,
+                    "tokens": True,
+                },
+                {
+                    "name": "LatestBookingTime",
+                    "type": XmlTime,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MinimumBookingPeriod",
+                    "type": XmlDuration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "BookingUrl",
+                    "type": str,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "BookingNote",
+                    "type": MultilingualString,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 29,
         }
     )

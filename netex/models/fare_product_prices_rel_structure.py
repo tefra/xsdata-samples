@@ -14,35 +14,31 @@ class FareProductPricesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "fareProductPrices_RelStructure"
 
-    fare_product_price_ref: List[FareProductPriceRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "FareProductPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    cell_ref: List[CellRef1] = field(
-        default_factory=list,
-        metadata={
-            "name": "CellRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_cell_ref: List[CellRef2] = field(
-        default_factory=list,
-        metadata={
-            "name": "CellRef_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_product_price: List[FareProductPrice] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareProductPrice",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FareProductPriceRef",
+                    "type": FareProductPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CellRef",
+                    "type": CellRef1,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CellRef_",
+                    "type": CellRef2,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareProductPrice",
+                    "type": FareProductPrice,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

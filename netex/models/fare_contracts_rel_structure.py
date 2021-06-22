@@ -12,19 +12,21 @@ class FareContractsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "fareContracts_RelStructure"
 
-    fare_contract_ref: List[FareContractRef] = field(
+    fare_contract_ref_or_fare_contract: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "FareContractRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_contract: List[FareContract] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareContract",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FareContractRef",
+                    "type": FareContractRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareContract",
+                    "type": FareContract,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

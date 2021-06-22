@@ -14,35 +14,31 @@ class CustomerPurchasePackagePricesRelStructure(StrictContainmentAggregationStru
     class Meta:
         name = "customerPurchasePackagePrices_RelStructure"
 
-    customer_purchase_package_price_ref: List[CustomerPurchasePackagePriceRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "CustomerPurchasePackagePriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    customer_purchase_package_price: List[CustomerPurchasePackagePriceVersionedChildStructure] = field(
-        default_factory=list,
-        metadata={
-            "name": "CustomerPurchasePackagePrice",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    cell_ref: List[CellRef1] = field(
-        default_factory=list,
-        metadata={
-            "name": "CellRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_cell_ref: List[CellRef2] = field(
-        default_factory=list,
-        metadata={
-            "name": "CellRef_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "CustomerPurchasePackagePriceRef",
+                    "type": CustomerPurchasePackagePriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CustomerPurchasePackagePrice",
+                    "type": CustomerPurchasePackagePriceVersionedChildStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CellRef",
+                    "type": CellRef1,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CellRef_",
+                    "type": CellRef2,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

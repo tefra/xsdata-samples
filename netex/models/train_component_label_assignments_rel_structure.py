@@ -12,19 +12,21 @@ class TrainComponentLabelAssignmentsRelStructure(ContainmentAggregationStructure
     class Meta:
         name = "trainComponentLabelAssignments_RelStructure"
 
-    train_component_label_assignment_ref: List[TrainComponentLabelAssignmentRef] = field(
+    train_component_label_assignment_ref_or_train_component_label_assignment: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "TrainComponentLabelAssignmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    train_component_label_assignment: List[TrainComponentLabelAssignment] = field(
-        default_factory=list,
-        metadata={
-            "name": "TrainComponentLabelAssignment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TrainComponentLabelAssignmentRef",
+                    "type": TrainComponentLabelAssignmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TrainComponentLabelAssignment",
+                    "type": TrainComponentLabelAssignment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

@@ -12,19 +12,21 @@ class GaragePointsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "garagePoints_RelStructure"
 
-    garage_point_ref: List[GaragePointRef] = field(
+    garage_point_ref_or_garage_point: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "GaragePointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    garage_point: List[GaragePoint] = field(
-        default_factory=list,
-        metadata={
-            "name": "GaragePoint",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "GaragePointRef",
+                    "type": GaragePointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GaragePoint",
+                    "type": GaragePoint,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

@@ -52,109 +52,77 @@ class GroupOfSalesOfferPackagesVersionStructure(GroupOfEntitiesVersionStructure)
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    limiting_rule_ref: List[LimitingRuleRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "LimitingRuleRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 6,
-            "sequential": True,
-        }
-    )
-    discounting_rule_ref: List[DiscountingRuleRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "DiscountingRuleRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    pricing_rule_ref: Optional[PricingRuleRef] = field(
-        default=None,
-        metadata={
-            "name": "PricingRuleRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    price_groups: Optional[PriceGroupsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "priceGroups",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_tables: Optional[FareTablesRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "fareTables",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_sales_offer_package_ref: Optional[TypeOfSalesOfferPackageRef] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfSalesOfferPackageRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    condition_summary: Optional[ConditionSummary] = field(
-        default=None,
-        metadata={
-            "name": "ConditionSummary",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    validity_parameter_assignments: Optional[GenericParameterAssignmentsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "validityParameterAssignments",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    distribution_assignments: Optional[DistributionAssignmentsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "distributionAssignments",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    rounding_ref: Optional[RoundingRef] = field(
-        default=None,
-        metadata={
-            "name": "RoundingRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    prices: Optional[SalesOfferPackagePricesRelStructure] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    sales_offer_package_elements: Optional[SalesOfferPackageElementsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "salesOfferPackageElements",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    members: Optional[SalesOfferPackageRefsRelStructure] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "LimitingRuleRef",
+                    "type": LimitingRuleRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DiscountingRuleRef",
+                    "type": DiscountingRuleRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PricingRuleRef",
+                    "type": PricingRuleRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "priceGroups",
+                    "type": PriceGroupsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "fareTables",
+                    "type": FareTablesRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfSalesOfferPackageRef",
+                    "type": TypeOfSalesOfferPackageRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ConditionSummary",
+                    "type": ConditionSummary,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "validityParameterAssignments",
+                    "type": GenericParameterAssignmentsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "distributionAssignments",
+                    "type": DistributionAssignmentsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RoundingRef",
+                    "type": RoundingRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "prices",
+                    "type": SalesOfferPackagePricesRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "salesOfferPackageElements",
+                    "type": SalesOfferPackageElementsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "members",
+                    "type": SalesOfferPackageRefsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 20,
         }
     )

@@ -12,19 +12,21 @@ class AssistanceBookingServicesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "assistanceBookingServices_RelStructure"
 
-    assistance_booking_service_ref: List[AssistanceBookingServiceRef] = field(
+    assistance_booking_service_ref_or_assistance_booking_service: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "AssistanceBookingServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    assistance_booking_service: List[AssistanceBookingService] = field(
-        default_factory=list,
-        metadata={
-            "name": "AssistanceBookingService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "AssistanceBookingServiceRef",
+                    "type": AssistanceBookingServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AssistanceBookingService",
+                    "type": AssistanceBookingService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

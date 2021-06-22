@@ -14,35 +14,31 @@ class NoticeAssignmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "noticeAssignments_RelStructure"
 
-    sales_notice_assignment: List[SalesNoticeAssignment] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "SalesNoticeAssignment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    notice_assignment: List[NoticeAssignment1] = field(
-        default_factory=list,
-        metadata={
-            "name": "NoticeAssignment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_notice_assignment: List[NoticeAssignment2] = field(
-        default_factory=list,
-        metadata={
-            "name": "NoticeAssignment_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    notice_assignment_view: List[NoticeAssignmentView] = field(
-        default_factory=list,
-        metadata={
-            "name": "NoticeAssignmentView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "SalesNoticeAssignment",
+                    "type": SalesNoticeAssignment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "NoticeAssignment",
+                    "type": NoticeAssignment1,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "NoticeAssignment_",
+                    "type": NoticeAssignment2,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "NoticeAssignmentView",
+                    "type": NoticeAssignmentView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

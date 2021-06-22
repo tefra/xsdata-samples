@@ -12,19 +12,21 @@ class EquipmentPlacesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "equipmentPlaces_RelStructure"
 
-    equipment_place_ref: List[EquipmentPlaceRef] = field(
+    equipment_place_ref_or_equipment_place: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "EquipmentPlaceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    equipment_place: List[EquipmentPlace] = field(
-        default_factory=list,
-        metadata={
-            "name": "EquipmentPlace",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "EquipmentPlaceRef",
+                    "type": EquipmentPlaceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "EquipmentPlace",
+                    "type": EquipmentPlace,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

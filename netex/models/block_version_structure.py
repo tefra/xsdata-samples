@@ -111,78 +111,57 @@ class BlockVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    compound_train_ref: List[CompoundTrainRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "CompoundTrainRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    train_ref: List[TrainRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TrainRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    vehicle_type_ref: Optional[VehicleTypeRef] = field(
-        default=None,
-        metadata={
-            "name": "VehicleTypeRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    start_point_ref: Optional[PointRefStructure] = field(
-        default=None,
-        metadata={
-            "name": "StartPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    end_point_ref: Optional[PointRefStructure] = field(
-        default=None,
-        metadata={
-            "name": "EndPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    journeys: Optional[JourneyRefsRelStructure] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    courses_of_journeys: Optional[CoursesOfJourneysRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "coursesOfJourneys",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    block_parts: Optional[BlockPartsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "blockParts",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    relief_opportunities: Optional[ReliefOpportunitiesRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "reliefOpportunities",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "CompoundTrainRef",
+                    "type": CompoundTrainRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TrainRef",
+                    "type": TrainRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleTypeRef",
+                    "type": VehicleTypeRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "StartPointRef",
+                    "type": PointRefStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "EndPointRef",
+                    "type": PointRefStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "journeys",
+                    "type": JourneyRefsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "coursesOfJourneys",
+                    "type": CoursesOfJourneysRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "blockParts",
+                    "type": BlockPartsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "reliefOpportunities",
+                    "type": ReliefOpportunitiesRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 13,
         }
     )

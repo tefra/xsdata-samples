@@ -81,255 +81,157 @@ class AccessRightParameterAssignmentVersionStructure(AssignmentVersionStructure1
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    supplement_product_ref: List[SupplementProductRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "SupplementProductRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 10,
-            "sequential": True,
-        }
-    )
-    preassigned_fare_product_ref: List[PreassignedFareProductRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "PreassignedFareProductRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 4,
-            "sequential": True,
-        }
-    )
-    amount_of_price_unit_product_ref: List[AmountOfPriceUnitProductRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "AmountOfPriceUnitProductRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 4,
-            "sequential": True,
-        }
-    )
-    usage_discount_right_ref: List[UsageDiscountRightRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "UsageDiscountRightRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 4,
-            "sequential": True,
-        }
-    )
-    third_party_product_ref: List[ThirdPartyProductRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ThirdPartyProductRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 4,
-            "sequential": True,
-        }
-    )
-    capped_discount_right_ref: List[CappedDiscountRightRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "CappedDiscountRightRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 10,
-            "sequential": True,
-        }
-    )
-    sale_discount_right_ref: List[SaleDiscountRightRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "SaleDiscountRightRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 4,
-            "sequential": True,
-        }
-    )
-    fare_product_ref: Optional[FareProductRef] = field(
-        default=None,
-        metadata={
-            "name": "FareProductRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    parking_tariff_ref: List[ParkingTariffRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ParkingTariffRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-        }
-    )
-    tariff_ref: Optional[TariffRef] = field(
-        default=None,
-        metadata={
-            "name": "TariffRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_structure_element_ref: Optional[FareStructureElementRef] = field(
-        default=None,
-        metadata={
-            "name": "FareStructureElementRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    controllable_element_in_sequence_ref: List[ControllableElementInSequenceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ControllableElementInSequenceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    fare_structure_element_in_sequence_ref: List[FareStructureElementInSequenceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareStructureElementInSequenceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    access_right_in_product_ref: List[AccessRightInProductRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "AccessRightInProductRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    fare_element_in_sequence_ref: Optional[FareElementInSequenceRef] = field(
-        default=None,
-        metadata={
-            "name": "FareElementInSequenceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    distance_matrix_element_ref: Optional[DistanceMatrixElementRef] = field(
-        default=None,
-        metadata={
-            "name": "DistanceMatrixElementRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    distance_matrix_element_inverse_ref: Optional[DistanceMatrixElementInverseRef] = field(
-        default=None,
-        metadata={
-            "name": "DistanceMatrixElementInverseRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    distance_matrix_element_view: Optional[DistanceMatrixElementView] = field(
-        default=None,
-        metadata={
-            "name": "DistanceMatrixElementView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    sales_offer_package_ref: Optional[SalesOfferPackageRef] = field(
-        default=None,
-        metadata={
-            "name": "SalesOfferPackageRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    group_of_distance_matrix_elements_ref: Optional[GroupOfDistanceMatrixElementsRef] = field(
-        default=None,
-        metadata={
-            "name": "GroupOfDistanceMatrixElementsRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    group_of_sales_offer_packages_ref: Optional[GroupOfSalesOfferPackagesRef] = field(
-        default=None,
-        metadata={
-            "name": "GroupOfSalesOfferPackagesRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    limitation_grouping_type: Optional[BooleanOperatorEnumeration] = field(
-        default=None,
-        metadata={
-            "name": "LimitationGroupingType",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    limitation_set_selection_type: Optional[SetOperatorEnumeration] = field(
-        default=None,
-        metadata={
-            "name": "LimitationSetSelectionType",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    limitations: Optional[UsageParametersRelStructure] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    validity_parameter_assignment_type: Optional[RelativeOperatorEnumeration] = field(
-        default=None,
-        metadata={
-            "name": "ValidityParameterAssignmentType",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    validity_parameter_grouping_type: Optional[BooleanOperatorEnumeration] = field(
-        default=None,
-        metadata={
-            "name": "ValidityParameterGroupingType",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    validity_parameter_set_selection_type: Optional[SetOperatorEnumeration] = field(
-        default=None,
-        metadata={
-            "name": "ValidityParameterSetSelectionType",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    temporal_validity_parameters: Optional[TemporalValidityParametersRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "temporalValidityParameters",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    validity_parameters: Optional[ValidityParametersRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "validityParameters",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "SupplementProductRef",
+                    "type": SupplementProductRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PreassignedFareProductRef",
+                    "type": PreassignedFareProductRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AmountOfPriceUnitProductRef",
+                    "type": AmountOfPriceUnitProductRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "UsageDiscountRightRef",
+                    "type": UsageDiscountRightRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ThirdPartyProductRef",
+                    "type": ThirdPartyProductRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CappedDiscountRightRef",
+                    "type": CappedDiscountRightRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SaleDiscountRightRef",
+                    "type": SaleDiscountRightRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareProductRef",
+                    "type": FareProductRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingTariffRef",
+                    "type": ParkingTariffRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TariffRef",
+                    "type": TariffRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareStructureElementRef",
+                    "type": FareStructureElementRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ControllableElementInSequenceRef",
+                    "type": ControllableElementInSequenceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareStructureElementInSequenceRef",
+                    "type": FareStructureElementInSequenceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AccessRightInProductRef",
+                    "type": AccessRightInProductRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareElementInSequenceRef",
+                    "type": FareElementInSequenceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DistanceMatrixElementRef",
+                    "type": DistanceMatrixElementRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DistanceMatrixElementInverseRef",
+                    "type": DistanceMatrixElementInverseRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DistanceMatrixElementView",
+                    "type": DistanceMatrixElementView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SalesOfferPackageRef",
+                    "type": SalesOfferPackageRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GroupOfDistanceMatrixElementsRef",
+                    "type": GroupOfDistanceMatrixElementsRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GroupOfSalesOfferPackagesRef",
+                    "type": GroupOfSalesOfferPackagesRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LimitationGroupingType",
+                    "type": BooleanOperatorEnumeration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LimitationSetSelectionType",
+                    "type": SetOperatorEnumeration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "limitations",
+                    "type": UsageParametersRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ValidityParameterAssignmentType",
+                    "type": RelativeOperatorEnumeration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ValidityParameterGroupingType",
+                    "type": BooleanOperatorEnumeration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ValidityParameterSetSelectionType",
+                    "type": SetOperatorEnumeration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "temporalValidityParameters",
+                    "type": TemporalValidityParametersRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "validityParameters",
+                    "type": ValidityParametersRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 70,
         }
     )

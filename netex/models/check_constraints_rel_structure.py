@@ -12,19 +12,21 @@ class CheckConstraintsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "checkConstraints_RelStructure"
 
-    check_constraint_ref: List[CheckConstraintRef] = field(
+    check_constraint_ref_or_check_constraint: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "CheckConstraintRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    check_constraint: List[CheckConstraint] = field(
-        default_factory=list,
-        metadata={
-            "name": "CheckConstraint",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "CheckConstraintRef",
+                    "type": CheckConstraintRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CheckConstraint",
+                    "type": CheckConstraint,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

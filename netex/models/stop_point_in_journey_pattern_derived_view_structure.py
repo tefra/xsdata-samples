@@ -64,117 +64,83 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    fare_scheduled_stop_point_ref: List[FareScheduledStopPointRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "FareScheduledStopPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-        }
-    )
-    scheduled_stop_point_ref: Optional[ScheduledStopPointRef] = field(
-        default=None,
-        metadata={
-            "name": "ScheduledStopPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    scheduled_stop_point_view: Optional[ScheduledStopPointView] = field(
-        default=None,
-        metadata={
-            "name": "ScheduledStopPointView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    onward_timing_link_view: Optional[OnwardTimingLinkView] = field(
-        default=None,
-        metadata={
-            "name": "OnwardTimingLinkView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    onward_service_link_ref: Optional[ServiceLinkRefStructure] = field(
-        default=None,
-        metadata={
-            "name": "OnwardServiceLinkRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    onward_service_link_view: Optional[OnwardServiceLinkView] = field(
-        default=None,
-        metadata={
-            "name": "OnwardServiceLinkView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    timing_point_status: Optional[TimingPointStatusEnumeration] = field(
-        default=None,
-        metadata={
-            "name": "TimingPointStatus",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    is_wait_point: Optional[bool] = field(
-        default=None,
-        metadata={
-            "name": "IsWaitPoint",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    time_demand_type_ref: Optional[TimeDemandTypeRef] = field(
-        default=None,
-        metadata={
-            "name": "TimeDemandTypeRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    timeband_ref: Optional[TimebandRef] = field(
-        default=None,
-        metadata={
-            "name": "TimebandRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    wait_time: Optional[XmlDuration] = field(
-        default=None,
-        metadata={
-            "name": "WaitTime",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    scheduled_headway_interval: Optional[XmlDuration] = field(
-        default=None,
-        metadata={
-            "name": "ScheduledHeadwayInterval",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    minimum_headway_interval: Optional[XmlDuration] = field(
-        default=None,
-        metadata={
-            "name": "MinimumHeadwayInterval",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    maximum_headway_interval: Optional[XmlDuration] = field(
-        default=None,
-        metadata={
-            "name": "MaximumHeadwayInterval",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FareScheduledStopPointRef",
+                    "type": FareScheduledStopPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ScheduledStopPointRef",
+                    "type": ScheduledStopPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ScheduledStopPointView",
+                    "type": ScheduledStopPointView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OnwardTimingLinkView",
+                    "type": OnwardTimingLinkView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OnwardServiceLinkRef",
+                    "type": ServiceLinkRefStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OnwardServiceLinkView",
+                    "type": OnwardServiceLinkView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TimingPointStatus",
+                    "type": TimingPointStatusEnumeration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "IsWaitPoint",
+                    "type": bool,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TimeDemandTypeRef",
+                    "type": TimeDemandTypeRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TimebandRef",
+                    "type": TimebandRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "WaitTime",
+                    "type": XmlDuration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ScheduledHeadwayInterval",
+                    "type": XmlDuration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MinimumHeadwayInterval",
+                    "type": XmlDuration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MaximumHeadwayInterval",
+                    "type": XmlDuration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 15,
         }
     )
     order: Optional[int] = field(

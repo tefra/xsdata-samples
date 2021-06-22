@@ -12,19 +12,21 @@ class CodespacesRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "codespaces_RelStructure"
 
-    codespace_ref: List[CodespaceRef] = field(
+    codespace_ref_or_codespace: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "CodespaceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    codespace: List[Codespace] = field(
-        default_factory=list,
-        metadata={
-            "name": "Codespace",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "CodespaceRef",
+                    "type": CodespaceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Codespace",
+                    "type": Codespace,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

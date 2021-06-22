@@ -12,19 +12,21 @@ class FarePricesInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "farePricesInFrame_RelStructure"
 
-    price_group: List[PriceGroup1] = field(
+    price_group_or_price_group: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "PriceGroup",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_price_group: List[PriceGroup2] = field(
-        default_factory=list,
-        metadata={
-            "name": "PriceGroup_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "PriceGroup",
+                    "type": PriceGroup1,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PriceGroup_",
+                    "type": PriceGroup2,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

@@ -12,19 +12,21 @@ class LevelsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "levels_RelStructure"
 
-    level_ref: List[LevelRef] = field(
+    level_ref_or_level: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "LevelRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    level: List[Level] = field(
-        default_factory=list,
-        metadata={
-            "name": "Level",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "LevelRef",
+                    "type": LevelRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Level",
+                    "type": Level,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

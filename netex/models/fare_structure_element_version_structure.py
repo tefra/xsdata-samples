@@ -97,111 +97,78 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    fare_quota_factor_ref: List[FareQuotaFactorRef] = field(
+    choice_1: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "FareQuotaFactorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    fare_demand_factor_ref: List[FareDemandFactorRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareDemandFactorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    quality_structure_factor_ref: Optional[QualityStructureFactorRef] = field(
-        default=None,
-        metadata={
-            "name": "QualityStructureFactorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    quality_structure_factors: Optional[QualityStructureFactorsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "qualityStructureFactors",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    distance_matrix_element_ref: Optional[DistanceMatrixElementRef] = field(
-        default=None,
-        metadata={
-            "name": "DistanceMatrixElementRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    distance_matrix_elements: Optional[DistanceMatrixElementsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "distanceMatrixElements",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    group_of_distance_matrix_elements_ref: Optional[GroupOfDistanceMatrixElementsRef] = field(
-        default=None,
-        metadata={
-            "name": "GroupOfDistanceMatrixElementsRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    group_of_distance_matrix_elements: Optional[GroupOfDistanceMatrixElements] = field(
-        default=None,
-        metadata={
-            "name": "GroupOfDistanceMatrixElements",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_structure_elements_in_sequence: Optional[FareStructureElementsInSequenceRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "fareStructureElementsInSequence",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    validity_parameter_assignments: Optional[GenericParameterAssignmentsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "validityParameterAssignments",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    generic_parameter_assignment: Optional[GenericParameterAssignment] = field(
-        default=None,
-        metadata={
-            "name": "GenericParameterAssignment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    generic_parameter_assignment_in_context: Optional[GenericParameterAssignmentInContext] = field(
-        default=None,
-        metadata={
-            "name": "GenericParameterAssignmentInContext",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    prices: Optional[FareStructureElementPricesRelStructure] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FareQuotaFactorRef",
+                    "type": FareQuotaFactorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareDemandFactorRef",
+                    "type": FareDemandFactorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "QualityStructureFactorRef",
+                    "type": QualityStructureFactorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "qualityStructureFactors",
+                    "type": QualityStructureFactorsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DistanceMatrixElementRef",
+                    "type": DistanceMatrixElementRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "distanceMatrixElements",
+                    "type": DistanceMatrixElementsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GroupOfDistanceMatrixElementsRef",
+                    "type": GroupOfDistanceMatrixElementsRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GroupOfDistanceMatrixElements",
+                    "type": GroupOfDistanceMatrixElements,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "fareStructureElementsInSequence",
+                    "type": FareStructureElementsInSequenceRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "validityParameterAssignments",
+                    "type": GenericParameterAssignmentsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GenericParameterAssignment",
+                    "type": GenericParameterAssignment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GenericParameterAssignmentInContext",
+                    "type": GenericParameterAssignmentInContext,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "prices",
+                    "type": FareStructureElementPricesRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 17,
         }
     )
     name_of_class_of_unit: Optional[str] = field(

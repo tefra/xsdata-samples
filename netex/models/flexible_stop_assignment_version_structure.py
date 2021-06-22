@@ -23,31 +23,27 @@ class FlexibleStopAssignmentVersionStructure(StopAssignmentVersionStructure):
             "required": True,
         }
     )
-    hail_and_ride_area_ref: List[HailAndRideAreaRef] = field(
+    hail_and_ride_area_ref_or_flexible_area_ref_or_flexible_quay_ref: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "HailAndRideAreaRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    flexible_area_ref: List[FlexibleAreaRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "FlexibleAreaRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    flexible_quay_ref: Optional[FlexibleQuayRef] = field(
-        default=None,
-        metadata={
-            "name": "FlexibleQuayRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "HailAndRideAreaRef",
+                    "type": HailAndRideAreaRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FlexibleAreaRef",
+                    "type": FlexibleAreaRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FlexibleQuayRef",
+                    "type": FlexibleQuayRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 5,
         }
     )

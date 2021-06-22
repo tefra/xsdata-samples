@@ -8,8 +8,8 @@
     <topics>
       <NetworkFrameTopic>
         <Current/>
-        <ServiceFrameRef ref="mybus:ntwkf001">REQUEST</ServiceFrameRef>
         <InfrastructureFrameRef ref="mybus:ifwkf001">REQUEST</InfrastructureFrameRef>
+        <ServiceFrameRef ref="mybus:ntwkf001">REQUEST</ServiceFrameRef>
       </NetworkFrameTopic>
     </topics>
   </PublicationRequest>
@@ -884,6 +884,10 @@
                   <ScheduledStopPointRef version="032" ref="hde:SSP0002B_a"/>
                   <IsWaitPoint>false</IsWaitPoint>
                 </StopPointInJourneyPattern>
+                <TimingPointInJourneyPattern id="hde:PIP_JP001o_0003" modification="new" version="any" status="active" order="3">
+                  <TimingPointRef version="015" ref="hde:TPT0051"/>
+                  <IsWaitPoint>false</IsWaitPoint>
+                </TimingPointInJourneyPattern>
                 <StopPointInJourneyPattern id="hde:PIP_JP001o_0004_01" modification="new" version="any" status="active" order="4">
                   <ScheduledStopPointRef version="015" ref="hde:SSP0003C_a"/>
                   <IsWaitPoint>true</IsWaitPoint>
@@ -902,10 +906,6 @@
                   <ScheduledStopPointRef version="015" ref="hde:SSP0004D"/>
                   <IsWaitPoint>true</IsWaitPoint>
                 </StopPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="hde:PIP_JP001o_0003" modification="new" version="any" status="active" order="3">
-                  <TimingPointRef version="015" ref="hde:TPT0051"/>
-                  <IsWaitPoint>false</IsWaitPoint>
-                </TimingPointInJourneyPattern>
               </pointsInSequence>
             </ServiceJourneyPattern>
             <ServiceJourneyPattern id="hde:JP001i" modification="new" version="any" status="active">
@@ -974,6 +974,10 @@
                     </JourneyPatternWaitTime>
                   </waitTimes>
                 </StopPointInJourneyPattern>
+                <TimingPointInJourneyPattern id="hde:PIP_JP002o_0003" modification="new" version="any" status="active" order="3">
+                  <TimingPointRef version="015" ref="hde:TPT0051"/>
+                  <IsWaitPoint>false</IsWaitPoint>
+                </TimingPointInJourneyPattern>
                 <StopPointInJourneyPattern id="hde:PIP_JP002o_0004" modification="new" version="any" status="active" order="4">
                   <ScheduledStopPointRef version="015" ref="hde:SSP0003C_a"/>
                   <IsWaitPoint>true</IsWaitPoint>
@@ -982,10 +986,6 @@
                   <ScheduledStopPointRef version="015" ref="hde:SSP0005E"/>
                   <IsWaitPoint>true</IsWaitPoint>
                 </StopPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="hde:PIP_JP002o_0003" modification="new" version="any" status="active" order="3">
-                  <TimingPointRef version="015" ref="hde:TPT0051"/>
-                  <IsWaitPoint>false</IsWaitPoint>
-                </TimingPointInJourneyPattern>
               </pointsInSequence>
             </ServiceJourneyPattern>
             <ServiceJourneyPattern id="hde:JP002i" modification="new" version="any" status="active">

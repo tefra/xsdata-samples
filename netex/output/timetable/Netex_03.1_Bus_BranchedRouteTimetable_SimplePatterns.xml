@@ -738,7 +738,7 @@
                   <TimingPointRef version="any" ref="mybus:Alpha"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_YPo@03" modification="new" version="any" status="active" order="3">
-                  <TimingPointRef version="any" ref="mybus:Bravo" xsi:type="TimingPointRefStructure"/>
+                  <TimingPointRef version="any" ref="mybus:Bravo"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_YPo@04" modification="new" version="any" status="active" order="4">
                   <TimingPointRef version="any" ref="mybus:Charley"/>
@@ -760,7 +760,7 @@
                   <TimingPointRef version="any" ref="mybus:Alpha"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_YQo@03" modification="new" version="any" status="active" order="3">
-                  <TimingPointRef version="any" ref="mybus:Bravo" xsi:type="TimingPointRefStructure"/>
+                  <TimingPointRef version="any" ref="mybus:Bravo"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_YQo@04" modification="new" version="any" status="active" order="4">
                   <TimingPointRef version="any" ref="mybus:Quebec"/>
@@ -782,7 +782,7 @@
                   <TimingPointRef version="any" ref="mybus:Alpha"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_ZPo@03" modification="new" version="any" status="active" order="3">
-                  <TimingPointRef version="any" ref="mybus:Bravo" xsi:type="TimingPointRefStructure"/>
+                  <TimingPointRef version="any" ref="mybus:Bravo"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_ZPo@04" modification="new" version="any" status="active" order="4">
                   <TimingPointRef version="any" ref="mybus:Charley"/>
@@ -804,7 +804,7 @@
                   <TimingPointRef version="any" ref="mybus:Alpha"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_ZQo@03" modification="new" version="any" status="active" order="3">
-                  <TimingPointRef version="any" ref="mybus:Bravo" xsi:type="TimingPointRefStructure"/>
+                  <TimingPointRef version="any" ref="mybus:Bravo"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:TL@Bravo+Charley"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_ZQo@04" modification="new" version="any" status="active" order="4">

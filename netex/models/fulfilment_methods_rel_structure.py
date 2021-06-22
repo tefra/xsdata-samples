@@ -12,19 +12,21 @@ class FulfilmentMethodsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "fulfilmentMethods_RelStructure"
 
-    fulfilment_method_ref: List[FulfilmentMethodRef] = field(
+    fulfilment_method_ref_or_fulfilment_method: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "FulfilmentMethodRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fulfilment_method: List[FulfilmentMethod] = field(
-        default_factory=list,
-        metadata={
-            "name": "FulfilmentMethod",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FulfilmentMethodRef",
+                    "type": FulfilmentMethodRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FulfilmentMethod",
+                    "type": FulfilmentMethod,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

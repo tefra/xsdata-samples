@@ -12,19 +12,21 @@ class GroupOfTimebandsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "groupOfTimebands_RelStructure"
 
-    group_of_timebands_ref: List[GroupOfTimebandsRef] = field(
+    group_of_timebands_ref_or_group_of_timebands: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "GroupOfTimebandsRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    group_of_timebands: List[GroupOfTimebandsVersionedChildStructure] = field(
-        default_factory=list,
-        metadata={
-            "name": "GroupOfTimebands",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "GroupOfTimebandsRef",
+                    "type": GroupOfTimebandsRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GroupOfTimebands",
+                    "type": GroupOfTimebandsVersionedChildStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

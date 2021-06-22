@@ -12,19 +12,21 @@ class AccessRightsInProductRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "accessRightsInProduct_RelStructure"
 
-    access_right_in_product_ref: List[AccessRightInProductRef] = field(
+    access_right_in_product_ref_or_access_right_in_product: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "AccessRightInProductRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    access_right_in_product: List[AccessRightInProduct] = field(
-        default_factory=list,
-        metadata={
-            "name": "AccessRightInProduct",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "AccessRightInProductRef",
+                    "type": AccessRightInProductRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AccessRightInProduct",
+                    "type": AccessRightInProduct,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

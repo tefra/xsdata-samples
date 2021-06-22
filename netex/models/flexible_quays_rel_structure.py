@@ -14,35 +14,31 @@ class FlexibleQuaysRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "flexibleQuays_RelStructure"
 
-    hail_and_ride_area_ref: List[HailAndRideAreaRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "HailAndRideAreaRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    flexible_area_ref: List[FlexibleAreaRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "FlexibleAreaRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    flexible_quay_ref: List[FlexibleQuayRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "FlexibleQuayRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    flexible_quay: List[FlexibleQuay] = field(
-        default_factory=list,
-        metadata={
-            "name": "FlexibleQuay",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "HailAndRideAreaRef",
+                    "type": HailAndRideAreaRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FlexibleAreaRef",
+                    "type": FlexibleAreaRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FlexibleQuayRef",
+                    "type": FlexibleQuayRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FlexibleQuay",
+                    "type": FlexibleQuay,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

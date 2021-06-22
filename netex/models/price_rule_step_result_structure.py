@@ -235,59 +235,44 @@ class PriceRuleStepResultStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    limiting_rule_ref: List[LimitingRuleRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "LimitingRuleRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    discounting_rule_ref: List[DiscountingRuleRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "DiscountingRuleRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    pricing_rule_ref: Optional[PricingRuleRef] = field(
-        default=None,
-        metadata={
-            "name": "PricingRuleRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
-        }
-    )
-    rounding_ref: Optional[RoundingRef] = field(
-        default=None,
-        metadata={
-            "name": "RoundingRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    rounding_step_ref: Optional[RoundingStepRef] = field(
-        default=None,
-        metadata={
-            "name": "RoundingStepRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    narrative: Optional[MultilingualString] = field(
-        default=None,
-        metadata={
-            "name": "Narrative",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "LimitingRuleRef",
+                    "type": LimitingRuleRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DiscountingRuleRef",
+                    "type": DiscountingRuleRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PricingRuleRef",
+                    "type": PricingRuleRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RoundingRef",
+                    "type": RoundingRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RoundingStepRef",
+                    "type": RoundingStepRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Narrative",
+                    "type": MultilingualString,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "min_occurs": 3,
+            "max_occurs": 9,
         }
     )
     id: Optional[str] = field(

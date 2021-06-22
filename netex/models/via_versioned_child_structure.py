@@ -46,89 +46,57 @@ class ViaVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    border_point_ref: List[BorderPointRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "BorderPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    fare_scheduled_stop_point_ref: List[FareScheduledStopPointRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareScheduledStopPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 4,
-            "sequential": True,
-        }
-    )
-    scheduled_stop_point_ref: List[ScheduledStopPointRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ScheduledStopPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    garage_point_ref: List[GaragePointRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "GaragePointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 5,
-            "sequential": True,
-        }
-    )
-    parking_point_ref: List[ParkingPointRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ParkingPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 4,
-            "sequential": True,
-        }
-    )
-    relief_point_ref: List[ReliefPointRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ReliefPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    timing_point_ref: List[TimingPointRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TimingPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    route_point_ref: Optional[RoutePointRef] = field(
-        default=None,
-        metadata={
-            "name": "RoutePointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    via_type: Optional[ViaTypeEnumeration] = field(
-        default=None,
-        metadata={
-            "name": "ViaType",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "BorderPointRef",
+                    "type": BorderPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareScheduledStopPointRef",
+                    "type": FareScheduledStopPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ScheduledStopPointRef",
+                    "type": ScheduledStopPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GaragePointRef",
+                    "type": GaragePointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingPointRef",
+                    "type": ParkingPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ReliefPointRef",
+                    "type": ReliefPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TimingPointRef",
+                    "type": TimingPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RoutePointRef",
+                    "type": RoutePointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ViaType",
+                    "type": ViaTypeEnumeration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 26,
         }
     )

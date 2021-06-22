@@ -118,178 +118,112 @@ class JourneyMeetingDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    dated_vehicle_journey_ref: List[DatedVehicleJourneyRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "DatedVehicleJourneyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    dated_special_service_ref: List[DatedSpecialServiceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "DatedSpecialServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    special_service_ref: List[SpecialServiceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "SpecialServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    template_service_journey_ref: List[TemplateServiceJourneyRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TemplateServiceJourneyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    service_journey_ref: List[ServiceJourneyRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ServiceJourneyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    dead_run_ref: List[DeadRunRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "DeadRunRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    vehicle_journey_ref: List[VehicleJourneyRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "VehicleJourneyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    journey_ref: Optional[JourneyRef] = field(
-        default=None,
-        metadata={
-            "name": "JourneyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    connecting_journey_view: Optional[ConnectingJourneyView] = field(
-        default=None,
-        metadata={
-            "name": "ConnectingJourneyView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    flexible_line_ref: List[FlexibleLineRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "FlexibleLineRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-        }
-    )
-    line_ref: Optional[LineRef] = field(
-        default=None,
-        metadata={
-            "name": "LineRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    connecting_line_view: Optional[LineDerivedViewStructure] = field(
-        default=None,
-        metadata={
-            "name": "ConnectingLineView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    stay_seated: Optional[bool] = field(
-        default=None,
-        metadata={
-            "name": "StaySeated",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    cross_border: Optional[bool] = field(
-        default=None,
-        metadata={
-            "name": "CrossBorder",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    planned: Optional[bool] = field(
-        default=None,
-        metadata={
-            "name": "Planned",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    guaranteed: Optional[bool] = field(
-        default=None,
-        metadata={
-            "name": "Guaranteed",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    advertised: Optional[bool] = field(
-        default=None,
-        metadata={
-            "name": "Advertised",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    controlled: Optional[bool] = field(
-        default=None,
-        metadata={
-            "name": "Controlled",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    connection_certainty: Optional[ConnectionCertaintyEnumeration] = field(
-        default=None,
-        metadata={
-            "name": "ConnectionCertainty",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    transfer_duration: Optional[TransferDurationStructure] = field(
-        default=None,
-        metadata={
-            "name": "TransferDuration",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "DatedVehicleJourneyRef",
+                    "type": DatedVehicleJourneyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DatedSpecialServiceRef",
+                    "type": DatedSpecialServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SpecialServiceRef",
+                    "type": SpecialServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TemplateServiceJourneyRef",
+                    "type": TemplateServiceJourneyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServiceJourneyRef",
+                    "type": ServiceJourneyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DeadRunRef",
+                    "type": DeadRunRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleJourneyRef",
+                    "type": VehicleJourneyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "JourneyRef",
+                    "type": JourneyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ConnectingJourneyView",
+                    "type": ConnectingJourneyView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FlexibleLineRef",
+                    "type": FlexibleLineRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LineRef",
+                    "type": LineRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ConnectingLineView",
+                    "type": LineDerivedViewStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "StaySeated",
+                    "type": bool,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CrossBorder",
+                    "type": bool,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Planned",
+                    "type": bool,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Guaranteed",
+                    "type": bool,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Advertised",
+                    "type": bool,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Controlled",
+                    "type": bool,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ConnectionCertainty",
+                    "type": ConnectionCertaintyEnumeration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TransferDuration",
+                    "type": TransferDurationStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 31,
         }
     )

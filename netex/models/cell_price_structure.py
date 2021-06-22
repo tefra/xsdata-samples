@@ -139,361 +139,207 @@ class CellPriceStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    customer_purchase_package_price_ref: List[CustomerPurchasePackagePriceRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "CustomerPurchasePackagePriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    parking_price_ref: List[ParkingPriceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ParkingPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    time_interval_price_ref: List[TimeIntervalPriceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TimeIntervalPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    time_unit_price_ref: List[TimeUnitPriceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TimeUnitPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    quality_structure_factor_price_ref: List[QualityStructureFactorPriceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "QualityStructureFactorPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    controllable_element_price_ref: List[ControllableElementPriceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ControllableElementPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    validable_element_price_ref: List[ValidableElementPriceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ValidableElementPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    geographical_interval_price_ref: List[GeographicalIntervalPriceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "GeographicalIntervalPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    geographical_unit_price_ref: List[GeographicalUnitPriceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "GeographicalUnitPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    usage_parameter_price_ref: List[UsageParameterPriceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "UsageParameterPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    sales_offer_package_price_ref: List[SalesOfferPackagePriceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "SalesOfferPackagePriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    distance_matrix_element_price_ref: List[DistanceMatrixElementPriceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "DistanceMatrixElementPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    fare_structure_element_price_ref: List[FareStructureElementPriceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareStructureElementPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    fulfilment_method_price_ref: List[FulfilmentMethodPriceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "FulfilmentMethodPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    series_constraint_price_ref: List[SeriesConstraintPriceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "SeriesConstraintPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    capping_rule_price_ref: List[CappingRulePriceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "CappingRulePriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    fare_product_price_ref: List[FareProductPriceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareProductPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    fare_price_ref: Optional[FarePriceRef] = field(
-        default=None,
-        metadata={
-            "name": "FarePriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    limiting_rule_ref: List[LimitingRuleRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "LimitingRuleRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 6,
-            "sequential": True,
-        }
-    )
-    discounting_rule_ref: List[DiscountingRuleRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "DiscountingRuleRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    pricing_rule_ref: Optional[PricingRuleRef] = field(
-        default=None,
-        metadata={
-            "name": "PricingRuleRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    limiting_rule_in_context: List[LimitingRuleInContext] = field(
-        default_factory=list,
-        metadata={
-            "name": "LimitingRuleInContext",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    limiting_rule: List[LimitingRule] = field(
-        default_factory=list,
-        metadata={
-            "name": "LimitingRule",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    discounting_rule: List[DiscountingRule] = field(
-        default_factory=list,
-        metadata={
-            "name": "DiscountingRule",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    pricing_rule: List[PricingRule1] = field(
-        default_factory=list,
-        metadata={
-            "name": "PricingRule",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    netex_org_uk_netex_pricing_rule: Optional[PricingRule2] = field(
-        default=None,
-        metadata={
-            "name": "PricingRule_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    can_be_cumulative: Optional[bool] = field(
-        default=None,
-        metadata={
-            "name": "CanBeCumulative",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    rounding_ref: Optional[RoundingRef] = field(
-        default=None,
-        metadata={
-            "name": "RoundingRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    ranking: Optional[int] = field(
-        default=None,
-        metadata={
-            "name": "Ranking",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    minimum_price: Optional[Decimal] = field(
-        default=None,
-        metadata={
-            "name": "MinimumPrice",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    minimum_price_as_percentage: Optional[Decimal] = field(
-        default=None,
-        metadata={
-            "name": "MinimumPriceAsPercentage",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    minimum_price_as_multiple: Optional[int] = field(
-        default=None,
-        metadata={
-            "name": "MinimumPriceAsMultiple",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    maximum_price: Optional[Decimal] = field(
-        default=None,
-        metadata={
-            "name": "MaximumPrice",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    maximum_price_as_percentage: Optional[Decimal] = field(
-        default=None,
-        metadata={
-            "name": "MaximumPriceAsPercentage",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    maximum_price_as_multiple: Optional[int] = field(
-        default=None,
-        metadata={
-            "name": "MaximumPriceAsMultiple",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    minimum_limit_price_as_percentage: Optional[Decimal] = field(
-        default=None,
-        metadata={
-            "name": "MinimumLimitPriceAsPercentage",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    minimum_limit_price: Optional[Decimal] = field(
-        default=None,
-        metadata={
-            "name": "MinimumLimitPrice",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    maximum_limit_price_as_percentage: Optional[Decimal] = field(
-        default=None,
-        metadata={
-            "name": "MaximumLimitPriceAsPercentage",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    maximum_limit_price: Optional[Decimal] = field(
-        default=None,
-        metadata={
-            "name": "MaximumLimitPrice",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "CustomerPurchasePackagePriceRef",
+                    "type": CustomerPurchasePackagePriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingPriceRef",
+                    "type": ParkingPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TimeIntervalPriceRef",
+                    "type": TimeIntervalPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TimeUnitPriceRef",
+                    "type": TimeUnitPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "QualityStructureFactorPriceRef",
+                    "type": QualityStructureFactorPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ControllableElementPriceRef",
+                    "type": ControllableElementPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ValidableElementPriceRef",
+                    "type": ValidableElementPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GeographicalIntervalPriceRef",
+                    "type": GeographicalIntervalPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GeographicalUnitPriceRef",
+                    "type": GeographicalUnitPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "UsageParameterPriceRef",
+                    "type": UsageParameterPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SalesOfferPackagePriceRef",
+                    "type": SalesOfferPackagePriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DistanceMatrixElementPriceRef",
+                    "type": DistanceMatrixElementPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareStructureElementPriceRef",
+                    "type": FareStructureElementPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FulfilmentMethodPriceRef",
+                    "type": FulfilmentMethodPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SeriesConstraintPriceRef",
+                    "type": SeriesConstraintPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CappingRulePriceRef",
+                    "type": CappingRulePriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareProductPriceRef",
+                    "type": FareProductPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FarePriceRef",
+                    "type": FarePriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LimitingRuleRef",
+                    "type": LimitingRuleRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DiscountingRuleRef",
+                    "type": DiscountingRuleRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PricingRuleRef",
+                    "type": PricingRuleRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LimitingRuleInContext",
+                    "type": LimitingRuleInContext,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LimitingRule",
+                    "type": LimitingRule,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DiscountingRule",
+                    "type": DiscountingRule,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PricingRule",
+                    "type": PricingRule1,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PricingRule_",
+                    "type": PricingRule2,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CanBeCumulative",
+                    "type": bool,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RoundingRef",
+                    "type": RoundingRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Ranking",
+                    "type": int,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MinimumPrice",
+                    "type": Decimal,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MinimumPriceAsPercentage",
+                    "type": Decimal,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MinimumPriceAsMultiple",
+                    "type": int,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MaximumPrice",
+                    "type": Decimal,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MaximumPriceAsPercentage",
+                    "type": Decimal,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MaximumPriceAsMultiple",
+                    "type": int,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MinimumLimitPriceAsPercentage",
+                    "type": Decimal,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MinimumLimitPrice",
+                    "type": Decimal,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MaximumLimitPriceAsPercentage",
+                    "type": Decimal,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MaximumLimitPrice",
+                    "type": Decimal,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 88,
         }
     )

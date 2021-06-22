@@ -12,19 +12,21 @@ class VehicleEntrancesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "vehicleEntrances_RelStructure"
 
-    vehicle_entrance_ref: List[VehicleEntranceRef] = field(
+    vehicle_entrance_ref_or_vehicle_entrance: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "VehicleEntranceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    vehicle_entrance: List[VehicleEntrance] = field(
-        default_factory=list,
-        metadata={
-            "name": "VehicleEntrance",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "VehicleEntranceRef",
+                    "type": VehicleEntranceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleEntrance",
+                    "type": VehicleEntrance,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

@@ -174,27 +174,27 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    standard_fare_table_ref: List[StandardFareTableRef] = field(
+    standard_fare_table_ref_or_fare_table_ref_or_prices: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "StandardFareTableRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-        }
-    )
-    fare_table_ref: Optional[FareTableRef] = field(
-        default=None,
-        metadata={
-            "name": "FareTableRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    prices: Optional[DistanceMatrixElementPricesRelStructure] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "StandardFareTableRef",
+                    "type": StandardFareTableRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareTableRef",
+                    "type": FareTableRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "prices",
+                    "type": DistanceMatrixElementPricesRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 5,
         }
     )

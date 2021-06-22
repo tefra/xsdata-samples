@@ -540,4051 +540,2541 @@ class ObjectFilterByValueStructure:
 
     @dataclass
     class ObjectReferences:
-        travel_document_ref: List[TravelDocumentRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TravelDocumentRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        repeated_trip_fare_request_ref: List[RepeatedTripFareRequestRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "RepeatedTripFareRequestRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        single_trip_fare_request_ref: List[SingleTripFareRequestRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "SingleTripFareRequestRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        fare_request_ref: List[FareRequestRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FareRequestRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        stop_finder_request_ref: List[StopFinderRequestRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "StopFinderRequestRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        stop_event_request_ref: List[StopEventRequestRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "StopEventRequestRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        schedule_request_ref: List[ScheduleRequestRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ScheduleRequestRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        trip_plan_request_ref: List[TripPlanRequestRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TripPlanRequestRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        passenger_information_request_ref: List[PassengerInformationRequestRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "PassengerInformationRequestRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        residential_qualification_eligibility_ref: List[ResidentialQualificationEligibilityRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ResidentialQualificationEligibilityRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        commercial_profile_eligibility_ref: List[CommercialProfileEligibilityRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "CommercialProfileEligibilityRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        user_profile_eligibility_ref: List[UserProfileEligibilityRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "UserProfileEligibilityRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        customer_eligibility_ref: List[CustomerEligibilityRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "CustomerEligibilityRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        customer_account_ref: List[CustomerAccountRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "CustomerAccountRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        fare_contract_ref: List[FareContractRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FareContractRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        customer_ref: List[CustomerRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "CustomerRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        start_time_at_stop_point_ref: List[StartTimeAtStopPointRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "StartTimeAtStopPointRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        residential_qualification_ref: List[ResidentialQualificationRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ResidentialQualificationRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_concession_ref: List[TypeOfConcessionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfConcessionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_usage_parameter_ref: List[TypeOfUsageParameterRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfUsageParameterRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        tariff_object_ref: List[TariffObjectRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TariffObjectRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        parking_tariff_ref: List[ParkingTariffRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ParkingTariffRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        tariff_ref: List[TariffRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TariffRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_fare_table_ref: List[TypeOfFareTableRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfFareTableRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        fare_table_row_ref: List[FareTableRowRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FareTableRowRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        fare_table_column_ref: List[FareTableColumnRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FareTableColumnRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        time_unit_ref: List[TimeUnitRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TimeUnitRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        geographical_unit_ref: List[GeographicalUnitRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "GeographicalUnitRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        fare_unit_ref: List[FareUnitRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FareUnitRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        controllable_element_in_sequence_ref: List[ControllableElementInSequenceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ControllableElementInSequenceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        fare_structure_element_in_sequence_ref: List[FareStructureElementInSequenceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FareStructureElementInSequenceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        access_right_in_product_ref: List[AccessRightInProductRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "AccessRightInProductRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        fare_element_in_sequence_ref: List[FareElementInSequenceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FareElementInSequenceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        cell_ref: List[CellRef1] = field(
-            default_factory=list,
-            metadata={
-                "name": "CellRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        netex_org_uk_netex_cell_ref: List[CellRef2] = field(
-            default_factory=list,
-            metadata={
-                "name": "CellRef_",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        customer_purchase_package_price_ref: List[CustomerPurchasePackagePriceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "CustomerPurchasePackagePriceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        parking_price_ref: List[ParkingPriceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ParkingPriceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        time_interval_price_ref: List[TimeIntervalPriceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TimeIntervalPriceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        time_unit_price_ref: List[TimeUnitPriceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TimeUnitPriceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        quality_structure_factor_price_ref: List[QualityStructureFactorPriceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "QualityStructureFactorPriceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        controllable_element_price_ref: List[ControllableElementPriceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ControllableElementPriceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        validable_element_price_ref: List[ValidableElementPriceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ValidableElementPriceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        geographical_interval_price_ref: List[GeographicalIntervalPriceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "GeographicalIntervalPriceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        geographical_unit_price_ref: List[GeographicalUnitPriceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "GeographicalUnitPriceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        usage_parameter_price_ref: List[UsageParameterPriceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "UsageParameterPriceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        sales_offer_package_price_ref: List[SalesOfferPackagePriceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "SalesOfferPackagePriceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        distance_matrix_element_price_ref: List[DistanceMatrixElementPriceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "DistanceMatrixElementPriceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        fare_structure_element_price_ref: List[FareStructureElementPriceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FareStructureElementPriceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        fulfilment_method_price_ref: List[FulfilmentMethodPriceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FulfilmentMethodPriceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        series_constraint_price_ref: List[SeriesConstraintPriceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "SeriesConstraintPriceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        capping_rule_price_ref: List[CappingRulePriceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "CappingRulePriceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        fare_product_price_ref: List[FareProductPriceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FareProductPriceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        fare_price_ref: List[FarePriceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FarePriceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        customer_purchase_package_element_ref: List[CustomerPurchasePackageElementRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "CustomerPurchasePackageElementRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        customer_purchase_package_ref: List[CustomerPurchasePackageRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "CustomerPurchasePackageRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        controllable_element_ref: List[ControllableElementRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ControllableElementRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        validable_element_ref: List[ValidableElementRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ValidableElementRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        sales_offer_package_entitlement_given_ref: List[SalesOfferPackageEntitlementGivenRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "SalesOfferPackageEntitlementGivenRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        sales_offer_package_entitlement_required_ref: List[SalesOfferPackageEntitlementRequiredRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "SalesOfferPackageEntitlementRequiredRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        minimum_stay_ref: List[MinimumStayRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "MinimumStayRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        interchanging_ref: List[InterchangingRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "InterchangingRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        frequency_of_use_ref: List[FrequencyOfUseRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FrequencyOfUseRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        suspending_ref: List[SuspendingRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "SuspendingRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        usage_validity_period_ref: List[UsageValidityPeriodRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "UsageValidityPeriodRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        step_limit_ref: List[StepLimitRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "StepLimitRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        routing_ref: List[RoutingRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "RoutingRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        round_trip_ref: List[RoundTripRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "RoundTripRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        luggage_allowance_ref: List[LuggageAllowanceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "LuggageAllowanceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        entitlement_given_ref: List[EntitlementGivenRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "EntitlementGivenRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        entitlement_required_ref: List[EntitlementRequiredRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "EntitlementRequiredRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        eligibility_change_policy_ref: List[EligibilityChangePolicyRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "EligibilityChangePolicyRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        group_ticket_ref: List[GroupTicketRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "GroupTicketRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        commercial_profile_ref: List[CommercialProfileRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "CommercialProfileRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        companion_profile_ref: List[CompanionProfileRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "CompanionProfileRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        user_profile_ref: List[UserProfileRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "UserProfileRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        profile_parameter_ref: List[ProfileParameterRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ProfileParameterRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        subscribing_ref: List[SubscribingRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "SubscribingRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        penalty_policy_ref: List[PenaltyPolicyRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "PenaltyPolicyRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        charging_policy_ref: List[ChargingPolicyRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ChargingPolicyRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        transferability_ref: List[TransferabilityRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TransferabilityRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        replacing_ref: List[ReplacingRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ReplacingRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        refunding_ref: List[RefundingRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "RefundingRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        exchanging_ref: List[ExchangingRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ExchangingRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        reselling_ref: List[ResellingRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ResellingRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        cancelling_ref: List[CancellingRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "CancellingRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        reserving_ref: List[ReservingRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ReservingRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        purchase_window_ref: List[PurchaseWindowRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "PurchaseWindowRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        usage_parameter_ref: List[UsageParameterRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "UsageParameterRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        sales_offer_package_element_ref: List[SalesOfferPackageElementRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "SalesOfferPackageElementRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        sales_offer_package_ref: List[SalesOfferPackageRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "SalesOfferPackageRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        distance_matrix_element_inverse_ref: List[DistanceMatrixElementInverseRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "DistanceMatrixElementInverseRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        distance_matrix_element_ref: List[DistanceMatrixElementRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "DistanceMatrixElementRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        fare_structure_element_ref: List[FareStructureElementRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FareStructureElementRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        fulfilment_method_ref: List[FulfilmentMethodRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FulfilmentMethodRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        series_constraint_ref: List[SeriesConstraintRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "SeriesConstraintRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        capping_rule_ref: List[CappingRuleRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "CappingRuleRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        entitlement_product_ref: List[EntitlementProductRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "EntitlementProductRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        supplement_product_ref: List[SupplementProductRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "SupplementProductRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        preassigned_fare_product_ref: List[PreassignedFareProductRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "PreassignedFareProductRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        amount_of_price_unit_product_ref: List[AmountOfPriceUnitProductRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "AmountOfPriceUnitProductRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        usage_discount_right_ref: List[UsageDiscountRightRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "UsageDiscountRightRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        third_party_product_ref: List[ThirdPartyProductRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ThirdPartyProductRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        capped_discount_right_ref: List[CappedDiscountRightRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "CappedDiscountRightRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        sale_discount_right_ref: List[SaleDiscountRightRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "SaleDiscountRightRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        fare_product_ref: List[FareProductRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FareProductRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        service_access_right_ref: List[ServiceAccessRightRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ServiceAccessRightRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        time_interval_ref: List[TimeIntervalRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TimeIntervalRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        geographical_interval_ref: List[GeographicalIntervalRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "GeographicalIntervalRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        fare_interval_ref: List[FareIntervalRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FareIntervalRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        parking_charge_band_ref: List[ParkingChargeBandRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ParkingChargeBandRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        time_structure_factor_ref: List[TimeStructureFactorRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TimeStructureFactorRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        fare_quota_factor_ref: List[FareQuotaFactorRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FareQuotaFactorRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        fare_demand_factor_ref: List[FareDemandFactorRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FareDemandFactorRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        quality_structure_factor_ref: List[QualityStructureFactorRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "QualityStructureFactorRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        geographical_structure_factor_ref: List[GeographicalStructureFactorRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "GeographicalStructureFactorRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        fare_structure_factor_ref: List[FareStructureFactorRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FareStructureFactorRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        priceable_object_ref: List[PriceableObjectRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "PriceableObjectRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        month_validity_offset_ref: List[MonthValidityOffsetRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "MonthValidityOffsetRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        limiting_rule_ref: List[LimitingRuleRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "LimitingRuleRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        discounting_rule_ref: List[DiscountingRuleRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "DiscountingRuleRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        pricing_rule_ref: List[PricingRuleRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "PricingRuleRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        pricing_service_ref: List[PricingServiceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "PricingServiceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        rounding_step_ref: List[RoundingStepRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "RoundingStepRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        rounding_ref: List[RoundingRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "RoundingRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        pricing_parameter_set_ref: List[PricingParameterSetRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "PricingParameterSetRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        supply_contract_ref: List[SupplyContractRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "SupplyContractRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        flexible_service_properties_ref: List[FlexibleServicePropertiesRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FlexibleServicePropertiesRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        driver_trip_time_ref: List[DriverTripTimeRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "DriverTripTimeRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        driver_trip_ref: List[DriverTripRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "DriverTripRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        duty_part_ref: List[DutyPartRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "DutyPartRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        accountable_element_ref: List[AccountableElementRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "AccountableElementRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        duty_ref: List[DutyRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "DutyRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        relief_opportunity_ref: List[ReliefOpportunityRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ReliefOpportunityRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        course_of_journeys_ref: List[CourseOfJourneysRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "CourseOfJourneysRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        driver_ref: List[DriverRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "DriverRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        vehicle_service_part_ref: List[VehicleServicePartRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "VehicleServicePartRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        vehicle_service_ref: List[VehicleServiceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "VehicleServiceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        compound_block_ref: List[CompoundBlockRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "CompoundBlockRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        train_block_part_ref: List[TrainBlockPartRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TrainBlockPartRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        block_part_ref: List[BlockPartRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "BlockPartRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        train_block_ref: List[TrainBlockRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TrainBlockRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        block_ref: List[BlockRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "BlockRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        journey_part_couple_ref: List[JourneyPartCoupleRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "JourneyPartCoupleRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        coupled_journey_ref: List[CoupledJourneyRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "CoupledJourneyRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        journey_part_ref: List[JourneyPartRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "JourneyPartRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        timetabled_passing_time_ref: List[TimetabledPassingTimeRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TimetabledPassingTimeRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        estimated_passing_time_ref: List[EstimatedPassingTimeRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "EstimatedPassingTimeRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        observed_passing_time_ref: List[ObservedPassingTimeRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ObservedPassingTimeRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        target_passing_time_ref: List[TargetPassingTimeRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TargetPassingTimeRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        passing_time_ref: List[PassingTimeRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "PassingTimeRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        interchange_rule_timing_ref: List[InterchangeRuleTimingRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "InterchangeRuleTimingRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        interchange_rule_ref: List[InterchangeRuleRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "InterchangeRuleRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        service_journey_pattern_interchange_ref: List[ServiceJourneyPatternInterchangeRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ServiceJourneyPatternInterchangeRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        service_journey_interchange_ref: List[ServiceJourneyInterchangeRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ServiceJourneyInterchangeRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        default_interchange_ref: List[DefaultInterchangeRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "DefaultInterchangeRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        interchange_ref: List[InterchangeRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "InterchangeRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        journey_meeting_ref: List[JourneyMeetingRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "JourneyMeetingRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        train_number_ref: List[TrainNumberRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TrainNumberRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        routing_constraint_zone_ref: List[RoutingConstraintZoneRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "RoutingConstraintZoneRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        vehicle_position_alignment_ref: List[VehiclePositionAlignmentRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "VehiclePositionAlignmentRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        vehicle_quay_alignment_ref: List[VehicleQuayAlignmentRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "VehicleQuayAlignmentRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        logical_display_ref: List[LogicalDisplayRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "LogicalDisplayRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        parking_area_ref: List[ParkingAreaRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ParkingAreaRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        parking_properties_ref: List[ParkingPropertiesRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ParkingPropertiesRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        parking_capacity_ref: List[ParkingCapacityRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ParkingCapacityRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        line_network_ref: List[LineNetworkRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "LineNetworkRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        route_instruction_ref: List[RouteInstructionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "RouteInstructionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        level_ref: List[LevelRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "LevelRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        flexible_point_properties_ref: List[FlexiblePointPropertiesRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FlexiblePointPropertiesRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        flexible_link_properties_ref: List[FlexibleLinkPropertiesRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FlexibleLinkPropertiesRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        time_demand_profile_ref: List[TimeDemandProfileRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TimeDemandProfileRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        time_demand_type_ref: List[TimeDemandTypeRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TimeDemandTypeRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        vehicle_type_preference_ref: List[VehicleTypePreferenceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "VehicleTypePreferenceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        journey_pattern_headway_ref: List[JourneyPatternHeadwayRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "JourneyPatternHeadwayRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        journey_pattern_layover_ref: List[JourneyPatternLayoverRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "JourneyPatternLayoverRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        journey_pattern_run_time_ref: List[JourneyPatternRunTimeRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "JourneyPatternRunTimeRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        journey_pattern_wait_time_ref: List[JourneyPatternWaitTimeRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "JourneyPatternWaitTimeRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        default_service_journey_time_ref: List[DefaultServiceJourneyTimeRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "DefaultServiceJourneyTimeRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        default_dead_run_run_time_ref: List[DefaultDeadRunRunTimeRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "DefaultDeadRunRunTimeRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        turnaround_time_limit_time_ref: List[TurnaroundTimeLimitTimeRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TurnaroundTimeLimitTimeRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        headway_ref: List[HeadwayRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "HeadwayRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        journey_timing_ref: List[JourneyTimingRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "JourneyTimingRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        crew_base_ref: List[CrewBaseRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "CrewBaseRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        passenger_seat_ref: List[PassengerSeatRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "PassengerSeatRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        operating_department_ref: List[OperatingDepartmentRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "OperatingDepartmentRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        operational_context_ref: List[OperationalContextRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "OperationalContextRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        train_component_ref: List[TrainComponentRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TrainComponentRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        train_element_ref: List[TrainElementRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TrainElementRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        train_in_compound_train_ref: List[TrainInCompoundTrainRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TrainInCompoundTrainRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        travel_document_security_listing_ref: List[TravelDocumentSecurityListingRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TravelDocumentSecurityListingRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        retail_device_security_listing_ref: List[RetailDeviceSecurityListingRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "RetailDeviceSecurityListingRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        customer_account_security_listing_ref: List[CustomerAccountSecurityListingRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "CustomerAccountSecurityListingRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        fare_contract_security_listing_ref: List[FareContractSecurityListingRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FareContractSecurityListingRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        customer_security_listing_ref: List[CustomerSecurityListingRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "CustomerSecurityListingRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        security_listing_ref: List[SecurityListingRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "SecurityListingRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        whitelist_ref: List[WhitelistRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "WhitelistRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        blacklist_ref: List[BlacklistRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "BlacklistRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        security_list_ref: List[SecurityListRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "SecurityListRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        schematic_map_member_ref: List[SchematicMapMemberRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "SchematicMapMemberRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        schematic_map_ref: List[SchematicMapRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "SchematicMapRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        delivery_variant_ref: List[DeliveryVariantRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "DeliveryVariantRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        notice_ref: List[NoticeRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "NoticeRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        vehicle_equipment_profile_ref: List[VehicleEquipmentProfileRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "VehicleEquipmentProfileRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        vehicle_model_ref: List[VehicleModelRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "VehicleModelRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        vehicle_ref: List[VehicleRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "VehicleRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        passenger_capacity_ref: List[PassengerCapacityRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "PassengerCapacityRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        facility_requirement_ref: List[FacilityRequirementRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FacilityRequirementRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        vehicle_manoeuvring_requirement_ref: List[VehicleManoeuvringRequirementRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "VehicleManoeuvringRequirementRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        passenger_carrying_requirement_ref: List[PassengerCarryingRequirementRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "PassengerCarryingRequirementRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        vehicle_requirement_ref: List[VehicleRequirementRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "VehicleRequirementRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        compound_train_ref: List[CompoundTrainRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "CompoundTrainRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        train_ref: List[TrainRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TrainRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        vehicle_type_ref: List[VehicleTypeRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "VehicleTypeRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        onboard_stay_ref: List[OnboardStayRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "OnboardStayRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        accommodation_ref: List[AccommodationRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "AccommodationRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        service_facility_set_ref: List[ServiceFacilitySetRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ServiceFacilitySetRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        site_facility_set_ref: List[SiteFacilitySetRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "SiteFacilitySetRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        facility_set_ref: List[FacilitySetRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FacilitySetRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        facility_ref: List[FacilityRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FacilityRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        mode_ref: List[ModeRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ModeRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        submode_ref: List[SubmodeRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "SubmodeRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        open_transport_mode_ref: List[OpenTransportModeRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "OpenTransportModeRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        topographic_projection_ref: List[TopographicProjectionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TopographicProjectionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        complex_feature_projection_ref: List[ComplexFeatureProjectionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ComplexFeatureProjectionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        link_sequence_projection_ref: List[LinkSequenceProjectionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "LinkSequenceProjectionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        zone_projection_ref: List[ZoneProjectionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ZoneProjectionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        link_projection_ref: List[LinkProjectionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "LinkProjectionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        point_projection_ref: List[PointProjectionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "PointProjectionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        projection_ref: List[ProjectionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ProjectionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        group_of_link_sequences_ref: List[GroupOfLinkSequencesRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "GroupOfLinkSequencesRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        dated_vehicle_journey_ref: List[DatedVehicleJourneyRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "DatedVehicleJourneyRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        dated_special_service_ref: List[DatedSpecialServiceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "DatedSpecialServiceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        special_service_ref: List[SpecialServiceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "SpecialServiceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        template_service_journey_ref: List[TemplateServiceJourneyRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TemplateServiceJourneyRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        service_journey_ref: List[ServiceJourneyRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ServiceJourneyRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        dead_run_ref: List[DeadRunRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "DeadRunRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        vehicle_journey_ref: List[VehicleJourneyRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "VehicleJourneyRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        journey_ref: List[JourneyRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "JourneyRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        navigation_path_ref: List[NavigationPathRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "NavigationPathRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        service_journey_pattern_ref: List[ServiceJourneyPatternRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ServiceJourneyPatternRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        service_pattern_ref: List[ServicePatternRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ServicePatternRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        dead_run_journey_pattern_ref: List[DeadRunJourneyPatternRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "DeadRunJourneyPatternRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        journey_pattern_ref: List[JourneyPatternRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "JourneyPatternRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        timing_pattern_ref: List[TimingPatternRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TimingPatternRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        route_ref: List[RouteRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "RouteRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        link_sequence_ref: List[LinkSequenceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "LinkSequenceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        sales_transaction_ref: List[SalesTransactionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "SalesTransactionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        offered_travel_specification_ref: List[OfferedTravelSpecificationRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "OfferedTravelSpecificationRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        requested_travel_specification_ref: List[RequestedTravelSpecificationRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "RequestedTravelSpecificationRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        travel_specification_ref: List[TravelSpecificationRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TravelSpecificationRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        fare_contract_entry_ref: List[FareContractEntryRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FareContractEntryRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        log_entry_ref: List[LogEntryRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "LogEntryRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        alternative_name_ref: List[AlternativeNameRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "AlternativeNameRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        timeband_ref: List[TimebandRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TimebandRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        fare_day_type_ref: List[FareDayTypeRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FareDayTypeRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        day_type_ref: List[DayTypeRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "DayTypeRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        default_connection_ref: List[DefaultConnectionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "DefaultConnectionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        site_connection_ref: List[SiteConnectionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "SiteConnectionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        connection_ref: List[ConnectionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ConnectionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        access_ref: List[AccessRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "AccessRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        transfer_ref: List[TransferRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TransferRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        hail_and_ride_area_ref: List[HailAndRideAreaRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "HailAndRideAreaRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        flexible_area_ref: List[FlexibleAreaRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FlexibleAreaRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        flexible_quay_ref: List[FlexibleQuayRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FlexibleQuayRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        flexible_stop_place_ref: List[FlexibleStopPlaceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FlexibleStopPlaceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        path_junction_ref: List[PathJunctionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "PathJunctionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        topographic_place_ref: List[TopographicPlaceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TopographicPlaceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        equipment_place_ref: List[EquipmentPlaceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "EquipmentPlaceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        equipment_position_ref: List[EquipmentPositionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "EquipmentPositionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        vehicle_stopping_position_ref: List[VehicleStoppingPositionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "VehicleStoppingPositionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        vehicle_stopping_place_ref: List[VehicleStoppingPlaceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "VehicleStoppingPlaceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        boarding_position_ref: List[BoardingPositionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "BoardingPositionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        access_space_ref: List[AccessSpaceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "AccessSpaceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        quay_ref: List[QuayRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "QuayRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        stop_place_space_ref: List[StopPlaceSpaceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "StopPlaceSpaceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        parking_bay_ref: List[ParkingBayRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ParkingBayRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        point_of_interest_space_ref: List[PointOfInterestSpaceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "PointOfInterestSpaceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        stop_place_vehicle_entrance_ref: List[StopPlaceVehicleEntranceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "StopPlaceVehicleEntranceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        stop_place_entrance_ref: List[StopPlaceEntranceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "StopPlaceEntranceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        parking_entrance_for_vehicles_ref: List[ParkingEntranceForVehiclesRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ParkingEntranceForVehiclesRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        parking_passenger_entrance_ref: List[ParkingPassengerEntranceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ParkingPassengerEntranceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        parking_entrance_ref: List[ParkingEntranceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ParkingEntranceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        point_of_interest_vehicle_entrance_ref: List[PointOfInterestVehicleEntranceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "PointOfInterestVehicleEntranceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        point_of_interest_entrance_ref: List[PointOfInterestEntranceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "PointOfInterestEntranceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        vehicle_entrance_ref: List[VehicleEntranceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "VehicleEntranceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        entrance_ref: List[EntranceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "EntranceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        site_component_ref: List[SiteComponentRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "SiteComponentRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        stop_place_ref: List[StopPlaceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "StopPlaceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        parking_ref: List[ParkingRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ParkingRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        point_of_interest_ref: List[PointOfInterestRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "PointOfInterestRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        service_site_ref: List[ServiceSiteRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ServiceSiteRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        site_ref: List[SiteRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "SiteRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        site_element_ref: List[SiteElementRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "SiteElementRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        garage_ref: List[GarageRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "GarageRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        addressable_place_ref: List[AddressablePlaceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "AddressablePlaceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        postal_address_ref: List[PostalAddressRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "PostalAddressRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        road_address_ref: List[RoadAddressRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "RoadAddressRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        address_ref: List[AddressRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "AddressRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        place_ref: List[PlaceRef2] = field(
-            default_factory=list,
-            metadata={
-                "name": "PlaceRef_",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        service_link_ref: List[ServiceLinkRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ServiceLinkRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        line_link_ref: List[LineLinkRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "LineLinkRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        path_link_ref: List[PathLinkRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "PathLinkRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        timing_link_ref: List[TimingLinkRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TimingLinkRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        route_link_ref: List[RouteLinkRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "RouteLinkRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        wire_link_ref: List[WireLinkRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "WireLinkRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        road_link_ref: List[RoadLinkRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "RoadLinkRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        railway_link_ref: List[RailwayLinkRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "RailwayLinkRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        infrastructure_link_ref: List[InfrastructureLinkRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "InfrastructureLinkRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        activation_link_ref: List[ActivationLinkRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ActivationLinkRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        link_ref: List[LinkRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "LinkRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        border_point_ref: List[BorderPointRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "BorderPointRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        fare_scheduled_stop_point_ref: List[FareScheduledStopPointRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FareScheduledStopPointRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        scheduled_stop_point_ref: List[ScheduledStopPointRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ScheduledStopPointRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        garage_point_ref: List[GaragePointRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "GaragePointRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        parking_point_ref: List[ParkingPointRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ParkingPointRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        relief_point_ref: List[ReliefPointRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ReliefPointRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        timing_point_ref: List[TimingPointRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TimingPointRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        route_point_ref: List[RoutePointRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "RoutePointRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        wire_point_ref: List[WirePointRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "WirePointRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        road_point_ref: List[RoadPointRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "RoadPointRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        railway_point_ref: List[RailwayPointRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "RailwayPointRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        infrastructure_point_ref: List[InfrastructurePointRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "InfrastructurePointRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        traffic_control_point_ref: List[TrafficControlPointRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TrafficControlPointRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        beacon_point_ref: List[BeaconPointRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "BeaconPointRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        activation_point_ref: List[ActivationPointRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ActivationPointRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        point_on_link_ref: List[PointOnLinkRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "PointOnLinkRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        point_ref: List[PointRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "PointRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        operating_period_ref: List[OperatingPeriodRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "OperatingPeriodRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        operating_day_ref: List[OperatingDayRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "OperatingDayRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        service_calendar_ref: List[ServiceCalendarRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ServiceCalendarRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        alternative_text_ref: List[AlternativeTextRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "AlternativeTextRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        availability_condition_ref: List[AvailabilityConditionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "AvailabilityConditionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        validity_rule_parameter_ref: List[ValidityRuleParameterRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ValidityRuleParameterRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        validity_trigger_ref: List[ValidityTriggerRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ValidityTriggerRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        validity_condition_ref: List[ValidityConditionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ValidityConditionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        responsibility_role_ref: List[ResponsibilityRoleRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ResponsibilityRoleRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        control_centre_ref: List[ControlCentreRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ControlCentreRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        organisational_unit_ref: List[OrganisationalUnitRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "OrganisationalUnitRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        department_ref: List[DepartmentRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "DepartmentRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        organisation_part_ref: List[OrganisationPartRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "OrganisationPartRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        all_authorities_ref: List[AllAuthoritiesRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "AllAuthoritiesRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        all_operators_ref: List[AllOperatorsRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "AllOperatorsRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        all_transport_organisations_ref: List[AllTransportOrganisationsRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "AllTransportOrganisationsRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        all_organisations_ref: List[AllOrganisationsRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "AllOrganisationsRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        retail_consortium_ref: List[RetailConsortiumRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "RetailConsortiumRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        authority_ref: List[AuthorityRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "AuthorityRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        operator_ref: List[OperatorRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "OperatorRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        transport_organisation_ref: List[TransportOrganisationRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TransportOrganisationRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        general_organisation_ref: List[GeneralOrganisationRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "GeneralOrganisationRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        management_agent_ref: List[ManagementAgentRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ManagementAgentRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        serviced_organisation_ref: List[ServicedOrganisationRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ServicedOrganisationRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        travel_agent_ref: List[TravelAgentRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TravelAgentRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        other_organisation_ref: List[OtherOrganisationRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "OtherOrganisationRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        organisation_ref: List[OrganisationRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "OrganisationRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        responsibility_set_ref: List[ResponsibilitySetRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ResponsibilitySetRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        destination_display_variant_ref: List[DestinationDisplayVariantRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "DestinationDisplayVariantRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        destination_display_ref: List[DestinationDisplayRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "DestinationDisplayRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        allowed_line_direction_ref: List[AllowedLineDirectionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "AllowedLineDirectionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        flexible_line_ref: List[FlexibleLineRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FlexibleLineRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        line_ref: List[LineRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "LineRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        group_of_entities_ref: List[GroupOfEntitiesRef1] = field(
-            default_factory=list,
-            metadata={
-                "name": "GroupOfEntitiesRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        group_of_customer_purchase_packages_ref: List[GroupOfCustomerPurchasePackagesRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "GroupOfCustomerPurchasePackagesRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        group_of_sales_offer_packages_ref: List[GroupOfSalesOfferPackagesRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "GroupOfSalesOfferPackagesRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        group_of_distance_matrix_elements_ref: List[GroupOfDistanceMatrixElementsRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "GroupOfDistanceMatrixElementsRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        group_of_distribution_channels_ref: List[GroupOfDistributionChannelsRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "GroupOfDistributionChannelsRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        standard_fare_table_ref: List[StandardFareTableRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "StandardFareTableRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        fare_table_ref: List[FareTableRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FareTableRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        price_group_ref: List[PriceGroupRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "PriceGroupRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        rhythmical_journey_group_ref: List[RhythmicalJourneyGroupRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "RhythmicalJourneyGroupRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        headway_journey_group_ref: List[HeadwayJourneyGroupRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "HeadwayJourneyGroupRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        journey_frequency_group_ref: List[JourneyFrequencyGroupRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "JourneyFrequencyGroupRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        group_of_services_ref: List[GroupOfServicesRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "GroupOfServicesRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        group_of_stop_places_ref: List[GroupOfStopPlacesRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "GroupOfStopPlacesRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        point_of_interest_hierarchy_ref: List[PointOfInterestHierarchyRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "PointOfInterestHierarchyRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        group_of_timing_links_ref: List[GroupOfTimingLinksRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "GroupOfTimingLinksRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        group_of_operators_ref: List[GroupOfOperatorsRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "GroupOfOperatorsRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        group_of_places_ref: List[GroupOfPlacesRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "GroupOfPlacesRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        parent_section_ref: List[ParentSectionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ParentSectionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        parent_common_section_ref: List[ParentCommonSectionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ParentCommonSectionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        common_section_ref: List[CommonSectionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "CommonSectionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        line_section_ref: List[LineSectionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "LineSectionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        fare_section_ref: List[FareSectionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FareSectionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        general_section_ref: List[GeneralSectionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "GeneralSectionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        section_ref: List[SectionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "SectionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        log_ref: List[LogRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "LogRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        group_of_timebands_ref: List[GroupOfTimebandsRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "GroupOfTimebandsRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        netex_org_uk_netex_place_ref: List[PlaceRef1] = field(
-            default_factory=list,
-            metadata={
-                "name": "PlaceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        group_of_points_ref: List[GroupOfPointsRef1] = field(
-            default_factory=list,
-            metadata={
-                "name": "GroupOfPointsRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        stop_area_ref: List[StopAreaRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "StopAreaRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        access_zone_ref: List[AccessZoneRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "AccessZoneRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        transport_administrative_zone_ref: List[TransportAdministrativeZoneRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TransportAdministrativeZoneRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        administrative_zone_ref: List[AdministrativeZoneRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "AdministrativeZoneRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        fare_zone_ref: List[FareZoneRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FareZoneRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        tariff_zone_ref: List[TariffZoneRef1] = field(
-            default_factory=list,
-            metadata={
-                "name": "TariffZoneRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        netex_org_uk_netex_tariff_zone_ref: List[TariffZoneRef2] = field(
-            default_factory=list,
-            metadata={
-                "name": "TariffZoneRef_",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        zone_ref: List[ZoneRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ZoneRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        netex_org_uk_netex_group_of_points_ref: List[GroupOfPointsRef2] = field(
-            default_factory=list,
-            metadata={
-                "name": "GroupOfPointsRef_",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        layer_ref: List[LayerRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "LayerRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        network_ref: List[NetworkRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "NetworkRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        group_of_lines_ref: List[GroupOfLinesRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "GroupOfLinesRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        general_group_of_entities_ref: List[GeneralGroupOfEntitiesRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "GeneralGroupOfEntitiesRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        netex_org_uk_netex_group_of_entities_ref: List[GroupOfEntitiesRef2] = field(
-            default_factory=list,
-            metadata={
-                "name": "GroupOfEntitiesRef_",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        sales_transaction_frame_ref: List[SalesTransactionFrameRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "SalesTransactionFrameRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        fare_frame_ref: List[FareFrameRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FareFrameRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        service_frame_ref: List[ServiceFrameRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ServiceFrameRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        driver_schedule_frame_ref: List[DriverScheduleFrameRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "DriverScheduleFrameRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        vehicle_schedule_frame_ref: List[VehicleScheduleFrameRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "VehicleScheduleFrameRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        timetable_frame_ref: List[TimetableFrameRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TimetableFrameRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        site_frame_ref: List[SiteFrameRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "SiteFrameRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        infrastructure_frame_ref: List[InfrastructureFrameRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "InfrastructureFrameRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        general_frame_ref: List[GeneralFrameRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "GeneralFrameRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        resource_frame_ref: List[ResourceFrameRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ResourceFrameRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        service_calendar_frame_ref: List[ServiceCalendarFrameRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ServiceCalendarFrameRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        composite_frame_ref: List[CompositeFrameRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "CompositeFrameRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        version_frame_ref: List[VersionFrameRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "VersionFrameRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        distribution_channel_ref: List[DistributionChannelRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "DistributionChannelRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        charging_moment_ref: List[ChargingMomentRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ChargingMomentRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        price_unit_ref: List[PriceUnitRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "PriceUnitRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        purpose_of_journey_partition_ref: List[PurposeOfJourneyPartitionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "PurposeOfJourneyPartitionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        timing_algorithm_type_ref: List[TimingAlgorithmTypeRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TimingAlgorithmTypeRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        point_of_interest_classification_ref: List[PointOfInterestClassificationRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "PointOfInterestClassificationRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        direction_ref: List[DirectionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "DirectionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_activation_ref: List[TypeOfActivationRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfActivationRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        purpose_of_equipment_profile_ref: List[PurposeOfEquipmentProfileRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "PurposeOfEquipmentProfileRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_product_category_ref: List[TypeOfProductCategoryRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfProductCategoryRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_payment_method_ref: List[TypeOfPaymentMethodRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfPaymentMethodRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        class_of_use_ref: List[ClassOfUseRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ClassOfUseRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_operation_ref: List[TypeOfOperationRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfOperationRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_codespace_assignment_ref: List[TypeOfCodespaceAssignmentRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfCodespaceAssignmentRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        branding_ref: List[BrandingRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "BrandingRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_responsibility_role_ref: List[TypeOfResponsibilityRoleRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfResponsibilityRoleRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        purpose_of_grouping_ref: List[PurposeOfGroupingRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "PurposeOfGroupingRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_retail_device_ref: List[TypeOfRetailDeviceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfRetailDeviceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        customer_account_status_ref: List[CustomerAccountStatusRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "CustomerAccountStatusRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_customer_account_ref: List[TypeOfCustomerAccountRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfCustomerAccountRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_fare_contract_entry_ref: List[TypeOfFareContractEntryRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfFareContractEntryRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_fare_contract_ref: List[TypeOfFareContractRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfFareContractRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_access_right_assignment_ref: List[TypeOfAccessRightAssignmentRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfAccessRightAssignmentRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_sales_offer_package_ref: List[TypeOfSalesOfferPackageRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfSalesOfferPackageRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_fare_structure_element_ref: List[TypeOfFareStructureElementRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfFareStructureElementRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_tariff_ref: List[TypeOfTariffRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfTariffRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        all_distribution_channels_ref: List[AllDistributionChannelsRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "AllDistributionChannelsRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_machine_readability_ref: List[TypeOfMachineReadabilityRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfMachineReadabilityRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_travel_document_ref: List[TypeOfTravelDocumentRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfTravelDocumentRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_fare_product_ref: List[TypeOfFareProductRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfFareProductRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_fare_structure_factor_ref: List[TypeOfFareStructureFactorRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfFareStructureFactorRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_pricing_rule_ref: List[TypeOfPricingRuleRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfPricingRuleRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_flexible_service_ref: List[TypeOfFlexibleServiceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfFlexibleServiceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_passenger_information_equipment_ref: List[TypeOfPassengerInformationEquipmentRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfPassengerInformationEquipmentRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_service_feature_ref: List[TypeOfServiceFeatureRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfServiceFeatureRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_congestion_ref: List[TypeOfCongestionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfCongestionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_time_demand_type_ref: List[TypeOfTimeDemandTypeRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfTimeDemandTypeRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_journey_pattern_ref: List[TypeOfJourneyPatternRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfJourneyPatternRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_security_list_ref: List[TypeOfSecurityListRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfSecurityListRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_delivery_variant_ref: List[TypeOfDeliveryVariantRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfDeliveryVariantRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_notice_ref: List[TypeOfNoticeRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfNoticeRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_service_ref: List[TypeOfServiceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfServiceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_facility_ref: List[TypeOfFacilityRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfFacilityRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_equipment_ref: List[TypeOfEquipmentRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfEquipmentRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_projection_ref: List[TypeOfProjectionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfProjectionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_feature_ref: List[TypeOfFeatureRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfFeatureRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_link_sequence_ref: List[TypeOfLinkSequenceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfLinkSequenceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_organisation_part_ref: List[TypeOfOrganisationPartRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfOrganisationPartRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_organisation_ref: List[TypeOfOrganisationRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfOrganisationRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_place_ref: List[TypeOfPlaceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfPlaceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_transfer_ref: List[TypeOfTransferRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfTransferRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_zone_ref: List[TypeOfZoneRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfZoneRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_link_ref: List[TypeOfLinkRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfLinkRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_point_ref: List[TypeOfPointRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfPointRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_line_ref: List[TypeOfLineRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfLineRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_validity_ref: List[TypeOfValidityRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfValidityRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_frame_ref: List[TypeOfFrameRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfFrameRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_entity_ref: List[TypeOfEntityRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfEntityRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        type_of_value_ref: List[TypeOfValueRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TypeOfValueRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        data_source_ref: List[DataSourceRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "DataSourceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        version_ref: List[VersionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "VersionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        version_of_object_ref: List[VersionOfObjectRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "VersionOfObjectRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        distribution_assignment_ref: List[DistributionAssignmentRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "DistributionAssignmentRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        sales_offer_package_substitution_ref: List[SalesOfferPackageSubstitutionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "SalesOfferPackageSubstitutionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        journey_accounting_ref: List[JourneyAccountingRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "JourneyAccountingRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        train_component_label_assignment_ref: List[TrainComponentLabelAssignmentRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TrainComponentLabelAssignmentRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        transfer_restriction_ref: List[TransferRestrictionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TransferRestrictionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        service_exclusion_ref: List[ServiceExclusionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ServiceExclusionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        flexible_service_assignment_ref: List[FlexibleServiceAssignmentRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "FlexibleServiceAssignmentRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        vehicle_type_stop_assignment_ref: List[VehicleTypeStopAssignmentRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "VehicleTypeStopAssignmentRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        path_assignment_ref: List[PathAssignmentRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "PathAssignmentRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        train_stop_assignment_ref: List[TrainStopAssignmentRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TrainStopAssignmentRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        vehicle_journey_stop_assignment_ref: List[VehicleJourneyStopAssignmentRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "VehicleJourneyStopAssignmentRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        dynamic_stop_assignment_ref: List[DynamicStopAssignmentRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "DynamicStopAssignmentRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        passenger_stop_assignment_ref: List[PassengerStopAssignmentRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "PassengerStopAssignmentRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        stop_assignment_ref: List[StopAssignmentRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "StopAssignmentRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        display_assignment_ref: List[DisplayAssignmentRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "DisplayAssignmentRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        check_constraint_throughput_ref: List[CheckConstraintThroughputRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "CheckConstraintThroughputRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        check_constraint_delay_ref: List[CheckConstraintDelayRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "CheckConstraintDelayRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        check_constraint_ref: List[CheckConstraintRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "CheckConstraintRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        time_demand_type_assigment_ref: List[TimeDemandTypeAssigmentRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "TimeDemandTypeAssigmentRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        overtaking_possibility_ref: List[OvertakingPossibilityRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "OvertakingPossibilityRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        meeting_restriction_ref: List[MeetingRestrictionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "MeetingRestrictionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        restricted_manoeuvre_ref: List[RestrictedManoeuvreRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "RestrictedManoeuvreRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        infrastructure_link_restriction_ref: List[InfrastructureLinkRestrictionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "InfrastructureLinkRestrictionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        vehicle_type_at_point_ref: List[VehicleTypeAtPointRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "VehicleTypeAtPointRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        network_restriction_ref: List[NetworkRestrictionRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "NetworkRestrictionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        activation_assignment_ref: List[ActivationAssignmentRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ActivationAssignmentRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        day_type_assignment_ref: List[DayTypeAssignmentRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "DayTypeAssignmentRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        assignment_ref: List[AssignmentRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "AssignmentRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        class_in_frame_ref: List[ClassInFrameRef] = field(
-            default_factory=list,
-            metadata={
-                "name": "ClassInFrameRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
+        choice: List[object] = field(
+            default_factory=list,
+            metadata={
+                "type": "Elements",
+                "choices": (
+                    {
+                        "name": "TravelDocumentRef",
+                        "type": TravelDocumentRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "RepeatedTripFareRequestRef",
+                        "type": RepeatedTripFareRequestRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "SingleTripFareRequestRef",
+                        "type": SingleTripFareRequestRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FareRequestRef",
+                        "type": FareRequestRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "StopFinderRequestRef",
+                        "type": StopFinderRequestRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "StopEventRequestRef",
+                        "type": StopEventRequestRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ScheduleRequestRef",
+                        "type": ScheduleRequestRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TripPlanRequestRef",
+                        "type": TripPlanRequestRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "PassengerInformationRequestRef",
+                        "type": PassengerInformationRequestRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ResidentialQualificationEligibilityRef",
+                        "type": ResidentialQualificationEligibilityRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "CommercialProfileEligibilityRef",
+                        "type": CommercialProfileEligibilityRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "UserProfileEligibilityRef",
+                        "type": UserProfileEligibilityRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "CustomerEligibilityRef",
+                        "type": CustomerEligibilityRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "CustomerAccountRef",
+                        "type": CustomerAccountRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FareContractRef",
+                        "type": FareContractRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "CustomerRef",
+                        "type": CustomerRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "StartTimeAtStopPointRef",
+                        "type": StartTimeAtStopPointRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ResidentialQualificationRef",
+                        "type": ResidentialQualificationRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfConcessionRef",
+                        "type": TypeOfConcessionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfUsageParameterRef",
+                        "type": TypeOfUsageParameterRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TariffObjectRef",
+                        "type": TariffObjectRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ParkingTariffRef",
+                        "type": ParkingTariffRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TariffRef",
+                        "type": TariffRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfFareTableRef",
+                        "type": TypeOfFareTableRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FareTableRowRef",
+                        "type": FareTableRowRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FareTableColumnRef",
+                        "type": FareTableColumnRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TimeUnitRef",
+                        "type": TimeUnitRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "GeographicalUnitRef",
+                        "type": GeographicalUnitRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FareUnitRef",
+                        "type": FareUnitRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ControllableElementInSequenceRef",
+                        "type": ControllableElementInSequenceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FareStructureElementInSequenceRef",
+                        "type": FareStructureElementInSequenceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "AccessRightInProductRef",
+                        "type": AccessRightInProductRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FareElementInSequenceRef",
+                        "type": FareElementInSequenceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "CellRef",
+                        "type": CellRef1,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "CellRef_",
+                        "type": CellRef2,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "CustomerPurchasePackagePriceRef",
+                        "type": CustomerPurchasePackagePriceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ParkingPriceRef",
+                        "type": ParkingPriceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TimeIntervalPriceRef",
+                        "type": TimeIntervalPriceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TimeUnitPriceRef",
+                        "type": TimeUnitPriceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "QualityStructureFactorPriceRef",
+                        "type": QualityStructureFactorPriceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ControllableElementPriceRef",
+                        "type": ControllableElementPriceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ValidableElementPriceRef",
+                        "type": ValidableElementPriceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "GeographicalIntervalPriceRef",
+                        "type": GeographicalIntervalPriceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "GeographicalUnitPriceRef",
+                        "type": GeographicalUnitPriceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "UsageParameterPriceRef",
+                        "type": UsageParameterPriceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "SalesOfferPackagePriceRef",
+                        "type": SalesOfferPackagePriceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "DistanceMatrixElementPriceRef",
+                        "type": DistanceMatrixElementPriceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FareStructureElementPriceRef",
+                        "type": FareStructureElementPriceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FulfilmentMethodPriceRef",
+                        "type": FulfilmentMethodPriceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "SeriesConstraintPriceRef",
+                        "type": SeriesConstraintPriceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "CappingRulePriceRef",
+                        "type": CappingRulePriceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FareProductPriceRef",
+                        "type": FareProductPriceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FarePriceRef",
+                        "type": FarePriceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "CustomerPurchasePackageElementRef",
+                        "type": CustomerPurchasePackageElementRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "CustomerPurchasePackageRef",
+                        "type": CustomerPurchasePackageRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ControllableElementRef",
+                        "type": ControllableElementRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ValidableElementRef",
+                        "type": ValidableElementRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "SalesOfferPackageEntitlementGivenRef",
+                        "type": SalesOfferPackageEntitlementGivenRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "SalesOfferPackageEntitlementRequiredRef",
+                        "type": SalesOfferPackageEntitlementRequiredRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "MinimumStayRef",
+                        "type": MinimumStayRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "InterchangingRef",
+                        "type": InterchangingRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FrequencyOfUseRef",
+                        "type": FrequencyOfUseRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "SuspendingRef",
+                        "type": SuspendingRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "UsageValidityPeriodRef",
+                        "type": UsageValidityPeriodRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "StepLimitRef",
+                        "type": StepLimitRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "RoutingRef",
+                        "type": RoutingRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "RoundTripRef",
+                        "type": RoundTripRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "LuggageAllowanceRef",
+                        "type": LuggageAllowanceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "EntitlementGivenRef",
+                        "type": EntitlementGivenRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "EntitlementRequiredRef",
+                        "type": EntitlementRequiredRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "EligibilityChangePolicyRef",
+                        "type": EligibilityChangePolicyRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "GroupTicketRef",
+                        "type": GroupTicketRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "CommercialProfileRef",
+                        "type": CommercialProfileRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "CompanionProfileRef",
+                        "type": CompanionProfileRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "UserProfileRef",
+                        "type": UserProfileRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ProfileParameterRef",
+                        "type": ProfileParameterRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "SubscribingRef",
+                        "type": SubscribingRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "PenaltyPolicyRef",
+                        "type": PenaltyPolicyRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ChargingPolicyRef",
+                        "type": ChargingPolicyRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TransferabilityRef",
+                        "type": TransferabilityRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ReplacingRef",
+                        "type": ReplacingRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "RefundingRef",
+                        "type": RefundingRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ExchangingRef",
+                        "type": ExchangingRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ResellingRef",
+                        "type": ResellingRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "CancellingRef",
+                        "type": CancellingRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ReservingRef",
+                        "type": ReservingRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "PurchaseWindowRef",
+                        "type": PurchaseWindowRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "UsageParameterRef",
+                        "type": UsageParameterRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "SalesOfferPackageElementRef",
+                        "type": SalesOfferPackageElementRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "SalesOfferPackageRef",
+                        "type": SalesOfferPackageRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "DistanceMatrixElementInverseRef",
+                        "type": DistanceMatrixElementInverseRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "DistanceMatrixElementRef",
+                        "type": DistanceMatrixElementRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FareStructureElementRef",
+                        "type": FareStructureElementRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FulfilmentMethodRef",
+                        "type": FulfilmentMethodRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "SeriesConstraintRef",
+                        "type": SeriesConstraintRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "CappingRuleRef",
+                        "type": CappingRuleRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "EntitlementProductRef",
+                        "type": EntitlementProductRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "SupplementProductRef",
+                        "type": SupplementProductRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "PreassignedFareProductRef",
+                        "type": PreassignedFareProductRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "AmountOfPriceUnitProductRef",
+                        "type": AmountOfPriceUnitProductRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "UsageDiscountRightRef",
+                        "type": UsageDiscountRightRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ThirdPartyProductRef",
+                        "type": ThirdPartyProductRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "CappedDiscountRightRef",
+                        "type": CappedDiscountRightRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "SaleDiscountRightRef",
+                        "type": SaleDiscountRightRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FareProductRef",
+                        "type": FareProductRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ServiceAccessRightRef",
+                        "type": ServiceAccessRightRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TimeIntervalRef",
+                        "type": TimeIntervalRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "GeographicalIntervalRef",
+                        "type": GeographicalIntervalRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FareIntervalRef",
+                        "type": FareIntervalRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ParkingChargeBandRef",
+                        "type": ParkingChargeBandRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TimeStructureFactorRef",
+                        "type": TimeStructureFactorRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FareQuotaFactorRef",
+                        "type": FareQuotaFactorRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FareDemandFactorRef",
+                        "type": FareDemandFactorRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "QualityStructureFactorRef",
+                        "type": QualityStructureFactorRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "GeographicalStructureFactorRef",
+                        "type": GeographicalStructureFactorRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FareStructureFactorRef",
+                        "type": FareStructureFactorRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "PriceableObjectRef",
+                        "type": PriceableObjectRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "MonthValidityOffsetRef",
+                        "type": MonthValidityOffsetRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "LimitingRuleRef",
+                        "type": LimitingRuleRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "DiscountingRuleRef",
+                        "type": DiscountingRuleRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "PricingRuleRef",
+                        "type": PricingRuleRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "PricingServiceRef",
+                        "type": PricingServiceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "RoundingStepRef",
+                        "type": RoundingStepRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "RoundingRef",
+                        "type": RoundingRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "PricingParameterSetRef",
+                        "type": PricingParameterSetRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "SupplyContractRef",
+                        "type": SupplyContractRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FlexibleServicePropertiesRef",
+                        "type": FlexibleServicePropertiesRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "DriverTripTimeRef",
+                        "type": DriverTripTimeRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "DriverTripRef",
+                        "type": DriverTripRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "DutyPartRef",
+                        "type": DutyPartRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "AccountableElementRef",
+                        "type": AccountableElementRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "DutyRef",
+                        "type": DutyRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ReliefOpportunityRef",
+                        "type": ReliefOpportunityRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "CourseOfJourneysRef",
+                        "type": CourseOfJourneysRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "DriverRef",
+                        "type": DriverRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "VehicleServicePartRef",
+                        "type": VehicleServicePartRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "VehicleServiceRef",
+                        "type": VehicleServiceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "CompoundBlockRef",
+                        "type": CompoundBlockRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TrainBlockPartRef",
+                        "type": TrainBlockPartRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "BlockPartRef",
+                        "type": BlockPartRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TrainBlockRef",
+                        "type": TrainBlockRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "BlockRef",
+                        "type": BlockRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "JourneyPartCoupleRef",
+                        "type": JourneyPartCoupleRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "CoupledJourneyRef",
+                        "type": CoupledJourneyRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "JourneyPartRef",
+                        "type": JourneyPartRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TimetabledPassingTimeRef",
+                        "type": TimetabledPassingTimeRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "EstimatedPassingTimeRef",
+                        "type": EstimatedPassingTimeRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ObservedPassingTimeRef",
+                        "type": ObservedPassingTimeRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TargetPassingTimeRef",
+                        "type": TargetPassingTimeRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "PassingTimeRef",
+                        "type": PassingTimeRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "InterchangeRuleTimingRef",
+                        "type": InterchangeRuleTimingRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "InterchangeRuleRef",
+                        "type": InterchangeRuleRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ServiceJourneyPatternInterchangeRef",
+                        "type": ServiceJourneyPatternInterchangeRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ServiceJourneyInterchangeRef",
+                        "type": ServiceJourneyInterchangeRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "DefaultInterchangeRef",
+                        "type": DefaultInterchangeRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "InterchangeRef",
+                        "type": InterchangeRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "JourneyMeetingRef",
+                        "type": JourneyMeetingRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TrainNumberRef",
+                        "type": TrainNumberRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "RoutingConstraintZoneRef",
+                        "type": RoutingConstraintZoneRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "VehiclePositionAlignmentRef",
+                        "type": VehiclePositionAlignmentRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "VehicleQuayAlignmentRef",
+                        "type": VehicleQuayAlignmentRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "LogicalDisplayRef",
+                        "type": LogicalDisplayRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ParkingAreaRef",
+                        "type": ParkingAreaRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ParkingPropertiesRef",
+                        "type": ParkingPropertiesRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ParkingCapacityRef",
+                        "type": ParkingCapacityRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "LineNetworkRef",
+                        "type": LineNetworkRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "RouteInstructionRef",
+                        "type": RouteInstructionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "LevelRef",
+                        "type": LevelRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FlexiblePointPropertiesRef",
+                        "type": FlexiblePointPropertiesRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FlexibleLinkPropertiesRef",
+                        "type": FlexibleLinkPropertiesRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TimeDemandProfileRef",
+                        "type": TimeDemandProfileRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TimeDemandTypeRef",
+                        "type": TimeDemandTypeRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "VehicleTypePreferenceRef",
+                        "type": VehicleTypePreferenceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "JourneyPatternHeadwayRef",
+                        "type": JourneyPatternHeadwayRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "JourneyPatternLayoverRef",
+                        "type": JourneyPatternLayoverRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "JourneyPatternRunTimeRef",
+                        "type": JourneyPatternRunTimeRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "JourneyPatternWaitTimeRef",
+                        "type": JourneyPatternWaitTimeRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "DefaultServiceJourneyTimeRef",
+                        "type": DefaultServiceJourneyTimeRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "DefaultDeadRunRunTimeRef",
+                        "type": DefaultDeadRunRunTimeRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TurnaroundTimeLimitTimeRef",
+                        "type": TurnaroundTimeLimitTimeRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "HeadwayRef",
+                        "type": HeadwayRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "JourneyTimingRef",
+                        "type": JourneyTimingRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "CrewBaseRef",
+                        "type": CrewBaseRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "PassengerSeatRef",
+                        "type": PassengerSeatRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "OperatingDepartmentRef",
+                        "type": OperatingDepartmentRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "OperationalContextRef",
+                        "type": OperationalContextRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TrainComponentRef",
+                        "type": TrainComponentRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TrainElementRef",
+                        "type": TrainElementRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TrainInCompoundTrainRef",
+                        "type": TrainInCompoundTrainRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TravelDocumentSecurityListingRef",
+                        "type": TravelDocumentSecurityListingRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "RetailDeviceSecurityListingRef",
+                        "type": RetailDeviceSecurityListingRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "CustomerAccountSecurityListingRef",
+                        "type": CustomerAccountSecurityListingRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FareContractSecurityListingRef",
+                        "type": FareContractSecurityListingRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "CustomerSecurityListingRef",
+                        "type": CustomerSecurityListingRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "SecurityListingRef",
+                        "type": SecurityListingRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "WhitelistRef",
+                        "type": WhitelistRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "BlacklistRef",
+                        "type": BlacklistRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "SecurityListRef",
+                        "type": SecurityListRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "SchematicMapMemberRef",
+                        "type": SchematicMapMemberRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "SchematicMapRef",
+                        "type": SchematicMapRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "DeliveryVariantRef",
+                        "type": DeliveryVariantRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "NoticeRef",
+                        "type": NoticeRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "VehicleEquipmentProfileRef",
+                        "type": VehicleEquipmentProfileRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "VehicleModelRef",
+                        "type": VehicleModelRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "VehicleRef",
+                        "type": VehicleRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "PassengerCapacityRef",
+                        "type": PassengerCapacityRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FacilityRequirementRef",
+                        "type": FacilityRequirementRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "VehicleManoeuvringRequirementRef",
+                        "type": VehicleManoeuvringRequirementRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "PassengerCarryingRequirementRef",
+                        "type": PassengerCarryingRequirementRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "VehicleRequirementRef",
+                        "type": VehicleRequirementRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "CompoundTrainRef",
+                        "type": CompoundTrainRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TrainRef",
+                        "type": TrainRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "VehicleTypeRef",
+                        "type": VehicleTypeRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "OnboardStayRef",
+                        "type": OnboardStayRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "AccommodationRef",
+                        "type": AccommodationRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ServiceFacilitySetRef",
+                        "type": ServiceFacilitySetRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "SiteFacilitySetRef",
+                        "type": SiteFacilitySetRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FacilitySetRef",
+                        "type": FacilitySetRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FacilityRef",
+                        "type": FacilityRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ModeRef",
+                        "type": ModeRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "SubmodeRef",
+                        "type": SubmodeRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "OpenTransportModeRef",
+                        "type": OpenTransportModeRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TopographicProjectionRef",
+                        "type": TopographicProjectionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ComplexFeatureProjectionRef",
+                        "type": ComplexFeatureProjectionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "LinkSequenceProjectionRef",
+                        "type": LinkSequenceProjectionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ZoneProjectionRef",
+                        "type": ZoneProjectionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "LinkProjectionRef",
+                        "type": LinkProjectionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "PointProjectionRef",
+                        "type": PointProjectionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ProjectionRef",
+                        "type": ProjectionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "GroupOfLinkSequencesRef",
+                        "type": GroupOfLinkSequencesRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "DatedVehicleJourneyRef",
+                        "type": DatedVehicleJourneyRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "DatedSpecialServiceRef",
+                        "type": DatedSpecialServiceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "SpecialServiceRef",
+                        "type": SpecialServiceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TemplateServiceJourneyRef",
+                        "type": TemplateServiceJourneyRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ServiceJourneyRef",
+                        "type": ServiceJourneyRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "DeadRunRef",
+                        "type": DeadRunRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "VehicleJourneyRef",
+                        "type": VehicleJourneyRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "JourneyRef",
+                        "type": JourneyRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "NavigationPathRef",
+                        "type": NavigationPathRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ServiceJourneyPatternRef",
+                        "type": ServiceJourneyPatternRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ServicePatternRef",
+                        "type": ServicePatternRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "DeadRunJourneyPatternRef",
+                        "type": DeadRunJourneyPatternRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "JourneyPatternRef",
+                        "type": JourneyPatternRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TimingPatternRef",
+                        "type": TimingPatternRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "RouteRef",
+                        "type": RouteRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "LinkSequenceRef",
+                        "type": LinkSequenceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "SalesTransactionRef",
+                        "type": SalesTransactionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "OfferedTravelSpecificationRef",
+                        "type": OfferedTravelSpecificationRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "RequestedTravelSpecificationRef",
+                        "type": RequestedTravelSpecificationRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TravelSpecificationRef",
+                        "type": TravelSpecificationRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FareContractEntryRef",
+                        "type": FareContractEntryRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "LogEntryRef",
+                        "type": LogEntryRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "AlternativeNameRef",
+                        "type": AlternativeNameRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TimebandRef",
+                        "type": TimebandRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FareDayTypeRef",
+                        "type": FareDayTypeRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "DayTypeRef",
+                        "type": DayTypeRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "DefaultConnectionRef",
+                        "type": DefaultConnectionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "SiteConnectionRef",
+                        "type": SiteConnectionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ConnectionRef",
+                        "type": ConnectionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "AccessRef",
+                        "type": AccessRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TransferRef",
+                        "type": TransferRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "HailAndRideAreaRef",
+                        "type": HailAndRideAreaRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FlexibleAreaRef",
+                        "type": FlexibleAreaRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FlexibleQuayRef",
+                        "type": FlexibleQuayRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FlexibleStopPlaceRef",
+                        "type": FlexibleStopPlaceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "PathJunctionRef",
+                        "type": PathJunctionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TopographicPlaceRef",
+                        "type": TopographicPlaceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "EquipmentPlaceRef",
+                        "type": EquipmentPlaceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "EquipmentPositionRef",
+                        "type": EquipmentPositionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "VehicleStoppingPositionRef",
+                        "type": VehicleStoppingPositionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "VehicleStoppingPlaceRef",
+                        "type": VehicleStoppingPlaceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "BoardingPositionRef",
+                        "type": BoardingPositionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "AccessSpaceRef",
+                        "type": AccessSpaceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "QuayRef",
+                        "type": QuayRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "StopPlaceSpaceRef",
+                        "type": StopPlaceSpaceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ParkingBayRef",
+                        "type": ParkingBayRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "PointOfInterestSpaceRef",
+                        "type": PointOfInterestSpaceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "StopPlaceVehicleEntranceRef",
+                        "type": StopPlaceVehicleEntranceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "StopPlaceEntranceRef",
+                        "type": StopPlaceEntranceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ParkingEntranceForVehiclesRef",
+                        "type": ParkingEntranceForVehiclesRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ParkingPassengerEntranceRef",
+                        "type": ParkingPassengerEntranceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ParkingEntranceRef",
+                        "type": ParkingEntranceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "PointOfInterestVehicleEntranceRef",
+                        "type": PointOfInterestVehicleEntranceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "PointOfInterestEntranceRef",
+                        "type": PointOfInterestEntranceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "VehicleEntranceRef",
+                        "type": VehicleEntranceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "EntranceRef",
+                        "type": EntranceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "SiteComponentRef",
+                        "type": SiteComponentRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "StopPlaceRef",
+                        "type": StopPlaceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ParkingRef",
+                        "type": ParkingRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "PointOfInterestRef",
+                        "type": PointOfInterestRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ServiceSiteRef",
+                        "type": ServiceSiteRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "SiteRef",
+                        "type": SiteRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "SiteElementRef",
+                        "type": SiteElementRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "GarageRef",
+                        "type": GarageRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "AddressablePlaceRef",
+                        "type": AddressablePlaceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "PostalAddressRef",
+                        "type": PostalAddressRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "RoadAddressRef",
+                        "type": RoadAddressRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "AddressRef",
+                        "type": AddressRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "PlaceRef_",
+                        "type": PlaceRef2,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ServiceLinkRef",
+                        "type": ServiceLinkRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "LineLinkRef",
+                        "type": LineLinkRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "PathLinkRef",
+                        "type": PathLinkRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TimingLinkRef",
+                        "type": TimingLinkRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "RouteLinkRef",
+                        "type": RouteLinkRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "WireLinkRef",
+                        "type": WireLinkRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "RoadLinkRef",
+                        "type": RoadLinkRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "RailwayLinkRef",
+                        "type": RailwayLinkRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "InfrastructureLinkRef",
+                        "type": InfrastructureLinkRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ActivationLinkRef",
+                        "type": ActivationLinkRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "LinkRef",
+                        "type": LinkRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "BorderPointRef",
+                        "type": BorderPointRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FareScheduledStopPointRef",
+                        "type": FareScheduledStopPointRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ScheduledStopPointRef",
+                        "type": ScheduledStopPointRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "GaragePointRef",
+                        "type": GaragePointRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ParkingPointRef",
+                        "type": ParkingPointRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ReliefPointRef",
+                        "type": ReliefPointRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TimingPointRef",
+                        "type": TimingPointRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "RoutePointRef",
+                        "type": RoutePointRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "WirePointRef",
+                        "type": WirePointRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "RoadPointRef",
+                        "type": RoadPointRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "RailwayPointRef",
+                        "type": RailwayPointRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "InfrastructurePointRef",
+                        "type": InfrastructurePointRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TrafficControlPointRef",
+                        "type": TrafficControlPointRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "BeaconPointRef",
+                        "type": BeaconPointRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ActivationPointRef",
+                        "type": ActivationPointRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "PointOnLinkRef",
+                        "type": PointOnLinkRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "PointRef",
+                        "type": PointRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "OperatingPeriodRef",
+                        "type": OperatingPeriodRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "OperatingDayRef",
+                        "type": OperatingDayRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ServiceCalendarRef",
+                        "type": ServiceCalendarRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "AlternativeTextRef",
+                        "type": AlternativeTextRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "AvailabilityConditionRef",
+                        "type": AvailabilityConditionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ValidityRuleParameterRef",
+                        "type": ValidityRuleParameterRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ValidityTriggerRef",
+                        "type": ValidityTriggerRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ValidityConditionRef",
+                        "type": ValidityConditionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ResponsibilityRoleRef",
+                        "type": ResponsibilityRoleRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ControlCentreRef",
+                        "type": ControlCentreRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "OrganisationalUnitRef",
+                        "type": OrganisationalUnitRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "DepartmentRef",
+                        "type": DepartmentRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "OrganisationPartRef",
+                        "type": OrganisationPartRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "AllAuthoritiesRef",
+                        "type": AllAuthoritiesRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "AllOperatorsRef",
+                        "type": AllOperatorsRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "AllTransportOrganisationsRef",
+                        "type": AllTransportOrganisationsRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "AllOrganisationsRef",
+                        "type": AllOrganisationsRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "RetailConsortiumRef",
+                        "type": RetailConsortiumRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "AuthorityRef",
+                        "type": AuthorityRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "OperatorRef",
+                        "type": OperatorRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TransportOrganisationRef",
+                        "type": TransportOrganisationRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "GeneralOrganisationRef",
+                        "type": GeneralOrganisationRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ManagementAgentRef",
+                        "type": ManagementAgentRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ServicedOrganisationRef",
+                        "type": ServicedOrganisationRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TravelAgentRef",
+                        "type": TravelAgentRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "OtherOrganisationRef",
+                        "type": OtherOrganisationRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "OrganisationRef",
+                        "type": OrganisationRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ResponsibilitySetRef",
+                        "type": ResponsibilitySetRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "DestinationDisplayVariantRef",
+                        "type": DestinationDisplayVariantRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "DestinationDisplayRef",
+                        "type": DestinationDisplayRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "AllowedLineDirectionRef",
+                        "type": AllowedLineDirectionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FlexibleLineRef",
+                        "type": FlexibleLineRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "LineRef",
+                        "type": LineRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "GroupOfEntitiesRef",
+                        "type": GroupOfEntitiesRef1,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "GroupOfCustomerPurchasePackagesRef",
+                        "type": GroupOfCustomerPurchasePackagesRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "GroupOfSalesOfferPackagesRef",
+                        "type": GroupOfSalesOfferPackagesRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "GroupOfDistanceMatrixElementsRef",
+                        "type": GroupOfDistanceMatrixElementsRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "GroupOfDistributionChannelsRef",
+                        "type": GroupOfDistributionChannelsRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "StandardFareTableRef",
+                        "type": StandardFareTableRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FareTableRef",
+                        "type": FareTableRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "PriceGroupRef",
+                        "type": PriceGroupRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "RhythmicalJourneyGroupRef",
+                        "type": RhythmicalJourneyGroupRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "HeadwayJourneyGroupRef",
+                        "type": HeadwayJourneyGroupRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "JourneyFrequencyGroupRef",
+                        "type": JourneyFrequencyGroupRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "GroupOfServicesRef",
+                        "type": GroupOfServicesRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "GroupOfStopPlacesRef",
+                        "type": GroupOfStopPlacesRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "PointOfInterestHierarchyRef",
+                        "type": PointOfInterestHierarchyRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "GroupOfTimingLinksRef",
+                        "type": GroupOfTimingLinksRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "GroupOfOperatorsRef",
+                        "type": GroupOfOperatorsRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "GroupOfPlacesRef",
+                        "type": GroupOfPlacesRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ParentSectionRef",
+                        "type": ParentSectionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ParentCommonSectionRef",
+                        "type": ParentCommonSectionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "CommonSectionRef",
+                        "type": CommonSectionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "LineSectionRef",
+                        "type": LineSectionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FareSectionRef",
+                        "type": FareSectionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "GeneralSectionRef",
+                        "type": GeneralSectionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "SectionRef",
+                        "type": SectionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "LogRef",
+                        "type": LogRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "GroupOfTimebandsRef",
+                        "type": GroupOfTimebandsRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "PlaceRef",
+                        "type": PlaceRef1,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "GroupOfPointsRef",
+                        "type": GroupOfPointsRef1,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "StopAreaRef",
+                        "type": StopAreaRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "AccessZoneRef",
+                        "type": AccessZoneRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TransportAdministrativeZoneRef",
+                        "type": TransportAdministrativeZoneRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "AdministrativeZoneRef",
+                        "type": AdministrativeZoneRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FareZoneRef",
+                        "type": FareZoneRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TariffZoneRef",
+                        "type": TariffZoneRef1,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TariffZoneRef_",
+                        "type": TariffZoneRef2,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ZoneRef",
+                        "type": ZoneRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "GroupOfPointsRef_",
+                        "type": GroupOfPointsRef2,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "LayerRef",
+                        "type": LayerRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "NetworkRef",
+                        "type": NetworkRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "GroupOfLinesRef",
+                        "type": GroupOfLinesRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "GeneralGroupOfEntitiesRef",
+                        "type": GeneralGroupOfEntitiesRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "GroupOfEntitiesRef_",
+                        "type": GroupOfEntitiesRef2,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "SalesTransactionFrameRef",
+                        "type": SalesTransactionFrameRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FareFrameRef",
+                        "type": FareFrameRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ServiceFrameRef",
+                        "type": ServiceFrameRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "DriverScheduleFrameRef",
+                        "type": DriverScheduleFrameRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "VehicleScheduleFrameRef",
+                        "type": VehicleScheduleFrameRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TimetableFrameRef",
+                        "type": TimetableFrameRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "SiteFrameRef",
+                        "type": SiteFrameRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "InfrastructureFrameRef",
+                        "type": InfrastructureFrameRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "GeneralFrameRef",
+                        "type": GeneralFrameRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ResourceFrameRef",
+                        "type": ResourceFrameRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ServiceCalendarFrameRef",
+                        "type": ServiceCalendarFrameRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "CompositeFrameRef",
+                        "type": CompositeFrameRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "VersionFrameRef",
+                        "type": VersionFrameRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "DistributionChannelRef",
+                        "type": DistributionChannelRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ChargingMomentRef",
+                        "type": ChargingMomentRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "PriceUnitRef",
+                        "type": PriceUnitRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "PurposeOfJourneyPartitionRef",
+                        "type": PurposeOfJourneyPartitionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TimingAlgorithmTypeRef",
+                        "type": TimingAlgorithmTypeRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "PointOfInterestClassificationRef",
+                        "type": PointOfInterestClassificationRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "DirectionRef",
+                        "type": DirectionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfActivationRef",
+                        "type": TypeOfActivationRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "PurposeOfEquipmentProfileRef",
+                        "type": PurposeOfEquipmentProfileRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfProductCategoryRef",
+                        "type": TypeOfProductCategoryRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfPaymentMethodRef",
+                        "type": TypeOfPaymentMethodRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ClassOfUseRef",
+                        "type": ClassOfUseRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfOperationRef",
+                        "type": TypeOfOperationRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfCodespaceAssignmentRef",
+                        "type": TypeOfCodespaceAssignmentRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "BrandingRef",
+                        "type": BrandingRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfResponsibilityRoleRef",
+                        "type": TypeOfResponsibilityRoleRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "PurposeOfGroupingRef",
+                        "type": PurposeOfGroupingRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfRetailDeviceRef",
+                        "type": TypeOfRetailDeviceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "CustomerAccountStatusRef",
+                        "type": CustomerAccountStatusRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfCustomerAccountRef",
+                        "type": TypeOfCustomerAccountRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfFareContractEntryRef",
+                        "type": TypeOfFareContractEntryRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfFareContractRef",
+                        "type": TypeOfFareContractRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfAccessRightAssignmentRef",
+                        "type": TypeOfAccessRightAssignmentRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfSalesOfferPackageRef",
+                        "type": TypeOfSalesOfferPackageRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfFareStructureElementRef",
+                        "type": TypeOfFareStructureElementRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfTariffRef",
+                        "type": TypeOfTariffRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "AllDistributionChannelsRef",
+                        "type": AllDistributionChannelsRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfMachineReadabilityRef",
+                        "type": TypeOfMachineReadabilityRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfTravelDocumentRef",
+                        "type": TypeOfTravelDocumentRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfFareProductRef",
+                        "type": TypeOfFareProductRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfFareStructureFactorRef",
+                        "type": TypeOfFareStructureFactorRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfPricingRuleRef",
+                        "type": TypeOfPricingRuleRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfFlexibleServiceRef",
+                        "type": TypeOfFlexibleServiceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfPassengerInformationEquipmentRef",
+                        "type": TypeOfPassengerInformationEquipmentRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfServiceFeatureRef",
+                        "type": TypeOfServiceFeatureRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfCongestionRef",
+                        "type": TypeOfCongestionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfTimeDemandTypeRef",
+                        "type": TypeOfTimeDemandTypeRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfJourneyPatternRef",
+                        "type": TypeOfJourneyPatternRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfSecurityListRef",
+                        "type": TypeOfSecurityListRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfDeliveryVariantRef",
+                        "type": TypeOfDeliveryVariantRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfNoticeRef",
+                        "type": TypeOfNoticeRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfServiceRef",
+                        "type": TypeOfServiceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfFacilityRef",
+                        "type": TypeOfFacilityRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfEquipmentRef",
+                        "type": TypeOfEquipmentRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfProjectionRef",
+                        "type": TypeOfProjectionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfFeatureRef",
+                        "type": TypeOfFeatureRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfLinkSequenceRef",
+                        "type": TypeOfLinkSequenceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfOrganisationPartRef",
+                        "type": TypeOfOrganisationPartRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfOrganisationRef",
+                        "type": TypeOfOrganisationRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfPlaceRef",
+                        "type": TypeOfPlaceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfTransferRef",
+                        "type": TypeOfTransferRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfZoneRef",
+                        "type": TypeOfZoneRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfLinkRef",
+                        "type": TypeOfLinkRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfPointRef",
+                        "type": TypeOfPointRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfLineRef",
+                        "type": TypeOfLineRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfValidityRef",
+                        "type": TypeOfValidityRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfFrameRef",
+                        "type": TypeOfFrameRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfEntityRef",
+                        "type": TypeOfEntityRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TypeOfValueRef",
+                        "type": TypeOfValueRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "DataSourceRef",
+                        "type": DataSourceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "VersionRef",
+                        "type": VersionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "VersionOfObjectRef",
+                        "type": VersionOfObjectRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "DistributionAssignmentRef",
+                        "type": DistributionAssignmentRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "SalesOfferPackageSubstitutionRef",
+                        "type": SalesOfferPackageSubstitutionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "JourneyAccountingRef",
+                        "type": JourneyAccountingRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TrainComponentLabelAssignmentRef",
+                        "type": TrainComponentLabelAssignmentRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TransferRestrictionRef",
+                        "type": TransferRestrictionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ServiceExclusionRef",
+                        "type": ServiceExclusionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FlexibleServiceAssignmentRef",
+                        "type": FlexibleServiceAssignmentRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "VehicleTypeStopAssignmentRef",
+                        "type": VehicleTypeStopAssignmentRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "PathAssignmentRef",
+                        "type": PathAssignmentRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TrainStopAssignmentRef",
+                        "type": TrainStopAssignmentRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "VehicleJourneyStopAssignmentRef",
+                        "type": VehicleJourneyStopAssignmentRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "DynamicStopAssignmentRef",
+                        "type": DynamicStopAssignmentRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "PassengerStopAssignmentRef",
+                        "type": PassengerStopAssignmentRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "StopAssignmentRef",
+                        "type": StopAssignmentRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "DisplayAssignmentRef",
+                        "type": DisplayAssignmentRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "CheckConstraintThroughputRef",
+                        "type": CheckConstraintThroughputRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "CheckConstraintDelayRef",
+                        "type": CheckConstraintDelayRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "CheckConstraintRef",
+                        "type": CheckConstraintRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TimeDemandTypeAssigmentRef",
+                        "type": TimeDemandTypeAssigmentRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "OvertakingPossibilityRef",
+                        "type": OvertakingPossibilityRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "MeetingRestrictionRef",
+                        "type": MeetingRestrictionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "RestrictedManoeuvreRef",
+                        "type": RestrictedManoeuvreRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "InfrastructureLinkRestrictionRef",
+                        "type": InfrastructureLinkRestrictionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "VehicleTypeAtPointRef",
+                        "type": VehicleTypeAtPointRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "NetworkRestrictionRef",
+                        "type": NetworkRestrictionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ActivationAssignmentRef",
+                        "type": ActivationAssignmentRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "DayTypeAssignmentRef",
+                        "type": DayTypeAssignmentRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "AssignmentRef",
+                        "type": AssignmentRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ClassInFrameRef",
+                        "type": ClassInFrameRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                ),
             }
         )

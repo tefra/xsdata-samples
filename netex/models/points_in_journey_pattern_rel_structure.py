@@ -13,30 +13,27 @@ class PointsInJourneyPatternRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "pointsInJourneyPattern_RelStructure"
 
-    point_in_journey_pattern: List[PointInJourneyPattern] = field(
+    point_in_journey_pattern_or_stop_point_in_journey_pattern_or_timing_point_in_journey_pattern: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "PointInJourneyPattern",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 2,
-        }
-    )
-    stop_point_in_journey_pattern: List[StopPointInJourneyPattern] = field(
-        default_factory=list,
-        metadata={
-            "name": "StopPointInJourneyPattern",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 2,
-        }
-    )
-    timing_point_in_journey_pattern: List[TimingPointInJourneyPattern] = field(
-        default_factory=list,
-        metadata={
-            "name": "TimingPointInJourneyPattern",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "PointInJourneyPattern",
+                    "type": PointInJourneyPattern,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "StopPointInJourneyPattern",
+                    "type": StopPointInJourneyPattern,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TimingPointInJourneyPattern",
+                    "type": TimingPointInJourneyPattern,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
             "min_occurs": 2,
         }
     )

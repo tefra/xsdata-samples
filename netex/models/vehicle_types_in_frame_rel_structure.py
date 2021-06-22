@@ -13,27 +13,26 @@ class VehicleTypesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "vehicleTypesInFrame_RelStructure"
 
-    compound_train: List[CompoundTrain] = field(
+    compound_train_or_train_or_vehicle_type: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "CompoundTrain",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    train: List[Train] = field(
-        default_factory=list,
-        metadata={
-            "name": "Train",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    vehicle_type: List[VehicleType] = field(
-        default_factory=list,
-        metadata={
-            "name": "VehicleType",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "CompoundTrain",
+                    "type": CompoundTrain,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Train",
+                    "type": Train,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleType",
+                    "type": VehicleType,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

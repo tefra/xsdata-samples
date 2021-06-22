@@ -12,19 +12,21 @@ class TypesOfFareContractEntryRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "typesOfFareContractEntry_RelStructure"
 
-    type_of_fare_contract_entry_ref: List[TypeOfFareContractEntryRef] = field(
+    type_of_fare_contract_entry_ref_or_type_of_fare_contract_entry: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "TypeOfFareContractEntryRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_fare_contract_entry: List[TypeOfFareContractEntry] = field(
-        default_factory=list,
-        metadata={
-            "name": "TypeOfFareContractEntry",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TypeOfFareContractEntryRef",
+                    "type": TypeOfFareContractEntryRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfFareContractEntry",
+                    "type": TypeOfFareContractEntry,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

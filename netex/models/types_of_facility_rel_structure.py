@@ -12,19 +12,21 @@ class TypesOfFacilityRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "typesOfFacility_RelStructure"
 
-    type_of_facility_ref: List[TypeOfFacilityRef] = field(
+    type_of_facility_ref_or_type_of_facility: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "TypeOfFacilityRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_facility: List[TypeOfFacility] = field(
-        default_factory=list,
-        metadata={
-            "name": "TypeOfFacility",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TypeOfFacilityRef",
+                    "type": TypeOfFacilityRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfFacility",
+                    "type": TypeOfFacility,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

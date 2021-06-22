@@ -12,19 +12,21 @@ class CheckConstraintThroughputsRelStructure(StrictContainmentAggregationStructu
     class Meta:
         name = "checkConstraintThroughputs_RelStructure"
 
-    check_constraint_throughput_ref: List[CheckConstraintThroughputRef] = field(
+    check_constraint_throughput_ref_or_check_constraint_throughput: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "CheckConstraintThroughputRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    check_constraint_throughput: List[CheckConstraintThroughput] = field(
-        default_factory=list,
-        metadata={
-            "name": "CheckConstraintThroughput",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "CheckConstraintThroughputRef",
+                    "type": CheckConstraintThroughputRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CheckConstraintThroughput",
+                    "type": CheckConstraintThroughput,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

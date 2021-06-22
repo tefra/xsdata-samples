@@ -232,19 +232,19 @@
                   <OnwardTimingLinkRef version="any" ref="ao:Briga-p_to_Briga-p_t1"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="ao:tpijp_24o_02" modification="new" version="any" status="active" order="2">
-                  <TimingPointRef version="any" ref="ao:Briga-p_t1" xsi:type="TimingPointRefStructure"/>
+                  <TimingPointRef version="any" ref="ao:Briga-p_t1"/>
                   <OnwardTimingLinkRef version="any" ref="ao:Briga-p_t1_to_Briga-p_t2"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="ao:tpijp_24o_03" modification="new" version="any" status="active" order="3">
-                  <TimingPointRef version="any" ref="ao:Briga-p_t2" xsi:type="TimingPointRefStructure"/>
+                  <TimingPointRef version="any" ref="ao:Briga-p_t2"/>
                   <OnwardTimingLinkRef version="any" ref="ao:Briga-p_t2_to_Banjaloka-p"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="ao:tpijp_24o_04" modification="new" version="any" status="active" order="4">
-                  <TimingPointRef version="any" ref="ao:Banjaloka-p" xsi:type="TimingPointRefStructure"/>
+                  <TimingPointRef version="any" ref="ao:Banjaloka-p"/>
                   <OnwardTimingLinkRef version="any" ref="ao:Banjaloka-p_to_Banjaloka-p_t3"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="ao:tpijp_24o_05" modification="new" version="any" status="active" order="5">
-                  <TimingPointRef version="any" ref="ao:Banjaloka-p_t3" xsi:type="TimingPointRefStructure"/>
+                  <TimingPointRef version="any" ref="ao:Banjaloka-p_t3"/>
                   <OnwardTimingLinkRef version="any" ref="ao:Banjaloka-p_t3_to_NovaSela-p"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="ao:tpijp_24o_06" modification="new" version="any" status="active" order="6">
@@ -269,21 +269,21 @@
                 <StopPointInJourneyPattern id="ao:pijp_24o_01" modification="new" version="any" status="active" order="1">
                   <ScheduledStopPointRef version="any" ref="ao:Briga-p"/>
                 </StopPointInJourneyPattern>
+                <TimingPointInJourneyPattern id="ao:pijp_24o_02" modification="new" version="any" status="active" order="2">
+                  <TimingPointRef version="any" ref="ao:Briga-p_t1"/>
+                </TimingPointInJourneyPattern>
+                <TimingPointInJourneyPattern id="ao:pijp_24o_03" modification="new" version="any" status="active" order="3">
+                  <TimingPointRef version="any" ref="ao:Briga-p_t2"/>
+                </TimingPointInJourneyPattern>
                 <StopPointInJourneyPattern id="ao:pijp_24o_04" modification="new" version="any" status="active" order="4">
                   <ScheduledStopPointRef version="any" ref="ao:Banjaloka-p"/>
                 </StopPointInJourneyPattern>
+                <TimingPointInJourneyPattern id="ao:tpip_24o_05" modification="new" version="any" status="active" order="5">
+                  <TimingPointRef version="any" ref="ao:Banjaloka-p_t3"/>
+                </TimingPointInJourneyPattern>
                 <StopPointInJourneyPattern id="ao:tpip_24o_06" modification="new" version="any" status="active" order="6">
                   <ScheduledStopPointRef version="any" ref="ao:NovaSela-p"/>
                 </StopPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="ao:pijp_24o_02" modification="new" version="any" status="active" order="2">
-                  <TimingPointRef version="any" ref="ao:Briga-p_t1" xsi:type="TimingPointRefStructure"/>
-                </TimingPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="ao:pijp_24o_03" modification="new" version="any" status="active" order="3">
-                  <TimingPointRef version="any" ref="ao:Briga-p_t2" xsi:type="TimingPointRefStructure"/>
-                </TimingPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="ao:tpip_24o_05" modification="new" version="any" status="active" order="5">
-                  <TimingPointRef version="any" ref="ao:Banjaloka-p_t3" xsi:type="TimingPointRefStructure"/>
-                </TimingPointInJourneyPattern>
               </pointsInSequence>
               <linksInSequence>
                 <ServiceLinkInJourneyPattern id="ao:lijp_24o_01" modification="new" version="any" status="active" order="1">

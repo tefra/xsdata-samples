@@ -12,19 +12,21 @@ class AccessSpacesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "accessSpaces_RelStructure"
 
-    access_space_ref: List[AccessSpaceRef] = field(
+    access_space_ref_or_access_space: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "AccessSpaceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    access_space: List[AccessSpace] = field(
-        default_factory=list,
-        metadata={
-            "name": "AccessSpace",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "AccessSpaceRef",
+                    "type": AccessSpaceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AccessSpace",
+                    "type": AccessSpace,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

@@ -30,117 +30,78 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    fare_scheduled_stop_point_ref: List[FareScheduledStopPointRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "FareScheduledStopPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
-            "max_occurs": 3,
-        }
-    )
-    scheduled_stop_point_ref: Optional[ScheduledStopPointRef] = field(
-        default=None,
-        metadata={
-            "name": "ScheduledStopPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
-        }
-    )
-    vehicle_mode: Optional[AllModesEnumeration] = field(
-        default=None,
-        metadata={
-            "name": "VehicleMode",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    flexible_line_ref: List[FlexibleLineRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "FlexibleLineRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-        }
-    )
-    line_ref: Optional[LineRef] = field(
-        default=None,
-        metadata={
-            "name": "LineRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    direction_ref: Optional[DirectionRef] = field(
-        default=None,
-        metadata={
-            "name": "DirectionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    service_journey_pattern_ref: List[ServiceJourneyPatternRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ServiceJourneyPatternRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    service_pattern_ref: List[ServicePatternRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ServicePatternRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    dead_run_journey_pattern_ref: List[DeadRunJourneyPatternRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "DeadRunJourneyPatternRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    journey_pattern_ref: Optional[JourneyPatternRef] = field(
-        default=None,
-        metadata={
-            "name": "JourneyPatternRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    display_assignment_type: Optional[DisplayAssignmentTypeEnumeration] = field(
-        default=None,
-        metadata={
-            "name": "DisplayAssignmentType",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    number_of_journeys_to_show: Optional[int] = field(
-        default=None,
-        metadata={
-            "name": "NumberOfJourneysToShow",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    display_priority: Optional[int] = field(
-        default=None,
-        metadata={
-            "name": "DisplayPriority",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FareScheduledStopPointRef",
+                    "type": FareScheduledStopPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ScheduledStopPointRef",
+                    "type": ScheduledStopPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleMode",
+                    "type": AllModesEnumeration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FlexibleLineRef",
+                    "type": FlexibleLineRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LineRef",
+                    "type": LineRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DirectionRef",
+                    "type": DirectionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServiceJourneyPatternRef",
+                    "type": ServiceJourneyPatternRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServicePatternRef",
+                    "type": ServicePatternRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DeadRunJourneyPatternRef",
+                    "type": DeadRunJourneyPatternRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "JourneyPatternRef",
+                    "type": JourneyPatternRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DisplayAssignmentType",
+                    "type": DisplayAssignmentTypeEnumeration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "NumberOfJourneysToShow",
+                    "type": int,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DisplayPriority",
+                    "type": int,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "min_occurs": 2,
+            "max_occurs": 23,
         }
     )

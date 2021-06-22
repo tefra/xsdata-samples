@@ -12,19 +12,21 @@ class FlexibleServicePropertiesRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "flexibleServiceProperties_RelStructure"
 
-    flexible_service_properties_ref: List[FlexibleServicePropertiesRef] = field(
+    flexible_service_properties_ref_or_flexible_service_properties: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "FlexibleServicePropertiesRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    flexible_service_properties: List[FlexibleServiceProperties] = field(
-        default_factory=list,
-        metadata={
-            "name": "FlexibleServiceProperties",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FlexibleServicePropertiesRef",
+                    "type": FlexibleServicePropertiesRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FlexibleServiceProperties",
+                    "type": FlexibleServiceProperties,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

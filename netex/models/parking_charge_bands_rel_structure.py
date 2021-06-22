@@ -12,19 +12,21 @@ class ParkingChargeBandsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "parkingChargeBands_RelStructure"
 
-    parking_charge_band_ref: List[ParkingChargeBandRef] = field(
+    parking_charge_band_ref_or_parking_charge_band: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "ParkingChargeBandRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    parking_charge_band: List[ParkingChargeBand] = field(
-        default_factory=list,
-        metadata={
-            "name": "ParkingChargeBand",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ParkingChargeBandRef",
+                    "type": ParkingChargeBandRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingChargeBand",
+                    "type": ParkingChargeBand,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List
 from .garage_point_ref import GaragePointRef
 from .garage_refs_rel_structure import GarageRefsRelStructure
 from .group_of_entities_version_structure import GroupOfEntitiesVersionStructure
@@ -14,41 +14,33 @@ class CrewBaseVersionStructure(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "CrewBase_VersionStructure"
 
-    garage_point_ref: List[GaragePointRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "GaragePointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    parking_point_ref: List[ParkingPointRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ParkingPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    relief_point_ref: Optional[ReliefPointRef] = field(
-        default=None,
-        metadata={
-            "name": "ReliefPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
-        }
-    )
-    garages: Optional[GarageRefsRelStructure] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "GaragePointRef",
+                    "type": GaragePointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingPointRef",
+                    "type": ParkingPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ReliefPointRef",
+                    "type": ReliefPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "garages",
+                    "type": GarageRefsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "min_occurs": 3,
+            "max_occurs": 7,
         }
     )

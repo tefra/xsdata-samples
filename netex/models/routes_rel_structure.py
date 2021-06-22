@@ -12,19 +12,21 @@ class RoutesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "routes_RelStructure"
 
-    route_ref: List[RouteRef] = field(
+    route_ref_or_route: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "RouteRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    route: List[Route1] = field(
-        default_factory=list,
-        metadata={
-            "name": "Route",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "RouteRef",
+                    "type": RouteRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Route",
+                    "type": Route1,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

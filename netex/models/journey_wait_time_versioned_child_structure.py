@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List
 from xsdata.models.datatype import XmlDuration
 from .border_point_ref import BorderPointRef
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
@@ -18,80 +18,53 @@ class JourneyWaitTimeVersionedChildStructure(JourneyTimingVersionedChildStructur
     class Meta:
         name = "JourneyWaitTime_VersionedChildStructure"
 
-    border_point_ref: List[BorderPointRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "BorderPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    fare_scheduled_stop_point_ref: List[FareScheduledStopPointRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareScheduledStopPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    scheduled_stop_point_ref: List[ScheduledStopPointRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ScheduledStopPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    garage_point_ref: List[GaragePointRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "GaragePointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 4,
-            "sequential": True,
-        }
-    )
-    parking_point_ref: List[ParkingPointRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ParkingPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    relief_point_ref: List[ReliefPointRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ReliefPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "max_occurs": 2,
-            "sequential": True,
-        }
-    )
-    timing_point_ref: Optional[TimingPointRef] = field(
-        default=None,
-        metadata={
-            "name": "TimingPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    wait_time: Optional[XmlDuration] = field(
-        default=None,
-        metadata={
-            "name": "WaitTime",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "BorderPointRef",
+                    "type": BorderPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareScheduledStopPointRef",
+                    "type": FareScheduledStopPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ScheduledStopPointRef",
+                    "type": ScheduledStopPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GaragePointRef",
+                    "type": GaragePointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingPointRef",
+                    "type": ParkingPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ReliefPointRef",
+                    "type": ReliefPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TimingPointRef",
+                    "type": TimingPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "WaitTime",
+                    "type": XmlDuration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "min_occurs": 1,
+            "max_occurs": 18,
         }
     )

@@ -12,19 +12,21 @@ class CustomerPurchasePackagesRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "customerPurchasePackages_RelStructure"
 
-    customer_purchase_package: List[CustomerPurchasePackage] = field(
+    customer_purchase_package_or_customer_purchase_package_ref: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "CustomerPurchasePackage",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    customer_purchase_package_ref: List[CustomerPurchasePackageRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "CustomerPurchasePackageRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "CustomerPurchasePackage",
+                    "type": CustomerPurchasePackage,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CustomerPurchasePackageRef",
+                    "type": CustomerPurchasePackageRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

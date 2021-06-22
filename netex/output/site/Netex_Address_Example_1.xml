@@ -12,7 +12,6 @@
       <validityConditions modificationSet="all">
         <AvailabilityCondition id="mysite:PP01_OpeningHours" modification="new" version="any" status="active">
           <dayTypes modificationSet="all">
-            <DayTypeRef ref=""/>
             <DayType id="mysite:EveryDay" modification="new" version="any" status="active">
               <Name>Every day</Name>
               <properties>
@@ -21,6 +20,7 @@
                 </PropertyOfDay>
               </properties>
             </DayType>
+            <DayTypeRef ref=""/>
           </dayTypes>
           <timebands modificationSet="all">
             <Timeband id="mysite:OpeningHours" modification="new" version="any" status="active">
@@ -31,7 +31,6 @@
         </AvailabilityCondition>
         <AvailabilityCondition id="mysite:PP01_ExitHours" modification="new" version="any" status="active">
           <dayTypes modificationSet="all">
-            <DayTypeRef ref=""/>
             <DayType id="mysite:24HrsEveryDay" modification="new" version="any" status="active">
               <Name>Every day</Name>
               <properties>
@@ -40,6 +39,7 @@
                 </PropertyOfDay>
               </properties>
             </DayType>
+            <DayTypeRef ref=""/>
           </dayTypes>
         </AvailabilityCondition>
       </validityConditions>
@@ -183,7 +183,6 @@
               <Name>Charged Parking times</Name>
               <Description>Modnay to friday not PublicHolidays</Description>
               <dayTypes modificationSet="all">
-                <DayTypeRef ref=""/>
                 <DayType id="mysite:WorkingDay" modification="new" version="any" status="active">
                   <Name>Working day</Name>
                   <properties>
@@ -194,6 +193,7 @@
                     </PropertyOfDay>
                   </properties>
                 </DayType>
+                <DayTypeRef ref=""/>
               </dayTypes>
               <timebands modificationSet="all">
                 <Timeband id="mysite:ParkingChargeHours" modification="new" version="any" status="active">

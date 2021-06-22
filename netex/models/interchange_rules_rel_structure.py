@@ -12,19 +12,21 @@ class InterchangeRulesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "interchangeRules_RelStructure"
 
-    interchange_rule_ref: List[InterchangeRuleRef] = field(
+    interchange_rule_ref_or_interchange_rule: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "InterchangeRuleRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    interchange_rule: List[InterchangeRule] = field(
-        default_factory=list,
-        metadata={
-            "name": "InterchangeRule",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "InterchangeRuleRef",
+                    "type": InterchangeRuleRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "InterchangeRule",
+                    "type": InterchangeRule,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
