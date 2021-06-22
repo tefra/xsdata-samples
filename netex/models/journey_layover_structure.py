@@ -123,10 +123,9 @@ class JourneyLayoverStructure(JourneyTimingVersionedChildStructure):
                     "name": "PointRef",
                     "type": PointRef,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "required": True,
                 },
             ),
-            "min_occurs": 16,
-            "max_occurs": 53,
+            "min_occurs": 17,
+            "max_occurs": 54,
         }
     )

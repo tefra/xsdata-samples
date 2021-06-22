@@ -1449,10 +1449,7 @@ issued to DB ticket vending machines.</Description>
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Everyday</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </FareDayType>
@@ -1461,10 +1458,7 @@ issued to DB ticket vending machines.</Description>
               <Description>After 9.00 end at 4.30 next day.</Description>
               <properties>
                 <PropertyOfDay>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <HolidayTypes>WorkingDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
               <timebands modificationSet="all">
@@ -1480,10 +1474,7 @@ issued to DB ticket vending machines.</Description>
               <DayLength>P1DT3H</DayLength>
               <properties>
                 <PropertyOfDay>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <HolidayTypes>NotWorkingDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </FareDayType>

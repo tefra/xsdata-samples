@@ -195,6 +195,6 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 3,
+            "max_occurs": 5,
         }
     )

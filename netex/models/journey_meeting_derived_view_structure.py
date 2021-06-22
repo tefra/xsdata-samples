@@ -224,6 +224,6 @@ class JourneyMeetingDerivedViewStructure(DerivedViewStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 19,
+            "max_occurs": 31,
         }
     )

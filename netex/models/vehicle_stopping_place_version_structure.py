@@ -76,6 +76,6 @@ class VehicleStoppingPlaceVersionStructure(StopPlaceSpaceVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 12,
+            "max_occurs": 16,
         }
     )

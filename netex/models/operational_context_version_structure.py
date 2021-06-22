@@ -78,6 +78,6 @@ class OperationalContextVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 6,
+            "max_occurs": 9,
         }
     )

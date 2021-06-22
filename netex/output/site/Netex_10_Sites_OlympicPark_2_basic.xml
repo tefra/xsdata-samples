@@ -2553,10 +2553,6 @@
               <Name>Busy Day</Name>
               <properties>
                 <PropertyOfDay>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                   <Crowding>veryBusy</Crowding>
                 </PropertyOfDay>
               </properties>
@@ -2570,10 +2566,6 @@
               <Name>Busy Day</Name>
               <properties>
                 <PropertyOfDay>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                   <Crowding>busy</Crowding>
                 </PropertyOfDay>
               </properties>
@@ -2587,10 +2579,6 @@
               <Name>Busy Day</Name>
               <properties>
                 <PropertyOfDay>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                   <Crowding>normal</Crowding>
                 </PropertyOfDay>
               </properties>
@@ -2604,10 +2592,6 @@
               <Name>Quiet Day</Name>
               <properties>
                 <PropertyOfDay>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                   <Crowding>quiet</Crowding>
                 </PropertyOfDay>
               </properties>

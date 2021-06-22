@@ -59,6 +59,6 @@ class CompanionProfileVersionStructure(UsageParameterVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
+            "max_occurs": 7,
         }
     )

@@ -208,6 +208,6 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 10,
+            "max_occurs": 29,
         }
     )

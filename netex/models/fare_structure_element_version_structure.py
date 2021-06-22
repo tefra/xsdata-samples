@@ -168,7 +168,7 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 6,
+            "max_occurs": 17,
         }
     )
     name_of_class_of_unit: Optional[str] = field(

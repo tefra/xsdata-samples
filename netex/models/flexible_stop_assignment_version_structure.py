@@ -44,6 +44,6 @@ class FlexibleStopAssignmentVersionStructure(StopAssignmentVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 4,
+            "max_occurs": 5,
         }
     )

@@ -217,6 +217,6 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 33,
+            "max_occurs": 37,
         }
     )

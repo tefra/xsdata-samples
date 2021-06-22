@@ -8047,11 +8047,8 @@ https://www.greateranglia.co.uk/tickets-fares/daily-tickets/off-peak-and-super-o
               <Name>Suffolk School    Day</Name>
               <properties>
                 <PropertyOfDay>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <CountryRef ref="uk" refPrincipality="GB-SFK">Suffolk</CountryRef>
                   <HolidayTypes>SchoolDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </FareDayType>
@@ -8059,11 +8056,8 @@ https://www.greateranglia.co.uk/tickets-fares/daily-tickets/off-peak-and-super-o
               <Name>Suffolk School    Holiday</Name>
               <properties>
                 <PropertyOfDay>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <CountryRef ref="uk" refPrincipality="GB-SFK">Suffolk</CountryRef>
                   <HolidayTypes>NotSchoolDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </FareDayType>
@@ -9257,10 +9251,7 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Everyday</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </FareDayType>
@@ -9270,10 +9261,7 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
               <EarliestTime>09:30:00</EarliestTime>
               <properties>
                 <PropertyOfDay>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <HolidayTypes>WorkingDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </FareDayType>
@@ -9283,10 +9271,7 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
               <EarliestTime>10:10:00</EarliestTime>
               <properties>
                 <PropertyOfDay>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <HolidayTypes>WorkingDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </FareDayType>
@@ -10634,10 +10619,7 @@ West Midlands Railway
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Everyday</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </FareDayType>
@@ -10649,10 +10631,7 @@ West Midlands Railway
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Weekdays</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <HolidayTypes>WorkingDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </FareDayType>
@@ -10663,10 +10642,7 @@ West Midlands Railway
               <DayLength>P1DT20H</DayLength>
               <properties>
                 <PropertyOfDay>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <HolidayTypes>WorkingDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </FareDayType>
@@ -10678,10 +10654,7 @@ West Midlands Railway
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Weekdays</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <HolidayTypes>WorkingDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </FareDayType>
@@ -10693,10 +10666,7 @@ West Midlands Railway
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Weekend</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </FareDayType>
@@ -10704,11 +10674,8 @@ West Midlands Railway
               <Name>Public Holiday</Name>
               <properties>
                 <PropertyOfDay>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <CountryRef ref="gb" refPrincipality="GB-UKM"/>
                   <HolidayTypes>NationalHoliday</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </FareDayType>
@@ -10718,11 +10685,8 @@ West Midlands Railway
 							</Description>
               <properties>
                 <PropertyOfDay>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <CountryRef ref="gb" refPrincipality="GB-SCT"/>
                   <HolidayTypes>RegionalHoliday</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </FareDayType>
@@ -10732,11 +10696,8 @@ West Midlands Railway
 							</Description>
               <properties>
                 <PropertyOfDay>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <CountryRef ref="gb" refPrincipality="GB-WLS"/>
                   <HolidayTypes>RegionalHoliday</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </FareDayType>
@@ -10746,11 +10707,8 @@ West Midlands Railway
 							</Description>
               <properties>
                 <PropertyOfDay>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <CountryRef ref="gb" refPrincipality="GB-EWN">NB Bodge as no official code</CountryRef>
                   <HolidayTypes>RegionalHoliday</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </FareDayType>
@@ -10760,11 +10718,8 @@ West Midlands Railway
 							</Description>
               <properties>
                 <PropertyOfDay>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <CountryRef ref="gb" refPrincipality="GB-NIR"/>
                   <HolidayTypes>RegionalHoliday</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </FareDayType>
@@ -10774,11 +10729,8 @@ West Midlands Railway
 							</Description>
               <properties>
                 <PropertyOfDay>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <CountryRef ref="gb" refPrincipality="GB-ENG"/>
                   <HolidayTypes>RegionalHoliday</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </FareDayType>
@@ -10790,10 +10742,7 @@ West Midlands Railway
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Weekdays</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <HolidayTypes>SchoolDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </FareDayType>
@@ -10801,10 +10750,7 @@ West Midlands Railway
               <Name>School    Holiday</Name>
               <properties>
                 <PropertyOfDay>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <HolidayTypes>NotSchoolDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </FareDayType>

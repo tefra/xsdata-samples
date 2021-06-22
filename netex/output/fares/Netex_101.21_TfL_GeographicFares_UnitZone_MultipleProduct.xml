@@ -60,10 +60,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Weekdays</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
               <timebands modificationSet="all">
@@ -81,10 +77,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Weekdays</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
               <timebands modificationSet="all">
@@ -99,10 +91,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Saturday Sunday</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
               <timebands modificationSet="all">
@@ -116,10 +104,7 @@ Special peak and off-peak times apply on journeys that start at stations north o
             <DayType id="tfl:OffPeak_Holiday" modification="new" version="any" status="active">
               <properties>
                 <PropertyOfDay>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <HolidayTypes>NationalHoliday</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
               <timebands modificationSet="all">
@@ -138,10 +123,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Weekdays</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
               <timebands modificationSet="all">
@@ -159,10 +140,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Weekdays</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
               <timebands modificationSet="all">
@@ -176,10 +153,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Saturday</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -191,10 +164,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Sunday</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -206,10 +175,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Weekdays</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
               <timebands modificationSet="all">
@@ -222,10 +187,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Saturday Sunday</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -237,10 +198,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Weekdays</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
               <timebands modificationSet="all">
@@ -253,10 +210,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Saturday Sunday</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -11726,22 +11679,14 @@ Find out more about using contactless payment cards on buses</Description>
                 <DayType id="lrs:July" modification="new" version="any" status="active">
                   <properties>
                     <PropertyOfDay>
-                      <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                       <MonthOfYear>--07</MonthOfYear>
-                      <HolidayTypes>AnyDay</HolidayTypes>
-                      <Seasons>Perennially</Seasons>
-                      <Tides>AllTides</Tides>
                     </PropertyOfDay>
                   </properties>
                 </DayType>
                 <DayType id="lrs:August" modification="new" version="any" status="active">
                   <properties>
                     <PropertyOfDay>
-                      <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                       <MonthOfYear>--08</MonthOfYear>
-                      <HolidayTypes>AnyDay</HolidayTypes>
-                      <Seasons>Perennially</Seasons>
-                      <Tides>AllTides</Tides>
                     </PropertyOfDay>
                   </properties>
                 </DayType>
@@ -14449,10 +14394,7 @@ Multi-journey Boarding Passes are not transferable.</Description>
                           <properties>
                             <PropertyOfDay>
                               <DaysOfWeek>Monday Tuesday Wednesday Thursday Saturday</DaysOfWeek>
-                              <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                               <HolidayTypes>NotHoliday</HolidayTypes>
-                              <Seasons>Perennially</Seasons>
-                              <Tides>AllTides</Tides>
                             </PropertyOfDay>
                           </properties>
                           <timebands modificationSet="all">
@@ -14466,10 +14408,7 @@ Multi-journey Boarding Passes are not transferable.</Description>
                           <properties>
                             <PropertyOfDay>
                               <DaysOfWeek>Friday</DaysOfWeek>
-                              <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                               <HolidayTypes>NotHoliday</HolidayTypes>
-                              <Seasons>Perennially</Seasons>
-                              <Tides>AllTides</Tides>
                             </PropertyOfDay>
                           </properties>
                           <timebands modificationSet="all">
@@ -14483,10 +14422,7 @@ Multi-journey Boarding Passes are not transferable.</Description>
                           <properties>
                             <PropertyOfDay>
                               <DaysOfWeek>Sunday</DaysOfWeek>
-                              <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                               <HolidayTypes>NotHoliday NationalHoliday</HolidayTypes>
-                              <Seasons>Perennially</Seasons>
-                              <Tides>AllTides</Tides>
                             </PropertyOfDay>
                           </properties>
                           <timebands modificationSet="all">
@@ -14500,10 +14436,7 @@ Multi-journey Boarding Passes are not transferable.</Description>
                           <properties>
                             <PropertyOfDay>
                               <DaysOfWeek>Everyday</DaysOfWeek>
-                              <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                               <HolidayTypes>NationalHoliday</HolidayTypes>
-                              <Seasons>Perennially</Seasons>
-                              <Tides>AllTides</Tides>
                             </PropertyOfDay>
                           </properties>
                           <timebands modificationSet="all">
@@ -14539,10 +14472,7 @@ Multi-journey Boarding Passes are not transferable.</Description>
                           <properties>
                             <PropertyOfDay>
                               <DaysOfWeek>Weekdays</DaysOfWeek>
-                              <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                               <HolidayTypes>NotHoliday</HolidayTypes>
-                              <Seasons>Perennially</Seasons>
-                              <Tides>AllTides</Tides>
                             </PropertyOfDay>
                           </properties>
                           <timebands modificationSet="all">
@@ -14556,10 +14486,7 @@ Multi-journey Boarding Passes are not transferable.</Description>
                           <properties>
                             <PropertyOfDay>
                               <DaysOfWeek>Saturday</DaysOfWeek>
-                              <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                               <HolidayTypes>AnyDay</HolidayTypes>
-                              <Seasons>Perennially</Seasons>
-                              <Tides>AllTides</Tides>
                             </PropertyOfDay>
                           </properties>
                           <timebands modificationSet="all">
@@ -14573,10 +14500,7 @@ Multi-journey Boarding Passes are not transferable.</Description>
                           <properties>
                             <PropertyOfDay>
                               <DaysOfWeek>Sunday</DaysOfWeek>
-                              <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                               <HolidayTypes>NotHoliday</HolidayTypes>
-                              <Seasons>Perennially</Seasons>
-                              <Tides>AllTides</Tides>
                             </PropertyOfDay>
                           </properties>
                           <timebands modificationSet="all">
@@ -14627,10 +14551,7 @@ Multi-journey Boarding Passes are not transferable.</Description>
                           <properties>
                             <PropertyOfDay>
                               <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday Saturday</DaysOfWeek>
-                              <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                               <HolidayTypes>NotHoliday</HolidayTypes>
-                              <Seasons>Perennially</Seasons>
-                              <Tides>AllTides</Tides>
                             </PropertyOfDay>
                           </properties>
                           <timebands modificationSet="all">
@@ -14666,10 +14587,7 @@ Multi-journey Boarding Passes are not transferable.</Description>
                           <properties>
                             <PropertyOfDay>
                               <DaysOfWeek>Everyday</DaysOfWeek>
-                              <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                               <HolidayTypes>NotHoliday NationalHoliday</HolidayTypes>
-                              <Seasons>Perennially</Seasons>
-                              <Tides>AllTides</Tides>
                             </PropertyOfDay>
                           </properties>
                           <timebands modificationSet="all">

@@ -232,6 +232,6 @@ class AccessRightParameterAssignmentVersionStructure(AssignmentVersionStructure1
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 52,
+            "max_occurs": 70,
         }
     )

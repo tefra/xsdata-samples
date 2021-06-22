@@ -265,6 +265,6 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 70,
+            "max_occurs": 85,
         }
     )

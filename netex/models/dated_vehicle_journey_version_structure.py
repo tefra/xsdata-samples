@@ -73,7 +73,6 @@ class DatedVehicleJourneyVersionStructure(VehicleJourneyVersionStructure):
                     "name": "OperatingDayRef",
                     "type": OperatingDayRef,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "required": True,
                 },
                 {
                     "name": "ExternalDatedVehicleJourneyRef",
@@ -101,6 +100,7 @@ class DatedVehicleJourneyVersionStructure(VehicleJourneyVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 30,
+            "min_occurs": 1,
+            "max_occurs": 37,
         }
     )

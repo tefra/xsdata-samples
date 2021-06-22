@@ -42,9 +42,7 @@ class PropertyOfDayStructure:
         }
     )
     weeks_of_month: List[WeekOfMonthEnumeration] = field(
-        default_factory=lambda: [
-            WeekOfMonthEnumeration.EVERY_WEEK,
-        ],
+        default_factory=list,
         metadata={
             "name": "WeeksOfMonth",
             "type": "Element",
@@ -85,9 +83,7 @@ class PropertyOfDayStructure:
         }
     )
     holiday_types: List[HolidayTypeEnumeration] = field(
-        default_factory=lambda: [
-            HolidayTypeEnumeration.ANY_DAY,
-        ],
+        default_factory=list,
         metadata={
             "name": "HolidayTypes",
             "type": "Element",
@@ -96,9 +92,7 @@ class PropertyOfDayStructure:
         }
     )
     seasons: List[SeasonEnumeration] = field(
-        default_factory=lambda: [
-            SeasonEnumeration.PERENNIALLY,
-        ],
+        default_factory=list,
         metadata={
             "name": "Seasons",
             "type": "Element",
@@ -107,9 +101,7 @@ class PropertyOfDayStructure:
         }
     )
     tides: List[TideEnumeration] = field(
-        default_factory=lambda: [
-            TideEnumeration.ALL_TIDES,
-        ],
+        default_factory=list,
         metadata={
             "name": "Tides",
             "type": "Element",

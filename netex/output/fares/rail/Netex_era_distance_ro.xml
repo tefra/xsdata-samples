@@ -7435,10 +7435,6 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Everyday</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </FareDayType>
@@ -7447,21 +7443,14 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Weekdays</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <HolidayTypes>NotHoliday</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </FareDayType>
             <FareDayType id="tfc:January@1" modification="new" version="01" status="active">
               <properties>
                 <PropertyOfDay>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <DayOfYear>--01-01</DayOfYear>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </FareDayType>

@@ -206,7 +206,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 5,
+            "max_occurs": 34,
         }
     )
     order: Optional[int] = field(

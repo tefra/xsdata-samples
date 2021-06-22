@@ -219,6 +219,6 @@ class ParkingTariffVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 45,
+            "max_occurs": 62,
         }
     )

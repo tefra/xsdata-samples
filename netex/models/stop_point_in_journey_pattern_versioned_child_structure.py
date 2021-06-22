@@ -40,7 +40,6 @@ class StopPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVersio
                     "name": "ScheduledStopPointRef",
                     "type": ScheduledStopPointRef,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "required": True,
                 },
                 {
                     "name": "OnwardTimingLinkRef",
@@ -148,7 +147,7 @@ class StopPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVersio
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "min_occurs": 1,
-            "max_occurs": 3,
+            "min_occurs": 2,
+            "max_occurs": 25,
         }
     )

@@ -201,10 +201,10 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    gradien_type: Optional[GradientEnumeration] = field(
+    gradient_type: Optional[GradientEnumeration] = field(
         default=None,
         metadata={
-            "name": "GradienType",
+            "name": "GradientType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

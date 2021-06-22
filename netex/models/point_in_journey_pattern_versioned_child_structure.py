@@ -158,6 +158,6 @@ class PointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVersionedC
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 53,
+            "max_occurs": 61,
         }
     )

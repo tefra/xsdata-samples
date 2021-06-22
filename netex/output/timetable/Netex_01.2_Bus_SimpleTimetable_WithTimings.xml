@@ -1,0 +1,1229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+  <PublicationTimestamp>2010-12-17T09:30:47Z</PublicationTimestamp>
+  <ParticipantRef>SYS001</ParticipantRef>
+  <PublicationRequest version="1.0">
+    <RequestTimestamp>2010-12-17T09:30:47Z</RequestTimestamp>
+    <ParticipantRef>SYS002</ParticipantRef>
+    <topics>
+      <NetworkFrameTopic>
+        <selectionValidityConditions>
+          <AvailabilityCondition id="request" modification="new" version="any" status="active">
+            <FromDate>2010-11-01T00:00:00Z</FromDate>
+          </AvailabilityCondition>
+        </selectionValidityConditions>
+        <TimetableFrameRef ref="hde:TimetableFrameTIM_23_O">REQUEST</TimetableFrameRef>
+      </NetworkFrameTopic>
+    </topics>
+  </PublicationRequest>
+  <PublicationRefreshInterval>P1M</PublicationRefreshInterval>
+  <Description>Example  of simple timetable frame with two journeys and service calendar, with detailed timings
+	
+1. OVERVIEW
+============
+
+   The route has just  three stops         A - B  - C   
+   
+     with three intremediate timing points
+ 
+   The route has just  three stops         A - t1 - t2 - B  - t3 - C    
+ 
+	There are just two  SERVICE JOURNEYs   in a single DIRECTION 
+
+    hde:sj_24o_01   at 14:20   outbound
+    hde:sj_24o_02   at 15:20   outbound
+ 
+And the timetable is thus
+
+			sj_24o_01  				 sj_24o_02
+
+	A	d		14:00				15:00
+	B	a		14:30				15:30         
+	B	d		14:32	    		15:32 
+	C	a		15:10				16:10
+										
+In this example we include both  detailed TIMING and JOURNEY PATTERN data as well as the
+SERVICE JOURNEY with  CALLs.
+
+The CALLs are in effect derived from the other  data and could be omitted
+ 
+Journey  sj_24o_01   runs every day that is not a holiday and on Christmas day, New years day, Goodfriday and Easter monday
+Journey  sj_24o_01   runs every monday to fridays that are not a holiday
+
+==================================
+2. DETAILS
+
+There are just two SERVICE JOURNEYs in the timetable  for LINE 24
+
+     (i)  SERVICE JOURNEY hde:sj_24o_01         
+             Departs 14:00   on         
+             DAY TYPEs  
+						hde:DT_02-Everyday-NotHoliday  
+						hde:DT_ChristmasEve 
+						hde:DT_ChristmasDay 
+						hde:DT_ChristmasDayDisplacement 
+						hde:DT_NewYearsEve 
+						hde:DT_NewYearsDay 
+						hde:DT_2ndJanuary 
+						hde:DT_NewYearsDayDisplacement 
+						hde:DT_GoodFriday 
+						hde:DT_EasterSunday 
+						hde:DT_EasterMonday                     
+             
+
+     (ii)  SERVICE JOURNEY hde:sj_24o_02     
+             Departs 15:00   on        
+                DAY TYPEs   
+						hde:DT_01-MF-NotHoliday 
+             Connects with LINE 4 at stop B 
+
+
+SCHEDULED STOP POINTs
+	    A)  mybus:ssp_001  Alpha						 
+		B)  mybus:ssp_002   Bravo							 
+		C)  mybus:ssp_077	 Charley
+
+SERVICE LINKS
+			SERVICE LINK :	A		 - B     	mybus:SSP_001_to_SSP_002  
+			SERVICE LINK :	B		 - C		mybus:SSP_002_to_SSP_077
+
+
+There is a single SERVICE  PATTERN  has  three STOP POINTs IN JOURNEY PATTERN referencing the  three SCHEDULED STOP POINTs  
+ which are connected by two      SERVICE LINKs   .
+ 
+ SERVICE PATTERN:  ServicePattern:svp_24o  follows  SERVICE JOURNEY PATTERN:  ServiceJourneyPattern:sjp_24o
+	1 A STOP POINT IN JOURNEY PATTERN	 hde:spip_24o_01
+		SCHEDULED STOP POINT:  A  mybus:SSP_001  
+		SERVICE LINK :	A		 - B     	mybus:SSP_001_to_SSP_002 
+	2 B  STOP POINT IN JOURNEY PATTERN 	 hde:spip_24o_02
+		SCHEDULED STOP POINT: B     mybus:SSP_002
+		SERVICE LINK :	B		 - C		mybus:SSP_002_to_SSP_077
+	3 C  STOP POINT IN JOURNEY PATTERN 	 hde:spip_24o_03
+		SCHEDULED STOP POINT:   C   mybus:SSP_077
+
+
+    The TIMING PATTERN has   three intermediate TIMING POINTs which are not SCHEDULED STOP POINTs, as well as the three     SCHEDULED STOP POINTs
+			  A - a_t1 - a_t2 - B  - b_t3 - C   
+
+timing points
+     TIMING POINT: mybus:SSP_001_t1
+	 TIMING POINT: mybus:SSP_001_t2
+     TIMING POINT: mybus:SSP_002_t3
+
+timing links
+		TIMING LINK :	A		 - 	a_t1     	mybus:SSP_001_to_SSP_001_t1
+		TIMING LINK :	 a_t1	-	a_t2		mybus:SSP_001_t1_to_SSP_001_t2
+		TIMING LINK :	a_t2	-	B		 	mybus:SSP_001_t2_to_SSP_002
+		TIMING LINK :	A		 - b_t3			mybus:SSP_002_to_SSP_002_t3
+		TIMING LINK :	b_t3		- 	C			mybus:SSP_002_t3_to_SSP_077
+
+   There is a single TIME DEMAND TYPE and one set of RUN TIMES 
+ 	01			02		 	 
+	A	d		14:00	 	15:00		    
+	  t1										+10m	RUN TIME 
+	  t2										+10m	RUN TIME 
+	B	a		14:30		15:30 		+10m	RUN TIME  
+	B	d		14:32	...	15:32 		+2m	 	WAIT TIME
+	  t1										+180m	 RUN TIME .
+	C	d		15:10		16:10		.+20m	RUN TIME  
+												+70m	 JOURNEY PATTERN RUN TIME  	
+
+	JOURNEY RUN TIME  mybus:tdtr_TD01_SSP_001_to_SSP_077	   70M
+
+    The TIMING PATTERN  has  thus six POINTs IN TIMING PATTERN, referencing the  TIMING POINTs 
+	connected by five   TIMING LINKs    
+
+ TIMING PATTERN:  TimingPattern:tp_24o
+	1.TIMING POINT IN JOURNEY PATTERN	: hde:tpip_24o_01
+			TIMING POINT:  A   mybus:SSP_001
+			TIMING LINK :	A		 - 	a_t1     	mybus:SSP_001_to_SSP_001_t1
+				JOURNEY RUN TIME  mybus:tdtr_TD01_SSP_001_to_SSP_001_t1  	 4M 
+		 Depart: 14:20, 15 20
+
+    2. TIMING POINT IN JOURNEY PATTERN	: hde:tpip_24o_02
+			TIMING POINT: mybus:SSP_001_t1
+			TIMING LINK :	 a_t1	-	a_t2		mybus:SSP_001_t1_to_SSP_001_t2
+				JOURNEY RUN TIME  mybus:tdtr_TD01_SSP_001_t1_to_SSP_001_t2   10M
+
+	3. TIMING POINT IN JOURNEY PATTERN	: hde:tpip_24o_03
+			TIMING POINT: mybus:SSP_001_t2
+			TIMING LINK :	a_t2	-	B				mybus:SSP_001_t2_to_SSP_002
+				JOURNEY RUN TIME  mybus:tdtr_TD01_SSP_001_t1_to_SSP_002	   10M
+
+	4. TIMING POINT IN JOURNEY PATTERN	: hde:tpip_24o_04
+			TIMING POINT:  B   mybus:SSP_002
+ 				JOURNEY WAIT TIME  mybus:tdtr_TD01_SSP_002	   2M
+			TIMING LINK :	A		 - b_t3			mybus:SSP_002_to_SSP_002_t3    
+				JOURNEY RUN TIME  mybus:tdtr_TD01_SSP_002_to_SSP_002_t3  	 18M
+			  Arrive14:30, 15 30 
+			  Depart14:32, 15 32
+
+    5. TIMING POINT IN JOURNEY PATTERN	: hde:tpip_24o_05
+			TIMING POINT: mybus:SSP_002_t3
+			TIMING LINK :	b_t3		- 	C			mybus:SSP_002_t3_to_SSP_077
+				JOURNEY RUN TIME  mybus:tdtr_TD01_SSP_002_t3_to_SSP_077	   20M
+
+	6. TIMING POINT IN JOURNEY PATTERN	: hde:tpip_24o_06
+			TIMING POINT:  C   mybus:SSP_077
+			 Arrive: 15:10, 16 10
+
+There is alink for the whole route as well
+  TIMING LINK :	A		 - 	C    	mybus:SSP_001_to_SSP_077
+ 	  
+	
+
+The SERVICE JOURNEY  PATTERN  has  six  POINT IN JOURNEY PATTERN referencing the  three SCHEDULED STOP POINTs  and three additional timing points
+ which are connected by two      SERVICE LINKs   .and five TIMING LINKs
+ 
+ SERVICE JOURNEY PATTERN:  ServiceJourneyPattern:sjp_24o
+	1  POINT IN JOURNEY PATTERN		 hde:tpip_24o_01
+			SCHEDULED STOP POINT:  A   mybus:SSP_001
+			SERVICE LINK :	A		 - B     	mybus:SSP_001_to_SSP_002 
+			TIMING LINK :	A		 - 	a_t1     	mybus:SSP_001_to_SSP_001_t1
+
+    2.   POINT IN JOURNEY PATTERN:		hde:tpip_24o_02
+			TIMING POINT: mybus:SSP_001_t1
+			TIMING LINK :	 a_t1	-	a_t2		mybus:SSP_001_t1_to_SSP_001_t2
+
+	3.   POINT IN JOURNEY PATTERN:		hde:tpip_24o_03
+			TIMING POINT: mybus:SSP_001_t2
+			TIMING LINK :	a_t2	-	B				mybus:SSP_001_t2_to_SSP_002
+
+	4 POINT IN JOURNEY PATTERN:   hde:tpip_24o_04
+			SCHEDULED STOP POINT:  B   mybus:SSP_002
+			SERVICE LINK :	B		 - C		mybus:SSP_002_to_SSP_077
+			TIMING LINK :	A		 - b_t3			mybus:SSP_002_to_SSP_002_t3  JOURNEY RUN TIME  18M
+
+	5. POINT IN JOURNEY PATTERN: 		hde:tpip_24o_05
+			TIMING POINT: mybus:SSP_002_t3
+			TIMING LINK :	b_t3		- 	C			mybus:SSP_002_t3_to_SSP_077  JOURNEY RUN TIME  20M
+
+	6 POINT IN JOURNEY PATTERN: 		hde:tpip_24o_06
+			SCHEDULED STOP POINT:  C   mybus:SSP_077
+
+The   JOURNEY  PATTERN  has  six  POINT IN JOURNEY PATTERN referencing the  three SCHEDULED STOP POINTs  and three additional timing points
+ which are connected by two      SERVICE LINKs   .and five TIMING LINKs
+ 
+ SERVICE JOURNEY PATTERN:  ServiceJourneyPattern:sjp_24o
+	1  POINT IN JOURNEY PATTERN		 hde:tpip_24o_01
+			SCHEDULED STOP POINT:  A   mybus:SSP_001
+			SERVICE LINK :	A		 - B     	mybus:SSP_001_to_SSP_002 
+			TIMING LINK :	A		 - 	a_t1     	mybus:SSP_001_to_SSP_001_t1
+
+    2.   POINT IN JOURNEY PATTERN:		hde:tpip_24o_02
+			TIMING POINT: mybus:SSP_001_t1
+			TIMING LINK :	 a_t1	-	a_t2		mybus:SSP_001_t1_to_SSP_001_t2
+
+	3.   POINT IN JOURNEY PATTERN:		hde:tpip_24o_03
+			TIMING POINT: mybus:SSP_001_t2
+			TIMING LINK :	a_t2	-	B				mybus:SSP_001_t2_to_SSP_002
+
+	4 POINT IN JOURNEY PATTERN:   hde:tpip_24o_04
+			SCHEDULED STOP POINT:  B   mybus:SSP_002
+			SERVICE LINK :	B		 - C		mybus:SSP_002_to_SSP_077
+			TIMING LINK :	A		 - b_t3			mybus:SSP_002_to_SSP_002_t3  JOURNEY RUN TIME  18M
+
+	5. POINT IN JOURNEY PATTERN: 		hde:tpip_24o_05
+			TIMING POINT: mybus:SSP_002_t3
+			TIMING LINK :	b_t3		- 	C			mybus:SSP_002_t3_to_SSP_077  JOURNEY RUN TIME  20M
+
+	6 POINT IN JOURNEY PATTERN: 		hde:tpip_24o_06
+			SCHEDULED STOP POINT:  C   mybus:SSP_077
+
+
+There are Three NOTICes defining Stop Announcements
+These are associated with a POINT IN JOURNEY PATTERN  using a NOTICE ASSIGNMENT
+	 mybus:Na_Nxa_SSP_001   = = &gt; mybus:Nxa_SSP_001 
+			 Next stop is 
+	 mybus:Na_Nxa_SSP_002   = = &gt; mybus:Nxa_SSP_002 
+	 mybus:Na_Nxa_SSP_077   = = &gt; mybus:Nxa_SSP_077 
+   
+A COMPOSITE FRAME is used to group the component FRAMEs
+ 
+   - It has a VALIDITY CONDITION  that specifies it is valid from Sept to Matrch
+
+		A SERVICE  FRAME is used to contain the STOP POINT  elements   LINE, etc
+		A TIMETABLE FRAME is used to contain  the SERVICE JOURNEY   elements 
+ 
+			 a SERVICE CALENDAR FRAMEb	A SERVICE CALENDAR FRAME is used to contain the DAY TYPEs etc 
+
+The Calendar is shown coded as
+      Compact : OPERATING DAYs are assumed for each calendar date within the period of the calendar 
+	
+	</Description>
+  <dataObjects>
+    <CompositeFrame id="hde:ACS@Line_24" modification="new" version="1.0" status="active">
+      <codespaces modificationSet="all">
+        <Codespace id="mybus">
+          <Xmlns>mybus</Xmlns>
+          <XmlnsUrl>http://www.mybuses.eu/stuff</XmlnsUrl>
+          <Description>My buses</Description>
+        </Codespace>
+      </codespaces>
+      <FrameDefaults>
+        <DefaultCodespaceRef ref="mybus"/>
+      </FrameDefaults>
+      <frames modificationSet="all">
+        <ServiceFrame id="mybus:ACS@Line_24@network" modification="new" version="1.0" status="active">
+          <Name>Stops for Winter timetable for route 24 </Name>
+          <codespaces modificationSet="all">
+            <Codespace id="hde">
+              <Xmlns>hde</Xmlns>
+              <XmlnsUrl>http://www.halt.de/</XmlnsUrl>
+              <Description>Stop data  data</Description>
+            </Codespace>
+          </codespaces>
+          <prerequisites modificationSet="all">
+            <ResourceFrameRef version="1.0" ref="acs:ACS@Common_resources"/>
+          </prerequisites>
+          <directions modificationSet="all">
+            <Direction id="mybus:DR_Westbound" modification="new" version="any" status="active">
+              <Name>Westbound</Name>
+            </Direction>
+            <Direction id="mybus:DR_Southbound" modification="new" version="any" status="active">
+              <Name>Eastbound</Name>
+            </Direction>
+          </directions>
+          <routes modificationSet="all">
+            <Route id="mybus:RT_24o" modification="new" version="any" status="active">
+              <Name>Line 24 Alpha to Charley  (Details not GIVEN)</Name>
+              <DirectionType>outbound</DirectionType>
+              <DirectionRef version="any" ref="mybus:DR_Westbound"/>
+            </Route>
+          </routes>
+          <lines modificationSet="all">
+            <Line id="mybus:LN_24" modification="new" version="any" status="active">
+              <Name>Line 24 Alpha to Charley</Name>
+              <ShortName>Line 24</ShortName>
+              <TransportMode>bus</TransportMode>
+              <PublicCode>24</PublicCode>
+              <OperatorRef version="1.0" ref="acs:ACS"/>
+              <routes modificationSet="all">
+                <RouteRef ref="mybus:RT_24o"/>
+              </routes>
+              <Presentation>
+                <ColourName>Red</ColourName>
+              </Presentation>
+            </Line>
+          </lines>
+          <destinationDisplays modificationSet="all">
+            <DestinationDisplay id="mybus:DST_Bravo" modification="new" version="any" status="active">
+              <Name>Bravo</Name>
+              <ShortName>Bravo</ShortName>
+              <PublicCode>Bravo</PublicCode>
+            </DestinationDisplay>
+            <DestinationDisplay id="mybus:DST_Charley" modification="new" version="any" status="active">
+              <Name>Charley</Name>
+              <ShortName>Charley G</ShortName>
+              <PublicCode>Charley</PublicCode>
+            </DestinationDisplay>
+          </destinationDisplays>
+          <scheduledStopPoints modificationSet="all">
+            <ScheduledStopPoint id="mybus:SSP_001" modification="new" version="any" status="active">
+              <Name>Alpha &amp; Castle</Name>
+              <Location>
+                <Longitude>53.0000</Longitude>
+                <Latitude>0.1000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+              <ShortName>Alpha</ShortName>
+              <PublicCode>ALPH</PublicCode>
+              <StopType>onstreetBus</StopType>
+              <VehicleModes>bus</VehicleModes>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint id="mybus:SSP_002" modification="new" version="any" status="active">
+              <Name>Bravo Street</Name>
+              <Location>
+                <Longitude>53.2000</Longitude>
+                <Latitude>0.2000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+              <ShortName>Bravo</ShortName>
+              <PublicCode>BRAV</PublicCode>
+              <StopType>onstreetBus</StopType>
+              <VehicleModes>bus</VehicleModes>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint id="mybus:SSP_077" modification="new" version="any" status="active">
+              <Name>Charley Crescent</Name>
+              <Location>
+                <Longitude>53.3000</Longitude>
+                <Latitude>0.3000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+              <ShortName>Charley</ShortName>
+              <PublicCode>CHAS</PublicCode>
+              <StopType>onstreetBus</StopType>
+              <VehicleModes>bus</VehicleModes>
+            </ScheduledStopPoint>
+          </scheduledStopPoints>
+          <serviceLinks modificationSet="all">
+            <ServiceLink id="mybus:SSP_001_to_SSP_002" modification="new" version="any" status="active">
+              <Name>Alpha &amp; Castle to Bravo</Name>
+              <FromPointRef version="any" ref="mybus:SSP_001"/>
+              <ToPointRef version="any" ref="mybus:SSP_002"/>
+            </ServiceLink>
+            <ServiceLink id="mybus:SSP_002_to_SSP_077" modification="new" version="any" status="active">
+              <Name>Bravo to Charley</Name>
+              <FromPointRef version="any" ref="mybus:SSP_002"/>
+              <ToPointRef version="any" ref="mybus:SSP_077"/>
+            </ServiceLink>
+          </serviceLinks>
+          <servicePatterns modificationSet="all">
+            <ServicePattern id="hde:svp_24o" modification="new" version="any" status="active">
+              <Name>Alpha to Charley</Name>
+              <RouteRef version="any" ref="mybus:RT_24o"/>
+              <DirectionType>outbound</DirectionType>
+              <journeyPatterns modificationSet="all">
+                <ServiceJourneyPatternRef version="any" ref="hde:sjp_24o"/>
+              </journeyPatterns>
+              <pointsInSequence>
+                <StopPointInJourneyPattern id="hde:spijp_24o_01" modification="new" version="any" status="active" order="1">
+                  <ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
+                  <OnwardServiceLinkRef version="any" ref="mybus:SSP_001_to_SSP_002">Redundant Information!</OnwardServiceLinkRef>
+                  <ForAlighting>false</ForAlighting>
+                  <noticeAssignments modificationSet="all">
+                    <NoticeAssignment id="mybus:spijp_24o_01" modification="new" version="any" status="active" order="1">
+                      <Name>Next Stop Announcement for SSP_001</Name>
+                      <NoticeRef version="any" ref="mybus:Nxa_SSP_001"/>
+                      <Advertised>true</Advertised>
+                    </NoticeAssignment>
+                  </noticeAssignments>
+                </StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="hde:spijp_24o_02" modification="new" version="any" status="active" order="2">
+                  <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
+                  <OnwardServiceLinkRef version="any" ref="mybus:SSP_002_to_SSP_077">Redundant Information!</OnwardServiceLinkRef>
+                  <noticeAssignments modificationSet="all">
+                    <NoticeAssignment id="mybus:spijp_24o_02" modification="new" version="any" status="active" order="1">
+                      <Name>Next Stop Announcement for SSP_002</Name>
+                      <NoticeRef version="any" ref="mybus:Nxa_SSP_002"/>
+                      <Advertised>true</Advertised>
+                    </NoticeAssignment>
+                  </noticeAssignments>
+                </StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="hde:spijp_24o_03" modification="new" version="any" status="active" order="3">
+                  <ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
+                  <ForBoarding>false</ForBoarding>
+                  <noticeAssignments modificationSet="all">
+                    <NoticeAssignment id="mybus:spijp_24o_03" modification="new" version="any" status="active" order="1">
+                      <Name>Next Stop Announcement for SSP_077</Name>
+                      <NoticeRef version="any" ref="mybus:Nxa_SSP_077"/>
+                      <Advertised>true</Advertised>
+                    </NoticeAssignment>
+                  </noticeAssignments>
+                </StopPointInJourneyPattern>
+              </pointsInSequence>
+              <linksInSequence>
+                <ServiceLinkInJourneyPattern id="hde:slijp_24o_01" modification="new" version="any" status="active" order="1">
+                  <ServiceLinkRef version="any" ref="mybus:SSP_001_to_SSP_002"/>
+                </ServiceLinkInJourneyPattern>
+                <ServiceLinkInJourneyPattern id="hde:slijp_24o_02" modification="new" version="any" status="active" order="2">
+                  <ServiceLinkRef version="any" ref="mybus:SSP_002_to_SSP_077"/>
+                </ServiceLinkInJourneyPattern>
+              </linksInSequence>
+            </ServicePattern>
+          </servicePatterns>
+          <timingPoints modificationSet="all">
+            <TimingPoint id="mybus:SSP_001_t1" modification="new" version="any" status="active">
+              <Name>Between  Alpha   and Bravo Point 1</Name>
+              <Location>
+                <Longitude>53.2000</Longitude>
+                <Latitude>0.2000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+            </TimingPoint>
+            <TimingPoint id="mybus:SSP_001_t2" modification="new" version="any" status="active">
+              <Name>Between  Alpha   and Bravo  Point 2</Name>
+              <Location>
+                <Longitude>53.3000</Longitude>
+                <Latitude>0.3000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+            </TimingPoint>
+            <TimingPoint id="mybus:SSP_002_t3" modification="new" version="any" status="active">
+              <Name>Between  Bravo   and Charley  Point 1</Name>
+              <Location>
+                <Longitude>53.4000</Longitude>
+                <Latitude>0.4000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+            </TimingPoint>
+          </timingPoints>
+          <timingLinks modificationSet="all">
+            <TimingLink id="mybus:SSP_001_to_SSP_077" modification="new" version="any" status="active">
+              <Name>Overall timing Alpha  to  Charley reen</Name>
+              <FromPointRef version="any" ref="mybus:SSP_001"/>
+              <ToPointRef version="any" ref="mybus:SSP_077"/>
+            </TimingLink>
+            <TimingLink id="mybus:SSP_001_to_SSP_001_t1" modification="new" version="any" status="active">
+              <Name>After Alpha   t1</Name>
+              <FromPointRef version="any" ref="mybus:SSP_001"/>
+              <ToPointRef version="any" ref="mybus:SSP_001_t1"/>
+            </TimingLink>
+            <TimingLink id="mybus:SSP_001_t1_to_SSP_001_t2" modification="new" version="any" status="active">
+              <Name>After Alpha   t1 to After Alpha  t2</Name>
+              <FromPointRef version="any" ref="mybus:SSP_001_t1"/>
+              <ToPointRef version="any" ref="mybus:SSP_002_t3"/>
+            </TimingLink>
+            <TimingLink id="mybus:SSP_001_t2_to_SSP_002" modification="new" version="any" status="active">
+              <Name>After Alpha  t2 to Bravo</Name>
+              <FromPointRef version="any" ref="mybus:SSP_001_t2"/>
+              <ToPointRef version="any" ref="mybus:SSP_002"/>
+            </TimingLink>
+            <TimingLink id="mybus:SSP_002_to_SSP_002_t3" modification="new" version="any" status="active">
+              <Name>Bravo to After Bravo t1</Name>
+              <FromPointRef version="any" ref="mybus:SSP_002"/>
+              <ToPointRef version="any" ref="mybus:SSP_002_t3"/>
+            </TimingLink>
+            <TimingLink id="mybus:SSP_002_t3_to_SSP_077" modification="new" version="any" status="active">
+              <Name>After Bravo t1 to Charley</Name>
+              <FromPointRef version="any" ref="mybus:SSP_002_t3"/>
+              <ToPointRef version="any" ref="mybus:SSP_077"/>
+            </TimingLink>
+          </timingLinks>
+          <timingPatterns modificationSet="all">
+            <TimingPattern id="hde:tp_24o" modification="new" version="any" status="active">
+              <Name>Route 24</Name>
+              <RouteRef version="any" ref="mybus:RT_24o"/>
+              <DirectionType>outbound</DirectionType>
+              <pointsInSequence>
+                <TimingPointInJourneyPattern id="hde:tpijp_24o_01" modification="new" version="any" status="active" order="1">
+                  <TimingPointRef version="any" ref="mybus:SSP_001"/>
+                  <OnwardTimingLinkRef version="any" ref="mybus:SSP_001_to_SSP_001_t1"/>
+                </TimingPointInJourneyPattern>
+                <TimingPointInJourneyPattern id="hde:tpijp_24o_02" modification="new" version="any" status="active" order="2">
+                  <TimingPointRef version="any" ref="mybus:SSP_001_t1"/>
+                  <OnwardTimingLinkRef version="any" ref="mybus:SSP_001_t1_to_SSP_001_t2"/>
+                </TimingPointInJourneyPattern>
+                <TimingPointInJourneyPattern id="hde:tpijp_24o_03" modification="new" version="any" status="active" order="3">
+                  <TimingPointRef version="any" ref="mybus:SSP_001_t2"/>
+                  <OnwardTimingLinkRef version="any" ref="mybus:SSP_001_t2_to_SSP_002"/>
+                </TimingPointInJourneyPattern>
+                <TimingPointInJourneyPattern id="hde:tpijp_24o_04" modification="new" version="any" status="active" order="4">
+                  <TimingPointRef version="any" ref="mybus:SSP_002"/>
+                  <OnwardTimingLinkRef version="any" ref="mybus:SSP_002_to_SSP_002_t3"/>
+                </TimingPointInJourneyPattern>
+                <TimingPointInJourneyPattern id="hde:tpijp_24o_05" modification="new" version="any" status="active" order="5">
+                  <TimingPointRef version="any" ref="mybus:SSP_002_t3"/>
+                  <OnwardTimingLinkRef version="any" ref="mybus:SSP_002_t3_to_SSP_077"/>
+                </TimingPointInJourneyPattern>
+                <TimingPointInJourneyPattern id="hde:tpijp_24o_06" modification="new" version="any" status="active" order="6">
+                  <TimingPointRef version="any" ref="mybus:SSP_077"/>
+                </TimingPointInJourneyPattern>
+              </pointsInSequence>
+            </TimingPattern>
+          </timingPatterns>
+          <journeyPatterns modificationSet="all">
+            <ServiceJourneyPattern id="hde:sjp_24o" modification="new" version="any" status="active">
+              <Name>Alpha to Charley - All POINTs</Name>
+              <RouteRef version="any" ref="mybus:RT_24o"/>
+              <DirectionType>outbound</DirectionType>
+              <runTimes>
+                <JourneyPatternRunTime id="mybus:jprt_24o1_SSP_001_to_SSP_077" modification="new" version="any" status="active">
+                  <TimeDemandTypeRef version="any" ref="mybus:tdt_01"/>
+                  <TimingLinkRef version="any" ref="mybus:SSP_001_to_SSP_077"/>
+                  <RunTime>PT70M</RunTime>
+                </JourneyPatternRunTime>
+              </runTimes>
+              <pointsInSequence>
+                <StopPointInJourneyPattern id="hde:pijp_24o_01" modification="new" version="any" status="active" order="1">
+                  <ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
+                </StopPointInJourneyPattern>
+                <TimingPointInJourneyPattern id="hde:pijp_24o_02" modification="new" version="any" status="active" order="2">
+                  <TimingPointRef version="any" ref="mybus:SSP_001_t1"/>
+                  <noticeAssignments modificationSet="all">
+                    <NoticeAssignment id="mybus:pijp_24o_02" modification="new" version="any" status="active" order="1">
+                      <Name>Next Stop Announcement for SSP_001</Name>
+                      <NoticeRef version="any" ref="mybus:Nxa_SSP_001"/>
+                      <Advertised>true</Advertised>
+                    </NoticeAssignment>
+                  </noticeAssignments>
+                </TimingPointInJourneyPattern>
+                <TimingPointInJourneyPattern id="hde:pijp_24o_03" modification="new" version="any" status="active" order="3">
+                  <TimingPointRef version="any" ref="mybus:SSP_001_t2"/>
+                </TimingPointInJourneyPattern>
+                <StopPointInJourneyPattern id="hde:pijp_24o_04" modification="new" version="any" status="active" order="4">
+                  <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
+                  <noticeAssignments modificationSet="all">
+                    <NoticeAssignment id="mybus:pijp_24o_04" modification="new" version="any" status="active" order="1">
+                      <Name>Next Stop Announcement for SSP_002</Name>
+                      <NoticeRef version="any" ref="mybus:Nxa_SSP_002"/>
+                      <Advertised>true</Advertised>
+                    </NoticeAssignment>
+                  </noticeAssignments>
+                </StopPointInJourneyPattern>
+                <TimingPointInJourneyPattern id="hde:tpip_24o_05" modification="new" version="any" status="active" order="5">
+                  <TimingPointRef version="any" ref="mybus:SSP_002_t3"/>
+                </TimingPointInJourneyPattern>
+                <StopPointInJourneyPattern id="hde:tpip_24o_06" modification="new" version="any" status="active" order="6">
+                  <ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
+                  <noticeAssignments modificationSet="all">
+                    <NoticeAssignment id="mybus:tpip_24o_06" modification="new" version="any" status="active" order="1">
+                      <Name>Next Stop Announcement for SSP_077</Name>
+                      <NoticeRef version="any" ref="mybus:Nxa_SSP_077"/>
+                      <Advertised>true</Advertised>
+                    </NoticeAssignment>
+                  </noticeAssignments>
+                </StopPointInJourneyPattern>
+              </pointsInSequence>
+              <linksInSequence>
+                <ServiceLinkInJourneyPattern id="hde:lijp_24o_01" modification="new" version="any" status="active" order="1">
+                  <ServiceLinkRef version="any" ref="mybus:SSP_001_to_SSP_002"/>
+                </ServiceLinkInJourneyPattern>
+                <ServiceLinkInJourneyPattern id="hde:lijp_24o_02" modification="new" version="any" status="active" order="2">
+                  <ServiceLinkRef version="any" ref="mybus:SSP_002_to_SSP_077"/>
+                </ServiceLinkInJourneyPattern>
+              </linksInSequence>
+            </ServiceJourneyPattern>
+          </journeyPatterns>
+          <timeDemandTypes modificationSet="all">
+            <TimeDemandType id="mybus:tdt_01" modification="new" version="any" status="active">
+              <Name>Normal Day</Name>
+              <runTimes>
+                <JourneyRunTime id="mybus:tdtr_TD01_SSP_001_to_SSP_001_t1" modification="new" version="any" status="active">
+                  <TimingLinkRef version="any" ref="mybus:SSP_001_to_SSP_001_t1"/>
+                  <RunTime>PT10M</RunTime>
+                </JourneyRunTime>
+                <JourneyRunTime id="mybus:tdtr_TD01_SSP_001_t1_to_SSP_001_t2" modification="new" version="any" status="active">
+                  <TimingLinkRef version="any" ref="mybus:SSP_001_t1_to_SSP_001_t2"/>
+                  <RunTime>PT10M</RunTime>
+                </JourneyRunTime>
+                <JourneyRunTime id="mybus:tdtr_TD01_SSP_001_t2_to_SSP_002" modification="new" version="any" status="active">
+                  <TimingLinkRef version="any" ref="mybus:SSP_001_t2_to_SSP_002"/>
+                  <RunTime>PT10M</RunTime>
+                </JourneyRunTime>
+                <JourneyRunTime id="mybus:tdtr_TD01_SSP_002_to_SSP_002_t3" modification="new" version="any" status="active">
+                  <TimingLinkRef version="any" ref="mybus:SSP_002_to_SSP_002_t3"/>
+                  <RunTime>PT18M</RunTime>
+                </JourneyRunTime>
+                <JourneyRunTime id="mybus:tdtr_TD01_SSP_002_t3_to_SSP_077" modification="new" version="any" status="active">
+                  <TimingLinkRef version="any" ref="mybus:SSP_002_t3_to_SSP_077"/>
+                  <RunTime>PT20M</RunTime>
+                </JourneyRunTime>
+              </runTimes>
+              <waitTimes>
+                <JourneyWaitTime id="mybus:tdwt_24o1_SSP_002" modification="new" version="any" status="active">
+                  <Name>Wait at Stop B</Name>
+                  <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
+                  <WaitTime>PT2M</WaitTime>
+                </JourneyWaitTime>
+              </waitTimes>
+            </TimeDemandType>
+          </timeDemandTypes>
+          <timeDemandTypeAssignments modificationSet="all">
+            <TimeDemandTypeAssignment id="mybus:TA_001" modification="new" version="any" status="active" order="1">
+              <TimeDemandTypeRef version="any" ref="mybus:tdt_01"/>
+              <TimebandRef ref="mybus:tdt_01"/>
+              <GroupOfTimingLinksRef version="any" ref="mybus:Bogus"/>
+            </TimeDemandTypeAssignment>
+          </timeDemandTypeAssignments>
+          <timingLinkGroups modificationSet="all">
+            <GroupOfLinks id="mybus:Bogus" modification="new" version="any" status="active">
+              <Name>bogus group</Name>
+              <members modificationSet="all">
+                <TimingLinkRef version="any" ref="mybus:SSP_001_t2_to_SSP_002"/>
+                <TimingLinkRef version="any" ref="mybus:SSP_002_to_SSP_002_t3"/>
+              </members>
+            </GroupOfLinks>
+          </timingLinkGroups>
+          <notices modificationSet="all">
+            <Notice id="mybus:Nxa_SSP_001" modification="new" version="any" status="active">
+              <Name>Next Stop Announcement for SSP_002</Name>
+              <Text lang="en">Welcome This service goes to Charley Crescent. Stopping everywhere</Text>
+              <variants>
+                <DeliveryVariant id="mybus:Nxa_SSP_001_en" modification="new" version="any" status="active">
+                  <DeliveryVariantMediaType>textToSpeech</DeliveryVariantMediaType>
+                  <VariantText lang="de">Welcome This service goes to Charley Crescent.</VariantText>
+                </DeliveryVariant>
+                <DeliveryVariant id="mybus:Nxa_SSP_001_de" modification="new" version="any" status="active">
+                  <DeliveryVariantMediaType>textToSpeech</DeliveryVariantMediaType>
+                  <VariantText lang="de">Willkommen  Dieser Dienst   fahrt nach Charley Crescent.</VariantText>
+                </DeliveryVariant>
+              </variants>
+            </Notice>
+            <Notice id="mybus:Nxa_SSP_002" modification="new" version="any" status="active">
+              <Name>Next Stop Announcement for SSP_002</Name>
+              <Text lang="en">Next Stop is Bravo Road. Alight here for Chocolate Museum</Text>
+              <variants>
+                <DeliveryVariant id="mybus:Nxa_SSP_002_en" modification="new" version="any" status="active">
+                  <DeliveryVariantMediaType>textToSpeech</DeliveryVariantMediaType>
+                  <VariantText lang="de">Next Stop is Bravo Road</VariantText>
+                </DeliveryVariant>
+                <DeliveryVariant id="mybus:Nxa_SSP_002_de" modification="new" version="any" status="active">
+                  <DeliveryVariantMediaType>textToSpeech</DeliveryVariantMediaType>
+                  <VariantText lang="de">Nachste Haltstelle Bravo Road.  </VariantText>
+                </DeliveryVariant>
+              </variants>
+            </Notice>
+            <Notice id="mybus:Nxa_SSP_077" modification="new" version="any" status="active">
+              <Name>Next Stop Announcement for SSP_077</Name>
+              <Text lang="en">Next Stop is Charley Road. Service Terminates here</Text>
+              <variants>
+                <DeliveryVariant id="mybus:Nxa_SSP_002_en" modification="new" version="any" status="active">
+                  <DeliveryVariantMediaType>textToSpeech</DeliveryVariantMediaType>
+                  <VariantText lang="de">Next Stop is Charley Crescent. All alight here.</VariantText>
+                </DeliveryVariant>
+                <DeliveryVariant id="mybus:Nxa_SSP_002_de" modification="new" version="any" status="active">
+                  <DeliveryVariantMediaType>textToSpeech</DeliveryVariantMediaType>
+                  <VariantText lang="de">Nachste Haltstelle Charley Crescent. Aussteigen</VariantText>
+                </DeliveryVariant>
+              </variants>
+            </Notice>
+          </notices>
+        </ServiceFrame>
+        <TimetableFrame id="hde:LN_24" modification="new" version="1.0" status="active">
+          <validityConditions modificationSet="all">
+            <AvailabilityCondition id="hde:Cnd001" modification="new" version="any" status="active">
+              <Description>Sept  to April</Description>
+              <FromDate>2010-11-01T00:00:00Z</FromDate>
+              <ToDate>2011-04-30T00:00:00Z</ToDate>
+            </AvailabilityCondition>
+          </validityConditions>
+          <Name>Winter timetable for route 23 outbound</Name>
+          <prerequisites modificationSet="all">
+            <ServiceFrameRef version="1.0" ref="mybus:ACS@Line_24@network"/>
+            <ServiceCalendarFrameRef version="1.0" ref="hde:Calendar@2010"/>
+          </prerequisites>
+          <VehicleModes>bus</VehicleModes>
+          <vehicleJourneys modificationSet="all">
+            <ServiceJourney id="hde:sj_24o_01" modification="new" version="any" status="active">
+              <journeyAccountings modificationSet="all">
+                <JourneyAccounting id="mytim:ac02" modification="new" version="any" status="active" order="1">
+                  <OrganisationRef ref="txc:xshire" xsi:type="AuthorityRefStructure">EXTERNAL</OrganisationRef>
+                  <AccountingType>subsidy</AccountingType>
+                  <Partial>false</Partial>
+                  <Distance>20</Distance>
+                </JourneyAccounting>
+                <JourneyAccounting id="mytim:ac03" modification="new" version="any" status="active" order="2">
+                  <OrganisationRef ref="txc:xshire" xsi:type="AuthorityRefStructure">EXTERNAL</OrganisationRef>
+                  <AccountingType>contract</AccountingType>
+                  <Partial>false</Partial>
+                  <Distance>20</Distance>
+                </JourneyAccounting>
+              </journeyAccountings>
+              <DepartureTime>14:20:00Z</DepartureTime>
+              <dayTypes modificationSet="all">
+                <DayTypeRef version="any" ref="hde:DT_02-Everyday-NotHoliday"/>
+                <DayTypeRef version="any" ref="hde:DT_ChristmasEve"/>
+                <DayTypeRef version="any" ref="hde:DT_ChristmasDay"/>
+                <DayTypeRef version="any" ref="hde:DT_ChristmasDayDisplacement"/>
+                <DayTypeRef version="any" ref="hde:DT_NewYearsEve"/>
+                <DayTypeRef version="any" ref="hde:DT_NewYearsDay"/>
+                <DayTypeRef version="any" ref="hde:DT_2ndJanuary"/>
+                <DayTypeRef version="any" ref="hde:DT_GoodFriday"/>
+                <DayTypeRef version="any" ref="hde:DT_EasterSunday"/>
+                <DayTypeRef version="any" ref="hde:DT_EasterMonday"/>
+              </dayTypes>
+              <ServicePatternRef version="any" ref="hde:svp_24o"/>
+              <TimeDemandTypeRef version="any" ref="mybus:tdt_01"/>
+              <BlockRef ref="mybus:BLK_24o5">EXTERNAL</BlockRef>
+              <LineRef version="any" ref="mybus:LN_24"/>
+              <JourneyPatternView>
+                <RouteRef version="any" ref="mybus:RT_24o"/>
+                <DirectionType>outbound</DirectionType>
+                <DestinationDisplayRef version="any" ref="mybus:DST_Charley"/>
+              </JourneyPatternView>
+              <runTimes>
+                <VehicleJourneyRunTime id="hde:vjrt_sj_24o_01" modification="new" status="active">
+                  <Name>Overall run time</Name>
+                  <TimeDemandTypeRef version="any" ref="mybus:tdt_01"/>
+                  <TimingLinkRef version="any" ref="mybus:SSP_001_to_SSP_077"/>
+                  <RunTime>PT70M</RunTime>
+                </VehicleJourneyRunTime>
+              </runTimes>
+              <passingTimes>
+                <TimetabledPassingTime id="mybus:tpt_24o_01_SSP_001" modification="new" version="any" status="active">
+                  <StopPointInJourneyPatternRef version="any" ref="hde:spijp_24o_01"/>
+                  <DepartureTime>14:00:00Z</DepartureTime>
+                </TimetabledPassingTime>
+                <TimetabledPassingTime id="hde:tpt_24o_01_SSP_001_t1" modification="new" version="any" status="active">
+                  <TimingPointInJourneyPatternRef version="any" ref="hde:tpijp_24o_02"/>
+                  <DepartureTime>14:10:00Z</DepartureTime>
+                </TimetabledPassingTime>
+                <TimetabledPassingTime id="hde:tpt_24o_01_SSP_001_t2" modification="new" version="any" status="active">
+                  <TimingPointInJourneyPatternRef version="any" ref="hde:tpijp_24o_03"/>
+                  <DepartureTime>14:20:00Z</DepartureTime>
+                </TimetabledPassingTime>
+                <TimetabledPassingTime id="mybus:tpt_24o_01_SSP_002" modification="new" version="any" status="active">
+                  <StopPointInJourneyPatternRef version="any" ref="hde:spijp_24o_02"/>
+                  <DepartureTime>14:30:00Z</DepartureTime>
+                </TimetabledPassingTime>
+                <TimetabledPassingTime id="hde:tpt_24o_01_SSP_002_t3" modification="new" version="any" status="active">
+                  <TimingPointInJourneyPatternRef version="any" ref="hde:tpijp_24o_05"/>
+                  <DepartureTime>14:50:00Z</DepartureTime>
+                </TimetabledPassingTime>
+                <TimetabledPassingTime id="mybus:tpt_24o_01_SSP_077" modification="new" version="any" status="active">
+                  <StopPointInJourneyPatternRef version="any" ref="hde:spijp_24o_03"/>
+                  <ArrivalTime>15:10:00Z</ArrivalTime>
+                </TimetabledPassingTime>
+              </passingTimes>
+              <calls>
+                <Call id="hde:sj_24o_01_001" modification="new" version="any" status="active" order="1">
+                  <ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
+                  <OnwardTimingLinkView>
+                    <TimingLinkRef version="any" ref="mybus:SSP_001_to_SSP_001_t1"/>
+                    <ToPointRef version="any" ref="mybus:SSP_001_t1"/>
+                  </OnwardTimingLinkView>
+                  <OnwardServiceLinkRef version="any" ref="mybus:SSP_001_to_SSP_002"/>
+                  <Arrival>
+                    <ForAlighting>false</ForAlighting>
+                  </Arrival>
+                  <Departure>
+                    <Time>14:00:00Z</Time>
+                  </Departure>
+                </Call>
+                <Call id="hde:sj_24o_01_002" modification="new" version="any" status="active" order="2">
+                  <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
+                  <OnwardTimingLinkView>
+                    <TimingLinkRef version="any" ref="mybus:SSP_002_to_SSP_002_t3"/>
+                    <ToPointRef version="any" ref="mybus:SSP_002_t3"/>
+                  </OnwardTimingLinkView>
+                  <OnwardServiceLinkRef version="any" ref="mybus:SSP_002_to_SSP_077"/>
+                  <Arrival>
+                    <Time>14:30:00Z</Time>
+                  </Arrival>
+                  <Departure>
+                    <Time>14:32:00Z</Time>
+                    <WaitTime>PT2M</WaitTime>
+                  </Departure>
+                  <Note>Arrival at Terminus</Note>
+                </Call>
+                <Call id="hde:sj_24o_01_003" modification="new" version="any" status="active" order="3">
+                  <ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
+                  <Arrival>
+                    <Time>15:10:00Z</Time>
+                  </Arrival>
+                  <Departure>
+                    <ForBoarding>false</ForBoarding>
+                  </Departure>
+                </Call>
+              </calls>
+              <facilities modificationSet="all">
+                <ServiceFacilitySetRef version="any" ref="hde:sfs_24o_01"/>
+              </facilities>
+            </ServiceJourney>
+            <ServiceJourney id="hde:sj_24o_02" modification="new" version="any" status="active">
+              <DepartureTime>15:20:00Z</DepartureTime>
+              <dayTypes modificationSet="all">
+                <DayTypeRef version="any" ref="hde:DT_01-MF-NotHoliday"/>
+              </dayTypes>
+              <ServicePatternRef version="any" ref="hde:svp_24o"/>
+              <TimeDemandTypeRef version="any" ref="mybus:tdt_01"/>
+              <BlockRef ref="mybus:BLK_24o8">EXTERNAL</BlockRef>
+              <LineRef version="any" ref="mybus:LN_24"/>
+              <JourneyPatternView>
+                <RouteRef version="any" ref="mybus:RT_24o"/>
+                <DirectionType>outbound</DirectionType>
+                <DestinationDisplayRef version="any" ref="mybus:DST_Charley"/>
+              </JourneyPatternView>
+              <runTimes>
+                <VehicleJourneyRunTime id="hde:vjrt_sj_24o_02" modification="new" status="active">
+                  <Name>Overall run time</Name>
+                  <TimeDemandTypeRef version="any" ref="mybus:tdt_01"/>
+                  <TimingLinkRef version="any" ref="mybus:SSP_001_to_SSP_077"/>
+                  <RunTime>PT70M</RunTime>
+                </VehicleJourneyRunTime>
+              </runTimes>
+              <passingTimes>
+                <TimetabledPassingTime id="mybus:tpt_24o_02_SSP_001" modification="new" version="any" status="active">
+                  <StopPointInJourneyPatternRef version="any" ref="hde:spijp_24o_01"/>
+                  <DepartureTime>15:00:00Z</DepartureTime>
+                </TimetabledPassingTime>
+                <TimetabledPassingTime id="hde:tpt_24o_02_SSP_001_t1" modification="new" version="any" status="active">
+                  <TimingPointInJourneyPatternRef version="any" ref="hde:tpijp_24o_02"/>
+                  <DepartureTime>15:10:00Z</DepartureTime>
+                </TimetabledPassingTime>
+                <TimetabledPassingTime id="hde:tpt_24o_02_SSP_001_t2" modification="new" version="any" status="active">
+                  <TimingPointInJourneyPatternRef version="any" ref="hde:tpijp_24o_03"/>
+                  <DepartureTime>15:20:00Z</DepartureTime>
+                </TimetabledPassingTime>
+                <TimetabledPassingTime id="mybus:tpt_24o_02_SSP_002" modification="new" version="any" status="active">
+                  <StopPointInJourneyPatternRef version="any" ref="hde:spijp_24o_02"/>
+                  <DepartureTime>15:30:00Z</DepartureTime>
+                </TimetabledPassingTime>
+                <TimetabledPassingTime id="hde:tpt_24o_02_SSP_002_t3" modification="new" version="any" status="active">
+                  <TimingPointInJourneyPatternRef version="any" ref="hde:tpijp_24o_05"/>
+                  <DepartureTime>15:50:00Z</DepartureTime>
+                </TimetabledPassingTime>
+                <TimetabledPassingTime id="mybus:tpt_24o_02_SSP_077" modification="new" version="any" status="active">
+                  <StopPointInJourneyPatternRef version="any" ref="hde:spijp_24o_03"/>
+                  <ArrivalTime>16:10:00Z</ArrivalTime>
+                </TimetabledPassingTime>
+              </passingTimes>
+              <calls>
+                <Call id="hde:sj_24o_02_001" modification="new" version="any" status="active" order="1">
+                  <ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
+                  <OnwardTimingLinkView>
+                    <TimingLinkRef version="any" ref="mybus:SSP_001_to_SSP_001_t1"/>
+                    <ToPointRef version="any" ref="mybus:SSP_001_t1"/>
+                  </OnwardTimingLinkView>
+                  <OnwardServiceLinkRef version="any" ref="mybus:SSP_001_to_SSP_002"/>
+                  <Arrival>
+                    <ForAlighting>false</ForAlighting>
+                  </Arrival>
+                  <Departure>
+                    <Time>15:00:00Z</Time>
+                  </Departure>
+                  <vias>
+                    <Via modification="new" status="active">
+                      <DestinationDisplayRef version="any" ref="mybus:DST_Bravo"/>
+                    </Via>
+                  </vias>
+                  <ChangeOfDestinationDisplay>false</ChangeOfDestinationDisplay>
+                </Call>
+                <Call id="hde:sj_24o_02_002" modification="new" version="any" status="active" order="2">
+                  <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
+                  <OnwardTimingLinkView>
+                    <TimingLinkRef version="any" ref="mybus:SSP_002_to_SSP_002_t3"/>
+                    <ToPointRef version="any" ref="mybus:SSP_002_t3"/>
+                  </OnwardTimingLinkView>
+                  <OnwardServiceLinkRef version="any" ref="mybus:SSP_002_to_SSP_077"/>
+                  <Arrival>
+                    <Time>15:30:00Z</Time>
+                  </Arrival>
+                  <Departure>
+                    <Time>15:32:00Z</Time>
+                    <WaitTime>PT2M</WaitTime>
+                  </Departure>
+                </Call>
+                <Call id="hde:sj_24o_02_003" modification="new" version="any" status="active" order="3">
+                  <ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
+                  <Arrival>
+                    <Time>16:10:00Z</Time>
+                  </Arrival>
+                  <Departure>
+                    <ForBoarding>false</ForBoarding>
+                  </Departure>
+                </Call>
+              </calls>
+              <facilities modificationSet="all">
+                <ServiceFacilitySetRef version="any" ref="hde:sfs_24o_01"/>
+              </facilities>
+            </ServiceJourney>
+          </vehicleJourneys>
+          <serviceFacilitySets modificationSet="all">
+            <ServiceFacilitySet id="hde:sfs_24o_01" modification="new" version="any" status="active">
+              <ProvidedByRef ref="xyz:4567">EXTERNAL</ProvidedByRef>
+              <AssistanceFacilityList>boardingAssistance conductor wheechairAssistance</AssistanceFacilityList>
+              <FareClasses>standardClass</FareClasses>
+              <MobilityFacilityList>stepFreeAccess suitableForWheelchairs</MobilityFacilityList>
+              <NuisanceFacilityList>noSmoking</NuisanceFacilityList>
+              <PassengerInformationFacilityList>nextStopIndicator realTimeConnections stopAnnouncements</PassengerInformationFacilityList>
+              <TicketingServiceFacilityList>purchase</TicketingServiceFacilityList>
+              <LuggageCarriageFacilityList>noBaggageStorage</LuggageCarriageFacilityList>
+            </ServiceFacilitySet>
+          </serviceFacilitySets>
+        </TimetableFrame>
+        <ResourceFrame id="acs:ACS@Common_resources" modification="new" version="1.0" status="active">
+          <codespaces modificationSet="all">
+            <Codespace id="acs">
+              <Xmlns>acs</Xmlns>
+              <XmlnsUrl>http://autocarssuperbe.fr</XmlnsUrl>
+              <Description>Service data </Description>
+            </Codespace>
+          </codespaces>
+          <FrameDefaults>
+            <DefaultCodespaceRef ref="acs"/>
+          </FrameDefaults>
+          <organisations modificationSet="all">
+            <Operator id="acs:ACS" modification="new" version="1.0" status="active">
+              <Name>Autocars superbe</Name>
+              <Locale>
+                <DefaultLanguage>fr</DefaultLanguage>
+              </Locale>
+              <ContactDetails>
+                <Phone>+33-1-675-9876</Phone>
+                <Url>http://autocarssuperbe.fr</Url>
+              </ContactDetails>
+            </Operator>
+          </organisations>
+        </ResourceFrame>
+        <ServiceCalendarFrame id="hde:Calendar@2010" modification="new" version="1.0" status="active">
+          <Name>Service Calendar Nov to April 2010  (Compact Coding) </Name>
+          <ServiceCalendar id="hde:Calendar@2010" modification="new" version="any" status="active">
+            <FromDate>2010-11-01</FromDate>
+            <ToDate>2010-11-14</ToDate>
+          </ServiceCalendar>
+          <dayTypes modificationSet="all">
+            <DayType id="hde:DT_01-MF-NotHoliday" modification="new" version="any" status="active">
+              <Name>Weekdays unless a holiday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+                  <HolidayTypes>NotHoliday</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType id="hde:DT_02-Everyday-NotHoliday" modification="new" version="any" status="active">
+              <Name>Everyday unless a holiday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Everyday</DaysOfWeek>
+                  <HolidayTypes>NotHoliday</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType id="hde:DT_03-WE-NotHoliday" modification="new" version="any" status="active">
+              <Name>Weekends unless a holiday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Saturday Sunday</DaysOfWeek>
+                  <HolidayTypes>NotHoliday</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType id="hde:DT_04-AA-NotHoliday" modification="new" version="any" status="active">
+              <Name>Holidays</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Everyday</DaysOfWeek>
+                  <HolidayTypes>AnyHoliday</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType id="hde:DT_ChristmasEve" modification="new" version="any" status="active">
+              <Name>Christmas Ev e  </Name>
+              <properties>
+                <PropertyOfDay>
+                  <DayOfYear>--12-24</DayOfYear>
+                  <HolidayTypes>EveOfHoliday</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType id="hde:DT_ChristmasDay" modification="new" version="any" status="active">
+              <Name>Christmas Day  </Name>
+              <properties>
+                <PropertyOfDay>
+                  <DayOfYear>--12-25</DayOfYear>
+                  <HolidayTypes>NationalHoliday</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType id="hde:DT_ChristmasDayDisplacement" modification="new" version="any" status="active">
+              <Name>Christmas Day Displacement holidday </Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+                  <HolidayTypes>HolidayDisplacementDay</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType id="hde:DT_NewYearsEve" modification="new" version="any" status="active">
+              <Name>NewYear's Eve  </Name>
+              <properties>
+                <PropertyOfDay>
+                  <DayOfYear>--12-31</DayOfYear>
+                  <HolidayTypes>EveOfHoliday</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType id="hde:DT_NewYearsDay" modification="new" version="any" status="active">
+              <Name>NewYear's  Day  </Name>
+              <properties>
+                <PropertyOfDay>
+                  <DayOfYear>--01-01</DayOfYear>
+                  <HolidayTypes>NationalHoliday</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType id="hde:DT_2ndJanuary" modification="new" version="any" status="active">
+              <Name>2nd January Holiday (Scotland)  </Name>
+              <properties>
+                <PropertyOfDay>
+                  <DayOfYear>--02-01</DayOfYear>
+                  <HolidayTypes>RegionalHoliday</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType id="hde:DT_NewYearsDayDisplacement" modification="new" version="any" status="active">
+              <Name>NewYear's  Day Displacement holiday </Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+                  <HolidayTypes>HolidayDisplacementDay</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType id="hde:DT_GoodFriday" modification="new" version="any" status="active">
+              <Name>Good Friday </Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Friday</DaysOfWeek>
+                  <HolidayTypes>NationalHoliday</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType id="hde:DT_EasterSunday" modification="new" version="any" status="active">
+              <Name>Easter Sunday  </Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Sunday</DaysOfWeek>
+                  <HolidayTypes>NationalHoliday</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType id="hde:DT_EasterMonday" modification="new" version="any" status="active">
+              <Name>Easter Monday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Monday</DaysOfWeek>
+                  <HolidayTypes>NationalHoliday</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+          </dayTypes>
+          <operatingDays modificationSet="all">
+            <OperatingDay id="hde:OD_2010-11-01" modification="new" version="any" status="active">
+              <CalendarDate>2010-11-01</CalendarDate>
+              <Name>Monday 2010-11-01</Name>
+              <EarliestTime>02:00:00</EarliestTime>
+              <DayLength>PT24H</DayLength>
+            </OperatingDay>
+            <OperatingDay id="hde:OD_2011-04-30" modification="new" version="any" status="active">
+              <CalendarDate>2011-04-30</CalendarDate>
+              <Name>Saturday 2011-04-30</Name>
+              <EarliestTime>02:00:00</EarliestTime>
+              <DayLength>PT24H</DayLength>
+            </OperatingDay>
+          </operatingDays>
+          <operatingPeriods modificationSet="all">
+            <OperatingPeriod id="hde:op_010" modification="new" version="any" status="active">
+              <Name>WInter 2011</Name>
+              <FromOperatingDayRef version="any" ref="hde:OD_2010-11-01"/>
+              <ToOperatingDayRef version="any" ref="hde:OD_2011-04-30"/>
+              <HolidayType>NotHoliday</HolidayType>
+              <Season>Winter</Season>
+            </OperatingPeriod>
+          </operatingPeriods>
+          <dayTypeAssignments modificationSet="all">
+            <DayTypeAssignment id="hde:DayAsgn_2010-11-01" modification="new" version="any" status="active" order="1">
+              <Description>Monday 2010-11-01</Description>
+              <OperatingDayRef version="any" ref="hde:OD_2010-11-01"/>
+              <DayTypeRef version="any" ref="hde:DT_01-MF-NotHoliday"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="hde:DayAsgn_2010-11-02" modification="new" version="any" status="active" order="1">
+              <Description>Tuesday 2010-11-02</Description>
+              <Date>2010-11-02</Date>
+              <DayTypeRef version="any" ref="hde:DT_01-MF-NotHoliday"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="hde:DayAsgn_2010-11-03" modification="new" version="any" status="active" order="1">
+              <Description>Wednesday 2010-11-03</Description>
+              <Date>2010-11-03</Date>
+              <DayTypeRef version="any" ref="hde:DT_01-MF-NotHoliday"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="hde:DayAsgn_2010-11-04" modification="new" version="any" status="active" order="1">
+              <Description>Thusday 2010-11-04</Description>
+              <Date>2010-11-04</Date>
+              <DayTypeRef version="any" ref="hde:DT_01-MF-NotHoliday"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="hde:DayAsgn_2010-11-05" modification="new" version="any" status="active" order="1">
+              <Description>MFriday 2010-11-05</Description>
+              <Date>2010-11-05</Date>
+              <DayTypeRef version="any" ref="hde:DT_01-MF-NotHoliday"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="hde:DayAsgn_2010-11-06" modification="new" version="any" status="active" order="1">
+              <Description>Saturday 2010-11-06</Description>
+              <Date>2010-11-06</Date>
+              <DayTypeRef version="any" ref="hde:DT_03-WE-NotHoliday"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="hde:DayAsgn_2010-11-07" modification="new" version="any" status="active" order="1">
+              <Description>Sunday 2010-11-07</Description>
+              <Date>2010-11-07</Date>
+              <DayTypeRef version="any" ref="hde:DT_03-WE-NotHoliday"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="hde:DayAsgn_2010-11-08" modification="new" version="any" status="active" order="1">
+              <Description>Monday 2010-11-08</Description>
+              <Date>2010-11-08</Date>
+              <DayTypeRef version="any" ref="hde:DT_01-MF-NotHoliday"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="hde:DayAsgn_2010-11-09" modification="new" version="any" status="active" order="1">
+              <Description>Tuesday 2010-11-09</Description>
+              <Date>2010-11-09</Date>
+              <DayTypeRef version="any" ref="hde:DT_01-MF-NotHoliday"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="hde:DayAsgn_2010-11-10" modification="new" version="any" status="active" order="1">
+              <Description>Wednesday 2010-11-10</Description>
+              <Date>2010-11-10</Date>
+              <DayTypeRef version="any" ref="hde:DT_01-MF-NotHoliday"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="hde:DayAsgn_2010-11-11" modification="new" version="any" status="active" order="1">
+              <Description>Thusday 2010-11-11</Description>
+              <Date>2010-11-11</Date>
+              <DayTypeRef version="any" ref="hde:DT_01-MF-NotHoliday"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="hde:DayAsgn_2010-11-12" modification="new" version="any" status="active" order="1">
+              <Description>MFriday 2010-11-12</Description>
+              <Date>2010-11-12</Date>
+              <DayTypeRef version="any" ref="hde:DT_01-MF-NotHoliday"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="hde:DayAsgn_2010-11-13" modification="new" version="any" status="active" order="1">
+              <Description>Saturday 2010-11-13</Description>
+              <Date>2010-11-13</Date>
+              <DayTypeRef version="any" ref="hde:DT_03-WE-NotHoliday"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="hde:DayAsgn_2010-11-14" modification="new" version="any" status="active" order="1">
+              <Description>Sunday 2010-11-14</Description>
+              <Date>2010-11-14</Date>
+              <DayTypeRef version="any" ref="hde:DT_03-WE-NotHoliday"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="hde:DayAsgn_2010-12-24" modification="new" version="any" status="active" order="1">
+              <Description>Sunday 2010-12-24</Description>
+              <Date>2010-12-31</Date>
+              <DayTypeRef version="any" ref="hde:DT_ChristmasEve"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="hde:DayAsgn_2010-12-25" modification="new" version="any" status="active" order="1">
+              <Description>Saturday 2010-12-25 Christams Day</Description>
+              <Date>2010-12-25</Date>
+              <DayTypeRef version="any" ref="hde:DT_ChristmasDay"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="hde:DayAsgn_2010-12-27" modification="new" version="any" status="active" order="1">
+              <Description>Monday 2010-12-27 (Christjmas Day displacement holiday)</Description>
+              <Date>2010-12-27</Date>
+              <DayTypeRef version="any" ref="hde:DT_ChristmasDayDisplacement"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="hde:DayAsgn_2010-12-31" modification="new" version="any" status="active" order="1">
+              <Description>Friday 2010-12-31  New Years eve</Description>
+              <Date>2010-12-31</Date>
+              <DayTypeRef version="any" ref="hde:DT_NewYearsEve"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="hde:DayAsgn_2011-01-01" modification="new" version="any" status="active" order="1">
+              <Description>Saturday  2011-01-01 New Years day</Description>
+              <Date>2011-01-01</Date>
+              <DayTypeRef version="any" ref="hde:DT_NewYearsDay"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="hde:DayAsgn_2011-01-03" modification="new" version="any" status="active" order="1">
+              <Description>Satuurday  2011-01-03 New Years day displacement</Description>
+              <Date>2011-01-03</Date>
+              <DayTypeRef version="any" ref="hde:DT_NewYearsDayDisplacement"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="hde:DayAsgn_&gt;2011-04-22" modification="new" version="any" status="active" order="1">
+              <Description>Friday 2011-04-22 Good Friday</Description>
+              <Date>2011-04-22</Date>
+              <DayTypeRef version="any" ref="hde:DT_GoodFriday"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="hde:DayAsgn_&gt;2011-04-24" modification="new" version="any" status="active" order="1">
+              <Description>Sunday 2011-04-24 Easter Sunday</Description>
+              <Date>2011-04-24</Date>
+              <DayTypeRef version="any" ref="hde:DT_EasterSunday"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="hde:DayAsgn_&gt;2011-04-25" modification="new" version="any" status="active" order="1">
+              <Description>Monday 2011-04-25 Easter Monday</Description>
+              <Date>2011-04-25</Date>
+              <DayTypeRef version="any" ref="hde:DT_EasterMonday"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="hde:DayAsgn_2011-04-29" modification="new" version="any" status="active" order="1">
+              <Description>Friday2011-04-29</Description>
+              <Date>2011-04-29</Date>
+              <DayTypeRef version="any" ref="hde:DT_01-MF-NotHoliday"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="hde:DayAsgn_2011-04-30" modification="new" version="any" status="active" order="1">
+              <Description>Saturday 2011-04-30</Description>
+              <OperatingDayRef version="any" ref="hde:OD_2011-04-30"/>
+              <DayTypeRef version="any" ref="hde:DT_03-WE-NotHoliday"/>
+            </DayTypeAssignment>
+          </dayTypeAssignments>
+        </ServiceCalendarFrame>
+      </frames>
+    </CompositeFrame>
+  </dataObjects>
+</PublicationDelivery>
+

@@ -195,6 +195,6 @@ class DefaultConnectionVersionStructure(TransferVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 80,
+            "max_occurs": 81,
         }
     )

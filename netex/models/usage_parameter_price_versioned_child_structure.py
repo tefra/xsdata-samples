@@ -202,6 +202,6 @@ class UsageParameterPriceVersionedChildStructure(FarePriceVersionedChildStructur
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 68,
+            "max_occurs": 69,
         }
     )

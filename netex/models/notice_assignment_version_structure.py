@@ -216,6 +216,6 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 105,
+            "max_occurs": 113,
         }
     )

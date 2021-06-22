@@ -414,7 +414,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 70,
+            "max_occurs": 73,
         }
     )
     customer_purchase_package_element_ref: List[CustomerPurchasePackageElementRef] = field(
@@ -1132,7 +1132,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 50,
+            "max_occurs": 73,
         }
     )
     order: Optional[int] = field(
@@ -1519,7 +1519,7 @@ class FareTableVersionStructure(GroupOfEntitiesVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 45,
+            "max_occurs": 55,
         }
     )
 
@@ -1674,7 +1674,7 @@ class PriceableObjectVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 5,
+            "max_occurs": 8,
         }
     )
 
@@ -1756,7 +1756,7 @@ class TimeStructureFactorVersionStructure(FareStructureFactorVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 6,
+            "max_occurs": 10,
         }
     )
 
@@ -1813,7 +1813,7 @@ class ParkingChargeBandVersionStructure(TimeStructureFactorVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 4,
+            "max_occurs": 7,
         }
     )
 
@@ -2195,7 +2195,7 @@ class PriceGroupVersionStructure(GroupOfEntitiesVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 34,
+            "max_occurs": 35,
         }
     )
 

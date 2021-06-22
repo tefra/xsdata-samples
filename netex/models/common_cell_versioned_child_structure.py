@@ -57,7 +57,7 @@ class CommonCellVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 3,
+            "max_occurs": 6,
         }
     )
     order: Optional[int] = field(

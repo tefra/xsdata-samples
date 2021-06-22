@@ -8180,7 +8180,6 @@
                           <Description>Boroughs of Greater London </Description>
                         </CodespaceAssignment>
                       </codespaceAssignments>
-                      <VehicleModes>all</VehicleModes>
                     </TransportAdministrativeZone>
                   </administrativeZones>
                 </OrganisationPart>
@@ -8200,7 +8199,6 @@
                           <Description>UK NPTG Admin Area codes  </Description>
                         </CodespaceAssignment>
                       </codespaceAssignments>
-                      <VehicleModes>all</VehicleModes>
                     </TransportAdministrativeZone>
                     <TransportAdministrativeZone id="nptg:Administrative_Zone@110" modification="new" version="any" status="active">
                       <Name>UK Rail </Name>
@@ -8211,7 +8209,6 @@
                           <Description>UK Rail  </Description>
                         </CodespaceAssignment>
                       </codespaceAssignments>
-                      <VehicleModes>all</VehicleModes>
                     </TransportAdministrativeZone>
                     <TransportAdministrativeZone id="nptg:Administrative_Zone@144" modification="new" version="any" status="active">
                       <Name>UK Rail</Name>
@@ -8222,7 +8219,6 @@
                           <Description>UK Rail Alias</Description>
                         </CodespaceAssignment>
                       </codespaceAssignments>
-                      <VehicleModes>all</VehicleModes>
                     </TransportAdministrativeZone>
                     <TransportAdministrativeZone id="nptg:Administrative_Zone@147" modification="new" version="any" status="active">
                       <Name>UK Metro</Name>
@@ -8233,7 +8229,6 @@
                           <Description>UK Metro and Tram</Description>
                         </CodespaceAssignment>
                       </codespaceAssignments>
-                      <VehicleModes>all</VehicleModes>
                     </TransportAdministrativeZone>
                   </administrativeZones>
                 </OrganisationPart>
@@ -8279,10 +8274,7 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <HolidayTypes>WorkingDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
               <timebands modificationSet="all">
@@ -8297,10 +8289,7 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Saturday</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <HolidayTypes>WorkingDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
               <timebands modificationSet="all">
@@ -8315,10 +8304,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Sunday</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
               <timebands modificationSet="all">
@@ -8332,10 +8317,7 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday Saturday</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <HolidayTypes>WorkingDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
               <timebands modificationSet="all">
@@ -8349,10 +8331,7 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <HolidayTypes>WorkingDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
               <timebands modificationSet="all">
@@ -8366,10 +8345,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Sunday</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
               <timebands modificationSet="all">

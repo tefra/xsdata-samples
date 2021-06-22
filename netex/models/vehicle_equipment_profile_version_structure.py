@@ -365,6 +365,6 @@ class VehicleEquipmentProfileVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 157,
+            "max_occurs": 161,
         }
     )

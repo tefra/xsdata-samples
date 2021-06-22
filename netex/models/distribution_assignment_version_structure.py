@@ -296,6 +296,6 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 152,
+            "max_occurs": 178,
         }
     )

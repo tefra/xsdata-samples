@@ -61,7 +61,6 @@ class TimingPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVers
                     "name": "TimingPointRef",
                     "type": TimingPointRef,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "required": True,
                 },
                 {
                     "name": "OnwardTimingLinkRef",
@@ -94,7 +93,7 @@ class TimingPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVers
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "min_occurs": 6,
-            "max_occurs": 16,
+            "min_occurs": 7,
+            "max_occurs": 23,
         }
     )

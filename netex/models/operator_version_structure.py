@@ -55,9 +55,7 @@ class OperatorVersionStructure(OrganisationVersionStructure):
                     "name": "OperatorActivities",
                     "type": List[OperatorActivitiesEnumeration],
                     "namespace": "http://www.netex.org.uk/netex",
-                    "default_factory": lambda: [
-            OperatorActivitiesEnumeration.PASSENGER,
-        ],
+                    "default_factory": list,
                     "tokens": True,
                 },
                 {
@@ -71,6 +69,6 @@ class OperatorVersionStructure(OrganisationVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 4,
+            "max_occurs": 9,
         }
     )

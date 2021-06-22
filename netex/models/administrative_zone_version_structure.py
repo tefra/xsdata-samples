@@ -106,7 +106,7 @@ class AdministrativeZoneVersionStructure(ZoneVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 24,
+            "max_occurs": 28,
         }
     )
 
@@ -124,9 +124,7 @@ class TransportAdministrativeZoneVersionStructure(AdministrativeZoneVersionStruc
         name = "TransportAdministrativeZone_VersionStructure"
 
     vehicle_modes: List[AllVehicleModesOfTransportEnumeration] = field(
-        default_factory=lambda: [
-            AllVehicleModesOfTransportEnumeration.ALL,
-        ],
+        default_factory=list,
         metadata={
             "name": "VehicleModes",
             "type": "Element",

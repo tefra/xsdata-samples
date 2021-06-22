@@ -201,6 +201,6 @@ class FareTableSpecificsStructure:
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 20,
+            "max_occurs": 41,
         }
     )

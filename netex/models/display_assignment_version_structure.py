@@ -44,7 +44,6 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
                     "name": "ScheduledStopPointRef",
                     "type": ScheduledStopPointRef,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "required": True,
                 },
                 {
                     "name": "VehicleMode",
@@ -102,7 +101,7 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "min_occurs": 1,
-            "max_occurs": 15,
+            "min_occurs": 2,
+            "max_occurs": 23,
         }
     )

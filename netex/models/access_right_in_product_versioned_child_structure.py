@@ -37,6 +37,6 @@ class AccessRightInProductVersionedChildStructure(FareElementInSequenceVersioned
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
+            "max_occurs": 3,
         }
     )

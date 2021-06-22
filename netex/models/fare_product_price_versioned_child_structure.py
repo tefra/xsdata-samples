@@ -64,6 +64,6 @@ class FareProductPriceVersionedChildStructure(FarePriceVersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 16,
+            "max_occurs": 17,
         }
     )

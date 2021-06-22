@@ -140,7 +140,7 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
+            "max_occurs": 15,
         }
     )
     order: Optional[int] = field(

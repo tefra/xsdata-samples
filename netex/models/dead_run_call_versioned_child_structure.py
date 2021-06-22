@@ -221,7 +221,7 @@ class DeadRunCallVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 53,
+            "max_occurs": 72,
         }
     )
     order: Optional[int] = field(

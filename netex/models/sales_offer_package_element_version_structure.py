@@ -111,7 +111,7 @@ class SalesOfferPackageElementVersionStructure(PriceableObjectVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 16,
+            "max_occurs": 19,
         }
     )
     order: Optional[int] = field(

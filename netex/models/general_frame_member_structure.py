@@ -2882,10 +2882,9 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
                     "name": "VersionOfObjectRef",
                     "type": VersionOfObjectRef,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "required": True,
                 },
             ),
-            "min_occurs": 476,
-            "max_occurs": 1583,
+            "min_occurs": 477,
+            "max_occurs": 1584,
         }
     )

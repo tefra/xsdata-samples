@@ -442,6 +442,6 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 323,
+            "max_occurs": 326,
         }
     )

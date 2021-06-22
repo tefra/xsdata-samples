@@ -100,11 +100,7 @@
                           <DayType id="myfares:Time_interval@access_when" modification="new" version="1.0" status="active">
                             <properties>
                               <PropertyOfDay>
-                                <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                                 <DayOfMonth>---01</DayOfMonth>
-                                <HolidayTypes>AnyDay</HolidayTypes>
-                                <Seasons>Perennially</Seasons>
-                                <Tides>AllTides</Tides>
                               </PropertyOfDay>
                             </properties>
                           </DayType>

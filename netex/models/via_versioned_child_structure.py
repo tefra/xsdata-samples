@@ -97,6 +97,6 @@ class ViaVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 24,
+            "max_occurs": 26,
         }
     )

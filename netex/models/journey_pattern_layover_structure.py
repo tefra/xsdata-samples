@@ -37,6 +37,6 @@ class JourneyPatternLayoverStructure(JourneyLayoverStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 6,
+            "max_occurs": 7,
         }
     )

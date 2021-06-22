@@ -10806,10 +10806,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Everyday</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -10818,10 +10814,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -10830,10 +10822,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Tuesday Wednesday Thursday</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -10842,10 +10830,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Friday</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -10854,10 +10838,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Tuesday Wednesday Thursday</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -10866,10 +10846,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Tuesday Wednesday Thursday</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -10878,10 +10854,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Tuesday Wednesday Thursday</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -10890,10 +10862,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Tuesday Wednesday Thursday</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -10902,10 +10870,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Friday</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -10914,10 +10878,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Saturday</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -10926,10 +10886,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Sunday</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -10937,10 +10893,7 @@
               <Name>No Service Day</Name>
               <properties>
                 <PropertyOfDay>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
                   <HolidayTypes>NationalHoliday</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -11023,10 +10976,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Everyday</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -11035,10 +10984,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Wednesday Thursday Friday Sunday</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -11127,10 +11072,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Saturday</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -11139,10 +11080,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Friday</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -11151,10 +11088,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Saturday</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -11163,10 +11096,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Saturday</DaysOfWeek>
-                  <WeeksOfMonth>EveryWeek</WeeksOfMonth>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons>Perennially</Seasons>
-                  <Tides>AllTides</Tides>
                 </PropertyOfDay>
               </properties>
             </DayType>

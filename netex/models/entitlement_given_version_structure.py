@@ -77,7 +77,6 @@ class EntitlementGivenVersionStructure(UsageParameterVersionStructure):
                     "name": "ServiceAccessRightRef",
                     "type": ServiceAccessRightRef,
                     "namespace": "http://www.netex.org.uk/netex",
-                    "required": True,
                 },
                 {
                     "name": "MinimumQualificationPeriod",
@@ -95,7 +94,7 @@ class EntitlementGivenVersionStructure(UsageParameterVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "min_occurs": 9,
-            "max_occurs": 56,
+            "min_occurs": 10,
+            "max_occurs": 60,
         }
     )

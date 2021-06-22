@@ -33,10 +33,10 @@ class PresentationStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    back_ground_colour: Optional[bytes] = field(
+    background_colour: Optional[bytes] = field(
         default=None,
         metadata={
-            "name": "BackGroundColour",
+            "name": "BackgroundColour",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "max_length": 6,

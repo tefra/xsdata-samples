@@ -427,7 +427,7 @@ class LineSectionVersionStructure(SectionVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 6,
+            "max_occurs": 8,
         }
     )
 
@@ -491,7 +491,7 @@ class FareSectionVersionStructure(GeneralSectionVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 6,
+            "max_occurs": 10,
         }
     )
 
@@ -585,7 +585,7 @@ class SectionInSequenceVersionedChildStructure(LinkInLinkSequenceVersionedChildS
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 21,
+            "max_occurs": 23,
         }
     )
 
