@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import Optional
 from .dead_run_ref import DeadRunRef
 from .journey_headway_versioned_child_structure import JourneyHeadwayVersionedChildStructure
 from .timing_point_in_journey_pattern_ref import TimingPointInJourneyPatternRef
@@ -13,27 +13,27 @@ class VehicleJourneyHeadwayVersionedChildStructure(JourneyHeadwayVersionedChildS
     class Meta:
         name = "VehicleJourneyHeadway_VersionedChildStructure"
 
-    dead_run_ref_or_vehicle_journey_ref_or_timing_point_in_journey_pattern_ref: List[object] = field(
-        default_factory=list,
+    dead_run_ref: Optional[DeadRunRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "DeadRunRef",
-                    "type": DeadRunRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "VehicleJourneyRef",
-                    "type": VehicleJourneyRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TimingPointInJourneyPatternRef",
-                    "type": TimingPointInJourneyPatternRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 4,
+            "name": "DeadRunRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    vehicle_journey_ref: Optional[VehicleJourneyRef] = field(
+        default=None,
+        metadata={
+            "name": "VehicleJourneyRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    timing_point_in_journey_pattern_ref: Optional[TimingPointInJourneyPatternRef] = field(
+        default=None,
+        metadata={
+            "name": "TimingPointInJourneyPatternRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )

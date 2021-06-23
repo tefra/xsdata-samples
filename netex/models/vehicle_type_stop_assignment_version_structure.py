@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .assignment_version_structure_1 import AssignmentVersionStructure1
 from .compound_train_ref import CompoundTrainRef
 from .dead_run_ref import DeadRunRef
@@ -33,38 +33,46 @@ class VehicleTypeStopAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
-        default_factory=list,
+    dead_run_ref: Optional[DeadRunRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "DeadRunRef",
-                    "type": DeadRunRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "VehicleJourneyRef",
-                    "type": VehicleJourneyRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "CompoundTrainRef",
-                    "type": CompoundTrainRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TrainRef",
-                    "type": TrainRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "VehicleTypeRef",
-                    "type": VehicleTypeRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "min_occurs": 3,
-            "max_occurs": 8,
+            "name": "DeadRunRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    vehicle_journey_ref: Optional[VehicleJourneyRef] = field(
+        default=None,
+        metadata={
+            "name": "VehicleJourneyRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    compound_train_ref: Optional[CompoundTrainRef] = field(
+        default=None,
+        metadata={
+            "name": "CompoundTrainRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "required": True,
+        }
+    )
+    train_ref: Optional[TrainRef] = field(
+        default=None,
+        metadata={
+            "name": "TrainRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "required": True,
+        }
+    )
+    vehicle_type_ref: Optional[VehicleTypeRef] = field(
+        default=None,
+        metadata={
+            "name": "VehicleTypeRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "required": True,
         }
     )

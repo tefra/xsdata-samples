@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .all_modes_enumeration import AllModesEnumeration
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .control_centre_ref import ControlCentreRef
@@ -42,42 +42,51 @@ class OperationalContextVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
-        default_factory=list,
+    control_centre_ref: Optional[ControlCentreRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "ControlCentreRef",
-                    "type": ControlCentreRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "OrganisationalUnitRef",
-                    "type": OrganisationalUnitRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "DepartmentRef",
-                    "type": DepartmentRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "OrganisationPartRef",
-                    "type": OrganisationPartRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "VehicleMode",
-                    "type": AllModesEnumeration,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TransportSubmode",
-                    "type": TransportSubmode,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 9,
+            "name": "ControlCentreRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    organisational_unit_ref: Optional[OrganisationalUnitRef] = field(
+        default=None,
+        metadata={
+            "name": "OrganisationalUnitRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    department_ref: Optional[DepartmentRef] = field(
+        default=None,
+        metadata={
+            "name": "DepartmentRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    organisation_part_ref: Optional[OrganisationPartRef] = field(
+        default=None,
+        metadata={
+            "name": "OrganisationPartRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    vehicle_mode: Optional[AllModesEnumeration] = field(
+        default=None,
+        metadata={
+            "name": "VehicleMode",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    transport_submode: Optional[TransportSubmode] = field(
+        default=None,
+        metadata={
+            "name": "TransportSubmode",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )

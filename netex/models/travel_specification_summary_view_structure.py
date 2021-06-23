@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xsdata.models.datatype import XmlDateTime, XmlDuration
 from .class_of_use_ref import ClassOfUseRef
 from .companion_profile_ref import CompanionProfileRef
@@ -126,52 +126,67 @@ class TravelSpecificationSummaryViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
-        default_factory=list,
+    companion_profile_ref: Optional[CompanionProfileRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "CompanionProfileRef",
-                    "type": CompanionProfileRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "UserProfileRef",
-                    "type": UserProfileRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "GroupTicketRef",
-                    "type": GroupTicketRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "MaximumNumberOfUsers",
-                    "type": int,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TrainElementRef",
-                    "type": TrainElementRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TrainComponentLabelAssignmentRef",
-                    "type": TrainComponentLabelAssignmentRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "PassengerSeatRef",
-                    "type": PassengerSeatRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ServiceFacilitySet",
-                    "type": ServiceFacilitySet,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 9,
+            "name": "CompanionProfileRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    user_profile_ref: Optional[UserProfileRef] = field(
+        default=None,
+        metadata={
+            "name": "UserProfileRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    group_ticket_ref: Optional[GroupTicketRef] = field(
+        default=None,
+        metadata={
+            "name": "GroupTicketRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    maximum_number_of_users: Optional[int] = field(
+        default=None,
+        metadata={
+            "name": "MaximumNumberOfUsers",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    train_element_ref: Optional[TrainElementRef] = field(
+        default=None,
+        metadata={
+            "name": "TrainElementRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    train_component_label_assignment_ref: Optional[TrainComponentLabelAssignmentRef] = field(
+        default=None,
+        metadata={
+            "name": "TrainComponentLabelAssignmentRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    passenger_seat_ref: Optional[PassengerSeatRef] = field(
+        default=None,
+        metadata={
+            "name": "PassengerSeatRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    service_facility_set: Optional[ServiceFacilitySet] = field(
+        default=None,
+        metadata={
+            "name": "ServiceFacilitySet",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )

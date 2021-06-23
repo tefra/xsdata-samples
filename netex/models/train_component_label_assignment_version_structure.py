@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .assignment_version_structure_1 import AssignmentVersionStructure1
 from .dead_run_ref import DeadRunRef
 from .multilingual_string import MultilingualString
@@ -22,28 +22,28 @@ class TrainComponentLabelAssignmentVersionStructure(AssignmentVersionStructure1)
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    dead_run_ref_or_vehicle_journey_ref_or_train_component_ref: List[object] = field(
-        default_factory=list,
+    dead_run_ref: Optional[DeadRunRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "DeadRunRef",
-                    "type": DeadRunRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "VehicleJourneyRef",
-                    "type": VehicleJourneyRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TrainComponentRef",
-                    "type": TrainComponentRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "min_occurs": 1,
-            "max_occurs": 4,
+            "name": "DeadRunRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    vehicle_journey_ref: Optional[VehicleJourneyRef] = field(
+        default=None,
+        metadata={
+            "name": "VehicleJourneyRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    train_component_ref: Optional[TrainComponentRef] = field(
+        default=None,
+        metadata={
+            "name": "TrainComponentRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "required": True,
         }
     )

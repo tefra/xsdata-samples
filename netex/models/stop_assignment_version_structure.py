@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .assignment_version_structure_1 import AssignmentVersionStructure1
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
 from .private_code import PrivateCode
@@ -38,27 +38,27 @@ class StopAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point: List[object] = field(
-        default_factory=list,
+    fare_scheduled_stop_point_ref: Optional[FareScheduledStopPointRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "FareScheduledStopPointRef",
-                    "type": FareScheduledStopPointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ScheduledStopPointRef",
-                    "type": ScheduledStopPointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ScheduledStopPoint",
-                    "type": ScheduledStopPoint,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 4,
+            "name": "FareScheduledStopPointRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    scheduled_stop_point_ref: Optional[ScheduledStopPointRef] = field(
+        default=None,
+        metadata={
+            "name": "ScheduledStopPointRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    scheduled_stop_point: Optional[ScheduledStopPoint] = field(
+        default=None,
+        metadata={
+            "name": "ScheduledStopPoint",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )

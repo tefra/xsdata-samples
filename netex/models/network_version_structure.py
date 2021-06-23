@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import Optional
 from .authority_ref import AuthorityRef
 from .group_of_lines_version_structure import GroupOfLinesVersionStructure
 from .groups_of_lines_in_frame_rel_structure import GroupsOfLinesInFrameRelStructure
@@ -16,42 +16,51 @@ class NetworkVersionStructure(GroupOfLinesVersionStructure):
     class Meta:
         name = "Network_VersionStructure"
 
-    choice: List[object] = field(
-        default_factory=list,
+    authority_ref: Optional[AuthorityRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "AuthorityRef",
-                    "type": AuthorityRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "OperatorRef",
-                    "type": OperatorRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TransportOrganisationRef",
-                    "type": TransportOrganisationRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "groupsOfOperators",
-                    "type": GroupsOfTransportOrganisationsRefsRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "groupsOfLines",
-                    "type": GroupsOfLinesInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "tariffZones",
-                    "type": TariffZoneRefsRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 8,
+            "name": "AuthorityRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    operator_ref: Optional[OperatorRef] = field(
+        default=None,
+        metadata={
+            "name": "OperatorRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    transport_organisation_ref: Optional[TransportOrganisationRef] = field(
+        default=None,
+        metadata={
+            "name": "TransportOrganisationRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    groups_of_operators: Optional[GroupsOfTransportOrganisationsRefsRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "groupsOfOperators",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    groups_of_lines: Optional[GroupsOfLinesInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "groupsOfLines",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    tariff_zones: Optional[TariffZoneRefsRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "tariffZones",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import Optional
 from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
 from .journey_pattern_ref import JourneyPatternRef
 from .journey_run_time_versioned_child_structure import JourneyRunTimeVersionedChildStructure
@@ -14,32 +14,35 @@ class JourneyPatternRunTimeVersionedChildStructure(JourneyRunTimeVersionedChildS
     class Meta:
         name = "JourneyPatternRunTime_VersionedChildStructure"
 
-    choice: List[object] = field(
-        default_factory=list,
+    service_journey_pattern_ref: Optional[ServiceJourneyPatternRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "ServiceJourneyPatternRef",
-                    "type": ServiceJourneyPatternRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ServicePatternRef",
-                    "type": ServicePatternRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "DeadRunJourneyPatternRef",
-                    "type": DeadRunJourneyPatternRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "JourneyPatternRef",
-                    "type": JourneyPatternRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 7,
+            "name": "ServiceJourneyPatternRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    service_pattern_ref: Optional[ServicePatternRef] = field(
+        default=None,
+        metadata={
+            "name": "ServicePatternRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    dead_run_journey_pattern_ref: Optional[DeadRunJourneyPatternRef] = field(
+        default=None,
+        metadata={
+            "name": "DeadRunJourneyPatternRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    journey_pattern_ref: Optional[JourneyPatternRef] = field(
+        default=None,
+        metadata={
+            "name": "JourneyPatternRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )

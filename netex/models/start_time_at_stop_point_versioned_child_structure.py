@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xsdata.models.datatype import XmlTime
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .fare_demand_factor_ref import FareDemandFactorRef
@@ -22,38 +22,45 @@ class StartTimeAtStopPointVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
-        default_factory=list,
+    fare_scheduled_stop_point_ref: Optional[FareScheduledStopPointRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "FareScheduledStopPointRef",
-                    "type": FareScheduledStopPointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ScheduledStopPointRef",
-                    "type": ScheduledStopPointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "StartTime",
-                    "type": XmlTime,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "EndTime",
-                    "type": XmlTime,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "DayOffset",
-                    "type": int,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "min_occurs": 2,
-            "max_occurs": 6,
+            "name": "FareScheduledStopPointRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "required": True,
+        }
+    )
+    scheduled_stop_point_ref: Optional[ScheduledStopPointRef] = field(
+        default=None,
+        metadata={
+            "name": "ScheduledStopPointRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "required": True,
+        }
+    )
+    start_time: Optional[XmlTime] = field(
+        default=None,
+        metadata={
+            "name": "StartTime",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    end_time: Optional[XmlTime] = field(
+        default=None,
+        metadata={
+            "name": "EndTime",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    day_offset: Optional[int] = field(
+        default=None,
+        metadata={
+            "name": "DayOffset",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .block_parts_rel_structure import BlockPartsRelStructure
 from .compound_train_ref import CompoundTrainRef
@@ -29,42 +29,50 @@ class CompoundBlockStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
-        default_factory=list,
+    compound_train_ref: Optional[CompoundTrainRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "CompoundTrainRef",
-                    "type": CompoundTrainRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TrainRef",
-                    "type": TrainRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "VehicleTypeRef",
-                    "type": VehicleTypeRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "StartPointRef",
-                    "type": TimingPointInJourneyPatternRefStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "EndPointRef",
-                    "type": TimingPointInJourneyPatternRefStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "parts",
-                    "type": BlockPartsRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 8,
+            "name": "CompoundTrainRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    train_ref: Optional[TrainRef] = field(
+        default=None,
+        metadata={
+            "name": "TrainRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    vehicle_type_ref: Optional[VehicleTypeRef] = field(
+        default=None,
+        metadata={
+            "name": "VehicleTypeRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    start_point_ref: Optional[TimingPointInJourneyPatternRefStructure] = field(
+        default=None,
+        metadata={
+            "name": "StartPointRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    end_point_ref: Optional[TimingPointInJourneyPatternRefStructure] = field(
+        default=None,
+        metadata={
+            "name": "EndPointRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    parts: Optional[BlockPartsRelStructure] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .day_type_ref import DayTypeRef
 from .fare_day_type_ref import FareDayTypeRef
@@ -75,32 +75,35 @@ class PricingParameterSetVersionedStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
-        default_factory=list,
+    fare_day_type_ref: Optional[FareDayTypeRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "FareDayTypeRef",
-                    "type": FareDayTypeRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "DayTypeRef",
-                    "type": DayTypeRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "monthValidityOffsets",
-                    "type": MonthValidityOffsetsRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "pricingServices",
-                    "type": PricingServicesRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 5,
+            "name": "FareDayTypeRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    day_type_ref: Optional[DayTypeRef] = field(
+        default=None,
+        metadata={
+            "name": "DayTypeRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    month_validity_offsets: Optional[MonthValidityOffsetsRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "monthValidityOffsets",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    pricing_services: Optional[PricingServicesRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "pricingServices",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )

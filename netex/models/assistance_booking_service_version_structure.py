@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .all_modes_enumeration import AllModesEnumeration
 from .assistance_availability_enumeration import AssistanceAvailabilityEnumeration
 from .authority_ref import AuthorityRef
@@ -61,47 +61,59 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
-        default_factory=list,
+    authority_ref: Optional[AuthorityRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "AuthorityRef",
-                    "type": AuthorityRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "OperatorRef",
-                    "type": OperatorRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TransportOrganisationRef",
-                    "type": TransportOrganisationRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "FlexibleLineRef",
-                    "type": FlexibleLineRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "LineRef",
-                    "type": LineRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "BookedObjectRef",
-                    "type": VersionOfObjectRefStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "noticeAssignments",
-                    "type": NoticeAssignmentsRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 13,
+            "name": "AuthorityRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    operator_ref: Optional[OperatorRef] = field(
+        default=None,
+        metadata={
+            "name": "OperatorRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    transport_organisation_ref: Optional[TransportOrganisationRef] = field(
+        default=None,
+        metadata={
+            "name": "TransportOrganisationRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    flexible_line_ref: Optional[FlexibleLineRef] = field(
+        default=None,
+        metadata={
+            "name": "FlexibleLineRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    line_ref: Optional[LineRef] = field(
+        default=None,
+        metadata={
+            "name": "LineRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    booked_object_ref: Optional[VersionOfObjectRefStructure] = field(
+        default=None,
+        metadata={
+            "name": "BookedObjectRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    notice_assignments: Optional[NoticeAssignmentsRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "noticeAssignments",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )

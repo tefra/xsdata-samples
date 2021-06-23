@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import Optional
 from .dead_run_ref import DeadRunRef
 from .journey_wait_time_versioned_child_structure import JourneyWaitTimeVersionedChildStructure
 from .vehicle_journey_ref import VehicleJourneyRef
@@ -12,22 +12,19 @@ class VehicleJourneyWaitTimeVersionedChildStructure(JourneyWaitTimeVersionedChil
     class Meta:
         name = "VehicleJourneyWaitTime_VersionedChildStructure"
 
-    dead_run_ref_or_vehicle_journey_ref: List[object] = field(
-        default_factory=list,
+    dead_run_ref: Optional[DeadRunRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "DeadRunRef",
-                    "type": DeadRunRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "VehicleJourneyRef",
-                    "type": VehicleJourneyRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 3,
+            "name": "DeadRunRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    vehicle_journey_ref: Optional[VehicleJourneyRef] = field(
+        default=None,
+        metadata={
+            "name": "VehicleJourneyRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .access_right_parameter_assignment_version_structure import AccessRightParameterAssignmentVersionStructure
 from .fare_demand_factor_ref import FareDemandFactorRef
 from .fare_quota_factor_ref import FareQuotaFactorRef
@@ -26,47 +26,59 @@ class ValidityParameterAssignmentVersionStructure(AccessRightParameterAssignment
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice_1: List[object] = field(
-        default_factory=list,
+    parking_charge_band_ref: Optional[ParkingChargeBandRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "ParkingChargeBandRef",
-                    "type": ParkingChargeBandRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TimeStructureFactorRef",
-                    "type": TimeStructureFactorRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "GeographicalIntervalRef",
-                    "type": GeographicalIntervalRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "GeographicalStructureFactorRef",
-                    "type": GeographicalStructureFactorRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "FareQuotaFactorRef",
-                    "type": FareQuotaFactorRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "FareDemandFactorRef",
-                    "type": FareDemandFactorRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "QualityStructureFactorRef",
-                    "type": QualityStructureFactorRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 10,
+            "name": "ParkingChargeBandRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    time_structure_factor_ref: Optional[TimeStructureFactorRef] = field(
+        default=None,
+        metadata={
+            "name": "TimeStructureFactorRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    geographical_interval_ref: Optional[GeographicalIntervalRef] = field(
+        default=None,
+        metadata={
+            "name": "GeographicalIntervalRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    geographical_structure_factor_ref: Optional[GeographicalStructureFactorRef] = field(
+        default=None,
+        metadata={
+            "name": "GeographicalStructureFactorRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    fare_quota_factor_ref: Optional[FareQuotaFactorRef] = field(
+        default=None,
+        metadata={
+            "name": "FareQuotaFactorRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    fare_demand_factor_ref: Optional[FareDemandFactorRef] = field(
+        default=None,
+        metadata={
+            "name": "FareDemandFactorRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    quality_structure_factor_ref: Optional[QualityStructureFactorRef] = field(
+        default=None,
+        metadata={
+            "name": "QualityStructureFactorRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )

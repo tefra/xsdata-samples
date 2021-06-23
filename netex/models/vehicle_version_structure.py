@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .compound_train_ref import CompoundTrainRef
 from .equipments_rel_structure import EquipmentsRelStructure
@@ -65,32 +65,35 @@ class VehicleVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
-        default_factory=list,
+    compound_train_ref: Optional[CompoundTrainRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "CompoundTrainRef",
-                    "type": CompoundTrainRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TrainRef",
-                    "type": TrainRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "VehicleTypeRef",
-                    "type": VehicleTypeRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "actualVehicleEquipments",
-                    "type": EquipmentsRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 6,
+            "name": "CompoundTrainRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    train_ref: Optional[TrainRef] = field(
+        default=None,
+        metadata={
+            "name": "TrainRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    vehicle_type_ref: Optional[VehicleTypeRef] = field(
+        default=None,
+        metadata={
+            "name": "VehicleTypeRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    actual_vehicle_equipments: Optional[EquipmentsRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "actualVehicleEquipments",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )

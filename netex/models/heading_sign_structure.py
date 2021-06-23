@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .destination_display_ref import DestinationDisplayRef
 from .direction_ref import DirectionRef
 from .flexible_line_ref import FlexibleLineRef
@@ -23,62 +23,83 @@ class HeadingSignStructure(SignEquipmentVersionStructure):
             "required": True,
         }
     )
-    choice: List[object] = field(
-        default_factory=list,
+    flexible_line_ref: Optional[FlexibleLineRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "FlexibleLineRef",
-                    "type": FlexibleLineRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "LineRef",
-                    "type": LineRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "LineName",
-                    "type": MultilingualString,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TransportMode",
-                    "type": VehicleModeEnumeration,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TransportSubmode",
-                    "type": TransportSubmode,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "LineMap",
-                    "type": str,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "DirectionRef",
-                    "type": DirectionRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "DirectionName",
-                    "type": MultilingualString,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "DestinationDisplayRef",
-                    "type": DestinationDisplayRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "LinePublicCode",
-                    "type": str,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 11,
+            "name": "FlexibleLineRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    line_ref: Optional[LineRef] = field(
+        default=None,
+        metadata={
+            "name": "LineRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    line_name: Optional[MultilingualString] = field(
+        default=None,
+        metadata={
+            "name": "LineName",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    transport_mode: Optional[VehicleModeEnumeration] = field(
+        default=None,
+        metadata={
+            "name": "TransportMode",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    transport_submode: Optional[TransportSubmode] = field(
+        default=None,
+        metadata={
+            "name": "TransportSubmode",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    line_map: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "LineMap",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    direction_ref: Optional[DirectionRef] = field(
+        default=None,
+        metadata={
+            "name": "DirectionRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    direction_name: Optional[MultilingualString] = field(
+        default=None,
+        metadata={
+            "name": "DirectionName",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    destination_display_ref: Optional[DestinationDisplayRef] = field(
+        default=None,
+        metadata={
+            "name": "DestinationDisplayRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    line_public_code: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "LinePublicCode",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )

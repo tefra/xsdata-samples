@@ -863,43 +863,47 @@ class ValidDuringVersionStructure(ValidBetweenVersionStructure):
     class Meta:
         name = "ValidDuring_VersionStructure"
 
-    choice: List[object] = field(
+    fare_day_type_ref: Optional[FareDayTypeRef] = field(
+        default=None,
+        metadata={
+            "name": "FareDayTypeRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    day_type_ref: Optional[DayTypeRef] = field(
+        default=None,
+        metadata={
+            "name": "DayTypeRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    days_of_week: List[DayOfWeekEnumeration] = field(
         default_factory=list,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "FareDayTypeRef",
-                    "type": FareDayTypeRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "DayTypeRef",
-                    "type": DayTypeRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "DaysOfWeek",
-                    "type": List[DayOfWeekEnumeration],
-                    "namespace": "http://www.netex.org.uk/netex",
-                    "default_factory": list,
-                    "tokens": True,
-                },
-                {
-                    "name": "Days",
-                    "type": str,
-                    "namespace": "http://www.netex.org.uk/netex",
-                    "min_length": 7,
-                    "max_length": 7,
-                    "pattern": r"([Y | N])*",
-                },
-                {
-                    "name": "timebands",
-                    "type": TimebandsRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 6,
+            "name": "DaysOfWeek",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "tokens": True,
+        }
+    )
+    days: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "Days",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "min_length": 7,
+            "max_length": 7,
+            "pattern": r"([Y | N])*",
+        }
+    )
+    timebands: Optional[TimebandsRelStructure] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )
 

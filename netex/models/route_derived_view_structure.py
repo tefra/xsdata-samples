@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
 from .derived_view_structure import DerivedViewStructure
 from .direction_view import DirectionView
@@ -42,37 +42,43 @@ class RouteDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
-        default_factory=list,
+    flexible_line_ref: Optional[FlexibleLineRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "FlexibleLineRef",
-                    "type": FlexibleLineRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "LineRef",
-                    "type": LineRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "LineView",
-                    "type": LineView,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "DirectionView",
-                    "type": DirectionView,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "LinkSequenceProjectionRef",
-                    "type": LinkSequenceProjectionRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 6,
+            "name": "FlexibleLineRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    line_ref: Optional[LineRef] = field(
+        default=None,
+        metadata={
+            "name": "LineRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    line_view: Optional[LineView] = field(
+        default=None,
+        metadata={
+            "name": "LineView",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    direction_view: Optional[DirectionView] = field(
+        default=None,
+        metadata={
+            "name": "DirectionView",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    link_sequence_projection_ref: Optional[LinkSequenceProjectionRef] = field(
+        default=None,
+        metadata={
+            "name": "LinkSequenceProjectionRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )

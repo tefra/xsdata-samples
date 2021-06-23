@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xsdata.models.datatype import XmlTime
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .block_part_ref import BlockPartRef
@@ -63,74 +63,101 @@ class JourneyPartVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
-        default_factory=list,
+    train_block_part_ref: Optional[TrainBlockPartRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "TrainBlockPartRef",
-                    "type": TrainBlockPartRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "BlockPartRef",
-                    "type": BlockPartRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "FromStopPointRef",
-                    "type": ScheduledStopPointRefStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ToStopPointRef",
-                    "type": ScheduledStopPointRefStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "StartTime",
-                    "type": XmlTime,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "StartTimeDayOffset",
-                    "type": int,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "EndTime",
-                    "type": XmlTime,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "EndTimeDayOffset",
-                    "type": int,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "VehicleOrientation",
-                    "type": bool,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "PurposeOfJourneyPartitionRef",
-                    "type": PurposeOfJourneyPartitionRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "facilities",
-                    "type": ServiceFacilitySetsRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "journeyPartPositions",
-                    "type": JourneyPartPositionsRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "min_occurs": 2,
-            "max_occurs": 14,
+            "name": "TrainBlockPartRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    block_part_ref: Optional[BlockPartRef] = field(
+        default=None,
+        metadata={
+            "name": "BlockPartRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    from_stop_point_ref: Optional[ScheduledStopPointRefStructure] = field(
+        default=None,
+        metadata={
+            "name": "FromStopPointRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    to_stop_point_ref: Optional[ScheduledStopPointRefStructure] = field(
+        default=None,
+        metadata={
+            "name": "ToStopPointRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    start_time: Optional[XmlTime] = field(
+        default=None,
+        metadata={
+            "name": "StartTime",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "required": True,
+        }
+    )
+    start_time_day_offset: Optional[int] = field(
+        default=None,
+        metadata={
+            "name": "StartTimeDayOffset",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    end_time: Optional[XmlTime] = field(
+        default=None,
+        metadata={
+            "name": "EndTime",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "required": True,
+        }
+    )
+    end_time_day_offset: Optional[int] = field(
+        default=None,
+        metadata={
+            "name": "EndTimeDayOffset",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    vehicle_orientation: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "VehicleOrientation",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    purpose_of_journey_partition_ref: Optional[PurposeOfJourneyPartitionRef] = field(
+        default=None,
+        metadata={
+            "name": "PurposeOfJourneyPartitionRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    facilities: Optional[ServiceFacilitySetsRelStructure] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    journey_part_positions: Optional[JourneyPartPositionsRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "journeyPartPositions",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )
     order: Optional[int] = field(

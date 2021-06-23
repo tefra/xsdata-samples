@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .group_of_lines_ref import GroupOfLinesRef
 from .line_refs_rel_structure import LineRefsRelStructure
 from .network_ref import NetworkRef
@@ -38,22 +38,19 @@ class RoutingConstraintZoneVersionStructure(ZoneVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    network_ref_or_group_of_lines_ref: List[object] = field(
-        default_factory=list,
+    network_ref: Optional[NetworkRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "NetworkRef",
-                    "type": NetworkRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "GroupOfLinesRef",
-                    "type": GroupOfLinesRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 3,
+            "name": "NetworkRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    group_of_lines_ref: Optional[GroupOfLinesRef] = field(
+        default=None,
+        metadata={
+            "name": "GroupOfLinesRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )

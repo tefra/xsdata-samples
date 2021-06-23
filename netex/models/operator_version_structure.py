@@ -26,49 +26,59 @@ class OperatorVersionStructure(OrganisationVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
+    postal_address: Optional[PostalAddress] = field(
+        default=None,
+        metadata={
+            "name": "PostalAddress",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    road_address: Optional[RoadAddress] = field(
+        default=None,
+        metadata={
+            "name": "RoadAddress",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    address: Optional[PostalAddressVersionStructure] = field(
+        default=None,
+        metadata={
+            "name": "Address",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    primary_mode: Optional[VehicleModeEnumeration] = field(
+        default=None,
+        metadata={
+            "name": "PrimaryMode",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    operator_activities: List[OperatorActivitiesEnumeration] = field(
         default_factory=list,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "PostalAddress",
-                    "type": PostalAddress,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "RoadAddress",
-                    "type": RoadAddress,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "Address",
-                    "type": PostalAddressVersionStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "PrimaryMode",
-                    "type": VehicleModeEnumeration,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "OperatorActivities",
-                    "type": List[OperatorActivitiesEnumeration],
-                    "namespace": "http://www.netex.org.uk/netex",
-                    "default_factory": list,
-                    "tokens": True,
-                },
-                {
-                    "name": "CustomerServiceContactDetails",
-                    "type": ContactStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "departments",
-                    "type": DepartmentsRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 9,
+            "name": "OperatorActivities",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "tokens": True,
+        }
+    )
+    customer_service_contact_details: Optional[ContactStructure] = field(
+        default=None,
+        metadata={
+            "name": "CustomerServiceContactDetails",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    departments: Optional[DepartmentsRelStructure] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )

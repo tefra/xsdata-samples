@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import List, Optional
+from typing import Optional
 from .cell_versioned_child_structure import PriceableObjectVersionStructure
 from .distance_matrix_element_prices_rel_structure import DistanceMatrixElementPricesRelStructure
 from .fare_point_in_pattern_ref_structure import FarePointInPatternRefStructure
@@ -174,27 +174,26 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    standard_fare_table_ref_or_fare_table_ref_or_prices: List[object] = field(
-        default_factory=list,
+    standard_fare_table_ref: Optional[StandardFareTableRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "StandardFareTableRef",
-                    "type": StandardFareTableRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "FareTableRef",
-                    "type": FareTableRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "prices",
-                    "type": DistanceMatrixElementPricesRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 5,
+            "name": "StandardFareTableRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    fare_table_ref: Optional[FareTableRef] = field(
+        default=None,
+        metadata={
+            "name": "FareTableRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    prices: Optional[DistanceMatrixElementPricesRelStructure] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )
