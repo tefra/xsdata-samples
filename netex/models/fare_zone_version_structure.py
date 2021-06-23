@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .authority_ref import AuthorityRef
 from .fare_sections_rel_structure import FareSectionsRelStructure
 from .fare_zone_ref_structure import FareZoneRefStructure
@@ -44,47 +44,57 @@ class FareZoneVersionStructure(TariffZoneVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
-        default_factory=list,
+    authority_ref: Optional[AuthorityRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "AuthorityRef",
-                    "type": AuthorityRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "OperatorRef",
-                    "type": OperatorRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TransportOrganisationRef",
-                    "type": TransportOrganisationRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "GroupOfOperatorsRef",
-                    "type": GroupOfOperatorsRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "fareSections",
-                    "type": FareSectionsRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "contains",
-                    "type": TariffZoneRefsRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "neighbours",
-                    "type": FareZoneRefsRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 9,
+            "name": "AuthorityRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    operator_ref: Optional[OperatorRef] = field(
+        default=None,
+        metadata={
+            "name": "OperatorRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    transport_organisation_ref: Optional[TransportOrganisationRef] = field(
+        default=None,
+        metadata={
+            "name": "TransportOrganisationRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    group_of_operators_ref: Optional[GroupOfOperatorsRef] = field(
+        default=None,
+        metadata={
+            "name": "GroupOfOperatorsRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    fare_sections: Optional[FareSectionsRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "fareSections",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    contains: Optional[TariffZoneRefsRelStructure] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    neighbours: Optional[FareZoneRefsRelStructure] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )

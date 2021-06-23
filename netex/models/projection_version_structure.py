@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .complex_feature_ref import ComplexFeatureRef
 from .multilingual_string import MultilingualString
@@ -31,28 +31,28 @@ class ProjectionVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    complex_feature_ref_or_simple_feature_ref_or_spatial_feature_ref: List[object] = field(
-        default_factory=list,
+    complex_feature_ref: Optional[ComplexFeatureRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "ComplexFeatureRef",
-                    "type": ComplexFeatureRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "SimpleFeatureRef",
-                    "type": SimpleFeatureRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "SpatialFeatureRef",
-                    "type": SpatialFeatureRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 5,
+            "name": "ComplexFeatureRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    simple_feature_ref: Optional[SimpleFeatureRef] = field(
+        default=None,
+        metadata={
+            "name": "SimpleFeatureRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    spatial_feature_ref: Optional[SpatialFeatureRef] = field(
+        default=None,
+        metadata={
+            "name": "SpatialFeatureRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )
     order: Optional[int] = field(

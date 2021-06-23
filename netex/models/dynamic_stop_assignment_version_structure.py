@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import Optional
 from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
 from .dynamic_stop_assignment_ref import DynamicStopAssignmentRef
 from .journey_pattern_ref import JourneyPatternRef
@@ -17,47 +17,59 @@ class DynamicStopAssignmentVersionStructure(PassengerStopAssignmentVersionStruct
     class Meta:
         name = "DynamicStopAssignment_VersionStructure"
 
-    choice: List[object] = field(
-        default_factory=list,
+    service_journey_pattern_ref: Optional[ServiceJourneyPatternRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "ServiceJourneyPatternRef",
-                    "type": ServiceJourneyPatternRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ServicePatternRef",
-                    "type": ServicePatternRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "DeadRunJourneyPatternRef",
-                    "type": DeadRunJourneyPatternRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "JourneyPatternRef",
-                    "type": JourneyPatternRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "VehicleJourneyStopAssignmentRef",
-                    "type": VehicleJourneyStopAssignmentRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "DynamicStopAssignmentRef",
-                    "type": DynamicStopAssignmentRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "PassengerStopAssignmentRef",
-                    "type": PassengerStopAssignmentRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 12,
+            "name": "ServiceJourneyPatternRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    service_pattern_ref: Optional[ServicePatternRef] = field(
+        default=None,
+        metadata={
+            "name": "ServicePatternRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    dead_run_journey_pattern_ref: Optional[DeadRunJourneyPatternRef] = field(
+        default=None,
+        metadata={
+            "name": "DeadRunJourneyPatternRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    journey_pattern_ref: Optional[JourneyPatternRef] = field(
+        default=None,
+        metadata={
+            "name": "JourneyPatternRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    vehicle_journey_stop_assignment_ref: Optional[VehicleJourneyStopAssignmentRef] = field(
+        default=None,
+        metadata={
+            "name": "VehicleJourneyStopAssignmentRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    dynamic_stop_assignment_ref: Optional[DynamicStopAssignmentRef] = field(
+        default=None,
+        metadata={
+            "name": "DynamicStopAssignmentRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    passenger_stop_assignment_ref: Optional[PassengerStopAssignmentRef] = field(
+        default=None,
+        metadata={
+            "name": "PassengerStopAssignmentRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )

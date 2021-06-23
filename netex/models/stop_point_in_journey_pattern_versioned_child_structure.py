@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import Optional
 from xsdata.models.datatype import XmlDuration
 from .booking_arrangements_structure import BookingArrangementsStructure
 from .destination_display_ref import DestinationDisplayRef
@@ -26,128 +26,187 @@ class StopPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVersio
     class Meta:
         name = "StopPointInJourneyPattern_VersionedChildStructure"
 
-    choice_1: List[object] = field(
-        default_factory=list,
+    fare_scheduled_stop_point_ref: Optional[FareScheduledStopPointRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "FareScheduledStopPointRef",
-                    "type": FareScheduledStopPointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ScheduledStopPointRef",
-                    "type": ScheduledStopPointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "OnwardTimingLinkRef",
-                    "type": TimingLinkRefStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "IsWaitPoint",
-                    "type": bool,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "WaitTime",
-                    "type": XmlDuration,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "waitTimes",
-                    "type": JourneyPatternWaitTimesRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "headways",
-                    "type": JourneyPatternHeadwaysRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "OnwardServiceLinkRef",
-                    "type": ServiceLinkRefStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ForAlighting",
-                    "type": bool,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ForBoarding",
-                    "type": bool,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "DestinationDisplayRef",
-                    "type": DestinationDisplayRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "DestinationDisplayView",
-                    "type": DestinationDisplayView,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "vias",
-                    "type": ViasRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "FlexiblePointProperties",
-                    "type": FlexiblePointProperties,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ChangeOfDestinationDisplay",
-                    "type": bool,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ChangeOfServiceRequirements",
-                    "type": bool,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "noticeAssignments",
-                    "type": NoticeAssignmentsRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "RequestStop",
-                    "type": bool,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "RequestMethod",
-                    "type": RequestMethodTypeEnumeration,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "StopUse",
-                    "type": StopUseEnumeration,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "BookingArrangements",
-                    "type": BookingArrangementsStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "Print",
-                    "type": bool,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "Dynamic",
-                    "type": DynamicAdvertisementEnumeration,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "min_occurs": 2,
-            "max_occurs": 25,
+            "name": "FareScheduledStopPointRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "required": True,
+        }
+    )
+    scheduled_stop_point_ref: Optional[ScheduledStopPointRef] = field(
+        default=None,
+        metadata={
+            "name": "ScheduledStopPointRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "required": True,
+        }
+    )
+    onward_timing_link_ref: Optional[TimingLinkRefStructure] = field(
+        default=None,
+        metadata={
+            "name": "OnwardTimingLinkRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    is_wait_point: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "IsWaitPoint",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    wait_time: Optional[XmlDuration] = field(
+        default=None,
+        metadata={
+            "name": "WaitTime",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    wait_times: Optional[JourneyPatternWaitTimesRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "waitTimes",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    headways: Optional[JourneyPatternHeadwaysRelStructure] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    onward_service_link_ref: Optional[ServiceLinkRefStructure] = field(
+        default=None,
+        metadata={
+            "name": "OnwardServiceLinkRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    for_alighting: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "ForAlighting",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    for_boarding: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "ForBoarding",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    destination_display_ref: Optional[DestinationDisplayRef] = field(
+        default=None,
+        metadata={
+            "name": "DestinationDisplayRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    destination_display_view: Optional[DestinationDisplayView] = field(
+        default=None,
+        metadata={
+            "name": "DestinationDisplayView",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    vias: Optional[ViasRelStructure] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    flexible_point_properties: Optional[FlexiblePointProperties] = field(
+        default=None,
+        metadata={
+            "name": "FlexiblePointProperties",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    change_of_destination_display: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "ChangeOfDestinationDisplay",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    change_of_service_requirements: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "ChangeOfServiceRequirements",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    notice_assignments: Optional[NoticeAssignmentsRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "noticeAssignments",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    request_stop: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "RequestStop",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    request_method: Optional[RequestMethodTypeEnumeration] = field(
+        default=None,
+        metadata={
+            "name": "RequestMethod",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    stop_use: Optional[StopUseEnumeration] = field(
+        default=None,
+        metadata={
+            "name": "StopUse",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    booking_arrangements: Optional[BookingArrangementsStructure] = field(
+        default=None,
+        metadata={
+            "name": "BookingArrangements",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    print: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "Print",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    dynamic: Optional[DynamicAdvertisementEnumeration] = field(
+        default=None,
+        metadata={
+            "name": "Dynamic",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )

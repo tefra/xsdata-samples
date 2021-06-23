@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import Optional
 from .direction_ref import DirectionRef
 from .direction_type_enumeration import DirectionTypeEnumeration
 from .flexible_line_ref import FlexibleLineRef
@@ -16,42 +16,51 @@ class RouteVersionStructure(LinkSequenceVersionStructure):
     class Meta:
         name = "Route_VersionStructure"
 
-    choice: List[object] = field(
-        default_factory=list,
+    flexible_line_ref: Optional[FlexibleLineRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "FlexibleLineRef",
-                    "type": FlexibleLineRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "LineRef",
-                    "type": LineRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "DirectionType",
-                    "type": DirectionTypeEnumeration,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "DirectionRef",
-                    "type": DirectionRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "pointsInSequence",
-                    "type": PointsOnRouteRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "InverseRouteRef",
-                    "type": RouteRefStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 7,
+            "name": "FlexibleLineRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    line_ref: Optional[LineRef] = field(
+        default=None,
+        metadata={
+            "name": "LineRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    direction_type: Optional[DirectionTypeEnumeration] = field(
+        default=None,
+        metadata={
+            "name": "DirectionType",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    direction_ref: Optional[DirectionRef] = field(
+        default=None,
+        metadata={
+            "name": "DirectionRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    points_in_sequence: Optional[PointsOnRouteRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "pointsInSequence",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    inverse_route_ref: Optional[RouteRefStructure] = field(
+        default=None,
+        metadata={
+            "name": "InverseRouteRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )

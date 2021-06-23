@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import List, Optional, Type
+from typing import List, Optional
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .authority_ref import AuthorityRef
 from .common_section_point_members_rel_structure import CommonSectionPointMembersRelStructure
@@ -396,38 +396,44 @@ class LineSectionVersionStructure(SectionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
-        default_factory=list,
+    flexible_line_ref: Optional[FlexibleLineRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "FlexibleLineRef",
-                    "type": FlexibleLineRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "LineRef",
-                    "type": LineRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "AuthorityRef",
-                    "type": AuthorityRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "OperatorRef",
-                    "type": OperatorRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TransportOrganisationRef",
-                    "type": TransportOrganisationRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 8,
+            "name": "FlexibleLineRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    line_ref: Optional[LineRef] = field(
+        default=None,
+        metadata={
+            "name": "LineRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    authority_ref: Optional[AuthorityRef] = field(
+        default=None,
+        metadata={
+            "name": "AuthorityRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    operator_ref: Optional[OperatorRef] = field(
+        default=None,
+        metadata={
+            "name": "OperatorRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    transport_organisation_ref: Optional[TransportOrganisationRef] = field(
+        default=None,
+        metadata={
+            "name": "TransportOrganisationRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )
 
@@ -450,48 +456,60 @@ class FareSectionVersionStructure(GeneralSectionVersionStructure):
     class Meta:
         name = "FareSection_VersionStructure"
 
-    choice: List[object] = field(
-        default_factory=list,
+    service_journey_pattern_ref: Optional[ServiceJourneyPatternRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "ServiceJourneyPatternRef",
-                    "type": ServiceJourneyPatternRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ServicePatternRef",
-                    "type": ServicePatternRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "DeadRunJourneyPatternRef",
-                    "type": DeadRunJourneyPatternRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "JourneyPatternRef",
-                    "type": JourneyPatternRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "JourneyPattern",
-                    "type": JourneyPattern1,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "FromPointInPatternRef",
-                    "type": FarePointInPatternRefStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ToPointInPatternRef",
-                    "type": FarePointInPatternRefStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 10,
+            "name": "ServiceJourneyPatternRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    service_pattern_ref: Optional[ServicePatternRef] = field(
+        default=None,
+        metadata={
+            "name": "ServicePatternRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    dead_run_journey_pattern_ref: Optional[DeadRunJourneyPatternRef] = field(
+        default=None,
+        metadata={
+            "name": "DeadRunJourneyPatternRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    journey_pattern_ref: Optional[JourneyPatternRef] = field(
+        default=None,
+        metadata={
+            "name": "JourneyPatternRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    journey_pattern: Optional[JourneyPattern1] = field(
+        default=None,
+        metadata={
+            "name": "JourneyPattern",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    from_point_in_pattern_ref: Optional[FarePointInPatternRefStructure] = field(
+        default=None,
+        metadata={
+            "name": "FromPointInPatternRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    to_point_in_pattern_ref: Optional[FarePointInPatternRefStructure] = field(
+        default=None,
+        metadata={
+            "name": "ToPointInPatternRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )
 
@@ -519,73 +537,100 @@ class SectionInSequenceVersionedChildStructure(LinkInLinkSequenceVersionedChildS
     class Meta:
         name = "SectionInSequence_VersionedChildStructure"
 
-    choice: List[object] = field(
-        default_factory=list,
+    parent_common_section_ref: Optional[ParentCommonSectionRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "ParentCommonSectionRef",
-                    "type": ParentCommonSectionRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "CommonSectionRef",
-                    "type": CommonSectionRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "LineSectionRef",
-                    "type": LineSectionRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "FareSectionRef",
-                    "type": FareSectionRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "GeneralSectionRef",
-                    "type": GeneralSectionRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "SectionRef",
-                    "type": SectionRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "FareSection",
-                    "type": Type["FareSection"],
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "CommonSection",
-                    "type": CommonSection,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "LineSection",
-                    "type": LineSection,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "GeneralSection",
-                    "type": GeneralSection,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "Section",
-                    "type": Section1,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "Section_",
-                    "type": Section2,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 23,
+            "name": "ParentCommonSectionRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    common_section_ref: Optional[CommonSectionRef] = field(
+        default=None,
+        metadata={
+            "name": "CommonSectionRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    line_section_ref: Optional[LineSectionRef] = field(
+        default=None,
+        metadata={
+            "name": "LineSectionRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    fare_section_ref: Optional[FareSectionRef] = field(
+        default=None,
+        metadata={
+            "name": "FareSectionRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    general_section_ref: Optional[GeneralSectionRef] = field(
+        default=None,
+        metadata={
+            "name": "GeneralSectionRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    section_ref: Optional[SectionRef] = field(
+        default=None,
+        metadata={
+            "name": "SectionRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    fare_section: Optional["FareSection"] = field(
+        default=None,
+        metadata={
+            "name": "FareSection",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    common_section: Optional[CommonSection] = field(
+        default=None,
+        metadata={
+            "name": "CommonSection",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    line_section: Optional[LineSection] = field(
+        default=None,
+        metadata={
+            "name": "LineSection",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    general_section: Optional[GeneralSection] = field(
+        default=None,
+        metadata={
+            "name": "GeneralSection",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    section: Optional[Section1] = field(
+        default=None,
+        metadata={
+            "name": "Section",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    netex_org_uk_netex_section: Optional[Section2] = field(
+        default=None,
+        metadata={
+            "name": "Section_",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )
 

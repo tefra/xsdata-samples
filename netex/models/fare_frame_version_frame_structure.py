@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .access_right_parameter_assignments_in_frame_rel_structure import AccessRightParameterAssignmentsInFrameRelStructure
 from .authority_ref import AuthorityRef
 from .border_points_in_frame_rel_structure import BorderPointsInFrameRelStructure
@@ -58,207 +58,313 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
-        default_factory=list,
+    authority_ref: Optional[AuthorityRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "AuthorityRef",
-                    "type": AuthorityRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "OperatorRef",
-                    "type": OperatorRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TransportOrganisationRef",
-                    "type": TransportOrganisationRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "PricingParameterSet",
-                    "type": PricingParameterSet,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "notices",
-                    "type": NoticesInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "noticeAssignments",
-                    "type": NoticeAssignmentsInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "borderPoints",
-                    "type": BorderPointsInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "fareScheduledStopPoints",
-                    "type": FareScheduledStopPointsInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "fareZones",
-                    "type": FareZonesInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "fareSections",
-                    "type": FareSectionsInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "seriesConstraints",
-                    "type": FareSeriesInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "geographicalUnits",
-                    "type": GeographicalUnitsRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "geographicalIntervals",
-                    "type": GeographicalIntervalsRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "geographicalStructureFactors",
-                    "type": GeographicalStructureFactorsRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "timeUnits",
-                    "type": TimeUnitsRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "timeIntervals",
-                    "type": TimeIntervalsRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "timeStructureFactors",
-                    "type": TimeStructureFactorsRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "qualityStructureFactors",
-                    "type": QualityStructureFactorsRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "distanceMatrixElements",
-                    "type": DistanceMatrixElementsRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "groupsOfDistanceMatrixElements",
-                    "type": GroupsOfDistanceMatrixElementsRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "fareStructureElements",
-                    "type": FareStructureElementsInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "tariffs",
-                    "type": TariffsInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "validableElements",
-                    "type": ValidableElementsInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "controllableElements",
-                    "type": ControllableElementsInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "usageParameters",
-                    "type": UsageParametersInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "accessRightParameterAssignments",
-                    "type": AccessRightParameterAssignmentsInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "fareProducts",
-                    "type": FareProductsInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "priceGroups",
-                    "type": FarePricesInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "fareTables",
-                    "type": FareTablesInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "distributionChannels",
-                    "type": DistributionChannelsInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "groupsOfDistributionChannels",
-                    "type": GroupsOfDistributionChannelsInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "fulfilmentMethods",
-                    "type": FulfilmentMethodsInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "typesOfTravelDocuments",
-                    "type": TypesOfTravelDocumentInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "salesOfferPackages",
-                    "type": SalesOfferPackagesInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "salesOfferPackageElements",
-                    "type": SalesOfferPackageElementsInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "salesOfferPackageSubstitutions",
-                    "type": SalesOfferPackageSubstitutionsInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "groupsOfSalesOfferPackages",
-                    "type": GroupsOfSalesOfferPackagesInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "distributionAssignments",
-                    "type": DistributionAssignmentsInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "parkingTariffs",
-                    "type": ParkingTariffsInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 43,
+            "name": "AuthorityRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    operator_ref: Optional[OperatorRef] = field(
+        default=None,
+        metadata={
+            "name": "OperatorRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    transport_organisation_ref: Optional[TransportOrganisationRef] = field(
+        default=None,
+        metadata={
+            "name": "TransportOrganisationRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    pricing_parameter_set: Optional[PricingParameterSet] = field(
+        default=None,
+        metadata={
+            "name": "PricingParameterSet",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    notices: Optional[NoticesInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    notice_assignments: Optional[NoticeAssignmentsInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "noticeAssignments",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    border_points: Optional[BorderPointsInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "borderPoints",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    fare_scheduled_stop_points: Optional[FareScheduledStopPointsInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "fareScheduledStopPoints",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    fare_zones: Optional[FareZonesInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "fareZones",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    fare_sections: Optional[FareSectionsInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "fareSections",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    series_constraints: Optional[FareSeriesInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "seriesConstraints",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    geographical_units: Optional[GeographicalUnitsRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "geographicalUnits",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    geographical_intervals: Optional[GeographicalIntervalsRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "geographicalIntervals",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    geographical_structure_factors: Optional[GeographicalStructureFactorsRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "geographicalStructureFactors",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    time_units: Optional[TimeUnitsRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "timeUnits",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    time_intervals: Optional[TimeIntervalsRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "timeIntervals",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    time_structure_factors: Optional[TimeStructureFactorsRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "timeStructureFactors",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    quality_structure_factors: Optional[QualityStructureFactorsRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "qualityStructureFactors",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    distance_matrix_elements: Optional[DistanceMatrixElementsRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "distanceMatrixElements",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    groups_of_distance_matrix_elements: Optional[GroupsOfDistanceMatrixElementsRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "groupsOfDistanceMatrixElements",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    fare_structure_elements: Optional[FareStructureElementsInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "fareStructureElements",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    tariffs: Optional[TariffsInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    validable_elements: Optional[ValidableElementsInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "validableElements",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    controllable_elements: Optional[ControllableElementsInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "controllableElements",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    usage_parameters: Optional[UsageParametersInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "usageParameters",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    access_right_parameter_assignments: Optional[AccessRightParameterAssignmentsInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "accessRightParameterAssignments",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    fare_products: Optional[FareProductsInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "fareProducts",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    price_groups: Optional[FarePricesInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "priceGroups",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    fare_tables: Optional[FareTablesInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "fareTables",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    distribution_channels: Optional[DistributionChannelsInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "distributionChannels",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    groups_of_distribution_channels: Optional[GroupsOfDistributionChannelsInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "groupsOfDistributionChannels",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    fulfilment_methods: Optional[FulfilmentMethodsInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "fulfilmentMethods",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    types_of_travel_documents: Optional[TypesOfTravelDocumentInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "typesOfTravelDocuments",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    sales_offer_packages: Optional[SalesOfferPackagesInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "salesOfferPackages",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    sales_offer_package_elements: Optional[SalesOfferPackageElementsInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "salesOfferPackageElements",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    sales_offer_package_substitutions: Optional[SalesOfferPackageSubstitutionsInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "salesOfferPackageSubstitutions",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    groups_of_sales_offer_packages: Optional[GroupsOfSalesOfferPackagesInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "groupsOfSalesOfferPackages",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    distribution_assignments: Optional[DistributionAssignmentsInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "distributionAssignments",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    parking_tariffs: Optional[ParkingTariffsInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "parkingTariffs",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )

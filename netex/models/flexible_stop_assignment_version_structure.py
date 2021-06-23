@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .flexible_area_ref import FlexibleAreaRef
 from .flexible_quay_ref import FlexibleQuayRef
 from .flexible_stop_place_ref import FlexibleStopPlaceRef
@@ -23,27 +23,27 @@ class FlexibleStopAssignmentVersionStructure(StopAssignmentVersionStructure):
             "required": True,
         }
     )
-    hail_and_ride_area_ref_or_flexible_area_ref_or_flexible_quay_ref: List[object] = field(
-        default_factory=list,
+    hail_and_ride_area_ref: Optional[HailAndRideAreaRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "HailAndRideAreaRef",
-                    "type": HailAndRideAreaRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "FlexibleAreaRef",
-                    "type": FlexibleAreaRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "FlexibleQuayRef",
-                    "type": FlexibleQuayRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 5,
+            "name": "HailAndRideAreaRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    flexible_area_ref: Optional[FlexibleAreaRef] = field(
+        default=None,
+        metadata={
+            "name": "FlexibleAreaRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    flexible_quay_ref: Optional[FlexibleQuayRef] = field(
+        default=None,
+        metadata={
+            "name": "FlexibleQuayRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )

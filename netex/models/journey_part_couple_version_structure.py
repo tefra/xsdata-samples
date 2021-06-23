@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xsdata.models.datatype import XmlTime
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .block_ref import BlockRef
@@ -87,33 +87,36 @@ class JourneyPartCoupleVersionStructure(DataManagedObjectStructure):
             "required": True,
         }
     )
-    choice: List[object] = field(
-        default_factory=list,
+    train_block_ref: Optional[TrainBlockRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "TrainBlockRef",
-                    "type": TrainBlockRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "BlockRef",
-                    "type": BlockRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "journeyParts",
-                    "type": JourneyPartRefsRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TrainNumberRef",
-                    "type": TrainNumberRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 5,
+            "name": "TrainBlockRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    block_ref: Optional[BlockRef] = field(
+        default=None,
+        metadata={
+            "name": "BlockRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    journey_parts: Optional[JourneyPartRefsRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "journeyParts",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    train_number_ref: Optional[TrainNumberRef] = field(
+        default=None,
+        metadata={
+            "name": "TrainNumberRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )
     order: Optional[int] = field(

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .authority_ref import AuthorityRef
 from .equipment_places_rel_structure import EquipmentPlacesRelStructure
 from .general_organisation_ref import GeneralOrganisationRef
@@ -82,107 +82,153 @@ class SiteVersionStructure(SiteElementVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
-        default_factory=list,
+    retail_consortium_ref: Optional[RetailConsortiumRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "RetailConsortiumRef",
-                    "type": RetailConsortiumRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "AuthorityRef",
-                    "type": AuthorityRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "OperatorRef",
-                    "type": OperatorRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TransportOrganisationRef",
-                    "type": TransportOrganisationRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "GeneralOrganisationRef",
-                    "type": GeneralOrganisationRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ManagementAgentRef",
-                    "type": ManagementAgentRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ServicedOrganisationRef",
-                    "type": ServicedOrganisationRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TravelAgentRef",
-                    "type": TravelAgentRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "OtherOrganisationRef",
-                    "type": OtherOrganisationRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "OrganisationRef",
-                    "type": OrganisationRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "OperatingOrganisationView",
-                    "type": OrganisationDerivedViewStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ParentSiteRef",
-                    "type": SiteRefStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "adjacentSites",
-                    "type": SiteRefsRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ContainedInPlaceRef",
-                    "type": TopographicPlaceRefStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "levels",
-                    "type": LevelsRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "entrances",
-                    "type": SiteEntrancesRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "equipmentPlaces",
-                    "type": EquipmentPlacesRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "placeEquipments",
-                    "type": PlaceEquipmentsRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "localServices",
-                    "type": LocalServicesRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 34,
+            "name": "RetailConsortiumRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    authority_ref: Optional[AuthorityRef] = field(
+        default=None,
+        metadata={
+            "name": "AuthorityRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    operator_ref: Optional[OperatorRef] = field(
+        default=None,
+        metadata={
+            "name": "OperatorRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    transport_organisation_ref: Optional[TransportOrganisationRef] = field(
+        default=None,
+        metadata={
+            "name": "TransportOrganisationRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    general_organisation_ref: Optional[GeneralOrganisationRef] = field(
+        default=None,
+        metadata={
+            "name": "GeneralOrganisationRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    management_agent_ref: Optional[ManagementAgentRef] = field(
+        default=None,
+        metadata={
+            "name": "ManagementAgentRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    serviced_organisation_ref: Optional[ServicedOrganisationRef] = field(
+        default=None,
+        metadata={
+            "name": "ServicedOrganisationRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    travel_agent_ref: Optional[TravelAgentRef] = field(
+        default=None,
+        metadata={
+            "name": "TravelAgentRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    other_organisation_ref: Optional[OtherOrganisationRef] = field(
+        default=None,
+        metadata={
+            "name": "OtherOrganisationRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    organisation_ref: Optional[OrganisationRef] = field(
+        default=None,
+        metadata={
+            "name": "OrganisationRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    operating_organisation_view: Optional[OrganisationDerivedViewStructure] = field(
+        default=None,
+        metadata={
+            "name": "OperatingOrganisationView",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    parent_site_ref: Optional[SiteRefStructure] = field(
+        default=None,
+        metadata={
+            "name": "ParentSiteRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    adjacent_sites: Optional[SiteRefsRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "adjacentSites",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    contained_in_place_ref: Optional[TopographicPlaceRefStructure] = field(
+        default=None,
+        metadata={
+            "name": "ContainedInPlaceRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    levels: Optional[LevelsRelStructure] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    entrances: Optional[SiteEntrancesRelStructure] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    equipment_places: Optional[EquipmentPlacesRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "equipmentPlaces",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    place_equipments: Optional[PlaceEquipmentsRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "placeEquipments",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    local_services: Optional[LocalServicesRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "localServices",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Optional
 from .dead_run_ref import DeadRunRef
 from .dynamic_stop_assignment_ref import DynamicStopAssignmentRef
 from .passenger_stop_assignment_ref import PassengerStopAssignmentRef
@@ -31,27 +31,27 @@ class VehicleJourneyStopAssignmentVersionStructure(PassengerStopAssignmentVersio
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    vehicle_journey_stop_assignment_ref_or_dynamic_stop_assignment_ref_or_passenger_stop_assignment_ref: List[object] = field(
-        default_factory=list,
+    vehicle_journey_stop_assignment_ref: Optional[VehicleJourneyStopAssignmentRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "VehicleJourneyStopAssignmentRef",
-                    "type": VehicleJourneyStopAssignmentRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "DynamicStopAssignmentRef",
-                    "type": DynamicStopAssignmentRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "PassengerStopAssignmentRef",
-                    "type": PassengerStopAssignmentRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 5,
+            "name": "VehicleJourneyStopAssignmentRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    dynamic_stop_assignment_ref: Optional[DynamicStopAssignmentRef] = field(
+        default=None,
+        metadata={
+            "name": "DynamicStopAssignmentRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    passenger_stop_assignment_ref: Optional[PassengerStopAssignmentRef] = field(
+        default=None,
+        metadata={
+            "name": "PassengerStopAssignmentRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )

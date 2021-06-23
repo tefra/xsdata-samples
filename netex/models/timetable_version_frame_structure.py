@@ -131,132 +131,194 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
-        default_factory=list,
+    compound_train_ref: Optional[CompoundTrainRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "CompoundTrainRef",
-                    "type": CompoundTrainRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TrainRef",
-                    "type": TrainRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "VehicleTypeRef",
-                    "type": VehicleTypeRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "timeDemandTypes",
-                    "type": TimeDemandTypesInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "timeDemandTypeAssignments",
-                    "type": TimeDemandTypeAssignmentsInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "timingLinkGroups",
-                    "type": GroupOfLinksInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "vehicleJourneys",
-                    "type": JourneysInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "frequencyGroups",
-                    "type": FrequencyGroupsInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "groupsOfServices",
-                    "type": GroupsOfServicesInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "trainNumbers",
-                    "type": TrainNumbersInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "journeyPartCouples",
-                    "type": JourneyPartCouplesInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "coupledJourneys",
-                    "type": CoupledJourneysInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "serviceFacilitySets",
-                    "type": ServiceFacilitySetsInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "typesOfService",
-                    "type": TypesOfServiceInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "flexibleServiceProperties",
-                    "type": FlexibleServicePropertiesInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "vehicleJourneyStopAssignments",
-                    "type": VehicleJourneyStopAssignmentsInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "notices",
-                    "type": NoticesInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "noticeAssignments",
-                    "type": NoticeAssignmentsInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "journeyMeetings",
-                    "type": JourneyMeetingsInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "journeyInterchanges",
-                    "type": JourneyInterchangesInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "defaultInterchanges",
-                    "type": DefaultInterchangseInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "interchangeRules",
-                    "type": InterchangeRulesInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "vehicleTypes",
-                    "type": VehicleTypesInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "journeyAccountings",
-                    "type": JourneyAccountingsInFrameRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 28,
+            "name": "CompoundTrainRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    train_ref: Optional[TrainRef] = field(
+        default=None,
+        metadata={
+            "name": "TrainRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    vehicle_type_ref: Optional[VehicleTypeRef] = field(
+        default=None,
+        metadata={
+            "name": "VehicleTypeRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    time_demand_types: Optional[TimeDemandTypesInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "timeDemandTypes",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    time_demand_type_assignments: Optional[TimeDemandTypeAssignmentsInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "timeDemandTypeAssignments",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    timing_link_groups: Optional[GroupOfLinksInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "timingLinkGroups",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    vehicle_journeys: Optional[JourneysInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "vehicleJourneys",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    frequency_groups: Optional[FrequencyGroupsInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "frequencyGroups",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    groups_of_services: Optional[GroupsOfServicesInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "groupsOfServices",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    train_numbers: Optional[TrainNumbersInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "trainNumbers",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    journey_part_couples: Optional[JourneyPartCouplesInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "journeyPartCouples",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    coupled_journeys: Optional[CoupledJourneysInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "coupledJourneys",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    service_facility_sets: Optional[ServiceFacilitySetsInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "serviceFacilitySets",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    types_of_service: Optional[TypesOfServiceInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "typesOfService",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    flexible_service_properties: Optional[FlexibleServicePropertiesInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "flexibleServiceProperties",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    vehicle_journey_stop_assignments: Optional[VehicleJourneyStopAssignmentsInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "vehicleJourneyStopAssignments",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    notices: Optional[NoticesInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    notice_assignments: Optional[NoticeAssignmentsInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "noticeAssignments",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    journey_meetings: Optional[JourneyMeetingsInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "journeyMeetings",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    journey_interchanges: Optional[JourneyInterchangesInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "journeyInterchanges",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    default_interchanges: Optional[DefaultInterchangseInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "defaultInterchanges",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    interchange_rules: Optional[InterchangeRulesInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "interchangeRules",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    vehicle_types: Optional[VehicleTypesInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "vehicleTypes",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    journey_accountings: Optional[JourneyAccountingsInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "journeyAccountings",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )

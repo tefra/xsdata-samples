@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .dead_run_endpoint_structure import DeadRunEndpointStructure
 from .dead_run_type_enumeration import DeadRunTypeEnumeration
 from .direction_type_enumeration import DirectionTypeEnumeration
@@ -26,52 +26,67 @@ class DeadRunVersionStructure(VehicleJourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice_1: List[object] = field(
-        default_factory=list,
+    flexible_line_ref: Optional[FlexibleLineRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "FlexibleLineRef",
-                    "type": FlexibleLineRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "LineRef",
-                    "type": LineRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "DirectionType",
-                    "type": DirectionTypeEnumeration,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "groupsOfServices",
-                    "type": GroupOfServicesRefsRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "trainNumbers",
-                    "type": TrainNumberRefsRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "Origin",
-                    "type": DeadRunEndpointStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "Destination",
-                    "type": DeadRunEndpointStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "DeadRunType",
-                    "type": DeadRunTypeEnumeration,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 10,
+            "name": "FlexibleLineRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    line_ref: Optional[LineRef] = field(
+        default=None,
+        metadata={
+            "name": "LineRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    direction_type: Optional[DirectionTypeEnumeration] = field(
+        default=None,
+        metadata={
+            "name": "DirectionType",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    groups_of_services: Optional[GroupOfServicesRefsRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "groupsOfServices",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    train_numbers: Optional[TrainNumberRefsRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "trainNumbers",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    origin: Optional[DeadRunEndpointStructure] = field(
+        default=None,
+        metadata={
+            "name": "Origin",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    destination: Optional[DeadRunEndpointStructure] = field(
+        default=None,
+        metadata={
+            "name": "Destination",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    dead_run_type: Optional[DeadRunTypeEnumeration] = field(
+        default=None,
+        metadata={
+            "name": "DeadRunType",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )

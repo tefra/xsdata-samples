@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xsdata.models.datatype import XmlDuration
 from .journey_timing_versioned_child_structure import JourneyTimingVersionedChildStructure
 from .service_journey_ref import ServiceJourneyRef
@@ -22,22 +22,19 @@ class DefaultServiceJourneyRunTimeVersionedChildStructure(JourneyTimingVersioned
             "required": True,
         }
     )
-    template_service_journey_ref_or_service_journey_ref: List[object] = field(
-        default_factory=list,
+    template_service_journey_ref: Optional[TemplateServiceJourneyRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "TemplateServiceJourneyRef",
-                    "type": TemplateServiceJourneyRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ServiceJourneyRef",
-                    "type": ServiceJourneyRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 3,
+            "name": "TemplateServiceJourneyRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    service_journey_ref: Optional[ServiceJourneyRef] = field(
+        default=None,
+        metadata={
+            "name": "ServiceJourneyRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )

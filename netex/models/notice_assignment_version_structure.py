@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .assignment_version_structure_1 import AssignmentVersionStructure1
 from .common_section_ref import CommonSectionRef
 from .dated_special_service_ref import DatedSpecialServiceRef
@@ -70,152 +70,227 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
-        default_factory=list,
+    dated_vehicle_journey_ref: Optional[DatedVehicleJourneyRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "DatedVehicleJourneyRef",
-                    "type": DatedVehicleJourneyRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "DatedSpecialServiceRef",
-                    "type": DatedSpecialServiceRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "SpecialServiceRef",
-                    "type": SpecialServiceRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TemplateServiceJourneyRef",
-                    "type": TemplateServiceJourneyRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ServiceJourneyRef",
-                    "type": ServiceJourneyRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "DeadRunRef",
-                    "type": DeadRunRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "VehicleJourneyRef",
-                    "type": VehicleJourneyRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "JourneyRef",
-                    "type": JourneyRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "NavigationPathRef",
-                    "type": NavigationPathRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ServiceJourneyPatternRef",
-                    "type": ServiceJourneyPatternRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ServicePatternRef",
-                    "type": ServicePatternRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "DeadRunJourneyPatternRef",
-                    "type": DeadRunJourneyPatternRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "JourneyPatternRef",
-                    "type": JourneyPatternRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TimingPatternRef",
-                    "type": TimingPatternRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "RouteRef",
-                    "type": RouteRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "LinkSequenceRef",
-                    "type": LinkSequenceRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ParentCommonSectionRef",
-                    "type": ParentCommonSectionRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "CommonSectionRef",
-                    "type": CommonSectionRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "LineSectionRef",
-                    "type": LineSectionRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "FareSectionRef",
-                    "type": FareSectionRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "GeneralSectionRef",
-                    "type": GeneralSectionRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "SectionRef",
-                    "type": SectionRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "StartPointInPatternRef",
-                    "type": PointInSequenceRefStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "EndPointInPatternRef",
-                    "type": PointInSequenceRefStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "Mark",
-                    "type": str,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "MarkUrl",
-                    "type": str,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "PublicityChannel",
-                    "type": PublicityChannelEnumeration,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "Advertised",
-                    "type": bool,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 113,
+            "name": "DatedVehicleJourneyRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    dated_special_service_ref: Optional[DatedSpecialServiceRef] = field(
+        default=None,
+        metadata={
+            "name": "DatedSpecialServiceRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    special_service_ref: Optional[SpecialServiceRef] = field(
+        default=None,
+        metadata={
+            "name": "SpecialServiceRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    template_service_journey_ref: Optional[TemplateServiceJourneyRef] = field(
+        default=None,
+        metadata={
+            "name": "TemplateServiceJourneyRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    service_journey_ref: Optional[ServiceJourneyRef] = field(
+        default=None,
+        metadata={
+            "name": "ServiceJourneyRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    dead_run_ref: Optional[DeadRunRef] = field(
+        default=None,
+        metadata={
+            "name": "DeadRunRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    vehicle_journey_ref: Optional[VehicleJourneyRef] = field(
+        default=None,
+        metadata={
+            "name": "VehicleJourneyRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    journey_ref: Optional[JourneyRef] = field(
+        default=None,
+        metadata={
+            "name": "JourneyRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    navigation_path_ref: Optional[NavigationPathRef] = field(
+        default=None,
+        metadata={
+            "name": "NavigationPathRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    service_journey_pattern_ref: Optional[ServiceJourneyPatternRef] = field(
+        default=None,
+        metadata={
+            "name": "ServiceJourneyPatternRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    service_pattern_ref: Optional[ServicePatternRef] = field(
+        default=None,
+        metadata={
+            "name": "ServicePatternRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    dead_run_journey_pattern_ref: Optional[DeadRunJourneyPatternRef] = field(
+        default=None,
+        metadata={
+            "name": "DeadRunJourneyPatternRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    journey_pattern_ref: Optional[JourneyPatternRef] = field(
+        default=None,
+        metadata={
+            "name": "JourneyPatternRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    timing_pattern_ref: Optional[TimingPatternRef] = field(
+        default=None,
+        metadata={
+            "name": "TimingPatternRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    route_ref: Optional[RouteRef] = field(
+        default=None,
+        metadata={
+            "name": "RouteRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    link_sequence_ref: Optional[LinkSequenceRef] = field(
+        default=None,
+        metadata={
+            "name": "LinkSequenceRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    parent_common_section_ref: Optional[ParentCommonSectionRef] = field(
+        default=None,
+        metadata={
+            "name": "ParentCommonSectionRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    common_section_ref: Optional[CommonSectionRef] = field(
+        default=None,
+        metadata={
+            "name": "CommonSectionRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    line_section_ref: Optional[LineSectionRef] = field(
+        default=None,
+        metadata={
+            "name": "LineSectionRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    fare_section_ref: Optional[FareSectionRef] = field(
+        default=None,
+        metadata={
+            "name": "FareSectionRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    general_section_ref: Optional[GeneralSectionRef] = field(
+        default=None,
+        metadata={
+            "name": "GeneralSectionRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    section_ref: Optional[SectionRef] = field(
+        default=None,
+        metadata={
+            "name": "SectionRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    start_point_in_pattern_ref: Optional[PointInSequenceRefStructure] = field(
+        default=None,
+        metadata={
+            "name": "StartPointInPatternRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    end_point_in_pattern_ref: Optional[PointInSequenceRefStructure] = field(
+        default=None,
+        metadata={
+            "name": "EndPointInPatternRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    mark: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "Mark",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    mark_url: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "MarkUrl",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    publicity_channel: Optional[PublicityChannelEnumeration] = field(
+        default=None,
+        metadata={
+            "name": "PublicityChannel",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    advertised: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "Advertised",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )

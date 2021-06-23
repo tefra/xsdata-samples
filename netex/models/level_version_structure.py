@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .accessibility_assessment_versioned_child_structure import AccessibilityAssessmentVersionedChildStructure
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .multilingual_string import MultilingualString
@@ -73,37 +73,43 @@ class LevelVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
-        default_factory=list,
+    stop_place_ref: Optional[StopPlaceRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "StopPlaceRef",
-                    "type": StopPlaceRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ParkingRef",
-                    "type": ParkingRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "PointOfInterestRef",
-                    "type": PointOfInterestRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ServiceSiteRef",
-                    "type": ServiceSiteRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "SiteRef",
-                    "type": SiteRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 9,
+            "name": "StopPlaceRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    parking_ref: Optional[ParkingRef] = field(
+        default=None,
+        metadata={
+            "name": "ParkingRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    point_of_interest_ref: Optional[PointOfInterestRef] = field(
+        default=None,
+        metadata={
+            "name": "PointOfInterestRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    service_site_ref: Optional[ServiceSiteRef] = field(
+        default=None,
+        metadata={
+            "name": "ServiceSiteRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    site_ref: Optional[SiteRef] = field(
+        default=None,
+        metadata={
+            "name": "SiteRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )

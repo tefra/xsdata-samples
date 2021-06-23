@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xsdata.models.datatype import XmlDuration
 from .activation_point_ref import ActivationPointRef
 from .beacon_point_ref import BeaconPointRef
@@ -34,98 +34,156 @@ class JourneyLayoverStructure(JourneyTimingVersionedChildStructure):
             "required": True,
         }
     )
-    choice: List[object] = field(
-        default_factory=list,
+    border_point_ref: Optional[BorderPointRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "BorderPointRef",
-                    "type": BorderPointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "FareScheduledStopPointRef",
-                    "type": FareScheduledStopPointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ScheduledStopPointRef",
-                    "type": ScheduledStopPointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "GaragePointRef",
-                    "type": GaragePointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ParkingPointRef",
-                    "type": ParkingPointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ReliefPointRef",
-                    "type": ReliefPointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TimingPointRef",
-                    "type": TimingPointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "RoutePointRef",
-                    "type": RoutePointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "WirePointRef",
-                    "type": WirePointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "RoadPointRef",
-                    "type": RoadPointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "RailwayPointRef",
-                    "type": RailwayPointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "InfrastructurePointRef",
-                    "type": InfrastructurePointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TrafficControlPointRef",
-                    "type": TrafficControlPointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "BeaconPointRef",
-                    "type": BeaconPointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ActivationPointRef",
-                    "type": ActivationPointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "PointOnLinkRef",
-                    "type": PointOnLinkRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "PointRef",
-                    "type": PointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "min_occurs": 17,
-            "max_occurs": 54,
+            "name": "BorderPointRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "required": True,
+        }
+    )
+    fare_scheduled_stop_point_ref: Optional[FareScheduledStopPointRef] = field(
+        default=None,
+        metadata={
+            "name": "FareScheduledStopPointRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "required": True,
+        }
+    )
+    scheduled_stop_point_ref: Optional[ScheduledStopPointRef] = field(
+        default=None,
+        metadata={
+            "name": "ScheduledStopPointRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "required": True,
+        }
+    )
+    garage_point_ref: Optional[GaragePointRef] = field(
+        default=None,
+        metadata={
+            "name": "GaragePointRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "required": True,
+        }
+    )
+    parking_point_ref: Optional[ParkingPointRef] = field(
+        default=None,
+        metadata={
+            "name": "ParkingPointRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "required": True,
+        }
+    )
+    relief_point_ref: Optional[ReliefPointRef] = field(
+        default=None,
+        metadata={
+            "name": "ReliefPointRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "required": True,
+        }
+    )
+    timing_point_ref: Optional[TimingPointRef] = field(
+        default=None,
+        metadata={
+            "name": "TimingPointRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "required": True,
+        }
+    )
+    route_point_ref: Optional[RoutePointRef] = field(
+        default=None,
+        metadata={
+            "name": "RoutePointRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "required": True,
+        }
+    )
+    wire_point_ref: Optional[WirePointRef] = field(
+        default=None,
+        metadata={
+            "name": "WirePointRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "required": True,
+        }
+    )
+    road_point_ref: Optional[RoadPointRef] = field(
+        default=None,
+        metadata={
+            "name": "RoadPointRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "required": True,
+        }
+    )
+    railway_point_ref: Optional[RailwayPointRef] = field(
+        default=None,
+        metadata={
+            "name": "RailwayPointRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "required": True,
+        }
+    )
+    infrastructure_point_ref: Optional[InfrastructurePointRef] = field(
+        default=None,
+        metadata={
+            "name": "InfrastructurePointRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "required": True,
+        }
+    )
+    traffic_control_point_ref: Optional[TrafficControlPointRef] = field(
+        default=None,
+        metadata={
+            "name": "TrafficControlPointRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "required": True,
+        }
+    )
+    beacon_point_ref: Optional[BeaconPointRef] = field(
+        default=None,
+        metadata={
+            "name": "BeaconPointRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "required": True,
+        }
+    )
+    activation_point_ref: Optional[ActivationPointRef] = field(
+        default=None,
+        metadata={
+            "name": "ActivationPointRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "required": True,
+        }
+    )
+    point_on_link_ref: Optional[PointOnLinkRef] = field(
+        default=None,
+        metadata={
+            "name": "PointOnLinkRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "required": True,
+        }
+    )
+    point_ref: Optional[PointRef] = field(
+        default=None,
+        metadata={
+            "name": "PointRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+            "required": True,
         }
     )

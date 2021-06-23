@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xsdata.models.datatype import XmlTime
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .block_ref import BlockRef
@@ -47,22 +47,19 @@ class ReliefOpportunityVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    train_block_ref_or_block_ref: List[object] = field(
-        default_factory=list,
+    train_block_ref: Optional[TrainBlockRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "TrainBlockRef",
-                    "type": TrainBlockRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "BlockRef",
-                    "type": BlockRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 3,
+            "name": "TrainBlockRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    block_ref: Optional[BlockRef] = field(
+        default=None,
+        metadata={
+            "name": "BlockRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )

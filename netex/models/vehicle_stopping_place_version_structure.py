@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import Optional
 from .infrastructure_link_ref import InfrastructureLinkRef
 from .infrastructure_point_ref import InfrastructurePointRef
 from .railway_link_ref import RailwayLinkRef
@@ -20,62 +20,83 @@ class VehicleStoppingPlaceVersionStructure(StopPlaceSpaceVersionStructure):
     class Meta:
         name = "VehicleStoppingPlace_VersionStructure"
 
-    choice: List[object] = field(
-        default_factory=list,
+    wire_link_ref: Optional[WireLinkRef] = field(
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "WireLinkRef",
-                    "type": WireLinkRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "RoadLinkRef",
-                    "type": RoadLinkRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "RailwayLinkRef",
-                    "type": RailwayLinkRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "InfrastructureLinkRef",
-                    "type": InfrastructureLinkRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "WirePointRef",
-                    "type": WirePointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "RoadPointRef",
-                    "type": RoadPointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "RailwayPointRef",
-                    "type": RailwayPointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "InfrastructurePointRef",
-                    "type": InfrastructurePointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "vehicleStoppingPositions",
-                    "type": VehicleStoppingPositionsRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "quayAlignments",
-                    "type": VehicleQuayAlignmentsRelStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 16,
+            "name": "WireLinkRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    road_link_ref: Optional[RoadLinkRef] = field(
+        default=None,
+        metadata={
+            "name": "RoadLinkRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    railway_link_ref: Optional[RailwayLinkRef] = field(
+        default=None,
+        metadata={
+            "name": "RailwayLinkRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    infrastructure_link_ref: Optional[InfrastructureLinkRef] = field(
+        default=None,
+        metadata={
+            "name": "InfrastructureLinkRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    wire_point_ref: Optional[WirePointRef] = field(
+        default=None,
+        metadata={
+            "name": "WirePointRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    road_point_ref: Optional[RoadPointRef] = field(
+        default=None,
+        metadata={
+            "name": "RoadPointRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    railway_point_ref: Optional[RailwayPointRef] = field(
+        default=None,
+        metadata={
+            "name": "RailwayPointRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    infrastructure_point_ref: Optional[InfrastructurePointRef] = field(
+        default=None,
+        metadata={
+            "name": "InfrastructurePointRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    vehicle_stopping_positions: Optional[VehicleStoppingPositionsRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "vehicleStoppingPositions",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        }
+    )
+    quay_alignments: Optional[VehicleQuayAlignmentsRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "quayAlignments",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         }
     )
