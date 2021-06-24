@@ -57,6 +57,20 @@ mypies = $\
 	mypy-autosar $\
 	mypy-netex
 
+init-configs = $\
+	init-config-amadeus $\
+	init-config-sabre $\
+	init-config-travelport $\
+	init-config-common_types $\
+	init-config-reqif $\
+	init-config-npo $\
+	init-config-datexii $\
+	init-config-ewp $\
+	init-config-ubl $\
+	init-config-spacex $\
+	init-config-autosar $\
+	init-config-netex
+
 all: $(builds) $(tests) $(mypies)
 
 amadeus: build-amadeus test-amadeus mypy-amadeus
@@ -76,6 +90,7 @@ autosar: build-autosar test-autosar mypy-autosar
 build: $(builds)
 test: $(tests)
 mypy: $(mypies)
+init-config: $(init-configs)
 
 build-%:
 	@echo "**** Generating models: $* ****"
@@ -89,3 +104,6 @@ test-%:
 mypy-%:
 	@echo "**** Running static analysis: $* ****"
 	mypy $*/models
+
+init-config-%:
+	xsdata init-config $*/.xsdata.xml

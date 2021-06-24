@@ -2,9 +2,10 @@
 <Config xmlns="http://pypi.org/project/xsdata" version="21.6">
   <Output maxLineLength="79">
     <Package>sabre.models</Package>
-    <Format relativeImports="false">dataclasses</Format>
+    <Format repr="true" eq="true" order="false" unsafeHash="false" frozen="false">dataclasses</Format>
     <Structure>filenames</Structure>
     <DocstringStyle>Google</DocstringStyle>
+    <RelativeImports>false</RelativeImports>
     <CompoundFields>false</CompoundFields>
   </Output>
   <Conventions>
