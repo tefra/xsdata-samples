@@ -11,13 +11,12 @@ class AccessibilityLimitationVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "AccessibilityLimitation_VersionedChildStructure"
 
-    wheelchair_access: Optional[LimitationStatusEnumeration] = field(
-        default=None,
+    wheelchair_access: LimitationStatusEnumeration = field(
+        default=LimitationStatusEnumeration.FALSE_VALUE,
         metadata={
             "name": "WheelchairAccess",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     step_free_access: Optional[LimitationStatusEnumeration] = field(

@@ -412,7 +412,7 @@ class StrucDocTitleFootnote:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    br: List[object] = field(
+    br: List[StrucDocBr] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -590,7 +590,7 @@ class StrucDocTitleContent:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    br: List[object] = field(
+    br: List[StrucDocBr] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -688,7 +688,7 @@ class StrucDocParagraph:
             "sequential": True,
         }
     )
-    br: List[object] = field(
+    br: List[StrucDocBr] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -787,7 +787,7 @@ class StrucDocTh:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    br: List[object] = field(
+    br: List[StrucDocBr] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -935,7 +935,7 @@ class StrucDocTitle:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    br: List[object] = field(
+    br: List[StrucDocBr] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1030,7 +1030,7 @@ class StrucDocTd:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    br: List[object] = field(
+    br: List[StrucDocBr] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1571,7 +1571,7 @@ class StrucDocItem:
             "sequential": True,
         }
     )
-    br: List[object] = field(
+    br: List[StrucDocBr] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1745,7 +1745,7 @@ class StrucDocFootnote:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    br: List[object] = field(
+    br: List[StrucDocBr] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1928,7 +1928,7 @@ class StrucDocContent:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    br: List[object] = field(
+    br: List[StrucDocBr] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2029,7 +2029,7 @@ class StrucDocText:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    br: List[object] = field(
+    br: List[StrucDocBr] = field(
         default_factory=list,
         metadata={
             "type": "Element",
