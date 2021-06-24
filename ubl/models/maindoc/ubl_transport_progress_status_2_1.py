@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional, Tuple
 from xsdata.models.datatype import XmlDate, XmlTime
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     ReceiverParty,
@@ -24,7 +24,7 @@ from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:TransportProgressStatus-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransportProgressStatusType:
     ublextensions: Optional[Ublextensions] = field(
         default=None,
@@ -109,8 +109,8 @@ class TransportProgressStatusType:
             "required": True,
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -125,8 +125,8 @@ class TransportProgressStatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    signature: List[Signature] = field(
-        default_factory=list,
+    signature: Tuple[Signature, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Signature",
             "type": "Element",
@@ -174,8 +174,8 @@ class TransportProgressStatusType:
             "required": True,
         }
     )
-    transport_schedule: List[TransportSchedule] = field(
-        default_factory=list,
+    transport_schedule: Tuple[TransportSchedule, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TransportSchedule",
             "type": "Element",
@@ -184,7 +184,7 @@ class TransportProgressStatusType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransportProgressStatus(TransportProgressStatusType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:TransportProgressStatus-2"

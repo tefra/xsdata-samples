@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional, Tuple
 from xsdata.models.datatype import XmlDate, XmlTime
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     AdditionalDocumentReference,
@@ -25,7 +25,7 @@ from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:TendererQualification-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TendererQualificationType:
     ublextensions: Optional[Ublextensions] = field(
         default=None,
@@ -118,8 +118,8 @@ class TendererQualificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -142,16 +142,16 @@ class TendererQualificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    signature: List[Signature] = field(
-        default_factory=list,
+    signature: Tuple[Signature, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Signature",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    tenderer_party_qualification: List[TendererPartyQualification] = field(
-        default_factory=list,
+    tenderer_party_qualification: Tuple[TendererPartyQualification, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TendererPartyQualification",
             "type": "Element",
@@ -167,16 +167,16 @@ class TendererQualificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    evidence: List[Evidence] = field(
-        default_factory=list,
+    evidence: Tuple[Evidence, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Evidence",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    additional_document_reference: List[AdditionalDocumentReference] = field(
-        default_factory=list,
+    additional_document_reference: Tuple[AdditionalDocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AdditionalDocumentReference",
             "type": "Element",
@@ -185,7 +185,7 @@ class TendererQualificationType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TendererQualification(TendererQualificationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:TendererQualification-2"

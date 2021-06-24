@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional, Tuple
 from xsdata.models.datatype import XmlDate, XmlTime
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     AdditionalDocumentReference,
@@ -26,7 +26,7 @@ from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:OrderCancellation-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class OrderCancellationType:
     ublextensions: Optional[Ublextensions] = field(
         default=None,
@@ -110,16 +110,16 @@ class OrderCancellationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    cancellation_note: List[CancellationNote] = field(
-        default_factory=list,
+    cancellation_note: Tuple[CancellationNote, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "CancellationNote",
             "type": "Element",
@@ -127,8 +127,8 @@ class OrderCancellationType:
             "min_occurs": 1,
         }
     )
-    order_reference: List[OrderReference] = field(
-        default_factory=list,
+    order_reference: Tuple[OrderReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "OrderReference",
             "type": "Element",
@@ -144,24 +144,24 @@ class OrderCancellationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    additional_document_reference: List[AdditionalDocumentReference] = field(
-        default_factory=list,
+    additional_document_reference: Tuple[AdditionalDocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AdditionalDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    contract: List[Contract] = field(
-        default_factory=list,
+    contract: Tuple[Contract, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Contract",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    signature: List[Signature] = field(
-        default_factory=list,
+    signature: Tuple[Signature, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Signature",
             "type": "Element",
@@ -196,7 +196,7 @@ class OrderCancellationType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class OrderCancellation(OrderCancellationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:OrderCancellation-2"

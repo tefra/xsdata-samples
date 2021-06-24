@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional, Tuple
 from xsdata.models.datatype import XmlDate, XmlTime
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     BuyerCustomerParty,
@@ -32,7 +32,7 @@ from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:RetailEvent-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RetailEventType:
     ublextensions: Optional[Ublextensions] = field(
         default=None,
@@ -115,8 +115,8 @@ class RetailEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -156,8 +156,8 @@ class RetailEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -173,16 +173,16 @@ class RetailEventType:
             "required": True,
         }
     )
-    original_document_reference: List[OriginalDocumentReference] = field(
-        default_factory=list,
+    original_document_reference: Tuple[OriginalDocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "OriginalDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    signature: List[Signature] = field(
-        default_factory=list,
+    signature: Tuple[Signature, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Signature",
             "type": "Element",
@@ -223,8 +223,8 @@ class RetailEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    event_comment: List[EventComment] = field(
-        default_factory=list,
+    event_comment: Tuple[EventComment, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "EventComment",
             "type": "Element",
@@ -249,7 +249,7 @@ class RetailEventType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class RetailEvent(RetailEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:RetailEvent-2"

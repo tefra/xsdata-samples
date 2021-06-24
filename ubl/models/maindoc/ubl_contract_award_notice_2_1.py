@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional, Tuple
 from xsdata.models.datatype import XmlDate, XmlTime
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     ContractingParty,
@@ -30,7 +30,7 @@ from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ContractAwardNoticeType:
     ublextensions: Optional[Ublextensions] = field(
         default=None,
@@ -122,16 +122,16 @@ class ContractAwardNoticeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    regulatory_domain: List[RegulatoryDomain] = field(
-        default_factory=list,
+    regulatory_domain: Tuple[RegulatoryDomain, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "RegulatoryDomain",
             "type": "Element",
@@ -146,24 +146,24 @@ class ContractAwardNoticeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    previous_document_reference: List[PreviousDocumentReference] = field(
-        default_factory=list,
+    previous_document_reference: Tuple[PreviousDocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PreviousDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    minutes_document_reference: List[MinutesDocumentReference] = field(
-        default_factory=list,
+    minutes_document_reference: Tuple[MinutesDocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "MinutesDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    signature: List[Signature] = field(
-        default_factory=list,
+    signature: Tuple[Signature, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Signature",
             "type": "Element",
@@ -219,16 +219,16 @@ class ContractAwardNoticeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    procurement_project_lot: List[ProcurementProjectLot] = field(
-        default_factory=list,
+    procurement_project_lot: Tuple[ProcurementProjectLot, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ProcurementProjectLot",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    tender_result: List[TenderResult] = field(
-        default_factory=list,
+    tender_result: Tuple[TenderResult, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TenderResult",
             "type": "Element",
@@ -238,7 +238,7 @@ class ContractAwardNoticeType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ContractAwardNotice(ContractAwardNoticeType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"

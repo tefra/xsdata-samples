@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional, Tuple
 from xsdata.models.datatype import XmlDate, XmlTime
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     AccountingCustomerParty,
@@ -56,7 +56,7 @@ from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CreditNoteType:
     ublextensions: Optional[Ublextensions] = field(
         default=None,
@@ -156,8 +156,8 @@ class CreditNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -236,16 +236,16 @@ class CreditNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    invoice_period: List[InvoicePeriod] = field(
-        default_factory=list,
+    invoice_period: Tuple[InvoicePeriod, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "InvoicePeriod",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    discrepancy_response: List[DiscrepancyResponse] = field(
-        default_factory=list,
+    discrepancy_response: Tuple[DiscrepancyResponse, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DiscrepancyResponse",
             "type": "Element",
@@ -260,64 +260,64 @@ class CreditNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    billing_reference: List[BillingReference] = field(
-        default_factory=list,
+    billing_reference: Tuple[BillingReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "BillingReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    despatch_document_reference: List[DespatchDocumentReference] = field(
-        default_factory=list,
+    despatch_document_reference: Tuple[DespatchDocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DespatchDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    receipt_document_reference: List[ReceiptDocumentReference] = field(
-        default_factory=list,
+    receipt_document_reference: Tuple[ReceiptDocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ReceiptDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    contract_document_reference: List[ContractDocumentReference] = field(
-        default_factory=list,
+    contract_document_reference: Tuple[ContractDocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ContractDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    additional_document_reference: List[AdditionalDocumentReference] = field(
-        default_factory=list,
+    additional_document_reference: Tuple[AdditionalDocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AdditionalDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    statement_document_reference: List[StatementDocumentReference] = field(
-        default_factory=list,
+    statement_document_reference: Tuple[StatementDocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "StatementDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    originator_document_reference: List[OriginatorDocumentReference] = field(
-        default_factory=list,
+    originator_document_reference: Tuple[OriginatorDocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "OriginatorDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    signature: List[Signature] = field(
-        default_factory=list,
+    signature: Tuple[Signature, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Signature",
             "type": "Element",
@@ -374,32 +374,32 @@ class CreditNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    delivery: List[Delivery] = field(
-        default_factory=list,
+    delivery: Tuple[Delivery, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Delivery",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    delivery_terms: List[DeliveryTerms] = field(
-        default_factory=list,
+    delivery_terms: Tuple[DeliveryTerms, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DeliveryTerms",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    payment_means: List[PaymentMeans] = field(
-        default_factory=list,
+    payment_means: Tuple[PaymentMeans, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PaymentMeans",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    payment_terms: List[PaymentTerms] = field(
-        default_factory=list,
+    payment_terms: Tuple[PaymentTerms, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PaymentTerms",
             "type": "Element",
@@ -438,16 +438,16 @@ class CreditNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    allowance_charge: List[AllowanceCharge] = field(
-        default_factory=list,
+    allowance_charge: Tuple[AllowanceCharge, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AllowanceCharge",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    tax_total: List[TaxTotal] = field(
-        default_factory=list,
+    tax_total: Tuple[TaxTotal, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TaxTotal",
             "type": "Element",
@@ -463,8 +463,8 @@ class CreditNoteType:
             "required": True,
         }
     )
-    credit_note_line: List[CreditNoteLine] = field(
-        default_factory=list,
+    credit_note_line: Tuple[CreditNoteLine, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "CreditNoteLine",
             "type": "Element",
@@ -474,7 +474,7 @@ class CreditNoteType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class CreditNote(CreditNoteType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2"

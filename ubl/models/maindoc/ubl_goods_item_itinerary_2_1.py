@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional, Tuple
 from xsdata.models.datatype import XmlDate, XmlTime
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     ReceiverParty,
@@ -27,7 +27,7 @@ from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:GoodsItemItinerary-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class GoodsItemItineraryType:
     ublextensions: Optional[Ublextensions] = field(
         default=None,
@@ -112,8 +112,8 @@ class GoodsItemItineraryType:
             "required": True,
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -138,8 +138,8 @@ class GoodsItemItineraryType:
             "required": True,
         }
     )
-    signature: List[Signature] = field(
-        default_factory=list,
+    signature: Tuple[Signature, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Signature",
             "type": "Element",
@@ -162,40 +162,40 @@ class GoodsItemItineraryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    referenced_consignment: List[ReferencedConsignment] = field(
-        default_factory=list,
+    referenced_consignment: Tuple[ReferencedConsignment, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ReferencedConsignment",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    referenced_transport_equipment: List[ReferencedTransportEquipment] = field(
-        default_factory=list,
+    referenced_transport_equipment: Tuple[ReferencedTransportEquipment, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ReferencedTransportEquipment",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    referenced_package: List[ReferencedPackage] = field(
-        default_factory=list,
+    referenced_package: Tuple[ReferencedPackage, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ReferencedPackage",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    referenced_goods_item: List[ReferencedGoodsItem] = field(
-        default_factory=list,
+    referenced_goods_item: Tuple[ReferencedGoodsItem, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ReferencedGoodsItem",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    transportation_segment: List[TransportationSegment] = field(
-        default_factory=list,
+    transportation_segment: Tuple[TransportationSegment, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TransportationSegment",
             "type": "Element",
@@ -205,7 +205,7 @@ class GoodsItemItineraryType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class GoodsItemItinerary(GoodsItemItineraryType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:GoodsItemItinerary-2"

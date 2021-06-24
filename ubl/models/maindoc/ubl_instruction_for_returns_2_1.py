@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional, Tuple
 from xsdata.models.datatype import XmlDate, XmlTime
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     DocumentReference,
@@ -24,7 +24,7 @@ from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:InstructionForReturns-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class InstructionForReturnsType:
     ublextensions: Optional[Ublextensions] = field(
         default=None,
@@ -108,24 +108,24 @@ class InstructionForReturnsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    document_reference: List[DocumentReference] = field(
-        default_factory=list,
+    document_reference: Tuple[DocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    signature: List[Signature] = field(
-        default_factory=list,
+    signature: Tuple[Signature, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Signature",
             "type": "Element",
@@ -166,8 +166,8 @@ class InstructionForReturnsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    instruction_for_returns_line: List[InstructionForReturnsLine] = field(
-        default_factory=list,
+    instruction_for_returns_line: Tuple[InstructionForReturnsLine, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "InstructionForReturnsLine",
             "type": "Element",
@@ -177,7 +177,7 @@ class InstructionForReturnsType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class InstructionForReturns(InstructionForReturnsType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:InstructionForReturns-2"

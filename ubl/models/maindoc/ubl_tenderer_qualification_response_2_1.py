@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional, Tuple
 from xsdata.models.datatype import XmlDate, XmlTime
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     AppealTerms,
@@ -25,7 +25,7 @@ from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:TendererQualificationResponse-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TendererQualificationResponseType:
     ublextensions: Optional[Ublextensions] = field(
         default=None,
@@ -100,8 +100,8 @@ class TendererQualificationResponseType:
             "required": True,
         }
     )
-    contract_name: List[ContractName] = field(
-        default_factory=list,
+    contract_name: Tuple[ContractName, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ContractName",
             "type": "Element",
@@ -125,8 +125,8 @@ class TendererQualificationResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -159,8 +159,8 @@ class TendererQualificationResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    qualification_resolution: List[QualificationResolution] = field(
-        default_factory=list,
+    qualification_resolution: Tuple[QualificationResolution, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "QualificationResolution",
             "type": "Element",
@@ -176,8 +176,8 @@ class TendererQualificationResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    signature: List[Signature] = field(
-        default_factory=list,
+    signature: Tuple[Signature, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Signature",
             "type": "Element",
@@ -186,7 +186,7 @@ class TendererQualificationResponseType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TendererQualificationResponse(TendererQualificationResponseType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:TendererQualificationResponse-2"

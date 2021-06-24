@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional, Tuple
 
 __NAMESPACE__ = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CanonicalizationMethodType:
-    any_element: List[object] = field(
-        default_factory=list,
+    any_element: Tuple[object, ...] = field(
+        default_factory=tuple,
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
@@ -24,7 +24,7 @@ class CanonicalizationMethodType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class DsakeyValueType:
     class Meta:
         name = "DSAKeyValueType"
@@ -95,10 +95,10 @@ class DsakeyValueType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class DigestMethodType:
-    other_element: List[object] = field(
-        default_factory=list,
+    other_element: Tuple[object, ...] = field(
+        default_factory=tuple,
         metadata={
             "type": "Wildcard",
             "namespace": "##other",
@@ -115,7 +115,7 @@ class DigestMethodType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class DigestValue:
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
@@ -129,7 +129,7 @@ class DigestValue:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class KeyName:
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
@@ -142,7 +142,7 @@ class KeyName:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class MgmtData:
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
@@ -155,10 +155,10 @@ class MgmtData:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ObjectType:
-    any_element: List[object] = field(
-        default_factory=list,
+    any_element: Tuple[object, ...] = field(
+        default_factory=tuple,
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
@@ -188,7 +188,7 @@ class ObjectType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class PgpdataType:
     class Meta:
         name = "PGPDataType"
@@ -202,8 +202,8 @@ class PgpdataType:
             "format": "base64",
         }
     )
-    pgpkey_packet: List[bytes] = field(
-        default_factory=list,
+    pgpkey_packet: Tuple[bytes, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PGPKeyPacket",
             "type": "Element",
@@ -212,8 +212,8 @@ class PgpdataType:
             "format": "base64",
         }
     )
-    other_element: List[object] = field(
-        default_factory=list,
+    other_element: Tuple[object, ...] = field(
+        default_factory=tuple,
         metadata={
             "type": "Wildcard",
             "namespace": "##other",
@@ -221,7 +221,7 @@ class PgpdataType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class RsakeyValueType:
     class Meta:
         name = "RSAKeyValueType"
@@ -248,13 +248,13 @@ class RsakeyValueType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class SpkidataType:
     class Meta:
         name = "SPKIDataType"
 
-    spkisexp: List[bytes] = field(
-        default_factory=list,
+    spkisexp: Tuple[bytes, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SPKISexp",
             "type": "Element",
@@ -264,8 +264,8 @@ class SpkidataType:
             "format": "base64",
         }
     )
-    other_element: List[object] = field(
-        default_factory=list,
+    other_element: Tuple[object, ...] = field(
+        default_factory=tuple,
         metadata={
             "type": "Wildcard",
             "namespace": "##other",
@@ -274,7 +274,7 @@ class SpkidataType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class SignatureMethodType:
     hmacoutput_length: Optional[int] = field(
         default=None,
@@ -284,8 +284,8 @@ class SignatureMethodType:
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
         }
     )
-    other_element: List[object] = field(
-        default_factory=list,
+    other_element: Tuple[object, ...] = field(
+        default_factory=tuple,
         metadata={
             "type": "Wildcard",
             "namespace": "##other",
@@ -302,10 +302,10 @@ class SignatureMethodType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class SignaturePropertyType:
-    other_element: List[object] = field(
-        default_factory=list,
+    other_element: Tuple[object, ...] = field(
+        default_factory=tuple,
         metadata={
             "type": "Wildcard",
             "namespace": "##other",
@@ -329,7 +329,7 @@ class SignaturePropertyType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class SignatureValueType:
     value: Optional[bytes] = field(
         default=None,
@@ -347,18 +347,18 @@ class SignatureValueType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransformType:
-    other_element: List[object] = field(
-        default_factory=list,
+    other_element: Tuple[object, ...] = field(
+        default_factory=tuple,
         metadata={
             "type": "Wildcard",
             "namespace": "##other",
             "mixed": True,
         }
     )
-    xpath: List[str] = field(
-        default_factory=list,
+    xpath: Tuple[str, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "XPath",
             "type": "Element",
@@ -375,7 +375,7 @@ class TransformType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class X509IssuerSerialType:
     x509_issuer_name: Optional[str] = field(
         default=None,
@@ -397,80 +397,80 @@ class X509IssuerSerialType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class CanonicalizationMethod(CanonicalizationMethodType):
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DsakeyValue(DsakeyValueType):
     class Meta:
         name = "DSAKeyValue"
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DigestMethod(DigestMethodType):
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Object(ObjectType):
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Pgpdata(PgpdataType):
     class Meta:
         name = "PGPData"
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RsakeyValue(RsakeyValueType):
     class Meta:
         name = "RSAKeyValue"
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Spkidata(SpkidataType):
     class Meta:
         name = "SPKIData"
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SignatureMethod(SignatureMethodType):
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SignatureProperty(SignaturePropertyType):
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SignatureValue(SignatureValueType):
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Transform(TransformType):
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class X509DataType:
-    x509_issuer_serial: List[X509IssuerSerialType] = field(
-        default_factory=list,
+    x509_issuer_serial: Tuple[X509IssuerSerialType, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "X509IssuerSerial",
             "type": "Element",
@@ -478,8 +478,8 @@ class X509DataType:
             "sequential": True,
         }
     )
-    x509_ski: List[bytes] = field(
-        default_factory=list,
+    x509_ski: Tuple[bytes, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "X509SKI",
             "type": "Element",
@@ -488,8 +488,8 @@ class X509DataType:
             "format": "base64",
         }
     )
-    x509_subject_name: List[str] = field(
-        default_factory=list,
+    x509_subject_name: Tuple[str, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "X509SubjectName",
             "type": "Element",
@@ -497,8 +497,8 @@ class X509DataType:
             "sequential": True,
         }
     )
-    x509_certificate: List[bytes] = field(
-        default_factory=list,
+    x509_certificate: Tuple[bytes, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "X509Certificate",
             "type": "Element",
@@ -507,8 +507,8 @@ class X509DataType:
             "format": "base64",
         }
     )
-    x509_crl: List[bytes] = field(
-        default_factory=list,
+    x509_crl: Tuple[bytes, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "X509CRL",
             "type": "Element",
@@ -517,8 +517,8 @@ class X509DataType:
             "format": "base64",
         }
     )
-    other_element: List[object] = field(
-        default_factory=list,
+    other_element: Tuple[object, ...] = field(
+        default_factory=tuple,
         metadata={
             "type": "Wildcard",
             "namespace": "##other",
@@ -527,7 +527,7 @@ class X509DataType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class KeyValueType:
     dsakey_value: Optional[DsakeyValue] = field(
         default=None,
@@ -545,8 +545,8 @@ class KeyValueType:
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
         }
     )
-    other_element: List[object] = field(
-        default_factory=list,
+    other_element: Tuple[object, ...] = field(
+        default_factory=tuple,
         metadata={
             "type": "Wildcard",
             "namespace": "##other",
@@ -555,10 +555,10 @@ class KeyValueType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class SignaturePropertiesType:
-    signature_property: List[SignatureProperty] = field(
-        default_factory=list,
+    signature_property: Tuple[SignatureProperty, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SignatureProperty",
             "type": "Element",
@@ -575,10 +575,10 @@ class SignaturePropertiesType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransformsType:
-    transform: List[Transform] = field(
-        default_factory=list,
+    transform: Tuple[Transform, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Transform",
             "type": "Element",
@@ -588,31 +588,31 @@ class TransformsType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class X509Data(X509DataType):
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class KeyValue(KeyValueType):
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SignatureProperties(SignaturePropertiesType):
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Transforms(TransformsType):
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ReferenceType:
     transforms: Optional[Transforms] = field(
         default=None,
@@ -664,7 +664,7 @@ class ReferenceType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class RetrievalMethodType:
     transforms: Optional[Transforms] = field(
         default=None,
@@ -690,78 +690,78 @@ class RetrievalMethodType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class Reference(ReferenceType):
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RetrievalMethod(RetrievalMethodType):
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class KeyInfoType:
-    key_name: List[str] = field(
-        default_factory=list,
+    key_name: Tuple[str, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "KeyName",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
         }
     )
-    key_value: List[KeyValue] = field(
-        default_factory=list,
+    key_value: Tuple[KeyValue, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "KeyValue",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
         }
     )
-    retrieval_method: List[RetrievalMethod] = field(
-        default_factory=list,
+    retrieval_method: Tuple[RetrievalMethod, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "RetrievalMethod",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
         }
     )
-    x509_data: List[X509Data] = field(
-        default_factory=list,
+    x509_data: Tuple[X509Data, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "X509Data",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
         }
     )
-    pgpdata: List[Pgpdata] = field(
-        default_factory=list,
+    pgpdata: Tuple[Pgpdata, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PGPData",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
         }
     )
-    spkidata: List[Spkidata] = field(
-        default_factory=list,
+    spkidata: Tuple[Spkidata, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SPKIData",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
         }
     )
-    mgmt_data: List[str] = field(
-        default_factory=list,
+    mgmt_data: Tuple[str, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "MgmtData",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
         }
     )
-    other_element: List[object] = field(
-        default_factory=list,
+    other_element: Tuple[object, ...] = field(
+        default_factory=tuple,
         metadata={
             "type": "Wildcard",
             "namespace": "##other",
@@ -777,10 +777,10 @@ class KeyInfoType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ManifestType:
-    reference: List[Reference] = field(
-        default_factory=list,
+    reference: Tuple[Reference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -797,7 +797,7 @@ class ManifestType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class SignedInfoType:
     canonicalization_method: Optional[CanonicalizationMethod] = field(
         default=None,
@@ -817,8 +817,8 @@ class SignedInfoType:
             "required": True,
         }
     )
-    reference: List[Reference] = field(
-        default_factory=list,
+    reference: Tuple[Reference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -835,25 +835,25 @@ class SignedInfoType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class KeyInfo(KeyInfoType):
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Manifest(ManifestType):
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SignedInfo(SignedInfoType):
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SignatureType:
     signed_info: Optional[SignedInfo] = field(
         default=None,
@@ -881,8 +881,8 @@ class SignatureType:
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
         }
     )
-    object: List[Object] = field(
-        default_factory=list,
+    object: Tuple[Object, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Object",
             "type": "Element",
@@ -898,7 +898,7 @@ class SignatureType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class Signature(SignatureType):
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"

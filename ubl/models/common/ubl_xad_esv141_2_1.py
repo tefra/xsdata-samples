@@ -9,13 +9,13 @@ from ubl.models.common.ubl_xad_esv132_2_1 import (
 __NAMESPACE__ = "http://uri.etsi.org/01903/v1.4.1#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ArchiveTimeStampV2(XadEstimeStampType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.4.1#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ValidationDataType:
     certificate_values: Optional[CertificateValues] = field(
         default=None,
@@ -49,7 +49,7 @@ class ValidationDataType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TimeStampValidationData(ValidationDataType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.4.1#"

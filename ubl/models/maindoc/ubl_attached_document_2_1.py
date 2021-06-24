@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional, Tuple
 from xsdata.models.datatype import XmlDate, XmlTime
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     Attachment,
@@ -27,7 +27,7 @@ from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:AttachedDocument-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AttachedDocumentType:
     ublextensions: Optional[Ublextensions] = field(
         default=None,
@@ -103,8 +103,8 @@ class AttachedDocumentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -152,8 +152,8 @@ class AttachedDocumentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    signature: List[Signature] = field(
-        default_factory=list,
+    signature: Tuple[Signature, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Signature",
             "type": "Element",
@@ -187,8 +187,8 @@ class AttachedDocumentType:
             "required": True,
         }
     )
-    parent_document_line_reference: List[ParentDocumentLineReference] = field(
-        default_factory=list,
+    parent_document_line_reference: Tuple[ParentDocumentLineReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ParentDocumentLineReference",
             "type": "Element",
@@ -197,7 +197,7 @@ class AttachedDocumentType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class AttachedDocument(AttachedDocumentType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:AttachedDocument-2"

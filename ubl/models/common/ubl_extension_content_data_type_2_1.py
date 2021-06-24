@@ -4,7 +4,7 @@ from typing import Optional
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ExtensionContentType:
     other_element: Optional[object] = field(
         default=None,

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional, Tuple
 from xsdata.models.datatype import XmlDate, XmlTime
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     AccountingCustomerParty,
@@ -58,7 +58,7 @@ from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:OrderResponse-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class OrderResponseType:
     ublextensions: Optional[Ublextensions] = field(
         default=None,
@@ -158,8 +158,8 @@ class OrderResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -270,16 +270,16 @@ class OrderResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    validity_period: List[ValidityPeriod] = field(
-        default_factory=list,
+    validity_period: Tuple[ValidityPeriod, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ValidityPeriod",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    order_reference: List[OrderReference] = field(
-        default_factory=list,
+    order_reference: Tuple[OrderReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "OrderReference",
             "type": "Element",
@@ -287,8 +287,8 @@ class OrderResponseType:
             "min_occurs": 1,
         }
     )
-    order_document_reference: List[OrderDocumentReference] = field(
-        default_factory=list,
+    order_document_reference: Tuple[OrderDocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "OrderDocumentReference",
             "type": "Element",
@@ -303,24 +303,24 @@ class OrderResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    additional_document_reference: List[AdditionalDocumentReference] = field(
-        default_factory=list,
+    additional_document_reference: Tuple[AdditionalDocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AdditionalDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    contract: List[Contract] = field(
-        default_factory=list,
+    contract: Tuple[Contract, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Contract",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    signature: List[Signature] = field(
-        default_factory=list,
+    signature: Tuple[Signature, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Signature",
             "type": "Element",
@@ -377,8 +377,8 @@ class OrderResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    delivery: List[Delivery] = field(
-        default_factory=list,
+    delivery: Tuple[Delivery, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Delivery",
             "type": "Element",
@@ -393,24 +393,24 @@ class OrderResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    payment_means: List[PaymentMeans] = field(
-        default_factory=list,
+    payment_means: Tuple[PaymentMeans, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PaymentMeans",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    payment_terms: List[PaymentTerms] = field(
-        default_factory=list,
+    payment_terms: Tuple[PaymentTerms, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PaymentTerms",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    allowance_charge: List[AllowanceCharge] = field(
-        default_factory=list,
+    allowance_charge: Tuple[AllowanceCharge, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AllowanceCharge",
             "type": "Element",
@@ -457,8 +457,8 @@ class OrderResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    tax_total: List[TaxTotal] = field(
-        default_factory=list,
+    tax_total: Tuple[TaxTotal, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TaxTotal",
             "type": "Element",
@@ -473,8 +473,8 @@ class OrderResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    order_line: List[OrderLine] = field(
-        default_factory=list,
+    order_line: Tuple[OrderLine, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "OrderLine",
             "type": "Element",
@@ -483,7 +483,7 @@ class OrderResponseType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class OrderResponse(OrderResponseType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:OrderResponse-2"

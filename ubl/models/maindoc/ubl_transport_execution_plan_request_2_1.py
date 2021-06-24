@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional, Tuple
 from xsdata.models.datatype import XmlDate, XmlTime
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     AdditionalDocumentReference,
@@ -42,7 +42,7 @@ from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:TransportExecutionPlanRequest-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransportExecutionPlanRequestType:
     ublextensions: Optional[Ublextensions] = field(
         default=None,
@@ -149,24 +149,24 @@ class TransportExecutionPlanRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    document_status_reason_description: List[DocumentStatusReasonDescription] = field(
-        default_factory=list,
+    document_status_reason_description: Tuple[DocumentStatusReasonDescription, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DocumentStatusReasonDescription",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    transport_user_remarks: List[TransportUserRemarks] = field(
-        default_factory=list,
+    transport_user_remarks: Tuple[TransportUserRemarks, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TransportUserRemarks",
             "type": "Element",
@@ -215,8 +215,8 @@ class TransportExecutionPlanRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    signature: List[Signature] = field(
-        default_factory=list,
+    signature: Tuple[Signature, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Signature",
             "type": "Element",
@@ -239,8 +239,8 @@ class TransportExecutionPlanRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    additional_document_reference: List[AdditionalDocumentReference] = field(
-        default_factory=list,
+    additional_document_reference: Tuple[AdditionalDocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AdditionalDocumentReference",
             "type": "Element",
@@ -255,8 +255,8 @@ class TransportExecutionPlanRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    transport_service_provider_response_deadline_period: List[TransportServiceProviderResponseDeadlinePeriod] = field(
-        default_factory=list,
+    transport_service_provider_response_deadline_period: Tuple[TransportServiceProviderResponseDeadlinePeriod, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TransportServiceProviderResponseDeadlinePeriod",
             "type": "Element",
@@ -271,8 +271,8 @@ class TransportExecutionPlanRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    additional_transportation_service: List[AdditionalTransportationService] = field(
-        default_factory=list,
+    additional_transportation_service: Tuple[AdditionalTransportationService, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AdditionalTransportationService",
             "type": "Element",
@@ -327,8 +327,8 @@ class TransportExecutionPlanRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    consignment: List[Consignment] = field(
-        default_factory=list,
+    consignment: Tuple[Consignment, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Consignment",
             "type": "Element",
@@ -338,7 +338,7 @@ class TransportExecutionPlanRequestType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransportExecutionPlanRequest(TransportExecutionPlanRequestType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:TransportExecutionPlanRequest-2"
