@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional, Tuple
 from xsdata.models.datatype import XmlDate, XmlTime
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     DocumentReference,
@@ -25,7 +25,7 @@ from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:StockAvailabilityReport-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class StockAvailabilityReportType:
     ublextensions: Optional[Ublextensions] = field(
         default=None,
@@ -109,8 +109,8 @@ class StockAvailabilityReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -133,16 +133,16 @@ class StockAvailabilityReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    document_reference: List[DocumentReference] = field(
-        default_factory=list,
+    document_reference: Tuple[DocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    signature: List[Signature] = field(
-        default_factory=list,
+    signature: Tuple[Signature, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Signature",
             "type": "Element",
@@ -175,8 +175,8 @@ class StockAvailabilityReportType:
             "required": True,
         }
     )
-    stock_availability_report_line: List[StockAvailabilityReportLine] = field(
-        default_factory=list,
+    stock_availability_report_line: Tuple[StockAvailabilityReportLine, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "StockAvailabilityReportLine",
             "type": "Element",
@@ -186,7 +186,7 @@ class StockAvailabilityReportType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class StockAvailabilityReport(StockAvailabilityReportType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:StockAvailabilityReport-2"

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional, Tuple
 from xsdata.models.datatype import XmlDate, XmlTime
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     AdditionalDocumentReference,
@@ -30,7 +30,7 @@ from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:UtilityStatement-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class UtilityStatementType:
     ublextensions: Optional[Ublextensions] = field(
         default=None,
@@ -123,8 +123,8 @@ class UtilityStatementType:
             "required": True,
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -165,16 +165,16 @@ class UtilityStatementType:
             "required": True,
         }
     )
-    additional_document_reference: List[AdditionalDocumentReference] = field(
-        default_factory=list,
+    additional_document_reference: Tuple[AdditionalDocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AdditionalDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    signature: List[Signature] = field(
-        default_factory=list,
+    signature: Tuple[Signature, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Signature",
             "type": "Element",
@@ -215,16 +215,16 @@ class UtilityStatementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    main_on_account_payment: List[MainOnAccountPayment] = field(
-        default_factory=list,
+    main_on_account_payment: Tuple[MainOnAccountPayment, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "MainOnAccountPayment",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    subscriber_consumption: List[SubscriberConsumption] = field(
-        default_factory=list,
+    subscriber_consumption: Tuple[SubscriberConsumption, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SubscriberConsumption",
             "type": "Element",
@@ -233,7 +233,7 @@ class UtilityStatementType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class UtilityStatement(UtilityStatementType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:UtilityStatement-2"

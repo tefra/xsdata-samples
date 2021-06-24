@@ -13,81 +13,81 @@ from ubl.models.common.ccts_cct_schema_module_2_1 import (
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AmountType(CctsCctSchemaModule21AmountType):
     pass
 
 
-@dataclass
+@dataclass(frozen=True)
 class BinaryObjectType(CctsCctSchemaModule21BinaryObjectType):
     pass
 
 
-@dataclass
+@dataclass(frozen=True)
 class CodeType(CctsCctSchemaModule21CodeType):
     pass
 
 
-@dataclass
+@dataclass(frozen=True)
 class GraphicType(CctsCctSchemaModule21BinaryObjectType):
     pass
 
 
-@dataclass
+@dataclass(frozen=True)
 class IdentifierType(CctsCctSchemaModule21IdentifierType):
     pass
 
 
-@dataclass
+@dataclass(frozen=True)
 class MeasureType(CctsCctSchemaModule21MeasureType):
     pass
 
 
-@dataclass
+@dataclass(frozen=True)
 class NameType(CctsCctSchemaModule21TextType):
     pass
 
 
-@dataclass
+@dataclass(frozen=True)
 class NumericType(CctsCctSchemaModule21NumericType):
     pass
 
 
-@dataclass
+@dataclass(frozen=True)
 class PercentType(CctsCctSchemaModule21NumericType):
     pass
 
 
-@dataclass
+@dataclass(frozen=True)
 class PictureType(CctsCctSchemaModule21BinaryObjectType):
     pass
 
 
-@dataclass
+@dataclass(frozen=True)
 class QuantityType(CctsCctSchemaModule21QuantityType):
     pass
 
 
-@dataclass
+@dataclass(frozen=True)
 class RateType(CctsCctSchemaModule21NumericType):
     pass
 
 
-@dataclass
+@dataclass(frozen=True)
 class SoundType(CctsCctSchemaModule21BinaryObjectType):
     pass
 
 
-@dataclass
+@dataclass(frozen=True)
 class TextType(CctsCctSchemaModule21TextType):
     pass
 
 
-@dataclass
+@dataclass(frozen=True)
 class ValueType(CctsCctSchemaModule21NumericType):
     pass
 
 
-@dataclass
+@dataclass(frozen=True)
 class VideoType(CctsCctSchemaModule21BinaryObjectType):
     pass

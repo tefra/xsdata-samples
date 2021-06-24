@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional, Tuple
 from xsdata.models.datatype import XmlDate, XmlTime
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     AdditionalDocumentReference,
@@ -30,7 +30,7 @@ from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:ReceiptAdvice-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ReceiptAdviceType:
     ublextensions: Optional[Ublextensions] = field(
         default=None,
@@ -130,8 +130,8 @@ class ReceiptAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -146,32 +146,32 @@ class ReceiptAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    order_reference: List[OrderReference] = field(
-        default_factory=list,
+    order_reference: Tuple[OrderReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "OrderReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    despatch_document_reference: List[DespatchDocumentReference] = field(
-        default_factory=list,
+    despatch_document_reference: Tuple[DespatchDocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DespatchDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    additional_document_reference: List[AdditionalDocumentReference] = field(
-        default_factory=list,
+    additional_document_reference: Tuple[AdditionalDocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AdditionalDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    signature: List[Signature] = field(
-        default_factory=list,
+    signature: Tuple[Signature, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Signature",
             "type": "Element",
@@ -220,8 +220,8 @@ class ReceiptAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    receipt_line: List[ReceiptLine] = field(
-        default_factory=list,
+    receipt_line: Tuple[ReceiptLine, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ReceiptLine",
             "type": "Element",
@@ -231,7 +231,7 @@ class ReceiptAdviceType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ReceiptAdvice(ReceiptAdviceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:ReceiptAdvice-2"

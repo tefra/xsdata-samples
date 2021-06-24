@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional, Tuple
 from xsdata.models.datatype import XmlDate, XmlTime
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     AccountingCustomerParty,
@@ -29,7 +29,7 @@ from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:OrderResponseSimple-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class OrderResponseSimpleType:
     ublextensions: Optional[Ublextensions] = field(
         default=None,
@@ -113,8 +113,8 @@ class OrderResponseSimpleType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -130,8 +130,8 @@ class OrderResponseSimpleType:
             "required": True,
         }
     )
-    rejection_note: List[RejectionNote] = field(
-        default_factory=list,
+    rejection_note: Tuple[RejectionNote, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "RejectionNote",
             "type": "Element",
@@ -171,16 +171,16 @@ class OrderResponseSimpleType:
             "required": True,
         }
     )
-    additional_document_reference: List[AdditionalDocumentReference] = field(
-        default_factory=list,
+    additional_document_reference: Tuple[AdditionalDocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AdditionalDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    signature: List[Signature] = field(
-        default_factory=list,
+    signature: Tuple[Signature, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Signature",
             "type": "Element",
@@ -231,7 +231,7 @@ class OrderResponseSimpleType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class OrderResponseSimple(OrderResponseSimpleType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:OrderResponseSimple-2"

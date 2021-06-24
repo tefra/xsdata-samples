@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional, Tuple
 from xsdata.models.datatype import XmlDate, XmlTime
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     ContractingParty,
@@ -29,7 +29,7 @@ from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:Tender-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TenderType:
     ublextensions: Optional[Ublextensions] = field(
         default=None,
@@ -130,16 +130,16 @@ class TenderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    contract_name: List[ContractName] = field(
-        default_factory=list,
+    contract_name: Tuple[ContractName, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ContractName",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -154,16 +154,16 @@ class TenderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    document_reference: List[DocumentReference] = field(
-        default_factory=list,
+    document_reference: Tuple[DocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    signature: List[Signature] = field(
-        default_factory=list,
+    signature: Tuple[Signature, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Signature",
             "type": "Element",
@@ -187,8 +187,8 @@ class TenderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    subcontractor_party: List[SubcontractorParty] = field(
-        default_factory=list,
+    subcontractor_party: Tuple[SubcontractorParty, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SubcontractorParty",
             "type": "Element",
@@ -211,8 +211,8 @@ class TenderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    tendered_project: List[TenderedProject] = field(
-        default_factory=list,
+    tendered_project: Tuple[TenderedProject, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TenderedProject",
             "type": "Element",
@@ -222,7 +222,7 @@ class TenderType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class Tender(TenderType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:Tender-2"

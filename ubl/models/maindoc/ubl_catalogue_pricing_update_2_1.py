@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional, Tuple
 from xsdata.models.datatype import XmlDate, XmlTime
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     CataloguePricingUpdateLine,
@@ -32,7 +32,7 @@ from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:CataloguePricingUpdate-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CataloguePricingUpdateType:
     ublextensions: Optional[Ublextensions] = field(
         default=None,
@@ -132,16 +132,16 @@ class CataloguePricingUpdateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -164,8 +164,8 @@ class CataloguePricingUpdateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    validity_period: List[ValidityPeriod] = field(
-        default_factory=list,
+    validity_period: Tuple[ValidityPeriod, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ValidityPeriod",
             "type": "Element",
@@ -181,16 +181,16 @@ class CataloguePricingUpdateType:
             "required": True,
         }
     )
-    referenced_contract: List[ReferencedContract] = field(
-        default_factory=list,
+    referenced_contract: Tuple[ReferencedContract, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ReferencedContract",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    signature: List[Signature] = field(
-        default_factory=list,
+    signature: Tuple[Signature, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Signature",
             "type": "Element",
@@ -247,8 +247,8 @@ class CataloguePricingUpdateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    catalogue_pricing_update_line: List[CataloguePricingUpdateLine] = field(
-        default_factory=list,
+    catalogue_pricing_update_line: Tuple[CataloguePricingUpdateLine, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "CataloguePricingUpdateLine",
             "type": "Element",
@@ -258,7 +258,7 @@ class CataloguePricingUpdateType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class CataloguePricingUpdate(CataloguePricingUpdateType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CataloguePricingUpdate-2"

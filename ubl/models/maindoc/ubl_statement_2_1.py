@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional, Tuple
 from xsdata.models.datatype import XmlDate, XmlTime
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     AccountingCustomerParty,
@@ -37,7 +37,7 @@ from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:Statement-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class StatementType:
     ublextensions: Optional[Ublextensions] = field(
         default=None,
@@ -121,8 +121,8 @@ class StatementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -186,16 +186,16 @@ class StatementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    additional_document_reference: List[AdditionalDocumentReference] = field(
-        default_factory=list,
+    additional_document_reference: Tuple[AdditionalDocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AdditionalDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    signature: List[Signature] = field(
-        default_factory=list,
+    signature: Tuple[Signature, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Signature",
             "type": "Element",
@@ -252,40 +252,40 @@ class StatementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    payment_means: List[PaymentMeans] = field(
-        default_factory=list,
+    payment_means: Tuple[PaymentMeans, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PaymentMeans",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    payment_terms: List[PaymentTerms] = field(
-        default_factory=list,
+    payment_terms: Tuple[PaymentTerms, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PaymentTerms",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    allowance_charge: List[AllowanceCharge] = field(
-        default_factory=list,
+    allowance_charge: Tuple[AllowanceCharge, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AllowanceCharge",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    tax_total: List[TaxTotal] = field(
-        default_factory=list,
+    tax_total: Tuple[TaxTotal, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TaxTotal",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    statement_line: List[StatementLine] = field(
-        default_factory=list,
+    statement_line: Tuple[StatementLine, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "StatementLine",
             "type": "Element",
@@ -295,7 +295,7 @@ class StatementType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class Statement(StatementType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:Statement-2"

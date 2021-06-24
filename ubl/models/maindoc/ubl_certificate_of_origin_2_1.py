@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional, Tuple
 from xsdata.models.datatype import XmlDate, XmlTime
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     CertificateOfOriginApplication,
@@ -27,7 +27,7 @@ from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:CertificateOfOrigin-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CertificateOfOriginType:
     ublextensions: Optional[Ublextensions] = field(
         default=None,
@@ -102,16 +102,16 @@ class CertificateOfOriginType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -126,8 +126,8 @@ class CertificateOfOriginType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    signature: List[Signature] = field(
-        default_factory=list,
+    signature: Tuple[Signature, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Signature",
             "type": "Element",
@@ -150,8 +150,8 @@ class CertificateOfOriginType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    endorser_party: List[EndorserParty] = field(
-        default_factory=list,
+    endorser_party: Tuple[EndorserParty, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "EndorserParty",
             "type": "Element",
@@ -194,7 +194,7 @@ class CertificateOfOriginType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class CertificateOfOrigin(CertificateOfOriginType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CertificateOfOrigin-2"

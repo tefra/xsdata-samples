@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional, Tuple
 from xsdata.models.datatype import XmlDate, XmlTime
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     CarrierParty,
@@ -32,7 +32,7 @@ from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:BillOfLading-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class BillOfLadingType:
     ublextensions: Optional[Ublextensions] = field(
         default=None,
@@ -123,16 +123,16 @@ class BillOfLadingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -179,8 +179,8 @@ class BillOfLadingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    other_instruction: List[OtherInstruction] = field(
-        default_factory=list,
+    other_instruction: Tuple[OtherInstruction, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "OtherInstruction",
             "type": "Element",
@@ -219,32 +219,32 @@ class BillOfLadingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    document_reference: List[DocumentReference] = field(
-        default_factory=list,
+    document_reference: Tuple[DocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    exchange_rate: List[ExchangeRate] = field(
-        default_factory=list,
+    exchange_rate: Tuple[ExchangeRate, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ExchangeRate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    document_distribution: List[DocumentDistribution] = field(
-        default_factory=list,
+    document_distribution: Tuple[DocumentDistribution, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DocumentDistribution",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    signature: List[Signature] = field(
-        default_factory=list,
+    signature: Tuple[Signature, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Signature",
             "type": "Element",
@@ -253,7 +253,7 @@ class BillOfLadingType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class BillOfLading(BillOfLadingType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:BillOfLading-2"

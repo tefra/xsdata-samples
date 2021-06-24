@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional, Tuple
 from xsdata.models.datatype import XmlDate, XmlTime
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     ContractingParty,
@@ -27,7 +27,7 @@ from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PriorInformationNoticeType:
     ublextensions: Optional[Ublextensions] = field(
         default=None,
@@ -118,8 +118,8 @@ class PriorInformationNoticeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -134,16 +134,16 @@ class PriorInformationNoticeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    document_reference: List[DocumentReference] = field(
-        default_factory=list,
+    document_reference: Tuple[DocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    signature: List[Signature] = field(
-        default_factory=list,
+    signature: Tuple[Signature, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Signature",
             "type": "Element",
@@ -159,8 +159,8 @@ class PriorInformationNoticeType:
             "required": True,
         }
     )
-    originator_customer_party: List[OriginatorCustomerParty] = field(
-        default_factory=list,
+    originator_customer_party: Tuple[OriginatorCustomerParty, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "OriginatorCustomerParty",
             "type": "Element",
@@ -199,8 +199,8 @@ class PriorInformationNoticeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    procurement_project_lot: List[ProcurementProjectLot] = field(
-        default_factory=list,
+    procurement_project_lot: Tuple[ProcurementProjectLot, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ProcurementProjectLot",
             "type": "Element",
@@ -209,7 +209,7 @@ class PriorInformationNoticeType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class PriorInformationNotice(PriorInformationNoticeType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2"

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional, Tuple
 from xsdata.models.datatype import XmlDate, XmlTime
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     ActivityPeriod,
@@ -24,7 +24,7 @@ from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:ProductActivity-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ProductActivityType:
     ublextensions: Optional[Ublextensions] = field(
         default=None,
@@ -108,8 +108,8 @@ class ProductActivityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -133,16 +133,16 @@ class ProductActivityType:
             "required": True,
         }
     )
-    document_reference: List[DocumentReference] = field(
-        default_factory=list,
+    document_reference: Tuple[DocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    signature: List[Signature] = field(
-        default_factory=list,
+    signature: Tuple[Signature, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Signature",
             "type": "Element",
@@ -167,8 +167,8 @@ class ProductActivityType:
             "required": True,
         }
     )
-    supply_chain_activity_data_line: List[SupplyChainActivityDataLine] = field(
-        default_factory=list,
+    supply_chain_activity_data_line: Tuple[SupplyChainActivityDataLine, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SupplyChainActivityDataLine",
             "type": "Element",
@@ -178,7 +178,7 @@ class ProductActivityType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ProductActivity(ProductActivityType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:ProductActivity-2"

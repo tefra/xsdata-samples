@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional, Tuple
 from xsdata.models.datatype import XmlDate, XmlTime
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     ApplicablePeriod,
@@ -30,7 +30,7 @@ from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:GuaranteeCertificate-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class GuaranteeCertificateType:
     ublextensions: Optional[Ublextensions] = field(
         default=None,
@@ -130,8 +130,8 @@ class GuaranteeCertificateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    purpose: List[Purpose] = field(
-        default_factory=list,
+    purpose: Tuple[Purpose, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Purpose",
             "type": "Element",
@@ -155,8 +155,8 @@ class GuaranteeCertificateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -171,32 +171,32 @@ class GuaranteeCertificateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    applicable_regulation: List[ApplicableRegulation] = field(
-        default_factory=list,
+    applicable_regulation: Tuple[ApplicableRegulation, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ApplicableRegulation",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    guarantee_document_reference: List[GuaranteeDocumentReference] = field(
-        default_factory=list,
+    guarantee_document_reference: Tuple[GuaranteeDocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "GuaranteeDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    immobilized_security: List[ImmobilizedSecurity] = field(
-        default_factory=list,
+    immobilized_security: Tuple[ImmobilizedSecurity, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ImmobilizedSecurity",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    signature: List[Signature] = field(
-        default_factory=list,
+    signature: Tuple[Signature, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Signature",
             "type": "Element",
@@ -232,7 +232,7 @@ class GuaranteeCertificateType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class GuaranteeCertificate(GuaranteeCertificateType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:GuaranteeCertificate-2"

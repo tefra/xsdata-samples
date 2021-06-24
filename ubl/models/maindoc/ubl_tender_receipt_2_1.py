@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional, Tuple
 from xsdata.models.datatype import XmlDate, XmlTime
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     ReceiverParty,
@@ -23,7 +23,7 @@ from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:TenderReceipt-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TenderReceiptType:
     ublextensions: Optional[Ublextensions] = field(
         default=None,
@@ -115,16 +115,16 @@ class TenderReceiptType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    contract_name: List[ContractName] = field(
-        default_factory=list,
+    contract_name: Tuple[ContractName, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ContractName",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -149,16 +149,16 @@ class TenderReceiptType:
             "required": True,
         }
     )
-    tender_document_reference: List[TenderDocumentReference] = field(
-        default_factory=list,
+    tender_document_reference: Tuple[TenderDocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TenderDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    signature: List[Signature] = field(
-        default_factory=list,
+    signature: Tuple[Signature, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Signature",
             "type": "Element",
@@ -185,7 +185,7 @@ class TenderReceiptType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TenderReceipt(TenderReceiptType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:TenderReceipt-2"

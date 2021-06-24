@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional, Tuple
 from xsdata.models.datatype import XmlDate, XmlTime
 from ubl.models.common.ubl_common_basic_components_2_1 import (
     AcceptedVariantsDescription,
@@ -680,7 +680,7 @@ from ubl.models.common.ubl_common_basic_components_2_1 import (
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ActivityPropertyType:
     name: Optional[Name] = field(
         default=None,
@@ -702,7 +702,7 @@ class ActivityPropertyType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class AddressLineType:
     line: Optional[Line] = field(
         default=None,
@@ -715,7 +715,7 @@ class AddressLineType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class AirTransportType:
     aircraft_id: Optional[AircraftId] = field(
         default=None,
@@ -728,7 +728,7 @@ class AirTransportType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class AuctionTermsType:
     auction_constraint_indicator: Optional[bool] = field(
         default=None,
@@ -738,40 +738,40 @@ class AuctionTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    justification_description: List[JustificationDescription] = field(
-        default_factory=list,
+    justification_description: Tuple[JustificationDescription, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "JustificationDescription",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    process_description: List[ProcessDescription] = field(
-        default_factory=list,
+    process_description: Tuple[ProcessDescription, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ProcessDescription",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    conditions_description: List[ConditionsDescription] = field(
-        default_factory=list,
+    conditions_description: Tuple[ConditionsDescription, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ConditionsDescription",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    electronic_device_description: List[ElectronicDeviceDescription] = field(
-        default_factory=list,
+    electronic_device_description: Tuple[ElectronicDeviceDescription, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ElectronicDeviceDescription",
             "type": "Element",
@@ -788,7 +788,7 @@ class AuctionTermsType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class AwardingCriterionResponseType:
     id: Optional[Id] = field(
         default=None,
@@ -806,16 +806,16 @@ class AwardingCriterionResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    awarding_criterion_description: List[AwardingCriterionDescription] = field(
-        default_factory=list,
+    awarding_criterion_description: Tuple[AwardingCriterionDescription, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AwardingCriterionDescription",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -838,8 +838,8 @@ class AwardingCriterionResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    subordinate_awarding_criterion_response: List["SubordinateAwardingCriterionResponse"] = field(
-        default_factory=list,
+    subordinate_awarding_criterion_response: Tuple["SubordinateAwardingCriterionResponse", ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SubordinateAwardingCriterionResponse",
             "type": "Element",
@@ -848,7 +848,7 @@ class AwardingCriterionResponseType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class AwardingCriterionType:
     id: Optional[Id] = field(
         default=None,
@@ -866,8 +866,8 @@ class AwardingCriterionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -882,16 +882,16 @@ class AwardingCriterionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    weight: List[Weight] = field(
-        default_factory=list,
+    weight: Tuple[Weight, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Weight",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    calculation_expression: List[CalculationExpression] = field(
-        default_factory=list,
+    calculation_expression: Tuple[CalculationExpression, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "CalculationExpression",
             "type": "Element",
@@ -938,16 +938,16 @@ class AwardingCriterionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    minimum_improvement_bid: List[MinimumImprovementBid] = field(
-        default_factory=list,
+    minimum_improvement_bid: Tuple[MinimumImprovementBid, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "MinimumImprovementBid",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    subordinate_awarding_criterion: List["SubordinateAwardingCriterion"] = field(
-        default_factory=list,
+    subordinate_awarding_criterion: Tuple["SubordinateAwardingCriterion", ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SubordinateAwardingCriterion",
             "type": "Element",
@@ -956,7 +956,7 @@ class AwardingCriterionType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class CardAccountType:
     primary_account_number_id: Optional[PrimaryAccountNumberId] = field(
         default=None,
@@ -1050,7 +1050,7 @@ class CardAccountType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class CatalogueReferenceType:
     id: Optional[Id] = field(
         default=None,
@@ -1101,16 +1101,16 @@ class CatalogueReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -1135,7 +1135,7 @@ class CatalogueReferenceType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ClassificationCategoryType:
     name: Optional[Name] = field(
         default=None,
@@ -1153,16 +1153,16 @@ class ClassificationCategoryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    categorizes_classification_category: List["CategorizesClassificationCategory"] = field(
-        default_factory=list,
+    categorizes_classification_category: Tuple["CategorizesClassificationCategory", ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "CategorizesClassificationCategory",
             "type": "Element",
@@ -1171,7 +1171,7 @@ class ClassificationCategoryType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ClauseType:
     id: Optional[Id] = field(
         default=None,
@@ -1181,8 +1181,8 @@ class ClauseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    content: List[Content] = field(
-        default_factory=list,
+    content: Tuple[Content, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Content",
             "type": "Element",
@@ -1191,7 +1191,7 @@ class ClauseType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class CommodityClassificationType:
     nature_code: Optional[NatureCode] = field(
         default=None,
@@ -1227,7 +1227,7 @@ class CommodityClassificationType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class CommunicationType:
     channel_code: Optional[ChannelCode] = field(
         default=None,
@@ -1255,7 +1255,7 @@ class CommunicationType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ConditionType:
     attribute_id: Optional[AttributeId] = field(
         default=None,
@@ -1274,8 +1274,8 @@ class ConditionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -1300,7 +1300,7 @@ class ConditionType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ConsumptionAverageType:
     average_amount: Optional[AverageAmount] = field(
         default=None,
@@ -1310,8 +1310,8 @@ class ConsumptionAverageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -1320,7 +1320,7 @@ class ConsumptionAverageType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ConsumptionCorrectionType:
     correction_type: Optional[CorrectionType] = field(
         default=None,
@@ -1378,8 +1378,8 @@ class ConsumptionCorrectionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -1420,10 +1420,10 @@ class ConsumptionCorrectionType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ContractExecutionRequirementType:
-    name: List[Name] = field(
-        default_factory=list,
+    name: Tuple[Name, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Name",
             "type": "Element",
@@ -1438,8 +1438,8 @@ class ContractExecutionRequirementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -1448,7 +1448,7 @@ class ContractExecutionRequirementType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ContractingActivityType:
     activity_type_code: Optional[ActivityTypeCode] = field(
         default=None,
@@ -1468,7 +1468,7 @@ class ContractingActivityType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ContractingPartyTypeType:
     party_type_code: Optional[PartyTypeCode] = field(
         default=None,
@@ -1488,7 +1488,7 @@ class ContractingPartyTypeType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class CountryType:
     identification_code: Optional[IdentificationCode] = field(
         default=None,
@@ -1508,7 +1508,7 @@ class CountryType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class CreditAccountType:
     account_id: Optional[AccountId] = field(
         default=None,
@@ -1521,7 +1521,7 @@ class CreditAccountType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class DeliveryUnitType:
     batch_quantity: Optional[BatchQuantity] = field(
         default=None,
@@ -1550,7 +1550,7 @@ class DeliveryUnitType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class DimensionType:
     attribute_id: Optional[AttributeId] = field(
         default=None,
@@ -1569,8 +1569,8 @@ class DimensionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -1595,7 +1595,7 @@ class DimensionType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class EconomicOperatorRoleType:
     role_code: Optional[RoleCode] = field(
         default=None,
@@ -1605,8 +1605,8 @@ class EconomicOperatorRoleType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    role_description: List[RoleDescription] = field(
-        default_factory=list,
+    role_description: Tuple[RoleDescription, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "RoleDescription",
             "type": "Element",
@@ -1615,7 +1615,7 @@ class EconomicOperatorRoleType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class EventCommentType:
     comment: Optional[Comment] = field(
         default=None,
@@ -1644,7 +1644,7 @@ class EventCommentType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class EventTacticEnumerationType:
     consumer_incentive_tactic_type_code: Optional[ConsumerIncentiveTacticTypeCode] = field(
         default=None,
@@ -1680,7 +1680,7 @@ class EventTacticEnumerationType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class EvidenceSuppliedType:
     id: Optional[Id] = field(
         default=None,
@@ -1693,7 +1693,7 @@ class EvidenceSuppliedType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ExternalReferenceType:
     uri: Optional[Uri] = field(
         default=None,
@@ -1775,8 +1775,8 @@ class ExternalReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -1785,7 +1785,7 @@ class ExternalReferenceType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ForecastExceptionCriterionLineType:
     forecast_purpose_code: Optional[ForecastPurposeCode] = field(
         default=None,
@@ -1832,7 +1832,7 @@ class ForecastExceptionCriterionLineType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ForecastExceptionType:
     forecast_purpose_code: Optional[ForecastPurposeCode] = field(
         default=None,
@@ -1904,7 +1904,7 @@ class ForecastExceptionType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class GoodsItemContainerType:
     id: Optional[Id] = field(
         default=None,
@@ -1923,8 +1923,8 @@ class GoodsItemContainerType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    transport_equipment: List["TransportEquipment"] = field(
-        default_factory=list,
+    transport_equipment: Tuple["TransportEquipment", ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TransportEquipment",
             "type": "Element",
@@ -1933,7 +1933,7 @@ class GoodsItemContainerType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ItemComparisonType:
     price_amount: Optional[PriceAmount] = field(
         default=None,
@@ -1953,7 +1953,7 @@ class ItemComparisonType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ItemPropertyGroupType:
     id: Optional[Id] = field(
         default=None,
@@ -1982,7 +1982,7 @@ class ItemPropertyGroupType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ItemPropertyRangeType:
     minimum_value: Optional[MinimumValue] = field(
         default=None,
@@ -2002,7 +2002,7 @@ class ItemPropertyRangeType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class LanguageType:
     id: Optional[Id] = field(
         default=None,
@@ -2030,7 +2030,7 @@ class LanguageType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class LocationCoordinateType:
     coordinate_system_code: Optional[CoordinateSystemCode] = field(
         default=None,
@@ -2098,7 +2098,7 @@ class LocationCoordinateType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class MeterPropertyType:
     name: Optional[Name] = field(
         default=None,
@@ -2132,8 +2132,8 @@ class MeterPropertyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    value_qualifier: List[ValueQualifier] = field(
-        default_factory=list,
+    value_qualifier: Tuple[ValueQualifier, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ValueQualifier",
             "type": "Element",
@@ -2142,7 +2142,7 @@ class MeterPropertyType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class MeterReadingType:
     id: Optional[Id] = field(
         default=None,
@@ -2236,8 +2236,8 @@ class MeterReadingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    meter_reading_comments: List[MeterReadingComments] = field(
-        default_factory=list,
+    meter_reading_comments: Tuple[MeterReadingComments, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "MeterReadingComments",
             "type": "Element",
@@ -2255,7 +2255,7 @@ class MeterReadingType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class MonetaryTotalType:
     line_extension_amount: Optional[LineExtensionAmount] = field(
         default=None,
@@ -2332,7 +2332,7 @@ class MonetaryTotalType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class PartyIdentificationType:
     id: Optional[Id] = field(
         default=None,
@@ -2345,7 +2345,7 @@ class PartyIdentificationType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class PartyNameType:
     name: Optional[Name] = field(
         default=None,
@@ -2358,7 +2358,7 @@ class PartyNameType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class PaymentType:
     id: Optional[Id] = field(
         default=None,
@@ -2410,7 +2410,7 @@ class PaymentType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class PeriodType:
     start_date: Optional[XmlDate] = field(
         default=None,
@@ -2452,16 +2452,16 @@ class PeriodType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description_code: List[DescriptionCode] = field(
-        default_factory=list,
+    description_code: Tuple[DescriptionCode, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DescriptionCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -2470,7 +2470,7 @@ class PeriodType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class PhysicalAttributeType:
     attribute_id: Optional[AttributeId] = field(
         default=None,
@@ -2497,8 +2497,8 @@ class PhysicalAttributeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -2507,7 +2507,7 @@ class PhysicalAttributeType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ProcessJustificationType:
     previous_cancellation_reason_code: Optional[PreviousCancellationReasonCode] = field(
         default=None,
@@ -2525,16 +2525,16 @@ class ProcessJustificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    process_reason: List[ProcessReason] = field(
-        default_factory=list,
+    process_reason: Tuple[ProcessReason, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ProcessReason",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -2543,7 +2543,7 @@ class ProcessJustificationType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class RailTransportType:
     train_id: Optional[TrainId] = field(
         default=None,
@@ -2564,7 +2564,7 @@ class RailTransportType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class RegulationType:
     name: Optional[Name] = field(
         default=None,
@@ -2593,7 +2593,7 @@ class RegulationType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class RelatedItemType:
     id: Optional[Id] = field(
         default=None,
@@ -2611,8 +2611,8 @@ class RelatedItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -2621,7 +2621,7 @@ class RelatedItemType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ResultOfVerificationType:
     validator_id: Optional[ValidatorId] = field(
         default=None,
@@ -2689,7 +2689,7 @@ class ResultOfVerificationType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class RoadTransportType:
     license_plate_id: Optional[LicensePlateId] = field(
         default=None,
@@ -2702,7 +2702,7 @@ class RoadTransportType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class SecondaryHazardType:
     id: Optional[Id] = field(
         default=None,
@@ -2736,8 +2736,8 @@ class SecondaryHazardType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    extension: List[Extension] = field(
-        default_factory=list,
+    extension: Tuple[Extension, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Extension",
             "type": "Element",
@@ -2746,7 +2746,7 @@ class SecondaryHazardType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ServiceFrequencyType:
     week_day_code: Optional[WeekDayCode] = field(
         default=None,
@@ -2759,7 +2759,7 @@ class ServiceFrequencyType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ShareholderPartyType:
     partecipation_percent: Optional[PartecipationPercent] = field(
         default=None,
@@ -2779,7 +2779,7 @@ class ShareholderPartyType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class SubcontractTermsType:
     rate: Optional[Rate] = field(
         default=None,
@@ -2797,8 +2797,8 @@ class SubcontractTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -2839,7 +2839,7 @@ class SubcontractTermsType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TemperatureType:
     attribute_id: Optional[AttributeId] = field(
         default=None,
@@ -2859,8 +2859,8 @@ class TemperatureType:
             "required": True,
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -2869,7 +2869,7 @@ class TemperatureType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransportEquipmentSealType:
     id: Optional[Id] = field(
         default=None,
@@ -2914,7 +2914,7 @@ class TransportEquipmentSealType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class UnstructuredPriceType:
     price_amount: Optional[PriceAmount] = field(
         default=None,
@@ -2934,7 +2934,7 @@ class UnstructuredPriceType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class WebSiteAccessType:
     uri: Optional[Uri] = field(
         default=None,
@@ -2964,943 +2964,943 @@ class WebSiteAccessType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class AccessoryRelatedItem(RelatedItemType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ActivityPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ActivityProperty(ActivityPropertyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AdditionalCommodityClassification(CommodityClassificationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AdditionalTemperature(TemperatureType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AddressLine(AddressLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AirTransport(AirTransportType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AllowedSubcontractTerms(SubcontractTermsType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AnticipatedMonetaryTotal(MonetaryTotalType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ApplicablePeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ApplicableRegulation(RegulationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AuctionTerms(AuctionTermsType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AwardingCriterion(AwardingCriterionType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AwardingCriterionResponse(AwardingCriterionResponseType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CardAccount(CardAccountType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CatalogueReference(CatalogueReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CategorizesClassificationCategory(ClassificationCategoryType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ClassificationCategory(ClassificationCategoryType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Clause(ClauseType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CollectedPayment(PaymentType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CommodityClassification(CommodityClassificationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Communication(CommunicationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ComplementaryRelatedItem(RelatedItemType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ComponentRelatedItem(RelatedItemType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Condition(ConditionType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ConstitutionPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ConsumptionAverage(ConsumptionAverageType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ConsumptionCorrection(ConsumptionCorrectionType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ContractAcceptancePeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ContractExecutionRequirement(ContractExecutionRequirementType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ContractFormalizationPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ContractingActivity(ContractingActivityType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ContractingPartyType(ContractingPartyTypeType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Country(CountryType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CreditAccount(CreditAccountType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DefaultLanguage(LanguageType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DeletedCatalogueReference(CatalogueReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DeliveryPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DeliveryUnit(DeliveryUnitType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DestinationCountry(CountryType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Dimension(DimensionType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DocumentAvailabilityPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DurationPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class EconomicOperatorRole(EconomicOperatorRoleType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class EffectivePeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class EmergencyTemperature(TemperatureType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class EnergyWaterConsumptionCorrection(ConsumptionCorrectionType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class EstimatedDeliveryPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class EstimatedDespatchPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class EstimatedDurationPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class EstimatedTransitPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class EventComment(EventCommentType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class EventTacticEnumeration(EventTacticEnumerationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class EvidenceSupplied(EvidenceSuppliedType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ExceptionObservationPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ExportCountry(CountryType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ExternalReference(ExternalReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class FinalDestinationCountry(CountryType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class FlashpointTemperature(TemperatureType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class FloorSpaceMeasurementDimension(DimensionType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ForecastException(ForecastExceptionType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ForecastExceptionCriterionLine(ForecastExceptionCriterionLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ForecastPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class FrequencyPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class GoodsItemContainer(GoodsItemContainerType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class InventoryPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class InvitationSubmissionPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class InvoicePeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class IssuingCountry(CountryType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ItemComparison(ItemComparisonType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ItemPropertyGroup(ItemPropertyGroupType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ItemPropertyRange(ItemPropertyRangeType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Language(LanguageType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class LegalMonetaryTotal(MonetaryTotalType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class LineValidityPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class LocationCoordinate(LocationCoordinateType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class MainCommodityClassification(CommodityClassificationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class MainPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class MaximumDeliveryUnit(DeliveryUnitType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class MaximumTemperature(TemperatureType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class MeasurementDimension(DimensionType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class MeterProperty(MeterPropertyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class MeterReading(MeterReadingType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class MinimumDeliveryUnit(DeliveryUnitType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class MinimumTemperature(TemperatureType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class MonetaryTotal(MonetaryTotalType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class NominationPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class NotificationPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class OptionValidityPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class OriginCountry(CountryType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class OriginalDepartureCountry(CountryType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class OtherCommunication(CommunicationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PalletSpaceMeasurementDimension(DimensionType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ParticipationRequestReceptionPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PartyIdentification(PartyIdentificationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PartyName(PartyNameType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Payment(PaymentType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PaymentReversalPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PenaltyClause(ClauseType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PenaltyPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Period(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PhysicalAttribute(PhysicalAttributeType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PlannedPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PrepaidPayment(PaymentType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PresentationPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ProcessJustification(ProcessJustificationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PromisedDeliveryPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class QuotedMonetaryTotal(MonetaryTotalType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RailTransport(RailTransportType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RangeDimension(DimensionType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Regulation(RegulationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RelatedCatalogueReference(CatalogueReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RelatedItem(RelatedItemType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ReminderPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ReplacedRelatedItem(RelatedItemType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ReplacementRelatedItem(RelatedItemType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RequestedCatalogueReference(CatalogueReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RequestedDeliveryPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RequestedDespatchPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RequestedLanguage(LanguageType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RequestedMonetaryTotal(MonetaryTotalType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RequestedStatusPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RequestedValidityPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RequiredRelatedItem(RelatedItemType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ResultOfVerification(ResultOfVerificationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RoadTransport(RoadTransportType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ScheduledServiceFrequency(ServiceFrequencyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SecondaryHazard(SecondaryHazardType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ServiceEndTimePeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ServiceFrequency(ServiceFrequencyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ServiceStartTimePeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SettlementPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ShareholderParty(ShareholderPartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SourceCatalogueReference(CatalogueReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class StatementPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class StatusPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SubcontractTerms(SubcontractTermsType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SubordinateAwardingCriterion(AwardingCriterionType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SubordinateAwardingCriterionResponse(AwardingCriterionResponseType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SupportedCommodityClassification(CommodityClassificationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Temperature(TemperatureType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TenderSubmissionDeadlinePeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TenderValidityPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TotalCapacityDimension(DimensionType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransitCountry(CountryType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransitPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransportEquipmentSeal(TransportEquipmentSealType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransportServiceProviderResponseDeadlinePeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransportServiceProviderResponseRequiredPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransportUserResponseRequiredPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class UnstructuredPrice(UnstructuredPriceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class UnsupportedCommodityClassification(CommodityClassificationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class UsabilityPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ValidityPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class WarrantyValidityPeriod(PeriodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class WebSiteAccess(WebSiteAccessType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AddressType:
     id: Optional[Id] = field(
         default=None,
@@ -4094,8 +4094,8 @@ class AddressType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    address_line: List[AddressLine] = field(
-        default_factory=list,
+    address_line: Tuple[AddressLine, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AddressLine",
             "type": "Element",
@@ -4110,8 +4110,8 @@ class AddressType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    location_coordinate: List[LocationCoordinate] = field(
-        default_factory=list,
+    location_coordinate: Tuple[LocationCoordinate, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "LocationCoordinate",
             "type": "Element",
@@ -4120,7 +4120,7 @@ class AddressType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class AttachmentType:
     embedded_document_binary_object: Optional[EmbeddedDocumentBinaryObject] = field(
         default=None,
@@ -4140,7 +4140,7 @@ class AttachmentType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class CapabilityType:
     capability_type_code: Optional[CapabilityTypeCode] = field(
         default=None,
@@ -4150,8 +4150,8 @@ class CapabilityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -4174,8 +4174,8 @@ class CapabilityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    evidence_supplied: List[EvidenceSupplied] = field(
-        default_factory=list,
+    evidence_supplied: Tuple[EvidenceSupplied, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "EvidenceSupplied",
             "type": "Element",
@@ -4192,7 +4192,7 @@ class CapabilityType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ClassificationSchemeType:
     id: Optional[Id] = field(
         default=None,
@@ -4227,8 +4227,8 @@ class ClassificationSchemeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -4243,8 +4243,8 @@ class ClassificationSchemeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -4299,8 +4299,8 @@ class ClassificationSchemeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    classification_category: List[ClassificationCategory] = field(
-        default_factory=list,
+    classification_category: Tuple[ClassificationCategory, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ClassificationCategory",
             "type": "Element",
@@ -4310,7 +4310,7 @@ class ClassificationSchemeType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ConsumptionHistoryType:
     meter_number: Optional[MeterNumber] = field(
         default=None,
@@ -4353,8 +4353,8 @@ class ConsumptionHistoryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -4372,7 +4372,7 @@ class ConsumptionHistoryType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ConsumptionReportReferenceType:
     consumption_report_id: Optional[ConsumptionReportId] = field(
         default=None,
@@ -4419,7 +4419,7 @@ class ConsumptionReportReferenceType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ContactType:
     id: Optional[Id] = field(
         default=None,
@@ -4461,16 +4461,16 @@ class ContactType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    other_communication: List[OtherCommunication] = field(
-        default_factory=list,
+    other_communication: Tuple[OtherCommunication, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "OtherCommunication",
             "type": "Element",
@@ -4479,10 +4479,10 @@ class ContactType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class DeclarationType:
-    name: List[Name] = field(
-        default_factory=list,
+    name: Tuple[Name, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Name",
             "type": "Element",
@@ -4497,16 +4497,16 @@ class DeclarationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    evidence_supplied: List[EvidenceSupplied] = field(
-        default_factory=list,
+    evidence_supplied: Tuple[EvidenceSupplied, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "EvidenceSupplied",
             "type": "Element",
@@ -4515,7 +4515,7 @@ class DeclarationType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class EventTacticType:
     comment: Optional[Comment] = field(
         default=None,
@@ -4552,7 +4552,7 @@ class EventTacticType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class FinancialGuaranteeType:
     guarantee_type_code: Optional[GuaranteeTypeCode] = field(
         default=None,
@@ -4563,8 +4563,8 @@ class FinancialGuaranteeType:
             "required": True,
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -4597,7 +4597,7 @@ class FinancialGuaranteeType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class HazardousGoodsTransitType:
     transport_emergency_card_code: Optional[TransportEmergencyCardCode] = field(
         default=None,
@@ -4657,7 +4657,7 @@ class HazardousGoodsTransitType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ItemPropertyType:
     id: Optional[Id] = field(
         default=None,
@@ -4708,8 +4708,8 @@ class ItemPropertyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    value_qualifier: List[ValueQualifier] = field(
-        default_factory=list,
+    value_qualifier: Tuple[ValueQualifier, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ValueQualifier",
             "type": "Element",
@@ -4724,8 +4724,8 @@ class ItemPropertyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    list_value: List[ListValue] = field(
-        default_factory=list,
+    list_value: Tuple[ListValue, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ListValue",
             "type": "Element",
@@ -4740,8 +4740,8 @@ class ItemPropertyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    item_property_group: List[ItemPropertyGroup] = field(
-        default_factory=list,
+    item_property_group: Tuple[ItemPropertyGroup, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ItemPropertyGroup",
             "type": "Element",
@@ -4766,7 +4766,7 @@ class ItemPropertyType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class MeterType:
     meter_number: Optional[MeterNumber] = field(
         default=None,
@@ -4808,16 +4808,16 @@ class MeterType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    meter_reading: List[MeterReading] = field(
-        default_factory=list,
+    meter_reading: Tuple[MeterReading, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "MeterReading",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    meter_property: List[MeterProperty] = field(
-        default_factory=list,
+    meter_property: Tuple[MeterProperty, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "MeterProperty",
             "type": "Element",
@@ -4826,7 +4826,7 @@ class MeterType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class PaymentTermsType:
     id: Optional[Id] = field(
         default=None,
@@ -4836,8 +4836,8 @@ class PaymentTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    payment_means_id: List[PaymentMeansId] = field(
-        default_factory=list,
+    payment_means_id: Tuple[PaymentMeansId, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PaymentMeansID",
             "type": "Element",
@@ -4852,8 +4852,8 @@ class PaymentTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -4982,7 +4982,7 @@ class PaymentTermsType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class PriceListType:
     id: Optional[Id] = field(
         default=None,
@@ -5000,8 +5000,8 @@ class PriceListType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    validity_period: List[ValidityPeriod] = field(
-        default_factory=list,
+    validity_period: Tuple[ValidityPeriod, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ValidityPeriod",
             "type": "Element",
@@ -5018,7 +5018,7 @@ class PriceListType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class RenewalType:
     amount: Optional[Amount] = field(
         default=None,
@@ -5038,7 +5038,7 @@ class RenewalType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class RetailPlannedImpactType:
     amount: Optional[Amount] = field(
         default=None,
@@ -5077,7 +5077,7 @@ class RetailPlannedImpactType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class StatusType:
     condition_code: Optional[ConditionCode] = field(
         default=None,
@@ -5103,8 +5103,8 @@ class StatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -5119,8 +5119,8 @@ class StatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    status_reason: List[StatusReason] = field(
-        default_factory=list,
+    status_reason: Tuple[StatusReason, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "StatusReason",
             "type": "Element",
@@ -5135,8 +5135,8 @@ class StatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    text: List[Text] = field(
-        default_factory=list,
+    text: Tuple[Text, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Text",
             "type": "Element",
@@ -5167,8 +5167,8 @@ class StatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    condition: List[Condition] = field(
-        default_factory=list,
+    condition: Tuple[Condition, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Condition",
             "type": "Element",
@@ -5177,7 +5177,7 @@ class StatusType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class StowageType:
     location_id: Optional[LocationId] = field(
         default=None,
@@ -5187,16 +5187,16 @@ class StowageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    location: List[UblCommonBasicComponents21Location] = field(
-        default_factory=list,
+    location: Tuple[UblCommonBasicComponents21Location, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Location",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    measurement_dimension: List[MeasurementDimension] = field(
-        default_factory=list,
+    measurement_dimension: Tuple[MeasurementDimension, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "MeasurementDimension",
             "type": "Element",
@@ -5205,349 +5205,349 @@ class StowageType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class AccountingContact(ContactType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AdditionalItemProperty(ItemPropertyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Address(AddressType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ApplicableAddress(AddressType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ApplicableTerritoryAddress(AddressType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Attachment(AttachmentType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class BonusPaymentTerms(PaymentTermsType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class BusinessClassificationScheme(ClassificationSchemeType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class BuyerContact(ContactType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Capability(CapabilityType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ClassificationScheme(ClassificationSchemeType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CollectPaymentTerms(PaymentTermsType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CommissionPaymentTerms(PaymentTermsType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ConsumptionHistory(ConsumptionHistoryType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ConsumptionReportReference(ConsumptionReportReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Contact(ContactType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CurrentStatus(StatusType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Declaration(DeclarationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DeliveryAddress(AddressType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DeliveryContact(ContactType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DespatchAddress(AddressType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DespatchContact(ContactType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DigitalSignatureAttachment(AttachmentType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DisbursementPaymentTerms(PaymentTermsType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class EventTactic(EventTacticType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class FinalFinancialGuarantee(FinancialGuaranteeType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class FinancialCapability(CapabilityType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class FinancialGuarantee(FinancialGuaranteeType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class HazardousGoodsTransit(HazardousGoodsTransitType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ItemProperty(ItemPropertyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class JurisdictionRegionAddress(AddressType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class KeywordItemProperty(ItemPropertyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class LocationAddress(AddressType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Meter(MeterType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class OriginAddress(AddressType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PaymentTerms(PaymentTermsType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PenaltyPaymentTerms(PaymentTermsType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PostalAddress(AddressType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PrepaidPaymentTerms(PaymentTermsType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PreviousPriceList(PriceListType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PriceList(PriceListType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RegistrationAddress(AddressType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Renewal(RenewalType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RequestedClassificationScheme(ClassificationSchemeType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RequiredBusinessClassificationScheme(ClassificationSchemeType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RequiredClassificationScheme(ClassificationSchemeType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RequiredFinancialGuarantee(FinancialGuaranteeType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ResidenceAddress(AddressType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RetailPlannedImpact(RetailPlannedImpactType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ReturnAddress(AddressType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SellerContact(ContactType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ServiceChargePaymentTerms(PaymentTermsType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SignatoryContact(ContactType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Status(StatusType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Stowage(StowageType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TechnicalCapability(CapabilityType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class UtilityMeter(MeterType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class BudgetAccountType:
     id: Optional[Id] = field(
         default=None,
@@ -5575,7 +5575,7 @@ class BudgetAccountType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ConsumptionPointType:
     id: Optional[Id] = field(
         default=None,
@@ -5586,8 +5586,8 @@ class ConsumptionPointType:
             "required": True,
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -5642,8 +5642,8 @@ class ConsumptionPointType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    utility_meter: List[UtilityMeter] = field(
-        default_factory=list,
+    utility_meter: Tuple[UtilityMeter, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "UtilityMeter",
             "type": "Element",
@@ -5652,10 +5652,10 @@ class ConsumptionPointType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ContractExtensionType:
-    options_description: List[OptionsDescription] = field(
-        default_factory=list,
+    options_description: Tuple[OptionsDescription, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "OptionsDescription",
             "type": "Element",
@@ -5686,8 +5686,8 @@ class ContractExtensionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    renewal: List[Renewal] = field(
-        default_factory=list,
+    renewal: Tuple[Renewal, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Renewal",
             "type": "Element",
@@ -5696,7 +5696,7 @@ class ContractExtensionType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class CorporateRegistrationSchemeType:
     id: Optional[Id] = field(
         default=None,
@@ -5722,8 +5722,8 @@ class CorporateRegistrationSchemeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    jurisdiction_region_address: List[JurisdictionRegionAddress] = field(
-        default_factory=list,
+    jurisdiction_region_address: Tuple[JurisdictionRegionAddress, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "JurisdictionRegionAddress",
             "type": "Element",
@@ -5732,7 +5732,7 @@ class CorporateRegistrationSchemeType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class DocumentReferenceType:
     id: Optional[Id] = field(
         default=None,
@@ -5791,8 +5791,8 @@ class DocumentReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    xpath: List[Xpath] = field(
-        default_factory=list,
+    xpath: Tuple[Xpath, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "XPath",
             "type": "Element",
@@ -5831,8 +5831,8 @@ class DocumentReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    document_description: List[DocumentDescription] = field(
-        default_factory=list,
+    document_description: Tuple[DocumentDescription, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DocumentDescription",
             "type": "Element",
@@ -5873,7 +5873,7 @@ class DocumentReferenceType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class FinancialInstitutionType:
     id: Optional[Id] = field(
         default=None,
@@ -5901,7 +5901,7 @@ class FinancialInstitutionType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class LocationType:
     id: Optional[Id] = field(
         default=None,
@@ -5911,16 +5911,16 @@ class LocationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    conditions: List[Conditions] = field(
-        default_factory=list,
+    conditions: Tuple[Conditions, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Conditions",
             "type": "Element",
@@ -5967,8 +5967,8 @@ class LocationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    validity_period: List[ValidityPeriod] = field(
-        default_factory=list,
+    validity_period: Tuple[ValidityPeriod, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ValidityPeriod",
             "type": "Element",
@@ -5983,16 +5983,16 @@ class LocationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    subsidiary_location: List["SubsidiaryLocation"] = field(
-        default_factory=list,
+    subsidiary_location: Tuple["SubsidiaryLocation", ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SubsidiaryLocation",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    location_coordinate: List[LocationCoordinate] = field(
-        default_factory=list,
+    location_coordinate: Tuple[LocationCoordinate, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "LocationCoordinate",
             "type": "Element",
@@ -6001,7 +6001,7 @@ class LocationType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class LotIdentificationType:
     lot_number_id: Optional[LotNumberId] = field(
         default=None,
@@ -6019,8 +6019,8 @@ class LotIdentificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    additional_item_property: List[AdditionalItemProperty] = field(
-        default_factory=list,
+    additional_item_property: Tuple[AdditionalItemProperty, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AdditionalItemProperty",
             "type": "Element",
@@ -6029,7 +6029,7 @@ class LotIdentificationType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class OnAccountPaymentType:
     estimated_consumed_quantity: Optional[EstimatedConsumedQuantity] = field(
         default=None,
@@ -6040,16 +6040,16 @@ class OnAccountPaymentType:
             "required": True,
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    payment_terms: List[PaymentTerms] = field(
-        default_factory=list,
+    payment_terms: Tuple[PaymentTerms, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PaymentTerms",
             "type": "Element",
@@ -6059,7 +6059,7 @@ class OnAccountPaymentType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ResponseType:
     reference_id: Optional[ReferenceId] = field(
         default=None,
@@ -6077,8 +6077,8 @@ class ResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -6101,8 +6101,8 @@ class ResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    status: List[Status] = field(
-        default_factory=list,
+    status: Tuple[Status, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Status",
             "type": "Element",
@@ -6111,7 +6111,7 @@ class ResponseType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ServiceProviderPartyType:
     id: Optional[Id] = field(
         default=None,
@@ -6129,8 +6129,8 @@ class ServiceProviderPartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    service_type: List[ServiceType] = field(
-        default_factory=list,
+    service_type: Tuple[ServiceType, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ServiceType",
             "type": "Element",
@@ -6156,7 +6156,7 @@ class ServiceProviderPartyType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TaxSchemeType:
     id: Optional[Id] = field(
         default=None,
@@ -6190,8 +6190,8 @@ class TaxSchemeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    jurisdiction_region_address: List[JurisdictionRegionAddress] = field(
-        default_factory=list,
+    jurisdiction_region_address: Tuple[JurisdictionRegionAddress, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "JurisdictionRegionAddress",
             "type": "Element",
@@ -6200,10 +6200,10 @@ class TaxSchemeType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TradingTermsType:
-    information: List[Information] = field(
-        default_factory=list,
+    information: Tuple[Information, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Information",
             "type": "Element",
@@ -6228,595 +6228,595 @@ class TradingTermsType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ActivityFinalLocation(LocationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ActivityOriginLocation(LocationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AdditionalDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AlternativeDeliveryLocation(LocationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AtLocation(LocationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class BudgetAccount(BudgetAccountType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CallForTendersDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CatalogueDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ConsumptionPoint(ConsumptionPointType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ContractDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ContractExtension(ContractExtensionType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ContractualDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CorporateRegistrationScheme(CorporateRegistrationSchemeType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CreditNoteDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DebitNoteDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DeliveryLocation(LocationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DespatchDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DespatchLocation(LocationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DiscrepancyResponse(ResponseType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class EmploymentLegislationDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class EnvironmentalLegislationDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class EvidenceDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class FinancialInstitution(FinancialInstitutionType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class FirstArrivalPortLocation(LocationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class FiscalLegislationDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class FreightChargeLocation(LocationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class FromLocation(LocationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class GuaranteeDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class GuidanceDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class HaulageTradingTerms(TradingTermsType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class IdentityDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class InventoryLocation(LocationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class InvoiceDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ItemSpecificationDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class LastExitPortLocation(LocationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class LegalDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class LoadingLocation(LocationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class LoadingPortLocation(LocationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Location(LocationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class LotIdentification(LotIdentificationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class MainOnAccountPayment(OnAccountPaymentType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class MandateDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class MeasurementFromLocation(LocationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class MeasurementToLocation(LocationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class MinutesDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class NoticeDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class NotificationLocation(LocationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class OccurenceLocation(LocationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class OnAccountPayment(OnAccountPaymentType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class OrderDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class OriginalDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class OriginatorDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ParentDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ParticipatingLocationsLocation(LocationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PhysicalLocation(LocationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PickupLocation(LocationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PreviousDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ProcurementLegislationDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class QuotationDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RealizedLocation(LocationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ReceiptDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RegistryCertificateDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RegistryPortLocation(LocationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ReminderDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ReplacedNoticeDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RequestForQuotationDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RequestedDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RequestedStatusLocation(LocationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ResolutionDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Response(ResponseType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SelfBilledCreditNoteDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SelfBilledInvoiceDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ServiceProviderParty(ServiceProviderPartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ShipmentDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class StatementDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class StatusLocation(LocationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class StorageLocation(LocationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SubsidiaryLocation(LocationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SupportingDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TaxScheme(TaxSchemeType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TechnicalDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TemplateDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TenderDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TendererQualificationDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ToLocation(LocationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TradingTerms(TradingTermsType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransportExecutionPlanDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransportExecutionPlanRequestDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransportProgressStatusRequestDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransportServiceDescriptionDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransportServiceDescriptionRequestDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransportationStatusRequestDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransshipPortLocation(LocationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class UnloadingLocation(LocationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class UnloadingPortLocation(LocationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class UtilityConsumptionPoint(ConsumptionPointType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class WorkOrderDocumentReference(DocumentReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class BranchType:
     id: Optional[Id] = field(
         default=None,
@@ -6852,7 +6852,7 @@ class BranchType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class BudgetAccountLineType:
     id: Optional[Id] = field(
         default=None,
@@ -6870,8 +6870,8 @@ class BudgetAccountLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    budget_account: List[BudgetAccount] = field(
-        default_factory=list,
+    budget_account: Tuple[BudgetAccount, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "BudgetAccount",
             "type": "Element",
@@ -6880,7 +6880,7 @@ class BudgetAccountLineType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ConsumptionReportType:
     id: Optional[Id] = field(
         default=None,
@@ -6907,8 +6907,8 @@ class ConsumptionReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -7011,16 +7011,16 @@ class ConsumptionReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    consumption_report_reference: List[ConsumptionReportReference] = field(
-        default_factory=list,
+    consumption_report_reference: Tuple[ConsumptionReportReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ConsumptionReportReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    consumption_history: List[ConsumptionHistory] = field(
-        default_factory=list,
+    consumption_history: Tuple[ConsumptionHistory, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ConsumptionHistory",
             "type": "Element",
@@ -7029,7 +7029,7 @@ class ConsumptionReportType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class EmissionCalculationMethodType:
     calculation_method_code: Optional[CalculationMethodCode] = field(
         default=None,
@@ -7065,7 +7065,7 @@ class EmissionCalculationMethodType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class EnergyTaxReportType:
     tax_energy_amount: Optional[TaxEnergyAmount] = field(
         default=None,
@@ -7102,7 +7102,7 @@ class EnergyTaxReportType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class EventType:
     identification_id: Optional[IdentificationId] = field(
         default=None,
@@ -7136,8 +7136,8 @@ class EventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -7152,16 +7152,16 @@ class EventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    current_status: List[CurrentStatus] = field(
-        default_factory=list,
+    current_status: Tuple[CurrentStatus, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "CurrentStatus",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    contact: List[Contact] = field(
-        default_factory=list,
+    contact: Tuple[Contact, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Contact",
             "type": "Element",
@@ -7178,7 +7178,7 @@ class EventType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ItemInstanceType:
     product_trace_id: Optional[ProductTraceId] = field(
         default=None,
@@ -7228,8 +7228,8 @@ class ItemInstanceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    additional_item_property: List[AdditionalItemProperty] = field(
-        default_factory=list,
+    additional_item_property: Tuple[AdditionalItemProperty, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AdditionalItemProperty",
             "type": "Element",
@@ -7246,7 +7246,7 @@ class ItemInstanceType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class LineReferenceType:
     line_id: Optional[LineId] = field(
         default=None,
@@ -7283,7 +7283,7 @@ class LineReferenceType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class MaritimeTransportType:
     vessel_id: Optional[VesselId] = field(
         default=None,
@@ -7309,8 +7309,8 @@ class MaritimeTransportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    ships_requirements: List[ShipsRequirements] = field(
-        default_factory=list,
+    ships_requirements: Tuple[ShipsRequirements, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ShipsRequirements",
             "type": "Element",
@@ -7351,7 +7351,7 @@ class MaritimeTransportType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class OrderReferenceType:
     id: Optional[Id] = field(
         default=None,
@@ -7428,7 +7428,7 @@ class OrderReferenceType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class PartyLegalEntityType:
     registration_name: Optional[RegistrationName] = field(
         default=None,
@@ -7534,8 +7534,8 @@ class PartyLegalEntityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    shareholder_party: List[ShareholderParty] = field(
-        default_factory=list,
+    shareholder_party: Tuple[ShareholderParty, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ShareholderParty",
             "type": "Element",
@@ -7544,7 +7544,7 @@ class PartyLegalEntityType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class PartyTaxSchemeType:
     registration_name: Optional[RegistrationName] = field(
         default=None,
@@ -7578,8 +7578,8 @@ class PartyTaxSchemeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    exemption_reason: List[ExemptionReason] = field(
-        default_factory=list,
+    exemption_reason: Tuple[ExemptionReason, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ExemptionReason",
             "type": "Element",
@@ -7605,7 +7605,7 @@ class PartyTaxSchemeType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class PowerOfAttorneyType:
     id: Optional[Id] = field(
         default=None,
@@ -7631,8 +7631,8 @@ class PowerOfAttorneyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -7656,16 +7656,16 @@ class PowerOfAttorneyType:
             "required": True,
         }
     )
-    witness_party: List["WitnessParty"] = field(
-        default_factory=list,
+    witness_party: Tuple["WitnessParty", ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "WitnessParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    mandate_document_reference: List[MandateDocumentReference] = field(
-        default_factory=list,
+    mandate_document_reference: Tuple[MandateDocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "MandateDocumentReference",
             "type": "Element",
@@ -7674,7 +7674,7 @@ class PowerOfAttorneyType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TaxCategoryType:
     id: Optional[Id] = field(
         default=None,
@@ -7724,8 +7724,8 @@ class TaxCategoryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    tax_exemption_reason: List[TaxExemptionReason] = field(
-        default_factory=list,
+    tax_exemption_reason: Tuple[TaxExemptionReason, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TaxExemptionReason",
             "type": "Element",
@@ -7759,7 +7759,7 @@ class TaxCategoryType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TenderRequirementType:
     name: Optional[Name] = field(
         default=None,
@@ -7770,8 +7770,8 @@ class TenderRequirementType:
             "required": True,
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -7788,7 +7788,7 @@ class TenderRequirementType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransactionConditionsType:
     id: Optional[Id] = field(
         default=None,
@@ -7806,16 +7806,16 @@ class TransactionConditionsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    document_reference: List[DocumentReference] = field(
-        default_factory=list,
+    document_reference: Tuple[DocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DocumentReference",
             "type": "Element",
@@ -7824,7 +7824,7 @@ class TransactionConditionsType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class WorkPhaseReferenceType:
     id: Optional[Id] = field(
         default=None,
@@ -7842,8 +7842,8 @@ class WorkPhaseReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    work_phase: List[WorkPhase] = field(
-        default_factory=list,
+    work_phase: Tuple[WorkPhase, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "WorkPhase",
             "type": "Element",
@@ -7874,8 +7874,8 @@ class WorkPhaseReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    work_order_document_reference: List[WorkOrderDocumentReference] = field(
-        default_factory=list,
+    work_order_document_reference: Tuple[WorkOrderDocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "WorkOrderDocumentReference",
             "type": "Element",
@@ -7884,193 +7884,193 @@ class WorkPhaseReferenceType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ApplicableTaxCategory(TaxCategoryType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Branch(BranchType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class BudgetAccountLine(BudgetAccountLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CallForTendersLineReference(LineReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CatalogueLineReference(LineReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ClassifiedTaxCategory(TaxCategoryType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ConsumptionReport(ConsumptionReportType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DependentLineReference(LineReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DespatchLineReference(LineReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DocumentTenderRequirement(TenderRequirementType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class EmissionCalculationMethod(EmissionCalculationMethodType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class EnergyTaxReport(EnergyTaxReportType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Event(EventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class FinancialInstitutionBranch(BranchType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ItemInstance(ItemInstanceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class LineReference(LineReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class MaritimeTransport(MaritimeTransportType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class OpenTenderEvent(EventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class OrderReference(OrderReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ParentDocumentLineReference(LineReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PartyLegalEntity(PartyLegalEntityType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PartyTaxScheme(PartyTaxSchemeType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PowerOfAttorney(PowerOfAttorneyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class QuotationLineReference(LineReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ReceiptLineReference(LineReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RequestLineReference(LineReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SubsequentProcessTenderRequirement(TenderRequirementType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TaxCategory(TaxCategoryType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TenderRequirement(TenderRequirementType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransactionConditions(TransactionConditionsType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class WorkPhaseReference(WorkPhaseReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DependentPriceReferenceType:
     percent: Optional[Percent] = field(
         default=None,
@@ -8098,7 +8098,7 @@ class DependentPriceReferenceType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class DutyType:
     amount: Optional[Amount] = field(
         default=None,
@@ -8135,34 +8135,34 @@ class DutyType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class EnergyWaterSupplyType:
-    consumption_report: List[ConsumptionReport] = field(
-        default_factory=list,
+    consumption_report: Tuple[ConsumptionReport, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ConsumptionReport",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    energy_tax_report: List[EnergyTaxReport] = field(
-        default_factory=list,
+    energy_tax_report: Tuple[EnergyTaxReport, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "EnergyTaxReport",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    consumption_average: List[ConsumptionAverage] = field(
-        default_factory=list,
+    consumption_average: Tuple[ConsumptionAverage, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ConsumptionAverage",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    energy_water_consumption_correction: List[EnergyWaterConsumptionCorrection] = field(
-        default_factory=list,
+    energy_water_consumption_correction: Tuple[EnergyWaterConsumptionCorrection, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "EnergyWaterConsumptionCorrection",
             "type": "Element",
@@ -8171,7 +8171,7 @@ class EnergyWaterSupplyType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class EnvironmentalEmissionType:
     environmental_emission_type_code: Optional[EnvironmentalEmissionTypeCode] = field(
         default=None,
@@ -8191,16 +8191,16 @@ class EnvironmentalEmissionType:
             "required": True,
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    emission_calculation_method: List[EmissionCalculationMethod] = field(
-        default_factory=list,
+    emission_calculation_method: Tuple[EmissionCalculationMethod, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "EmissionCalculationMethod",
             "type": "Element",
@@ -8209,7 +8209,7 @@ class EnvironmentalEmissionType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class FinancialAccountType:
     id: Optional[Id] = field(
         default=None,
@@ -8259,8 +8259,8 @@ class FinancialAccountType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    payment_note: List[PaymentNote] = field(
-        default_factory=list,
+    payment_note: Tuple[PaymentNote, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PaymentNote",
             "type": "Element",
@@ -8285,7 +8285,7 @@ class FinancialAccountType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class FrameworkAgreementType:
     expected_operator_quantity: Optional[ExpectedOperatorQuantity] = field(
         default=None,
@@ -8303,16 +8303,16 @@ class FrameworkAgreementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    justification: List[Justification] = field(
-        default_factory=list,
+    justification: Tuple[Justification, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Justification",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    frequency: List[Frequency] = field(
-        default_factory=list,
+    frequency: Tuple[Frequency, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Frequency",
             "type": "Element",
@@ -8327,8 +8327,8 @@ class FrameworkAgreementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    subsequent_process_tender_requirement: List[SubsequentProcessTenderRequirement] = field(
-        default_factory=list,
+    subsequent_process_tender_requirement: Tuple[SubsequentProcessTenderRequirement, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SubsequentProcessTenderRequirement",
             "type": "Element",
@@ -8337,7 +8337,7 @@ class FrameworkAgreementType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class LineResponseType:
     line_reference: Optional[LineReference] = field(
         default=None,
@@ -8348,8 +8348,8 @@ class LineResponseType:
             "required": True,
         }
     )
-    response: List[Response] = field(
-        default_factory=list,
+    response: Tuple[Response, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Response",
             "type": "Element",
@@ -8359,7 +8359,7 @@ class LineResponseType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class OrderLineReferenceType:
     line_id: Optional[LineId] = field(
         default=None,
@@ -8404,7 +8404,7 @@ class OrderLineReferenceType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ProjectReferenceType:
     id: Optional[Id] = field(
         default=None,
@@ -8431,8 +8431,8 @@ class ProjectReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    work_phase_reference: List[WorkPhaseReference] = field(
-        default_factory=list,
+    work_phase_reference: Tuple[WorkPhaseReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "WorkPhaseReference",
             "type": "Element",
@@ -8441,7 +8441,7 @@ class ProjectReferenceType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class RequestedTenderTotalType:
     estimated_overall_contract_amount: Optional[EstimatedOverallContractAmount] = field(
         default=None,
@@ -8483,8 +8483,8 @@ class RequestedTenderTotalType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    monetary_scope: List[MonetaryScope] = field(
-        default_factory=list,
+    monetary_scope: Tuple[MonetaryScope, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "MonetaryScope",
             "type": "Element",
@@ -8499,8 +8499,8 @@ class RequestedTenderTotalType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    applicable_tax_category: List[ApplicableTaxCategory] = field(
-        default_factory=list,
+    applicable_tax_category: Tuple[ApplicableTaxCategory, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ApplicableTaxCategory",
             "type": "Element",
@@ -8509,7 +8509,7 @@ class RequestedTenderTotalType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TaxSubtotalType:
     taxable_amount: Optional[TaxableAmount] = field(
         default=None,
@@ -8595,7 +8595,7 @@ class TaxSubtotalType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TenderPreparationType:
     tender_envelope_id: Optional[TenderEnvelopeId] = field(
         default=None,
@@ -8614,8 +8614,8 @@ class TenderPreparationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -8630,16 +8630,16 @@ class TenderPreparationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    procurement_project_lot: List["ProcurementProjectLot"] = field(
-        default_factory=list,
+    procurement_project_lot: Tuple["ProcurementProjectLot", ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ProcurementProjectLot",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    document_tender_requirement: List[DocumentTenderRequirement] = field(
-        default_factory=list,
+    document_tender_requirement: Tuple[DocumentTenderRequirement, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DocumentTenderRequirement",
             "type": "Element",
@@ -8648,109 +8648,109 @@ class TenderPreparationType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class CallDuty(DutyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DependentPriceReference(DependentPriceReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Duty(DutyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class EnergyWaterSupply(EnergyWaterSupplyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class EnvironmentalEmission(EnvironmentalEmissionType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class FinancialAccount(FinancialAccountType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class FinancingFinancialAccount(FinancialAccountType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class FrameworkAgreement(FrameworkAgreementType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class LineResponse(LineResponseType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class OrderLineReference(OrderLineReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PayeeFinancialAccount(FinancialAccountType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PayerFinancialAccount(FinancialAccountType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ProjectReference(ProjectReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RequestedTenderTotal(RequestedTenderTotalType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TaxSubtotal(TaxSubtotalType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TenderPreparation(TenderPreparationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TimeDuty(DutyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PersonType:
     id: Optional[Id] = field(
         default=None,
@@ -8872,8 +8872,8 @@ class PersonType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    identity_document_reference: List[IdentityDocumentReference] = field(
-        default_factory=list,
+    identity_document_reference: Tuple[IdentityDocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "IdentityDocumentReference",
             "type": "Element",
@@ -8890,7 +8890,7 @@ class PersonType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TaxTotalType:
     tax_amount: Optional[TaxAmount] = field(
         default=None,
@@ -8925,8 +8925,8 @@ class TaxTotalType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    tax_subtotal: List[TaxSubtotal] = field(
-        default_factory=list,
+    tax_subtotal: Tuple[TaxSubtotal, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TaxSubtotal",
             "type": "Element",
@@ -8935,73 +8935,73 @@ class TaxTotalType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class CrewMemberPerson(PersonType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DriverPerson(PersonType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class MasterPerson(PersonType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PassengerPerson(PersonType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Person(PersonType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ReportingPerson(PersonType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SecurityOfficerPerson(PersonType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ShipsSurgeonPerson(PersonType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TaxTotal(TaxTotalType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TechnicalCommitteePerson(PersonType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class WithholdingTaxTotal(TaxTotalType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AwardingTermsType:
     weighting_algorithm_code: Optional[WeightingAlgorithmCode] = field(
         default=None,
@@ -9011,24 +9011,24 @@ class AwardingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    technical_committee_description: List[TechnicalCommitteeDescription] = field(
-        default_factory=list,
+    technical_committee_description: Tuple[TechnicalCommitteeDescription, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TechnicalCommitteeDescription",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    low_tenders_description: List[LowTendersDescription] = field(
-        default_factory=list,
+    low_tenders_description: Tuple[LowTendersDescription, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "LowTendersDescription",
             "type": "Element",
@@ -9043,16 +9043,16 @@ class AwardingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    prize_description: List[PrizeDescription] = field(
-        default_factory=list,
+    prize_description: Tuple[PrizeDescription, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PrizeDescription",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    payment_description: List[PaymentDescription] = field(
-        default_factory=list,
+    payment_description: Tuple[PaymentDescription, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PaymentDescription",
             "type": "Element",
@@ -9075,16 +9075,16 @@ class AwardingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    awarding_criterion: List[AwardingCriterion] = field(
-        default_factory=list,
+    awarding_criterion: Tuple[AwardingCriterion, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AwardingCriterion",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    technical_committee_person: List[TechnicalCommitteePerson] = field(
-        default_factory=list,
+    technical_committee_person: Tuple[TechnicalCommitteePerson, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TechnicalCommitteePerson",
             "type": "Element",
@@ -9093,7 +9093,7 @@ class AwardingTermsType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class PartyType:
     mark_care_indicator: Optional[bool] = field(
         default=None,
@@ -9143,16 +9143,16 @@ class PartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    party_identification: List[PartyIdentification] = field(
-        default_factory=list,
+    party_identification: Tuple[PartyIdentification, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PartyIdentification",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    party_name: List[PartyName] = field(
-        default_factory=list,
+    party_name: Tuple[PartyName, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PartyName",
             "type": "Element",
@@ -9183,16 +9183,16 @@ class PartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    party_tax_scheme: List[PartyTaxScheme] = field(
-        default_factory=list,
+    party_tax_scheme: Tuple[PartyTaxScheme, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PartyTaxScheme",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    party_legal_entity: List[PartyLegalEntity] = field(
-        default_factory=list,
+    party_legal_entity: Tuple[PartyLegalEntity, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PartyLegalEntity",
             "type": "Element",
@@ -9207,8 +9207,8 @@ class PartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    person: List[Person] = field(
-        default_factory=list,
+    person: Tuple[Person, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Person",
             "type": "Element",
@@ -9223,16 +9223,16 @@ class PartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    service_provider_party: List[ServiceProviderParty] = field(
-        default_factory=list,
+    service_provider_party: Tuple[ServiceProviderParty, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ServiceProviderParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    power_of_attorney: List[PowerOfAttorney] = field(
-        default_factory=list,
+    power_of_attorney: Tuple[PowerOfAttorney, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PowerOfAttorney",
             "type": "Element",
@@ -9249,7 +9249,7 @@ class PartyType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class PriceExtensionType:
     amount: Optional[Amount] = field(
         default=None,
@@ -9260,8 +9260,8 @@ class PriceExtensionType:
             "required": True,
         }
     )
-    tax_total: List[TaxTotal] = field(
-        default_factory=list,
+    tax_total: Tuple[TaxTotal, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TaxTotal",
             "type": "Element",
@@ -9270,448 +9270,448 @@ class PriceExtensionType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class AdditionalInformationParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AgentParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AppealInformationParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AppealReceiverParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AwardingTerms(AwardingTermsType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class BeneficiaryParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class BillOfLadingHolderParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class BillToParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CarrierParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ConsigneeParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ConsignorParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ContactParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ContractResponsibleParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CustomsAgentParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DeliveryParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DespatchParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DocumentProviderParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class EvidenceIssuingParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ExporterParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class FinalDeliveryParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class FinancingParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class FreightForwarderParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class GuarantorParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class HazardousItemNotificationParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class HeadOfficeParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ImporterParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class InformationContentProviderParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class InsuranceParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class InterestedParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class InventoryReportingParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class IssuerParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ItemPriceExtension(PriceExtensionType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class LoadingProofParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class LogisticsOperatorParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ManufacturerParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class MediationParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class MortgageHolderParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class NotaryParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class NotifyParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class OperatingParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class OriginalDespatchParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class OriginatorParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class OwnerParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Party(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PayeeParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PayerParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PerformingCarrierParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PickupParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PreSelectedParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PreparationParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PriceExtension(PriceExtensionType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ProviderParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ReceiverParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RecipientParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ResponsibleTransportServiceProviderParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SenderParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SignatoryParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SourceIssuerParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SubcontractorParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SubscriberParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SubstituteCarrierParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TaxRepresentativeParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TenderEvaluationParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TenderRecipientParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TendererParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TerminalOperatorParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransportAdvisorParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransportServiceProviderParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransportUserParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class UtilityCustomerParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class UtilitySupplierParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class WarrantyParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class WitnessParty(PartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AppealTermsType:
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -9752,7 +9752,7 @@ class AppealTermsType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ContractingPartyType1:
     class Meta:
         name = "ContractingPartyType"
@@ -9765,16 +9765,16 @@ class ContractingPartyType1:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    contracting_party_type: List[ContractingPartyType] = field(
-        default_factory=list,
+    contracting_party_type: Tuple[ContractingPartyType, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ContractingPartyType",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    contracting_activity: List[ContractingActivity] = field(
-        default_factory=list,
+    contracting_activity: Tuple[ContractingActivity, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ContractingActivity",
             "type": "Element",
@@ -9792,7 +9792,7 @@ class ContractingPartyType1:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class CustomerPartyType:
     customer_assigned_account_id: Optional[CustomerAssignedAccountId] = field(
         default=None,
@@ -9810,8 +9810,8 @@ class CustomerPartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    additional_account_id: List[AdditionalAccountId] = field(
-        default_factory=list,
+    additional_account_id: Tuple[AdditionalAccountId, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AdditionalAccountID",
             "type": "Element",
@@ -9852,7 +9852,7 @@ class CustomerPartyType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class CustomsDeclarationType:
     id: Optional[Id] = field(
         default=None,
@@ -9873,7 +9873,7 @@ class CustomsDeclarationType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class DespatchType:
     id: Optional[Id] = field(
         default=None,
@@ -9955,8 +9955,8 @@ class DespatchType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    instructions: List[Instructions] = field(
-        default_factory=list,
+    instructions: Tuple[Instructions, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Instructions",
             "type": "Element",
@@ -9995,8 +9995,8 @@ class DespatchType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    notify_party: List[NotifyParty] = field(
-        default_factory=list,
+    notify_party: Tuple[NotifyParty, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "NotifyParty",
             "type": "Element",
@@ -10029,7 +10029,7 @@ class DespatchType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class DocumentDistributionType:
     print_qualifier: Optional[PrintQualifier] = field(
         default=None,
@@ -10060,7 +10060,7 @@ class DocumentDistributionType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class DocumentResponseType:
     response: Optional[Response] = field(
         default=None,
@@ -10071,8 +10071,8 @@ class DocumentResponseType:
             "required": True,
         }
     )
-    document_reference: List[DocumentReference] = field(
-        default_factory=list,
+    document_reference: Tuple[DocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DocumentReference",
             "type": "Element",
@@ -10096,8 +10096,8 @@ class DocumentResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    line_response: List[LineResponse] = field(
-        default_factory=list,
+    line_response: Tuple[LineResponse, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "LineResponse",
             "type": "Element",
@@ -10106,10 +10106,10 @@ class DocumentResponseType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class EconomicOperatorShortListType:
-    limitation_description: List[LimitationDescription] = field(
-        default_factory=list,
+    limitation_description: Tuple[LimitationDescription, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "LimitationDescription",
             "type": "Element",
@@ -10140,8 +10140,8 @@ class EconomicOperatorShortListType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    pre_selected_party: List[PreSelectedParty] = field(
-        default_factory=list,
+    pre_selected_party: Tuple[PreSelectedParty, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PreSelectedParty",
             "type": "Element",
@@ -10150,7 +10150,7 @@ class EconomicOperatorShortListType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class EndorserPartyType:
     role_code: Optional[RoleCode] = field(
         default=None,
@@ -10190,7 +10190,7 @@ class EndorserPartyType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class EvidenceType:
     id: Optional[Id] = field(
         default=None,
@@ -10208,16 +10208,16 @@ class EvidenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    candidate_statement: List[CandidateStatement] = field(
-        default_factory=list,
+    candidate_statement: Tuple[CandidateStatement, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "CandidateStatement",
             "type": "Element",
@@ -10250,7 +10250,7 @@ class EvidenceType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class HazardousItemType:
     id: Optional[Id] = field(
         default=None,
@@ -10276,8 +10276,8 @@ class HazardousItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    additional_information: List[AdditionalInformation] = field(
-        default_factory=list,
+    additional_information: Tuple[AdditionalInformation, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AdditionalInformation",
             "type": "Element",
@@ -10396,16 +10396,16 @@ class HazardousItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    secondary_hazard: List[SecondaryHazard] = field(
-        default_factory=list,
+    secondary_hazard: Tuple[SecondaryHazard, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SecondaryHazard",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    hazardous_goods_transit: List[HazardousGoodsTransit] = field(
-        default_factory=list,
+    hazardous_goods_transit: Tuple[HazardousGoodsTransit, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "HazardousGoodsTransit",
             "type": "Element",
@@ -10428,8 +10428,8 @@ class HazardousItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    additional_temperature: List[AdditionalTemperature] = field(
-        default_factory=list,
+    additional_temperature: Tuple[AdditionalTemperature, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AdditionalTemperature",
             "type": "Element",
@@ -10438,7 +10438,7 @@ class HazardousItemType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ImmobilizedSecurityType:
     immobilization_certificate_id: Optional[ImmobilizationCertificateId] = field(
         default=None,
@@ -10498,7 +10498,7 @@ class ImmobilizedSecurityType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ItemIdentificationType:
     id: Optional[Id] = field(
         default=None,
@@ -10525,16 +10525,16 @@ class ItemIdentificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    physical_attribute: List[PhysicalAttribute] = field(
-        default_factory=list,
+    physical_attribute: Tuple[PhysicalAttribute, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PhysicalAttribute",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    measurement_dimension: List[MeasurementDimension] = field(
-        default_factory=list,
+    measurement_dimension: Tuple[MeasurementDimension, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "MeasurementDimension",
             "type": "Element",
@@ -10551,7 +10551,7 @@ class ItemIdentificationType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class NotificationRequirementType:
     notification_type_code: Optional[NotificationTypeCode] = field(
         default=None,
@@ -10578,24 +10578,24 @@ class NotificationRequirementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    notify_party: List[NotifyParty] = field(
-        default_factory=list,
+    notify_party: Tuple[NotifyParty, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "NotifyParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    notification_period: List[NotificationPeriod] = field(
-        default_factory=list,
+    notification_period: Tuple[NotificationPeriod, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "NotificationPeriod",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    notification_location: List[NotificationLocation] = field(
-        default_factory=list,
+    notification_location: Tuple[NotificationLocation, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "NotificationLocation",
             "type": "Element",
@@ -10604,7 +10604,7 @@ class NotificationRequirementType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class PaymentMandateType:
     id: Optional[Id] = field(
         default=None,
@@ -10678,8 +10678,8 @@ class PaymentMandateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    clause: List[Clause] = field(
-        default_factory=list,
+    clause: Tuple[Clause, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Clause",
             "type": "Element",
@@ -10688,7 +10688,7 @@ class PaymentMandateType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class PickupType:
     id: Optional[Id] = field(
         default=None,
@@ -10764,7 +10764,7 @@ class PickupType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class SignatureType:
     id: Optional[Id] = field(
         default=None,
@@ -10775,8 +10775,8 @@ class SignatureType:
             "required": True,
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -10849,7 +10849,7 @@ class SignatureType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class SupplierPartyType:
     customer_assigned_account_id: Optional[CustomerAssignedAccountId] = field(
         default=None,
@@ -10859,8 +10859,8 @@ class SupplierPartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    additional_account_id: List[AdditionalAccountId] = field(
-        default_factory=list,
+    additional_account_id: Tuple[AdditionalAccountId, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AdditionalAccountID",
             "type": "Element",
@@ -10909,7 +10909,7 @@ class SupplierPartyType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TradeFinancingType:
     id: Optional[Id] = field(
         default=None,
@@ -10935,8 +10935,8 @@ class TradeFinancingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    document_reference: List[DocumentReference] = field(
-        default_factory=list,
+    document_reference: Tuple[DocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DocumentReference",
             "type": "Element",
@@ -10960,8 +10960,8 @@ class TradeFinancingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    clause: List[Clause] = field(
-        default_factory=list,
+    clause: Tuple[Clause, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Clause",
             "type": "Element",
@@ -10970,7 +10970,7 @@ class TradeFinancingType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransportMeansType:
     journey_id: Optional[JourneyId] = field(
         default=None,
@@ -10988,8 +10988,8 @@ class TransportMeansType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    registration_nationality: List[RegistrationNationality] = field(
-        default_factory=list,
+    registration_nationality: Tuple[RegistrationNationality, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "RegistrationNationality",
             "type": "Element",
@@ -11068,8 +11068,8 @@ class TransportMeansType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    measurement_dimension: List[MeasurementDimension] = field(
-        default_factory=list,
+    measurement_dimension: Tuple[MeasurementDimension, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "MeasurementDimension",
             "type": "Element",
@@ -11078,7 +11078,7 @@ class TransportMeansType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class WinningPartyType:
     rank: Optional[Rank] = field(
         default=None,
@@ -11099,247 +11099,247 @@ class WinningPartyType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class AccountingCustomerParty(CustomerPartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AccountingSupplierParty(SupplierPartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AdditionalDocumentResponse(DocumentResponseType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AdditionalItemIdentification(ItemIdentificationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AppealTerms(AppealTermsType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ApplicableTransportMeans(TransportMeansType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class BuyerCustomerParty(CustomerPartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class BuyersItemIdentification(ItemIdentificationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CatalogueItemIdentification(ItemIdentificationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ContractingParty(ContractingPartyType1):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ContractorCustomerParty(CustomerPartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CustomerParty(CustomerPartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CustomsDeclaration(CustomsDeclarationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DeliveryCustomerParty(CustomerPartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Despatch(DespatchType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DespatchSupplierParty(SupplierPartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DocumentDistribution(DocumentDistributionType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DocumentResponse(DocumentResponseType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class EconomicOperatorShortList(EconomicOperatorShortListType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class EndorserParty(EndorserPartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Evidence(EvidenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class HazardousItem(HazardousItemType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ImmobilizedSecurity(ImmobilizedSecurityType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ItemIdentification(ItemIdentificationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ManufacturersItemIdentification(ItemIdentificationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class NotificationRequirement(NotificationRequirementType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class OriginatorCustomerParty(CustomerPartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PaymentMandate(PaymentMandateType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Pickup(PickupType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RecipientCustomerParty(CustomerPartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RetailerCustomerParty(CustomerPartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SellerSupplierParty(SupplierPartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SellersItemIdentification(ItemIdentificationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Signature(SignatureType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class StandardItemIdentification(ItemIdentificationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SuggestedEvidence(EvidenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SupplierParty(SupplierPartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TradeFinancing(TradeFinancingType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransportMeans(TransportMeansType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class WinningParty(WinningPartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CertificateType:
     id: Optional[Id] = field(
         default=None,
@@ -11368,8 +11368,8 @@ class CertificateType:
             "required": True,
         }
     )
-    remarks: List[Remarks] = field(
-        default_factory=list,
+    remarks: Tuple[Remarks, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Remarks",
             "type": "Element",
@@ -11385,16 +11385,16 @@ class CertificateType:
             "required": True,
         }
     )
-    document_reference: List[DocumentReference] = field(
-        default_factory=list,
+    document_reference: Tuple[DocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    signature: List[Signature] = field(
-        default_factory=list,
+    signature: Tuple[Signature, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Signature",
             "type": "Element",
@@ -11403,7 +11403,7 @@ class CertificateType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class CompletedTaskType:
     annual_average_amount: Optional[AnnualAverageAmount] = field(
         default=None,
@@ -11429,16 +11429,16 @@ class CompletedTaskType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    evidence_supplied: List[EvidenceSupplied] = field(
-        default_factory=list,
+    evidence_supplied: Tuple[EvidenceSupplied, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "EvidenceSupplied",
             "type": "Element",
@@ -11463,7 +11463,7 @@ class CompletedTaskType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class EndorsementType:
     document_id: Optional[DocumentId] = field(
         default=None,
@@ -11483,8 +11483,8 @@ class EndorsementType:
             "required": True,
         }
     )
-    remarks: List[Remarks] = field(
-        default_factory=list,
+    remarks: Tuple[Remarks, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Remarks",
             "type": "Element",
@@ -11500,8 +11500,8 @@ class EndorsementType:
             "required": True,
         }
     )
-    signature: List[Signature] = field(
-        default_factory=list,
+    signature: Tuple[Signature, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Signature",
             "type": "Element",
@@ -11510,7 +11510,7 @@ class EndorsementType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class EvaluationCriterionType:
     evaluation_criterion_type_code: Optional[EvaluationCriterionTypeCode] = field(
         default=None,
@@ -11520,8 +11520,8 @@ class EvaluationCriterionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -11552,8 +11552,8 @@ class EvaluationCriterionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    expression: List[Expression] = field(
-        default_factory=list,
+    expression: Tuple[Expression, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Expression",
             "type": "Element",
@@ -11568,8 +11568,8 @@ class EvaluationCriterionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    suggested_evidence: List[SuggestedEvidence] = field(
-        default_factory=list,
+    suggested_evidence: Tuple[SuggestedEvidence, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SuggestedEvidence",
             "type": "Element",
@@ -11578,7 +11578,7 @@ class EvaluationCriterionType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class PaymentMeansType:
     id: Optional[Id] = field(
         default=None,
@@ -11621,16 +11621,16 @@ class PaymentMeansType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    instruction_note: List[InstructionNote] = field(
-        default_factory=list,
+    instruction_note: Tuple[InstructionNote, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "InstructionNote",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    payment_id: List[PaymentId] = field(
-        default_factory=list,
+    payment_id: Tuple[PaymentId, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PaymentID",
             "type": "Element",
@@ -11687,10 +11687,10 @@ class PaymentMeansType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TendererRequirementType:
-    name: List[Name] = field(
-        default_factory=list,
+    name: Tuple[Name, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Name",
             "type": "Element",
@@ -11705,8 +11705,8 @@ class TendererRequirementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -11721,8 +11721,8 @@ class TendererRequirementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    suggested_evidence: List[SuggestedEvidence] = field(
-        default_factory=list,
+    suggested_evidence: Tuple[SuggestedEvidence, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SuggestedEvidence",
             "type": "Element",
@@ -11731,7 +11731,7 @@ class TendererRequirementType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TenderingProcessType:
     id: Optional[Id] = field(
         default=None,
@@ -11749,16 +11749,16 @@ class TenderingProcessType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    negotiation_description: List[NegotiationDescription] = field(
-        default_factory=list,
+    negotiation_description: Tuple[NegotiationDescription, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "NegotiationDescription",
             "type": "Element",
@@ -11861,24 +11861,24 @@ class TenderingProcessType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    notice_document_reference: List[NoticeDocumentReference] = field(
-        default_factory=list,
+    notice_document_reference: Tuple[NoticeDocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "NoticeDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    additional_document_reference: List[AdditionalDocumentReference] = field(
-        default_factory=list,
+    additional_document_reference: Tuple[AdditionalDocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AdditionalDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    process_justification: List[ProcessJustification] = field(
-        default_factory=list,
+    process_justification: Tuple[ProcessJustification, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ProcessJustification",
             "type": "Element",
@@ -11893,8 +11893,8 @@ class TenderingProcessType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    open_tender_event: List[OpenTenderEvent] = field(
-        default_factory=list,
+    open_tender_event: Tuple[OpenTenderEvent, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "OpenTenderEvent",
             "type": "Element",
@@ -11919,7 +11919,7 @@ class TenderingProcessType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransportEventType:
     identification_id: Optional[IdentificationId] = field(
         default=None,
@@ -11953,8 +11953,8 @@ class TransportEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -11977,16 +11977,16 @@ class TransportEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    current_status: List[CurrentStatus] = field(
-        default_factory=list,
+    current_status: Tuple[CurrentStatus, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "CurrentStatus",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    contact: List[Contact] = field(
-        default_factory=list,
+    contact: Tuple[Contact, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Contact",
             "type": "Element",
@@ -12009,8 +12009,8 @@ class TransportEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    period: List[Period] = field(
-        default_factory=list,
+    period: Tuple[Period, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Period",
             "type": "Element",
@@ -12019,307 +12019,307 @@ class TransportEventType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class AcceptanceTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ActualArrivalTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ActualDepartureTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ActualPickupTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ActualWaypointTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AvailabilityTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Certificate(CertificateType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CompletedTask(CompletedTaskType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DeliveryTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DetentionTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DischargeTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DropoffTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class EmbassyEndorsement(EndorsementType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Endorsement(EndorsementType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class EstimatedArrivalTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class EstimatedDepartureTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class EvaluationCriterion(EvaluationCriterionType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ExaminationTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ExportationTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class FinancialEvaluationCriterion(EvaluationCriterionType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class HandlingTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class InsuranceEndorsement(EndorsementType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class IssuerEndorsement(EndorsementType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class LoadingTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class OptionalTakeoverTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PaymentMeans(PaymentMeansType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PickupTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PlannedArrivalTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PlannedDeliveryTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PlannedDepartureTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PlannedPickupTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PlannedWaypointTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PositioningTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class QuarantineTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ReceiptTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RequestedArrivalTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RequestedDeliveryTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RequestedDepartureTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RequestedPickupTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RequestedWaypointTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SpecificTendererRequirement(TendererRequirementType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class StorageTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TakeoverTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TechnicalEvaluationCriterion(EvaluationCriterionType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TendererRequirement(TendererRequirementType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TenderingProcess(TenderingProcessType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class UpdatedDeliveryTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class UpdatedPickupTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class WarehousingTransportEvent(TransportEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AllowanceChargeType:
     id: Optional[Id] = field(
         default=None,
@@ -12346,8 +12346,8 @@ class AllowanceChargeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    allowance_charge_reason: List[AllowanceChargeReason] = field(
-        default_factory=list,
+    allowance_charge_reason: Tuple[AllowanceChargeReason, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AllowanceChargeReason",
             "type": "Element",
@@ -12419,8 +12419,8 @@ class AllowanceChargeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    tax_category: List[TaxCategory] = field(
-        default_factory=list,
+    tax_category: Tuple[TaxCategory, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TaxCategory",
             "type": "Element",
@@ -12435,8 +12435,8 @@ class AllowanceChargeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    payment_means: List[PaymentMeans] = field(
-        default_factory=list,
+    payment_means: Tuple[PaymentMeans, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PaymentMeans",
             "type": "Element",
@@ -12445,10 +12445,10 @@ class AllowanceChargeType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ItemType:
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -12495,32 +12495,32 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    additional_information: List[AdditionalInformation] = field(
-        default_factory=list,
+    additional_information: Tuple[AdditionalInformation, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AdditionalInformation",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    keyword: List[Keyword] = field(
-        default_factory=list,
+    keyword: Tuple[Keyword, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Keyword",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    brand_name: List[BrandName] = field(
-        default_factory=list,
+    brand_name: Tuple[BrandName, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "BrandName",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    model_name: List[ModelName] = field(
-        default_factory=list,
+    model_name: Tuple[ModelName, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ModelName",
             "type": "Element",
@@ -12543,8 +12543,8 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    manufacturers_item_identification: List[ManufacturersItemIdentification] = field(
-        default_factory=list,
+    manufacturers_item_identification: Tuple[ManufacturersItemIdentification, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ManufacturersItemIdentification",
             "type": "Element",
@@ -12567,8 +12567,8 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    additional_item_identification: List[AdditionalItemIdentification] = field(
-        default_factory=list,
+    additional_item_identification: Tuple[AdditionalItemIdentification, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AdditionalItemIdentification",
             "type": "Element",
@@ -12583,8 +12583,8 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    item_specification_document_reference: List[ItemSpecificationDocumentReference] = field(
-        default_factory=list,
+    item_specification_document_reference: Tuple[ItemSpecificationDocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ItemSpecificationDocumentReference",
             "type": "Element",
@@ -12599,48 +12599,48 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    commodity_classification: List[CommodityClassification] = field(
-        default_factory=list,
+    commodity_classification: Tuple[CommodityClassification, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "CommodityClassification",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    transaction_conditions: List[TransactionConditions] = field(
-        default_factory=list,
+    transaction_conditions: Tuple[TransactionConditions, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TransactionConditions",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    hazardous_item: List[HazardousItem] = field(
-        default_factory=list,
+    hazardous_item: Tuple[HazardousItem, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "HazardousItem",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    classified_tax_category: List[ClassifiedTaxCategory] = field(
-        default_factory=list,
+    classified_tax_category: Tuple[ClassifiedTaxCategory, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ClassifiedTaxCategory",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    additional_item_property: List[AdditionalItemProperty] = field(
-        default_factory=list,
+    additional_item_property: Tuple[AdditionalItemProperty, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AdditionalItemProperty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    manufacturer_party: List[ManufacturerParty] = field(
-        default_factory=list,
+    manufacturer_party: Tuple[ManufacturerParty, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ManufacturerParty",
             "type": "Element",
@@ -12655,32 +12655,32 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    origin_address: List[OriginAddress] = field(
-        default_factory=list,
+    origin_address: Tuple[OriginAddress, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "OriginAddress",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    item_instance: List[ItemInstance] = field(
-        default_factory=list,
+    item_instance: Tuple[ItemInstance, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ItemInstance",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    certificate: List[Certificate] = field(
-        default_factory=list,
+    certificate: Tuple[Certificate, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Certificate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    dimension: List[Dimension] = field(
-        default_factory=list,
+    dimension: Tuple[Dimension, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Dimension",
             "type": "Element",
@@ -12689,7 +12689,7 @@ class ItemType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class QualifyingPartyType:
     participation_percent: Optional[ParticipationPercent] = field(
         default=None,
@@ -12699,8 +12699,8 @@ class QualifyingPartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    personal_situation: List[PersonalSituation] = field(
-        default_factory=list,
+    personal_situation: Tuple[PersonalSituation, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PersonalSituation",
             "type": "Element",
@@ -12755,32 +12755,32 @@ class QualifyingPartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    technical_capability: List[TechnicalCapability] = field(
-        default_factory=list,
+    technical_capability: Tuple[TechnicalCapability, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TechnicalCapability",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    financial_capability: List[FinancialCapability] = field(
-        default_factory=list,
+    financial_capability: Tuple[FinancialCapability, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "FinancialCapability",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    completed_task: List[CompletedTask] = field(
-        default_factory=list,
+    completed_task: Tuple[CompletedTask, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "CompletedTask",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    declaration: List[Declaration] = field(
-        default_factory=list,
+    declaration: Tuple[Declaration, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Declaration",
             "type": "Element",
@@ -12805,7 +12805,7 @@ class QualifyingPartyType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TendererQualificationRequestType:
     company_legal_form_code: Optional[CompanyLegalFormCode] = field(
         default=None,
@@ -12823,8 +12823,8 @@ class TendererQualificationRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    personal_situation: List[PersonalSituation] = field(
-        default_factory=list,
+    personal_situation: Tuple[PersonalSituation, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PersonalSituation",
             "type": "Element",
@@ -12847,48 +12847,48 @@ class TendererQualificationRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    required_business_classification_scheme: List[RequiredBusinessClassificationScheme] = field(
-        default_factory=list,
+    required_business_classification_scheme: Tuple[RequiredBusinessClassificationScheme, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "RequiredBusinessClassificationScheme",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    technical_evaluation_criterion: List[TechnicalEvaluationCriterion] = field(
-        default_factory=list,
+    technical_evaluation_criterion: Tuple[TechnicalEvaluationCriterion, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TechnicalEvaluationCriterion",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    financial_evaluation_criterion: List[FinancialEvaluationCriterion] = field(
-        default_factory=list,
+    financial_evaluation_criterion: Tuple[FinancialEvaluationCriterion, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "FinancialEvaluationCriterion",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    specific_tenderer_requirement: List[SpecificTendererRequirement] = field(
-        default_factory=list,
+    specific_tenderer_requirement: Tuple[SpecificTendererRequirement, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SpecificTendererRequirement",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    economic_operator_role: List[EconomicOperatorRole] = field(
-        default_factory=list,
+    economic_operator_role: Tuple[EconomicOperatorRole, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "EconomicOperatorRole",
             "type": "Element",
@@ -12897,7 +12897,7 @@ class TendererQualificationRequestType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransportScheduleType:
     sequence_numeric: Optional[SequenceNumeric] = field(
         default=None,
@@ -12932,8 +12932,8 @@ class TransportScheduleType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    remarks: List[Remarks] = field(
-        default_factory=list,
+    remarks: Tuple[Remarks, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Remarks",
             "type": "Element",
@@ -12999,73 +12999,73 @@ class TransportScheduleType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class AdditionalQualifyingParty(QualifyingPartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AllowanceCharge(AllowanceChargeType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ExtraAllowanceCharge(AllowanceChargeType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class FreightAllowanceCharge(AllowanceChargeType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Item(ItemType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class MainQualifyingParty(QualifyingPartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class QualifyingParty(QualifyingPartyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ServiceAllowanceCharge(AllowanceChargeType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SupplyItem(ItemType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TendererQualificationRequest(TendererQualificationRequestType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransportSchedule(TransportScheduleType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class BillingReferenceLineType:
     id: Optional[Id] = field(
         default=None,
@@ -13084,8 +13084,8 @@ class BillingReferenceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    allowance_charge: List[AllowanceCharge] = field(
-        default_factory=list,
+    allowance_charge: Tuple[AllowanceCharge, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AllowanceCharge",
             "type": "Element",
@@ -13094,7 +13094,7 @@ class BillingReferenceLineType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class CatalogueItemSpecificationUpdateLineType:
     id: Optional[Id] = field(
         default=None,
@@ -13132,7 +13132,7 @@ class CatalogueItemSpecificationUpdateLineType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class DeliveryTermsType:
     id: Optional[Id] = field(
         default=None,
@@ -13142,8 +13142,8 @@ class DeliveryTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    special_terms: List[SpecialTerms] = field(
-        default_factory=list,
+    special_terms: Tuple[SpecialTerms, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SpecialTerms",
             "type": "Element",
@@ -13158,8 +13158,8 @@ class DeliveryTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    loss_risk: List[LossRisk] = field(
-        default_factory=list,
+    loss_risk: Tuple[LossRisk, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "LossRisk",
             "type": "Element",
@@ -13192,7 +13192,7 @@ class DeliveryTermsType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class DespatchLineType:
     id: Optional[Id] = field(
         default=None,
@@ -13211,8 +13211,8 @@ class DespatchLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -13243,8 +13243,8 @@ class DespatchLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    backorder_reason: List[BackorderReason] = field(
-        default_factory=list,
+    backorder_reason: Tuple[BackorderReason, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "BackorderReason",
             "type": "Element",
@@ -13259,8 +13259,8 @@ class DespatchLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    outstanding_reason: List[OutstandingReason] = field(
-        default_factory=list,
+    outstanding_reason: Tuple[OutstandingReason, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "OutstandingReason",
             "type": "Element",
@@ -13275,8 +13275,8 @@ class DespatchLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    order_line_reference: List[OrderLineReference] = field(
-        default_factory=list,
+    order_line_reference: Tuple[OrderLineReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "OrderLineReference",
             "type": "Element",
@@ -13284,8 +13284,8 @@ class DespatchLineType:
             "min_occurs": 1,
         }
     )
-    document_reference: List[DocumentReference] = field(
-        default_factory=list,
+    document_reference: Tuple[DocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DocumentReference",
             "type": "Element",
@@ -13301,8 +13301,8 @@ class DespatchLineType:
             "required": True,
         }
     )
-    shipment: List["Shipment"] = field(
-        default_factory=list,
+    shipment: Tuple["Shipment", ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Shipment",
             "type": "Element",
@@ -13311,7 +13311,7 @@ class DespatchLineType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class EventLineItemType:
     line_number_numeric: Optional[LineNumberNumeric] = field(
         default=None,
@@ -13329,8 +13329,8 @@ class EventLineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    retail_planned_impact: List[RetailPlannedImpact] = field(
-        default_factory=list,
+    retail_planned_impact: Tuple[RetailPlannedImpact, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "RetailPlannedImpact",
             "type": "Element",
@@ -13348,7 +13348,7 @@ class EventLineItemType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ExceptionCriteriaLineType:
     id: Optional[Id] = field(
         default=None,
@@ -13359,8 +13359,8 @@ class ExceptionCriteriaLineType:
             "required": True,
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -13433,8 +13433,8 @@ class ExceptionCriteriaLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    supply_item: List[SupplyItem] = field(
-        default_factory=list,
+    supply_item: Tuple[SupplyItem, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SupplyItem",
             "type": "Element",
@@ -13452,7 +13452,7 @@ class ExceptionCriteriaLineType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ExceptionNotificationLineType:
     id: Optional[Id] = field(
         default=None,
@@ -13463,16 +13463,16 @@ class ExceptionNotificationLineType:
             "required": True,
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -13553,8 +13553,8 @@ class ExceptionNotificationLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    document_reference: List[DocumentReference] = field(
-        default_factory=list,
+    document_reference: Tuple[DocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DocumentReference",
             "type": "Element",
@@ -13580,7 +13580,7 @@ class ExceptionNotificationLineType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class InstructionForReturnsLineType:
     id: Optional[Id] = field(
         default=None,
@@ -13591,8 +13591,8 @@ class InstructionForReturnsLineType:
             "required": True,
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -13627,7 +13627,7 @@ class InstructionForReturnsLineType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class InventoryReportLineType:
     id: Optional[Id] = field(
         default=None,
@@ -13638,8 +13638,8 @@ class InventoryReportLineType:
             "required": True,
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -13698,7 +13698,7 @@ class InventoryReportLineType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ItemLocationQuantityType:
     lead_time_measure: Optional[LeadTimeMeasure] = field(
         default=None,
@@ -13732,16 +13732,16 @@ class ItemLocationQuantityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    trading_restrictions: List[TradingRestrictions] = field(
-        default_factory=list,
+    trading_restrictions: Tuple[TradingRestrictions, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TradingRestrictions",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    applicable_territory_address: List[ApplicableTerritoryAddress] = field(
-        default_factory=list,
+    applicable_territory_address: Tuple[ApplicableTerritoryAddress, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ApplicableTerritoryAddress",
             "type": "Element",
@@ -13756,16 +13756,16 @@ class ItemLocationQuantityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    delivery_unit: List[DeliveryUnit] = field(
-        default_factory=list,
+    delivery_unit: Tuple[DeliveryUnit, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DeliveryUnit",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    applicable_tax_category: List[ApplicableTaxCategory] = field(
-        default_factory=list,
+    applicable_tax_category: Tuple[ApplicableTaxCategory, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ApplicableTaxCategory",
             "type": "Element",
@@ -13780,8 +13780,8 @@ class ItemLocationQuantityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    allowance_charge: List[AllowanceCharge] = field(
-        default_factory=list,
+    allowance_charge: Tuple[AllowanceCharge, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AllowanceCharge",
             "type": "Element",
@@ -13798,7 +13798,7 @@ class ItemLocationQuantityType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class PerformanceDataLineType:
     id: Optional[Id] = field(
         default=None,
@@ -13809,8 +13809,8 @@ class PerformanceDataLineType:
             "required": True,
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -13853,7 +13853,7 @@ class PerformanceDataLineType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ReceiptLineType:
     id: Optional[Id] = field(
         default=None,
@@ -13872,8 +13872,8 @@ class ReceiptLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -13920,8 +13920,8 @@ class ReceiptLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    reject_reason: List[RejectReason] = field(
-        default_factory=list,
+    reject_reason: Tuple[RejectReason, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "RejectReason",
             "type": "Element",
@@ -13984,32 +13984,32 @@ class ReceiptLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    despatch_line_reference: List[DespatchLineReference] = field(
-        default_factory=list,
+    despatch_line_reference: Tuple[DespatchLineReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DespatchLineReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    document_reference: List[DocumentReference] = field(
-        default_factory=list,
+    document_reference: Tuple[DocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    item: List[Item] = field(
-        default_factory=list,
+    item: Tuple[Item, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Item",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    shipment: List["Shipment"] = field(
-        default_factory=list,
+    shipment: Tuple["Shipment", ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Shipment",
             "type": "Element",
@@ -14018,7 +14018,7 @@ class ReceiptLineType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ShipmentStageType:
     id: Optional[Id] = field(
         default=None,
@@ -14116,16 +14116,16 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    instructions: List[Instructions] = field(
-        default_factory=list,
+    instructions: Tuple[Instructions, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Instructions",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    demurrage_instructions: List[DemurrageInstructions] = field(
-        default_factory=list,
+    demurrage_instructions: Tuple[DemurrageInstructions, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DemurrageInstructions",
             "type": "Element",
@@ -14156,8 +14156,8 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    carrier_party: List[CarrierParty] = field(
-        default_factory=list,
+    carrier_party: Tuple[CarrierParty, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "CarrierParty",
             "type": "Element",
@@ -14332,8 +14332,8 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    freight_allowance_charge: List[FreightAllowanceCharge] = field(
-        default_factory=list,
+    freight_allowance_charge: Tuple[FreightAllowanceCharge, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "FreightAllowanceCharge",
             "type": "Element",
@@ -14348,8 +14348,8 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    detention_transport_event: List[DetentionTransportEvent] = field(
-        default_factory=list,
+    detention_transport_event: Tuple[DetentionTransportEvent, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DetentionTransportEvent",
             "type": "Element",
@@ -14372,8 +14372,8 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    requested_waypoint_transport_event: List[RequestedWaypointTransportEvent] = field(
-        default_factory=list,
+    requested_waypoint_transport_event: Tuple[RequestedWaypointTransportEvent, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "RequestedWaypointTransportEvent",
             "type": "Element",
@@ -14396,8 +14396,8 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    planned_waypoint_transport_event: List[PlannedWaypointTransportEvent] = field(
-        default_factory=list,
+    planned_waypoint_transport_event: Tuple[PlannedWaypointTransportEvent, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PlannedWaypointTransportEvent",
             "type": "Element",
@@ -14428,8 +14428,8 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    transport_event: List[TransportEvent] = field(
-        default_factory=list,
+    transport_event: Tuple[TransportEvent, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TransportEvent",
             "type": "Element",
@@ -14452,16 +14452,16 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    passenger_person: List[PassengerPerson] = field(
-        default_factory=list,
+    passenger_person: Tuple[PassengerPerson, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PassengerPerson",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    driver_person: List[DriverPerson] = field(
-        default_factory=list,
+    driver_person: Tuple[DriverPerson, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DriverPerson",
             "type": "Element",
@@ -14476,8 +14476,8 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    crew_member_person: List[CrewMemberPerson] = field(
-        default_factory=list,
+    crew_member_person: Tuple[CrewMemberPerson, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "CrewMemberPerson",
             "type": "Element",
@@ -14510,7 +14510,7 @@ class ShipmentStageType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class StockAvailabilityReportLineType:
     id: Optional[Id] = field(
         default=None,
@@ -14521,8 +14521,8 @@ class StockAvailabilityReportLineType:
             "required": True,
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -14573,7 +14573,7 @@ class StockAvailabilityReportLineType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TenderingTermsType:
     awarding_method_type_code: Optional[AwardingMethodTypeCode] = field(
         default=None,
@@ -14607,16 +14607,16 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    accepted_variants_description: List[AcceptedVariantsDescription] = field(
-        default_factory=list,
+    accepted_variants_description: Tuple[AcceptedVariantsDescription, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AcceptedVariantsDescription",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    price_revision_formula_description: List[PriceRevisionFormulaDescription] = field(
-        default_factory=list,
+    price_revision_formula_description: Tuple[PriceRevisionFormulaDescription, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PriceRevisionFormulaDescription",
             "type": "Element",
@@ -14631,8 +14631,8 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    funding_program: List[FundingProgram] = field(
-        default_factory=list,
+    funding_program: Tuple[FundingProgram, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "FundingProgram",
             "type": "Element",
@@ -14647,8 +14647,8 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -14687,8 +14687,8 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    additional_conditions: List[AdditionalConditions] = field(
-        default_factory=list,
+    additional_conditions: Tuple[AdditionalConditions, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AdditionalConditions",
             "type": "Element",
@@ -14711,16 +14711,16 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    penalty_clause: List[PenaltyClause] = field(
-        default_factory=list,
+    penalty_clause: Tuple[PenaltyClause, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PenaltyClause",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    required_financial_guarantee: List[RequiredFinancialGuarantee] = field(
-        default_factory=list,
+    required_financial_guarantee: Tuple[RequiredFinancialGuarantee, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "RequiredFinancialGuarantee",
             "type": "Element",
@@ -14759,8 +14759,8 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    contractual_document_reference: List[ContractualDocumentReference] = field(
-        default_factory=list,
+    contractual_document_reference: Tuple[ContractualDocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ContractualDocumentReference",
             "type": "Element",
@@ -14783,40 +14783,40 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    payment_terms: List[PaymentTerms] = field(
-        default_factory=list,
+    payment_terms: Tuple[PaymentTerms, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PaymentTerms",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    tenderer_qualification_request: List[TendererQualificationRequest] = field(
-        default_factory=list,
+    tenderer_qualification_request: Tuple[TendererQualificationRequest, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TendererQualificationRequest",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    allowed_subcontract_terms: List[AllowedSubcontractTerms] = field(
-        default_factory=list,
+    allowed_subcontract_terms: Tuple[AllowedSubcontractTerms, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AllowedSubcontractTerms",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    tender_preparation: List[TenderPreparation] = field(
-        default_factory=list,
+    tender_preparation: Tuple[TenderPreparation, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TenderPreparation",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    contract_execution_requirement: List[ContractExecutionRequirement] = field(
-        default_factory=list,
+    contract_execution_requirement: Tuple[ContractExecutionRequirement, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ContractExecutionRequirement",
             "type": "Element",
@@ -14863,8 +14863,8 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    tender_evaluation_party: List[TenderEvaluationParty] = field(
-        default_factory=list,
+    tender_evaluation_party: Tuple[TenderEvaluationParty, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TenderEvaluationParty",
             "type": "Element",
@@ -14895,16 +14895,16 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    language: List[Language] = field(
-        default_factory=list,
+    language: Tuple[Language, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Language",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    budget_account_line: List[BudgetAccountLine] = field(
-        default_factory=list,
+    budget_account_line: Tuple[BudgetAccountLine, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "BudgetAccountLine",
             "type": "Element",
@@ -14921,145 +14921,145 @@ class TenderingTermsType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class BillingReferenceLine(BillingReferenceLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CatalogueItemSpecificationUpdateLine(CatalogueItemSpecificationUpdateLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DeliveryTerms(DeliveryTermsType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DespatchLine(DespatchLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class EventLineItem(EventLineItemType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ExceptionCriteriaLine(ExceptionCriteriaLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ExceptionNotificationLine(ExceptionNotificationLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class HandlingUnitDespatchLine(DespatchLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class InstructionForReturnsLine(InstructionForReturnsLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class InventoryReportLine(InventoryReportLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ItemLocationQuantity(ItemLocationQuantityType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class MainCarriageShipmentStage(ShipmentStageType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class OfferedItemLocationQuantity(ItemLocationQuantityType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class OnCarriageShipmentStage(ShipmentStageType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class OriginalItemLocationQuantity(ItemLocationQuantityType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PerformanceDataLine(PerformanceDataLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PreCarriageShipmentStage(ShipmentStageType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ReceiptLine(ReceiptLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ReceivedHandlingUnitReceiptLine(ReceiptLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RequiredItemLocationQuantity(ItemLocationQuantityType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ShipmentStage(ShipmentStageType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class StockAvailabilityReportLine(StockAvailabilityReportLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TenderingTerms(TenderingTermsType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class BillingReferenceType:
     invoice_document_reference: Optional[InvoiceDocumentReference] = field(
         default=None,
@@ -15117,8 +15117,8 @@ class BillingReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    billing_reference_line: List[BillingReferenceLine] = field(
-        default_factory=list,
+    billing_reference_line: Tuple[BillingReferenceLine, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "BillingReferenceLine",
             "type": "Element",
@@ -15127,7 +15127,7 @@ class BillingReferenceType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class CatalogueLineType:
     id: Optional[Id] = field(
         default=None,
@@ -15162,8 +15162,8 @@ class CatalogueLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -15218,8 +15218,8 @@ class CatalogueLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    warranty_information: List[WarrantyInformation] = field(
-        default_factory=list,
+    warranty_information: Tuple[WarrantyInformation, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "WarrantyInformation",
             "type": "Element",
@@ -15274,72 +15274,72 @@ class CatalogueLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    item_comparison: List[ItemComparison] = field(
-        default_factory=list,
+    item_comparison: Tuple[ItemComparison, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ItemComparison",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    component_related_item: List[ComponentRelatedItem] = field(
-        default_factory=list,
+    component_related_item: Tuple[ComponentRelatedItem, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ComponentRelatedItem",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    accessory_related_item: List[AccessoryRelatedItem] = field(
-        default_factory=list,
+    accessory_related_item: Tuple[AccessoryRelatedItem, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AccessoryRelatedItem",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    required_related_item: List[RequiredRelatedItem] = field(
-        default_factory=list,
+    required_related_item: Tuple[RequiredRelatedItem, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "RequiredRelatedItem",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    replacement_related_item: List[ReplacementRelatedItem] = field(
-        default_factory=list,
+    replacement_related_item: Tuple[ReplacementRelatedItem, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ReplacementRelatedItem",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    complementary_related_item: List[ComplementaryRelatedItem] = field(
-        default_factory=list,
+    complementary_related_item: Tuple[ComplementaryRelatedItem, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ComplementaryRelatedItem",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    replaced_related_item: List[ReplacedRelatedItem] = field(
-        default_factory=list,
+    replaced_related_item: Tuple[ReplacedRelatedItem, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ReplacedRelatedItem",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    required_item_location_quantity: List[RequiredItemLocationQuantity] = field(
-        default_factory=list,
+    required_item_location_quantity: Tuple[RequiredItemLocationQuantity, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "RequiredItemLocationQuantity",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    document_reference: List[DocumentReference] = field(
-        default_factory=list,
+    document_reference: Tuple[DocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DocumentReference",
             "type": "Element",
@@ -15355,8 +15355,8 @@ class CatalogueLineType:
             "required": True,
         }
     )
-    keyword_item_property: List[KeywordItemProperty] = field(
-        default_factory=list,
+    keyword_item_property: Tuple[KeywordItemProperty, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "KeywordItemProperty",
             "type": "Element",
@@ -15381,7 +15381,7 @@ class CatalogueLineType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class CataloguePricingUpdateLineType:
     id: Optional[Id] = field(
         default=None,
@@ -15408,8 +15408,8 @@ class CataloguePricingUpdateLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    required_item_location_quantity: List[RequiredItemLocationQuantity] = field(
-        default_factory=list,
+    required_item_location_quantity: Tuple[RequiredItemLocationQuantity, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "RequiredItemLocationQuantity",
             "type": "Element",
@@ -15418,7 +15418,7 @@ class CataloguePricingUpdateLineType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class CatalogueRequestLineType:
     id: Optional[Id] = field(
         default=None,
@@ -15437,8 +15437,8 @@ class CatalogueRequestLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -15453,8 +15453,8 @@ class CatalogueRequestLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    required_item_location_quantity: List[RequiredItemLocationQuantity] = field(
-        default_factory=list,
+    required_item_location_quantity: Tuple[RequiredItemLocationQuantity, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "RequiredItemLocationQuantity",
             "type": "Element",
@@ -15472,7 +15472,7 @@ class CatalogueRequestLineType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ItemManagementProfileType:
     frozen_period_days_numeric: Optional[FrozenPeriodDaysNumeric] = field(
         default=None,
@@ -15506,8 +15506,8 @@ class ItemManagementProfileType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    replenishment_owner_description: List[ReplenishmentOwnerDescription] = field(
-        default_factory=list,
+    replenishment_owner_description: Tuple[ReplenishmentOwnerDescription, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ReplenishmentOwnerDescription",
             "type": "Element",
@@ -15558,7 +15558,7 @@ class ItemManagementProfileType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class MiscellaneousEventType:
     miscellaneous_event_type_code: Optional[MiscellaneousEventTypeCode] = field(
         default=None,
@@ -15569,8 +15569,8 @@ class MiscellaneousEventType:
             "required": True,
         }
     )
-    event_line_item: List[EventLineItem] = field(
-        default_factory=list,
+    event_line_item: Tuple[EventLineItem, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "EventLineItem",
             "type": "Element",
@@ -15580,7 +15580,7 @@ class MiscellaneousEventType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class PricingReferenceType:
     original_item_location_quantity: Optional[OriginalItemLocationQuantity] = field(
         default=None,
@@ -15590,8 +15590,8 @@ class PricingReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    alternative_condition_price: List["AlternativeConditionPrice"] = field(
-        default_factory=list,
+    alternative_condition_price: Tuple["AlternativeConditionPrice", ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AlternativeConditionPrice",
             "type": "Element",
@@ -15600,7 +15600,7 @@ class PricingReferenceType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class PromotionalEventLineItemType:
     amount: Optional[Amount] = field(
         default=None,
@@ -15622,7 +15622,7 @@ class PromotionalEventLineItemType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class RequestForTenderLineType:
     id: Optional[Id] = field(
         default=None,
@@ -15640,8 +15640,8 @@ class RequestForTenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -15704,24 +15704,24 @@ class RequestForTenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    document_reference: List[DocumentReference] = field(
-        default_factory=list,
+    document_reference: Tuple[DocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    delivery_period: List[DeliveryPeriod] = field(
-        default_factory=list,
+    delivery_period: Tuple[DeliveryPeriod, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DeliveryPeriod",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    required_item_location_quantity: List[RequiredItemLocationQuantity] = field(
-        default_factory=list,
+    required_item_location_quantity: Tuple[RequiredItemLocationQuantity, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "RequiredItemLocationQuantity",
             "type": "Element",
@@ -15745,8 +15745,8 @@ class RequestForTenderLineType:
             "required": True,
         }
     )
-    sub_request_for_tender_line: List["SubRequestForTenderLine"] = field(
-        default_factory=list,
+    sub_request_for_tender_line: Tuple["SubRequestForTenderLine", ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SubRequestForTenderLine",
             "type": "Element",
@@ -15755,7 +15755,7 @@ class RequestForTenderLineType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TenderLineType:
     id: Optional[Id] = field(
         default=None,
@@ -15765,8 +15765,8 @@ class TenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -15837,8 +15837,8 @@ class TenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    warranty_information: List[WarrantyInformation] = field(
-        default_factory=list,
+    warranty_information: Tuple[WarrantyInformation, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "WarrantyInformation",
             "type": "Element",
@@ -15853,8 +15853,8 @@ class TenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    document_reference: List[DocumentReference] = field(
-        default_factory=list,
+    document_reference: Tuple[DocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DocumentReference",
             "type": "Element",
@@ -15869,16 +15869,16 @@ class TenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    offered_item_location_quantity: List[OfferedItemLocationQuantity] = field(
-        default_factory=list,
+    offered_item_location_quantity: Tuple[OfferedItemLocationQuantity, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "OfferedItemLocationQuantity",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    replacement_related_item: List[ReplacementRelatedItem] = field(
-        default_factory=list,
+    replacement_related_item: Tuple[ReplacementRelatedItem, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ReplacementRelatedItem",
             "type": "Element",
@@ -15901,8 +15901,8 @@ class TenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    sub_tender_line: List["SubTenderLine"] = field(
-        default_factory=list,
+    sub_tender_line: Tuple["SubTenderLine", ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SubTenderLine",
             "type": "Element",
@@ -15927,42 +15927,42 @@ class TenderLineType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransportExecutionTermsType:
-    transport_user_special_terms: List[TransportUserSpecialTerms] = field(
-        default_factory=list,
+    transport_user_special_terms: Tuple[TransportUserSpecialTerms, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TransportUserSpecialTerms",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    transport_service_provider_special_terms: List[TransportServiceProviderSpecialTerms] = field(
-        default_factory=list,
+    transport_service_provider_special_terms: Tuple[TransportServiceProviderSpecialTerms, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TransportServiceProviderSpecialTerms",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    change_conditions: List[ChangeConditions] = field(
-        default_factory=list,
+    change_conditions: Tuple[ChangeConditions, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ChangeConditions",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    payment_terms: List[PaymentTerms] = field(
-        default_factory=list,
+    payment_terms: Tuple[PaymentTerms, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PaymentTerms",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    delivery_terms: List[DeliveryTerms] = field(
-        default_factory=list,
+    delivery_terms: Tuple[DeliveryTerms, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DeliveryTerms",
             "type": "Element",
@@ -15993,16 +15993,16 @@ class TransportExecutionTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    environmental_emission: List[EnvironmentalEmission] = field(
-        default_factory=list,
+    environmental_emission: Tuple[EnvironmentalEmission, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "EnvironmentalEmission",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    notification_requirement: List[NotificationRequirement] = field(
-        default_factory=list,
+    notification_requirement: Tuple[NotificationRequirement, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "NotificationRequirement",
             "type": "Element",
@@ -16019,85 +16019,85 @@ class TransportExecutionTermsType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class BillingReference(BillingReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CatalogueLine(CatalogueLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CataloguePricingUpdateLine(CataloguePricingUpdateLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CatalogueRequestLine(CatalogueRequestLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ItemManagementProfile(ItemManagementProfileType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class MiscellaneousEvent(MiscellaneousEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PricingReference(PricingReferenceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PromotionalEventLineItem(PromotionalEventLineItemType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RequestForTenderLine(RequestForTenderLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SubRequestForTenderLine(RequestForTenderLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SubTenderLine(TenderLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TenderLine(TenderLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransportExecutionTerms(TransportExecutionTermsType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class InvoiceLineType:
     id: Optional[Id] = field(
         default=None,
@@ -16116,8 +16116,8 @@ class InvoiceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -16181,48 +16181,48 @@ class InvoiceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    invoice_period: List[InvoicePeriod] = field(
-        default_factory=list,
+    invoice_period: Tuple[InvoicePeriod, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "InvoicePeriod",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    order_line_reference: List[OrderLineReference] = field(
-        default_factory=list,
+    order_line_reference: Tuple[OrderLineReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "OrderLineReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    despatch_line_reference: List[DespatchLineReference] = field(
-        default_factory=list,
+    despatch_line_reference: Tuple[DespatchLineReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DespatchLineReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    receipt_line_reference: List[ReceiptLineReference] = field(
-        default_factory=list,
+    receipt_line_reference: Tuple[ReceiptLineReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ReceiptLineReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    billing_reference: List[BillingReference] = field(
-        default_factory=list,
+    billing_reference: Tuple[BillingReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "BillingReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    document_reference: List[DocumentReference] = field(
-        default_factory=list,
+    document_reference: Tuple[DocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DocumentReference",
             "type": "Element",
@@ -16245,40 +16245,40 @@ class InvoiceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    delivery: List["Delivery"] = field(
-        default_factory=list,
+    delivery: Tuple["Delivery", ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Delivery",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    payment_terms: List[PaymentTerms] = field(
-        default_factory=list,
+    payment_terms: Tuple[PaymentTerms, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PaymentTerms",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    allowance_charge: List[AllowanceCharge] = field(
-        default_factory=list,
+    allowance_charge: Tuple[AllowanceCharge, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AllowanceCharge",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    tax_total: List[TaxTotal] = field(
-        default_factory=list,
+    tax_total: Tuple[TaxTotal, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TaxTotal",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    withholding_tax_total: List[WithholdingTaxTotal] = field(
-        default_factory=list,
+    withholding_tax_total: Tuple[WithholdingTaxTotal, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "WithholdingTaxTotal",
             "type": "Element",
@@ -16310,8 +16310,8 @@ class InvoiceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    sub_invoice_line: List["SubInvoiceLine"] = field(
-        default_factory=list,
+    sub_invoice_line: Tuple["SubInvoiceLine", ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SubInvoiceLine",
             "type": "Element",
@@ -16328,7 +16328,7 @@ class InvoiceLineType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ProcurementProjectType:
     id: Optional[Id] = field(
         default=None,
@@ -16338,8 +16338,8 @@ class ProcurementProjectType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    name: List[Name] = field(
-        default_factory=list,
+    name: Tuple[Name, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Name",
             "type": "Element",
@@ -16347,8 +16347,8 @@ class ProcurementProjectType:
             "min_occurs": 1,
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -16387,8 +16387,8 @@ class ProcurementProjectType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    fee_description: List[FeeDescription] = field(
-        default_factory=list,
+    fee_description: Tuple[FeeDescription, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "FeeDescription",
             "type": "Element",
@@ -16411,8 +16411,8 @@ class ProcurementProjectType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -16435,16 +16435,16 @@ class ProcurementProjectType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    additional_commodity_classification: List[AdditionalCommodityClassification] = field(
-        default_factory=list,
+    additional_commodity_classification: Tuple[AdditionalCommodityClassification, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AdditionalCommodityClassification",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    realized_location: List[RealizedLocation] = field(
-        default_factory=list,
+    realized_location: Tuple[RealizedLocation, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "RealizedLocation",
             "type": "Element",
@@ -16467,8 +16467,8 @@ class ProcurementProjectType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    request_for_tender_line: List[RequestForTenderLine] = field(
-        default_factory=list,
+    request_for_tender_line: Tuple[RequestForTenderLine, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "RequestForTenderLine",
             "type": "Element",
@@ -16477,7 +16477,7 @@ class ProcurementProjectType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class PromotionalSpecificationType:
     specification_id: Optional[SpecificationId] = field(
         default=None,
@@ -16487,8 +16487,8 @@ class PromotionalSpecificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    promotional_event_line_item: List[PromotionalEventLineItem] = field(
-        default_factory=list,
+    promotional_event_line_item: Tuple[PromotionalEventLineItem, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PromotionalEventLineItem",
             "type": "Element",
@@ -16496,8 +16496,8 @@ class PromotionalSpecificationType:
             "min_occurs": 1,
         }
     )
-    event_tactic: List[EventTactic] = field(
-        default_factory=list,
+    event_tactic: Tuple[EventTactic, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "EventTactic",
             "type": "Element",
@@ -16506,31 +16506,31 @@ class PromotionalSpecificationType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class InvoiceLine(InvoiceLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ProcurementProject(ProcurementProjectType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PromotionalSpecification(PromotionalSpecificationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SubInvoiceLine(InvoiceLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class GoodsItemType:
     id: Optional[Id] = field(
         default=None,
@@ -16548,8 +16548,8 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -16732,48 +16732,48 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    item: List[Item] = field(
-        default_factory=list,
+    item: Tuple[Item, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Item",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    goods_item_container: List[GoodsItemContainer] = field(
-        default_factory=list,
+    goods_item_container: Tuple[GoodsItemContainer, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "GoodsItemContainer",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    freight_allowance_charge: List[FreightAllowanceCharge] = field(
-        default_factory=list,
+    freight_allowance_charge: Tuple[FreightAllowanceCharge, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "FreightAllowanceCharge",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    invoice_line: List[InvoiceLine] = field(
-        default_factory=list,
+    invoice_line: Tuple[InvoiceLine, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "InvoiceLine",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    temperature: List[Temperature] = field(
-        default_factory=list,
+    temperature: Tuple[Temperature, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Temperature",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    contained_goods_item: List["ContainedGoodsItem"] = field(
-        default_factory=list,
+    contained_goods_item: Tuple["ContainedGoodsItem", ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ContainedGoodsItem",
             "type": "Element",
@@ -16812,16 +16812,16 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    measurement_dimension: List[MeasurementDimension] = field(
-        default_factory=list,
+    measurement_dimension: Tuple[MeasurementDimension, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "MeasurementDimension",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    containing_package: List["ContainingPackage"] = field(
-        default_factory=list,
+    containing_package: Tuple["ContainingPackage", ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ContainingPackage",
             "type": "Element",
@@ -16854,7 +16854,7 @@ class GoodsItemType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ProcurementProjectLotType:
     id: Optional[Id] = field(
         default=None,
@@ -16883,7 +16883,7 @@ class ProcurementProjectLotType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class PromotionalEventType:
     promotional_event_type_code: Optional[PromotionalEventTypeCode] = field(
         default=None,
@@ -16918,8 +16918,8 @@ class PromotionalEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    promotional_specification: List[PromotionalSpecification] = field(
-        default_factory=list,
+    promotional_specification: Tuple[PromotionalSpecification, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PromotionalSpecification",
             "type": "Element",
@@ -16929,43 +16929,43 @@ class PromotionalEventType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ContainedGoodsItem(GoodsItemType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class GoodsItem(GoodsItemType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class InterestedProcurementProjectLot(ProcurementProjectLotType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ProcurementProjectLot(ProcurementProjectLotType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PromotionalEvent(PromotionalEventType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ReferencedGoodsItem(GoodsItemType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PackageType:
     id: Optional[Id] = field(
         default=None,
@@ -17007,8 +17007,8 @@ class PackageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    packing_material: List[PackingMaterial] = field(
-        default_factory=list,
+    packing_material: Tuple[PackingMaterial, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PackingMaterial",
             "type": "Element",
@@ -17023,8 +17023,8 @@ class PackageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    contained_package: List["ContainedPackage"] = field(
-        default_factory=list,
+    contained_package: Tuple["ContainedPackage", ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ContainedPackage",
             "type": "Element",
@@ -17039,24 +17039,24 @@ class PackageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    goods_item: List[GoodsItem] = field(
-        default_factory=list,
+    goods_item: Tuple[GoodsItem, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "GoodsItem",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    measurement_dimension: List[MeasurementDimension] = field(
-        default_factory=list,
+    measurement_dimension: Tuple[MeasurementDimension, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "MeasurementDimension",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    delivery_unit: List[DeliveryUnit] = field(
-        default_factory=list,
+    delivery_unit: Tuple[DeliveryUnit, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DeliveryUnit",
             "type": "Element",
@@ -17089,7 +17089,7 @@ class PackageType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class QualificationResolutionType:
     admission_code: Optional[AdmissionCode] = field(
         default=None,
@@ -17100,16 +17100,16 @@ class QualificationResolutionType:
             "required": True,
         }
     )
-    exclusion_reason: List[ExclusionReason] = field(
-        default_factory=list,
+    exclusion_reason: Tuple[ExclusionReason, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ExclusionReason",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    resolution: List[Resolution] = field(
-        default_factory=list,
+    resolution: Tuple[Resolution, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Resolution",
             "type": "Element",
@@ -17143,7 +17143,7 @@ class QualificationResolutionType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TenderedProjectType:
     variant_id: Optional[VariantId] = field(
         default=None,
@@ -17161,8 +17161,8 @@ class TenderedProjectType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    fee_description: List[FeeDescription] = field(
-        default_factory=list,
+    fee_description: Tuple[FeeDescription, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "FeeDescription",
             "type": "Element",
@@ -17193,16 +17193,16 @@ class TenderedProjectType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    evidence_document_reference: List[EvidenceDocumentReference] = field(
-        default_factory=list,
+    evidence_document_reference: Tuple[EvidenceDocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "EvidenceDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    tax_total: List[TaxTotal] = field(
-        default_factory=list,
+    tax_total: Tuple[TaxTotal, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TaxTotal",
             "type": "Element",
@@ -17217,16 +17217,16 @@ class TenderedProjectType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    tender_line: List[TenderLine] = field(
-        default_factory=list,
+    tender_line: Tuple[TenderLine, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TenderLine",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    awarding_criterion_response: List[AwardingCriterionResponse] = field(
-        default_factory=list,
+    awarding_criterion_response: Tuple[AwardingCriterionResponse, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AwardingCriterionResponse",
             "type": "Element",
@@ -17235,10 +17235,10 @@ class TenderedProjectType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TendererPartyQualificationType:
-    interested_procurement_project_lot: List[InterestedProcurementProjectLot] = field(
-        default_factory=list,
+    interested_procurement_project_lot: Tuple[InterestedProcurementProjectLot, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "InterestedProcurementProjectLot",
             "type": "Element",
@@ -17254,8 +17254,8 @@ class TendererPartyQualificationType:
             "required": True,
         }
     )
-    additional_qualifying_party: List[AdditionalQualifyingParty] = field(
-        default_factory=list,
+    additional_qualifying_party: Tuple[AdditionalQualifyingParty, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AdditionalQualifyingParty",
             "type": "Element",
@@ -17264,61 +17264,61 @@ class TendererPartyQualificationType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ActualPackage(PackageType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AwardedTenderedProject(TenderedProjectType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ContainedPackage(PackageType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ContainingPackage(PackageType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Package(PackageType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class QualificationResolution(QualificationResolutionType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ReferencedPackage(PackageType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TenderedProject(TenderedProjectType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TendererPartyQualification(TendererPartyQualificationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransportHandlingUnitType:
     id: Optional[Id] = field(
         default=None,
@@ -17344,8 +17344,8 @@ class TransportHandlingUnitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    handling_instructions: List[HandlingInstructions] = field(
-        default_factory=list,
+    handling_instructions: Tuple[HandlingInstructions, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "HandlingInstructions",
             "type": "Element",
@@ -17376,16 +17376,16 @@ class TransportHandlingUnitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    damage_remarks: List[DamageRemarks] = field(
-        default_factory=list,
+    damage_remarks: Tuple[DamageRemarks, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DamageRemarks",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    shipping_marks: List[ShippingMarks] = field(
-        default_factory=list,
+    shipping_marks: Tuple[ShippingMarks, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ShippingMarks",
             "type": "Element",
@@ -17400,56 +17400,56 @@ class TransportHandlingUnitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    handling_unit_despatch_line: List[HandlingUnitDespatchLine] = field(
-        default_factory=list,
+    handling_unit_despatch_line: Tuple[HandlingUnitDespatchLine, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "HandlingUnitDespatchLine",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    actual_package: List[ActualPackage] = field(
-        default_factory=list,
+    actual_package: Tuple[ActualPackage, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ActualPackage",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    received_handling_unit_receipt_line: List[ReceivedHandlingUnitReceiptLine] = field(
-        default_factory=list,
+    received_handling_unit_receipt_line: Tuple[ReceivedHandlingUnitReceiptLine, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ReceivedHandlingUnitReceiptLine",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    transport_equipment: List["TransportEquipment"] = field(
-        default_factory=list,
+    transport_equipment: Tuple["TransportEquipment", ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TransportEquipment",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    transport_means: List[TransportMeans] = field(
-        default_factory=list,
+    transport_means: Tuple[TransportMeans, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TransportMeans",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    hazardous_goods_transit: List[HazardousGoodsTransit] = field(
-        default_factory=list,
+    hazardous_goods_transit: Tuple[HazardousGoodsTransit, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "HazardousGoodsTransit",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    measurement_dimension: List[MeasurementDimension] = field(
-        default_factory=list,
+    measurement_dimension: Tuple[MeasurementDimension, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "MeasurementDimension",
             "type": "Element",
@@ -17472,8 +17472,8 @@ class TransportHandlingUnitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    goods_item: List[GoodsItem] = field(
-        default_factory=list,
+    goods_item: Tuple[GoodsItem, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "GoodsItem",
             "type": "Element",
@@ -17496,40 +17496,40 @@ class TransportHandlingUnitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    shipment_document_reference: List[ShipmentDocumentReference] = field(
-        default_factory=list,
+    shipment_document_reference: Tuple[ShipmentDocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ShipmentDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    status: List[Status] = field(
-        default_factory=list,
+    status: Tuple[Status, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Status",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    customs_declaration: List[CustomsDeclaration] = field(
-        default_factory=list,
+    customs_declaration: Tuple[CustomsDeclaration, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "CustomsDeclaration",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    referenced_shipment: List["ReferencedShipment"] = field(
-        default_factory=list,
+    referenced_shipment: Tuple["ReferencedShipment", ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ReferencedShipment",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    package: List[Package] = field(
-        default_factory=list,
+    package: Tuple[Package, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Package",
             "type": "Element",
@@ -17538,19 +17538,19 @@ class TransportHandlingUnitType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class PackagedTransportHandlingUnit(TransportHandlingUnitType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransportHandlingUnit(TransportHandlingUnitType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransportEquipmentType:
     id: Optional[Id] = field(
         default=None,
@@ -17560,8 +17560,8 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    referenced_consignment_id: List[ReferencedConsignmentId] = field(
-        default_factory=list,
+    referenced_consignment_id: Tuple[ReferencedConsignmentId, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ReferencedConsignmentID",
             "type": "Element",
@@ -17624,8 +17624,8 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    information: List[Information] = field(
-        default_factory=list,
+    information: Tuple[Information, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Information",
             "type": "Element",
@@ -17704,24 +17704,24 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    damage_remarks: List[DamageRemarks] = field(
-        default_factory=list,
+    damage_remarks: Tuple[DamageRemarks, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DamageRemarks",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    special_transport_requirements: List[SpecialTransportRequirements] = field(
-        default_factory=list,
+    special_transport_requirements: Tuple[SpecialTransportRequirements, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SpecialTransportRequirements",
             "type": "Element",
@@ -17776,16 +17776,16 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    measurement_dimension: List[MeasurementDimension] = field(
-        default_factory=list,
+    measurement_dimension: Tuple[MeasurementDimension, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "MeasurementDimension",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    transport_equipment_seal: List[TransportEquipmentSeal] = field(
-        default_factory=list,
+    transport_equipment_seal: Tuple[TransportEquipmentSeal, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TransportEquipmentSeal",
             "type": "Element",
@@ -17872,56 +17872,56 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    positioning_transport_event: List[PositioningTransportEvent] = field(
-        default_factory=list,
+    positioning_transport_event: Tuple[PositioningTransportEvent, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PositioningTransportEvent",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    quarantine_transport_event: List[QuarantineTransportEvent] = field(
-        default_factory=list,
+    quarantine_transport_event: Tuple[QuarantineTransportEvent, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "QuarantineTransportEvent",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    delivery_transport_event: List[DeliveryTransportEvent] = field(
-        default_factory=list,
+    delivery_transport_event: Tuple[DeliveryTransportEvent, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DeliveryTransportEvent",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    pickup_transport_event: List[PickupTransportEvent] = field(
-        default_factory=list,
+    pickup_transport_event: Tuple[PickupTransportEvent, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PickupTransportEvent",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    handling_transport_event: List[HandlingTransportEvent] = field(
-        default_factory=list,
+    handling_transport_event: Tuple[HandlingTransportEvent, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "HandlingTransportEvent",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    loading_transport_event: List[LoadingTransportEvent] = field(
-        default_factory=list,
+    loading_transport_event: Tuple[LoadingTransportEvent, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "LoadingTransportEvent",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    transport_event: List[TransportEvent] = field(
-        default_factory=list,
+    transport_event: Tuple[TransportEvent, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TransportEvent",
             "type": "Element",
@@ -17936,48 +17936,48 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    haulage_trading_terms: List[HaulageTradingTerms] = field(
-        default_factory=list,
+    haulage_trading_terms: Tuple[HaulageTradingTerms, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "HaulageTradingTerms",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    hazardous_goods_transit: List[HazardousGoodsTransit] = field(
-        default_factory=list,
+    hazardous_goods_transit: Tuple[HazardousGoodsTransit, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "HazardousGoodsTransit",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    packaged_transport_handling_unit: List[PackagedTransportHandlingUnit] = field(
-        default_factory=list,
+    packaged_transport_handling_unit: Tuple[PackagedTransportHandlingUnit, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PackagedTransportHandlingUnit",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    service_allowance_charge: List[ServiceAllowanceCharge] = field(
-        default_factory=list,
+    service_allowance_charge: Tuple[ServiceAllowanceCharge, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ServiceAllowanceCharge",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    freight_allowance_charge: List[FreightAllowanceCharge] = field(
-        default_factory=list,
+    freight_allowance_charge: Tuple[FreightAllowanceCharge, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "FreightAllowanceCharge",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    attached_transport_equipment: List["AttachedTransportEquipment"] = field(
-        default_factory=list,
+    attached_transport_equipment: Tuple["AttachedTransportEquipment", ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AttachedTransportEquipment",
             "type": "Element",
@@ -18008,32 +18008,32 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    shipment_document_reference: List[ShipmentDocumentReference] = field(
-        default_factory=list,
+    shipment_document_reference: Tuple[ShipmentDocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ShipmentDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    contained_in_transport_equipment: List["ContainedInTransportEquipment"] = field(
-        default_factory=list,
+    contained_in_transport_equipment: Tuple["ContainedInTransportEquipment", ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ContainedInTransportEquipment",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    package: List[Package] = field(
-        default_factory=list,
+    package: Tuple[Package, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Package",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    goods_item: List[GoodsItem] = field(
-        default_factory=list,
+    goods_item: Tuple[GoodsItem, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "GoodsItem",
             "type": "Element",
@@ -18042,49 +18042,49 @@ class TransportEquipmentType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class AttachedTransportEquipment(TransportEquipmentType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ContainedInTransportEquipment(TransportEquipmentType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ContainingTransportEquipment(TransportEquipmentType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ReferencedTransportEquipment(TransportEquipmentType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SupportedTransportEquipment(TransportEquipmentType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransportEquipment(TransportEquipmentType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class UnsupportedTransportEquipment(TransportEquipmentType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransportationServiceType:
     transport_service_code: Optional[TransportServiceCode] = field(
         default=None,
@@ -18119,8 +18119,8 @@ class TransportationServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    transportation_service_description: List[TransportationServiceDescription] = field(
-        default_factory=list,
+    transportation_service_description: Tuple[TransportationServiceDescription, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TransportationServiceDescription",
             "type": "Element",
@@ -18167,48 +18167,48 @@ class TransportationServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    transport_equipment: List[TransportEquipment] = field(
-        default_factory=list,
+    transport_equipment: Tuple[TransportEquipment, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TransportEquipment",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    supported_transport_equipment: List[SupportedTransportEquipment] = field(
-        default_factory=list,
+    supported_transport_equipment: Tuple[SupportedTransportEquipment, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SupportedTransportEquipment",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    unsupported_transport_equipment: List[UnsupportedTransportEquipment] = field(
-        default_factory=list,
+    unsupported_transport_equipment: Tuple[UnsupportedTransportEquipment, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "UnsupportedTransportEquipment",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    commodity_classification: List[CommodityClassification] = field(
-        default_factory=list,
+    commodity_classification: Tuple[CommodityClassification, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "CommodityClassification",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    supported_commodity_classification: List[SupportedCommodityClassification] = field(
-        default_factory=list,
+    supported_commodity_classification: Tuple[SupportedCommodityClassification, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SupportedCommodityClassification",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    unsupported_commodity_classification: List[UnsupportedCommodityClassification] = field(
-        default_factory=list,
+    unsupported_commodity_classification: Tuple[UnsupportedCommodityClassification, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "UnsupportedCommodityClassification",
             "type": "Element",
@@ -18223,16 +18223,16 @@ class TransportationServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    shipment_stage: List[ShipmentStage] = field(
-        default_factory=list,
+    shipment_stage: Tuple[ShipmentStage, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ShipmentStage",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    transport_event: List[TransportEvent] = field(
-        default_factory=list,
+    transport_event: Tuple[TransportEvent, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TransportEvent",
             "type": "Element",
@@ -18247,8 +18247,8 @@ class TransportationServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    environmental_emission: List[EnvironmentalEmission] = field(
-        default_factory=list,
+    environmental_emission: Tuple[EnvironmentalEmission, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "EnvironmentalEmission",
             "type": "Element",
@@ -18263,8 +18263,8 @@ class TransportationServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    scheduled_service_frequency: List[ScheduledServiceFrequency] = field(
-        default_factory=list,
+    scheduled_service_frequency: Tuple[ScheduledServiceFrequency, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ScheduledServiceFrequency",
             "type": "Element",
@@ -18273,37 +18273,37 @@ class TransportationServiceType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class AdditionalTransportationService(TransportationServiceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class FinalDeliveryTransportationService(TransportationServiceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class MainTransportationService(TransportationServiceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class OriginalDespatchTransportationService(TransportationServiceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransportationService(TransportationServiceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ConsignmentType:
     id: Optional[Id] = field(
         default=None,
@@ -18370,8 +18370,8 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    summary_description: List[SummaryDescription] = field(
-        default_factory=list,
+    summary_description: Tuple[SummaryDescription, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SummaryDescription",
             "type": "Element",
@@ -18394,8 +18394,8 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    tariff_description: List[TariffDescription] = field(
-        default_factory=list,
+    tariff_description: Tuple[TariffDescription, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TariffDescription",
             "type": "Element",
@@ -18474,8 +18474,8 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    remarks: List[Remarks] = field(
-        default_factory=list,
+    remarks: Tuple[Remarks, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Remarks",
             "type": "Element",
@@ -18554,32 +18554,32 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    carrier_service_instructions: List[CarrierServiceInstructions] = field(
-        default_factory=list,
+    carrier_service_instructions: Tuple[CarrierServiceInstructions, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "CarrierServiceInstructions",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    customs_clearance_service_instructions: List[CustomsClearanceServiceInstructions] = field(
-        default_factory=list,
+    customs_clearance_service_instructions: Tuple[CustomsClearanceServiceInstructions, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "CustomsClearanceServiceInstructions",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    forwarder_service_instructions: List[ForwarderServiceInstructions] = field(
-        default_factory=list,
+    forwarder_service_instructions: Tuple[ForwarderServiceInstructions, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ForwarderServiceInstructions",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    special_service_instructions: List[SpecialServiceInstructions] = field(
-        default_factory=list,
+    special_service_instructions: Tuple[SpecialServiceInstructions, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SpecialServiceInstructions",
             "type": "Element",
@@ -18610,16 +18610,16 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    handling_instructions: List[HandlingInstructions] = field(
-        default_factory=list,
+    handling_instructions: Tuple[HandlingInstructions, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "HandlingInstructions",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    information: List[Information] = field(
-        default_factory=list,
+    information: Tuple[Information, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Information",
             "type": "Element",
@@ -18674,8 +18674,8 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    special_instructions: List[SpecialInstructions] = field(
-        default_factory=list,
+    special_instructions: Tuple[SpecialInstructions, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SpecialInstructions",
             "type": "Element",
@@ -18690,8 +18690,8 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    delivery_instructions: List[DeliveryInstructions] = field(
-        default_factory=list,
+    delivery_instructions: Tuple[DeliveryInstructions, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DeliveryInstructions",
             "type": "Element",
@@ -18714,8 +18714,8 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    haulage_instructions: List[HaulageInstructions] = field(
-        default_factory=list,
+    haulage_instructions: Tuple[HaulageInstructions, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "HaulageInstructions",
             "type": "Element",
@@ -18746,16 +18746,16 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    consolidated_shipment: List["ConsolidatedShipment"] = field(
-        default_factory=list,
+    consolidated_shipment: Tuple["ConsolidatedShipment", ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ConsolidatedShipment",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    customs_declaration: List[CustomsDeclaration] = field(
-        default_factory=list,
+    customs_declaration: Tuple[CustomsDeclaration, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "CustomsDeclaration",
             "type": "Element",
@@ -18794,16 +18794,16 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    status: List[Status] = field(
-        default_factory=list,
+    status: Tuple[Status, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Status",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    child_consignment: List["ChildConsignment"] = field(
-        default_factory=list,
+    child_consignment: Tuple["ChildConsignment", ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ChildConsignment",
             "type": "Element",
@@ -18962,8 +18962,8 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    transit_country: List[TransitCountry] = field(
-        default_factory=list,
+    transit_country: Tuple[TransitCountry, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TransitCountry",
             "type": "Element",
@@ -18978,8 +18978,8 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    transport_event: List[TransportEvent] = field(
-        default_factory=list,
+    transport_event: Tuple[TransportEvent, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TransportEvent",
             "type": "Element",
@@ -19042,48 +19042,48 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    freight_allowance_charge: List[FreightAllowanceCharge] = field(
-        default_factory=list,
+    freight_allowance_charge: Tuple[FreightAllowanceCharge, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "FreightAllowanceCharge",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    extra_allowance_charge: List[ExtraAllowanceCharge] = field(
-        default_factory=list,
+    extra_allowance_charge: Tuple[ExtraAllowanceCharge, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ExtraAllowanceCharge",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    main_carriage_shipment_stage: List[MainCarriageShipmentStage] = field(
-        default_factory=list,
+    main_carriage_shipment_stage: Tuple[MainCarriageShipmentStage, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "MainCarriageShipmentStage",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    pre_carriage_shipment_stage: List[PreCarriageShipmentStage] = field(
-        default_factory=list,
+    pre_carriage_shipment_stage: Tuple[PreCarriageShipmentStage, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PreCarriageShipmentStage",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    on_carriage_shipment_stage: List[OnCarriageShipmentStage] = field(
-        default_factory=list,
+    on_carriage_shipment_stage: Tuple[OnCarriageShipmentStage, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "OnCarriageShipmentStage",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    transport_handling_unit: List[TransportHandlingUnit] = field(
-        default_factory=list,
+    transport_handling_unit: Tuple[TransportHandlingUnit, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TransportHandlingUnit",
             "type": "Element",
@@ -19108,25 +19108,25 @@ class ConsignmentType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ChildConsignment(ConsignmentType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Consignment(ConsignmentType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ReferencedConsignment(ConsignmentType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ShipmentType:
     id: Optional[Id] = field(
         default=None,
@@ -19153,16 +19153,16 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    handling_instructions: List[HandlingInstructions] = field(
-        default_factory=list,
+    handling_instructions: Tuple[HandlingInstructions, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "HandlingInstructions",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    information: List[Information] = field(
-        default_factory=list,
+    information: Tuple[Information, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Information",
             "type": "Element",
@@ -19265,16 +19265,16 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    special_instructions: List[SpecialInstructions] = field(
-        default_factory=list,
+    special_instructions: Tuple[SpecialInstructions, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SpecialInstructions",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    delivery_instructions: List[DeliveryInstructions] = field(
-        default_factory=list,
+    delivery_instructions: Tuple[DeliveryInstructions, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DeliveryInstructions",
             "type": "Element",
@@ -19297,24 +19297,24 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    consignment: List[Consignment] = field(
-        default_factory=list,
+    consignment: Tuple[Consignment, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Consignment",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    goods_item: List[GoodsItem] = field(
-        default_factory=list,
+    goods_item: Tuple[GoodsItem, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "GoodsItem",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    shipment_stage: List[ShipmentStage] = field(
-        default_factory=list,
+    shipment_stage: Tuple[ShipmentStage, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ShipmentStage",
             "type": "Element",
@@ -19329,8 +19329,8 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    transport_handling_unit: List[TransportHandlingUnit] = field(
-        default_factory=list,
+    transport_handling_unit: Tuple[TransportHandlingUnit, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TransportHandlingUnit",
             "type": "Element",
@@ -19377,8 +19377,8 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    freight_allowance_charge: List[FreightAllowanceCharge] = field(
-        default_factory=list,
+    freight_allowance_charge: Tuple[FreightAllowanceCharge, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "FreightAllowanceCharge",
             "type": "Element",
@@ -19387,7 +19387,7 @@ class ShipmentType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransportationSegmentType:
     sequence_numeric: Optional[SequenceNumeric] = field(
         default=None,
@@ -19432,8 +19432,8 @@ class TransportationSegmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    shipment_stage: List[ShipmentStage] = field(
-        default_factory=list,
+    shipment_stage: Tuple[ShipmentStage, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ShipmentStage",
             "type": "Element",
@@ -19442,37 +19442,37 @@ class TransportationSegmentType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ConsolidatedShipment(ShipmentType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ReferencedShipment(ShipmentType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ReportedShipment(ShipmentType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Shipment(ShipmentType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransportationSegment(TransportationSegmentType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CertificateOfOriginApplicationType:
     reference_id: Optional[ReferenceId] = field(
         default=None,
@@ -19517,8 +19517,8 @@ class CertificateOfOriginApplicationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    remarks: List[Remarks] = field(
-        default_factory=list,
+    remarks: Tuple[Remarks, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Remarks",
             "type": "Element",
@@ -19534,8 +19534,8 @@ class CertificateOfOriginApplicationType:
             "required": True,
         }
     )
-    endorser_party: List[EndorserParty] = field(
-        default_factory=list,
+    endorser_party: Tuple[EndorserParty, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "EndorserParty",
             "type": "Element",
@@ -19586,24 +19586,24 @@ class CertificateOfOriginApplicationType:
             "required": True,
         }
     )
-    document_distribution: List[DocumentDistribution] = field(
-        default_factory=list,
+    document_distribution: Tuple[DocumentDistribution, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DocumentDistribution",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    supporting_document_reference: List[SupportingDocumentReference] = field(
-        default_factory=list,
+    supporting_document_reference: Tuple[SupportingDocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SupportingDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    signature: List[Signature] = field(
-        default_factory=list,
+    signature: Tuple[Signature, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Signature",
             "type": "Element",
@@ -19612,7 +19612,7 @@ class CertificateOfOriginApplicationType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class DeliveryType:
     id: Optional[Id] = field(
         default=None,
@@ -19758,8 +19758,8 @@ class DeliveryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    notify_party: List[NotifyParty] = field(
-        default_factory=list,
+    notify_party: Tuple[NotifyParty, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "NotifyParty",
             "type": "Element",
@@ -19774,8 +19774,8 @@ class DeliveryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    delivery_terms: List[DeliveryTerms] = field(
-        default_factory=list,
+    delivery_terms: Tuple[DeliveryTerms, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DeliveryTerms",
             "type": "Element",
@@ -19808,7 +19808,7 @@ class DeliveryType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class OrderedShipmentType:
     shipment: Optional[Shipment] = field(
         default=None,
@@ -19819,8 +19819,8 @@ class OrderedShipmentType:
             "required": True,
         }
     )
-    package: List[Package] = field(
-        default_factory=list,
+    package: Tuple[Package, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Package",
             "type": "Element",
@@ -19829,31 +19829,31 @@ class OrderedShipmentType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class CertificateOfOriginApplication(CertificateOfOriginApplicationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ContractualDelivery(DeliveryType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Delivery(DeliveryType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class OrderedShipment(OrderedShipmentType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ContractType:
     id: Optional[Id] = field(
         default=None,
@@ -19911,8 +19911,8 @@ class ContractType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -19927,8 +19927,8 @@ class ContractType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -19943,8 +19943,8 @@ class ContractType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    contract_document_reference: List[ContractDocumentReference] = field(
-        default_factory=list,
+    contract_document_reference: Tuple[ContractDocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ContractDocumentReference",
             "type": "Element",
@@ -19969,31 +19969,31 @@ class ContractType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class Contract(ContractType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ForeignExchangeContract(ContractType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ReferencedContract(ContractType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TransportContract(ContractType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ExchangeRateType:
     source_currency_code: Optional[SourceCurrencyCode] = field(
         default=None,
@@ -20071,7 +20071,7 @@ class ExchangeRateType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TenderResultType:
     tender_result_code: Optional[TenderResultCode] = field(
         default=None,
@@ -20081,8 +20081,8 @@ class TenderResultType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -20186,16 +20186,16 @@ class TenderResultType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    subcontract_terms: List[SubcontractTerms] = field(
-        default_factory=list,
+    subcontract_terms: Tuple[SubcontractTerms, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SubcontractTerms",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    winning_party: List[WinningParty] = field(
-        default_factory=list,
+    winning_party: Tuple[WinningParty, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "WinningParty",
             "type": "Element",
@@ -20204,7 +20204,7 @@ class TenderResultType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class UtilityItemType:
     id: Optional[Id] = field(
         default=None,
@@ -20239,8 +20239,8 @@ class UtilityItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -20329,49 +20329,49 @@ class UtilityItemType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ExchangeRate(ExchangeRateType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PaymentAlternativeExchangeRate(ExchangeRateType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PaymentExchangeRate(ExchangeRateType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PricingExchangeRate(ExchangeRateType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TaxExchangeRate(ExchangeRateType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TenderResult(TenderResultType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class UtilityItem(UtilityItemType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class PriceType:
     price_amount: Optional[PriceAmount] = field(
         default=None,
@@ -20390,8 +20390,8 @@ class PriceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    price_change_reason: List[PriceChangeReason] = field(
-        default_factory=list,
+    price_change_reason: Tuple[PriceChangeReason, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PriceChangeReason",
             "type": "Element",
@@ -20422,8 +20422,8 @@ class PriceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    validity_period: List[ValidityPeriod] = field(
-        default_factory=list,
+    validity_period: Tuple[ValidityPeriod, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ValidityPeriod",
             "type": "Element",
@@ -20438,8 +20438,8 @@ class PriceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    allowance_charge: List[AllowanceCharge] = field(
-        default_factory=list,
+    allowance_charge: Tuple[AllowanceCharge, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AllowanceCharge",
             "type": "Element",
@@ -20456,7 +20456,7 @@ class PriceType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ReminderLineType:
     id: Optional[Id] = field(
         default=None,
@@ -20467,8 +20467,8 @@ class ReminderLineType:
             "required": True,
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -20547,16 +20547,16 @@ class ReminderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    reminder_period: List[ReminderPeriod] = field(
-        default_factory=list,
+    reminder_period: Tuple[ReminderPeriod, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ReminderPeriod",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    billing_reference: List[BillingReference] = field(
-        default_factory=list,
+    billing_reference: Tuple[BillingReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "BillingReference",
             "type": "Element",
@@ -20573,7 +20573,7 @@ class ReminderLineType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class RemittanceAdviceLineType:
     id: Optional[Id] = field(
         default=None,
@@ -20584,8 +20584,8 @@ class RemittanceAdviceLineType:
             "required": True,
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -20688,24 +20688,24 @@ class RemittanceAdviceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    invoice_period: List[InvoicePeriod] = field(
-        default_factory=list,
+    invoice_period: Tuple[InvoicePeriod, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "InvoicePeriod",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    billing_reference: List[BillingReference] = field(
-        default_factory=list,
+    billing_reference: Tuple[BillingReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "BillingReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    document_reference: List[DocumentReference] = field(
-        default_factory=list,
+    document_reference: Tuple[DocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DocumentReference",
             "type": "Element",
@@ -20722,7 +20722,7 @@ class RemittanceAdviceLineType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class StatementLineType:
     id: Optional[Id] = field(
         default=None,
@@ -20733,8 +20733,8 @@ class StatementLineType:
             "required": True,
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -20797,8 +20797,8 @@ class StatementLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    payment_terms: List[PaymentTerms] = field(
-        default_factory=list,
+    payment_terms: Tuple[PaymentTerms, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PaymentTerms",
             "type": "Element",
@@ -20853,24 +20853,24 @@ class StatementLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    invoice_period: List[InvoicePeriod] = field(
-        default_factory=list,
+    invoice_period: Tuple[InvoicePeriod, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "InvoicePeriod",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    billing_reference: List[BillingReference] = field(
-        default_factory=list,
+    billing_reference: Tuple[BillingReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "BillingReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    document_reference: List[DocumentReference] = field(
-        default_factory=list,
+    document_reference: Tuple[DocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DocumentReference",
             "type": "Element",
@@ -20885,16 +20885,16 @@ class StatementLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    allowance_charge: List[AllowanceCharge] = field(
-        default_factory=list,
+    allowance_charge: Tuple[AllowanceCharge, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AllowanceCharge",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    collected_payment: List[CollectedPayment] = field(
-        default_factory=list,
+    collected_payment: Tuple[CollectedPayment, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "CollectedPayment",
             "type": "Element",
@@ -20903,49 +20903,49 @@ class StatementLineType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class AlternativeConditionPrice(PriceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Price(PriceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ReminderLine(ReminderLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RemittanceAdviceLine(RemittanceAdviceLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class StatementLine(StatementLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TaxExclusivePrice(PriceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TaxInclusivePrice(PriceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ConsumptionLineType:
     id: Optional[Id] = field(
         default=None,
@@ -20990,24 +20990,24 @@ class ConsumptionLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    delivery: List[Delivery] = field(
-        default_factory=list,
+    delivery: Tuple[Delivery, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Delivery",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    allowance_charge: List[AllowanceCharge] = field(
-        default_factory=list,
+    allowance_charge: Tuple[AllowanceCharge, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AllowanceCharge",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    tax_total: List[TaxTotal] = field(
-        default_factory=list,
+    tax_total: Tuple[TaxTotal, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TaxTotal",
             "type": "Element",
@@ -21041,7 +21041,7 @@ class ConsumptionLineType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class CreditNoteLineType:
     id: Optional[Id] = field(
         default=None,
@@ -21060,8 +21060,8 @@ class CreditNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -21124,56 +21124,56 @@ class CreditNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    invoice_period: List[InvoicePeriod] = field(
-        default_factory=list,
+    invoice_period: Tuple[InvoicePeriod, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "InvoicePeriod",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    order_line_reference: List[OrderLineReference] = field(
-        default_factory=list,
+    order_line_reference: Tuple[OrderLineReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "OrderLineReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    discrepancy_response: List[DiscrepancyResponse] = field(
-        default_factory=list,
+    discrepancy_response: Tuple[DiscrepancyResponse, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DiscrepancyResponse",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    despatch_line_reference: List[DespatchLineReference] = field(
-        default_factory=list,
+    despatch_line_reference: Tuple[DespatchLineReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DespatchLineReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    receipt_line_reference: List[ReceiptLineReference] = field(
-        default_factory=list,
+    receipt_line_reference: Tuple[ReceiptLineReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ReceiptLineReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    billing_reference: List[BillingReference] = field(
-        default_factory=list,
+    billing_reference: Tuple[BillingReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "BillingReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    document_reference: List[DocumentReference] = field(
-        default_factory=list,
+    document_reference: Tuple[DocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DocumentReference",
             "type": "Element",
@@ -21196,32 +21196,32 @@ class CreditNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    delivery: List[Delivery] = field(
-        default_factory=list,
+    delivery: Tuple[Delivery, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Delivery",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    payment_terms: List[PaymentTerms] = field(
-        default_factory=list,
+    payment_terms: Tuple[PaymentTerms, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "PaymentTerms",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    tax_total: List[TaxTotal] = field(
-        default_factory=list,
+    tax_total: Tuple[TaxTotal, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TaxTotal",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    allowance_charge: List[AllowanceCharge] = field(
-        default_factory=list,
+    allowance_charge: Tuple[AllowanceCharge, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AllowanceCharge",
             "type": "Element",
@@ -21244,16 +21244,16 @@ class CreditNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    delivery_terms: List[DeliveryTerms] = field(
-        default_factory=list,
+    delivery_terms: Tuple[DeliveryTerms, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DeliveryTerms",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    sub_credit_note_line: List["SubCreditNoteLine"] = field(
-        default_factory=list,
+    sub_credit_note_line: Tuple["SubCreditNoteLine", ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SubCreditNoteLine",
             "type": "Element",
@@ -21270,7 +21270,7 @@ class CreditNoteLineType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class DebitNoteLineType:
     id: Optional[Id] = field(
         default=None,
@@ -21289,8 +21289,8 @@ class DebitNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -21346,40 +21346,40 @@ class DebitNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    discrepancy_response: List[DiscrepancyResponse] = field(
-        default_factory=list,
+    discrepancy_response: Tuple[DiscrepancyResponse, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DiscrepancyResponse",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    despatch_line_reference: List[DespatchLineReference] = field(
-        default_factory=list,
+    despatch_line_reference: Tuple[DespatchLineReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DespatchLineReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    receipt_line_reference: List[ReceiptLineReference] = field(
-        default_factory=list,
+    receipt_line_reference: Tuple[ReceiptLineReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ReceiptLineReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    billing_reference: List[BillingReference] = field(
-        default_factory=list,
+    billing_reference: Tuple[BillingReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "BillingReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    document_reference: List[DocumentReference] = field(
-        default_factory=list,
+    document_reference: Tuple[DocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DocumentReference",
             "type": "Element",
@@ -21394,24 +21394,24 @@ class DebitNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    delivery: List[Delivery] = field(
-        default_factory=list,
+    delivery: Tuple[Delivery, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Delivery",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    tax_total: List[TaxTotal] = field(
-        default_factory=list,
+    tax_total: Tuple[TaxTotal, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TaxTotal",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    allowance_charge: List[AllowanceCharge] = field(
-        default_factory=list,
+    allowance_charge: Tuple[AllowanceCharge, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AllowanceCharge",
             "type": "Element",
@@ -21434,8 +21434,8 @@ class DebitNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    sub_debit_note_line: List["SubDebitNoteLine"] = field(
-        default_factory=list,
+    sub_debit_note_line: Tuple["SubDebitNoteLine", ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SubDebitNoteLine",
             "type": "Element",
@@ -21444,7 +21444,7 @@ class DebitNoteLineType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class LineItemType:
     id: Optional[Id] = field(
         default=None,
@@ -21471,8 +21471,8 @@ class LineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -21583,16 +21583,16 @@ class LineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    warranty_information: List[WarrantyInformation] = field(
-        default_factory=list,
+    warranty_information: Tuple[WarrantyInformation, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "WarrantyInformation",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    delivery: List[Delivery] = field(
-        default_factory=list,
+    delivery: Tuple[Delivery, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Delivery",
             "type": "Element",
@@ -21615,8 +21615,8 @@ class LineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    ordered_shipment: List[OrderedShipment] = field(
-        default_factory=list,
+    ordered_shipment: Tuple[OrderedShipment, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "OrderedShipment",
             "type": "Element",
@@ -21631,8 +21631,8 @@ class LineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    allowance_charge: List[AllowanceCharge] = field(
-        default_factory=list,
+    allowance_charge: Tuple[AllowanceCharge, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AllowanceCharge",
             "type": "Element",
@@ -21656,8 +21656,8 @@ class LineItemType:
             "required": True,
         }
     )
-    sub_line_item: List["SubLineItem"] = field(
-        default_factory=list,
+    sub_line_item: Tuple["SubLineItem", ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SubLineItem",
             "type": "Element",
@@ -21680,8 +21680,8 @@ class LineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    tax_total: List[TaxTotal] = field(
-        default_factory=list,
+    tax_total: Tuple[TaxTotal, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TaxTotal",
             "type": "Element",
@@ -21696,8 +21696,8 @@ class LineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    line_reference: List[LineReference] = field(
-        default_factory=list,
+    line_reference: Tuple[LineReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "LineReference",
             "type": "Element",
@@ -21706,7 +21706,7 @@ class LineItemType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class SalesItemType:
     quantity: Optional[Quantity] = field(
         default=None,
@@ -21717,24 +21717,24 @@ class SalesItemType:
             "required": True,
         }
     )
-    activity_property: List[ActivityProperty] = field(
-        default_factory=list,
+    activity_property: Tuple[ActivityProperty, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ActivityProperty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    tax_exclusive_price: List[TaxExclusivePrice] = field(
-        default_factory=list,
+    tax_exclusive_price: Tuple[TaxExclusivePrice, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TaxExclusivePrice",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    tax_inclusive_price: List[TaxInclusivePrice] = field(
-        default_factory=list,
+    tax_inclusive_price: Tuple[TaxInclusivePrice, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TaxInclusivePrice",
             "type": "Element",
@@ -21752,7 +21752,7 @@ class SalesItemType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TelecommunicationsServiceType:
     id: Optional[Id] = field(
         default=None,
@@ -21885,40 +21885,40 @@ class TelecommunicationsServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    exchange_rate: List[ExchangeRate] = field(
-        default_factory=list,
+    exchange_rate: Tuple[ExchangeRate, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ExchangeRate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    allowance_charge: List[AllowanceCharge] = field(
-        default_factory=list,
+    allowance_charge: Tuple[AllowanceCharge, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AllowanceCharge",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    tax_total: List[TaxTotal] = field(
-        default_factory=list,
+    tax_total: Tuple[TaxTotal, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TaxTotal",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    call_duty: List[CallDuty] = field(
-        default_factory=list,
+    call_duty: Tuple[CallDuty, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "CallDuty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    time_duty: List[TimeDuty] = field(
-        default_factory=list,
+    time_duty: Tuple[TimeDuty, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TimeDuty",
             "type": "Element",
@@ -21927,85 +21927,85 @@ class TelecommunicationsServiceType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class AlternativeLineItem(LineItemType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class BuyerProposedSubstituteLineItem(LineItemType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ConsumptionLine(ConsumptionLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CreditNoteLine(CreditNoteLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class DebitNoteLine(DebitNoteLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class LineItem(LineItemType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SalesItem(SalesItemType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SellerProposedSubstituteLineItem(LineItemType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SellerSubstitutedLineItem(LineItemType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SubCreditNoteLine(CreditNoteLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SubDebitNoteLine(DebitNoteLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SubLineItem(LineItemType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TelecommunicationsService(TelecommunicationsServiceType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ActivityDataLineType:
     id: Optional[Id] = field(
         default=None,
@@ -22066,8 +22066,8 @@ class ActivityDataLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    sales_item: List[SalesItem] = field(
-        default_factory=list,
+    sales_item: Tuple[SalesItem, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SalesItem",
             "type": "Element",
@@ -22077,7 +22077,7 @@ class ActivityDataLineType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ForecastLineType:
     id: Optional[Id] = field(
         default=None,
@@ -22088,8 +22088,8 @@ class ForecastLineType:
             "required": True,
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -22131,7 +22131,7 @@ class ForecastLineType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ForecastRevisionLineType:
     id: Optional[Id] = field(
         default=None,
@@ -22142,16 +22142,16 @@ class ForecastRevisionLineType:
             "required": True,
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -22211,7 +22211,7 @@ class ForecastRevisionLineType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ItemInformationRequestLineType:
     time_frequency_code: Optional[TimeFrequencyCode] = field(
         default=None,
@@ -22245,8 +22245,8 @@ class ItemInformationRequestLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    period: List[Period] = field(
-        default_factory=list,
+    period: Tuple[Period, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Period",
             "type": "Element",
@@ -22254,8 +22254,8 @@ class ItemInformationRequestLineType:
             "min_occurs": 1,
         }
     )
-    sales_item: List[SalesItem] = field(
-        default_factory=list,
+    sales_item: Tuple[SalesItem, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SalesItem",
             "type": "Element",
@@ -22265,7 +22265,7 @@ class ItemInformationRequestLineType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class OrderLineType:
     substitution_status_code: Optional[SubstitutionStatusCode] = field(
         default=None,
@@ -22275,8 +22275,8 @@ class OrderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -22292,24 +22292,24 @@ class OrderLineType:
             "required": True,
         }
     )
-    seller_proposed_substitute_line_item: List[SellerProposedSubstituteLineItem] = field(
-        default_factory=list,
+    seller_proposed_substitute_line_item: Tuple[SellerProposedSubstituteLineItem, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SellerProposedSubstituteLineItem",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    seller_substituted_line_item: List[SellerSubstitutedLineItem] = field(
-        default_factory=list,
+    seller_substituted_line_item: Tuple[SellerSubstitutedLineItem, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SellerSubstitutedLineItem",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    buyer_proposed_substitute_line_item: List[BuyerProposedSubstituteLineItem] = field(
-        default_factory=list,
+    buyer_proposed_substitute_line_item: Tuple[BuyerProposedSubstituteLineItem, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "BuyerProposedSubstituteLineItem",
             "type": "Element",
@@ -22332,16 +22332,16 @@ class OrderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    order_line_reference: List[OrderLineReference] = field(
-        default_factory=list,
+    order_line_reference: Tuple[OrderLineReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "OrderLineReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    document_reference: List[DocumentReference] = field(
-        default_factory=list,
+    document_reference: Tuple[DocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DocumentReference",
             "type": "Element",
@@ -22350,7 +22350,7 @@ class OrderLineType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class QuotationLineType:
     id: Optional[Id] = field(
         default=None,
@@ -22360,8 +22360,8 @@ class QuotationLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -22400,8 +22400,8 @@ class QuotationLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    document_reference: List[DocumentReference] = field(
-        default_factory=list,
+    document_reference: Tuple[DocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DocumentReference",
             "type": "Element",
@@ -22417,16 +22417,16 @@ class QuotationLineType:
             "required": True,
         }
     )
-    seller_proposed_substitute_line_item: List[SellerProposedSubstituteLineItem] = field(
-        default_factory=list,
+    seller_proposed_substitute_line_item: Tuple[SellerProposedSubstituteLineItem, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SellerProposedSubstituteLineItem",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    alternative_line_item: List[AlternativeLineItem] = field(
-        default_factory=list,
+    alternative_line_item: Tuple[AlternativeLineItem, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AlternativeLineItem",
             "type": "Element",
@@ -22443,7 +22443,7 @@ class QuotationLineType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class RequestForQuotationLineType:
     id: Optional[Id] = field(
         default=None,
@@ -22461,8 +22461,8 @@ class RequestForQuotationLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -22493,8 +22493,8 @@ class RequestForQuotationLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    document_reference: List[DocumentReference] = field(
-        default_factory=list,
+    document_reference: Tuple[DocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DocumentReference",
             "type": "Element",
@@ -22512,7 +22512,7 @@ class RequestForQuotationLineType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TelecommunicationsSupplyLineType:
     id: Optional[Id] = field(
         default=None,
@@ -22532,8 +22532,8 @@ class TelecommunicationsSupplyLineType:
             "required": True,
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -22548,32 +22548,32 @@ class TelecommunicationsSupplyLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    exchange_rate: List[ExchangeRate] = field(
-        default_factory=list,
+    exchange_rate: Tuple[ExchangeRate, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ExchangeRate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    allowance_charge: List[AllowanceCharge] = field(
-        default_factory=list,
+    allowance_charge: Tuple[AllowanceCharge, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AllowanceCharge",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    tax_total: List[TaxTotal] = field(
-        default_factory=list,
+    tax_total: Tuple[TaxTotal, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TaxTotal",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    telecommunications_service: List[TelecommunicationsService] = field(
-        default_factory=list,
+    telecommunications_service: Tuple[TelecommunicationsService, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TelecommunicationsService",
             "type": "Element",
@@ -22583,61 +22583,61 @@ class TelecommunicationsSupplyLineType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ActivityDataLine(ActivityDataLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ForecastLine(ForecastLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ForecastRevisionLine(ForecastRevisionLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ItemInformationRequestLine(ItemInformationRequestLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class OrderLine(OrderLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class QuotationLine(QuotationLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RequestForQuotationLine(RequestForQuotationLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SupplyChainActivityDataLine(ActivityDataLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TelecommunicationsSupplyLine(TelecommunicationsSupplyLineType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class TelecommunicationsSupplyType:
     telecommunications_supply_type: Optional[UblCommonBasicComponents21TelecommunicationsSupplyType] = field(
         default=None,
@@ -22664,8 +22664,8 @@ class TelecommunicationsSupplyType:
             "required": True,
         }
     )
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -22680,8 +22680,8 @@ class TelecommunicationsSupplyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    telecommunications_supply_line: List[TelecommunicationsSupplyLine] = field(
-        default_factory=list,
+    telecommunications_supply_line: Tuple[TelecommunicationsSupplyLine, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TelecommunicationsSupplyLine",
             "type": "Element",
@@ -22691,13 +22691,13 @@ class TelecommunicationsSupplyType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TelecommunicationsSupply(TelecommunicationsSupplyType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ConsumptionType:
     utility_statement_type_code: Optional[UtilityStatementTypeCode] = field(
         default=None,
@@ -22715,16 +22715,16 @@ class ConsumptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    allowance_charge: List[AllowanceCharge] = field(
-        default_factory=list,
+    allowance_charge: Tuple[AllowanceCharge, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AllowanceCharge",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    tax_total: List[TaxTotal] = field(
-        default_factory=list,
+    tax_total: Tuple[TaxTotal, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TaxTotal",
             "type": "Element",
@@ -22758,16 +22758,16 @@ class ConsumptionType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class Consumption(ConsumptionType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SupplierConsumptionType:
-    description: List[Description] = field(
-        default_factory=list,
+    description: Tuple[Description, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Description",
             "type": "Element",
@@ -22807,8 +22807,8 @@ class SupplierConsumptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    consumption_line: List[ConsumptionLine] = field(
-        default_factory=list,
+    consumption_line: Tuple[ConsumptionLine, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ConsumptionLine",
             "type": "Element",
@@ -22818,13 +22818,13 @@ class SupplierConsumptionType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class SupplierConsumption(SupplierConsumptionType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SubscriberConsumptionType:
     consumption_id: Optional[ConsumptionId] = field(
         default=None,
@@ -22842,8 +22842,8 @@ class SubscriberConsumptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -22875,8 +22875,8 @@ class SubscriberConsumptionType:
             "required": True,
         }
     )
-    on_account_payment: List[OnAccountPayment] = field(
-        default_factory=list,
+    on_account_payment: Tuple[OnAccountPayment, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "OnAccountPayment",
             "type": "Element",
@@ -22891,8 +22891,8 @@ class SubscriberConsumptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    supplier_consumption: List[SupplierConsumption] = field(
-        default_factory=list,
+    supplier_consumption: Tuple[SupplierConsumption, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SupplierConsumption",
             "type": "Element",
@@ -22901,7 +22901,7 @@ class SubscriberConsumptionType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class SubscriberConsumption(SubscriberConsumptionType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"

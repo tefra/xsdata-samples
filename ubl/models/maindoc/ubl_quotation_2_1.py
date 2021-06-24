@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional, Tuple
 from xsdata.models.datatype import XmlDate, XmlTime
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     AdditionalDocumentReference,
@@ -36,7 +36,7 @@ from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:Quotation-2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class QuotationType:
     ublextensions: Optional[Ublextensions] = field(
         default=None,
@@ -119,8 +119,8 @@ class QuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         }
     )
-    note: List[Note] = field(
-        default_factory=list,
+    note: Tuple[Note, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Note",
             "type": "Element",
@@ -159,24 +159,24 @@ class QuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    additional_document_reference: List[AdditionalDocumentReference] = field(
-        default_factory=list,
+    additional_document_reference: Tuple[AdditionalDocumentReference, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AdditionalDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    contract: List[Contract] = field(
-        default_factory=list,
+    contract: Tuple[Contract, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Contract",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    signature: List[Signature] = field(
-        default_factory=list,
+    signature: Tuple[Signature, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Signature",
             "type": "Element",
@@ -208,8 +208,8 @@ class QuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    delivery: List[Delivery] = field(
-        default_factory=list,
+    delivery: Tuple[Delivery, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Delivery",
             "type": "Element",
@@ -240,8 +240,8 @@ class QuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    allowance_charge: List[AllowanceCharge] = field(
-        default_factory=list,
+    allowance_charge: Tuple[AllowanceCharge, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AllowanceCharge",
             "type": "Element",
@@ -256,8 +256,8 @@ class QuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         }
     )
-    tax_total: List[TaxTotal] = field(
-        default_factory=list,
+    tax_total: Tuple[TaxTotal, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "TaxTotal",
             "type": "Element",
@@ -273,8 +273,8 @@ class QuotationType:
             "required": True,
         }
     )
-    quotation_line: List[QuotationLine] = field(
-        default_factory=list,
+    quotation_line: Tuple[QuotationLine, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "QuotationLine",
             "type": "Element",
@@ -284,7 +284,7 @@ class QuotationType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class Quotation(QuotationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:Quotation-2"

@@ -5,7 +5,7 @@
     <Format repr="true" eq="true" order="false" unsafeHash="false" frozen="false">dataclasses</Format>
     <Structure>filenames</Structure>
     <DocstringStyle>reStructuredText</DocstringStyle>
-    <RelativeImports>false</RelativeImports>
+    <RelativeImports>true</RelativeImports>
     <CompoundFields>false</CompoundFields>
   </Output>
   <Conventions>

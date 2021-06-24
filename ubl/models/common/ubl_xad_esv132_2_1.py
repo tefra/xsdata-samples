@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import Dict, List, Optional
+from typing import Dict, Optional, Tuple
 from xsdata.models.datatype import XmlDateTime
 from ubl.models.common.ubl_xmldsig_core_schema_2_1 import (
     CanonicalizationMethod,
@@ -13,10 +13,10 @@ from ubl.models.common.ubl_xmldsig_core_schema_2_1 import (
 __NAMESPACE__ = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AnyType:
-    any_element: List[object] = field(
-        default_factory=list,
+    any_element: Tuple[object, ...] = field(
+        default_factory=tuple,
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
@@ -32,7 +32,7 @@ class AnyType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class CrlidentifierType:
     class Meta:
         name = "CRLIdentifierType"
@@ -72,10 +72,10 @@ class CrlidentifierType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class DocumentationReferencesType:
-    documentation_reference: List[str] = field(
-        default_factory=list,
+    documentation_reference: Tuple[str, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DocumentationReference",
             "type": "Element",
@@ -85,7 +85,7 @@ class DocumentationReferencesType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class EncapsulatedPkidataType:
     class Meta:
         name = "EncapsulatedPKIDataType"
@@ -113,7 +113,7 @@ class EncapsulatedPkidataType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class IncludeType:
     uri: Optional[str] = field(
         default=None,
@@ -132,10 +132,10 @@ class IncludeType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class IntegerListType:
-    int_value: List[int] = field(
-        default_factory=list,
+    int_value: Tuple[int, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "int",
             "type": "Element",
@@ -149,7 +149,7 @@ class QualifierType(Enum):
     OIDAS_URN = "OIDAsURN"
 
 
-@dataclass
+@dataclass(frozen=True)
 class QualifyingPropertiesReferenceType:
     uri: Optional[str] = field(
         default=None,
@@ -168,7 +168,7 @@ class QualifyingPropertiesReferenceType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ResponderIdtype:
     class Meta:
         name = "ResponderIDType"
@@ -192,7 +192,7 @@ class ResponderIdtype:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class Spuri:
     class Meta:
         name = "SPURI"
@@ -206,7 +206,7 @@ class Spuri:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class SignatureProductionPlaceType:
     city: Optional[str] = field(
         default=None,
@@ -242,7 +242,7 @@ class SignatureProductionPlaceType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class SigningTime:
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
@@ -255,19 +255,19 @@ class SigningTime:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class Any(AnyType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CrlvaluesType:
     class Meta:
         name = "CRLValuesType"
 
-    encapsulated_crlvalue: List[EncapsulatedPkidataType] = field(
-        default_factory=list,
+    encapsulated_crlvalue: Tuple[EncapsulatedPkidataType, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "EncapsulatedCRLValue",
             "type": "Element",
@@ -277,18 +277,18 @@ class CrlvaluesType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class CertificateValuesType:
-    encapsulated_x509_certificate: List[EncapsulatedPkidataType] = field(
-        default_factory=list,
+    encapsulated_x509_certificate: Tuple[EncapsulatedPkidataType, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "EncapsulatedX509Certificate",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         }
     )
-    other_certificate: List[AnyType] = field(
-        default_factory=list,
+    other_certificate: Tuple[AnyType, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "OtherCertificate",
             "type": "Element",
@@ -304,10 +304,10 @@ class CertificateValuesType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class CertifiedRolesListType:
-    certified_role: List[EncapsulatedPkidataType] = field(
-        default_factory=list,
+    certified_role: Tuple[EncapsulatedPkidataType, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "CertifiedRole",
             "type": "Element",
@@ -317,10 +317,10 @@ class CertifiedRolesListType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ClaimedRolesListType:
-    claimed_role: List[AnyType] = field(
-        default_factory=list,
+    claimed_role: Tuple[AnyType, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ClaimedRole",
             "type": "Element",
@@ -330,10 +330,10 @@ class ClaimedRolesListType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class CommitmentTypeQualifiersListType:
-    commitment_type_qualifier: List[AnyType] = field(
-        default_factory=list,
+    commitment_type_qualifier: Tuple[AnyType, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "CommitmentTypeQualifier",
             "type": "Element",
@@ -342,7 +342,7 @@ class CommitmentTypeQualifiersListType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class CounterSignatureType:
     signature: Optional[Signature] = field(
         default=None,
@@ -355,7 +355,7 @@ class CounterSignatureType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class DigestAlgAndValueType:
     digest_method: Optional[DigestMethod] = field(
         default=None,
@@ -378,14 +378,14 @@ class DigestAlgAndValueType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class EncapsulatedPkidata(EncapsulatedPkidataType):
     class Meta:
         name = "EncapsulatedPKIData"
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class IdentifierType:
     value: Optional[str] = field(
         default=None,
@@ -402,13 +402,13 @@ class IdentifierType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class Include(IncludeType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class NoticeReferenceType:
     organization: Optional[str] = field(
         default=None,
@@ -430,7 +430,7 @@ class NoticeReferenceType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class OcspidentifierType:
     class Meta:
         name = "OCSPIdentifierType"
@@ -462,13 +462,13 @@ class OcspidentifierType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class OcspvaluesType:
     class Meta:
         name = "OCSPValuesType"
 
-    encapsulated_ocspvalue: List[EncapsulatedPkidataType] = field(
-        default_factory=list,
+    encapsulated_ocspvalue: Tuple[EncapsulatedPkidataType, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "EncapsulatedOCSPValue",
             "type": "Element",
@@ -478,10 +478,10 @@ class OcspvaluesType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class OtherCertStatusRefsType:
-    other_ref: List[AnyType] = field(
-        default_factory=list,
+    other_ref: Tuple[AnyType, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "OtherRef",
             "type": "Element",
@@ -491,10 +491,10 @@ class OtherCertStatusRefsType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class OtherCertStatusValuesType:
-    other_value: List[AnyType] = field(
-        default_factory=list,
+    other_value: Tuple[AnyType, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "OtherValue",
             "type": "Element",
@@ -504,13 +504,13 @@ class OtherCertStatusValuesType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class QualifyingPropertiesReference(QualifyingPropertiesReferenceType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ReferenceInfoType:
     digest_method: Optional[DigestMethod] = field(
         default=None,
@@ -547,10 +547,10 @@ class ReferenceInfoType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class SigPolicyQualifiersListType:
-    sig_policy_qualifier: List[AnyType] = field(
-        default_factory=list,
+    sig_policy_qualifier: Tuple[AnyType, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SigPolicyQualifier",
             "type": "Element",
@@ -560,16 +560,16 @@ class SigPolicyQualifiersListType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class SignatureProductionPlace(SignatureProductionPlaceType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class UnsignedDataObjectPropertiesType:
-    unsigned_data_object_property: List[AnyType] = field(
-        default_factory=list,
+    unsigned_data_object_property: Tuple[AnyType, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "UnsignedDataObjectProperty",
             "type": "Element",
@@ -586,13 +586,13 @@ class UnsignedDataObjectPropertiesType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class AttrAuthoritiesCertValues(CertificateValuesType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CrlrefType:
     class Meta:
         name = "CRLRefType"
@@ -616,7 +616,7 @@ class CrlrefType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class CertIdtype:
     class Meta:
         name = "CertIDType"
@@ -648,19 +648,19 @@ class CertIdtype:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class CertificateValues(CertificateValuesType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CounterSignature(CounterSignatureType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class OcsprefType:
     class Meta:
         name = "OCSPRefType"
@@ -684,7 +684,7 @@ class OcsprefType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ObjectIdentifierType:
     identifier: Optional[IdentifierType] = field(
         default=None,
@@ -713,13 +713,13 @@ class ObjectIdentifierType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ReferenceInfo(ReferenceInfoType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RevocationValuesType:
     crlvalues: Optional[CrlvaluesType] = field(
         default=None,
@@ -754,7 +754,7 @@ class RevocationValuesType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class SpuserNoticeType:
     class Meta:
         name = "SPUserNoticeType"
@@ -777,7 +777,7 @@ class SpuserNoticeType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class SignerRoleType:
     claimed_roles: Optional[ClaimedRolesListType] = field(
         default=None,
@@ -797,25 +797,25 @@ class SignerRoleType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class UnsignedDataObjectProperties(UnsignedDataObjectPropertiesType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AttributeRevocationValues(RevocationValuesType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CrlrefsType:
     class Meta:
         name = "CRLRefsType"
 
-    crlref: List[CrlrefType] = field(
-        default_factory=list,
+    crlref: Tuple[CrlrefType, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "CRLRef",
             "type": "Element",
@@ -825,13 +825,13 @@ class CrlrefsType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class CertIdlistType:
     class Meta:
         name = "CertIDListType"
 
-    cert: List[CertIdtype] = field(
-        default_factory=list,
+    cert: Tuple[CertIdtype, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Cert",
             "type": "Element",
@@ -841,7 +841,7 @@ class CertIdlistType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class CommitmentTypeIndicationType:
     commitment_type_id: Optional[ObjectIdentifierType] = field(
         default=None,
@@ -852,8 +852,8 @@ class CommitmentTypeIndicationType:
             "required": True,
         }
     )
-    object_reference: List[str] = field(
-        default_factory=list,
+    object_reference: Tuple[str, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ObjectReference",
             "type": "Element",
@@ -878,7 +878,7 @@ class CommitmentTypeIndicationType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class DataObjectFormatType:
     description: Optional[str] = field(
         default=None,
@@ -922,18 +922,18 @@ class DataObjectFormatType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class GenericTimeStampType:
-    include: List[Include] = field(
-        default_factory=list,
+    include: Tuple[Include, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "Include",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         }
     )
-    reference_info: List[ReferenceInfo] = field(
-        default_factory=list,
+    reference_info: Tuple[ReferenceInfo, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ReferenceInfo",
             "type": "Element",
@@ -948,8 +948,8 @@ class GenericTimeStampType:
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
         }
     )
-    encapsulated_time_stamp: List[EncapsulatedPkidataType] = field(
-        default_factory=list,
+    encapsulated_time_stamp: Tuple[EncapsulatedPkidataType, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "EncapsulatedTimeStamp",
             "type": "Element",
@@ -957,8 +957,8 @@ class GenericTimeStampType:
             "sequential": True,
         }
     )
-    xmltime_stamp: List[AnyType] = field(
-        default_factory=list,
+    xmltime_stamp: Tuple[AnyType, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "XMLTimeStamp",
             "type": "Element",
@@ -975,13 +975,13 @@ class GenericTimeStampType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class OcsprefsType:
     class Meta:
         name = "OCSPRefsType"
 
-    ocspref: List[OcsprefType] = field(
-        default_factory=list,
+    ocspref: Tuple[OcsprefType, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "OCSPRef",
             "type": "Element",
@@ -991,26 +991,26 @@ class OcsprefsType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class ObjectIdentifier(ObjectIdentifierType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RevocationValues(RevocationValuesType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SpuserNotice(SpuserNoticeType):
     class Meta:
         name = "SPUserNotice"
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SignaturePolicyIdType:
     sig_policy_id: Optional[ObjectIdentifierType] = field(
         default=None,
@@ -1048,19 +1048,19 @@ class SignaturePolicyIdType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class SignerRole(SignerRoleType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CommitmentTypeIndication(CommitmentTypeIndicationType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CompleteCertificateRefsType:
     cert_refs: Optional[CertIdlistType] = field(
         default=None,
@@ -1080,7 +1080,7 @@ class CompleteCertificateRefsType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class CompleteRevocationRefsType:
     crlrefs: Optional[CrlrefsType] = field(
         default=None,
@@ -1115,18 +1115,18 @@ class CompleteRevocationRefsType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class DataObjectFormat(DataObjectFormatType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class OtherTimeStampType(GenericTimeStampType):
     pass
 
 
-@dataclass
+@dataclass(frozen=True)
 class SignaturePolicyIdentifierType:
     signature_policy_id: Optional[SignaturePolicyIdType] = field(
         default=None,
@@ -1146,118 +1146,118 @@ class SignaturePolicyIdentifierType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class SigningCertificate(CertIdlistType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class XadEstimeStampType(GenericTimeStampType):
     class Meta:
         name = "XAdESTimeStampType"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AllDataObjectsTimeStamp(XadEstimeStampType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class ArchiveTimeStamp(XadEstimeStampType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AttributeCertificateRefs(CompleteCertificateRefsType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AttributeRevocationRefs(CompleteRevocationRefsType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CompleteCertificateRefs(CompleteCertificateRefsType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class CompleteRevocationRefs(CompleteRevocationRefsType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class IndividualDataObjectsTimeStamp(XadEstimeStampType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class OtherTimeStamp(OtherTimeStampType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class RefsOnlyTimeStamp(XadEstimeStampType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SigAndRefsTimeStamp(XadEstimeStampType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SignaturePolicyIdentifier(SignaturePolicyIdentifierType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SignatureTimeStamp(XadEstimeStampType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SignedDataObjectPropertiesType:
-    data_object_format: List[DataObjectFormatType] = field(
-        default_factory=list,
+    data_object_format: Tuple[DataObjectFormatType, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "DataObjectFormat",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         }
     )
-    commitment_type_indication: List[CommitmentTypeIndicationType] = field(
-        default_factory=list,
+    commitment_type_indication: Tuple[CommitmentTypeIndicationType, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "CommitmentTypeIndication",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         }
     )
-    all_data_objects_time_stamp: List[XadEstimeStampType] = field(
-        default_factory=list,
+    all_data_objects_time_stamp: Tuple[XadEstimeStampType, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AllDataObjectsTimeStamp",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         }
     )
-    individual_data_objects_time_stamp: List[XadEstimeStampType] = field(
-        default_factory=list,
+    individual_data_objects_time_stamp: Tuple[XadEstimeStampType, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "IndividualDataObjectsTimeStamp",
             "type": "Element",
@@ -1273,7 +1273,7 @@ class SignedDataObjectPropertiesType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class SignedSignaturePropertiesType:
     signing_time: Optional[XmlDateTime] = field(
         default=None,
@@ -1324,114 +1324,114 @@ class SignedSignaturePropertiesType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class UnsignedSignaturePropertiesType:
-    counter_signature: List[CounterSignatureType] = field(
-        default_factory=list,
+    counter_signature: Tuple[CounterSignatureType, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "CounterSignature",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         }
     )
-    signature_time_stamp: List[XadEstimeStampType] = field(
-        default_factory=list,
+    signature_time_stamp: Tuple[XadEstimeStampType, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SignatureTimeStamp",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         }
     )
-    complete_certificate_refs: List[CompleteCertificateRefsType] = field(
-        default_factory=list,
+    complete_certificate_refs: Tuple[CompleteCertificateRefsType, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "CompleteCertificateRefs",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         }
     )
-    complete_revocation_refs: List[CompleteRevocationRefsType] = field(
-        default_factory=list,
+    complete_revocation_refs: Tuple[CompleteRevocationRefsType, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "CompleteRevocationRefs",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         }
     )
-    attribute_certificate_refs: List[CompleteCertificateRefsType] = field(
-        default_factory=list,
+    attribute_certificate_refs: Tuple[CompleteCertificateRefsType, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AttributeCertificateRefs",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         }
     )
-    attribute_revocation_refs: List[CompleteRevocationRefsType] = field(
-        default_factory=list,
+    attribute_revocation_refs: Tuple[CompleteRevocationRefsType, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AttributeRevocationRefs",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         }
     )
-    sig_and_refs_time_stamp: List[XadEstimeStampType] = field(
-        default_factory=list,
+    sig_and_refs_time_stamp: Tuple[XadEstimeStampType, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "SigAndRefsTimeStamp",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         }
     )
-    refs_only_time_stamp: List[XadEstimeStampType] = field(
-        default_factory=list,
+    refs_only_time_stamp: Tuple[XadEstimeStampType, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "RefsOnlyTimeStamp",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         }
     )
-    certificate_values: List[CertificateValuesType] = field(
-        default_factory=list,
+    certificate_values: Tuple[CertificateValuesType, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "CertificateValues",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         }
     )
-    revocation_values: List[RevocationValuesType] = field(
-        default_factory=list,
+    revocation_values: Tuple[RevocationValuesType, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "RevocationValues",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         }
     )
-    attr_authorities_cert_values: List[CertificateValuesType] = field(
-        default_factory=list,
+    attr_authorities_cert_values: Tuple[CertificateValuesType, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AttrAuthoritiesCertValues",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         }
     )
-    attribute_revocation_values: List[RevocationValuesType] = field(
-        default_factory=list,
+    attribute_revocation_values: Tuple[RevocationValuesType, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "AttributeRevocationValues",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         }
     )
-    archive_time_stamp: List[XadEstimeStampType] = field(
-        default_factory=list,
+    archive_time_stamp: Tuple[XadEstimeStampType, ...] = field(
+        default_factory=tuple,
         metadata={
             "name": "ArchiveTimeStamp",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         }
     )
-    other_element: List[object] = field(
-        default_factory=list,
+    other_element: Tuple[object, ...] = field(
+        default_factory=tuple,
         metadata={
             "type": "Wildcard",
             "namespace": "##other",
@@ -1446,20 +1446,20 @@ class UnsignedSignaturePropertiesType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class XadEstimeStamp(XadEstimeStampType):
     class Meta:
         name = "XAdESTimeStamp"
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SignedDataObjectProperties(SignedDataObjectPropertiesType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SignedPropertiesType:
     signed_signature_properties: Optional[SignedSignaturePropertiesType] = field(
         default=None,
@@ -1486,13 +1486,13 @@ class SignedPropertiesType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class SignedSignatureProperties(SignedSignaturePropertiesType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class UnsignedPropertiesType:
     unsigned_signature_properties: Optional[UnsignedSignaturePropertiesType] = field(
         default=None,
@@ -1519,13 +1519,13 @@ class UnsignedPropertiesType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class UnsignedSignatureProperties(UnsignedSignaturePropertiesType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class QualifyingPropertiesType:
     signed_properties: Optional[SignedPropertiesType] = field(
         default=None,
@@ -1560,19 +1560,19 @@ class QualifyingPropertiesType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class SignedProperties(SignedPropertiesType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class UnsignedProperties(UnsignedPropertiesType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 
-@dataclass
+@dataclass(frozen=True)
 class QualifyingProperties(QualifyingPropertiesType):
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"

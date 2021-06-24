@@ -5,7 +5,7 @@ from typing import Optional
 __NAMESPACE__ = "urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
 
 
-@dataclass
+@dataclass(frozen=True)
 class AmountType:
     value: Optional[Decimal] = field(
         default=None,
@@ -29,7 +29,7 @@ class AmountType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class BinaryObjectType:
     value: Optional[bytes] = field(
         default=None,
@@ -79,7 +79,7 @@ class BinaryObjectType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class CodeType:
     value: Optional[str] = field(
         default=None,
@@ -151,7 +151,7 @@ class CodeType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class DateTimeType:
     value: Optional[str] = field(
         default=None,
@@ -167,7 +167,7 @@ class DateTimeType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class IdentifierType:
     value: Optional[str] = field(
         default=None,
@@ -226,7 +226,7 @@ class IdentifierType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class IndicatorType:
     value: Optional[str] = field(
         default=None,
@@ -242,7 +242,7 @@ class IndicatorType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class MeasureType:
     value: Optional[Decimal] = field(
         default=None,
@@ -266,7 +266,7 @@ class MeasureType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class NumericType:
     value: Optional[Decimal] = field(
         default=None,
@@ -282,7 +282,7 @@ class NumericType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class QuantityType:
     value: Optional[Decimal] = field(
         default=None,
@@ -320,7 +320,7 @@ class QuantityType:
     )
 
 
-@dataclass
+@dataclass(frozen=True)
 class TextType:
     value: Optional[str] = field(
         default=None,
