@@ -66,11 +66,10 @@ class LPlainText:
             "required": True,
         }
     )
-    space: Optional[SpaceValue] = field(
-        default=None,
+    space: SpaceValue = field(
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
-            "required": True,
         }
     )

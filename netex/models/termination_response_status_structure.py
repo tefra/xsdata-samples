@@ -51,13 +51,12 @@ class TerminationResponseStatusStructure:
             "namespace": "http://www.siri.org.uk/siri",
         }
     )
-    status: Optional[bool] = field(
-        default=None,
+    status: bool = field(
+        default=True,
         metadata={
             "name": "Status",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-            "required": True,
         }
     )
     error_condition: Optional["TerminationResponseStatusStructure.ErrorCondition"] = field(
