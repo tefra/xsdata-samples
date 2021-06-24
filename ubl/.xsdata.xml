@@ -2,9 +2,10 @@
 <Config xmlns="http://pypi.org/project/xsdata" version="21.6">
   <Output maxLineLength="79">
     <Package>ubl.models</Package>
-    <Format relativeImports="false">dataclasses</Format>
+    <Format repr="true" eq="true" order="false" unsafeHash="false" frozen="true">dataclasses</Format>
     <Structure>filenames</Structure>
     <DocstringStyle>Blank</DocstringStyle>
+    <RelativeImports>false</RelativeImports>
     <CompoundFields>false</CompoundFields>
   </Output>
   <Conventions>

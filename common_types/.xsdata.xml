@@ -2,9 +2,10 @@
 <Config xmlns="http://pypi.org/project/xsdata" version="21.6">
   <Output maxLineLength="79">
     <Package>common_types.models</Package>
-    <Format relativeImports="true">dataclasses</Format>
+    <Format repr="true" eq="true" order="false" unsafeHash="false" frozen="false">dataclasses</Format>
     <Structure>filenames</Structure>
     <DocstringStyle>reStructuredText</DocstringStyle>
+    <RelativeImports>false</RelativeImports>
     <CompoundFields>false</CompoundFields>
   </Output>
   <Conventions>
