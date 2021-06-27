@@ -4,6 +4,6 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 class HandrailEnumeration(Enum):
-    NONE_VALUE = "none"
+    NONE = "none"
     ONE_SIDE = "oneSide"
     BOTH_SIDES = "bothSides"

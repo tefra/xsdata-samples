@@ -12,7 +12,7 @@ from .blueprint_policy_single import BlueprintPolicySingle
 from .boolean import Boolean
 from .category_string import CategoryString
 from .client_server_operation import ClientServerOperation
-from .field_mod import FieldType
+from .field_mod import Field
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -375,7 +375,7 @@ class ServiceInterface:
 
     @dataclass
     class Fields:
-        field_value: List[FieldType] = field(
+        field_value: List[Field] = field(
             default_factory=list,
             metadata={
                 "name": "FIELD",

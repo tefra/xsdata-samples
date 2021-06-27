@@ -7,8 +7,8 @@ class DataLimitKindEnumSimple(Enum):
     """
     :cvar MAX: Limitation to maximum value
     :cvar MIN: Limitation to minimum value
-    :cvar NONE_VALUE: No limitation applicable
+    :cvar NONE: No limitation applicable
     """
     MAX = "MAX"
     MIN = "MIN"
-    NONE_VALUE = "NONE"
+    NONE = "NONE"

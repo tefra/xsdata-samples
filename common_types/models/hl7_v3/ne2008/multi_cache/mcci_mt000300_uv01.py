@@ -7,7 +7,7 @@ from ..core.datatypes_base import (
     EdExplicit,
     EnExplicit,
     Ii,
-    IntType,
+    Int,
     IvlTsExplicit,
     Sc,
     St,
@@ -470,7 +470,7 @@ class McciMt000300Uv01Acknowledgement:
             "required": True,
         }
     )
-    message_waiting_number: Optional[IntType] = field(
+    message_waiting_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "messageWaitingNumber",

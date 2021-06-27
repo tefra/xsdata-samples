@@ -5,8 +5,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 class SwcToSwcOperationArgumentsDirectionEnumSimple(Enum):
     """
-    :cvar IN_VALUE: IN (all IN and INOUT arguments)
+    :cvar IN: IN (all IN and INOUT arguments)
     :cvar OUT: OUT (all OUT and INOUT arguments) .
     """
-    IN_VALUE = "IN"
+    IN = "IN"
     OUT = "OUT"

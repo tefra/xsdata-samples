@@ -4,7 +4,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 class MachineReadableEnumeration(Enum):
-    NONE_VALUE = "none"
+    NONE = "none"
     MAGNETIC_STRIP = "magneticStrip"
     CHIP = "chip"
     OCR = "ocr"

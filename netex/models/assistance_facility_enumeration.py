@@ -12,5 +12,5 @@ class AssistanceFacilityEnumeration(Enum):
     CONDUCTOR = "conductor"
     INFORMATION = "information"
     OTHER = "other"
-    NONE_VALUE = "none"
+    NONE = "none"
     ANY = "any"

@@ -1408,7 +1408,7 @@ class CustomerSearch:
 
 class DirectionInfoDirection(Enum):
     TO = "To"
-    FROM_VALUE = "From"
+    FROM = "From"
 
 
 @dataclass
@@ -5686,7 +5686,7 @@ class WaiverCode:
 
 
 @dataclass
-class YieldType:
+class Yield:
     """An identifier which identifies yield made on original pricing.
 
     It can be a flat amount of original price. The value of Amount can
@@ -5700,7 +5700,6 @@ class YieldType:
         Yield is applied.
     """
     class Meta:
-        name = "Yield"
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
     amount: Optional[str] = field(
@@ -5732,7 +5731,7 @@ class TypeAtpcoglobalIndicator(Enum):
     CT: Circle trip.
     EH: Within Eastern Hemisphere
     FE: Far East
-    IN_VALUE: FareByRule - For int'l incl. AT/PA/WH/CT/RW
+    IN: FareByRule - For int'l incl. AT/PA/WH/CT/RW
     NA: FareByRule for North America incl US/CA/TB/PV
     PA: Via Pacific
     PN: Via Pacific and via North America
@@ -5754,7 +5753,7 @@ class TypeAtpcoglobalIndicator(Enum):
     CT = "CT"
     EH = "EH"
     FE = "FE"
-    IN_VALUE = "IN"
+    IN = "IN"
     NA = "NA"
     PA = "PA"
     PN = "PN"
@@ -5867,7 +5866,7 @@ class TypeAssessIndicator(Enum):
 
 class TypeBackOffice(Enum):
     ACCOUNTING = "Accounting"
-    GLOBAL_VALUE = "Global"
+    GLOBAL = "Global"
     NON_ACCOUNTING = "NonAccounting"
     NON_ACCOUNTING_REMOTE = "NonAccountingRemote"
     DUAL = "Dual"
@@ -6161,7 +6160,7 @@ class TypeFareDirectionality(Enum):
     A fare's directionality (e.g. one-way, return )
     """
     OUTBOUND = "Outbound"
-    RETURN_VALUE = "Return"
+    RETURN = "Return"
     ALL = "All"
 
 
@@ -6323,7 +6322,7 @@ class TypeFareRuleType(Enum):
     """
     The valid rule types.
     """
-    NONE_VALUE = "none"
+    NONE = "none"
     SHORT = "short"
     LONG = "long"
 
@@ -6333,7 +6332,7 @@ class TypeFareSearchOption(Enum):
     Fare Search option indicator.
     """
     LEAVE = "Leave"
-    RETURN_VALUE = "Return"
+    RETURN = "Return"
     SEASONAL = "Seasonal"
     BLACKOUT = "Blackout"
     ADVANCE_PURCHASE = "Advance Purchase"
@@ -6376,7 +6375,7 @@ class TypeFareTripType(Enum):
     """
     ONE_WAY = "OneWay"
     ONE_WAY_ONLY = "OneWayOnly"
-    RETURN_VALUE = "Return"
+    RETURN = "Return"
     RETURN_ONLY = "ReturnOnly"
     HALF_RETURN = "HalfReturn"
     CIRCLE_TRIP = "CircleTrip"
@@ -23741,7 +23740,7 @@ class AirPricingInfo:
             "max_occurs": 999,
         }
     )
-    yield_value: List[YieldType] = field(
+    yield_value: List[Yield] = field(
         default_factory=list,
         metadata={
             "name": "Yield",
@@ -24424,7 +24423,7 @@ class BaseAirPriceReq(BaseCoreReq):
         }
     )
     fare_rule_type: TypeFareRuleType = field(
-        default=TypeFareRuleType.NONE_VALUE,
+        default=TypeFareRuleType.NONE,
         metadata={
             "name": "FareRuleType",
             "type": "Attribute",
@@ -26706,7 +26705,7 @@ class AirRepriceReq(AirBaseReq):
         }
     )
     fare_rule_type: TypeFareRuleType = field(
-        default=TypeFareRuleType.NONE_VALUE,
+        default=TypeFareRuleType.NONE,
         metadata={
             "name": "FareRuleType",
             "type": "Attribute",
@@ -27111,7 +27110,7 @@ class BaseAirExchangeQuoteReq(BaseCoreReq):
         }
     )
     fare_rule_type: TypeFareRuleType = field(
-        default=TypeFareRuleType.NONE_VALUE,
+        default=TypeFareRuleType.NONE,
         metadata={
             "name": "FareRuleType",
             "type": "Attribute",

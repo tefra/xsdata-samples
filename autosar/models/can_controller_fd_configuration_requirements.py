@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from .boolean import Boolean
-from .float_mod import FloatType
+from .float_mod import Float
 from .integer import Integer
 from .positive_integer import PositiveInteger
 from .time_value import TimeValue
@@ -71,7 +71,7 @@ class CanControllerFdConfigurationRequirements:
             "namespace": "http://autosar.org/schema/r4.0",
         }
     )
-    max_sample_point: Optional[FloatType] = field(
+    max_sample_point: Optional[Float] = field(
         default=None,
         metadata={
             "name": "MAX-SAMPLE-POINT",
@@ -79,7 +79,7 @@ class CanControllerFdConfigurationRequirements:
             "namespace": "http://autosar.org/schema/r4.0",
         }
     )
-    max_sync_jump_width: Optional[FloatType] = field(
+    max_sync_jump_width: Optional[Float] = field(
         default=None,
         metadata={
             "name": "MAX-SYNC-JUMP-WIDTH",
@@ -103,7 +103,7 @@ class CanControllerFdConfigurationRequirements:
             "namespace": "http://autosar.org/schema/r4.0",
         }
     )
-    min_sample_point: Optional[FloatType] = field(
+    min_sample_point: Optional[Float] = field(
         default=None,
         metadata={
             "name": "MIN-SAMPLE-POINT",
@@ -111,7 +111,7 @@ class CanControllerFdConfigurationRequirements:
             "namespace": "http://autosar.org/schema/r4.0",
         }
     )
-    min_sync_jump_width: Optional[FloatType] = field(
+    min_sync_jump_width: Optional[Float] = field(
         default=None,
         metadata={
             "name": "MIN-SYNC-JUMP-WIDTH",

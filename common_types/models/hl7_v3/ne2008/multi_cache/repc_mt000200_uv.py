@@ -13,7 +13,7 @@ from ..core.datatypes_base import (
     Cs,
     EdExplicit,
     Ii,
-    IntType,
+    Int,
     IvlTsExplicit,
     St,
     SxcmTsExplicit,
@@ -337,7 +337,7 @@ class RepcMt000200UvComponent2:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    sequence_number: Optional[IntType] = field(
+    sequence_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "sequenceNumber",
@@ -414,7 +414,7 @@ class RepcMt000200UvComponent7:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    sequence_number: Optional[IntType] = field(
+    sequence_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "sequenceNumber",
@@ -2460,7 +2460,7 @@ class RepcMt000200UvActDefinition:
     )
     mood_code: ActMood = field(
         init=False,
-        default=ActMood.DEF_VALUE,
+        default=ActMood.DEF,
         metadata={
             "name": "moodCode",
             "type": "Attribute",
@@ -2682,7 +2682,7 @@ class RepcMt000200UvEncounterDefinition:
     )
     mood_code: ActMood = field(
         init=False,
-        default=ActMood.DEF_VALUE,
+        default=ActMood.DEF,
         metadata={
             "name": "moodCode",
             "type": "Attribute",
@@ -2896,7 +2896,7 @@ class RepcMt000200UvObservationDefinition:
     )
     mood_code: ActMood = field(
         init=False,
-        default=ActMood.DEF_VALUE,
+        default=ActMood.DEF,
         metadata={
             "name": "moodCode",
             "type": "Attribute",
@@ -3094,7 +3094,7 @@ class RepcMt000200UvProcedureDefinition:
     )
     mood_code: ActMood = field(
         init=False,
-        default=ActMood.DEF_VALUE,
+        default=ActMood.DEF,
         metadata={
             "name": "moodCode",
             "type": "Attribute",
@@ -3511,7 +3511,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
     )
     mood_code: ActMood = field(
         init=False,
-        default=ActMood.DEF_VALUE,
+        default=ActMood.DEF,
         metadata={
             "name": "moodCode",
             "type": "Attribute",
@@ -3556,7 +3556,7 @@ class RepcMt000200UvComponent13:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    sequence_number: Optional[IntType] = field(
+    sequence_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "sequenceNumber",
@@ -3923,7 +3923,7 @@ class RepcMt000200UvGuideline:
     )
     mood_code: ActMood = field(
         init=False,
-        default=ActMood.DEF_VALUE,
+        default=ActMood.DEF,
         metadata={
             "name": "moodCode",
             "type": "Attribute",
@@ -4736,7 +4736,7 @@ class RepcMt000200UvComponent3:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    sequence_number: Optional[IntType] = field(
+    sequence_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "sequenceNumber",
@@ -5128,7 +5128,7 @@ class RepcMt000200UvComponent4:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    sequence_number: Optional[IntType] = field(
+    sequence_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "sequenceNumber",
@@ -5475,7 +5475,7 @@ class RepcMt000200UvComponent10:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    sequence_number: Optional[IntType] = field(
+    sequence_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "sequenceNumber",

@@ -4,7 +4,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 class InterchangingTypeEnumeration(Enum):
-    NONE_VALUE = "none"
+    NONE = "none"
     UNLIMITED = "unlimited"
     LIMITED = "limited"
     SINGLE = "single"

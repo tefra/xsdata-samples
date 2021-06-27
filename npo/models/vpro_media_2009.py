@@ -750,7 +750,7 @@ class CountryType:
 
 
 class Encryption(Enum):
-    NONE_VALUE = "NONE"
+    NONE = "NONE"
     DRM = "DRM"
 
 

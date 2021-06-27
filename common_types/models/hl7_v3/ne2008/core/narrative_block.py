@@ -130,7 +130,7 @@ class StrucDocTableFrame(Enum):
 
 
 class StrucDocTableRules(Enum):
-    NONE_VALUE = "none"
+    NONE = "none"
     GROUPS = "groups"
     ROWS = "rows"
     COLS = "cols"

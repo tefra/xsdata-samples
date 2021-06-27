@@ -6,7 +6,7 @@ from ..core.datatypes_base import (
     Cs,
     EdExplicit,
     Ii,
-    IntType,
+    Int,
     IvlTsExplicit,
     St,
     TsExplicit,
@@ -168,7 +168,7 @@ class RepcMt000400Uv01Component4:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    sequence_number: Optional[IntType] = field(
+    sequence_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "sequenceNumber",
@@ -493,7 +493,7 @@ class RepcMt000400Uv01ActList:
     )
     class_code: ActClass = field(
         init=False,
-        default=ActClass.LIST_VALUE,
+        default=ActClass.LIST,
         metadata={
             "name": "classCode",
             "type": "Attribute",

@@ -104,7 +104,7 @@ class ActAdjudicationCode(Enum):
     AA = "AA"
     ANF = "ANF"
     AR = "AR"
-    AS_VALUE = "AS"
+    AS = "AS"
 
 
 class ActAdjudicationGroupCode(Enum):
@@ -298,7 +298,7 @@ class ActClass(Enum):
     SBADM = "SBADM"
     TRFR = "TRFR"
     TRNS = "TRNS"
-    LIST_VALUE = "LIST"
+    LIST = "LIST"
 
 
 class ActClassCareProvision(Enum):
@@ -591,7 +591,7 @@ class ActClassRoot(Enum):
     SBADM = "SBADM"
     TRFR = "TRFR"
     TRNS = "TRNS"
-    LIST_VALUE = "LIST"
+    LIST = "LIST"
 
 
 class ActClassSubjectBodyPosition(Enum):
@@ -1215,13 +1215,13 @@ class ActMood(Enum):
     """vocSet: T10196 (C-0-T10196-cpt)"""
     PRP = "PRP"
     RMD = "RMD"
-    INT_VALUE = "INT"
+    INT = "INT"
     APT = "APT"
     ARQ = "ARQ"
     PRMS = "PRMS"
     RQO = "RQO"
     SLOT = "SLOT"
-    DEF_VALUE = "DEF"
+    DEF = "DEF"
     EVN = "EVN"
     CRT = "CRT"
     EVN_CRT = "EVN.CRT"
@@ -1237,13 +1237,13 @@ class ActMoodCompletionTrack(Enum):
     """abstDomain: A10197 (C-0-T10196-A10197-cpt)"""
     PRP = "PRP"
     RMD = "RMD"
-    INT_VALUE = "INT"
+    INT = "INT"
     APT = "APT"
     ARQ = "ARQ"
     PRMS = "PRMS"
     RQO = "RQO"
     SLOT = "SLOT"
-    DEF_VALUE = "DEF"
+    DEF = "DEF"
     EVN = "EVN"
 
 
@@ -1257,7 +1257,7 @@ class ActMoodIntent(Enum):
     """specDomain: S10199 (C-0-T10196-A10197-S10199-cpt)"""
     PRP = "PRP"
     RMD = "RMD"
-    INT_VALUE = "INT"
+    INT = "INT"
     APT = "APT"
     ARQ = "ARQ"
     PRMS = "PRMS"
@@ -1846,7 +1846,7 @@ class AddressPartType(Enum):
     POB = "POB"
     BNR = "BNR"
     BNN = "BNN"
-    STR_VALUE = "STR"
+    STR = "STR"
     STB = "STB"
     STTYP = "STTYP"
     SAL = "SAL"
@@ -1855,7 +1855,7 @@ class AddressPartType(Enum):
     CEN = "CEN"
     CNT = "CNT"
     CPA = "CPA"
-    DEL_VALUE = "DEL"
+    DEL = "DEL"
     CTY = "CTY"
     ZIP = "ZIP"
     PRE = "PRE"
@@ -3749,7 +3749,7 @@ class ContainerCap(Enum):
 class ContainerSeparator(Enum):
     """vocSet: T14054 (C-0-T14054-cpt)"""
     GEL = "GEL"
-    NONE_VALUE = "NONE"
+    NONE = "NONE"
 
 
 class ContentProcessingMode(Enum):
@@ -3839,7 +3839,7 @@ class CoverageRoleType(Enum):
     FAMDEP = "FAMDEP"
     HANDIC = "HANDIC"
     INJ = "INJ"
-    SELF_VALUE = "SELF"
+    SELF = "SELF"
     SPON = "SPON"
 
 
@@ -4060,7 +4060,7 @@ class DataTypeInstanceIdentifier(Enum):
 
 class DataTypeIntegerNumber(Enum):
     """specDomain: S10795 (C-0-T10774-A10775-A10794-S10795-cpt)"""
-    INT_VALUE = "INT"
+    INT = "INT"
 
 
 class DataTypeInterval(Enum):
@@ -4662,7 +4662,7 @@ class DocumentCompletion(Enum):
     DI = "DI"
     DO = "DO"
     IP = "IP"
-    IN_VALUE = "IN"
+    IN = "IN"
     LA = "LA"
     PA = "PA"
 
@@ -5139,13 +5139,13 @@ class EntityNamePartQualifier(Enum):
     BR = "BR"
     SP = "SP"
     CL = "CL"
-    IN_VALUE = "IN"
+    IN = "IN"
     TITLE = "TITLE"
 
 
 class EntityNamePartType(Enum):
     """vocSet: T15880 (C-0-T15880-cpt)"""
-    DEL_VALUE = "DEL"
+    DEL = "DEL"
     PFX = "PFX"
     SFX = "SFX"
     FAM = "FAM"
@@ -5165,7 +5165,7 @@ class EntityNameUse(Enum):
     SNDX = "SNDX"
     PHON = "PHON"
     L = "L"
-    OR_VALUE = "OR"
+    OR = "OR"
     ABC = "ABC"
     IDE = "IDE"
     SYL = "SYL"
@@ -7395,7 +7395,7 @@ class MaterialEntityAdditive(Enum):
     MMDTM = "MMDTM"
     MICHTM = "MICHTM"
     HNO3 = "HNO3"
-    NONE_VALUE = "NONE"
+    NONE = "NONE"
     PAGE = "PAGE"
     PHENOL = "PHENOL"
     PVA = "PVA"
@@ -7441,7 +7441,7 @@ class MdfHmdRowType(Enum):
     ATTR = "attr"
     ITEM = "item"
     HMD = "hmd"
-    CLASS_VALUE = "class"
+    CLASS = "class"
     STC = "stc"
 
 
@@ -7449,7 +7449,7 @@ class MdfRmimRowType(Enum):
     """vocSet: T10063 (C-0-T10063-cpt)"""
     ASSOC = "assoc"
     ATTR = "attr"
-    CLASS_VALUE = "class"
+    CLASS = "class"
     RMIM = "rmim"
     STC = "stc"
 
@@ -7684,7 +7684,7 @@ class NailRoute(Enum):
 class NameLegalUse(Enum):
     """specDomain: S10176 (C-0-T15913-S10176-cpt)"""
     L = "L"
-    OR_VALUE = "OR"
+    OR = "OR"
 
 
 class NameRepresentationUse(Enum):
@@ -8724,7 +8724,7 @@ class ObservationDetectedIssueCode(Enum):
     PREG = "PREG"
     REACT = "REACT"
     ALGY = "ALGY"
-    INT_VALUE = "INT"
+    INT = "INT"
     RREACT = "RREACT"
     RALG = "RALG"
     RINT = "RINT"
@@ -9428,14 +9428,14 @@ class OrganizationNameUse(Enum):
     IDE = "IDE"
     SYL = "SYL"
     L = "L"
-    OR_VALUE = "OR"
+    OR = "OR"
     C = "C"
 
 
 class OrganizationNameUseLegalByBot(Enum):
     """specDomain: S10176 (C-0-T15913-A15914-S10176-cpt)"""
     L = "L"
-    OR_VALUE = "OR"
+    OR = "OR"
 
 
 class OromucosalRoute(Enum):
@@ -9911,7 +9911,7 @@ class ParticipationInformationRecipient(Enum):
     REFT = "REFT"
     PRCP = "PRCP"
     TRC = "TRC"
-    NOT_VALUE = "NOT"
+    NOT = "NOT"
 
 
 class ParticipationInformationTranscriber(Enum):
@@ -9987,7 +9987,7 @@ class ParticipationParticipation(Enum):
     REFT = "REFT"
     PRCP = "PRCP"
     TRC = "TRC"
-    NOT_VALUE = "NOT"
+    NOT = "NOT"
     PRF = "PRF"
     DIST = "DIST"
     PPRF = "PPRF"
@@ -10116,7 +10116,7 @@ class ParticipationType(Enum):
     REFT = "REFT"
     PRCP = "PRCP"
     TRC = "TRC"
-    NOT_VALUE = "NOT"
+    NOT = "NOT"
     PRF = "PRF"
     DIST = "DIST"
     PPRF = "PPRF"
@@ -10227,7 +10227,7 @@ class PatientImportance(Enum):
     """vocSet: T19265 (C-0-T19265-cpt)"""
     BM = "BM"
     FD = "FD"
-    FOR_VALUE = "FOR"
+    FOR = "FOR"
     GOVT = "GOVT"
     DFM = "DFM"
     SFM = "SFM"
@@ -10445,7 +10445,7 @@ class PersonNamePartQualifier(Enum):
     BR = "BR"
     SP = "SP"
     CL = "CL"
-    IN_VALUE = "IN"
+    IN = "IN"
     TITLE = "TITLE"
 
 
@@ -10458,7 +10458,7 @@ class PersonNameUse(Enum):
     IDE = "IDE"
     SYL = "SYL"
     L = "L"
-    OR_VALUE = "OR"
+    OR = "OR"
     P = "P"
     A = "A"
     I = "I"
@@ -10470,7 +10470,7 @@ class PersonNameUse(Enum):
 class PersonNameUseLegalByBot(Enum):
     """specDomain: S10176 (C-0-T15913-A200-S10176-cpt)"""
     L = "L"
-    OR_VALUE = "OR"
+    OR = "OR"
 
 
 class PersonNameUsePseudonym(Enum):
@@ -16197,7 +16197,7 @@ class ReactionDetectedIssueCode(Enum):
     """specDomain: S16672 (C-0-T14878-A19692-A19781-A16124-A16656-A16657-A16658-S16664-S16672-cpt)"""
     REACT = "REACT"
     ALGY = "ALGY"
-    INT_VALUE = "INT"
+    INT = "INT"
 
 
 class RealmOfUse(Enum):
@@ -16445,9 +16445,9 @@ class RelationalOperator(Enum):
 
 class RelationshipConjunction(Enum):
     """vocSet: T10365 (C-0-T10365-cpt)"""
-    AND_VALUE = "AND"
+    AND = "AND"
     XOR = "XOR"
-    OR_VALUE = "OR"
+    OR = "OR"
 
 
 class ReligiousAffiliation(Enum):
@@ -16936,7 +16936,7 @@ class RoleClassLicensedEntity(Enum):
     """specDomain: S16773 (C-0-T11555-S13940-A19313-A19316-A10416-S16773-cpt)"""
     LIC = "LIC"
     PROV = "PROV"
-    NOT_VALUE = "NOT"
+    NOT = "NOT"
 
 
 class RoleClassLocatedEntity(Enum):
@@ -16975,7 +16975,7 @@ class RoleClassMutualRelationship(Enum):
     RESBJ = "RESBJ"
     LIC = "LIC"
     PROV = "PROV"
-    NOT_VALUE = "NOT"
+    NOT = "NOT"
     AFFL = "AFFL"
     CIT = "CIT"
     CRINV = "CRINV"
@@ -17101,7 +17101,7 @@ class RoleClassRelationshipFormal(Enum):
     RESBJ = "RESBJ"
     LIC = "LIC"
     PROV = "PROV"
-    NOT_VALUE = "NOT"
+    NOT = "NOT"
     AFFL = "AFFL"
     CIT = "CIT"
     CRINV = "CRINV"
@@ -17733,7 +17733,7 @@ class StreetAddressLine(Enum):
     POB = "POB"
     BNR = "BNR"
     BNN = "BNN"
-    STR_VALUE = "STR"
+    STR = "STR"
     STB = "STB"
     STTYP = "STTYP"
     SAL = "SAL"
@@ -17742,7 +17742,7 @@ class StreetAddressLine(Enum):
 
 class StreetName(Enum):
     """specDomain: S10648 (C-0-T10642-S14822-S10648-cpt)"""
-    STR_VALUE = "STR"
+    STR = "STR"
     STB = "STB"
     STTYP = "STTYP"
 
@@ -18072,7 +18072,7 @@ class TableRules(Enum):
     ALL = "all"
     COLS = "cols"
     GROUPS = "groups"
-    NONE_VALUE = "none"
+    NONE = "none"
     ROWS = "rows"
 
 
@@ -18242,7 +18242,7 @@ class TelecommunicationAddressUse(Enum):
     PUB = "PUB"
     BAD = "BAD"
     TMP = "TMP"
-    AS_VALUE = "AS"
+    AS = "AS"
     EC = "EC"
     MC = "MC"
     PG = "PG"
@@ -19317,7 +19317,7 @@ class UnitOfMeasureAtomInsens(Enum):
     SRD_US = "[SRD_US]"
     SYD_I = "[SYD_I]"
     MI_I = "[MI_I]"
-    STR_VALUE = "STR"
+    STR = "STR"
     SB = "SB"
     STONE_AV = "[STONE_AV]"
     SR = "SR"
@@ -19896,7 +19896,7 @@ class UnitsOfMeasureCaseInsensitive(Enum):
     SRD_US = "[SRD_US]"
     SYD_I = "[SYD_I]"
     MI_I = "[MI_I]"
-    STR_VALUE = "STR"
+    STR = "STR"
     SB = "SB"
     STONE_AV = "[STONE_AV]"
     SR = "SR"
@@ -20743,20 +20743,20 @@ class XActFinancialProductAcquisitionCode(Enum):
 
 class XActMoodDefEvn(Enum):
     """abstDomain: A19375 (C-0-T10196-A19375-cpt)"""
-    DEF_VALUE = "DEF"
+    DEF = "DEF"
     EVN = "EVN"
 
 
 class XActMoodDefEvnRqo(Enum):
     """abstDomain: A19762 (C-0-T10196-A19762-cpt)"""
-    DEF_VALUE = "DEF"
+    DEF = "DEF"
     EVN = "EVN"
     RQO = "RQO"
 
 
 class XActMoodDefEvnRqoPrmsPrp(Enum):
     """abstDomain: A19371 (C-0-T10196-A19371-cpt)"""
-    DEF_VALUE = "DEF"
+    DEF = "DEF"
     EVN = "EVN"
     PRMS = "PRMS"
     PRP = "PRP"
@@ -20766,9 +20766,9 @@ class XActMoodDefEvnRqoPrmsPrp(Enum):
 class XActMoodDocumentObservation(Enum):
     """abstDomain: A18943 (C-0-T10196-A18943-cpt)"""
     GOL = "GOL"
-    DEF_VALUE = "DEF"
+    DEF = "DEF"
     EVN = "EVN"
-    INT_VALUE = "INT"
+    INT = "INT"
     PRMS = "PRMS"
     PRP = "PRP"
     RQO = "RQO"
@@ -20927,9 +20927,9 @@ class XClinicalStatementActMood(Enum):
     """abstDomain: A19649 (C-0-T10196-A19649-cpt)"""
     APT = "APT"
     ARQ = "ARQ"
-    DEF_VALUE = "DEF"
+    DEF = "DEF"
     EVN = "EVN"
-    INT_VALUE = "INT"
+    INT = "INT"
     PRMS = "PRMS"
     PRP = "PRP"
     RQO = "RQO"
@@ -20940,7 +20940,7 @@ class XClinicalStatementEncounterMood(Enum):
     APT = "APT"
     ARQ = "ARQ"
     EVN = "EVN"
-    INT_VALUE = "INT"
+    INT = "INT"
     PRMS = "PRMS"
     PRP = "PRP"
     RQO = "RQO"
@@ -20951,9 +20951,9 @@ class XClinicalStatementObservationMood(Enum):
     GOL = "GOL"
     APT = "APT"
     ARQ = "ARQ"
-    DEF_VALUE = "DEF"
+    DEF = "DEF"
     EVN = "EVN"
-    INT_VALUE = "INT"
+    INT = "INT"
     PRMS = "PRMS"
     PRP = "PRP"
     RQO = "RQO"
@@ -20963,9 +20963,9 @@ class XClinicalStatementProcedureMood(Enum):
     """abstDomain: A19647 (C-0-T10196-A19647-cpt)"""
     APT = "APT"
     ARQ = "ARQ"
-    DEF_VALUE = "DEF"
+    DEF = "DEF"
     EVN = "EVN"
-    INT_VALUE = "INT"
+    INT = "INT"
     PRMS = "PRMS"
     PRP = "PRP"
     RQO = "RQO"
@@ -20974,7 +20974,7 @@ class XClinicalStatementProcedureMood(Enum):
 class XClinicalStatementSubstanceMood(Enum):
     """abstDomain: A19645 (C-0-T10196-A19645-cpt)"""
     EVN = "EVN"
-    INT_VALUE = "INT"
+    INT = "INT"
     PRMS = "PRMS"
     PRP = "PRP"
     RQO = "RQO"
@@ -20983,7 +20983,7 @@ class XClinicalStatementSubstanceMood(Enum):
 class XClinicalStatementSupplyMood(Enum):
     """abstDomain: A19646 (C-0-T10196-A19646-cpt)"""
     EVN = "EVN"
-    INT_VALUE = "INT"
+    INT = "INT"
 
 
 class XDeterminerInstanceKind(Enum):
@@ -20997,9 +20997,9 @@ class XDocumentActMood(Enum):
     """abstDomain: A19458 (C-0-T10196-A19458-cpt)"""
     APT = "APT"
     ARQ = "ARQ"
-    DEF_VALUE = "DEF"
+    DEF = "DEF"
     EVN = "EVN"
-    INT_VALUE = "INT"
+    INT = "INT"
     PRMS = "PRMS"
     PRP = "PRP"
     RQO = "RQO"
@@ -21010,7 +21010,7 @@ class XDocumentEncounterMood(Enum):
     APT = "APT"
     ARQ = "ARQ"
     EVN = "EVN"
-    INT_VALUE = "INT"
+    INT = "INT"
     PRMS = "PRMS"
     PRP = "PRP"
     RQO = "RQO"
@@ -21027,9 +21027,9 @@ class XDocumentProcedureMood(Enum):
     """abstDomain: A19460 (C-0-T10196-A19460-cpt)"""
     APT = "APT"
     ARQ = "ARQ"
-    DEF_VALUE = "DEF"
+    DEF = "DEF"
     EVN = "EVN"
-    INT_VALUE = "INT"
+    INT = "INT"
     PRMS = "PRMS"
     PRP = "PRP"
     RQO = "RQO"
@@ -21052,7 +21052,7 @@ class XDocumentSubject(Enum):
 class XDocumentSubstanceMood(Enum):
     """abstDomain: A19461 (C-0-T10196-A19461-cpt)"""
     EVN = "EVN"
-    INT_VALUE = "INT"
+    INT = "INT"
     PRMS = "PRMS"
     PRP = "PRP"
     RQO = "RQO"
@@ -21121,7 +21121,7 @@ class XLabSpecimenCollectionProviders(Enum):
     LABORATORY = "laboratory"
     PATHOLOGIST = "pathologist"
     PHLEBOTOMIST = "phlebotomist"
-    SELF_VALUE = "self"
+    SELF = "self"
     THIRD_PARTY = "thirdParty"
 
 
@@ -21137,7 +21137,7 @@ class XMedicineValue(Enum):
 
 class XOrganizationNamePartType(Enum):
     """abstDomain: A15881 (C-0-T15880-A15881-cpt)"""
-    DEL_VALUE = "DEL"
+    DEL = "DEL"
     PFX = "PFX"
     SFX = "SFX"
 
@@ -21179,7 +21179,7 @@ class XPayeeRelationshipRoleType(Enum):
 
 class XPersonNamePartType(Enum):
     """abstDomain: A10653 (C-0-T15880-A10653-cpt)"""
-    DEL_VALUE = "DEL"
+    DEL = "DEL"
     FAM = "FAM"
     GIV = "GIV"
     PFX = "PFX"

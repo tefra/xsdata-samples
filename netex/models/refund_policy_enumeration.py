@@ -11,5 +11,5 @@ class RefundPolicyEnumeration(Enum):
     REDUNDANCY = "redundancy"
     CHANGE_OF_EMPLOYMENT = "changeOfEmployment"
     CHANGE_OF_RESIDENCE = "changeOfResidence"
-    NONE_VALUE = "none"
+    NONE = "none"
     OTHER = "other"

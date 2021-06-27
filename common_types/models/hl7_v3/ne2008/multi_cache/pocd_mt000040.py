@@ -16,7 +16,7 @@ from ..core.datatypes_base import (
     EdExplicit,
     EnExplicit,
     Ii,
-    IntType,
+    Int,
     IvlTsExplicit,
     OnExplicit,
     PnExplicit,
@@ -127,7 +127,7 @@ class PocdMt000040InfrastructureRootTypeId(Ii):
 
 
 @dataclass
-class PocdMt000040RegionOfInterestValue(IntType):
+class PocdMt000040RegionOfInterestValue(Int):
     class Meta:
         name = "POCD_MT000040.RegionOfInterest.value"
 
@@ -718,7 +718,7 @@ class PocdMt000040ExternalDocument:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    version_number: Optional[IntType] = field(
+    version_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "versionNumber",
@@ -1493,7 +1493,7 @@ class PocdMt000040ParentDocument:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    version_number: Optional[IntType] = field(
+    version_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "versionNumber",
@@ -6623,7 +6623,7 @@ class PocdMt000040Component4:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    sequence_number: Optional[IntType] = field(
+    sequence_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "sequenceNumber",
@@ -6908,7 +6908,7 @@ class PocdMt000040EntryRelationship:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    sequence_number: Optional[IntType] = field(
+    sequence_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "sequenceNumber",
@@ -7770,7 +7770,7 @@ class PocdMt000040ClinicalDocument:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    version_number: Optional[IntType] = field(
+    version_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "versionNumber",

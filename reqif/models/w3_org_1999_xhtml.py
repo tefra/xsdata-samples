@@ -48,7 +48,7 @@ class XhtmlParamAttlistValuetype(Enum):
 
 
 class XhtmlRulesAttribRules(Enum):
-    NONE_VALUE = "none"
+    NONE = "none"
     GROUPS = "groups"
     ROWS = "rows"
     COLS = "cols"
@@ -575,9 +575,10 @@ class XhtmlQType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    object: List["XhtmlObjectType"] = field(
+    object_value: List["XhtmlObjectType"] = field(
         default_factory=list,
         metadata={
+            "name": "object",
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         }
@@ -806,9 +807,10 @@ class XhtmlAcronymType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    object: List["XhtmlObjectType"] = field(
+    object_value: List["XhtmlObjectType"] = field(
         default_factory=list,
         metadata={
+            "name": "object",
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         }
@@ -1030,9 +1032,10 @@ class XhtmlAbbrType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    object: List["XhtmlObjectType"] = field(
+    object_value: List["XhtmlObjectType"] = field(
         default_factory=list,
         metadata={
+            "name": "object",
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         }
@@ -1254,9 +1257,10 @@ class XhtmlCiteType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    object: List["XhtmlObjectType"] = field(
+    object_value: List["XhtmlObjectType"] = field(
         default_factory=list,
         metadata={
+            "name": "object",
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         }
@@ -1478,9 +1482,10 @@ class XhtmlVarType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    object: List["XhtmlObjectType"] = field(
+    object_value: List["XhtmlObjectType"] = field(
         default_factory=list,
         metadata={
+            "name": "object",
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         }
@@ -1702,9 +1707,10 @@ class XhtmlKbdType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    object: List["XhtmlObjectType"] = field(
+    object_value: List["XhtmlObjectType"] = field(
         default_factory=list,
         metadata={
+            "name": "object",
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         }
@@ -1926,9 +1932,10 @@ class XhtmlSampType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    object: List["XhtmlObjectType"] = field(
+    object_value: List["XhtmlObjectType"] = field(
         default_factory=list,
         metadata={
+            "name": "object",
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         }
@@ -2150,9 +2157,10 @@ class XhtmlCodeType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    object: List["XhtmlObjectType"] = field(
+    object_value: List["XhtmlObjectType"] = field(
         default_factory=list,
         metadata={
+            "name": "object",
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         }
@@ -2374,9 +2382,10 @@ class XhtmlDfnType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    object: List["XhtmlObjectType"] = field(
+    object_value: List["XhtmlObjectType"] = field(
         default_factory=list,
         metadata={
+            "name": "object",
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         }
@@ -2598,9 +2607,10 @@ class XhtmlStrongType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    object: List["XhtmlObjectType"] = field(
+    object_value: List["XhtmlObjectType"] = field(
         default_factory=list,
         metadata={
+            "name": "object",
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         }
@@ -2822,9 +2832,10 @@ class XhtmlCaptionType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    object: List["XhtmlObjectType"] = field(
+    object_value: List["XhtmlObjectType"] = field(
         default_factory=list,
         metadata={
+            "name": "object",
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         }
@@ -3046,9 +3057,10 @@ class XhtmlDtType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    object: List["XhtmlObjectType"] = field(
+    object_value: List["XhtmlObjectType"] = field(
         default_factory=list,
         metadata={
+            "name": "object",
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         }
@@ -3270,9 +3282,10 @@ class XhtmlH2Type:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    object: List["XhtmlObjectType"] = field(
+    object_value: List["XhtmlObjectType"] = field(
         default_factory=list,
         metadata={
+            "name": "object",
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         }
@@ -3494,9 +3507,10 @@ class XhtmlH3Type:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    object: List["XhtmlObjectType"] = field(
+    object_value: List["XhtmlObjectType"] = field(
         default_factory=list,
         metadata={
+            "name": "object",
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         }
@@ -3718,9 +3732,10 @@ class XhtmlH4Type:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    object: List["XhtmlObjectType"] = field(
+    object_value: List["XhtmlObjectType"] = field(
         default_factory=list,
         metadata={
+            "name": "object",
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         }
@@ -3942,9 +3957,10 @@ class XhtmlH5Type:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    object: List["XhtmlObjectType"] = field(
+    object_value: List["XhtmlObjectType"] = field(
         default_factory=list,
         metadata={
+            "name": "object",
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         }
@@ -4166,9 +4182,10 @@ class XhtmlH6Type:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    object: List["XhtmlObjectType"] = field(
+    object_value: List["XhtmlObjectType"] = field(
         default_factory=list,
         metadata={
+            "name": "object",
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         }
@@ -4390,9 +4407,10 @@ class XhtmlPType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    object: List["XhtmlObjectType"] = field(
+    object_value: List["XhtmlObjectType"] = field(
         default_factory=list,
         metadata={
+            "name": "object",
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         }
@@ -4915,9 +4933,10 @@ class XhtmlDdType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    object: List["XhtmlObjectType"] = field(
+    object_value: List["XhtmlObjectType"] = field(
         default_factory=list,
         metadata={
+            "name": "object",
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         }
@@ -5314,9 +5333,10 @@ class XhtmlTdType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    object: List["XhtmlObjectType"] = field(
+    object_value: List["XhtmlObjectType"] = field(
         default_factory=list,
         metadata={
+            "name": "object",
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         }
@@ -5714,9 +5734,10 @@ class XhtmlThType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    object: List["XhtmlObjectType"] = field(
+    object_value: List["XhtmlObjectType"] = field(
         default_factory=list,
         metadata={
+            "name": "object",
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         }
@@ -6767,9 +6788,10 @@ class XhtmlDivType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    object: List["XhtmlObjectType"] = field(
+    object_value: List["XhtmlObjectType"] = field(
         default_factory=list,
         metadata={
+            "name": "object",
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         }
@@ -7103,9 +7125,10 @@ class XhtmlLiType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    object: List["XhtmlObjectType"] = field(
+    object_value: List["XhtmlObjectType"] = field(
         default_factory=list,
         metadata={
+            "name": "object",
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         }
@@ -7539,9 +7562,10 @@ class XhtmlObjectType:
             "sequential": True,
         }
     )
-    object: List["XhtmlObjectType"] = field(
+    object_value: List["XhtmlObjectType"] = field(
         default_factory=list,
         metadata={
+            "name": "object",
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
             "sequential": True,
@@ -7834,9 +7858,10 @@ class XhtmlAType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    object: List[XhtmlObjectType] = field(
+    object_value: List[XhtmlObjectType] = field(
         default_factory=list,
         metadata={
+            "name": "object",
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         }
@@ -8109,9 +8134,10 @@ class XhtmlInlPresType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    object: List[XhtmlObjectType] = field(
+    object_value: List[XhtmlObjectType] = field(
         default_factory=list,
         metadata={
+            "name": "object",
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         }
@@ -8333,9 +8359,10 @@ class XhtmlEmType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    object: List[XhtmlObjectType] = field(
+    object_value: List[XhtmlObjectType] = field(
         default_factory=list,
         metadata={
+            "name": "object",
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         }
@@ -8557,9 +8584,10 @@ class XhtmlH1Type:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    object: List[XhtmlObjectType] = field(
+    object_value: List[XhtmlObjectType] = field(
         default_factory=list,
         metadata={
+            "name": "object",
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         }
@@ -8893,9 +8921,10 @@ class XhtmlEditType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    object: List[XhtmlObjectType] = field(
+    object_value: List[XhtmlObjectType] = field(
         default_factory=list,
         metadata={
+            "name": "object",
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         }
@@ -9130,9 +9159,10 @@ class XhtmlSpanType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    object: List[XhtmlObjectType] = field(
+    object_value: List[XhtmlObjectType] = field(
         default_factory=list,
         metadata={
+            "name": "object",
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         }
@@ -9354,9 +9384,10 @@ class XhtmlAddressType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    object: List[XhtmlObjectType] = field(
+    object_value: List[XhtmlObjectType] = field(
         default_factory=list,
         metadata={
+            "name": "object",
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         }
@@ -9578,9 +9609,10 @@ class XhtmlHeadingType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    object: List[XhtmlObjectType] = field(
+    object_value: List[XhtmlObjectType] = field(
         default_factory=list,
         metadata={
+            "name": "object",
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         }

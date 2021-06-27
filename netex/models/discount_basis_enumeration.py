@@ -4,6 +4,6 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 class DiscountBasisEnumeration(Enum):
-    NONE_VALUE = "none"
+    NONE = "none"
     FREE = "free"
     DISCOUNT = "discount"

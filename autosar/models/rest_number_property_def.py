@@ -6,7 +6,7 @@ from .annotation import (
     DocumentationBlock,
 )
 from .category_string import CategoryString
-from .float_mod import FloatType
+from .float_mod import Float
 from .identifier import Identifier
 from .limit_value import LimitValue
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
@@ -160,7 +160,7 @@ class RestNumberPropertyDef:
             "namespace": "http://autosar.org/schema/r4.0",
         }
     )
-    resolution: Optional[FloatType] = field(
+    resolution: Optional[Float] = field(
         default=None,
         metadata={
             "name": "RESOLUTION",

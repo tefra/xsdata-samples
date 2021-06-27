@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .float_mod import FloatType
+from .float_mod import Float
 from .normalized_instruction import NormalizedInstruction
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -70,7 +70,7 @@ class DeterministicClientResource:
             "namespace": "http://autosar.org/schema/r4.0",
         }
     )
-    speedup: Optional[FloatType] = field(
+    speedup: Optional[Float] = field(
         default=None,
         metadata={
             "name": "SPEEDUP",

@@ -4,7 +4,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 class SeriesPresentationEnumeration(Enum):
-    NONE_VALUE = "none"
+    NONE = "none"
     REQUIRED = "required"
     OPTIONAL_LEFT = "optionalLeft"
     OPTIONAL_RIGHT = "optionalRight"

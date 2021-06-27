@@ -10,7 +10,7 @@ from ..core.datatypes_base import (
     EdExplicit,
     EnExplicit,
     Ii,
-    IntType,
+    Int,
     IvlTs,
     IvlTsExplicit,
     OnExplicit,
@@ -1646,7 +1646,7 @@ class CoctMt290000Uv06Reason3:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    priority_number: Optional[IntType] = field(
+    priority_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "priorityNumber",
@@ -1709,7 +1709,7 @@ class CoctMt290000Uv06Reason5:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    priority_number: Optional[IntType] = field(
+    priority_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "priorityNumber",
@@ -2893,7 +2893,7 @@ class CoctMt290000Uv06Reason1:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    sequence_number: Optional[IntType] = field(
+    sequence_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "sequenceNumber",
@@ -3297,7 +3297,7 @@ class CoctMt290000Uv06Reason4:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    sequence_number: Optional[IntType] = field(
+    sequence_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "sequenceNumber",

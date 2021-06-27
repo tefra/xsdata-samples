@@ -8,7 +8,7 @@ from ..core.datatypes_base import (
     Cs,
     EdExplicit,
     Ii,
-    IntType,
+    Int,
     IvlTsExplicit,
     Pq,
     SxcmTsExplicit,
@@ -652,7 +652,7 @@ class CoctMt010000Uv01NotificationContact:
     )
     type_code: ParticipationType = field(
         init=False,
-        default=ParticipationType.NOT_VALUE,
+        default=ParticipationType.NOT,
         metadata={
             "name": "typeCode",
             "type": "Attribute",
@@ -765,7 +765,7 @@ class CoctMt010000Uv01PertinentInformation2:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    priority_number: Optional[IntType] = field(
+    priority_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "priorityNumber",

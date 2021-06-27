@@ -16,7 +16,7 @@ class TransportDescriptionStructure:
         }
     )
     compression_method: CompressionMethodEnumeration = field(
-        default=CompressionMethodEnumeration.NONE_VALUE,
+        default=CompressionMethodEnumeration.NONE,
         metadata={
             "name": "CompressionMethod",
             "type": "Element",

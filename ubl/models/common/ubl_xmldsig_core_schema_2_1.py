@@ -881,7 +881,7 @@ class SignatureType:
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
         }
     )
-    object: Tuple[Object, ...] = field(
+    object_value: Tuple[Object, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Object",

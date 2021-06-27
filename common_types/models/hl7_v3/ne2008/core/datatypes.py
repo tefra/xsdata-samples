@@ -5,7 +5,7 @@ from .datatypes_base import (
     Cd,
     Ce,
     EivlEvent,
-    IntType,
+    Int,
     IvlTs,
     Mo,
     Pq,
@@ -192,7 +192,7 @@ class HxitPq(Pq):
 
 
 @dataclass
-class IvxbInt(IntType):
+class IvxbInt(Int):
     """
     :ivar inclusive: Specifies whether the limit is included in the
         interval (interval is closed) or excluded from the interval
@@ -559,7 +559,7 @@ class SxcmCd(Cd):
 
 
 @dataclass
-class SxcmInt(IntType):
+class SxcmInt(Int):
     """
     :ivar operator: A code specifying whether the set component is
         included (union) or excluded (set-difference) from the set, or
@@ -697,7 +697,7 @@ class IvlInt(SxcmInt):
             "namespace": "urn:hl7-org:v3",
         }
     )
-    width: List[IntType] = field(
+    width: List[Int] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -715,7 +715,7 @@ class IvlInt(SxcmInt):
             "sequential": True,
         }
     )
-    center: Optional[IntType] = field(
+    center: Optional[Int] = field(
         default=None,
         metadata={
             "type": "Element",

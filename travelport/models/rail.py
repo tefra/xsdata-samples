@@ -767,7 +767,7 @@ class TypeJourneyDirection(Enum):
     Outbound and Return directions.
     """
     OUTWARD = "Outward"
-    RETURN_VALUE = "Return"
+    RETURN = "Return"
 
 
 class TypeRailDirection(Enum):

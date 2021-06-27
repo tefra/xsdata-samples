@@ -6,7 +6,7 @@ from ..core.datatypes_base import (
     Cs,
     EdExplicit,
     Ii,
-    IntType,
+    Int,
     IvlTsExplicit,
     St,
     TsExplicit,
@@ -113,7 +113,7 @@ class QupcIn043100Uv01QuqiMt020001Uv01QueryByParameter:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    initial_quantity: Optional[IntType] = field(
+    initial_quantity: Optional[Int] = field(
         default=None,
         metadata={
             "name": "initialQuantity",
@@ -423,7 +423,7 @@ class QupcIn043100Uv01McciMt000100Uv01Message:
             "required": True,
         }
     )
-    sequence_number: Optional[IntType] = field(
+    sequence_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "sequenceNumber",

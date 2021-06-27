@@ -3,7 +3,7 @@ from typing import Optional
 from .annotation import DocumentationBlock
 from .argument_data_prototype_subtypes_enum import ArgumentDataPrototypeSubtypesEnum
 from .filter_debouncing_enum import FilterDebouncingEnum
-from .float_mod import FloatType
+from .float_mod import Float
 from .multidimensional_time import MultidimensionalTime
 from .multilanguage_long_name import MultilanguageLongName
 from .port_prototype_subtypes_enum import PortPrototypeSubtypesEnum
@@ -118,7 +118,7 @@ class IoHwAbstractionServerAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         }
     )
-    bsw_resolution: Optional[FloatType] = field(
+    bsw_resolution: Optional[Float] = field(
         default=None,
         metadata={
             "name": "BSW-RESOLUTION",

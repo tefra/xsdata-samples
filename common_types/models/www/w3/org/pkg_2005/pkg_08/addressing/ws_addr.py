@@ -281,9 +281,8 @@ class FaultTo(EndpointReferenceType):
 
 
 @dataclass
-class FromType(EndpointReferenceType):
+class From(EndpointReferenceType):
     class Meta:
-        name = "From"
         namespace = "http://www.w3.org/2005/08/addressing"
 
 

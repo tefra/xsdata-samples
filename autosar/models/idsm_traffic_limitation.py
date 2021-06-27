@@ -6,7 +6,7 @@ from .annotation import (
     DocumentationBlock,
 )
 from .category_string import CategoryString
-from .float_mod import FloatType
+from .float_mod import Float
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -162,7 +162,7 @@ class IdsmTrafficLimitation:
             "namespace": "http://autosar.org/schema/r4.0",
         }
     )
-    time_interval: Optional[FloatType] = field(
+    time_interval: Optional[Float] = field(
         default=None,
         metadata={
             "name": "TIME-INTERVAL",

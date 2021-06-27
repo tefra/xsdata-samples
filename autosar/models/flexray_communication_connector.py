@@ -9,7 +9,7 @@ from .annotation import (
 from .boolean import Boolean
 from .category_string import CategoryString
 from .communication_controller_subtypes_enum import CommunicationControllerSubtypesEnum
-from .float_mod import FloatType
+from .float_mod import Float
 from .frame_port import FramePort
 from .i_pdu_port import IPduPort
 from .i_signal_port import ISignalPort
@@ -232,7 +232,7 @@ class FlexrayCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         }
     )
-    nm_ready_sleep_time: Optional[FloatType] = field(
+    nm_ready_sleep_time: Optional[Float] = field(
         default=None,
         metadata={
             "name": "NM-READY-SLEEP-TIME",

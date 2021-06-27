@@ -249,7 +249,7 @@ class EnExplicitDelimiter:
     )
     part_type: EntityNamePartType = field(
         init=False,
-        default=EntityNamePartType.DEL_VALUE,
+        default=EntityNamePartType.DEL,
         metadata={
             "name": "partType",
             "type": "Attribute",
@@ -760,7 +760,7 @@ class AdxpExplicitDelimiter(AdxpExplicit):
 
     part_type: AddressPartType = field(
         init=False,
-        default=AddressPartType.DEL_VALUE,
+        default=AddressPartType.DEL,
         metadata={
             "name": "partType",
             "type": "Attribute",
@@ -985,7 +985,7 @@ class AdxpExplicitStreetName(AdxpExplicit):
 
     part_type: AddressPartType = field(
         init=False,
-        default=AddressPartType.STR_VALUE,
+        default=AddressPartType.STR,
         metadata={
             "name": "partType",
             "type": "Attribute",
@@ -1402,7 +1402,7 @@ class Bn(AnynonNull):
 
 
 @dataclass
-class IntType(Qty):
+class Int(Qty):
     """Integer numbers (-1,0,1,2, 100, 3398129, etc.) are precise numbers that
     are results of counting and enumerating.
 
@@ -3256,7 +3256,7 @@ class AdxpDelimiter(Adxp):
 
     part_type: AddressPartType = field(
         init=False,
-        default=AddressPartType.DEL_VALUE,
+        default=AddressPartType.DEL,
         metadata={
             "name": "partType",
             "type": "Attribute",
@@ -3481,7 +3481,7 @@ class AdxpStreetName(Adxp):
 
     part_type: AddressPartType = field(
         init=False,
-        default=AddressPartType.STR_VALUE,
+        default=AddressPartType.STR,
         metadata={
             "name": "partType",
             "type": "Attribute",
@@ -3556,7 +3556,7 @@ class EnDelimiter(Enxp):
 
     part_type: EntityNamePartType = field(
         init=False,
-        default=EntityNamePartType.DEL_VALUE,
+        default=EntityNamePartType.DEL,
         metadata={
             "name": "partType",
             "type": "Attribute",

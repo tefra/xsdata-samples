@@ -4,7 +4,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 class CheckProcessTypeEnumeration(Enum):
-    NONE_VALUE = "none"
+    NONE = "none"
     UNKNOWN = "unknown"
     BOARDING = "boarding"
     ALIGHTING = "alighting"

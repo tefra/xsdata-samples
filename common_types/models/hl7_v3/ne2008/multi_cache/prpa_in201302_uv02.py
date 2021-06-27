@@ -6,7 +6,7 @@ from ..core.datatypes_base import (
     Cs,
     EdExplicit,
     Ii,
-    IntType,
+    Int,
     IvlTsExplicit,
     St,
     TsExplicit,
@@ -572,7 +572,7 @@ class PrpaIn201302Uv02McciMt000100Uv01Message:
             "required": True,
         }
     )
-    sequence_number: Optional[IntType] = field(
+    sequence_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "sequenceNumber",

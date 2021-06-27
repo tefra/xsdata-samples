@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .float_mod import FloatType
+from .float_mod import Float
 from .multidimensional_time import MultidimensionalTime
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -41,7 +41,7 @@ class ConfidenceInterval:
             "namespace": "http://autosar.org/schema/r4.0",
         }
     )
-    propability: Optional[FloatType] = field(
+    propability: Optional[Float] = field(
         default=None,
         metadata={
             "name": "PROPABILITY",

@@ -4,6 +4,6 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 class GroupCheckInEnumeration(Enum):
-    NONE_VALUE = "none"
+    NONE = "none"
     REQUIRED = "required"
     ALLOWED = "allowed"

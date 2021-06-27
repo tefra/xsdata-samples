@@ -113,7 +113,7 @@ class AccessibilityEnum(Enum):
         might be some acoustic system or tactile paving.
     :cvar HANDICAPPED_MARKED: There is a visible mark for the privilege
         of handicapped or disabled people (e.g. a wheelchair symbol).
-    :cvar NONE_VALUE: No form of special accessibility, i.e. usually not
+    :cvar NONE: No form of special accessibility, i.e. usually not
         convenient for handicapped people, e.g. because of steps or
         barriers.
     :cvar UNKNOWN: It is unknown, whether there is a special form of
@@ -126,7 +126,7 @@ class AccessibilityEnum(Enum):
     HANDICAPPED_EASEMENTS = "handicappedEasements"
     ORIENTATION_SYSTEM_FOR_BLIND_PEOPLE = "orientationSystemForBlindPeople"
     HANDICAPPED_MARKED = "handicappedMarked"
-    NONE_VALUE = "none"
+    NONE = "none"
     UNKNOWN = "unknown"
     OTHER = "other"
 
@@ -894,7 +894,7 @@ class CountryEnum(Enum):
     :cvar HU: Hungary
     :cvar IE: Ireland
     :cvar IM: Isle Of Man
-    :cvar IS_VALUE: Iceland
+    :cvar IS: Iceland
     :cvar IT: Italy
     :cvar JE: Jersey
     :cvar LI: Lichtenstein
@@ -940,7 +940,7 @@ class CountryEnum(Enum):
     HU = "hu"
     IE = "ie"
     IM = "im"
-    IS_VALUE = "is"
+    IS = "is"
     IT = "it"
     JE = "je"
     LI = "li"
@@ -996,7 +996,7 @@ class CurrencyEnum(Enum):
     :cvar RSD: Serbian Dinar
     :cvar RUB: Russian Ruble
     :cvar SEK: Swedish Krona
-    :cvar TRY_VALUE: Turkish Lira
+    :cvar TRY: Turkish Lira
     :cvar UAH: Hryvnia (Ukraine)
     :cvar USD: US Dollar
     :cvar OTHER: Another currency.
@@ -1025,7 +1025,7 @@ class CurrencyEnum(Enum):
     RSD = "rsd"
     RUB = "rub"
     SEK = "sek"
-    TRY_VALUE = "try"
+    TRY = "try"
     UAH = "uah"
     USD = "usd"
     OTHER = "other"
@@ -1567,7 +1567,7 @@ class EquipmentTypeEnum(Enum):
     :cvar FIRE_HOSE: A hose for water transport in case of fire.
     :cvar FIRE_EXTINGIUSHER: Fire extinguisher
     :cvar FIRE_HYDRANT: Fire hydrant
-    :cvar NONE_VALUE: None.
+    :cvar NONE: None.
     :cvar UNKNOWN: Unknown.
     :cvar OTHER: Some other equipment. Use
         'otherEquipmentOrServiceFacility' to specify it.
@@ -1605,7 +1605,7 @@ class EquipmentTypeEnum(Enum):
     FIRE_HOSE = "fireHose"
     FIRE_EXTINGIUSHER = "fireExtingiusher"
     FIRE_HYDRANT = "fireHydrant"
-    NONE_VALUE = "none"
+    NONE = "none"
     UNKNOWN = "unknown"
     OTHER = "other"
 
@@ -2048,7 +2048,7 @@ class LABELSecurityLevelEnum(Enum):
     """
     Security level defined by the LABEL project http://truckparkinglabel.eu.
 
-    :cvar NONE_VALUE: None.
+    :cvar NONE: None.
     :cvar SECURITY_LEVEL1: Providing the basics.
     :cvar SECURITY_LEVEL2: Technical measures to improve security.
     :cvar SECURITY_LEVEL3: Security measures are combined, Access of
@@ -2059,7 +2059,7 @@ class LABELSecurityLevelEnum(Enum):
         professional staff, site manned around the clock.
     :cvar UNKNOWN: Unknown.
     """
-    NONE_VALUE = "none"
+    NONE = "none"
     SECURITY_LEVEL1 = "securityLevel1"
     SECURITY_LEVEL2 = "securityLevel2"
     SECURITY_LEVEL3 = "securityLevel3"
@@ -2072,7 +2072,7 @@ class LABELServiceLevelEnum(Enum):
     """
     Service level defined by the LABEL project http://truckparkinglabel.eu.
 
-    :cvar NONE_VALUE: None.
+    :cvar NONE: None.
     :cvar SERVICE_LEVEL1: Providing the basics.
     :cvar SERVICE_LEVEL2: Also providing washing facilities and a more
         convenient lay-out of the parking area.
@@ -2082,7 +2082,7 @@ class LABELServiceLevelEnum(Enum):
     :cvar SERVICE_LEVEL5: Providing the high end of comfort levels.
     :cvar UNKNOWN: Unknown.
     """
-    NONE_VALUE = "none"
+    NONE = "none"
     SERVICE_LEVEL1 = "serviceLevel1"
     SERVICE_LEVEL2 = "serviceLevel2"
     SERVICE_LEVEL3 = "serviceLevel3"
@@ -2708,7 +2708,7 @@ class OccupancyDetectionTypeEnum(Enum):
 
     ).
 
-    :cvar NONE_VALUE: No occupancy detection available.
+    :cvar NONE: No occupancy detection available.
     :cvar BALANCING: Counting and balancing incoming and outcoming
         traffic amount ('indirect' method).
     :cvar SINGLE_SPACE_DETECTION: There is a detector for every
@@ -2721,7 +2721,7 @@ class OccupancyDetectionTypeEnum(Enum):
     :cvar OTHER: Other.
     :cvar UNKNOWN: Unknown.
     """
-    NONE_VALUE = "none"
+    NONE = "none"
     BALANCING = "balancing"
     SINGLE_SPACE_DETECTION = "singleSpaceDetection"
     MODEL_BASED = "modelBased"
@@ -3041,8 +3041,8 @@ class ParkingLayoutEnum(Enum):
     :cvar COVERED: Some covered parking space.
     :cvar NESTED: A parking space within a complex structure of
         buildings or surrounded by buildings.
-    :cvar FIELD_VALUE: A non-bituminized parking space (e.g. for events
-        or as extension).
+    :cvar FIELD: A non-bituminized parking space (e.g. for events or as
+        extension).
     :cvar UNKNOWN: Unknown.
     :cvar OTHER: Other.
     """
@@ -3054,7 +3054,7 @@ class ParkingLayoutEnum(Enum):
     OPEN_SPACE = "openSpace"
     COVERED = "covered"
     NESTED = "nested"
-    FIELD_VALUE = "field"
+    FIELD = "field"
     UNKNOWN = "unknown"
     OTHER = "other"
 
@@ -3213,7 +3213,7 @@ class ParkingSecurityEnum(Enum):
     :cvar AREA_SEPERATED_FROM_SURROUNDINGS: Site is separated from its
         surroundings. Can also be used to express a space for noise-
         producing vehicles, e.g. lorries with cooling generators.
-    :cvar NONE_VALUE: There are no security measures.
+    :cvar NONE: There are no security measures.
     :cvar UNKNOWN: Unknown.
     :cvar OTHER: None of the values in this enumeration applies. Use
         'parkingAdditionalSecurity' instead.
@@ -3228,7 +3228,7 @@ class ParkingSecurityEnum(Enum):
     FLOOD_LIGHT = "floodLight"
     FENCES = "fences"
     AREA_SEPERATED_FROM_SURROUNDINGS = "areaSeperatedFromSurroundings"
-    NONE_VALUE = "none"
+    NONE = "none"
     UNKNOWN = "unknown"
     OTHER = "other"
 
@@ -3388,7 +3388,7 @@ class ParkingSupervisionEnum(Enum):
     :cvar CONTROL_CENTRE_ON_SITE: Control centre on site.
     :cvar CONTROL_CENTRE_OFF_SITE: Control centre off site.
     :cvar PATROL: Patrol.
-    :cvar NONE_VALUE: None.
+    :cvar NONE: None.
     :cvar UNKNOWN: Unknown.
     :cvar OTHER: Other.
     """
@@ -3397,7 +3397,7 @@ class ParkingSupervisionEnum(Enum):
     CONTROL_CENTRE_ON_SITE = "controlCentreOnSite"
     CONTROL_CENTRE_OFF_SITE = "controlCentreOffSite"
     PATROL = "patrol"
-    NONE_VALUE = "none"
+    NONE = "none"
     UNKNOWN = "unknown"
     OTHER = "other"
 
@@ -4408,7 +4408,7 @@ class ReservationTypeEnum(Enum):
     """
     Reservation type enum.
 
-    :cvar OPTIONAL_VALUE: Places can be reserved, but must not.
+    :cvar OPTIONAL: Places can be reserved, but must not.
     :cvar MANDATORY: Places need to be reserved.
     :cvar NOT_AVAILABLE: Places cannot be reserved.
     :cvar PARTLY: Some places can or must be reserved, others not (do
@@ -4416,7 +4416,7 @@ class ReservationTypeEnum(Enum):
     :cvar UNKNOWN: Possibility of reservation is unknown,
     :cvar UNSPECIFIED: Possibility of reservation is not specified.
     """
-    OPTIONAL_VALUE = "optional"
+    OPTIONAL = "optional"
     MANDATORY = "mandatory"
     NOT_AVAILABLE = "notAvailable"
     PARTLY = "partly"
@@ -4877,8 +4877,8 @@ class SeverityEnum(Enum):
     :cvar LOW: Perceived by supplier as being of a low level.
     :cvar LOWEST: Perceived by supplier as being of the lowest
         discernible level.
-    :cvar NONE_VALUE: Perceived by supplier as having a severity rating
-        of none.
+    :cvar NONE: Perceived by supplier as having a severity rating of
+        none.
     :cvar UNKNOWN: Perceived by supplier as being of an unknown level.
     """
     HIGHEST = "highest"
@@ -4886,7 +4886,7 @@ class SeverityEnum(Enum):
     MEDIUM = "medium"
     LOW = "low"
     LOWEST = "lowest"
-    NONE_VALUE = "none"
+    NONE = "none"
     UNKNOWN = "unknown"
 
 
