@@ -11,7 +11,7 @@ from ..core.datatypes_base import (
     EdExplicit,
     EnExplicit,
     Ii,
-    IntType,
+    Int,
     IvlTsExplicit,
     OnExplicit,
     PnExplicit,
@@ -227,7 +227,7 @@ class PrpaMt201302Uv02CoveredParty:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    sequence_number: Optional[IntType] = field(
+    sequence_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "sequenceNumber",
@@ -2023,7 +2023,7 @@ class PrpaMt201302Uv02NonPersonLivingSubject:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    multiple_birth_order_number: Optional[IntType] = field(
+    multiple_birth_order_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "multipleBirthOrderNumber",
@@ -2258,7 +2258,7 @@ class PrpaMt201302Uv02Person:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    multiple_birth_order_number: Optional[IntType] = field(
+    multiple_birth_order_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "multipleBirthOrderNumber",

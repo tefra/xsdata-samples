@@ -10,7 +10,7 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 class AirTripType(Enum):
     """Identifies the trip type - one way, return, circle trip, open jaw."""
     ONE_WAY = "OneWay"
-    RETURN_VALUE = "Return"
+    RETURN = "Return"
     CIRCLE = "Circle"
     OPEN_JAW = "OpenJaw"
     OTHER = "Other"
@@ -113,7 +113,7 @@ class EquipmentType:
 
 class FareDirectionality(Enum):
     TO = "TO"
-    FROM_VALUE = "FROM"
+    FROM = "FROM"
 
 
 class MaximumStayReturnType(Enum):

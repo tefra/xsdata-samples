@@ -12,10 +12,9 @@ class CoordinatesType:
             "required": True,
         }
     )
-    decimal_value: str = field(
+    decimal: str = field(
         default=".",
         metadata={
-            "name": "decimal",
             "type": "Attribute",
         }
     )

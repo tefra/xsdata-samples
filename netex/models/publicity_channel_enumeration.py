@@ -7,4 +7,4 @@ class PublicityChannelEnumeration(Enum):
     ALL = "all"
     PRINTED_MEDIA = "printedMedia"
     DYNAMIC_MEDIA = "dynamicMedia"
-    NONE_VALUE = "none"
+    NONE = "none"

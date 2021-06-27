@@ -4,7 +4,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 class MediaTypeEnumeration(Enum):
-    NONE_VALUE = "none"
+    NONE = "none"
     PAPER_TICKET = "paperTicket"
     PAPER_TICKET_WITH_COUPONS = "paperTicketWithCoupons"
     COUPON = "coupon"

@@ -10,7 +10,7 @@ class LEnumSimple(Enum):
     :cvar AF: Afrikaans
     :cvar AM: Amharic
     :cvar AR: Arabic
-    :cvar AS_VALUE: Assamese
+    :cvar AS: Assamese
     :cvar AY: Aymara
     :cvar AZ: Azerbaijani
     :cvar BA: Bashkir
@@ -54,8 +54,8 @@ class LEnumSimple(Enum):
     :cvar IA: Interlingua
     :cvar IE: Interlingue
     :cvar IK: Inupiak
-    :cvar IN_VALUE: Indonesian
-    :cvar IS_VALUE: Icelandic
+    :cvar IN: Indonesian
+    :cvar IS: Icelandic
     :cvar IT: Italian
     :cvar IW: Hebrew
     :cvar JA: Japanese
@@ -91,7 +91,7 @@ class LEnumSimple(Enum):
     :cvar NO: Norwegian
     :cvar OC: Occitan
     :cvar OM: (Afan) Oromo
-    :cvar OR_VALUE: Oriya
+    :cvar OR: Oriya
     :cvar PA: Punjabi
     :cvar PL: Polish
     :cvar PS: Pashto, Pushto
@@ -148,7 +148,7 @@ class LEnumSimple(Enum):
     AF = "AF"
     AM = "AM"
     AR = "AR"
-    AS_VALUE = "AS"
+    AS = "AS"
     AY = "AY"
     AZ = "AZ"
     BA = "BA"
@@ -192,8 +192,8 @@ class LEnumSimple(Enum):
     IA = "IA"
     IE = "IE"
     IK = "IK"
-    IN_VALUE = "IN"
-    IS_VALUE = "IS"
+    IN = "IN"
+    IS = "IS"
     IT = "IT"
     IW = "IW"
     JA = "JA"
@@ -229,7 +229,7 @@ class LEnumSimple(Enum):
     NO = "NO"
     OC = "OC"
     OM = "OM"
-    OR_VALUE = "OR"
+    OR = "OR"
     PA = "PA"
     PL = "PL"
     PS = "PS"

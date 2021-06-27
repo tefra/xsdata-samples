@@ -4,7 +4,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 class SanitaryFacilityEnumeration(Enum):
-    NONE_VALUE = "none"
+    NONE = "none"
     TOILET = "toilet"
     WHEEL_CHAIR_ACCESS_TOILET = "wheelChairAccessToilet"
     SHOWER = "shower"

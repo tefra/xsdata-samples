@@ -7,5 +7,5 @@ class SubscriptionRenewalPolicyEnumeration(Enum):
     AUTOMATIC = "automatic"
     MANUAL = "manual"
     AUTOMATIC_ON_CONFIRMATION = "automaticOnConfirmation"
-    NONE_VALUE = "none"
+    NONE = "none"
     OTHER = "other"

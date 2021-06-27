@@ -4,7 +4,7 @@ from .application_primitive_data_type_subtypes_enum import ApplicationPrimitiveD
 from .autosar_variable_ref import AutosarVariableRef
 from .compu_method_subtypes_enum import CompuMethodSubtypesEnum
 from .data_constr_subtypes_enum import DataConstrSubtypesEnum
-from .float_mod import FloatType
+from .float_mod import Float
 from .integer_value_variation_point import IntegerValueVariationPoint
 from .mc_data_instance_subtypes_enum import McDataInstanceSubtypesEnum
 from .monotony_enum import MonotonyEnum
@@ -80,7 +80,7 @@ class SwAxisIndividual:
     class Meta:
         name = "SW-AXIS-INDIVIDUAL"
 
-    max_gradient: Optional[FloatType] = field(
+    max_gradient: Optional[Float] = field(
         default=None,
         metadata={
             "name": "MAX-GRADIENT",

@@ -3,7 +3,7 @@ from typing import Optional
 from .application_primitive_data_type_subtypes_enum import ApplicationPrimitiveDataTypeSubtypesEnum
 from .autosar_parameter_ref import AutosarParameterRef
 from .axis_index_type import AxisIndexType
-from .float_mod import FloatType
+from .float_mod import Float
 from .mc_data_instance_subtypes_enum import McDataInstanceSubtypesEnum
 from .monotony_enum import MonotonyEnum
 from .ref import Ref
@@ -59,7 +59,7 @@ class SwAxisGrouped:
     class Meta:
         name = "SW-AXIS-GROUPED"
 
-    max_gradient: Optional[FloatType] = field(
+    max_gradient: Optional[Float] = field(
         default=None,
         metadata={
             "name": "MAX-GRADIENT",

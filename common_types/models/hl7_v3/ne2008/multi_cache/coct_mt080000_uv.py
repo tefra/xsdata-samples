@@ -10,7 +10,7 @@ from ..core.datatypes_base import (
     EdExplicit,
     EnExplicit,
     Ii,
-    IntType,
+    Int,
     IvlTsExplicit,
     PqExplicit,
     St,
@@ -247,7 +247,7 @@ class CoctMt080000UvAuthorOrPerformer:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    sequence_number: Optional[IntType] = field(
+    sequence_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "sequenceNumber",
@@ -440,7 +440,7 @@ class CoctMt080000UvContent4:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    position_number: List[IntType] = field(
+    position_number: List[Int] = field(
         default_factory=list,
         metadata={
             "name": "positionNumber",
@@ -772,7 +772,7 @@ class CoctMt080000UvPerformer:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    sequence_number: Optional[IntType] = field(
+    sequence_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "sequenceNumber",
@@ -1300,7 +1300,7 @@ class CoctMt080000UvPrecondition:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    sequence_number: Optional[IntType] = field(
+    sequence_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "sequenceNumber",
@@ -1308,7 +1308,7 @@ class CoctMt080000UvPrecondition:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    priority_number: Optional[IntType] = field(
+    priority_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "priorityNumber",
@@ -1394,7 +1394,7 @@ class CoctMt080000UvSubject1:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    sequence_number: Optional[IntType] = field(
+    sequence_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "sequenceNumber",
@@ -1471,7 +1471,7 @@ class CoctMt080000UvSubject2:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    sequence_number: Optional[IntType] = field(
+    sequence_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "sequenceNumber",
@@ -1547,7 +1547,7 @@ class CoctMt080000UvSubject4:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    sequence_number: Optional[IntType] = field(
+    sequence_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "sequenceNumber",
@@ -1641,7 +1641,7 @@ class CoctMt080000UvContent3:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    position_number: List[IntType] = field(
+    position_number: List[Int] = field(
         default_factory=list,
         metadata={
             "name": "positionNumber",
@@ -2204,7 +2204,7 @@ class CoctMt080000UvSubject3:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    sequence_number: Optional[IntType] = field(
+    sequence_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "sequenceNumber",
@@ -2722,7 +2722,7 @@ class CoctMt080000UvNonPersonLivingSubject:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    multiple_birth_order_number: Optional[IntType] = field(
+    multiple_birth_order_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "multipleBirthOrderNumber",
@@ -2950,7 +2950,7 @@ class CoctMt080000UvPerson:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    multiple_birth_order_number: Optional[IntType] = field(
+    multiple_birth_order_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "multipleBirthOrderNumber",

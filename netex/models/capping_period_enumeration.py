@@ -7,4 +7,4 @@ class CappingPeriodEnumeration(Enum):
     DAY = "day"
     WEEK = "week"
     MONTH = "month"
-    NONE_VALUE = "none"
+    NONE = "none"

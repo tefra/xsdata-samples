@@ -14,4 +14,4 @@ class DayOfWeekEnumeration(Enum):
     EVERYDAY = "Everyday"
     WEEKDAYS = "Weekdays"
     WEEKEND = "Weekend"
-    NONE_VALUE = "none"
+    NONE = "none"

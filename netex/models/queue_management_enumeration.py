@@ -4,7 +4,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 class QueueManagementEnumeration(Enum):
-    NONE_VALUE = "none"
+    NONE = "none"
     MAZE = "maze"
     SEPARATE_LINES = "separateLines"
     TICKETED = "ticketed"

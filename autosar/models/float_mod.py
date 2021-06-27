@@ -5,7 +5,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
 @dataclass
-class FloatType:
+class Float:
     """
     An instance of Float is an element from the set of real numbers.
 

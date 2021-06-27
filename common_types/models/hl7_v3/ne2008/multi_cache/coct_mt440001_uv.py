@@ -113,7 +113,7 @@ class CoctMt440001UvValuedItem:
     )
     mood_code: ActMood = field(
         init=False,
-        default=ActMood.DEF_VALUE,
+        default=ActMood.DEF,
         metadata={
             "name": "moodCode",
             "type": "Attribute",

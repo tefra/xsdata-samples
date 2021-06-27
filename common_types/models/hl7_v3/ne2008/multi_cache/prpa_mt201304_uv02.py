@@ -6,7 +6,7 @@ from ..core.datatypes_base import (
     En,
     EnExplicit,
     Ii,
-    IntType,
+    Int,
     IvlTsExplicit,
     On,
     PnExplicit,
@@ -73,7 +73,7 @@ class PrpaMt201304Uv02CoveredParty:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    sequence_number: Optional[IntType] = field(
+    sequence_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "sequenceNumber",

@@ -7,7 +7,7 @@ from ..core.datatypes_base import (
     EdExplicit,
     EnExplicit,
     Ii,
-    IntType,
+    Int,
     IvlTsExplicit,
     Sc,
     St,
@@ -471,7 +471,7 @@ class McciMt000200Uv01Acknowledgement:
             "required": True,
         }
     )
-    expected_sequence_number: Optional[IntType] = field(
+    expected_sequence_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "expectedSequenceNumber",
@@ -479,7 +479,7 @@ class McciMt000200Uv01Acknowledgement:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    message_waiting_number: Optional[IntType] = field(
+    message_waiting_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "messageWaitingNumber",

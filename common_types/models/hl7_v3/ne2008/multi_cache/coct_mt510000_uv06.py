@@ -11,7 +11,7 @@ from ..core.datatypes_base import (
     Cs,
     EdExplicit,
     Ii,
-    IntType,
+    Int,
     IvlTsExplicit,
     Mo,
     OnExplicit,
@@ -184,7 +184,7 @@ class CoctMt510000Uv06CoverageChargePolicy:
     )
     mood_code: ActMood = field(
         init=False,
-        default=ActMood.DEF_VALUE,
+        default=ActMood.DEF,
         metadata={
             "name": "moodCode",
             "type": "Attribute",
@@ -259,7 +259,7 @@ class CoctMt510000Uv06CoverageDefinition:
     )
     mood_code: ActMood = field(
         init=False,
-        default=ActMood.DEF_VALUE,
+        default=ActMood.DEF,
         metadata={
             "name": "moodCode",
             "type": "Attribute",
@@ -342,7 +342,7 @@ class CoctMt510000Uv06CoverageLimitObservation:
     )
     mood_code: ActMood = field(
         init=False,
-        default=ActMood.DEF_VALUE,
+        default=ActMood.DEF,
         metadata={
             "name": "moodCode",
             "type": "Attribute",
@@ -434,7 +434,7 @@ class CoctMt510000Uv06CoveragePolicy:
     )
     mood_code: ActMood = field(
         init=False,
-        default=ActMood.DEF_VALUE,
+        default=ActMood.DEF,
         metadata={
             "name": "moodCode",
             "type": "Attribute",
@@ -869,7 +869,7 @@ class CoctMt510000Uv06PolicyOrProgramFinancialLimit:
     )
     mood_code: ActMood = field(
         init=False,
-        default=ActMood.DEF_VALUE,
+        default=ActMood.DEF,
         metadata={
             "name": "moodCode",
             "type": "Attribute",
@@ -1121,7 +1121,7 @@ class CoctMt510000Uv06ServiceDefinition:
     )
     mood_code: ActMood = field(
         init=False,
-        default=ActMood.DEF_VALUE,
+        default=ActMood.DEF,
         metadata={
             "name": "moodCode",
             "type": "Attribute",
@@ -2814,7 +2814,7 @@ class CoctMt510000Uv06Part:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    priority_number: Optional[IntType] = field(
+    priority_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "priorityNumber",
@@ -4031,7 +4031,7 @@ class CoctMt510000Uv06Component:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    priority_number: Optional[IntType] = field(
+    priority_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "priorityNumber",

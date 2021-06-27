@@ -16,7 +16,7 @@ from ..core.datatypes_base import (
     EdExplicit,
     EnExplicit,
     Ii,
-    IntType,
+    Int,
     IvlTsExplicit,
     OnExplicit,
     PnExplicit,
@@ -163,7 +163,7 @@ class CoctMt530000UvActDefinition:
     )
     mood_code: ActMood = field(
         init=False,
-        default=ActMood.DEF_VALUE,
+        default=ActMood.DEF,
         metadata={
             "name": "moodCode",
             "type": "Attribute",
@@ -819,7 +819,7 @@ class CoctMt530000UvProduct2:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    sequence_number: Optional[IntType] = field(
+    sequence_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "sequenceNumber",
@@ -1677,7 +1677,7 @@ class CoctMt530000UvSourceOf1:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    sequence_number: Optional[IntType] = field(
+    sequence_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "sequenceNumber",
@@ -2374,7 +2374,7 @@ class CoctMt530000UvPerson:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    multiple_birth_order_number: Optional[IntType] = field(
+    multiple_birth_order_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "multipleBirthOrderNumber",
@@ -3382,7 +3382,7 @@ class CoctMt530000UvSubject2:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    sequence_number: Optional[IntType] = field(
+    sequence_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "sequenceNumber",
@@ -4882,7 +4882,7 @@ class CoctMt530000UvComponent:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    sequence_number: Optional[IntType] = field(
+    sequence_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "sequenceNumber",
@@ -5275,7 +5275,7 @@ class CoctMt530000UvSourceOf2:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    sequence_number: Optional[IntType] = field(
+    sequence_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "sequenceNumber",
@@ -5757,7 +5757,7 @@ class CoctMt530000UvSourceOf3:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    sequence_number: Optional[IntType] = field(
+    sequence_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "sequenceNumber",

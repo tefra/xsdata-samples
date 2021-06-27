@@ -20,7 +20,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
 @dataclass
-class FieldType:
+class Field:
     """This meta-class represents the ability to define a piece of data that
     can be accessed with read and/or write semantics.
 
@@ -103,7 +103,7 @@ class FieldType:
             "required": True,
         }
     )
-    short_name_fragments: Optional["FieldType.ShortNameFragments"] = field(
+    short_name_fragments: Optional["Field.ShortNameFragments"] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -151,7 +151,7 @@ class FieldType:
             "namespace": "http://autosar.org/schema/r4.0",
         }
     )
-    annotations: Optional["FieldType.Annotations"] = field(
+    annotations: Optional["Field.Annotations"] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -167,7 +167,7 @@ class FieldType:
             "namespace": "http://autosar.org/schema/r4.0",
         }
     )
-    type_tref: Optional["FieldType.TypeTref"] = field(
+    type_tref: Optional["Field.TypeTref"] = field(
         default=None,
         metadata={
             "name": "TYPE-TREF",

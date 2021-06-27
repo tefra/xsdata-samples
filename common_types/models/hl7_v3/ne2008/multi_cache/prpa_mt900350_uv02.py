@@ -4,7 +4,7 @@ from ..core.datatypes_base import (
     Cd,
     Cs,
     Ii,
-    IntType,
+    Int,
     IvlTsExplicit,
 )
 from ..core.voc import (
@@ -113,7 +113,7 @@ class PrpaMt900350Uv02Attender:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    sequence_number: Optional[IntType] = field(
+    sequence_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "sequenceNumber",

@@ -17,7 +17,7 @@ from .constant_reference import ConstantReference
 from .data_constr_subtypes_enum import DataConstrSubtypesEnum
 from .display_format_string import DisplayFormatString
 from .display_presentation_enum import DisplayPresentationEnum
-from .float_mod import FloatType
+from .float_mod import Float
 from .identifier import Identifier
 from .mc_data_instance_subtypes_enum import McDataInstanceSubtypesEnum
 from .multidimensional_time import MultidimensionalTime
@@ -287,7 +287,7 @@ class SwDataDefPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         }
     )
-    step_size: Optional[FloatType] = field(
+    step_size: Optional[Float] = field(
         default=None,
         metadata={
             "name": "STEP-SIZE",

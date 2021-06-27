@@ -4,7 +4,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 class PassageTypeEnumeration(Enum):
-    NONE_VALUE = "none"
+    NONE = "none"
     PATHWAY = "pathway"
     CORRIDOR = "corridor"
     OVERPASS = "overpass"

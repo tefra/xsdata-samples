@@ -2125,7 +2125,7 @@ class PhoneNumberType(Enum):
     FAX = "Fax"
     HOTEL = "Hotel"
     OTHER = "Other"
-    NONE_VALUE = "None"
+    NONE = "None"
     EMAIL = "Email"
     RESERVATIONS = "Reservations"
 
@@ -3770,7 +3770,7 @@ class TypeProfileApplicability(Enum):
     The applicability of the profile or profile template value.
     """
     ALWAYS = "Always"
-    OPTIONAL_VALUE = "Optional"
+    OPTIONAL = "Optional"
     NEVER = "Never"
 
 
@@ -4317,8 +4317,8 @@ class TypeTrinary(Enum):
     """
     Extension of boolean, that allows for unknown values.
     """
-    TRUE_VALUE = "true"
-    FALSE_VALUE = "false"
+    TRUE = "true"
+    FALSE = "false"
     UNKNOWN = "unknown"
 
 

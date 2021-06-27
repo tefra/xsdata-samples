@@ -10,5 +10,5 @@ class AudibleSignalsAvailable:
         namespace = "http://www.netex.org.uk/netex"
 
     value: LimitationStatusEnumeration = field(
-        default=LimitationStatusEnumeration.FALSE_VALUE,
+        default=LimitationStatusEnumeration.FALSE,
     )

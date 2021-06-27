@@ -6,7 +6,7 @@ from ..core.datatypes_base import (
     Cs,
     EdExplicit,
     Ii,
-    IntType,
+    Int,
     IvlTs,
     IvlTsExplicit,
 )
@@ -125,7 +125,7 @@ class MfmiMt700712Uv01ActDefinition:
     )
     mood_code: ActMood = field(
         init=False,
-        default=ActMood.DEF_VALUE,
+        default=ActMood.DEF,
         metadata={
             "name": "moodCode",
             "type": "Attribute",
@@ -870,7 +870,7 @@ class MfmiMt700712Uv01QueryAck:
             "required": True,
         }
     )
-    result_total_quantity: Optional[IntType] = field(
+    result_total_quantity: Optional[Int] = field(
         default=None,
         metadata={
             "name": "resultTotalQuantity",
@@ -878,7 +878,7 @@ class MfmiMt700712Uv01QueryAck:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    result_current_quantity: Optional[IntType] = field(
+    result_current_quantity: Optional[Int] = field(
         default=None,
         metadata={
             "name": "resultCurrentQuantity",
@@ -886,7 +886,7 @@ class MfmiMt700712Uv01QueryAck:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    result_remaining_quantity: Optional[IntType] = field(
+    result_remaining_quantity: Optional[Int] = field(
         default=None,
         metadata={
             "name": "resultRemainingQuantity",

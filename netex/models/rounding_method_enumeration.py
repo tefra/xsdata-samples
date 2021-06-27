@@ -4,7 +4,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 class RoundingMethodEnumeration(Enum):
-    NONE_VALUE = "none"
+    NONE = "none"
     DOWN = "down"
     UP = "up"
     SPLIT = "split"

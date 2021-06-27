@@ -1295,7 +1295,7 @@ from .field_access_enum import FieldAccessEnum
 from .field_access_enum_simple import FieldAccessEnumSimple
 from .field_in_executable_instance_ref import FieldInExecutableInstanceRef
 from .field_mapping import FieldMapping
-from .field_mod import FieldType
+from .field_mod import Field
 from .field_sender_com_spec import FieldSenderComSpec
 from .field_subtypes_enum import FieldSubtypesEnum
 from .file_info_comment import FileInfoComment
@@ -1345,7 +1345,7 @@ from .flexray_tp_pdu_pool import FlexrayTpPduPool
 from .flexray_tp_pdu_pool_subtypes_enum import FlexrayTpPduPoolSubtypesEnum
 from .float_enum import FloatEnum
 from .float_enum_simple import FloatEnumSimple
-from .float_mod import FloatType
+from .float_mod import Float
 from .float_value_variation_point import FloatValueVariationPoint
 from .fm_attribute_def import FmAttributeDef
 from .fm_attribute_def_subtypes_enum import FmAttributeDefSubtypesEnum
@@ -4159,7 +4159,7 @@ __all__ = [
     "FieldAccessEnumSimple",
     "FieldInExecutableInstanceRef",
     "FieldMapping",
-    "FieldType",
+    "Field",
     "FieldSenderComSpec",
     "FieldSubtypesEnum",
     "FileInfoComment",
@@ -4209,7 +4209,7 @@ __all__ = [
     "FlexrayTpPduPoolSubtypesEnum",
     "FloatEnum",
     "FloatEnumSimple",
-    "FloatType",
+    "Float",
     "FloatValueVariationPoint",
     "FmAttributeDef",
     "FmAttributeDefSubtypesEnum",

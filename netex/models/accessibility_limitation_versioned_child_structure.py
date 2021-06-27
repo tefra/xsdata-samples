@@ -12,7 +12,7 @@ class AccessibilityLimitationVersionedChildStructure(VersionedChildStructure):
         name = "AccessibilityLimitation_VersionedChildStructure"
 
     wheelchair_access: LimitationStatusEnumeration = field(
-        default=LimitationStatusEnumeration.FALSE_VALUE,
+        default=LimitationStatusEnumeration.FALSE,
         metadata={
             "name": "WheelchairAccess",
             "type": "Element",

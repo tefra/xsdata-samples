@@ -14,7 +14,7 @@ class HandleOutOfRangeEnumSimple(Enum):
         range.
     :cvar INVALID: The RTE will use the invalidValue if the value is out
         of the specified bounds.
-    :cvar NONE_VALUE: A range check is not required.
+    :cvar NONE: A range check is not required.
     :cvar SATURATE: The RTE will saturate the value of the dataElement
         such that it is limited to the applicable upper bound if it is
         greater than the upper bound. Consequently, it is limited to the
@@ -25,5 +25,5 @@ class HandleOutOfRangeEnumSimple(Enum):
     EXTERNAL_REPLACEMENT = "EXTERNAL-REPLACEMENT"
     IGNORE = "IGNORE"
     INVALID = "INVALID"
-    NONE_VALUE = "NONE"
+    NONE = "NONE"
     SATURATE = "SATURATE"

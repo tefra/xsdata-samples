@@ -6,7 +6,7 @@ from ..core.datatypes_base import (
     Ce,
     Cs,
     Ii,
-    IntType,
+    Int,
     IvlTsExplicit,
     PnExplicit,
     TsExplicit,
@@ -275,7 +275,7 @@ class QupcMt040300Uv01MaximumHistoryStatements:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    value: Optional[IntType] = field(
+    value: Optional[Int] = field(
         default=None,
         metadata={
             "type": "Element",

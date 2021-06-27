@@ -8,7 +8,7 @@ from ..core.datatypes_base import (
     EdExplicit,
     EnExplicit,
     Ii,
-    IntType,
+    Int,
     IvlTsExplicit,
     OnExplicit,
     St,
@@ -1526,7 +1526,7 @@ class RepcMt000300Uv01Subject4:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    priority_number: Optional[IntType] = field(
+    priority_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "priorityNumber",

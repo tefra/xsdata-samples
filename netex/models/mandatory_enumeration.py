@@ -5,5 +5,5 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 class MandatoryEnumeration(Enum):
     REQUIRED = "required"
-    OPTIONAL_VALUE = "optional"
+    OPTIONAL = "optional"
     NOT_ALLOWED = "notAllowed"

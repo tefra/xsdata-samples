@@ -5,10 +5,10 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 class ChapterEnumBreakSimple(Enum):
     """
-    :cvar BREAK_VALUE: This indicates the a page break shall be applied
-        before the current block.
+    :cvar BREAK: This indicates the a page break shall be applied before
+        the current block.
     :cvar NO_BREAK: This indicates that there is no need to force a page
         break before this block.
     """
-    BREAK_VALUE = "BREAK"
+    BREAK = "BREAK"
     NO_BREAK = "NO-BREAK"

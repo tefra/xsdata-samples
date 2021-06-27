@@ -6,7 +6,7 @@ from ..core.datatypes_base import (
     Cs,
     Cv,
     Ii,
-    IntType,
+    Int,
     IvlTsExplicit,
     Sc,
     St,
@@ -315,7 +315,7 @@ class PrpaMt900300Uv02SortControl:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    sequence_number: Optional[IntType] = field(
+    sequence_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "sequenceNumber",
@@ -480,7 +480,7 @@ class PrpaMt900300Uv02QueryByParameterPayload:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    initial_quantity: Optional[IntType] = field(
+    initial_quantity: Optional[Int] = field(
         default=None,
         metadata={
             "name": "initialQuantity",

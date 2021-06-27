@@ -19,7 +19,7 @@ class AccessFeatureEnumeration(Enum):
     CONCOURSE = "concourse"
     CONFINED_SPACE = "confinedSpace"
     QUEUE_MANAGEMENT = "queueManagement"
-    NONE_VALUE = "none"
+    NONE = "none"
     UNKNOWN = "unknown"
     OTHER = "other"
     OPEN_SPACE = "openSpace"

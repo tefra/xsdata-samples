@@ -8,7 +8,7 @@ from ..core.datatypes_base import (
     EdExplicit,
     EnExplicit,
     Ii,
-    IntType,
+    Int,
     IvlTsExplicit,
     Sc,
     TelExplicit,
@@ -441,7 +441,7 @@ class CoctMt030000Uv04Entity:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    quantity: Optional[IntType] = field(
+    quantity: Optional[Int] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1064,7 +1064,7 @@ class CoctMt030000Uv04NonPersonLivingSubject:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    quantity: Optional[IntType] = field(
+    quantity: Optional[Int] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1149,7 +1149,7 @@ class CoctMt030000Uv04NonPersonLivingSubject:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    multiple_birth_order_number: Optional[IntType] = field(
+    multiple_birth_order_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "multipleBirthOrderNumber",
@@ -1365,7 +1365,7 @@ class CoctMt030000Uv04Person:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    multiple_birth_order_number: Optional[IntType] = field(
+    multiple_birth_order_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "multipleBirthOrderNumber",

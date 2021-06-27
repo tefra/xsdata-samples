@@ -147,7 +147,7 @@ class HightlightType:
 class Match(Enum):
     MUST = "MUST"
     SHOULD = "SHOULD"
-    NOT_VALUE = "NOT"
+    NOT = "NOT"
 
 
 @dataclass

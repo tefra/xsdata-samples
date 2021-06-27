@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from typing import Optional
 from .can_controller_fd_configuration import CanControllerFdConfiguration
 from .can_controller_fd_configuration_requirements import CanControllerFdConfigurationRequirements
-from .float_mod import FloatType
+from .float_mod import Float
 from .integer import Integer
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -82,7 +82,7 @@ class CanControllerConfigurationRequirements:
             "namespace": "http://autosar.org/schema/r4.0",
         }
     )
-    max_sample_point: Optional[FloatType] = field(
+    max_sample_point: Optional[Float] = field(
         default=None,
         metadata={
             "name": "MAX-SAMPLE-POINT",
@@ -90,7 +90,7 @@ class CanControllerConfigurationRequirements:
             "namespace": "http://autosar.org/schema/r4.0",
         }
     )
-    max_sync_jump_width: Optional[FloatType] = field(
+    max_sync_jump_width: Optional[Float] = field(
         default=None,
         metadata={
             "name": "MAX-SYNC-JUMP-WIDTH",
@@ -106,7 +106,7 @@ class CanControllerConfigurationRequirements:
             "namespace": "http://autosar.org/schema/r4.0",
         }
     )
-    min_sample_point: Optional[FloatType] = field(
+    min_sample_point: Optional[Float] = field(
         default=None,
         metadata={
             "name": "MIN-SAMPLE-POINT",
@@ -114,7 +114,7 @@ class CanControllerConfigurationRequirements:
             "namespace": "http://autosar.org/schema/r4.0",
         }
     )
-    min_sync_jump_width: Optional[FloatType] = field(
+    min_sync_jump_width: Optional[Float] = field(
         default=None,
         metadata={
             "name": "MIN-SYNC-JUMP-WIDTH",

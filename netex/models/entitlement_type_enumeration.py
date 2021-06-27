@@ -4,7 +4,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 class EntitlementTypeEnumeration(Enum):
-    NONE_VALUE = "none"
+    NONE = "none"
     PURCHASE = "purchase"
     PURCHASE_AT_DISCOUNT = "purchaseAtDiscount"
     USE = "use"

@@ -5,7 +5,7 @@ from ..core.datatypes_base import (
     Cs,
     EdExplicit,
     Ii,
-    IntType,
+    Int,
     IvlTs,
     IvlTsExplicit,
     Sc,
@@ -467,7 +467,7 @@ class QuqiMt020001Uv01SortControl:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    sequence_number: Optional[IntType] = field(
+    sequence_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "sequenceNumber",

@@ -4,7 +4,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 class BooleanOperatorEnumeration(Enum):
-    AND_VALUE = "AND"
-    OR_VALUE = "OR"
-    NOT_VALUE = "NOT"
+    AND = "AND"
+    OR = "OR"
+    NOT = "NOT"
     XOR = "XOR"

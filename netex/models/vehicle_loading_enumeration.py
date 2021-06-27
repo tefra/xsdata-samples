@@ -4,7 +4,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 class VehicleLoadingEnumeration(Enum):
-    NONE_VALUE = "none"
+    NONE = "none"
     LOADING = "loading"
     UNLOADING = "unloading"
     ADDITIONAL_LOADING = "additionalLoading"

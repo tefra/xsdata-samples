@@ -5,7 +5,7 @@ from ..core.datatypes_base import (
     Ce,
     Cs,
     Ii,
-    IntType,
+    Int,
     IvlTsExplicit,
     OnExplicit,
     PnExplicit,
@@ -113,7 +113,7 @@ class CoctMt500000Uv04AccommodationCoverage:
     )
     mood_code: ActMood = field(
         init=False,
-        default=ActMood.DEF_VALUE,
+        default=ActMood.DEF,
         metadata={
             "name": "moodCode",
             "type": "Attribute",
@@ -891,7 +891,7 @@ class CoctMt500000Uv04Beneficiary:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    sequence_number: Optional[IntType] = field(
+    sequence_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "sequenceNumber",

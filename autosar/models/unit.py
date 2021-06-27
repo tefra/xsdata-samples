@@ -7,7 +7,7 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .float_mod import FloatType
+from .float_mod import Float
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -182,7 +182,7 @@ class Unit:
             "namespace": "http://autosar.org/schema/r4.0",
         }
     )
-    factor_si_to_unit: Optional[FloatType] = field(
+    factor_si_to_unit: Optional[Float] = field(
         default=None,
         metadata={
             "name": "FACTOR-SI-TO-UNIT",
@@ -190,7 +190,7 @@ class Unit:
             "namespace": "http://autosar.org/schema/r4.0",
         }
     )
-    offset_si_to_unit: Optional[FloatType] = field(
+    offset_si_to_unit: Optional[Float] = field(
         default=None,
         metadata={
             "name": "OFFSET-SI-TO-UNIT",

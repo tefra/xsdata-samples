@@ -8,7 +8,7 @@ from ..core.datatypes_base import (
     Cv,
     EnExplicit,
     Ii,
-    IntType,
+    Int,
     IvlTsExplicit,
     PnExplicit,
     Sc,
@@ -546,7 +546,7 @@ class PrpaMt201306Uv02MinimumDegreeMatch:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    value: Optional[IntType] = field(
+    value: Optional[Int] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -985,7 +985,7 @@ class PrpaMt201306Uv02SortControl:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    sequence_number: Optional[IntType] = field(
+    sequence_number: Optional[Int] = field(
         default=None,
         metadata={
             "name": "sequenceNumber",
@@ -1340,7 +1340,7 @@ class PrpaMt201306Uv02QueryByParameter:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    initial_quantity: Optional[IntType] = field(
+    initial_quantity: Optional[Int] = field(
         default=None,
         metadata={
             "name": "initialQuantity",

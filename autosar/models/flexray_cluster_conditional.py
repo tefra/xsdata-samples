@@ -5,7 +5,7 @@ from .boolean import Boolean
 from .can_physical_channel import CanPhysicalChannel
 from .ethernet_physical_channel import EthernetPhysicalChannel
 from .flexray_physical_channel import FlexrayPhysicalChannel
-from .float_mod import FloatType
+from .float_mod import Float
 from .integer import Integer
 from .lin_physical_channel import LinPhysicalChannel
 from .positive_unlimited_integer import PositiveUnlimitedInteger
@@ -405,7 +405,7 @@ class FlexrayClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         }
     )
-    tranceiver_standby_delay: Optional[FloatType] = field(
+    tranceiver_standby_delay: Optional[Float] = field(
         default=None,
         metadata={
             "name": "TRANCEIVER-STANDBY-DELAY",

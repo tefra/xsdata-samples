@@ -380,7 +380,7 @@ class AttributeDefinitionBoolean:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         }
     )
-    type: Optional["AttributeDefinitionBoolean.Type"] = field(
+    type: Optional["AttributeDefinitionBoolean.TypeType"] = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -450,7 +450,7 @@ class AttributeDefinitionBoolean:
         )
 
     @dataclass
-    class Type:
+    class TypeType:
         datatype_definition_boolean_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -482,7 +482,7 @@ class AttributeDefinitionDate:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         }
     )
-    type: Optional["AttributeDefinitionDate.Type"] = field(
+    type: Optional["AttributeDefinitionDate.TypeType"] = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -552,7 +552,7 @@ class AttributeDefinitionDate:
         )
 
     @dataclass
-    class Type:
+    class TypeType:
         datatype_definition_date_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -584,7 +584,7 @@ class AttributeDefinitionEnumeration:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         }
     )
-    type: Optional["AttributeDefinitionEnumeration.Type"] = field(
+    type: Optional["AttributeDefinitionEnumeration.TypeType"] = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -662,7 +662,7 @@ class AttributeDefinitionEnumeration:
         )
 
     @dataclass
-    class Type:
+    class TypeType:
         datatype_definition_enumeration_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -694,7 +694,7 @@ class AttributeDefinitionInteger:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         }
     )
-    type: Optional["AttributeDefinitionInteger.Type"] = field(
+    type: Optional["AttributeDefinitionInteger.TypeType"] = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -764,7 +764,7 @@ class AttributeDefinitionInteger:
         )
 
     @dataclass
-    class Type:
+    class TypeType:
         datatype_definition_integer_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -796,7 +796,7 @@ class AttributeDefinitionReal:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         }
     )
-    type: Optional["AttributeDefinitionReal.Type"] = field(
+    type: Optional["AttributeDefinitionReal.TypeType"] = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -866,7 +866,7 @@ class AttributeDefinitionReal:
         )
 
     @dataclass
-    class Type:
+    class TypeType:
         datatype_definition_real_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -898,7 +898,7 @@ class AttributeDefinitionString:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         }
     )
-    type: Optional["AttributeDefinitionString.Type"] = field(
+    type: Optional["AttributeDefinitionString.TypeType"] = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -968,7 +968,7 @@ class AttributeDefinitionString:
         )
 
     @dataclass
-    class Type:
+    class TypeType:
         datatype_definition_string_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -1478,7 +1478,7 @@ class RelationGroup:
             "required": True,
         }
     )
-    type: Optional["RelationGroup.Type"] = field(
+    type: Optional["RelationGroup.TypeType"] = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -1563,7 +1563,7 @@ class RelationGroup:
         )
 
     @dataclass
-    class Type:
+    class TypeType:
         relation_group_type_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -1603,7 +1603,7 @@ class SpecHierarchy:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         }
     )
-    object: Optional["SpecHierarchy.Object"] = field(
+    object_value: Optional["SpecHierarchy.Object"] = field(
         default=None,
         metadata={
             "name": "OBJECT",
@@ -1918,7 +1918,7 @@ class AttributeDefinitionXhtml:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         }
     )
-    type: Optional["AttributeDefinitionXhtml.Type"] = field(
+    type: Optional["AttributeDefinitionXhtml.TypeType"] = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -1988,7 +1988,7 @@ class AttributeDefinitionXhtml:
         )
 
     @dataclass
-    class Type:
+    class TypeType:
         datatype_definition_xhtml_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -2020,7 +2020,7 @@ class SpecObject:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         }
     )
-    type: Optional["SpecObject.Type"] = field(
+    type: Optional["SpecObject.TypeType"] = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -2131,7 +2131,7 @@ class SpecObject:
         )
 
     @dataclass
-    class Type:
+    class TypeType:
         spec_object_type_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -2181,7 +2181,7 @@ class SpecRelation:
             "required": True,
         }
     )
-    type: Optional["SpecRelation.Type"] = field(
+    type: Optional["SpecRelation.TypeType"] = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -2314,7 +2314,7 @@ class SpecRelation:
         )
 
     @dataclass
-    class Type:
+    class TypeType:
         spec_relation_type_ref: Optional[str] = field(
             default=None,
             metadata={
@@ -2354,7 +2354,7 @@ class Specification:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         }
     )
-    type: Optional["Specification.Type"] = field(
+    type: Optional["Specification.TypeType"] = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -2476,7 +2476,7 @@ class Specification:
         )
 
     @dataclass
-    class Type:
+    class TypeType:
         specification_type_ref: Optional[str] = field(
             default=None,
             metadata={
