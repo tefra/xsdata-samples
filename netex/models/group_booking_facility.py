@@ -10,5 +10,5 @@ class GroupBookingFacility:
         namespace = "http://www.netex.org.uk/netex"
 
     value: GroupBookingEnumeration = field(
-        default=GroupBookingEnumeration.UNKNOWN,
+        default=GroupBookingEnumeration.UNKNOWN
     )

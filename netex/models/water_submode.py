@@ -10,5 +10,5 @@ class WaterSubmode:
         namespace = "http://www.netex.org.uk/netex"
 
     value: WaterSubmodeEnumeration = field(
-        default=WaterSubmodeEnumeration.UNKNOWN,
+        default=WaterSubmodeEnumeration.UNKNOWN
     )

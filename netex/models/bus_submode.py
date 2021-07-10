@@ -10,5 +10,5 @@ class BusSubmode:
         namespace = "http://www.netex.org.uk/netex"
 
     value: BusSubmodeEnumeration = field(
-        default=BusSubmodeEnumeration.UNKNOWN,
+        default=BusSubmodeEnumeration.UNKNOWN
     )

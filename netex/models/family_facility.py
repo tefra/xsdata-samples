@@ -10,5 +10,5 @@ class FamilyFacility:
         namespace = "http://www.netex.org.uk/netex"
 
     value: FamilyFacilityEnumeration = field(
-        default=FamilyFacilityEnumeration.NONE,
+        default=FamilyFacilityEnumeration.NONE
     )
