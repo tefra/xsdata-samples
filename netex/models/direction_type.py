@@ -10,5 +10,5 @@ class DirectionType:
         namespace = "http://www.netex.org.uk/netex"
 
     value: DirectionTypeEnumeration = field(
-        default=DirectionTypeEnumeration.OUTBOUND,
+        default=DirectionTypeEnumeration.OUTBOUND
     )

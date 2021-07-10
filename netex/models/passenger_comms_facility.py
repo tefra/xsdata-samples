@@ -10,5 +10,5 @@ class PassengerCommsFacility:
         namespace = "http://www.netex.org.uk/netex"
 
     value: PassengerCommsFacilityEnumeration = field(
-        default=PassengerCommsFacilityEnumeration.UNKNOWN,
+        default=PassengerCommsFacilityEnumeration.UNKNOWN
     )

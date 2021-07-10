@@ -10,5 +10,5 @@ class ServiceReservationFacility:
         namespace = "http://www.netex.org.uk/netex"
 
     value: ReservationEnumeration = field(
-        default=ReservationEnumeration.UNKNOWN,
+        default=ReservationEnumeration.UNKNOWN
     )

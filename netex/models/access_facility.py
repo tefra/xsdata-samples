@@ -10,5 +10,5 @@ class AccessFacility:
         namespace = "http://www.netex.org.uk/netex"
 
     value: AccessFacilityEnumeration = field(
-        default=AccessFacilityEnumeration.UNKNOWN,
+        default=AccessFacilityEnumeration.UNKNOWN
     )

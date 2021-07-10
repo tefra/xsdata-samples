@@ -10,5 +10,5 @@ class RetailFacility:
         namespace = "http://www.netex.org.uk/netex"
 
     value: RetailFacilityEnumeration = field(
-        default=RetailFacilityEnumeration.UNKNOWN,
+        default=RetailFacilityEnumeration.UNKNOWN
     )

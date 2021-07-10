@@ -10,5 +10,5 @@ class SelfDriveSubmode:
         namespace = "http://www.netex.org.uk/netex"
 
     value: SelfDriveSubmodeEnumeration = field(
-        default=SelfDriveSubmodeEnumeration.UNKNOWN,
+        default=SelfDriveSubmodeEnumeration.UNKNOWN
     )

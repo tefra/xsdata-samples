@@ -10,5 +10,5 @@ class StepFreeAccess:
         namespace = "http://www.netex.org.uk/netex"
 
     value: LimitationStatusEnumeration = field(
-        default=LimitationStatusEnumeration.UNKNOWN,
+        default=LimitationStatusEnumeration.UNKNOWN
     )
