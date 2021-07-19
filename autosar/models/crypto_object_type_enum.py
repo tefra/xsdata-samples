@@ -27,10 +27,7 @@ class CryptoObjectTypeEnum:
         name = "CRYPTO-OBJECT-TYPE-ENUM"
 
     value: Optional[CryptoObjectTypeEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

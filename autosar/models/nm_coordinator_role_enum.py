@@ -26,10 +26,7 @@ class NmCoordinatorRoleEnum:
         name = "NM-COORDINATOR-ROLE-ENUM"
 
     value: Optional[NmCoordinatorRoleEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

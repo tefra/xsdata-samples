@@ -26,10 +26,7 @@ class CouplingPortRoleEnum:
         name = "COUPLING-PORT-ROLE-ENUM"
 
     value: Optional[CouplingPortRoleEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

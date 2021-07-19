@@ -27,10 +27,7 @@ class TcpRoleEnum:
         name = "TCP-ROLE-ENUM"
 
     value: Optional[TcpRoleEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

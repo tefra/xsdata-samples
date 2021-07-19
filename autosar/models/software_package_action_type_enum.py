@@ -27,10 +27,7 @@ class SoftwarePackageActionTypeEnum:
         name = "SOFTWARE-PACKAGE-ACTION-TYPE-ENUM"
 
     value: Optional[SoftwarePackageActionTypeEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

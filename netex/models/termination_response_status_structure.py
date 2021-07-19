@@ -51,8 +51,8 @@ class TerminationResponseStatusStructure:
             "namespace": "http://www.siri.org.uk/siri",
         }
     )
-    status: bool = field(
-        default=True,
+    status: Optional[bool] = field(
+        default=None,
         metadata={
             "name": "Status",
             "type": "Element",

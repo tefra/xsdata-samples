@@ -18,7 +18,6 @@ class ProductType:
         metadata={
             "type": "Element",
             "namespace": "",
-            "required": True,
             "min_inclusive": 2,
             "max_inclusive": 18,
         }

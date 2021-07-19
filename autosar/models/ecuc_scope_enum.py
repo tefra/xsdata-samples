@@ -26,10 +26,7 @@ class EcucScopeEnum:
         name = "ECUC-SCOPE-ENUM"
 
     value: Optional[EcucScopeEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

@@ -26,10 +26,7 @@ class EthernetConnectionNegotiationEnum:
         name = "ETHERNET-CONNECTION-NEGOTIATION-ENUM"
 
     value: Optional[EthernetConnectionNegotiationEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

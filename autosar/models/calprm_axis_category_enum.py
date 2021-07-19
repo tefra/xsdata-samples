@@ -27,10 +27,7 @@ class CalprmAxisCategoryEnum:
         name = "CALPRM-AXIS-CATEGORY-ENUM"
 
     value: Optional[CalprmAxisCategoryEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

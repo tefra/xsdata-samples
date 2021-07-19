@@ -11,8 +11,5 @@ class AccessibilityTool:
         namespace = "http://www.netex.org.uk/netex"
 
     value: Optional[AccessibilityToolEnumeration] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )

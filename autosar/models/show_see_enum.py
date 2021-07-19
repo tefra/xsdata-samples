@@ -27,10 +27,7 @@ class ShowSeeEnum:
         name = "SHOW-SEE-ENUM"
 
     value: Optional[ShowSeeEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

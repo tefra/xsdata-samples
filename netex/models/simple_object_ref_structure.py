@@ -7,10 +7,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 @dataclass
 class SimpleObjectRefStructure:
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     ref: Optional[str] = field(
         default=None,

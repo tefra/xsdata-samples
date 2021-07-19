@@ -120,7 +120,6 @@ class ApplicationErrorInformationType:
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 4,
         }
@@ -171,7 +170,6 @@ class AttributeInformationTypeU:
             "name": "attributeType",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 25,
         }
@@ -205,7 +203,6 @@ class AttributeInformationType97181C:
             "name": "attributeType",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 25,
         }
@@ -327,7 +324,6 @@ class CabinInformationType:
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 5,
         }
@@ -357,7 +353,6 @@ class CabinProductDetailsType:
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 1,
         }
@@ -438,7 +433,6 @@ class CabinProductDetailsType195516C:
             "name": "avlStatus",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 0,
             "max_length": 3,
         }
@@ -461,7 +455,6 @@ class CabinProductDetailsType205138C:
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 1,
         }
@@ -510,7 +503,6 @@ class CabinProductDetailsType229142C:
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 1,
         }
@@ -549,7 +541,6 @@ class CategoryDescriptionType:
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "pattern": r"-?[0-9]{1,3}",
         }
     )
@@ -575,7 +566,6 @@ class ClassInformationType:
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 5,
         }
@@ -606,7 +596,6 @@ class CodedAttributeInformationType:
             "name": "attributeType",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 5,
         }
@@ -640,7 +629,6 @@ class CodedAttributeInformationType270108C:
             "name": "attributeType",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 5,
         }
@@ -699,7 +687,6 @@ class CompanyIdentificationType:
             "name": "marketingCarrier",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 2,
             "max_length": 3,
         }
@@ -903,7 +890,6 @@ class ConversionRateDetailsTypeI179848C:
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 3,
         }
@@ -999,7 +985,6 @@ class DataTypeInformationType:
             "name": "subType",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 3,
         }
@@ -1136,7 +1121,6 @@ class DateTimePeriodDetailsTypeI:
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 3,
         }
@@ -1168,7 +1152,6 @@ class DiscountPenaltyInformationType:
             "name": "fareQualifier",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 3,
         }
@@ -1329,7 +1312,6 @@ class FareCategoryCodesTypeI:
             "name": "fareType",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 20,
         }
@@ -1473,7 +1455,6 @@ class FareFamilyDetailsType:
             "name": "commercialFamily",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 10,
         }
@@ -1598,7 +1579,6 @@ class FreeTextQualificationType:
             "name": "textSubjectQualifier",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 3,
         }
@@ -1629,7 +1609,6 @@ class FreeTextQualificationTypeI:
             "name": "textSubjectQualifier",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 3,
         }
@@ -1654,7 +1633,6 @@ class FreeTextQualificationType120769C:
             "name": "textSubjectQualifier",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 3,
         }
@@ -2017,7 +1995,6 @@ class ItineraryDetailsType:
             "name": "airportCityQualifier",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 1,
         }
@@ -2028,7 +2005,6 @@ class ItineraryDetailsType:
             "name": "segmentNumber",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "pattern": r"-?[0-9]{1,3}",
         }
     )
@@ -2048,7 +2024,6 @@ class LocationIdentificationDetailsType:
             "name": "locationId",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 3,
             "max_length": 5,
         }
@@ -2132,7 +2107,6 @@ class MiniRulesType:
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 3,
         }
@@ -2161,7 +2135,6 @@ class MonetaryInformationDetailsType:
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
         }
     )
     currency: Optional[str] = field(
@@ -2190,7 +2163,6 @@ class MonetaryInformationDetailsTypeI:
             "name": "typeQualifier",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 6,
         }
@@ -2234,7 +2206,6 @@ class MonetaryInformationDetailsType245528C:
             "name": "typeQualifier",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 3,
         }
@@ -2317,7 +2288,6 @@ class OriginAndDestinationRequestType134833S:
             "name": "segRef",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "pattern": r"-?[0-9]{1,2}",
         }
     )
@@ -2387,7 +2357,6 @@ class PricingTicketingInformationType:
             "name": "priceType",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "min_occurs": 1,
             "max_occurs": 20,
             "min_length": 0,
             "max_length": 3,
@@ -2408,7 +2377,6 @@ class PricingTicketingSubsequentType:
             "name": "paxFareNum",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "min_occurs": 1,
             "max_occurs": 10,
             "min_length": 1,
             "max_length": 3,
@@ -2473,7 +2441,6 @@ class ProductDateTimeType:
             "name": "dateOfDeparture",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "pattern": r"(0[1-9]|[1-2][0-9]|3[0-1])(0[1-9]|1[0-2])[0-9]{2}",
         }
     )
@@ -2525,7 +2492,6 @@ class ProductDetailsType:
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 17,
         }
@@ -2654,7 +2620,6 @@ class ProductTypeDetailsType:
             "name": "availabilityCnxType",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "min_occurs": 1,
             "max_occurs": 9,
             "min_length": 1,
             "max_length": 3,
@@ -2677,7 +2642,6 @@ class ProductTypeDetailsType205137C:
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "min_occurs": 1,
             "max_occurs": 9,
             "min_length": 1,
             "max_length": 6,
@@ -2774,7 +2738,6 @@ class ReferencingDetailsType:
             "name": "refNumber",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "pattern": r"-?[0-9]{0,3}",
         }
     )
@@ -2807,7 +2770,6 @@ class ReferencingDetailsType191583C:
             "name": "refNumber",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "pattern": r"-?[0-9]{0,6}",
         }
     )
@@ -2840,7 +2802,6 @@ class ReferencingDetailsType195561C:
             "name": "refNumber",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "pattern": r"-?[0-9]{0,3}",
         }
     )
@@ -2917,7 +2878,6 @@ class SelectionDetailsInformationType:
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 3,
         }
@@ -2947,7 +2907,6 @@ class SequenceInformationTypeU:
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 10,
         }
@@ -3041,7 +3000,6 @@ class SpecialRequirementsTypeDetailsType:
             "name": "serviceClassification",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 4,
         }
@@ -3654,7 +3612,6 @@ class FareFamilyType:
             "name": "refNumber",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "pattern": r"-?[0-9]{1,3}",
         }
     )
@@ -4054,7 +4011,6 @@ class FlightServicesType:
             "name": "serviceType",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 3,
         }
@@ -4420,7 +4376,6 @@ class MiniRulesType78547S:
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 0,
             "max_length": 3,
         }
@@ -4566,7 +4521,6 @@ class OriginAndDestinationRequestType:
             "name": "segRef",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "pattern": r"-?[0-9]{1,2}",
         }
     )
@@ -4602,7 +4556,6 @@ class PricingTicketingSubsequentType193023S:
             "name": "paxFareNum",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 3,
         }
@@ -4613,7 +4566,6 @@ class PricingTicketingSubsequentType193023S:
             "name": "totalFareAmount",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
         }
     )
     total_tax_amount: Optional[Decimal] = field(

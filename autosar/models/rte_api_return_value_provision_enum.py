@@ -27,10 +27,7 @@ class RteApiReturnValueProvisionEnum:
         name = "RTE-API-RETURN-VALUE-PROVISION-ENUM"
 
     value: Optional[RteApiReturnValueProvisionEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

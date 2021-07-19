@@ -26,10 +26,7 @@ class EthernetPhysicalLayerTypeEnum:
         name = "ETHERNET-PHYSICAL-LAYER-TYPE-ENUM"
 
     value: Optional[EthernetPhysicalLayerTypeEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

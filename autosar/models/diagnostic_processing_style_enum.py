@@ -27,10 +27,7 @@ class DiagnosticProcessingStyleEnum:
         name = "DIAGNOSTIC-PROCESSING-STYLE-ENUM"
 
     value: Optional[DiagnosticProcessingStyleEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

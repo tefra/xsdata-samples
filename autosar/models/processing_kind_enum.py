@@ -26,10 +26,7 @@ class ProcessingKindEnum:
         name = "PROCESSING-KIND-ENUM"
 
     value: Optional[ProcessingKindEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

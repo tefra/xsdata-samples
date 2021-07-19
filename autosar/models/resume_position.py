@@ -27,10 +27,7 @@ class ResumePosition:
         name = "RESUME-POSITION"
 
     value: Optional[ResumePositionSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

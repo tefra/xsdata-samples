@@ -26,10 +26,7 @@ class SynchronizationTypeEnum:
         name = "SYNCHRONIZATION-TYPE-ENUM"
 
     value: Optional[SynchronizationTypeEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

@@ -26,10 +26,7 @@ class SerializationTechnologyEnum:
         name = "SERIALIZATION-TECHNOLOGY-ENUM"
 
     value: Optional[SerializationTechnologyEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

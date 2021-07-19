@@ -28,10 +28,7 @@ class UdpCollectionTriggerEnum:
         name = "UDP-COLLECTION-TRIGGER-ENUM"
 
     value: Optional[UdpCollectionTriggerEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

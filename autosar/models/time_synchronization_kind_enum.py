@@ -26,10 +26,7 @@ class TimeSynchronizationKindEnum:
         name = "TIME-SYNCHRONIZATION-KIND-ENUM"
 
     value: Optional[TimeSynchronizationKindEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

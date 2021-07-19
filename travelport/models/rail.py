@@ -89,10 +89,7 @@ class JourneyRemark:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     category: Optional[str] = field(
         default=None,
@@ -119,10 +116,7 @@ class OperatingCompany:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     code: Optional[str] = field(
         default=None,
@@ -731,7 +725,6 @@ class TicketAdvisory:
     value: Optional[str] = field(
         default=None,
         metadata={
-            "required": True,
             "min_length": 1,
             "max_length": 500,
         }
@@ -992,10 +985,7 @@ class RailFareId:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     key: Optional[str] = field(
         default=None,
@@ -1051,10 +1041,7 @@ class RailFareNote:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     key: Optional[str] = field(
         default=None,
@@ -1289,10 +1276,7 @@ class RailSegmentInfo:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     category: Optional[str] = field(
         default=None,

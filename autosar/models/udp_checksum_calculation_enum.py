@@ -26,10 +26,7 @@ class UdpChecksumCalculationEnum:
         name = "UDP-CHECKSUM-CALCULATION-ENUM"
 
     value: Optional[UdpChecksumCalculationEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

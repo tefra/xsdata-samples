@@ -27,10 +27,7 @@ class DiagnosticOperationCycleTypeEnum:
         name = "DIAGNOSTIC-OPERATION-CYCLE-TYPE-ENUM"
 
     value: Optional[DiagnosticOperationCycleTypeEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

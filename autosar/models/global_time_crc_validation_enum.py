@@ -26,10 +26,7 @@ class GlobalTimeCrcValidationEnum:
         name = "GLOBAL-TIME-CRC-VALIDATION-ENUM"
 
     value: Optional[GlobalTimeCrcValidationEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

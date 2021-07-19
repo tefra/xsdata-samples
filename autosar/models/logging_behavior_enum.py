@@ -27,10 +27,7 @@ class LoggingBehaviorEnum:
         name = "LOGGING-BEHAVIOR-ENUM"
 
     value: Optional[LoggingBehaviorEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

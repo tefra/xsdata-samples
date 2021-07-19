@@ -26,10 +26,7 @@ class DiagnosticTypeOfFreezeFrameRecordNumerationEnum:
         name = "DIAGNOSTIC-TYPE-OF-FREEZE-FRAME-RECORD-NUMERATION-ENUM"
 
     value: Optional[DiagnosticTypeOfFreezeFrameRecordNumerationEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

@@ -39,6 +39,5 @@ class SubscriptionTerminatedNotificationStructure(ProducerResponseStructure):
                     "namespace": "http://www.siri.org.uk/siri",
                 },
             ),
-            "min_occurs": 1,
         }
     )

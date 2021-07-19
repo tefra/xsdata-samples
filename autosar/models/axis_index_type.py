@@ -37,7 +37,6 @@ class AxisIndexType:
     value: Optional[str] = field(
         default=None,
         metadata={
-            "required": True,
             "pattern": r"[0-9]+|STRING|ARRAY",
         }
     )

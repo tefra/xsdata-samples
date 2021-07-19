@@ -26,10 +26,7 @@ class DiagnosticRecordTriggerEnum:
         name = "DIAGNOSTIC-RECORD-TRIGGER-ENUM"
 
     value: Optional[DiagnosticRecordTriggerEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

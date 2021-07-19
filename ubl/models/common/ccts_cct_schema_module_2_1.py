@@ -8,10 +8,7 @@ __NAMESPACE__ = "urn:un:unece:uncefact:data:specification:CoreComponentTypeSchem
 @dataclass(frozen=True)
 class AmountType:
     value: Optional[Decimal] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     currency_id: Optional[str] = field(
         default=None,
@@ -34,7 +31,6 @@ class BinaryObjectType:
     value: Optional[bytes] = field(
         default=None,
         metadata={
-            "required": True,
             "format": "base64",
         }
     )
@@ -82,10 +78,7 @@ class BinaryObjectType:
 @dataclass(frozen=True)
 class CodeType:
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     list_id: Optional[str] = field(
         default=None,
@@ -154,10 +147,7 @@ class CodeType:
 @dataclass(frozen=True)
 class DateTimeType:
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     format: Optional[str] = field(
         default=None,
@@ -170,10 +160,7 @@ class DateTimeType:
 @dataclass(frozen=True)
 class IdentifierType:
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     scheme_id: Optional[str] = field(
         default=None,
@@ -229,10 +216,7 @@ class IdentifierType:
 @dataclass(frozen=True)
 class IndicatorType:
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     format: Optional[str] = field(
         default=None,
@@ -245,10 +229,7 @@ class IndicatorType:
 @dataclass(frozen=True)
 class MeasureType:
     value: Optional[Decimal] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     unit_code: Optional[str] = field(
         default=None,
@@ -269,10 +250,7 @@ class MeasureType:
 @dataclass(frozen=True)
 class NumericType:
     value: Optional[Decimal] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     format: Optional[str] = field(
         default=None,
@@ -285,10 +263,7 @@ class NumericType:
 @dataclass(frozen=True)
 class QuantityType:
     value: Optional[Decimal] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     unit_code: Optional[str] = field(
         default=None,
@@ -323,10 +298,7 @@ class QuantityType:
 @dataclass(frozen=True)
 class TextType:
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     language_id: Optional[str] = field(
         default=None,

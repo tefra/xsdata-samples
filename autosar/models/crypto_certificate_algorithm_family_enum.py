@@ -27,10 +27,7 @@ class CryptoCertificateAlgorithmFamilyEnum:
         name = "CRYPTO-CERTIFICATE-ALGORITHM-FAMILY-ENUM"
 
     value: Optional[CryptoCertificateAlgorithmFamilyEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

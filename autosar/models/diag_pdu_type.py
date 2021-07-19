@@ -26,10 +26,7 @@ class DiagPduType:
         name = "DIAG-PDU-TYPE"
 
     value: Optional[DiagPduTypeSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

@@ -33,7 +33,6 @@ class LimitValue:
     value: Optional[str] = field(
         default=None,
         metadata={
-            "required": True,
             "pattern": r"(0[xX][0-9a-fA-F]+)|(0[0-7]+)|(0[bB][0-1]+)|(([+\-]?[1-9][0-9]+(\.[0-9]+)?|[+\-]?[0-9](\.[0-9]+)?)([eE]([+\-]?)[0-9]+)?)|\.0|INF|-INF|NaN",
         }
     )

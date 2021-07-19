@@ -185,7 +185,6 @@ class AdminEmail:
     value: Optional[str] = field(
         default=None,
         metadata={
-            "required": True,
             "pattern": r"[^@]+@[^.]+\..+",
         }
     )
@@ -204,10 +203,7 @@ class AdminNotes:
         namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -223,10 +219,7 @@ class OtherHeiId:
         target_namespace = "https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
 
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     type: Optional[OtherHeiIdValue] = field(
         default=None,
@@ -260,7 +253,6 @@ class HttpwithOptionalLang:
     value: Optional[str] = field(
         default=None,
         metadata={
-            "required": True,
             "pattern": r"https?://.+",
         }
     )
@@ -289,10 +281,7 @@ class MultilineStringWithOptionalLang:
         target_namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     lang: Optional[Union[str, LangValue]] = field(
         default=None,
@@ -326,10 +315,7 @@ class StringWithOptionalLang:
         target_namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     lang: Optional[Union[str, LangValue]] = field(
         default=None,
@@ -437,7 +423,6 @@ class ErrorResponse:
         metadata={
             "name": "developer-message",
             "type": "Element",
-            "required": True,
         }
     )
     user_message: List[MultilineStringWithOptionalLang] = field(
@@ -966,7 +951,6 @@ class Catalogue:
             value: Optional[bytes] = field(
                 default=None,
                 metadata={
-                    "required": True,
                     "format": "base64",
                 }
             )

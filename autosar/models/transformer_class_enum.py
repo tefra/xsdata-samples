@@ -26,10 +26,7 @@ class TransformerClassEnum:
         name = "TRANSFORMER-CLASS-ENUM"
 
     value: Optional[TransformerClassEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

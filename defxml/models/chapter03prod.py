@@ -8,10 +8,7 @@ __NAMESPACE__ = "http://example.org/prod"
 @dataclass
 class ProdNumType:
     value: Optional[int] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     id: Optional[str] = field(
         default=None,
@@ -26,10 +23,7 @@ class ProdNumType:
 @dataclass
 class SizeType:
     value: Optional[int] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     system: Optional[str] = field(
         default=None,

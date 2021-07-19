@@ -24,10 +24,7 @@ class AcceptedIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -37,10 +34,7 @@ class ActualDeliveryDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -50,10 +44,7 @@ class ActualDeliveryTime:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -63,10 +54,7 @@ class ActualDespatchDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -76,10 +64,7 @@ class ActualDespatchTime:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -89,10 +74,7 @@ class ActualPickupDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -102,10 +84,7 @@ class ActualPickupTime:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -115,10 +94,7 @@ class AdValoremIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -128,10 +104,7 @@ class AnimalFoodApprovedIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -141,10 +114,7 @@ class AnimalFoodIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -154,10 +124,7 @@ class ApprovalDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -167,10 +134,7 @@ class AuctionConstraintIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -180,10 +144,7 @@ class AvailabilityDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -193,10 +154,7 @@ class AwardDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -206,10 +164,7 @@ class AwardTime:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -219,10 +174,7 @@ class BackOrderAllowedIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -232,10 +184,7 @@ class BalanceBroughtForwardIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -245,10 +194,7 @@ class BasedOnConsensusIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -258,10 +204,7 @@ class BestBeforeDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -271,10 +214,7 @@ class BindingOnBuyerIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -284,10 +224,7 @@ class BirthDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -297,10 +234,7 @@ class BulkCargoIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -310,10 +244,7 @@ class CallDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -323,10 +254,7 @@ class CallTime:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -336,10 +264,7 @@ class CandidateReductionConstraintIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -349,10 +274,7 @@ class CatalogueIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -362,10 +284,7 @@ class ChargeIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -375,10 +294,7 @@ class ComparisonForecastIssueDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -388,10 +304,7 @@ class ComparisonForecastIssueTime:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -401,10 +314,7 @@ class CompletionIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -414,10 +324,7 @@ class ConsolidatableIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -427,10 +334,7 @@ class ContainerizedIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -440,10 +344,7 @@ class CopyIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -453,10 +354,7 @@ class CustomsImportClassifiedIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -466,10 +364,7 @@ class DangerousGoodsApprovedIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -479,10 +374,7 @@ class Date:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -492,10 +384,7 @@ class DueDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -505,10 +394,7 @@ class EarliestPickupDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -518,10 +404,7 @@ class EarliestPickupTime:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -531,10 +414,7 @@ class EffectiveDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -544,10 +424,7 @@ class EffectiveTime:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -557,10 +434,7 @@ class EndDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -570,10 +444,7 @@ class EndTime:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -583,10 +454,7 @@ class EstimatedDeliveryDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -596,10 +464,7 @@ class EstimatedDeliveryTime:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -609,10 +474,7 @@ class EstimatedDespatchDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -622,10 +484,7 @@ class EstimatedDespatchTime:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -635,10 +494,7 @@ class ExpiryDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -648,10 +504,7 @@ class ExpiryTime:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -661,10 +514,7 @@ class FirstShipmentAvailibilityDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -674,10 +524,7 @@ class FollowupContractIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -687,10 +534,7 @@ class FreeOfChargeIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -700,10 +544,7 @@ class FrozenDocumentIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -713,10 +554,7 @@ class FullyPaidSharesIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -726,10 +564,7 @@ class GeneralCargoIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -739,10 +574,7 @@ class GovernmentAgreementConstraintIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -752,10 +584,7 @@ class GuaranteedDespatchDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -765,10 +594,7 @@ class GuaranteedDespatchTime:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -778,10 +604,7 @@ class HazardousRiskIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -791,10 +614,7 @@ class HumanFoodApprovedIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -804,10 +624,7 @@ class HumanFoodIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -817,10 +634,7 @@ class IndicationIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -830,10 +644,7 @@ class InstallmentDueDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -843,10 +654,7 @@ class IssueDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -856,10 +664,7 @@ class IssueTime:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -869,10 +674,7 @@ class ItemUpdateRequestIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -882,10 +684,7 @@ class LastRevisionDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -895,10 +694,7 @@ class LastRevisionTime:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -908,10 +704,7 @@ class LatestDeliveryDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -921,10 +714,7 @@ class LatestDeliveryTime:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -934,10 +724,7 @@ class LatestMeterReadingDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -947,10 +734,7 @@ class LatestPickupDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -960,10 +744,7 @@ class LatestPickupTime:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -973,10 +754,7 @@ class LatestProposalAcceptanceDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -986,10 +764,7 @@ class LatestSecurityClearanceDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -999,10 +774,7 @@ class LegalStatusIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1012,10 +784,7 @@ class LivestockIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1025,10 +794,7 @@ class ManufactureDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1038,10 +804,7 @@ class ManufactureTime:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1051,10 +814,7 @@ class MarkAttentionIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1064,10 +824,7 @@ class MarkCareIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1077,10 +834,7 @@ class NominationDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1090,10 +844,7 @@ class NominationTime:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1103,10 +854,7 @@ class OccurrenceDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1116,10 +864,7 @@ class OccurrenceTime:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1129,10 +874,7 @@ class OnCarriageIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1142,10 +884,7 @@ class OptionalLineItemIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1155,10 +894,7 @@ class OrderableIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1168,10 +904,7 @@ class OtherConditionsIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1181,10 +914,7 @@ class PaidDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1194,10 +924,7 @@ class PaidTime:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1207,10 +934,7 @@ class PartialDeliveryIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1220,10 +944,7 @@ class PaymentDueDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1233,10 +954,7 @@ class PlannedDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1246,10 +964,7 @@ class PowerIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1259,10 +974,7 @@ class PreCarriageIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1272,10 +984,7 @@ class PrepaidIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1285,10 +994,7 @@ class PreviousMeterReadingDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1298,10 +1004,7 @@ class PricingUpdateRequestIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1311,10 +1014,7 @@ class PrizeIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1324,10 +1024,7 @@ class PublishAwardIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1337,10 +1034,7 @@ class ReceivedDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1350,10 +1044,7 @@ class ReferenceDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1363,10 +1054,7 @@ class ReferenceTime:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1376,10 +1064,7 @@ class RefrigeratedIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1389,10 +1074,7 @@ class RefrigerationOnIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1402,10 +1084,7 @@ class RegisteredDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1415,10 +1094,7 @@ class RegisteredTime:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1428,10 +1104,7 @@ class RegistrationDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1441,10 +1114,7 @@ class RegistrationExpirationDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1454,10 +1124,7 @@ class RequestedDeliveryDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1467,10 +1134,7 @@ class RequestedDespatchDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1480,10 +1144,7 @@ class RequestedDespatchTime:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1493,10 +1154,7 @@ class RequestedPublicationDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1506,10 +1164,7 @@ class RequiredCurriculaIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1519,10 +1174,7 @@ class RequiredDeliveryDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1532,10 +1184,7 @@ class RequiredDeliveryTime:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1545,10 +1194,7 @@ class ResolutionDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1558,10 +1204,7 @@ class ResolutionTime:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1571,10 +1214,7 @@ class ResponseDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1584,10 +1224,7 @@ class ResponseTime:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1597,10 +1234,7 @@ class ReturnabilityIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1610,10 +1244,7 @@ class ReturnableMaterialIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1623,10 +1254,7 @@ class RevisionDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1636,10 +1264,7 @@ class RevisionTime:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1649,10 +1274,7 @@ class SoleProprietorshipIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1662,10 +1284,7 @@ class SourceForecastIssueDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1675,10 +1294,7 @@ class SourceForecastIssueTime:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1688,10 +1304,7 @@ class SpecialSecurityIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1701,10 +1314,7 @@ class SplitConsignmentIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1714,10 +1324,7 @@ class StartDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1727,10 +1334,7 @@ class StartTime:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1740,10 +1344,7 @@ class StatusAvailableIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1753,10 +1354,7 @@ class SubmissionDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1766,10 +1364,7 @@ class SubmissionDueDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1779,10 +1374,7 @@ class TaxEvidenceIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1792,10 +1384,7 @@ class TaxIncludedIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1805,10 +1394,7 @@ class TaxPointDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1818,10 +1404,7 @@ class ThirdPartyPayerIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1831,10 +1414,7 @@ class ToOrderIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1844,10 +1424,7 @@ class UnknownPriceIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1857,10 +1434,7 @@ class ValidationDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1870,10 +1444,7 @@ class ValidationTime:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1883,10 +1454,7 @@ class ValidityStartDate:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -1896,10 +1464,7 @@ class VariantConstraintIndicator:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 

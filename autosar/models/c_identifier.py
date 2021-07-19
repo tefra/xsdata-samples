@@ -34,7 +34,6 @@ class CIdentifier:
     value: Optional[str] = field(
         default=None,
         metadata={
-            "required": True,
             "pattern": r"[a-zA-Z_][a-zA-Z0-9_]*",
         }
     )

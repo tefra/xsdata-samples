@@ -27,10 +27,7 @@ class IPsecIpProtocolEnum:
         name = "I-PSEC-IP-PROTOCOL-ENUM"
 
     value: Optional[IPsecIpProtocolEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

@@ -26,10 +26,7 @@ class SecuredPduHeaderEnum:
         name = "SECURED-PDU-HEADER-ENUM"
 
     value: Optional[SecuredPduHeaderEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

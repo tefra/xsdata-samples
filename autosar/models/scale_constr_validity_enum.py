@@ -26,10 +26,7 @@ class ScaleConstrValidityEnum:
         name = "SCALE-CONSTR-VALIDITY-ENUM"
 
     value: Optional[ScaleConstrValidityEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

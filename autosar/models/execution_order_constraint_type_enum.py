@@ -26,10 +26,7 @@ class ExecutionOrderConstraintTypeEnum:
         name = "EXECUTION-ORDER-CONSTRAINT-TYPE-ENUM"
 
     value: Optional[ExecutionOrderConstraintTypeEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

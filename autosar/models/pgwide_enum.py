@@ -27,10 +27,7 @@ class PgwideEnum:
         name = "PGWIDE-ENUM"
 
     value: Optional[PgwideEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

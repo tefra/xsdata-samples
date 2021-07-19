@@ -27,10 +27,7 @@ class GraphicFitEnum:
         name = "GRAPHIC-FIT-ENUM"
 
     value: Optional[GraphicFitEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

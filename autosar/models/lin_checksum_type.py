@@ -27,10 +27,7 @@ class LinChecksumType:
         name = "LIN-CHECKSUM-TYPE"
 
     value: Optional[LinChecksumTypeSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

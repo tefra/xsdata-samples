@@ -27,10 +27,7 @@ class EnvironmentCaptureToReportingEnum:
         name = "ENVIRONMENT-CAPTURE-TO-REPORTING-ENUM"
 
     value: Optional[EnvironmentCaptureToReportingEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

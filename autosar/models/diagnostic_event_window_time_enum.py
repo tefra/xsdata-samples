@@ -26,10 +26,7 @@ class DiagnosticEventWindowTimeEnum:
         name = "DIAGNOSTIC-EVENT-WINDOW-TIME-ENUM"
 
     value: Optional[DiagnosticEventWindowTimeEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

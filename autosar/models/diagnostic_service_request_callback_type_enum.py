@@ -27,10 +27,7 @@ class DiagnosticServiceRequestCallbackTypeEnum:
         name = "DIAGNOSTIC-SERVICE-REQUEST-CALLBACK-TYPE-ENUM"
 
     value: Optional[DiagnosticServiceRequestCallbackTypeEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

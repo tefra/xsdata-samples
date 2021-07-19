@@ -27,10 +27,7 @@ class ShowResourceLongNameEnum:
         name = "SHOW-RESOURCE-LONG-NAME-ENUM"
 
     value: Optional[ShowResourceLongNameEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

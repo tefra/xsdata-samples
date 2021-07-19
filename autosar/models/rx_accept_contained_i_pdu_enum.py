@@ -27,10 +27,7 @@ class RxAcceptContainedIPduEnum:
         name = "RX-ACCEPT-CONTAINED-I-PDU-ENUM"
 
     value: Optional[RxAcceptContainedIPduEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

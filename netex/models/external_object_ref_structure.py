@@ -7,10 +7,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 @dataclass
 class ExternalObjectRefStructure:
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     type: Optional[str] = field(
         default=None,

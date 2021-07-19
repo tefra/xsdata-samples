@@ -26,10 +26,7 @@ class DiagnosticRoutineTypeEnum:
         name = "DIAGNOSTIC-ROUTINE-TYPE-ENUM"
 
     value: Optional[DiagnosticRoutineTypeEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

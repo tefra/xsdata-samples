@@ -29,10 +29,7 @@ class DefaultValueApplicationStrategyEnum:
         name = "DEFAULT-VALUE-APPLICATION-STRATEGY-ENUM"
 
     value: Optional[DefaultValueApplicationStrategyEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

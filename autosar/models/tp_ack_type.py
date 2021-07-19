@@ -26,10 +26,7 @@ class TpAckType:
         name = "TP-ACK-TYPE"
 
     value: Optional[TpAckTypeSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

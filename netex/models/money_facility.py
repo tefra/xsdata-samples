@@ -11,8 +11,5 @@ class MoneyFacility:
         namespace = "http://www.netex.org.uk/netex"
 
     value: Optional[MoneyFacilityEnumeration] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )

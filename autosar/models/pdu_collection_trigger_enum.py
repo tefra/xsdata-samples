@@ -27,10 +27,7 @@ class PduCollectionTriggerEnum:
         name = "PDU-COLLECTION-TRIGGER-ENUM"
 
     value: Optional[PduCollectionTriggerEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

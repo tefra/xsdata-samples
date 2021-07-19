@@ -26,10 +26,7 @@ class MappingScopeEnum:
         name = "MAPPING-SCOPE-ENUM"
 
     value: Optional[MappingScopeEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

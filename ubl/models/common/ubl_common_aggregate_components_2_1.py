@@ -1858,7 +1858,6 @@ class ForecastExceptionType:
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     issue_time: Optional[XmlTime] = field(
@@ -2174,7 +2173,6 @@ class MeterReadingType:
             "name": "PreviousMeterReadingDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     previous_meter_quantity: Optional[PreviousMeterQuantity] = field(
@@ -2192,7 +2190,6 @@ class MeterReadingType:
             "name": "LatestMeterReadingDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     latest_meter_quantity: Optional[LatestMeterQuantity] = field(
@@ -12335,7 +12332,6 @@ class AllowanceChargeType:
             "name": "ChargeIndicator",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     allowance_charge_reason_code: Optional[AllowanceChargeReasonCode] = field(
@@ -17122,7 +17118,6 @@ class QualificationResolutionType:
             "name": "ResolutionDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     resolution_time: Optional[XmlTime] = field(
@@ -20103,7 +20098,6 @@ class TenderResultType:
             "name": "AwardDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     award_time: Optional[XmlTime] = field(
@@ -21768,7 +21762,6 @@ class TelecommunicationsServiceType:
             "name": "CallDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     call_time: Optional[XmlTime] = field(
@@ -21777,7 +21770,6 @@ class TelecommunicationsServiceType:
             "name": "CallTime",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     service_number_called: Optional[ServiceNumberCalled] = field(
@@ -22173,7 +22165,6 @@ class ForecastRevisionLineType:
             "name": "SourceForecastIssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     source_forecast_issue_time: Optional[XmlTime] = field(
@@ -22182,7 +22173,6 @@ class ForecastRevisionLineType:
             "name": "SourceForecastIssueTime",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     adjustment_reason_code: Optional[AdjustmentReasonCode] = field(

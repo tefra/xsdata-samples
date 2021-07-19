@@ -26,10 +26,7 @@ class DiagnosticEventDisplacementStrategyEnum:
         name = "DIAGNOSTIC-EVENT-DISPLACEMENT-STRATEGY-ENUM"
 
     value: Optional[DiagnosticEventDisplacementStrategyEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

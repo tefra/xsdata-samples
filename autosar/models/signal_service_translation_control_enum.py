@@ -27,10 +27,7 @@ class SignalServiceTranslationControlEnum:
         name = "SIGNAL-SERVICE-TRANSLATION-CONTROL-ENUM"
 
     value: Optional[SignalServiceTranslationControlEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

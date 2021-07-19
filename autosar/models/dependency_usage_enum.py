@@ -26,10 +26,7 @@ class DependencyUsageEnum:
         name = "DEPENDENCY-USAGE-ENUM"
 
     value: Optional[DependencyUsageEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

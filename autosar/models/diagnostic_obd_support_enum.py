@@ -29,10 +29,7 @@ class DiagnosticObdSupportEnum:
         name = "DIAGNOSTIC-OBD-SUPPORT-ENUM"
 
     value: Optional[DiagnosticObdSupportEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

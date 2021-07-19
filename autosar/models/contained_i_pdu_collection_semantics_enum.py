@@ -26,10 +26,7 @@ class ContainedIPduCollectionSemanticsEnum:
         name = "CONTAINED-I-PDU-COLLECTION-SEMANTICS-ENUM"
 
     value: Optional[ContainedIPduCollectionSemanticsEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

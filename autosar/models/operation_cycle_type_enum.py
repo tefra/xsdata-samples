@@ -26,10 +26,7 @@ class OperationCycleTypeEnum:
         name = "OPERATION-CYCLE-TYPE-ENUM"
 
     value: Optional[OperationCycleTypeEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

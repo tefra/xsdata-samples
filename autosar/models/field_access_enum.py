@@ -26,10 +26,7 @@ class FieldAccessEnum:
         name = "FIELD-ACCESS-ENUM"
 
     value: Optional[FieldAccessEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

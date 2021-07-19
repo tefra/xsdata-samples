@@ -24,10 +24,7 @@ class SecurityEventReportingModeEnum:
         name = "SECURITY-EVENT-REPORTING-MODE-ENUM"
 
     value: Optional[SecurityEventReportingModeEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

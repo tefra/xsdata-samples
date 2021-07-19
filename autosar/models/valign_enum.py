@@ -26,10 +26,7 @@ class ValignEnum:
         name = "VALIGN-ENUM"
 
     value: Optional[ValignEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

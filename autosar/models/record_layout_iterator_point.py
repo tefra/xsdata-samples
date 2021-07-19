@@ -31,7 +31,6 @@ class RecordLayoutIteratorPoint:
     value: Optional[str] = field(
         default=None,
         metadata={
-            "required": True,
             "pattern": r"-?([0-9]+|MAX-TEXT-SIZE|ARRAY-SIZE)",
         }
     )

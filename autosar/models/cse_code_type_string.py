@@ -27,10 +27,7 @@ class CseCodeTypeString:
         name = "CSE-CODE-TYPE-STRING"
 
     value: Optional[int] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

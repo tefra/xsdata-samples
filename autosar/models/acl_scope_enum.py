@@ -27,10 +27,7 @@ class AclScopeEnum:
         name = "ACL-SCOPE-ENUM"
 
     value: Optional[AclScopeEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

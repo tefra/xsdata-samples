@@ -10,8 +10,5 @@ class RequestorRef:
         namespace = "http://www.siri.org.uk/siri"
 
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )

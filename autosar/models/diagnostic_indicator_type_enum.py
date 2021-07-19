@@ -26,10 +26,7 @@ class DiagnosticIndicatorTypeEnum:
         name = "DIAGNOSTIC-INDICATOR-TYPE-ENUM"
 
     value: Optional[DiagnosticIndicatorTypeEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

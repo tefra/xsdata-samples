@@ -26,10 +26,7 @@ class DiagnosticClearEventBehaviorEnum:
         name = "DIAGNOSTIC-CLEAR-EVENT-BEHAVIOR-ENUM"
 
     value: Optional[DiagnosticClearEventBehaviorEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

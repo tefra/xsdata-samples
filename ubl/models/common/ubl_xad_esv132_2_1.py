@@ -93,7 +93,6 @@ class EncapsulatedPkidataType:
     value: Optional[bytes] = field(
         default=None,
         metadata={
-            "required": True,
             "format": "base64",
         }
     )
@@ -199,10 +198,7 @@ class Spuri:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -248,10 +244,7 @@ class SigningTime:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
     value: Optional[XmlDateTime] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -372,7 +365,6 @@ class DigestAlgAndValueType:
             "name": "DigestValue",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
-            "required": True,
             "format": "base64",
         }
     )
@@ -388,10 +380,7 @@ class EncapsulatedPkidata(EncapsulatedPkidataType):
 @dataclass(frozen=True)
 class IdentifierType:
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     qualifier: Optional[QualifierType] = field(
         default=None,
@@ -527,7 +516,6 @@ class ReferenceInfoType:
             "name": "DigestValue",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
-            "required": True,
             "format": "base64",
         }
     )

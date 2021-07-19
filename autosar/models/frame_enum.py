@@ -27,10 +27,7 @@ class FrameEnum:
         name = "FRAME-ENUM"
 
     value: Optional[FrameEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

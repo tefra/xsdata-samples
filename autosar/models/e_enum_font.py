@@ -26,10 +26,7 @@ class EEnumFont:
         name = "E-ENUM-FONT"
 
     value: Optional[EEnumFontSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

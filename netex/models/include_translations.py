@@ -10,8 +10,5 @@ class IncludeTranslations:
         namespace = "http://www.siri.org.uk/siri"
 
     value: Optional[bool] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )

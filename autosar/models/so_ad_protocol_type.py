@@ -26,10 +26,7 @@ class SoAdProtocolType:
         name = "SO-AD-PROTOCOL-TYPE"
 
     value: Optional[SoAdProtocolTypeSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

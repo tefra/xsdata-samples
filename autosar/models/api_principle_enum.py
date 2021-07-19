@@ -27,10 +27,7 @@ class ApiPrincipleEnum:
         name = "API-PRINCIPLE-ENUM"
 
     value: Optional[ApiPrincipleEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

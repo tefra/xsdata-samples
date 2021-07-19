@@ -11,8 +11,5 @@ class UicProductCharacteristic:
         namespace = "http://www.netex.org.uk/netex"
 
     value: Optional[UicProductCharacteristicEnumeration] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
