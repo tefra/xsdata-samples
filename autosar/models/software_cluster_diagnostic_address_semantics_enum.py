@@ -27,10 +27,7 @@ class SoftwareClusterDiagnosticAddressSemanticsEnum:
         name = "SOFTWARE-CLUSTER-DIAGNOSTIC-ADDRESS-SEMANTICS-ENUM"
 
     value: Optional[SoftwareClusterDiagnosticAddressSemanticsEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

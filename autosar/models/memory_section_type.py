@@ -28,10 +28,7 @@ class MemorySectionType:
         name = "MEMORY-SECTION-TYPE"
 
     value: Optional[MemorySectionTypeSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

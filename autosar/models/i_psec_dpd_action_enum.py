@@ -26,10 +26,7 @@ class IPsecDpdActionEnum:
         name = "I-PSEC-DPD-ACTION-ENUM"
 
     value: Optional[IPsecDpdActionEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

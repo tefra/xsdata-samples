@@ -27,10 +27,7 @@ class BswCallType:
         name = "BSW-CALL-TYPE"
 
     value: Optional[BswCallTypeSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

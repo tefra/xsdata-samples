@@ -26,10 +26,7 @@ class NetworkTargetAddressType:
         name = "NETWORK-TARGET-ADDRESS-TYPE"
 
     value: Optional[NetworkTargetAddressTypeSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

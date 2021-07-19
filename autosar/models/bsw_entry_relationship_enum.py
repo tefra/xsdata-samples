@@ -24,10 +24,7 @@ class BswEntryRelationshipEnum:
         name = "BSW-ENTRY-RELATIONSHIP-ENUM"
 
     value: Optional[BswEntryRelationshipEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

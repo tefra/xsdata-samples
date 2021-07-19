@@ -27,10 +27,7 @@ class PersistencyCollectionLevelUpdateStrategyEnum:
         name = "PERSISTENCY-COLLECTION-LEVEL-UPDATE-STRATEGY-ENUM"
 
     value: Optional[PersistencyCollectionLevelUpdateStrategyEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

@@ -29,7 +29,6 @@ class Boolean:
     value: Optional[str] = field(
         default=None,
         metadata={
-            "required": True,
             "pattern": r"0|1|true|false",
         }
     )

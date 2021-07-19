@@ -26,10 +26,7 @@ class DiagnosticDebounceBehaviorEnum:
         name = "DIAGNOSTIC-DEBOUNCE-BEHAVIOR-ENUM"
 
     value: Optional[DiagnosticDebounceBehaviorEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

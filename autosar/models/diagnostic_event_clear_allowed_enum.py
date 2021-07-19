@@ -26,10 +26,7 @@ class DiagnosticEventClearAllowedEnum:
         name = "DIAGNOSTIC-EVENT-CLEAR-ALLOWED-ENUM"
 
     value: Optional[DiagnosticEventClearAllowedEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

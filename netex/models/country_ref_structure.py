@@ -8,10 +8,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 @dataclass
 class CountryRefStructure:
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     ref: Optional[IanaCountryTldEnumeration] = field(
         default=None,

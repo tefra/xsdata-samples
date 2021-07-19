@@ -26,10 +26,7 @@ class IPduSignalProcessingEnum:
         name = "I-PDU-SIGNAL-PROCESSING-ENUM"
 
     value: Optional[IPduSignalProcessingEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

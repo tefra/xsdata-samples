@@ -26,10 +26,7 @@ class FmFeatureSelectionState:
         name = "FM-FEATURE-SELECTION-STATE"
 
     value: Optional[FmFeatureSelectionStateSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

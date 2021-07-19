@@ -27,10 +27,7 @@ class DiagnosticAccessPermissionValidityEnum:
         name = "DIAGNOSTIC-ACCESS-PERMISSION-VALIDITY-ENUM"
 
     value: Optional[DiagnosticAccessPermissionValidityEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

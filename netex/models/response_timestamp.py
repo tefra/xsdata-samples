@@ -11,8 +11,5 @@ class ResponseTimestamp:
         namespace = "http://www.siri.org.uk/siri"
 
     value: Optional[XmlDateTime] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )

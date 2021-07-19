@@ -24,10 +24,7 @@ class V2XSupportEnum:
         name = "V-2-X-SUPPORT-ENUM"
 
     value: Optional[V2XSupportEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

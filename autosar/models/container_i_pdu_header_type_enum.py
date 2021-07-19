@@ -27,10 +27,7 @@ class ContainerIPduHeaderTypeEnum:
         name = "CONTAINER-I-PDU-HEADER-TYPE-ENUM"
 
     value: Optional[ContainerIPduHeaderTypeEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

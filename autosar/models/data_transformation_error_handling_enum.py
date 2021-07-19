@@ -27,10 +27,7 @@ class DataTransformationErrorHandlingEnum:
         name = "DATA-TRANSFORMATION-ERROR-HANDLING-ENUM"
 
     value: Optional[DataTransformationErrorHandlingEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

@@ -26,10 +26,7 @@ class FloatEnum:
         name = "FLOAT-ENUM"
 
     value: Optional[FloatEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

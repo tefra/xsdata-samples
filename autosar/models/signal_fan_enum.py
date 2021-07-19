@@ -26,10 +26,7 @@ class SignalFanEnum:
         name = "SIGNAL-FAN-ENUM"
 
     value: Optional[SignalFanEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

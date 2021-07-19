@@ -27,10 +27,7 @@ class ExecutionStateReportingBehaviorEnum:
         name = "EXECUTION-STATE-REPORTING-BEHAVIOR-ENUM"
 
     value: Optional[ExecutionStateReportingBehaviorEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

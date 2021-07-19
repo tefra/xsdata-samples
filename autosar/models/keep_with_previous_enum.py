@@ -27,10 +27,7 @@ class KeepWithPreviousEnum:
         name = "KEEP-WITH-PREVIOUS-ENUM"
 
     value: Optional[KeepWithPreviousEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

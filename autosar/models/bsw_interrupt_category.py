@@ -26,10 +26,7 @@ class BswInterruptCategory:
         name = "BSW-INTERRUPT-CATEGORY"
 
     value: Optional[BswInterruptCategorySimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

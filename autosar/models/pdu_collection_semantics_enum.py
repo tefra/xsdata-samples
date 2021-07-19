@@ -26,10 +26,7 @@ class PduCollectionSemanticsEnum:
         name = "PDU-COLLECTION-SEMANTICS-ENUM"
 
     value: Optional[PduCollectionSemanticsEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

@@ -26,10 +26,7 @@ class DataFilterTypeEnum:
         name = "DATA-FILTER-TYPE-ENUM"
 
     value: Optional[DataFilterTypeEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

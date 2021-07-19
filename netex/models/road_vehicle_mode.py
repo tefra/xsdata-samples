@@ -11,8 +11,5 @@ class RoadVehicleMode:
         namespace = "http://www.netex.org.uk/netex"
 
     value: Optional[AllModesEnumeration] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )

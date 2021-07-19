@@ -27,10 +27,7 @@ class ItemType:
 @dataclass
 class SizeType:
     value: Optional[int] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     system: Optional[str] = field(
         default=None,

@@ -26,10 +26,7 @@ class TransmissionModeDefinitionEnum:
         name = "TRANSMISSION-MODE-DEFINITION-ENUM"
 
     value: Optional[TransmissionModeDefinitionEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

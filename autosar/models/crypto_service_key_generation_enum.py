@@ -28,10 +28,7 @@ class CryptoServiceKeyGenerationEnum:
         name = "CRYPTO-SERVICE-KEY-GENERATION-ENUM"
 
     value: Optional[CryptoServiceKeyGenerationEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

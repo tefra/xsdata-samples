@@ -27,10 +27,7 @@ class TriggerMode:
         name = "TRIGGER-MODE"
 
     value: Optional[TriggerModeSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class DataReceivedResponseStructure(ConsumerResponseEndpointStructure):
-    status: bool = field(
-        default=True,
+    status: Optional[bool] = field(
+        default=None,
         metadata={
             "name": "Status",
             "type": "Element",

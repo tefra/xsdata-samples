@@ -26,10 +26,7 @@ class MaximumMessageLengthType:
         name = "MAXIMUM-MESSAGE-LENGTH-TYPE"
 
     value: Optional[MaximumMessageLengthTypeSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

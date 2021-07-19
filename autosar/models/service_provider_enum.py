@@ -26,10 +26,7 @@ class ServiceProviderEnum:
         name = "SERVICE-PROVIDER-ENUM"
 
     value: Optional[ServiceProviderEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

@@ -27,10 +27,7 @@ class HandleTerminationAndRestartEnum:
         name = "HANDLE-TERMINATION-AND-RESTART-ENUM"
 
     value: Optional[HandleTerminationAndRestartEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

@@ -26,10 +26,7 @@ class CanTpChannelModeType:
         name = "CAN-TP-CHANNEL-MODE-TYPE"
 
     value: Optional[CanTpChannelModeTypeSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

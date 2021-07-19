@@ -26,10 +26,7 @@ class AreaEnumNohref:
         name = "AREA-ENUM-NOHREF"
 
     value: Optional[AreaEnumNohrefSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

@@ -27,10 +27,7 @@ class SoftwareClusterDependencyOperatorEnum:
         name = "SOFTWARE-CLUSTER-DEPENDENCY-OPERATOR-ENUM"
 
     value: Optional[SoftwareClusterDependencyOperatorEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

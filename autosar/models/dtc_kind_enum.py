@@ -27,10 +27,7 @@ class DtcKindEnum:
         name = "DTC-KIND-ENUM"
 
     value: Optional[DtcKindEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

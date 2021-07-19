@@ -12,10 +12,7 @@ class TypeOfOrganisationPartRef:
         namespace = "http://www.netex.org.uk/netex"
 
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     name_of_ref_class: Optional[str] = field(
         default=None,

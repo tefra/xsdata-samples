@@ -27,7 +27,6 @@ class Address:
     value: Optional[str] = field(
         default=None,
         metadata={
-            "required": True,
             "pattern": r"0x[0-9a-z]*",
         }
     )

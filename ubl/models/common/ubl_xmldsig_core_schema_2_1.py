@@ -62,7 +62,6 @@ class DsakeyValueType:
             "name": "Y",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
-            "required": True,
             "format": "base64",
         }
     )
@@ -123,7 +122,6 @@ class DigestValue:
     value: Optional[bytes] = field(
         default=None,
         metadata={
-            "required": True,
             "format": "base64",
         }
     )
@@ -135,10 +133,7 @@ class KeyName:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -148,10 +143,7 @@ class MgmtData:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
 
 
@@ -232,7 +224,6 @@ class RsakeyValueType:
             "name": "Modulus",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
-            "required": True,
             "format": "base64",
         }
     )
@@ -242,7 +233,6 @@ class RsakeyValueType:
             "name": "Exponent",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
-            "required": True,
             "format": "base64",
         }
     )
@@ -334,7 +324,6 @@ class SignatureValueType:
     value: Optional[bytes] = field(
         default=None,
         metadata={
-            "required": True,
             "format": "base64",
         }
     )
@@ -637,7 +626,6 @@ class ReferenceType:
             "name": "DigestValue",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
-            "required": True,
             "format": "base64",
         }
     )

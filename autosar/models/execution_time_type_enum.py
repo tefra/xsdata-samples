@@ -27,10 +27,7 @@ class ExecutionTimeTypeEnum:
         name = "EXECUTION-TIME-TYPE-ENUM"
 
     value: Optional[ExecutionTimeTypeEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

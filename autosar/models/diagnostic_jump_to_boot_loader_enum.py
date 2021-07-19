@@ -26,10 +26,7 @@ class DiagnosticJumpToBootLoaderEnum:
         name = "DIAGNOSTIC-JUMP-TO-BOOT-LOADER-ENUM"
 
     value: Optional[DiagnosticJumpToBootLoaderEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

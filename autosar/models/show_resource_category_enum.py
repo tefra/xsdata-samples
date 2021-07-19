@@ -27,10 +27,7 @@ class ShowResourceCategoryEnum:
         name = "SHOW-RESOURCE-CATEGORY-ENUM"
 
     value: Optional[ShowResourceCategoryEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

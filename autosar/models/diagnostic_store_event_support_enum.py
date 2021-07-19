@@ -27,10 +27,7 @@ class DiagnosticStoreEventSupportEnum:
         name = "DIAGNOSTIC-STORE-EVENT-SUPPORT-ENUM"
 
     value: Optional[DiagnosticStoreEventSupportEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

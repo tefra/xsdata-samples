@@ -28,10 +28,7 @@ class CycleRepetitionType:
         name = "CYCLE-REPETITION-TYPE"
 
     value: Optional[CycleRepetitionTypeSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

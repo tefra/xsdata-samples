@@ -26,10 +26,7 @@ class CommunicationDirectionType:
         name = "COMMUNICATION-DIRECTION-TYPE"
 
     value: Optional[CommunicationDirectionTypeSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

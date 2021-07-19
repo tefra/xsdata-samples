@@ -27,10 +27,7 @@ class RptPreparationEnum:
         name = "RPT-PREPARATION-ENUM"
 
     value: Optional[RptPreparationEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

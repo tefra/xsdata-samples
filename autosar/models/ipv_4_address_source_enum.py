@@ -26,10 +26,7 @@ class Ipv4AddressSourceEnum:
         name = "IPV-4-ADDRESS-SOURCE-ENUM"
 
     value: Optional[Ipv4AddressSourceEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

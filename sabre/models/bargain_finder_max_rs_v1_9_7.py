@@ -41,10 +41,7 @@ class AirFeeType:
             standard "minor unit".
     """
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     fee_code: Optional[str] = field(
         default=None,
@@ -127,10 +124,7 @@ class AirTaxType:
         published_currency:
     """
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     tax_code: Optional[str] = field(
         default=None,
@@ -532,10 +526,7 @@ class FreeTextType:
         language: Language identification.
     """
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     language: Optional[str] = field(
         default=None,
@@ -978,10 +969,7 @@ class ResponseLocationType:
             such as IATA, ARC, or internal code, etc.
     """
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     location_code: Optional[str] = field(
         default=None,
@@ -1015,10 +1003,7 @@ class SuccessType:
 @dataclass
 class SurchargesType:
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     ind: Optional[str] = field(
         default=None,
@@ -2413,7 +2398,6 @@ class FareInfoType:
             "name": "FareReference",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
             "min_length": 1,
             "max_length": 8,
         }
@@ -3846,7 +3830,6 @@ class PtcfareBreakdownType:
             value: Optional[str] = field(
                 default=None,
                 metadata={
-                    "required": True,
                     "min_length": 1,
                     "max_length": 16,
                 }
@@ -4013,10 +3996,7 @@ class PtcfareBreakdownType:
         @dataclass
         class FareType:
             value: Optional[str] = field(
-                default=None,
-                metadata={
-                    "required": True,
-                }
+                default=None
             )
             name: Optional[str] = field(
                 default=None,
@@ -4074,7 +4054,6 @@ class PtcfareBreakdownType:
                     "name": "FareReference",
                     "type": "Element",
                     "namespace": "http://www.opentravel.org/OTA/2003/05",
-                    "required": True,
                     "min_length": 1,
                     "max_length": 8,
                 }
@@ -4543,7 +4522,6 @@ class AirItineraryPricingInfoType:
                     "name": "FareReference",
                     "type": "Element",
                     "namespace": "http://www.opentravel.org/OTA/2003/05",
-                    "required": True,
                     "min_length": 1,
                     "max_length": 8,
                 }

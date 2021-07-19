@@ -27,10 +27,7 @@ class MonotonyEnum:
         name = "MONOTONY-ENUM"
 
     value: Optional[MonotonyEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

@@ -26,10 +26,7 @@ class IPsecModeEnum:
         name = "I-PSEC-MODE-ENUM"
 
     value: Optional[IPsecModeEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

@@ -35,7 +35,6 @@ class Sd:
     value: Optional[str] = field(
         default=None,
         metadata={
-            "required": True,
             "white_space": "preserve",
         }
     )
@@ -61,8 +60,8 @@ class Sd:
             "type": "Attribute",
         }
     )
-    space: Optional[SpaceValue] = field(
-        default=None,
+    space: SpaceValue = field(
+        default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",

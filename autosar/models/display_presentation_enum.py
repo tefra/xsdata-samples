@@ -27,10 +27,7 @@ class DisplayPresentationEnum:
         name = "DISPLAY-PRESENTATION-ENUM"
 
     value: Optional[DisplayPresentationEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

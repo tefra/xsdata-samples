@@ -26,10 +26,7 @@ class EventGroupControlTypeEnum:
         name = "EVENT-GROUP-CONTROL-TYPE-ENUM"
 
     value: Optional[EventGroupControlTypeEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

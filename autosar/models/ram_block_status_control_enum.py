@@ -27,10 +27,7 @@ class RamBlockStatusControlEnum:
         name = "RAM-BLOCK-STATUS-CONTROL-ENUM"
 
     value: Optional[RamBlockStatusControlEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

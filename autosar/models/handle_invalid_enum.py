@@ -26,10 +26,7 @@ class HandleInvalidEnum:
         name = "HANDLE-INVALID-ENUM"
 
     value: Optional[HandleInvalidEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

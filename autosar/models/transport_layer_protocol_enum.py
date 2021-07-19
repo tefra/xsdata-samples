@@ -26,10 +26,7 @@ class TransportLayerProtocolEnum:
         name = "TRANSPORT-LAYER-PROTOCOL-ENUM"
 
     value: Optional[TransportLayerProtocolEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

@@ -26,10 +26,7 @@ class DiagnosticDataCaptureEnum:
         name = "DIAGNOSTIC-DATA-CAPTURE-ENUM"
 
     value: Optional[DiagnosticDataCaptureEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

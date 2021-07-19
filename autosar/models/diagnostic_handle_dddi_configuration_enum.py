@@ -28,10 +28,7 @@ class DiagnosticHandleDddiConfigurationEnum:
         name = "DIAGNOSTIC-HANDLE-DDDI-CONFIGURATION-ENUM"
 
     value: Optional[DiagnosticHandleDddiConfigurationEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

@@ -24,10 +24,7 @@ class IPsecPolicyEnum:
         name = "I-PSEC-POLICY-ENUM"
 
     value: Optional[IPsecPolicyEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

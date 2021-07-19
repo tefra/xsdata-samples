@@ -27,10 +27,7 @@ class TdEventVariableDataPrototypeTypeEnum:
         name = "TD-EVENT-VARIABLE-DATA-PROTOTYPE-TYPE-ENUM"
 
     value: Optional[TdEventVariableDataPrototypeTypeEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

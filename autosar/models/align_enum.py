@@ -26,10 +26,7 @@ class AlignEnum:
         name = "ALIGN-ENUM"
 
     value: Optional[AlignEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

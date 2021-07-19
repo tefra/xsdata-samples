@@ -11,8 +11,8 @@ class AccessibilityLimitationVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "AccessibilityLimitation_VersionedChildStructure"
 
-    wheelchair_access: LimitationStatusEnumeration = field(
-        default=LimitationStatusEnumeration.FALSE,
+    wheelchair_access: Optional[LimitationStatusEnumeration] = field(
+        default=None,
         metadata={
             "name": "WheelchairAccess",
             "type": "Element",

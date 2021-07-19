@@ -289,7 +289,6 @@ class CountryNameType:
     value: Optional[str] = field(
         default=None,
         metadata={
-            "required": True,
             "min_length": 0,
             "max_length": 64,
         }
@@ -1137,10 +1136,7 @@ class RequestLocationType:
             such as IATA, ARC, or internal code, etc.
     """
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     location_code: Optional[str] = field(
         default=None,
@@ -1373,7 +1369,6 @@ class StateProvType:
     value: Optional[str] = field(
         default=None,
         metadata={
-            "required": True,
             "min_length": 0,
             "max_length": 64,
         }
@@ -1401,7 +1396,6 @@ class StreetNmbrType:
     value: Optional[str] = field(
         default=None,
         metadata={
-            "required": True,
             "min_length": 0,
             "max_length": 64,
         }
@@ -2755,7 +2749,6 @@ class EmailType:
     value: Optional[str] = field(
         default=None,
         metadata={
-            "required": True,
             "min_length": 1,
             "max_length": 128,
         }
@@ -3774,7 +3767,6 @@ class PersonNameType:
             "name": "Surname",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
             "min_length": 1,
             "max_length": 64,
         }
@@ -4919,7 +4911,6 @@ class TicketDistribPrefType:
     value: Optional[str] = field(
         default=None,
         metadata={
-            "required": True,
             "min_length": 0,
             "max_length": 64,
         }
@@ -7457,7 +7448,6 @@ class AirTravelerType:
                 "name": "FlightSegmentRPH",
                 "type": "Element",
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
-                "min_occurs": 1,
                 "max_occurs": 99,
                 "pattern": r"[0-9]{1,8}",
             }
@@ -8397,10 +8387,7 @@ class TransactionType:
     @dataclass
     class RequestType:
         value: Optional[str] = field(
-            default=None,
-            metadata={
-                "required": True,
-            }
+            default=None
         )
         name: Optional[str] = field(
             default=None,
@@ -8413,10 +8400,7 @@ class TransactionType:
     @dataclass
     class ServiceTag:
         value: Optional[str] = field(
-            default=None,
-            metadata={
-                "required": True,
-            }
+            default=None
         )
         name: Optional[str] = field(
             default=None,

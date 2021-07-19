@@ -27,10 +27,7 @@ class FilterDebouncingEnum:
         name = "FILTER-DEBOUNCING-ENUM"
 
     value: Optional[FilterDebouncingEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

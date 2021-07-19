@@ -13,6 +13,5 @@ class AbstractRequiredReferencingItemStructure(AbstractItemStructure):
             "name": "ItemRef",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-            "required": True,
         }
     )

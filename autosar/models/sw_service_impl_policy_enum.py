@@ -27,10 +27,7 @@ class SwServiceImplPolicyEnum:
         name = "SW-SERVICE-IMPL-POLICY-ENUM"
 
     value: Optional[SwServiceImplPolicyEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

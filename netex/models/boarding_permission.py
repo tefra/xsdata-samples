@@ -11,8 +11,5 @@ class BoardingPermission:
         namespace = "http://www.netex.org.uk/netex"
 
     value: Optional[BoardingPermissionEnumeration] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )

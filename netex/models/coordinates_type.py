@@ -7,10 +7,7 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 @dataclass
 class CoordinatesType:
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     decimal: str = field(
         default=".",

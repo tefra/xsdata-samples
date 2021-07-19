@@ -27,10 +27,7 @@ class MaxCommModeEnum:
         name = "MAX-COMM-MODE-ENUM"
 
     value: Optional[MaxCommModeEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

@@ -26,10 +26,7 @@ class ReentrancyLevelEnum:
         name = "REENTRANCY-LEVEL-ENUM"
 
     value: Optional[ReentrancyLevelEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

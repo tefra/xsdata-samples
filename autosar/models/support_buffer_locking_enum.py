@@ -27,10 +27,7 @@ class SupportBufferLockingEnum:
         name = "SUPPORT-BUFFER-LOCKING-ENUM"
 
     value: Optional[SupportBufferLockingEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

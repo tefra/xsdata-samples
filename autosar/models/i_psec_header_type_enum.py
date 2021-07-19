@@ -26,10 +26,7 @@ class IPsecHeaderTypeEnum:
         name = "I-PSEC-HEADER-TYPE-ENUM"
 
     value: Optional[IPsecHeaderTypeEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

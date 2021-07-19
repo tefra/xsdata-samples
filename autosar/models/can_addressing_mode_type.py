@@ -26,10 +26,7 @@ class CanAddressingModeType:
         name = "CAN-ADDRESSING-MODE-TYPE"
 
     value: Optional[CanAddressingModeTypeSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

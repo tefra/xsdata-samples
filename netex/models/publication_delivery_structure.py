@@ -25,7 +25,6 @@ class PublicationDeliveryStructure:
             "name": "ParticipantRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     publication_request: Optional[PublicationRequestStructure] = field(

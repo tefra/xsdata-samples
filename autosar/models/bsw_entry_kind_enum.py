@@ -27,10 +27,7 @@ class BswEntryKindEnum:
         name = "BSW-ENTRY-KIND-ENUM"
 
     value: Optional[BswEntryKindEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

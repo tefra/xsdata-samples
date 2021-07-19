@@ -26,10 +26,7 @@ class ModeErrorReactionPolicyEnum:
         name = "MODE-ERROR-REACTION-POLICY-ENUM"
 
     value: Optional[ModeErrorReactionPolicyEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

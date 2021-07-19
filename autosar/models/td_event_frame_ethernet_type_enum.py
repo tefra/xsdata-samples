@@ -26,10 +26,7 @@ class TdEventFrameEthernetTypeEnum:
         name = "TD-EVENT-FRAME-ETHERNET-TYPE-ENUM"
 
     value: Optional[TdEventFrameEthernetTypeEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

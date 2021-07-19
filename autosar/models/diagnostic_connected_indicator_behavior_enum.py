@@ -26,10 +26,7 @@ class DiagnosticConnectedIndicatorBehaviorEnum:
         name = "DIAGNOSTIC-CONNECTED-INDICATOR-BEHAVIOR-ENUM"
 
     value: Optional[DiagnosticConnectedIndicatorBehaviorEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

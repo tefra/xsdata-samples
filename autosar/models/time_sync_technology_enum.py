@@ -27,10 +27,7 @@ class TimeSyncTechnologyEnum:
         name = "TIME-SYNC-TECHNOLOGY-ENUM"
 
     value: Optional[TimeSyncTechnologyEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

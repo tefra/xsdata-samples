@@ -26,10 +26,7 @@ class ListEnum:
         name = "LIST-ENUM"
 
     value: Optional[ListEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

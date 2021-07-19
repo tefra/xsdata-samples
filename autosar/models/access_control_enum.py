@@ -27,10 +27,7 @@ class AccessControlEnum:
         name = "ACCESS-CONTROL-ENUM"
 
     value: Optional[AccessControlEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

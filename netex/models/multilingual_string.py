@@ -7,10 +7,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 @dataclass
 class MultilingualString:
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     lang: Optional[str] = field(
         default=None,

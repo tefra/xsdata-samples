@@ -29,7 +29,6 @@ class Ip6AddressString:
     value: Optional[str] = field(
         default=None,
         metadata={
-            "required": True,
             "pattern": r"[0-9A-Fa-f]{1,4}(:[0-9A-Fa-f]{1,4}){7,7}|ANY",
         }
     )

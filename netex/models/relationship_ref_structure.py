@@ -7,10 +7,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 @dataclass
 class RelationshipRefStructure:
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     name_of_class: Optional[str] = field(
         default=None,

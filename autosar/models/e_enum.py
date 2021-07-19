@@ -30,10 +30,7 @@ class EEnum:
         name = "E-ENUM"
 
     value: Optional[EEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

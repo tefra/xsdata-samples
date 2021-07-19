@@ -26,10 +26,7 @@ class DiagnosticUdsSeverityEnum:
         name = "DIAGNOSTIC-UDS-SEVERITY-ENUM"
 
     value: Optional[DiagnosticUdsSeverityEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

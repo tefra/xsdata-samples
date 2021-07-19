@@ -75,10 +75,7 @@ class RelationType:
         name = "relationType"
 
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     uri_ref: Optional[str] = field(
         default=None,
@@ -109,10 +106,7 @@ class SectionType:
         name = "sectionType"
 
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     path: Optional[str] = field(
         default=None,
@@ -302,10 +296,7 @@ class ReferralType:
         name = "referralType"
 
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     referrer: Optional[str] = field(
         default=None,

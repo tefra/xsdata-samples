@@ -27,10 +27,7 @@ class DataIdModeEnum:
         name = "DATA-ID-MODE-ENUM"
 
     value: Optional[DataIdModeEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

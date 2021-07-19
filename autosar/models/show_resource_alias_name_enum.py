@@ -27,10 +27,7 @@ class ShowResourceAliasNameEnum:
         name = "SHOW-RESOURCE-ALIAS-NAME-ENUM"
 
     value: Optional[ShowResourceAliasNameEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

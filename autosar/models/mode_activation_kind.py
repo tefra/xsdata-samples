@@ -27,10 +27,7 @@ class ModeActivationKind:
         name = "MODE-ACTIVATION-KIND"
 
     value: Optional[ModeActivationKindSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

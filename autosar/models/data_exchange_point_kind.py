@@ -26,10 +26,7 @@ class DataExchangePointKind:
         name = "DATA-EXCHANGE-POINT-KIND"
 
     value: Optional[DataExchangePointKindSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

@@ -735,10 +735,7 @@ class CountryType:
         name = "countryType"
 
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     code: Optional[str] = field(
         default=None,
@@ -848,10 +845,7 @@ class LanguageType:
         name = "languageType"
 
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     code: Optional[str] = field(
         default=None,
@@ -924,10 +918,7 @@ class OrganizationType:
         name = "organizationType"
 
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     id: Optional[str] = field(
         default=None,
@@ -951,10 +942,7 @@ class PortalRestrictionType:
         name = "portalRestrictionType"
 
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     portal_id: Optional[str] = field(
         default=None,
@@ -1007,10 +995,7 @@ class RelationType:
         name = "relationType"
 
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     type: Optional[str] = field(
         default=None,
@@ -1048,10 +1033,7 @@ class RepeatType:
         name = "repeatType"
 
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     is_rerun: Optional[bool] = field(
         default=None,
@@ -1186,10 +1168,7 @@ class DescriptionType:
         name = "descriptionType"
 
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     type: Optional[TextualTypeEnum] = field(
         default=None,
@@ -1256,10 +1235,7 @@ class GeoRestrictionType:
         name = "geoRestrictionType"
 
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     region_id: Optional[GeoRestrictionEnum] = field(
         default=None,
@@ -1431,10 +1407,7 @@ class PredictionType:
         name = "predictionType"
 
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     state: Optional[PredictionStateEnum] = field(
         default=None,
@@ -1520,10 +1493,7 @@ class ScheduleEventDescription:
         name = "scheduleEventDescription"
 
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     owner: Optional[OwnerTypeEnum] = field(
         default=None,
@@ -1547,10 +1517,7 @@ class ScheduleEventTitle:
         name = "scheduleEventTitle"
 
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     owner: Optional[OwnerTypeEnum] = field(
         default=None,
@@ -1596,10 +1563,7 @@ class TagType:
         name = "tagType"
 
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     lang: Optional[Union[str, LangValue]] = field(
         default=None,
@@ -1637,10 +1601,7 @@ class TitleType:
         name = "titleType"
 
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     type: Optional[TextualTypeEnum] = field(
         default=None,
@@ -1700,10 +1661,7 @@ class TwitterType:
         name = "twitterType"
 
     value: Optional[str] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     type: Optional[TwitterTypeType] = field(
         default=None,

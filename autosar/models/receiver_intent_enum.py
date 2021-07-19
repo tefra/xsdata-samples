@@ -27,10 +27,7 @@ class ReceiverIntentEnum:
         name = "RECEIVER-INTENT-ENUM"
 
     value: Optional[ReceiverIntentEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

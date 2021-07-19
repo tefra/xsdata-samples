@@ -26,10 +26,7 @@ class IkeAuthenticationMethodEnum:
         name = "IKE-AUTHENTICATION-METHOD-ENUM"
 
     value: Optional[IkeAuthenticationMethodEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

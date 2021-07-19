@@ -24,10 +24,7 @@ class KeyUsageRestrictionEnum:
         name = "KEY-USAGE-RESTRICTION-ENUM"
 
     value: Optional[KeyUsageRestrictionEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

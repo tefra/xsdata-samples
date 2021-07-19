@@ -31,10 +31,7 @@ class ByteOrderEnum:
         name = "BYTE-ORDER-ENUM"
 
     value: Optional[ByteOrderEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

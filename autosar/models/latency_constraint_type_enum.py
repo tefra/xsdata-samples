@@ -26,10 +26,7 @@ class LatencyConstraintTypeEnum:
         name = "LATENCY-CONSTRAINT-TYPE-ENUM"
 
     value: Optional[LatencyConstraintTypeEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

@@ -26,10 +26,7 @@ class DataTypePolicyEnum:
         name = "DATA-TYPE-POLICY-ENUM"
 
     value: Optional[DataTypePolicyEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

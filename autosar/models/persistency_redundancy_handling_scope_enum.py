@@ -27,10 +27,7 @@ class PersistencyRedundancyHandlingScopeEnum:
         name = "PERSISTENCY-REDUNDANCY-HANDLING-SCOPE-ENUM"
 
     value: Optional[PersistencyRedundancyHandlingScopeEnumSimple] = field(
-        default=None,
-        metadata={
-            "required": True,
-        }
+        default=None
     )
     s: Optional[str] = field(
         default=None,

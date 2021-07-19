@@ -30,7 +30,6 @@ class TableSeparatorString:
     value: Optional[str] = field(
         default=None,
         metadata={
-            "required": True,
             "pattern": r"[0-1]",
         }
     )

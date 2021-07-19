@@ -99,7 +99,6 @@ class ExceptionCriteriaType:
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     issue_time: Optional[XmlTime] = field(
