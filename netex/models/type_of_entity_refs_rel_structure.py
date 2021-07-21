@@ -57,7 +57,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfRetailDeviceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     customer_account_status_ref: List[CustomerAccountStatusRef] = field(
@@ -66,7 +65,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "CustomerAccountStatusRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_customer_account_ref: List[TypeOfCustomerAccountRef] = field(
@@ -75,7 +73,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfCustomerAccountRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_fare_contract_entry_ref: List[TypeOfFareContractEntryRef] = field(
@@ -84,7 +81,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfFareContractEntryRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_fare_contract_ref: List[TypeOfFareContractRef] = field(
@@ -93,7 +89,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfFareContractRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_access_right_assignment_ref: List[TypeOfAccessRightAssignmentRef] = field(
@@ -102,7 +97,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfAccessRightAssignmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_sales_offer_package_ref: List[TypeOfSalesOfferPackageRef] = field(
@@ -111,7 +105,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfSalesOfferPackageRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_fare_structure_element_ref: List[TypeOfFareStructureElementRef] = field(
@@ -120,7 +113,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfFareStructureElementRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_tariff_ref: List[TypeOfTariffRef] = field(
@@ -129,7 +121,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfTariffRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     all_distribution_channels_ref: List[AllDistributionChannelsRef] = field(
@@ -138,7 +129,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "AllDistributionChannelsRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_machine_readability_ref: List[TypeOfMachineReadabilityRef] = field(
@@ -147,7 +137,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfMachineReadabilityRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_travel_document_ref: List[TypeOfTravelDocumentRef] = field(
@@ -156,7 +145,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfTravelDocumentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_fare_product_ref: List[TypeOfFareProductRef] = field(
@@ -165,7 +153,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfFareProductRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_fare_structure_factor_ref: List[TypeOfFareStructureFactorRef] = field(
@@ -174,7 +161,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfFareStructureFactorRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_pricing_rule_ref: List[TypeOfPricingRuleRef] = field(
@@ -183,7 +169,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfPricingRuleRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_flexible_service_ref: List[TypeOfFlexibleServiceRef] = field(
@@ -192,7 +177,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfFlexibleServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_passenger_information_equipment_ref: List[TypeOfPassengerInformationEquipmentRef] = field(
@@ -201,7 +185,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfPassengerInformationEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_service_feature_ref: List[TypeOfServiceFeatureRef] = field(
@@ -210,7 +193,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfServiceFeatureRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_congestion_ref: List[TypeOfCongestionRef] = field(
@@ -219,7 +201,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfCongestionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_time_demand_type_ref: List[TypeOfTimeDemandTypeRef] = field(
@@ -228,7 +209,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfTimeDemandTypeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_journey_pattern_ref: List[TypeOfJourneyPatternRef] = field(
@@ -237,7 +217,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfJourneyPatternRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_security_list_ref: List[TypeOfSecurityListRef] = field(
@@ -246,7 +225,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfSecurityListRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_delivery_variant_ref: List[TypeOfDeliveryVariantRef] = field(
@@ -255,7 +233,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfDeliveryVariantRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_notice_ref: List[TypeOfNoticeRef] = field(
@@ -264,7 +241,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfNoticeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_service_ref: List[TypeOfServiceRef] = field(
@@ -273,7 +249,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_facility_ref: List[TypeOfFacilityRef] = field(
@@ -282,7 +257,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfFacilityRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_equipment_ref: List[TypeOfEquipmentRef] = field(
@@ -291,7 +265,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_projection_ref: List[TypeOfProjectionRef] = field(
@@ -300,7 +273,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfProjectionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_feature_ref: List[TypeOfFeatureRef] = field(
@@ -309,7 +281,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfFeatureRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_link_sequence_ref: List[TypeOfLinkSequenceRef] = field(
@@ -318,7 +289,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfLinkSequenceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_organisation_part_ref: List[TypeOfOrganisationPartRef] = field(
@@ -327,7 +297,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfOrganisationPartRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_organisation_ref: List[TypeOfOrganisationRef] = field(
@@ -336,7 +305,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfOrganisationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_place_ref: List[TypeOfPlaceRef] = field(
@@ -345,7 +313,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfPlaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_transfer_ref: List[TypeOfTransferRef] = field(
@@ -354,7 +321,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfTransferRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_zone_ref: List[TypeOfZoneRef] = field(
@@ -363,7 +329,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfZoneRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_link_ref: List[TypeOfLinkRef] = field(
@@ -372,7 +337,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_point_ref: List[TypeOfPointRef] = field(
@@ -381,7 +345,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_line_ref: List[TypeOfLineRef] = field(
@@ -390,7 +353,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfLineRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_validity_ref: List[TypeOfValidityRef] = field(
@@ -399,7 +361,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfValidityRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_frame_ref: List[TypeOfFrameRef] = field(
@@ -408,7 +369,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfFrameRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_entity_ref: List[TypeOfEntityRef] = field(
@@ -417,6 +377,5 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfEntityRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

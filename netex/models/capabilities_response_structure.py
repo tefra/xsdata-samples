@@ -15,7 +15,6 @@ class CapabilitiesResponseStructure(ProducerResponseStructure):
             "name": "DataObjectCapabilitiesResponse",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     abstract_functional_service_capabilities_response: Optional[AbstractFunctionalServiceCapabilitiesResponse] = field(
@@ -24,6 +23,5 @@ class CapabilitiesResponseStructure(ProducerResponseStructure):
             "name": "AbstractFunctionalServiceCapabilitiesResponse",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-            "required": True,
         }
     )

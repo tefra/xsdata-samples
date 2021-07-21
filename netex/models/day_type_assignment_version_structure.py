@@ -55,7 +55,6 @@ class DayTypeAssignmentVersionStructure(AssignmentVersionStructure1):
             "name": "FareDayTypeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     day_type_ref: Optional[DayTypeRef] = field(
@@ -64,7 +63,6 @@ class DayTypeAssignmentVersionStructure(AssignmentVersionStructure1):
             "name": "DayTypeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     timeband_ref: List[TimebandRef] = field(

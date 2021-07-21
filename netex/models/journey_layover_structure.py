@@ -40,7 +40,6 @@ class JourneyLayoverStructure(JourneyTimingVersionedChildStructure):
             "name": "BorderPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     fare_scheduled_stop_point_ref: Optional[FareScheduledStopPointRef] = field(
@@ -49,7 +48,6 @@ class JourneyLayoverStructure(JourneyTimingVersionedChildStructure):
             "name": "FareScheduledStopPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     scheduled_stop_point_ref: Optional[ScheduledStopPointRef] = field(
@@ -58,7 +56,6 @@ class JourneyLayoverStructure(JourneyTimingVersionedChildStructure):
             "name": "ScheduledStopPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     garage_point_ref: Optional[GaragePointRef] = field(
@@ -67,7 +64,6 @@ class JourneyLayoverStructure(JourneyTimingVersionedChildStructure):
             "name": "GaragePointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     parking_point_ref: Optional[ParkingPointRef] = field(
@@ -76,7 +72,6 @@ class JourneyLayoverStructure(JourneyTimingVersionedChildStructure):
             "name": "ParkingPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     relief_point_ref: Optional[ReliefPointRef] = field(
@@ -85,7 +80,6 @@ class JourneyLayoverStructure(JourneyTimingVersionedChildStructure):
             "name": "ReliefPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     timing_point_ref: Optional[TimingPointRef] = field(
@@ -94,7 +88,6 @@ class JourneyLayoverStructure(JourneyTimingVersionedChildStructure):
             "name": "TimingPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     route_point_ref: Optional[RoutePointRef] = field(
@@ -103,7 +96,6 @@ class JourneyLayoverStructure(JourneyTimingVersionedChildStructure):
             "name": "RoutePointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     wire_point_ref: Optional[WirePointRef] = field(
@@ -112,7 +104,6 @@ class JourneyLayoverStructure(JourneyTimingVersionedChildStructure):
             "name": "WirePointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     road_point_ref: Optional[RoadPointRef] = field(
@@ -121,7 +112,6 @@ class JourneyLayoverStructure(JourneyTimingVersionedChildStructure):
             "name": "RoadPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     railway_point_ref: Optional[RailwayPointRef] = field(
@@ -130,7 +120,6 @@ class JourneyLayoverStructure(JourneyTimingVersionedChildStructure):
             "name": "RailwayPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     infrastructure_point_ref: Optional[InfrastructurePointRef] = field(
@@ -139,7 +128,6 @@ class JourneyLayoverStructure(JourneyTimingVersionedChildStructure):
             "name": "InfrastructurePointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     traffic_control_point_ref: Optional[TrafficControlPointRef] = field(
@@ -148,7 +136,6 @@ class JourneyLayoverStructure(JourneyTimingVersionedChildStructure):
             "name": "TrafficControlPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     beacon_point_ref: Optional[BeaconPointRef] = field(
@@ -157,7 +144,6 @@ class JourneyLayoverStructure(JourneyTimingVersionedChildStructure):
             "name": "BeaconPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     activation_point_ref: Optional[ActivationPointRef] = field(
@@ -166,7 +152,6 @@ class JourneyLayoverStructure(JourneyTimingVersionedChildStructure):
             "name": "ActivationPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     point_on_link_ref: Optional[PointOnLinkRef] = field(
@@ -175,7 +160,6 @@ class JourneyLayoverStructure(JourneyTimingVersionedChildStructure):
             "name": "PointOnLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     point_ref: Optional[PointRef] = field(
@@ -184,6 +168,5 @@ class JourneyLayoverStructure(JourneyTimingVersionedChildStructure):
             "name": "PointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )

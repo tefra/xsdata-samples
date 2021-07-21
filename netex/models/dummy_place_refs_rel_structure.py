@@ -54,7 +54,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "HailAndRideAreaRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     flexible_area_ref: List[FlexibleAreaRef] = field(
@@ -63,7 +62,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "FlexibleAreaRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     flexible_quay_ref: List[FlexibleQuayRef] = field(
@@ -72,7 +70,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "FlexibleQuayRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     flexible_stop_place_ref: List[FlexibleStopPlaceRef] = field(
@@ -81,7 +78,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "FlexibleStopPlaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     path_junction_ref: List[PathJunctionRef] = field(
@@ -90,7 +86,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "PathJunctionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     topographic_place_ref: List[TopographicPlaceRef] = field(
@@ -99,7 +94,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TopographicPlaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     equipment_place_ref: List[EquipmentPlaceRef] = field(
@@ -108,7 +102,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "EquipmentPlaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     equipment_position_ref: List[EquipmentPositionRef] = field(
@@ -117,7 +110,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "EquipmentPositionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     vehicle_stopping_position_ref: List[VehicleStoppingPositionRef] = field(
@@ -126,7 +118,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "VehicleStoppingPositionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     vehicle_stopping_place_ref: List[VehicleStoppingPlaceRef] = field(
@@ -135,7 +126,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "VehicleStoppingPlaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     boarding_position_ref: List[BoardingPositionRef] = field(
@@ -144,7 +134,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "BoardingPositionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     access_space_ref: List[AccessSpaceRef] = field(
@@ -153,7 +142,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "AccessSpaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     quay_ref: List[QuayRef] = field(
@@ -162,7 +150,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "QuayRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     stop_place_space_ref: List[StopPlaceSpaceRef] = field(
@@ -171,7 +158,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "StopPlaceSpaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     parking_bay_ref: List[ParkingBayRef] = field(
@@ -180,7 +166,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ParkingBayRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     point_of_interest_space_ref: List[PointOfInterestSpaceRef] = field(
@@ -189,7 +174,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "PointOfInterestSpaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     stop_place_vehicle_entrance_ref: List[StopPlaceVehicleEntranceRef] = field(
@@ -198,7 +182,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "StopPlaceVehicleEntranceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     stop_place_entrance_ref: List[StopPlaceEntranceRef] = field(
@@ -207,7 +190,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "StopPlaceEntranceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     parking_entrance_for_vehicles_ref: List[ParkingEntranceForVehiclesRef] = field(
@@ -216,7 +198,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ParkingEntranceForVehiclesRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     parking_passenger_entrance_ref: List[ParkingPassengerEntranceRef] = field(
@@ -225,7 +206,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ParkingPassengerEntranceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     parking_entrance_ref: List[ParkingEntranceRef] = field(
@@ -234,7 +214,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ParkingEntranceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     point_of_interest_vehicle_entrance_ref: List[PointOfInterestVehicleEntranceRef] = field(
@@ -243,7 +222,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "PointOfInterestVehicleEntranceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     point_of_interest_entrance_ref: List[PointOfInterestEntranceRef] = field(
@@ -252,7 +230,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "PointOfInterestEntranceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     vehicle_entrance_ref: List[VehicleEntranceRef] = field(
@@ -261,7 +238,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "VehicleEntranceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     entrance_ref: List[EntranceRef] = field(
@@ -270,7 +246,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "EntranceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     site_component_ref: List[SiteComponentRef] = field(
@@ -279,7 +254,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "SiteComponentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     stop_place_ref: List[StopPlaceRef] = field(
@@ -288,7 +262,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "StopPlaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     parking_ref: List[ParkingRef] = field(
@@ -297,7 +270,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ParkingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     point_of_interest_ref: List[PointOfInterestRef] = field(
@@ -306,7 +278,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "PointOfInterestRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     service_site_ref: List[ServiceSiteRef] = field(
@@ -315,7 +286,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ServiceSiteRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     site_ref: List[SiteRef] = field(
@@ -324,7 +294,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "SiteRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     site_element_ref: List[SiteElementRef] = field(
@@ -333,7 +302,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "SiteElementRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     garage_ref: List[GarageRef] = field(
@@ -342,7 +310,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "GarageRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     addressable_place_ref: List[AddressablePlaceRef] = field(
@@ -351,7 +318,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "AddressablePlaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     postal_address_ref: List[PostalAddressRef] = field(
@@ -360,7 +326,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "PostalAddressRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     road_address_ref: List[RoadAddressRef] = field(
@@ -369,7 +334,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "RoadAddressRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     address_ref: List[AddressRef] = field(
@@ -378,7 +342,6 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "AddressRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     place_ref: List[PlaceRef2] = field(
@@ -387,6 +350,5 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "PlaceRef_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

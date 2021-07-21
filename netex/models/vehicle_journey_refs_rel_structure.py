@@ -18,7 +18,6 @@ class VehicleJourneyRefsRelStructure(OneToManyRelationshipStructure):
             "name": "DeadRunRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     vehicle_journey_ref: List[VehicleJourneyRef] = field(
@@ -27,6 +26,5 @@ class VehicleJourneyRefsRelStructure(OneToManyRelationshipStructure):
             "name": "VehicleJourneyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

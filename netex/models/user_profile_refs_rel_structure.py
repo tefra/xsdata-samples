@@ -18,7 +18,6 @@ class UserProfileRefsRelStructure(OneToManyRelationshipStructure):
             "name": "CompanionProfileRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     user_profile_ref: List[UserProfileRef] = field(
@@ -27,6 +26,5 @@ class UserProfileRefsRelStructure(OneToManyRelationshipStructure):
             "name": "UserProfileRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

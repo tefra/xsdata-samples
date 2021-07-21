@@ -21,7 +21,6 @@ class PricingRulesRelStructure(FrameContainmentStructure):
             "name": "LimitingRuleInContext",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     limiting_rule: List[LimitingRule] = field(
@@ -30,7 +29,6 @@ class PricingRulesRelStructure(FrameContainmentStructure):
             "name": "LimitingRule",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     discounting_rule: List[DiscountingRule] = field(
@@ -39,7 +37,6 @@ class PricingRulesRelStructure(FrameContainmentStructure):
             "name": "DiscountingRule",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     pricing_rule: List[PricingRule1] = field(
@@ -48,7 +45,6 @@ class PricingRulesRelStructure(FrameContainmentStructure):
             "name": "PricingRule",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     netex_org_uk_netex_pricing_rule: List[PricingRule2] = field(
@@ -57,6 +53,5 @@ class PricingRulesRelStructure(FrameContainmentStructure):
             "name": "PricingRule_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

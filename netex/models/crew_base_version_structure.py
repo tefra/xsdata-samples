@@ -20,7 +20,6 @@ class CrewBaseVersionStructure(GroupOfEntitiesVersionStructure):
             "name": "GaragePointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     parking_point_ref: Optional[ParkingPointRef] = field(
@@ -29,7 +28,6 @@ class CrewBaseVersionStructure(GroupOfEntitiesVersionStructure):
             "name": "ParkingPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     relief_point_ref: Optional[ReliefPointRef] = field(
@@ -38,7 +36,6 @@ class CrewBaseVersionStructure(GroupOfEntitiesVersionStructure):
             "name": "ReliefPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     garages: Optional[GarageRefsRelStructure] = field(

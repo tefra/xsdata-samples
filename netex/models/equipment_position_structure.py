@@ -71,7 +71,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "RetailDeviceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     assistance_booking_service_ref: Optional[AssistanceBookingServiceRef] = field(
@@ -80,7 +79,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "AssistanceBookingServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     catering_service_ref: Optional[CateringServiceRef] = field(
@@ -89,7 +87,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "CateringServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     retail_service_ref: Optional[RetailServiceRef] = field(
@@ -98,7 +95,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "RetailServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     money_service_ref: Optional[MoneyServiceRef] = field(
@@ -107,7 +103,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "MoneyServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     hire_service_ref: Optional[HireServiceRef] = field(
@@ -116,7 +111,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "HireServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     communication_service_ref: Optional[CommunicationServiceRef] = field(
@@ -125,7 +119,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "CommunicationServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     meeting_point_service_ref: Optional[MeetingPointServiceRef] = field(
@@ -134,7 +127,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "MeetingPointServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     left_luggage_service_ref: Optional[LeftLuggageServiceRef] = field(
@@ -143,7 +135,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "LeftLuggageServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     luggage_service_ref: Optional[LuggageServiceRef] = field(
@@ -152,7 +143,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "LuggageServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     lost_property_service_ref: Optional[LostPropertyServiceRef] = field(
@@ -161,7 +151,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "LostPropertyServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     complaints_service_ref: Optional[ComplaintsServiceRef] = field(
@@ -170,7 +159,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "ComplaintsServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     customer_service_ref: Optional[CustomerServiceRef] = field(
@@ -179,7 +167,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "CustomerServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     assistance_service_ref: Optional[AssistanceServiceRef] = field(
@@ -188,7 +175,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "AssistanceServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     ticketing_service_ref: Optional[TicketingServiceRef] = field(
@@ -197,7 +183,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "TicketingServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     local_service_ref: Optional[LocalServiceRef] = field(
@@ -206,7 +191,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "LocalServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     vehicle_charging_equipment_ref: Optional[VehicleChargingEquipmentRef] = field(
@@ -215,7 +199,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "VehicleChargingEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     cycle_storage_equipment_ref: Optional[CycleStorageEquipmentRef] = field(
@@ -224,7 +207,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "CycleStorageEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     ticket_validator_equipment_ref: Optional[TicketValidatorEquipmentRef] = field(
@@ -233,7 +215,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "TicketValidatorEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     ticketing_equipment_ref: Optional[TicketingEquipmentRef] = field(
@@ -242,7 +223,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "TicketingEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     trolley_stand_equipment_ref: Optional[TrolleyStandEquipmentRef] = field(
@@ -251,7 +231,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "TrolleyStandEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     seating_equipment_ref: Optional[SeatingEquipmentRef] = field(
@@ -260,7 +239,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "SeatingEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     shelter_equipment_ref: Optional[ShelterEquipmentRef] = field(
@@ -269,7 +247,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "ShelterEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     luggage_locker_equipment_ref: Optional[LuggageLockerEquipmentRef] = field(
@@ -278,7 +255,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "LuggageLockerEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     waiting_room_equipment_ref: Optional[WaitingRoomEquipmentRef] = field(
@@ -287,7 +263,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "WaitingRoomEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     waiting_equipment_ref: Optional[WaitingEquipmentRef] = field(
@@ -296,7 +271,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "WaitingEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     site_equipment_ref: Optional[SiteEquipmentRef] = field(
@@ -305,7 +279,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "SiteEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     heading_sign_ref: Optional[HeadingSignRef] = field(
@@ -314,7 +287,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "HeadingSignRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     general_sign_ref: Optional[GeneralSignRef] = field(
@@ -323,7 +295,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "GeneralSignRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     place_sign_ref: Optional[PlaceSignRef] = field(
@@ -332,7 +303,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "PlaceSignRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     sign_equipment_ref: Optional[SignEquipmentRef] = field(
@@ -341,7 +311,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "SignEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     place_lighting_equipment_ref: Optional[PlaceLightingEquipmentRef] = field(
@@ -350,7 +319,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "PlaceLightingEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     rough_surface_ref: Optional[RoughSurfaceRef] = field(
@@ -359,7 +327,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "RoughSurfaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     staircase_equipment_ref: Optional[StaircaseEquipmentRef] = field(
@@ -368,7 +335,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "StaircaseEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     queueing_equipment_ref: Optional[QueueingEquipmentRef] = field(
@@ -377,7 +343,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "QueueingEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     travelator_equipment_ref: Optional[TravelatorEquipmentRef] = field(
@@ -386,7 +351,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "TravelatorEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     escalator_equipment_ref: Optional[EscalatorEquipmentRef] = field(
@@ -395,7 +359,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "EscalatorEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     lift_equipment_ref: Optional[LiftEquipmentRef] = field(
@@ -404,7 +367,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "LiftEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     crossing_equipment_ref: Optional[CrossingEquipmentRef] = field(
@@ -413,7 +375,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "CrossingEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     ramp_equipment_ref: Optional[RampEquipmentRef] = field(
@@ -422,7 +383,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "RampEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     entrance_equipment_ref: Optional[EntranceEquipmentRef] = field(
@@ -431,7 +391,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "EntranceEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     access_equipment_ref: Optional[AccessEquipmentRef] = field(
@@ -440,7 +399,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "AccessEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     activated_equipment_ref: Optional[ActivatedEquipmentRef] = field(
@@ -449,7 +407,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "ActivatedEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     passenger_information_equipment_ref: Optional[PassengerInformationEquipmentRef] = field(
@@ -458,7 +415,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "PassengerInformationEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     rubbish_disposal_equipment_ref: Optional[RubbishDisposalEquipmentRef] = field(
@@ -467,7 +423,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "RubbishDisposalEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     help_point_equipment_ref: Optional[HelpPointEquipmentRef] = field(
@@ -476,7 +431,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "HelpPointEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     passenger_safety_equipment_ref: Optional[PassengerSafetyEquipmentRef] = field(
@@ -485,7 +439,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "PassengerSafetyEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     sanitary_equipment_ref: Optional[SanitaryEquipmentRef] = field(
@@ -494,7 +447,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "SanitaryEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     wheelchair_vehicle_ref: Optional[WheelchairVehicleRef] = field(
@@ -503,7 +455,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "WheelchairVehicleRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     access_vehicle_equipment_ref: Optional[AccessVehicleEquipmentRef] = field(
@@ -512,7 +463,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "AccessVehicleEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     vehicle_equipment_ref: Optional[VehicleEquipmentRef] = field(
@@ -521,7 +471,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "VehicleEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     passenger_equipment_ref: Optional[PassengerEquipmentRef] = field(
@@ -530,7 +479,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "PassengerEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     installed_equipment_ref: Optional[InstalledEquipmentRef] = field(
@@ -539,7 +487,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "InstalledEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     equipment_ref: Optional[EquipmentRef] = field(
@@ -548,7 +495,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "EquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     description: Optional[MultilingualString] = field(

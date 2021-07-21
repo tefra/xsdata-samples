@@ -15,7 +15,6 @@ class CapabilitiesRequestStructure(RequestStructure):
             "name": "DataObjectCapabilitiesRequest",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     abstract_functional_service_capabilities_request: Optional[AbstractFunctionalServiceCapabilitiesRequest] = field(
@@ -24,7 +23,6 @@ class CapabilitiesRequestStructure(RequestStructure):
             "name": "AbstractFunctionalServiceCapabilitiesRequest",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-            "required": True,
         }
     )
     version: str = field(

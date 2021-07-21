@@ -69,7 +69,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "RoutingConstraintZone",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     stop_area: List[StopArea] = field(
@@ -78,7 +77,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "StopArea",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     access_zone: List[AccessZone] = field(
@@ -87,7 +85,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "AccessZone",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     hail_and_ride_area: List[HailAndRideArea] = field(
@@ -96,7 +93,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "HailAndRideArea",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     flexible_area: List[FlexibleArea] = field(
@@ -105,7 +101,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "FlexibleArea",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     flexible_quay: List[FlexibleQuay] = field(
@@ -114,7 +109,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "FlexibleQuay",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     flexible_stop_place: List[FlexibleStopPlace] = field(
@@ -123,7 +117,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "FlexibleStopPlace",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     point_of_interest_component: List[PointOfInterestComponent] = field(
@@ -132,7 +125,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "PointOfInterestComponent",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     vehicle_stopping_place: List[VehicleStoppingPlace] = field(
@@ -141,7 +133,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "VehicleStoppingPlace",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     boarding_position: List[BoardingPosition] = field(
@@ -150,7 +141,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "BoardingPosition",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     access_space: List[AccessSpace] = field(
@@ -159,7 +149,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "AccessSpace",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     quay: List[Quay] = field(
@@ -168,7 +157,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "Quay",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     stop_place_space: List[StopPlaceSpace] = field(
@@ -177,7 +165,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "StopPlaceSpace",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     stop_place_component: List[StopPlaceComponent] = field(
@@ -186,7 +173,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "StopPlaceComponent",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     point_of_interest_space: List[PointOfInterestSpace] = field(
@@ -195,7 +181,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "PointOfInterestSpace",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     parking_bay: List[ParkingBay] = field(
@@ -204,7 +189,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "ParkingBay",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     parking_area: List[ParkingArea] = field(
@@ -213,7 +197,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "ParkingArea",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     parking_component: List[ParkingComponent] = field(
@@ -222,7 +205,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "ParkingComponent",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     vehicle_stopping_position: List[VehicleStoppingPosition] = field(
@@ -231,7 +213,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "VehicleStoppingPosition",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     point_of_interest_vehicle_entrance: List[PointOfInterestVehicleEntrance] = field(
@@ -240,7 +221,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "PointOfInterestVehicleEntrance",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     point_of_interest_entrance: List[PointOfInterestEntrance] = field(
@@ -249,7 +229,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "PointOfInterestEntrance",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     parking_passenger_entrance: List[ParkingPassengerEntrance] = field(
@@ -258,7 +237,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "ParkingPassengerEntrance",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     parking_entrance_for_vehicles: List[ParkingEntranceForVehicles] = field(
@@ -267,7 +245,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "ParkingEntranceForVehicles",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     stop_place_vehicle_entrance: List[StopPlaceVehicleEntrance] = field(
@@ -276,7 +253,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "StopPlaceVehicleEntrance",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     stop_place_entrance: List[StopPlaceEntrance] = field(
@@ -285,7 +261,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "StopPlaceEntrance",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     vehicle_entrance: List[VehicleEntrance] = field(
@@ -294,7 +269,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "VehicleEntrance",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     entrance: List[Entrance] = field(
@@ -303,7 +277,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "Entrance",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     site_component: List[SiteComponent] = field(
@@ -312,7 +285,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "SiteComponent",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     point_of_interest: List[PointOfInterest] = field(
@@ -321,7 +293,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "PointOfInterest",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     parking: List[Parking] = field(
@@ -330,7 +301,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "Parking",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     stop_place: List[StopPlace] = field(
@@ -339,7 +309,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "StopPlace",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     service_site: List[ServiceSite] = field(
@@ -348,7 +317,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "ServiceSite",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     site: List[Site] = field(
@@ -357,7 +325,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "Site",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     site_element: List[SiteElement] = field(
@@ -366,7 +333,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "SiteElement",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     garage: List[Garage] = field(
@@ -375,7 +341,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "Garage",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     topographic_place: List[TopographicPlace] = field(
@@ -384,7 +349,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "TopographicPlace",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     equipment_place: List[EquipmentPlace] = field(
@@ -393,7 +357,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "EquipmentPlace",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     country: List[Country] = field(
@@ -402,7 +365,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "Country",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     addressable_place: List[AddressablePlace] = field(
@@ -411,7 +373,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "AddressablePlace",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     postal_address: List[PostalAddress] = field(
@@ -420,7 +381,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "PostalAddress",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     road_address: List[RoadAddress] = field(
@@ -429,7 +389,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "RoadAddress",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     address: List[Address] = field(
@@ -438,7 +397,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "Address",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     place: List[Place] = field(
@@ -447,7 +405,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "Place",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     transport_administrative_zone: List[TransportAdministrativeZone] = field(
@@ -456,7 +413,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "TransportAdministrativeZone",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     administrative_zone: List[AdministrativeZone1] = field(
@@ -465,7 +421,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "AdministrativeZone",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     netex_org_uk_netex_administrative_zone: List[AdministrativeZone2] = field(
@@ -474,7 +429,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "AdministrativeZone_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     fare_zone: List[FareZone] = field(
@@ -483,7 +437,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "FareZone",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     tariff_zone: List[TariffZone1] = field(
@@ -492,7 +445,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "TariffZone",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     netex_org_uk_netex_tariff_zone: List[TariffZone2] = field(
@@ -501,7 +453,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "TariffZone_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     general_zone: List[GeneralZone] = field(
@@ -510,7 +461,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "GeneralZone",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     zone: List[Zone] = field(
@@ -519,6 +469,5 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "Zone",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

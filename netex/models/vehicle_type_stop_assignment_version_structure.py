@@ -55,7 +55,6 @@ class VehicleTypeStopAssignmentVersionStructure(AssignmentVersionStructure1):
             "name": "CompoundTrainRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     train_ref: Optional[TrainRef] = field(
@@ -64,7 +63,6 @@ class VehicleTypeStopAssignmentVersionStructure(AssignmentVersionStructure1):
             "name": "TrainRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     vehicle_type_ref: Optional[VehicleTypeRef] = field(
@@ -73,6 +71,5 @@ class VehicleTypeStopAssignmentVersionStructure(AssignmentVersionStructure1):
             "name": "VehicleTypeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )

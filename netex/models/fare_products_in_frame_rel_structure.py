@@ -25,7 +25,6 @@ class FareProductsInFrameRelStructure(FrameContainmentStructure):
             "name": "SupplementProduct",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     preassigned_fare_product: List[PreassignedFareProduct] = field(
@@ -34,7 +33,6 @@ class FareProductsInFrameRelStructure(FrameContainmentStructure):
             "name": "PreassignedFareProduct",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     amount_of_price_unit_product: List[AmountOfPriceUnitProduct] = field(
@@ -43,7 +41,6 @@ class FareProductsInFrameRelStructure(FrameContainmentStructure):
             "name": "AmountOfPriceUnitProduct",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     capped_discount_right: List[CappedDiscountRight] = field(
@@ -52,7 +49,6 @@ class FareProductsInFrameRelStructure(FrameContainmentStructure):
             "name": "CappedDiscountRight",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     usage_discount_right: List[UsageDiscountRight] = field(
@@ -61,7 +57,6 @@ class FareProductsInFrameRelStructure(FrameContainmentStructure):
             "name": "UsageDiscountRight",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     third_party_product: List[ThirdPartyProduct] = field(
@@ -70,7 +65,6 @@ class FareProductsInFrameRelStructure(FrameContainmentStructure):
             "name": "ThirdPartyProduct",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     sale_discount_right: List[SaleDiscountRight] = field(
@@ -79,7 +73,6 @@ class FareProductsInFrameRelStructure(FrameContainmentStructure):
             "name": "SaleDiscountRight",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     fare_product: List[FareProduct1] = field(
@@ -88,7 +81,6 @@ class FareProductsInFrameRelStructure(FrameContainmentStructure):
             "name": "FareProduct",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     netex_org_uk_netex_fare_product: List[FareProduct2] = field(
@@ -97,6 +89,5 @@ class FareProductsInFrameRelStructure(FrameContainmentStructure):
             "name": "FareProduct_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

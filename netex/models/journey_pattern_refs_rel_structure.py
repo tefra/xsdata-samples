@@ -20,7 +20,6 @@ class JourneyPatternRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ServiceJourneyPatternRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     service_pattern_ref: List[ServicePatternRef] = field(
@@ -29,7 +28,6 @@ class JourneyPatternRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ServicePatternRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     dead_run_journey_pattern_ref: List[DeadRunJourneyPatternRef] = field(
@@ -38,7 +36,6 @@ class JourneyPatternRefsRelStructure(OneToManyRelationshipStructure):
             "name": "DeadRunJourneyPatternRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     journey_pattern_ref: List[JourneyPatternRef] = field(
@@ -47,6 +44,5 @@ class JourneyPatternRefsRelStructure(OneToManyRelationshipStructure):
             "name": "JourneyPatternRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

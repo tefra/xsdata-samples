@@ -19,7 +19,6 @@ class SecuritylistRefsRelStructure(OneToManyRelationshipStructure):
             "name": "WhitelistRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     blacklist_ref: List[BlacklistRef] = field(
@@ -28,7 +27,6 @@ class SecuritylistRefsRelStructure(OneToManyRelationshipStructure):
             "name": "BlacklistRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     security_list_ref: List[SecurityListRef] = field(
@@ -37,6 +35,5 @@ class SecuritylistRefsRelStructure(OneToManyRelationshipStructure):
             "name": "SecurityListRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

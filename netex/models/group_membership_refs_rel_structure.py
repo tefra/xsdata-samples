@@ -25,7 +25,6 @@ class GroupMembershipRefsRelStructure(OneToManyRelationshipStructure):
             "name": "StopAreaRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     access_zone_ref: List[AccessZoneRef] = field(
@@ -34,7 +33,6 @@ class GroupMembershipRefsRelStructure(OneToManyRelationshipStructure):
             "name": "AccessZoneRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     transport_administrative_zone_ref: List[TransportAdministrativeZoneRef] = field(
@@ -43,7 +41,6 @@ class GroupMembershipRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TransportAdministrativeZoneRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     administrative_zone_ref: List[AdministrativeZoneRef] = field(
@@ -52,7 +49,6 @@ class GroupMembershipRefsRelStructure(OneToManyRelationshipStructure):
             "name": "AdministrativeZoneRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     fare_zone_ref: List[FareZoneRef] = field(
@@ -61,7 +57,6 @@ class GroupMembershipRefsRelStructure(OneToManyRelationshipStructure):
             "name": "FareZoneRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     tariff_zone_ref: List[TariffZoneRef1] = field(
@@ -70,7 +65,6 @@ class GroupMembershipRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TariffZoneRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     netex_org_uk_netex_tariff_zone_ref: List[TariffZoneRef2] = field(
@@ -79,7 +73,6 @@ class GroupMembershipRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TariffZoneRef_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     zone_ref: List[ZoneRef] = field(
@@ -88,7 +81,6 @@ class GroupMembershipRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ZoneRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     group_of_points_ref: List[GroupOfPointsRef2] = field(
@@ -97,6 +89,5 @@ class GroupMembershipRefsRelStructure(OneToManyRelationshipStructure):
             "name": "GroupOfPointsRef_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

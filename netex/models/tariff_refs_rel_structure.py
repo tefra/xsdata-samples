@@ -18,7 +18,6 @@ class TariffRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ParkingTariffRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     tariff_ref: List[TariffRef] = field(
@@ -27,6 +26,5 @@ class TariffRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TariffRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

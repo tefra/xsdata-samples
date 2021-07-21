@@ -36,7 +36,6 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
             "name": "FareScheduledStopPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     scheduled_stop_point_ref: Optional[ScheduledStopPointRef] = field(
@@ -45,7 +44,6 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
             "name": "ScheduledStopPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     vehicle_mode: Optional[AllModesEnumeration] = field(

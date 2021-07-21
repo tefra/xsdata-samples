@@ -23,7 +23,6 @@ class StopAssignmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "FlexibleStopAssignment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     vehicle_journey_stop_assignment: List[VehicleJourneyStopAssignment] = field(
@@ -32,7 +31,6 @@ class StopAssignmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "VehicleJourneyStopAssignment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     navigation_path_assignment: List[NavigationPathAssignment] = field(
@@ -41,7 +39,6 @@ class StopAssignmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "NavigationPathAssignment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     train_stop_assignment: List[TrainStopAssignment] = field(
@@ -50,7 +47,6 @@ class StopAssignmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "TrainStopAssignment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     dynamic_stop_assignment: List[DynamicStopAssignment] = field(
@@ -59,7 +55,6 @@ class StopAssignmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "DynamicStopAssignment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     passenger_stop_assignment: List[PassengerStopAssignment] = field(
@@ -68,7 +63,6 @@ class StopAssignmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "PassengerStopAssignment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     stop_assignment: List[StopAssignment] = field(
@@ -77,6 +71,5 @@ class StopAssignmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "StopAssignment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

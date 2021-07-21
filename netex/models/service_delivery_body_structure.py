@@ -40,7 +40,6 @@ class ServiceDeliveryBodyStructure:
             "name": "DataObjectDelivery",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     abstract_functional_service_delivery: List[AbstractFunctionalServiceDelivery] = field(
@@ -49,7 +48,6 @@ class ServiceDeliveryBodyStructure:
             "name": "AbstractFunctionalServiceDelivery",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-            "min_occurs": 1,
         }
     )
     srs_name: Optional[str] = field(

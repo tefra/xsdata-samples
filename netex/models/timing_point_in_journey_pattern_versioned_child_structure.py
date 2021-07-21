@@ -28,7 +28,6 @@ class TimingPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVers
             "name": "BorderPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     fare_scheduled_stop_point_ref: Optional[FareScheduledStopPointRef] = field(
@@ -37,7 +36,6 @@ class TimingPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVers
             "name": "FareScheduledStopPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     scheduled_stop_point_ref: Optional[ScheduledStopPointRef] = field(
@@ -46,7 +44,6 @@ class TimingPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVers
             "name": "ScheduledStopPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     garage_point_ref: Optional[GaragePointRef] = field(
@@ -55,7 +52,6 @@ class TimingPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVers
             "name": "GaragePointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     parking_point_ref: Optional[ParkingPointRef] = field(
@@ -64,7 +60,6 @@ class TimingPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVers
             "name": "ParkingPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     relief_point_ref: Optional[ReliefPointRef] = field(
@@ -73,7 +68,6 @@ class TimingPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVers
             "name": "ReliefPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     timing_point_ref: Optional[TimingPointRef] = field(
@@ -82,7 +76,6 @@ class TimingPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVers
             "name": "TimingPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     onward_timing_link_ref: Optional[TimingLinkRefStructure] = field(

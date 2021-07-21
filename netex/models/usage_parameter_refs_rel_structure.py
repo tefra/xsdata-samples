@@ -47,7 +47,6 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
             "name": "SalesOfferPackageEntitlementGivenRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     sales_offer_package_entitlement_required_ref: List[SalesOfferPackageEntitlementRequiredRef] = field(
@@ -56,7 +55,6 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
             "name": "SalesOfferPackageEntitlementRequiredRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     minimum_stay_ref: List[MinimumStayRef] = field(
@@ -65,7 +63,6 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
             "name": "MinimumStayRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     interchanging_ref: List[InterchangingRef] = field(
@@ -74,7 +71,6 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
             "name": "InterchangingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     frequency_of_use_ref: List[FrequencyOfUseRef] = field(
@@ -83,7 +79,6 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
             "name": "FrequencyOfUseRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     suspending_ref: List[SuspendingRef] = field(
@@ -92,7 +87,6 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
             "name": "SuspendingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     usage_validity_period_ref: List[UsageValidityPeriodRef] = field(
@@ -101,7 +95,6 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
             "name": "UsageValidityPeriodRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     step_limit_ref: List[StepLimitRef] = field(
@@ -110,7 +103,6 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
             "name": "StepLimitRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     routing_ref: List[RoutingRef] = field(
@@ -119,7 +111,6 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
             "name": "RoutingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     round_trip_ref: List[RoundTripRef] = field(
@@ -128,7 +119,6 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
             "name": "RoundTripRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     luggage_allowance_ref: List[LuggageAllowanceRef] = field(
@@ -137,7 +127,6 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
             "name": "LuggageAllowanceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     entitlement_given_ref: List[EntitlementGivenRef] = field(
@@ -146,7 +135,6 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
             "name": "EntitlementGivenRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     entitlement_required_ref: List[EntitlementRequiredRef] = field(
@@ -155,7 +143,6 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
             "name": "EntitlementRequiredRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     eligibility_change_policy_ref: List[EligibilityChangePolicyRef] = field(
@@ -164,7 +151,6 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
             "name": "EligibilityChangePolicyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     group_ticket_ref: List[GroupTicketRef] = field(
@@ -173,7 +159,6 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
             "name": "GroupTicketRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     commercial_profile_ref: List[CommercialProfileRef] = field(
@@ -182,7 +167,6 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
             "name": "CommercialProfileRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     companion_profile_ref: List[CompanionProfileRef] = field(
@@ -191,7 +175,6 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
             "name": "CompanionProfileRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     user_profile_ref: List[UserProfileRef] = field(
@@ -200,7 +183,6 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
             "name": "UserProfileRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     profile_parameter_ref: List[ProfileParameterRef] = field(
@@ -209,7 +191,6 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ProfileParameterRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     subscribing_ref: List[SubscribingRef] = field(
@@ -218,7 +199,6 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
             "name": "SubscribingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     penalty_policy_ref: List[PenaltyPolicyRef] = field(
@@ -227,7 +207,6 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
             "name": "PenaltyPolicyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     charging_policy_ref: List[ChargingPolicyRef] = field(
@@ -236,7 +215,6 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ChargingPolicyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     transferability_ref: List[TransferabilityRef] = field(
@@ -245,7 +223,6 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TransferabilityRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     replacing_ref: List[ReplacingRef] = field(
@@ -254,7 +231,6 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ReplacingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     refunding_ref: List[RefundingRef] = field(
@@ -263,7 +239,6 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
             "name": "RefundingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     exchanging_ref: List[ExchangingRef] = field(
@@ -272,7 +247,6 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ExchangingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     reselling_ref: List[ResellingRef] = field(
@@ -281,7 +255,6 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ResellingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     cancelling_ref: List[CancellingRef] = field(
@@ -290,7 +263,6 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
             "name": "CancellingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     reserving_ref: List[ReservingRef] = field(
@@ -299,7 +271,6 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ReservingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     purchase_window_ref: List[PurchaseWindowRef] = field(
@@ -308,7 +279,6 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
             "name": "PurchaseWindowRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     usage_parameter_ref: List[UsageParameterRef] = field(
@@ -317,6 +287,5 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
             "name": "UsageParameterRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

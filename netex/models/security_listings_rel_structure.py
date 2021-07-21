@@ -23,7 +23,6 @@ class SecurityListingsRelStructure(ContainmentAggregationStructure):
             "name": "TravelDocumentSecurityListing",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     retail_device_security_listing: List[RetailDeviceSecurityListing] = field(
@@ -32,7 +31,6 @@ class SecurityListingsRelStructure(ContainmentAggregationStructure):
             "name": "RetailDeviceSecurityListing",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     fare_contract_security_listing: List[FareContractSecurityListing] = field(
@@ -41,7 +39,6 @@ class SecurityListingsRelStructure(ContainmentAggregationStructure):
             "name": "FareContractSecurityListing",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     customer_security_listing: List[CustomerSecurityListing] = field(
@@ -50,7 +47,6 @@ class SecurityListingsRelStructure(ContainmentAggregationStructure):
             "name": "CustomerSecurityListing",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     customer_account_security_listing: List[CustomerAccountSecurityListing] = field(
@@ -59,7 +55,6 @@ class SecurityListingsRelStructure(ContainmentAggregationStructure):
             "name": "CustomerAccountSecurityListing",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     security_listing: List[SecurityListing1] = field(
@@ -68,7 +63,6 @@ class SecurityListingsRelStructure(ContainmentAggregationStructure):
             "name": "SecurityListing",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     netex_org_uk_netex_security_listing: List[SecurityListing2] = field(
@@ -77,6 +71,5 @@ class SecurityListingsRelStructure(ContainmentAggregationStructure):
             "name": "SecurityListing_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

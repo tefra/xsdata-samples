@@ -22,7 +22,6 @@ class FareTablesInFrameRelStructure(FrameContainmentStructure):
             "name": "StandardFareTable",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     fare_table_in_context: List[FareTableInContext] = field(
@@ -31,7 +30,6 @@ class FareTablesInFrameRelStructure(FrameContainmentStructure):
             "name": "FareTableInContext",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     fare_table: List[FareTable1] = field(
@@ -40,7 +38,6 @@ class FareTablesInFrameRelStructure(FrameContainmentStructure):
             "name": "FareTable",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     netex_org_uk_netex_fare_table: List[FareTable2] = field(
@@ -49,6 +46,5 @@ class FareTablesInFrameRelStructure(FrameContainmentStructure):
             "name": "FareTable_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

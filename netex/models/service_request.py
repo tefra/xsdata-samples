@@ -18,7 +18,6 @@ class ServiceRequest(ServiceRequestStructure):
             "name": "DataObjectRequest",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     abstract_functional_service_request: List[AbstractFunctionalServiceRequest] = field(
@@ -26,6 +25,5 @@ class ServiceRequest(ServiceRequestStructure):
         metadata={
             "name": "AbstractFunctionalServiceRequest",
             "type": "Element",
-            "min_occurs": 1,
         }
     )

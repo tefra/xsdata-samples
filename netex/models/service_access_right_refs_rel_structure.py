@@ -26,7 +26,6 @@ class ServiceAccessRightRefsRelStructure(OneToManyRelationshipStructure):
             "name": "EntitlementProductRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     supplement_product_ref: List[SupplementProductRef] = field(
@@ -35,7 +34,6 @@ class ServiceAccessRightRefsRelStructure(OneToManyRelationshipStructure):
             "name": "SupplementProductRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     preassigned_fare_product_ref: List[PreassignedFareProductRef] = field(
@@ -44,7 +42,6 @@ class ServiceAccessRightRefsRelStructure(OneToManyRelationshipStructure):
             "name": "PreassignedFareProductRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     amount_of_price_unit_product_ref: List[AmountOfPriceUnitProductRef] = field(
@@ -53,7 +50,6 @@ class ServiceAccessRightRefsRelStructure(OneToManyRelationshipStructure):
             "name": "AmountOfPriceUnitProductRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     usage_discount_right_ref: List[UsageDiscountRightRef] = field(
@@ -62,7 +58,6 @@ class ServiceAccessRightRefsRelStructure(OneToManyRelationshipStructure):
             "name": "UsageDiscountRightRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     third_party_product_ref: List[ThirdPartyProductRef] = field(
@@ -71,7 +66,6 @@ class ServiceAccessRightRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ThirdPartyProductRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     capped_discount_right_ref: List[CappedDiscountRightRef] = field(
@@ -80,7 +74,6 @@ class ServiceAccessRightRefsRelStructure(OneToManyRelationshipStructure):
             "name": "CappedDiscountRightRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     sale_discount_right_ref: List[SaleDiscountRightRef] = field(
@@ -89,7 +82,6 @@ class ServiceAccessRightRefsRelStructure(OneToManyRelationshipStructure):
             "name": "SaleDiscountRightRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     fare_product_ref: List[FareProductRef] = field(
@@ -98,7 +90,6 @@ class ServiceAccessRightRefsRelStructure(OneToManyRelationshipStructure):
             "name": "FareProductRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     service_access_right_ref: List[ServiceAccessRightRef] = field(
@@ -107,6 +98,5 @@ class ServiceAccessRightRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ServiceAccessRightRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

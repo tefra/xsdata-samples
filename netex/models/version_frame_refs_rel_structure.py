@@ -29,7 +29,6 @@ class VersionFrameRefsRelStructure(OneToManyRelationshipStructure):
             "name": "SalesTransactionFrameRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     fare_frame_ref: List[FareFrameRef] = field(
@@ -38,7 +37,6 @@ class VersionFrameRefsRelStructure(OneToManyRelationshipStructure):
             "name": "FareFrameRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     service_frame_ref: List[ServiceFrameRef] = field(
@@ -47,7 +45,6 @@ class VersionFrameRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ServiceFrameRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     driver_schedule_frame_ref: List[DriverScheduleFrameRef] = field(
@@ -56,7 +53,6 @@ class VersionFrameRefsRelStructure(OneToManyRelationshipStructure):
             "name": "DriverScheduleFrameRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     vehicle_schedule_frame_ref: List[VehicleScheduleFrameRef] = field(
@@ -65,7 +61,6 @@ class VersionFrameRefsRelStructure(OneToManyRelationshipStructure):
             "name": "VehicleScheduleFrameRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     timetable_frame_ref: List[TimetableFrameRef] = field(
@@ -74,7 +69,6 @@ class VersionFrameRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TimetableFrameRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     site_frame_ref: List[SiteFrameRef] = field(
@@ -83,7 +77,6 @@ class VersionFrameRefsRelStructure(OneToManyRelationshipStructure):
             "name": "SiteFrameRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     infrastructure_frame_ref: List[InfrastructureFrameRef] = field(
@@ -92,7 +85,6 @@ class VersionFrameRefsRelStructure(OneToManyRelationshipStructure):
             "name": "InfrastructureFrameRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     general_frame_ref: List[GeneralFrameRef] = field(
@@ -101,7 +93,6 @@ class VersionFrameRefsRelStructure(OneToManyRelationshipStructure):
             "name": "GeneralFrameRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     resource_frame_ref: List[ResourceFrameRef] = field(
@@ -110,7 +101,6 @@ class VersionFrameRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ResourceFrameRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     service_calendar_frame_ref: List[ServiceCalendarFrameRef] = field(
@@ -119,7 +109,6 @@ class VersionFrameRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ServiceCalendarFrameRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     composite_frame_ref: List[CompositeFrameRef] = field(
@@ -128,7 +117,6 @@ class VersionFrameRefsRelStructure(OneToManyRelationshipStructure):
             "name": "CompositeFrameRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     version_frame_ref: List[VersionFrameRef] = field(
@@ -137,6 +125,5 @@ class VersionFrameRefsRelStructure(OneToManyRelationshipStructure):
             "name": "VersionFrameRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

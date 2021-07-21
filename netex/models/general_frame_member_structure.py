@@ -499,7 +499,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TravelDocumentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     repeated_trip_fare_request_ref: Optional[RepeatedTripFareRequestRef] = field(
@@ -508,7 +507,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "RepeatedTripFareRequestRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     single_trip_fare_request_ref: Optional[SingleTripFareRequestRef] = field(
@@ -517,7 +515,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "SingleTripFareRequestRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     fare_request_ref: Optional[FareRequestRef] = field(
@@ -526,7 +523,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FareRequestRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     stop_finder_request_ref: Optional[StopFinderRequestRef] = field(
@@ -535,7 +531,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "StopFinderRequestRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     stop_event_request_ref: Optional[StopEventRequestRef] = field(
@@ -544,7 +539,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "StopEventRequestRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     schedule_request_ref: Optional[ScheduleRequestRef] = field(
@@ -553,7 +547,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ScheduleRequestRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     trip_plan_request_ref: Optional[TripPlanRequestRef] = field(
@@ -562,7 +555,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TripPlanRequestRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     passenger_information_request_ref: Optional[PassengerInformationRequestRef] = field(
@@ -571,7 +563,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "PassengerInformationRequestRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     residential_qualification_eligibility_ref: Optional[ResidentialQualificationEligibilityRef] = field(
@@ -580,7 +571,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ResidentialQualificationEligibilityRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     commercial_profile_eligibility_ref: Optional[CommercialProfileEligibilityRef] = field(
@@ -589,7 +579,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "CommercialProfileEligibilityRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     user_profile_eligibility_ref: Optional[UserProfileEligibilityRef] = field(
@@ -598,7 +587,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "UserProfileEligibilityRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     customer_eligibility_ref: Optional[CustomerEligibilityRef] = field(
@@ -607,7 +595,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "CustomerEligibilityRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     customer_account_ref: Optional[CustomerAccountRef] = field(
@@ -616,7 +603,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "CustomerAccountRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     fare_contract_ref: Optional[FareContractRef] = field(
@@ -625,7 +611,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FareContractRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     customer_ref: Optional[CustomerRef] = field(
@@ -634,7 +619,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "CustomerRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     start_time_at_stop_point_ref: Optional[StartTimeAtStopPointRef] = field(
@@ -643,7 +627,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "StartTimeAtStopPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     residential_qualification_ref: Optional[ResidentialQualificationRef] = field(
@@ -652,7 +635,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ResidentialQualificationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_concession_ref: Optional[TypeOfConcessionRef] = field(
@@ -661,7 +643,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfConcessionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_usage_parameter_ref: Optional[TypeOfUsageParameterRef] = field(
@@ -670,7 +651,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfUsageParameterRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     tariff_object_ref: Optional[TariffObjectRef] = field(
@@ -679,7 +659,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TariffObjectRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     parking_tariff_ref: Optional[ParkingTariffRef] = field(
@@ -688,7 +667,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ParkingTariffRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     tariff_ref: Optional[TariffRef] = field(
@@ -697,7 +675,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TariffRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_fare_table_ref: Optional[TypeOfFareTableRef] = field(
@@ -706,7 +683,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfFareTableRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     fare_table_row_ref: Optional[FareTableRowRef] = field(
@@ -715,7 +691,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FareTableRowRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     fare_table_column_ref: Optional[FareTableColumnRef] = field(
@@ -724,7 +699,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FareTableColumnRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     time_unit_ref: Optional[TimeUnitRef] = field(
@@ -733,7 +707,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TimeUnitRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     geographical_unit_ref: Optional[GeographicalUnitRef] = field(
@@ -742,7 +715,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "GeographicalUnitRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     fare_unit_ref: Optional[FareUnitRef] = field(
@@ -751,7 +723,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FareUnitRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     controllable_element_in_sequence_ref: Optional[ControllableElementInSequenceRef] = field(
@@ -760,7 +731,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ControllableElementInSequenceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     fare_structure_element_in_sequence_ref: Optional[FareStructureElementInSequenceRef] = field(
@@ -769,7 +739,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FareStructureElementInSequenceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     access_right_in_product_ref: Optional[AccessRightInProductRef] = field(
@@ -778,7 +747,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "AccessRightInProductRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     fare_element_in_sequence_ref: Optional[FareElementInSequenceRef] = field(
@@ -787,7 +755,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FareElementInSequenceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     cell_ref: Optional[CellRef1] = field(
@@ -796,7 +763,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "CellRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     netex_org_uk_netex_cell_ref: Optional[CellRef2] = field(
@@ -805,7 +771,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "CellRef_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     customer_purchase_package_price_ref: Optional[CustomerPurchasePackagePriceRef] = field(
@@ -814,7 +779,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "CustomerPurchasePackagePriceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     parking_price_ref: Optional[ParkingPriceRef] = field(
@@ -823,7 +787,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ParkingPriceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     time_interval_price_ref: Optional[TimeIntervalPriceRef] = field(
@@ -832,7 +795,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TimeIntervalPriceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     time_unit_price_ref: Optional[TimeUnitPriceRef] = field(
@@ -841,7 +803,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TimeUnitPriceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     quality_structure_factor_price_ref: Optional[QualityStructureFactorPriceRef] = field(
@@ -850,7 +811,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "QualityStructureFactorPriceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     controllable_element_price_ref: Optional[ControllableElementPriceRef] = field(
@@ -859,7 +819,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ControllableElementPriceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     validable_element_price_ref: Optional[ValidableElementPriceRef] = field(
@@ -868,7 +827,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ValidableElementPriceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     geographical_interval_price_ref: Optional[GeographicalIntervalPriceRef] = field(
@@ -877,7 +835,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "GeographicalIntervalPriceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     geographical_unit_price_ref: Optional[GeographicalUnitPriceRef] = field(
@@ -886,7 +843,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "GeographicalUnitPriceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     usage_parameter_price_ref: Optional[UsageParameterPriceRef] = field(
@@ -895,7 +851,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "UsageParameterPriceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     sales_offer_package_price_ref: Optional[SalesOfferPackagePriceRef] = field(
@@ -904,7 +859,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "SalesOfferPackagePriceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     distance_matrix_element_price_ref: Optional[DistanceMatrixElementPriceRef] = field(
@@ -913,7 +867,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "DistanceMatrixElementPriceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     fare_structure_element_price_ref: Optional[FareStructureElementPriceRef] = field(
@@ -922,7 +875,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FareStructureElementPriceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     fulfilment_method_price_ref: Optional[FulfilmentMethodPriceRef] = field(
@@ -931,7 +883,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FulfilmentMethodPriceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     series_constraint_price_ref: Optional[SeriesConstraintPriceRef] = field(
@@ -940,7 +891,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "SeriesConstraintPriceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     capping_rule_price_ref: Optional[CappingRulePriceRef] = field(
@@ -949,7 +899,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "CappingRulePriceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     fare_product_price_ref: Optional[FareProductPriceRef] = field(
@@ -958,7 +907,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FareProductPriceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     fare_price_ref: Optional[FarePriceRef] = field(
@@ -967,7 +915,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FarePriceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     customer_purchase_package_element_ref: Optional[CustomerPurchasePackageElementRef] = field(
@@ -976,7 +923,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "CustomerPurchasePackageElementRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     customer_purchase_package_ref: Optional[CustomerPurchasePackageRef] = field(
@@ -985,7 +931,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "CustomerPurchasePackageRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     controllable_element_ref: Optional[ControllableElementRef] = field(
@@ -994,7 +939,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ControllableElementRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     validable_element_ref: Optional[ValidableElementRef] = field(
@@ -1003,7 +947,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ValidableElementRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     sales_offer_package_entitlement_given_ref: Optional[SalesOfferPackageEntitlementGivenRef] = field(
@@ -1012,7 +955,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "SalesOfferPackageEntitlementGivenRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     sales_offer_package_entitlement_required_ref: Optional[SalesOfferPackageEntitlementRequiredRef] = field(
@@ -1021,7 +963,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "SalesOfferPackageEntitlementRequiredRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     minimum_stay_ref: Optional[MinimumStayRef] = field(
@@ -1030,7 +971,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "MinimumStayRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     interchanging_ref: Optional[InterchangingRef] = field(
@@ -1039,7 +979,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "InterchangingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     frequency_of_use_ref: Optional[FrequencyOfUseRef] = field(
@@ -1048,7 +987,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FrequencyOfUseRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     suspending_ref: Optional[SuspendingRef] = field(
@@ -1057,7 +995,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "SuspendingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     usage_validity_period_ref: Optional[UsageValidityPeriodRef] = field(
@@ -1066,7 +1003,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "UsageValidityPeriodRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     step_limit_ref: Optional[StepLimitRef] = field(
@@ -1075,7 +1011,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "StepLimitRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     routing_ref: Optional[RoutingRef] = field(
@@ -1084,7 +1019,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "RoutingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     round_trip_ref: Optional[RoundTripRef] = field(
@@ -1093,7 +1027,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "RoundTripRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     luggage_allowance_ref: Optional[LuggageAllowanceRef] = field(
@@ -1102,7 +1035,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "LuggageAllowanceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     entitlement_given_ref: Optional[EntitlementGivenRef] = field(
@@ -1111,7 +1043,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "EntitlementGivenRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     entitlement_required_ref: Optional[EntitlementRequiredRef] = field(
@@ -1120,7 +1051,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "EntitlementRequiredRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     eligibility_change_policy_ref: Optional[EligibilityChangePolicyRef] = field(
@@ -1129,7 +1059,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "EligibilityChangePolicyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     group_ticket_ref: Optional[GroupTicketRef] = field(
@@ -1138,7 +1067,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "GroupTicketRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     commercial_profile_ref: Optional[CommercialProfileRef] = field(
@@ -1147,7 +1075,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "CommercialProfileRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     companion_profile_ref: Optional[CompanionProfileRef] = field(
@@ -1156,7 +1083,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "CompanionProfileRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     user_profile_ref: Optional[UserProfileRef] = field(
@@ -1165,7 +1091,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "UserProfileRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     profile_parameter_ref: Optional[ProfileParameterRef] = field(
@@ -1174,7 +1099,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ProfileParameterRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     subscribing_ref: Optional[SubscribingRef] = field(
@@ -1183,7 +1107,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "SubscribingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     penalty_policy_ref: Optional[PenaltyPolicyRef] = field(
@@ -1192,7 +1115,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "PenaltyPolicyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     charging_policy_ref: Optional[ChargingPolicyRef] = field(
@@ -1201,7 +1123,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ChargingPolicyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     transferability_ref: Optional[TransferabilityRef] = field(
@@ -1210,7 +1131,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TransferabilityRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     replacing_ref: Optional[ReplacingRef] = field(
@@ -1219,7 +1139,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ReplacingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     refunding_ref: Optional[RefundingRef] = field(
@@ -1228,7 +1147,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "RefundingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     exchanging_ref: Optional[ExchangingRef] = field(
@@ -1237,7 +1155,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ExchangingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     reselling_ref: Optional[ResellingRef] = field(
@@ -1246,7 +1163,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ResellingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     cancelling_ref: Optional[CancellingRef] = field(
@@ -1255,7 +1171,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "CancellingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     reserving_ref: Optional[ReservingRef] = field(
@@ -1264,7 +1179,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ReservingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     purchase_window_ref: Optional[PurchaseWindowRef] = field(
@@ -1273,7 +1187,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "PurchaseWindowRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     usage_parameter_ref: Optional[UsageParameterRef] = field(
@@ -1282,7 +1195,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "UsageParameterRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     sales_offer_package_element_ref: Optional[SalesOfferPackageElementRef] = field(
@@ -1291,7 +1203,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "SalesOfferPackageElementRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     sales_offer_package_ref: Optional[SalesOfferPackageRef] = field(
@@ -1300,7 +1211,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "SalesOfferPackageRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     distance_matrix_element_inverse_ref: Optional[DistanceMatrixElementInverseRef] = field(
@@ -1309,7 +1219,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "DistanceMatrixElementInverseRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     distance_matrix_element_ref: Optional[DistanceMatrixElementRef] = field(
@@ -1318,7 +1227,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "DistanceMatrixElementRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     fare_structure_element_ref: Optional[FareStructureElementRef] = field(
@@ -1327,7 +1235,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FareStructureElementRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     fulfilment_method_ref: Optional[FulfilmentMethodRef] = field(
@@ -1336,7 +1243,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FulfilmentMethodRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     series_constraint_ref: Optional[SeriesConstraintRef] = field(
@@ -1345,7 +1251,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "SeriesConstraintRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     capping_rule_ref: Optional[CappingRuleRef] = field(
@@ -1354,7 +1259,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "CappingRuleRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     entitlement_product_ref: Optional[EntitlementProductRef] = field(
@@ -1363,7 +1267,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "EntitlementProductRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     supplement_product_ref: Optional[SupplementProductRef] = field(
@@ -1372,7 +1275,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "SupplementProductRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     preassigned_fare_product_ref: Optional[PreassignedFareProductRef] = field(
@@ -1381,7 +1283,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "PreassignedFareProductRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     amount_of_price_unit_product_ref: Optional[AmountOfPriceUnitProductRef] = field(
@@ -1390,7 +1291,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "AmountOfPriceUnitProductRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     usage_discount_right_ref: Optional[UsageDiscountRightRef] = field(
@@ -1399,7 +1299,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "UsageDiscountRightRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     third_party_product_ref: Optional[ThirdPartyProductRef] = field(
@@ -1408,7 +1307,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ThirdPartyProductRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     capped_discount_right_ref: Optional[CappedDiscountRightRef] = field(
@@ -1417,7 +1315,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "CappedDiscountRightRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     sale_discount_right_ref: Optional[SaleDiscountRightRef] = field(
@@ -1426,7 +1323,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "SaleDiscountRightRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     fare_product_ref: Optional[FareProductRef] = field(
@@ -1435,7 +1331,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FareProductRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     service_access_right_ref: Optional[ServiceAccessRightRef] = field(
@@ -1444,7 +1339,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ServiceAccessRightRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     time_interval_ref: Optional[TimeIntervalRef] = field(
@@ -1453,7 +1347,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TimeIntervalRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     geographical_interval_ref: Optional[GeographicalIntervalRef] = field(
@@ -1462,7 +1355,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "GeographicalIntervalRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     fare_interval_ref: Optional[FareIntervalRef] = field(
@@ -1471,7 +1363,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FareIntervalRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     parking_charge_band_ref: Optional[ParkingChargeBandRef] = field(
@@ -1480,7 +1371,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ParkingChargeBandRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     time_structure_factor_ref: Optional[TimeStructureFactorRef] = field(
@@ -1489,7 +1379,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TimeStructureFactorRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     fare_quota_factor_ref: Optional[FareQuotaFactorRef] = field(
@@ -1498,7 +1387,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FareQuotaFactorRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     fare_demand_factor_ref: Optional[FareDemandFactorRef] = field(
@@ -1507,7 +1395,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FareDemandFactorRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     quality_structure_factor_ref: Optional[QualityStructureFactorRef] = field(
@@ -1516,7 +1403,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "QualityStructureFactorRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     geographical_structure_factor_ref: Optional[GeographicalStructureFactorRef] = field(
@@ -1525,7 +1411,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "GeographicalStructureFactorRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     fare_structure_factor_ref: Optional[FareStructureFactorRef] = field(
@@ -1534,7 +1419,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FareStructureFactorRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     priceable_object_ref: Optional[PriceableObjectRef] = field(
@@ -1543,7 +1427,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "PriceableObjectRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     month_validity_offset_ref: Optional[MonthValidityOffsetRef] = field(
@@ -1552,7 +1435,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "MonthValidityOffsetRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     limiting_rule_ref: Optional[LimitingRuleRef] = field(
@@ -1561,7 +1443,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "LimitingRuleRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     discounting_rule_ref: Optional[DiscountingRuleRef] = field(
@@ -1570,7 +1451,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "DiscountingRuleRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     pricing_rule_ref: Optional[PricingRuleRef] = field(
@@ -1579,7 +1459,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "PricingRuleRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     pricing_service_ref: Optional[PricingServiceRef] = field(
@@ -1588,7 +1467,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "PricingServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     rounding_step_ref: Optional[RoundingStepRef] = field(
@@ -1597,7 +1475,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "RoundingStepRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     rounding_ref: Optional[RoundingRef] = field(
@@ -1606,7 +1483,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "RoundingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     pricing_parameter_set_ref: Optional[PricingParameterSetRef] = field(
@@ -1615,7 +1491,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "PricingParameterSetRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     supply_contract_ref: Optional[SupplyContractRef] = field(
@@ -1624,7 +1499,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "SupplyContractRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     flexible_service_properties_ref: Optional[FlexibleServicePropertiesRef] = field(
@@ -1633,7 +1507,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FlexibleServicePropertiesRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     driver_trip_time_ref: Optional[DriverTripTimeRef] = field(
@@ -1642,7 +1515,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "DriverTripTimeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     driver_trip_ref: Optional[DriverTripRef] = field(
@@ -1651,7 +1523,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "DriverTripRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     duty_part_ref: Optional[DutyPartRef] = field(
@@ -1660,7 +1531,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "DutyPartRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     accountable_element_ref: Optional[AccountableElementRef] = field(
@@ -1669,7 +1539,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "AccountableElementRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     duty_ref: Optional[DutyRef] = field(
@@ -1678,7 +1547,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "DutyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     relief_opportunity_ref: Optional[ReliefOpportunityRef] = field(
@@ -1687,7 +1555,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ReliefOpportunityRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     course_of_journeys_ref: Optional[CourseOfJourneysRef] = field(
@@ -1696,7 +1563,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "CourseOfJourneysRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     driver_ref: Optional[DriverRef] = field(
@@ -1705,7 +1571,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "DriverRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     vehicle_service_part_ref: Optional[VehicleServicePartRef] = field(
@@ -1714,7 +1579,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "VehicleServicePartRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     vehicle_service_ref: Optional[VehicleServiceRef] = field(
@@ -1723,7 +1587,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "VehicleServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     compound_block_ref: Optional[CompoundBlockRef] = field(
@@ -1732,7 +1595,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "CompoundBlockRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     train_block_part_ref: Optional[TrainBlockPartRef] = field(
@@ -1741,7 +1603,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TrainBlockPartRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     block_part_ref: Optional[BlockPartRef] = field(
@@ -1750,7 +1611,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "BlockPartRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     train_block_ref: Optional[TrainBlockRef] = field(
@@ -1759,7 +1619,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TrainBlockRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     block_ref: Optional[BlockRef] = field(
@@ -1768,7 +1627,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "BlockRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     journey_part_couple_ref: Optional[JourneyPartCoupleRef] = field(
@@ -1777,7 +1635,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "JourneyPartCoupleRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     coupled_journey_ref: Optional[CoupledJourneyRef] = field(
@@ -1786,7 +1643,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "CoupledJourneyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     journey_part_ref: Optional[JourneyPartRef] = field(
@@ -1795,7 +1651,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "JourneyPartRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     timetabled_passing_time_ref: Optional[TimetabledPassingTimeRef] = field(
@@ -1804,7 +1659,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TimetabledPassingTimeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     estimated_passing_time_ref: Optional[EstimatedPassingTimeRef] = field(
@@ -1813,7 +1667,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "EstimatedPassingTimeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     observed_passing_time_ref: Optional[ObservedPassingTimeRef] = field(
@@ -1822,7 +1675,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ObservedPassingTimeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     target_passing_time_ref: Optional[TargetPassingTimeRef] = field(
@@ -1831,7 +1683,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TargetPassingTimeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     passing_time_ref: Optional[PassingTimeRef] = field(
@@ -1840,7 +1691,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "PassingTimeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     interchange_rule_timing_ref: Optional[InterchangeRuleTimingRef] = field(
@@ -1849,7 +1699,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "InterchangeRuleTimingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     interchange_rule_ref: Optional[InterchangeRuleRef] = field(
@@ -1858,7 +1707,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "InterchangeRuleRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     service_journey_pattern_interchange_ref: Optional[ServiceJourneyPatternInterchangeRef] = field(
@@ -1867,7 +1715,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ServiceJourneyPatternInterchangeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     service_journey_interchange_ref: Optional[ServiceJourneyInterchangeRef] = field(
@@ -1876,7 +1723,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ServiceJourneyInterchangeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     default_interchange_ref: Optional[DefaultInterchangeRef] = field(
@@ -1885,7 +1731,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "DefaultInterchangeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     interchange_ref: Optional[InterchangeRef] = field(
@@ -1894,7 +1739,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "InterchangeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     journey_meeting_ref: Optional[JourneyMeetingRef] = field(
@@ -1903,7 +1747,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "JourneyMeetingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     train_number_ref: Optional[TrainNumberRef] = field(
@@ -1912,7 +1755,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TrainNumberRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     routing_constraint_zone_ref: Optional[RoutingConstraintZoneRef] = field(
@@ -1921,7 +1763,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "RoutingConstraintZoneRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     vehicle_position_alignment_ref: Optional[VehiclePositionAlignmentRef] = field(
@@ -1930,7 +1771,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "VehiclePositionAlignmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     vehicle_quay_alignment_ref: Optional[VehicleQuayAlignmentRef] = field(
@@ -1939,7 +1779,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "VehicleQuayAlignmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     logical_display_ref: Optional[LogicalDisplayRef] = field(
@@ -1948,7 +1787,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "LogicalDisplayRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     parking_area_ref: Optional[ParkingAreaRef] = field(
@@ -1957,7 +1795,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ParkingAreaRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     parking_properties_ref: Optional[ParkingPropertiesRef] = field(
@@ -1966,7 +1803,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ParkingPropertiesRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     parking_capacity_ref: Optional[ParkingCapacityRef] = field(
@@ -1975,7 +1811,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ParkingCapacityRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     line_network_ref: Optional[LineNetworkRef] = field(
@@ -1984,7 +1819,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "LineNetworkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     route_instruction_ref: Optional[RouteInstructionRef] = field(
@@ -1993,7 +1827,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "RouteInstructionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     level_ref: Optional[LevelRef] = field(
@@ -2002,7 +1835,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "LevelRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     flexible_point_properties_ref: Optional[FlexiblePointPropertiesRef] = field(
@@ -2011,7 +1843,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FlexiblePointPropertiesRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     flexible_link_properties_ref: Optional[FlexibleLinkPropertiesRef] = field(
@@ -2020,7 +1851,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FlexibleLinkPropertiesRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     time_demand_profile_ref: Optional[TimeDemandProfileRef] = field(
@@ -2029,7 +1859,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TimeDemandProfileRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     time_demand_type_ref: Optional[TimeDemandTypeRef] = field(
@@ -2038,7 +1867,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TimeDemandTypeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     vehicle_type_preference_ref: Optional[VehicleTypePreferenceRef] = field(
@@ -2047,7 +1875,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "VehicleTypePreferenceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     journey_pattern_headway_ref: Optional[JourneyPatternHeadwayRef] = field(
@@ -2056,7 +1883,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "JourneyPatternHeadwayRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     journey_pattern_layover_ref: Optional[JourneyPatternLayoverRef] = field(
@@ -2065,7 +1891,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "JourneyPatternLayoverRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     journey_pattern_run_time_ref: Optional[JourneyPatternRunTimeRef] = field(
@@ -2074,7 +1899,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "JourneyPatternRunTimeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     journey_pattern_wait_time_ref: Optional[JourneyPatternWaitTimeRef] = field(
@@ -2083,7 +1907,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "JourneyPatternWaitTimeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     default_service_journey_time_ref: Optional[DefaultServiceJourneyTimeRef] = field(
@@ -2092,7 +1915,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "DefaultServiceJourneyTimeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     default_dead_run_run_time_ref: Optional[DefaultDeadRunRunTimeRef] = field(
@@ -2101,7 +1923,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "DefaultDeadRunRunTimeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     turnaround_time_limit_time_ref: Optional[TurnaroundTimeLimitTimeRef] = field(
@@ -2110,7 +1931,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TurnaroundTimeLimitTimeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     headway_ref: Optional[HeadwayRef] = field(
@@ -2119,7 +1939,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "HeadwayRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     journey_timing_ref: Optional[JourneyTimingRef] = field(
@@ -2128,7 +1947,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "JourneyTimingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     crew_base_ref: Optional[CrewBaseRef] = field(
@@ -2137,7 +1955,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "CrewBaseRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     passenger_seat_ref: Optional[PassengerSeatRef] = field(
@@ -2146,7 +1963,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "PassengerSeatRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     operating_department_ref: Optional[OperatingDepartmentRef] = field(
@@ -2155,7 +1971,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "OperatingDepartmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     operational_context_ref: Optional[OperationalContextRef] = field(
@@ -2164,7 +1979,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "OperationalContextRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     train_component_ref: Optional[TrainComponentRef] = field(
@@ -2173,7 +1987,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TrainComponentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     train_element_ref: Optional[TrainElementRef] = field(
@@ -2182,7 +1995,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TrainElementRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     train_in_compound_train_ref: Optional[TrainInCompoundTrainRef] = field(
@@ -2191,7 +2003,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TrainInCompoundTrainRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     travel_document_security_listing_ref: Optional[TravelDocumentSecurityListingRef] = field(
@@ -2200,7 +2011,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TravelDocumentSecurityListingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     retail_device_security_listing_ref: Optional[RetailDeviceSecurityListingRef] = field(
@@ -2209,7 +2019,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "RetailDeviceSecurityListingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     customer_account_security_listing_ref: Optional[CustomerAccountSecurityListingRef] = field(
@@ -2218,7 +2027,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "CustomerAccountSecurityListingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     fare_contract_security_listing_ref: Optional[FareContractSecurityListingRef] = field(
@@ -2227,7 +2035,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FareContractSecurityListingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     customer_security_listing_ref: Optional[CustomerSecurityListingRef] = field(
@@ -2236,7 +2043,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "CustomerSecurityListingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     security_listing_ref: Optional[SecurityListingRef] = field(
@@ -2245,7 +2051,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "SecurityListingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     whitelist_ref: Optional[WhitelistRef] = field(
@@ -2254,7 +2059,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "WhitelistRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     blacklist_ref: Optional[BlacklistRef] = field(
@@ -2263,7 +2067,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "BlacklistRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     security_list_ref: Optional[SecurityListRef] = field(
@@ -2272,7 +2075,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "SecurityListRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     schematic_map_member_ref: Optional[SchematicMapMemberRef] = field(
@@ -2281,7 +2083,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "SchematicMapMemberRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     schematic_map_ref: Optional[SchematicMapRef] = field(
@@ -2290,7 +2091,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "SchematicMapRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     delivery_variant_ref: Optional[DeliveryVariantRef] = field(
@@ -2299,7 +2099,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "DeliveryVariantRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     notice_ref: Optional[NoticeRef] = field(
@@ -2308,7 +2107,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "NoticeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     vehicle_equipment_profile_ref: Optional[VehicleEquipmentProfileRef] = field(
@@ -2317,7 +2115,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "VehicleEquipmentProfileRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     vehicle_model_ref: Optional[VehicleModelRef] = field(
@@ -2326,7 +2123,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "VehicleModelRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     vehicle_ref: Optional[VehicleRef] = field(
@@ -2335,7 +2131,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "VehicleRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     passenger_capacity_ref: Optional[PassengerCapacityRef] = field(
@@ -2344,7 +2139,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "PassengerCapacityRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     facility_requirement_ref: Optional[FacilityRequirementRef] = field(
@@ -2353,7 +2147,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FacilityRequirementRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     vehicle_manoeuvring_requirement_ref: Optional[VehicleManoeuvringRequirementRef] = field(
@@ -2362,7 +2155,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "VehicleManoeuvringRequirementRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     passenger_carrying_requirement_ref: Optional[PassengerCarryingRequirementRef] = field(
@@ -2371,7 +2163,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "PassengerCarryingRequirementRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     vehicle_requirement_ref: Optional[VehicleRequirementRef] = field(
@@ -2380,7 +2171,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "VehicleRequirementRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     compound_train_ref: Optional[CompoundTrainRef] = field(
@@ -2389,7 +2179,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "CompoundTrainRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     train_ref: Optional[TrainRef] = field(
@@ -2398,7 +2187,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TrainRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     vehicle_type_ref: Optional[VehicleTypeRef] = field(
@@ -2407,7 +2195,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "VehicleTypeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     onboard_stay_ref: Optional[OnboardStayRef] = field(
@@ -2416,7 +2203,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "OnboardStayRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     accommodation_ref: Optional[AccommodationRef] = field(
@@ -2425,7 +2211,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "AccommodationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     service_facility_set_ref: Optional[ServiceFacilitySetRef] = field(
@@ -2434,7 +2219,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ServiceFacilitySetRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     site_facility_set_ref: Optional[SiteFacilitySetRef] = field(
@@ -2443,7 +2227,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "SiteFacilitySetRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     facility_set_ref: Optional[FacilitySetRef] = field(
@@ -2452,7 +2235,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FacilitySetRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     facility_ref: Optional[FacilityRef] = field(
@@ -2461,7 +2243,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FacilityRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     mode_ref: Optional[ModeRef] = field(
@@ -2470,7 +2251,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ModeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     submode_ref: Optional[SubmodeRef] = field(
@@ -2479,7 +2259,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "SubmodeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     open_transport_mode_ref: Optional[OpenTransportModeRef] = field(
@@ -2488,7 +2267,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "OpenTransportModeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     topographic_projection_ref: Optional[TopographicProjectionRef] = field(
@@ -2497,7 +2275,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TopographicProjectionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     complex_feature_projection_ref: Optional[ComplexFeatureProjectionRef] = field(
@@ -2506,7 +2283,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ComplexFeatureProjectionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     link_sequence_projection_ref: Optional[LinkSequenceProjectionRef] = field(
@@ -2515,7 +2291,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "LinkSequenceProjectionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     zone_projection_ref: Optional[ZoneProjectionRef] = field(
@@ -2524,7 +2299,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ZoneProjectionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     link_projection_ref: Optional[LinkProjectionRef] = field(
@@ -2533,7 +2307,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "LinkProjectionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     point_projection_ref: Optional[PointProjectionRef] = field(
@@ -2542,7 +2315,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "PointProjectionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     projection_ref: Optional[ProjectionRef] = field(
@@ -2551,7 +2323,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ProjectionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     group_of_link_sequences_ref: Optional[GroupOfLinkSequencesRef] = field(
@@ -2560,7 +2331,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "GroupOfLinkSequencesRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     dated_vehicle_journey_ref: Optional[DatedVehicleJourneyRef] = field(
@@ -2569,7 +2339,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "DatedVehicleJourneyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     dated_special_service_ref: Optional[DatedSpecialServiceRef] = field(
@@ -2578,7 +2347,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "DatedSpecialServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     special_service_ref: Optional[SpecialServiceRef] = field(
@@ -2587,7 +2355,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "SpecialServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     template_service_journey_ref: Optional[TemplateServiceJourneyRef] = field(
@@ -2596,7 +2363,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TemplateServiceJourneyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     service_journey_ref: Optional[ServiceJourneyRef] = field(
@@ -2605,7 +2371,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ServiceJourneyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     dead_run_ref: Optional[DeadRunRef] = field(
@@ -2614,7 +2379,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "DeadRunRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     vehicle_journey_ref: Optional[VehicleJourneyRef] = field(
@@ -2623,7 +2387,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "VehicleJourneyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     journey_ref: Optional[JourneyRef] = field(
@@ -2632,7 +2395,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "JourneyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     navigation_path_ref: Optional[NavigationPathRef] = field(
@@ -2641,7 +2403,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "NavigationPathRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     service_journey_pattern_ref: Optional[ServiceJourneyPatternRef] = field(
@@ -2650,7 +2411,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ServiceJourneyPatternRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     service_pattern_ref: Optional[ServicePatternRef] = field(
@@ -2659,7 +2419,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ServicePatternRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     dead_run_journey_pattern_ref: Optional[DeadRunJourneyPatternRef] = field(
@@ -2668,7 +2427,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "DeadRunJourneyPatternRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     journey_pattern_ref: Optional[JourneyPatternRef] = field(
@@ -2677,7 +2435,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "JourneyPatternRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     timing_pattern_ref: Optional[TimingPatternRef] = field(
@@ -2686,7 +2443,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TimingPatternRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     route_ref: Optional[RouteRef] = field(
@@ -2695,7 +2451,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "RouteRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     link_sequence_ref: Optional[LinkSequenceRef] = field(
@@ -2704,7 +2459,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "LinkSequenceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     sales_transaction_ref: Optional[SalesTransactionRef] = field(
@@ -2713,7 +2467,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "SalesTransactionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     offered_travel_specification_ref: Optional[OfferedTravelSpecificationRef] = field(
@@ -2722,7 +2475,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "OfferedTravelSpecificationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     requested_travel_specification_ref: Optional[RequestedTravelSpecificationRef] = field(
@@ -2731,7 +2483,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "RequestedTravelSpecificationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     travel_specification_ref: Optional[TravelSpecificationRef] = field(
@@ -2740,7 +2491,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TravelSpecificationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     fare_contract_entry_ref: Optional[FareContractEntryRef] = field(
@@ -2749,7 +2499,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FareContractEntryRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     log_entry_ref: Optional[LogEntryRef] = field(
@@ -2758,7 +2507,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "LogEntryRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     alternative_name_ref: Optional[AlternativeNameRef] = field(
@@ -2767,7 +2515,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "AlternativeNameRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     timeband_ref: Optional[TimebandRef] = field(
@@ -2776,7 +2523,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TimebandRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     fare_day_type_ref: Optional[FareDayTypeRef] = field(
@@ -2785,7 +2531,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FareDayTypeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     day_type_ref: Optional[DayTypeRef] = field(
@@ -2794,7 +2539,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "DayTypeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     default_connection_ref: Optional[DefaultConnectionRef] = field(
@@ -2803,7 +2547,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "DefaultConnectionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     site_connection_ref: Optional[SiteConnectionRef] = field(
@@ -2812,7 +2555,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "SiteConnectionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     connection_ref: Optional[ConnectionRef] = field(
@@ -2821,7 +2563,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ConnectionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     access_ref: Optional[AccessRef] = field(
@@ -2830,7 +2571,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "AccessRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     transfer_ref: Optional[TransferRef] = field(
@@ -2839,7 +2579,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TransferRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     hail_and_ride_area_ref: Optional[HailAndRideAreaRef] = field(
@@ -2848,7 +2587,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "HailAndRideAreaRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     flexible_area_ref: Optional[FlexibleAreaRef] = field(
@@ -2857,7 +2595,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FlexibleAreaRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     flexible_quay_ref: Optional[FlexibleQuayRef] = field(
@@ -2866,7 +2603,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FlexibleQuayRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     flexible_stop_place_ref: Optional[FlexibleStopPlaceRef] = field(
@@ -2875,7 +2611,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FlexibleStopPlaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     path_junction_ref: Optional[PathJunctionRef] = field(
@@ -2884,7 +2619,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "PathJunctionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     topographic_place_ref: Optional[TopographicPlaceRef] = field(
@@ -2893,7 +2627,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TopographicPlaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     equipment_place_ref: Optional[EquipmentPlaceRef] = field(
@@ -2902,7 +2635,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "EquipmentPlaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     equipment_position_ref: Optional[EquipmentPositionRef] = field(
@@ -2911,7 +2643,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "EquipmentPositionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     vehicle_stopping_position_ref: Optional[VehicleStoppingPositionRef] = field(
@@ -2920,7 +2651,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "VehicleStoppingPositionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     vehicle_stopping_place_ref: Optional[VehicleStoppingPlaceRef] = field(
@@ -2929,7 +2659,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "VehicleStoppingPlaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     boarding_position_ref: Optional[BoardingPositionRef] = field(
@@ -2938,7 +2667,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "BoardingPositionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     access_space_ref: Optional[AccessSpaceRef] = field(
@@ -2947,7 +2675,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "AccessSpaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     quay_ref: Optional[QuayRef] = field(
@@ -2956,7 +2683,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "QuayRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     stop_place_space_ref: Optional[StopPlaceSpaceRef] = field(
@@ -2965,7 +2691,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "StopPlaceSpaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     parking_bay_ref: Optional[ParkingBayRef] = field(
@@ -2974,7 +2699,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ParkingBayRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     point_of_interest_space_ref: Optional[PointOfInterestSpaceRef] = field(
@@ -2983,7 +2707,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "PointOfInterestSpaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     stop_place_vehicle_entrance_ref: Optional[StopPlaceVehicleEntranceRef] = field(
@@ -2992,7 +2715,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "StopPlaceVehicleEntranceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     stop_place_entrance_ref: Optional[StopPlaceEntranceRef] = field(
@@ -3001,7 +2723,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "StopPlaceEntranceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     parking_entrance_for_vehicles_ref: Optional[ParkingEntranceForVehiclesRef] = field(
@@ -3010,7 +2731,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ParkingEntranceForVehiclesRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     parking_passenger_entrance_ref: Optional[ParkingPassengerEntranceRef] = field(
@@ -3019,7 +2739,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ParkingPassengerEntranceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     parking_entrance_ref: Optional[ParkingEntranceRef] = field(
@@ -3028,7 +2747,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ParkingEntranceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     point_of_interest_vehicle_entrance_ref: Optional[PointOfInterestVehicleEntranceRef] = field(
@@ -3037,7 +2755,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "PointOfInterestVehicleEntranceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     point_of_interest_entrance_ref: Optional[PointOfInterestEntranceRef] = field(
@@ -3046,7 +2763,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "PointOfInterestEntranceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     vehicle_entrance_ref: Optional[VehicleEntranceRef] = field(
@@ -3055,7 +2771,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "VehicleEntranceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     entrance_ref: Optional[EntranceRef] = field(
@@ -3064,7 +2779,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "EntranceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     site_component_ref: Optional[SiteComponentRef] = field(
@@ -3073,7 +2787,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "SiteComponentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     stop_place_ref: Optional[StopPlaceRef] = field(
@@ -3082,7 +2795,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "StopPlaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     parking_ref: Optional[ParkingRef] = field(
@@ -3091,7 +2803,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ParkingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     point_of_interest_ref: Optional[PointOfInterestRef] = field(
@@ -3100,7 +2811,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "PointOfInterestRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     service_site_ref: Optional[ServiceSiteRef] = field(
@@ -3109,7 +2819,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ServiceSiteRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     site_ref: Optional[SiteRef] = field(
@@ -3118,7 +2827,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "SiteRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     site_element_ref: Optional[SiteElementRef] = field(
@@ -3127,7 +2835,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "SiteElementRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     garage_ref: Optional[GarageRef] = field(
@@ -3136,7 +2843,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "GarageRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     addressable_place_ref: Optional[AddressablePlaceRef] = field(
@@ -3145,7 +2851,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "AddressablePlaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     postal_address_ref: Optional[PostalAddressRef] = field(
@@ -3154,7 +2859,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "PostalAddressRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     road_address_ref: Optional[RoadAddressRef] = field(
@@ -3163,7 +2867,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "RoadAddressRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     address_ref: Optional[AddressRef] = field(
@@ -3172,7 +2875,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "AddressRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     place_ref: Optional[PlaceRef2] = field(
@@ -3181,7 +2883,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "PlaceRef_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     service_link_ref: Optional[ServiceLinkRef] = field(
@@ -3190,7 +2891,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ServiceLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     line_link_ref: Optional[LineLinkRef] = field(
@@ -3199,7 +2899,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "LineLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     path_link_ref: Optional[PathLinkRef] = field(
@@ -3208,7 +2907,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "PathLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     timing_link_ref: Optional[TimingLinkRef] = field(
@@ -3217,7 +2915,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TimingLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     route_link_ref: Optional[RouteLinkRef] = field(
@@ -3226,7 +2923,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "RouteLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     wire_link_ref: Optional[WireLinkRef] = field(
@@ -3235,7 +2931,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "WireLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     road_link_ref: Optional[RoadLinkRef] = field(
@@ -3244,7 +2939,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "RoadLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     railway_link_ref: Optional[RailwayLinkRef] = field(
@@ -3253,7 +2947,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "RailwayLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     infrastructure_link_ref: Optional[InfrastructureLinkRef] = field(
@@ -3262,7 +2955,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "InfrastructureLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     activation_link_ref: Optional[ActivationLinkRef] = field(
@@ -3271,7 +2963,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ActivationLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     link_ref: Optional[LinkRef] = field(
@@ -3280,7 +2971,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "LinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     border_point_ref: Optional[BorderPointRef] = field(
@@ -3289,7 +2979,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "BorderPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     fare_scheduled_stop_point_ref: Optional[FareScheduledStopPointRef] = field(
@@ -3298,7 +2987,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FareScheduledStopPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     scheduled_stop_point_ref: Optional[ScheduledStopPointRef] = field(
@@ -3307,7 +2995,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ScheduledStopPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     garage_point_ref: Optional[GaragePointRef] = field(
@@ -3316,7 +3003,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "GaragePointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     parking_point_ref: Optional[ParkingPointRef] = field(
@@ -3325,7 +3011,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ParkingPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     relief_point_ref: Optional[ReliefPointRef] = field(
@@ -3334,7 +3019,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ReliefPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     timing_point_ref: Optional[TimingPointRef] = field(
@@ -3343,7 +3027,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TimingPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     route_point_ref: Optional[RoutePointRef] = field(
@@ -3352,7 +3035,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "RoutePointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     wire_point_ref: Optional[WirePointRef] = field(
@@ -3361,7 +3043,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "WirePointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     road_point_ref: Optional[RoadPointRef] = field(
@@ -3370,7 +3051,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "RoadPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     railway_point_ref: Optional[RailwayPointRef] = field(
@@ -3379,7 +3059,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "RailwayPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     infrastructure_point_ref: Optional[InfrastructurePointRef] = field(
@@ -3388,7 +3067,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "InfrastructurePointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     traffic_control_point_ref: Optional[TrafficControlPointRef] = field(
@@ -3397,7 +3075,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TrafficControlPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     beacon_point_ref: Optional[BeaconPointRef] = field(
@@ -3406,7 +3083,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "BeaconPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     activation_point_ref: Optional[ActivationPointRef] = field(
@@ -3415,7 +3091,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ActivationPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     point_on_link_ref: Optional[PointOnLinkRef] = field(
@@ -3424,7 +3099,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "PointOnLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     point_ref: Optional[PointRef] = field(
@@ -3433,7 +3107,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "PointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     operating_period_ref: Optional[OperatingPeriodRef] = field(
@@ -3442,7 +3115,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "OperatingPeriodRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     operating_day_ref: Optional[OperatingDayRef] = field(
@@ -3451,7 +3123,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "OperatingDayRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     service_calendar_ref: Optional[ServiceCalendarRef] = field(
@@ -3460,7 +3131,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ServiceCalendarRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     alternative_text_ref: Optional[AlternativeTextRef] = field(
@@ -3469,7 +3139,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "AlternativeTextRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     availability_condition_ref: Optional[AvailabilityConditionRef] = field(
@@ -3478,7 +3147,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "AvailabilityConditionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     validity_rule_parameter_ref: Optional[ValidityRuleParameterRef] = field(
@@ -3487,7 +3155,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ValidityRuleParameterRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     validity_trigger_ref: Optional[ValidityTriggerRef] = field(
@@ -3496,7 +3163,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ValidityTriggerRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     validity_condition_ref: Optional[ValidityConditionRef] = field(
@@ -3505,7 +3171,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ValidityConditionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     responsibility_role_ref: Optional[ResponsibilityRoleRef] = field(
@@ -3514,7 +3179,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ResponsibilityRoleRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     control_centre_ref: Optional[ControlCentreRef] = field(
@@ -3523,7 +3187,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ControlCentreRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     organisational_unit_ref: Optional[OrganisationalUnitRef] = field(
@@ -3532,7 +3195,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "OrganisationalUnitRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     department_ref: Optional[DepartmentRef] = field(
@@ -3541,7 +3203,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "DepartmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     organisation_part_ref: Optional[OrganisationPartRef] = field(
@@ -3550,7 +3211,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "OrganisationPartRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     all_authorities_ref: Optional[AllAuthoritiesRef] = field(
@@ -3559,7 +3219,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "AllAuthoritiesRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     all_operators_ref: Optional[AllOperatorsRef] = field(
@@ -3568,7 +3227,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "AllOperatorsRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     all_transport_organisations_ref: Optional[AllTransportOrganisationsRef] = field(
@@ -3577,7 +3235,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "AllTransportOrganisationsRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     all_organisations_ref: Optional[AllOrganisationsRef] = field(
@@ -3586,7 +3243,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "AllOrganisationsRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     retail_consortium_ref: Optional[RetailConsortiumRef] = field(
@@ -3595,7 +3251,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "RetailConsortiumRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     authority_ref: Optional[AuthorityRef] = field(
@@ -3604,7 +3259,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "AuthorityRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     operator_ref: Optional[OperatorRef] = field(
@@ -3613,7 +3267,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "OperatorRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     transport_organisation_ref: Optional[TransportOrganisationRef] = field(
@@ -3622,7 +3275,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TransportOrganisationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     general_organisation_ref: Optional[GeneralOrganisationRef] = field(
@@ -3631,7 +3283,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "GeneralOrganisationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     management_agent_ref: Optional[ManagementAgentRef] = field(
@@ -3640,7 +3291,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ManagementAgentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     serviced_organisation_ref: Optional[ServicedOrganisationRef] = field(
@@ -3649,7 +3299,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ServicedOrganisationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     travel_agent_ref: Optional[TravelAgentRef] = field(
@@ -3658,7 +3307,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TravelAgentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     other_organisation_ref: Optional[OtherOrganisationRef] = field(
@@ -3667,7 +3315,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "OtherOrganisationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     organisation_ref: Optional[OrganisationRef] = field(
@@ -3676,7 +3323,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "OrganisationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     responsibility_set_ref: Optional[ResponsibilitySetRef] = field(
@@ -3685,7 +3331,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ResponsibilitySetRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     destination_display_variant_ref: Optional[DestinationDisplayVariantRef] = field(
@@ -3694,7 +3339,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "DestinationDisplayVariantRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     destination_display_ref: Optional[DestinationDisplayRef] = field(
@@ -3703,7 +3347,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "DestinationDisplayRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     allowed_line_direction_ref: Optional[AllowedLineDirectionRef] = field(
@@ -3712,7 +3355,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "AllowedLineDirectionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     flexible_line_ref: Optional[FlexibleLineRef] = field(
@@ -3721,7 +3363,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FlexibleLineRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     line_ref: Optional[LineRef] = field(
@@ -3730,7 +3371,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "LineRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     group_of_entities_ref: Optional[GroupOfEntitiesRef1] = field(
@@ -3739,7 +3379,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "GroupOfEntitiesRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     group_of_customer_purchase_packages_ref: Optional[GroupOfCustomerPurchasePackagesRef] = field(
@@ -3748,7 +3387,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "GroupOfCustomerPurchasePackagesRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     group_of_sales_offer_packages_ref: Optional[GroupOfSalesOfferPackagesRef] = field(
@@ -3757,7 +3395,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "GroupOfSalesOfferPackagesRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     group_of_distance_matrix_elements_ref: Optional[GroupOfDistanceMatrixElementsRef] = field(
@@ -3766,7 +3403,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "GroupOfDistanceMatrixElementsRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     group_of_distribution_channels_ref: Optional[GroupOfDistributionChannelsRef] = field(
@@ -3775,7 +3411,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "GroupOfDistributionChannelsRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     standard_fare_table_ref: Optional[StandardFareTableRef] = field(
@@ -3784,7 +3419,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "StandardFareTableRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     fare_table_ref: Optional[FareTableRef] = field(
@@ -3793,7 +3427,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FareTableRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     price_group_ref: Optional[PriceGroupRef] = field(
@@ -3802,7 +3435,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "PriceGroupRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     rhythmical_journey_group_ref: Optional[RhythmicalJourneyGroupRef] = field(
@@ -3811,7 +3443,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "RhythmicalJourneyGroupRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     headway_journey_group_ref: Optional[HeadwayJourneyGroupRef] = field(
@@ -3820,7 +3451,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "HeadwayJourneyGroupRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     journey_frequency_group_ref: Optional[JourneyFrequencyGroupRef] = field(
@@ -3829,7 +3459,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "JourneyFrequencyGroupRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     group_of_services_ref: Optional[GroupOfServicesRef] = field(
@@ -3838,7 +3467,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "GroupOfServicesRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     group_of_stop_places_ref: Optional[GroupOfStopPlacesRef] = field(
@@ -3847,7 +3475,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "GroupOfStopPlacesRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     point_of_interest_hierarchy_ref: Optional[PointOfInterestHierarchyRef] = field(
@@ -3856,7 +3483,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "PointOfInterestHierarchyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     group_of_timing_links_ref: Optional[GroupOfTimingLinksRef] = field(
@@ -3865,7 +3491,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "GroupOfTimingLinksRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     group_of_operators_ref: Optional[GroupOfOperatorsRef] = field(
@@ -3874,7 +3499,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "GroupOfOperatorsRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     group_of_places_ref: Optional[GroupOfPlacesRef] = field(
@@ -3883,7 +3507,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "GroupOfPlacesRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     parent_section_ref: Optional[ParentSectionRef] = field(
@@ -3892,7 +3515,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ParentSectionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     parent_common_section_ref: Optional[ParentCommonSectionRef] = field(
@@ -3901,7 +3523,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ParentCommonSectionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     common_section_ref: Optional[CommonSectionRef] = field(
@@ -3910,7 +3531,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "CommonSectionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     line_section_ref: Optional[LineSectionRef] = field(
@@ -3919,7 +3539,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "LineSectionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     fare_section_ref: Optional[FareSectionRef] = field(
@@ -3928,7 +3547,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FareSectionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     general_section_ref: Optional[GeneralSectionRef] = field(
@@ -3937,7 +3555,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "GeneralSectionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     section_ref: Optional[SectionRef] = field(
@@ -3946,7 +3563,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "SectionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     log_ref: Optional[LogRef] = field(
@@ -3955,7 +3571,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "LogRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     group_of_timebands_ref: Optional[GroupOfTimebandsRef] = field(
@@ -3964,7 +3579,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "GroupOfTimebandsRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     netex_org_uk_netex_place_ref: Optional[PlaceRef1] = field(
@@ -3973,7 +3587,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "PlaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     group_of_points_ref: Optional[GroupOfPointsRef1] = field(
@@ -3982,7 +3595,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "GroupOfPointsRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     stop_area_ref: Optional[StopAreaRef] = field(
@@ -3991,7 +3603,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "StopAreaRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     access_zone_ref: Optional[AccessZoneRef] = field(
@@ -4000,7 +3611,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "AccessZoneRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     transport_administrative_zone_ref: Optional[TransportAdministrativeZoneRef] = field(
@@ -4009,7 +3619,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TransportAdministrativeZoneRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     administrative_zone_ref: Optional[AdministrativeZoneRef] = field(
@@ -4018,7 +3627,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "AdministrativeZoneRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     fare_zone_ref: Optional[FareZoneRef] = field(
@@ -4027,7 +3635,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FareZoneRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     tariff_zone_ref: Optional[TariffZoneRef1] = field(
@@ -4036,7 +3643,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TariffZoneRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     netex_org_uk_netex_tariff_zone_ref: Optional[TariffZoneRef2] = field(
@@ -4045,7 +3651,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TariffZoneRef_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     zone_ref: Optional[ZoneRef] = field(
@@ -4054,7 +3659,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ZoneRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     netex_org_uk_netex_group_of_points_ref: Optional[GroupOfPointsRef2] = field(
@@ -4063,7 +3667,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "GroupOfPointsRef_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     layer_ref: Optional[LayerRef] = field(
@@ -4072,7 +3675,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "LayerRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     network_ref: Optional[NetworkRef] = field(
@@ -4081,7 +3683,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "NetworkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     group_of_lines_ref: Optional[GroupOfLinesRef] = field(
@@ -4090,7 +3691,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "GroupOfLinesRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     general_group_of_entities_ref: Optional[GeneralGroupOfEntitiesRef] = field(
@@ -4099,7 +3699,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "GeneralGroupOfEntitiesRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     netex_org_uk_netex_group_of_entities_ref: Optional[GroupOfEntitiesRef2] = field(
@@ -4108,7 +3707,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "GroupOfEntitiesRef_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     sales_transaction_frame_ref: Optional[SalesTransactionFrameRef] = field(
@@ -4117,7 +3715,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "SalesTransactionFrameRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     fare_frame_ref: Optional[FareFrameRef] = field(
@@ -4126,7 +3723,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "FareFrameRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     service_frame_ref: Optional[ServiceFrameRef] = field(
@@ -4135,7 +3731,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ServiceFrameRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     driver_schedule_frame_ref: Optional[DriverScheduleFrameRef] = field(
@@ -4144,7 +3739,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "DriverScheduleFrameRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     vehicle_schedule_frame_ref: Optional[VehicleScheduleFrameRef] = field(
@@ -4153,7 +3747,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "VehicleScheduleFrameRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     timetable_frame_ref: Optional[TimetableFrameRef] = field(
@@ -4162,7 +3755,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TimetableFrameRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     site_frame_ref: Optional[SiteFrameRef] = field(
@@ -4171,7 +3763,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "SiteFrameRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     infrastructure_frame_ref: Optional[InfrastructureFrameRef] = field(
@@ -4180,7 +3771,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "InfrastructureFrameRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     general_frame_ref: Optional[GeneralFrameRef] = field(
@@ -4189,7 +3779,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "GeneralFrameRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     resource_frame_ref: Optional[ResourceFrameRef] = field(
@@ -4198,7 +3787,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ResourceFrameRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     service_calendar_frame_ref: Optional[ServiceCalendarFrameRef] = field(
@@ -4207,7 +3795,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ServiceCalendarFrameRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     composite_frame_ref: Optional[CompositeFrameRef] = field(
@@ -4216,7 +3803,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "CompositeFrameRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     version_frame_ref: Optional[VersionFrameRef] = field(
@@ -4225,7 +3811,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "VersionFrameRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     distribution_channel_ref: Optional[DistributionChannelRef] = field(
@@ -4234,7 +3819,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "DistributionChannelRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     charging_moment_ref: Optional[ChargingMomentRef] = field(
@@ -4243,7 +3827,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ChargingMomentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     price_unit_ref: Optional[PriceUnitRef] = field(
@@ -4252,7 +3835,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "PriceUnitRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     purpose_of_journey_partition_ref: Optional[PurposeOfJourneyPartitionRef] = field(
@@ -4261,7 +3843,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "PurposeOfJourneyPartitionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     timing_algorithm_type_ref: Optional[TimingAlgorithmTypeRef] = field(
@@ -4270,7 +3851,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TimingAlgorithmTypeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     point_of_interest_classification_ref: Optional[PointOfInterestClassificationRef] = field(
@@ -4279,7 +3859,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "PointOfInterestClassificationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     direction_ref: Optional[DirectionRef] = field(
@@ -4288,7 +3867,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "DirectionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_activation_ref: Optional[TypeOfActivationRef] = field(
@@ -4297,7 +3875,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfActivationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     purpose_of_equipment_profile_ref: Optional[PurposeOfEquipmentProfileRef] = field(
@@ -4306,7 +3883,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "PurposeOfEquipmentProfileRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_product_category_ref: Optional[TypeOfProductCategoryRef] = field(
@@ -4315,7 +3891,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfProductCategoryRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_payment_method_ref: Optional[TypeOfPaymentMethodRef] = field(
@@ -4324,7 +3899,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfPaymentMethodRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     class_of_use_ref: Optional[ClassOfUseRef] = field(
@@ -4333,7 +3907,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "ClassOfUseRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_operation_ref: Optional[TypeOfOperationRef] = field(
@@ -4342,7 +3915,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfOperationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_codespace_assignment_ref: Optional[TypeOfCodespaceAssignmentRef] = field(
@@ -4351,7 +3923,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfCodespaceAssignmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     branding_ref: Optional[BrandingRef] = field(
@@ -4360,7 +3931,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "BrandingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_responsibility_role_ref: Optional[TypeOfResponsibilityRoleRef] = field(
@@ -4369,7 +3939,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfResponsibilityRoleRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     purpose_of_grouping_ref: Optional[PurposeOfGroupingRef] = field(
@@ -4378,7 +3947,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "PurposeOfGroupingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_retail_device_ref: Optional[TypeOfRetailDeviceRef] = field(
@@ -4387,7 +3955,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfRetailDeviceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     customer_account_status_ref: Optional[CustomerAccountStatusRef] = field(
@@ -4396,7 +3963,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "CustomerAccountStatusRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_customer_account_ref: Optional[TypeOfCustomerAccountRef] = field(
@@ -4405,7 +3971,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfCustomerAccountRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_fare_contract_entry_ref: Optional[TypeOfFareContractEntryRef] = field(
@@ -4414,7 +3979,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfFareContractEntryRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_fare_contract_ref: Optional[TypeOfFareContractRef] = field(
@@ -4423,7 +3987,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfFareContractRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_access_right_assignment_ref: Optional[TypeOfAccessRightAssignmentRef] = field(
@@ -4432,7 +3995,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfAccessRightAssignmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_sales_offer_package_ref: Optional[TypeOfSalesOfferPackageRef] = field(
@@ -4441,7 +4003,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfSalesOfferPackageRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_fare_structure_element_ref: Optional[TypeOfFareStructureElementRef] = field(
@@ -4450,7 +4011,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfFareStructureElementRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_tariff_ref: Optional[TypeOfTariffRef] = field(
@@ -4459,7 +4019,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfTariffRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     all_distribution_channels_ref: Optional[AllDistributionChannelsRef] = field(
@@ -4468,7 +4027,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "AllDistributionChannelsRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_machine_readability_ref: Optional[TypeOfMachineReadabilityRef] = field(
@@ -4477,7 +4035,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfMachineReadabilityRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_travel_document_ref: Optional[TypeOfTravelDocumentRef] = field(
@@ -4486,7 +4043,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfTravelDocumentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_fare_product_ref: Optional[TypeOfFareProductRef] = field(
@@ -4495,7 +4051,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfFareProductRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_fare_structure_factor_ref: Optional[TypeOfFareStructureFactorRef] = field(
@@ -4504,7 +4059,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfFareStructureFactorRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_pricing_rule_ref: Optional[TypeOfPricingRuleRef] = field(
@@ -4513,7 +4067,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfPricingRuleRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_flexible_service_ref: Optional[TypeOfFlexibleServiceRef] = field(
@@ -4522,7 +4075,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfFlexibleServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_passenger_information_equipment_ref: Optional[TypeOfPassengerInformationEquipmentRef] = field(
@@ -4531,7 +4083,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfPassengerInformationEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_service_feature_ref: Optional[TypeOfServiceFeatureRef] = field(
@@ -4540,7 +4091,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfServiceFeatureRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_congestion_ref: Optional[TypeOfCongestionRef] = field(
@@ -4549,7 +4099,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfCongestionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_time_demand_type_ref: Optional[TypeOfTimeDemandTypeRef] = field(
@@ -4558,7 +4107,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfTimeDemandTypeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_journey_pattern_ref: Optional[TypeOfJourneyPatternRef] = field(
@@ -4567,7 +4115,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfJourneyPatternRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_security_list_ref: Optional[TypeOfSecurityListRef] = field(
@@ -4576,7 +4123,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfSecurityListRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_delivery_variant_ref: Optional[TypeOfDeliveryVariantRef] = field(
@@ -4585,7 +4131,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfDeliveryVariantRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_notice_ref: Optional[TypeOfNoticeRef] = field(
@@ -4594,7 +4139,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfNoticeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_service_ref: Optional[TypeOfServiceRef] = field(
@@ -4603,7 +4147,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_facility_ref: Optional[TypeOfFacilityRef] = field(
@@ -4612,7 +4155,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfFacilityRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_equipment_ref: Optional[TypeOfEquipmentRef] = field(
@@ -4621,7 +4163,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_projection_ref: Optional[TypeOfProjectionRef] = field(
@@ -4630,7 +4171,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfProjectionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_feature_ref: Optional[TypeOfFeatureRef] = field(
@@ -4639,7 +4179,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfFeatureRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_link_sequence_ref: Optional[TypeOfLinkSequenceRef] = field(
@@ -4648,7 +4187,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfLinkSequenceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_organisation_part_ref: Optional[TypeOfOrganisationPartRef] = field(
@@ -4657,7 +4195,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfOrganisationPartRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_organisation_ref: Optional[TypeOfOrganisationRef] = field(
@@ -4666,7 +4203,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfOrganisationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_place_ref: Optional[TypeOfPlaceRef] = field(
@@ -4675,7 +4211,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfPlaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_transfer_ref: Optional[TypeOfTransferRef] = field(
@@ -4684,7 +4219,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfTransferRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_zone_ref: Optional[TypeOfZoneRef] = field(
@@ -4693,7 +4227,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfZoneRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_link_ref: Optional[TypeOfLinkRef] = field(
@@ -4702,7 +4235,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_point_ref: Optional[TypeOfPointRef] = field(
@@ -4711,7 +4243,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_line_ref: Optional[TypeOfLineRef] = field(
@@ -4720,7 +4251,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfLineRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_validity_ref: Optional[TypeOfValidityRef] = field(
@@ -4729,7 +4259,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfValidityRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_frame_ref: Optional[TypeOfFrameRef] = field(
@@ -4738,7 +4267,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfFrameRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_entity_ref: Optional[TypeOfEntityRef] = field(
@@ -4747,7 +4275,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfEntityRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_value_ref: Optional[TypeOfValueRef] = field(
@@ -4756,7 +4283,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "TypeOfValueRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     data_source_ref: Optional[DataSourceRef] = field(
@@ -4765,7 +4291,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "DataSourceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     version_ref: Optional[VersionRef] = field(
@@ -4774,7 +4299,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "VersionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     version_of_object_ref: Optional[VersionOfObjectRef] = field(
@@ -4783,6 +4307,5 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
             "name": "VersionOfObjectRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )

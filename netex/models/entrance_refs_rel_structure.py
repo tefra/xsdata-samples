@@ -25,7 +25,6 @@ class EntranceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "StopPlaceVehicleEntranceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     stop_place_entrance_ref: List[StopPlaceEntranceRef] = field(
@@ -34,7 +33,6 @@ class EntranceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "StopPlaceEntranceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     parking_entrance_for_vehicles_ref: List[ParkingEntranceForVehiclesRef] = field(
@@ -43,7 +41,6 @@ class EntranceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ParkingEntranceForVehiclesRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     parking_passenger_entrance_ref: List[ParkingPassengerEntranceRef] = field(
@@ -52,7 +49,6 @@ class EntranceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ParkingPassengerEntranceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     parking_entrance_ref: List[ParkingEntranceRef] = field(
@@ -61,7 +57,6 @@ class EntranceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ParkingEntranceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     point_of_interest_vehicle_entrance_ref: List[PointOfInterestVehicleEntranceRef] = field(
@@ -70,7 +65,6 @@ class EntranceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "PointOfInterestVehicleEntranceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     point_of_interest_entrance_ref: List[PointOfInterestEntranceRef] = field(
@@ -79,7 +73,6 @@ class EntranceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "PointOfInterestEntranceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     vehicle_entrance_ref: List[VehicleEntranceRef] = field(
@@ -88,7 +81,6 @@ class EntranceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "VehicleEntranceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     entrance_ref: List[EntranceRef] = field(
@@ -97,6 +89,5 @@ class EntranceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "EntranceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

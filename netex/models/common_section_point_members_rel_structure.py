@@ -18,7 +18,6 @@ class CommonSectionPointMembersRelStructure(StrictContainmentAggregationStructur
             "name": "LineSectionPointMember",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     common_section_point_member: List[CommonSectionPointMember] = field(
@@ -27,6 +26,5 @@ class CommonSectionPointMembersRelStructure(StrictContainmentAggregationStructur
             "name": "CommonSectionPointMember",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

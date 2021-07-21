@@ -18,7 +18,6 @@ class SpecialServiceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "DatedSpecialServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     special_service_ref: Optional[SpecialServiceRef] = field(
@@ -27,6 +26,5 @@ class SpecialServiceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "SpecialServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )

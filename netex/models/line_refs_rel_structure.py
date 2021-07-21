@@ -18,7 +18,6 @@ class LineRefsRelStructure(OneToManyRelationshipStructure):
             "name": "FlexibleLineRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     line_ref: List[LineRef] = field(
@@ -27,6 +26,5 @@ class LineRefsRelStructure(OneToManyRelationshipStructure):
             "name": "LineRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

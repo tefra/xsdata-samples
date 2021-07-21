@@ -19,7 +19,6 @@ class TravelSpecificationRefsRelStructure(OneToManyRelationshipStructure):
             "name": "OfferedTravelSpecificationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     requested_travel_specification_ref: List[RequestedTravelSpecificationRef] = field(
@@ -28,7 +27,6 @@ class TravelSpecificationRefsRelStructure(OneToManyRelationshipStructure):
             "name": "RequestedTravelSpecificationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     travel_specification_ref: List[TravelSpecificationRef] = field(
@@ -37,6 +35,5 @@ class TravelSpecificationRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TravelSpecificationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

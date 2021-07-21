@@ -71,7 +71,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "AssistanceBookingService",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     catering_service: List[CateringService] = field(
@@ -80,7 +79,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "CateringService",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     retail_service: List[RetailService] = field(
@@ -89,7 +87,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "RetailService",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     money_service: List[MoneyService] = field(
@@ -98,7 +95,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "MoneyService",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     hire_service: List[HireService] = field(
@@ -107,7 +103,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "HireService",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     communication_service: List[CommunicationService] = field(
@@ -116,7 +111,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "CommunicationService",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     meeting_point_service: List[MeetingPointService] = field(
@@ -125,7 +119,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "MeetingPointService",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     lost_property_service: List[LostPropertyService] = field(
@@ -134,7 +127,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "LostPropertyService",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     left_luggage_service: List[LeftLuggageService] = field(
@@ -143,7 +135,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "LeftLuggageService",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     complaints_service: List[ComplaintsService] = field(
@@ -152,7 +143,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "ComplaintsService",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     customer_service: List[CustomerService] = field(
@@ -161,7 +151,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "CustomerService",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     luggage_service: List[LuggageService] = field(
@@ -170,7 +159,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "LuggageService",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     assistance_service: List[AssistanceService] = field(
@@ -179,7 +167,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "AssistanceService",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     ticketing_service: List[TicketingService] = field(
@@ -188,7 +175,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "TicketingService",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     local_service: List[LocalService] = field(
@@ -197,7 +183,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "LocalService",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     retail_device: List[RetailDevice] = field(
@@ -206,7 +191,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "RetailDevice",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     ticket_validator_equipment: List[TicketValidatorEquipment] = field(
@@ -215,7 +199,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "TicketValidatorEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     ticketing_equipment: List[TicketingEquipment] = field(
@@ -224,7 +207,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "TicketingEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     seating_equipment: List[SeatingEquipment] = field(
@@ -233,7 +215,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "SeatingEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     shelter_equipment: List[ShelterEquipment] = field(
@@ -242,7 +223,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "ShelterEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     trolley_stand_equipment: List[TrolleyStandEquipment] = field(
@@ -251,7 +231,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "TrolleyStandEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     waiting_room_equipment: List[WaitingRoomEquipment] = field(
@@ -260,7 +239,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "WaitingRoomEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     waiting_equipment: List[WaitingEquipment] = field(
@@ -269,7 +247,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "WaitingEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     luggage_locker_equipment: List[LuggageLockerEquipment] = field(
@@ -278,7 +255,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "LuggageLockerEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     site_equipment: List[SiteEquipment] = field(
@@ -287,7 +263,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "SiteEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     crossing_equipment: List[CrossingEquipment] = field(
@@ -296,7 +271,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "CrossingEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     queueing_equipment: List[QueueingEquipment] = field(
@@ -305,7 +279,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "QueueingEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     entrance_equipment: List[EntranceEquipment] = field(
@@ -314,7 +287,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "EntranceEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     ramp_equipment: List[RampEquipment] = field(
@@ -323,7 +295,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "RampEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     lift_equipment: List[LiftEquipment] = field(
@@ -332,7 +303,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "LiftEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     travelator_equipment: List[TravelatorEquipment] = field(
@@ -341,7 +311,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "TravelatorEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     staircase_equipment: List[StaircaseEquipment] = field(
@@ -350,7 +319,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "StaircaseEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     escalator_equipment: List[EscalatorEquipment] = field(
@@ -359,7 +327,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "EscalatorEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     stair_equipment: List[StairEquipment] = field(
@@ -368,7 +335,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "StairEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     place_lighting: List[PlaceLighting] = field(
@@ -377,7 +343,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "PlaceLighting",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     rough_surface: List[RoughSurface] = field(
@@ -386,7 +351,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "RoughSurface",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     access_equipment: List[AccessEquipment] = field(
@@ -395,7 +359,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "AccessEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     general_sign: List[GeneralSign] = field(
@@ -404,7 +367,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "GeneralSign",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     heading_sign: List[HeadingSign] = field(
@@ -413,7 +375,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "HeadingSign",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     place_sign: List[PlaceSign] = field(
@@ -422,7 +383,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "PlaceSign",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     sign_equipment: List[SignEquipment] = field(
@@ -431,7 +391,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "SignEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     wheelchair_vehicle_equipment: List[WheelchairVehicleEquipment] = field(
@@ -440,7 +399,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "WheelchairVehicleEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     access_vehicle_equipment: List[AccessVehicleEquipment] = field(
@@ -449,7 +407,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "AccessVehicleEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     vehicle_charging_equipment: List[VehicleChargingEquipment] = field(
@@ -458,7 +415,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "VehicleChargingEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     cycle_storage_equipment: List[CycleStorageEquipment] = field(
@@ -467,7 +423,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "CycleStorageEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     place_equipment: List[PlaceEquipment] = field(
@@ -476,7 +431,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "PlaceEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     passenger_information_equipment: List[PassengerInformationEquipment] = field(
@@ -485,7 +439,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "PassengerInformationEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     rubbish_disposal_equipment: List[RubbishDisposalEquipment] = field(
@@ -494,7 +447,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "RubbishDisposalEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     help_point_equipment: List[HelpPointEquipment] = field(
@@ -503,7 +455,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "HelpPointEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     passenger_safety_equipment: List[PassengerSafetyEquipment] = field(
@@ -512,7 +463,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "PassengerSafetyEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     sanitary_equipment: List[SanitaryEquipment] = field(
@@ -521,7 +471,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "SanitaryEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     actual_vehicle_equipment: List[ActualVehicleEquipment] = field(
@@ -530,7 +479,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "ActualVehicleEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     passenger_equipment: List[PassengerEquipment] = field(
@@ -539,7 +487,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "PassengerEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     installed_equipment: List[InstalledEquipment] = field(
@@ -548,7 +495,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "InstalledEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     equipment: List[Equipment] = field(
@@ -557,6 +503,5 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "Equipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

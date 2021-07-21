@@ -27,7 +27,6 @@ class OrganisationsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "RetailConsortium",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     authority: List[Authority] = field(
@@ -36,7 +35,6 @@ class OrganisationsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "Authority",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     operator: List[Operator] = field(
@@ -45,7 +43,6 @@ class OrganisationsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "Operator",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     transport_organisation: List[TransportOrganisation] = field(
@@ -54,7 +51,6 @@ class OrganisationsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "TransportOrganisation_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     serviced_organisation: List[ServicedOrganisation] = field(
@@ -63,7 +59,6 @@ class OrganisationsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "ServicedOrganisation",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     general_organisation: List[GeneralOrganisation] = field(
@@ -72,7 +67,6 @@ class OrganisationsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "GeneralOrganisation",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     management_agent: List[ManagementAgent] = field(
@@ -81,7 +75,6 @@ class OrganisationsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "ManagementAgent",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     travel_agent: List[TravelAgent] = field(
@@ -90,7 +83,6 @@ class OrganisationsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "TravelAgent",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     other_organisation: List[OtherOrganisation] = field(
@@ -99,7 +91,6 @@ class OrganisationsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "OtherOrganisation",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     organisation: List[Organisation1] = field(
@@ -108,7 +99,6 @@ class OrganisationsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "Organisation",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     netex_org_uk_netex_organisation: List[Organisation2] = field(
@@ -117,6 +107,5 @@ class OrganisationsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "Organisation_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
