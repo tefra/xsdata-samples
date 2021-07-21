@@ -21,7 +21,6 @@ class CallsRelStructure(StrictContainmentAggregationStructure):
             "name": "DatedCall-Z",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 2,
         }
     )
     dated_call: List[DatedCall] = field(
@@ -30,7 +29,6 @@ class CallsRelStructure(StrictContainmentAggregationStructure):
             "name": "DatedCall",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 2,
         }
     )
     call_z: List[CallZ] = field(
@@ -39,7 +37,6 @@ class CallsRelStructure(StrictContainmentAggregationStructure):
             "name": "Call-Z",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 2,
         }
     )
     call: List[Call1] = field(
@@ -48,7 +45,6 @@ class CallsRelStructure(StrictContainmentAggregationStructure):
             "name": "Call",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 2,
         }
     )
     netex_org_uk_netex_call: List[Call2] = field(
@@ -57,6 +53,5 @@ class CallsRelStructure(StrictContainmentAggregationStructure):
             "name": "Call_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 2,
         }
     )

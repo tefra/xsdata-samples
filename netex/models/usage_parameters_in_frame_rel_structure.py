@@ -47,7 +47,6 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
             "name": "SalesOfferPackageEntitlementRequired",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     sales_offer_package_entitlement_given: List[SalesOfferPackageEntitlementGiven] = field(
@@ -56,7 +55,6 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
             "name": "SalesOfferPackageEntitlementGiven",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     minimum_stay: List[MinimumStay] = field(
@@ -65,7 +63,6 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
             "name": "MinimumStay",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     interchanging: List[Interchanging] = field(
@@ -74,7 +71,6 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
             "name": "Interchanging",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     suspending: List[Suspending] = field(
@@ -83,7 +79,6 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
             "name": "Suspending",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     usage_validity_period: List[UsageValidityPeriod] = field(
@@ -92,7 +87,6 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
             "name": "UsageValidityPeriod",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     frequency_of_use: List[FrequencyOfUse] = field(
@@ -101,7 +95,6 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
             "name": "FrequencyOfUse",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     step_limit: List[StepLimit] = field(
@@ -110,7 +103,6 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
             "name": "StepLimit",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     routing: List[Routing] = field(
@@ -119,7 +111,6 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
             "name": "Routing",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     round_trip: List[RoundTrip] = field(
@@ -128,7 +119,6 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
             "name": "RoundTrip",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     luggage_allowance: List[LuggageAllowance] = field(
@@ -137,7 +127,6 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
             "name": "LuggageAllowance",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     entitlement_required: List[EntitlementRequired] = field(
@@ -146,7 +135,6 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
             "name": "EntitlementRequired",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     entitlement_given: List[EntitlementGiven] = field(
@@ -155,7 +143,6 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
             "name": "EntitlementGiven",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     eligibility_change_policy: List[EligibilityChangePolicy] = field(
@@ -164,7 +151,6 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
             "name": "EligibilityChangePolicy",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     companion_profile: List[CompanionProfile] = field(
@@ -173,7 +159,6 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
             "name": "CompanionProfile",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     group_ticket: List[GroupTicket] = field(
@@ -182,7 +167,6 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
             "name": "GroupTicket",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     commercial_profile: List[CommercialProfile] = field(
@@ -191,7 +175,6 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
             "name": "CommercialProfile",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     user_profile: List[UserProfile] = field(
@@ -200,7 +183,6 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
             "name": "UserProfile",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     subscribing: List[Subscribing] = field(
@@ -209,7 +191,6 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
             "name": "Subscribing",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     penalty_policy: List[PenaltyPolicy] = field(
@@ -218,7 +199,6 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
             "name": "PenaltyPolicy",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     charging_policy: List[ChargingPolicy] = field(
@@ -227,7 +207,6 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
             "name": "ChargingPolicy",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     cancelling: List[Cancelling] = field(
@@ -236,7 +215,6 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
             "name": "Cancelling",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     reserving: List[Reserving] = field(
@@ -245,7 +223,6 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
             "name": "Reserving",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     purchase_window: List[PurchaseWindow] = field(
@@ -254,7 +231,6 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
             "name": "PurchaseWindow",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     transferability: List[Transferability] = field(
@@ -263,7 +239,6 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
             "name": "Transferability",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     replacing: List[Replacing] = field(
@@ -272,7 +247,6 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
             "name": "Replacing",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     refunding: List[Refunding] = field(
@@ -281,7 +255,6 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
             "name": "Refunding",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     exchanging: List[Exchanging] = field(
@@ -290,7 +263,6 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
             "name": "Exchanging",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     reselling: List[Reselling] = field(
@@ -299,7 +271,6 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
             "name": "Reselling",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     usage_parameter: List[UsageParameter1] = field(
@@ -308,7 +279,6 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
             "name": "UsageParameter",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     netex_org_uk_netex_usage_parameter: List[UsageParameter2] = field(
@@ -317,6 +287,5 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
             "name": "UsageParameter_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

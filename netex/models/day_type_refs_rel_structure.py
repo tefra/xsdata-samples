@@ -18,7 +18,6 @@ class DayTypeRefsRelStructure(OneToManyRelationshipStructure):
             "name": "FareDayTypeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     day_type_ref: List[DayTypeRef] = field(
@@ -27,6 +26,5 @@ class DayTypeRefsRelStructure(OneToManyRelationshipStructure):
             "name": "DayTypeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

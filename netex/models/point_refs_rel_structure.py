@@ -33,7 +33,6 @@ class PointRefsRelStructure(OneToManyRelationshipStructure):
             "name": "BorderPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     fare_scheduled_stop_point_ref: List[FareScheduledStopPointRef] = field(
@@ -42,7 +41,6 @@ class PointRefsRelStructure(OneToManyRelationshipStructure):
             "name": "FareScheduledStopPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     scheduled_stop_point_ref: List[ScheduledStopPointRef] = field(
@@ -51,7 +49,6 @@ class PointRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ScheduledStopPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     garage_point_ref: List[GaragePointRef] = field(
@@ -60,7 +57,6 @@ class PointRefsRelStructure(OneToManyRelationshipStructure):
             "name": "GaragePointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     parking_point_ref: List[ParkingPointRef] = field(
@@ -69,7 +65,6 @@ class PointRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ParkingPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     relief_point_ref: List[ReliefPointRef] = field(
@@ -78,7 +73,6 @@ class PointRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ReliefPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     timing_point_ref: List[TimingPointRef] = field(
@@ -87,7 +81,6 @@ class PointRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TimingPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     route_point_ref: List[RoutePointRef] = field(
@@ -96,7 +89,6 @@ class PointRefsRelStructure(OneToManyRelationshipStructure):
             "name": "RoutePointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     wire_point_ref: List[WirePointRef] = field(
@@ -105,7 +97,6 @@ class PointRefsRelStructure(OneToManyRelationshipStructure):
             "name": "WirePointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     road_point_ref: List[RoadPointRef] = field(
@@ -114,7 +105,6 @@ class PointRefsRelStructure(OneToManyRelationshipStructure):
             "name": "RoadPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     railway_point_ref: List[RailwayPointRef] = field(
@@ -123,7 +113,6 @@ class PointRefsRelStructure(OneToManyRelationshipStructure):
             "name": "RailwayPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     infrastructure_point_ref: List[InfrastructurePointRef] = field(
@@ -132,7 +121,6 @@ class PointRefsRelStructure(OneToManyRelationshipStructure):
             "name": "InfrastructurePointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     traffic_control_point_ref: List[TrafficControlPointRef] = field(
@@ -141,7 +129,6 @@ class PointRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TrafficControlPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     beacon_point_ref: List[BeaconPointRef] = field(
@@ -150,7 +137,6 @@ class PointRefsRelStructure(OneToManyRelationshipStructure):
             "name": "BeaconPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     activation_point_ref: List[ActivationPointRef] = field(
@@ -159,7 +145,6 @@ class PointRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ActivationPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     point_on_link_ref: List[PointOnLinkRef] = field(
@@ -168,7 +153,6 @@ class PointRefsRelStructure(OneToManyRelationshipStructure):
             "name": "PointOnLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     point_ref: List[PointRef] = field(
@@ -177,6 +161,5 @@ class PointRefsRelStructure(OneToManyRelationshipStructure):
             "name": "PointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

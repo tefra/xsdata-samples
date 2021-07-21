@@ -19,7 +19,6 @@ class VehicleTypeRefsRelStructure(OneToManyRelationshipStructure):
             "name": "CompoundTrainRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     train_ref: List[TrainRef] = field(
@@ -28,7 +27,6 @@ class VehicleTypeRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TrainRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     vehicle_type_ref: List[VehicleTypeRef] = field(
@@ -37,6 +35,5 @@ class VehicleTypeRefsRelStructure(OneToManyRelationshipStructure):
             "name": "VehicleTypeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

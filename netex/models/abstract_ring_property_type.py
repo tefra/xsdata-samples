@@ -14,7 +14,6 @@ class AbstractRingPropertyType:
             "name": "LinearRing",
             "type": "Element",
             "namespace": "http://www.opengis.net/gml/3.2",
-            "required": True,
         }
     )
     abstract_ring: Optional[AbstractRing] = field(
@@ -23,6 +22,5 @@ class AbstractRingPropertyType:
             "name": "AbstractRing",
             "type": "Element",
             "namespace": "http://www.opengis.net/gml/3.2",
-            "required": True,
         }
     )

@@ -20,7 +20,6 @@ class ValidityConditionRefsRelStructure(OneToManyRelationshipStructure):
             "name": "AvailabilityConditionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     validity_rule_parameter_ref: List[ValidityRuleParameterRef] = field(
@@ -29,7 +28,6 @@ class ValidityConditionRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ValidityRuleParameterRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     validity_trigger_ref: List[ValidityTriggerRef] = field(
@@ -38,7 +36,6 @@ class ValidityConditionRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ValidityTriggerRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     validity_condition_ref: List[ValidityConditionRef] = field(
@@ -47,6 +44,5 @@ class ValidityConditionRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ValidityConditionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

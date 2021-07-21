@@ -28,7 +28,6 @@ class EntitlementRequiredVersionStructure(UsageParameterVersionStructure):
             "name": "EntitlementProductRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     supplement_product_ref: Optional[SupplementProductRef] = field(
@@ -37,7 +36,6 @@ class EntitlementRequiredVersionStructure(UsageParameterVersionStructure):
             "name": "SupplementProductRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     preassigned_fare_product_ref: Optional[PreassignedFareProductRef] = field(
@@ -46,7 +44,6 @@ class EntitlementRequiredVersionStructure(UsageParameterVersionStructure):
             "name": "PreassignedFareProductRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     amount_of_price_unit_product_ref: Optional[AmountOfPriceUnitProductRef] = field(
@@ -55,7 +52,6 @@ class EntitlementRequiredVersionStructure(UsageParameterVersionStructure):
             "name": "AmountOfPriceUnitProductRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     usage_discount_right_ref: Optional[UsageDiscountRightRef] = field(
@@ -64,7 +60,6 @@ class EntitlementRequiredVersionStructure(UsageParameterVersionStructure):
             "name": "UsageDiscountRightRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     third_party_product_ref: Optional[ThirdPartyProductRef] = field(
@@ -73,7 +68,6 @@ class EntitlementRequiredVersionStructure(UsageParameterVersionStructure):
             "name": "ThirdPartyProductRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     capped_discount_right_ref: Optional[CappedDiscountRightRef] = field(
@@ -82,7 +76,6 @@ class EntitlementRequiredVersionStructure(UsageParameterVersionStructure):
             "name": "CappedDiscountRightRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     sale_discount_right_ref: Optional[SaleDiscountRightRef] = field(
@@ -91,7 +84,6 @@ class EntitlementRequiredVersionStructure(UsageParameterVersionStructure):
             "name": "SaleDiscountRightRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     fare_product_ref: Optional[FareProductRef] = field(
@@ -100,7 +92,6 @@ class EntitlementRequiredVersionStructure(UsageParameterVersionStructure):
             "name": "FareProductRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     service_access_right_ref: Optional[ServiceAccessRightRef] = field(
@@ -109,7 +100,6 @@ class EntitlementRequiredVersionStructure(UsageParameterVersionStructure):
             "name": "ServiceAccessRightRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     minimum_qualification_period: Optional[XmlDuration] = field(

@@ -18,7 +18,6 @@ class ClassRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ClassInFrameRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     class_ref: List[ClassRef] = field(
@@ -27,6 +26,5 @@ class ClassRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ClassRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

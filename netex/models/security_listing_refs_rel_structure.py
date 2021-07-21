@@ -22,7 +22,6 @@ class SecurityListingRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TravelDocumentSecurityListingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     retail_device_security_listing_ref: List[RetailDeviceSecurityListingRef] = field(
@@ -31,7 +30,6 @@ class SecurityListingRefsRelStructure(OneToManyRelationshipStructure):
             "name": "RetailDeviceSecurityListingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     customer_account_security_listing_ref: List[CustomerAccountSecurityListingRef] = field(
@@ -40,7 +38,6 @@ class SecurityListingRefsRelStructure(OneToManyRelationshipStructure):
             "name": "CustomerAccountSecurityListingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     fare_contract_security_listing_ref: List[FareContractSecurityListingRef] = field(
@@ -49,7 +46,6 @@ class SecurityListingRefsRelStructure(OneToManyRelationshipStructure):
             "name": "FareContractSecurityListingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     customer_security_listing_ref: List[CustomerSecurityListingRef] = field(
@@ -58,7 +54,6 @@ class SecurityListingRefsRelStructure(OneToManyRelationshipStructure):
             "name": "CustomerSecurityListingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     security_listing_ref: List[SecurityListingRef] = field(
@@ -67,6 +62,5 @@ class SecurityListingRefsRelStructure(OneToManyRelationshipStructure):
             "name": "SecurityListingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

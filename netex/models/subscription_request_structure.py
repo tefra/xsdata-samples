@@ -15,7 +15,6 @@ class SubscriptionRequestStructure(AbstractSubscriptionRequestStructure):
             "name": "DataObjectSubscriptionRequest",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     abstract_functional_service_subscription_request: List[AbstractFunctionalServiceSubscriptionRequest] = field(
@@ -24,6 +23,5 @@ class SubscriptionRequestStructure(AbstractSubscriptionRequestStructure):
             "name": "AbstractFunctionalServiceSubscriptionRequest",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-            "min_occurs": 1,
         }
     )

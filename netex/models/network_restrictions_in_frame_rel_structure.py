@@ -22,7 +22,6 @@ class NetworkRestrictionsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "OvertakingPossibility",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     meeting_restriction: List[MeetingRestriction] = field(
@@ -31,7 +30,6 @@ class NetworkRestrictionsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "MeetingRestriction",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     restricted_manoeuvre: List[RestrictedManoeuvre] = field(
@@ -40,7 +38,6 @@ class NetworkRestrictionsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "RestrictedManoeuvre",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     infrastructure_link_restriction: List[InfrastructureLinkRestriction] = field(
@@ -49,7 +46,6 @@ class NetworkRestrictionsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "InfrastructureLinkRestriction",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     vehicle_type_at_point: List[VehicleTypeAtPoint] = field(
@@ -58,7 +54,6 @@ class NetworkRestrictionsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "VehicleTypeAtPoint",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     network_restriction: List[NetworkRestriction] = field(
@@ -67,6 +62,5 @@ class NetworkRestrictionsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "NetworkRestriction",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

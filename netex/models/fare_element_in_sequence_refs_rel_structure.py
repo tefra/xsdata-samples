@@ -20,7 +20,6 @@ class FareElementInSequenceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ControllableElementInSequenceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     fare_structure_element_in_sequence_ref: List[FareStructureElementInSequenceRef] = field(
@@ -29,7 +28,6 @@ class FareElementInSequenceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "FareStructureElementInSequenceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     access_right_in_product_ref: List[AccessRightInProductRef] = field(
@@ -38,7 +36,6 @@ class FareElementInSequenceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "AccessRightInProductRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     fare_element_in_sequence_ref: List[FareElementInSequenceRef] = field(
@@ -47,6 +44,5 @@ class FareElementInSequenceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "FareElementInSequenceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

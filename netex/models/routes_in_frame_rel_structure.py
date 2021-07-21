@@ -19,7 +19,6 @@ class RoutesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "FlexibleRoute",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     route: List[Route1] = field(
@@ -28,7 +27,6 @@ class RoutesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "Route",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     netex_org_uk_netex_route: List[Route2] = field(
@@ -37,6 +35,5 @@ class RoutesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "Route_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

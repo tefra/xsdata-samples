@@ -19,7 +19,6 @@ class TariffZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "FareZone",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     tariff_zone: List[TariffZone1] = field(
@@ -28,7 +27,6 @@ class TariffZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "TariffZone",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     netex_org_uk_netex_tariff_zone: List[TariffZone2] = field(
@@ -37,6 +35,5 @@ class TariffZonesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "TariffZone_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

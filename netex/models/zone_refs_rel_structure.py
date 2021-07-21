@@ -24,7 +24,6 @@ class ZoneRefsRelStructure(OneToManyRelationshipStructure):
             "name": "StopAreaRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     access_zone_ref: Optional[AccessZoneRef] = field(
@@ -33,7 +32,6 @@ class ZoneRefsRelStructure(OneToManyRelationshipStructure):
             "name": "AccessZoneRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     transport_administrative_zone_ref: Optional[TransportAdministrativeZoneRef] = field(
@@ -42,7 +40,6 @@ class ZoneRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TransportAdministrativeZoneRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     administrative_zone_ref: Optional[AdministrativeZoneRef] = field(
@@ -51,7 +48,6 @@ class ZoneRefsRelStructure(OneToManyRelationshipStructure):
             "name": "AdministrativeZoneRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     fare_zone_ref: Optional[FareZoneRef] = field(
@@ -60,7 +56,6 @@ class ZoneRefsRelStructure(OneToManyRelationshipStructure):
             "name": "FareZoneRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     tariff_zone_ref: Optional[TariffZoneRef1] = field(
@@ -69,7 +64,6 @@ class ZoneRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TariffZoneRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     netex_org_uk_netex_tariff_zone_ref: Optional[TariffZoneRef2] = field(
@@ -78,7 +72,6 @@ class ZoneRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TariffZoneRef_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     zone_ref: Optional[ZoneRef] = field(
@@ -87,6 +80,5 @@ class ZoneRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ZoneRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )

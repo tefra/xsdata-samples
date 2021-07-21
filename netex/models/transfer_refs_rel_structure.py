@@ -21,7 +21,6 @@ class TransferRefsRelStructure(OneToManyRelationshipStructure):
             "name": "DefaultConnectionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     site_connection_ref: List[SiteConnectionRef] = field(
@@ -30,7 +29,6 @@ class TransferRefsRelStructure(OneToManyRelationshipStructure):
             "name": "SiteConnectionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     connection_ref: List[ConnectionRef] = field(
@@ -39,7 +37,6 @@ class TransferRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ConnectionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     access_ref: List[AccessRef] = field(
@@ -48,7 +45,6 @@ class TransferRefsRelStructure(OneToManyRelationshipStructure):
             "name": "AccessRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     transfer_ref: List[TransferRef] = field(
@@ -57,6 +53,5 @@ class TransferRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TransferRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

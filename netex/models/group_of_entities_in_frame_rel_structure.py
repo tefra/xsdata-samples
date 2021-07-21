@@ -95,7 +95,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "GroupOfDistributionChannels",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     group_of_distance_matrix_elements: List[GroupOfDistanceMatrixElements] = field(
@@ -104,7 +103,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "GroupOfDistanceMatrixElements",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     price_group: List[PriceGroup1] = field(
@@ -113,7 +111,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "PriceGroup",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     netex_org_uk_netex_price_group: List[PriceGroup2] = field(
@@ -122,7 +119,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "PriceGroup_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     standard_fare_table: List[StandardFareTable] = field(
@@ -131,7 +127,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "StandardFareTable",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     fare_table_in_context: List[FareTableInContext] = field(
@@ -140,7 +135,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "FareTableInContext",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     fare_table: List[FareTable1] = field(
@@ -149,7 +143,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "FareTable",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     netex_org_uk_netex_fare_table: List[FareTable2] = field(
@@ -158,7 +151,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "FareTable_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     group_of_services: List[GroupOfServices] = field(
@@ -167,7 +159,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "GroupOfServices",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     rhythmical_journey_group: List[RhythmicalJourneyGroup] = field(
@@ -176,7 +167,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "RhythmicalJourneyGroup",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     headway_journey_group: List[HeadwayJourneyGroup] = field(
@@ -185,7 +175,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "HeadwayJourneyGroup",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     journey_frequency_group: List[JourneyFrequencyGroup] = field(
@@ -194,7 +183,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "JourneyFrequencyGroup",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     network: List[Network] = field(
@@ -203,7 +191,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "Network",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     group_of_lines: List[GroupOfLines] = field(
@@ -212,7 +199,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "GroupOfLines",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     crew_base: List[CrewBase] = field(
@@ -221,7 +207,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "CrewBase",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     group_of_timing_links: List[GroupOfTimingLinks] = field(
@@ -230,7 +215,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "GroupOfTimingLinks",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     group_of_operators: List[GroupOfOperators] = field(
@@ -239,7 +223,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "GroupOfOperators",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     group_of_places: List[GroupOfPlaces] = field(
@@ -248,7 +231,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "GroupOfPlaces",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     group_of_link_sequences: List[GroupOfLinkSequences] = field(
@@ -257,7 +239,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "GroupOfLinkSequences",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     routing_constraint_zone: List[RoutingConstraintZone] = field(
@@ -266,7 +247,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "RoutingConstraintZone",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     stop_area: List[StopArea] = field(
@@ -275,7 +255,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "StopArea",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     access_zone: List[AccessZone] = field(
@@ -284,7 +263,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "AccessZone",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     hail_and_ride_area: List[HailAndRideArea] = field(
@@ -293,7 +271,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "HailAndRideArea",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     flexible_area: List[FlexibleArea] = field(
@@ -302,7 +279,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "FlexibleArea",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     flexible_quay: List[FlexibleQuay] = field(
@@ -311,7 +287,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "FlexibleQuay",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     flexible_stop_place: List[FlexibleStopPlace] = field(
@@ -320,7 +295,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "FlexibleStopPlace",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     point_of_interest_component: List[PointOfInterestComponent] = field(
@@ -329,7 +303,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "PointOfInterestComponent",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     vehicle_stopping_place: List[VehicleStoppingPlace] = field(
@@ -338,7 +311,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "VehicleStoppingPlace",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     boarding_position: List[BoardingPosition] = field(
@@ -347,7 +319,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "BoardingPosition",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     access_space: List[AccessSpace] = field(
@@ -356,7 +327,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "AccessSpace",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     quay: List[Quay] = field(
@@ -365,7 +335,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "Quay",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     stop_place_space: List[StopPlaceSpace] = field(
@@ -374,7 +343,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "StopPlaceSpace",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     stop_place_component: List[StopPlaceComponent] = field(
@@ -383,7 +351,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "StopPlaceComponent",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     point_of_interest_space: List[PointOfInterestSpace] = field(
@@ -392,7 +359,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "PointOfInterestSpace",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     parking_bay: List[ParkingBay] = field(
@@ -401,7 +367,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "ParkingBay",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     parking_area: List[ParkingArea] = field(
@@ -410,7 +375,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "ParkingArea",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     parking_component: List[ParkingComponent] = field(
@@ -419,7 +383,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "ParkingComponent",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     vehicle_stopping_position: List[VehicleStoppingPosition] = field(
@@ -428,7 +391,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "VehicleStoppingPosition",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     point_of_interest_vehicle_entrance: List[PointOfInterestVehicleEntrance] = field(
@@ -437,7 +399,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "PointOfInterestVehicleEntrance",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     point_of_interest_entrance: List[PointOfInterestEntrance] = field(
@@ -446,7 +407,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "PointOfInterestEntrance",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     parking_passenger_entrance: List[ParkingPassengerEntrance] = field(
@@ -455,7 +415,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "ParkingPassengerEntrance",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     parking_entrance_for_vehicles: List[ParkingEntranceForVehicles] = field(
@@ -464,7 +423,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "ParkingEntranceForVehicles",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     stop_place_vehicle_entrance: List[StopPlaceVehicleEntrance] = field(
@@ -473,7 +431,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "StopPlaceVehicleEntrance",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     stop_place_entrance: List[StopPlaceEntrance] = field(
@@ -482,7 +439,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "StopPlaceEntrance",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     vehicle_entrance: List[VehicleEntrance] = field(
@@ -491,7 +447,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "VehicleEntrance",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     entrance: List[Entrance] = field(
@@ -500,7 +455,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "Entrance",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     site_component: List[SiteComponent] = field(
@@ -509,7 +463,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "SiteComponent",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     point_of_interest: List[PointOfInterest] = field(
@@ -518,7 +471,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "PointOfInterest",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     parking: List[Parking] = field(
@@ -527,7 +479,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "Parking",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     stop_place: List[StopPlace] = field(
@@ -536,7 +487,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "StopPlace",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     service_site: List[ServiceSite] = field(
@@ -545,7 +495,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "ServiceSite",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     site: List[Site] = field(
@@ -554,7 +503,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "Site",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     site_element: List[SiteElement] = field(
@@ -563,7 +511,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "SiteElement",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     garage: List[Garage] = field(
@@ -572,7 +519,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "Garage",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     topographic_place: List[TopographicPlace] = field(
@@ -581,7 +527,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "TopographicPlace",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     equipment_place: List[EquipmentPlace] = field(
@@ -590,7 +535,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "EquipmentPlace",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     country: List[Country] = field(
@@ -599,7 +543,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "Country",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     addressable_place: List[AddressablePlace] = field(
@@ -608,7 +551,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "AddressablePlace",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     postal_address: List[PostalAddress] = field(
@@ -617,7 +559,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "PostalAddress",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     road_address: List[RoadAddress] = field(
@@ -626,7 +567,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "RoadAddress",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     address: List[Address] = field(
@@ -635,7 +575,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "Address",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     place: List[Place] = field(
@@ -644,7 +583,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "Place",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     transport_administrative_zone: List[TransportAdministrativeZone] = field(
@@ -653,7 +591,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "TransportAdministrativeZone",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     administrative_zone: List[AdministrativeZone1] = field(
@@ -662,7 +599,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "AdministrativeZone",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     netex_org_uk_netex_administrative_zone: List[AdministrativeZone2] = field(
@@ -671,7 +607,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "AdministrativeZone_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     fare_zone: List[FareZone] = field(
@@ -680,7 +615,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "FareZone",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     tariff_zone: List[TariffZone1] = field(
@@ -689,7 +623,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "TariffZone",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     netex_org_uk_netex_tariff_zone: List[TariffZone2] = field(
@@ -698,7 +631,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "TariffZone_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     general_zone: List[GeneralZone] = field(
@@ -707,7 +639,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "GeneralZone",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     zone: List[Zone] = field(
@@ -716,7 +647,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "Zone",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     group_of_links: List[GroupOfLinks] = field(
@@ -725,7 +655,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "GroupOfLinks",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     group_of_points: List[GroupOfPoints] = field(
@@ -734,7 +663,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "GroupOfPoints",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     layer: List[Layer] = field(
@@ -743,7 +671,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "Layer",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     general_group_of_entities: List[GeneralGroupOfEntities] = field(
@@ -752,7 +679,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "GeneralGroupOfEntities",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     group_of_entities: List[GroupOfEntities] = field(
@@ -761,6 +687,5 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "GroupOfEntities",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

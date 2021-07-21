@@ -21,7 +21,6 @@ class SiteRefsRelStructure(OneToManyRelationshipStructure):
             "name": "StopPlaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     parking_ref: List[ParkingRef] = field(
@@ -30,7 +29,6 @@ class SiteRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ParkingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     point_of_interest_ref: List[PointOfInterestRef] = field(
@@ -39,7 +37,6 @@ class SiteRefsRelStructure(OneToManyRelationshipStructure):
             "name": "PointOfInterestRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     service_site_ref: List[ServiceSiteRef] = field(
@@ -48,7 +45,6 @@ class SiteRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ServiceSiteRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     site_ref: List[SiteRef] = field(
@@ -57,6 +53,5 @@ class SiteRefsRelStructure(OneToManyRelationshipStructure):
             "name": "SiteRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

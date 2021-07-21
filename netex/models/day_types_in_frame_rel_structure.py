@@ -22,7 +22,6 @@ class DayTypesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "FareDayType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     organisation_day_type: List[OrganisationDayType] = field(
@@ -31,7 +30,6 @@ class DayTypesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "OrganisationDayType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     day_type: List[DayType1] = field(
@@ -40,7 +38,6 @@ class DayTypesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "DayType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     netex_org_uk_netex_day_type: List[DayType2] = field(
@@ -49,6 +46,5 @@ class DayTypesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "DayType_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

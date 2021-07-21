@@ -19,7 +19,6 @@ class NoticeAssignmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "SalesNoticeAssignment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     notice_assignment: List[NoticeAssignment1] = field(
@@ -28,7 +27,6 @@ class NoticeAssignmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "NoticeAssignment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     netex_org_uk_netex_notice_assignment: List[NoticeAssignment2] = field(
@@ -37,6 +35,5 @@ class NoticeAssignmentsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "NoticeAssignment_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

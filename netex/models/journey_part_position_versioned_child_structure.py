@@ -27,7 +27,6 @@ class JourneyPartPositionVersionedChildStructure(VersionedChildStructure):
             "name": "FareScheduledStopPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     scheduled_stop_point_ref: List[ScheduledStopPointRef] = field(
@@ -36,7 +35,6 @@ class JourneyPartPositionVersionedChildStructure(VersionedChildStructure):
             "name": "ScheduledStopPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     position_in_train: Optional[int] = field(

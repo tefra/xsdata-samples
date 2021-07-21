@@ -21,7 +21,6 @@ class CustomerEligibilitiesRelStructure(ContainmentAggregationStructure):
             "name": "ResidentialQualificationEligibility",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     commercial_profile_eligibility: List[CommercialProfileEligibility] = field(
@@ -30,7 +29,6 @@ class CustomerEligibilitiesRelStructure(ContainmentAggregationStructure):
             "name": "CommercialProfileEligibility",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     user_profile_eligibility: List[UserProfileEligibility] = field(
@@ -39,7 +37,6 @@ class CustomerEligibilitiesRelStructure(ContainmentAggregationStructure):
             "name": "UserProfileEligibility",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     customer_eligibility: List[CustomerEligibility1] = field(
@@ -48,7 +45,6 @@ class CustomerEligibilitiesRelStructure(ContainmentAggregationStructure):
             "name": "CustomerEligibility",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     netex_org_uk_netex_customer_eligibility: List[CustomerEligibility2] = field(
@@ -57,6 +53,5 @@ class CustomerEligibilitiesRelStructure(ContainmentAggregationStructure):
             "name": "CustomerEligibility_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

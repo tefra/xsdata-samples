@@ -125,28 +125,24 @@ class ItemsType:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 1,
         }
     )
     hat: List[Hat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 1,
         }
     )
     shirt: List[Shirt] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 1,
         }
     )
     product: List[Product] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 1,
         }
     )
 

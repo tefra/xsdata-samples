@@ -241,7 +241,6 @@ class PriceRuleStepResultStructure:
             "name": "LimitingRuleRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     discounting_rule_ref: Optional[DiscountingRuleRef] = field(
@@ -250,7 +249,6 @@ class PriceRuleStepResultStructure:
             "name": "DiscountingRuleRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     pricing_rule_ref: Optional[PricingRuleRef] = field(
@@ -259,7 +257,6 @@ class PriceRuleStepResultStructure:
             "name": "PricingRuleRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     rounding_ref: Optional[RoundingRef] = field(

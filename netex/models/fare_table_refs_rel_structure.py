@@ -18,7 +18,6 @@ class FareTableRefsRelStructure(OneToManyRelationshipStructure):
             "name": "StandardFareTableRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     fare_table_ref: List[FareTableRef] = field(
@@ -27,6 +26,5 @@ class FareTableRefsRelStructure(OneToManyRelationshipStructure):
             "name": "FareTableRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

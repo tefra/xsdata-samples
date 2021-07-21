@@ -80,7 +80,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfMachineReadability",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_concession: List[TypeOfConcession] = field(
@@ -89,7 +88,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfConcession",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     charging_moment: List[ChargingMoment] = field(
@@ -98,7 +96,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "ChargingMoment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_usage_parameter: List[TypeOfUsageParameter] = field(
@@ -107,7 +104,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfUsageParameter",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_fare_table: List[TypeOfFareTable] = field(
@@ -116,7 +112,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfFareTable",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_pricing_rule: List[TypeOfPricingRule] = field(
@@ -125,7 +120,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfPricingRule",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     price_unit: List[PriceUnit] = field(
@@ -134,7 +128,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "PriceUnit",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     timing_algorithm_type: List[TimingAlgorithmType] = field(
@@ -143,7 +136,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TimingAlgorithmType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     purpose_of_journey_partition: List[PurposeOfJourneyPartition] = field(
@@ -152,7 +144,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "PurposeOfJourneyPartition",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_service_feature: List[TypeOfServiceFeature] = field(
@@ -161,7 +152,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfServiceFeature",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     point_of_interest_classification: List[PointOfInterestClassification] = field(
@@ -170,7 +160,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "PointOfInterestClassification",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     direction: List[Direction] = field(
@@ -179,7 +168,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "Direction",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     purpose_of_equipment_profile: List[PurposeOfEquipmentProfile] = field(
@@ -188,7 +176,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "PurposeOfEquipmentProfile",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_security_list: List[TypeOfSecurityList] = field(
@@ -197,7 +184,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfSecurityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_product_category: List[TypeOfProductCategory] = field(
@@ -206,7 +192,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfProductCategory",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_payment_method: List[TypeOfPaymentMethod] = field(
@@ -215,7 +200,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfPaymentMethod",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     class_of_use: List[ClassOfUse] = field(
@@ -224,7 +208,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "ClassOfUse",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     submode: List[Submode] = field(
@@ -233,7 +216,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "Submode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     open_transport_mode: List[OpenTransportMode] = field(
@@ -242,7 +224,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "OpenTransportMode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_codespace_assignment: List[TypeOfCodespaceAssignment] = field(
@@ -251,7 +232,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfCodespaceAssignment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_validity: List[TypeOfValidity] = field(
@@ -260,7 +240,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfValidity",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     purpose_of_grouping: List[PurposeOfGrouping] = field(
@@ -269,7 +248,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "PurposeOfGrouping",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     branding: List[Branding] = field(
@@ -278,7 +256,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "Branding",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     data_source: List[DataSource] = field(
@@ -287,7 +264,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "DataSource",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_retail_device: List[TypeOfRetailDevice] = field(
@@ -296,7 +272,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfRetailDevice",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     customer_account_status: List[CustomerAccountStatus] = field(
@@ -305,7 +280,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "CustomerAccountStatus",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_customer_account: List[TypeOfCustomerAccount] = field(
@@ -314,7 +288,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfCustomerAccount",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_fare_contract_entry: List[TypeOfFareContractEntry] = field(
@@ -323,7 +296,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfFareContractEntry",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_fare_contract: List[TypeOfFareContract] = field(
@@ -332,7 +304,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfFareContract",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_travel_document: List[TypeOfTravelDocument] = field(
@@ -341,7 +312,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfTravelDocument",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_sales_offer_package: List[TypeOfSalesOfferPackage] = field(
@@ -350,7 +320,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfSalesOfferPackage",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_fare_product: List[TypeOfFareProduct] = field(
@@ -359,7 +328,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfFareProduct",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_fare_structure_element: List[TypeOfFareStructureElement] = field(
@@ -368,7 +336,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfFareStructureElement",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_tariff: List[TypeOfTariff] = field(
@@ -377,7 +344,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfTariff",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_access_right_assignment: List[TypeOfAccessRightAssignment] = field(
@@ -386,7 +352,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfAccessRightAssignment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_fare_structure_factor: List[TypeOfFareStructureFactor] = field(
@@ -395,7 +360,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfFareStructureFactor",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_flexible_service: List[TypeOfFlexibleService] = field(
@@ -404,7 +368,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfFlexibleService",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_time_demand_type: List[TypeOfTimeDemandType] = field(
@@ -413,7 +376,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfTimeDemandType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_passenger_information_equipment: List[TypeOfPassengerInformationEquipment] = field(
@@ -422,7 +384,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfPassengerInformationEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_congestion: List[TypeOfCongestion] = field(
@@ -431,7 +392,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfCongestion",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_journey_pattern: List[TypeOfJourneyPattern] = field(
@@ -440,7 +400,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfJourneyPattern",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_line: List[TypeOfLine] = field(
@@ -449,7 +408,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfLine",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_activation: List[TypeOfActivation] = field(
@@ -458,7 +416,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfActivation",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_delivery_variant: List[TypeOfDeliveryVariant] = field(
@@ -467,7 +424,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfDeliveryVariant",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_notice: List[TypeOfNotice] = field(
@@ -476,7 +432,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfNotice",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_facility: List[TypeOfFacility] = field(
@@ -485,7 +440,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfFacility",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_service: List[TypeOfService] = field(
@@ -494,7 +448,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfService",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_equipment: List[TypeOfEquipment] = field(
@@ -503,7 +456,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_feature: List[TypeOfFeature] = field(
@@ -512,7 +464,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfFeature",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_link_sequence: List[TypeOfLinkSequence] = field(
@@ -521,7 +472,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfLinkSequence",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_place: List[TypeOfPlace] = field(
@@ -530,7 +480,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfPlace",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_transfer: List[TypeOfTransfer] = field(
@@ -539,7 +488,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfTransfer",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_operation: List[TypeOfOperation] = field(
@@ -548,7 +496,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfOperation",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_organisation_part: List[TypeOfOrganisationPart] = field(
@@ -557,7 +504,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfOrganisationPart",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_organisation: List[TypeOfOrganisation] = field(
@@ -566,7 +512,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfOrganisation",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_zone: List[TypeOfZone] = field(
@@ -575,7 +520,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfZone",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_link: List[TypeOfLink] = field(
@@ -584,7 +528,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfLink",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_point: List[TypeOfPoint] = field(
@@ -593,7 +536,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfPoint",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_projection: List[TypeOfProjection] = field(
@@ -602,7 +544,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfProjection",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_frame: List[TypeOfFrame] = field(
@@ -611,7 +552,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfFrame",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_responsibility_role: List[TypeOfResponsibilityRole] = field(
@@ -620,7 +560,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfResponsibilityRole",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_entity: List[TypeOfEntity] = field(
@@ -629,7 +568,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfEntity",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_version: List[TypeOfVersion] = field(
@@ -638,7 +576,6 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfVersion",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     type_of_value: List[TypeOfValue] = field(
@@ -647,6 +584,5 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "name": "TypeOfValue",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

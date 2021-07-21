@@ -21,7 +21,6 @@ class ReliefPointsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "ParkingPoint",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     garage_point: List[GaragePoint] = field(
@@ -30,7 +29,6 @@ class ReliefPointsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "GaragePoint",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     netex_org_uk_netex_parking_point: List[ParkingPoint2] = field(
@@ -39,7 +37,6 @@ class ReliefPointsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "ParkingPoint_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     relief_point: List[ReliefPoint1] = field(
@@ -48,7 +45,6 @@ class ReliefPointsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "ReliefPoint",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     netex_org_uk_netex_relief_point: List[ReliefPoint2] = field(
@@ -57,6 +53,5 @@ class ReliefPointsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "ReliefPoint_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

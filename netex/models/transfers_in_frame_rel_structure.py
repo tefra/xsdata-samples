@@ -21,7 +21,6 @@ class TransfersInFrameRelStructure(ContainmentAggregationStructure):
             "name": "Connection",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     default_connection: List[DefaultConnection] = field(
@@ -30,7 +29,6 @@ class TransfersInFrameRelStructure(ContainmentAggregationStructure):
             "name": "DefaultConnection",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     site_connection: List[SiteConnection] = field(
@@ -39,7 +37,6 @@ class TransfersInFrameRelStructure(ContainmentAggregationStructure):
             "name": "SiteConnection",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     access: List[Access] = field(
@@ -48,7 +45,6 @@ class TransfersInFrameRelStructure(ContainmentAggregationStructure):
             "name": "Access",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     transfer: List[Transfer] = field(
@@ -57,6 +53,5 @@ class TransfersInFrameRelStructure(ContainmentAggregationStructure):
             "name": "Transfer",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

@@ -20,7 +20,6 @@ class CustomerEligibilityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ResidentialQualificationEligibilityRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     commercial_profile_eligibility_ref: List[CommercialProfileEligibilityRef] = field(
@@ -29,7 +28,6 @@ class CustomerEligibilityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "CommercialProfileEligibilityRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     user_profile_eligibility_ref: List[UserProfileEligibilityRef] = field(
@@ -38,7 +36,6 @@ class CustomerEligibilityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "UserProfileEligibilityRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     customer_eligibility_ref: List[CustomerEligibilityRef] = field(
@@ -47,6 +44,5 @@ class CustomerEligibilityRefsRelStructure(OneToManyRelationshipStructure):
             "name": "CustomerEligibilityRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

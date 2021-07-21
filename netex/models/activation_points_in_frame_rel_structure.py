@@ -19,7 +19,6 @@ class ActivationPointsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "BeaconPoint",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     activation_point: List[ActivationPoint1] = field(
@@ -28,7 +27,6 @@ class ActivationPointsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "ActivationPoint",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     netex_org_uk_netex_activation_point: List[ActivationPoint2] = field(
@@ -37,6 +35,5 @@ class ActivationPointsInFrameRelStructure(ContainmentAggregationStructure):
             "name": "ActivationPoint_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

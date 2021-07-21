@@ -19,7 +19,6 @@ class AddressesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "PostalAddress",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     road_address: List[RoadAddress] = field(
@@ -28,7 +27,6 @@ class AddressesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "RoadAddress",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     address: List[Address] = field(
@@ -37,6 +35,5 @@ class AddressesInFrameRelStructure(ContainmentAggregationStructure):
             "name": "Address",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

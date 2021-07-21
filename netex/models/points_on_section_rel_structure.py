@@ -19,7 +19,6 @@ class PointsOnSectionRelStructure(StrictContainmentAggregationStructure):
             "name": "PointOnLineSection",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     point_on_section: List[PointOnSection1] = field(
@@ -28,7 +27,6 @@ class PointsOnSectionRelStructure(StrictContainmentAggregationStructure):
             "name": "PointOnSection",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     netex_org_uk_netex_point_on_section: List[PointOnSection2] = field(
@@ -37,6 +35,5 @@ class PointsOnSectionRelStructure(StrictContainmentAggregationStructure):
             "name": "PointOnSection_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

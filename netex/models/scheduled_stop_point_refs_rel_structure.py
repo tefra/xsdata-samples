@@ -18,7 +18,6 @@ class ScheduledStopPointRefsRelStructure(OneToManyRelationshipStructure):
             "name": "FareScheduledStopPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     scheduled_stop_point_ref: Optional[ScheduledStopPointRef] = field(
@@ -27,6 +26,5 @@ class ScheduledStopPointRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ScheduledStopPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )

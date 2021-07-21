@@ -25,7 +25,6 @@ class ValidityParameterAssignmentsRelStructure(ContainmentAggregationStructure):
             "name": "CustomerPurchaseParameterAssignment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     specific_parameter_assignment: List[SpecificParameterAssignment] = field(
@@ -34,7 +33,6 @@ class ValidityParameterAssignmentsRelStructure(ContainmentAggregationStructure):
             "name": "SpecificParameterAssignment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     generic_parameter_assignment_in_context: List[GenericParameterAssignmentInContext] = field(
@@ -43,7 +41,6 @@ class ValidityParameterAssignmentsRelStructure(ContainmentAggregationStructure):
             "name": "GenericParameterAssignmentInContext",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     generic_parameter_assignment: List[GenericParameterAssignment] = field(
@@ -52,7 +49,6 @@ class ValidityParameterAssignmentsRelStructure(ContainmentAggregationStructure):
             "name": "GenericParameterAssignment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     validity_parameter_assignment: List[ValidityParameterAssignment] = field(
@@ -61,7 +57,6 @@ class ValidityParameterAssignmentsRelStructure(ContainmentAggregationStructure):
             "name": "ValidityParameterAssignment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     access_right_parameter_assignment: List[AccessRightParameterAssignment1] = field(
@@ -70,7 +65,6 @@ class ValidityParameterAssignmentsRelStructure(ContainmentAggregationStructure):
             "name": "AccessRightParameterAssignment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     netex_org_uk_netex_access_right_parameter_assignment: List[AccessRightParameterAssignment2] = field(
@@ -79,6 +73,5 @@ class ValidityParameterAssignmentsRelStructure(ContainmentAggregationStructure):
             "name": "AccessRightParameterAssignment_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

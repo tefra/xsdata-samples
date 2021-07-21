@@ -19,7 +19,6 @@ class TransportOrganisationRefsRelStructure(OneToManyRelationshipStructure):
             "name": "AuthorityRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     operator_ref: List[OperatorRef] = field(
@@ -28,7 +27,6 @@ class TransportOrganisationRefsRelStructure(OneToManyRelationshipStructure):
             "name": "OperatorRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     transport_organisation_ref: List[TransportOrganisationRef] = field(
@@ -37,6 +35,5 @@ class TransportOrganisationRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TransportOrganisationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )

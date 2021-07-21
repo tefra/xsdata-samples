@@ -32,7 +32,6 @@ class LinkSequenceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "DatedVehicleJourneyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     dated_special_service_ref: List[DatedSpecialServiceRef] = field(
@@ -41,7 +40,6 @@ class LinkSequenceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "DatedSpecialServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     special_service_ref: List[SpecialServiceRef] = field(
@@ -50,7 +48,6 @@ class LinkSequenceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "SpecialServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     template_service_journey_ref: List[TemplateServiceJourneyRef] = field(
@@ -59,7 +56,6 @@ class LinkSequenceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TemplateServiceJourneyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     service_journey_ref: List[ServiceJourneyRef] = field(
@@ -68,7 +64,6 @@ class LinkSequenceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ServiceJourneyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     dead_run_ref: List[DeadRunRef] = field(
@@ -77,7 +72,6 @@ class LinkSequenceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "DeadRunRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     vehicle_journey_ref: List[VehicleJourneyRef] = field(
@@ -86,7 +80,6 @@ class LinkSequenceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "VehicleJourneyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     journey_ref: List[JourneyRef] = field(
@@ -95,7 +88,6 @@ class LinkSequenceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "JourneyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     navigation_path_ref: List[NavigationPathRef] = field(
@@ -104,7 +96,6 @@ class LinkSequenceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "NavigationPathRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     service_journey_pattern_ref: List[ServiceJourneyPatternRef] = field(
@@ -113,7 +104,6 @@ class LinkSequenceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ServiceJourneyPatternRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     service_pattern_ref: List[ServicePatternRef] = field(
@@ -122,7 +112,6 @@ class LinkSequenceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ServicePatternRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     dead_run_journey_pattern_ref: List[DeadRunJourneyPatternRef] = field(
@@ -131,7 +120,6 @@ class LinkSequenceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "DeadRunJourneyPatternRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     journey_pattern_ref: List[JourneyPatternRef] = field(
@@ -140,7 +128,6 @@ class LinkSequenceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "JourneyPatternRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     timing_pattern_ref: List[TimingPatternRef] = field(
@@ -149,7 +136,6 @@ class LinkSequenceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TimingPatternRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     route_ref: List[RouteRef] = field(
@@ -158,7 +144,6 @@ class LinkSequenceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "RouteRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
     link_sequence_ref: List[LinkSequenceRef] = field(
@@ -167,6 +152,5 @@ class LinkSequenceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "LinkSequenceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
         }
     )
