@@ -12,7 +12,6 @@ class LPlainText:
 
     The language is denoted in the attribute l.
 
-    :ivar content:
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if
         an ArObject has changed. The checksum has no semantic meaning
@@ -31,18 +30,11 @@ class LPlainText:
     :ivar space: This attribute is used to signal an intention that in
         that element, white space should be preserved by applications.
         It is defined according to xml:space as declared by W3C.
+    :ivar content:
     """
     class Meta:
         name = "L-PLAIN-TEXT"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     s: Optional[str] = field(
         default=None,
         metadata={
@@ -71,5 +63,13 @@ class LPlainText:
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
         }
     )

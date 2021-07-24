@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import List, Optional
+from typing import List, Optional, Type
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 
@@ -246,51 +246,6 @@ class StrucDocCaption:
     class Meta:
         name = "StrucDoc.Caption"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    link_html: List["StrucDocLinkHtml"] = field(
-        default_factory=list,
-        metadata={
-            "name": "linkHtml",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    sub: List[StrucDocSub] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    sup: List[StrucDocSup] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    footnote: List["StrucDocFootnote"] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    footnote_ref: List[StrucDocFootnoteRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "footnoteRef",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -310,6 +265,41 @@ class StrucDocCaption:
             "name": "styleCode",
             "type": "Attribute",
             "tokens": True,
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "linkHtml",
+                    "type": Type["StrucDocLinkHtml"],
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "sub",
+                    "type": StrucDocSub,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "sup",
+                    "type": StrucDocSup,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "footnote",
+                    "type": Type["StrucDocFootnote"],
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "footnoteRef",
+                    "type": StrucDocFootnoteRef,
+                    "namespace": "urn:hl7-org:v3",
+                },
+            ),
         }
     )
 
@@ -383,42 +373,6 @@ class StrucDocTitleFootnote:
     class Meta:
         name = "StrucDoc.TitleFootnote"
 
-    content_any: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    content: List["StrucDocTitleContent"] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    sub: List[StrucDocSub] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    sup: List[StrucDocSup] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    br: List[StrucDocBr] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -438,6 +392,36 @@ class StrucDocTitleFootnote:
             "name": "styleCode",
             "type": "Attribute",
             "tokens": True,
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "content",
+                    "type": Type["StrucDocTitleContent"],
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "sub",
+                    "type": StrucDocSub,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "sup",
+                    "type": StrucDocSup,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "br",
+                    "type": StrucDocBr,
+                    "namespace": "urn:hl7-org:v3",
+                },
+            ),
         }
     )
 
@@ -561,57 +545,6 @@ class StrucDocTitleContent:
     class Meta:
         name = "StrucDoc.TitleContent"
 
-    content_any: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    content: List["StrucDocTitleContent"] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    sub: List[StrucDocSub] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    sup: List[StrucDocSup] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    br: List[StrucDocBr] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    footnote: List[StrucDocTitleFootnote] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    footnote_ref: List[StrucDocFootnoteRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "footnoteRef",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -631,6 +564,46 @@ class StrucDocTitleContent:
             "name": "styleCode",
             "type": "Attribute",
             "tokens": True,
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "content",
+                    "type": Type["StrucDocTitleContent"],
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "sub",
+                    "type": StrucDocSub,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "sup",
+                    "type": StrucDocSup,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "br",
+                    "type": StrucDocBr,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "footnote",
+                    "type": StrucDocTitleFootnote,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "footnoteRef",
+                    "type": StrucDocFootnoteRef,
+                    "namespace": "urn:hl7-org:v3",
+                },
+            ),
         }
     )
 
@@ -640,88 +613,6 @@ class StrucDocParagraph:
     class Meta:
         name = "StrucDoc.Paragraph"
 
-    content_any: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    caption: Optional[StrucDocCaption] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    content: List["StrucDocContent"] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    link_html: List["StrucDocLinkHtml"] = field(
-        default_factory=list,
-        metadata={
-            "name": "linkHtml",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    sub: List[StrucDocSub] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    sup: List[StrucDocSup] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    br: List[StrucDocBr] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    footnote: List["StrucDocFootnote"] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    footnote_ref: List[StrucDocFootnoteRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "footnoteRef",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    render_multi_media: List[StrucDocRenderMultiMedia] = field(
-        default_factory=list,
-        metadata={
-            "name": "renderMultiMedia",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -743,6 +634,61 @@ class StrucDocParagraph:
             "tokens": True,
         }
     )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "caption",
+                    "type": StrucDocCaption,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "content",
+                    "type": Type["StrucDocContent"],
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "linkHtml",
+                    "type": Type["StrucDocLinkHtml"],
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "sub",
+                    "type": StrucDocSub,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "sup",
+                    "type": StrucDocSup,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "br",
+                    "type": StrucDocBr,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "footnote",
+                    "type": Type["StrucDocFootnote"],
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "footnoteRef",
+                    "type": StrucDocFootnoteRef,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "renderMultiMedia",
+                    "type": StrucDocRenderMultiMedia,
+                    "namespace": "urn:hl7-org:v3",
+                },
+            ),
+        }
+    )
 
 
 @dataclass
@@ -750,73 +696,6 @@ class StrucDocTh:
     class Meta:
         name = "StrucDoc.Th"
 
-    content_any: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    content: List["StrucDocContent"] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    link_html: List["StrucDocLinkHtml"] = field(
-        default_factory=list,
-        metadata={
-            "name": "linkHtml",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    sub: List[StrucDocSub] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    sup: List[StrucDocSup] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    br: List[StrucDocBr] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    footnote: List["StrucDocFootnote"] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    footnote_ref: List[StrucDocFootnoteRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "footnoteRef",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    render_multi_media: List[StrucDocRenderMultiMedia] = field(
-        default_factory=list,
-        metadata={
-            "name": "renderMultiMedia",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -899,6 +778,56 @@ class StrucDocTh:
             "type": "Attribute",
         }
     )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "content",
+                    "type": Type["StrucDocContent"],
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "linkHtml",
+                    "type": Type["StrucDocLinkHtml"],
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "sub",
+                    "type": StrucDocSub,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "sup",
+                    "type": StrucDocSup,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "br",
+                    "type": StrucDocBr,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "footnote",
+                    "type": Type["StrucDocFootnote"],
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "footnoteRef",
+                    "type": StrucDocFootnoteRef,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "renderMultiMedia",
+                    "type": StrucDocRenderMultiMedia,
+                    "namespace": "urn:hl7-org:v3",
+                },
+            ),
+        }
+    )
 
 
 @dataclass
@@ -906,57 +835,6 @@ class StrucDocTitle:
     class Meta:
         name = "StrucDoc.Title"
 
-    content_any: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    content: List[StrucDocTitleContent] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    sub: List[StrucDocSub] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    sup: List[StrucDocSup] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    br: List[StrucDocBr] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    footnote: List[StrucDocTitleFootnote] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    footnote_ref: List[StrucDocFootnoteRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "footnoteRef",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -986,6 +864,46 @@ class StrucDocTitle:
             "type": "Attribute",
         }
     )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "content",
+                    "type": StrucDocTitleContent,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "sub",
+                    "type": StrucDocSub,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "sup",
+                    "type": StrucDocSup,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "br",
+                    "type": StrucDocBr,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "footnote",
+                    "type": StrucDocTitleFootnote,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "footnoteRef",
+                    "type": StrucDocFootnoteRef,
+                    "namespace": "urn:hl7-org:v3",
+                },
+            ),
+        }
+    )
 
 
 @dataclass
@@ -993,88 +911,6 @@ class StrucDocTd:
     class Meta:
         name = "StrucDoc.Td"
 
-    content_any: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    content: List["StrucDocContent"] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    link_html: List["StrucDocLinkHtml"] = field(
-        default_factory=list,
-        metadata={
-            "name": "linkHtml",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    sub: List[StrucDocSub] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    sup: List[StrucDocSup] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    br: List[StrucDocBr] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    footnote: List["StrucDocFootnote"] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    footnote_ref: List[StrucDocFootnoteRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "footnoteRef",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    render_multi_media: List[StrucDocRenderMultiMedia] = field(
-        default_factory=list,
-        metadata={
-            "name": "renderMultiMedia",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    paragraph: List[StrucDocParagraph] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    list_value: List["StrucDocList"] = field(
-        default_factory=list,
-        metadata={
-            "name": "list",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1155,6 +991,66 @@ class StrucDocTd:
         default=None,
         metadata={
             "type": "Attribute",
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "content",
+                    "type": Type["StrucDocContent"],
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "linkHtml",
+                    "type": Type["StrucDocLinkHtml"],
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "sub",
+                    "type": StrucDocSub,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "sup",
+                    "type": StrucDocSup,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "br",
+                    "type": StrucDocBr,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "footnote",
+                    "type": Type["StrucDocFootnote"],
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "footnoteRef",
+                    "type": StrucDocFootnoteRef,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "renderMultiMedia",
+                    "type": StrucDocRenderMultiMedia,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "paragraph",
+                    "type": StrucDocParagraph,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "list",
+                    "type": Type["StrucDocList"],
+                    "namespace": "urn:hl7-org:v3",
+                },
+            ),
         }
     )
 
@@ -1523,113 +1419,6 @@ class StrucDocItem:
     class Meta:
         name = "StrucDoc.Item"
 
-    content_any: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    caption: Optional[StrucDocCaption] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    content: List["StrucDocContent"] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    link_html: List["StrucDocLinkHtml"] = field(
-        default_factory=list,
-        metadata={
-            "name": "linkHtml",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    sub: List[StrucDocSub] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    sup: List[StrucDocSup] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    br: List[StrucDocBr] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    footnote: List["StrucDocFootnote"] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    footnote_ref: List[StrucDocFootnoteRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "footnoteRef",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    render_multi_media: List[StrucDocRenderMultiMedia] = field(
-        default_factory=list,
-        metadata={
-            "name": "renderMultiMedia",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    paragraph: List[StrucDocParagraph] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    list_value: List["StrucDocList"] = field(
-        default_factory=list,
-        metadata={
-            "name": "list",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    table: List[StrucDocTable] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1649,6 +1438,76 @@ class StrucDocItem:
             "name": "styleCode",
             "type": "Attribute",
             "tokens": True,
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "caption",
+                    "type": StrucDocCaption,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "content",
+                    "type": Type["StrucDocContent"],
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "linkHtml",
+                    "type": Type["StrucDocLinkHtml"],
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "sub",
+                    "type": StrucDocSub,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "sup",
+                    "type": StrucDocSup,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "br",
+                    "type": StrucDocBr,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "footnote",
+                    "type": Type["StrucDocFootnote"],
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "footnoteRef",
+                    "type": StrucDocFootnoteRef,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "renderMultiMedia",
+                    "type": StrucDocRenderMultiMedia,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "paragraph",
+                    "type": StrucDocParagraph,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "list",
+                    "type": Type["StrucDocList"],
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "table",
+                    "type": StrucDocTable,
+                    "namespace": "urn:hl7-org:v3",
+                },
+            ),
         }
     )
 
@@ -1708,80 +1567,6 @@ class StrucDocFootnote:
     class Meta:
         name = "StrucDoc.Footnote"
 
-    content_any: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    content: List["StrucDocContent"] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    link_html: List["StrucDocLinkHtml"] = field(
-        default_factory=list,
-        metadata={
-            "name": "linkHtml",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    sub: List[StrucDocSub] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    sup: List[StrucDocSup] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    br: List[StrucDocBr] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    render_multi_media: List[StrucDocRenderMultiMedia] = field(
-        default_factory=list,
-        metadata={
-            "name": "renderMultiMedia",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    paragraph: List[StrucDocParagraph] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    list_value: List[StrucDocList] = field(
-        default_factory=list,
-        metadata={
-            "name": "list",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    table: List[StrucDocTable] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1803,6 +1588,61 @@ class StrucDocFootnote:
             "tokens": True,
         }
     )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "content",
+                    "type": Type["StrucDocContent"],
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "linkHtml",
+                    "type": Type["StrucDocLinkHtml"],
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "sub",
+                    "type": StrucDocSub,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "sup",
+                    "type": StrucDocSup,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "br",
+                    "type": StrucDocBr,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "renderMultiMedia",
+                    "type": StrucDocRenderMultiMedia,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "paragraph",
+                    "type": StrucDocParagraph,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "list",
+                    "type": StrucDocList,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "table",
+                    "type": StrucDocTable,
+                    "namespace": "urn:hl7-org:v3",
+                },
+            ),
+        }
+    )
 
 
 @dataclass
@@ -1810,29 +1650,6 @@ class StrucDocLinkHtml:
     class Meta:
         name = "StrucDoc.LinkHtml"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    footnote: List[StrucDocFootnote] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    footnote_ref: List[StrucDocFootnoteRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "footnoteRef",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
     name: Optional[str] = field(
         default=None,
         metadata={
@@ -1884,6 +1701,26 @@ class StrucDocLinkHtml:
             "tokens": True,
         }
     )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "footnote",
+                    "type": StrucDocFootnote,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "footnoteRef",
+                    "type": StrucDocFootnoteRef,
+                    "namespace": "urn:hl7-org:v3",
+                },
+            ),
+        }
+    )
 
 
 @dataclass
@@ -1891,73 +1728,6 @@ class StrucDocContent:
     class Meta:
         name = "StrucDoc.Content"
 
-    content_any: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    content: List["StrucDocContent"] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    link_html: List[StrucDocLinkHtml] = field(
-        default_factory=list,
-        metadata={
-            "name": "linkHtml",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    sub: List[StrucDocSub] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    sup: List[StrucDocSup] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    br: List[StrucDocBr] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    footnote: List[StrucDocFootnote] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    footnote_ref: List[StrucDocFootnoteRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "footnoteRef",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    render_multi_media: List[StrucDocRenderMultiMedia] = field(
-        default_factory=list,
-        metadata={
-            "name": "renderMultiMedia",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1985,6 +1755,56 @@ class StrucDocContent:
             "type": "Attribute",
         }
     )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "content",
+                    "type": Type["StrucDocContent"],
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "linkHtml",
+                    "type": StrucDocLinkHtml,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "sub",
+                    "type": StrucDocSub,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "sup",
+                    "type": StrucDocSup,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "br",
+                    "type": StrucDocBr,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "footnote",
+                    "type": StrucDocFootnote,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "footnoteRef",
+                    "type": StrucDocFootnoteRef,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "renderMultiMedia",
+                    "type": StrucDocRenderMultiMedia,
+                    "namespace": "urn:hl7-org:v3",
+                },
+            ),
+        }
+    )
 
 
 @dataclass
@@ -1992,95 +1812,6 @@ class StrucDocText:
     class Meta:
         name = "StrucDoc.Text"
 
-    content_any: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    content: List[StrucDocContent] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    link_html: List[StrucDocLinkHtml] = field(
-        default_factory=list,
-        metadata={
-            "name": "linkHtml",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    sub: List[StrucDocSub] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    sup: List[StrucDocSup] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    br: List[StrucDocBr] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    footnote: List[StrucDocFootnote] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    footnote_ref: List[StrucDocFootnoteRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "footnoteRef",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    render_multi_media: List[StrucDocRenderMultiMedia] = field(
-        default_factory=list,
-        metadata={
-            "name": "renderMultiMedia",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    paragraph: List[StrucDocParagraph] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    list_value: List[StrucDocList] = field(
-        default_factory=list,
-        metadata={
-            "name": "list",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    table: List[StrucDocTable] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -2108,5 +1839,70 @@ class StrucDocText:
         metadata={
             "name": "mediaType",
             "type": "Attribute",
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "content",
+                    "type": StrucDocContent,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "linkHtml",
+                    "type": StrucDocLinkHtml,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "sub",
+                    "type": StrucDocSub,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "sup",
+                    "type": StrucDocSup,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "br",
+                    "type": StrucDocBr,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "footnote",
+                    "type": StrucDocFootnote,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "footnoteRef",
+                    "type": StrucDocFootnoteRef,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "renderMultiMedia",
+                    "type": StrucDocRenderMultiMedia,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "paragraph",
+                    "type": StrucDocParagraph,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "list",
+                    "type": StrucDocList,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "table",
+                    "type": StrucDocTable,
+                    "namespace": "urn:hl7-org:v3",
+                },
+            ),
         }
     )

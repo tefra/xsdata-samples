@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Type
 from .caption import Caption
 from .category_string import CategoryString
 from .chapter_enum_break_simple import ChapterEnumBreakSimple
@@ -570,19 +570,6 @@ class BlueprintFormula:
 
     blueprintCondition.
 
-    :ivar content:
-    :ivar sysc_string_ref: syscString indicates that the referenced
-        system constant shall be evaluated as a string according to
-        [TPS_SWCT_01431].
-    :ivar sysc_ref: This refers to a system constant. The internal
-        (coded) value of the system constant shall be used.
-    :ivar ecuc_query_ref: The EcucQuery serves as a argument for the
-        formula.
-    :ivar ecuc_ref: The EcucDefinitionElement serves as a argument for
-        the formular.
-    :ivar verbatim: This represents an informal term in the expression
-        as verbatim text. Note that the result of this is same as
-        formula keyword "undefined".
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if
         an ArObject has changed. The checksum has no semantic meaning
@@ -593,58 +580,11 @@ class BlueprintFormula:
         the last change of an ArObject. The timestamp has no semantic
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
+    :ivar content:
     """
     class Meta:
         name = "BLUEPRINT-FORMULA"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    sysc_string_ref: List["BlueprintFormula.SyscStringRef"] = field(
-        default_factory=list,
-        metadata={
-            "name": "SYSC-STRING-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
-    sysc_ref: List["BlueprintFormula.SyscRef"] = field(
-        default_factory=list,
-        metadata={
-            "name": "SYSC-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
-    ecuc_query_ref: List["BlueprintFormula.EcucQueryRef"] = field(
-        default_factory=list,
-        metadata={
-            "name": "ECUC-QUERY-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
-    ecuc_ref: List["BlueprintFormula.EcucRef"] = field(
-        default_factory=list,
-        metadata={
-            "name": "ECUC-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
-    verbatim: List[MultiLanguageVerbatim] = field(
-        default_factory=list,
-        metadata={
-            "name": "VERBATIM",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
     s: Optional[str] = field(
         default=None,
         metadata={
@@ -658,6 +598,41 @@ class BlueprintFormula:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "SYSC-STRING-REF",
+                    "type": Type["BlueprintFormula.SyscStringRef"],
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+                {
+                    "name": "SYSC-REF",
+                    "type": Type["BlueprintFormula.SyscRef"],
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+                {
+                    "name": "ECUC-QUERY-REF",
+                    "type": Type["BlueprintFormula.EcucQueryRef"],
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+                {
+                    "name": "ECUC-REF",
+                    "type": Type["BlueprintFormula.EcucRef"],
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+                {
+                    "name": "VERBATIM",
+                    "type": MultiLanguageVerbatim,
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            ),
         }
     )
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Type
 from .br import Br
 from .emphasis_text import EmphasisText
 from .index_entry import IndexEntry
@@ -21,20 +21,6 @@ class LOverviewParagraph:
 
     The language is denoted in the attribute l.
 
-    :ivar content:
-    :ivar br: This element is the same as function here as in a HTML
-        document i.e. it forces a line break.
-    :ivar ft: This is a foot note within a paragraph.
-    :ivar trace_ref: This allows to place an arbitrary reference to a
-        traceable object in documentation.
-    :ivar tt: This is a technical term.
-    :ivar xref: This is a cross reference.
-    :ivar xref_target: This element specifies a reference target which
-        can be scattered throughout the text.
-    :ivar e: This is emphasis text.
-    :ivar sup: This is subscript text.
-    :ivar sub: This is superscript text.
-    :ivar ie: This is an index entry.
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if
         an ArObject has changed. The checksum has no semantic meaning
@@ -53,98 +39,11 @@ class LOverviewParagraph:
     :ivar blueprint_value: This represents a description that documents
         how the value shall be defined when deriving objects from the
         blueprint.
+    :ivar content:
     """
     class Meta:
         name = "L-OVERVIEW-PARAGRAPH"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    br: List[Br] = field(
-        default_factory=list,
-        metadata={
-            "name": "BR",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
-    ft: List[SlOverviewParagraph] = field(
-        default_factory=list,
-        metadata={
-            "name": "FT",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
-    trace_ref: List["LOverviewParagraph.TraceRef"] = field(
-        default_factory=list,
-        metadata={
-            "name": "TRACE-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
-    tt: List[Tt] = field(
-        default_factory=list,
-        metadata={
-            "name": "TT",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
-    xref: List[Xref] = field(
-        default_factory=list,
-        metadata={
-            "name": "XREF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
-    xref_target: List[XrefTarget] = field(
-        default_factory=list,
-        metadata={
-            "name": "XREF-TARGET",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
-    e: List[EmphasisText] = field(
-        default_factory=list,
-        metadata={
-            "name": "E",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
-    sup: List[Supscript] = field(
-        default_factory=list,
-        metadata={
-            "name": "SUP",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
-    sub: List[Supscript] = field(
-        default_factory=list,
-        metadata={
-            "name": "SUB",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
-    ie: List[IndexEntry] = field(
-        default_factory=list,
-        metadata={
-            "name": "IE",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
     s: Optional[str] = field(
         default=None,
         metadata={
@@ -173,6 +72,66 @@ class LOverviewParagraph:
         metadata={
             "name": "BLUEPRINT-VALUE",
             "type": "Attribute",
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "BR",
+                    "type": Br,
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+                {
+                    "name": "FT",
+                    "type": SlOverviewParagraph,
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+                {
+                    "name": "TRACE-REF",
+                    "type": Type["LOverviewParagraph.TraceRef"],
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+                {
+                    "name": "TT",
+                    "type": Tt,
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+                {
+                    "name": "XREF",
+                    "type": Xref,
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+                {
+                    "name": "XREF-TARGET",
+                    "type": XrefTarget,
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+                {
+                    "name": "E",
+                    "type": EmphasisText,
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+                {
+                    "name": "SUP",
+                    "type": Supscript,
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+                {
+                    "name": "SUB",
+                    "type": Supscript,
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+                {
+                    "name": "IE",
+                    "type": IndexEntry,
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            ),
         }
     )
 

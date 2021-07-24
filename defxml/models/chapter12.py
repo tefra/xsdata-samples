@@ -15,11 +15,11 @@ class ColorType:
 
 @dataclass
 class DescriptionType:
-    w3_org_1999_xhtml_element: List[object] = field(
+    content: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
-            "namespace": "http://www.w3.org/1999/xhtml",
+            "namespace": "##any",
             "mixed": True,
         }
     )

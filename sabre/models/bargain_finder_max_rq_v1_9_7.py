@@ -4616,11 +4616,6 @@ class PriceRequestInformationType:
     class NegotiatedFareCode:
         """
         Attributes
-            content:
-            supplier: This element indicates the supplier associated
-                with a negotiated fare code.
-            tpa_extensions: This is a place holder for additional
-                elements.
             code: Any code used to specify an item, for example, type of
                 traveler, service code, room amenity, etc.
             code_context: Identifies the source authority for the code.
@@ -4633,31 +4628,8 @@ class PriceRequestInformationType:
             supplier_code: An additional attribute to allow flexibility
                 for particular organizations who require an additional
                 supplier code.
+            content:
         """
-        content: List[object] = field(
-            default_factory=list,
-            metadata={
-                "type": "Wildcard",
-                "namespace": "##any",
-                "mixed": True,
-            }
-        )
-        supplier: List[CompanyNameType] = field(
-            default_factory=list,
-            metadata={
-                "name": "Supplier",
-                "type": "Element",
-                "namespace": "http://www.opentravel.org/OTA/2003/05",
-            }
-        )
-        tpa_extensions: Optional[str] = field(
-            default=None,
-            metadata={
-                "name": "TPA_Extensions",
-                "type": "Element",
-                "namespace": "http://www.opentravel.org/OTA/2003/05",
-            }
-        )
         code: Optional[str] = field(
             default=None,
             metadata={
@@ -4707,6 +4679,26 @@ class PriceRequestInformationType:
                 "type": "Attribute",
                 "min_length": 1,
                 "max_length": 16,
+            }
+        )
+        content: List[object] = field(
+            default_factory=list,
+            metadata={
+                "type": "Wildcard",
+                "namespace": "##any",
+                "mixed": True,
+                "choices": (
+                    {
+                        "name": "Supplier",
+                        "type": CompanyNameType,
+                        "namespace": "http://www.opentravel.org/OTA/2003/05",
+                    },
+                    {
+                        "name": "TPA_Extensions",
+                        "type": str,
+                        "namespace": "http://www.opentravel.org/OTA/2003/05",
+                    },
+                ),
             }
         )
 

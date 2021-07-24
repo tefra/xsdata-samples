@@ -15,10 +15,6 @@ class EmphasisText:
     As a compromise it contains some rendering oriented attributes such
     as color and font.
 
-    :ivar content:
-    :ivar sub: this is subscript text
-    :ivar sup: This is superscript text
-    :ivar tt: This is a technical term.
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if
         an ArObject has changed. The checksum has no semantic meaning
@@ -36,42 +32,11 @@ class EmphasisText:
     :ivar type: Indicates how the text may be emphasized. Note that this
         is only a proposal which can be overridden or ignored by
         particular formatting engines. Default is BOLD.
+    :ivar content:
     """
     class Meta:
         name = "EMPHASIS-TEXT"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    sub: List[Supscript] = field(
-        default_factory=list,
-        metadata={
-            "name": "SUB",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
-    sup: List[Supscript] = field(
-        default_factory=list,
-        metadata={
-            "name": "SUP",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
-    tt: List[Tt] = field(
-        default_factory=list,
-        metadata={
-            "name": "TT",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
     s: Optional[str] = field(
         default=None,
         metadata={
@@ -106,5 +71,30 @@ class EmphasisText:
         metadata={
             "name": "TYPE",
             "type": "Attribute",
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "SUB",
+                    "type": Supscript,
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+                {
+                    "name": "SUP",
+                    "type": Supscript,
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+                {
+                    "name": "TT",
+                    "type": Tt,
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            ),
         }
     )
