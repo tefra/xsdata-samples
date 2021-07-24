@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Type
 from .binding_time_enum_simple import BindingTimeEnumSimple
 from .ref import Ref
 from .sw_systemconst_subtypes_enum import SwSystemconstSubtypesEnum
@@ -12,12 +12,6 @@ class DiagnosticTestResultUpdateEnumValueVariationPoint:
     """
     This element was generated/modified due to an atpVariation stereotype.
 
-    :ivar content:
-    :ivar sysc_string_ref: syscString indicates that the referenced
-        system constant shall be evaluated as a string according to
-        [TPS_SWCT_01431].
-    :ivar sysc_ref: This refers to a system constant. The internal
-        (coded) value of the system constant shall be used.
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if
         an ArObject has changed. The checksum has no semantic meaning
@@ -47,34 +41,11 @@ class DiagnosticTestResultUpdateEnumValueVariationPoint:
     :ivar base: This attribute reflects the base to be used in context
         of EnumerationMappingTable for this reference.
     :ivar enum_table: This represents the assigned enumeration table.
+    :ivar content:
     """
     class Meta:
         name = "DIAGNOSTIC-TEST-RESULT-UPDATE-ENUM-VALUE-VARIATION-POINT"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    sysc_string_ref: List["DiagnosticTestResultUpdateEnumValueVariationPoint.SyscStringRef"] = field(
-        default_factory=list,
-        metadata={
-            "name": "SYSC-STRING-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
-    sysc_ref: List["DiagnosticTestResultUpdateEnumValueVariationPoint.SyscRef"] = field(
-        default_factory=list,
-        metadata={
-            "name": "SYSC-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
     s: Optional[str] = field(
         default=None,
         metadata={
@@ -135,6 +106,26 @@ class DiagnosticTestResultUpdateEnumValueVariationPoint:
             "name": "ENUM-TABLE",
             "type": "Attribute",
             "pattern": r"/?[a-zA-Z][a-zA-Z0-9_]{0,127}(/[a-zA-Z][a-zA-Z0-9_]{0,127})*",
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "SYSC-STRING-REF",
+                    "type": Type["DiagnosticTestResultUpdateEnumValueVariationPoint.SyscStringRef"],
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+                {
+                    "name": "SYSC-REF",
+                    "type": Type["DiagnosticTestResultUpdateEnumValueVariationPoint.SyscRef"],
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            ),
         }
     )
 

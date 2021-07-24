@@ -35,28 +35,28 @@ class AdxpExplicit:
     which are indicated by special line-breaking delimiter elements
     (e.g., DEL).
 
-    :ivar content:
     :ivar part_type: Specifies whether an address part names the street,
         city, country, postal code, post box, etc. If the type is NULL
         the address part is unclassified and would simply appear on an
         address label as is.
+    :ivar content:
     """
     class Meta:
         name = "ADXP_explicit"
 
+    part_type: Optional[AddressPartType] = field(
+        default=None,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
     content: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
             "mixed": True,
-        }
-    )
-    part_type: Optional[AddressPartType] = field(
-        default=None,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
         }
     )
 
@@ -94,25 +94,17 @@ class EnxpExplicit:
     part type. Typical name parts for person names are given names, and
     family names, titles, etc.
 
-    :ivar content:
     :ivar part_type: Indicates whether the name part is a given name,
         family name, prefix, suffix, etc.
     :ivar qualifier: is a set of codes each of which specifies a certain
         subcategory of the name part in addition to the main name part
         type. For example, a given name may be flagged as a nickname, a
         family name may be a pseudonym or a name of public records.
+    :ivar content:
     """
     class Meta:
         name = "ENXP_explicit"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: Optional[EntityNamePartType] = field(
         default=None,
         metadata={
@@ -125,6 +117,14 @@ class EnxpExplicit:
         metadata={
             "type": "Attribute",
             "tokens": True,
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
         }
     )
 
@@ -239,14 +239,6 @@ class EnExplicitDelimiter:
     class Meta:
         name = "en_explicit.delimiter"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     part_type: EntityNamePartType = field(
         init=False,
         default=EntityNamePartType.DEL,
@@ -262,13 +254,6 @@ class EnExplicitDelimiter:
             "tokens": True,
         }
     )
-
-
-@dataclass
-class EnExplicitFamily:
-    class Meta:
-        name = "en_explicit.family"
-
     content: List[object] = field(
         default_factory=list,
         metadata={
@@ -277,6 +262,13 @@ class EnExplicitFamily:
             "mixed": True,
         }
     )
+
+
+@dataclass
+class EnExplicitFamily:
+    class Meta:
+        name = "en_explicit.family"
+
     part_type: EntityNamePartType = field(
         init=False,
         default=EntityNamePartType.FAM,
@@ -292,13 +284,6 @@ class EnExplicitFamily:
             "tokens": True,
         }
     )
-
-
-@dataclass
-class EnExplicitGiven:
-    class Meta:
-        name = "en_explicit.given"
-
     content: List[object] = field(
         default_factory=list,
         metadata={
@@ -307,6 +292,13 @@ class EnExplicitGiven:
             "mixed": True,
         }
     )
+
+
+@dataclass
+class EnExplicitGiven:
+    class Meta:
+        name = "en_explicit.given"
+
     part_type: EntityNamePartType = field(
         init=False,
         default=EntityNamePartType.GIV,
@@ -322,13 +314,6 @@ class EnExplicitGiven:
             "tokens": True,
         }
     )
-
-
-@dataclass
-class EnExplicitPrefix:
-    class Meta:
-        name = "en_explicit.prefix"
-
     content: List[object] = field(
         default_factory=list,
         metadata={
@@ -337,6 +322,13 @@ class EnExplicitPrefix:
             "mixed": True,
         }
     )
+
+
+@dataclass
+class EnExplicitPrefix:
+    class Meta:
+        name = "en_explicit.prefix"
+
     part_type: EntityNamePartType = field(
         init=False,
         default=EntityNamePartType.PFX,
@@ -352,13 +344,6 @@ class EnExplicitPrefix:
             "tokens": True,
         }
     )
-
-
-@dataclass
-class EnExplicitSuffix:
-    class Meta:
-        name = "en_explicit.suffix"
-
     content: List[object] = field(
         default_factory=list,
         metadata={
@@ -367,6 +352,13 @@ class EnExplicitSuffix:
             "mixed": True,
         }
     )
+
+
+@dataclass
+class EnExplicitSuffix:
+    class Meta:
+        name = "en_explicit.suffix"
+
     part_type: EntityNamePartType = field(
         init=False,
         default=EntityNamePartType.SFX,
@@ -380,6 +372,14 @@ class EnExplicitSuffix:
         metadata={
             "type": "Attribute",
             "tokens": True,
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
         }
     )
 
@@ -402,25 +402,25 @@ class Bin(Any):
     Binary data is a protected type that MUST not be used outside the
     data type specification.
 
-    :ivar content:
     :ivar representation: Specifies the representation of the binary
         data that is the content of the binary data value.
+    :ivar content:
     """
     class Meta:
         name = "BIN"
 
+    representation: BinaryDataEncoding = field(
+        default=BinaryDataEncoding.TXT,
+        metadata={
+            "type": "Attribute",
+        }
+    )
     content: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
             "mixed": True,
-        }
-    )
-    representation: BinaryDataEncoding = field(
-        default=BinaryDataEncoding.TXT,
-        metadata={
-            "type": "Attribute",
         }
     )
 
@@ -1060,38 +1060,6 @@ class AdExplicit:
     A sequence of address parts, such as street or post office Box,
     city, postal code, country, etc.
 
-    :ivar content:
-    :ivar delimiter:
-    :ivar country:
-    :ivar state:
-    :ivar county:
-    :ivar city:
-    :ivar postal_code:
-    :ivar street_address_line:
-    :ivar house_number:
-    :ivar house_number_numeric:
-    :ivar direction:
-    :ivar street_name:
-    :ivar street_name_base:
-    :ivar street_name_type:
-    :ivar additional_locator:
-    :ivar unit_id:
-    :ivar unit_type:
-    :ivar care_of:
-    :ivar census_tract:
-    :ivar delivery_address_line:
-    :ivar delivery_installation_type:
-    :ivar delivery_installation_area:
-    :ivar delivery_installation_qualifier:
-    :ivar delivery_mode:
-    :ivar delivery_mode_identifier:
-    :ivar building_number_suffix:
-    :ivar post_box:
-    :ivar precinct:
-    :ivar useable_period: A GTS specifying the periods of time during
-        which the address can be used. This is used to specify different
-        addresses for different times of the year or to refer to
-        historical addresses.
     :ivar null_flavor: An exceptional value expressing missing
         information and possibly the reason why the information is
         missing.
@@ -1102,262 +1070,11 @@ class AdExplicit:
         are always a Sequence, the order in which they are presented may
         or may not be known. Where this matters, can be used to convey
         this information.
+    :ivar content:
     """
     class Meta:
         name = "AD_explicit"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    delimiter: List[AdxpExplicitDelimiter] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    country: List[AdxpExplicitCountry] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    state: List[AdxpExplicitState] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    county: List[AdxpExplicitCounty] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    city: List[AdxpExplicitCity] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    postal_code: List[AdxpExplicitPostalCode] = field(
-        default_factory=list,
-        metadata={
-            "name": "postalCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    street_address_line: List[AdxpExplicitStreetAddressLine] = field(
-        default_factory=list,
-        metadata={
-            "name": "streetAddressLine",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    house_number: List[AdxpExplicitHouseNumber] = field(
-        default_factory=list,
-        metadata={
-            "name": "houseNumber",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    house_number_numeric: List[AdxpExplicitHouseNumberNumeric] = field(
-        default_factory=list,
-        metadata={
-            "name": "houseNumberNumeric",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    direction: List[AdxpExplicitDirection] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    street_name: List[AdxpExplicitStreetName] = field(
-        default_factory=list,
-        metadata={
-            "name": "streetName",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    street_name_base: List[AdxpExplicitStreetNameBase] = field(
-        default_factory=list,
-        metadata={
-            "name": "streetNameBase",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    street_name_type: List[AdxpExplicitStreetNameType1] = field(
-        default_factory=list,
-        metadata={
-            "name": "streetNameType",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    additional_locator: List[AdxpExplicitAdditionalLocator] = field(
-        default_factory=list,
-        metadata={
-            "name": "additionalLocator",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    unit_id: List[AdxpExplicitUnitId] = field(
-        default_factory=list,
-        metadata={
-            "name": "unitID",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    unit_type: List[AdxpExplicitUnitType] = field(
-        default_factory=list,
-        metadata={
-            "name": "unitType",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    care_of: List[AdxpExplicitCareOf] = field(
-        default_factory=list,
-        metadata={
-            "name": "careOf",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    census_tract: List[AdxpExplicitCensusTract] = field(
-        default_factory=list,
-        metadata={
-            "name": "censusTract",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    delivery_address_line: List[AdxpExplicitDeliveryAddressLine] = field(
-        default_factory=list,
-        metadata={
-            "name": "deliveryAddressLine",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    delivery_installation_type: List[AdxpExplicitDeliveryInstallationType] = field(
-        default_factory=list,
-        metadata={
-            "name": "deliveryInstallationType",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    delivery_installation_area: List[AdxpExplicitDeliveryInstallationArea] = field(
-        default_factory=list,
-        metadata={
-            "name": "deliveryInstallationArea",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    delivery_installation_qualifier: List[AdxpExplicitDeliveryInstallationQualifier] = field(
-        default_factory=list,
-        metadata={
-            "name": "deliveryInstallationQualifier",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    delivery_mode: List[AdxpExplicitDeliveryMode] = field(
-        default_factory=list,
-        metadata={
-            "name": "deliveryMode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    delivery_mode_identifier: List[AdxpExplicitDeliveryModeIdentifier] = field(
-        default_factory=list,
-        metadata={
-            "name": "deliveryModeIdentifier",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    building_number_suffix: List[AdxpExplicitBuildingNumberSuffix] = field(
-        default_factory=list,
-        metadata={
-            "name": "buildingNumberSuffix",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    post_box: List[AdxpExplicitPostBox] = field(
-        default_factory=list,
-        metadata={
-            "name": "postBox",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    precinct: List[AdxpExplicitPrecinct] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    useable_period: List[SxcmTsExplicit] = field(
-        default_factory=list,
-        metadata={
-            "name": "useablePeriod",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
@@ -1380,6 +1097,156 @@ class AdExplicit:
             "pattern": r"true|false",
         }
     )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "delimiter",
+                    "type": AdxpExplicitDelimiter,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "country",
+                    "type": AdxpExplicitCountry,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "state",
+                    "type": AdxpExplicitState,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "county",
+                    "type": AdxpExplicitCounty,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "city",
+                    "type": AdxpExplicitCity,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "postalCode",
+                    "type": AdxpExplicitPostalCode,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "streetAddressLine",
+                    "type": AdxpExplicitStreetAddressLine,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "houseNumber",
+                    "type": AdxpExplicitHouseNumber,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "houseNumberNumeric",
+                    "type": AdxpExplicitHouseNumberNumeric,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "direction",
+                    "type": AdxpExplicitDirection,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "streetName",
+                    "type": AdxpExplicitStreetName,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "streetNameBase",
+                    "type": AdxpExplicitStreetNameBase,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "streetNameType",
+                    "type": AdxpExplicitStreetNameType1,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "additionalLocator",
+                    "type": AdxpExplicitAdditionalLocator,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "unitID",
+                    "type": AdxpExplicitUnitId,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "unitType",
+                    "type": AdxpExplicitUnitType,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "careOf",
+                    "type": AdxpExplicitCareOf,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "censusTract",
+                    "type": AdxpExplicitCensusTract,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "deliveryAddressLine",
+                    "type": AdxpExplicitDeliveryAddressLine,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "deliveryInstallationType",
+                    "type": AdxpExplicitDeliveryInstallationType,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "deliveryInstallationArea",
+                    "type": AdxpExplicitDeliveryInstallationArea,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "deliveryInstallationQualifier",
+                    "type": AdxpExplicitDeliveryInstallationQualifier,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "deliveryMode",
+                    "type": AdxpExplicitDeliveryMode,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "deliveryModeIdentifier",
+                    "type": AdxpExplicitDeliveryModeIdentifier,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "buildingNumberSuffix",
+                    "type": AdxpExplicitBuildingNumberSuffix,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "postBox",
+                    "type": AdxpExplicitPostBox,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "precinct",
+                    "type": AdxpExplicitPrecinct,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "useablePeriod",
+                    "type": SxcmTsExplicit,
+                    "namespace": "urn:hl7-org:v3",
+                },
+            ),
+        }
+    )
 
 
 @dataclass
@@ -1397,6 +1264,74 @@ class Bn(AnynonNull):
         metadata={
             "type": "Attribute",
             "pattern": r"true|false",
+        }
+    )
+
+
+@dataclass
+class Ed(Bin):
+    """Data that is primarily intended for human interpretation or for further
+    machine processing is outside the scope of HL7.
+
+    This includes unformatted or formatted written language, multimedia
+    data, or structured information as defined by a different standard
+    (e.g., XML-signatures.)  Instead of the data itself, an ED may
+    contain only a reference (see TEL.) Note that the ST data type is a
+    specialization of when the  is text/plain.
+
+    :ivar media_type: Identifies the type of the encapsulated data and
+        identifies a method to interpret or render the data.
+    :ivar language: For character based information the language
+        property specifies the human language of the text.
+    :ivar compression: Indicates whether the raw byte data is
+        compressed, and what compression algorithm was used.
+    :ivar integrity_check: The integrity check is a short binary value
+        representing a cryptographically strong checksum that is
+        calculated over the binary data. The purpose of this property,
+        when communicated with a reference is for anyone to validate
+        later whether the reference still resolved to the same data that
+        the reference resolved to when the encapsulated data value with
+        reference was created.
+    :ivar integrity_check_algorithm: Specifies the algorithm used to
+        compute the integrityCheck value.
+    """
+    class Meta:
+        name = "ED"
+
+    media_type: str = field(
+        default="text/plain",
+        metadata={
+            "name": "mediaType",
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
+    )
+    language: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
+    )
+    compression: Optional[CompressionAlgorithm] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    integrity_check: Optional[bytes] = field(
+        default=None,
+        metadata={
+            "name": "integrityCheck",
+            "type": "Attribute",
+            "format": "base64",
+        }
+    )
+    integrity_check_algorithm: IntegrityCheckAlgorithm = field(
+        default=IntegrityCheckAlgorithm.SHA_1,
+        metadata={
+            "name": "integrityCheckAlgorithm",
+            "type": "Attribute",
         }
     )
 
@@ -1539,8 +1474,6 @@ class ThumbnailExplicit:
     encapsulated data. It allows a user to select data more efficiently
     before actually downloading through the reference.
 
-    :ivar content:
-    :ivar reference:
     :ivar null_flavor: An exceptional value expressing missing
         information and possibly the reason why the information is
         missing.
@@ -1561,25 +1494,11 @@ class ThumbnailExplicit:
         reference was created.
     :ivar integrity_check_algorithm: Specifies the algorithm used to
         compute the integrityCheck value.
+    :ivar content:
     """
     class Meta:
         name = "thumbnail_explicit"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    reference: Optional[TelExplicit] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
@@ -1629,690 +1548,19 @@ class ThumbnailExplicit:
             "type": "Attribute",
         }
     )
-
-
-@dataclass
-class EdExplicit:
-    """Data that is primarily intended for human interpretation or for further
-    machine processing is outside the scope of HL7.
-
-    This includes unformatted or formatted written language, multimedia
-    data, or structured information as defined by a different standard
-    (e.g., XML-signatures.)  Instead of the data itself, an ED may
-    contain only a reference (see TEL.) Note that the ST data type is a
-    specialization of when the  is text/plain.
-
-    :ivar content:
-    :ivar reference: A telecommunication address (TEL), such as a URL
-        for HTTP or FTP, which will resolve to precisely the same binary
-        data that could as well have been provided as inline data.
-    :ivar thumbnail:
-    :ivar null_flavor: An exceptional value expressing missing
-        information and possibly the reason why the information is
-        missing.
-    :ivar representation: Specifies the representation of the binary
-        data that is the content of the binary data value.
-    :ivar media_type: Identifies the type of the encapsulated data and
-        identifies a method to interpret or render the data.
-    :ivar language: For character based information the language
-        property specifies the human language of the text.
-    :ivar compression: Indicates whether the raw byte data is
-        compressed, and what compression algorithm was used.
-    :ivar integrity_check: The integrity check is a short binary value
-        representing a cryptographically strong checksum that is
-        calculated over the binary data. The purpose of this property,
-        when communicated with a reference is for anyone to validate
-        later whether the reference still resolved to the same data that
-        the reference resolved to when the encapsulated data value with
-        reference was created.
-    :ivar integrity_check_algorithm: Specifies the algorithm used to
-        compute the integrityCheck value.
-    """
-    class Meta:
-        name = "ED_explicit"
-
     content: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
             "mixed": True,
-        }
-    )
-    reference: Optional[TelExplicit] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    thumbnail: Optional[ThumbnailExplicit] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        }
-    )
-    representation: BinaryDataEncoding = field(
-        default=BinaryDataEncoding.TXT,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    media_type: str = field(
-        default="text/plain",
-        metadata={
-            "name": "mediaType",
-            "type": "Attribute",
-            "pattern": r"[^\s]+",
-        }
-    )
-    language: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "pattern": r"[^\s]+",
-        }
-    )
-    compression: Optional[CompressionAlgorithm] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    integrity_check: Optional[bytes] = field(
-        default=None,
-        metadata={
-            "name": "integrityCheck",
-            "type": "Attribute",
-            "format": "base64",
-        }
-    )
-    integrity_check_algorithm: IntegrityCheckAlgorithm = field(
-        default=IntegrityCheckAlgorithm.SHA_1,
-        metadata={
-            "name": "integrityCheckAlgorithm",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class IvxbTs(Ts):
-    """
-    :ivar inclusive: Specifies whether the limit is included in the
-        interval (interval is closed) or excluded from the interval
-        (interval is open).
-    """
-    class Meta:
-        name = "IVXB_TS"
-
-    inclusive: str = field(
-        default="true",
-        metadata={
-            "type": "Attribute",
-            "pattern": r"true|false",
-        }
-    )
-
-
-@dataclass
-class Rto(RtoQtyQty):
-    """A quantity constructed as the quotient of a numerator quantity divided
-    by a denominator quantity.
-
-    Common factors in the numerator and denominator are not
-    automatically cancelled out.   supports titers (e.g., "1:128") and
-    other quantities produced by laboratories that truly represent
-    ratios. Ratios are not simply "structured numerics", particularly
-    blood pressure measurements (e.g. "120/60") are not ratios. In many
-    cases REAL should be used instead of .
-    """
-    class Meta:
-        name = "RTO"
-
-
-@dataclass
-class ScExplicit:
-    """An ST that optionally may have a code attached.
-
-    The text must always be present if a code is present. The code is
-    often a local code.
-
-    :ivar content:
-    :ivar reference: A telecommunication address (TEL), such as a URL
-        for HTTP or FTP, which will resolve to precisely the same binary
-        data that could as well have been provided as inline data.
-    :ivar thumbnail:
-    :ivar null_flavor: An exceptional value expressing missing
-        information and possibly the reason why the information is
-        missing.
-    :ivar representation: Specifies the representation of the binary
-        data that is the content of the binary data value.
-    :ivar media_type: Identifies the type of the encapsulated data and
-        identifies a method to interpret or render the data.
-    :ivar language: For character based information the language
-        property specifies the human language of the text.
-    :ivar compression: Indicates whether the raw byte data is
-        compressed, and what compression algorithm was used.
-    :ivar integrity_check: The integrity check is a short binary value
-        representing a cryptographically strong checksum that is
-        calculated over the binary data. The purpose of this property,
-        when communicated with a reference is for anyone to validate
-        later whether the reference still resolved to the same data that
-        the reference resolved to when the encapsulated data value with
-        reference was created.
-    :ivar integrity_check_algorithm: Specifies the algorithm used to
-        compute the integrityCheck value.
-    :ivar code: The plain code symbol defined by the code system. For
-        example, "784.0" is the code symbol of the ICD-9 code "784.0"
-        for headache.
-    :ivar code_system: Specifies the code system that defines the code.
-    :ivar code_system_name: A common name of the coding system.
-    :ivar code_system_version: If applicable, a version descriptor
-        defined specifically for the given code system.
-    :ivar display_name: A name or title for the code, under which the
-        sending system shows the code value to its users.
-    """
-    class Meta:
-        name = "SC_explicit"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    reference: Optional[TelExplicit] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    thumbnail: Optional[ThumbnailExplicit] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        }
-    )
-    representation: BinaryDataEncoding = field(
-        default=BinaryDataEncoding.TXT,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    media_type: str = field(
-        default="text/plain",
-        metadata={
-            "name": "mediaType",
-            "type": "Attribute",
-            "pattern": r"[^\s]+",
-        }
-    )
-    language: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "pattern": r"[^\s]+",
-        }
-    )
-    compression: Optional[CompressionAlgorithm] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    integrity_check: Optional[bytes] = field(
-        default=None,
-        metadata={
-            "name": "integrityCheck",
-            "type": "Attribute",
-            "format": "base64",
-        }
-    )
-    integrity_check_algorithm: IntegrityCheckAlgorithm = field(
-        default=IntegrityCheckAlgorithm.SHA_1,
-        metadata={
-            "name": "integrityCheckAlgorithm",
-            "type": "Attribute",
-        }
-    )
-    code: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "pattern": r"[^\s]+",
-        }
-    )
-    code_system: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "codeSystem",
-            "type": "Attribute",
-            "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
-        }
-    )
-    code_system_name: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "codeSystemName",
-            "type": "Attribute",
-            "min_length": 1,
-        }
-    )
-    code_system_version: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "codeSystemVersion",
-            "type": "Attribute",
-            "min_length": 1,
-        }
-    )
-    display_name: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "displayName",
-            "type": "Attribute",
-            "min_length": 1,
-        }
-    )
-
-
-@dataclass
-class StExplicit:
-    """
-    The character string data type stands for text data, primarily intended for
-    machine processing (e.g., sorting, querying, indexing, etc.) Used for
-    names, symbols, and formal expressions.
-
-    :ivar content:
-    :ivar reference: A telecommunication address (TEL), such as a URL
-        for HTTP or FTP, which will resolve to precisely the same binary
-        data that could as well have been provided as inline data.
-    :ivar thumbnail:
-    :ivar representation: Specifies the representation of the binary
-        data that is the content of the binary data value.
-    :ivar media_type: Identifies the type of the encapsulated data and
-        identifies a method to interpret or render the data.
-    :ivar language: For character based information the language
-        property specifies the human language of the text.
-    :ivar compression: Indicates whether the raw byte data is
-        compressed, and what compression algorithm was used.
-    :ivar integrity_check: The integrity check is a short binary value
-        representing a cryptographically strong checksum that is
-        calculated over the binary data. The purpose of this property,
-        when communicated with a reference is for anyone to validate
-        later whether the reference still resolved to the same data that
-        the reference resolved to when the encapsulated data value with
-        reference was created.
-    :ivar integrity_check_algorithm: Specifies the algorithm used to
-        compute the integrityCheck value.
-    """
-    class Meta:
-        name = "ST_explicit"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    reference: Optional[TelExplicit] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    thumbnail: Optional[ThumbnailExplicit] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    representation: BinaryDataEncoding = field(
-        default=BinaryDataEncoding.TXT,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    media_type: str = field(
-        default="text/plain",
-        metadata={
-            "name": "mediaType",
-            "type": "Attribute",
-            "pattern": r"[^\s]+",
-        }
-    )
-    language: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "pattern": r"[^\s]+",
-        }
-    )
-    compression: Optional[CompressionAlgorithm] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    integrity_check: Optional[bytes] = field(
-        default=None,
-        metadata={
-            "name": "integrityCheck",
-            "type": "Attribute",
-            "format": "base64",
-        }
-    )
-    integrity_check_algorithm: IntegrityCheckAlgorithm = field(
-        default=IntegrityCheckAlgorithm.SHA_1,
-        metadata={
-            "name": "integrityCheckAlgorithm",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class SxcmTs(Ts):
-    """
-    :ivar operator: A code specifying whether the set component is
-        included (union) or excluded (set-difference) from the set, or
-        other set operations with the current set component and the set
-        as constructed from the representation stream up to the current
-        point.
-    """
-    class Meta:
-        name = "SXCM_TS"
-
-    operator: SetOperator = field(
-        default=SetOperator.I,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class PqrExplicit:
-    """A representation of a physical quantity in a unit from any code system.
-
-    Used to show alternative representation for a physical quantity.
-
-    :ivar original_text: The text or phrase used as the basis for the
-        coding.
-    :ivar null_flavor: An exceptional value expressing missing
-        information and possibly the reason why the information is
-        missing.
-    :ivar code: The plain code symbol defined by the code system. For
-        example, "784.0" is the code symbol of the ICD-9 code "784.0"
-        for headache.
-    :ivar code_system: Specifies the code system that defines the code.
-    :ivar code_system_name: A common name of the coding system.
-    :ivar code_system_version: If applicable, a version descriptor
-        defined specifically for the given code system.
-    :ivar display_name: A name or title for the code, under which the
-        sending system shows the code value to its users.
-    :ivar value: The magnitude of the measurement value in terms of the
-        unit specified in the code.
-    """
-    class Meta:
-        name = "PQR_explicit"
-
-    original_text: Optional[EdExplicit] = field(
-        default=None,
-        metadata={
-            "name": "originalText",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        }
-    )
-    code: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "pattern": r"[^\s]+",
-        }
-    )
-    code_system: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "codeSystem",
-            "type": "Attribute",
-            "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
-        }
-    )
-    code_system_name: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "codeSystemName",
-            "type": "Attribute",
-            "min_length": 1,
-        }
-    )
-    code_system_version: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "codeSystemVersion",
-            "type": "Attribute",
-            "min_length": 1,
-        }
-    )
-    display_name: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "displayName",
-            "type": "Attribute",
-            "min_length": 1,
-        }
-    )
-    value: Optional[Union[Decimal, float]] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class Tel(Url):
-    """A telephone number (voice or fax), e-mail address, or other locator for
-    a resource (information or service) mediated by telecommunication
-    equipment.
-
-    The address is specified as a URL qualified by time specification
-    and use codes that help in deciding which address to use for a given
-    time and purpose.
-
-    :ivar useable_period: Specifies the periods of time during which the
-        telecommunication address can be used.  For a telephone number,
-        this can indicate the time of day in which the party can be
-        reached on that telephone. For a web address, it may specify a
-        time range in which the web content is promised to be available
-        under the given address.
-    :ivar use: One or more codes advising a system or user which
-        telecommunication address in a set of like addresses to select
-        for a given telecommunication need.
-    """
-    class Meta:
-        name = "TEL"
-
-    useable_period: List[SxcmTs] = field(
-        default_factory=list,
-        metadata={
-            "name": "useablePeriod",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    use: List[TelecommunicationAddressUse] = field(
-        default_factory=list,
-        metadata={
-            "type": "Attribute",
-            "tokens": True,
-        }
-    )
-
-
-@dataclass
-class Ed(Bin):
-    """Data that is primarily intended for human interpretation or for further
-    machine processing is outside the scope of HL7.
-
-    This includes unformatted or formatted written language, multimedia
-    data, or structured information as defined by a different standard
-    (e.g., XML-signatures.)  Instead of the data itself, an ED may
-    contain only a reference (see TEL.) Note that the ST data type is a
-    specialization of when the  is text/plain.
-
-    :ivar reference: A telecommunication address (TEL), such as a URL
-        for HTTP or FTP, which will resolve to precisely the same binary
-        data that could as well have been provided as inline data.
-    :ivar thumbnail:
-    :ivar media_type: Identifies the type of the encapsulated data and
-        identifies a method to interpret or render the data.
-    :ivar language: For character based information the language
-        property specifies the human language of the text.
-    :ivar compression: Indicates whether the raw byte data is
-        compressed, and what compression algorithm was used.
-    :ivar integrity_check: The integrity check is a short binary value
-        representing a cryptographically strong checksum that is
-        calculated over the binary data. The purpose of this property,
-        when communicated with a reference is for anyone to validate
-        later whether the reference still resolved to the same data that
-        the reference resolved to when the encapsulated data value with
-        reference was created.
-    :ivar integrity_check_algorithm: Specifies the algorithm used to
-        compute the integrityCheck value.
-    """
-    class Meta:
-        name = "ED"
-
-    reference: Optional[Tel] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    thumbnail: Optional["Thumbnail"] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    media_type: str = field(
-        default="text/plain",
-        metadata={
-            "name": "mediaType",
-            "type": "Attribute",
-            "pattern": r"[^\s]+",
-        }
-    )
-    language: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "pattern": r"[^\s]+",
-        }
-    )
-    compression: Optional[CompressionAlgorithm] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    integrity_check: Optional[bytes] = field(
-        default=None,
-        metadata={
-            "name": "integrityCheck",
-            "type": "Attribute",
-            "format": "base64",
-        }
-    )
-    integrity_check_algorithm: IntegrityCheckAlgorithm = field(
-        default=IntegrityCheckAlgorithm.SHA_1,
-        metadata={
-            "name": "integrityCheckAlgorithm",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class PqExplicit:
-    """
-    A dimensioned quantity expressing the result of a measurement act.
-
-    :ivar translation: An alternative representation of the same
-        physical quantity expressed in a different unit, of a different
-        unit code system and possibly with a different value.
-    :ivar null_flavor: An exceptional value expressing missing
-        information and possibly the reason why the information is
-        missing.
-    :ivar value: The magnitude of the quantity measured in terms of the
-        unit.
-    :ivar unit: The unit of measure specified in the Unified Code for
-        Units of Measure (UCUM) [http://aurora.rg.iupui.edu/UCUM].
-    """
-    class Meta:
-        name = "PQ_explicit"
-
-    translation: List[PqrExplicit] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    null_flavor: Optional[NullFlavor] = field(
-        default=None,
-        metadata={
-            "name": "nullFlavor",
-            "type": "Attribute",
-        }
-    )
-    value: Optional[Union[Decimal, float]] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    unit: str = field(
-        default="1",
-        metadata={
-            "type": "Attribute",
-            "pattern": r"[^\s]+",
+            "choices": (
+                {
+                    "name": "reference",
+                    "type": TelExplicit,
+                    "namespace": "urn:hl7-org:v3",
+                },
+            ),
         }
     )
 
@@ -2434,64 +1682,41 @@ class Cd(Any):
 
 
 @dataclass
-class IvlTsExplicit:
-    """
-    :ivar low: The low limit of the interval.
-    :ivar width: The difference between high and low boundary. The
-        purpose of distinguishing a width property is to handle all
-        cases of incomplete information symmetrically. In any interval
-        representation only two of the three properties high, low, and
-        width need to be stated and the third can be derived.
-    :ivar high: The high limit of the interval.
-    :ivar center: The arithmetic mean of the interval (low plus high
-        divided by 2). The purpose of distinguishing the center as a
-        semantic property is for conversions of intervals from and to
-        point values.
+class EdExplicit:
+    """Data that is primarily intended for human interpretation or for further
+    machine processing is outside the scope of HL7.
+
+    This includes unformatted or formatted written language, multimedia
+    data, or structured information as defined by a different standard
+    (e.g., XML-signatures.)  Instead of the data itself, an ED may
+    contain only a reference (see TEL.) Note that the ST data type is a
+    specialization of when the  is text/plain.
+
     :ivar null_flavor: An exceptional value expressing missing
         information and possibly the reason why the information is
         missing.
-    :ivar value:
-    :ivar operator: A code specifying whether the set component is
-        included (union) or excluded (set-difference) from the set, or
-        other set operations with the current set component and the set
-        as constructed from the representation stream up to the current
-        point.
+    :ivar representation: Specifies the representation of the binary
+        data that is the content of the binary data value.
+    :ivar media_type: Identifies the type of the encapsulated data and
+        identifies a method to interpret or render the data.
+    :ivar language: For character based information the language
+        property specifies the human language of the text.
+    :ivar compression: Indicates whether the raw byte data is
+        compressed, and what compression algorithm was used.
+    :ivar integrity_check: The integrity check is a short binary value
+        representing a cryptographically strong checksum that is
+        calculated over the binary data. The purpose of this property,
+        when communicated with a reference is for anyone to validate
+        later whether the reference still resolved to the same data that
+        the reference resolved to when the encapsulated data value with
+        reference was created.
+    :ivar integrity_check_algorithm: Specifies the algorithm used to
+        compute the integrityCheck value.
+    :ivar content:
     """
     class Meta:
-        name = "IVL_TS_explicit"
+        name = "ED_explicit"
 
-    low: Optional[IvxbTsExplicit] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    width: List[PqExplicit] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    high: List[IvxbTsExplicit] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "max_occurs": 3,
-            "sequential": True,
-        }
-    )
-    center: Optional[TsExplicit] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
@@ -2499,17 +1724,252 @@ class IvlTsExplicit:
             "type": "Attribute",
         }
     )
-    value: Optional[str] = field(
+    representation: BinaryDataEncoding = field(
+        default=BinaryDataEncoding.TXT,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    media_type: str = field(
+        default="text/plain",
+        metadata={
+            "name": "mediaType",
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
+    )
+    language: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-            "pattern": r"[0-9]{1,8}|([0-9]{9,14}|[0-9]{14,14}\.[0-9]+)([+\-][0-9]{1,4})?",
+            "pattern": r"[^\s]+",
         }
     )
-    operator: SetOperator = field(
-        default=SetOperator.I,
+    compression: Optional[CompressionAlgorithm] = field(
+        default=None,
         metadata={
             "type": "Attribute",
+        }
+    )
+    integrity_check: Optional[bytes] = field(
+        default=None,
+        metadata={
+            "name": "integrityCheck",
+            "type": "Attribute",
+            "format": "base64",
+        }
+    )
+    integrity_check_algorithm: IntegrityCheckAlgorithm = field(
+        default=IntegrityCheckAlgorithm.SHA_1,
+        metadata={
+            "name": "integrityCheckAlgorithm",
+            "type": "Attribute",
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "reference",
+                    "type": TelExplicit,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "thumbnail",
+                    "type": ThumbnailExplicit,
+                    "namespace": "urn:hl7-org:v3",
+                },
+            ),
+        }
+    )
+
+
+@dataclass
+class IvxbTs(Ts):
+    """
+    :ivar inclusive: Specifies whether the limit is included in the
+        interval (interval is closed) or excluded from the interval
+        (interval is open).
+    """
+    class Meta:
+        name = "IVXB_TS"
+
+    inclusive: str = field(
+        default="true",
+        metadata={
+            "type": "Attribute",
+            "pattern": r"true|false",
+        }
+    )
+
+
+@dataclass
+class Rto(RtoQtyQty):
+    """A quantity constructed as the quotient of a numerator quantity divided
+    by a denominator quantity.
+
+    Common factors in the numerator and denominator are not
+    automatically cancelled out.   supports titers (e.g., "1:128") and
+    other quantities produced by laboratories that truly represent
+    ratios. Ratios are not simply "structured numerics", particularly
+    blood pressure measurements (e.g. "120/60") are not ratios. In many
+    cases REAL should be used instead of .
+    """
+    class Meta:
+        name = "RTO"
+
+
+@dataclass
+class ScExplicit:
+    """An ST that optionally may have a code attached.
+
+    The text must always be present if a code is present. The code is
+    often a local code.
+
+    :ivar null_flavor: An exceptional value expressing missing
+        information and possibly the reason why the information is
+        missing.
+    :ivar representation: Specifies the representation of the binary
+        data that is the content of the binary data value.
+    :ivar media_type: Identifies the type of the encapsulated data and
+        identifies a method to interpret or render the data.
+    :ivar language: For character based information the language
+        property specifies the human language of the text.
+    :ivar compression: Indicates whether the raw byte data is
+        compressed, and what compression algorithm was used.
+    :ivar integrity_check: The integrity check is a short binary value
+        representing a cryptographically strong checksum that is
+        calculated over the binary data. The purpose of this property,
+        when communicated with a reference is for anyone to validate
+        later whether the reference still resolved to the same data that
+        the reference resolved to when the encapsulated data value with
+        reference was created.
+    :ivar integrity_check_algorithm: Specifies the algorithm used to
+        compute the integrityCheck value.
+    :ivar code: The plain code symbol defined by the code system. For
+        example, "784.0" is the code symbol of the ICD-9 code "784.0"
+        for headache.
+    :ivar code_system: Specifies the code system that defines the code.
+    :ivar code_system_name: A common name of the coding system.
+    :ivar code_system_version: If applicable, a version descriptor
+        defined specifically for the given code system.
+    :ivar display_name: A name or title for the code, under which the
+        sending system shows the code value to its users.
+    :ivar content:
+    """
+    class Meta:
+        name = "SC_explicit"
+
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
+    )
+    representation: BinaryDataEncoding = field(
+        default=BinaryDataEncoding.TXT,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    media_type: str = field(
+        default="text/plain",
+        metadata={
+            "name": "mediaType",
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
+    )
+    language: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
+    )
+    compression: Optional[CompressionAlgorithm] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    integrity_check: Optional[bytes] = field(
+        default=None,
+        metadata={
+            "name": "integrityCheck",
+            "type": "Attribute",
+            "format": "base64",
+        }
+    )
+    integrity_check_algorithm: IntegrityCheckAlgorithm = field(
+        default=IntegrityCheckAlgorithm.SHA_1,
+        metadata={
+            "name": "integrityCheckAlgorithm",
+            "type": "Attribute",
+        }
+    )
+    code: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
+    )
+    code_system: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "codeSystem",
+            "type": "Attribute",
+            "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
+        }
+    )
+    code_system_name: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "codeSystemName",
+            "type": "Attribute",
+            "min_length": 1,
+        }
+    )
+    code_system_version: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "codeSystemVersion",
+            "type": "Attribute",
+            "min_length": 1,
+        }
+    )
+    display_name: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "displayName",
+            "type": "Attribute",
+            "min_length": 1,
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "reference",
+                    "type": TelExplicit,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "thumbnail",
+                    "type": ThumbnailExplicit,
+                    "namespace": "urn:hl7-org:v3",
+                },
+            ),
         }
     )
 
@@ -2538,6 +1998,119 @@ class St(Ed):
             "name": "mediaType",
             "type": "Attribute",
             "pattern": r"[^\s]+",
+        }
+    )
+
+
+@dataclass
+class StExplicit:
+    """
+    The character string data type stands for text data, primarily intended for
+    machine processing (e.g., sorting, querying, indexing, etc.) Used for
+    names, symbols, and formal expressions.
+
+    :ivar representation: Specifies the representation of the binary
+        data that is the content of the binary data value.
+    :ivar media_type: Identifies the type of the encapsulated data and
+        identifies a method to interpret or render the data.
+    :ivar language: For character based information the language
+        property specifies the human language of the text.
+    :ivar compression: Indicates whether the raw byte data is
+        compressed, and what compression algorithm was used.
+    :ivar integrity_check: The integrity check is a short binary value
+        representing a cryptographically strong checksum that is
+        calculated over the binary data. The purpose of this property,
+        when communicated with a reference is for anyone to validate
+        later whether the reference still resolved to the same data that
+        the reference resolved to when the encapsulated data value with
+        reference was created.
+    :ivar integrity_check_algorithm: Specifies the algorithm used to
+        compute the integrityCheck value.
+    :ivar content:
+    """
+    class Meta:
+        name = "ST_explicit"
+
+    representation: BinaryDataEncoding = field(
+        default=BinaryDataEncoding.TXT,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    media_type: str = field(
+        default="text/plain",
+        metadata={
+            "name": "mediaType",
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
+    )
+    language: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
+        }
+    )
+    compression: Optional[CompressionAlgorithm] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    integrity_check: Optional[bytes] = field(
+        default=None,
+        metadata={
+            "name": "integrityCheck",
+            "type": "Attribute",
+            "format": "base64",
+        }
+    )
+    integrity_check_algorithm: IntegrityCheckAlgorithm = field(
+        default=IntegrityCheckAlgorithm.SHA_1,
+        metadata={
+            "name": "integrityCheckAlgorithm",
+            "type": "Attribute",
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "reference",
+                    "type": TelExplicit,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "thumbnail",
+                    "type": ThumbnailExplicit,
+                    "namespace": "urn:hl7-org:v3",
+                },
+            ),
+        }
+    )
+
+
+@dataclass
+class SxcmTs(Ts):
+    """
+    :ivar operator: A code specifying whether the set component is
+        included (union) or excluded (set-difference) from the set, or
+        other set operations with the current set component and the set
+        as constructed from the representation stream up to the current
+        point.
+    """
+    class Meta:
+        name = "SXCM_TS"
+
+    operator: SetOperator = field(
+        default=SetOperator.I,
+        metadata={
+            "type": "Attribute",
         }
     )
 
@@ -2748,86 +2321,35 @@ class Enxp(St):
 
 
 @dataclass
-class EnExplicit:
-    """A name for a person.
+class PqrExplicit:
+    """A representation of a physical quantity in a unit from any code system.
 
-    A sequence of name parts, such as given name or family name, prefix,
-    suffix, etc. PN differs from EN because the qualifier type cannot
-    include LS (Legal Status).
+    Used to show alternative representation for a physical quantity.
 
-    :ivar content:
-    :ivar delimiter:
-    :ivar family:
-    :ivar given:
-    :ivar prefix:
-    :ivar suffix:
-    :ivar valid_time: An interval of time specifying the time during
-        which the name is or was used for the entity. This accomodates
-        the fact that people change names for people, places and things.
+    :ivar original_text: The text or phrase used as the basis for the
+        coding.
     :ivar null_flavor: An exceptional value expressing missing
         information and possibly the reason why the information is
         missing.
-    :ivar use: A set of codes advising a system or user which name in a
-        set of like names to select for a given purpose. A name without
-        specific use code might be a default name useful for any
-        purpose, but a name with a specific use code would be preferred
-        for that respective purpose.
+    :ivar code: The plain code symbol defined by the code system. For
+        example, "784.0" is the code symbol of the ICD-9 code "784.0"
+        for headache.
+    :ivar code_system: Specifies the code system that defines the code.
+    :ivar code_system_name: A common name of the coding system.
+    :ivar code_system_version: If applicable, a version descriptor
+        defined specifically for the given code system.
+    :ivar display_name: A name or title for the code, under which the
+        sending system shows the code value to its users.
+    :ivar value: The magnitude of the measurement value in terms of the
+        unit specified in the code.
     """
     class Meta:
-        name = "EN_explicit"
+        name = "PQR_explicit"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    delimiter: List[EnExplicitDelimiter] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    family: List[EnExplicitFamily] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    given: List[EnExplicitGiven] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    prefix: List[EnExplicitPrefix] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    suffix: List[EnExplicitSuffix] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    valid_time: Optional[IvlTsExplicit] = field(
+    original_text: Optional[EdExplicit] = field(
         default=None,
         metadata={
-            "name": "validTime",
+            "name": "originalText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         }
@@ -2839,195 +2361,49 @@ class EnExplicit:
             "type": "Attribute",
         }
     )
-    use: List[EntityNameUse] = field(
-        default_factory=list,
-        metadata={
-            "type": "Attribute",
-            "tokens": True,
-        }
-    )
-
-
-@dataclass
-class OnExplicit:
-    """A name for a person.
-
-    A sequence of name parts, such as given name or family name, prefix,
-    suffix, etc. PN differs from EN because the qualifier type cannot
-    include LS (Legal Status).
-
-    :ivar content:
-    :ivar delimiter:
-    :ivar prefix:
-    :ivar suffix:
-    :ivar valid_time: An interval of time specifying the time during
-        which the name is or was used for the entity. This accomodates
-        the fact that people change names for people, places and things.
-    :ivar null_flavor: An exceptional value expressing missing
-        information and possibly the reason why the information is
-        missing.
-    :ivar use: A set of codes advising a system or user which name in a
-        set of like names to select for a given purpose. A name without
-        specific use code might be a default name useful for any
-        purpose, but a name with a specific use code would be preferred
-        for that respective purpose.
-    """
-    class Meta:
-        name = "ON_explicit"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    delimiter: List[EnExplicitDelimiter] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    prefix: List[EnExplicitPrefix] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    suffix: List[EnExplicitSuffix] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    valid_time: Optional[IvlTsExplicit] = field(
+    code: Optional[str] = field(
         default=None,
         metadata={
-            "name": "validTime",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
         }
     )
-    null_flavor: Optional[NullFlavor] = field(
+    code_system: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nullFlavor",
+            "name": "codeSystem",
             "type": "Attribute",
+            "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
         }
     )
-    use: List[EntityNameUse] = field(
-        default_factory=list,
-        metadata={
-            "type": "Attribute",
-            "tokens": True,
-        }
-    )
-
-
-@dataclass
-class PnExplicit:
-    """A name for a person.
-
-    A sequence of name parts, such as given name or family name, prefix,
-    suffix, etc. PN differs from EN because the qualifier type cannot
-    include LS (Legal Status).
-
-    :ivar content:
-    :ivar delimiter:
-    :ivar family:
-    :ivar given:
-    :ivar prefix:
-    :ivar suffix:
-    :ivar valid_time: An interval of time specifying the time during
-        which the name is or was used for the entity. This accomodates
-        the fact that people change names for people, places and things.
-    :ivar null_flavor: An exceptional value expressing missing
-        information and possibly the reason why the information is
-        missing.
-    :ivar use: A set of codes advising a system or user which name in a
-        set of like names to select for a given purpose. A name without
-        specific use code might be a default name useful for any
-        purpose, but a name with a specific use code would be preferred
-        for that respective purpose.
-    """
-    class Meta:
-        name = "PN_explicit"
-
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    delimiter: List[EnExplicitDelimiter] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    family: List[EnExplicitFamily] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    given: List[EnExplicitGiven] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    prefix: List[EnExplicitPrefix] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    suffix: List[EnExplicitSuffix] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    valid_time: Optional[IvlTsExplicit] = field(
+    code_system_name: Optional[str] = field(
         default=None,
         metadata={
-            "name": "validTime",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
+            "name": "codeSystemName",
+            "type": "Attribute",
+            "min_length": 1,
         }
     )
-    null_flavor: Optional[NullFlavor] = field(
+    code_system_version: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nullFlavor",
+            "name": "codeSystemVersion",
             "type": "Attribute",
+            "min_length": 1,
         }
     )
-    use: List[EntityNameUse] = field(
-        default_factory=list,
+    display_name: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "displayName",
+            "type": "Attribute",
+            "min_length": 1,
+        }
+    )
+    value: Optional[Union[Decimal, float]] = field(
+        default=None,
         metadata={
             "type": "Attribute",
-            "tokens": True,
         }
     )
 
@@ -3094,6 +2470,46 @@ class Sc(St):
 
 
 @dataclass
+class Tel(Url):
+    """A telephone number (voice or fax), e-mail address, or other locator for
+    a resource (information or service) mediated by telecommunication
+    equipment.
+
+    The address is specified as a URL qualified by time specification
+    and use codes that help in deciding which address to use for a given
+    time and purpose.
+
+    :ivar useable_period: Specifies the periods of time during which the
+        telecommunication address can be used.  For a telephone number,
+        this can indicate the time of day in which the party can be
+        reached on that telephone. For a web address, it may specify a
+        time range in which the web content is promised to be available
+        under the given address.
+    :ivar use: One or more codes advising a system or user which
+        telecommunication address in a set of like addresses to select
+        for a given telecommunication need.
+    """
+    class Meta:
+        name = "TEL"
+
+    useable_period: List[SxcmTs] = field(
+        default_factory=list,
+        metadata={
+            "name": "useablePeriod",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
+    )
+    use: List[TelecommunicationAddressUse] = field(
+        default_factory=list,
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
+    )
+
+
+@dataclass
 class CeExplicit(CdExplicit):
     """Coded data, consists of a coded value (CV) and, optionally, coded
     value(s) from other coding systems that identify the same concept.
@@ -3140,6 +2556,54 @@ class EivlEvent(Ce):
             "name": "codeSystemName",
             "type": "Attribute",
             "min_length": 1,
+        }
+    )
+
+
+@dataclass
+class PqExplicit:
+    """
+    A dimensioned quantity expressing the result of a measurement act.
+
+    :ivar translation: An alternative representation of the same
+        physical quantity expressed in a different unit, of a different
+        unit code system and possibly with a different value.
+    :ivar null_flavor: An exceptional value expressing missing
+        information and possibly the reason why the information is
+        missing.
+    :ivar value: The magnitude of the quantity measured in terms of the
+        unit.
+    :ivar unit: The unit of measure specified in the Unified Code for
+        Units of Measure (UCUM) [http://aurora.rg.iupui.edu/UCUM].
+    """
+    class Meta:
+        name = "PQ_explicit"
+
+    translation: List[PqrExplicit] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
+    )
+    value: Optional[Union[Decimal, float]] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    unit: str = field(
+        default="1",
+        metadata={
+            "type": "Attribute",
+            "pattern": r"[^\s]+",
         }
     )
 
@@ -3631,38 +3095,6 @@ class Ad(Any):
     A sequence of address parts, such as street or post office Box,
     city, postal code, country, etc.
 
-    :ivar content:
-    :ivar delimiter:
-    :ivar country:
-    :ivar state:
-    :ivar county:
-    :ivar city:
-    :ivar postal_code:
-    :ivar street_address_line:
-    :ivar house_number:
-    :ivar house_number_numeric:
-    :ivar direction:
-    :ivar street_name:
-    :ivar street_name_base:
-    :ivar street_name_type:
-    :ivar additional_locator:
-    :ivar unit_id:
-    :ivar unit_type:
-    :ivar care_of:
-    :ivar census_tract:
-    :ivar delivery_address_line:
-    :ivar delivery_installation_type:
-    :ivar delivery_installation_area:
-    :ivar delivery_installation_qualifier:
-    :ivar delivery_mode:
-    :ivar delivery_mode_identifier:
-    :ivar building_number_suffix:
-    :ivar post_box:
-    :ivar precinct:
-    :ivar useable_period: A GTS specifying the periods of time during
-        which the address can be used. This is used to specify different
-        addresses for different times of the year or to refer to
-        historical addresses.
     :ivar use: A set of codes advising a system or user which address in
         a set of like addresses to select for a given purpose.
     :ivar is_not_ordered: A boolean value specifying whether the order
@@ -3670,262 +3102,11 @@ class Ad(Any):
         are always a Sequence, the order in which they are presented may
         or may not be known. Where this matters, can be used to convey
         this information.
+    :ivar content:
     """
     class Meta:
         name = "AD"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    delimiter: List[AdxpDelimiter] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    country: List[AdxpCountry] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    state: List[AdxpState] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    county: List[AdxpCounty] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    city: List[AdxpCity] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    postal_code: List[AdxpPostalCode] = field(
-        default_factory=list,
-        metadata={
-            "name": "postalCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    street_address_line: List[AdxpStreetAddressLine] = field(
-        default_factory=list,
-        metadata={
-            "name": "streetAddressLine",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    house_number: List[AdxpHouseNumber] = field(
-        default_factory=list,
-        metadata={
-            "name": "houseNumber",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    house_number_numeric: List[AdxpHouseNumberNumeric] = field(
-        default_factory=list,
-        metadata={
-            "name": "houseNumberNumeric",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    direction: List[AdxpDirection] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    street_name: List[AdxpStreetName] = field(
-        default_factory=list,
-        metadata={
-            "name": "streetName",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    street_name_base: List[AdxpStreetNameBase] = field(
-        default_factory=list,
-        metadata={
-            "name": "streetNameBase",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    street_name_type: List[AdxpStreetNameType] = field(
-        default_factory=list,
-        metadata={
-            "name": "streetNameType",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    additional_locator: List[AdxpAdditionalLocator] = field(
-        default_factory=list,
-        metadata={
-            "name": "additionalLocator",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    unit_id: List[AdxpUnitId] = field(
-        default_factory=list,
-        metadata={
-            "name": "unitID",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    unit_type: List[AdxpUnitType] = field(
-        default_factory=list,
-        metadata={
-            "name": "unitType",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    care_of: List[AdxpCareOf] = field(
-        default_factory=list,
-        metadata={
-            "name": "careOf",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    census_tract: List[AdxpCensusTract] = field(
-        default_factory=list,
-        metadata={
-            "name": "censusTract",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    delivery_address_line: List[AdxpDeliveryAddressLine] = field(
-        default_factory=list,
-        metadata={
-            "name": "deliveryAddressLine",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    delivery_installation_type: List[AdxpDeliveryInstallationType] = field(
-        default_factory=list,
-        metadata={
-            "name": "deliveryInstallationType",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    delivery_installation_area: List[AdxpDeliveryInstallationArea] = field(
-        default_factory=list,
-        metadata={
-            "name": "deliveryInstallationArea",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    delivery_installation_qualifier: List[AdxpDeliveryInstallationQualifier] = field(
-        default_factory=list,
-        metadata={
-            "name": "deliveryInstallationQualifier",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    delivery_mode: List[AdxpDeliveryMode] = field(
-        default_factory=list,
-        metadata={
-            "name": "deliveryMode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    delivery_mode_identifier: List[AdxpDeliveryModeIdentifier] = field(
-        default_factory=list,
-        metadata={
-            "name": "deliveryModeIdentifier",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    building_number_suffix: List[AdxpBuildingNumberSuffix] = field(
-        default_factory=list,
-        metadata={
-            "name": "buildingNumberSuffix",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    post_box: List[AdxpPostBox] = field(
-        default_factory=list,
-        metadata={
-            "name": "postBox",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    precinct: List[AdxpPrecinct] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    useable_period: List[SxcmTs] = field(
-        default_factory=list,
-        metadata={
-            "name": "useablePeriod",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
     use: List[PostalAddressUse] = field(
         default_factory=list,
         metadata={
@@ -3939,6 +3120,156 @@ class Ad(Any):
             "name": "isNotOrdered",
             "type": "Attribute",
             "pattern": r"true|false",
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "delimiter",
+                    "type": AdxpDelimiter,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "country",
+                    "type": AdxpCountry,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "state",
+                    "type": AdxpState,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "county",
+                    "type": AdxpCounty,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "city",
+                    "type": AdxpCity,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "postalCode",
+                    "type": AdxpPostalCode,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "streetAddressLine",
+                    "type": AdxpStreetAddressLine,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "houseNumber",
+                    "type": AdxpHouseNumber,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "houseNumberNumeric",
+                    "type": AdxpHouseNumberNumeric,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "direction",
+                    "type": AdxpDirection,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "streetName",
+                    "type": AdxpStreetName,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "streetNameBase",
+                    "type": AdxpStreetNameBase,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "streetNameType",
+                    "type": AdxpStreetNameType,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "additionalLocator",
+                    "type": AdxpAdditionalLocator,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "unitID",
+                    "type": AdxpUnitId,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "unitType",
+                    "type": AdxpUnitType,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "careOf",
+                    "type": AdxpCareOf,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "censusTract",
+                    "type": AdxpCensusTract,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "deliveryAddressLine",
+                    "type": AdxpDeliveryAddressLine,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "deliveryInstallationType",
+                    "type": AdxpDeliveryInstallationType,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "deliveryInstallationArea",
+                    "type": AdxpDeliveryInstallationArea,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "deliveryInstallationQualifier",
+                    "type": AdxpDeliveryInstallationQualifier,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "deliveryMode",
+                    "type": AdxpDeliveryMode,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "deliveryModeIdentifier",
+                    "type": AdxpDeliveryModeIdentifier,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "buildingNumberSuffix",
+                    "type": AdxpBuildingNumberSuffix,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "postBox",
+                    "type": AdxpPostBox,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "precinct",
+                    "type": AdxpPrecinct,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "useablePeriod",
+                    "type": SxcmTs,
+                    "namespace": "urn:hl7-org:v3",
+                },
+            ),
         }
     )
 
@@ -3968,6 +3299,87 @@ class Cs(Cv):
 
 
 @dataclass
+class IvlTsExplicit:
+    """
+    :ivar low: The low limit of the interval.
+    :ivar width: The difference between high and low boundary. The
+        purpose of distinguishing a width property is to handle all
+        cases of incomplete information symmetrically. In any interval
+        representation only two of the three properties high, low, and
+        width need to be stated and the third can be derived.
+    :ivar high: The high limit of the interval.
+    :ivar center: The arithmetic mean of the interval (low plus high
+        divided by 2). The purpose of distinguishing the center as a
+        semantic property is for conversions of intervals from and to
+        point values.
+    :ivar null_flavor: An exceptional value expressing missing
+        information and possibly the reason why the information is
+        missing.
+    :ivar value:
+    :ivar operator: A code specifying whether the set component is
+        included (union) or excluded (set-difference) from the set, or
+        other set operations with the current set component and the set
+        as constructed from the representation stream up to the current
+        point.
+    """
+    class Meta:
+        name = "IVL_TS_explicit"
+
+    low: Optional[IvxbTsExplicit] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
+    )
+    width: List[PqExplicit] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "max_occurs": 3,
+            "sequential": True,
+        }
+    )
+    high: List[IvxbTsExplicit] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "max_occurs": 3,
+            "sequential": True,
+        }
+    )
+    center: Optional[TsExplicit] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        }
+    )
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
+    )
+    value: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "pattern": r"[0-9]{1,8}|([0-9]{9,14}|[0-9]{14,14}\.[0-9]+)([+\-][0-9]{1,4})?",
+        }
+    )
+    operator: SetOperator = field(
+        default=SetOperator.I,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
 class Pqr(Cv):
     """A representation of a physical quantity in a unit from any code system.
 
@@ -3983,6 +3395,227 @@ class Pqr(Cv):
         default=None,
         metadata={
             "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class EnExplicit:
+    """A name for a person.
+
+    A sequence of name parts, such as given name or family name, prefix,
+    suffix, etc. PN differs from EN because the qualifier type cannot
+    include LS (Legal Status).
+
+    :ivar null_flavor: An exceptional value expressing missing
+        information and possibly the reason why the information is
+        missing.
+    :ivar use: A set of codes advising a system or user which name in a
+        set of like names to select for a given purpose. A name without
+        specific use code might be a default name useful for any
+        purpose, but a name with a specific use code would be preferred
+        for that respective purpose.
+    :ivar content:
+    """
+    class Meta:
+        name = "EN_explicit"
+
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
+    )
+    use: List[EntityNameUse] = field(
+        default_factory=list,
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "delimiter",
+                    "type": EnExplicitDelimiter,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "family",
+                    "type": EnExplicitFamily,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "given",
+                    "type": EnExplicitGiven,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "prefix",
+                    "type": EnExplicitPrefix,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "suffix",
+                    "type": EnExplicitSuffix,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "validTime",
+                    "type": IvlTsExplicit,
+                    "namespace": "urn:hl7-org:v3",
+                },
+            ),
+        }
+    )
+
+
+@dataclass
+class OnExplicit:
+    """A name for a person.
+
+    A sequence of name parts, such as given name or family name, prefix,
+    suffix, etc. PN differs from EN because the qualifier type cannot
+    include LS (Legal Status).
+
+    :ivar null_flavor: An exceptional value expressing missing
+        information and possibly the reason why the information is
+        missing.
+    :ivar use: A set of codes advising a system or user which name in a
+        set of like names to select for a given purpose. A name without
+        specific use code might be a default name useful for any
+        purpose, but a name with a specific use code would be preferred
+        for that respective purpose.
+    :ivar content:
+    """
+    class Meta:
+        name = "ON_explicit"
+
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
+    )
+    use: List[EntityNameUse] = field(
+        default_factory=list,
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "delimiter",
+                    "type": EnExplicitDelimiter,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "prefix",
+                    "type": EnExplicitPrefix,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "suffix",
+                    "type": EnExplicitSuffix,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "validTime",
+                    "type": IvlTsExplicit,
+                    "namespace": "urn:hl7-org:v3",
+                },
+            ),
+        }
+    )
+
+
+@dataclass
+class PnExplicit:
+    """A name for a person.
+
+    A sequence of name parts, such as given name or family name, prefix,
+    suffix, etc. PN differs from EN because the qualifier type cannot
+    include LS (Legal Status).
+
+    :ivar null_flavor: An exceptional value expressing missing
+        information and possibly the reason why the information is
+        missing.
+    :ivar use: A set of codes advising a system or user which name in a
+        set of like names to select for a given purpose. A name without
+        specific use code might be a default name useful for any
+        purpose, but a name with a specific use code would be preferred
+        for that respective purpose.
+    :ivar content:
+    """
+    class Meta:
+        name = "PN_explicit"
+
+    null_flavor: Optional[NullFlavor] = field(
+        default=None,
+        metadata={
+            "name": "nullFlavor",
+            "type": "Attribute",
+        }
+    )
+    use: List[EntityNameUse] = field(
+        default_factory=list,
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "delimiter",
+                    "type": EnExplicitDelimiter,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "family",
+                    "type": EnExplicitFamily,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "given",
+                    "type": EnExplicitGiven,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "prefix",
+                    "type": EnExplicitPrefix,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "suffix",
+                    "type": EnExplicitSuffix,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "validTime",
+                    "type": IvlTsExplicit,
+                    "namespace": "urn:hl7-org:v3",
+                },
+            ),
         }
     )
 
@@ -4088,85 +3721,61 @@ class En(Any):
     entity name parts, such as, "Jim", "Bob", "Walton", and "Jr.",
     "Health Level Seven" and "Inc.", "Lake" and "Tahoe".
 
-    :ivar content:
-    :ivar delimiter:
-    :ivar family:
-    :ivar given:
-    :ivar prefix:
-    :ivar suffix:
-    :ivar valid_time: An interval of time specifying the time during
-        which the name is or was used for the entity. This accomodates
-        the fact that people change names for people, places and things.
     :ivar use: A set of codes advising a system or user which name in a
         set of like names to select for a given purpose. A name without
         specific use code might be a default name useful for any
         purpose, but a name with a specific use code would be preferred
         for that respective purpose.
+    :ivar content:
     """
     class Meta:
         name = "EN"
 
+    use: List[EntityNameUse] = field(
+        default_factory=list,
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
+    )
     content: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
             "mixed": True,
-        }
-    )
-    delimiter: List[EnDelimiter] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    family: List[EnFamily] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    given: List[EnGiven] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    prefix: List[EnPrefix] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    suffix: List[EnSuffix] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "sequential": True,
-        }
-    )
-    valid_time: Optional[IvlTs] = field(
-        default=None,
-        metadata={
-            "name": "validTime",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        }
-    )
-    use: List[EntityNameUse] = field(
-        default_factory=list,
-        metadata={
-            "type": "Attribute",
-            "tokens": True,
+            "choices": (
+                {
+                    "name": "delimiter",
+                    "type": EnDelimiter,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "family",
+                    "type": EnFamily,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "given",
+                    "type": EnGiven,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "prefix",
+                    "type": EnPrefix,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "suffix",
+                    "type": EnSuffix,
+                    "namespace": "urn:hl7-org:v3",
+                },
+                {
+                    "name": "validTime",
+                    "type": IvlTs,
+                    "namespace": "urn:hl7-org:v3",
+                },
+            ),
         }
     )
 

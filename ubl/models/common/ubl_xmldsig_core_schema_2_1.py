@@ -6,20 +6,20 @@ __NAMESPACE__ = "http://www.w3.org/2000/09/xmldsig#"
 
 @dataclass(frozen=True)
 class CanonicalizationMethodType:
-    any_element: Tuple[object, ...] = field(
-        default_factory=tuple,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     algorithm: Optional[str] = field(
         default=None,
         metadata={
             "name": "Algorithm",
             "type": "Attribute",
             "required": True,
+        }
+    )
+    content: Tuple[object, ...] = field(
+        default_factory=tuple,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
         }
     )
 
@@ -96,20 +96,20 @@ class DsakeyValueType:
 
 @dataclass(frozen=True)
 class DigestMethodType:
-    other_element: Tuple[object, ...] = field(
-        default_factory=tuple,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##other",
-            "mixed": True,
-        }
-    )
     algorithm: Optional[str] = field(
         default=None,
         metadata={
             "name": "Algorithm",
             "type": "Attribute",
             "required": True,
+        }
+    )
+    content: Tuple[object, ...] = field(
+        default_factory=tuple,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
         }
     )
 
@@ -149,14 +149,6 @@ class MgmtData:
 
 @dataclass(frozen=True)
 class ObjectType:
-    any_element: Tuple[object, ...] = field(
-        default_factory=tuple,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -176,6 +168,14 @@ class ObjectType:
         metadata={
             "name": "Encoding",
             "type": "Attribute",
+        }
+    )
+    content: Tuple[object, ...] = field(
+        default_factory=tuple,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
         }
     )
 
@@ -266,22 +266,6 @@ class SpkidataType:
 
 @dataclass(frozen=True)
 class SignatureMethodType:
-    hmacoutput_length: Optional[int] = field(
-        default=None,
-        metadata={
-            "name": "HMACOutputLength",
-            "type": "Element",
-            "namespace": "http://www.w3.org/2000/09/xmldsig#",
-        }
-    )
-    other_element: Tuple[object, ...] = field(
-        default_factory=tuple,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##other",
-            "mixed": True,
-        }
-    )
     algorithm: Optional[str] = field(
         default=None,
         metadata={
@@ -290,18 +274,25 @@ class SignatureMethodType:
             "required": True,
         }
     )
+    content: Tuple[object, ...] = field(
+        default_factory=tuple,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "HMACOutputLength",
+                    "type": int,
+                    "namespace": "http://www.w3.org/2000/09/xmldsig#",
+                },
+            ),
+        }
+    )
 
 
 @dataclass(frozen=True)
 class SignaturePropertyType:
-    other_element: Tuple[object, ...] = field(
-        default_factory=tuple,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##other",
-            "mixed": True,
-        }
-    )
     target: Optional[str] = field(
         default=None,
         metadata={
@@ -315,6 +306,14 @@ class SignaturePropertyType:
         metadata={
             "name": "Id",
             "type": "Attribute",
+        }
+    )
+    content: Tuple[object, ...] = field(
+        default_factory=tuple,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
         }
     )
 
@@ -338,28 +337,27 @@ class SignatureValueType:
 
 @dataclass(frozen=True)
 class TransformType:
-    other_element: Tuple[object, ...] = field(
-        default_factory=tuple,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##other",
-            "mixed": True,
-        }
-    )
-    xpath: Tuple[str, ...] = field(
-        default_factory=tuple,
-        metadata={
-            "name": "XPath",
-            "type": "Element",
-            "namespace": "http://www.w3.org/2000/09/xmldsig#",
-        }
-    )
     algorithm: Optional[str] = field(
         default=None,
         metadata={
             "name": "Algorithm",
             "type": "Attribute",
             "required": True,
+        }
+    )
+    content: Tuple[object, ...] = field(
+        default_factory=tuple,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "XPath",
+                    "type": str,
+                    "namespace": "http://www.w3.org/2000/09/xmldsig#",
+                },
+            ),
         }
     )
 
@@ -518,28 +516,24 @@ class X509DataType:
 
 @dataclass(frozen=True)
 class KeyValueType:
-    dsakey_value: Optional[DsakeyValue] = field(
-        default=None,
-        metadata={
-            "name": "DSAKeyValue",
-            "type": "Element",
-            "namespace": "http://www.w3.org/2000/09/xmldsig#",
-        }
-    )
-    rsakey_value: Optional[RsakeyValue] = field(
-        default=None,
-        metadata={
-            "name": "RSAKeyValue",
-            "type": "Element",
-            "namespace": "http://www.w3.org/2000/09/xmldsig#",
-        }
-    )
-    other_element: Tuple[object, ...] = field(
+    content: Tuple[object, ...] = field(
         default_factory=tuple,
         metadata={
             "type": "Wildcard",
-            "namespace": "##other",
+            "namespace": "##any",
             "mixed": True,
+            "choices": (
+                {
+                    "name": "DSAKeyValue",
+                    "type": DsakeyValue,
+                    "namespace": "http://www.w3.org/2000/09/xmldsig#",
+                },
+                {
+                    "name": "RSAKeyValue",
+                    "type": RsakeyValue,
+                    "namespace": "http://www.w3.org/2000/09/xmldsig#",
+                },
+            ),
         }
     )
 
@@ -692,75 +686,56 @@ class RetrievalMethod(RetrievalMethodType):
 
 @dataclass(frozen=True)
 class KeyInfoType:
-    key_name: Tuple[str, ...] = field(
-        default_factory=tuple,
-        metadata={
-            "name": "KeyName",
-            "type": "Element",
-            "namespace": "http://www.w3.org/2000/09/xmldsig#",
-        }
-    )
-    key_value: Tuple[KeyValue, ...] = field(
-        default_factory=tuple,
-        metadata={
-            "name": "KeyValue",
-            "type": "Element",
-            "namespace": "http://www.w3.org/2000/09/xmldsig#",
-        }
-    )
-    retrieval_method: Tuple[RetrievalMethod, ...] = field(
-        default_factory=tuple,
-        metadata={
-            "name": "RetrievalMethod",
-            "type": "Element",
-            "namespace": "http://www.w3.org/2000/09/xmldsig#",
-        }
-    )
-    x509_data: Tuple[X509Data, ...] = field(
-        default_factory=tuple,
-        metadata={
-            "name": "X509Data",
-            "type": "Element",
-            "namespace": "http://www.w3.org/2000/09/xmldsig#",
-        }
-    )
-    pgpdata: Tuple[Pgpdata, ...] = field(
-        default_factory=tuple,
-        metadata={
-            "name": "PGPData",
-            "type": "Element",
-            "namespace": "http://www.w3.org/2000/09/xmldsig#",
-        }
-    )
-    spkidata: Tuple[Spkidata, ...] = field(
-        default_factory=tuple,
-        metadata={
-            "name": "SPKIData",
-            "type": "Element",
-            "namespace": "http://www.w3.org/2000/09/xmldsig#",
-        }
-    )
-    mgmt_data: Tuple[str, ...] = field(
-        default_factory=tuple,
-        metadata={
-            "name": "MgmtData",
-            "type": "Element",
-            "namespace": "http://www.w3.org/2000/09/xmldsig#",
-        }
-    )
-    other_element: Tuple[object, ...] = field(
-        default_factory=tuple,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##other",
-            "mixed": True,
-        }
-    )
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Attribute",
+        }
+    )
+    content: Tuple[object, ...] = field(
+        default_factory=tuple,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "KeyName",
+                    "type": str,
+                    "namespace": "http://www.w3.org/2000/09/xmldsig#",
+                },
+                {
+                    "name": "KeyValue",
+                    "type": KeyValue,
+                    "namespace": "http://www.w3.org/2000/09/xmldsig#",
+                },
+                {
+                    "name": "RetrievalMethod",
+                    "type": RetrievalMethod,
+                    "namespace": "http://www.w3.org/2000/09/xmldsig#",
+                },
+                {
+                    "name": "X509Data",
+                    "type": X509Data,
+                    "namespace": "http://www.w3.org/2000/09/xmldsig#",
+                },
+                {
+                    "name": "PGPData",
+                    "type": Pgpdata,
+                    "namespace": "http://www.w3.org/2000/09/xmldsig#",
+                },
+                {
+                    "name": "SPKIData",
+                    "type": Spkidata,
+                    "namespace": "http://www.w3.org/2000/09/xmldsig#",
+                },
+                {
+                    "name": "MgmtData",
+                    "type": str,
+                    "namespace": "http://www.w3.org/2000/09/xmldsig#",
+                },
+            ),
         }
     )
 

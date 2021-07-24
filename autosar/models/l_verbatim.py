@@ -16,18 +16,6 @@ class LVerbatim:
 
     The language is denoted in the attribute l.
 
-    :ivar content:
-    :ivar tt: This represents a technical term in verbatim. Note that
-        it's the responibility of the user not to take a tt that would
-        add additional character to the text (such as SgmlElement).
-    :ivar e: This is emphsized text. Note that in verbatim, the
-        attribute font should not be considered since verbatim is always
-        rendered as monospace font.
-    :ivar xref: This is a crossreference within a verbatim text. The
-        attributes may disturb the arrangement of the text. It is
-        subject to the author to keep this under control.
-    :ivar br: This element is the same as function here as in a HTML
-        document i.e. it forces a line break.
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if
         an ArObject has changed. The checksum has no semantic meaning
@@ -46,50 +34,11 @@ class LVerbatim:
     :ivar space: This attribute is used to signal an intention that in
         that element, white space should be preserved by applications.
         It is defined according to xml:space as declared by W3C.
+    :ivar content:
     """
     class Meta:
         name = "L-VERBATIM"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    tt: List[Tt] = field(
-        default_factory=list,
-        metadata={
-            "name": "TT",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
-    e: List[EmphasisText] = field(
-        default_factory=list,
-        metadata={
-            "name": "E",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
-    xref: List[Xref] = field(
-        default_factory=list,
-        metadata={
-            "name": "XREF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
-    br: List[Br] = field(
-        default_factory=list,
-        metadata={
-            "name": "BR",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
     s: Optional[str] = field(
         default=None,
         metadata={
@@ -118,5 +67,35 @@ class LVerbatim:
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "TT",
+                    "type": Tt,
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+                {
+                    "name": "E",
+                    "type": EmphasisText,
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+                {
+                    "name": "XREF",
+                    "type": Xref,
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+                {
+                    "name": "BR",
+                    "type": Br,
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            ),
         }
     )

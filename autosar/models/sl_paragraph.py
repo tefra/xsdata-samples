@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Type
 from .br import Br
 from .emphasis_text import EmphasisText
 from .index_entry import IndexEntry
@@ -24,24 +24,6 @@ class SlParagraph:
     The language is defined by the context. The attribute l is there
     only for backwards compatibility and shall be ignored.
 
-    :ivar content:
-    :ivar ft: This is a foot note within a paragraph.
-    :ivar trace_ref: This allows to place an arbitrary reference to a
-        traceable object in documentation.
-    :ivar tt: This is a technical term.
-    :ivar br: This element is the same as function here as in a HTML
-        document i.e. it forces a line break.
-    :ivar xref: This is a cross reference.
-    :ivar xref_target: This element specifies a reference target which
-        can be scattered throughout the text.
-    :ivar e: This is emphasized text.
-    :ivar sup: This is superscript text.
-    :ivar sub: This is subscript text.
-    :ivar ie: This is an index entry.
-    :ivar std: This is a refeernce to a standard.
-    :ivar xdoc: This is a reference to a printable external document.
-    :ivar xfile: This represents a reference to an external file which
-        usually cannot be printed.
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if
         an ArObject has changed. The checksum has no semantic meaning
@@ -54,122 +36,11 @@ class SlParagraph:
         AUTOSAR tools to manage the timestamp.
     :ivar l: The attribute l is there only for backwards compatibility
         and shall be ignored.
+    :ivar content:
     """
     class Meta:
         name = "SL-PARAGRAPH"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    ft: List["SlParagraph"] = field(
-        default_factory=list,
-        metadata={
-            "name": "FT",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
-    trace_ref: List["SlParagraph.TraceRef"] = field(
-        default_factory=list,
-        metadata={
-            "name": "TRACE-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
-    tt: List[Tt] = field(
-        default_factory=list,
-        metadata={
-            "name": "TT",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
-    br: List[Br] = field(
-        default_factory=list,
-        metadata={
-            "name": "BR",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
-    xref: List[Xref] = field(
-        default_factory=list,
-        metadata={
-            "name": "XREF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
-    xref_target: List[XrefTarget] = field(
-        default_factory=list,
-        metadata={
-            "name": "XREF-TARGET",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
-    e: List[EmphasisText] = field(
-        default_factory=list,
-        metadata={
-            "name": "E",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
-    sup: List[Supscript] = field(
-        default_factory=list,
-        metadata={
-            "name": "SUP",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
-    sub: List[Supscript] = field(
-        default_factory=list,
-        metadata={
-            "name": "SUB",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
-    ie: List[IndexEntry] = field(
-        default_factory=list,
-        metadata={
-            "name": "IE",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
-    std: List[Std] = field(
-        default_factory=list,
-        metadata={
-            "name": "STD",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
-    xdoc: List[Xdoc] = field(
-        default_factory=list,
-        metadata={
-            "name": "XDOC",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
-    xfile: List[Xfile] = field(
-        default_factory=list,
-        metadata={
-            "name": "XFILE",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
     s: Optional[str] = field(
         default=None,
         metadata={
@@ -190,6 +61,81 @@ class SlParagraph:
         metadata={
             "name": "L",
             "type": "Attribute",
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "FT",
+                    "type": Type["SlParagraph"],
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+                {
+                    "name": "TRACE-REF",
+                    "type": Type["SlParagraph.TraceRef"],
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+                {
+                    "name": "TT",
+                    "type": Tt,
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+                {
+                    "name": "BR",
+                    "type": Br,
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+                {
+                    "name": "XREF",
+                    "type": Xref,
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+                {
+                    "name": "XREF-TARGET",
+                    "type": XrefTarget,
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+                {
+                    "name": "E",
+                    "type": EmphasisText,
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+                {
+                    "name": "SUP",
+                    "type": Supscript,
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+                {
+                    "name": "SUB",
+                    "type": Supscript,
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+                {
+                    "name": "IE",
+                    "type": IndexEntry,
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+                {
+                    "name": "STD",
+                    "type": Std,
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+                {
+                    "name": "XDOC",
+                    "type": Xdoc,
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+                {
+                    "name": "XFILE",
+                    "type": Xfile,
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            ),
         }
     )
 

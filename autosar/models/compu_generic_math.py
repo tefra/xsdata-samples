@@ -10,7 +10,6 @@ class CompuGenericMath:
     This meta-class represents the ability to specify a generic formula
     expression.
 
-    :ivar content:
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if
         an ArObject has changed. The checksum has no semantic meaning
@@ -24,18 +23,11 @@ class CompuGenericMath:
     :ivar level: Placeholder to describe an indicator of a language
         level for the mathematics e.g. INFORMAL, ASAMHDO. May be refined
         by particular use-cases.
+    :ivar content:
     """
     class Meta:
         name = "COMPU-GENERIC-MATH"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     s: Optional[str] = field(
         default=None,
         metadata={
@@ -58,5 +50,13 @@ class CompuGenericMath:
             "type": "Attribute",
             "max_length": 128,
             "pattern": r"[a-zA-Z]([a-zA-Z0-9]|_[a-zA-Z0-9])*_?",
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
         }
     )

@@ -15,19 +15,19 @@ __NAMESPACE__ = "http://uri.etsi.org/01903/v1.3.2#"
 
 @dataclass(frozen=True)
 class AnyType:
-    any_element: Tuple[object, ...] = field(
-        default_factory=tuple,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
     any_attributes: Dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
             "namespace": "##any",
+        }
+    )
+    content: Tuple[object, ...] = field(
+        default_factory=tuple,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
         }
     )
 

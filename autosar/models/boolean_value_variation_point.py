@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Type
 from .binding_time_enum_simple import BindingTimeEnumSimple
 from .ref import Ref
 from .sw_systemconst_subtypes_enum import SwSystemconstSubtypesEnum
@@ -14,12 +14,6 @@ class BooleanValueVariationPoint:
 
     Note that this class might be used in the extended meta-model on
 
-    :ivar content:
-    :ivar sysc_string_ref: syscString indicates that the referenced
-        system constant shall be evaluated as a string according to
-        [TPS_SWCT_01431].
-    :ivar sysc_ref: This refers to a system constant. The internal
-        (coded) value of the system constant shall be used.
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if
         an ArObject has changed. The checksum has no semantic meaning
@@ -46,34 +40,11 @@ class BooleanValueVariationPoint:
     :ivar short_label: This allows to identify the variation point. It
         is also intended to allow RTE support for CompileTime Variation
         points.
+    :ivar content:
     """
     class Meta:
         name = "BOOLEAN-VALUE-VARIATION-POINT"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    sysc_string_ref: List["BooleanValueVariationPoint.SyscStringRef"] = field(
-        default_factory=list,
-        metadata={
-            "name": "SYSC-STRING-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
-    sysc_ref: List["BooleanValueVariationPoint.SyscRef"] = field(
-        default_factory=list,
-        metadata={
-            "name": "SYSC-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
     s: Optional[str] = field(
         default=None,
         metadata={
@@ -117,6 +88,26 @@ class BooleanValueVariationPoint:
             "type": "Attribute",
             "max_length": 128,
             "pattern": r"[a-zA-Z]([a-zA-Z0-9]|_[a-zA-Z0-9])*_?",
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "SYSC-STRING-REF",
+                    "type": Type["BooleanValueVariationPoint.SyscStringRef"],
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+                {
+                    "name": "SYSC-REF",
+                    "type": Type["BooleanValueVariationPoint.SyscRef"],
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            ),
         }
     )
 

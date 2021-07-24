@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Type
 from .binding_time_enum_simple import BindingTimeEnumSimple
 from .interval_type_enum_simple import IntervalTypeEnumSimple
 from .ref import Ref
@@ -16,12 +16,6 @@ class Limit:
     additional attribute intervalType. Note that the xml.name is "LIMIT"
     for backward compatibility reasons.
 
-    :ivar content:
-    :ivar sysc_string_ref: syscString indicates that the referenced
-        system constant shall be evaluated as a string according to
-        [TPS_SWCT_01431].
-    :ivar sysc_ref: This refers to a system constant. The internal
-        (coded) value of the system constant shall be used.
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if
         an ArObject has changed. The checksum has no semantic meaning
@@ -51,34 +45,11 @@ class Limit:
     :ivar interval_type: This specifies the type of the interval. If the
         attribute is missing the interval shall be considered as
         "CLOSED".
+    :ivar content:
     """
     class Meta:
         name = "LIMIT"
 
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-    sysc_string_ref: List["Limit.SyscStringRef"] = field(
-        default_factory=list,
-        metadata={
-            "name": "SYSC-STRING-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
-    sysc_ref: List["Limit.SyscRef"] = field(
-        default_factory=list,
-        metadata={
-            "name": "SYSC-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        }
-    )
     s: Optional[str] = field(
         default=None,
         metadata={
@@ -129,6 +100,26 @@ class Limit:
         metadata={
             "name": "INTERVAL-TYPE",
             "type": "Attribute",
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "SYSC-STRING-REF",
+                    "type": Type["Limit.SyscStringRef"],
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+                {
+                    "name": "SYSC-REF",
+                    "type": Type["Limit.SyscRef"],
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            ),
         }
     )
 
