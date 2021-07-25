@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Config xmlns="http://pypi.org/project/xsdata" version="21.6">
+<Config xmlns="http://pypi.org/project/xsdata" version="21.7">
   <Output maxLineLength="79">
     <Package>ubl.models</Package>
-    <Format repr="true" eq="true" order="false" unsafeHash="false" frozen="true">dataclasses</Format>
+    <Format repr="true" eq="true" order="false" unsafeHash="false" frozen="true" slots="false" kwOnly="false">dataclasses</Format>
     <Structure>filenames</Structure>
     <DocstringStyle>Blank</DocstringStyle>
     <RelativeImports>false</RelativeImports>
