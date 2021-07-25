@@ -11,6 +11,5 @@ class ExtensionContentType:
         metadata={
             "type": "Wildcard",
             "namespace": "##other",
-            "required": True,
         }
     )
