@@ -21,6 +21,7 @@ class AbstractSubscriptionStructure:
             "name": "SubscriptionIdentifier",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
+            "required": True,
         }
     )
     initial_termination_time: Optional[XmlDateTime] = field(

@@ -96,6 +96,7 @@ class TransportServiceDescriptionRequestType:
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+            "required": True,
         }
     )
     issue_time: Optional[XmlTime] = field(
@@ -104,6 +105,7 @@ class TransportServiceDescriptionRequestType:
             "name": "IssueTime",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+            "required": True,
         }
     )
     note: Tuple[Note, ...] = field(

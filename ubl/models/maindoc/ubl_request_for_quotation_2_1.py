@@ -103,6 +103,7 @@ class RequestForQuotationType:
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+            "required": True,
         }
     )
     issue_time: Optional[XmlTime] = field(
@@ -111,6 +112,7 @@ class RequestForQuotationType:
             "name": "IssueTime",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+            "required": True,
         }
     )
     submission_due_date: Optional[XmlDate] = field(

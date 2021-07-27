@@ -6819,6 +6819,7 @@ class AlertCLinear:
             "name": "alertCLocationCountryCode",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
             "max_length": 1024,
         }
     )
@@ -6828,6 +6829,7 @@ class AlertCLinear:
             "name": "alertCLocationTableNumber",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
             "max_length": 1024,
         }
     )
@@ -6837,6 +6839,7 @@ class AlertCLinear:
             "name": "alertCLocationTableVersion",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
             "max_length": 1024,
         }
     )
@@ -6871,6 +6874,7 @@ class AlertCPoint:
             "name": "alertCLocationCountryCode",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
             "max_length": 1024,
         }
     )
@@ -6880,6 +6884,7 @@ class AlertCPoint:
             "name": "alertCLocationTableNumber",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
             "max_length": 1024,
         }
     )
@@ -6889,6 +6894,7 @@ class AlertCPoint:
             "name": "alertCLocationTableVersion",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
             "max_length": 1024,
         }
     )
@@ -6924,6 +6930,7 @@ class AxleSpacing:
             "name": "axleSpacing",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     axle_spacing_sequence_identifier: Optional[int] = field(
@@ -6932,6 +6939,7 @@ class AxleSpacing:
             "name": "axleSpacingSequenceIdentifier",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     axle_spacing_extension: Optional[ExtensionType] = field(
@@ -6966,6 +6974,7 @@ class AxleWeight:
             "name": "axlePositionIdentifier",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     axle_weight: Optional[float] = field(
@@ -7009,6 +7018,7 @@ class CatalogueReference:
             "name": "keyCatalogueReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
             "max_length": 1024,
         }
     )
@@ -7248,6 +7258,7 @@ class ExternalReferencing:
             "name": "externalLocationCode",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
             "max_length": 1024,
         }
     )
@@ -7257,6 +7268,7 @@ class ExternalReferencing:
             "name": "externalReferencingSystem",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
             "max_length": 1024,
         }
     )
@@ -7319,6 +7331,7 @@ class Fault:
             "name": "faultLastUpdateTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     fault_severity: Optional[FaultSeverityEnum] = field(
@@ -7359,6 +7372,7 @@ class FilterExitManagement:
             "name": "filterEnd",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     filter_out_of_range: Optional[bool] = field(
@@ -7367,6 +7381,7 @@ class FilterExitManagement:
             "name": "filterOutOfRange",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     filter_exit_management_extension: Optional[ExtensionType] = field(
@@ -7414,6 +7429,7 @@ class FilterReference:
             "name": "keyFilterReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
             "max_length": 1024,
         }
     )
@@ -7453,6 +7469,7 @@ class GrossWeightCharacteristic:
             "name": "grossVehicleWeight",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     gross_weight_characteristic_extension: Optional[ExtensionType] = field(
@@ -7625,6 +7642,7 @@ class HeaviestAxleWeightCharacteristic:
             "name": "heaviestAxleWeight",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     heaviest_axle_weight_characteristic_extension: Optional[ExtensionType] = field(
@@ -7664,6 +7682,7 @@ class HeightCharacteristic:
             "name": "vehicleHeight",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     height_characteristic_extension: Optional[ExtensionType] = field(
@@ -7700,6 +7719,7 @@ class InternationalIdentifier:
             "name": "nationalIdentifier",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
             "max_length": 1024,
         }
     )
@@ -7740,6 +7760,7 @@ class LengthCharacteristic:
             "name": "vehicleLength",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     length_characteristic_extension: Optional[ExtensionType] = field(
@@ -7947,6 +7968,7 @@ class NumberOfAxlesCharacteristic:
             "name": "numberOfAxles",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     number_of_axles_characteristic_extension: Optional[ExtensionType] = field(
@@ -7978,6 +8000,7 @@ class OffsetDistance:
             "name": "offsetDistance",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     offset_distance_extension: Optional[ExtensionType] = field(
@@ -8026,6 +8049,7 @@ class OpenlrGridAttributes:
             "name": "openlrNumColumns",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     openlr_num_rows: Optional[int] = field(
@@ -8034,6 +8058,7 @@ class OpenlrGridAttributes:
             "name": "openlrNumRows",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     openlr_grid_attributes_extension: Optional[ExtensionType] = field(
@@ -8086,6 +8111,7 @@ class OpenlrLineAttributes:
             "name": "openlrBearing",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     openlr_line_attributes_extension: Optional[ExtensionType] = field(
@@ -8166,6 +8192,7 @@ class OpenlrPathAttributes:
             "name": "openlrDistanceToNextLRPoint",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     openlr_path_attributes_extension: Optional[ExtensionType] = field(
@@ -8331,6 +8358,7 @@ class ParkingSpaceStatus:
             "name": "parkingSpaceOccupied",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     parking_space_closed: Optional[bool] = field(
@@ -8521,6 +8549,7 @@ class PointCoordinates:
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     longitude: Optional[float] = field(
@@ -8528,6 +8557,7 @@ class PointCoordinates:
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     point_coordinates_extension: Optional[ExtensionType] = field(
@@ -8610,6 +8640,7 @@ class Target:
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
             "max_length": 1024,
         }
     )
@@ -8618,6 +8649,7 @@ class Target:
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
             "max_length": 1024,
         }
     )
@@ -9289,6 +9321,7 @@ class VmsTextLine:
             "name": "vmsTextLine",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
             "max_length": 1024,
         }
     )
@@ -9361,6 +9394,7 @@ class WidthCharacteristic:
             "name": "vehicleWidth",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     width_characteristic_extension: Optional[ExtensionType] = field(
@@ -9699,6 +9733,7 @@ class AlertCLocation:
             "name": "specificLocation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     alert_clocation_extension: Optional[ExtensionType] = field(
@@ -9812,6 +9847,7 @@ class Charge:
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
             "total_digits": 8,
             "fraction_digits": 2,
         }
@@ -10126,6 +10162,7 @@ class DistanceFromLinearElementStart(DistanceAlongLinearElement):
             "name": "distanceAlong",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     distance_from_linear_element_start_extension: Optional[ExtensionType] = field(
@@ -10503,6 +10540,7 @@ class IndividualCharge:
             "name": "chargePaid",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
             "total_digits": 8,
             "fraction_digits": 2,
         }
@@ -11115,6 +11153,7 @@ class ParkingRouteStatus:
             "name": "parkingRouteActive",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     parking_route_status_extension: Optional[ExtensionType] = field(
@@ -11289,6 +11328,7 @@ class PayloadPublication:
             "name": "publicationTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     publication_creator: Optional[InternationalIdentifier] = field(
@@ -11336,6 +11376,7 @@ class PercentageDistanceAlongLinearElement(DistanceAlongLinearElement):
             "name": "percentageDistanceAlong",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     percentage_distance_along_linear_element_extension: Optional[ExtensionType] = field(
@@ -11474,6 +11515,7 @@ class RGBColour:
             "name": "rgbRedValue",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     rgb_green_value: Optional[int] = field(
@@ -11482,6 +11524,7 @@ class RGBColour:
             "name": "rgbGreenValue",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     rgb_blue_value: Optional[int] = field(
@@ -11490,6 +11533,7 @@ class RGBColour:
             "name": "rgbBlueValue",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     colour_name: Optional[MultilingualString] = field(
@@ -11573,6 +11617,7 @@ class Referent:
             "name": "referentIdentifier",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
             "max_length": 1024,
         }
     )
@@ -11819,6 +11864,7 @@ class Subscription:
             "name": "subscriptionStartTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     subscription_state: Optional[SubscriptionStateEnum] = field(
@@ -11954,6 +12000,7 @@ class TimePeriodByHour(TimePeriodOfDay):
             "name": "startTimeOfPeriod",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     end_time_of_period: Optional[XmlTime] = field(
@@ -11962,6 +12009,7 @@ class TimePeriodByHour(TimePeriodOfDay):
             "name": "endTimeOfPeriod",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     time_period_by_hour_extension: Optional[ExtensionType] = field(
@@ -12158,6 +12206,7 @@ class UrlLink:
             "name": "urlLinkAddress",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     url_link_description: Optional[MultilingualString] = field(
@@ -12679,6 +12728,7 @@ class AlertCArea:
             "name": "alertCLocationCountryCode",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
             "max_length": 1024,
         }
     )
@@ -12688,6 +12738,7 @@ class AlertCArea:
             "name": "alertCLocationTableNumber",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
             "max_length": 1024,
         }
     )
@@ -12697,6 +12748,7 @@ class AlertCArea:
             "name": "alertCLocationTableVersion",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
             "max_length": 1024,
         }
     )
@@ -12899,6 +12951,7 @@ class ApplicationRateValue(DataValue):
             "name": "applicationRate",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     application_rate_value_extension: Optional[ExtensionType] = field(
@@ -12926,6 +12979,7 @@ class AxleFlowValue(DataValue):
             "name": "axleFlowRate",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     axle_flow_value_extension: Optional[ExtensionType] = field(
@@ -12954,6 +13008,7 @@ class ConcentrationOfVehiclesValue(DataValue):
             "name": "concentrationOfVehicles",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     concentration_of_vehicles_value_extension: Optional[ExtensionType] = field(
@@ -12980,6 +13035,7 @@ class DateTimeValue(DataValue):
             "name": "dateTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     date_time_value_extension: Optional[ExtensionType] = field(
@@ -13008,6 +13064,7 @@ class DirectionBearingValue(DataValue):
             "name": "directionBearing",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     direction_bearing_value_extension: Optional[ExtensionType] = field(
@@ -13071,6 +13128,7 @@ class DistanceFromLinearElementReferent(DistanceAlongLinearElement):
             "name": "distanceAlong",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     from_referent: Optional[Referent] = field(
@@ -13113,6 +13171,7 @@ class DurationValue(DataValue):
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     duration_value_extension: Optional[ExtensionType] = field(
@@ -13309,6 +13368,7 @@ class FloatingPointMetreDistanceValue(DataValue):
             "name": "floatingPointMetreDistance",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     floating_point_metre_distance_value_extension: Optional[ExtensionType] = field(
@@ -13336,6 +13396,7 @@ class IntegerMetreDistanceValue(DataValue):
             "name": "integerMetreDistance",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     integer_metre_distance_value_extension: Optional[ExtensionType] = field(
@@ -13463,6 +13524,7 @@ class KilogramsConcentrationValue(DataValue):
             "name": "kilogramsConcentration",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     kilograms_concentration_value_extension: Optional[ExtensionType] = field(
@@ -13493,6 +13555,7 @@ class LinearElementByCode(LinearElement):
             "name": "linearElementIdentifier",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
             "max_length": 1024,
         }
     )
@@ -13708,6 +13771,7 @@ class MicrogramsConcentrationValue(DataValue):
             "name": "microgramsConcentration",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     micrograms_concentration_value_extension: Optional[ExtensionType] = field(
@@ -13828,6 +13892,7 @@ class OccupancyChangeValue(DataValue):
             "name": "occupancyChange",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     occupancy_change_value_extension: Optional[ExtensionType] = field(
@@ -13855,6 +13920,7 @@ class OpenlrCircleLocationReference(OpenlrAreaLocationReference):
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     openlr_geo_coordinate: Optional[OpenlrGeoCoordinate] = field(
@@ -14080,6 +14146,7 @@ class PcuFlowValue(DataValue):
             "name": "pcuFlowRate",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     pcu_flow_value_extension: Optional[ExtensionType] = field(
@@ -14105,6 +14172,7 @@ class PercentageValue(DataValue):
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     percentage_value_extension: Optional[ExtensionType] = field(
@@ -14250,6 +14318,7 @@ class PrecipitationIntensityValue(DataValue):
             "name": "millimetresPerHourIntensity",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     precipitation_intensity_value_extension: Optional[ExtensionType] = field(
@@ -14402,6 +14471,7 @@ class SpecialDay:
             "name": "intersectWithApplicableDays",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     special_day_type: Optional[SpecialDayTypeEnum] = field(
@@ -14452,6 +14522,7 @@ class SpeedValue(DataValue):
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     speed_value_extension: Optional[ExtensionType] = field(
@@ -14478,6 +14549,7 @@ class TemperatureValue(DataValue):
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     temperature_value_extension: Optional[ExtensionType] = field(
@@ -14706,6 +14778,7 @@ class VehicleCountValue(DataValue):
             "name": "vehicleCount",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     vehicle_count_value_extension: Optional[ExtensionType] = field(
@@ -14733,6 +14806,7 @@ class VehicleFlowValue(DataValue):
             "name": "vehicleFlowRate",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     vehicle_flow_value_extension: Optional[ExtensionType] = field(
@@ -16346,6 +16420,7 @@ class TpegGeometricArea(TpegAreaLocation):
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     centre_point: Optional[PointCoordinates] = field(
@@ -16820,6 +16895,7 @@ class VehicleCountWithinInterval:
             "name": "measurementInterval",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     number_of_incoming_vehicles: Optional[VehicleCountValue] = field(
@@ -17108,6 +17184,7 @@ class VmsPictogram:
             "name": "presenceOfRedTriangle",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     vienna_convention_compliant: Optional[bool] = field(
@@ -17895,6 +17972,7 @@ class SiteMeasurements:
             "name": "measurementTimeDefault",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     measured_value: List[SiteMeasurementsIndexMeasuredValue] = field(
@@ -19382,6 +19460,7 @@ class OverallPeriod:
             "name": "overallStartTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     overall_end_time: Optional[XmlDateTime] = field(
@@ -20100,6 +20179,7 @@ class VmsMessage:
             "name": "timeLastSet",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     requested_by: Optional[MultilingualString] = field(
@@ -20742,6 +20822,7 @@ class ParkingRecordStatus:
             "name": "parkingStatusOriginTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     parking_status_description: Optional[MultilingualString] = field(
@@ -21057,6 +21138,7 @@ class SituationRecord:
             "name": "situationRecordCreationTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     situation_record_observation_time: Optional[XmlDateTime] = field(
@@ -21073,6 +21155,7 @@ class SituationRecord:
             "name": "situationRecordVersionTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     situation_record_first_supplier_version_time: Optional[XmlDateTime] = field(
@@ -21487,6 +21570,7 @@ class GenericSituationRecord(SituationRecord):
             "name": "genericSituationRecordName",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
             "max_length": 1024,
         }
     )
@@ -22155,6 +22239,7 @@ class Vms:
             "name": "vmsWorking",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     vms_message_sequencing_interval: Optional[float] = field(
@@ -22464,6 +22549,7 @@ class CarParks(NonRoadEventInformation):
             "name": "carParkIdentity",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
             "max_length": 1024,
         }
     )
@@ -23062,6 +23148,7 @@ class TrafficViewRecord:
             "name": "recordSequenceNumber",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     traffic_element: Optional[TrafficElement] = field(
@@ -24369,6 +24456,7 @@ class TrafficView:
             "name": "trafficViewTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     predefined_non_ordered_location_group_reference: Optional[PredefinedNonOrderedLocationGroupVersionedReference] = field(
@@ -24645,6 +24733,7 @@ class ParkingRecord:
             "name": "parkingRecordVersionTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     parking_number_of_spaces: Optional[int] = field(
@@ -24998,6 +25087,7 @@ class GroupOfParkingSpaces1(ParkingSpaceBasics):
             "name": "parkingNumberOfSpaces",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     parking_type_of_group: Optional[ParkingTypeOfGroup] = field(
@@ -25239,6 +25329,7 @@ class ParkingTable:
             "name": "parkingTableVersionTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
         }
     )
     parking_record: List[ParkingRecord] = field(
@@ -25505,6 +25596,7 @@ class GenericPublication(PayloadPublication):
             "name": "genericPublicationName",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
             "max_length": 1024,
         }
     )

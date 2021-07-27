@@ -62,6 +62,7 @@ class DsakeyValueType:
             "name": "Y",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
+            "required": True,
             "format": "base64",
         }
     )
@@ -224,6 +225,7 @@ class RsakeyValueType:
             "name": "Modulus",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
+            "required": True,
             "format": "base64",
         }
     )
@@ -233,6 +235,7 @@ class RsakeyValueType:
             "name": "Exponent",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
+            "required": True,
             "format": "base64",
         }
     )
@@ -620,6 +623,7 @@ class ReferenceType:
             "name": "DigestValue",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
+            "required": True,
             "format": "base64",
         }
     )

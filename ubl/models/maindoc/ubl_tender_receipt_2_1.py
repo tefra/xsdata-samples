@@ -104,6 +104,7 @@ class TenderReceiptType:
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+            "required": True,
         }
     )
     issue_time: Optional[XmlTime] = field(
@@ -136,6 +137,7 @@ class TenderReceiptType:
             "name": "RegisteredDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+            "required": True,
         }
     )
     registered_time: Optional[XmlTime] = field(
@@ -144,6 +146,7 @@ class TenderReceiptType:
             "name": "RegisteredTime",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+            "required": True,
         }
     )
     tender_document_reference: Tuple[TenderDocumentReference, ...] = field(

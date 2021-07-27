@@ -23,6 +23,7 @@ class TerminateSubscriptionRequestStructure(AuthenticatedRequestStructure):
             "name": "RequestorRef",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
+            "required": True,
         }
     )
     message_identifier: Optional[str] = field(

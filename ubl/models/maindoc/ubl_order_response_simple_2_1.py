@@ -102,6 +102,7 @@ class OrderResponseSimpleType:
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+            "required": True,
         }
     )
     issue_time: Optional[XmlTime] = field(
@@ -126,6 +127,7 @@ class OrderResponseSimpleType:
             "name": "AcceptedIndicator",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+            "required": True,
         }
     )
     rejection_note: Tuple[RejectionNote, ...] = field(
