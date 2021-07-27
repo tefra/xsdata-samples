@@ -18,6 +18,7 @@ class ConsumerType:
             "name": "UniqueID",
             "type": "Element",
             "namespace": "http://wsdl.amadeus.com/2010/06/ws/Link_v1",
+            "required": True,
             "max_length": 64,
         }
     )
@@ -37,6 +38,7 @@ class ReceiverType:
             "name": "ServerID",
             "type": "Element",
             "namespace": "http://wsdl.amadeus.com/2010/06/ws/Link_v1",
+            "required": True,
             "max_length": 64,
         }
     )

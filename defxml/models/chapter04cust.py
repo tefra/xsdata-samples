@@ -11,6 +11,7 @@ class CustomerType:
         metadata={
             "type": "Element",
             "namespace": "",
+            "required": True,
         }
     )
     number: Optional[int] = field(

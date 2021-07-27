@@ -5462,6 +5462,7 @@ class ConsolidatorRemark:
         metadata={
             "name": "PseudoCityCode",
             "type": "Element",
+            "min_occurs": 1,
             "max_occurs": 5,
             "min_length": 2,
             "max_length": 10,
@@ -12058,6 +12059,7 @@ class Group:
         metadata={
             "name": "Name",
             "type": "Element",
+            "required": True,
             "min_length": 1,
             "white_space": "collapse",
         }

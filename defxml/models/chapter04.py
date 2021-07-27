@@ -13,6 +13,7 @@ class OrderType:
         metadata={
             "type": "Element",
             "namespace": "",
+            "required": True,
         }
     )
     customer: Optional[CustomerType] = field(

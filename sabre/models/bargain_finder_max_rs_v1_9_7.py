@@ -2398,6 +2398,7 @@ class FareInfoType:
             "name": "FareReference",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
+            "required": True,
             "min_length": 1,
             "max_length": 8,
         }
@@ -4054,6 +4055,7 @@ class PtcfareBreakdownType:
                     "name": "FareReference",
                     "type": "Element",
                     "namespace": "http://www.opentravel.org/OTA/2003/05",
+                    "required": True,
                     "min_length": 1,
                     "max_length": 8,
                 }
@@ -4522,6 +4524,7 @@ class AirItineraryPricingInfoType:
                     "name": "FareReference",
                     "type": "Element",
                     "namespace": "http://www.opentravel.org/OTA/2003/05",
+                    "required": True,
                     "min_length": 1,
                     "max_length": 8,
                 }

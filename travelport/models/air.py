@@ -1196,6 +1196,7 @@ class CarrierList:
         metadata={
             "name": "CarrierCode",
             "type": "Element",
+            "min_occurs": 1,
             "max_occurs": 6,
             "length": 2,
         }
@@ -2303,6 +2304,7 @@ class FareRuleFailureInfo:
         metadata={
             "name": "Reason",
             "type": "Element",
+            "min_occurs": 1,
             "max_occurs": 999,
         }
     )
@@ -4363,6 +4365,7 @@ class PolicyCodesList:
         metadata={
             "name": "PolicyCode",
             "type": "Element",
+            "min_occurs": 1,
             "max_occurs": 10,
             "min_inclusive": 1,
             "max_inclusive": 9999,
@@ -7222,6 +7225,7 @@ class AirExchangeTicketBundle:
             "name": "TicketNumber",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "required": True,
             "min_length": 1,
             "max_length": 13,
         }
@@ -9691,6 +9695,7 @@ class EmdretrieveReq(BaseReq):
             metadata={
                 "name": "EMDNumber",
                 "type": "Element",
+                "required": True,
                 "length": 13,
             }
         )
@@ -11481,6 +11486,7 @@ class RefundFailureInfo:
         metadata={
             "name": "BookingTravelerRef",
             "type": "Element",
+            "min_occurs": 1,
             "max_occurs": 999,
         }
     )
@@ -12710,6 +12716,7 @@ class TypeTicketFailureInfo:
             "name": "BookingTravelerRef",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v48_0",
+            "min_occurs": 1,
             "max_occurs": 999,
         }
     )
@@ -16457,6 +16464,7 @@ class AirExchangeTicketingReq(BaseReq):
         metadata={
             "name": "AirReservationLocatorCode",
             "type": "Element",
+            "required": True,
             "min_length": 5,
             "max_length": 8,
         }
@@ -16467,6 +16475,7 @@ class AirExchangeTicketingReq(BaseReq):
             "name": "TicketNumber",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v48_0",
+            "required": True,
             "min_length": 1,
             "max_length": 13,
         }
@@ -19853,6 +19862,7 @@ class AirTicketingReq(AirBaseReq):
         metadata={
             "name": "AirReservationLocatorCode",
             "type": "Element",
+            "required": True,
             "min_length": 5,
             "max_length": 8,
         }
@@ -25508,6 +25518,7 @@ class Etr:
         metadata={
             "name": "FareCalc",
             "type": "Element",
+            "required": True,
         }
     )
     ticket: List[Ticket] = field(
@@ -26371,6 +26382,7 @@ class AirExchangeReq(BaseReq):
         metadata={
             "name": "AirReservationLocatorCode",
             "type": "Element",
+            "required": True,
             "min_length": 5,
             "max_length": 8,
         }

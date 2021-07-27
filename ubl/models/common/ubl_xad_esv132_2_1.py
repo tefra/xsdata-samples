@@ -365,6 +365,7 @@ class DigestAlgAndValueType:
             "name": "DigestValue",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
+            "required": True,
             "format": "base64",
         }
     )
@@ -516,6 +517,7 @@ class ReferenceInfoType:
             "name": "DigestValue",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
+            "required": True,
             "format": "base64",
         }
     )

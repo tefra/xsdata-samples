@@ -423,6 +423,7 @@ class ErrorResponse:
         metadata={
             "name": "developer-message",
             "type": "Element",
+            "required": True,
         }
     )
     user_message: List[MultilineStringWithOptionalLang] = field(
