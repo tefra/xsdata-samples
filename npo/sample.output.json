@@ -1,92 +1,92 @@
 {
-    "items": {
-        "item": [
+  "items": {
+    "item": [
+      {
+        "result": {
+          "crid": [
+            "crid://vpro/media/vprobroadcast/WO_VPRO_2297327"
+          ],
+          "alternativeUrl": [],
+          "broadcaster": [
             {
-                "result": {
-                    "crid": [
-                        "crid://vpro/media/vprobroadcast/WO_VPRO_2297327"
-                    ],
-                    "alternativeUrl": [],
-                    "broadcaster": [
-                        {
-                            "value": null,
-                            "id": "VPRO"
-                        }
-                    ],
-                    "portal": {
-                        "name": "www.vprobroadcast.com",
-                        "section": null,
-                        "id": "VPROBROADCAST",
-                        "url": "https://www.vprobroadcast.com"
-                    },
-                    "title": "Antibiotics",
-                    "subTitle": null,
-                    "keyword": [],
-                    "genre": [],
-                    "summary": null,
-                    "paragraphs": null,
-                    "tag": [],
-                    "referral": [],
-                    "link": [],
-                    "embed": [],
-                    "statRef": [],
-                    "images": {
-                        "image": [
-                            {
-                                "title": "Antibiotica",
-                                "description": "Labyrint",
-                                "credits": null,
-                                "source": null,
-                                "sourceName": null,
-                                "license": null,
-                                "type": "PICTURE",
-                                "url": "https://images.poms.omroep.nl/image/s360/665086.jpg"
-                            }
-                        ]
-                    },
-                    "relation": [],
-                    "url": "https://www.vprobroadcast.com/play~WO_VPRO_2297327~antibiotics~.html",
-                    "type": "VIDEO",
-                    "creationDate": "2019-11-22T14:15:09.443+01:00",
-                    "lastModified": "2019-11-22T14:15:09.443+01:00",
-                    "lastPublished": "2019-11-22T14:15:24.341+01:00",
-                    "publishStart": "2015-10-16T14:23:14.729+02:00",
-                    "publishStop": null,
-                    "refCount": 0,
-                    "sortDate": "2015-10-16T14:23:14.729+02:00",
-                    "workflow": null
-                },
-                "highlight": [],
-                "score": 0.3099519
+              "value": null,
+              "id": "VPRO"
             }
-        ]
-    },
-    "total": 432,
-    "totalQualifier": "EQUAL_TO",
-    "offset": 0,
-    "max": 0,
-    "facets": {
-        "sortDates": [],
-        "types": [],
-        "broadcasters": [],
-        "tags": [],
-        "keywords": [],
-        "genres": [],
-        "portals": [],
-        "sections": [],
-        "relations": []
-    },
-    "selectedFacets": {
-        "sortDates": [],
-        "types": [],
-        "broadcasters": [],
-        "tags": [],
-        "keywords": [],
-        "genres": [],
-        "portals": [],
-        "sections": [],
-        "relations": []
-    },
-    "mediaFacets": null,
-    "mediaSelectedFacets": null
+          ],
+          "portal": {
+            "name": "www.vprobroadcast.com",
+            "section": null,
+            "id": "VPROBROADCAST",
+            "url": "https://www.vprobroadcast.com"
+          },
+          "title": "Antibiotics",
+          "subTitle": null,
+          "keyword": [],
+          "genre": [],
+          "summary": null,
+          "paragraphs": null,
+          "tag": [],
+          "referral": [],
+          "link": [],
+          "embed": [],
+          "statRef": [],
+          "images": {
+            "image": [
+              {
+                "title": "Antibiotica",
+                "description": "Labyrint",
+                "credits": null,
+                "source": null,
+                "sourceName": null,
+                "license": null,
+                "type": "PICTURE",
+                "url": "https://images.poms.omroep.nl/image/s360/665086.jpg"
+              }
+            ]
+          },
+          "relation": [],
+          "url": "https://www.vprobroadcast.com/play~WO_VPRO_2297327~antibiotics~.html",
+          "type": "VIDEO",
+          "creationDate": "2019-11-22T14:15:09.443+01:00",
+          "lastModified": "2019-11-22T14:15:09.443+01:00",
+          "lastPublished": "2019-11-22T14:15:24.341+01:00",
+          "publishStart": "2015-10-16T14:23:14.729+02:00",
+          "publishStop": null,
+          "refCount": 0,
+          "sortDate": "2015-10-16T14:23:14.729+02:00",
+          "workflow": null
+        },
+        "highlight": [],
+        "score": 0.3099519
+      }
+    ]
+  },
+  "total": 432,
+  "totalQualifier": "EQUAL_TO",
+  "offset": 0,
+  "max": 0,
+  "facets": {
+    "sortDates": [],
+    "types": [],
+    "broadcasters": [],
+    "tags": [],
+    "keywords": [],
+    "genres": [],
+    "portals": [],
+    "sections": [],
+    "relations": []
+  },
+  "selectedFacets": {
+    "sortDates": [],
+    "types": [],
+    "broadcasters": [],
+    "tags": [],
+    "keywords": [],
+    "genres": [],
+    "portals": [],
+    "sections": [],
+    "relations": []
+  },
+  "mediaFacets": null,
+  "mediaSelectedFacets": null
 }
