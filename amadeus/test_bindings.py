@@ -2,15 +2,10 @@ import json
 from pathlib import Path
 
 from lxml import etree
-from xsdata.formats.dataclass.parsers import XmlParser
-from xsdata.formats.dataclass.serializers import DictFactory
-from xsdata.formats.dataclass.serializers import JsonSerializer
 
 from amadeus.models import FareMasterPricerTravelBoardSearch
 from amadeus.models import FareMasterPricerTravelBoardSearchReply
 
-parser = XmlParser()
-serializer = JsonSerializer(indent=2, dict_factory=DictFactory.FILTER_NONE)
 cwd = Path(__file__).parent.absolute()
 xsd_location = str(
     cwd.joinpath("schemas/Fare_MasterPricerTravelBoardSearch_15_3_1A.xsd")

@@ -138,7 +138,7 @@ def validate_bindings(schema: Path, clazz: Type, output_format: str):
     obj = XmlParser(context=context).from_path(sample, clazz)
     config = SerializerConfig(pretty_print=True)
 
-    actual_json = JsonSerializer(context=context, indent=4).render(obj)
+    actual_json = JsonSerializer(context=context, config=config).render(obj)
     actual_xml = XmlSerializer(context=context, config=config).render(obj)
 
     if output_json.exists() and chapter != "13":
