@@ -27,7 +27,10 @@ class ShowResourceShortNameEnum:
         name = "SHOW-RESOURCE-SHORT-NAME-ENUM"
 
     value: Optional[ShowResourceShortNameEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

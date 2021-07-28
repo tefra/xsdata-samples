@@ -27,7 +27,10 @@ class BuildTypeEnum:
         name = "BUILD-TYPE-ENUM"
 
     value: Optional[BuildTypeEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

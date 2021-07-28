@@ -26,7 +26,10 @@ class SeverityEnum:
         name = "SEVERITY-ENUM"
 
     value: Optional[SeverityEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

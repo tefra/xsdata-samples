@@ -27,7 +27,10 @@ class TdEventServiceInstanceMethodTypeEnum:
         name = "TD-EVENT-SERVICE-INSTANCE-METHOD-TYPE-ENUM"
 
     value: Optional[TdEventServiceInstanceMethodTypeEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

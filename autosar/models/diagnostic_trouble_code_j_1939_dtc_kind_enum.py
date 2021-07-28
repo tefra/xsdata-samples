@@ -27,7 +27,10 @@ class DiagnosticTroubleCodeJ1939DtcKindEnum:
         name = "DIAGNOSTIC-TROUBLE-CODE-J-1939-DTC-KIND-ENUM"
 
     value: Optional[DiagnosticTroubleCodeJ1939DtcKindEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

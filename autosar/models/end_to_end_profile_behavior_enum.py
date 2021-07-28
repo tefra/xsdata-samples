@@ -26,7 +26,10 @@ class EndToEndProfileBehaviorEnum:
         name = "END-TO-END-PROFILE-BEHAVIOR-ENUM"
 
     value: Optional[EndToEndProfileBehaviorEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

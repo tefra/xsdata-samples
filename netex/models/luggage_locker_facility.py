@@ -11,5 +11,8 @@ class LuggageLockerFacility:
         namespace = "http://www.netex.org.uk/netex"
 
     value: Optional[LuggageLockerFacilityEnumeration] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )

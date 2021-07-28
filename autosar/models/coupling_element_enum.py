@@ -26,7 +26,10 @@ class CouplingElementEnum:
         name = "COUPLING-ELEMENT-ENUM"
 
     value: Optional[CouplingElementEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

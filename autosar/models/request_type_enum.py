@@ -26,7 +26,10 @@ class RequestTypeEnum:
         name = "REQUEST-TYPE-ENUM"
 
     value: Optional[RequestTypeEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

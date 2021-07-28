@@ -27,7 +27,10 @@ class DiagnosticTestResultUpdateEnum:
         name = "DIAGNOSTIC-TEST-RESULT-UPDATE-ENUM"
 
     value: Optional[DiagnosticTestResultUpdateEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

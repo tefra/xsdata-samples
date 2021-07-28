@@ -27,7 +27,10 @@ class GlobalTimeCrcSupportEnum:
         name = "GLOBAL-TIME-CRC-SUPPORT-ENUM"
 
     value: Optional[GlobalTimeCrcSupportEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

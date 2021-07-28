@@ -26,7 +26,10 @@ class MappingDirectionEnum:
         name = "MAPPING-DIRECTION-ENUM"
 
     value: Optional[MappingDirectionEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

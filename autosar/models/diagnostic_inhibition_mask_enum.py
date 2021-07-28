@@ -27,7 +27,10 @@ class DiagnosticInhibitionMaskEnum:
         name = "DIAGNOSTIC-INHIBITION-MASK-ENUM"
 
     value: Optional[DiagnosticInhibitionMaskEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

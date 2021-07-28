@@ -26,7 +26,10 @@ class RptExecutionControlEnum:
         name = "RPT-EXECUTION-CONTROL-ENUM"
 
     value: Optional[RptExecutionControlEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

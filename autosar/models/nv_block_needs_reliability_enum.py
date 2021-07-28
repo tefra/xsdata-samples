@@ -30,7 +30,10 @@ class NvBlockNeedsReliabilityEnum:
         name = "NV-BLOCK-NEEDS-RELIABILITY-ENUM"
 
     value: Optional[NvBlockNeedsReliabilityEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

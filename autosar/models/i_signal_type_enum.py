@@ -27,7 +27,10 @@ class ISignalTypeEnum:
         name = "I-SIGNAL-TYPE-ENUM"
 
     value: Optional[ISignalTypeEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

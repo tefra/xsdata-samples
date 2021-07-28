@@ -26,7 +26,10 @@ class TdEventTriggerTypeEnum:
         name = "TD-EVENT-TRIGGER-TYPE-ENUM"
 
     value: Optional[TdEventTriggerTypeEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

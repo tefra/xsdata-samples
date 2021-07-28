@@ -26,7 +26,10 @@ class CanTpAddressingFormatType:
         name = "CAN-TP-ADDRESSING-FORMAT-TYPE"
 
     value: Optional[CanTpAddressingFormatTypeSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

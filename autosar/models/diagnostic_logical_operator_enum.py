@@ -26,7 +26,10 @@ class DiagnosticLogicalOperatorEnum:
         name = "DIAGNOSTIC-LOGICAL-OPERATOR-ENUM"
 
     value: Optional[DiagnosticLogicalOperatorEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

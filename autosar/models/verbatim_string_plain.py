@@ -32,6 +32,7 @@ class VerbatimStringPlain:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "white_space": "preserve",
         }
     )

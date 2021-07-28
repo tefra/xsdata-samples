@@ -27,7 +27,10 @@ class ArrayImplPolicyEnum:
         name = "ARRAY-IMPL-POLICY-ENUM"
 
     value: Optional[ArrayImplPolicyEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

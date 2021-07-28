@@ -26,7 +26,10 @@ class FlexrayNmScheduleVariant:
         name = "FLEXRAY-NM-SCHEDULE-VARIANT"
 
     value: Optional[FlexrayNmScheduleVariantSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

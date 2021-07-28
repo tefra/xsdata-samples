@@ -27,7 +27,10 @@ class DataTransformationStatusForwardingEnum:
         name = "DATA-TRANSFORMATION-STATUS-FORWARDING-ENUM"
 
     value: Optional[DataTransformationStatusForwardingEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

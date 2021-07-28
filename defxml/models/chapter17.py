@@ -16,7 +16,10 @@ class ColorType:
 @dataclass
 class PriceType:
     value: Optional[Decimal] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     currency: Optional[str] = field(
         default=None,

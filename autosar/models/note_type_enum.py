@@ -27,7 +27,10 @@ class NoteTypeEnum:
         name = "NOTE-TYPE-ENUM"
 
     value: Optional[NoteTypeEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

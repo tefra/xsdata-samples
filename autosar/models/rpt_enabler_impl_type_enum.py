@@ -27,7 +27,10 @@ class RptEnablerImplTypeEnum:
         name = "RPT-ENABLER-IMPL-TYPE-ENUM"
 
     value: Optional[RptEnablerImplTypeEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

@@ -93,6 +93,7 @@ class EncapsulatedPkidataType:
     value: Optional[bytes] = field(
         default=None,
         metadata={
+            "required": True,
             "format": "base64",
         }
     )
@@ -198,7 +199,10 @@ class Spuri:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
 
 
@@ -244,7 +248,10 @@ class SigningTime:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
     value: Optional[XmlDateTime] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
 
 
@@ -381,7 +388,10 @@ class EncapsulatedPkidata(EncapsulatedPkidataType):
 @dataclass(frozen=True)
 class IdentifierType:
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     qualifier: Optional[QualifierType] = field(
         default=None,

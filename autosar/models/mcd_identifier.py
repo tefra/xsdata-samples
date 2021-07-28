@@ -36,6 +36,7 @@ class McdIdentifier:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "pattern": r"[a-zA-Z_][a-zA-Z0-9_]*(\[([a-zA-Z_][a-zA-Z0-9_]*|[0-9]+)\])*(\.[a-zA-Z_][a-zA-Z0-9_]*(\[([a-zA-Z_][a-zA-Z0-9_]*|[0-9]+)\])*)*",
         }
     )

@@ -27,7 +27,10 @@ class DataTransformationKindEnum:
         name = "DATA-TRANSFORMATION-KIND-ENUM"
 
     value: Optional[DataTransformationKindEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

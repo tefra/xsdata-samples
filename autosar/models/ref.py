@@ -40,6 +40,7 @@ class Ref:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "pattern": r"/?[a-zA-Z][a-zA-Z0-9_]{0,127}(/[a-zA-Z][a-zA-Z0-9_]{0,127})*",
         }
     )

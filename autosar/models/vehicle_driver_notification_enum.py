@@ -26,7 +26,10 @@ class VehicleDriverNotificationEnum:
         name = "VEHICLE-DRIVER-NOTIFICATION-ENUM"
 
     value: Optional[VehicleDriverNotificationEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

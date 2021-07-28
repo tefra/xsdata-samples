@@ -27,7 +27,10 @@ class GraphicNotationEnum:
         name = "GRAPHIC-NOTATION-ENUM"
 
     value: Optional[GraphicNotationEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

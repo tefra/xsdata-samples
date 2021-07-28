@@ -11,5 +11,8 @@ class SrsName1:
         namespace = "http://www.siri.org.uk/siri"
 
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )

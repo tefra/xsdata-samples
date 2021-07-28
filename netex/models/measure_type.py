@@ -7,7 +7,10 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 @dataclass
 class MeasureType:
     value: Optional[float] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     uom: Optional[str] = field(
         default=None,

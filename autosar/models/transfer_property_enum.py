@@ -26,7 +26,10 @@ class TransferPropertyEnum:
         name = "TRANSFER-PROPERTY-ENUM"
 
     value: Optional[TransferPropertyEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

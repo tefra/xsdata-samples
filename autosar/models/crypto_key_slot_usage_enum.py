@@ -26,7 +26,10 @@ class CryptoKeySlotUsageEnum:
         name = "CRYPTO-KEY-SLOT-USAGE-ENUM"
 
     value: Optional[CryptoKeySlotUsageEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

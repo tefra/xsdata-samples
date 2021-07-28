@@ -7,7 +7,10 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 @dataclass
 class PrivateCodeStructure:
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     type: Optional[str] = field(
         default=None,

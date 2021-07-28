@@ -11,5 +11,8 @@ class PassengerInformationFacility:
         namespace = "http://www.netex.org.uk/netex"
 
     value: Optional[PassengerInformationFacilityEnumeration] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )

@@ -26,7 +26,10 @@ class HandleTimeoutEnum:
         name = "HANDLE-TIMEOUT-ENUM"
 
     value: Optional[HandleTimeoutEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

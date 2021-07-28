@@ -27,7 +27,10 @@ class SearchIntentionEnum:
         name = "SEARCH-INTENTION-ENUM"
 
     value: Optional[SearchIntentionEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

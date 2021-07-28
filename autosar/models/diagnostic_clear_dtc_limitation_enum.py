@@ -26,7 +26,10 @@ class DiagnosticClearDtcLimitationEnum:
         name = "DIAGNOSTIC-CLEAR-DTC-LIMITATION-ENUM"
 
     value: Optional[DiagnosticClearDtcLimitationEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

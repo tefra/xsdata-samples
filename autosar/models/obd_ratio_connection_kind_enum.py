@@ -28,7 +28,10 @@ class ObdRatioConnectionKindEnum:
         name = "OBD-RATIO-CONNECTION-KIND-ENUM"
 
     value: Optional[ObdRatioConnectionKindEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

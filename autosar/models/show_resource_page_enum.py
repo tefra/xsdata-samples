@@ -27,7 +27,10 @@ class ShowResourcePageEnum:
         name = "SHOW-RESOURCE-PAGE-ENUM"
 
     value: Optional[ShowResourcePageEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

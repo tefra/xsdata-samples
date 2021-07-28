@@ -26,7 +26,10 @@ class FrArTpAckType:
         name = "FR-AR-TP-ACK-TYPE"
 
     value: Optional[FrArTpAckTypeSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

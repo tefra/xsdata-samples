@@ -27,7 +27,10 @@ class EcucDestinationUriNestingContractEnum:
         name = "ECUC-DESTINATION-URI-NESTING-CONTRACT-ENUM"
 
     value: Optional[EcucDestinationUriNestingContractEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

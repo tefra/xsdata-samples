@@ -26,7 +26,10 @@ class TtcanTriggerType:
         name = "TTCAN-TRIGGER-TYPE"
 
     value: Optional[TtcanTriggerTypeSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

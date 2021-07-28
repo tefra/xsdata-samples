@@ -27,7 +27,10 @@ class TdEventSwcInternalBehaviorTypeEnum:
         name = "TD-EVENT-SWC-INTERNAL-BEHAVIOR-TYPE-ENUM"
 
     value: Optional[TdEventSwcInternalBehaviorTypeEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

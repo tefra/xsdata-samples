@@ -26,7 +26,10 @@ class CanFrameRxBehaviorEnum:
         name = "CAN-FRAME-RX-BEHAVIOR-ENUM"
 
     value: Optional[CanFrameRxBehaviorEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

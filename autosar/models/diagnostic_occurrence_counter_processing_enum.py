@@ -26,7 +26,10 @@ class DiagnosticOccurrenceCounterProcessingEnum:
         name = "DIAGNOSTIC-OCCURRENCE-COUNTER-PROCESSING-ENUM"
 
     value: Optional[DiagnosticOccurrenceCounterProcessingEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

@@ -185,6 +185,7 @@ class AdminEmail:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "pattern": r"[^@]+@[^.]+\..+",
         }
     )
@@ -203,7 +204,10 @@ class AdminNotes:
         namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
 
 
@@ -219,7 +223,10 @@ class OtherHeiId:
         target_namespace = "https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
 
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     type: Optional[OtherHeiIdValue] = field(
         default=None,
@@ -253,6 +260,7 @@ class HttpwithOptionalLang:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "pattern": r"https?://.+",
         }
     )
@@ -281,7 +289,10 @@ class MultilineStringWithOptionalLang:
         target_namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     lang: Optional[Union[str, LangValue]] = field(
         default=None,
@@ -315,7 +326,10 @@ class StringWithOptionalLang:
         target_namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     lang: Optional[Union[str, LangValue]] = field(
         default=None,
@@ -952,6 +966,7 @@ class Catalogue:
             value: Optional[bytes] = field(
                 default=None,
                 metadata={
+                    "required": True,
                     "format": "base64",
                 }
             )

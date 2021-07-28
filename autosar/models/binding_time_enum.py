@@ -27,7 +27,10 @@ class BindingTimeEnum:
         name = "BINDING-TIME-ENUM"
 
     value: Optional[BindingTimeEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

@@ -26,7 +26,10 @@ class StandardNameEnum:
         name = "STANDARD-NAME-ENUM"
 
     value: Optional[StandardNameEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

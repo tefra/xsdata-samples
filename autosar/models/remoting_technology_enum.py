@@ -26,7 +26,10 @@ class RemotingTechnologyEnum:
         name = "REMOTING-TECHNOLOGY-ENUM"
 
     value: Optional[RemotingTechnologyEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

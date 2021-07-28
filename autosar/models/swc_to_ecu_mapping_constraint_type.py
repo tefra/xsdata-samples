@@ -27,7 +27,10 @@ class SwcToEcuMappingConstraintType:
         name = "SWC-TO-ECU-MAPPING-CONSTRAINT-TYPE"
 
     value: Optional[SwcToEcuMappingConstraintTypeSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

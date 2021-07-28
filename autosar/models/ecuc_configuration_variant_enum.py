@@ -26,7 +26,10 @@ class EcucConfigurationVariantEnum:
         name = "ECUC-CONFIGURATION-VARIANT-ENUM"
 
     value: Optional[EcucConfigurationVariantEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

@@ -27,7 +27,10 @@ class SwVariableAccessImplPolicyEnum:
         name = "SW-VARIABLE-ACCESS-IMPL-POLICY-ENUM"
 
     value: Optional[SwVariableAccessImplPolicyEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

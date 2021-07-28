@@ -8,7 +8,10 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 @dataclass
 class InfoLinkStructure:
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     type_of_info_link: List[TypeOfInfolinkEnumeration] = field(
         default_factory=list,

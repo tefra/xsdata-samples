@@ -27,7 +27,10 @@ class TrustedPlatformExecutableLaunchBehaviorEnum:
         name = "TRUSTED-PLATFORM-EXECUTABLE-LAUNCH-BEHAVIOR-ENUM"
 
     value: Optional[TrustedPlatformExecutableLaunchBehaviorEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

@@ -31,7 +31,10 @@ class ExtIdClassEnum:
         name = "EXT-ID-CLASS-ENUM"
 
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

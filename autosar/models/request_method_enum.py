@@ -26,7 +26,10 @@ class RequestMethodEnum:
         name = "REQUEST-METHOD-ENUM"
 
     value: Optional[RequestMethodEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

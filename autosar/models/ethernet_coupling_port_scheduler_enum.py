@@ -26,7 +26,10 @@ class EthernetCouplingPortSchedulerEnum:
         name = "ETHERNET-COUPLING-PORT-SCHEDULER-ENUM"
 
     value: Optional[EthernetCouplingPortSchedulerEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

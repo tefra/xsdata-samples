@@ -26,7 +26,10 @@ class ChapterEnumBreak:
         name = "CHAPTER-ENUM-BREAK"
 
     value: Optional[ChapterEnumBreakSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

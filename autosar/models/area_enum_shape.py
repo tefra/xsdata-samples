@@ -26,7 +26,10 @@ class AreaEnumShape:
         name = "AREA-ENUM-SHAPE"
 
     value: Optional[AreaEnumShapeSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

@@ -12,7 +12,10 @@ class AttributedQnameType:
         name = "AttributedQNameType"
 
     value: Optional[QName] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     other_attributes: Dict[str, str] = field(
         default_factory=dict,
@@ -29,7 +32,10 @@ class AttributedUritype:
         name = "AttributedURIType"
 
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     other_attributes: Dict[str, str] = field(
         default_factory=dict,
@@ -43,7 +49,10 @@ class AttributedUritype:
 @dataclass
 class AttributedUnsignedLongType:
     value: Optional[int] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     other_attributes: Dict[str, str] = field(
         default_factory=dict,
@@ -150,7 +159,10 @@ class ReferenceParameters(ReferenceParametersType):
 @dataclass
 class RelatesToType:
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     relationship_type: Union[RelationshipType, str] = field(
         default=RelationshipType.HTTP_WWW_W3_ORG_2005_08_ADDRESSING_REPLY,

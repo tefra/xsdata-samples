@@ -24,7 +24,10 @@ class SoftwarePackageStoringEnum:
         name = "SOFTWARE-PACKAGE-STORING-ENUM"
 
     value: Optional[SoftwarePackageStoringEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

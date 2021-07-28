@@ -27,7 +27,10 @@ class DiagnosticResponseOnEventActionEnum:
         name = "DIAGNOSTIC-RESPONSE-ON-EVENT-ACTION-ENUM"
 
     value: Optional[DiagnosticResponseOnEventActionEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

@@ -236,7 +236,10 @@ class Suggestion:
         namespace = "urn:vpro:api:2013"
 
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
 
 
@@ -307,7 +310,10 @@ class ExtendedMatcherType:
         name = "extendedMatcherType"
 
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     fuzziness: Optional[str] = field(
         default=None,
@@ -343,7 +349,10 @@ class GeoLocationSearchType:
         name = "geoLocationSearchType"
 
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     owner: Optional[OwnerTypeEnum] = field(
         default=None,
@@ -391,7 +400,10 @@ class MediaSortType:
         name = "mediaSortType"
 
     value: Optional[MediaSortTypeEnum] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     order: Optional[OrderTypeEnum] = field(
         default=None,
@@ -407,7 +419,10 @@ class PageSortType:
         name = "pageSortType"
 
     value: Optional[PageSortTypeEnum] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     order: Optional[OrderTypeEnum] = field(
         default=None,
@@ -581,7 +596,10 @@ class SimpleMatcherType:
         name = "simpleMatcherType"
 
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     fuzziness: Optional[str] = field(
         default=None,
@@ -672,7 +690,10 @@ class TextMatcherType:
         name = "textMatcherType"
 
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     match_type: Optional[StandardMatchType] = field(
         default=None,
@@ -695,7 +716,10 @@ class TitleSearchType:
         name = "titleSearchType"
 
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     owner: Optional[OwnerTypeEnum] = field(
         default=None,

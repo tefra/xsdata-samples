@@ -27,7 +27,10 @@ class ItemLabelPosEnum:
         name = "ITEM-LABEL-POS-ENUM"
 
     value: Optional[ItemLabelPosEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

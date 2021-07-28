@@ -11,5 +11,8 @@ class AccessMode:
         namespace = "http://www.netex.org.uk/netex"
 
     value: Optional[AccessModeEnumeration] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )

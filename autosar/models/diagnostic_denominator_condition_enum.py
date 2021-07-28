@@ -26,7 +26,10 @@ class DiagnosticDenominatorConditionEnum:
         name = "DIAGNOSTIC-DENOMINATOR-CONDITION-ENUM"
 
     value: Optional[DiagnosticDenominatorConditionEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

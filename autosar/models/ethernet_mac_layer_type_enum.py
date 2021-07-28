@@ -26,7 +26,10 @@ class EthernetMacLayerTypeEnum:
         name = "ETHERNET-MAC-LAYER-TYPE-ENUM"
 
     value: Optional[EthernetMacLayerTypeEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

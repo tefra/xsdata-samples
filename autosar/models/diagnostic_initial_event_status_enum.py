@@ -27,7 +27,10 @@ class DiagnosticInitialEventStatusEnum:
         name = "DIAGNOSTIC-INITIAL-EVENT-STATUS-ENUM"
 
     value: Optional[DiagnosticInitialEventStatusEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,
