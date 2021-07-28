@@ -826,6 +826,7 @@ class ContinuityCheckOverride:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "min_length": 1,
             "white_space": "collapse",
         }
@@ -856,7 +857,10 @@ class CorporateDiscountId:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     negotiated_rate_code: Optional[bool] = field(
         default=None,
@@ -1018,7 +1022,10 @@ class CustomizedNameData:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     key: Optional[str] = field(
         default=None,
@@ -1252,6 +1259,7 @@ class GuaranteeType:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "max_length": 250,
         }
     )
@@ -1403,7 +1411,10 @@ class Mcoremark:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     additional_rmk: Optional[bool] = field(
         default=None,
@@ -1429,7 +1440,10 @@ class Mcotext:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     type: Optional[str] = field(
         default=None,
@@ -1741,6 +1755,7 @@ class NextResultReference:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "min_length": 1,
             "white_space": "collapse",
         }
@@ -1767,6 +1782,7 @@ class OperatedBy:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "min_length": 1,
             "white_space": "collapse",
         }
@@ -2347,6 +2363,7 @@ class PseudoCityCode:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "min_length": 2,
             "max_length": 10,
         }
@@ -2402,6 +2419,7 @@ class ReferencePoint:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "max_length": 30,
         }
     )
@@ -2439,7 +2457,10 @@ class Remark:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     key: Optional[str] = field(
         default=None,
@@ -2605,7 +2626,10 @@ class SegmentRemark:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     key: Optional[str] = field(
         default=None,
@@ -2628,7 +2652,10 @@ class SellMessage:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
 
 
@@ -2864,7 +2891,10 @@ class SimpleName:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
 
 
@@ -2877,7 +2907,10 @@ class State:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
 
 
@@ -2970,7 +3003,10 @@ class TerminalSessionInfo:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
 
 
@@ -2985,6 +3021,7 @@ class TicketNumber:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "min_length": 1,
             "max_length": 13,
         }
@@ -3967,7 +4004,10 @@ class TypeRemark:
         name = "typeRemark"
 
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     provider_reservation_info_ref: Optional[str] = field(
         default=None,
@@ -5846,7 +5886,10 @@ class FormattedTextTextType:
         e.g. unformatted  or html.
     """
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     formatted: Optional[bool] = field(
         default=None,
@@ -6042,7 +6085,10 @@ class HostToken:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     host: Optional[str] = field(
         default=None,
@@ -6520,7 +6566,10 @@ class OtherGuaranteeInfo:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     type: Optional[OtherGuaranteeInfoType] = field(
         default=None,
@@ -7305,7 +7354,10 @@ class ResponseMessage:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     code: Optional[int] = field(
         default=None,
@@ -8352,7 +8404,10 @@ class Xmlremark:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     key: Optional[str] = field(
         default=None,
@@ -8989,7 +9044,10 @@ class TypeResultMessage:
         name = "typeResultMessage"
 
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     code: Optional[int] = field(
         default=None,

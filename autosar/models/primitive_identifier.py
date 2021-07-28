@@ -30,6 +30,7 @@ class PrimitiveIdentifier:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "max_length": 128,
             "pattern": r"[a-zA-Z]([a-zA-Z0-9]|_[a-zA-Z0-9])*_?",
         }

@@ -27,7 +27,10 @@ class SomeipMessageTypeEnum:
         name = "SOMEIP-MESSAGE-TYPE-ENUM"
 
     value: Optional[SomeipMessageTypeEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

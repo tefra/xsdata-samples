@@ -27,7 +27,10 @@ class EventAcceptanceStatusEnum:
         name = "EVENT-ACCEPTANCE-STATUS-ENUM"
 
     value: Optional[EventAcceptanceStatusEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

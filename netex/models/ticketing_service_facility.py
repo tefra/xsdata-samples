@@ -11,5 +11,8 @@ class TicketingServiceFacility:
         namespace = "http://www.netex.org.uk/netex"
 
     value: Optional[TicketingServiceFacilityEnumeration] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )

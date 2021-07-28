@@ -27,7 +27,10 @@ class TimeValue:
         name = "TIME-VALUE"
 
     value: Optional[float] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

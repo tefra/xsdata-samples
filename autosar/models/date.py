@@ -33,6 +33,7 @@ class Date:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         }
     )

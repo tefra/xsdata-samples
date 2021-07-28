@@ -26,7 +26,10 @@ class BaseTypeEncodingString:
         name = "BASE-TYPE-ENCODING-STRING"
 
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

@@ -27,7 +27,10 @@ class PersistencyRedundancyEnum:
         name = "PERSISTENCY-REDUNDANCY-ENUM"
 
     value: Optional[PersistencyRedundancyEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

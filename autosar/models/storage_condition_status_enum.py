@@ -27,7 +27,10 @@ class StorageConditionStatusEnum:
         name = "STORAGE-CONDITION-STATUS-ENUM"
 
     value: Optional[StorageConditionStatusEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

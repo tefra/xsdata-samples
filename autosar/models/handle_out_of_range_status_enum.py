@@ -26,7 +26,10 @@ class HandleOutOfRangeStatusEnum:
         name = "HANDLE-OUT-OF-RANGE-STATUS-ENUM"
 
     value: Optional[HandleOutOfRangeStatusEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

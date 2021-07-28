@@ -26,7 +26,10 @@ class DiagnosticTypeOfDtcSupportedEnum:
         name = "DIAGNOSTIC-TYPE-OF-DTC-SUPPORTED-ENUM"
 
     value: Optional[DiagnosticTypeOfDtcSupportedEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

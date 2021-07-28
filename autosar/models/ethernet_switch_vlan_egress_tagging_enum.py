@@ -26,7 +26,10 @@ class EthernetSwitchVlanEgressTaggingEnum:
         name = "ETHERNET-SWITCH-VLAN-EGRESS-TAGGING-ENUM"
 
     value: Optional[EthernetSwitchVlanEgressTaggingEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

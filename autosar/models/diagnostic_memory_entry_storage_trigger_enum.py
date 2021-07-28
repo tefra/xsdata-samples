@@ -26,7 +26,10 @@ class DiagnosticMemoryEntryStorageTriggerEnum:
         name = "DIAGNOSTIC-MEMORY-ENTRY-STORAGE-TRIGGER-ENUM"
 
     value: Optional[DiagnosticMemoryEntryStorageTriggerEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

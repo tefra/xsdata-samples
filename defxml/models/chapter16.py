@@ -15,7 +15,10 @@ class ColorType:
 @dataclass
 class HatSizeType:
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     system: Optional[str] = field(
         default=None,
@@ -48,7 +51,10 @@ class ProductType:
 @dataclass
 class ShirtSizeType:
     value: Optional[int] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     system: Optional[str] = field(
         default=None,
@@ -68,6 +74,7 @@ class Umbrella:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
+            "required": True,
         }
     )
 

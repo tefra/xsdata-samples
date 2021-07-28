@@ -30,7 +30,10 @@ class CompanyNameType:
             such as DUNS, IATA or internal code, etc.
     """
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     company_short_name: Optional[str] = field(
         default=None,
@@ -84,7 +87,10 @@ class EquipmentType:
         changeof_gauge: Indicates there is an equipment change.
     """
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     air_equip_type: Optional[str] = field(
         default=None,

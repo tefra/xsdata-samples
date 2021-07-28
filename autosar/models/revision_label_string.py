@@ -35,6 +35,7 @@ class RevisionLabelString:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "pattern": r"[0-9]+\.[0-9]+\.[0-9]+([\._;].*)?",
         }
     )

@@ -9,7 +9,10 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 @dataclass
 class AllTransportOrganisationsRefStructure:
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     name_of_ref_class: Optional[str] = field(
         default=None,

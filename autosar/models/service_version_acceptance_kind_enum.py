@@ -26,7 +26,10 @@ class ServiceVersionAcceptanceKindEnum:
         name = "SERVICE-VERSION-ACCEPTANCE-KIND-ENUM"
 
     value: Optional[ServiceVersionAcceptanceKindEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

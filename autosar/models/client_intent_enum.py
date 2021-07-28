@@ -27,7 +27,10 @@ class ClientIntentEnum:
         name = "CLIENT-INTENT-ENUM"
 
     value: Optional[ClientIntentEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

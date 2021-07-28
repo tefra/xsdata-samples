@@ -26,7 +26,10 @@ class DiagnosticAudienceEnum:
         name = "DIAGNOSTIC-AUDIENCE-ENUM"
 
     value: Optional[DiagnosticAudienceEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

@@ -26,7 +26,10 @@ class TdEventIPduTypeEnum:
         name = "TD-EVENT-I-PDU-TYPE-ENUM"
 
     value: Optional[TdEventIPduTypeEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

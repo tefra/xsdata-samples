@@ -27,7 +27,10 @@ class DiagnosticDynamicallyDefineDataIdentifierSubfunctionEnum:
         name = "DIAGNOSTIC-DYNAMICALLY-DEFINE-DATA-IDENTIFIER-SUBFUNCTION-ENUM"
 
     value: Optional[DiagnosticDynamicallyDefineDataIdentifierSubfunctionEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

@@ -27,7 +27,10 @@ class TerminationBehaviorEnum:
         name = "TERMINATION-BEHAVIOR-ENUM"
 
     value: Optional[TerminationBehaviorEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

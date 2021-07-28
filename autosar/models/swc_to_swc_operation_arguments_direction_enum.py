@@ -26,7 +26,10 @@ class SwcToSwcOperationArgumentsDirectionEnum:
         name = "SWC-TO-SWC-OPERATION-ARGUMENTS-DIRECTION-ENUM"
 
     value: Optional[SwcToSwcOperationArgumentsDirectionEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

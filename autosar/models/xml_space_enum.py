@@ -26,7 +26,10 @@ class XmlSpaceEnum:
         name = "XML-SPACE-ENUM"
 
     value: Optional[XmlSpaceEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

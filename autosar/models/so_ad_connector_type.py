@@ -27,7 +27,10 @@ class SoAdConnectorType:
         name = "SO-AD-CONNECTOR-TYPE"
 
     value: Optional[SoAdConnectorTypeSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

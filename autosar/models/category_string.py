@@ -29,6 +29,7 @@ class CategoryString:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "pattern": r"[a-zA-Z][a-zA-Z0-9_]*",
         }
     )

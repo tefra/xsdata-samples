@@ -26,7 +26,10 @@ class RegularExpression:
         name = "REGULAR-EXPRESSION"
 
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

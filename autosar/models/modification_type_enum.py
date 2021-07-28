@@ -27,7 +27,10 @@ class ModificationTypeEnum:
         name = "MODIFICATION-TYPE-ENUM"
 
     value: Optional[ModificationTypeEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

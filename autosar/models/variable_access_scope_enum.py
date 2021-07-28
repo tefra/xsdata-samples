@@ -26,7 +26,10 @@ class VariableAccessScopeEnum:
         name = "VARIABLE-ACCESS-SCOPE-ENUM"
 
     value: Optional[VariableAccessScopeEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

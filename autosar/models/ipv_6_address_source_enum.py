@@ -26,7 +26,10 @@ class Ipv6AddressSourceEnum:
         name = "IPV-6-ADDRESS-SOURCE-ENUM"
 
     value: Optional[Ipv6AddressSourceEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

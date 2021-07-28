@@ -27,7 +27,10 @@ class ServerArgumentImplPolicyEnum:
         name = "SERVER-ARGUMENT-IMPL-POLICY-ENUM"
 
     value: Optional[ServerArgumentImplPolicyEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

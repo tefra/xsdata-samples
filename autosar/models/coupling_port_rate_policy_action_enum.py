@@ -26,7 +26,10 @@ class CouplingPortRatePolicyActionEnum:
         name = "COUPLING-PORT-RATE-POLICY-ACTION-ENUM"
 
     value: Optional[CouplingPortRatePolicyActionEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

@@ -26,7 +26,10 @@ class ContainerIPduTriggerEnum:
         name = "CONTAINER-I-PDU-TRIGGER-ENUM"
 
     value: Optional[ContainerIPduTriggerEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

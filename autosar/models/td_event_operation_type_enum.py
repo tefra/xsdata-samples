@@ -26,7 +26,10 @@ class TdEventOperationTypeEnum:
         name = "TD-EVENT-OPERATION-TYPE-ENUM"
 
     value: Optional[TdEventOperationTypeEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

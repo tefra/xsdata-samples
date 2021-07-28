@@ -289,6 +289,7 @@ class CountryNameType:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "min_length": 0,
             "max_length": 64,
         }
@@ -1136,7 +1137,10 @@ class RequestLocationType:
             such as IATA, ARC, or internal code, etc.
     """
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     location_code: Optional[str] = field(
         default=None,
@@ -1369,6 +1373,7 @@ class StateProvType:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "min_length": 0,
             "max_length": 64,
         }
@@ -1396,6 +1401,7 @@ class StreetNmbrType:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "min_length": 0,
             "max_length": 64,
         }
@@ -2749,6 +2755,7 @@ class EmailType:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "min_length": 1,
             "max_length": 128,
         }
@@ -4904,6 +4911,7 @@ class TicketDistribPrefType:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "min_length": 0,
             "max_length": 64,
         }
@@ -8381,7 +8389,10 @@ class TransactionType:
     @dataclass
     class RequestType:
         value: Optional[str] = field(
-            default=None
+            default=None,
+            metadata={
+                "required": True,
+            }
         )
         name: Optional[str] = field(
             default=None,
@@ -8394,7 +8405,10 @@ class TransactionType:
     @dataclass
     class ServiceTag:
         value: Optional[str] = field(
-            default=None
+            default=None,
+            metadata={
+                "required": True,
+            }
         )
         name: Optional[str] = field(
             default=None,

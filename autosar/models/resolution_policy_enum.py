@@ -27,7 +27,10 @@ class ResolutionPolicyEnum:
         name = "RESOLUTION-POLICY-ENUM"
 
     value: Optional[ResolutionPolicyEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

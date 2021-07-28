@@ -27,7 +27,10 @@ class ShowResourceTypeEnum:
         name = "SHOW-RESOURCE-TYPE-ENUM"
 
     value: Optional[ShowResourceTypeEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

@@ -27,7 +27,10 @@ class TlsVersionEnum:
         name = "TLS-VERSION-ENUM"
 
     value: Optional[TlsVersionEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

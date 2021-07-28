@@ -26,7 +26,10 @@ class LogTraceLogModeEnum:
         name = "LOG-TRACE-LOG-MODE-ENUM"
 
     value: Optional[LogTraceLogModeEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

@@ -41,7 +41,10 @@ class AirFeeType:
             standard "minor unit".
     """
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     fee_code: Optional[str] = field(
         default=None,
@@ -124,7 +127,10 @@ class AirTaxType:
         published_currency:
     """
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     tax_code: Optional[str] = field(
         default=None,
@@ -526,7 +532,10 @@ class FreeTextType:
         language: Language identification.
     """
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     language: Optional[str] = field(
         default=None,
@@ -969,7 +978,10 @@ class ResponseLocationType:
             such as IATA, ARC, or internal code, etc.
     """
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     location_code: Optional[str] = field(
         default=None,
@@ -1003,7 +1015,10 @@ class SuccessType:
 @dataclass
 class SurchargesType:
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     ind: Optional[str] = field(
         default=None,
@@ -3831,6 +3846,7 @@ class PtcfareBreakdownType:
             value: Optional[str] = field(
                 default=None,
                 metadata={
+                    "required": True,
                     "min_length": 1,
                     "max_length": 16,
                 }
@@ -3997,7 +4013,10 @@ class PtcfareBreakdownType:
         @dataclass
         class FareType:
             value: Optional[str] = field(
-                default=None
+                default=None,
+                metadata={
+                    "required": True,
+                }
             )
             name: Optional[str] = field(
                 default=None,

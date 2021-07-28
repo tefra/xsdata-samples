@@ -26,7 +26,10 @@ class TdEventISignalTypeEnum:
         name = "TD-EVENT-I-SIGNAL-TYPE-ENUM"
 
     value: Optional[TdEventISignalTypeEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

@@ -24,7 +24,10 @@ class SecurityEventContextDataSourceEnum:
         name = "SECURITY-EVENT-CONTEXT-DATA-SOURCE-ENUM"
 
     value: Optional[SecurityEventContextDataSourceEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

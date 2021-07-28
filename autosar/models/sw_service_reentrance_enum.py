@@ -26,7 +26,10 @@ class SwServiceReentranceEnum:
         name = "SW-SERVICE-REENTRANCE-ENUM"
 
     value: Optional[SwServiceReentranceEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

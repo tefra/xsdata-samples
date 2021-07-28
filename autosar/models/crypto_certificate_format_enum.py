@@ -26,7 +26,10 @@ class CryptoCertificateFormatEnum:
         name = "CRYPTO-CERTIFICATE-FORMAT-ENUM"
 
     value: Optional[CryptoCertificateFormatEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

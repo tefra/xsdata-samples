@@ -32,7 +32,10 @@ class AsamRecordLayoutSemantics:
         name = "ASAM-RECORD-LAYOUT-SEMANTICS"
 
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

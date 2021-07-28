@@ -27,7 +27,10 @@ class ReportBehaviorEnum:
         name = "REPORT-BEHAVIOR-ENUM"
 
     value: Optional[ReportBehaviorEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

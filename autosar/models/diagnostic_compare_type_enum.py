@@ -27,7 +27,10 @@ class DiagnosticCompareTypeEnum:
         name = "DIAGNOSTIC-COMPARE-TYPE-ENUM"
 
     value: Optional[DiagnosticCompareTypeEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

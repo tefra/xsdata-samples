@@ -26,7 +26,10 @@ class OrientEnum:
         name = "ORIENT-ENUM"
 
     value: Optional[OrientEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

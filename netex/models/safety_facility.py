@@ -11,5 +11,8 @@ class SafetyFacility:
         namespace = "http://www.netex.org.uk/netex"
 
     value: Optional[SafetyFacilityEnumeration] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )

@@ -27,7 +27,10 @@ class RuntimeAddressConfigurationEnum:
         name = "RUNTIME-ADDRESS-CONFIGURATION-ENUM"
 
     value: Optional[RuntimeAddressConfigurationEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

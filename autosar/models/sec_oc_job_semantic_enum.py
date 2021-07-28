@@ -26,7 +26,10 @@ class SecOcJobSemanticEnum:
         name = "SEC-OC-JOB-SEMANTIC-ENUM"
 
     value: Optional[SecOcJobSemanticEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

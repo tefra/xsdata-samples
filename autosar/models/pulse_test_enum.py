@@ -28,7 +28,10 @@ class PulseTestEnum:
         name = "PULSE-TEST-ENUM"
 
     value: Optional[PulseTestEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

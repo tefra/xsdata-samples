@@ -27,7 +27,10 @@ class HttpAcceptEncodingEnum:
         name = "HTTP-ACCEPT-ENCODING-ENUM"
 
     value: Optional[HttpAcceptEncodingEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

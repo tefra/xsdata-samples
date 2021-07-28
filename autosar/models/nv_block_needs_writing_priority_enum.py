@@ -27,7 +27,10 @@ class NvBlockNeedsWritingPriorityEnum:
         name = "NV-BLOCK-NEEDS-WRITING-PRIORITY-ENUM"
 
     value: Optional[NvBlockNeedsWritingPriorityEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

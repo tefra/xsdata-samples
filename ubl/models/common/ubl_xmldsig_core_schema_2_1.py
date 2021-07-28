@@ -123,6 +123,7 @@ class DigestValue:
     value: Optional[bytes] = field(
         default=None,
         metadata={
+            "required": True,
             "format": "base64",
         }
     )
@@ -134,7 +135,10 @@ class KeyName:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
 
 
@@ -144,7 +148,10 @@ class MgmtData:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
     value: Optional[str] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
 
 
@@ -326,6 +333,7 @@ class SignatureValueType:
     value: Optional[bytes] = field(
         default=None,
         metadata={
+            "required": True,
             "format": "base64",
         }
     )

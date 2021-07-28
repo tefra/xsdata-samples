@@ -27,7 +27,10 @@ class DiagnosticMonitorUpdateKindEnum:
         name = "DIAGNOSTIC-MONITOR-UPDATE-KIND-ENUM"
 
     value: Optional[DiagnosticMonitorUpdateKindEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

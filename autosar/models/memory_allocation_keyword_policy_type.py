@@ -26,7 +26,10 @@ class MemoryAllocationKeywordPolicyType:
         name = "MEMORY-ALLOCATION-KEYWORD-POLICY-TYPE"
 
     value: Optional[MemoryAllocationKeywordPolicyTypeSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

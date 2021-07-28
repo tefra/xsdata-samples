@@ -27,7 +27,10 @@ class BswExecutionContext:
         name = "BSW-EXECUTION-CONTEXT"
 
     value: Optional[BswExecutionContextSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

@@ -27,7 +27,10 @@ class LogTraceDefaultLogLevelEnum:
         name = "LOG-TRACE-DEFAULT-LOG-LEVEL-ENUM"
 
     value: Optional[LogTraceDefaultLogLevelEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

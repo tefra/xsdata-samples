@@ -26,7 +26,10 @@ class PncGatewayTypeEnum:
         name = "PNC-GATEWAY-TYPE-ENUM"
 
     value: Optional[PncGatewayTypeEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

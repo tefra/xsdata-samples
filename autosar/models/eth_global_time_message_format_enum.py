@@ -27,7 +27,10 @@ class EthGlobalTimeMessageFormatEnum:
         name = "ETH-GLOBAL-TIME-MESSAGE-FORMAT-ENUM"
 
     value: Optional[EthGlobalTimeMessageFormatEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

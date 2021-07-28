@@ -27,7 +27,10 @@ class DiagnosticValueAccessEnum:
         name = "DIAGNOSTIC-VALUE-ACCESS-ENUM"
 
     value: Optional[DiagnosticValueAccessEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

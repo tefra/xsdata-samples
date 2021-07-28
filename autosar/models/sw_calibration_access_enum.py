@@ -27,7 +27,10 @@ class SwCalibrationAccessEnum:
         name = "SW-CALIBRATION-ACCESS-ENUM"
 
     value: Optional[SwCalibrationAccessEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

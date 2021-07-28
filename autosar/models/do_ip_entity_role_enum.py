@@ -26,7 +26,10 @@ class DoIpEntityRoleEnum:
         name = "DO-IP-ENTITY-ROLE-ENUM"
 
     value: Optional[DoIpEntityRoleEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

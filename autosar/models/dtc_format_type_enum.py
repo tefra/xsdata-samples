@@ -26,7 +26,10 @@ class DtcFormatTypeEnum:
         name = "DTC-FORMAT-TYPE-ENUM"
 
     value: Optional[DtcFormatTypeEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

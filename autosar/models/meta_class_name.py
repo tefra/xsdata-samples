@@ -27,6 +27,7 @@ class MetaClassName:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "pattern": r"[A-Z][a-zA-Z0-9_]*",
         }
     )

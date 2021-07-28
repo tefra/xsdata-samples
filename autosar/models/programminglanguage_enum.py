@@ -26,7 +26,10 @@ class ProgramminglanguageEnum:
         name = "PROGRAMMINGLANGUAGE-ENUM"
 
     value: Optional[ProgramminglanguageEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

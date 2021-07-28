@@ -33,6 +33,7 @@ class NormalizedInstruction:
     value: Optional[str] = field(
         default=None,
         metadata={
+            "required": True,
             "pattern": r"[1-9][0-9]*",
         }
     )

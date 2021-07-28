@@ -27,7 +27,10 @@ class DataLimitKindEnum:
         name = "DATA-LIMIT-KIND-ENUM"
 
     value: Optional[DataLimitKindEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

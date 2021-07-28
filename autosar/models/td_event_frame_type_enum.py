@@ -26,7 +26,10 @@ class TdEventFrameTypeEnum:
         name = "TD-EVENT-FRAME-TYPE-ENUM"
 
     value: Optional[TdEventFrameTypeEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

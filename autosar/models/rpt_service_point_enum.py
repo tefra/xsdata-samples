@@ -27,7 +27,10 @@ class RptServicePointEnum:
         name = "RPT-SERVICE-POINT-ENUM"
 
     value: Optional[RptServicePointEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

@@ -24,7 +24,10 @@ class DiagnosticResponseToEcuResetEnum:
         name = "DIAGNOSTIC-RESPONSE-TO-ECU-RESET-ENUM"
 
     value: Optional[DiagnosticResponseToEcuResetEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,

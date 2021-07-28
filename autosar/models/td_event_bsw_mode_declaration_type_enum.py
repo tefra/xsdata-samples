@@ -27,7 +27,10 @@ class TdEventBswModeDeclarationTypeEnum:
         name = "TD-EVENT-BSW-MODE-DECLARATION-TYPE-ENUM"
 
     value: Optional[TdEventBswModeDeclarationTypeEnumSimple] = field(
-        default=None
+        default=None,
+        metadata={
+            "required": True,
+        }
     )
     s: Optional[str] = field(
         default=None,
