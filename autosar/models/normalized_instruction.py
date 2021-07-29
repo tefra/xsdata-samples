@@ -30,8 +30,8 @@ class NormalizedInstruction:
     class Meta:
         name = "NORMALIZED-INSTRUCTION"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "pattern": r"[1-9][0-9]*",

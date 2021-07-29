@@ -28,8 +28,8 @@ class RecordLayoutIteratorPoint:
     class Meta:
         name = "RECORD-LAYOUT-ITERATOR-POINT"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "pattern": r"-?([0-9]+|MAX-TEXT-SIZE|ARRAY-SIZE)",

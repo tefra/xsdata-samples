@@ -40,8 +40,8 @@ class AirFeeType:
             particular currency. This is equivalent to the ISO 4217
             standard "minor unit".
     """
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -126,8 +126,8 @@ class AirTaxType:
         published_amount:
         published_currency:
     """
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -531,8 +531,8 @@ class FreeTextType:
         value:
         language: Language identification.
     """
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -977,8 +977,8 @@ class ResponseLocationType:
         code_context: Identifies the context of the identifying code,
             such as IATA, ARC, or internal code, etc.
     """
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -1014,8 +1014,8 @@ class SuccessType:
 
 @dataclass
 class SurchargesType:
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -1232,7 +1232,6 @@ class AirlineLowestFaresType:
             "name": "ItineraryCount",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
 
@@ -3843,8 +3842,8 @@ class PtcfareBreakdownType:
                     destination.
                 gov_carrier: Governing carrier
             """
-            value: Optional[str] = field(
-                default=None,
+            value: str = field(
+                default="",
                 metadata={
                     "required": True,
                     "min_length": 1,
@@ -4012,8 +4011,8 @@ class PtcfareBreakdownType:
 
         @dataclass
         class FareType:
-            value: Optional[str] = field(
-                default=None,
+            value: str = field(
+                default="",
                 metadata={
                     "required": True,
                 }

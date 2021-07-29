@@ -26,8 +26,8 @@ class NativeDeclarationString:
     class Meta:
         name = "NATIVE-DECLARATION-STRING"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "white_space": "preserve",

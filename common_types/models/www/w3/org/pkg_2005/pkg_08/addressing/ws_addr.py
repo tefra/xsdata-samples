@@ -31,8 +31,8 @@ class AttributedUritype:
     class Meta:
         name = "AttributedURIType"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -158,8 +158,8 @@ class ReferenceParameters(ReferenceParametersType):
 
 @dataclass
 class RelatesToType:
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }

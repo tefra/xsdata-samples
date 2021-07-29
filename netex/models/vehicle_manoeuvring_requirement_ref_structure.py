@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class VehicleManoeuvringRequirementRefStructure:
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }

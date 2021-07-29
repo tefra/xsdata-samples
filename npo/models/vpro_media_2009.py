@@ -734,8 +734,8 @@ class CountryType:
     class Meta:
         name = "countryType"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -847,8 +847,8 @@ class LanguageType:
     class Meta:
         name = "languageType"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -923,8 +923,8 @@ class OrganizationType:
     class Meta:
         name = "organizationType"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -950,8 +950,8 @@ class PortalRestrictionType:
     class Meta:
         name = "portalRestrictionType"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -1006,8 +1006,8 @@ class RelationType:
     class Meta:
         name = "relationType"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -1047,8 +1047,8 @@ class RepeatType:
     class Meta:
         name = "repeatType"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -1185,8 +1185,8 @@ class DescriptionType:
     class Meta:
         name = "descriptionType"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -1255,8 +1255,8 @@ class GeoRestrictionType:
     class Meta:
         name = "geoRestrictionType"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -1430,8 +1430,8 @@ class PredictionType:
     class Meta:
         name = "predictionType"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -1519,8 +1519,8 @@ class ScheduleEventDescription:
     class Meta:
         name = "scheduleEventDescription"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -1546,8 +1546,8 @@ class ScheduleEventTitle:
     class Meta:
         name = "scheduleEventTitle"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -1595,8 +1595,8 @@ class TagType:
     class Meta:
         name = "tagType"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -1636,8 +1636,8 @@ class TitleType:
     class Meta:
         name = "titleType"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -1699,8 +1699,8 @@ class TwitterType:
     class Meta:
         name = "twitterType"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }

@@ -286,8 +286,8 @@ class CountryNameType:
         value:
         code: ISO 3166 code for a country.
     """
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "min_length": 0,
@@ -1136,8 +1136,8 @@ class RequestLocationType:
         code_context: Identifies the context of the identifying code,
             such as IATA, ARC, or internal code, etc.
     """
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -1370,8 +1370,8 @@ class StateProvType:
         state_code: The postal service standard code or abbreviation for
             the state, province, or region.
     """
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "min_length": 0,
@@ -1398,8 +1398,8 @@ class StreetNmbrType:
         value:
         po_box: Defines a Post Office Box number.
     """
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "min_length": 0,
@@ -2752,8 +2752,8 @@ class EmailType:
             personal, business, listserve). Refer to OTA Code List Email
             Address Type (EAT).
     """
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "min_length": 1,
@@ -4908,8 +4908,8 @@ class TicketDistribPrefType:
         ticket_time: Ticket turnaround time desired, amount of time
             requested to deliver tickets.
     """
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "min_length": 0,
@@ -8388,8 +8388,8 @@ class TransactionType:
 
     @dataclass
     class RequestType:
-        value: Optional[str] = field(
-            default=None,
+        value: str = field(
+            default="",
             metadata={
                 "required": True,
             }
@@ -8404,8 +8404,8 @@ class TransactionType:
 
     @dataclass
     class ServiceTag:
-        value: Optional[str] = field(
-            default=None,
+        value: str = field(
+            default="",
             metadata={
                 "required": True,
             }

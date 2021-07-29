@@ -235,8 +235,8 @@ class Suggestion:
         name = "suggestion"
         namespace = "urn:vpro:api:2013"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -309,8 +309,8 @@ class ExtendedMatcherType:
     class Meta:
         name = "extendedMatcherType"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -348,8 +348,8 @@ class GeoLocationSearchType:
     class Meta:
         name = "geoLocationSearchType"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -595,8 +595,8 @@ class SimpleMatcherType:
     class Meta:
         name = "simpleMatcherType"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -689,8 +689,8 @@ class TextMatcherType:
     class Meta:
         name = "textMatcherType"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -715,8 +715,8 @@ class TitleSearchType:
     class Meta:
         name = "titleSearchType"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }

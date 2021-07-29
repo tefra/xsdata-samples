@@ -134,8 +134,8 @@ class KeyName:
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -147,8 +147,8 @@ class MgmtData:
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }

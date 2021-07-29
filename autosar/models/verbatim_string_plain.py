@@ -29,8 +29,8 @@ class VerbatimStringPlain:
     class Meta:
         name = "VERBATIM-STRING-PLAIN"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "white_space": "preserve",

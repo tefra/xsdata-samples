@@ -71,8 +71,8 @@ class FulFillmentType:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "min_length": 0,
             "max_length": 255,
@@ -88,8 +88,8 @@ class JourneyRemark:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -118,8 +118,8 @@ class OperatingCompany:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -728,8 +728,8 @@ class TicketAdvisory:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "min_length": 1,
@@ -991,8 +991,8 @@ class RailFareId:
         name = "RailFareID"
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -1050,8 +1050,8 @@ class RailFareNote:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -1288,8 +1288,8 @@ class RailSegmentInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }

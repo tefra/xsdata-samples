@@ -27,8 +27,8 @@ class TableSeparatorString:
     class Meta:
         name = "TABLE-SEPARATOR-STRING"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "pattern": r"[0-1]",

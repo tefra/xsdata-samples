@@ -24,8 +24,8 @@ class DiagRequirementIdString:
     class Meta:
         name = "DIAG-REQUIREMENT-ID-STRING"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "pattern": r"[0-9a-zA-Z_\-]+",

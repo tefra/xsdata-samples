@@ -27,8 +27,8 @@ class PrimitiveIdentifier:
     class Meta:
         name = "PRIMITIVE-IDENTIFIER"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "max_length": 128,

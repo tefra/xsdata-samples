@@ -29,8 +29,8 @@ class CompanyNameType:
         code_context: Identifies the context of the identifying code,
             such as DUNS, IATA or internal code, etc.
     """
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -86,8 +86,8 @@ class EquipmentType:
         air_equip_type: This is the 3 character IATA code.
         changeof_gauge: Indicates there is an equipment change.
     """
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }

@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class RouteInstructionRefStructure:
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }

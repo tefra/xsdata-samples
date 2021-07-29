@@ -26,8 +26,8 @@ class PositiveInteger:
     class Meta:
         name = "POSITIVE-INTEGER"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "pattern": r"0|[\+]?[1-9][0-9]*|0[xX][0-9a-fA-F]+|0[bB][0-1]+|0[0-7]+",

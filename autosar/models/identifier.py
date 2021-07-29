@@ -36,8 +36,8 @@ class Identifier:
     class Meta:
         name = "IDENTIFIER"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "max_length": 128,

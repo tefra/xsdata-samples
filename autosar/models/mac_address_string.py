@@ -26,8 +26,8 @@ class MacAddressString:
     class Meta:
         name = "MAC-ADDRESS-STRING"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "pattern": r"([0-9a-fA-F]{2}:){5}[0-9a-fA-F]{2}",

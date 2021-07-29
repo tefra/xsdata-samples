@@ -25,8 +25,8 @@ class UriString:
     class Meta:
         name = "URI-STRING"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
