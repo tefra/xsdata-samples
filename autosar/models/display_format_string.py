@@ -39,8 +39,8 @@ class DisplayFormatString:
     class Meta:
         name = "DISPLAY-FORMAT-STRING"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "pattern": r"%[ \-+#]?[0-9]*(\.[0-9]+)?[diouxXfeEgGcs]",

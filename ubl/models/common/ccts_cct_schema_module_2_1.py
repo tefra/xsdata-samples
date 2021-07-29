@@ -81,8 +81,8 @@ class BinaryObjectType:
 
 @dataclass(frozen=True)
 class CodeType:
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -153,8 +153,8 @@ class CodeType:
 
 @dataclass(frozen=True)
 class DateTimeType:
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -169,8 +169,8 @@ class DateTimeType:
 
 @dataclass(frozen=True)
 class IdentifierType:
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -228,8 +228,8 @@ class IdentifierType:
 
 @dataclass(frozen=True)
 class IndicatorType:
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -322,8 +322,8 @@ class QuantityType:
 
 @dataclass(frozen=True)
 class TextType:
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }

@@ -27,8 +27,8 @@ class AnyServiceInstanceId:
     class Meta:
         name = "ANY-SERVICE-INSTANCE-ID"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "pattern": r"[1-9][0-9]*|0[xX][0-9a-fA-F]+|0[0-7]*|0[bB][0-1]+|ANY|ALL",

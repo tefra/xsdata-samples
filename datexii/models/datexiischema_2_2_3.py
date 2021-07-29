@@ -2566,8 +2566,8 @@ class MonthOfYearEnum(Enum):
 
 @dataclass
 class MultilingualStringValue:
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "max_length": 1024,

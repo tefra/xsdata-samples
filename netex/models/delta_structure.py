@@ -66,8 +66,8 @@ class DeltaStructure:
 
     @dataclass
     class FromVersionRef:
-        value: Optional[str] = field(
-            default=None,
+        value: str = field(
+            default="",
             metadata={
                 "required": True,
             }
@@ -82,8 +82,8 @@ class DeltaStructure:
 
     @dataclass
     class ToVersionRef:
-        value: Optional[str] = field(
-            default=None,
+        value: str = field(
+            default="",
             metadata={
                 "required": True,
             }

@@ -14,8 +14,8 @@ class ColorType:
 
 @dataclass
 class HatSizeType:
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -74,7 +74,6 @@ class Umbrella:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-            "required": True,
         }
     )
 

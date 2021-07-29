@@ -7,8 +7,8 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class NaturalLanguagePlaceNameStructure:
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "min_length": 1,

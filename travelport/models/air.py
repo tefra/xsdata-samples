@@ -485,8 +485,8 @@ class AddlBookingCodeInformation:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "min_length": 1,
@@ -567,8 +567,8 @@ class AirFareDisplayRuleKey:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "min_length": 1,
@@ -679,8 +679,8 @@ class AirReservationLocatorCode:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "min_length": 5,
@@ -969,8 +969,8 @@ class BookingRulesFareReference:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -1184,8 +1184,8 @@ class CarrierCode:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "length": 2,
@@ -1234,8 +1234,8 @@ class CodeshareInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -1578,8 +1578,8 @@ class Emdendorsement:
         name = "EMDEndorsement"
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "min_length": 1,
             "max_length": 255,
@@ -1969,8 +1969,8 @@ class FareCalc:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -2001,8 +2001,8 @@ class FareInfoMessage:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -2043,8 +2043,8 @@ class FareMileageInformation:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -2285,8 +2285,8 @@ class FareRoutingInformation:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -2349,8 +2349,8 @@ class FareRuleKey:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "min_length": 1,
@@ -2385,8 +2385,8 @@ class FareRuleLong:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -2586,8 +2586,8 @@ class FeeApplication:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -2941,8 +2941,8 @@ class ImageLocation:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -2989,8 +2989,8 @@ class InFlightServices:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -3898,8 +3898,8 @@ class OptionalServiceRef:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -3915,8 +3915,8 @@ class OverrideCode:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "length": 4,
         }
@@ -3950,8 +3950,8 @@ class PassengerReceiptOverride:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "min_length": 1,
@@ -4224,8 +4224,8 @@ class PenaltyInformation:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -4429,8 +4429,8 @@ class PriceChangeType:
     carrier: Contains carrier code information
     segment_ref: Contains segment reference information
     """
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -4964,8 +4964,8 @@ class SeatInformation:
         number: Numerical rating of the seat from 1 to 5 with 1 being
             bad and 5 being good. Providers: 1G, 1V, 1P, 1J
         """
-        value: Optional[str] = field(
-            default=None,
+        value: str = field(
+            default="",
             metadata={
                 "required": True,
             }
@@ -5500,8 +5500,8 @@ class TravelArranger:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -5528,8 +5528,8 @@ class Url:
         name = "URL"
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -5620,8 +5620,8 @@ class VoidFailureInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -6480,8 +6480,8 @@ class TypeNativeSearchModifier:
     class Meta:
         name = "typeNativeSearchModifier"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -6721,8 +6721,8 @@ class TypeTextElement:
     class Meta:
         name = "typeTextElement"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -9937,8 +9937,8 @@ class FareNote:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }

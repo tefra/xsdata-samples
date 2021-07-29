@@ -823,8 +823,8 @@ class ContinuityCheckOverride:
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "min_length": 1,
@@ -856,8 +856,8 @@ class CorporateDiscountId:
         name = "CorporateDiscountID"
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -1021,8 +1021,8 @@ class CustomizedNameData:
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -1256,8 +1256,8 @@ class GuaranteeType:
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "max_length": 250,
@@ -1367,8 +1367,8 @@ class LocatorCode:
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "min_length": 1,
         }
@@ -1410,8 +1410,8 @@ class Mcoremark:
         name = "MCORemark"
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -1439,8 +1439,8 @@ class Mcotext:
         name = "MCOText"
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -1752,8 +1752,8 @@ class NextResultReference:
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "min_length": 1,
@@ -1779,8 +1779,8 @@ class OperatedBy:
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "min_length": 1,
@@ -2360,8 +2360,8 @@ class PseudoCityCode:
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "min_length": 2,
@@ -2416,8 +2416,8 @@ class ReferencePoint:
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "max_length": 30,
@@ -2456,8 +2456,8 @@ class Remark:
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -2625,8 +2625,8 @@ class SegmentRemark:
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -2651,8 +2651,8 @@ class SellMessage:
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -2890,8 +2890,8 @@ class SimpleName:
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -2906,8 +2906,8 @@ class State:
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -3002,8 +3002,8 @@ class TerminalSessionInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -3018,8 +3018,8 @@ class TicketNumber:
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "min_length": 1,
@@ -4003,8 +4003,8 @@ class TypeRemark:
     class Meta:
         name = "typeRemark"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -5885,8 +5885,8 @@ class FormattedTextTextType:
     text_format: Indicates the format of text used in the description
         e.g. unformatted  or html.
     """
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -6084,8 +6084,8 @@ class HostToken:
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -6565,8 +6565,8 @@ class OtherGuaranteeInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -7353,8 +7353,8 @@ class ResponseMessage:
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -8403,8 +8403,8 @@ class Xmlremark:
         name = "XMLRemark"
         namespace = "http://www.travelport.com/schema/common_v48_0"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -9043,8 +9043,8 @@ class TypeResultMessage:
     class Meta:
         name = "typeResultMessage"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }

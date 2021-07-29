@@ -74,8 +74,8 @@ class RelationType:
     class Meta:
         name = "relationType"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -108,8 +108,8 @@ class SectionType:
     class Meta:
         name = "sectionType"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -301,8 +301,8 @@ class ReferralType:
     class Meta:
         name = "referralType"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }

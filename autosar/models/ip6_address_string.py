@@ -26,8 +26,8 @@ class Ip6AddressString:
     class Meta:
         name = "IP6-ADDRESS-STRING"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "pattern": r"[0-9A-Fa-f]{1,4}(:[0-9A-Fa-f]{1,4}){7,7}|ANY",

@@ -26,8 +26,8 @@ class CategoryString:
     class Meta:
         name = "CATEGORY-STRING"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "pattern": r"[a-zA-Z][a-zA-Z0-9_]*",

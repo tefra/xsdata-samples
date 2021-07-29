@@ -26,8 +26,8 @@ class Boolean:
     class Meta:
         name = "BOOLEAN"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "pattern": r"0|1|true|false",

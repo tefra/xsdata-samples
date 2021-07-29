@@ -32,8 +32,8 @@ class SectionInitializationPolicyType:
     class Meta:
         name = "SECTION-INITIALIZATION-POLICY-TYPE"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }

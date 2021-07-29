@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -9,8 +8,8 @@ class CodespaceAssignmentRef:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }

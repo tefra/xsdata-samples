@@ -22,8 +22,8 @@ class AnyVersionString:
     class Meta:
         name = "ANY-VERSION-STRING"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "pattern": r"[0-9]+|ANY",

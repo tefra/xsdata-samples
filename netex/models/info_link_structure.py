@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List
 from .type_of_infolink_enumeration import TypeOfInfolinkEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -7,8 +7,8 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class InfoLinkStructure:
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }

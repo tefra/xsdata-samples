@@ -198,8 +198,8 @@ class Spuri:
         name = "SPURI"
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -387,8 +387,8 @@ class EncapsulatedPkidata(EncapsulatedPkidataType):
 
 @dataclass(frozen=True)
 class IdentifierType:
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }

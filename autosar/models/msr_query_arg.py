@@ -28,8 +28,8 @@ class MsrQueryArg:
     class Meta:
         name = "MSR-QUERY-ARG"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }

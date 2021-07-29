@@ -25,8 +25,8 @@ class CIdentifierWithIndex:
     class Meta:
         name = "C-IDENTIFIER-WITH-INDEX"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "pattern": r"[a-zA-Z_][a-zA-Z0-9_]*\[[0-9]+\]",

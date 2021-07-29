@@ -24,8 +24,8 @@ class ViewTokens:
     class Meta:
         name = "VIEW-TOKENS"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",

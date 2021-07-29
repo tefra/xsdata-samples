@@ -182,8 +182,8 @@ class AdminEmail:
         name = "admin-email"
         namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "pattern": r"[^@]+@[^.]+\..+",
@@ -203,8 +203,8 @@ class AdminNotes:
         name = "admin-notes"
         namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -222,8 +222,8 @@ class OtherHeiId:
     class Meta:
         target_namespace = "https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -257,8 +257,8 @@ class HttpwithOptionalLang:
         name = "HTTPWithOptionalLang"
         target_namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "pattern": r"https?://.+",
@@ -288,8 +288,8 @@ class MultilineStringWithOptionalLang:
     class Meta:
         target_namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }
@@ -325,8 +325,8 @@ class StringWithOptionalLang:
     class Meta:
         target_namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }

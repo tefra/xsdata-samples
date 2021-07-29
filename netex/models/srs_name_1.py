@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
@@ -10,8 +9,8 @@ class SrsName1:
         name = "SrsName"
         namespace = "http://www.siri.org.uk/siri"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
         }

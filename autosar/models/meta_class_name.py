@@ -24,8 +24,8 @@ class MetaClassName:
     class Meta:
         name = "META-CLASS-NAME"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "pattern": r"[A-Z][a-zA-Z0-9_]*",

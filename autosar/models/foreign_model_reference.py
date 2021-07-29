@@ -32,8 +32,8 @@ class ForeignModelReference:
     class Meta:
         name = "FOREIGN-MODEL-REFERENCE"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "pattern": r"/?[a-zA-Z][a-zA-Z0-9_]{0,127}(/[a-zA-Z][a-zA-Z0-9_]{0,127})*",

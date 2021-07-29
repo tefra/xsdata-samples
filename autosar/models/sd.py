@@ -32,8 +32,8 @@ class Sd:
     class Meta:
         name = "SD"
 
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
+        default="",
         metadata={
             "required": True,
             "white_space": "preserve",
