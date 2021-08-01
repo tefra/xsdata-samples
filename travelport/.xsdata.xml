@@ -16,10 +16,10 @@
     <PackageName case="snakeCase" safePrefix="pkg"/>
   </Conventions>
   <Aliases>
-    <ModuleName source="http://www.travelport.com/schema/common_v48_0" target="common"/>
-    <ModuleName source="http://www.travelport.com/schema/rail_v48_0" target="rail"/>
-    <ModuleName source="http://www.travelport.com/schema/air_v48_0" target="air"/>
-    <ModuleName source="http://www.travelport.com/service/air_v48_0" target="services"/>
-    <ModuleName source="http://www.travelport.com/soa/common/security/SessionContext_v1" target="session"/>
+    <PackageName source="http://www.travelport.com/schema/common_v48_0" target="common"/>
+    <PackageName source="http://www.travelport.com/schema/rail_v48_0" target="rail"/>
+    <PackageName source="http://www.travelport.com/schema/air_v48_0" target="air"/>
+    <PackageName source="http://www.travelport.com/service/air_v48_0" target="services"/>
+    <PackageName source="http://www.travelport.com/soa/common/security/SessionContext_v1" target="session"/>
   </Aliases>
 </Config>

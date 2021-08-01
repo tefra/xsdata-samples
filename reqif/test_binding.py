@@ -2,7 +2,7 @@ from pathlib import Path
 
 from lxml import etree
 
-from reqif.models import ReqIf
+from reqif.models.org.omg.spec.req_if.pkg_20110401 import ReqIf
 
 here = Path(__file__).parent.absolute()
 

@@ -1,0 +1,12 @@
+from enum import Enum
+
+__NAMESPACE__ = "urn:vpro:media:2009"
+
+
+class WorkflowTypeEnum(Enum):
+    PUBLISHED = "PUBLISHED"
+    REVOKED = "REVOKED"
+    FOR_REPUBLICATION = "FOR REPUBLICATION"
+    FOR_PUBLICATION = "FOR PUBLICATION"
+    DELETED = "DELETED"
+    PARENT_REVOKED = "PARENT REVOKED"

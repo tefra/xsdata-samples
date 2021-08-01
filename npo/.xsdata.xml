@@ -3,7 +3,7 @@
   <Output maxLineLength="79">
     <Package>npo.models</Package>
     <Format repr="true" eq="true" order="false" unsafeHash="false" frozen="false" slots="false" kwOnly="false">dataclasses</Format>
-    <Structure>namespaces</Structure>
+    <Structure>clusters</Structure>
     <DocstringStyle>Accessible</DocstringStyle>
     <RelativeImports>false</RelativeImports>
     <CompoundFields>false</CompoundFields>
