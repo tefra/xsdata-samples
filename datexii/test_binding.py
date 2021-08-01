@@ -2,7 +2,7 @@ from pathlib import Path
 
 from lxml import etree
 
-from datexii.models import D2LogicalModel
+from datexii.models.eu.datexii.v2 import D2LogicalModel
 
 here = Path(__file__).parent.absolute()
 xsd_location = str(here.joinpath("schemas/DATEXIISchema_2_2_3.xsd"))

@@ -1,0 +1,14 @@
+from enum import Enum
+
+__NAMESPACE__ = "urn:vpro:shared:2009"
+
+
+class SubtitlesWorkflowEnum(Enum):
+    IGNORE = "IGNORE"
+    REVOKED = "REVOKED"
+    FOR_DELETION = "FOR_DELETION"
+    DELETED = "DELETED"
+    FOR_PUBLICATION = "FOR_PUBLICATION"
+    FOR_REPUBLICATION = "FOR_REPUBLICATION"
+    PUBLISHED = "PUBLISHED"
+    PUBLISH_ERROR = "PUBLISH_ERROR"

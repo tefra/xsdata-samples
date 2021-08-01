@@ -3,7 +3,7 @@
   <Output maxLineLength="79">
     <Package>datexii.models</Package>
     <Format repr="true" eq="true" order="false" unsafeHash="false" frozen="false" slots="false" kwOnly="false">dataclasses</Format>
-    <Structure>filenames</Structure>
+    <Structure>namespace-clusters</Structure>
     <DocstringStyle>reStructuredText</DocstringStyle>
     <RelativeImports>false</RelativeImports>
     <CompoundFields>false</CompoundFields>
@@ -14,6 +14,10 @@
     <ConstantName case="screamingSnakeCase" safePrefix="value"/>
     <ModuleName case="snakeCase" safePrefix="mod"/>
     <PackageName case="snakeCase" safePrefix="pkg"/>
+    <PackageName case="snakeCase" safePrefix="pkg"/>
   </Conventions>
-  <Aliases/>
+  <Aliases>
+    <PackageName source="http://datex2.eu/schema/2/2_0" target="eu.datexii.v2"
+  </Aliases>
+
 </Config>
