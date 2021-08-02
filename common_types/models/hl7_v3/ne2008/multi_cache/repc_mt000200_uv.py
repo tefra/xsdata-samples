@@ -193,6 +193,7 @@ class RepcMt000200UvAuthor:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -297,6 +298,7 @@ class RepcMt000200UvAuthor6:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -514,6 +516,7 @@ class RepcMt000200UvCriterionGroup:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -600,6 +603,7 @@ class RepcMt000200UvDataEnterer:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -881,6 +885,7 @@ class RepcMt000200UvObservationGoal:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -1183,6 +1188,7 @@ class RepcMt000200UvPrecondition2:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1448,6 +1454,7 @@ class RepcMt000200UvAnnotation:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -1541,6 +1548,7 @@ class RepcMt000200UvCriterion:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     negation_ind: str = field(
@@ -1604,6 +1612,7 @@ class RepcMt000200UvFinalGoal:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1675,6 +1684,7 @@ class RepcMt000200UvGoal:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1837,6 +1847,7 @@ class RepcMt000200UvPatientInstructions:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -1899,6 +1910,7 @@ class RepcMt000200UvPlannedReview:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     mood_code: Optional[ActMoodIntent] = field(
@@ -2203,6 +2215,7 @@ class RepcMt000200UvSubject:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -2273,6 +2286,7 @@ class RepcMt000200UvSubject2:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -2464,6 +2478,7 @@ class RepcMt000200UvActDefinition:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     negation_ind: Optional[str] = field(
@@ -2527,6 +2542,7 @@ class RepcMt000200UvAdministerableMaterial:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -2678,6 +2694,7 @@ class RepcMt000200UvEncounterDefinition:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -2686,6 +2703,7 @@ class RepcMt000200UvEncounterDefinition:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -2900,6 +2918,7 @@ class RepcMt000200UvObservationDefinition:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -3098,6 +3117,7 @@ class RepcMt000200UvProcedureDefinition:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     negation_ind: Optional[str] = field(
@@ -3217,6 +3237,7 @@ class RepcMt000200UvSupplyEvent:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     negation_ind: Optional[str] = field(
@@ -3286,6 +3307,7 @@ class RepcMt000200UvConsumable:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     context_control_code: Optional[ContextControl] = field(
@@ -3507,6 +3529,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -3515,6 +3538,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     negation_ind: Optional[str] = field(
@@ -3927,6 +3951,7 @@ class RepcMt000200UvGuideline:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -4687,6 +4712,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     mood_code: Optional[ActMoodIntent] = field(
@@ -4879,6 +4905,7 @@ class RepcMt000200UvDefinition1:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -5087,6 +5114,7 @@ class RepcMt000200UvEncounterIntent:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     mood_code: Optional[ActMoodIntent] = field(

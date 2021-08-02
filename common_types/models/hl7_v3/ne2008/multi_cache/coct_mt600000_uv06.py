@@ -105,6 +105,7 @@ class CoctMt600000Uv06Destination:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -190,6 +191,7 @@ class CoctMt600000Uv06Diagnosis:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -300,6 +302,7 @@ class CoctMt600000Uv06Origin:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -353,6 +356,7 @@ class CoctMt600000Uv06ProviderPerson:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -361,6 +365,7 @@ class CoctMt600000Uv06ProviderPerson:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -423,6 +428,7 @@ class CoctMt600000Uv06SupplyObservationEvent:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -502,6 +508,7 @@ class CoctMt600000Uv06VisionPrescriptionObservationEvent:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -563,6 +570,7 @@ class CoctMt600000Uv06VisionProduct:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -633,6 +641,7 @@ class CoctMt600000Uv06HealthCareProvider:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -808,6 +817,7 @@ class CoctMt600000Uv06Product2:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -863,6 +873,7 @@ class CoctMt600000Uv06Author:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -1058,6 +1069,7 @@ class CoctMt600000Uv06PrescriptionOrder:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -1066,6 +1078,7 @@ class CoctMt600000Uv06PrescriptionOrder:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -1121,6 +1134,7 @@ class CoctMt600000Uv06Product:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -1231,6 +1245,7 @@ class CoctMt600000Uv06PrescriptionIntent:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     mood_code: Optional[ActMoodIntent] = field(
@@ -1441,5 +1456,6 @@ class CoctMt600000Uv06SupplyEvent:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )

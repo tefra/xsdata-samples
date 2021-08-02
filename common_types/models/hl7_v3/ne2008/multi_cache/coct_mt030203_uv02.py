@@ -169,6 +169,7 @@ class CoctMt030203Uv02Person:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -177,5 +178,6 @@ class CoctMt030203Uv02Person:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )

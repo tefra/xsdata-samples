@@ -215,6 +215,7 @@ class RepcMt000300Uv01Author:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -595,6 +596,7 @@ class RepcMt000300Uv01Organization:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -791,6 +793,7 @@ class RepcMt000300Uv01Place:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -981,6 +984,7 @@ class RepcMt000300Uv01RecordTarget:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -1100,6 +1104,7 @@ class RepcMt000300Uv01Reference:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1241,6 +1246,7 @@ class RepcMt000300Uv01ResponsibleParty:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -1296,6 +1302,7 @@ class RepcMt000300Uv01ResponsibleParty2:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     context_control_code: Optional[ContextControl] = field(
@@ -2123,6 +2130,7 @@ class RepcMt000300Uv01Subject3:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )

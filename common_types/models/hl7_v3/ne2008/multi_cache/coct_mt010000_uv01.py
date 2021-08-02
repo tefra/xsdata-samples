@@ -125,6 +125,7 @@ class CoctMt010000Uv01AccomodationEvent:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -133,6 +134,7 @@ class CoctMt010000Uv01AccomodationEvent:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -204,6 +206,7 @@ class CoctMt010000Uv01Admitter:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -290,6 +293,7 @@ class CoctMt010000Uv01Attender:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -344,6 +348,7 @@ class CoctMt010000Uv01Authorization:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -476,6 +481,7 @@ class CoctMt010000Uv01Consultant:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -547,6 +553,7 @@ class CoctMt010000Uv01Discharger:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -656,6 +663,7 @@ class CoctMt010000Uv01NotificationContact:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -724,6 +732,7 @@ class CoctMt010000Uv01ObservationEvent02:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     negation_ind: Optional[str] = field(
@@ -850,6 +859,7 @@ class CoctMt010000Uv01Reference:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -922,6 +932,7 @@ class CoctMt010000Uv01Referrer:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -1000,6 +1011,7 @@ class CoctMt010000Uv01ResponsibleParty1:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -1778,6 +1790,7 @@ class CoctMt010000Uv01Encounter:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -1786,6 +1799,7 @@ class CoctMt010000Uv01Encounter:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -1840,6 +1854,7 @@ class CoctMt010000Uv01CauseOf:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )

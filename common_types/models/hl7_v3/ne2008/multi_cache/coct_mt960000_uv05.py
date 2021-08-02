@@ -267,6 +267,7 @@ class CoctMt960000Uv05PositionAccuracy:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -275,6 +276,7 @@ class CoctMt960000Uv05PositionAccuracy:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -430,6 +432,7 @@ class CoctMt960000Uv05PositionCoordinate:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -438,6 +441,7 @@ class CoctMt960000Uv05PositionCoordinate:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -647,5 +651,6 @@ class CoctMt960000Uv05Position:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )

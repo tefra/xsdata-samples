@@ -10,5 +10,8 @@ class TramSubmode:
         namespace = "http://www.netex.org.uk/netex"
 
     value: TramSubmodeEnumeration = field(
-        default=TramSubmodeEnumeration.UNKNOWN
+        default=TramSubmodeEnumeration.UNKNOWN,
+        metadata={
+            "required": True,
+        }
     )

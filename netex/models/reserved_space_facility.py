@@ -10,5 +10,8 @@ class ReservedSpaceFacility:
         namespace = "http://www.netex.org.uk/netex"
 
     value: ReservedSpaceFacilityEnumeration = field(
-        default=ReservedSpaceFacilityEnumeration.UNKNOWN
+        default=ReservedSpaceFacilityEnumeration.UNKNOWN,
+        metadata={
+            "required": True,
+        }
     )

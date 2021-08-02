@@ -109,6 +109,7 @@ class CoctMt090100Uv01Group:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -117,6 +118,7 @@ class CoctMt090100Uv01Group:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -426,6 +428,7 @@ class CoctMt090100Uv01Member:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -526,6 +529,7 @@ class CoctMt090100Uv01Person:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -534,6 +538,7 @@ class CoctMt090100Uv01Person:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 

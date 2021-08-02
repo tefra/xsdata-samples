@@ -194,6 +194,7 @@ class QuqiMt020001Uv01DataEnterer:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     context_control_code: ContextControl = field(

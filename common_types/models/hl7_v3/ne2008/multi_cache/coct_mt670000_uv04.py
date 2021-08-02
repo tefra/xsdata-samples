@@ -86,6 +86,7 @@ class CoctMt670000Uv04Account:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -94,6 +95,7 @@ class CoctMt670000Uv04Account:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -233,6 +235,7 @@ class CoctMt670000Uv04GuarantorOrganization:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -286,6 +289,7 @@ class CoctMt670000Uv04PersonalRelationship:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -366,6 +370,7 @@ class CoctMt670000Uv04GuarantorPerson:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -374,6 +379,7 @@ class CoctMt670000Uv04GuarantorPerson:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -435,6 +441,7 @@ class CoctMt670000Uv04Holder:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -545,6 +552,7 @@ class CoctMt670000Uv04GuarantorRole:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )

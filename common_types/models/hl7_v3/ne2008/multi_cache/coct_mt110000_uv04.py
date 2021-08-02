@@ -176,6 +176,7 @@ class CoctMt110000Uv04AccountHolderOrganization:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -315,6 +316,7 @@ class CoctMt110000Uv04AccountHolderPerson:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -323,6 +325,7 @@ class CoctMt110000Uv04AccountHolderPerson:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -408,6 +411,7 @@ class CoctMt110000Uv04AccountHolder:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -471,6 +475,7 @@ class CoctMt110000Uv04Holder:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -563,6 +568,7 @@ class CoctMt110000Uv04Account:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -571,5 +577,6 @@ class CoctMt110000Uv04Account:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )

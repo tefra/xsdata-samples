@@ -15,5 +15,6 @@ class MeasurementSiteTableVersionedReference(VersionedReference):
         metadata={
             "name": "targetClass",
             "type": "Attribute",
+            "required": True,
         }
     )

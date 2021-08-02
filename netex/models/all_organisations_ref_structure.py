@@ -50,6 +50,7 @@ class AllOrganisationsRefStructure:
         default="All",
         metadata={
             "type": "Attribute",
+            "required": True,
         }
     )
     version_ref: Optional[str] = field(

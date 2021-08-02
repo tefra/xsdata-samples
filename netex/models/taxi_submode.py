@@ -10,5 +10,8 @@ class TaxiSubmode:
         namespace = "http://www.netex.org.uk/netex"
 
     value: TaxiSubmodeEnumeration = field(
-        default=TaxiSubmodeEnumeration.UNKNOWN
+        default=TaxiSubmodeEnumeration.UNKNOWN,
+        metadata={
+            "required": True,
+        }
     )

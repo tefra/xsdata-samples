@@ -167,6 +167,7 @@ class CoctMt030000Uv04Citizen:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -499,6 +500,7 @@ class CoctMt030000Uv04Entity:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -600,6 +602,7 @@ class CoctMt030000Uv04Guarantor:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -937,6 +940,7 @@ class CoctMt030000Uv04Student:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1023,6 +1027,7 @@ class CoctMt030000Uv04Member:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1547,6 +1552,7 @@ class CoctMt030000Uv04Person:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -1555,5 +1561,6 @@ class CoctMt030000Uv04Person:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )

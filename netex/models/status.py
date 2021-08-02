@@ -9,5 +9,8 @@ class Status:
         namespace = "http://www.siri.org.uk/siri"
 
     value: bool = field(
-        default=True
+        default=True,
+        metadata={
+            "required": True,
+        }
     )

@@ -186,6 +186,7 @@ class RepcMt000700Uv01Organization:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -271,6 +272,7 @@ class RepcMt000700Uv01Device:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -372,6 +374,7 @@ class RepcMt000700Uv01MaintainedEntity:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )

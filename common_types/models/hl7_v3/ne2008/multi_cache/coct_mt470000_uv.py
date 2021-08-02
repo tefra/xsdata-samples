@@ -206,6 +206,7 @@ class CoctMt470000UvResponsibleParty:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -309,6 +310,7 @@ class CoctMt470000UvConsent:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -317,6 +319,7 @@ class CoctMt470000UvConsent:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     negation_ind: Optional[str] = field(

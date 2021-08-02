@@ -232,6 +232,7 @@ class PrpaIn201306Uv02MfmiMt700711Uv01RegistrationEvent:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -240,6 +241,7 @@ class PrpaIn201306Uv02MfmiMt700711Uv01RegistrationEvent:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -295,6 +297,7 @@ class PrpaIn201306Uv02MfmiMt700711Uv01Subject1:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -671,5 +674,6 @@ class PrpaIn201306Uv02(PrpaIn201306Uv02McciMt000300Uv01Message):
         metadata={
             "name": "ITSVersion",
             "type": "Attribute",
+            "required": True,
         }
     )

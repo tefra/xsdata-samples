@@ -10,5 +10,8 @@ class AccommodationFacility:
         namespace = "http://www.netex.org.uk/netex"
 
     value: AccommodationFacilityEnumeration = field(
-        default=AccommodationFacilityEnumeration.SEATING
+        default=AccommodationFacilityEnumeration.SEATING,
+        metadata={
+            "required": True,
+        }
     )

@@ -115,6 +115,7 @@ class CoctMt230100UvAgency:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -123,6 +124,7 @@ class CoctMt230100UvAgency:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -199,6 +201,7 @@ class CoctMt230100UvCharacteristic:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -268,6 +271,7 @@ class CoctMt230100UvCountry:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -427,6 +431,7 @@ class CoctMt230100UvObservationGoal:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -495,6 +500,7 @@ class CoctMt230100UvPolicy:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -619,6 +625,7 @@ class CoctMt230100UvSubContent:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -806,6 +813,7 @@ class CoctMt230100UvSuperContent:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -898,6 +906,7 @@ class CoctMt230100UvManufacturer:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -1402,6 +1411,7 @@ class CoctMt230100UvTerritorialAuthority:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1465,6 +1475,7 @@ class CoctMt230100UvAuthor:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -1809,6 +1820,7 @@ class CoctMt230100UvHolder:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -2003,6 +2015,7 @@ class CoctMt230100UvApproval:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -2529,6 +2542,7 @@ class CoctMt230100UvContent:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -2812,6 +2826,7 @@ class CoctMt230100UvMedication:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )

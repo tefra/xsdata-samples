@@ -136,6 +136,7 @@ class CoctMt740000Uv04Diagnosis:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -252,6 +253,7 @@ class CoctMt740000Uv04OralHealthSubstanceAdministration:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -260,6 +262,7 @@ class CoctMt740000Uv04OralHealthSubstanceAdministration:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -328,6 +331,7 @@ class CoctMt740000Uv04ProviderPerson:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -336,6 +340,7 @@ class CoctMt740000Uv04ProviderPerson:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -405,6 +410,7 @@ class CoctMt740000Uv04HealthCareProvider:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -635,6 +641,7 @@ class CoctMt740000Uv04Referrer:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -690,6 +697,7 @@ class CoctMt740000Uv04ResponsibleParty:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -761,6 +769,7 @@ class CoctMt740000Uv04Referral:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -815,6 +824,7 @@ class CoctMt740000Uv04Reference:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )

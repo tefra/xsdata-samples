@@ -139,6 +139,7 @@ class CoctMt080000UvActRef:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -214,6 +215,7 @@ class CoctMt080000UvAdditiveMaterial:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -470,6 +472,7 @@ class CoctMt080000UvContent4:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -561,6 +564,7 @@ class CoctMt080000UvCriterion:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -622,6 +626,7 @@ class CoctMt080000UvIdentifiedContainer:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -893,6 +898,7 @@ class CoctMt080000UvSpecimenAlternateIdentifier:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1109,6 +1115,7 @@ class CoctMt080000UvAdditive:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1171,6 +1178,7 @@ class CoctMt080000UvAdditive2:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1259,6 +1267,7 @@ class CoctMt080000UvHolder:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -1267,6 +1276,7 @@ class CoctMt080000UvHolder:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -1345,6 +1355,7 @@ class CoctMt080000UvPrecondition:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1671,6 +1682,7 @@ class CoctMt080000UvContent3:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1912,6 +1924,7 @@ class CoctMt080000UvProcessStep:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -2094,6 +2107,7 @@ class CoctMt080000UvContainer:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -2164,6 +2178,7 @@ class CoctMt080000UvProduct:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -2302,6 +2317,7 @@ class CoctMt080000UvContent1:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -2455,6 +2471,7 @@ class CoctMt080000UvManufactured:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -2582,6 +2599,7 @@ class CoctMt080000UvNatural:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -2810,6 +2828,7 @@ class CoctMt080000UvNonPersonLivingSubject:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -3045,6 +3064,7 @@ class CoctMt080000UvPerson:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -3053,6 +3073,7 @@ class CoctMt080000UvPerson:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 

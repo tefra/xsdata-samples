@@ -15,5 +15,6 @@ class SituationRecordVersionedReference(VersionedReference):
         metadata={
             "name": "targetClass",
             "type": "Attribute",
+            "required": True,
         }
     )

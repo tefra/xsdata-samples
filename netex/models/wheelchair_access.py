@@ -10,5 +10,8 @@ class WheelchairAccess:
         namespace = "http://www.netex.org.uk/netex"
 
     value: LimitationStatusEnumeration = field(
-        default=LimitationStatusEnumeration.FALSE
+        default=LimitationStatusEnumeration.FALSE,
+        metadata={
+            "required": True,
+        }
     )
