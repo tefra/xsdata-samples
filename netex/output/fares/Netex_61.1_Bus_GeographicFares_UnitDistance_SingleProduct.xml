@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <PublicationTimestamp>2010-12-17T09:30:47Z</PublicationTimestamp>
   <ParticipantRef>SYS001</ParticipantRef>
-  <PublicationRequest version="1.0">
+  <PublicationRequest>
     <RequestTimestamp>2010-12-17T09:30:47Z</RequestTimestamp>
     <ParticipantRef>SYS002</ParticipantRef>
     <topics>
       <NetworkFrameTopic>
         <selectionValidityConditions>
-          <AvailabilityCondition id="hde:range2" modification="new" version="any" status="active">
+          <AvailabilityCondition id="hde:range2" version="any">
             <FromDate>2011-01-01T00:00:00Z</FromDate>
           </AvailabilityCondition>
         </selectionValidityConditions>
@@ -19,14 +19,14 @@
   <PublicationRefreshInterval>P1M</PublicationRefreshInterval>
   <Description>Example of simple point to point fares</Description>
   <dataObjects>
-    <CompositeFrame id="myfares:DTA@Line24_Unit_Distance" modification="new" version="1.0" status="active">
-      <validityConditions modificationSet="all">
-        <ValidBetween modification="new" status="active">
+    <CompositeFrame id="myfares:DTA@Line24_Unit_Distance" version="1.0">
+      <validityConditions>
+        <ValidBetween>
           <FromDate>2011-01-01T00:00:00Z</FromDate>
           <ToDate>2011-07-01T00:00:00Z</ToDate>
         </ValidBetween>
       </validityConditions>
-      <codespaces modificationSet="all">
+      <codespaces>
         <Codespace id="mybus">
           <Xmlns>mybus</Xmlns>
           <XmlnsUrl>http://www.mybuses.eu/stuff</XmlnsUrl>
@@ -41,24 +41,24 @@
       <FrameDefaults>
         <DefaultCodespaceRef ref="myfares"/>
       </FrameDefaults>
-      <frames modificationSet="all">
-        <FareFrame id="myfares:DTA@Line24_Unit_Distance@products" modification="new" version="1.0" status="active">
-          <prerequisites modificationSet="all">
+      <frames>
+        <FareFrame id="myfares:DTA@Line24_Unit_Distance@products" version="1.0">
+          <prerequisites>
             <ServiceFrameRef version="1.0" ref="mybus:DTA@Line24_Unit_Distance@network"/>
           </prerequisites>
-          <geographicalUnits modificationSet="all">
-            <GeographicalUnit id="myfares:1click" modification="new" version="1.0" status="active">
+          <geographicalUnits>
+            <GeographicalUnit id="myfares:1click" version="1.0">
               <Name>Arbitrary Quantized Unit of Transport Usage</Name>
             </GeographicalUnit>
           </geographicalUnits>
           <tariffs>
-            <Tariff id="myfares:Unit_Distance" modification="new" version="1.0" status="active">
+            <Tariff id="myfares:Unit_Distance" version="1.0">
               <Name>Unit distance fare</Name>
               <OperatorRef version="any" ref="mybus:DTA"/>
               <TypeOfTariffRef version="ntx:v1.0" ref="ntx:unit_distance"/>
               <GeographicalUnitRef version="1.0" ref="myfares:1click"/>
-              <geographicalIntervals modificationSet="all">
-                <GeographicalInterval id="myfares:Unit_Distance@gi_1" modification="new" version="1.0" status="active">
+              <geographicalIntervals>
+                <GeographicalInterval id="myfares:Unit_Distance@gi_1" version="1.0">
                   <Name>One Click</Name>
                   <StartGeographicalValue>1</StartGeographicalValue>
                   <EndGeographicalValue>2</EndGeographicalValue>
@@ -66,7 +66,7 @@
                   <IntervalType>distance</IntervalType>
                   <GeographicalUnitRef version="1.0" ref="myfares:1click"/>
                 </GeographicalInterval>
-                <GeographicalInterval id="myfares:Unit_Distance@gi_2" modification="new" version="1.0" status="active">
+                <GeographicalInterval id="myfares:Unit_Distance@gi_2" version="1.0">
                   <Name>Two Clicks</Name>
                   <StartGeographicalValue>1</StartGeographicalValue>
                   <EndGeographicalValue>3</EndGeographicalValue>
@@ -76,56 +76,56 @@
                 </GeographicalInterval>
               </geographicalIntervals>
               <geographicalStructureFactors>
-                <GeographicalStructureFactor id="myfares:1click" modification="new" version="1.0" status="active">
+                <GeographicalStructureFactor id="myfares:1click" version="1.0">
                   <GeographicalIntervalRef version="1.0" ref="myfares:Unit_Distance@gi_1"/>
                   <GeographicalUnitRef version="1.0" ref="myfares:1click"/>
                 </GeographicalStructureFactor>
-                <GeographicalStructureFactor id="myfares:2click" modification="new" version="1.0" status="active">
+                <GeographicalStructureFactor id="myfares:2click" version="1.0">
                   <GeographicalIntervalRef version="1.0" ref="myfares:Unit_Distance@gi_2"/>
                   <GeographicalUnitRef version="1.0" ref="myfares:1click"/>
                 </GeographicalStructureFactor>
               </geographicalStructureFactors>
-              <fareStructureElements modificationSet="all">
-                <FareStructureElement id="myfares:Unit_Distance@access" modification="new" version="1.0" status="active">
-                  <distanceMatrixElements modificationSet="all">
+              <fareStructureElements>
+                <FareStructureElement id="myfares:Unit_Distance@access" version="1.0">
+                  <distanceMatrixElements>
                     <DistanceMatrixElementRef version="any" ref="myfares:SSP_001+SSP_002"/>
                     <DistanceMatrixElementRef version="any" ref="myfares:SSP_002+SSP_077"/>
                     <DistanceMatrixElementRef version="any" ref="myfares:SSP_077+SSP_078"/>
                   </distanceMatrixElements>
-                  <GenericParameterAssignment id="myfares:TF01@access" modification="new" version="1.0" status="active" order="1">
+                  <GenericParameterAssignment id="myfares:TF01@access" version="1.0" order="1">
                     <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:can_access"/>
                     <ValidityParameterGroupingType>XOR</ValidityParameterGroupingType>
-                    <validityParameters modificationSet="all">
+                    <validityParameters>
                       <OperatorRef version="any" ref="mybus:DTA"/>
                       <NetworkRef version="any" ref="mybus:DTA"/>
                     </validityParameters>
                   </GenericParameterAssignment>
                 </FareStructureElement>
-                <FareStructureElement id="myfares:Unit_Distance@conditions_of_travel" modification="new" version="1.0" status="active">
+                <FareStructureElement id="myfares:Unit_Distance@conditions_of_travel" version="1.0">
                   <Name>eligible user types</Name>
-                  <GenericParameterAssignment id="myfares:Unit_Distance@conditions_of_travel" modification="new" version="1.0" status="active" order="1">
+                  <GenericParameterAssignment id="myfares:Unit_Distance@conditions_of_travel" version="1.0" order="1">
                     <Name>Conditions of travel</Name>
                     <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:condition_of_use"/>
                     <LimitationGroupingType>AND</LimitationGroupingType>
-                    <limitations modificationSet="all">
-                      <RoundTrip id="myfares:Unit_Distance@conditions_of_travel@trip" modification="new" version="1.0" status="active">
+                    <limitations>
+                      <RoundTrip id="myfares:Unit_Distance@conditions_of_travel@trip" version="1.0">
                         <Name>Single Trip</Name>
                         <TripType>single</TripType>
                       </RoundTrip>
-                      <FrequencyOfUse id="myfares:Unit_Distance@conditions_of_travel@frequency" modification="new" version="1.0" status="active">
+                      <FrequencyOfUse id="myfares:Unit_Distance@conditions_of_travel@frequency" version="1.0">
                         <Name>One trip no transfers</Name>
                         <FrequencyOfUseType>single</FrequencyOfUseType>
                         <MaximalFrequency>1</MaximalFrequency>
                       </FrequencyOfUse>
-                      <Interchanging id="myfares:Unit_Distance@conditions_of_travel@interchanging" modification="new" version="1.0" status="active">
+                      <Interchanging id="myfares:Unit_Distance@conditions_of_travel@interchanging" version="1.0">
                         <MaximumNumberOfInterchanges>0</MaximumNumberOfInterchanges>
                       </Interchanging>
                     </limitations>
                   </GenericParameterAssignment>
                 </FareStructureElement>
               </fareStructureElements>
-              <distanceMatrixElements modificationSet="all">
-                <DistanceMatrixElement id="myfares:SSP_001+SSP_002" modification="new" version="any" status="active">
+              <distanceMatrixElements>
+                <DistanceMatrixElement id="myfares:SSP_001+SSP_002" version="any">
                   <Name>Alpha to Bravo</Name>
                   <StartStopPointRef version="any" ref="mybus:SSP_001"/>
                   <EndStopPointRef version="any" ref="mybus:SSP_002"/>
@@ -133,7 +133,7 @@
                     <GeographicalStructureFactorRef version="1.0" ref="myfares:1click"/>
                   </structureFactors>
                 </DistanceMatrixElement>
-                <DistanceMatrixElement id="myfares:SSP_002+SSP_077" modification="new" version="any" status="active">
+                <DistanceMatrixElement id="myfares:SSP_002+SSP_077" version="any">
                   <Name>Bravo to Charley</Name>
                   <StartStopPointRef version="any" ref="mybus:SSP_002"/>
                   <EndStopPointRef version="any" ref="mybus:SSP_077"/>
@@ -141,7 +141,7 @@
                     <GeographicalStructureFactorRef version="1.0" ref="myfares:2click"/>
                   </structureFactors>
                 </DistanceMatrixElement>
-                <DistanceMatrixElement id="myfares:SSP_077+SSP_078" modification="new" version="any" status="active">
+                <DistanceMatrixElement id="myfares:SSP_077+SSP_078" version="any">
                   <Name>Charley to Delta</Name>
                   <StartStopPointRef version="any" ref="mybus:SSP_077"/>
                   <EndStopPointRef version="any" ref="mybus:SSP_078"/>
@@ -156,21 +156,21 @@
             </Tariff>
           </tariffs>
           <fareProducts>
-            <PreassignedFareProduct id="myfares:SingleTrip" modification="new" version="1.0" status="active">
+            <PreassignedFareProduct id="myfares:SingleTrip" version="1.0">
               <Name>Unit Distrance Trip</Name>
               <TypeOfFareProductRef version="ntx:v1.0" ref="ntx:trip"/>
               <OperatorRef version="any" ref="mybus:DTA"/>
               <validableElements>
-                <ValidableElement id="myfares:SingleTrip@travel" modification="new" version="1.0" status="active">
+                <ValidableElement id="myfares:SingleTrip@travel" version="1.0">
                   <Name>Single Trip</Name>
-                  <fareStructureElements modificationSet="all">
+                  <fareStructureElements>
                     <FareStructureElementRef version="1.0" ref="myfares:Unit_Distance@access"/>
                     <FareStructureElementRef version="1.0" ref="myfares:Unit_Distance@conditions_of_travel"/>
                   </fareStructureElements>
                 </ValidableElement>
               </validableElements>
               <accessRightsInProduct>
-                <AccessRightInProduct id="myfares:SingleTrip@travel" modification="new" version="1.0" status="active" order="1">
+                <AccessRightInProduct id="myfares:SingleTrip@travel" version="1.0" order="1">
                   <Name>Single Trip</Name>
                   <ValidableElementRef version="1.0" ref="myfares:SingleTrip@travel"/>
                 </AccessRightInProduct>
@@ -178,23 +178,23 @@
             </PreassignedFareProduct>
           </fareProducts>
         </FareFrame>
-        <FareFrame id="myfares:DTA@Line24_Unit_Distance@prices" modification="new" version="1.0" status="active">
+        <FareFrame id="myfares:DTA@Line24_Unit_Distance@prices" version="1.0">
           <FrameDefaults>
             <DefaultCurrency>EUR</DefaultCurrency>
           </FrameDefaults>
-          <prerequisites modificationSet="all">
+          <prerequisites>
             <FareFrameRef version="1.0" ref="myfares:DTA@Line24_Unit_Distance@products"/>
           </prerequisites>
           <priceGroups>
-            <PriceGroup id="myfares:Line24_Unit_Distance" modification="new" version="1.0" status="active">
+            <PriceGroup id="myfares:Line24_Unit_Distance" version="1.0">
               <Name>Fare Prices - Standard</Name>
               <members>
-                <GeographicalIntervalPrice id="myfares:Unit_Distance@gi_1" modification="new" version="1.0" status="active">
+                <GeographicalIntervalPrice id="myfares:Unit_Distance@gi_1" version="1.0">
                   <Amount>1.50</Amount>
                   <Units>1</Units>
                   <GeographicalIntervalRef version="1.0" ref="myfares:Unit_Distance@gi_1"/>
                 </GeographicalIntervalPrice>
-                <GeographicalIntervalPrice id="myfares:Unit_Distance@gi_2" modification="new" version="1.0" status="active">
+                <GeographicalIntervalPrice id="myfares:Unit_Distance@gi_2" version="1.0">
                   <Amount>3.00</Amount>
                   <Units>2</Units>
                   <GeographicalIntervalRef version="1.0" ref="myfares:Unit_Distance@gi_2"/>
@@ -203,24 +203,24 @@
             </PriceGroup>
           </priceGroups>
         </FareFrame>
-        <ServiceFrame id="mybus:DTA@Line24_Unit_Distance@network" modification="new" version="1.0" status="active">
+        <ServiceFrame id="mybus:DTA@Line24_Unit_Distance@network" version="1.0">
           <Name>Stops for Fare network </Name>
-          <prerequisites modificationSet="all">
+          <prerequisites>
             <ResourceFrameRef version="1.0" ref="mybus:DTA@Common_Resources"/>
           </prerequisites>
-          <Network id="mybus:DTA" modification="new" version="any" status="active">
-            <members modificationSet="all">
+          <Network id="mybus:DTA" version="any">
+            <members>
               <LineRef version="any" ref="mybus:Line_24"/>
             </members>
             <OperatorRef version="any" ref="mybus:DTA"/>
           </Network>
-          <lines modificationSet="all">
-            <Line id="mybus:Line_24" modification="new" version="any" status="active">
+          <lines>
+            <Line id="mybus:Line_24" version="any">
               <Name>Line  24</Name>
             </Line>
           </lines>
-          <scheduledStopPoints modificationSet="all">
-            <ScheduledStopPoint id="mybus:SSP_001" modification="new" version="any" status="active">
+          <scheduledStopPoints>
+            <ScheduledStopPoint id="mybus:SSP_001" version="any">
               <Name>Alpha &amp; Castle</Name>
               <Location>
                 <Longitude>53.0000</Longitude>
@@ -232,7 +232,7 @@
               <StopType>onstreetBus</StopType>
               <VehicleModes>bus</VehicleModes>
             </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_002" modification="new" version="any" status="active">
+            <ScheduledStopPoint id="mybus:SSP_002" version="any">
               <Name>Bravo Street</Name>
               <Location>
                 <Longitude>53.2000</Longitude>
@@ -244,7 +244,7 @@
               <StopType>onstreetBus</StopType>
               <VehicleModes>bus</VehicleModes>
             </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_077" modification="new" version="any" status="active">
+            <ScheduledStopPoint id="mybus:SSP_077" version="any">
               <Name>Charley Crescent</Name>
               <Location>
                 <Longitude>53.3000</Longitude>
@@ -256,7 +256,7 @@
               <StopType>onstreetBus</StopType>
               <VehicleModes>bus</VehicleModes>
             </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_078" modification="new" version="any" status="active">
+            <ScheduledStopPoint id="mybus:SSP_078" version="any">
               <Name>Delta </Name>
               <Location>
                 <Longitude>53.3000</Longitude>
@@ -270,102 +270,102 @@
             </ScheduledStopPoint>
           </scheduledStopPoints>
         </ServiceFrame>
-        <ResourceFrame id="mybus:DTA@Common_Resources" modification="new" version="1.0" status="active">
+        <ResourceFrame id="mybus:DTA@Common_Resources" version="1.0">
           <Name>Common resources</Name>
-          <codespaces modificationSet="all">
+          <codespaces>
             <Codespace id="ntx">
               <Xmlns>ntx</Xmlns>
               <XmlnsUrl>http://netex.org.uk/</XmlnsUrl>
               <Description>Netex built in value</Description>
             </Codespace>
           </codespaces>
-          <typesOfValue modificationSet="all">
-            <ValueSet id="ntx:Types_of_Tariff" modification="new" version="ntx:v1.0" status="active" classOfValues="TypeOfTariff">
+          <typesOfValue>
+            <ValueSet id="ntx:Types_of_Tariff" version="ntx:v1.0" classOfValues="TypeOfTariff">
               <Name>Types of Tariff</Name>
               <values>
-                <TypeOfTariff id="ntx:Distance_kilometers" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:Distance_kilometers" version="ntx:v1.0">
                   <Name>Kilometer Distance Kilometers</Name>
                 </TypeOfTariff>
-                <TypeOfTariff id="ntx:flat" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:flat" version="ntx:v1.0">
                   <Name>Flat</Name>
                 </TypeOfTariff>
-                <TypeOfTariff id="ntx:point_to_point" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:point_to_point" version="ntx:v1.0">
                   <Name>Point to point</Name>
                 </TypeOfTariff>
-                <TypeOfTariff id="ntx:zone_to_zone" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:zone_to_zone" version="ntx:v1.0">
                   <Name>Zone to Zone</Name>
                 </TypeOfTariff>
-                <TypeOfTariff id="ntx:zonal" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:zonal" version="ntx:v1.0">
                   <Name>Zonal</Name>
                 </TypeOfTariff>
-                <TypeOfTariff id="ntx:unit_distance" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:unit_distance" version="ntx:v1.0">
                   <Name>Unit distance (count of stops, sections, zones)</Name>
                 </TypeOfTariff>
-                <TypeOfTariff id="ntx:section" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:section" version="ntx:v1.0">
                   <Name>Section</Name>
                 </TypeOfTariff>
-                <TypeOfTariff id="ntx:banded" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:banded" version="ntx:v1.0">
                   <Name>Section</Name>
                 </TypeOfTariff>
-                <TypeOfTariff id="ntx:stored_value" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:stored_value" version="ntx:v1.0">
                   <Name>Stored value</Name>
                 </TypeOfTariff>
-                <TypeOfTariff id="ntx:discount" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:discount" version="ntx:v1.0">
                   <Name>Discount value</Name>
                 </TypeOfTariff>
-                <TypeOfTariff id="ntx:multitrip" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:multitrip" version="ntx:v1.0">
                   <Name>Multitrip carnet</Name>
                 </TypeOfTariff>
-                <TypeOfTariff id="ntx:identity_card" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:identity_card" version="ntx:v1.0">
                   <Name>SIdentity</Name>
                 </TypeOfTariff>
               </values>
             </ValueSet>
-            <ValueSet id="ntx:Types_of_FareProduct" modification="new" version="ntx:v1.0" status="active" classOfValues="TypeOfFareProduct">
+            <ValueSet id="ntx:Types_of_FareProduct" version="ntx:v1.0" classOfValues="TypeOfFareProduct">
               <Name>Types of Fare Product</Name>
               <values>
-                <TypeOfFareProduct id="ntx:trip" modification="new" version="ntx:v1.0" status="active">
+                <TypeOfFareProduct id="ntx:trip" version="ntx:v1.0">
                   <Name>Trip product</Name>
                 </TypeOfFareProduct>
-                <TypeOfFareProduct id="ntx:multi_trip" modification="new" version="ntx:v1.0" status="active">
+                <TypeOfFareProduct id="ntx:multi_trip" version="ntx:v1.0">
                   <Name>Multitrip / carnet  product</Name>
                 </TypeOfFareProduct>
-                <TypeOfFareProduct id="ntx:period_pass" modification="new" version="ntx:v1.0" status="active">
+                <TypeOfFareProduct id="ntx:period_pass" version="ntx:v1.0">
                   <Name>Peroid pass product</Name>
                 </TypeOfFareProduct>
-                <TypeOfFareProduct id="ntx:day_pass" modification="new" version="ntx:v1.0" status="active">
+                <TypeOfFareProduct id="ntx:day_pass" version="ntx:v1.0">
                   <Name>Day pass product</Name>
                 </TypeOfFareProduct>
-                <TypeOfFareProduct id="ntx:discount_card" modification="new" version="ntx:v1.0" status="active">
+                <TypeOfFareProduct id="ntx:discount_card" version="ntx:v1.0">
                   <Name>Discount  product</Name>
                 </TypeOfFareProduct>
               </values>
             </ValueSet>
-            <ValueSet id="myfares:Types_of_TravelDocument" modification="new" version="any" status="active" classOfValues="TypeOfTravelDocument">
+            <ValueSet id="myfares:Types_of_TravelDocument" version="any" classOfValues="TypeOfTravelDocument">
               <Name>Types of concession</Name>
               <values>
-                <TypeOfTravelDocument id="myfares:paper_ticket" modification="new" version="any" status="active">
+                <TypeOfTravelDocument id="myfares:paper_ticket" version="any">
                   <Name>Paper ticket</Name>
                 </TypeOfTravelDocument>
               </values>
             </ValueSet>
-            <ValueSet id="ntx:Types_of_AccessRightAssignment" modification="new" version="ntx:v1.0" status="active" classOfValues="TypeOfAccessRightAssignment">
+            <ValueSet id="ntx:Types_of_AccessRightAssignment" version="ntx:v1.0" classOfValues="TypeOfAccessRightAssignment">
               <Name>Types of Access Right Assignment</Name>
               <values>
-                <TypeOfAccessRightAssignment id="ntx:eligible" modification="new" version="ntx:v1.0" status="active">
+                <TypeOfAccessRightAssignment id="ntx:eligible" version="ntx:v1.0">
                   <Name>Eligible for a product or discount</Name>
                 </TypeOfAccessRightAssignment>
-                <TypeOfAccessRightAssignment id="ntx:can_access" modification="new" version="ntx:v1.0" status="active">
+                <TypeOfAccessRightAssignment id="ntx:can_access" version="ntx:v1.0">
                   <Name>Grants access rights to use or travel on</Name>
                 </TypeOfAccessRightAssignment>
-                <TypeOfAccessRightAssignment id="ntx:condition_of_use" modification="new" version="ntx:v1.0" status="active">
+                <TypeOfAccessRightAssignment id="ntx:condition_of_use" version="ntx:v1.0">
                   <Name>Defines a condition or restriction on use</Name>
                 </TypeOfAccessRightAssignment>
               </values>
             </ValueSet>
           </typesOfValue>
-          <organisations modificationSet="all">
-            <Operator id="mybus:DTA" modification="new" version="any" status="active">
+          <organisations>
+            <Operator id="mybus:DTA" version="any">
               <Name>Demo Transit Authority</Name>
             </Operator>
           </organisations>

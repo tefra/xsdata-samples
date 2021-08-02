@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <PublicationTimestamp>2001-12-17T09:30:47Z</PublicationTimestamp>
   <ParticipantRef>SYS001</ParticipantRef>
-  <PublicationRequest version="1.0">
+  <PublicationRequest>
     <RequestTimestamp>2001-12-17T09:30:47Z</RequestTimestamp>
     <ParticipantRef>SYS002</ParticipantRef>
   </PublicationRequest>
   <PublicationRefreshInterval>P1Y2M3DT10H30M0S</PublicationRefreshInterval>
   <dataObjects>
-    <CompositeFrame id="mybus:CompositeFrame:CF1" modification="new" version="any" status="active">
-      <codespaces modificationSet="all">
+    <CompositeFrame id="mybus:CompositeFrame:CF1" version="any">
+      <codespaces>
         <Codespace id="mybus">
           <Xmlns>mybus</Xmlns>
           <XmlnsUrl>http://www.mybuses.eu/stuff</XmlnsUrl>
@@ -19,124 +19,124 @@
       <FrameDefaults>
         <DefaultCodespaceRef ref="mybus"/>
       </FrameDefaults>
-      <frames modificationSet="all">
-        <ServiceFrame id="mybus:ServiceFrame:ntwkf002" modification="new" version="001" status="active">
-          <serviceLinks modificationSet="all">
-            <ServiceLink id="mybus:ServiceLink:SL_AtoB01" created="2010-05-19T10:30:47Z" modification="new" version="001" status="active">
+      <frames>
+        <ServiceFrame id="mybus:ServiceFrame:ntwkf002" version="001">
+          <serviceLinks>
+            <ServiceLink id="mybus:ServiceLink:SL_AtoB01" created="2010-05-19T10:30:47Z" version="001">
               <Name>Version one of Link from A to B</Name>
               <FromPointRef ref="mybus:ScheduledStopPoint:SSP0001A">EXTERNAL</FromPointRef>
               <ToPointRef ref="mybus:ScheduledStopPoint:SSP0002B">EXTERNAL</ToPointRef>
             </ServiceLink>
-            <ServiceLink id="mybus:ServiceLink:SL_BtoC01" created="2010-05-21T10:30:51Z" modification="new" version="001" status="active">
+            <ServiceLink id="mybus:ServiceLink:SL_BtoC01" created="2010-05-21T10:30:51Z" version="001">
               <Name>Version one of Link from B to C</Name>
               <FromPointRef ref="mybus:ScheduledStopPoint:SSP0002B">EXTERNAL</FromPointRef>
               <ToPointRef ref="mybus:ScheduledStopPoint:SSP0003C">EXTERNAL</ToPointRef>
             </ServiceLink>
-            <ServiceLink id="mybus:ServiceLink:SL_AtoC01" created="2010-05-19T10:30:47Z" modification="new" version="001" status="active">
+            <ServiceLink id="mybus:ServiceLink:SL_AtoC01" created="2010-05-19T10:30:47Z" version="001">
               <Name>Version one of Link from A to C</Name>
               <FromPointRef ref="mybus:ScheduledStopPoint:SSP0001A">EXTERNAL</FromPointRef>
               <ToPointRef ref="mybus:ScheduledStopPoint:SSP0003C">EXTERNAL</ToPointRef>
             </ServiceLink>
           </serviceLinks>
-          <servicePatterns modificationSet="all">
-            <ServicePattern id="mybus:ServicePattern:SP001" created="2010-05-21T10:30:51Z" modification="new" version="001" status="active">
+          <servicePatterns>
+            <ServicePattern id="mybus:ServicePattern:SP001" created="2010-05-21T10:30:51Z" version="001">
               <Name>From A to B to  C, Normal condiation </Name>
               <pointsInSequence>
-                <StopPointInJourneyPattern id="mybus:StopPointInJourneyPattern:SP001_01" modification="new" version="001" status="active" order="1">
+                <StopPointInJourneyPattern id="mybus:StopPointInJourneyPattern:SP001_01" version="001" order="1">
                   <ScheduledStopPointRef ref="mybus:ScheduledStopPoint:SSP0001A">EXTERNAL</ScheduledStopPointRef>
                 </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="mybus:StopPointInJourneyPattern:SP001_02" modification="new" version="001" status="active" order="2">
+                <StopPointInJourneyPattern id="mybus:StopPointInJourneyPattern:SP001_02" version="001" order="2">
                   <ScheduledStopPointRef ref="mybus:ScheduledStopPoint:SSP0002B">EXTERNAL</ScheduledStopPointRef>
                 </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="mybus:StopPointInJourneyPattern:SP001_03" modification="new" version="001" status="active" order="3">
+                <StopPointInJourneyPattern id="mybus:StopPointInJourneyPattern:SP001_03" version="001" order="3">
                   <ScheduledStopPointRef ref="mybus:ScheduledStopPoint:SSP0003C">EXTERNAL</ScheduledStopPointRef>
                 </StopPointInJourneyPattern>
               </pointsInSequence>
             </ServicePattern>
-            <ServicePattern id="mybus:ServicePattern:SP003" created="2010-05-21T10:30:51Z" modification="new" version="001" status="active">
+            <ServicePattern id="mybus:ServicePattern:SP003" created="2010-05-21T10:30:51Z" version="001">
               <Name>From A to C, direct - Icy conditions, omit B </Name>
               <pointsInSequence>
-                <StopPointInJourneyPattern id="mybus:StopPointInJourneyPattern:SP003_01" modification="new" version="001" status="active" order="1">
+                <StopPointInJourneyPattern id="mybus:StopPointInJourneyPattern:SP003_01" version="001" order="1">
                   <ScheduledStopPointRef ref="mybus:ScheduledStopPoint:SSP0001A"/>
                 </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="mybus:StopPointInJourneyPattern:SP003_02" modification="new" version="001" status="active" order="2">
+                <StopPointInJourneyPattern id="mybus:StopPointInJourneyPattern:SP003_02" version="001" order="2">
                   <ScheduledStopPointRef ref="mybus:ScheduledStopPoint:SSP0003C"/>
                 </StopPointInJourneyPattern>
               </pointsInSequence>
             </ServicePattern>
           </servicePatterns>
         </ServiceFrame>
-        <GeneralFrame id="mybus:GeneralFrame:ntwkf002" created="2010-05-17T09:30:47Z" changed="2010-05-21T10:30:51Z" modification="revise" version="002" status="active" responsibilitySetRef="mybus:ResponsibilitySet:RS_10">
-          <validityConditions modificationSet="all">
-            <AvailabilityCondition id="mybus:AvailabilityCondition:VC_ntwkf002_002_mf" created="2010-05-18T10:30:47Z" modification="new" version="any" status="active">
+        <GeneralFrame id="mybus:GeneralFrame:ntwkf002" created="2010-05-17T09:30:47Z" changed="2010-05-21T10:30:51Z" modification="revise" version="002" responsibilitySetRef="mybus:ResponsibilitySet:RS_10">
+          <validityConditions>
+            <AvailabilityCondition id="mybus:AvailabilityCondition:VC_ntwkf002_002_mf" created="2010-05-18T10:30:47Z" version="any">
               <Description>Use when no ice</Description>
               <FromDate>2010-05-17T00:00:00Z</FromDate>
               <ToDate>2011-05-17T00:00:00Z</ToDate>
-              <dayTypes modificationSet="all">
+              <dayTypes>
                 <DayTypeRef ref="mybus:DayType:DT001_MF">EXTERNAL</DayTypeRef>
               </dayTypes>
             </AvailabilityCondition>
           </validityConditions>
           <Name>ntwkf002  - Frame with SERVICE PATTERN for Normal conditions</Name>
           <BaselineVersionFrameRef version="001" ref="mybus:GeneralFrame"/>
-          <members modificationSet="all">
-            <GeneralFrameMember id="mybus:GeneralFrameMember:ntwkf002_01" modification="revise" status="active">
+          <members>
+            <GeneralFrameMember id="mybus:GeneralFrameMember:ntwkf002_01" modification="revise">
               <ScheduledStopPointRef ref="mybus:ScheduledStopPoint:SSP0001A">EXTERNAL</ScheduledStopPointRef>
             </GeneralFrameMember>
-            <GeneralFrameMember id="mybus:GeneralFrameMember:ntwkf002_02" modification="revise" status="active">
+            <GeneralFrameMember id="mybus:GeneralFrameMember:ntwkf002_02" modification="revise">
               <ScheduledStopPointRef ref="mybus:ScheduledStopPoint:SSP0001B">EXTERNAL</ScheduledStopPointRef>
             </GeneralFrameMember>
-            <GeneralFrameMember id="mybus:GeneralFrameMember:ntwkf002_05" modification="revise" status="active">
+            <GeneralFrameMember id="mybus:GeneralFrameMember:ntwkf002_05" modification="revise">
               <ScheduledStopPointRef ref="mybus:ScheduledStopPoint:SSP0001C">EXTERNAL</ScheduledStopPointRef>
             </GeneralFrameMember>
-            <GeneralFrameMember id="mybus:ntwkf002_03" modification="revise" status="active">
+            <GeneralFrameMember id="mybus:ntwkf002_03" modification="revise">
               <DayTypeRef ref="mybus:DayType:DT001_MF">EXTERNAL</DayTypeRef>
             </GeneralFrameMember>
-            <GeneralFrameMember id="mybus:GeneralFrameMember:ntwkf002_04" modification="revise" status="active">
+            <GeneralFrameMember id="mybus:GeneralFrameMember:ntwkf002_04" modification="revise">
               <ServiceLinkRef version="001" ref="mybus:ServiceLink:SL_AtoB01"/>
             </GeneralFrameMember>
-            <GeneralFrameMember id="mybus:GeneralFrameMember:ntwkf002_06" modification="new" status="active">
+            <GeneralFrameMember id="mybus:GeneralFrameMember:ntwkf002_06">
               <ServiceLinkRef version="001" ref="mybus:ServiceLink:SL_BtoC01"/>
             </GeneralFrameMember>
-            <GeneralFrameMember id="mybus:GeneralFrameMember:ntwkf002_07" modification="new" status="active">
+            <GeneralFrameMember id="mybus:GeneralFrameMember:ntwkf002_07">
               <ServicePatternRef version="001" ref="mybus:ServicePattern:SP001"/>
             </GeneralFrameMember>
           </members>
         </GeneralFrame>
-        <GeneralFrame id="mybus:GeneralFrame:ntwkf003" created="2010-05-17T09:30:47Z" changed="2010-05-21T10:30:51Z" modification="revise" version="002" status="active" responsibilitySetRef="mybus:ResponsibilitySet:RS_10">
-          <validityConditions modificationSet="all">
-            <ValidityRuleParameter id="mybus:ValidityRuleParameter:VC_ntwkf003_002_icy" created="2010-05-18T10:30:47Z" modification="new" version="any" status="active" responsibilitySetRef="mybus:ResponsibilitySet:RS_10">
+        <GeneralFrame id="mybus:GeneralFrame:ntwkf003" created="2010-05-17T09:30:47Z" changed="2010-05-21T10:30:51Z" modification="revise" version="002" responsibilitySetRef="mybus:ResponsibilitySet:RS_10">
+          <validityConditions>
+            <ValidityRuleParameter id="mybus:ValidityRuleParameter:VC_ntwkf003_002_icy" created="2010-05-18T10:30:47Z" version="any" responsibilitySetRef="mybus:ResponsibilitySet:RS_10">
               <Description>Use when Icy</Description>
               <RuleObjectRef nameOfRefClass="Weather" ref="Myobj:Cur001">EXTERNAL</RuleObjectRef>
               <AttributeName>roadCondition</AttributeName>
               <ComparisonOperator>EQ</ComparisonOperator>
               <AttributeValue>icy</AttributeValue>
             </ValidityRuleParameter>
-            <AvailabilityCondition id="mybus:AvailabilityCondition:VC_ntwkf003_002_mf" created="2010-05-18T10:30:47Z" modification="new" version="any" status="active" responsibilitySetRef="mybus:ResponsibilitySet:RS_10">
+            <AvailabilityCondition id="mybus:AvailabilityCondition:VC_ntwkf003_002_mf" created="2010-05-18T10:30:47Z" version="any" responsibilitySetRef="mybus:ResponsibilitySet:RS_10">
               <Description>Use when winter MF</Description>
               <FromDate>2010-05-17T00:00:00Z</FromDate>
               <ToDate>2011-05-17T00:00:00Z</ToDate>
-              <dayTypes modificationSet="all">
+              <dayTypes>
                 <DayTypeRef ref="mybus:DayType:DT001_MF"/>
               </dayTypes>
             </AvailabilityCondition>
           </validityConditions>
           <Name>ntwkf003 Different Frame  with a different condition - a different frame</Name>
           <BaselineVersionFrameRef version="001" ref="mybus:GeneralFrame:ntwkf001"/>
-          <members modificationSet="all">
-            <GeneralFrameMember id="mybus:GeneralFrameMember:ntwkf003_01" modification="revise" status="active">
+          <members>
+            <GeneralFrameMember id="mybus:GeneralFrameMember:ntwkf003_01" modification="revise">
               <ScheduledStopPointRef ref="mybus:ScheduledStopPoint:SSP0001A"/>
             </GeneralFrameMember>
-            <GeneralFrameMember id="mybus:GeneralFrameMember:ntwkf003_05" modification="revise" status="active">
+            <GeneralFrameMember id="mybus:GeneralFrameMember:ntwkf003_05" modification="revise">
               <ScheduledStopPointRef ref="mybus:ScheduledStopPoint:SSP0001C"/>
             </GeneralFrameMember>
-            <GeneralFrameMember id="mybus:GeneralFrameMember:ntwkf003_03" modification="revise" status="active">
+            <GeneralFrameMember id="mybus:GeneralFrameMember:ntwkf003_03" modification="revise">
               <DayTypeRef ref="mybus:DayType:DT001_MF"/>
             </GeneralFrameMember>
-            <GeneralFrameMember id="mybus:GeneralFrameMember:ntwkf003_04" modification="revise" status="active">
+            <GeneralFrameMember id="mybus:GeneralFrameMember:ntwkf003_04" modification="revise">
               <ServiceLinkRef version="001" ref="mybus:ServiceLink:SL_AtoC01"/>
             </GeneralFrameMember>
-            <GeneralFrameMember id="mybus:GeneralFrameMember:ntwkf003_07" modification="new" status="active">
+            <GeneralFrameMember id="mybus:GeneralFrameMember:ntwkf003_07">
               <ServicePatternRef ref="mybus:ServicePattern:SP002"/>
             </GeneralFrameMember>
           </members>

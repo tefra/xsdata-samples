@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <PublicationTimestamp>2010-12-17T09:30:47Z</PublicationTimestamp>
   <ParticipantRef>SYS001</ParticipantRef>
-  <PublicationRequest version="1.0">
+  <PublicationRequest>
     <RequestTimestamp>2010-12-17T09:30:47Z</RequestTimestamp>
     <ParticipantRef>SYS002</ParticipantRef>
     <topics>
       <NetworkFrameTopic>
         <selectionValidityConditions>
-          <AvailabilityCondition id="acs:CAL_02" modification="new" version="any" status="active">
+          <AvailabilityCondition id="acs:CAL_02" version="any">
             <FromDate>2010-11-01T00:00:00Z</FromDate>
           </AvailabilityCondition>
         </selectionValidityConditions>
@@ -19,25 +19,25 @@
   <PublicationRefreshInterval>P1M</PublicationRefreshInterval>
   <Description>Example  of simple timetable frame with two journeys and service calendar</Description>
   <dataObjects>
-    <CompositeFrame id="acs:ACS@Line_24" modification="new" version="1.0" status="active">
+    <CompositeFrame id="acs:ACS@Line_24" version="1.0">
       <FrameDefaults>
         <DefaultCodespaceRef ref="mybus"/>
       </FrameDefaults>
-      <frames modificationSet="all">
-        <ServiceFrame id="mybus:ACS@Line_24@Network" modification="new" version="1.0" status="active">
+      <frames>
+        <ServiceFrame id="mybus:ACS@Line_24@Network" version="1.0">
           <Name>Stops for Winter timetable for route 24 </Name>
-          <codespaces modificationSet="all">
+          <codespaces>
             <Codespace id="mybus">
               <Xmlns>mybus</Xmlns>
               <XmlnsUrl>http://www.mybuses.eu/stuff</XmlnsUrl>
               <Description>My buses</Description>
             </Codespace>
           </codespaces>
-          <prerequisites modificationSet="all">
+          <prerequisites>
             <ResourceFrameRef version="1.0" ref="acs:ACS@Common_Resources"/>
           </prerequisites>
-          <lines modificationSet="all">
-            <Line id="mybus:LN_24" modification="new" version="any" status="active">
+          <lines>
+            <Line id="mybus:LN_24" version="any">
               <Name>Line 24 Alpha to Charley</Name>
               <ShortName>Line 24</ShortName>
               <TransportMode>bus</TransportMode>
@@ -45,31 +45,31 @@
               <OperatorRef version="1.0" ref="acs:ACS"/>
             </Line>
           </lines>
-          <destinationDisplays modificationSet="all">
-            <DestinationDisplay id="mybus:Bravo" modification="new" version="any" status="active">
+          <destinationDisplays>
+            <DestinationDisplay id="mybus:Bravo" version="any">
               <Name>Bravo Road</Name>
               <ShortName>Bravo Rd</ShortName>
               <PublicCode>BRAV</PublicCode>
               <variants>
-                <DestinationDisplayVariant modification="new" status="active">
+                <DestinationDisplayVariant>
                   <DestinationDisplayVariantMediaType>textToSpeech</DestinationDisplayVariantMediaType>
                   <Name>Bravo</Name>
                   <vias>
-                    <Via modification="new" status="active">
+                    <Via>
                       <Name>Eye Hospital</Name>
                     </Via>
                   </vias>
                 </DestinationDisplayVariant>
               </variants>
             </DestinationDisplay>
-            <DestinationDisplay id="mybus:Charley" modification="new" version="any" status="active">
+            <DestinationDisplay id="mybus:Charley" version="any">
               <Name>Charley Crescent</Name>
               <ShortName>Charley C</ShortName>
               <PublicCode>CHAS</PublicCode>
             </DestinationDisplay>
           </destinationDisplays>
-          <scheduledStopPoints modificationSet="all">
-            <ScheduledStopPoint id="mybus:SSP_001" modification="new" version="any" status="active">
+          <scheduledStopPoints>
+            <ScheduledStopPoint id="mybus:SSP_001" version="any">
               <Name>Alpha &amp; Castle</Name>
               <Location>
                 <Longitude>53.0000</Longitude>
@@ -81,7 +81,7 @@
               <StopType>onstreetBus</StopType>
               <VehicleModes>bus</VehicleModes>
             </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_002" modification="new" version="any" status="active">
+            <ScheduledStopPoint id="mybus:SSP_002" version="any">
               <Name>Bravo Street</Name>
               <Location>
                 <Longitude>53.2000</Longitude>
@@ -93,7 +93,7 @@
               <StopType>onstreetBus</StopType>
               <VehicleModes>bus</VehicleModes>
             </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_077" modification="new" version="any" status="active">
+            <ScheduledStopPoint id="mybus:SSP_077" version="any">
               <Name>Charley Crescent</Name>
               <Location>
                 <Longitude>53.3000</Longitude>
@@ -105,7 +105,7 @@
               <StopType>onstreetBus</StopType>
               <VehicleModes>bus</VehicleModes>
             </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_015" modification="new" version="any" status="active">
+            <ScheduledStopPoint id="mybus:SSP_015" version="any">
               <Name>Park Lane</Name>
               <Location>
                 <Longitude>53.34000</Longitude>
@@ -119,30 +119,30 @@
             </ScheduledStopPoint>
           </scheduledStopPoints>
         </ServiceFrame>
-        <TimetableFrame id="acs:ACS@Line_24@Timetable" modification="new" version="1.0" status="active">
-          <validityConditions modificationSet="all">
-            <AvailabilityCondition id="acs:Cnd001" modification="new" version="any" status="active">
+        <TimetableFrame id="acs:ACS@Line_24@Timetable" version="1.0">
+          <validityConditions>
+            <AvailabilityCondition id="acs:Cnd001" version="any">
               <Description>Sept  to March</Description>
               <FromDate>2010-11-01T00:00:00Z</FromDate>
               <ToDate>2011-03-31T00:00:00Z</ToDate>
-              <dayTypes modificationSet="all">
+              <dayTypes>
                 <DayTypeRef version="any" ref="acs:DT_01-MF-NH"/>
                 <DayTypeRef version="any" ref="acs:DT_03-WE-NH"/>
               </dayTypes>
             </AvailabilityCondition>
           </validityConditions>
           <Name>Winter timetable for route 24 outbound</Name>
-          <prerequisites modificationSet="all">
+          <prerequisites>
             <ServiceFrameRef version="1.0" ref="mybus:ACS@Line_24@Network"/>
             <ServiceFrameRef ref="mybus:ACS@Line_24@Routes_and_JourneyPatterns" versionRef="EXTERNAL"/>
             <VehicleScheduleFrameRef ref="mybus:ACS@Line_24@Schedule" versionRef="EXTERNAL"/>
             <ServiceCalendarFrameRef version="1.0" ref="acs:ACS@Winter_2010"/>
           </prerequisites>
           <VehicleModes>bus</VehicleModes>
-          <vehicleJourneys modificationSet="all">
-            <ServiceJourney id="acs:sj_24o_01" modification="new" version="any" status="active">
+          <vehicleJourneys>
+            <ServiceJourney id="acs:sj_24o_01" version="any">
               <DepartureTime>14:20:00Z</DepartureTime>
-              <dayTypes modificationSet="all">
+              <dayTypes>
                 <DayTypeRef version="any" ref="acs:DT_01-MF-NH"/>
               </dayTypes>
               <ServiceJourneyPatternRef ref="acs:jp_24o" versionRef="EXTERNAL">EXTERNAL</ServiceJourneyPatternRef>
@@ -155,7 +155,7 @@
                 <DestinationDisplayRef version="any" ref="mybus:Charley"/>
               </JourneyPatternView>
               <calls>
-                <Call id="acs:sj_24o_01_001" modification="new" version="any" status="active" order="1">
+                <Call id="acs:sj_24o_01_001" version="any" order="1">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
                   <Arrival>
                     <ForAlighting>false</ForAlighting>
@@ -164,7 +164,7 @@
                     <Time>14:20:00Z</Time>
                   </Departure>
                 </Call>
-                <Call id="acs:sj_24o_01_002" modification="new" version="any" status="active" order="2">
+                <Call id="acs:sj_24o_01_002" version="any" order="2">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
                   <Arrival>
                     <Time>14:30:00Z</Time>
@@ -175,7 +175,7 @@
                   </Departure>
                   <Note>Arrival at Terminus</Note>
                 </Call>
-                <Call id="acs:sj_24o_01_003" modification="new" version="any" status="active" order="3">
+                <Call id="acs:sj_24o_01_003" version="any" order="3">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
                   <Arrival>
                     <Time>15:10:00Z</Time>
@@ -185,13 +185,13 @@
                   </Departure>
                 </Call>
               </calls>
-              <facilities modificationSet="all">
+              <facilities>
                 <ServiceFacilitySetRef version="any" ref="acs:sfs_24o_01"/>
               </facilities>
             </ServiceJourney>
-            <ServiceJourney id="acs:sj_24o_02" modification="new" version="any" status="active">
+            <ServiceJourney id="acs:sj_24o_02" version="any">
               <DepartureTime>15:20:00Z</DepartureTime>
-              <dayTypes modificationSet="all">
+              <dayTypes>
                 <DayTypeRef version="any" ref="acs:DT_01-MF-NH"/>
               </dayTypes>
               <ServiceJourneyPatternRef ref="acs:jp_24o">EXTERNAL</ServiceJourneyPatternRef>
@@ -204,7 +204,7 @@
                 <DestinationDisplayRef version="any" ref="mybus:Charley"/>
               </JourneyPatternView>
               <calls>
-                <Call id="acs:sj_24o_02_001" modification="new" version="any" status="active" order="1">
+                <Call id="acs:sj_24o_02_001" version="any" order="1">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
                   <Arrival>
                     <ForAlighting>false</ForAlighting>
@@ -213,13 +213,13 @@
                     <Time>15:20:00Z</Time>
                   </Departure>
                   <vias>
-                    <Via modification="new" status="active">
+                    <Via>
                       <DestinationDisplayRef version="any" ref="mybus:Bravo"/>
                     </Via>
                   </vias>
                   <ChangeOfDestinationDisplay>true</ChangeOfDestinationDisplay>
                 </Call>
-                <Call id="acs:sj_24o_02_002" modification="new" version="any" status="active" order="2">
+                <Call id="acs:sj_24o_02_002" version="any" order="2">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
                   <Arrival>
                     <Time>15:30:00Z</Time>
@@ -233,7 +233,7 @@
                   </vias>
                   <ChangeOfDestinationDisplay>true</ChangeOfDestinationDisplay>
                 </Call>
-                <Call id="acs:sj_24o_02_003" modification="new" version="any" status="active" order="3">
+                <Call id="acs:sj_24o_02_003" version="any" order="3">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
                   <Arrival>
                     <Time>16:10:00Z</Time>
@@ -243,13 +243,13 @@
                   </Departure>
                 </Call>
               </calls>
-              <facilities modificationSet="all">
+              <facilities>
                 <ServiceFacilitySetRef version="any" ref="acs:sfs_24o_01"/>
               </facilities>
             </ServiceJourney>
           </vehicleJourneys>
-          <serviceFacilitySets modificationSet="all">
-            <ServiceFacilitySet id="acs:sfs_24o_01" modification="new" version="any" status="active">
+          <serviceFacilitySets>
+            <ServiceFacilitySet id="acs:sfs_24o_01" version="any">
               <ProvidedByRef ref="xyz:4567">EXTERNAL</ProvidedByRef>
               <AssistanceFacilityList>boardingAssistance conductor wheechairAssistance</AssistanceFacilityList>
               <FareClasses>standardClass</FareClasses>
@@ -261,8 +261,8 @@
             </ServiceFacilitySet>
           </serviceFacilitySets>
         </TimetableFrame>
-        <ResourceFrame id="acs:ACS@Common_Resources" modification="new" version="1.0" status="active">
-          <codespaces modificationSet="all">
+        <ResourceFrame id="acs:ACS@Common_Resources" version="1.0">
+          <codespaces>
             <Codespace id="acs">
               <Xmlns>acs</Xmlns>
               <XmlnsUrl>http://autocarssuperbe.fr</XmlnsUrl>
@@ -272,8 +272,8 @@
           <FrameDefaults>
             <DefaultCodespaceRef ref="acs"/>
           </FrameDefaults>
-          <organisations modificationSet="all">
-            <Operator id="acs:ACS" modification="new" version="1.0" status="active">
+          <organisations>
+            <Operator id="acs:ACS" version="1.0">
               <Name>Autocars superbe</Name>
               <Locale>
                 <DefaultLanguage>fr</DefaultLanguage>
@@ -285,14 +285,14 @@
             </Operator>
           </organisations>
         </ResourceFrame>
-        <ServiceCalendarFrame id="acs:ACS@Winter_2010" modification="new" version="1.0" status="active">
+        <ServiceCalendarFrame id="acs:ACS@Winter_2010" version="1.0">
           <Name>Service Calendar Nov 2010 ALTERNATE MORE COMPACT Coding  </Name>
-          <ServiceCalendar id="acs:ACS@Winter_2010" modification="new" version="any" status="active">
+          <ServiceCalendar id="acs:ACS@Winter_2010" version="any">
             <FromDate>2010-11-01</FromDate>
             <ToDate>2010-11-14</ToDate>
           </ServiceCalendar>
-          <dayTypes modificationSet="all">
-            <DayType id="acs:DT_01-MF-NH" modification="new" version="any" status="active">
+          <dayTypes>
+            <DayType id="acs:DT_01-MF-NH" version="any">
               <Name>Weekdays unless a holiday</Name>
               <properties>
                 <PropertyOfDay>
@@ -301,7 +301,7 @@
                 </PropertyOfDay>
               </properties>
             </DayType>
-            <DayType id="acs:DT_02-AA-NH" modification="new" version="any" status="active">
+            <DayType id="acs:DT_02-AA-NH" version="any">
               <Name>Everyday unless a holiday</Name>
               <properties>
                 <PropertyOfDay>
@@ -310,7 +310,7 @@
                 </PropertyOfDay>
               </properties>
             </DayType>
-            <DayType id="acs:DT_03-WE-NH" modification="new" version="any" status="active">
+            <DayType id="acs:DT_03-WE-NH" version="any">
               <Name>Weekends unless a holiday</Name>
               <properties>
                 <PropertyOfDay>
@@ -319,7 +319,7 @@
                 </PropertyOfDay>
               </properties>
             </DayType>
-            <DayType id="acs:DT_04-AA-NH" modification="new" version="any" status="active">
+            <DayType id="acs:DT_04-AA-NH" version="any">
               <Name>Holidays</Name>
               <properties>
                 <PropertyOfDay>
@@ -329,73 +329,73 @@
               </properties>
             </DayType>
           </dayTypes>
-          <dayTypeAssignments modificationSet="all">
-            <DayTypeAssignment id="acs:2010-11-01" modification="new" version="any" status="active" order="1">
+          <dayTypeAssignments>
+            <DayTypeAssignment id="acs:2010-11-01" version="any" order="1">
               <Description>Monday 2010-11-01</Description>
               <Date>2010-11-01</Date>
               <DayTypeRef version="any" ref="acs:DT_01-MF-NH"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="acs:2010-11-02" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="acs:2010-11-02" version="any" order="1">
               <Description>Tuesday 2010-11-02</Description>
               <Date>2010-11-02</Date>
               <DayTypeRef version="any" ref="acs:DT_01-MF-NH"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="acs:2010-11-03" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="acs:2010-11-03" version="any" order="1">
               <Description>Wednesday 2010-11-03</Description>
               <Date>2010-11-03</Date>
               <DayTypeRef version="any" ref="acs:DT_01-MF-NH"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="acs:2010-11-04" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="acs:2010-11-04" version="any" order="1">
               <Description>Thusday 2010-11-04</Description>
               <Date>2010-11-04</Date>
               <DayTypeRef version="any" ref="acs:DT_01-MF-NH"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="acs:2010-11-05" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="acs:2010-11-05" version="any" order="1">
               <Description>MFriday 2010-11-05</Description>
               <Date>2010-11-05</Date>
               <DayTypeRef version="any" ref="acs:DT_01-MF-NH"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="acs:2010-11-06" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="acs:2010-11-06" version="any" order="1">
               <Description>Saturday 2010-11-06</Description>
               <Date>2010-11-06</Date>
               <DayTypeRef version="any" ref="acs:DT_03-WE-NH"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="acs:2010-11-07" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="acs:2010-11-07" version="any" order="1">
               <Description>Sunday 2010-11-07</Description>
               <Date>2010-11-07</Date>
               <DayTypeRef version="any" ref="acs:DT_03-WE-NH"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="acs:2010-11-08" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="acs:2010-11-08" version="any" order="1">
               <Description>Monday 2010-11-08</Description>
               <Date>2010-11-08</Date>
               <DayTypeRef version="any" ref="acs:DT_01-MF-NH"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="acs:2010-11-09" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="acs:2010-11-09" version="any" order="1">
               <Description>Tuesday 2010-11-09</Description>
               <Date>2010-11-09</Date>
               <DayTypeRef version="any" ref="acs:DT_01-MF-NH"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="acs:2010-11-10" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="acs:2010-11-10" version="any" order="1">
               <Description>Wednesday 2010-11-10</Description>
               <Date>2010-11-10</Date>
               <DayTypeRef version="any" ref="acs:DT_01-MF-NH"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="acs:2010-11-11" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="acs:2010-11-11" version="any" order="1">
               <Description>Thusday 2010-11-11</Description>
               <Date>2010-11-11</Date>
               <DayTypeRef version="any" ref="acs:DT_01-MF-NH"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="acs:2010-11-12" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="acs:2010-11-12" version="any" order="1">
               <Description>MFriday 2010-11-12</Description>
               <Date>2010-11-12</Date>
               <DayTypeRef version="any" ref="acs:DT_01-MF-NH"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="acs:2010-11-113" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="acs:2010-11-113" version="any" order="1">
               <Description>Saturday 2010-11-13</Description>
               <Date>2010-11-13</Date>
               <DayTypeRef version="any" ref="acs:DT_03-WE-NH"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="acs:2010-11-14" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="acs:2010-11-14" version="any" order="1">
               <Description>Sunday 2010-11-14</Description>
               <Date>2010-11-14</Date>
               <DayTypeRef version="any" ref="acs:DT_03-WE-NH"/>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <PublicationTimestamp>2010-12-17T09:30:47Z</PublicationTimestamp>
   <ParticipantRef>SYS001</ParticipantRef>
-  <PublicationRequest version="1.0">
+  <PublicationRequest>
     <RequestTimestamp>2010-12-17T09:30:47Z</RequestTimestamp>
     <ParticipantRef>SYS002</ParticipantRef>
     <topics>
       <NetworkFrameTopic>
         <selectionValidityConditions>
-          <AvailabilityCondition id="hde:CAL_02" modification="new" version="any" status="active">
+          <AvailabilityCondition id="hde:CAL_02" version="any">
             <FromDate>2010-11-01T00:00:00Z</FromDate>
           </AvailabilityCondition>
         </selectionValidityConditions>
@@ -19,8 +19,8 @@
   <PublicationRefreshInterval>P1M</PublicationRefreshInterval>
   <Description>Example  of simple intyerchange rulkes</Description>
   <dataObjects>
-    <CompositeFrame id="hde:CAL_02" modification="new" version="2" status="active">
-      <codespaces modificationSet="all">
+    <CompositeFrame id="hde:CAL_02" version="2">
+      <codespaces>
         <Codespace id="mybus">
           <Xmlns>mybus</Xmlns>
           <XmlnsUrl>http://www.mybuses.eu/stuff</XmlnsUrl>
@@ -35,91 +35,91 @@
       <FrameDefaults>
         <DefaultCodespaceRef ref="mybus"/>
       </FrameDefaults>
-      <frames modificationSet="all">
-        <ServiceFrame id="mybus:svf_12" modification="new" version="1" status="active">
+      <frames>
+        <ServiceFrame id="mybus:svf_12" version="1">
           <Name>Stops for Winter timetable for route 24 </Name>
-          <directions modificationSet="all">
-            <Direction id="mybus:DR_hbf" modification="new" version="any" status="active">
+          <directions>
+            <Direction id="mybus:DR_hbf" version="any">
               <Name>Main Station</Name>
               <ShortName>HBFd</ShortName>
             </Direction>
-            <Direction id="mybus:DR_Lake" modification="new" version="any" status="active">
+            <Direction id="mybus:DR_Lake" version="any">
               <Name>Lake</Name>
             </Direction>
-            <Direction id="mybus:DR_Forest" modification="new" version="any" status="active">
+            <Direction id="mybus:DR_Forest" version="any">
               <Name>Forest</Name>
             </Direction>
-            <Direction id="mybus:DR_MarketHall" modification="new" version="any" status="active">
+            <Direction id="mybus:DR_MarketHall" version="any">
               <Name>Market Hall</Name>
             </Direction>
-            <Direction id="mybus:DR_Museum" modification="new" version="any" status="active">
+            <Direction id="mybus:DR_Museum" version="any">
               <Name>Museum</Name>
             </Direction>
-            <Direction id="mybus:DR_Tower" modification="new" version="any" status="active">
+            <Direction id="mybus:DR_Tower" version="any">
               <Name>Tower</Name>
             </Direction>
-            <Direction id="mybus:DR_TownHall" modification="new" version="any" status="active">
+            <Direction id="mybus:DR_TownHall" version="any">
               <Name>Town Hall</Name>
             </Direction>
-            <Direction id="mybus:DR_Outskirts" modification="new" version="any" status="active">
+            <Direction id="mybus:DR_Outskirts" version="any">
               <Name>Outskirts</Name>
             </Direction>
-            <Direction id="mybus:DR_Opera" modification="new" version="any" status="active">
+            <Direction id="mybus:DR_Opera" version="any">
               <Name>Opera</Name>
             </Direction>
-            <Direction id="mybus:DR_IndustrieparkWest" modification="new" version="any" status="active">
+            <Direction id="mybus:DR_IndustrieparkWest" version="any">
               <Name>Industriepark West</Name>
             </Direction>
-            <Direction id="mybus:DR_CarPArk" modification="new" version="any" status="active">
+            <Direction id="mybus:DR_CarPArk" version="any">
               <Name>Car Park</Name>
             </Direction>
-            <Direction id="mybus:DR_Stadium" modification="new" version="any" status="active">
+            <Direction id="mybus:DR_Stadium" version="any">
               <Name>Stadium</Name>
             </Direction>
-            <Direction id="mybus:DR_Hospital" modification="new" version="any" status="active">
+            <Direction id="mybus:DR_Hospital" version="any">
               <Name>Hospital</Name>
             </Direction>
           </directions>
-          <lines modificationSet="all">
-            <Line id="mybus:LN_1" modification="new" version="any" status="active">
+          <lines>
+            <Line id="mybus:LN_1" version="any">
               <Name>Line 1  Lake to Forest</Name>
               <ShortName>Line 1</ShortName>
               <TransportMode>bus</TransportMode>
               <PublicCode>1</PublicCode>
             </Line>
-            <Line id="mybus:LN_2" modification="new" version="any" status="active">
+            <Line id="mybus:LN_2" version="any">
               <Name>Line 2  Market hall to Museum</Name>
               <ShortName>Line 2</ShortName>
               <TransportMode>bus</TransportMode>
               <PublicCode>2</PublicCode>
             </Line>
-            <Line id="mybus:LN_3" modification="new" version="any" status="active">
+            <Line id="mybus:LN_3" version="any">
               <Name>Line 3 Tower to Town Hall</Name>
               <ShortName>Line 3</ShortName>
               <TransportMode>bus</TransportMode>
               <PublicCode>3</PublicCode>
             </Line>
-            <Line id="mybus:LN_4" modification="new" version="any" status="active">
+            <Line id="mybus:LN_4" version="any">
               <Name>Line 4  Outskirts to Opera</Name>
               <ShortName>Line 5</ShortName>
               <TransportMode>bus</TransportMode>
               <PublicCode>5</PublicCode>
             </Line>
-            <Line id="mybus:LN_5" modification="new" version="any" status="active">
+            <Line id="mybus:LN_5" version="any">
               <Name>Line 5 IndustriePark West  to Carparkl</Name>
               <ShortName>Line 5</ShortName>
               <TransportMode>bus</TransportMode>
               <PublicCode>5</PublicCode>
             </Line>
-            <Line id="mybus:LN_6" modification="new" version="any" status="active">
+            <Line id="mybus:LN_6" version="any">
               <Name>Line 6 Stadium to Hospitall</Name>
               <ShortName>Line 6</ShortName>
               <TransportMode>bus</TransportMode>
               <PublicCode>6</PublicCode>
             </Line>
           </lines>
-          <scheduledStopPoints modificationSet="all">
-            <ScheduledStopPoint id="mybus:SSP_025" modification="new" version="any" status="active">
+          <scheduledStopPoints>
+            <ScheduledStopPoint id="mybus:SSP_025" version="any">
               <Name>Main Station</Name>
               <Location>
                 <Longitude>53.0000</Longitude>
@@ -130,7 +130,7 @@
               <StopType>railStation</StopType>
               <VehicleModes>rail bus bus</VehicleModes>
             </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_002" modification="new" version="any" status="active">
+            <ScheduledStopPoint id="mybus:SSP_002" version="any">
               <Name>Bravo Street</Name>
               <Location>
                 <Longitude>53.2000</Longitude>
@@ -141,7 +141,7 @@
               <StopType>onstreetBus</StopType>
               <VehicleModes>bus</VehicleModes>
             </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_003" modification="new" version="any" status="active">
+            <ScheduledStopPoint id="mybus:SSP_003" version="any">
               <Name>Charley Crescent</Name>
               <Location>
                 <Longitude>53.3000</Longitude>
@@ -152,7 +152,7 @@
               <StopType>onstreetBus</StopType>
               <VehicleModes>bus</VehicleModes>
             </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_011" modification="new" version="any" status="active">
+            <ScheduledStopPoint id="mybus:SSP_011" version="any">
               <Name>Park Lane</Name>
               <Location>
                 <Longitude>53.34000</Longitude>
@@ -163,7 +163,7 @@
               <StopType>onstreetBus</StopType>
               <VehicleModes>bus</VehicleModes>
             </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_012" modification="new" version="any" status="active">
+            <ScheduledStopPoint id="mybus:SSP_012" version="any">
               <Name>Hospital</Name>
               <Location>
                 <Longitude>53.34000</Longitude>
@@ -175,8 +175,8 @@
               <VehicleModes>bus</VehicleModes>
             </ScheduledStopPoint>
           </scheduledStopPoints>
-          <connections modificationSet="all">
-            <Connection id="mybus:CX_25" modification="new" version="any" status="active">
+          <connections>
+            <Connection id="mybus:CX_25" version="any">
               <Name>Connect at Main station</Name>
               <TransferDuration>
                 <DefaultDuration>PT5M</DefaultDuration>
@@ -193,9 +193,9 @@
             </Connection>
           </connections>
         </ServiceFrame>
-        <TimetableFrame id="hde:TIM_23_O" modification="new" version="2" status="active">
-          <validityConditions modificationSet="all">
-            <AvailabilityCondition id="hde:Cnd001" modification="new" version="any" status="active">
+        <TimetableFrame id="hde:TIM_23_O" version="2">
+          <validityConditions>
+            <AvailabilityCondition id="hde:Cnd001" version="any">
               <Description>Sept  to March</Description>
               <FromDate>2010-11-01T00:00:00Z</FromDate>
               <ToDate>2011-03-31T00:00:00Z</ToDate>
@@ -203,8 +203,8 @@
           </validityConditions>
           <Name>Winter timetable for route 23 outbound</Name>
           <BaselineVersionFrameRef nameOfRefClass="TimetableFrame" ref="hde:1"/>
-          <interchangeRules modificationSet="all">
-            <InterchangeRule id="hde:IR_25_all_f" modification="new" version="any" status="active">
+          <interchangeRules>
+            <InterchangeRule id="hde:IR_25_all_f" version="any">
               <Name>Main Station - All  inbound</Name>
               <ConnectionRef version="any" ref="mybus:CX_25"/>
               <Priority>5</Priority>
@@ -224,7 +224,7 @@
                 <MaximumInterchangeWindow>PT5M</MaximumInterchangeWindow>
               </FeederFilter>
             </InterchangeRule>
-            <InterchangeRule id="hde:IR_25_LN1_f" modification="new" version="any" status="active">
+            <InterchangeRule id="hde:IR_25_LN1_f" version="any">
               <Name>Main Station - Line 1 inbound Special rule</Name>
               <ConnectionRef version="any" ref="mybus:CX_25"/>
               <Priority>1</Priority>
@@ -248,7 +248,7 @@
                 <MaximumInterchangeWindow>PT4M</MaximumInterchangeWindow>
               </FeederFilter>
             </InterchangeRule>
-            <InterchangeRule id="hde:IR_25_all_d" modification="new" version="any" status="active">
+            <InterchangeRule id="hde:IR_25_all_d" version="any">
               <Name>Main Station - All lines outboundv </Name>
               <ConnectionRef version="any" ref="mybus:CX_25"/>
               <Priority>5</Priority>
@@ -269,7 +269,7 @@
                 <MaximumInterchangeWindow>PT5M</MaximumInterchangeWindow>
               </DistributorFilter>
             </InterchangeRule>
-            <InterchangeRule id="hde:IR_25_LN6_d" modification="new" version="any" status="active">
+            <InterchangeRule id="hde:IR_25_LN6_d" version="any">
               <Name>Main Station - Line 6 outbound </Name>
               <ConnectionRef version="any" ref="mybus:CX_25"/>
               <Priority>5</Priority>
@@ -298,16 +298,16 @@
             </InterchangeRule>
           </interchangeRules>
         </TimetableFrame>
-        <ResourceFrame id="hde:RS_23_O" modification="new" version="2" status="active">
+        <ResourceFrame id="hde:RS_23_O" version="2">
           <Name>Resoucres</Name>
           <BaselineVersionFrameRef nameOfRefClass="ResourceFrame" ref="hde:1"/>
-          <organisations modificationSet="all">
-            <Authority id="hde:TFO" modification="new" version="101" status="active">
+          <organisations>
+            <Authority id="hde:TFO" version="101">
               <Name>Mission Central</Name>
             </Authority>
           </organisations>
-          <controlCentres modificationSet="all">
-            <ControlCentre id="hde:123" modification="new" version="101" status="active">
+          <controlCentres>
+            <ControlCentre id="hde:123" version="101">
               <Name>Mission Central</Name>
               <AuthorityRef version="101" ref="hde:TFO"/>
             </ControlCentre>

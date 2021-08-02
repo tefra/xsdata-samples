@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <PublicationTimestamp>2010-12-17T09:30:47Z</PublicationTimestamp>
   <ParticipantRef>SYS001</ParticipantRef>
-  <PublicationRequest version="1.0">
+  <PublicationRequest>
     <RequestTimestamp>2010-12-17T09:30:47Z</RequestTimestamp>
     <ParticipantRef>SYS002</ParticipantRef>
     <topics>
       <NetworkFrameTopic>
         <selectionValidityConditions>
-          <AvailabilityCondition id="mytoc:range" modification="new" version="any" status="active">
+          <AvailabilityCondition id="mytoc:range" version="any">
             <FromDate>2011-01-01T00:00:00Z</FromDate>
           </AvailabilityCondition>
         </selectionValidityConditions>
@@ -19,14 +19,14 @@
   <PublicationRefreshInterval>P1M</PublicationRefreshInterval>
   <Description>Example  of simple point to point fares</Description>
   <dataObjects>
-    <CompositeFrame id="myfares:DTA@RailCards" modification="new" version="1" status="active">
-      <validityConditions modificationSet="all">
-        <ValidBetween modification="new" status="active">
+    <CompositeFrame id="myfares:DTA@RailCards" version="1">
+      <validityConditions>
+        <ValidBetween>
           <FromDate>2011-01-01T00:00:00Z</FromDate>
           <ToDate>2011-07-01T00:00:00Z</ToDate>
         </ValidBetween>
       </validityConditions>
-      <codespaces modificationSet="all">
+      <codespaces>
         <Codespace id="mytoc">
           <Xmlns>mytoc</Xmlns>
           <XmlnsUrl>http://www.mytoc.eu/network</XmlnsUrl>
@@ -41,63 +41,63 @@
       <FrameDefaults>
         <DefaultCurrency>EUR</DefaultCurrency>
       </FrameDefaults>
-      <frames modificationSet="all">
-        <FareFrame id="myfares:DTA@RailCards@products" modification="new" version="1.0" status="active">
-          <prerequisites modificationSet="all">
+      <frames>
+        <FareFrame id="myfares:DTA@RailCards@products" version="1.0">
+          <prerequisites>
             <ResourceFrameRef version="1.0" ref="myfares:DTA@Common_Resources"/>
           </prerequisites>
           <tariffs>
-            <Tariff id="myfares:Railcard_discount" modification="new" version="1.0" status="active">
+            <Tariff id="myfares:Railcard_discount" version="1.0">
               <Name>Railcard Discount  tariff</Name>
               <OperatorRef version="any" ref="mytoc:DTA"/>
               <TypeOfTariffRef version="ntx:v1.0" ref="ntx:zonal"/>
-              <timeIntervals modificationSet="all">
-                <TimeInterval id="myfares:Railcard_discount@1year" modification="new" version="1.0" status="active">
+              <timeIntervals>
+                <TimeInterval id="myfares:Railcard_discount@1year" version="1.0">
                   <Name>One Year</Name>
                   <Duration>P1Y</Duration>
                 </TimeInterval>
-                <TimeInterval id="myfares:Railcard_discount@2year" modification="new" version="1.0" status="active">
+                <TimeInterval id="myfares:Railcard_discount@2year" version="1.0">
                   <Name>Two Years</Name>
                   <Duration>P2Y</Duration>
                 </TimeInterval>
-                <TimeInterval id="myfares:payment_installment@3month" modification="new" version="1.0" status="active">
+                <TimeInterval id="myfares:payment_installment@3month" version="1.0">
                   <Duration>P3M</Duration>
                 </TimeInterval>
-                <TimeInterval id="myfares:payment_installment@6month" modification="new" version="1.0" status="active">
+                <TimeInterval id="myfares:payment_installment@6month" version="1.0">
                   <Duration>P6M</Duration>
                 </TimeInterval>
-                <TimeInterval id="myfares:payment_installment@1year" modification="new" version="1.0" status="active">
+                <TimeInterval id="myfares:payment_installment@1year" version="1.0">
                   <Name>One Year</Name>
                   <Duration>P1Y</Duration>
                 </TimeInterval>
               </timeIntervals>
-              <fareStructureElements modificationSet="all">
-                <FareStructureElement id="myfares:Railcard_discount@access" modification="new" version="1.0" status="active">
-                  <GenericParameterAssignment id="myfares:Flat@access" modification="new" version="1.0" status="active" order="1">
+              <fareStructureElements>
+                <FareStructureElement id="myfares:Railcard_discount@access" version="1.0">
+                  <GenericParameterAssignment id="myfares:Flat@access" version="1.0" order="1">
                     <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:can_access"/>
                     <ValidityParameterGroupingType>XOR</ValidityParameterGroupingType>
-                    <validityParameters modificationSet="all">
+                    <validityParameters>
                       <VehicleModes>rail</VehicleModes>
                       <OperatorRef version="any" ref="mytoc:DTA"/>
                     </validityParameters>
                   </GenericParameterAssignment>
                 </FareStructureElement>
-                <FareStructureElement id="myfares:Railcard_discount@access_when" modification="new" version="1.0" status="active">
+                <FareStructureElement id="myfares:Railcard_discount@access_when" version="1.0">
                   <Name>Allowed periods for  use of a  Railcard</Name>
-                  <timeIntervals modificationSet="all">
+                  <timeIntervals>
                     <TimeIntervalRef version="1.0" ref="myfares:Railcard_discount@1year"/>
                     <TimeIntervalRef version="1.0" ref="myfares:Railcard_discount@2year"/>
                   </timeIntervals>
-                  <GenericParameterAssignment id="myfares:Time_interval@access_when" modification="new" version="1.0" status="active" order="1">
+                  <GenericParameterAssignment id="myfares:Time_interval@access_when" version="1.0" order="1">
                     <TypeOfAccessRightAssignmentRef ref="fxc:can_access_when" versionRef="fxc:v1.0"/>
                     <LimitationGroupingType>AND</LimitationGroupingType>
-                    <limitations modificationSet="all">
-                      <UsageValidityPeriod id="myfares:Time_interval@access_whes" modification="new" version="1.0" status="active">
+                    <limitations>
+                      <UsageValidityPeriod id="myfares:Time_interval@access_whes" version="1.0">
                         <ValidityPeriodType>seasonTicket</ValidityPeriodType>
                         <UsageTrigger>specifiedStartDate</UsageTrigger>
                         <UsageStartConstraintType>variable</UsageStartConstraintType>
-                        <startOnlyOn modificationSet="all">
-                          <DayType id="myfares:Time_interval@access_when" modification="new" version="1.0" status="active">
+                        <startOnlyOn>
+                          <DayType id="myfares:Time_interval@access_when" version="1.0">
                             <properties>
                               <PropertyOfDay>
                                 <DayOfMonth>---01</DayOfMonth>
@@ -109,39 +109,39 @@
                     </limitations>
                   </GenericParameterAssignment>
                 </FareStructureElement>
-                <FareStructureElement id="myfares:Railcard_discount@can_purchase" modification="new" version="1.0" status="active">
+                <FareStructureElement id="myfares:Railcard_discount@can_purchase" version="1.0">
                   <Name>Allowed periods for payment installationsd</Name>
-                  <timeIntervals modificationSet="all">
+                  <timeIntervals>
                     <TimeIntervalRef version="1.0" ref="myfares:payment_installment@3month"/>
                     <TimeIntervalRef version="1.0" ref="myfares:payment_installment@6month"/>
                     <TimeIntervalRef version="1.0" ref="myfares:payment_installment@1year"/>
                   </timeIntervals>
-                  <GenericParameterAssignment id="myfares:Time_interval@can_purchase" modification="new" version="1.0" status="active" order="1">
+                  <GenericParameterAssignment id="myfares:Time_interval@can_purchase" version="1.0" order="1">
                     <TypeOfAccessRightAssignmentRef ref="fxc:can_purchase" versionRef="fxc:v1.0"/>
                     <ValidityParameterGroupingType>XOR</ValidityParameterGroupingType>
                   </GenericParameterAssignment>
                 </FareStructureElement>
-                <FareStructureElement id="myfares:Railcard_discount@eligibility" modification="new" version="1.0" status="active">
+                <FareStructureElement id="myfares:Railcard_discount@eligibility" version="1.0">
                   <Name>Eligible user types</Name>
-                  <GenericParameterAssignment id="myfares:Flat@eligibility" modification="new" version="1.0" status="active" order="1">
+                  <GenericParameterAssignment id="myfares:Flat@eligibility" version="1.0" order="1">
                     <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:eligible"/>
                     <LimitationGroupingType>XOR</LimitationGroupingType>
-                    <limitations modificationSet="all">
-                      <UserProfile id="myfares:adult" modification="new" version="any" status="active">
+                    <limitations>
+                      <UserProfile id="myfares:adult" version="any">
                         <Name>Normal</Name>
                         <TypeOfConcessionRef version="any" ref="myfares:standard"/>
                       </UserProfile>
-                      <UserProfile id="myfares:child" modification="new" version="any" status="active">
+                      <UserProfile id="myfares:child" version="any">
                         <Name>Child</Name>
                         <TypeOfConcessionRef version="any" ref="myfares:concession"/>
                         <MaximumAge>16</MaximumAge>
                       </UserProfile>
-                      <UserProfile id="myfares:student" modification="new" version="any" status="active">
+                      <UserProfile id="myfares:student" version="any">
                         <Name>Student</Name>
                         <TypeOfConcessionRef version="any" ref="myfares:concession"/>
                         <ProofRequired>membershipCard</ProofRequired>
                       </UserProfile>
-                      <UserProfile id="myfares:senior" modification="new" version="any" status="active">
+                      <UserProfile id="myfares:senior" version="any">
                         <Name>Senior</Name>
                         <TypeOfConcessionRef version="any" ref="myfares:concession"/>
                         <MinimumAge>60</MinimumAge>
@@ -150,13 +150,13 @@
                     </limitations>
                   </GenericParameterAssignment>
                 </FareStructureElement>
-                <FareStructureElement id="myfares:Railcard_discount@conditions_of_sale" modification="new" version="1.0" status="active">
+                <FareStructureElement id="myfares:Railcard_discount@conditions_of_sale" version="1.0">
                   <Name>Conditions of use</Name>
-                  <GenericParameterAssignment id="myfares:Railcard_discount@conditions_of_sale" modification="new" version="1.0" status="active" order="1">
+                  <GenericParameterAssignment id="myfares:Railcard_discount@conditions_of_sale" version="1.0" order="1">
                     <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:condition_of_sale"/>
                     <LimitationGroupingType>AND</LimitationGroupingType>
-                    <limitations modificationSet="all">
-                      <UsageValidityPeriod id="myfares:duration" modification="new" version="any" status="active">
+                    <limitations>
+                      <UsageValidityPeriod id="myfares:duration" version="any">
                         <ValidityPeriodType>profileMembership</ValidityPeriodType>
                         <UsageTrigger>specifiedStartDate</UsageTrigger>
                         <UsageEnd>productExpiry</UsageEnd>
@@ -171,14 +171,14 @@
             </Tariff>
           </tariffs>
           <fareProducts>
-            <SaleDiscountRight id="myfares:Railcard" modification="new" version="1.0" status="active">
+            <SaleDiscountRight id="myfares:Railcard" version="1.0">
               <Name>Adult  Standard Flat  fare</Name>
               <TypeOfFareProductRef version="ntx:v1.0" ref="ntx:discount_card"/>
               <OperatorRef version="any" ref="mytoc:DTA"/>
               <validableElements>
-                <ValidableElement id="myfares:Railcard@travel" modification="new" version="1.0" status="active">
+                <ValidableElement id="myfares:Railcard@travel" version="1.0">
                   <Name>A metro Trip</Name>
-                  <fareStructureElements modificationSet="all">
+                  <fareStructureElements>
                     <FareStructureElementRef version="1.0" ref="myfares:Railcard_discount@access"/>
                     <FareStructureElementRef version="1.0" ref="myfares:Railcard_discount@eligibility"/>
                     <FareStructureElementRef version="1.0" ref="myfares:Railcard_discount@conditions_of_sale"/>
@@ -186,7 +186,7 @@
                 </ValidableElement>
               </validableElements>
               <accessRightsInProduct>
-                <AccessRightInProduct id="myfares:Railcard@travel" modification="new" version="1.0" status="active" order="1">
+                <AccessRightInProduct id="myfares:Railcard@travel" version="1.0" order="1">
                   <Name>First ride</Name>
                   <ValidableElementRef version="1.0" ref="myfares:Railcard@travel"/>
                 </AccessRightInProduct>
@@ -194,13 +194,13 @@
             </SaleDiscountRight>
           </fareProducts>
           <salesOfferPackages>
-            <SalesOfferPackage id="myfares:Railcard-SOP@standard" modification="new" version="1.0" status="active">
+            <SalesOfferPackage id="myfares:Railcard-SOP@standard" version="1.0">
               <Name>Railcard - standard</Name>
-              <validityParameterAssignments modificationSet="all">
-                <GenericParameterAssignment id="myfares:Railcard-SOP@standard@eligible" modification="new" version="1.0" status="active" order="1">
+              <validityParameterAssignments>
+                <GenericParameterAssignment id="myfares:Railcard-SOP@standard@eligible" version="1.0" order="1">
                   <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:eligible"/>
                   <LimitationGroupingType>XOR</LimitationGroupingType>
-                  <limitations modificationSet="all">
+                  <limitations>
                     <UserProfileRef version="any" ref="myfares:adult"/>
                     <UserProfileRef version="any" ref="myfares:child"/>
                   </limitations>
@@ -208,17 +208,17 @@
               </validityParameterAssignments>
               <GroupOfSalesOfferPackagesRef version="1.0" ref="myfares:Railcard-GSOP"/>
             </SalesOfferPackage>
-            <SalesOfferPackage id="myfares:Railcard-SOP@student" modification="new" version="1.0" status="active">
+            <SalesOfferPackage id="myfares:Railcard-SOP@student" version="1.0">
               <Name>Ralcard - student</Name>
-              <validityParameterAssignments modificationSet="all">
-                <GenericParameterAssignment id="myfares:Railcard-SOP@student@eligible" modification="new" version="1.0" status="active" order="1">
+              <validityParameterAssignments>
+                <GenericParameterAssignment id="myfares:Railcard-SOP@student@eligible" version="1.0" order="1">
                   <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:eligible"/>
                   <LimitationGroupingType>XOR</LimitationGroupingType>
-                  <limitations modificationSet="all">
+                  <limitations>
                     <UserProfileRef version="any" ref="myfares:student"/>
                   </limitations>
                 </GenericParameterAssignment>
-                <GenericParameterAssignment id="myfares:Railcard-SOP@student@access_when" modification="new" version="1.0" status="active" order="1">
+                <GenericParameterAssignment id="myfares:Railcard-SOP@student@access_when" version="1.0" order="1">
                   <Name>Student pass only one year</Name>
                   <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:can_access_when"/>
                   <TimeIntervalRef version="1.0" ref="myfares:Railcard_discount@1year"/>
@@ -226,45 +226,45 @@
               </validityParameterAssignments>
               <GroupOfSalesOfferPackagesRef version="1.0" ref="myfares:Railcard-GSOP"/>
             </SalesOfferPackage>
-            <SalesOfferPackage id="myfares:Railcard-SOP@senior" modification="new" version="1.0" status="active">
+            <SalesOfferPackage id="myfares:Railcard-SOP@senior" version="1.0">
               <Name>Ralcard - senior</Name>
-              <validityParameterAssignments modificationSet="all">
-                <GenericParameterAssignment id="myfares:Railcard-SOP@senior@eligible" modification="new" version="1.0" status="active" order="1">
+              <validityParameterAssignments>
+                <GenericParameterAssignment id="myfares:Railcard-SOP@senior@eligible" version="1.0" order="1">
                   <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:eligible"/>
                   <LimitationGroupingType>XOR</LimitationGroupingType>
-                  <limitations modificationSet="all">
+                  <limitations>
                     <UserProfileRef version="any" ref="myfares:senior"/>
                   </limitations>
                 </GenericParameterAssignment>
-                <GenericParameterAssignment id="myfares:Railcard-SOP@senior@subscribing" modification="new" version="1.0" status="active" order="1">
+                <GenericParameterAssignment id="myfares:Railcard-SOP@senior@subscribing" version="1.0" order="1">
                   <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:can_purchase"/>
                   <LimitationGroupingType>XOR</LimitationGroupingType>
-                  <limitations modificationSet="all">
-                    <Subscribing id="myfares:ABO_3year_card_on_1year_payment_installment" modification="new" version="1.0" status="active">
+                  <limitations>
+                    <Subscribing id="myfares:ABO_3year_card_on_1year_payment_installment" version="1.0">
                       <SubscriptionTermType>openEnded</SubscriptionTermType>
                       <MinimumSubscriptionPeriod>P1Y</MinimumSubscriptionPeriod>
                       <MaximumSubscriptionPeriod>P10Y</MaximumSubscriptionPeriod>
-                      <possibleInstallmenttIntervals modificationSet="all">
+                      <possibleInstallmenttIntervals>
                         <TimeIntervalRef version="1.0" ref="myfares:payment_installment@3month"/>
                         <TimeIntervalRef version="1.0" ref="myfares:payment_installment@6month"/>
                         <TimeIntervalRef version="1.0" ref="myfares:payment_installment@1year"/>
                       </possibleInstallmenttIntervals>
                       <InstallmentPaymentMethods>debitCard creditCard directDebit</InstallmentPaymentMethods>
                     </Subscribing>
-                    <UsageValidityPeriod id="myfares:ABO_validity_conditions" modification="new" version="1.0" status="active">
+                    <UsageValidityPeriod id="myfares:ABO_validity_conditions" version="1.0">
                       <Name>Refund for subscription</Name>
                       <ValidityPeriodType>subscription</ValidityPeriodType>
                       <UsageTrigger>specifiedStartDate</UsageTrigger>
                       <UsageStartConstraintType>variable</UsageStartConstraintType>
                     </UsageValidityPeriod>
-                    <Suspending id="myfares:ABO_suspending" modification="new" version="1.0" status="active">
+                    <Suspending id="myfares:ABO_suspending" version="1.0">
                       <SuspensionPolicy>forCertifiedIllness forHoliday</SuspensionPolicy>
                       <QualificationPeriod>P6M</QualificationPeriod>
                       <MinimumSuspensionPeriod>P1M</MinimumSuspensionPeriod>
                       <MaximumSuspensionPeriod>P9M</MaximumSuspensionPeriod>
                       <MaximumNumberOfSuspensionsPerTerm>1</MaximumNumberOfSuspensionsPerTerm>
                     </Suspending>
-                    <Refunding id="myfares:ABO_refund_conditions" modification="new" version="1.0" status="active">
+                    <Refunding id="myfares:ABO_refund_conditions" version="1.0">
                       <Name>Refund for subscription</Name>
                       <CanChangeClass>true</CanChangeClass>
                       <UnusedTicketsOnly>false</UnusedTicketsOnly>
@@ -281,7 +281,7 @@
                       <RefundPolicy>any</RefundPolicy>
                       <PartialRefundBasis>unusedMonths</PartialRefundBasis>
                     </Refunding>
-                    <PurchaseWindow id="myfares:ABO_purchase Window_conditions" modification="new" version="1.0" status="active">
+                    <PurchaseWindow id="myfares:ABO_purchase Window_conditions" version="1.0">
                       <Name>Purchase window for subscription</Name>
                       <PurchaseWhen>advanceOnly</PurchaseWhen>
                       <MinimumPeriodBeforeDeparture>P3D</MinimumPeriodBeforeDeparture>
@@ -294,31 +294,31 @@
             </SalesOfferPackage>
           </salesOfferPackages>
           <groupsOfSalesOfferPackages>
-            <GroupOfSalesOfferPackages id="myfares:Railcard-GSOP" modification="new" version="1.0" status="active">
+            <GroupOfSalesOfferPackages id="myfares:Railcard-GSOP" version="1.0">
               <Name>Common properties of Railcards</Name>
-              <validityParameterAssignments modificationSet="all">
-                <GenericParameterAssignment id="myfares:Season_pass-SOP@entitles" modification="new" version="1.0" status="active" order="1">
+              <validityParameterAssignments>
+                <GenericParameterAssignment id="myfares:Season_pass-SOP@entitles" version="1.0" order="1">
                   <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:eligible"/>
                   <LimitationGroupingType>XOR</LimitationGroupingType>
-                  <limitations modificationSet="all">
-                    <SalesOfferPackageEntitlementGiven id="myfares:Railcard-GSOP@trip" modification="new" version="1.0" status="active">
+                  <limitations>
+                    <SalesOfferPackageEntitlementGiven id="myfares:Railcard-GSOP@trip" version="1.0">
                       <Name>Right to buy rail tickets at a discount</Name>
                       <SalesOfferPackageRef ref="myfares:Rail_Trip" versionRef="EXTERNAL"/>
                     </SalesOfferPackageEntitlementGiven>
-                    <SalesOfferPackageEntitlementGiven id="myfares:Railcard-GSOP@period_pass" modification="new" version="1.0" status="active">
+                    <SalesOfferPackageEntitlementGiven id="myfares:Railcard-GSOP@period_pass" version="1.0">
                       <Name>Right to buy rail season passes at a discount</Name>
                       <SalesOfferPackageRef ref="myfares:Rail_Pass" versionRef="EXTERNAL"/>
                     </SalesOfferPackageEntitlementGiven>
                   </limitations>
                 </GenericParameterAssignment>
               </validityParameterAssignments>
-              <salesOfferPackageElements modificationSet="all">
-                <SalesOfferPackageElement id="myfares:Railcard-GSOP" modification="new" version="1.0" status="active" order="1">
+              <salesOfferPackageElements>
+                <SalesOfferPackageElement id="myfares:Railcard-GSOP" version="1.0" order="1">
                   <TypeOfTravelDocumentRef version="any" ref="myfares:card"/>
                   <SaleDiscountRightRef version="1.0" ref="myfares:Railcard"/>
                 </SalesOfferPackageElement>
               </salesOfferPackageElements>
-              <members modificationSet="all">
+              <members>
                 <SalesOfferPackageRef version="1.0" ref="myfares:Railcard-SOP@standard"/>
                 <SalesOfferPackageRef version="1.0" ref="myfares:Railcard-SOP@student"/>
                 <SalesOfferPackageRef version="1.0" ref="myfares:Railcard-SOP@senior"/>
@@ -326,44 +326,44 @@
             </GroupOfSalesOfferPackages>
           </groupsOfSalesOfferPackages>
         </FareFrame>
-        <FareFrame id="myfares:DTA@RailCards@prices" modification="new" version="1.0" status="active">
+        <FareFrame id="myfares:DTA@RailCards@prices" version="1.0">
           <Name>Railcard prices</Name>
-          <prerequisites modificationSet="all">
+          <prerequisites>
             <FareFrameRef version="1.0" ref="myfares:DTA@RailCards@products"/>
           </prerequisites>
-          <PricingParameterSet id="myfares:RailCards@prices" modification="new" version="1.0" status="active">
+          <PricingParameterSet id="myfares:RailCards@prices" version="1.0">
             <pricingRules>
-              <DiscountingRule id="myfares:normal_discount" modification="new" version="1.0" status="active">
+              <DiscountingRule id="myfares:normal_discount" version="1.0">
                 <DiscountAsPercentage>5</DiscountAsPercentage>
               </DiscountingRule>
-              <DiscountingRule id="myfares:student_discount" modification="new" version="1.0" status="active">
+              <DiscountingRule id="myfares:student_discount" version="1.0">
                 <DiscountAsPercentage>20</DiscountAsPercentage>
               </DiscountingRule>
-              <DiscountingRule id="myfares:senior_discount" modification="new" version="1.0" status="active">
+              <DiscountingRule id="myfares:senior_discount" version="1.0">
                 <DiscountAsPercentage>20</DiscountAsPercentage>
               </DiscountingRule>
             </pricingRules>
           </PricingParameterSet>
           <priceGroups>
-            <PriceGroup id="myfares:With_Railcard@discounts" modification="new" version="1.0" status="active">
+            <PriceGroup id="myfares:With_Railcard@discounts" version="1.0">
               <Name>Discounts for Rail Cards</Name>
               <members>
-                <UsageParameterPrice id="myfares:With_Railcard@adult" modification="new" version="1.0" status="active">
+                <UsageParameterPrice id="myfares:With_Railcard@adult" version="1.0">
                   <Name>Standard discount - all fares</Name>
                   <DiscountingRuleRef version="1.0" ref="myfares:normal_discount"/>
                   <UserProfileRef version="any" ref="myfares:adult"/>
                 </UsageParameterPrice>
-                <UsageParameterPrice id="myfares:With_Railcard@child" modification="new" version="1.0" status="active">
+                <UsageParameterPrice id="myfares:With_Railcard@child" version="1.0">
                   <Name>Standard discount - child fares</Name>
                   <DiscountingRuleRef version="1.0" ref="myfares:normal_discount"/>
                   <UserProfileRef version="any" ref="myfares:child"/>
                 </UsageParameterPrice>
-                <UsageParameterPrice id="myfares:With_Railcard@student" modification="new" version="1.0" status="active">
+                <UsageParameterPrice id="myfares:With_Railcard@student" version="1.0">
                   <Name>Student  discount - all fares</Name>
                   <DiscountingRuleRef version="1.0" ref="myfares:student_discount"/>
                   <UserProfileRef version="any" ref="myfares:student"/>
                 </UsageParameterPrice>
-                <UsageParameterPrice id="myfares:With_Railcard@senior" modification="new" version="1.0" status="active">
+                <UsageParameterPrice id="myfares:With_Railcard@senior" version="1.0">
                   <Name>Senior discount - all fares</Name>
                   <DiscountingRuleRef version="1.0" ref="myfares:senior_discount"/>
                   <UserProfileRef version="any" ref="myfares:senior"/>
@@ -372,93 +372,93 @@
             </PriceGroup>
           </priceGroups>
           <fareTables>
-            <FareTable id="myfares:Railcard@prices" modification="new" version="1.0" status="active">
+            <FareTable id="myfares:Railcard@prices" version="1.0">
               <Name>Prices to buy Rail Cards</Name>
-              <pricesFor modificationSet="all">
+              <pricesFor>
                 <SaleDiscountRightRef version="1.0" ref="myfares:Railcard"/>
               </pricesFor>
-              <usedIn modificationSet="all">
+              <usedIn>
                 <TariffRef version="1.0" ref="myfares:Railcard_discount"/>
               </usedIn>
               <includes>
-                <FareTable id="myfares:Railcard@prices@adult" modification="new" version="1.0" status="active">
+                <FareTable id="myfares:Railcard@prices@adult" version="1.0">
                   <Name>Prices to buy Rail Cards - adult</Name>
-                  <pricesFor modificationSet="all">
+                  <pricesFor>
                     <SalesOfferPackageRef version="1.0" ref="myfares:Railcard-SOP@standard"/>
                   </pricesFor>
-                  <limitations modificationSet="all">
+                  <limitations>
                     <UserProfileRef version="any" ref="myfares:adult"/>
                   </limitations>
                   <cells>
-                    <TimeIntervalPrice id="myfares:railcard@adult@1year" modification="new" version="1.0" status="active">
+                    <TimeIntervalPrice id="myfares:railcard@adult@1year" version="1.0">
                       <Name>adult Railcard 1 year</Name>
                       <Amount>80</Amount>
                       <TimeIntervalRef version="1.0" ref="myfares:Railcard_discount@1year"/>
                     </TimeIntervalPrice>
-                    <TimeIntervalPrice id="myfares:railcard@adult@2year" modification="new" version="1.0" status="active">
+                    <TimeIntervalPrice id="myfares:railcard@adult@2year" version="1.0">
                       <Name>adult Railcard 2 years</Name>
                       <Amount>140</Amount>
                       <TimeIntervalRef version="1.0" ref="myfares:Railcard_discount@2year"/>
                     </TimeIntervalPrice>
                   </cells>
                 </FareTable>
-                <FareTable id="myfares:Railcard@prices@child" modification="new" version="1.0" status="active">
+                <FareTable id="myfares:Railcard@prices@child" version="1.0">
                   <Name>Prices to buy Rail Cards - child</Name>
-                  <pricesFor modificationSet="all">
+                  <pricesFor>
                     <SalesOfferPackageRef version="1.0" ref="myfares:Railcard-SOP@standard"/>
                   </pricesFor>
-                  <limitations modificationSet="all">
+                  <limitations>
                     <UserProfileRef version="any" ref="myfares:child"/>
                   </limitations>
                   <cells>
-                    <TimeIntervalPrice id="myfares:railcard@child@1year" modification="new" version="1.0" status="active">
+                    <TimeIntervalPrice id="myfares:railcard@child@1year" version="1.0">
                       <Name>child Railcard 1 year</Name>
                       <Amount>40</Amount>
                       <TimeIntervalRef version="1.0" ref="myfares:Railcard_discount@1year"/>
                     </TimeIntervalPrice>
-                    <TimeIntervalPrice id="myfares:railcard@child@2year" modification="new" version="1.0" status="active">
+                    <TimeIntervalPrice id="myfares:railcard@child@2year" version="1.0">
                       <Name>child Railcard 2 years</Name>
                       <Amount>70</Amount>
                       <TimeIntervalRef version="1.0" ref="myfares:Railcard_discount@2year"/>
                     </TimeIntervalPrice>
                   </cells>
                 </FareTable>
-                <FareTable id="myfares:Railcard@prices@student" modification="new" version="1.0" status="active">
+                <FareTable id="myfares:Railcard@prices@student" version="1.0">
                   <Name>Prices to buy Rail Cards - student</Name>
-                  <pricesFor modificationSet="all">
+                  <pricesFor>
                     <SalesOfferPackageRef version="1.0" ref="myfares:Railcard-SOP@student"/>
                   </pricesFor>
-                  <limitations modificationSet="all">
+                  <limitations>
                     <UserProfileRef version="any" ref="myfares:student"/>
                   </limitations>
                   <cells>
-                    <TimeIntervalPrice id="myfares:railcard@student@1year" modification="new" version="1.0" status="active">
+                    <TimeIntervalPrice id="myfares:railcard@student@1year" version="1.0">
                       <Name>student Railcard 1 year</Name>
                       <Amount>50</Amount>
                       <TimeIntervalRef version="1.0" ref="myfares:Railcard_discount@1year"/>
                     </TimeIntervalPrice>
-                    <TimeIntervalPrice id="myfares:railcard@student@2year" modification="new" version="1.0" status="active">
+                    <TimeIntervalPrice id="myfares:railcard@student@2year" version="1.0">
                       <Name>Student Railcard 2 years</Name>
                       <IsAllowed>false</IsAllowed>
                       <TimeIntervalRef version="1.0" ref="myfares:Railcard_discount@2year"/>
                     </TimeIntervalPrice>
                   </cells>
                 </FareTable>
-                <FareTable id="myfares:Railcard@prices@senior" modification="new" version="1.0" status="active">
+                <FareTable id="myfares:Railcard@prices@senior" version="1.0">
                   <Name>Prices to buy Rail Cards - Senior</Name>
-                  <pricesFor modificationSet="all">
+                  <pricesFor>
                     <SalesOfferPackageRef version="1.0" ref="myfares:Railcard-SOP@senior"/>
                   </pricesFor>
-                  <limitations modificationSet="all">
+                  <limitations>
                     <UserProfileRef version="any" ref="myfares:senior"/>
                   </limitations>
                   <cells>
-                    <TimeIntervalPrice id="myfares:railcard@senior@1year" modification="new" version="1.0" status="active">
+                    <TimeIntervalPrice id="myfares:railcard@senior@1year" version="1.0">
                       <Name>Senior Railcard 1 year</Name>
                       <Amount>60</Amount>
                       <TimeIntervalRef version="1.0" ref="myfares:Railcard_discount@1year"/>
                     </TimeIntervalPrice>
-                    <TimeIntervalPrice id="myfares:railcard@senior@2year" modification="new" version="1.0" status="active">
+                    <TimeIntervalPrice id="myfares:railcard@senior@2year" version="1.0">
                       <Name>Senior Railcard 2 years</Name>
                       <Amount>120</Amount>
                       <TimeIntervalRef version="1.0" ref="myfares:Railcard_discount@2year"/>
@@ -469,124 +469,124 @@
             </FareTable>
           </fareTables>
         </FareFrame>
-        <ResourceFrame id="myfares:DTA@Common_Resources" modification="new" version="1.0" status="active">
-          <codespaces modificationSet="all">
+        <ResourceFrame id="myfares:DTA@Common_Resources" version="1.0">
+          <codespaces>
             <Codespace id="ntx">
               <Xmlns>ntx</Xmlns>
               <XmlnsUrl>http://netex.org.uk/</XmlnsUrl>
               <Description>Netex built in value</Description>
             </Codespace>
           </codespaces>
-          <typesOfValue modificationSet="all">
-            <ValueSet id="ntx:Types_of_Tariff" modification="new" version="ntx:v1.0" status="active" classOfValues="TypeOfTariff">
+          <typesOfValue>
+            <ValueSet id="ntx:Types_of_Tariff" version="ntx:v1.0" classOfValues="TypeOfTariff">
               <Name>Types of Tariff</Name>
               <values>
-                <TypeOfTariff id="ntx:Distance_kilometers" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:Distance_kilometers" version="ntx:v1.0">
                   <Name>Kilometer Distance Kilometers</Name>
                 </TypeOfTariff>
-                <TypeOfTariff id="ntx:flat" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:flat" version="ntx:v1.0">
                   <Name>Flat</Name>
                 </TypeOfTariff>
-                <TypeOfTariff id="ntx:point_to_point" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:point_to_point" version="ntx:v1.0">
                   <Name>Point to point</Name>
                 </TypeOfTariff>
-                <TypeOfTariff id="ntx:zone_to_zone" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:zone_to_zone" version="ntx:v1.0">
                   <Name>Zone to Zone</Name>
                 </TypeOfTariff>
-                <TypeOfTariff id="ntx:zonal" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:zonal" version="ntx:v1.0">
                   <Name>Zonal</Name>
                 </TypeOfTariff>
-                <TypeOfTariff id="ntx:unit_distance" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:unit_distance" version="ntx:v1.0">
                   <Name>Unit distance (count of stops, sections, zones)</Name>
                 </TypeOfTariff>
-                <TypeOfTariff id="ntx:section" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:section" version="ntx:v1.0">
                   <Name>Section</Name>
                 </TypeOfTariff>
-                <TypeOfTariff id="ntx:banded" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:banded" version="ntx:v1.0">
                   <Name>Section</Name>
                 </TypeOfTariff>
-                <TypeOfTariff id="ntx:stored_value" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:stored_value" version="ntx:v1.0">
                   <Name>Stored value</Name>
                 </TypeOfTariff>
-                <TypeOfTariff id="ntx:discount" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:discount" version="ntx:v1.0">
                   <Name>Discount value</Name>
                 </TypeOfTariff>
-                <TypeOfTariff id="ntx:multitrip" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:multitrip" version="ntx:v1.0">
                   <Name>Multitrip carnet</Name>
                 </TypeOfTariff>
-                <TypeOfTariff id="ntx:identity_card" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:identity_card" version="ntx:v1.0">
                   <Name>SIdentity</Name>
                 </TypeOfTariff>
               </values>
             </ValueSet>
-            <ValueSet id="ntx:Types_of_FareProduct" modification="new" version="ntx:v1.0" status="active" classOfValues="TypeOfFareProduct">
+            <ValueSet id="ntx:Types_of_FareProduct" version="ntx:v1.0" classOfValues="TypeOfFareProduct">
               <Name>Types of Fare Product</Name>
               <values>
-                <TypeOfFareProduct id="ntx:trip" modification="new" version="ntx:v1.0" status="active">
+                <TypeOfFareProduct id="ntx:trip" version="ntx:v1.0">
                   <Name>Trip product</Name>
                 </TypeOfFareProduct>
-                <TypeOfFareProduct id="ntx:multi_trip" modification="new" version="ntx:v1.0" status="active">
+                <TypeOfFareProduct id="ntx:multi_trip" version="ntx:v1.0">
                   <Name>Multitrip / carnet  product</Name>
                 </TypeOfFareProduct>
-                <TypeOfFareProduct id="ntx:period_pass" modification="new" version="ntx:v1.0" status="active">
+                <TypeOfFareProduct id="ntx:period_pass" version="ntx:v1.0">
                   <Name>Peroid pass product</Name>
                 </TypeOfFareProduct>
-                <TypeOfFareProduct id="ntx:day_pass" modification="new" version="ntx:v1.0" status="active">
+                <TypeOfFareProduct id="ntx:day_pass" version="ntx:v1.0">
                   <Name>Day pass product</Name>
                 </TypeOfFareProduct>
-                <TypeOfFareProduct id="ntx:discount_card" modification="new" version="ntx:v1.0" status="active">
+                <TypeOfFareProduct id="ntx:discount_card" version="ntx:v1.0">
                   <Name>Discount  product</Name>
                 </TypeOfFareProduct>
               </values>
             </ValueSet>
-            <ValueSet id="myfares:Types_of_Concession" modification="new" version="any" status="active" classOfValues="TypeOfConcession">
+            <ValueSet id="myfares:Types_of_Concession" version="any" classOfValues="TypeOfConcession">
               <Name>Types of Concession</Name>
               <values>
-                <TypeOfConcession id="myfares:standard" modification="new" version="any" status="active">
+                <TypeOfConcession id="myfares:standard" version="any">
                   <Name>Full</Name>
                 </TypeOfConcession>
-                <TypeOfConcession id="myfares:concession" modification="new" version="any" status="active">
+                <TypeOfConcession id="myfares:concession" version="any">
                   <Name>Reduced</Name>
                 </TypeOfConcession>
               </values>
             </ValueSet>
-            <ValueSet id="myfares:Types_of_TravelDocument" modification="new" version="any" status="active" classOfValues="TypeOfTravelDocument">
+            <ValueSet id="myfares:Types_of_TravelDocument" version="any" classOfValues="TypeOfTravelDocument">
               <Name>Types of Travel document</Name>
               <values>
-                <TypeOfTravelDocument id="myfares:mobile_app" modification="new" version="any" status="active">
+                <TypeOfTravelDocument id="myfares:mobile_app" version="any">
                   <Name>Mobile Electronic</Name>
                 </TypeOfTravelDocument>
-                <TypeOfTravelDocument id="myfares:card" modification="new" version="any" status="active">
+                <TypeOfTravelDocument id="myfares:card" version="any">
                   <Name>Railcard - plastic</Name>
                 </TypeOfTravelDocument>
               </values>
             </ValueSet>
-            <ValueSet id="ntx:Types_of_AccessRightAssignment" modification="new" version="ntx:v1.0" status="active" classOfValues="TypeOfAccessRightAssignment">
+            <ValueSet id="ntx:Types_of_AccessRightAssignment" version="ntx:v1.0" classOfValues="TypeOfAccessRightAssignment">
               <Name>Types of Access Right Assignment</Name>
               <values>
-                <TypeOfAccessRightAssignment id="ntx:eligible" modification="new" version="ntx:v1.0" status="active">
+                <TypeOfAccessRightAssignment id="ntx:eligible" version="ntx:v1.0">
                   <Name>Eligible for a product or discount</Name>
                 </TypeOfAccessRightAssignment>
-                <TypeOfAccessRightAssignment id="ntx:can_access" modification="new" version="ntx:v1.0" status="active">
+                <TypeOfAccessRightAssignment id="ntx:can_access" version="ntx:v1.0">
                   <Name>Grants access rights to use or travel on</Name>
                 </TypeOfAccessRightAssignment>
-                <TypeOfAccessRightAssignment id="ntx:can_access_when" modification="new" version="ntx:v1.0" status="active">
+                <TypeOfAccessRightAssignment id="ntx:can_access_when" version="ntx:v1.0">
                   <Name>Grants access rights to use or travel during a specified period</Name>
                 </TypeOfAccessRightAssignment>
-                <TypeOfAccessRightAssignment id="ntx:condition_of_use" modification="new" version="ntx:v1.0" status="active">
+                <TypeOfAccessRightAssignment id="ntx:condition_of_use" version="ntx:v1.0">
                   <Name>Defines a condition or restriction on use</Name>
                 </TypeOfAccessRightAssignment>
-                <TypeOfAccessRightAssignment id="ntx:condition_of_sale" modification="new" version="ntx:v1.0" status="active">
+                <TypeOfAccessRightAssignment id="ntx:condition_of_sale" version="ntx:v1.0">
                   <Name>Defines a condition or restriction on sale</Name>
                 </TypeOfAccessRightAssignment>
-                <TypeOfAccessRightAssignment id="ntx:can_purchase" modification="new" version="ntx:v1.0" status="active">
+                <TypeOfAccessRightAssignment id="ntx:can_purchase" version="ntx:v1.0">
                   <Name>Describes an available purchase or means of purchase</Name>
                 </TypeOfAccessRightAssignment>
               </values>
             </ValueSet>
           </typesOfValue>
-          <organisations modificationSet="all">
-            <Operator id="mytoc:DTA" modification="new" version="any" status="active">
+          <organisations>
+            <Operator id="mytoc:DTA" version="any">
               <Name>Demo Transit Authority</Name>
             </Operator>
           </organisations>

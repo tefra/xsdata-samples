@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <PublicationTimestamp>2010-12-17T09:30:47Z</PublicationTimestamp>
   <ParticipantRef>SYS001</ParticipantRef>
-  <PublicationRequest version="1.0">
+  <PublicationRequest>
     <RequestTimestamp>2010-12-17T09:30:47Z</RequestTimestamp>
     <ParticipantRef>SYS002</ParticipantRef>
     <topics>
       <NetworkFrameTopic>
         <selectionValidityConditions>
-          <AvailabilityCondition id="hde:TIM_23_O" modification="new" version="any" status="active">
+          <AvailabilityCondition id="hde:TIM_23_O" version="any">
             <FromDate>2010-11-01T00:00:00Z</FromDate>
           </AvailabilityCondition>
         </selectionValidityConditions>
@@ -19,8 +19,8 @@
   <PublicationRefreshInterval>P1M</PublicationRefreshInterval>
   <Description>Example  of simple timetable frame with a group of headway journeys </Description>
   <dataObjects>
-    <CompositeFrame id="hde:CF_1" modification="new" version="1" status="active">
-      <codespaces modificationSet="all">
+    <CompositeFrame id="hde:CF_1" version="1">
+      <codespaces>
         <Codespace id="mybus">
           <Xmlns>mybus</Xmlns>
           <XmlnsUrl>http://www.mybuses.eu/stuff</XmlnsUrl>
@@ -35,19 +35,19 @@
       <FrameDefaults>
         <DefaultCodespaceRef ref="mybus"/>
       </FrameDefaults>
-      <frames modificationSet="all">
-        <ServiceFrame id="mybus:svf_24o" modification="new" version="any" status="active">
+      <frames>
+        <ServiceFrame id="mybus:svf_24o" version="any">
           <Name>Stops for Winter timetable for route 24o </Name>
-          <lines modificationSet="all">
-            <Line id="mybus:LN_24o" modification="new" version="any" status="active">
+          <lines>
+            <Line id="mybus:LN_24o" version="any">
               <Name>Line 24o Alpha to Charley Green</Name>
               <ShortName>Line 24o</ShortName>
               <TransportMode>bus</TransportMode>
               <PublicCode>24o</PublicCode>
             </Line>
           </lines>
-          <scheduledStopPoints modificationSet="all">
-            <ScheduledStopPoint id="mybus:SSP_001" modification="new" version="any" status="active">
+          <scheduledStopPoints>
+            <ScheduledStopPoint id="mybus:SSP_001" version="any">
               <Name>Alpha &amp; Castle</Name>
               <Location>
                 <Longitude>53.0000</Longitude>
@@ -59,7 +59,7 @@
               <StopType>onstreetBus</StopType>
               <VehicleModes>bus</VehicleModes>
             </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_002" modification="new" version="any" status="active">
+            <ScheduledStopPoint id="mybus:SSP_002" version="any">
               <Name>Bravo Arch</Name>
               <Location>
                 <Longitude>53.2000</Longitude>
@@ -71,7 +71,7 @@
               <StopType>onstreetBus</StopType>
               <VehicleModes>bus</VehicleModes>
             </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_077" modification="new" version="any" status="active">
+            <ScheduledStopPoint id="mybus:SSP_077" version="any">
               <Name>Charley Green</Name>
               <Location>
                 <Longitude>53.3000</Longitude>
@@ -84,32 +84,32 @@
               <VehicleModes>bus</VehicleModes>
             </ScheduledStopPoint>
           </scheduledStopPoints>
-          <serviceLinks modificationSet="all">
-            <ServiceLink id="mybus:SSP_001_to_SSP_002" modification="new" version="any" status="active">
+          <serviceLinks>
+            <ServiceLink id="mybus:SSP_001_to_SSP_002" version="any">
               <Name>Alpha &amp; Castle to Bravo Arch</Name>
               <FromPointRef version="any" ref="mybus:SSP_001"/>
               <ToPointRef version="any" ref="mybus:SSP_002"/>
             </ServiceLink>
-            <ServiceLink id="mybus:SSP_002_to_SSP_077" modification="new" version="any" status="active">
+            <ServiceLink id="mybus:SSP_002_to_SSP_077" version="any">
               <Name>Bravo Arch to Charley Green</Name>
               <FromPointRef version="any" ref="mybus:SSP_002"/>
               <ToPointRef version="any" ref="mybus:SSP_077"/>
             </ServiceLink>
           </serviceLinks>
-          <servicePatterns modificationSet="all">
-            <ServicePattern id="hde:svp_24o" modification="new" version="any" status="active">
+          <servicePatterns>
+            <ServicePattern id="hde:svp_24o" version="any">
               <Name>Alpha to Charley Green</Name>
               <pointsInSequence>
-                <StopPointInJourneyPattern id="hde:pijp_24o_01" modification="new" version="any" status="active" order="1">
+                <StopPointInJourneyPattern id="hde:pijp_24o_01" version="any" order="1">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
                   <OnwardServiceLinkRef version="any" ref="mybus:SSP_001_to_SSP_002"/>
                   <ForAlighting>false</ForAlighting>
                 </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="hde:pijp_24o_02" modification="new" version="any" status="active" order="2">
+                <StopPointInJourneyPattern id="hde:pijp_24o_02" version="any" order="2">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
                   <OnwardServiceLinkRef version="any" ref="mybus:SSP_002_to_SSP_077"/>
                 </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="hde:pijp_24o_03" modification="new" version="any" status="active" order="3">
+                <StopPointInJourneyPattern id="hde:pijp_24o_03" version="any" order="3">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
                   <ForBoarding>false</ForBoarding>
                 </StopPointInJourneyPattern>
@@ -117,9 +117,9 @@
             </ServicePattern>
           </servicePatterns>
         </ServiceFrame>
-        <TimetableFrame id="hde:hde:TIM_23HFT_O" modification="new" version="any" status="active">
-          <validityConditions modificationSet="all">
-            <AvailabilityCondition id="hde:Cnd001" modification="new" version="any" status="active">
+        <TimetableFrame id="hde:hde:TIM_23HFT_O" version="any">
+          <validityConditions>
+            <AvailabilityCondition id="hde:Cnd001" version="any">
               <Description>Sept  to March</Description>
               <FromDate>2010-11-01T00:00:00Z</FromDate>
               <ToDate>2011-03-31T00:00:00Z</ToDate>
@@ -127,21 +127,21 @@
           </validityConditions>
           <Name>Winter timetable for route 23 outbound</Name>
           <VehicleModes>bus</VehicleModes>
-          <vehicleJourneys modificationSet="all">
-            <ServiceJourney id="hde:sj_fg_24o_01" modification="new" version="any" status="active">
+          <vehicleJourneys>
+            <ServiceJourney id="hde:sj_fg_24o_01" version="any">
               <DepartureTime>10:00:00Z</DepartureTime>
               <Frequency>
                 <ScheduledHeadwayInterval>PT10M</ScheduledHeadwayInterval>
                 <HeadwayDisplay>DisplayInsteadOfPassingTimes</HeadwayDisplay>
               </Frequency>
-              <dayTypes modificationSet="all">
+              <dayTypes>
                 <DayTypeRef version="any" ref="hde:DT_01MTWTFSS"/>
               </dayTypes>
               <ServicePatternRef version="any" ref="hde:svp_24o"/>
               <HeadwayJourneyGroupRef version="any" ref="hde:hjg_24o_02_01"/>
               <LineRef version="any" ref="mybus:LN_24o"/>
               <calls>
-                <Call id="hde:sj_fg_24o_01_001" modification="new" version="any" status="active" order="1">
+                <Call id="hde:sj_fg_24o_01_001" version="any" order="1">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
                   <OnwardTimingLinkView>
                     <TimingLinkRef ref="mybus:TL_001_to_002">EXCLUDED</TimingLinkRef>
@@ -154,7 +154,7 @@
                     <Time>10:00:00Z</Time>
                   </Departure>
                 </Call>
-                <Call id="hde:sj_fg_24o_01_002" modification="new" version="any" status="active" order="2">
+                <Call id="hde:sj_fg_24o_01_002" version="any" order="2">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
                   <OnwardTimingLinkView>
                     <TimingLinkRef ref="mybus:TL_002_to_077">EXCLUDED</TimingLinkRef>
@@ -164,7 +164,7 @@
                     <Time>10:22:00Z</Time>
                   </Departure>
                 </Call>
-                <Call id="hde:sj_fg_24o_01_003" modification="new" version="any" status="active" order="3">
+                <Call id="hde:sj_fg_24o_01_003" version="any" order="3">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
                   <Arrival>
                     <Time>10:40:00Z</Time>
@@ -175,20 +175,20 @@
                 </Call>
               </calls>
             </ServiceJourney>
-            <ServiceJourney id="hde:sj_fg_24o_02" modification="new" version="any" status="active">
+            <ServiceJourney id="hde:sj_fg_24o_02" version="any">
               <DepartureTime>10:15:00Z</DepartureTime>
               <Frequency>
                 <ScheduledHeadwayInterval>PT10M</ScheduledHeadwayInterval>
                 <HeadwayDisplay>DisplayInsteadOfPassingTimes</HeadwayDisplay>
               </Frequency>
-              <dayTypes modificationSet="all">
+              <dayTypes>
                 <DayTypeRef version="any" ref="hde:DT_01MTWTFSS"/>
               </dayTypes>
               <ServicePatternRef version="any" ref="hde:svp_24o"/>
               <HeadwayJourneyGroupRef version="any" ref="hde:hjg_24o_02_01"/>
               <LineRef version="any" ref="mybus:LN_24o"/>
               <calls>
-                <Call id="hde:sj_fg_24o_02_001" modification="new" version="any" status="active" order="1">
+                <Call id="hde:sj_fg_24o_02_001" version="any" order="1">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
                   <Arrival>
                     <ForAlighting>false</ForAlighting>
@@ -197,13 +197,13 @@
                     <Time>10:15:00Z</Time>
                   </Departure>
                 </Call>
-                <Call id="hde:sj_fg_24o_02_002" modification="new" version="any" status="active" order="2">
+                <Call id="hde:sj_fg_24o_02_002" version="any" order="2">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
                   <Departure>
                     <Time>10:35:00Z</Time>
                   </Departure>
                 </Call>
-                <Call id="hde:sj_fg_24o_02_003" modification="new" version="any" status="active" order="3">
+                <Call id="hde:sj_fg_24o_02_003" version="any" order="3">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
                   <Arrival>
                     <Time>10:50:00Z</Time>
@@ -214,20 +214,20 @@
                 </Call>
               </calls>
             </ServiceJourney>
-            <ServiceJourney id="hde:sj_fg_24o_03" modification="new" version="any" status="active">
+            <ServiceJourney id="hde:sj_fg_24o_03" version="any">
               <DepartureTime>10:30:00Z</DepartureTime>
               <Frequency>
                 <ScheduledHeadwayInterval>PT10M</ScheduledHeadwayInterval>
                 <HeadwayDisplay>DisplayInsteadOfPassingTimes</HeadwayDisplay>
               </Frequency>
-              <dayTypes modificationSet="all">
+              <dayTypes>
                 <DayTypeRef version="any" ref="hde:DT_01MTWTFSS"/>
               </dayTypes>
               <ServicePatternRef version="any" ref="hde:svp_24o"/>
               <HeadwayJourneyGroupRef version="any" ref="hde:hjg_24o_02_01"/>
               <LineRef version="any" ref="mybus:LN_24o"/>
               <calls>
-                <Call id="hde:sj_fg_24o_03_001" modification="new" version="any" status="active" order="1">
+                <Call id="hde:sj_fg_24o_03_001" version="any" order="1">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
                   <Arrival>
                     <ForAlighting>false</ForAlighting>
@@ -236,13 +236,13 @@
                     <Time>10:30:00Z</Time>
                   </Departure>
                 </Call>
-                <Call id="hde:sj_fg_24o_03_002" modification="new" version="any" status="active" order="2">
+                <Call id="hde:sj_fg_24o_03_002" version="any" order="2">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
                   <Departure>
                     <Time>10:50:00Z</Time>
                   </Departure>
                 </Call>
-                <Call id="hde:sj_fg_24o_03_003" modification="new" version="any" status="active" order="3">
+                <Call id="hde:sj_fg_24o_03_003" version="any" order="3">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
                   <Arrival>
                     <Time>11:10:00Z</Time>
@@ -253,20 +253,20 @@
                 </Call>
               </calls>
             </ServiceJourney>
-            <ServiceJourney id="hde:sj_fg_24o_04" modification="new" version="any" status="active">
+            <ServiceJourney id="hde:sj_fg_24o_04" version="any">
               <DepartureTime>10:45:00Z</DepartureTime>
               <Frequency>
                 <ScheduledHeadwayInterval>PT10M</ScheduledHeadwayInterval>
                 <HeadwayDisplay>DisplayInsteadOfPassingTimes</HeadwayDisplay>
               </Frequency>
-              <dayTypes modificationSet="all">
+              <dayTypes>
                 <DayTypeRef version="any" ref="hde:DT_01MTWTFSS"/>
               </dayTypes>
               <ServicePatternRef version="any" ref="hde:svp_24o"/>
               <HeadwayJourneyGroupRef version="any" ref="hde:hjg_24o_02_01"/>
               <LineRef version="any" ref="mybus:LN_24o"/>
               <calls>
-                <Call id="hde:sj_fg_24o_04_001" modification="new" version="any" status="active" order="1">
+                <Call id="hde:sj_fg_24o_04_001" version="any" order="1">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
                   <Arrival>
                     <ForAlighting>false</ForAlighting>
@@ -275,13 +275,13 @@
                     <Time>10:45:00Z</Time>
                   </Departure>
                 </Call>
-                <Call id="hde:sj_fg_24o_04_002" modification="new" version="any" status="active" order="2">
+                <Call id="hde:sj_fg_24o_04_002" version="any" order="2">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
                   <Departure>
                     <Time>11:05:00Z</Time>
                   </Departure>
                 </Call>
-                <Call id="hde:sj_fg_24o_04_003" modification="new" version="any" status="active" order="3">
+                <Call id="hde:sj_fg_24o_04_003" version="any" order="3">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
                   <Arrival>
                     <Time>11:25:00Z</Time>
@@ -292,20 +292,20 @@
                 </Call>
               </calls>
             </ServiceJourney>
-            <ServiceJourney id="hde:sj_fg_24o_05" modification="new" version="any" status="active">
+            <ServiceJourney id="hde:sj_fg_24o_05" version="any">
               <DepartureTime>11:00:00Z</DepartureTime>
               <Frequency>
                 <ScheduledHeadwayInterval>PT10M</ScheduledHeadwayInterval>
                 <HeadwayDisplay>DisplayInsteadOfPassingTimes</HeadwayDisplay>
               </Frequency>
-              <dayTypes modificationSet="all">
+              <dayTypes>
                 <DayTypeRef version="any" ref="hde:DT_01MTWTFSS"/>
               </dayTypes>
               <ServicePatternRef version="any" ref="hde:svp_24o"/>
               <HeadwayJourneyGroupRef version="any" ref="hde:hjg_24o_02_01"/>
               <LineRef version="any" ref="mybus:LN_24o"/>
               <calls>
-                <Call id="hde:sj_fg_24o_05_001" modification="new" version="any" status="active" order="1">
+                <Call id="hde:sj_fg_24o_05_001" version="any" order="1">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
                   <Arrival>
                     <ForAlighting>false</ForAlighting>
@@ -314,13 +314,13 @@
                     <Time>11:20:00Z</Time>
                   </Departure>
                 </Call>
-                <Call id="hde:sj_fg_24o_05_002" modification="new" version="any" status="active" order="2">
+                <Call id="hde:sj_fg_24o_05_002" version="any" order="2">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
                   <Departure>
                     <Time>11:40:00Z</Time>
                   </Departure>
                 </Call>
-                <Call id="hde:sj_fg_24o_05_003" modification="new" version="any" status="active" order="3">
+                <Call id="hde:sj_fg_24o_05_003" version="any" order="3">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
                   <Arrival>
                     <Time>12:00:00Z</Time>
@@ -331,15 +331,15 @@
                 </Call>
               </calls>
             </ServiceJourney>
-            <ServiceJourney id="hde:sj_fg_24o_06" modification="new" version="any" status="active">
+            <ServiceJourney id="hde:sj_fg_24o_06" version="any">
               <DepartureTime>12:00:00Z</DepartureTime>
-              <dayTypes modificationSet="all">
+              <dayTypes>
                 <DayTypeRef version="any" ref="hde:DT_01MTWTFSS"/>
               </dayTypes>
               <ServicePatternRef version="any" ref="hde:svp_24o"/>
               <LineRef version="any" ref="mybus:LN_24o"/>
               <calls>
-                <Call id="hde:sj_fg_24o_06_001" modification="new" version="any" status="active" order="1">
+                <Call id="hde:sj_fg_24o_06_001" version="any" order="1">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
                   <Arrival>
                     <ForAlighting>false</ForAlighting>
@@ -348,13 +348,13 @@
                     <Time>12:00:00Z</Time>
                   </Departure>
                 </Call>
-                <Call id="hde:sj_fg_24o_06_002" modification="new" version="any" status="active" order="2">
+                <Call id="hde:sj_fg_24o_06_002" version="any" order="2">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
                   <Departure>
                     <Time>12:20:00Z</Time>
                   </Departure>
                 </Call>
-                <Call id="hde:sj_fg_24o_06_003" modification="new" version="any" status="active" order="3">
+                <Call id="hde:sj_fg_24o_06_003" version="any" order="3">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
                   <Arrival>
                     <Time>12:40:00Z</Time>
@@ -366,13 +366,13 @@
               </calls>
             </ServiceJourney>
           </vehicleJourneys>
-          <frequencyGroups modificationSet="all">
-            <HeadwayJourneyGroup id="hde:hjg_24o_02_01" modification="new" version="any" status="active">
+          <frequencyGroups>
+            <HeadwayJourneyGroup id="hde:hjg_24o_02_01" version="any">
               <Name>every 10 minutes between 10am and 10:50pm</Name>
               <Description>About every 10 minutes</Description>
               <FirstDepartureTime>10:00:00</FirstDepartureTime>
               <LastDepartureTime>11:00:00</LastDepartureTime>
-              <journeys modificationSet="all">
+              <journeys>
                 <ServiceJourneyRef version="any" ref="hde:sj_fg_24o_01"/>
                 <ServiceJourneyRef version="any" ref="hde:sj_fg_24o_02"/>
                 <ServiceJourneyRef version="any" ref="hde:sj_fg_24o_03"/>
@@ -386,14 +386,14 @@
             </HeadwayJourneyGroup>
           </frequencyGroups>
         </TimetableFrame>
-        <ServiceCalendarFrame id="hde:CAL_01" modification="new" version="any" status="active">
+        <ServiceCalendarFrame id="hde:CAL_01" version="any">
           <Name>Service Calendar Nov 2010 </Name>
-          <ServiceCalendar id="hde:SC_01" modification="new" version="any" status="active">
+          <ServiceCalendar id="hde:SC_01" version="any">
             <FromDate>2010-11-01</FromDate>
             <ToDate>2010-11-14</ToDate>
           </ServiceCalendar>
-          <dayTypes modificationSet="all">
-            <DayType id="hde:DT_01MTWTFSS" modification="new" version="any" status="active">
+          <dayTypes>
+            <DayType id="hde:DT_01MTWTFSS" version="any">
               <Name>Everyday unless a holiday</Name>
               <properties>
                 <PropertyOfDay>

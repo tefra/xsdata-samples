@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <PublicationTimestamp>2001-12-17T09:30:47Z</PublicationTimestamp>
   <ParticipantRef>SYS001</ParticipantRef>
-  <PublicationRequest version="1.0">
+  <PublicationRequest>
     <RequestTimestamp>2001-12-17T09:30:47Z</RequestTimestamp>
     <ParticipantRef>SYS002</ParticipantRef>
     <topics>
@@ -15,8 +15,8 @@
   <PublicationRefreshInterval>P7D</PublicationRefreshInterval>
   <Description>Noptis simple Simple service calendar  example</Description>
   <dataObjects>
-    <ServiceCalendarFrame id="noptis:9085002000100000" modification="new" version="any" status="active" responsibilitySetRef="noptis:9010001000000000">
-      <codespaces modificationSet="all">
+    <ServiceCalendarFrame id="noptis:9085002000100000" version="any" responsibilitySetRef="noptis:9010001000000000">
+      <codespaces>
         <Codespace id="noptis">
           <Xmlns>noptis</Xmlns>
           <XmlnsUrl>http://www.noptis.org./noptis</XmlnsUrl>
@@ -26,28 +26,28 @@
       <FrameDefaults>
         <DefaultCodespaceRef ref="noptis"/>
       </FrameDefaults>
-      <ServiceCalendar id="noptis:9085002000100000" modification="new" version="any" status="active" responsibilitySetRef="noptis:9010001000000000">
+      <ServiceCalendar id="noptis:9085002000100000" version="any" responsibilitySetRef="noptis:9010001000000000">
         <Name>Base</Name>
         <FromDate>2007-06-17</FromDate>
         <ToDate>2008-06-14</ToDate>
-        <dayTypes modificationSet="all">
-          <DayType id="noptis:9086002000100001" modification="new" version="any" status="active"/>
-          <DayType id="noptis:9086002000100002" modification="new" version="any" status="active"/>
+        <dayTypes>
+          <DayType id="noptis:9086002000100001" version="any"/>
+          <DayType id="noptis:9086002000100002" version="any"/>
         </dayTypes>
         <dayTypeAssignments>
-          <DayTypeAssignment id="noptis:DayTypeAssignment:2007-06-17" modification="new" version="any" status="active" order="1">
+          <DayTypeAssignment id="noptis:DayTypeAssignment:2007-06-17" version="any" order="1">
             <Date>2007-06-17</Date>
             <DayTypeRef version="any" ref="noptis:9086002000100001"/>
           </DayTypeAssignment>
-          <DayTypeAssignment id="noptis:DayTypeAssignment:2007-06-24" modification="new" version="any" status="active" order="1">
+          <DayTypeAssignment id="noptis:DayTypeAssignment:2007-06-24" version="any" order="1">
             <Date>2007-06-24</Date>
             <DayTypeRef version="any" ref="noptis:9086002000100001"/>
           </DayTypeAssignment>
-          <DayTypeAssignment id="noptis:DayTypeAssignment:2007-06-18" modification="new" version="any" status="active" order="1">
+          <DayTypeAssignment id="noptis:DayTypeAssignment:2007-06-18" version="any" order="1">
             <Date>2007-06-18</Date>
             <DayTypeRef version="any" ref="noptis:9086002000100002"/>
           </DayTypeAssignment>
-          <DayTypeAssignment id="noptis:DayTypeAssignment:2007-06-25" modification="new" version="any" status="active" order="1">
+          <DayTypeAssignment id="noptis:DayTypeAssignment:2007-06-25" version="any" order="1">
             <Date>2007-06-25</Date>
             <DayTypeRef version="any" ref="noptis:9086002000100002"/>
           </DayTypeAssignment>

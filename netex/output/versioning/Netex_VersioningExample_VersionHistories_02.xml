@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <PublicationTimestamp>2001-12-17T09:30:47Z</PublicationTimestamp>
   <ParticipantRef>SYS001</ParticipantRef>
-  <PublicationRequest version="1.0">
+  <PublicationRequest>
     <RequestTimestamp>2001-12-17T09:30:47Z</RequestTimestamp>
     <ParticipantRef>SYS002</ParticipantRef>
     <topics>
@@ -26,8 +26,8 @@
   <PublicationRefreshInterval>P1Y2M3DT10H30M0S</PublicationRefreshInterval>
   <Description>Example of simple network, explicit request </Description>
   <dataObjects>
-    <GeneralFrame id="mybus:SF1" modification="new" version="any" status="active">
-      <codespaces modificationSet="all">
+    <GeneralFrame id="mybus:SF1" version="any">
+      <codespaces>
         <Codespace id="mybus">
           <Xmlns>mybus</Xmlns>
           <XmlnsUrl>http://www.mybuses.eu/stuff</XmlnsUrl>
@@ -37,14 +37,14 @@
       <FrameDefaults>
         <DefaultCodespaceRef ref="mybus"/>
       </FrameDefaults>
-      <members modificationSet="all">
+      <members>
         <Entity_Entity nameOfClass="ScheduledStopPoint" id="mybus:SSP0001A" created="2010-05-17T09:30:47Z">
-          <versions modificationSet="all">
-            <ScheduledStopPoint id="mybus:SSP0001A" created="2010-05-17T09:30:47Z" modification="new" version="001" status="active" responsibilitySetRef="mybus:RS_10">
+          <versions>
+            <ScheduledStopPoint id="mybus:SSP0001A" created="2010-05-17T09:30:47Z" version="001" responsibilitySetRef="mybus:RS_10">
               <Name>Haltstelle A</Name>
               <Description>Version one of stop A</Description>
             </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP0001A" created="2010-05-17T09:30:47Z" changed="2010-05-18T09:30:47Z" modification="revise" version="002" status="active" derivedFromVersionRef="001" responsibilitySetRef="mybus:RS_10">
+            <ScheduledStopPoint id="mybus:SSP0001A" created="2010-05-17T09:30:47Z" changed="2010-05-18T09:30:47Z" modification="revise" version="002" derivedFromVersionRef="001" responsibilitySetRef="mybus:RS_10">
               <Name>Haltstelle A - Museum</Name>
               <Description>Version two of stop A. Name is Changed and code addded</Description>
               <PrivateCode>mycodeA</PrivateCode>
@@ -52,31 +52,31 @@
           </versions>
         </Entity_Entity>
         <Entity_Entity nameOfClass="ScheduledStopPoint" id="mybus:SSP0002B" created="2010-05-17T09:30:47Z">
-          <versions modificationSet="all">
-            <ScheduledStopPoint id="mybus:SSP0002B" created="2010-05-18T09:30:47Z" modification="new" version="001" status="active" responsibilitySetRef="mybus:RS_10">
+          <versions>
+            <ScheduledStopPoint id="mybus:SSP0002B" created="2010-05-18T09:30:47Z" version="001" responsibilitySetRef="mybus:RS_10">
               <Name>Haltstelle B</Name>
               <Description>Version one of stop B</Description>
             </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP0002B" created="2010-05-18T09:30:47Z" changed="2010-06-18T09:30:47Z" modification="revise" version="002" status="active" responsibilitySetRef="mybus:RS_10">
+            <ScheduledStopPoint id="mybus:SSP0002B" created="2010-05-18T09:30:47Z" changed="2010-06-18T09:30:47Z" modification="revise" version="002" responsibilitySetRef="mybus:RS_10">
               <Name>Haltstelle B</Name>
               <Description>Version two of stop B</Description>
               <PrivateCode>mycodeB</PrivateCode>
             </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP0003C" created="2010-05-21T10:30:51Z" modification="new" version="001" status="active" responsibilitySetRef="mybus:RS_10">
+            <ScheduledStopPoint id="mybus:SSP0003C" created="2010-05-21T10:30:51Z" version="001" responsibilitySetRef="mybus:RS_10">
               <Name>Haltstelle C</Name>
               <Description>Version one of stop C</Description>
             </ScheduledStopPoint>
           </versions>
         </Entity_Entity>
         <Entity_Entity nameOfClass="ServiceLink" id="mybu:SL_AtoB01" created="2010-05-19T10:30:47Z">
-          <versions modificationSet="all">
-            <ServiceLink id="mybu:SL_AtoB01" created="2010-05-19T10:30:47Z" modification="new" version="001" status="active" responsibilitySetRef="mybus:RS_10">
+          <versions>
+            <ServiceLink id="mybu:SL_AtoB01" created="2010-05-19T10:30:47Z" version="001" responsibilitySetRef="mybus:RS_10">
               <Name>Version one of Link from A to B</Name>
               <Distance>1.01</Distance>
               <FromPointRef version="001" ref="mybus:SSP0001A"/>
               <ToPointRef version="001" ref="mybus:SSP0002B"/>
             </ServiceLink>
-            <ServiceLink id="mybu:SL_AtoB01" created="2010-05-19T10:30:47Z" changed="2010-05-19T10:30:47Z" modification="revise" version="002" status="active" responsibilitySetRef="mybus:RS_10">
+            <ServiceLink id="mybu:SL_AtoB01" created="2010-05-19T10:30:47Z" changed="2010-05-19T10:30:47Z" modification="revise" version="002" responsibilitySetRef="mybus:RS_10">
               <Name>Version one of Link from A to B</Name>
               <Distance>1.12</Distance>
               <FromPointRef version="002" ref="mybus:SSP0001A"/>
@@ -85,8 +85,8 @@
           </versions>
         </Entity_Entity>
         <Entity_Entity nameOfClass="ServiceLink" id="mybu:SL_BtoC01" created="2010-05-21T10:30:51Z">
-          <versions modificationSet="all">
-            <ServiceLink id="mybu:SL_BtoC01" created="2010-05-21T10:30:51Z" modification="new" version="001" status="active" responsibilitySetRef="mybus:RS_10">
+          <versions>
+            <ServiceLink id="mybu:SL_BtoC01" created="2010-05-21T10:30:51Z" version="001" responsibilitySetRef="mybus:RS_10">
               <Name>Version one of Link from B to C</Name>
               <FromPointRef version="002" ref="mybus:SSP0002B"/>
               <ToPointRef version="001" ref="mybus:SSP0003C"/>
@@ -94,8 +94,8 @@
           </versions>
         </Entity_Entity>
         <Entity_Entity nameOfClass="ServiceLink" id="mybu:SL_BtoA01" created="2010-05-19T10:30:51Z" changed="2010-05-21T10:30:51Z">
-          <versions modificationSet="all">
-            <ServiceLink id="mybu:SL_BtoA01" created="2010-05-19T10:30:51Z" changed="2010-05-21T10:30:51Z" modification="delete" version="002" status="active" responsibilitySetRef="mybus:RS_10">
+          <versions>
+            <ServiceLink id="mybu:SL_BtoA01" created="2010-05-19T10:30:51Z" changed="2010-05-21T10:30:51Z" modification="delete" version="002" responsibilitySetRef="mybus:RS_10">
               <Name>Version two - deleteing  Link from B to A</Name>
               <FromPointRef version="002" ref="mybus:SSP0002B"/>
               <ToPointRef version="002" ref="mybus:SSP0001A"/>
@@ -103,33 +103,33 @@
           </versions>
         </Entity_Entity>
         <Entity_Entity nameOfClass="ServicePattern" id="mybus:SP_001" created="2010-05-21T10:30:51Z" changed="2010-05-22T10:30:51Z">
-          <versions modificationSet="all">
-            <ServicePattern id="mybus:SP_001" created="2010-05-21T10:30:51Z" modification="new" version="001" status="active">
+          <versions>
+            <ServicePattern id="mybus:SP_001" created="2010-05-21T10:30:51Z" version="001">
               <Name>From A to C, version 1</Name>
               <pointsInSequence>
-                <StopPointInJourneyPattern id="mybus:P_001_01" modification="new" version="001" status="active" order="1">
+                <StopPointInJourneyPattern id="mybus:P_001_01" version="001" order="1">
                   <ScheduledStopPointRef version="002" ref="mybus:SSP0001A"/>
                 </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="mybus:P_001_02" modification="new" version="001" status="active" order="2">
+                <StopPointInJourneyPattern id="mybus:P_001_02" version="001" order="2">
                   <ScheduledStopPointRef version="002" ref="mybus:SSP0002B"/>
                 </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="mybus:P_001_03" modification="new" version="001" status="active" order="3">
+                <StopPointInJourneyPattern id="mybus:P_001_03" version="001" order="3">
                   <ScheduledStopPointRef version="001" ref="mybus:SSP0003C"/>
                 </StopPointInJourneyPattern>
               </pointsInSequence>
             </ServicePattern>
-            <ServicePattern id="mybus:SP_001" created="2010-05-21T10:30:51Z" changed="2010-05-22T10:30:51Z" modification="new" version="002" status="active">
+            <ServicePattern id="mybus:SP_001" created="2010-05-21T10:30:51Z" changed="2010-05-22T10:30:51Z" version="002">
               <Name>From A to D, version 2</Name>
               <pointsInSequence>
-                <StopPointInJourneyPattern id="mybus:P_001_01" modification="new" version="002" status="active" order="1">
+                <StopPointInJourneyPattern id="mybus:P_001_01" version="002" order="1">
                   <ScheduledStopPointRef version="001" ref="mybus:SSP0001A"/>
                 </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="mybus:P_001_02" modification="new" version="002" status="active" order="2">
+                <StopPointInJourneyPattern id="mybus:P_001_02" version="002" order="2">
                   <ScheduledStopPointRef version="002" ref="mybus:SSP0002B"/>
                   <ForAlighting>true</ForAlighting>
                   <ForBoarding>false</ForBoarding>
                 </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="mybus:P_001_03" modification="new" version="002" status="active" order="3">
+                <StopPointInJourneyPattern id="mybus:P_001_03" version="002" order="3">
                   <ScheduledStopPointRef version="001" ref="mybus:SSP0003C"/>
                 </StopPointInJourneyPattern>
               </pointsInSequence>
@@ -138,9 +138,9 @@
         </Entity_Entity>
       </members>
     </GeneralFrame>
-    <ServiceCalendarFrame id="mybus:SCF1" modification="new" version="any" status="active">
-      <dayTypes modificationSet="all">
-        <DayType id="mybus:DT001_MF" created="2010-05-18T10:30:47Z" modification="new" version="001" status="active" responsibilitySetRef="mybus:RS_10">
+    <ServiceCalendarFrame id="mybus:SCF1" version="any">
+      <dayTypes>
+        <DayType id="mybus:DT001_MF" created="2010-05-18T10:30:47Z" version="001" responsibilitySetRef="mybus:RS_10">
           <Name>Monday to Friday</Name>
           <properties>
             <PropertyOfDay>

@@ -263,7 +263,7 @@
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"/>
+                <xhtml:p/>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -271,7 +271,7 @@
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"><xhtml:b xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:type="xhtml:xhtml.InlPres.type">Titel</xhtml:b> : Test Titel  <xhtml:br xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:type="xhtml:xhtml.br.type"/><xhtml:b xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:type="xhtml:xhtml.InlPres.type">Bearbeiter</xhtml:b> : Test Bearbeiter  <xhtml:br xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:type="xhtml:xhtml.br.type"/><xhtml:b xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:type="xhtml:xhtml.InlPres.type">Abt./OE</xhtml:b> : Test Abteilung  <xhtml:br xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:type="xhtml:xhtml.br.type"/><xhtml:b xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:type="xhtml:xhtml.InlPres.type">Telefon</xhtml:b> : Test Telefon  <xhtml:br xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:type="xhtml:xhtml.br.type"/><xhtml:b xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:type="xhtml:xhtml.InlPres.type">E-Mail:</xhtml:b>  some.body@example.com  <xhtml:br xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:type="xhtml:xhtml.br.type"/><xhtml:b xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:type="xhtml:xhtml.InlPres.type">Erstausgabe:</xhtml:b>  09.03.2020  <xhtml:br xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:type="xhtml:xhtml.br.type"/><xhtml:b xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:type="xhtml:xhtml.InlPres.type">Datum &#196;nderungsstand</xhtml:b> : 09.03.2020  <xhtml:br xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:type="xhtml:xhtml.br.type"/><xhtml:b xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:type="xhtml:xhtml.InlPres.type">&#196;nderungsstand</xhtml:b> : V1.0  </xhtml:p>
+                <xhtml:p><xhtml:b xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xhtml:xhtml.InlPres.type">Titel</xhtml:b> : Test Titel  <xhtml:br xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xhtml:xhtml.br.type"/><xhtml:b xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xhtml:xhtml.InlPres.type">Bearbeiter</xhtml:b> : Test Bearbeiter  <xhtml:br xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xhtml:xhtml.br.type"/><xhtml:b xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xhtml:xhtml.InlPres.type">Abt./OE</xhtml:b> : Test Abteilung  <xhtml:br xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xhtml:xhtml.br.type"/><xhtml:b xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xhtml:xhtml.InlPres.type">Telefon</xhtml:b> : Test Telefon  <xhtml:br xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xhtml:xhtml.br.type"/><xhtml:b xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xhtml:xhtml.InlPres.type">E-Mail:</xhtml:b>  some.body@example.com  <xhtml:br xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xhtml:xhtml.br.type"/><xhtml:b xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xhtml:xhtml.InlPres.type">Erstausgabe:</xhtml:b>  09.03.2020  <xhtml:br xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xhtml:xhtml.br.type"/><xhtml:b xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xhtml:xhtml.InlPres.type">Datum &#196;nderungsstand</xhtml:b> : 09.03.2020  <xhtml:br xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xhtml:xhtml.br.type"/><xhtml:b xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xhtml:xhtml.InlPres.type">&#196;nderungsstand</xhtml:b> : V1.0  </xhtml:p>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_ca65e999-bcee-4f6d-838d-5677c77f8ed9</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -307,7 +307,7 @@
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:div xml:space="preserve">Einleitung  </xhtml:div>
+                <xhtml:div>Einleitung  </xhtml:div>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -315,7 +315,7 @@
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"/>
+                <xhtml:p/>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_ca65e999-bcee-4f6d-838d-5677c77f8ed9</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -351,7 +351,7 @@
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:div xml:space="preserve">&#196;nderungsverfolgung  </xhtml:div>
+                <xhtml:div>&#196;nderungsverfolgung  </xhtml:div>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -359,7 +359,7 @@
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"/>
+                <xhtml:p/>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_ca65e999-bcee-4f6d-838d-5677c77f8ed9</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -395,7 +395,7 @@
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"/>
+                <xhtml:p/>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -403,9 +403,9 @@
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve">
-                  <xhtml:span xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" style="" xsi:type="xhtml:xhtml.span.type">
-                    <xhtml:object xml:space="preserve" data="KuFu_Testfunktion_00270cf8/21744/_3f36bf4d-5428-4134-9059-02e7c8a3af26_1.png" type="image/png" xsi:type="xhtml:xhtml.object.type"/>
+                <xhtml:p>
+                  <xhtml:span xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" style="" xsi:type="xhtml:xhtml.span.type">
+                    <xhtml:object data="KuFu_Testfunktion_00270cf8/21744/_3f36bf4d-5428-4134-9059-02e7c8a3af26_1.png" type="image/png" xsi:type="xhtml:xhtml.object.type"/>
                   </xhtml:span>
                 </xhtml:p>
               </THE-VALUE>
@@ -443,7 +443,7 @@
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:div xml:space="preserve">Dokumentenzweck  </xhtml:div>
+                <xhtml:div>Dokumentenzweck  </xhtml:div>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -451,7 +451,7 @@
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"/>
+                <xhtml:p/>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_ca65e999-bcee-4f6d-838d-5677c77f8ed9</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -487,7 +487,7 @@
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"/>
+                <xhtml:p/>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -495,7 +495,7 @@
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve">Das vorliegende Lastenheft beschreibt die Kundenfunktionsauspr&#228;gung der<xhtml:br xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:type="xhtml:xhtml.br.type"/>
+                <xhtml:p>Das vorliegende Lastenheft beschreibt die Kundenfunktionsauspr&#228;gung der<xhtml:br xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xhtml:xhtml.br.type"/>
 Funktion "Testfunktion"  </xhtml:p>
               </THE-VALUE>
               <DEFINITION>
@@ -532,7 +532,7 @@ Funktion "Testfunktion"  </xhtml:p>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:div xml:space="preserve">Geltungsbereich  </xhtml:div>
+                <xhtml:div>Geltungsbereich  </xhtml:div>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -540,7 +540,7 @@ Funktion "Testfunktion"  </xhtml:p>
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"/>
+                <xhtml:p/>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_ca65e999-bcee-4f6d-838d-5677c77f8ed9</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -576,7 +576,7 @@ Funktion "Testfunktion"  </xhtml:p>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"/>
+                <xhtml:p/>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -584,7 +584,7 @@ Funktion "Testfunktion"  </xhtml:p>
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve">Lorem ipsum  </xhtml:p>
+                <xhtml:p>Lorem ipsum  </xhtml:p>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_ca65e999-bcee-4f6d-838d-5677c77f8ed9</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -620,7 +620,7 @@ Funktion "Testfunktion"  </xhtml:p>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:div xml:space="preserve">Abk&#252;rzungen  </xhtml:div>
+                <xhtml:div>Abk&#252;rzungen  </xhtml:div>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -628,7 +628,7 @@ Funktion "Testfunktion"  </xhtml:p>
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"/>
+                <xhtml:p/>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_ca65e999-bcee-4f6d-838d-5677c77f8ed9</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -664,7 +664,7 @@ Funktion "Testfunktion"  </xhtml:p>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"/>
+                <xhtml:p/>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -672,7 +672,7 @@ Funktion "Testfunktion"  </xhtml:p>
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve">ACA:  <xhtml:br xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:type="xhtml:xhtml.br.type"/>
+                <xhtml:p>ACA:  <xhtml:br xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xhtml:xhtml.br.type"/>
 Adaptive Cruise Assist  </xhtml:p>
               </THE-VALUE>
               <DEFINITION>
@@ -709,7 +709,7 @@ Adaptive Cruise Assist  </xhtml:p>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"/>
+                <xhtml:p/>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -717,7 +717,7 @@ Adaptive Cruise Assist  </xhtml:p>
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve">ACC:  <xhtml:br xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:type="xhtml:xhtml.br.type"/>
+                <xhtml:p>ACC:  <xhtml:br xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xhtml:xhtml.br.type"/>
 Adaptive Cruise Control  </xhtml:p>
               </THE-VALUE>
               <DEFINITION>
@@ -754,7 +754,7 @@ Adaptive Cruise Control  </xhtml:p>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"/>
+                <xhtml:p/>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -762,7 +762,7 @@ Adaptive Cruise Control  </xhtml:p>
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve">HMI:  <xhtml:br xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:type="xhtml:xhtml.br.type"/>
+                <xhtml:p>HMI:  <xhtml:br xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xhtml:xhtml.br.type"/>
 Human Maschine Interface  </xhtml:p>
               </THE-VALUE>
               <DEFINITION>
@@ -799,7 +799,7 @@ Human Maschine Interface  </xhtml:p>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:div xml:space="preserve">Definitionen  </xhtml:div>
+                <xhtml:div>Definitionen  </xhtml:div>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -807,7 +807,7 @@ Human Maschine Interface  </xhtml:p>
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"/>
+                <xhtml:p/>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_ca65e999-bcee-4f6d-838d-5677c77f8ed9</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -843,7 +843,7 @@ Human Maschine Interface  </xhtml:p>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"/>
+                <xhtml:p/>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -851,7 +851,7 @@ Human Maschine Interface  </xhtml:p>
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve">Ego-Fahrzeug:  <xhtml:br xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:type="xhtml:xhtml.br.type"/>
+                <xhtml:p>Ego-Fahrzeug:  <xhtml:br xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xhtml:xhtml.br.type"/>
 Das eigene Fahrzeug auf das sich die Funktionsberschreibung bezieht  </xhtml:p>
               </THE-VALUE>
               <DEFINITION>
@@ -888,7 +888,7 @@ Das eigene Fahrzeug auf das sich die Funktionsberschreibung bezieht  </xhtml:p>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"/>
+                <xhtml:p/>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -896,7 +896,7 @@ Das eigene Fahrzeug auf das sich die Funktionsberschreibung bezieht  </xhtml:p>
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve">Ego-Fahrstreifen:  <xhtml:br xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:type="xhtml:xhtml.br.type"/>
+                <xhtml:p>Ego-Fahrstreifen:  <xhtml:br xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xhtml:xhtml.br.type"/>
 Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
               </THE-VALUE>
               <DEFINITION>
@@ -933,7 +933,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:div xml:space="preserve">Normen und Vorschriften  </xhtml:div>
+                <xhtml:div>Normen und Vorschriften  </xhtml:div>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -941,7 +941,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"/>
+                <xhtml:p/>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_ca65e999-bcee-4f6d-838d-5677c77f8ed9</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -977,7 +977,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"/>
+                <xhtml:p/>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -985,7 +985,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve">ISO26262: Road Vehicles &#8211; Functional Safety  </xhtml:p>
+                <xhtml:p>ISO26262: Road Vehicles &#8211; Functional Safety  </xhtml:p>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_ca65e999-bcee-4f6d-838d-5677c77f8ed9</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1021,7 +1021,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:div xml:space="preserve">Fahrzeugfunktion Testfunktion  </xhtml:div>
+                <xhtml:div>Fahrzeugfunktion Testfunktion  </xhtml:div>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1029,7 +1029,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"/>
+                <xhtml:p/>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_ca65e999-bcee-4f6d-838d-5677c77f8ed9</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1065,7 +1065,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:div xml:space="preserve">Funktionsbeschreibung  </xhtml:div>
+                <xhtml:div>Funktionsbeschreibung  </xhtml:div>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1073,7 +1073,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"/>
+                <xhtml:p/>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_ca65e999-bcee-4f6d-838d-5677c77f8ed9</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1109,7 +1109,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"/>
+                <xhtml:p/>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1117,7 +1117,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve">Infomration 1  </xhtml:p>
+                <xhtml:p>Infomration 1  </xhtml:p>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_ca65e999-bcee-4f6d-838d-5677c77f8ed9</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1153,7 +1153,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:div xml:space="preserve">Test Kommentar 30.06.2020 von Simon
+                <xhtml:div>Test Kommentar 30.06.2020 von Simon
 </xhtml:div>
               </THE-VALUE>
               <DEFINITION>
@@ -1162,7 +1162,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"/>
+                <xhtml:p/>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1170,7 +1170,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve">Anforderung 1  </xhtml:p>
+                <xhtml:p>Anforderung 1  </xhtml:p>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_ca65e999-bcee-4f6d-838d-5677c77f8ed9</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1206,7 +1206,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:div xml:space="preserve">No Findings</xhtml:div>
+                <xhtml:div>No Findings</xhtml:div>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_2ba9b86e-336e-4449-82ab-b91cfe54d6d5</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1214,7 +1214,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"/>
+                <xhtml:p/>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1222,7 +1222,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve">Anforderung 2  </xhtml:p>
+                <xhtml:p>Anforderung 2  </xhtml:p>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_ca65e999-bcee-4f6d-838d-5677c77f8ed9</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1258,7 +1258,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:div xml:space="preserve">Logischer Widerspruch</xhtml:div>
+                <xhtml:div>Logischer Widerspruch</xhtml:div>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_2ba9b86e-336e-4449-82ab-b91cfe54d6d5</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1266,7 +1266,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"/>
+                <xhtml:p/>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1274,7 +1274,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve">Anforderung 3  </xhtml:p>
+                <xhtml:p>Anforderung 3  </xhtml:p>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_ca65e999-bcee-4f6d-838d-5677c77f8ed9</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1310,7 +1310,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"/>
+                <xhtml:p/>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1318,7 +1318,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve">Information 2  </xhtml:p>
+                <xhtml:p>Information 2  </xhtml:p>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_ca65e999-bcee-4f6d-838d-5677c77f8ed9</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1354,7 +1354,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"/>
+                <xhtml:p/>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1362,7 +1362,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve">Anforderung 4  </xhtml:p>
+                <xhtml:p>Anforderung 4  </xhtml:p>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_ca65e999-bcee-4f6d-838d-5677c77f8ed9</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1398,7 +1398,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:div xml:space="preserve">fehlende Werte xy</xhtml:div>
+                <xhtml:div>fehlende Werte xy</xhtml:div>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_2ba9b86e-336e-4449-82ab-b91cfe54d6d5</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1406,7 +1406,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"/>
+                <xhtml:p/>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1414,7 +1414,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve">Anforderung 5  </xhtml:p>
+                <xhtml:p>Anforderung 5  </xhtml:p>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_ca65e999-bcee-4f6d-838d-5677c77f8ed9</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1450,7 +1450,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"/>
+                <xhtml:p/>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1458,7 +1458,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve">Anforderung 6  </xhtml:p>
+                <xhtml:p>Anforderung 6  </xhtml:p>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_ca65e999-bcee-4f6d-838d-5677c77f8ed9</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1494,7 +1494,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:div xml:space="preserve">HMI-Konzept  </xhtml:div>
+                <xhtml:div>HMI-Konzept  </xhtml:div>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1502,7 +1502,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"/>
+                <xhtml:p/>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_ca65e999-bcee-4f6d-838d-5677c77f8ed9</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1538,7 +1538,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"/>
+                <xhtml:p/>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1546,7 +1546,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve">Information 3  </xhtml:p>
+                <xhtml:p>Information 3  </xhtml:p>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_ca65e999-bcee-4f6d-838d-5677c77f8ed9</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1582,7 +1582,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"/>
+                <xhtml:p/>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1590,7 +1590,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve">Information 4  </xhtml:p>
+                <xhtml:p>Information 4  </xhtml:p>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_ca65e999-bcee-4f6d-838d-5677c77f8ed9</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1626,7 +1626,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"/>
+                <xhtml:p/>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1634,7 +1634,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve">Anforderung 7  </xhtml:p>
+                <xhtml:p>Anforderung 7  </xhtml:p>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_ca65e999-bcee-4f6d-838d-5677c77f8ed9</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1670,7 +1670,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"/>
+                <xhtml:p/>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1678,7 +1678,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve">Anforderung 8  </xhtml:p>
+                <xhtml:p>Anforderung 8  </xhtml:p>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_ca65e999-bcee-4f6d-838d-5677c77f8ed9</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1714,7 +1714,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"/>
+                <xhtml:p/>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1722,7 +1722,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve">Anforderung 9  </xhtml:p>
+                <xhtml:p>Anforderung 9  </xhtml:p>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_ca65e999-bcee-4f6d-838d-5677c77f8ed9</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1758,7 +1758,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:div xml:space="preserve">Funktionale Sicherheit  </xhtml:div>
+                <xhtml:div>Funktionale Sicherheit  </xhtml:div>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1766,7 +1766,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"/>
+                <xhtml:p/>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_ca65e999-bcee-4f6d-838d-5677c77f8ed9</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1802,7 +1802,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve"/>
+                <xhtml:p/>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21</ATTRIBUTE-DEFINITION-XHTML-REF>
@@ -1810,7 +1810,7 @@ Fahrstreifen auf dem sich das Ego-Fahrzeug bewegt  </xhtml:p>
             </ATTRIBUTE-VALUE-XHTML>
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
-                <xhtml:p xml:space="preserve">Die FuSi - rlevanten Anforderungen ist im Modul "XYZ" definiert  </xhtml:p>
+                <xhtml:p>Die FuSi - rlevanten Anforderungen ist im Modul "XYZ" definiert  </xhtml:p>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_ca65e999-bcee-4f6d-838d-5677c77f8ed9</ATTRIBUTE-DEFINITION-XHTML-REF>

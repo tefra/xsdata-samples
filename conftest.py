@@ -29,7 +29,7 @@ def xml_context(output_format):
 
 @pytest.fixture
 def serializer_config():
-    return SerializerConfig(pretty_print=True)
+    return SerializerConfig(pretty_print=True, ignore_default_attributes=True)
 
 
 @pytest.fixture

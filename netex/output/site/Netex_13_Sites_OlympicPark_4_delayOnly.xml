@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <PublicationTimestamp>2001-12-17T09:30:47Z</PublicationTimestamp>
   <ParticipantRef>SYS001</ParticipantRef>
-  <PublicationRequest version="1.0">
+  <PublicationRequest>
     <RequestTimestamp>2001-12-17T09:30:47Z</RequestTimestamp>
     <ParticipantRef>SYS002</ParticipantRef>
   </PublicationRequest>
   <PublicationRefreshInterval>PT5M0S</PublicationRefreshInterval>
   <Description>OPK Example - exchange of just the delays for a previously exchanged site. </Description>
   <dataObjects>
-    <SiteFrame id="naptPoi:8100OPKXX" modification="new" version="any" status="active">
-      <codespaces modificationSet="all">
+    <SiteFrame id="naptPoi:8100OPKXX" version="any">
+      <codespaces>
         <Codespace id="naptPoi_data">
           <Xmlns>naptPoi</Xmlns>
           <XmlnsUrl>http://www.naptan.org.uk/pois</XmlnsUrl>
@@ -25,75 +25,75 @@
       <FrameDefaults>
         <DefaultCodespaceRef ref="oda_data"/>
       </FrameDefaults>
-      <checkConstraints modificationSet="all">
-        <CheckConstraint id="naptPoi:8100OPK_E1_C1" modification="new" version="any" status="active" order="1">
+      <checkConstraints>
+        <CheckConstraint id="naptPoi:8100OPK_E1_C1" version="any" order="1">
           <delays>
-            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_VB_i" modification="new" version="any" status="active" order="1">
-              <validityConditions modificationSet="all">
+            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_VB_i" version="any" order="1">
+              <validityConditions>
                 <AvailabilityConditionRef ref="oda:Avl_Very_Busy_ingress">EXTERNAL</AvailabilityConditionRef>
               </validityConditions>
               <MinimumLikelyDelay>PT10M</MinimumLikelyDelay>
               <AverageDelay>PT40M</AverageDelay>
               <MaximumLikelyDelay>PT80M</MaximumLikelyDelay>
             </CheckConstraintDelay>
-            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_VB_d" modification="new" version="any" status="active" order="2">
-              <validityConditions modificationSet="all">
+            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_VB_d" version="any" order="2">
+              <validityConditions>
                 <AvailabilityConditionRef ref="oda:Avl_Very_Busy_during">EXTERNAL</AvailabilityConditionRef>
               </validityConditions>
               <MinimumLikelyDelay>PT8M</MinimumLikelyDelay>
               <AverageDelay>PT15M</AverageDelay>
               <MaximumLikelyDelay>PT30M</MaximumLikelyDelay>
             </CheckConstraintDelay>
-            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_VB_o" modification="new" version="any" status="active" order="3">
-              <validityConditions modificationSet="all">
+            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_VB_o" version="any" order="3">
+              <validityConditions>
                 <AvailabilityConditionRef ref="oda:Avl_Very_Busy_other">EXTERNAL</AvailabilityConditionRef>
               </validityConditions>
               <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>
               <AverageDelay>PT3M</AverageDelay>
               <MaximumLikelyDelay>PT6M</MaximumLikelyDelay>
             </CheckConstraintDelay>
-            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_B_i" modification="new" version="any" status="active" order="4">
-              <validityConditions modificationSet="all">
+            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_B_i" version="any" order="4">
+              <validityConditions>
                 <AvailabilityConditionRef ref="oda:Avl_Busy_ingress">EXTERNAL</AvailabilityConditionRef>
               </validityConditions>
               <MinimumLikelyDelay>PT25M</MinimumLikelyDelay>
               <AverageDelay>PT25M</AverageDelay>
               <MaximumLikelyDelay>PT50M</MaximumLikelyDelay>
             </CheckConstraintDelay>
-            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_B_d" modification="new" version="any" status="active" order="5">
-              <validityConditions modificationSet="all">
+            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_B_d" version="any" order="5">
+              <validityConditions>
                 <AvailabilityConditionRef ref="oda:Avl_Busy_during">EXTERNAL</AvailabilityConditionRef>
               </validityConditions>
               <MinimumLikelyDelay>PT6M</MinimumLikelyDelay>
               <AverageDelay>PT15M</AverageDelay>
               <MaximumLikelyDelay>PT30M</MaximumLikelyDelay>
             </CheckConstraintDelay>
-            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_B_o" modification="new" version="any" status="active" order="6">
-              <validityConditions modificationSet="all">
+            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_B_o" version="any" order="6">
+              <validityConditions>
                 <AvailabilityConditionRef ref="oda:Avl_Busy_other">EXTERNAL</AvailabilityConditionRef>
               </validityConditions>
               <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>
               <AverageDelay>PT3M</AverageDelay>
               <MaximumLikelyDelay>PT6M</MaximumLikelyDelay>
             </CheckConstraintDelay>
-            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_N_i" modification="new" version="any" status="active" order="7">
-              <validityConditions modificationSet="all">
+            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_N_i" version="any" order="7">
+              <validityConditions>
                 <AvailabilityConditionRef ref="oda:Avl_Normal_ingress">EXTERNAL</AvailabilityConditionRef>
               </validityConditions>
               <MinimumLikelyDelay>PT10M</MinimumLikelyDelay>
               <AverageDelay>PT20M</AverageDelay>
               <MaximumLikelyDelay>PT40M</MaximumLikelyDelay>
             </CheckConstraintDelay>
-            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_N_d" modification="new" version="any" status="active" order="7">
-              <validityConditions modificationSet="all">
+            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_N_d" version="any" order="7">
+              <validityConditions>
                 <AvailabilityConditionRef ref="oda:Avl_Normal_during">EXTERNAL</AvailabilityConditionRef>
               </validityConditions>
               <MinimumLikelyDelay>PT4M</MinimumLikelyDelay>
               <AverageDelay>PT10M</AverageDelay>
               <MaximumLikelyDelay>PT20M</MaximumLikelyDelay>
             </CheckConstraintDelay>
-            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_N_o" modification="new" version="any" status="active" order="8">
-              <validityConditions modificationSet="all">
+            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_N_o" version="any" order="8">
+              <validityConditions>
                 <AvailabilityConditionRef ref="oda:Avl_Normal_other">EXTERNAL</AvailabilityConditionRef>
               </validityConditions>
               <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>
@@ -102,74 +102,74 @@
             </CheckConstraintDelay>
           </delays>
         </CheckConstraint>
-        <CheckConstraint id="naptPoi:8100OPK_E1_C2" modification="new" version="any" status="active" order="1">
+        <CheckConstraint id="naptPoi:8100OPK_E1_C2" version="any" order="1">
           <delays>
-            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_VB_d" modification="new" version="any" status="active" order="1">
-              <validityConditions modificationSet="all">
+            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_VB_d" version="any" order="1">
+              <validityConditions>
                 <AvailabilityConditionRef ref="oda:Avl_Very_Busy_during">EXTERNAL</AvailabilityConditionRef>
               </validityConditions>
               <MinimumLikelyDelay>PT8M</MinimumLikelyDelay>
               <AverageDelay>PT15M</AverageDelay>
               <MaximumLikelyDelay>PT30M</MaximumLikelyDelay>
             </CheckConstraintDelay>
-            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_VB_e" modification="new" version="any" status="active" order="1">
-              <validityConditions modificationSet="all">
+            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_VB_e" version="any" order="1">
+              <validityConditions>
                 <AvailabilityConditionRef ref="oda:Avl_Very_Busy_egress">EXTERNAL</AvailabilityConditionRef>
               </validityConditions>
               <MinimumLikelyDelay>PT10M</MinimumLikelyDelay>
               <AverageDelay>PT20M</AverageDelay>
               <MaximumLikelyDelay>PT30M</MaximumLikelyDelay>
             </CheckConstraintDelay>
-            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_VB_o" modification="new" version="any" status="active" order="1">
-              <validityConditions modificationSet="all">
+            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_VB_o" version="any" order="1">
+              <validityConditions>
                 <AvailabilityConditionRef ref="oda:Avl_Very_Busy_other">EXTERNAL</AvailabilityConditionRef>
               </validityConditions>
               <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>
               <AverageDelay>PT3M</AverageDelay>
               <MaximumLikelyDelay>PT6M</MaximumLikelyDelay>
             </CheckConstraintDelay>
-            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_B_d" modification="new" version="any" status="active" order="1">
-              <validityConditions modificationSet="all">
+            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_B_d" version="any" order="1">
+              <validityConditions>
                 <AvailabilityConditionRef ref="oda:Avl_Busy_during">EXTERNAL</AvailabilityConditionRef>
               </validityConditions>
               <MinimumLikelyDelay>PT6M</MinimumLikelyDelay>
               <AverageDelay>PT15M</AverageDelay>
               <MaximumLikelyDelay>PT30M</MaximumLikelyDelay>
             </CheckConstraintDelay>
-            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_B_e" modification="new" version="any" status="active" order="1">
-              <validityConditions modificationSet="all">
+            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_B_e" version="any" order="1">
+              <validityConditions>
                 <AvailabilityConditionRef ref="oda:Avl_Busy_egress">EXTERNAL</AvailabilityConditionRef>
               </validityConditions>
               <MinimumLikelyDelay>PT8M</MinimumLikelyDelay>
               <AverageDelay>PT15M</AverageDelay>
               <MaximumLikelyDelay>PT25M</MaximumLikelyDelay>
             </CheckConstraintDelay>
-            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_B_o" modification="new" version="any" status="active" order="1">
-              <validityConditions modificationSet="all">
+            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_B_o" version="any" order="1">
+              <validityConditions>
                 <AvailabilityConditionRef ref="oda:Avl_Busy_other">EXTERNAL</AvailabilityConditionRef>
               </validityConditions>
               <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>
               <AverageDelay>PT3M</AverageDelay>
               <MaximumLikelyDelay>PT6M</MaximumLikelyDelay>
             </CheckConstraintDelay>
-            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_N_d" modification="new" version="any" status="active" order="1">
-              <validityConditions modificationSet="all">
+            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_N_d" version="any" order="1">
+              <validityConditions>
                 <AvailabilityConditionRef ref="oda:Avl_Normal_during">EXTERNAL</AvailabilityConditionRef>
               </validityConditions>
               <MinimumLikelyDelay>PT4M</MinimumLikelyDelay>
               <AverageDelay>PT10M</AverageDelay>
               <MaximumLikelyDelay>PT20M</MaximumLikelyDelay>
             </CheckConstraintDelay>
-            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_N_e" modification="new" version="any" status="active" order="1">
-              <validityConditions modificationSet="all">
+            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_N_e" version="any" order="1">
+              <validityConditions>
                 <AvailabilityConditionRef ref="oda:Avl_Normal_egress">EXTERNAL</AvailabilityConditionRef>
               </validityConditions>
               <MinimumLikelyDelay>PT6M</MinimumLikelyDelay>
               <AverageDelay>PT12M</AverageDelay>
               <MaximumLikelyDelay>PT20M</MaximumLikelyDelay>
             </CheckConstraintDelay>
-            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_N_o" modification="new" version="any" status="active" order="1">
-              <validityConditions modificationSet="all">
+            <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_N_o" version="any" order="1">
+              <validityConditions>
                 <AvailabilityConditionRef ref="oda:Avl_Normal_other">EXTERNAL</AvailabilityConditionRef>
               </validityConditions>
               <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>

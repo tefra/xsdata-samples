@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <PublicationTimestamp>2001-12-17T09:30:47Z</PublicationTimestamp>
   <ParticipantRef>SYS001</ParticipantRef>
   <dataObjects>
-    <ServiceFrame id="SVF004" modification="new" version="any" status="active">
-      <codespaces modificationSet="all">
+    <ServiceFrame id="SVF004" version="any">
+      <codespaces>
         <Codespace id="mybus">
           <Xmlns>mybus</Xmlns>
           <XmlnsUrl>http://www.mybus.fr/</XmlnsUrl>
@@ -14,8 +14,8 @@
       <FrameDefaults>
         <DefaultCodespaceRef ref="mybus"/>
       </FrameDefaults>
-      <scheduledStopPoints modificationSet="all">
-        <ScheduledStopPoint id="SSP0042A" created="2000-12-17T09:30:47Z" changed="2002-12-17T09:30:47Z" modification="new" version="032" status="active">
+      <scheduledStopPoints>
+        <ScheduledStopPoint id="SSP0042A" created="2000-12-17T09:30:47Z" changed="2002-12-17T09:30:47Z" version="032">
           <Name>Poste, St Jean</Name>
           <Location>
             <Longitude>-0.2071397147</Longitude>
@@ -23,7 +23,7 @@
           </Location>
           <VehicleModes>bus</VehicleModes>
         </ScheduledStopPoint>
-        <ScheduledStopPoint id="SNCF0047" created="2000-12-17T11:30:47Z" changed="2002-12-17T09:32:47Z" modification="new" version="032" status="active">
+        <ScheduledStopPoint id="SNCF0047" created="2000-12-17T11:30:47Z" changed="2002-12-17T09:32:47Z" version="032">
           <Name>Gare, St Jean</Name>
           <Location>
             <Longitude>-0.2071397153</Longitude>

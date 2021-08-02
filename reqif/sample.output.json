@@ -29,7 +29,6 @@
                       "OTHER-CONTENT": "-1"
                     }
                   },
-                  "DESC": null,
                   "IDENTIFIER": "_98c84b85-0043-4911-a0a3-42a48ec8a4fd",
                   "LAST-CHANGE": "2020-06-18T11:21:02+02:00",
                   "LONG-NAME": "Peter_Test"
@@ -42,7 +41,6 @@
                       "OTHER-CONTENT": "-1"
                     }
                   },
-                  "DESC": null,
                   "IDENTIFIER": "_342c6db4-78ad-4525-96bc-15b07ae0a36b",
                   "LAST-CHANGE": "2020-06-18T11:21:02+02:00",
                   "LONG-NAME": "Max_Mustermann"
@@ -55,7 +53,6 @@
                       "OTHER-CONTENT": "-1"
                     }
                   },
-                  "DESC": null,
                   "IDENTIFIER": "_caef9d66-4967-4067-9749-fcd67f22faf2",
                   "LAST-CHANGE": "2020-06-18T11:21:02+02:00",
                   "LONG-NAME": "User_1"
@@ -68,14 +65,12 @@
                       "OTHER-CONTENT": "-1"
                     }
                   },
-                  "DESC": null,
                   "IDENTIFIER": "_df43a5b5-04c9-4807-b5a1-dbb63a4788b7",
                   "LAST-CHANGE": "2020-06-18T11:21:02+02:00",
                   "LONG-NAME": "User_2"
                 }
               ]
             },
-            "DESC": null,
             "IDENTIFIER": "_0a3b23c3-ceff-46b0-9904-27e69a60d534",
             "LAST-CHANGE": "2020-06-18T11:21:02+02:00",
             "LONG-NAME": "t_Reviewer_Testing"
@@ -92,7 +87,6 @@
                       "OTHER-CONTENT": "4"
                     }
                   },
-                  "DESC": null,
                   "IDENTIFIER": "_9a287866-708f-4a8c-abab-259680b9cd61",
                   "LAST-CHANGE": "2020-06-18T11:21:02+02:00",
                   "LONG-NAME": "im_Review"
@@ -105,7 +99,6 @@
                       "OTHER-CONTENT": "12"
                     }
                   },
-                  "DESC": null,
                   "IDENTIFIER": "_7fe843e7-a5db-4299-91fc-9c7d068402fc",
                   "LAST-CHANGE": "2020-06-18T11:21:02+02:00",
                   "LONG-NAME": "zu_Kl\u00e4ren"
@@ -118,7 +111,6 @@
                       "OTHER-CONTENT": "8"
                     }
                   },
-                  "DESC": null,
                   "IDENTIFIER": "_f9437ec4-b92e-4d3b-ae1b-4de4f10de27e",
                   "LAST-CHANGE": "2020-06-18T11:21:02+02:00",
                   "LONG-NAME": "testbar"
@@ -131,7 +123,6 @@
                       "OTHER-CONTENT": "6"
                     }
                   },
-                  "DESC": null,
                   "IDENTIFIER": "_1f754c62-71e9-473c-9b94-d11abaec0c79",
                   "LAST-CHANGE": "2020-06-18T11:21:02+02:00",
                   "LONG-NAME": "nicht_testbar"
@@ -144,7 +135,6 @@
                       "OTHER-CONTENT": "-1"
                     }
                   },
-                  "DESC": null,
                   "IDENTIFIER": "_37429d02-48c0-4f3a-bb66-2fc0d99e9851",
                   "LAST-CHANGE": "2020-06-18T11:21:02+02:00",
                   "LONG-NAME": "n/a"
@@ -157,14 +147,12 @@
                       "OTHER-CONTENT": "-1"
                     }
                   },
-                  "DESC": null,
                   "IDENTIFIER": "_c2266813-bdad-42c7-8b60-04e9ee1c0f63",
                   "LAST-CHANGE": "2020-06-18T11:21:02+02:00",
                   "LONG-NAME": "TBD"
                 }
               ]
             },
-            "DESC": null,
             "IDENTIFIER": "_7937b70c-f4c9-4944-8df0-36660f1d15a9",
             "LAST-CHANGE": "2020-06-18T11:21:02+02:00",
             "LONG-NAME": "t_Status Testing"
@@ -181,7 +169,6 @@
                       "OTHER-CONTENT": "4"
                     }
                   },
-                  "DESC": null,
                   "IDENTIFIER": "_fcf54bdf-c824-4584-9cb2-e52f45cf5886",
                   "LAST-CHANGE": "2020-06-18T11:21:02+02:00",
                   "LONG-NAME": "Fahrzeug"
@@ -194,7 +181,6 @@
                       "OTHER-CONTENT": "10"
                     }
                   },
-                  "DESC": null,
                   "IDENTIFIER": "_ff2c7b41-c679-42e3-aa45-aa42534b5c5c",
                   "LAST-CHANGE": "2020-06-18T11:21:02+02:00",
                   "LONG-NAME": "HIL"
@@ -207,7 +193,6 @@
                       "OTHER-CONTENT": "6"
                     }
                   },
-                  "DESC": null,
                   "IDENTIFIER": "_69d5e5f2-6f34-436f-9aae-e22d438a5e42",
                   "LAST-CHANGE": "2020-06-18T11:21:02+02:00",
                   "LONG-NAME": "TBD"
@@ -220,14 +205,12 @@
                       "OTHER-CONTENT": "11"
                     }
                   },
-                  "DESC": null,
                   "IDENTIFIER": "_42f7f695-7b34-466f-889e-cdaf7834ca17",
                   "LAST-CHANGE": "2020-06-18T11:21:02+02:00",
                   "LONG-NAME": "n/a"
                 }
               ]
             },
-            "DESC": null,
             "IDENTIFIER": "_db82652b-8684-40d3-b4a0-f2cb3419691b",
             "LAST-CHANGE": "2020-06-18T11:21:02+02:00",
             "LONG-NAME": "t_Testort"
@@ -244,7 +227,6 @@
                       "OTHER-CONTENT": "-1"
                     }
                   },
-                  "DESC": null,
                   "IDENTIFIER": "_e0e37fdc-ba4a-432a-b7d9-e1ef7aead8a4",
                   "LAST-CHANGE": "2020-06-18T11:21:02+02:00",
                   "LONG-NAME": "TBD"
@@ -257,7 +239,6 @@
                       "OTHER-CONTENT": "-1"
                     }
                   },
-                  "DESC": null,
                   "IDENTIFIER": "_e15d0ce4-8136-473f-9aa5-7b397713d06a",
                   "LAST-CHANGE": "2020-06-18T11:21:02+02:00",
                   "LONG-NAME": "Funktionale Anforderung"
@@ -270,7 +251,6 @@
                       "OTHER-CONTENT": "-1"
                     }
                   },
-                  "DESC": null,
                   "IDENTIFIER": "_89342424-e9dd-411e-a853-163813bed665",
                   "LAST-CHANGE": "2020-06-18T11:21:02+02:00",
                   "LONG-NAME": "Nicht-funktionale Anforderung"
@@ -283,7 +263,6 @@
                       "OTHER-CONTENT": "-1"
                     }
                   },
-                  "DESC": null,
                   "IDENTIFIER": "_db3e20f4-4644-4cf6-8f54-f37c60d9065d",
                   "LAST-CHANGE": "2020-06-18T11:21:02+02:00",
                   "LONG-NAME": "Information"
@@ -296,14 +275,12 @@
                       "OTHER-CONTENT": "-1"
                     }
                   },
-                  "DESC": null,
                   "IDENTIFIER": "_5183bdc7-cc53-4a23-a485-48f5ae866533",
                   "LAST-CHANGE": "2020-06-18T11:21:02+02:00",
                   "LONG-NAME": "\u00dcberschrift"
                 }
               ]
             },
-            "DESC": null,
             "IDENTIFIER": "_e5629e97-8e39-4045-bc53-3a7745557619",
             "LAST-CHANGE": "2020-06-18T11:21:02+02:00",
             "LONG-NAME": "AnfTyp"
@@ -314,7 +291,6 @@
         "DATATYPE-DEFINITION-STRING": [
           {
             "ALTERNATIVE-ID": null,
-            "DESC": null,
             "IDENTIFIER": "_3d82caa2-9d92-4c70-a50d-1ab9b085fde7",
             "LAST-CHANGE": "2020-06-18T11:21:02+02:00",
             "LONG-NAME": "String",
@@ -324,7 +300,6 @@
         "DATATYPE-DEFINITION-XHTML": [
           {
             "ALTERNATIVE-ID": null,
-            "DESC": null,
             "IDENTIFIER": "_46bd8741-717f-46f7-a414-1b5c41f9f56e",
             "LAST-CHANGE": "2020-06-18T11:21:02+02:00",
             "LONG-NAME": "Text"
@@ -357,7 +332,6 @@
                   "TYPE": {
                     "DATATYPE-DEFINITION-ENUMERATION-REF": "_7937b70c-f4c9-4944-8df0-36660f1d15a9"
                   },
-                  "DESC": null,
                   "IDENTIFIER": "_91d05124-3a58-4c28-84bd-ea29744ff69c",
                   "IS-EDITABLE": false,
                   "LAST-CHANGE": "2020-06-18T11:21:02+02:00",
@@ -381,7 +355,6 @@
                   "TYPE": {
                     "DATATYPE-DEFINITION-ENUMERATION-REF": "_db82652b-8684-40d3-b4a0-f2cb3419691b"
                   },
-                  "DESC": null,
                   "IDENTIFIER": "_02dcd7b1-a607-40f8-bfb6-5f4435dd696d",
                   "IS-EDITABLE": false,
                   "LAST-CHANGE": "2020-06-18T11:21:02+02:00",
@@ -405,7 +378,6 @@
                   "TYPE": {
                     "DATATYPE-DEFINITION-ENUMERATION-REF": "_e5629e97-8e39-4045-bc53-3a7745557619"
                   },
-                  "DESC": null,
                   "IDENTIFIER": "_7a29d21c-052c-4599-8381-3c743c1b6504",
                   "IS-EDITABLE": false,
                   "LAST-CHANGE": "2020-06-18T11:21:02+02:00",
@@ -422,7 +394,6 @@
                   "TYPE": {
                     "DATATYPE-DEFINITION-STRING-REF": "_3d82caa2-9d92-4c70-a50d-1ab9b085fde7"
                   },
-                  "DESC": null,
                   "IDENTIFIER": "_f0b16293-8a23-4f58-a325-91cfcce5aa15",
                   "IS-EDITABLE": false,
                   "LAST-CHANGE": "2020-06-18T11:21:02+02:00",
@@ -436,7 +407,6 @@
                   "TYPE": {
                     "DATATYPE-DEFINITION-XHTML-REF": "_46bd8741-717f-46f7-a414-1b5c41f9f56e"
                   },
-                  "DESC": null,
                   "IDENTIFIER": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21",
                   "IS-EDITABLE": false,
                   "LAST-CHANGE": "2020-06-18T11:21:02+02:00",
@@ -448,7 +418,6 @@
                   "TYPE": {
                     "DATATYPE-DEFINITION-XHTML-REF": "_46bd8741-717f-46f7-a414-1b5c41f9f56e"
                   },
-                  "DESC": null,
                   "IDENTIFIER": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9",
                   "IS-EDITABLE": false,
                   "LAST-CHANGE": "2020-06-18T11:21:02+02:00",
@@ -460,7 +429,6 @@
                   "TYPE": {
                     "DATATYPE-DEFINITION-XHTML-REF": "_46bd8741-717f-46f7-a414-1b5c41f9f56e"
                   },
-                  "DESC": null,
                   "IDENTIFIER": "_2ba9b86e-336e-4449-82ab-b91cfe54d6d5",
                   "IS-EDITABLE": false,
                   "LAST-CHANGE": "2020-06-18T11:21:02+02:00",
@@ -468,7 +436,6 @@
                 }
               ]
             },
-            "DESC": null,
             "IDENTIFIER": "_8a253863-8e29-4cb7-9f06-4666c698f8b2",
             "LAST-CHANGE": "2020-06-18T11:21:01+02:00",
             "LONG-NAME": "KuFu_Testfunktion_OBJECT-TYPE"
@@ -490,7 +457,6 @@
                   "TYPE": {
                     "DATATYPE-DEFINITION-ENUMERATION-REF": "_0a3b23c3-ceff-46b0-9904-27e69a60d534"
                   },
-                  "DESC": null,
                   "IDENTIFIER": "_747d7404-99f5-4cde-a4e4-e50d80d3cbf8",
                   "IS-EDITABLE": true,
                   "LAST-CHANGE": "2020-06-18T11:21:02+02:00",
@@ -514,7 +480,6 @@
                   "TYPE": {
                     "DATATYPE-DEFINITION-ENUMERATION-REF": "_7937b70c-f4c9-4944-8df0-36660f1d15a9"
                   },
-                  "DESC": null,
                   "IDENTIFIER": "_a00bdc41-b33c-4b1e-9862-099a9969a433",
                   "IS-EDITABLE": true,
                   "LAST-CHANGE": "2020-06-18T11:21:02+02:00",
@@ -538,7 +503,6 @@
                   "TYPE": {
                     "DATATYPE-DEFINITION-ENUMERATION-REF": "_db82652b-8684-40d3-b4a0-f2cb3419691b"
                   },
-                  "DESC": null,
                   "IDENTIFIER": "_c16d7f65-a6c3-4449-a335-6941c6f5a7a7",
                   "IS-EDITABLE": true,
                   "LAST-CHANGE": "2020-06-18T11:21:02+02:00",
@@ -551,7 +515,6 @@
               "ATTRIBUTE-DEFINITION-STRING": [],
               "ATTRIBUTE-DEFINITION-XHTML": []
             },
-            "DESC": null,
             "IDENTIFIER": "_1e784a62-6117-4b98-b5c5-844d8b5ccedc",
             "LAST-CHANGE": "2020-06-18T11:21:01+02:00",
             "LONG-NAME": "KuFu_Testfunktion_DOCTYPE_GROUP-TYPE"
@@ -601,12 +564,6 @@
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": []
                     },
                     "div": null
@@ -614,28 +571,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         {
                           "qname": "{http://www.w3.org/1999/xhtml}b",
                           "value": {
-                            "space": "preserve",
-                            "id": null,
-                            "class": null,
-                            "title": null,
-                            "lang": null,
-                            "style": null,
                             "content": [
                               "Titel",
                               " : Test Titel  "
@@ -645,23 +589,12 @@
                         },
                         {
                           "qname": "{http://www.w3.org/1999/xhtml}br",
-                          "value": {
-                            "space": "preserve",
-                            "id": null,
-                            "class": null,
-                            "title": null
-                          },
+                          "value": {},
                           "type": "{http://www.w3.org/1999/xhtml}xhtml.br.type"
                         },
                         {
                           "qname": "{http://www.w3.org/1999/xhtml}b",
                           "value": {
-                            "space": "preserve",
-                            "id": null,
-                            "class": null,
-                            "title": null,
-                            "lang": null,
-                            "style": null,
                             "content": [
                               "Bearbeiter",
                               " : Test Bearbeiter  "
@@ -671,23 +604,12 @@
                         },
                         {
                           "qname": "{http://www.w3.org/1999/xhtml}br",
-                          "value": {
-                            "space": "preserve",
-                            "id": null,
-                            "class": null,
-                            "title": null
-                          },
+                          "value": {},
                           "type": "{http://www.w3.org/1999/xhtml}xhtml.br.type"
                         },
                         {
                           "qname": "{http://www.w3.org/1999/xhtml}b",
                           "value": {
-                            "space": "preserve",
-                            "id": null,
-                            "class": null,
-                            "title": null,
-                            "lang": null,
-                            "style": null,
                             "content": [
                               "Abt./OE",
                               " : Test Abteilung  "
@@ -697,23 +619,12 @@
                         },
                         {
                           "qname": "{http://www.w3.org/1999/xhtml}br",
-                          "value": {
-                            "space": "preserve",
-                            "id": null,
-                            "class": null,
-                            "title": null
-                          },
+                          "value": {},
                           "type": "{http://www.w3.org/1999/xhtml}xhtml.br.type"
                         },
                         {
                           "qname": "{http://www.w3.org/1999/xhtml}b",
                           "value": {
-                            "space": "preserve",
-                            "id": null,
-                            "class": null,
-                            "title": null,
-                            "lang": null,
-                            "style": null,
                             "content": [
                               "Telefon",
                               " : Test Telefon  "
@@ -723,23 +634,12 @@
                         },
                         {
                           "qname": "{http://www.w3.org/1999/xhtml}br",
-                          "value": {
-                            "space": "preserve",
-                            "id": null,
-                            "class": null,
-                            "title": null
-                          },
+                          "value": {},
                           "type": "{http://www.w3.org/1999/xhtml}xhtml.br.type"
                         },
                         {
                           "qname": "{http://www.w3.org/1999/xhtml}b",
                           "value": {
-                            "space": "preserve",
-                            "id": null,
-                            "class": null,
-                            "title": null,
-                            "lang": null,
-                            "style": null,
                             "content": [
                               "E-Mail:",
                               "  some.body@example.com  "
@@ -749,23 +649,12 @@
                         },
                         {
                           "qname": "{http://www.w3.org/1999/xhtml}br",
-                          "value": {
-                            "space": "preserve",
-                            "id": null,
-                            "class": null,
-                            "title": null
-                          },
+                          "value": {},
                           "type": "{http://www.w3.org/1999/xhtml}xhtml.br.type"
                         },
                         {
                           "qname": "{http://www.w3.org/1999/xhtml}b",
                           "value": {
-                            "space": "preserve",
-                            "id": null,
-                            "class": null,
-                            "title": null,
-                            "lang": null,
-                            "style": null,
                             "content": [
                               "Erstausgabe:",
                               "  09.03.2020  "
@@ -775,23 +664,12 @@
                         },
                         {
                           "qname": "{http://www.w3.org/1999/xhtml}br",
-                          "value": {
-                            "space": "preserve",
-                            "id": null,
-                            "class": null,
-                            "title": null
-                          },
+                          "value": {},
                           "type": "{http://www.w3.org/1999/xhtml}xhtml.br.type"
                         },
                         {
                           "qname": "{http://www.w3.org/1999/xhtml}b",
                           "value": {
-                            "space": "preserve",
-                            "id": null,
-                            "class": null,
-                            "title": null,
-                            "lang": null,
-                            "style": null,
                             "content": [
                               "Datum \u00c4nderungsstand",
                               " : 09.03.2020  "
@@ -801,23 +679,12 @@
                         },
                         {
                           "qname": "{http://www.w3.org/1999/xhtml}br",
-                          "value": {
-                            "space": "preserve",
-                            "id": null,
-                            "class": null,
-                            "title": null
-                          },
+                          "value": {},
                           "type": "{http://www.w3.org/1999/xhtml}xhtml.br.type"
                         },
                         {
                           "qname": "{http://www.w3.org/1999/xhtml}b",
                           "value": {
-                            "space": "preserve",
-                            "id": null,
-                            "class": null,
-                            "title": null,
-                            "lang": null,
-                            "style": null,
                             "content": [
                               "\u00c4nderungsstand",
                               " : V1.0  "
@@ -832,18 +699,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 }
               ]
             },
             "TYPE": {
               "SPEC-OBJECT-TYPE-REF": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
             },
-            "DESC": null,
             "IDENTIFIER": "_e2d6c16e-f1d3-46cf-8e28-61b5fb533f14",
-            "LAST-CHANGE": "2020-07-07T15:13:24.921169",
-            "LONG-NAME": null
+            "LAST-CHANGE": "2020-07-07T15:13:24.921169"
           },
           {
             "ALTERNATIVE-ID": null,
@@ -887,12 +751,6 @@
                   "THE-VALUE": {
                     "p": null,
                     "div": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "Einleitung  "
                       ]
@@ -901,18 +759,11 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": []
                     },
                     "div": null
@@ -920,18 +771,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 }
               ]
             },
             "TYPE": {
               "SPEC-OBJECT-TYPE-REF": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
             },
-            "DESC": null,
             "IDENTIFIER": "_82f7941c-35fb-474d-b440-cd4bb3a5cb07",
-            "LAST-CHANGE": "2020-07-07T15:13:24.930863",
-            "LONG-NAME": null
+            "LAST-CHANGE": "2020-07-07T15:13:24.930863"
           },
           {
             "ALTERNATIVE-ID": null,
@@ -975,12 +823,6 @@
                   "THE-VALUE": {
                     "p": null,
                     "div": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "\u00c4nderungsverfolgung  "
                       ]
@@ -989,18 +831,11 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": []
                     },
                     "div": null
@@ -1008,18 +843,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 }
               ]
             },
             "TYPE": {
               "SPEC-OBJECT-TYPE-REF": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
             },
-            "DESC": null,
             "IDENTIFIER": "_50139ee3-d7e1-4263-b6f8-197094383048",
-            "LAST-CHANGE": "2020-07-07T15:13:24.930863",
-            "LONG-NAME": null
+            "LAST-CHANGE": "2020-07-07T15:13:24.930863"
           },
           {
             "ALTERNATIVE-ID": null,
@@ -1062,12 +894,6 @@
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": []
                     },
                     "div": null
@@ -1075,50 +901,22 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         {
                           "qname": "{http://www.w3.org/1999/xhtml}span",
                           "value": {
-                            "space": "preserve",
-                            "id": null,
-                            "class": null,
-                            "title": null,
-                            "lang": null,
                             "style": "",
                             "content": [
                               {
                                 "qname": "{http://www.w3.org/1999/xhtml}object",
                                 "value": {
-                                  "space": "preserve",
-                                  "id": null,
-                                  "class": null,
-                                  "title": null,
-                                  "lang": null,
-                                  "style": null,
-                                  "declare": null,
-                                  "classid": null,
-                                  "codebase": null,
                                   "data": "KuFu_Testfunktion_00270cf8/21744/_3f36bf4d-5428-4134-9059-02e7c8a3af26_1.png",
                                   "type": "image/png",
-                                  "codetype": null,
-                                  "archive": [],
-                                  "standby": null,
-                                  "height": null,
-                                  "width": null,
-                                  "name": null,
-                                  "tabindex": null,
                                   "content": []
                                 },
                                 "type": "{http://www.w3.org/1999/xhtml}xhtml.object.type"
@@ -1134,18 +932,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 }
               ]
             },
             "TYPE": {
               "SPEC-OBJECT-TYPE-REF": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
             },
-            "DESC": null,
             "IDENTIFIER": "_bf3077ec-1755-4001-ba06-6b136d478355",
-            "LAST-CHANGE": "2020-07-07T15:13:24.930863",
-            "LONG-NAME": null
+            "LAST-CHANGE": "2020-07-07T15:13:24.930863"
           },
           {
             "ALTERNATIVE-ID": null,
@@ -1189,12 +984,6 @@
                   "THE-VALUE": {
                     "p": null,
                     "div": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "Dokumentenzweck  "
                       ]
@@ -1203,18 +992,11 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": []
                     },
                     "div": null
@@ -1222,18 +1004,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 }
               ]
             },
             "TYPE": {
               "SPEC-OBJECT-TYPE-REF": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
             },
-            "DESC": null,
             "IDENTIFIER": "_9e51998a-9b74-40d7-b703-244100f0adde",
-            "LAST-CHANGE": "2020-07-07T15:13:24.930863",
-            "LONG-NAME": null
+            "LAST-CHANGE": "2020-07-07T15:13:24.930863"
           },
           {
             "ALTERNATIVE-ID": null,
@@ -1276,12 +1055,6 @@
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": []
                     },
                     "div": null
@@ -1289,28 +1062,16 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "Das vorliegende Lastenheft beschreibt die Kundenfunktionsauspr\u00e4gung der",
                         {
                           "qname": "{http://www.w3.org/1999/xhtml}br",
-                          "value": {
-                            "space": "preserve",
-                            "id": null,
-                            "class": null,
-                            "title": null
-                          },
+                          "value": {},
                           "type": "{http://www.w3.org/1999/xhtml}xhtml.br.type"
                         },
                         "\nFunktion \"Testfunktion\"  "
@@ -1321,18 +1082,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 }
               ]
             },
             "TYPE": {
               "SPEC-OBJECT-TYPE-REF": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
             },
-            "DESC": null,
             "IDENTIFIER": "_a49cb529-786e-4af9-b55c-07d6e9b4f9ab",
-            "LAST-CHANGE": "2020-07-07T15:13:24.941303",
-            "LONG-NAME": null
+            "LAST-CHANGE": "2020-07-07T15:13:24.941303"
           },
           {
             "ALTERNATIVE-ID": null,
@@ -1376,12 +1134,6 @@
                   "THE-VALUE": {
                     "p": null,
                     "div": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "Geltungsbereich  "
                       ]
@@ -1390,18 +1142,11 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": []
                     },
                     "div": null
@@ -1409,18 +1154,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 }
               ]
             },
             "TYPE": {
               "SPEC-OBJECT-TYPE-REF": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
             },
-            "DESC": null,
             "IDENTIFIER": "_515e27c8-b859-4914-827d-7df0c11bc499",
-            "LAST-CHANGE": "2020-07-07T15:13:24.945999",
-            "LONG-NAME": null
+            "LAST-CHANGE": "2020-07-07T15:13:24.945999"
           },
           {
             "ALTERNATIVE-ID": null,
@@ -1463,12 +1205,6 @@
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": []
                     },
                     "div": null
@@ -1476,18 +1212,11 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "Lorem ipsum  "
                       ]
@@ -1497,18 +1226,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 }
               ]
             },
             "TYPE": {
               "SPEC-OBJECT-TYPE-REF": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
             },
-            "DESC": null,
             "IDENTIFIER": "_9d91426d-3e2f-4d63-9114-f8d947f23beb",
-            "LAST-CHANGE": "2020-07-07T15:13:24.945999",
-            "LONG-NAME": null
+            "LAST-CHANGE": "2020-07-07T15:13:24.945999"
           },
           {
             "ALTERNATIVE-ID": null,
@@ -1552,12 +1278,6 @@
                   "THE-VALUE": {
                     "p": null,
                     "div": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "Abk\u00fcrzungen  "
                       ]
@@ -1566,18 +1286,11 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": []
                     },
                     "div": null
@@ -1585,18 +1298,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 }
               ]
             },
             "TYPE": {
               "SPEC-OBJECT-TYPE-REF": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
             },
-            "DESC": null,
             "IDENTIFIER": "_f6093ebf-ef0d-48dc-9f1a-a162d4314f80",
-            "LAST-CHANGE": "2020-07-07T15:13:24.945999",
-            "LONG-NAME": null
+            "LAST-CHANGE": "2020-07-07T15:13:24.945999"
           },
           {
             "ALTERNATIVE-ID": null,
@@ -1639,12 +1349,6 @@
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": []
                     },
                     "div": null
@@ -1652,28 +1356,16 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "ACA:  ",
                         {
                           "qname": "{http://www.w3.org/1999/xhtml}br",
-                          "value": {
-                            "space": "preserve",
-                            "id": null,
-                            "class": null,
-                            "title": null
-                          },
+                          "value": {},
                           "type": "{http://www.w3.org/1999/xhtml}xhtml.br.type"
                         },
                         "\nAdaptive Cruise Assist  "
@@ -1684,18 +1376,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 }
               ]
             },
             "TYPE": {
               "SPEC-OBJECT-TYPE-REF": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
             },
-            "DESC": null,
             "IDENTIFIER": "_7f8c63fb-5d9f-4dea-8c83-e75fee2f89c7",
-            "LAST-CHANGE": "2020-07-07T15:13:24.951041",
-            "LONG-NAME": null
+            "LAST-CHANGE": "2020-07-07T15:13:24.951041"
           },
           {
             "ALTERNATIVE-ID": null,
@@ -1738,12 +1427,6 @@
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": []
                     },
                     "div": null
@@ -1751,28 +1434,16 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "ACC:  ",
                         {
                           "qname": "{http://www.w3.org/1999/xhtml}br",
-                          "value": {
-                            "space": "preserve",
-                            "id": null,
-                            "class": null,
-                            "title": null
-                          },
+                          "value": {},
                           "type": "{http://www.w3.org/1999/xhtml}xhtml.br.type"
                         },
                         "\nAdaptive Cruise Control  "
@@ -1783,18 +1454,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 }
               ]
             },
             "TYPE": {
               "SPEC-OBJECT-TYPE-REF": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
             },
-            "DESC": null,
             "IDENTIFIER": "_ccb938a6-a67d-4a26-bbcc-5be6c320d218",
-            "LAST-CHANGE": "2020-07-07T15:13:24.951041",
-            "LONG-NAME": null
+            "LAST-CHANGE": "2020-07-07T15:13:24.951041"
           },
           {
             "ALTERNATIVE-ID": null,
@@ -1837,12 +1505,6 @@
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": []
                     },
                     "div": null
@@ -1850,28 +1512,16 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "HMI:  ",
                         {
                           "qname": "{http://www.w3.org/1999/xhtml}br",
-                          "value": {
-                            "space": "preserve",
-                            "id": null,
-                            "class": null,
-                            "title": null
-                          },
+                          "value": {},
                           "type": "{http://www.w3.org/1999/xhtml}xhtml.br.type"
                         },
                         "\nHuman Maschine Interface  "
@@ -1882,18 +1532,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 }
               ]
             },
             "TYPE": {
               "SPEC-OBJECT-TYPE-REF": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
             },
-            "DESC": null,
             "IDENTIFIER": "_62886a45-3b25-4502-9a84-81cb636b75c8",
-            "LAST-CHANGE": "2020-07-07T15:13:24.951041",
-            "LONG-NAME": null
+            "LAST-CHANGE": "2020-07-07T15:13:24.951041"
           },
           {
             "ALTERNATIVE-ID": null,
@@ -1937,12 +1584,6 @@
                   "THE-VALUE": {
                     "p": null,
                     "div": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "Definitionen  "
                       ]
@@ -1951,18 +1592,11 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": []
                     },
                     "div": null
@@ -1970,18 +1604,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 }
               ]
             },
             "TYPE": {
               "SPEC-OBJECT-TYPE-REF": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
             },
-            "DESC": null,
             "IDENTIFIER": "_a28b6e46-ad92-4f09-abac-f091acd8e10f",
-            "LAST-CHANGE": "2020-07-07T15:13:24.951041",
-            "LONG-NAME": null
+            "LAST-CHANGE": "2020-07-07T15:13:24.951041"
           },
           {
             "ALTERNATIVE-ID": null,
@@ -2024,12 +1655,6 @@
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": []
                     },
                     "div": null
@@ -2037,28 +1662,16 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "Ego-Fahrzeug:  ",
                         {
                           "qname": "{http://www.w3.org/1999/xhtml}br",
-                          "value": {
-                            "space": "preserve",
-                            "id": null,
-                            "class": null,
-                            "title": null
-                          },
+                          "value": {},
                           "type": "{http://www.w3.org/1999/xhtml}xhtml.br.type"
                         },
                         "\nDas eigene Fahrzeug auf das sich die Funktionsberschreibung bezieht  "
@@ -2069,18 +1682,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 }
               ]
             },
             "TYPE": {
               "SPEC-OBJECT-TYPE-REF": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
             },
-            "DESC": null,
             "IDENTIFIER": "_47051ba0-c21f-4218-b933-d1dd23787ce7",
-            "LAST-CHANGE": "2020-07-07T15:13:24.960890",
-            "LONG-NAME": null
+            "LAST-CHANGE": "2020-07-07T15:13:24.960890"
           },
           {
             "ALTERNATIVE-ID": null,
@@ -2123,12 +1733,6 @@
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": []
                     },
                     "div": null
@@ -2136,28 +1740,16 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "Ego-Fahrstreifen:  ",
                         {
                           "qname": "{http://www.w3.org/1999/xhtml}br",
-                          "value": {
-                            "space": "preserve",
-                            "id": null,
-                            "class": null,
-                            "title": null
-                          },
+                          "value": {},
                           "type": "{http://www.w3.org/1999/xhtml}xhtml.br.type"
                         },
                         "\nFahrstreifen auf dem sich das Ego-Fahrzeug bewegt  "
@@ -2168,18 +1760,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 }
               ]
             },
             "TYPE": {
               "SPEC-OBJECT-TYPE-REF": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
             },
-            "DESC": null,
             "IDENTIFIER": "_680028f8-0938-483c-ad3e-840c23fe8f99",
-            "LAST-CHANGE": "2020-07-07T15:13:24.960890",
-            "LONG-NAME": null
+            "LAST-CHANGE": "2020-07-07T15:13:24.960890"
           },
           {
             "ALTERNATIVE-ID": null,
@@ -2223,12 +1812,6 @@
                   "THE-VALUE": {
                     "p": null,
                     "div": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "Normen und Vorschriften  "
                       ]
@@ -2237,18 +1820,11 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": []
                     },
                     "div": null
@@ -2256,18 +1832,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 }
               ]
             },
             "TYPE": {
               "SPEC-OBJECT-TYPE-REF": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
             },
-            "DESC": null,
             "IDENTIFIER": "_db40b8e7-3783-457e-b07b-96ee213efa5c",
-            "LAST-CHANGE": "2020-07-07T15:13:24.960890",
-            "LONG-NAME": null
+            "LAST-CHANGE": "2020-07-07T15:13:24.960890"
           },
           {
             "ALTERNATIVE-ID": null,
@@ -2310,12 +1883,6 @@
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": []
                     },
                     "div": null
@@ -2323,18 +1890,11 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "ISO26262: Road Vehicles \u2013 Functional Safety  "
                       ]
@@ -2344,18 +1904,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 }
               ]
             },
             "TYPE": {
               "SPEC-OBJECT-TYPE-REF": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
             },
-            "DESC": null,
             "IDENTIFIER": "_05e79ee1-23ec-44a6-afc6-3493027e2337",
-            "LAST-CHANGE": "2020-07-07T15:13:24.960890",
-            "LONG-NAME": null
+            "LAST-CHANGE": "2020-07-07T15:13:24.960890"
           },
           {
             "ALTERNATIVE-ID": null,
@@ -2399,12 +1956,6 @@
                   "THE-VALUE": {
                     "p": null,
                     "div": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "Fahrzeugfunktion Testfunktion  "
                       ]
@@ -2413,18 +1964,11 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": []
                     },
                     "div": null
@@ -2432,18 +1976,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 }
               ]
             },
             "TYPE": {
               "SPEC-OBJECT-TYPE-REF": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
             },
-            "DESC": null,
             "IDENTIFIER": "_241dbe84-34c8-48e9-a60a-11a2ad04520d",
-            "LAST-CHANGE": "2020-07-07T15:13:24.960890",
-            "LONG-NAME": null
+            "LAST-CHANGE": "2020-07-07T15:13:24.960890"
           },
           {
             "ALTERNATIVE-ID": null,
@@ -2487,12 +2028,6 @@
                   "THE-VALUE": {
                     "p": null,
                     "div": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "Funktionsbeschreibung  "
                       ]
@@ -2501,18 +2036,11 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": []
                     },
                     "div": null
@@ -2520,18 +2048,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 }
               ]
             },
             "TYPE": {
               "SPEC-OBJECT-TYPE-REF": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
             },
-            "DESC": null,
             "IDENTIFIER": "_20b0c130-bb71-4ba1-a333-7c57baa2d324",
-            "LAST-CHANGE": "2020-07-07T15:13:24.960890",
-            "LONG-NAME": null
+            "LAST-CHANGE": "2020-07-07T15:13:24.960890"
           },
           {
             "ALTERNATIVE-ID": null,
@@ -2574,12 +2099,6 @@
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": []
                     },
                     "div": null
@@ -2587,18 +2106,11 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "Infomration 1  "
                       ]
@@ -2608,18 +2120,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 }
               ]
             },
             "TYPE": {
               "SPEC-OBJECT-TYPE-REF": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
             },
-            "DESC": null,
             "IDENTIFIER": "_48c9c0e5-f623-49ac-87de-a743f7d403ba",
-            "LAST-CHANGE": "2020-07-07T15:13:24.960890",
-            "LONG-NAME": null
+            "LAST-CHANGE": "2020-07-07T15:13:24.960890"
           },
           {
             "ALTERNATIVE-ID": null,
@@ -2663,12 +2172,6 @@
                   "THE-VALUE": {
                     "p": null,
                     "div": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "Test Kommentar 30.06.2020 von Simon\n"
                       ]
@@ -2677,18 +2180,11 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_2ba9b86e-336e-4449-82ab-b91cfe54d6d5"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": []
                     },
                     "div": null
@@ -2696,18 +2192,11 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "Anforderung 1  "
                       ]
@@ -2717,18 +2206,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 }
               ]
             },
             "TYPE": {
               "SPEC-OBJECT-TYPE-REF": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
             },
-            "DESC": null,
             "IDENTIFIER": "_9f4a5535-bc91-4efb-b302-c83d700c6fe6",
-            "LAST-CHANGE": "2020-07-07T15:13:24.970923",
-            "LONG-NAME": null
+            "LAST-CHANGE": "2020-07-07T15:13:24.970923"
           },
           {
             "ALTERNATIVE-ID": null,
@@ -2772,12 +2258,6 @@
                   "THE-VALUE": {
                     "p": null,
                     "div": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "No Findings"
                       ]
@@ -2786,18 +2266,11 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_2ba9b86e-336e-4449-82ab-b91cfe54d6d5"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": []
                     },
                     "div": null
@@ -2805,18 +2278,11 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "Anforderung 2  "
                       ]
@@ -2826,18 +2292,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 }
               ]
             },
             "TYPE": {
               "SPEC-OBJECT-TYPE-REF": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
             },
-            "DESC": null,
             "IDENTIFIER": "_d5d5f8fb-8046-4ab0-a99f-569175b6ae92",
-            "LAST-CHANGE": "2020-07-07T15:13:24.970923",
-            "LONG-NAME": null
+            "LAST-CHANGE": "2020-07-07T15:13:24.970923"
           },
           {
             "ALTERNATIVE-ID": null,
@@ -2881,12 +2344,6 @@
                   "THE-VALUE": {
                     "p": null,
                     "div": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "Logischer Widerspruch"
                       ]
@@ -2895,18 +2352,11 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_2ba9b86e-336e-4449-82ab-b91cfe54d6d5"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": []
                     },
                     "div": null
@@ -2914,18 +2364,11 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "Anforderung 3  "
                       ]
@@ -2935,18 +2378,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 }
               ]
             },
             "TYPE": {
               "SPEC-OBJECT-TYPE-REF": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
             },
-            "DESC": null,
             "IDENTIFIER": "_4c488594-3726-4e4a-98a3-fef186876f30",
-            "LAST-CHANGE": "2020-07-07T15:13:24.970923",
-            "LONG-NAME": null
+            "LAST-CHANGE": "2020-07-07T15:13:24.970923"
           },
           {
             "ALTERNATIVE-ID": null,
@@ -2989,12 +2429,6 @@
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": []
                     },
                     "div": null
@@ -3002,18 +2436,11 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "Information 2  "
                       ]
@@ -3023,18 +2450,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 }
               ]
             },
             "TYPE": {
               "SPEC-OBJECT-TYPE-REF": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
             },
-            "DESC": null,
             "IDENTIFIER": "_85a1ce54-8795-451c-bddb-7748be63e025",
-            "LAST-CHANGE": "2020-07-07T15:13:24.970923",
-            "LONG-NAME": null
+            "LAST-CHANGE": "2020-07-07T15:13:24.970923"
           },
           {
             "ALTERNATIVE-ID": null,
@@ -3077,12 +2501,6 @@
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": []
                     },
                     "div": null
@@ -3090,18 +2508,11 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "Anforderung 4  "
                       ]
@@ -3111,18 +2522,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 }
               ]
             },
             "TYPE": {
               "SPEC-OBJECT-TYPE-REF": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
             },
-            "DESC": null,
             "IDENTIFIER": "_24a014d7-9f79-4a24-b7ee-348f6d2352cc",
-            "LAST-CHANGE": "2020-07-07T15:13:24.970923",
-            "LONG-NAME": null
+            "LAST-CHANGE": "2020-07-07T15:13:24.970923"
           },
           {
             "ALTERNATIVE-ID": null,
@@ -3166,12 +2574,6 @@
                   "THE-VALUE": {
                     "p": null,
                     "div": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "fehlende Werte xy"
                       ]
@@ -3180,18 +2582,11 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_2ba9b86e-336e-4449-82ab-b91cfe54d6d5"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": []
                     },
                     "div": null
@@ -3199,18 +2594,11 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "Anforderung 5  "
                       ]
@@ -3220,18 +2608,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 }
               ]
             },
             "TYPE": {
               "SPEC-OBJECT-TYPE-REF": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
             },
-            "DESC": null,
             "IDENTIFIER": "_e7e1f47f-f938-45dc-820d-cfaf4a292f9b",
-            "LAST-CHANGE": "2020-07-07T15:13:24.970923",
-            "LONG-NAME": null
+            "LAST-CHANGE": "2020-07-07T15:13:24.970923"
           },
           {
             "ALTERNATIVE-ID": null,
@@ -3274,12 +2659,6 @@
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": []
                     },
                     "div": null
@@ -3287,18 +2666,11 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "Anforderung 6  "
                       ]
@@ -3308,18 +2680,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 }
               ]
             },
             "TYPE": {
               "SPEC-OBJECT-TYPE-REF": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
             },
-            "DESC": null,
             "IDENTIFIER": "_6bd1c880-a619-4996-b835-af72a9a1f3b7",
-            "LAST-CHANGE": "2020-07-07T15:13:24.970923",
-            "LONG-NAME": null
+            "LAST-CHANGE": "2020-07-07T15:13:24.970923"
           },
           {
             "ALTERNATIVE-ID": null,
@@ -3363,12 +2732,6 @@
                   "THE-VALUE": {
                     "p": null,
                     "div": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "HMI-Konzept  "
                       ]
@@ -3377,18 +2740,11 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": []
                     },
                     "div": null
@@ -3396,18 +2752,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 }
               ]
             },
             "TYPE": {
               "SPEC-OBJECT-TYPE-REF": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
             },
-            "DESC": null,
             "IDENTIFIER": "_b4bdc373-dd3b-42d1-ab2a-b672505e573e",
-            "LAST-CHANGE": "2020-07-07T15:13:24.970923",
-            "LONG-NAME": null
+            "LAST-CHANGE": "2020-07-07T15:13:24.970923"
           },
           {
             "ALTERNATIVE-ID": null,
@@ -3450,12 +2803,6 @@
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": []
                     },
                     "div": null
@@ -3463,18 +2810,11 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "Information 3  "
                       ]
@@ -3484,18 +2824,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 }
               ]
             },
             "TYPE": {
               "SPEC-OBJECT-TYPE-REF": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
             },
-            "DESC": null,
             "IDENTIFIER": "_f54c3390-d0f5-4821-9f48-5b560de9f05b",
-            "LAST-CHANGE": "2020-07-07T15:13:24.981229",
-            "LONG-NAME": null
+            "LAST-CHANGE": "2020-07-07T15:13:24.981229"
           },
           {
             "ALTERNATIVE-ID": null,
@@ -3538,12 +2875,6 @@
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": []
                     },
                     "div": null
@@ -3551,18 +2882,11 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "Information 4  "
                       ]
@@ -3572,18 +2896,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 }
               ]
             },
             "TYPE": {
               "SPEC-OBJECT-TYPE-REF": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
             },
-            "DESC": null,
             "IDENTIFIER": "_e6770b8d-d6ce-4398-8fb2-49fced2f9caf",
-            "LAST-CHANGE": "2020-07-07T15:13:24.981229",
-            "LONG-NAME": null
+            "LAST-CHANGE": "2020-07-07T15:13:24.981229"
           },
           {
             "ALTERNATIVE-ID": null,
@@ -3626,12 +2947,6 @@
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": []
                     },
                     "div": null
@@ -3639,18 +2954,11 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "Anforderung 7  "
                       ]
@@ -3660,18 +2968,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 }
               ]
             },
             "TYPE": {
               "SPEC-OBJECT-TYPE-REF": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
             },
-            "DESC": null,
             "IDENTIFIER": "_5337254e-b5bd-4de3-86bf-54048314739b",
-            "LAST-CHANGE": "2020-07-07T15:13:24.981229",
-            "LONG-NAME": null
+            "LAST-CHANGE": "2020-07-07T15:13:24.981229"
           },
           {
             "ALTERNATIVE-ID": null,
@@ -3714,12 +3019,6 @@
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": []
                     },
                     "div": null
@@ -3727,18 +3026,11 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "Anforderung 8  "
                       ]
@@ -3748,18 +3040,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 }
               ]
             },
             "TYPE": {
               "SPEC-OBJECT-TYPE-REF": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
             },
-            "DESC": null,
             "IDENTIFIER": "_a665ae6e-12f9-4977-9f97-959df584bdce",
-            "LAST-CHANGE": "2020-07-07T15:13:24.981229",
-            "LONG-NAME": null
+            "LAST-CHANGE": "2020-07-07T15:13:24.981229"
           },
           {
             "ALTERNATIVE-ID": null,
@@ -3802,12 +3091,6 @@
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": []
                     },
                     "div": null
@@ -3815,18 +3098,11 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "Anforderung 9  "
                       ]
@@ -3836,18 +3112,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 }
               ]
             },
             "TYPE": {
               "SPEC-OBJECT-TYPE-REF": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
             },
-            "DESC": null,
             "IDENTIFIER": "_b6e753c5-6882-49f7-babc-db09e3e4bce0",
-            "LAST-CHANGE": "2020-07-07T15:13:24.981229",
-            "LONG-NAME": null
+            "LAST-CHANGE": "2020-07-07T15:13:24.981229"
           },
           {
             "ALTERNATIVE-ID": null,
@@ -3891,12 +3164,6 @@
                   "THE-VALUE": {
                     "p": null,
                     "div": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "Funktionale Sicherheit  "
                       ]
@@ -3905,18 +3172,11 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": []
                     },
                     "div": null
@@ -3924,18 +3184,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 }
               ]
             },
             "TYPE": {
               "SPEC-OBJECT-TYPE-REF": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
             },
-            "DESC": null,
             "IDENTIFIER": "_7021bc0c-cfd2-41f9-8758-d9c06b8a983d",
-            "LAST-CHANGE": "2020-07-07T15:13:24.981229",
-            "LONG-NAME": null
+            "LAST-CHANGE": "2020-07-07T15:13:24.981229"
           },
           {
             "ALTERNATIVE-ID": null,
@@ -3978,12 +3235,6 @@
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": []
                     },
                     "div": null
@@ -3991,18 +3242,11 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_7b109d73-d8a6-4b6e-9aa9-c8e20a6d8e21"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 },
                 {
                   "THE-VALUE": {
                     "p": {
-                      "space": "preserve",
-                      "id": null,
-                      "class": null,
-                      "title": null,
-                      "lang": null,
-                      "style": null,
                       "content": [
                         "Die FuSi - rlevanten Anforderungen ist im Modul \"XYZ\" definiert  "
                       ]
@@ -4012,18 +3256,15 @@
                   "THE-ORIGINAL-VALUE": null,
                   "DEFINITION": {
                     "ATTRIBUTE-DEFINITION-XHTML-REF": "_ca65e999-bcee-4f6d-838d-5677c77f8ed9"
-                  },
-                  "IS-SIMPLIFIED": null
+                  }
                 }
               ]
             },
             "TYPE": {
               "SPEC-OBJECT-TYPE-REF": "_8a253863-8e29-4cb7-9f06-4666c698f8b2"
             },
-            "DESC": null,
             "IDENTIFIER": "_2b78c61f-92f4-4c2a-9265-ca11a208a369",
-            "LAST-CHANGE": "2020-07-07T15:13:24.981229",
-            "LONG-NAME": null
+            "LAST-CHANGE": "2020-07-07T15:13:24.981229"
           }
         ]
       },
@@ -4042,12 +3283,10 @@
                   "OBJECT": {
                     "SPEC-OBJECT-REF": "_e2d6c16e-f1d3-46cf-8e28-61b5fb533f14"
                   },
-                  "DESC": null,
                   "IDENTIFIER": "_3416a75-4ce-910-507-acd8e2f2aef",
                   "IS-EDITABLE": true,
                   "IS-TABLE-INTERNAL": false,
-                  "LAST-CHANGE": "2020-07-07T15:13:24.921169",
-                  "LONG-NAME": null
+                  "LAST-CHANGE": "2020-07-07T15:13:24.921169"
                 },
                 {
                   "ALTERNATIVE-ID": null,
@@ -4064,12 +3303,10 @@
                               "OBJECT": {
                                 "SPEC-OBJECT-REF": "_bf3077ec-1755-4001-ba06-6b136d478355"
                               },
-                              "DESC": null,
                               "IDENTIFIER": "_67c6a1e-ce5-d3d-fa7-8ab6d9af3fd",
                               "IS-EDITABLE": true,
                               "IS-TABLE-INTERNAL": false,
-                              "LAST-CHANGE": "2020-07-07T15:13:24.930863",
-                              "LONG-NAME": null
+                              "LAST-CHANGE": "2020-07-07T15:13:24.930863"
                             }
                           ]
                         },
@@ -4077,12 +3314,10 @@
                         "OBJECT": {
                           "SPEC-OBJECT-REF": "_50139ee3-d7e1-4263-b6f8-197094383048"
                         },
-                        "DESC": null,
                         "IDENTIFIER": "_6c8349c-726-ae6-e3b-396831a8398",
                         "IS-EDITABLE": true,
                         "IS-TABLE-INTERNAL": false,
-                        "LAST-CHANGE": "2020-07-07T15:13:24.930863",
-                        "LONG-NAME": null
+                        "LAST-CHANGE": "2020-07-07T15:13:24.930863"
                       },
                       {
                         "ALTERNATIVE-ID": null,
@@ -4095,12 +3330,10 @@
                               "OBJECT": {
                                 "SPEC-OBJECT-REF": "_a49cb529-786e-4af9-b55c-07d6e9b4f9ab"
                               },
-                              "DESC": null,
                               "IDENTIFIER": "_2838023-778-fae-dc2-2708f721b78",
                               "IS-EDITABLE": true,
                               "IS-TABLE-INTERNAL": false,
-                              "LAST-CHANGE": "2020-07-07T15:13:24.941303",
-                              "LONG-NAME": null
+                              "LAST-CHANGE": "2020-07-07T15:13:24.941303"
                             }
                           ]
                         },
@@ -4108,12 +3341,10 @@
                         "OBJECT": {
                           "SPEC-OBJECT-REF": "_9e51998a-9b74-40d7-b703-244100f0adde"
                         },
-                        "DESC": null,
                         "IDENTIFIER": "_f457c54-a9d-d88-18e-ee47145a72c",
                         "IS-EDITABLE": true,
                         "IS-TABLE-INTERNAL": false,
-                        "LAST-CHANGE": "2020-07-07T15:13:24.930863",
-                        "LONG-NAME": null
+                        "LAST-CHANGE": "2020-07-07T15:13:24.930863"
                       },
                       {
                         "ALTERNATIVE-ID": null,
@@ -4126,12 +3357,10 @@
                               "OBJECT": {
                                 "SPEC-OBJECT-REF": "_9d91426d-3e2f-4d63-9114-f8d947f23beb"
                               },
-                              "DESC": null,
                               "IDENTIFIER": "_b53b3a3-6ab-0ce-268-29151c9bde1",
                               "IS-EDITABLE": true,
                               "IS-TABLE-INTERNAL": false,
-                              "LAST-CHANGE": "2020-07-07T15:13:24.945999",
-                              "LONG-NAME": null
+                              "LAST-CHANGE": "2020-07-07T15:13:24.945999"
                             }
                           ]
                         },
@@ -4139,12 +3368,10 @@
                         "OBJECT": {
                           "SPEC-OBJECT-REF": "_515e27c8-b859-4914-827d-7df0c11bc499"
                         },
-                        "DESC": null,
                         "IDENTIFIER": "_d82c8d1-19a-817-d66-453cfb2e55f",
                         "IS-EDITABLE": true,
                         "IS-TABLE-INTERNAL": false,
-                        "LAST-CHANGE": "2020-07-07T15:13:24.945999",
-                        "LONG-NAME": null
+                        "LAST-CHANGE": "2020-07-07T15:13:24.945999"
                       },
                       {
                         "ALTERNATIVE-ID": null,
@@ -4157,12 +3384,10 @@
                               "OBJECT": {
                                 "SPEC-OBJECT-REF": "_7f8c63fb-5d9f-4dea-8c83-e75fee2f89c7"
                               },
-                              "DESC": null,
                               "IDENTIFIER": "_093f65e-80a-95f-076-1c5722a46aa",
                               "IS-EDITABLE": true,
                               "IS-TABLE-INTERNAL": false,
-                              "LAST-CHANGE": "2020-07-07T15:13:24.951041",
-                              "LONG-NAME": null
+                              "LAST-CHANGE": "2020-07-07T15:13:24.951041"
                             },
                             {
                               "ALTERNATIVE-ID": null,
@@ -4171,12 +3396,10 @@
                               "OBJECT": {
                                 "SPEC-OBJECT-REF": "_ccb938a6-a67d-4a26-bbcc-5be6c320d218"
                               },
-                              "DESC": null,
                               "IDENTIFIER": "_7f39f83-7fb-b19-8ef-c628eba0259",
                               "IS-EDITABLE": true,
                               "IS-TABLE-INTERNAL": false,
-                              "LAST-CHANGE": "2020-07-07T15:13:24.951041",
-                              "LONG-NAME": null
+                              "LAST-CHANGE": "2020-07-07T15:13:24.951041"
                             },
                             {
                               "ALTERNATIVE-ID": null,
@@ -4185,12 +3408,10 @@
                               "OBJECT": {
                                 "SPEC-OBJECT-REF": "_62886a45-3b25-4502-9a84-81cb636b75c8"
                               },
-                              "DESC": null,
                               "IDENTIFIER": "_03afdbd-6e7-29b-25f-597834fa83a",
                               "IS-EDITABLE": true,
                               "IS-TABLE-INTERNAL": false,
-                              "LAST-CHANGE": "2020-07-07T15:13:24.951041",
-                              "LONG-NAME": null
+                              "LAST-CHANGE": "2020-07-07T15:13:24.951041"
                             }
                           ]
                         },
@@ -4198,12 +3419,10 @@
                         "OBJECT": {
                           "SPEC-OBJECT-REF": "_f6093ebf-ef0d-48dc-9f1a-a162d4314f80"
                         },
-                        "DESC": null,
                         "IDENTIFIER": "_72b32a1-754-a1c-9b3-95e0cb6cde7",
                         "IS-EDITABLE": true,
                         "IS-TABLE-INTERNAL": false,
-                        "LAST-CHANGE": "2020-07-07T15:13:24.945999",
-                        "LONG-NAME": null
+                        "LAST-CHANGE": "2020-07-07T15:13:24.945999"
                       },
                       {
                         "ALTERNATIVE-ID": null,
@@ -4216,12 +3435,10 @@
                               "OBJECT": {
                                 "SPEC-OBJECT-REF": "_47051ba0-c21f-4218-b933-d1dd23787ce7"
                               },
-                              "DESC": null,
                               "IDENTIFIER": "_735b90b-568-25e-6c3-678819b6e05",
                               "IS-EDITABLE": true,
                               "IS-TABLE-INTERNAL": false,
-                              "LAST-CHANGE": "2020-07-07T15:13:24.960890",
-                              "LONG-NAME": null
+                              "LAST-CHANGE": "2020-07-07T15:13:24.960890"
                             },
                             {
                               "ALTERNATIVE-ID": null,
@@ -4230,12 +3447,10 @@
                               "OBJECT": {
                                 "SPEC-OBJECT-REF": "_680028f8-0938-483c-ad3e-840c23fe8f99"
                               },
-                              "DESC": null,
                               "IDENTIFIER": "_14bfa6b-148-5e4-bba-28a21ed3804",
                               "IS-EDITABLE": true,
                               "IS-TABLE-INTERNAL": false,
-                              "LAST-CHANGE": "2020-07-07T15:13:24.960890",
-                              "LONG-NAME": null
+                              "LAST-CHANGE": "2020-07-07T15:13:24.960890"
                             }
                           ]
                         },
@@ -4243,12 +3458,10 @@
                         "OBJECT": {
                           "SPEC-OBJECT-REF": "_a28b6e46-ad92-4f09-abac-f091acd8e10f"
                         },
-                        "DESC": null,
                         "IDENTIFIER": "_fc490ca-5c0-b12-9bb-3554a4fdf6f",
                         "IS-EDITABLE": true,
                         "IS-TABLE-INTERNAL": false,
-                        "LAST-CHANGE": "2020-07-07T15:13:24.951041",
-                        "LONG-NAME": null
+                        "LAST-CHANGE": "2020-07-07T15:13:24.951041"
                       },
                       {
                         "ALTERNATIVE-ID": null,
@@ -4261,12 +3474,10 @@
                               "OBJECT": {
                                 "SPEC-OBJECT-REF": "_05e79ee1-23ec-44a6-afc6-3493027e2337"
                               },
-                              "DESC": null,
                               "IDENTIFIER": "_d2ddea1-f00-65c-862-e36bd4e3c7c",
                               "IS-EDITABLE": true,
                               "IS-TABLE-INTERNAL": false,
-                              "LAST-CHANGE": "2020-07-07T15:13:24.960890",
-                              "LONG-NAME": null
+                              "LAST-CHANGE": "2020-07-07T15:13:24.960890"
                             }
                           ]
                         },
@@ -4274,12 +3485,10 @@
                         "OBJECT": {
                           "SPEC-OBJECT-REF": "_db40b8e7-3783-457e-b07b-96ee213efa5c"
                         },
-                        "DESC": null,
                         "IDENTIFIER": "_e2c420d-28d-bf8-e0f-2ec19b37151",
                         "IS-EDITABLE": true,
                         "IS-TABLE-INTERNAL": false,
-                        "LAST-CHANGE": "2020-07-07T15:13:24.960890",
-                        "LONG-NAME": null
+                        "LAST-CHANGE": "2020-07-07T15:13:24.960890"
                       }
                     ]
                   },
@@ -4287,12 +3496,10 @@
                   "OBJECT": {
                     "SPEC-OBJECT-REF": "_82f7941c-35fb-474d-b440-cd4bb3a5cb07"
                   },
-                  "DESC": null,
                   "IDENTIFIER": "_17e6216-fc8-86d-a4d-bc0e1742c08",
                   "IS-EDITABLE": true,
                   "IS-TABLE-INTERNAL": false,
-                  "LAST-CHANGE": "2020-07-07T15:13:24.930863",
-                  "LONG-NAME": null
+                  "LAST-CHANGE": "2020-07-07T15:13:24.930863"
                 },
                 {
                   "ALTERNATIVE-ID": null,
@@ -4309,12 +3516,10 @@
                               "OBJECT": {
                                 "SPEC-OBJECT-REF": "_48c9c0e5-f623-49ac-87de-a743f7d403ba"
                               },
-                              "DESC": null,
                               "IDENTIFIER": "_d1fe173-08e-593-7ad-34b1d77e88d",
                               "IS-EDITABLE": true,
                               "IS-TABLE-INTERNAL": false,
-                              "LAST-CHANGE": "2020-07-07T15:13:24.960890",
-                              "LONG-NAME": null
+                              "LAST-CHANGE": "2020-07-07T15:13:24.960890"
                             },
                             {
                               "ALTERNATIVE-ID": null,
@@ -4323,12 +3528,10 @@
                               "OBJECT": {
                                 "SPEC-OBJECT-REF": "_9f4a5535-bc91-4efb-b302-c83d700c6fe6"
                               },
-                              "DESC": null,
                               "IDENTIFIER": "_43ec517-68b-edd-015-3edc9a11367",
                               "IS-EDITABLE": true,
                               "IS-TABLE-INTERNAL": false,
-                              "LAST-CHANGE": "2020-07-07T15:13:24.970923",
-                              "LONG-NAME": null
+                              "LAST-CHANGE": "2020-07-07T15:13:24.970923"
                             },
                             {
                               "ALTERNATIVE-ID": null,
@@ -4337,12 +3540,10 @@
                               "OBJECT": {
                                 "SPEC-OBJECT-REF": "_d5d5f8fb-8046-4ab0-a99f-569175b6ae92"
                               },
-                              "DESC": null,
                               "IDENTIFIER": "_fe9fc28-c3f-0af-42b-d3bead98a92",
                               "IS-EDITABLE": true,
                               "IS-TABLE-INTERNAL": false,
-                              "LAST-CHANGE": "2020-07-07T15:13:24.970923",
-                              "LONG-NAME": null
+                              "LAST-CHANGE": "2020-07-07T15:13:24.970923"
                             },
                             {
                               "ALTERNATIVE-ID": null,
@@ -4351,12 +3552,10 @@
                               "OBJECT": {
                                 "SPEC-OBJECT-REF": "_4c488594-3726-4e4a-98a3-fef186876f30"
                               },
-                              "DESC": null,
                               "IDENTIFIER": "_3ef8154-6f7-509-fe9-7004015c619",
                               "IS-EDITABLE": true,
                               "IS-TABLE-INTERNAL": false,
-                              "LAST-CHANGE": "2020-07-07T15:13:24.970923",
-                              "LONG-NAME": null
+                              "LAST-CHANGE": "2020-07-07T15:13:24.970923"
                             },
                             {
                               "ALTERNATIVE-ID": null,
@@ -4365,12 +3564,10 @@
                               "OBJECT": {
                                 "SPEC-OBJECT-REF": "_85a1ce54-8795-451c-bddb-7748be63e025"
                               },
-                              "DESC": null,
                               "IDENTIFIER": "_c7e1249-fc0-eb9-ed9-8c236bd1996",
                               "IS-EDITABLE": true,
                               "IS-TABLE-INTERNAL": false,
-                              "LAST-CHANGE": "2020-07-07T15:13:24.970923",
-                              "LONG-NAME": null
+                              "LAST-CHANGE": "2020-07-07T15:13:24.970923"
                             },
                             {
                               "ALTERNATIVE-ID": null,
@@ -4379,12 +3576,10 @@
                               "OBJECT": {
                                 "SPEC-OBJECT-REF": "_24a014d7-9f79-4a24-b7ee-348f6d2352cc"
                               },
-                              "DESC": null,
                               "IDENTIFIER": "_7647966-734-c29-486-3252e490f73",
                               "IS-EDITABLE": true,
                               "IS-TABLE-INTERNAL": false,
-                              "LAST-CHANGE": "2020-07-07T15:13:24.970923",
-                              "LONG-NAME": null
+                              "LAST-CHANGE": "2020-07-07T15:13:24.970923"
                             },
                             {
                               "ALTERNATIVE-ID": null,
@@ -4393,12 +3588,10 @@
                               "OBJECT": {
                                 "SPEC-OBJECT-REF": "_e7e1f47f-f938-45dc-820d-cfaf4a292f9b"
                               },
-                              "DESC": null,
                               "IDENTIFIER": "_54229ab-cfa-649-700-b83dd475529",
                               "IS-EDITABLE": true,
                               "IS-TABLE-INTERNAL": false,
-                              "LAST-CHANGE": "2020-07-07T15:13:24.970923",
-                              "LONG-NAME": null
+                              "LAST-CHANGE": "2020-07-07T15:13:24.970923"
                             },
                             {
                               "ALTERNATIVE-ID": null,
@@ -4407,12 +3600,10 @@
                               "OBJECT": {
                                 "SPEC-OBJECT-REF": "_6bd1c880-a619-4996-b835-af72a9a1f3b7"
                               },
-                              "DESC": null,
                               "IDENTIFIER": "_98dce83-a57-039-e16-467c9dae521",
                               "IS-EDITABLE": true,
                               "IS-TABLE-INTERNAL": false,
-                              "LAST-CHANGE": "2020-07-07T15:13:24.970923",
-                              "LONG-NAME": null
+                              "LAST-CHANGE": "2020-07-07T15:13:24.970923"
                             }
                           ]
                         },
@@ -4420,12 +3611,10 @@
                         "OBJECT": {
                           "SPEC-OBJECT-REF": "_20b0c130-bb71-4ba1-a333-7c57baa2d324"
                         },
-                        "DESC": null,
                         "IDENTIFIER": "_28dd2c7-55c-926-562-0b2ff0100bd",
                         "IS-EDITABLE": true,
                         "IS-TABLE-INTERNAL": false,
-                        "LAST-CHANGE": "2020-07-07T15:13:24.960890",
-                        "LONG-NAME": null
+                        "LAST-CHANGE": "2020-07-07T15:13:24.960890"
                       },
                       {
                         "ALTERNATIVE-ID": null,
@@ -4438,12 +3627,10 @@
                               "OBJECT": {
                                 "SPEC-OBJECT-REF": "_f54c3390-d0f5-4821-9f48-5b560de9f05b"
                               },
-                              "DESC": null,
                               "IDENTIFIER": "_e2ef524-bf3-9fe-11d-a8e90fefdc9",
                               "IS-EDITABLE": true,
                               "IS-TABLE-INTERNAL": false,
-                              "LAST-CHANGE": "2020-07-07T15:13:24.981229",
-                              "LONG-NAME": null
+                              "LAST-CHANGE": "2020-07-07T15:13:24.981229"
                             },
                             {
                               "ALTERNATIVE-ID": null,
@@ -4452,12 +3639,10 @@
                               "OBJECT": {
                                 "SPEC-OBJECT-REF": "_e6770b8d-d6ce-4398-8fb2-49fced2f9caf"
                               },
-                              "DESC": null,
                               "IDENTIFIER": "_ac627ab-ccb-b62-c96-702f07f6425",
                               "IS-EDITABLE": true,
                               "IS-TABLE-INTERNAL": false,
-                              "LAST-CHANGE": "2020-07-07T15:13:24.981229",
-                              "LONG-NAME": null
+                              "LAST-CHANGE": "2020-07-07T15:13:24.981229"
                             },
                             {
                               "ALTERNATIVE-ID": null,
@@ -4466,12 +3651,10 @@
                               "OBJECT": {
                                 "SPEC-OBJECT-REF": "_5337254e-b5bd-4de3-86bf-54048314739b"
                               },
-                              "DESC": null,
                               "IDENTIFIER": "_38b3eff-baf-662-478-c76a704e9b5",
                               "IS-EDITABLE": true,
                               "IS-TABLE-INTERNAL": false,
-                              "LAST-CHANGE": "2020-07-07T15:13:24.981229",
-                              "LONG-NAME": null
+                              "LAST-CHANGE": "2020-07-07T15:13:24.981229"
                             },
                             {
                               "ALTERNATIVE-ID": null,
@@ -4480,12 +3663,10 @@
                               "OBJECT": {
                                 "SPEC-OBJECT-REF": "_a665ae6e-12f9-4977-9f97-959df584bdce"
                               },
-                              "DESC": null,
                               "IDENTIFIER": "_6974ce5-c66-610-44d-b9fed0ff954",
                               "IS-EDITABLE": true,
                               "IS-TABLE-INTERNAL": false,
-                              "LAST-CHANGE": "2020-07-07T15:13:24.981229",
-                              "LONG-NAME": null
+                              "LAST-CHANGE": "2020-07-07T15:13:24.981229"
                             },
                             {
                               "ALTERNATIVE-ID": null,
@@ -4494,12 +3675,10 @@
                               "OBJECT": {
                                 "SPEC-OBJECT-REF": "_b6e753c5-6882-49f7-babc-db09e3e4bce0"
                               },
-                              "DESC": null,
                               "IDENTIFIER": "_65b9eea-e1c-6bb-f0c-2a47751a186",
                               "IS-EDITABLE": true,
                               "IS-TABLE-INTERNAL": false,
-                              "LAST-CHANGE": "2020-07-07T15:13:24.981229",
-                              "LONG-NAME": null
+                              "LAST-CHANGE": "2020-07-07T15:13:24.981229"
                             }
                           ]
                         },
@@ -4507,12 +3686,10 @@
                         "OBJECT": {
                           "SPEC-OBJECT-REF": "_b4bdc373-dd3b-42d1-ab2a-b672505e573e"
                         },
-                        "DESC": null,
                         "IDENTIFIER": "_812b4ba-87f-ee0-c9d-3bbf5bbe87f",
                         "IS-EDITABLE": true,
                         "IS-TABLE-INTERNAL": false,
-                        "LAST-CHANGE": "2020-07-07T15:13:24.970923",
-                        "LONG-NAME": null
+                        "LAST-CHANGE": "2020-07-07T15:13:24.970923"
                       }
                     ]
                   },
@@ -4520,12 +3697,10 @@
                   "OBJECT": {
                     "SPEC-OBJECT-REF": "_241dbe84-34c8-48e9-a60a-11a2ad04520d"
                   },
-                  "DESC": null,
                   "IDENTIFIER": "_d09bf41-44a-365-46c-077ebb5e35c",
                   "IS-EDITABLE": true,
                   "IS-TABLE-INTERNAL": false,
-                  "LAST-CHANGE": "2020-07-07T15:13:24.960890",
-                  "LONG-NAME": null
+                  "LAST-CHANGE": "2020-07-07T15:13:24.960890"
                 },
                 {
                   "ALTERNATIVE-ID": null,
@@ -4538,12 +3713,10 @@
                         "OBJECT": {
                           "SPEC-OBJECT-REF": "_2b78c61f-92f4-4c2a-9265-ca11a208a369"
                         },
-                        "DESC": null,
                         "IDENTIFIER": "_2723d09-b63-85e-d7c-60cc007e8b9",
                         "IS-EDITABLE": true,
                         "IS-TABLE-INTERNAL": false,
-                        "LAST-CHANGE": "2020-07-07T15:13:24.981229",
-                        "LONG-NAME": null
+                        "LAST-CHANGE": "2020-07-07T15:13:24.981229"
                       }
                     ]
                   },
@@ -4551,19 +3724,16 @@
                   "OBJECT": {
                     "SPEC-OBJECT-REF": "_7021bc0c-cfd2-41f9-8758-d9c06b8a983d"
                   },
-                  "DESC": null,
                   "IDENTIFIER": "_a97da62-b09-b75-294-ffdc3e46390",
                   "IS-EDITABLE": true,
                   "IS-TABLE-INTERNAL": false,
-                  "LAST-CHANGE": "2020-07-07T15:13:24.981229",
-                  "LONG-NAME": null
+                  "LAST-CHANGE": "2020-07-07T15:13:24.981229"
                 }
               ]
             },
             "TYPE": {
               "SPECIFICATION-TYPE-REF": "_1e784a62-6117-4b98-b5c5-844d8b5ccedc"
             },
-            "DESC": null,
             "IDENTIFIER": "_72296576-2d6f-498e-a267-5ccf60cb7ba4",
             "LAST-CHANGE": "2020-06-18T11:21:01+02:00",
             "LONG-NAME": "KuFu_Testfunktion"
@@ -4573,6 +3743,5 @@
       "SPEC-RELATION-GROUPS": null
     }
   },
-  "TOOL-EXTENSIONS": null,
-  "lang": null
+  "TOOL-EXTENSIONS": null
 }
