@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <PublicationTimestamp>2010-12-17T09:30:47Z</PublicationTimestamp>
   <ParticipantRef>SYS001</ParticipantRef>
-  <PublicationRequest version="1.0">
+  <PublicationRequest>
     <RequestTimestamp>2010-12-17T09:30:47Z</RequestTimestamp>
     <ParticipantRef>SYS002</ParticipantRef>
     <topics>
       <NetworkFrameTopic>
         <selectionValidityConditions>
-          <AvailabilityCondition id="hde:CAL_02" modification="new" version="any" status="active">
+          <AvailabilityCondition id="hde:CAL_02" version="any">
             <FromDate>2010-11-01T00:00:00Z</FromDate>
           </AvailabilityCondition>
         </selectionValidityConditions>
@@ -19,8 +19,8 @@
   <PublicationRefreshInterval>P1M</PublicationRefreshInterval>
   <Description>Example  of simple timetable frame with two journeys and service calendar</Description>
   <dataObjects>
-    <CompositeFrame id="hde:CAL_02" modification="new" version="1" status="active">
-      <codespaces modificationSet="all">
+    <CompositeFrame id="hde:CAL_02" version="1">
+      <codespaces>
         <Codespace id="mybus">
           <Xmlns>mybus</Xmlns>
           <XmlnsUrl>http://www.mybuses.eu/stuff</XmlnsUrl>
@@ -35,59 +35,59 @@
       <FrameDefaults>
         <DefaultCodespaceRef ref="mybus"/>
       </FrameDefaults>
-      <frames modificationSet="all">
-        <ServiceFrame id="mybus:svf_12" modification="new" version="any" status="active">
+      <frames>
+        <ServiceFrame id="mybus:svf_12" version="any">
           <Name>Stops for Winter timetable for route 24 </Name>
-          <directions modificationSet="all">
-            <Direction id="mybus:DR_Westbound" modification="new" version="any" status="active">
+          <directions>
+            <Direction id="mybus:DR_Westbound" version="any">
               <Name>Westbound</Name>
             </Direction>
-            <Direction id="mybus:DR_Southbound" modification="new" version="any" status="active">
+            <Direction id="mybus:DR_Southbound" version="any">
               <Name>Eastbound</Name>
             </Direction>
           </directions>
-          <routes modificationSet="all">
-            <Route id="mybus:RT_24o" modification="new" version="any" status="active">
+          <routes>
+            <Route id="mybus:RT_24o" version="any">
               <Name>Line 24 Alpha to Quebec</Name>
               <DirectionType>outbound</DirectionType>
               <DirectionRef version="any" ref="mybus:DR_Westbound"/>
             </Route>
-            <Route id="mybus:RT_46o" modification="new" version="any" status="active">
+            <Route id="mybus:RT_46o" version="any">
               <Name>Line 46  Bravo  to Quebec</Name>
               <DirectionType>outbound</DirectionType>
               <DirectionRef version="any" ref="mybus:DR_Westbound"/>
             </Route>
           </routes>
-          <lines modificationSet="all">
-            <Line id="mybus:LN_24" modification="new" version="any" status="active">
+          <lines>
+            <Line id="mybus:LN_24" version="any">
               <Name>Line 24 Alpha to Quebec bus</Name>
               <ShortName>Line 24</ShortName>
               <TransportMode>bus</TransportMode>
               <PublicCode>24</PublicCode>
             </Line>
-            <Line id="mybus:LN_46" modification="new" version="any" status="active">
+            <Line id="mybus:LN_46" version="any">
               <Name>Line 46 Bravo to Quebec Tram</Name>
               <ShortName>Line 46</ShortName>
               <TransportMode>tram</TransportMode>
               <PublicCode>46</PublicCode>
             </Line>
           </lines>
-          <destinationDisplays modificationSet="all">
-            <DestinationDisplay id="mybus:DST_Alpha" modification="new" version="any" status="active">
+          <destinationDisplays>
+            <DestinationDisplay id="mybus:DST_Alpha" version="any">
               <Name>Alpha</Name>
               <ShortName>Bravo</ShortName>
             </DestinationDisplay>
-            <DestinationDisplay id="mybus:DST_Bravo" modification="new" version="any" status="active">
+            <DestinationDisplay id="mybus:DST_Bravo" version="any">
               <Name>Bravo</Name>
               <ShortName>Alpha</ShortName>
             </DestinationDisplay>
-            <DestinationDisplay id="mybus:DST_Quebec" modification="new" version="any" status="active">
+            <DestinationDisplay id="mybus:DST_Quebec" version="any">
               <Name>Quebec </Name>
               <ShortName>Quebec </ShortName>
             </DestinationDisplay>
           </destinationDisplays>
-          <scheduledStopPoints modificationSet="all">
-            <ScheduledStopPoint id="mybus:SSP_001" modification="new" version="any" status="active">
+          <scheduledStopPoints>
+            <ScheduledStopPoint id="mybus:SSP_001" version="any">
               <Name>Alpha &amp; Castle</Name>
               <Location>
                 <Longitude>53.0000</Longitude>
@@ -99,7 +99,7 @@
               <StopType>onstreetBus</StopType>
               <VehicleModes>bus</VehicleModes>
             </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_002" modification="new" version="any" status="active">
+            <ScheduledStopPoint id="mybus:SSP_002" version="any">
               <Name>Bravo Street</Name>
               <Location>
                 <Longitude>53.2000</Longitude>
@@ -111,7 +111,7 @@
               <StopType>onstreetBus</StopType>
               <VehicleModes>bus</VehicleModes>
             </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_077" modification="new" version="any" status="active">
+            <ScheduledStopPoint id="mybus:SSP_077" version="any">
               <Name>Charley Crescent</Name>
               <Location>
                 <Longitude>53.3000</Longitude>
@@ -123,7 +123,7 @@
               <StopType>onstreetTram</StopType>
               <VehicleModes>bus tram</VehicleModes>
             </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_021" modification="new" version="any" status="active">
+            <ScheduledStopPoint id="mybus:SSP_021" version="any">
               <Name>Papa Road</Name>
               <Location>
                 <Longitude>53.3000</Longitude>
@@ -135,7 +135,7 @@
               <StopType>onstreetTram</StopType>
               <VehicleModes>bus tram</VehicleModes>
             </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_022" modification="new" version="any" status="active">
+            <ScheduledStopPoint id="mybus:SSP_022" version="any">
               <Name>Quebec Square</Name>
               <Location>
                 <Longitude>53.3000</Longitude>
@@ -148,143 +148,143 @@
               <VehicleModes>bus tram</VehicleModes>
             </ScheduledStopPoint>
           </scheduledStopPoints>
-          <serviceLinks modificationSet="all">
-            <ServiceLink id="mybus:SL@SSP_001+SSP_002_bus" modification="new" version="any" status="active">
+          <serviceLinks>
+            <ServiceLink id="mybus:SL@SSP_001+SSP_002_bus" version="any">
               <Name>Alpha   to Quebec BUS</Name>
               <FromPointRef version="any" ref="mybus:SSP_001"/>
               <ToPointRef version="any" ref="mybus:SSP_002"/>
               <VehicleMode>bus</VehicleMode>
             </ServiceLink>
-            <ServiceLink id="mybus:SL@SSP_002+SSP_077_bus" modification="new" version="any" status="active">
+            <ServiceLink id="mybus:SL@SSP_002+SSP_077_bus" version="any">
               <Name>Bravo to Charley BUS</Name>
               <FromPointRef version="any" ref="mybus:SSP_002"/>
               <ToPointRef version="any" ref="mybus:SSP_077"/>
               <VehicleMode>bus</VehicleMode>
             </ServiceLink>
-            <ServiceLink id="mybus:SL@SSP_077+SSP_021_bus" modification="new" version="any" status="active">
+            <ServiceLink id="mybus:SL@SSP_077+SSP_021_bus" version="any">
               <Name>Charley to Papa BUS</Name>
               <FromPointRef version="any" ref="mybus:SSP_077"/>
               <ToPointRef version="any" ref="mybus:SSP_021"/>
               <VehicleMode>bus</VehicleMode>
             </ServiceLink>
-            <ServiceLink id="mybus:SL@SSP_021+SSP_022_bus" modification="new" version="any" status="active">
+            <ServiceLink id="mybus:SL@SSP_021+SSP_022_bus" version="any">
               <Name>Papa to Quebec BUS</Name>
               <FromPointRef version="any" ref="mybus:SSP_021"/>
               <ToPointRef version="any" ref="mybus:SSP_022"/>
               <VehicleMode>bus</VehicleMode>
             </ServiceLink>
-            <ServiceLink id="mybus:SL@SSP_001+SSP_002_tram" modification="new" version="any" status="active">
+            <ServiceLink id="mybus:SL@SSP_001+SSP_002_tram" version="any">
               <Name>Alpha   to Quebec  TRAM</Name>
               <FromPointRef version="any" ref="mybus:SSP_001"/>
               <ToPointRef version="any" ref="mybus:SSP_002"/>
               <VehicleMode>tram</VehicleMode>
             </ServiceLink>
-            <ServiceLink id="mybus:SL@SSP_002+SSP_077_tram" modification="new" version="any" status="active">
+            <ServiceLink id="mybus:SL@SSP_002+SSP_077_tram" version="any">
               <Name>Bravo to Charley TRAM</Name>
               <FromPointRef version="any" ref="mybus:SSP_002"/>
               <ToPointRef version="any" ref="mybus:SSP_077"/>
               <VehicleMode>tram</VehicleMode>
             </ServiceLink>
-            <ServiceLink id="mybus:SL@SSP_077+SSP_021_tram" modification="new" version="any" status="active">
+            <ServiceLink id="mybus:SL@SSP_077+SSP_021_tram" version="any">
               <Name>Charley to Papa TRAM</Name>
               <FromPointRef version="any" ref="mybus:SSP_077"/>
               <ToPointRef version="any" ref="mybus:SSP_021"/>
               <VehicleMode>tram</VehicleMode>
             </ServiceLink>
-            <ServiceLink id="mybus:SL@SSP_021+SSP_022_tram" modification="new" version="any" status="active">
+            <ServiceLink id="mybus:SL@SSP_021+SSP_022_tram" version="any">
               <Name>Papa to Quebec TRAM</Name>
               <FromPointRef version="any" ref="mybus:SSP_021"/>
               <ToPointRef version="any" ref="mybus:SSP_022"/>
               <VehicleMode>tram</VehicleMode>
             </ServiceLink>
           </serviceLinks>
-          <servicePatterns modificationSet="all">
-            <ServicePattern id="hde:svp_24o" modification="new" version="any" status="active">
+          <servicePatterns>
+            <ServicePattern id="hde:svp_24o" version="any">
               <Name>Bravo to  Quebec TRAM</Name>
               <RouteRef version="any" ref="mybus:RT_24o"/>
               <DirectionType>outbound</DirectionType>
-              <journeyPatterns modificationSet="all">
+              <journeyPatterns>
                 <ServiceJourneyPatternRef version="any" ref="hde:sjp_24o"/>
               </journeyPatterns>
               <pointsInSequence>
-                <StopPointInJourneyPattern id="hde:spijp_24o_01" modification="new" version="any" status="active" order="1">
+                <StopPointInJourneyPattern id="hde:spijp_24o_01" version="any" order="1">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
                   <OnwardServiceLinkRef version="any" ref="mybus:SL@SSP_001+SSP_002_bus"/>
                   <ForAlighting>false</ForAlighting>
                 </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="hde:spijp_24o_02" modification="new" version="any" status="active" order="2">
+                <StopPointInJourneyPattern id="hde:spijp_24o_02" version="any" order="2">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
                   <OnwardServiceLinkRef version="any" ref="mybus:SL@SSP_002+SSP_077_bus"/>
                 </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="hde:spijp_24o_03" modification="new" version="any" status="active" order="3">
+                <StopPointInJourneyPattern id="hde:spijp_24o_03" version="any" order="3">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
                   <OnwardServiceLinkRef version="any" ref="mybus:SL@SSP_077+SSP_021_bus"/>
                 </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="hde:spijp_24o_04" modification="new" version="any" status="active" order="4">
+                <StopPointInJourneyPattern id="hde:spijp_24o_04" version="any" order="4">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_021"/>
                   <OnwardServiceLinkRef version="any" ref="mybus:SL@SSP_021+SSP_022_bus"/>
                 </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="hde:spijp_24o_05" modification="new" version="any" status="active" order="5">
+                <StopPointInJourneyPattern id="hde:spijp_24o_05" version="any" order="5">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_022"/>
                   <ForBoarding>false</ForBoarding>
                 </StopPointInJourneyPattern>
               </pointsInSequence>
               <linksInSequence>
-                <ServiceLinkInJourneyPattern id="hde:slijp_24o_01" modification="new" version="any" status="active" order="1">
+                <ServiceLinkInJourneyPattern id="hde:slijp_24o_01" version="any" order="1">
                   <ServiceLinkRef version="any" ref="mybus:SL@SSP_001+SSP_002_bus"/>
                 </ServiceLinkInJourneyPattern>
-                <ServiceLinkInJourneyPattern id="hde:slijp_24o_02" modification="new" version="any" status="active" order="2">
+                <ServiceLinkInJourneyPattern id="hde:slijp_24o_02" version="any" order="2">
                   <ServiceLinkRef version="any" ref="mybus:SL@SSP_002+SSP_077_bus"/>
                 </ServiceLinkInJourneyPattern>
-                <ServiceLinkInJourneyPattern id="hde:slijp_24o_03" modification="new" version="any" status="active" order="3">
+                <ServiceLinkInJourneyPattern id="hde:slijp_24o_03" version="any" order="3">
                   <ServiceLinkRef version="any" ref="mybus:SL@SSP_077+SSP_021_bus"/>
                 </ServiceLinkInJourneyPattern>
-                <ServiceLinkInJourneyPattern id="hde:slijp_24o_04" modification="new" version="any" status="active" order="4">
+                <ServiceLinkInJourneyPattern id="hde:slijp_24o_04" version="any" order="4">
                   <ServiceLinkRef version="any" ref="mybus:SL@SSP_021+SSP_022_bus"/>
                 </ServiceLinkInJourneyPattern>
               </linksInSequence>
             </ServicePattern>
-            <ServicePattern id="hde:svp_46o" modification="new" version="any" status="active">
+            <ServicePattern id="hde:svp_46o" version="any">
               <Name>Alpha to Charley</Name>
               <RouteRef version="any" ref="mybus:RT_46o"/>
               <DirectionType>outbound</DirectionType>
-              <journeyPatterns modificationSet="all">
+              <journeyPatterns>
                 <ServiceJourneyPatternRef version="any" ref="hde:sjp_46o"/>
               </journeyPatterns>
               <pointsInSequence>
-                <StopPointInJourneyPattern id="hde:spijp_46o_01" modification="new" version="any" status="active" order="1">
+                <StopPointInJourneyPattern id="hde:spijp_46o_01" version="any" order="1">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
                   <OnwardServiceLinkRef version="any" ref="mybus:SL@SSP_002+SSP_077_tram"/>
                   <ForAlighting>false</ForAlighting>
                 </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="hde:spijp_46o_02" modification="new" version="any" status="active" order="2">
+                <StopPointInJourneyPattern id="hde:spijp_46o_02" version="any" order="2">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
                   <OnwardServiceLinkRef version="any" ref="mybus:SL@SSP_077+SSP_021_tram"/>
                 </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="hde:spijp_46o_03" modification="new" version="any" status="active" order="3">
+                <StopPointInJourneyPattern id="hde:spijp_46o_03" version="any" order="3">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_021"/>
                   <OnwardServiceLinkRef version="any" ref="mybus:SL@SSP_021+SSP_022_tram"/>
                 </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="hde:spijp_46o_04" modification="new" version="any" status="active" order="4">
+                <StopPointInJourneyPattern id="hde:spijp_46o_04" version="any" order="4">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_022"/>
                   <ForBoarding>false</ForBoarding>
                 </StopPointInJourneyPattern>
               </pointsInSequence>
               <linksInSequence>
-                <ServiceLinkInJourneyPattern id="hde:slijp_46o_01" modification="new" version="any" status="active" order="1">
+                <ServiceLinkInJourneyPattern id="hde:slijp_46o_01" version="any" order="1">
                   <ServiceLinkRef version="any" ref="mybus:SL@SSP_002+SSP_077_tram"/>
                 </ServiceLinkInJourneyPattern>
-                <ServiceLinkInJourneyPattern id="hde:slijp_46o_02" modification="new" version="any" status="active" order="2">
+                <ServiceLinkInJourneyPattern id="hde:slijp_46o_02" version="any" order="2">
                   <ServiceLinkRef version="any" ref="mybus:SL@SSP_077+SSP_021_tram"/>
                 </ServiceLinkInJourneyPattern>
-                <ServiceLinkInJourneyPattern id="hde:slijp_46o_03" modification="new" version="any" status="active" order="3">
+                <ServiceLinkInJourneyPattern id="hde:slijp_46o_03" version="any" order="3">
                   <ServiceLinkRef version="any" ref="mybus:SL@SSP_021+SSP_022_tram"/>
                 </ServiceLinkInJourneyPattern>
               </linksInSequence>
             </ServicePattern>
           </servicePatterns>
-          <connections modificationSet="all">
-            <Connection id="mybus:cx_SSP_002" modification="new" version="any" status="active">
+          <connections>
+            <Connection id="mybus:cx_SSP_002" version="any">
               <Name>Bravo Connection to line 46</Name>
               <BothWays>true</BothWays>
               <From>
@@ -296,7 +296,7 @@
                 <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
               </To>
             </Connection>
-            <Connection id="mybus:cx_SSP_077" modification="new" version="any" status="active">
+            <Connection id="mybus:cx_SSP_077" version="any">
               <Name>Charley Connection to line 46</Name>
               <BothWays>true</BothWays>
               <From>
@@ -308,7 +308,7 @@
                 <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
               </To>
             </Connection>
-            <Connection id="mybus:cx_SSP_021" modification="new" version="any" status="active">
+            <Connection id="mybus:cx_SSP_021" version="any">
               <Name>Papa Connection to line 46</Name>
               <BothWays>true</BothWays>
               <From>
@@ -320,7 +320,7 @@
                 <ScheduledStopPointRef version="any" ref="mybus:SSP_021"/>
               </To>
             </Connection>
-            <Connection id="mybus:cx_SSP_022" modification="new" version="any" status="active">
+            <Connection id="mybus:cx_SSP_022" version="any">
               <Name>Papa Connection to line 46</Name>
               <BothWays>true</BothWays>
               <From>
@@ -333,8 +333,8 @@
               </To>
             </Connection>
           </connections>
-          <timingPoints modificationSet="all">
-            <TimingPoint id="mybus:SSP_001_t1" modification="new" version="any" status="active">
+          <timingPoints>
+            <TimingPoint id="mybus:SSP_001_t1" version="any">
               <Name>After Alpha &amp; Castle  Point 1</Name>
               <Location>
                 <Longitude>53.2000</Longitude>
@@ -342,7 +342,7 @@
               </Location>
               <TimingPointStatus>timingPoint</TimingPointStatus>
             </TimingPoint>
-            <TimingPoint id="mybus:SSP_001_t2" modification="new" version="any" status="active">
+            <TimingPoint id="mybus:SSP_001_t2" version="any">
               <Name>After Alpha &amp; Castle  Point 2</Name>
               <Location>
                 <Longitude>53.3000</Longitude>
@@ -350,7 +350,7 @@
               </Location>
               <TimingPointStatus>timingPoint</TimingPointStatus>
             </TimingPoint>
-            <TimingPoint id="mybus:SSP_002_t1" modification="new" version="any" status="active">
+            <TimingPoint id="mybus:SSP_002_t1" version="any">
               <Name>After Bravo  Point 1</Name>
               <Location>
                 <Longitude>53.4000</Longitude>
@@ -359,146 +359,146 @@
               <TimingPointStatus>timingPoint</TimingPointStatus>
             </TimingPoint>
           </timingPoints>
-          <timingLinks modificationSet="all">
-            <TimingLink id="mybus:TL@SSP_001+SSP_022_TOTAL_bus" modification="new" version="any" status="active">
+          <timingLinks>
+            <TimingLink id="mybus:TL@SSP_001+SSP_022_TOTAL_bus" version="any">
               <Name>Overall timing Alpha  to  Quebec</Name>
               <FromPointRef version="any" ref="mybus:SSP_001"/>
               <ToPointRef version="any" ref="mybus:SSP_022"/>
             </TimingLink>
-            <TimingLink id="mybus:TL@SSP_002+SSP_022_TOTAL_tram" modification="new" version="any" status="active">
+            <TimingLink id="mybus:TL@SSP_002+SSP_022_TOTAL_tram" version="any">
               <Name>Overall timing Bravo   to  Quebec</Name>
               <FromPointRef version="any" ref="mybus:SSP_002"/>
               <ToPointRef version="any" ref="mybus:SSP_022"/>
             </TimingLink>
-            <TimingLink id="mybus:TL@SSP_001+SSP_001_t1" modification="new" version="any" status="active">
+            <TimingLink id="mybus:TL@SSP_001+SSP_001_t1" version="any">
               <Name>Alpha to  After Alpha  t1</Name>
               <FromPointRef version="any" ref="mybus:SSP_001"/>
               <ToPointRef version="any" ref="mybus:SSP_001_t1"/>
             </TimingLink>
-            <TimingLink id="mybus:TL@SSP_001_t1+SSP_001_t2" modification="new" version="any" status="active">
+            <TimingLink id="mybus:TL@SSP_001_t1+SSP_001_t2" version="any">
               <Name>After Alpha    t1 to After Alpha  t2</Name>
               <FromPointRef version="any" ref="mybus:SSP_001_t1"/>
               <ToPointRef version="any" ref="mybus:SSP_002_t1"/>
             </TimingLink>
-            <TimingLink id="mybus:TL@SSP_001_t2+SSP_002" modification="new" version="any" status="active">
+            <TimingLink id="mybus:TL@SSP_001_t2+SSP_002" version="any">
               <Name>After Alpha  t2 to Bravo</Name>
               <FromPointRef version="any" ref="mybus:SSP_001_t2"/>
               <ToPointRef version="any" ref="mybus:SSP_002"/>
             </TimingLink>
-            <TimingLink id="mybus:TL@SSP_002+SSP_002_t1" modification="new" version="any" status="active">
+            <TimingLink id="mybus:TL@SSP_002+SSP_002_t1" version="any">
               <Name>Bravo to After Bravo t1</Name>
               <FromPointRef version="any" ref="mybus:SSP_002"/>
               <ToPointRef version="any" ref="mybus:SSP_002_t1"/>
             </TimingLink>
-            <TimingLink id="mybus:TL@SSP_002_t1+SSP_077" modification="new" version="any" status="active">
+            <TimingLink id="mybus:TL@SSP_002_t1+SSP_077" version="any">
               <Name>After Bravo t1 to Charley</Name>
               <FromPointRef version="any" ref="mybus:SSP_002_t1"/>
               <ToPointRef version="any" ref="mybus:SSP_077"/>
             </TimingLink>
-            <TimingLink id="mybus:TL@SSP_077+SSP_021_bus" modification="new" version="any" status="active">
+            <TimingLink id="mybus:TL@SSP_077+SSP_021_bus" version="any">
               <Name>CHarley to Papa</Name>
               <FromPointRef version="any" ref="mybus:SSP_021"/>
               <ToPointRef version="any" ref="mybus:SSP_022"/>
               <VehicleMode>bus</VehicleMode>
             </TimingLink>
-            <TimingLink id="mybus:TL@SSP_021+SSP_022_bus" modification="new" version="any" status="active">
+            <TimingLink id="mybus:TL@SSP_021+SSP_022_bus" version="any">
               <Name>Papa to Quebec </Name>
               <FromPointRef version="any" ref="mybus:SSP_021"/>
               <ToPointRef version="any" ref="mybus:SSP_022"/>
               <VehicleMode>bus</VehicleMode>
             </TimingLink>
-            <TimingLink id="mybus:TL@SSP_077+SSP_021_tram" modification="new" version="any" status="active">
+            <TimingLink id="mybus:TL@SSP_077+SSP_021_tram" version="any">
               <Name>Charley to Papa TRAM</Name>
               <FromPointRef version="any" ref="mybus:SSP_021"/>
               <ToPointRef version="any" ref="mybus:SSP_022"/>
               <VehicleMode>tram</VehicleMode>
             </TimingLink>
-            <TimingLink id="mybus:TL@SSP_021+SSP_022_tram" modification="new" version="any" status="active">
+            <TimingLink id="mybus:TL@SSP_021+SSP_022_tram" version="any">
               <Name>Papa to Quebec TRAM</Name>
               <FromPointRef version="any" ref="mybus:SSP_021"/>
               <ToPointRef version="any" ref="mybus:SSP_022"/>
               <VehicleMode>tram</VehicleMode>
             </TimingLink>
           </timingLinks>
-          <timingPatterns modificationSet="all">
-            <TimingPattern id="hde:tp_24o" modification="new" version="any" status="active">
+          <timingPatterns>
+            <TimingPattern id="hde:tp_24o" version="any">
               <Name>Route 24</Name>
               <RouteRef version="any" ref="mybus:RT_24o"/>
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
-                <TimingPointInJourneyPattern id="hde:tpip_24o_01" modification="new" version="any" status="active" order="1">
+                <TimingPointInJourneyPattern id="hde:tpip_24o_01" version="any" order="1">
                   <TimingPointRef version="any" ref="mybus:SSP_001"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:TL@SSP_001+SSP_001_t1"/>
                 </TimingPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="hde:tpip_24o_02" modification="new" version="any" status="active" order="2">
+                <TimingPointInJourneyPattern id="hde:tpip_24o_02" version="any" order="2">
                   <TimingPointRef version="any" ref="mybus:SSP_001_t1"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:TL@SSP_001_t1+SSP_001_t2"/>
                 </TimingPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="hde:tpip_24o_03" modification="new" version="any" status="active" order="3">
+                <TimingPointInJourneyPattern id="hde:tpip_24o_03" version="any" order="3">
                   <TimingPointRef version="any" ref="mybus:SSP_001_t2"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:TL@SSP_001_t2+SSP_002"/>
                 </TimingPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="hde:tpip_24o_04" modification="new" version="any" status="active" order="4">
+                <TimingPointInJourneyPattern id="hde:tpip_24o_04" version="any" order="4">
                   <TimingPointRef version="any" ref="mybus:SSP_002"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:TL@SSP_002+SSP_002_t1"/>
                 </TimingPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="hde:tpip_24o_05" modification="new" version="any" status="active" order="5">
+                <TimingPointInJourneyPattern id="hde:tpip_24o_05" version="any" order="5">
                   <TimingPointRef version="any" ref="mybus:SSP_002_t1"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:TL@SSP_002_t1+SSP_077"/>
                 </TimingPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="hde:tpip_24o_06" modification="new" version="any" status="active" order="6">
+                <TimingPointInJourneyPattern id="hde:tpip_24o_06" version="any" order="6">
                   <TimingPointRef version="any" ref="mybus:SSP_077"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:TL@SSP_077+SSP_021_bus"/>
                 </TimingPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="hde:tpip_24o_07" modification="new" version="any" status="active" order="7">
+                <TimingPointInJourneyPattern id="hde:tpip_24o_07" version="any" order="7">
                   <TimingPointRef version="any" ref="mybus:SSP_021"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:TL@SSP_021+SSP_022_bus"/>
                 </TimingPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="hde:tpip_24o_08" modification="new" version="any" status="active" order="8">
+                <TimingPointInJourneyPattern id="hde:tpip_24o_08" version="any" order="8">
                   <TimingPointRef version="any" ref="mybus:SSP_022"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
-            <TimingPattern id="hde:tp_46o" modification="new" version="any" status="active">
+            <TimingPattern id="hde:tp_46o" version="any">
               <Name>Route 24</Name>
               <RouteRef version="any" ref="mybus:RT_46o"/>
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
-                <TimingPointInJourneyPattern id="hde:tpip_46o_01" modification="new" version="any" status="active" order="1">
+                <TimingPointInJourneyPattern id="hde:tpip_46o_01" version="any" order="1">
                   <TimingPointRef version="any" ref="mybus:SSP_002"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:TL@SSP_002+SSP_002_t1"/>
                 </TimingPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="hde:tpip_46o_02" modification="new" version="any" status="active" order="2">
+                <TimingPointInJourneyPattern id="hde:tpip_46o_02" version="any" order="2">
                   <TimingPointRef version="any" ref="mybus:SSP_002_t1"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:TL@SSP_002_t1+SSP_077"/>
                 </TimingPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="hde:tpip_46o_03" modification="new" version="any" status="active" order="3">
+                <TimingPointInJourneyPattern id="hde:tpip_46o_03" version="any" order="3">
                   <TimingPointRef version="any" ref="mybus:SSP_077"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:TL@SSP_077+SSP_021_tram"/>
                 </TimingPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="hde:tpip_46o_04" modification="new" version="any" status="active" order="4">
+                <TimingPointInJourneyPattern id="hde:tpip_46o_04" version="any" order="4">
                   <TimingPointRef version="any" ref="mybus:SSP_021"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:TL@SSP_021+SSP_022_tram"/>
                 </TimingPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="hde:tpip_46o_05" modification="new" version="any" status="active" order="5">
+                <TimingPointInJourneyPattern id="hde:tpip_46o_05" version="any" order="5">
                   <TimingPointRef version="any" ref="mybus:SSP_022"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
           </timingPatterns>
-          <journeyPatterns modificationSet="all">
-            <ServiceJourneyPattern id="hde:sjp_24o" modification="new" version="any" status="active">
+          <journeyPatterns>
+            <ServiceJourneyPattern id="hde:sjp_24o" version="any">
               <Name>Alpha to Quebec   BUS</Name>
               <RouteRef version="any" ref="mybus:RT_24o"/>
               <DirectionType>outbound</DirectionType>
               <runTimes>
-                <JourneyPatternRunTime id="mybus:jprt_24o_SSP_001+SSP_077_tdt_Peak" modification="new" version="any" status="active">
+                <JourneyPatternRunTime id="mybus:jprt_24o_SSP_001+SSP_077_tdt_Peak" version="any">
                   <Name>Alpha   to Quebec Bus Peak total run time</Name>
                   <TimeDemandTypeRef version="any" ref="mybus:tdt_Peak"/>
                   <TimingLinkRef version="any" ref="mybus:TL@SSP_001+SSP_022_TOTAL_bus"/>
                   <RunTime>PT75M</RunTime>
                 </JourneyPatternRunTime>
-                <JourneyPatternRunTime id="mybus:jprt_24o_SSP_001+SSP_077_tdt_OffPeak" modification="new" version="any" status="active">
+                <JourneyPatternRunTime id="mybus:jprt_24o_SSP_001+SSP_077_tdt_OffPeak" version="any">
                   <Name>Alpha   to Quebec Bus Off Peak total run time</Name>
                   <TimeDemandTypeRef version="any" ref="mybus:tdt_OffPeak"/>
                   <TimingLinkRef version="any" ref="mybus:TL@SSP_001+SSP_022_TOTAL_bus"/>
@@ -506,44 +506,44 @@
                 </JourneyPatternRunTime>
               </runTimes>
               <pointsInSequence>
-                <StopPointInJourneyPattern id="hde:spip_24o_01" modification="new" version="any" status="active" order="1">
+                <StopPointInJourneyPattern id="hde:spip_24o_01" version="any" order="1">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
                 </StopPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="hde:spip_24o_02" modification="new" version="any" status="active" order="2">
+                <TimingPointInJourneyPattern id="hde:spip_24o_02" version="any" order="2">
                   <TimingPointRef version="any" ref="mybus:SSP_001_t1"/>
                 </TimingPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="hde:spip_24o_03" modification="new" version="any" status="active" order="3">
+                <TimingPointInJourneyPattern id="hde:spip_24o_03" version="any" order="3">
                   <TimingPointRef version="any" ref="mybus:SSP_001_t2"/>
                 </TimingPointInJourneyPattern>
-                <StopPointInJourneyPattern id="hde:spip_24o_04" modification="new" version="any" status="active" order="4">
+                <StopPointInJourneyPattern id="hde:spip_24o_04" version="any" order="4">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
                 </StopPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="hde:spip_24o_05" modification="new" version="any" status="active" order="5">
+                <TimingPointInJourneyPattern id="hde:spip_24o_05" version="any" order="5">
                   <TimingPointRef version="any" ref="mybus:SSP_002_t1"/>
                 </TimingPointInJourneyPattern>
-                <StopPointInJourneyPattern id="hde:spip_24o_06" modification="new" version="any" status="active" order="6">
+                <StopPointInJourneyPattern id="hde:spip_24o_06" version="any" order="6">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
                 </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="hde:spip_24o_07" modification="new" version="any" status="active" order="7">
+                <StopPointInJourneyPattern id="hde:spip_24o_07" version="any" order="7">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_021"/>
                 </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="hde:spip_24o_08" modification="new" version="any" status="active" order="8">
+                <StopPointInJourneyPattern id="hde:spip_24o_08" version="any" order="8">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_022"/>
                 </StopPointInJourneyPattern>
               </pointsInSequence>
             </ServiceJourneyPattern>
-            <ServiceJourneyPattern id="hde:sjp_46o" modification="new" version="any" status="active">
+            <ServiceJourneyPattern id="hde:sjp_46o" version="any">
               <Name>Bravo  to Quebec TRAM</Name>
               <RouteRef version="any" ref="mybus:RT_46o"/>
               <DirectionType>outbound</DirectionType>
               <runTimes>
-                <JourneyPatternRunTime id="mybus:jprt_46o1_SSP_001+SSP_077_tdt_Peak" modification="new" version="any" status="active">
+                <JourneyPatternRunTime id="mybus:jprt_46o1_SSP_001+SSP_077_tdt_Peak" version="any">
                   <Name>Bravo  to Quebec TRAM Peak total run time</Name>
                   <TimeDemandTypeRef version="any" ref="mybus:tdt_Peak"/>
                   <TimingLinkRef version="any" ref="mybus:TL@SSP_002+SSP_022_TOTAL_tram"/>
                   <RunTime>PT70M</RunTime>
                 </JourneyPatternRunTime>
-                <JourneyPatternRunTime id="mybus:jprt_46o1_SSP_001+SSP_077_tdt_OffPeak" modification="new" version="any" status="active">
+                <JourneyPatternRunTime id="mybus:jprt_46o1_SSP_001+SSP_077_tdt_OffPeak" version="any">
                   <Name>Bravo  to Quebec TRAM Off Peak total  run time</Name>
                   <TimeDemandTypeRef version="any" ref="mybus:tdt_OffPeak"/>
                   <TimingLinkRef version="any" ref="mybus:TL@SSP_002+SSP_022_TOTAL_tram"/>
@@ -551,94 +551,94 @@
                 </JourneyPatternRunTime>
               </runTimes>
               <pointsInSequence>
-                <StopPointInJourneyPattern id="hde:spip_46o_01" modification="new" version="any" status="active" order="1">
+                <StopPointInJourneyPattern id="hde:spip_46o_01" version="any" order="1">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
                 </StopPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="hde:spip_46o_02" modification="new" version="any" status="active" order="2">
+                <TimingPointInJourneyPattern id="hde:spip_46o_02" version="any" order="2">
                   <TimingPointRef version="any" ref="mybus:SSP_002_t1"/>
                 </TimingPointInJourneyPattern>
-                <StopPointInJourneyPattern id="hde:spip_46o_03" modification="new" version="any" status="active" order="3">
+                <StopPointInJourneyPattern id="hde:spip_46o_03" version="any" order="3">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
                 </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="hde:spip_46o_04" modification="new" version="any" status="active" order="4">
+                <StopPointInJourneyPattern id="hde:spip_46o_04" version="any" order="4">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_021"/>
                 </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="hde:spip_46o_05" modification="new" version="any" status="active" order="5">
+                <StopPointInJourneyPattern id="hde:spip_46o_05" version="any" order="5">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_022"/>
                 </StopPointInJourneyPattern>
               </pointsInSequence>
               <linksInSequence>
-                <ServiceLinkInJourneyPattern id="hde:lijp_46o_01" modification="new" version="any" status="active" order="1">
+                <ServiceLinkInJourneyPattern id="hde:lijp_46o_01" version="any" order="1">
                   <ServiceLinkRef version="any" ref="mybus:SL@SSP_002+SSP_077_tram"/>
                 </ServiceLinkInJourneyPattern>
-                <ServiceLinkInJourneyPattern id="hde:lijp_46o_02" modification="new" version="any" status="active" order="2">
+                <ServiceLinkInJourneyPattern id="hde:lijp_46o_02" version="any" order="2">
                   <ServiceLinkRef version="any" ref="mybus:SL@SSP_077+SSP_021_tram"/>
                 </ServiceLinkInJourneyPattern>
-                <ServiceLinkInJourneyPattern id="hde:lijp_46o_03" modification="new" version="any" status="active" order="3">
+                <ServiceLinkInJourneyPattern id="hde:lijp_46o_03" version="any" order="3">
                   <ServiceLinkRef version="any" ref="mybus:SL@SSP_021+SSP_022_tram"/>
                 </ServiceLinkInJourneyPattern>
               </linksInSequence>
             </ServiceJourneyPattern>
           </journeyPatterns>
-          <timeDemandTypes modificationSet="all">
-            <TimeDemandType id="mybus:tdt_OffPeak" modification="new" version="any" status="active">
+          <timeDemandTypes>
+            <TimeDemandType id="mybus:tdt_OffPeak" version="any">
               <Name>Off Peak</Name>
               <runTimes>
-                <JourneyRunTime id="mybus:tdtr_OffPeak_SSP_001+SSP_001_t1" modification="new" version="any" status="active">
+                <JourneyRunTime id="mybus:tdtr_OffPeak_SSP_001+SSP_001_t1" version="any">
                   <TimingLinkRef version="any" ref="mybus:TL@SSP_001+SSP_001_t1"/>
                   <RunTime>PT4M</RunTime>
                 </JourneyRunTime>
-                <JourneyRunTime id="mybus:tdtr_OffPeak_SSP_001_t1+SSP_001_t2" modification="new" version="any" status="active">
+                <JourneyRunTime id="mybus:tdtr_OffPeak_SSP_001_t1+SSP_001_t2" version="any">
                   <TimingLinkRef version="any" ref="mybus:TL@SSP_001_t1+SSP_001_t2"/>
                   <RunTime>PT4M</RunTime>
                 </JourneyRunTime>
-                <JourneyRunTime id="mybus:tdtr_OffPeak_SSP_001_t2+SSP_002" modification="new" version="any" status="active">
+                <JourneyRunTime id="mybus:tdtr_OffPeak_SSP_001_t2+SSP_002" version="any">
                   <TimingLinkRef version="any" ref="mybus:TL@SSP_001_t2+SSP_002"/>
                   <RunTime>PT2M</RunTime>
                 </JourneyRunTime>
-                <JourneyRunTime id="mybus:tdtr_OffPeak_SSP_002+SSP_002_t1_bus" modification="new" version="any" status="active">
+                <JourneyRunTime id="mybus:tdtr_OffPeak_SSP_002+SSP_002_t1_bus" version="any">
                   <VehicleMode>bus</VehicleMode>
                   <TimingLinkRef version="any" ref="mybus:TL@SSP_002+SSP_002_t1"/>
                   <RunTime>PT8M</RunTime>
                 </JourneyRunTime>
-                <JourneyRunTime id="mybus:tdtr_OffPeak_SSP_002+SSP_002_t1_tram" modification="new" version="any" status="active">
+                <JourneyRunTime id="mybus:tdtr_OffPeak_SSP_002+SSP_002_t1_tram" version="any">
                   <VehicleMode>tram</VehicleMode>
                   <TimingLinkRef version="any" ref="mybus:TL@SSP_002+SSP_002_t1"/>
                   <RunTime>PT5M</RunTime>
                 </JourneyRunTime>
-                <JourneyRunTime id="mybus:tdtr_OffPeak_SSP_002_t1+SSP_077_bus" modification="new" version="any" status="active">
+                <JourneyRunTime id="mybus:tdtr_OffPeak_SSP_002_t1+SSP_077_bus" version="any">
                   <VehicleMode>bus</VehicleMode>
                   <TimingLinkRef version="any" ref="mybus:TL@SSP_002_t1+SSP_077"/>
                   <RunTime>PT5M</RunTime>
                 </JourneyRunTime>
-                <JourneyRunTime id="mybus:tdtr_OffPeak_SSP_002_t1+SSP_077_tram" modification="new" version="any" status="active">
+                <JourneyRunTime id="mybus:tdtr_OffPeak_SSP_002_t1+SSP_077_tram" version="any">
                   <VehicleMode>tram</VehicleMode>
                   <TimingLinkRef version="any" ref="mybus:TL@SSP_002_t1+SSP_077"/>
                   <RunTime>PT5M</RunTime>
                 </JourneyRunTime>
-                <JourneyRunTime id="mybus:tdtr_OffPeak_SSP_077+SSP_021_bus" modification="new" version="any" status="active">
+                <JourneyRunTime id="mybus:tdtr_OffPeak_SSP_077+SSP_021_bus" version="any">
                   <VehicleMode>bus</VehicleMode>
                   <TimingLinkRef version="any" ref="mybus:TL@SSP_077+SSP_021_bus"/>
                   <RunTime>PT15M</RunTime>
                 </JourneyRunTime>
-                <JourneyRunTime id="mybus:tdtr_OffPeak_SSP_077+SSP_021_tram" modification="new" version="any" status="active">
+                <JourneyRunTime id="mybus:tdtr_OffPeak_SSP_077+SSP_021_tram" version="any">
                   <VehicleMode>tram</VehicleMode>
                   <TimingLinkRef version="any" ref="mybus:TL@SSP_077+SSP_021_tram"/>
                   <RunTime>PT10M</RunTime>
                 </JourneyRunTime>
-                <JourneyRunTime id="mybus:tdtr_OffPeak_SSP_021+SSP_022_bus" modification="new" version="any" status="active">
+                <JourneyRunTime id="mybus:tdtr_OffPeak_SSP_021+SSP_022_bus" version="any">
                   <VehicleMode>bus</VehicleMode>
                   <TimingLinkRef version="any" ref="mybus:TL@SSP_021+SSP_022_bus"/>
                   <RunTime>PT15M</RunTime>
                 </JourneyRunTime>
-                <JourneyRunTime id="mybus:tdtr_OffPeak_SSP_021+SSP_022_tram" modification="new" version="any" status="active">
+                <JourneyRunTime id="mybus:tdtr_OffPeak_SSP_021+SSP_022_tram" version="any">
                   <VehicleMode>tram</VehicleMode>
                   <TimingLinkRef version="any" ref="mybus:TL@SSP_021+SSP_022_tram"/>
                   <RunTime>PT10M</RunTime>
                 </JourneyRunTime>
               </runTimes>
               <waitTimes>
-                <JourneyWaitTime id="mybus:tdwt_OffPeak_24o1_SSP_002" modification="new" version="any" status="active">
+                <JourneyWaitTime id="mybus:tdwt_OffPeak_24o1_SSP_002" version="any">
                   <Name>Wait at Stop Bravo OFF PEAK</Name>
                   <VehicleMode>bus</VehicleMode>
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
@@ -646,64 +646,64 @@
                 </JourneyWaitTime>
               </waitTimes>
             </TimeDemandType>
-            <TimeDemandType id="mybus:tdt_Peak" modification="new" version="any" status="active">
+            <TimeDemandType id="mybus:tdt_Peak" version="any">
               <Name>Peak times</Name>
               <runTimes>
-                <JourneyRunTime id="mybus:tdtr_Peak_SSP_001+SSP_001_t1" modification="new" version="any" status="active">
+                <JourneyRunTime id="mybus:tdtr_Peak_SSP_001+SSP_001_t1" version="any">
                   <TimingLinkRef version="any" ref="mybus:TL@SSP_001+SSP_001_t1"/>
                   <RunTime>PT5M</RunTime>
                 </JourneyRunTime>
-                <JourneyRunTime id="mybus:tdtr_Peak_SSP_001_t1+SSP_001_t2" modification="new" version="any" status="active">
+                <JourneyRunTime id="mybus:tdtr_Peak_SSP_001_t1+SSP_001_t2" version="any">
                   <TimingLinkRef version="any" ref="mybus:TL@SSP_001_t1+SSP_001_t2"/>
                   <RunTime>PT5M</RunTime>
                 </JourneyRunTime>
-                <JourneyRunTime id="mybus:tdtr_Peak_SSP_001_t2+SSP_002" modification="new" version="any" status="active">
+                <JourneyRunTime id="mybus:tdtr_Peak_SSP_001_t2+SSP_002" version="any">
                   <TimingLinkRef version="any" ref="mybus:TL@SSP_001_t2+SSP_002"/>
                   <RunTime>PT5M</RunTime>
                 </JourneyRunTime>
-                <JourneyRunTime id="mybus:tdtr_Peak_SSP_002+SSP_002_t1_bus" modification="new" version="any" status="active">
+                <JourneyRunTime id="mybus:tdtr_Peak_SSP_002+SSP_002_t1_bus" version="any">
                   <VehicleMode>bus</VehicleMode>
                   <TimingLinkRef version="any" ref="mybus:TL@SSP_002+SSP_002_t1"/>
                   <RunTime>PT9M</RunTime>
                 </JourneyRunTime>
-                <JourneyRunTime id="mybus:tdtr_Peak_SSP_002+SSP_002_t1_tram" modification="new" version="any" status="active">
+                <JourneyRunTime id="mybus:tdtr_Peak_SSP_002+SSP_002_t1_tram" version="any">
                   <VehicleMode>tram</VehicleMode>
                   <TimingLinkRef version="any" ref="mybus:TL@SSP_002+SSP_002_t1"/>
                   <RunTime>PT5M</RunTime>
                 </JourneyRunTime>
-                <JourneyRunTime id="mybus:tdtr_Peak_SSP_002_t1+SSP_077_bus" modification="new" version="any" status="active">
+                <JourneyRunTime id="mybus:tdtr_Peak_SSP_002_t1+SSP_077_bus" version="any">
                   <VehicleMode>bus</VehicleMode>
                   <TimingLinkRef version="any" ref="mybus:TL@SSP_002_t1+SSP_077"/>
                   <RunTime>PT10M</RunTime>
                 </JourneyRunTime>
-                <JourneyRunTime id="mybus:tdtr_Peak_SSP_002_t1+SSP_077_tram" modification="new" version="any" status="active">
+                <JourneyRunTime id="mybus:tdtr_Peak_SSP_002_t1+SSP_077_tram" version="any">
                   <VehicleMode>tram</VehicleMode>
                   <TimingLinkRef version="any" ref="mybus:TL@SSP_002_t1+SSP_077"/>
                   <RunTime>PT5M</RunTime>
                 </JourneyRunTime>
-                <JourneyRunTime id="mybus:tdtr_Peak_SSP_077+SSP_021_bus" modification="new" version="any" status="active">
+                <JourneyRunTime id="mybus:tdtr_Peak_SSP_077+SSP_021_bus" version="any">
                   <VehicleMode>bus</VehicleMode>
                   <TimingLinkRef version="any" ref="mybus:TL@SSP_077+SSP_021_bus"/>
                   <RunTime>PT20M</RunTime>
                 </JourneyRunTime>
-                <JourneyRunTime id="mybus:tdtr_Peak_SSP_077+SSP_021_tram" modification="new" version="any" status="active">
+                <JourneyRunTime id="mybus:tdtr_Peak_SSP_077+SSP_021_tram" version="any">
                   <VehicleMode>tram</VehicleMode>
                   <TimingLinkRef version="any" ref="mybus:TL@SSP_077+SSP_021_tram"/>
                   <RunTime>PT10M</RunTime>
                 </JourneyRunTime>
-                <JourneyRunTime id="mybus:tdtr_Peak_SSP_021+SSP_022_bus" modification="new" version="any" status="active">
+                <JourneyRunTime id="mybus:tdtr_Peak_SSP_021+SSP_022_bus" version="any">
                   <VehicleMode>bus</VehicleMode>
                   <TimingLinkRef version="any" ref="mybus:TL@SSP_021+SSP_022_bus"/>
                   <RunTime>PT20M</RunTime>
                 </JourneyRunTime>
-                <JourneyRunTime id="mybus:tdtr_Peak_SSP_021+SSP_022_tram" modification="new" version="any" status="active">
+                <JourneyRunTime id="mybus:tdtr_Peak_SSP_021+SSP_022_tram" version="any">
                   <VehicleMode>tram</VehicleMode>
                   <TimingLinkRef version="any" ref="mybus:TL@SSP_021+SSP_022_tram"/>
                   <RunTime>PT10M</RunTime>
                 </JourneyRunTime>
               </runTimes>
               <waitTimes>
-                <JourneyWaitTime id="mybus:tdwt_Peak_24o1_SSP_002" modification="new" version="any" status="active">
+                <JourneyWaitTime id="mybus:tdwt_Peak_24o1_SSP_002" version="any">
                   <Name>Wait at Stop Bravo PEAK</Name>
                   <VehicleMode>bus</VehicleMode>
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
@@ -713,13 +713,13 @@
             </TimeDemandType>
           </timeDemandTypes>
         </ServiceFrame>
-        <TimetableFrame id="hde:TIM_23_O" modification="new" version="any" status="active">
-          <validityConditions modificationSet="all">
-            <AvailabilityCondition id="hde:Cnd001" modification="new" version="any" status="active">
+        <TimetableFrame id="hde:TIM_23_O" version="any">
+          <validityConditions>
+            <AvailabilityCondition id="hde:Cnd001" version="any">
               <Description>Sept  to March</Description>
               <FromDate>2010-11-01T00:00:00Z</FromDate>
               <ToDate>2011-03-31T00:00:00Z</ToDate>
-              <dayTypes modificationSet="all">
+              <dayTypes>
                 <DayTypeRef version="any" ref="hde:DT_01-MF-NH"/>
                 <DayTypeRef version="any" ref="hde:DT_03-WE-NH"/>
               </dayTypes>
@@ -727,10 +727,10 @@
           </validityConditions>
           <Name>Winter timetable for route 23 outbound</Name>
           <VehicleModes>bus</VehicleModes>
-          <vehicleJourneys modificationSet="all">
-            <ServiceJourney id="hde:sj_24o_01" modification="new" version="any" status="active">
+          <vehicleJourneys>
+            <ServiceJourney id="hde:sj_24o_01" version="any">
               <DepartureTime>14:20:00Z</DepartureTime>
-              <dayTypes modificationSet="all">
+              <dayTypes>
                 <DayTypeRef version="any" ref="hde:DT_01-MF-NH"/>
               </dayTypes>
               <ServicePatternRef version="any" ref="hde:svp_24o"/>
@@ -746,7 +746,7 @@
                 <DestinationDisplayRef version="any" ref="mybus:DST_Quebec"/>
               </JourneyPatternView>
               <calls>
-                <Call id="hde:sj_24o_01_001" modification="new" version="any" status="active" order="1">
+                <Call id="hde:sj_24o_01_001" version="any" order="1">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
                   <OnwardTimingLinkView>
                     <TimingLinkRef version="any" ref="mybus:TL@SSP_001+SSP_001_t1"/>
@@ -759,7 +759,7 @@
                     <Time>14:20:00Z</Time>
                   </Departure>
                 </Call>
-                <Call id="hde:sj_24o_01_002" modification="new" version="any" status="active" order="2">
+                <Call id="hde:sj_24o_01_002" version="any" order="2">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
                   <OnwardTimingLinkView>
                     <TimingLinkRef version="any" ref="mybus:TL@SSP_002+SSP_002_t1"/>
@@ -774,7 +774,7 @@
                   </Departure>
                   <Note>Arrival at Terminus</Note>
                 </Call>
-                <Call id="hde:sj_24o_01_003" modification="new" version="any" status="active" order="3">
+                <Call id="hde:sj_24o_01_003" version="any" order="3">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
                   <OnwardTimingLinkView>
                     <TimingLinkRef version="any" ref="mybus:TL@SSP_001+SSP_001_t1"/>
@@ -784,7 +784,7 @@
                     <Time>14:45:00Z</Time>
                   </Departure>
                 </Call>
-                <Call id="hde:sj_24o_01_004" modification="new" version="any" status="active" order="4">
+                <Call id="hde:sj_24o_01_004" version="any" order="4">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_021"/>
                   <OnwardTimingLinkView>
                     <TimingLinkRef version="any" ref="mybus:TL@SSP_021+SSP_022_bus"/>
@@ -794,7 +794,7 @@
                     <Time>15:00:00Z</Time>
                   </Departure>
                 </Call>
-                <Call id="hde:sj_24o_01_003" modification="new" version="any" status="active" order="5">
+                <Call id="hde:sj_24o_01_003" version="any" order="5">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_022"/>
                   <Arrival>
                     <Time>15:15:00Z</Time>
@@ -805,9 +805,9 @@
                 </Call>
               </calls>
             </ServiceJourney>
-            <ServiceJourney id="hde:sj_24o_02" modification="new" version="any" status="active">
+            <ServiceJourney id="hde:sj_24o_02" version="any">
               <DepartureTime>14:20:00Z</DepartureTime>
-              <dayTypes modificationSet="all">
+              <dayTypes>
                 <DayTypeRef version="any" ref="hde:DT_01-MF-NH"/>
               </dayTypes>
               <ServicePatternRef version="any" ref="hde:svp_24o"/>
@@ -823,7 +823,7 @@
                 <DestinationDisplayRef version="any" ref="mybus:DST_Quebec"/>
               </JourneyPatternView>
               <calls>
-                <Call id="hde:sj_24o_02_001" modification="new" version="any" status="active" order="1">
+                <Call id="hde:sj_24o_02_001" version="any" order="1">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
                   <OnwardTimingLinkView>
                     <TimingLinkRef version="any" ref="mybus:TL@SSP_001+SSP_001_t1"/>
@@ -836,7 +836,7 @@
                     <Time>18:00:00Z</Time>
                   </Departure>
                 </Call>
-                <Call id="hde:sj_24o_02_002" modification="new" version="any" status="active" order="2">
+                <Call id="hde:sj_24o_02_002" version="any" order="2">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
                   <OnwardTimingLinkView>
                     <TimingLinkRef version="any" ref="mybus:TL@SSP_002+SSP_002_t1"/>
@@ -851,7 +851,7 @@
                   </Departure>
                   <Note>Arrival at Terminus</Note>
                 </Call>
-                <Call id="hde:sj_24o_02_003" modification="new" version="any" status="active" order="3">
+                <Call id="hde:sj_24o_02_003" version="any" order="3">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
                   <OnwardTimingLinkView>
                     <TimingLinkRef version="any" ref="mybus:TL@SSP_077+SSP_021_bus"/>
@@ -861,7 +861,7 @@
                     <Time>18:35:00Z</Time>
                   </Departure>
                 </Call>
-                <Call id="hde:sj_24o_02_004" modification="new" version="any" status="active" order="4">
+                <Call id="hde:sj_24o_02_004" version="any" order="4">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_021"/>
                   <OnwardTimingLinkView>
                     <TimingLinkRef version="any" ref="mybus:TL@SSP_021+SSP_022_bus"/>
@@ -871,7 +871,7 @@
                     <Time>18:55:00Z</Time>
                   </Departure>
                 </Call>
-                <Call id="hde:sj_24o_02_003" modification="new" version="any" status="active" order="5">
+                <Call id="hde:sj_24o_02_003" version="any" order="5">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_022"/>
                   <Arrival>
                     <Time>19:15:00Z</Time>
@@ -882,9 +882,9 @@
                 </Call>
               </calls>
             </ServiceJourney>
-            <ServiceJourney id="hde:sj_46o_01" modification="new" version="any" status="active">
+            <ServiceJourney id="hde:sj_46o_01" version="any">
               <DepartureTime>14:40:00Z</DepartureTime>
-              <dayTypes modificationSet="all">
+              <dayTypes>
                 <DayTypeRef version="any" ref="hde:DT_01-MF-NH"/>
               </dayTypes>
               <ServicePatternRef version="any" ref="hde:svp_46o"/>
@@ -900,7 +900,7 @@
                 <DestinationDisplayRef version="any" ref="mybus:DST_Quebec"/>
               </JourneyPatternView>
               <calls>
-                <Call id="hde:sj_46o_01_001" modification="new" version="any" status="active" order="1">
+                <Call id="hde:sj_46o_01_001" version="any" order="1">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
                   <OnwardTimingLinkView>
                     <TimingLinkRef version="any" ref="mybus:TL@SSP_002+SSP_002_t1"/>
@@ -910,7 +910,7 @@
                     <Time>14:40:00Z</Time>
                   </Departure>
                 </Call>
-                <Call id="hde:sj_46o_01_002" modification="new" version="any" status="active" order="2">
+                <Call id="hde:sj_46o_01_002" version="any" order="2">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
                   <OnwardTimingLinkView>
                     <TimingLinkRef version="any" ref="mybus:TL@SSP_077+SSP_021_tram"/>
@@ -920,7 +920,7 @@
                     <Time>14:50:00Z</Time>
                   </Departure>
                 </Call>
-                <Call id="hde:sj_46o_01_003" modification="new" version="any" status="active" order="3">
+                <Call id="hde:sj_46o_01_003" version="any" order="3">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_021"/>
                   <OnwardTimingLinkView>
                     <TimingLinkRef version="any" ref="mybus:TL@SSP_021+SSP_022_tram"/>
@@ -930,7 +930,7 @@
                     <Time>15:00:00Z</Time>
                   </Departure>
                 </Call>
-                <Call id="hde:sj_46o_01_004" modification="new" version="any" status="active" order="4">
+                <Call id="hde:sj_46o_01_004" version="any" order="4">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_022"/>
                   <Arrival>
                     <Time>15:10:00Z</Time>
@@ -941,9 +941,9 @@
                 </Call>
               </calls>
             </ServiceJourney>
-            <ServiceJourney id="hde:sj_46o_02" modification="new" version="any" status="active">
+            <ServiceJourney id="hde:sj_46o_02" version="any">
               <DepartureTime>18:00:00Z</DepartureTime>
-              <dayTypes modificationSet="all">
+              <dayTypes>
                 <DayTypeRef version="any" ref="hde:DT_01-MF-NH"/>
               </dayTypes>
               <ServicePatternRef version="any" ref="hde:svp_46o"/>
@@ -959,7 +959,7 @@
                 <DestinationDisplayRef version="any" ref="mybus:DST_Quebec"/>
               </JourneyPatternView>
               <calls>
-                <Call id="hde:sj_46o_02_001" modification="new" version="any" status="active" order="1">
+                <Call id="hde:sj_46o_02_001" version="any" order="1">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
                   <OnwardTimingLinkView>
                     <TimingLinkRef version="any" ref="mybus:TL@SSP_002+SSP_002_t1"/>
@@ -969,7 +969,7 @@
                     <Time>18:00:00Z</Time>
                   </Departure>
                 </Call>
-                <Call id="hde:sj_46o_02_002" modification="new" version="any" status="active" order="2">
+                <Call id="hde:sj_46o_02_002" version="any" order="2">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
                   <OnwardTimingLinkView>
                     <TimingLinkRef version="any" ref="mybus:TL@SSP_077+SSP_021_tram"/>
@@ -979,7 +979,7 @@
                     <Time>18:10:00Z</Time>
                   </Departure>
                 </Call>
-                <Call id="hde:sj_46o_02_003" modification="new" version="any" status="active" order="3">
+                <Call id="hde:sj_46o_02_003" version="any" order="3">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_021"/>
                   <OnwardTimingLinkView>
                     <TimingLinkRef version="any" ref="mybus:TL@SSP_021+SSP_022_tram"/>
@@ -989,7 +989,7 @@
                     <Time>18:20:00Z</Time>
                   </Departure>
                 </Call>
-                <Call id="hde:sj_46o_02_004" modification="new" version="any" status="active" order="4">
+                <Call id="hde:sj_46o_02_004" version="any" order="4">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_022"/>
                   <Arrival>
                     <Time>18:30:00Z</Time>
@@ -1001,12 +1001,12 @@
               </calls>
             </ServiceJourney>
           </vehicleJourneys>
-          <notices modificationSet="all">
-            <Notice id="hde:sj_24o_02" modification="new" version="any" status="active">
+          <notices>
+            <Notice id="hde:sj_24o_02" version="any">
               <Text>foot note text</Text>
               <CanBeAdvertised>true</CanBeAdvertised>
               <variants>
-                <DeliveryVariant id="hde:sj_24o_02_01" modification="new" version="any" status="active">
+                <DeliveryVariant id="hde:sj_24o_02_01" version="any">
                   <DeliveryVariantMediaType>textToSpeech</DeliveryVariantMediaType>
                   <VariantText>mobile foot note text</VariantText>
                 </DeliveryVariant>
@@ -1014,14 +1014,14 @@
             </Notice>
           </notices>
         </TimetableFrame>
-        <ServiceCalendarFrame id="hde:CAL_02" modification="new" version="any" status="active">
+        <ServiceCalendarFrame id="hde:CAL_02" version="any">
           <Name>Service Calendar Nov 2010 ALTERNATE MORE COMPACT Coding  </Name>
-          <ServiceCalendar id="hde:CAL_02" modification="new" version="any" status="active">
+          <ServiceCalendar id="hde:CAL_02" version="any">
             <FromDate>2010-11-01</FromDate>
             <ToDate>2010-11-14</ToDate>
           </ServiceCalendar>
-          <dayTypes modificationSet="all">
-            <DayType id="hde:DT_01-MF-NH" modification="new" version="any" status="active">
+          <dayTypes>
+            <DayType id="hde:DT_01-MF-NH" version="any">
               <Name>Weekdays unless a holiday</Name>
               <properties>
                 <PropertyOfDay>
@@ -1030,7 +1030,7 @@
                 </PropertyOfDay>
               </properties>
             </DayType>
-            <DayType id="hde:DT_02-AA-NH" modification="new" version="any" status="active">
+            <DayType id="hde:DT_02-AA-NH" version="any">
               <Name>Everyday unless a holiday</Name>
               <properties>
                 <PropertyOfDay>
@@ -1039,7 +1039,7 @@
                 </PropertyOfDay>
               </properties>
             </DayType>
-            <DayType id="hde:DT_03-WE-NH" modification="new" version="any" status="active">
+            <DayType id="hde:DT_03-WE-NH" version="any">
               <Name>Weekends unless a holiday</Name>
               <properties>
                 <PropertyOfDay>
@@ -1048,7 +1048,7 @@
                 </PropertyOfDay>
               </properties>
             </DayType>
-            <DayType id="hde:DT_04-AA-NH" modification="new" version="any" status="active">
+            <DayType id="hde:DT_04-AA-NH" version="any">
               <Name>Holidays</Name>
               <properties>
                 <PropertyOfDay>
@@ -1058,73 +1058,73 @@
               </properties>
             </DayType>
           </dayTypes>
-          <dayTypeAssignments modificationSet="all">
-            <DayTypeAssignment id="hde:DayAsgn_2010-11-01" modification="new" version="any" status="active" order="1">
+          <dayTypeAssignments>
+            <DayTypeAssignment id="hde:DayAsgn_2010-11-01" version="any" order="1">
               <Description>Monday 2010-11-01</Description>
               <Date>2010-11-01</Date>
               <DayTypeRef version="any" ref="hde:DT_01-MF-NH"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="hde:DayAsgn_2010-11-02" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="hde:DayAsgn_2010-11-02" version="any" order="1">
               <Description>Tuesday 2010-11-02</Description>
               <Date>2010-11-02</Date>
               <DayTypeRef version="any" ref="hde:DT_01-MF-NH"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="hde:DayAsgn_2010-11-03" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="hde:DayAsgn_2010-11-03" version="any" order="1">
               <Description>Wednesday 2010-11-03</Description>
               <Date>2010-11-03</Date>
               <DayTypeRef version="any" ref="hde:DT_01-MF-NH"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="hde:DayAsgn_2010-11-04" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="hde:DayAsgn_2010-11-04" version="any" order="1">
               <Description>Thusday 2010-11-04</Description>
               <Date>2010-11-04</Date>
               <DayTypeRef version="any" ref="hde:DT_01-MF-NH"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="hde:DayAsgn_2010-11-05" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="hde:DayAsgn_2010-11-05" version="any" order="1">
               <Description>MFriday 2010-11-05</Description>
               <Date>2010-11-05</Date>
               <DayTypeRef version="any" ref="hde:DT_01-MF-NH"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="hde:DayAsgn_2010-11-06" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="hde:DayAsgn_2010-11-06" version="any" order="1">
               <Description>Saturday 2010-11-06</Description>
               <Date>2010-11-06</Date>
               <DayTypeRef version="any" ref="hde:DT_03-WE-NH"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="hde:DayAsgn_2010-11-07" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="hde:DayAsgn_2010-11-07" version="any" order="1">
               <Description>Sunday 2010-11-07</Description>
               <Date>2010-11-07</Date>
               <DayTypeRef version="any" ref="hde:DT_03-WE-NH"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="hde:DayAsgn_2010-11-08" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="hde:DayAsgn_2010-11-08" version="any" order="1">
               <Description>Monday 2010-11-08</Description>
               <Date>2010-11-08</Date>
               <DayTypeRef version="any" ref="hde:DT_01-MF-NH"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="hde:DayAsgn_2010-11-09" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="hde:DayAsgn_2010-11-09" version="any" order="1">
               <Description>Tuesday 2010-11-09</Description>
               <Date>2010-11-09</Date>
               <DayTypeRef version="any" ref="hde:DT_01-MF-NH"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="hde:DayAsgn_2010-11-10" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="hde:DayAsgn_2010-11-10" version="any" order="1">
               <Description>Wednesday 2010-11-10</Description>
               <Date>2010-11-10</Date>
               <DayTypeRef version="any" ref="hde:DT_01-MF-NH"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="hde:DayAsgn_2010-11-11" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="hde:DayAsgn_2010-11-11" version="any" order="1">
               <Description>Thusday 2010-11-11</Description>
               <Date>2010-11-11</Date>
               <DayTypeRef version="any" ref="hde:DT_01-MF-NH"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="hde:DayAsgn_2010-11-12" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="hde:DayAsgn_2010-11-12" version="any" order="1">
               <Description>MFriday 2010-11-12</Description>
               <Date>2010-11-12</Date>
               <DayTypeRef version="any" ref="hde:DT_01-MF-NH"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="hde:DayAsgn_2010-11-113" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="hde:DayAsgn_2010-11-113" version="any" order="1">
               <Description>Saturday 2010-11-13</Description>
               <Date>2010-11-13</Date>
               <DayTypeRef version="any" ref="hde:DT_03-WE-NH"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="hde:DayAsgn_2010-11-14" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="hde:DayAsgn_2010-11-14" version="any" order="1">
               <Description>Sunday 2010-11-14</Description>
               <Date>2010-11-14</Date>
               <DayTypeRef version="any" ref="hde:DT_03-WE-NH"/>

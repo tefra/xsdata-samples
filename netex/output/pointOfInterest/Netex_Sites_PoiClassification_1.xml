@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hde="http://www.halt.de/" xmlns:mybus="http://www.mybus.fr/" xmlns:nap="http://www.naptan.org.uk/" version="1.0">
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hde="http://www.halt.de/" xmlns:mybus="http://www.mybus.fr/" xmlns:nap="http://www.naptan.org.uk/">
   <PublicationTimestamp>2001-12-17T09:30:47Z</PublicationTimestamp>
   <ParticipantRef>SYS001</ParticipantRef>
-  <PublicationRequest version="1.0">
+  <PublicationRequest>
     <RequestTimestamp>2001-12-17T09:30:47Z</RequestTimestamp>
     <ParticipantRef>SYS002</ParticipantRef>
   </PublicationRequest>
   <PublicationRefreshInterval>PT5M0S</PublicationRefreshInterval>
   <dataObjects>
-    <SiteFrame id="poix:POI_Classifications" modification="new" version="any" status="active">
+    <SiteFrame id="poix:POI_Classifications" version="any">
       <Name>Poi Classifications</Name>
-      <codespaces modificationSet="all">
+      <codespaces>
         <Codespace id="poix">
           <Xmlns>poix</Xmlns>
           <XmlnsUrl>http://www.poininfo.eu/stuff</XmlnsUrl>
@@ -21,97 +21,97 @@
         <DefaultCodespaceRef ref="poix"/>
         <DefaultResponsibilitySetRef ref="poix:001">EXTERNAL</DefaultResponsibilitySetRef>
       </FrameDefaults>
-      <pointOfInterestClassifications modificationSet="all">
-        <PointOfInterestClassification id="poix:Cl000" modification="new" version="any" status="active">
+      <pointOfInterestClassifications>
+        <PointOfInterestClassification id="poix:Cl000" version="any">
           <Name>All</Name>
         </PointOfInterestClassification>
-        <PointOfInterestClassification id="poix:Cl001" modification="new" version="any" status="active">
+        <PointOfInterestClassification id="poix:Cl001" version="any">
           <Name>Tourist Attraction</Name>
           <ShortName>Attraction</ShortName>
         </PointOfInterestClassification>
-        <PointOfInterestClassification id="poix:Cl002" modification="new" version="any" status="active">
+        <PointOfInterestClassification id="poix:Cl002" version="any">
           <Name>Museum</Name>
           <ShortName>Museum</ShortName>
         </PointOfInterestClassification>
-        <PointOfInterestClassification id="poix:Cl003" modification="new" version="any" status="active">
+        <PointOfInterestClassification id="poix:Cl003" version="any">
           <Name>Art Galleriy</Name>
           <ShortName>Gallery</ShortName>
         </PointOfInterestClassification>
-        <PointOfInterestClassification id="poix:Cl004" modification="new" version="any" status="active">
+        <PointOfInterestClassification id="poix:Cl004" version="any">
           <Name>Sports Facility</Name>
           <ShortName>Sports Facility</ShortName>
         </PointOfInterestClassification>
-        <PointOfInterestClassification id="poix:Cl005" modification="new" version="any" status="active">
+        <PointOfInterestClassification id="poix:Cl005" version="any">
           <Name>Football Stadium</Name>
           <ShortName>Football</ShortName>
         </PointOfInterestClassification>
-        <PointOfInterestClassification id="poix:Cl006" modification="new" version="any" status="active">
+        <PointOfInterestClassification id="poix:Cl006" version="any">
           <Name>Rugby Stadium</Name>
           <ShortName>Rugby</ShortName>
         </PointOfInterestClassification>
-        <PointOfInterestClassification id="poix:Cl007" modification="new" version="any" status="active">
+        <PointOfInterestClassification id="poix:Cl007" version="any">
           <Name>Ice Rink</Name>
           <ShortName>Ice Rink</ShortName>
         </PointOfInterestClassification>
-        <PointOfInterestClassification id="poix:Cl008" modification="new" version="any" status="active">
+        <PointOfInterestClassification id="poix:Cl008" version="any">
           <Name>Stadium</Name>
           <ShortName>Stadium</ShortName>
         </PointOfInterestClassification>
-        <PointOfInterestClassification id="poix:Cl009" modification="new" version="any" status="active">
+        <PointOfInterestClassification id="poix:Cl009" version="any">
           <Name>Icerink</Name>
           <ShortName>Icerink</ShortName>
         </PointOfInterestClassification>
       </pointOfInterestClassifications>
-      <pointOfInterestClassificationHierarchies modificationSet="all">
-        <PointOfInterestClassificationHierarchy id="poix:hm_1" modification="new" version="any" status="active">
+      <pointOfInterestClassificationHierarchies>
+        <PointOfInterestClassificationHierarchy id="poix:hm_1" version="any">
           <Name>Main Hierarchy</Name>
           <members>
-            <ClassificationHierarchyMember id="poix:hm_1_00" modification="new" status="active">
+            <ClassificationHierarchyMember id="poix:hm_1_00">
               <ParentClassificationRef version="any" ref="poix:Cl000"/>
               <PointOfInterestClassificationRef version="any" ref="poix:Cl001"/>
             </ClassificationHierarchyMember>
-            <ClassificationHierarchyMember id="poix:hm_1_01" modification="new" status="active">
+            <ClassificationHierarchyMember id="poix:hm_1_01">
               <ParentClassificationRef version="any" ref="poix:Cl001"/>
               <PointOfInterestClassificationRef version="any" ref="poix:Cl002"/>
             </ClassificationHierarchyMember>
-            <ClassificationHierarchyMember id="poix:hm_1_02" modification="new" status="active">
+            <ClassificationHierarchyMember id="poix:hm_1_02">
               <ParentClassificationRef version="any" ref="poix:Cl001"/>
               <PointOfInterestClassificationRef version="any" ref="poix:Cl003"/>
             </ClassificationHierarchyMember>
-            <ClassificationHierarchyMember id="poix:hm_1_00" modification="new" status="active">
+            <ClassificationHierarchyMember id="poix:hm_1_00">
               <ParentClassificationRef version="any" ref="poix:Cl000"/>
               <PointOfInterestClassificationRef version="any" ref="poix:Cl004"/>
             </ClassificationHierarchyMember>
-            <ClassificationHierarchyMember id="poix:hm_1_03" modification="new" status="active">
+            <ClassificationHierarchyMember id="poix:hm_1_03">
               <ParentClassificationRef version="any" ref="poix:Cl004"/>
               <PointOfInterestClassificationRef version="any" ref="poix:Cl008"/>
             </ClassificationHierarchyMember>
-            <ClassificationHierarchyMember id="poix:hm_1_04" modification="new" status="active">
+            <ClassificationHierarchyMember id="poix:hm_1_04">
               <ParentClassificationRef version="any" ref="poix:Cl008"/>
               <PointOfInterestClassificationRef version="any" ref="poix:Cl005"/>
             </ClassificationHierarchyMember>
-            <ClassificationHierarchyMember id="poix:hm_1_05" modification="new" status="active">
+            <ClassificationHierarchyMember id="poix:hm_1_05">
               <ParentClassificationRef version="any" ref="poix:Cl008"/>
               <PointOfInterestClassificationRef version="any" ref="poix:Cl006"/>
             </ClassificationHierarchyMember>
-            <ClassificationHierarchyMember id="poix:hm_1_06" modification="new" status="active">
+            <ClassificationHierarchyMember id="poix:hm_1_06">
               <ParentClassificationRef version="any" ref="poix:Cl004"/>
               <PointOfInterestClassificationRef version="any" ref="poix:Cl009"/>
             </ClassificationHierarchyMember>
           </members>
         </PointOfInterestClassificationHierarchy>
-        <PointOfInterestClassificationHierarchy id="poix:hm_2" modification="new" version="any" status="active">
+        <PointOfInterestClassificationHierarchy id="poix:hm_2" version="any">
           <Name>Sports Hierarchy</Name>
           <members>
-            <ClassificationHierarchyMember id="poix:hm_2_01" modification="new" status="active">
+            <ClassificationHierarchyMember id="poix:hm_2_01">
               <ParentClassificationRef version="any" ref="poix:Cl004"/>
               <PointOfInterestClassificationRef version="any" ref="poix:Cl005"/>
             </ClassificationHierarchyMember>
-            <ClassificationHierarchyMember id="poix:hm_2_02" modification="new" status="active">
+            <ClassificationHierarchyMember id="poix:hm_2_02">
               <ParentClassificationRef version="any" ref="poix:Cl004"/>
               <PointOfInterestClassificationRef version="any" ref="poix:Cl006"/>
             </ClassificationHierarchyMember>
-            <ClassificationHierarchyMember id="poix:hm_2_03" modification="new" status="active">
+            <ClassificationHierarchyMember id="poix:hm_2_03">
               <ParentClassificationRef version="any" ref="poix:Cl004"/>
               <PointOfInterestClassificationRef version="any" ref="poix:Cl009"/>
             </ClassificationHierarchyMember>

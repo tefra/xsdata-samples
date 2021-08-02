@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gml="http://www.opengis.net/gml/3.2" version="1.0">
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gml="http://www.opengis.net/gml/3.2">
   <PublicationTimestamp>2001-12-17T09:30:47Z</PublicationTimestamp>
   <ParticipantRef>SYS001</ParticipantRef>
-  <PublicationRequest version="1.0">
+  <PublicationRequest>
     <RequestTimestamp>2001-12-17T09:30:47Z</RequestTimestamp>
     <ParticipantRef>SYS002</ParticipantRef>
   </PublicationRequest>
   <PublicationRefreshInterval>PT5M0S</PublicationRefreshInterval>
   <dataObjects>
-    <CompositeFrame id="oda:OPK_01" modification="new" version="1" status="active">
-      <validityConditions modificationSet="all">
-        <AvailabilityCondition id="oda:OPK_01" modification="new" version="any" status="active">
+    <CompositeFrame id="oda:OPK_01" version="1">
+      <validityConditions>
+        <AvailabilityCondition id="oda:OPK_01" version="any">
           <FromDate>2010-12-17T09:30:47Z</FromDate>
           <ToDate>2011-12-17T09:30:47Z</ToDate>
         </AvailabilityCondition>
       </validityConditions>
-      <codespaces modificationSet="all">
+      <codespaces>
         <Codespace id="napt_metadata">
           <Xmlns>napt</Xmlns>
           <XmlnsUrl>http://www.naptan.org.uk/naptan</XmlnsUrl>
@@ -40,162 +40,162 @@
       <FrameDefaults>
         <DefaultCodespaceRef ref="oda"/>
       </FrameDefaults>
-      <frames modificationSet="all">
-        <SiteFrame id="oda:OPK_fr002" modification="new" version="any" status="active">
+      <frames>
+        <SiteFrame id="oda:OPK_fr002" version="any">
           <Name>Olympic Park - Simple</Name>
-          <contentValidityConditions modificationSet="all">
-            <AvailabilityCondition id="oda:Avl_Very_Busy_ingress" modification="new" version="any" status="active">
-              <dayTypes modificationSet="all">
+          <contentValidityConditions>
+            <AvailabilityCondition id="oda:Avl_Very_Busy_ingress" version="any">
+              <dayTypes>
                 <DayTypeRef version="any" ref="oda:DT01_Very_Busy"/>
               </dayTypes>
-              <timebands modificationSet="all">
+              <timebands>
                 <TimebandRef version="any" ref="oda:TMB01_ingress"/>
               </timebands>
             </AvailabilityCondition>
-            <AvailabilityCondition id="oda:Avl_Very_Busy_during" modification="new" version="any" status="active">
-              <dayTypes modificationSet="all">
+            <AvailabilityCondition id="oda:Avl_Very_Busy_during" version="any">
+              <dayTypes>
                 <DayTypeRef version="any" ref="oda:DT01_Very_Busy"/>
               </dayTypes>
-              <timebands modificationSet="all">
+              <timebands>
                 <TimebandRef version="any" ref="oda:TMB02_during"/>
               </timebands>
             </AvailabilityCondition>
-            <AvailabilityCondition id="oda:Avl_Very_Busy_egress" modification="new" version="any" status="active">
-              <dayTypes modificationSet="all">
+            <AvailabilityCondition id="oda:Avl_Very_Busy_egress" version="any">
+              <dayTypes>
                 <DayTypeRef version="any" ref="oda:DT01_Very_Busy"/>
               </dayTypes>
-              <timebands modificationSet="all">
+              <timebands>
                 <TimebandRef version="any" ref="oda:TMB03_egress"/>
               </timebands>
             </AvailabilityCondition>
-            <AvailabilityCondition id="oda:Avl_Very_Busy_other" modification="new" version="any" status="active">
-              <dayTypes modificationSet="all">
+            <AvailabilityCondition id="oda:Avl_Very_Busy_other" version="any">
+              <dayTypes>
                 <DayTypeRef version="any" ref="oda:DT01_Very_Busy"/>
               </dayTypes>
             </AvailabilityCondition>
-            <AvailabilityCondition id="oda:Avl_Very_Busy_other-B" modification="new" version="any" status="active">
+            <AvailabilityCondition id="oda:Avl_Very_Busy_other-B" version="any">
               <FromDate>2011-08-17T00:00:00Z</FromDate>
               <ToDate>2011-08-17T23:59:59Z</ToDate>
-              <timebands modificationSet="all">
-                <Timeband id="oda:Avl_Very_Busy_other-B" modification="new" version="any" status="active">
+              <timebands>
+                <Timeband id="oda:Avl_Very_Busy_other-B" version="any">
                   <StartTime>09:30:00Z</StartTime>
                   <EndTime>11:30:00Z</EndTime>
                 </Timeband>
               </timebands>
             </AvailabilityCondition>
-            <AvailabilityCondition id="oda:Avl_Busy_ingress" modification="new" version="any" status="active">
-              <dayTypes modificationSet="all">
+            <AvailabilityCondition id="oda:Avl_Busy_ingress" version="any">
+              <dayTypes>
                 <DayTypeRef version="any" ref="oda:DT02_Busy"/>
               </dayTypes>
-              <timebands modificationSet="all">
+              <timebands>
                 <TimebandRef version="any" ref="oda:TMB01_ingress"/>
               </timebands>
             </AvailabilityCondition>
-            <AvailabilityCondition id="oda:Avl_Busy_during" modification="new" version="any" status="active">
-              <dayTypes modificationSet="all">
+            <AvailabilityCondition id="oda:Avl_Busy_during" version="any">
+              <dayTypes>
                 <DayTypeRef version="any" ref="oda:DT02_Busy"/>
               </dayTypes>
-              <timebands modificationSet="all">
+              <timebands>
                 <TimebandRef version="any" ref="oda:TMB02_during"/>
               </timebands>
             </AvailabilityCondition>
-            <AvailabilityCondition id="oda:Avl_Busy_egress" modification="new" version="any" status="active">
-              <dayTypes modificationSet="all">
+            <AvailabilityCondition id="oda:Avl_Busy_egress" version="any">
+              <dayTypes>
                 <DayTypeRef version="any" ref="oda:DT02_Busy"/>
               </dayTypes>
-              <timebands modificationSet="all">
+              <timebands>
                 <TimebandRef version="any" ref="oda:TMB03_egress"/>
               </timebands>
             </AvailabilityCondition>
-            <AvailabilityCondition id="oda:Avl_Busy_other" modification="new" version="any" status="active">
-              <dayTypes modificationSet="all">
+            <AvailabilityCondition id="oda:Avl_Busy_other" version="any">
+              <dayTypes>
                 <DayTypeRef version="any" ref="oda:DT02_Busy"/>
               </dayTypes>
             </AvailabilityCondition>
-            <AvailabilityCondition id="oda:Avl_Busy_other-B" modification="new" version="any" status="active">
+            <AvailabilityCondition id="oda:Avl_Busy_other-B" version="any">
               <FromDate>2011-08-17T00:00:00Z</FromDate>
               <ToDate>2011-08-17T23:59:59Z</ToDate>
-              <timebands modificationSet="all">
-                <Timeband id="oda:Avl_Busy_other-B" modification="new" version="any" status="active">
+              <timebands>
+                <Timeband id="oda:Avl_Busy_other-B" version="any">
                   <StartTime>09:30:00Z</StartTime>
                   <EndTime>11:30:00Z</EndTime>
                 </Timeband>
               </timebands>
             </AvailabilityCondition>
-            <AvailabilityCondition id="oda:Avl_Normal_ingress" modification="new" version="any" status="active">
-              <dayTypes modificationSet="all">
+            <AvailabilityCondition id="oda:Avl_Normal_ingress" version="any">
+              <dayTypes>
                 <DayTypeRef version="any" ref="oda:DT03_Normal"/>
               </dayTypes>
-              <timebands modificationSet="all">
+              <timebands>
                 <TimebandRef version="any" ref="oda:TMB01_ingress"/>
               </timebands>
             </AvailabilityCondition>
-            <AvailabilityCondition id="oda:Avl_Normal_during" modification="new" version="any" status="active">
-              <dayTypes modificationSet="all">
+            <AvailabilityCondition id="oda:Avl_Normal_during" version="any">
+              <dayTypes>
                 <DayTypeRef version="any" ref="oda:DT03_Normal"/>
               </dayTypes>
-              <timebands modificationSet="all">
+              <timebands>
                 <TimebandRef version="any" ref="oda:TMB02_during"/>
               </timebands>
             </AvailabilityCondition>
-            <AvailabilityCondition id="oda:Avl_Normal_egress" modification="new" version="any" status="active">
-              <dayTypes modificationSet="all">
+            <AvailabilityCondition id="oda:Avl_Normal_egress" version="any">
+              <dayTypes>
                 <DayTypeRef version="any" ref="oda:DT03_Normal"/>
               </dayTypes>
-              <timebands modificationSet="all">
+              <timebands>
                 <TimebandRef version="any" ref="oda:TMB03_egress"/>
               </timebands>
             </AvailabilityCondition>
-            <AvailabilityCondition id="oda:Avl_Normal_other" modification="new" version="any" status="active">
-              <dayTypes modificationSet="all">
+            <AvailabilityCondition id="oda:Avl_Normal_other" version="any">
+              <dayTypes>
                 <DayTypeRef version="any" ref="oda:DT03_Normal"/>
               </dayTypes>
             </AvailabilityCondition>
-            <AvailabilityCondition id="oda:Avl_Normal_other-B" modification="new" version="any" status="active">
+            <AvailabilityCondition id="oda:Avl_Normal_other-B" version="any">
               <FromDate>2011-08-17T00:00:00Z</FromDate>
               <ToDate>2011-08-17T23:59:59Z</ToDate>
-              <timebands modificationSet="all">
-                <Timeband id="oda:Avl_Normal_other-B" modification="new" version="any" status="active">
+              <timebands>
+                <Timeband id="oda:Avl_Normal_other-B" version="any">
                   <StartTime>09:30:00Z</StartTime>
                   <EndTime>11:30:00Z</EndTime>
                 </Timeband>
               </timebands>
             </AvailabilityCondition>
           </contentValidityConditions>
-          <pointsOfInterest modificationSet="all">
-            <PointOfInterest id="naptPoi:8100OPK" modification="new" version="any" status="active">
+          <pointsOfInterest>
+            <PointOfInterest id="naptPoi:8100OPK" version="any">
               <Name>London 2012 Olympic Park</Name>
               <Description>Queen Elizabeth II Olympic Park</Description>
-              <types modificationSet="all">
+              <types>
                 <TypeOfZoneRef version="any" ref="napt:type_of_zone@POI"/>
               </types>
-              <Centroid modification="new" status="active">
+              <Centroid>
                 <Location>
                   <Longitude>-180</Longitude>
                   <Latitude>-90</Latitude>
                 </Location>
               </Centroid>
-              <placeTypes modificationSet="all">
+              <placeTypes>
                 <TypeOfPlaceRef version="any" ref="napt:type_of_place@Park"/>
               </placeTypes>
-              <levels modificationSet="all">
-                <Level id="naptPoi:8100OPK_Lvl_01" created="2010-04-17T09:30:47Z" modification="new" version="any" status="active">
+              <levels>
+                <Level id="naptPoi:8100OPK_Lvl_01" created="2010-04-17T09:30:47Z" version="any">
                   <Name>Ground </Name>
                   <PublicCode>A</PublicCode>
                 </Level>
               </levels>
-              <entrances modificationSet="all">
-                <PointOfInterestEntrance id="naptPoi:8100OPK_E1" modification="new" version="any" status="active">
+              <entrances>
+                <PointOfInterestEntrance id="naptPoi:8100OPK_E1" version="any">
                   <Name>2012 Olympic Park Stratford Entrance</Name>
-                  <types modificationSet="all">
+                  <types>
                     <TypeOfZoneRef version="any" ref="napt:type_of_zone@PIE"/>
                   </types>
-                  <Centroid modification="new" status="active">
+                  <Centroid>
                     <Location>
                       <gml:pos srsName="UKOS">184435.0 538185.0</gml:pos>
                     </Location>
                   </Centroid>
-                  <PostalAddress id="naptPoi:8100OPK_E1_addr1" modification="new" version="any" status="active">
+                  <PostalAddress id="naptPoi:8100OPK_E1_addr1" version="any">
                     <BuildingName>Olympic Park Entrance</BuildingName>
                     <AddressLine1>Station Street  </AddressLine1>
                     <Town>Stratford</Town>
@@ -203,79 +203,79 @@
                   </PostalAddress>
                   <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                   <LevelRef version="any" ref="naptPoi:8100OPK_Lvl_01"/>
-                  <checkConstraints modificationSet="all">
-                    <CheckConstraint id="naptPoi:8100OPK_E1_C1" modification="new" version="any" status="active" order="1">
+                  <checkConstraints>
+                    <CheckConstraint id="naptPoi:8100OPK_E1_C1" version="any" order="1">
                       <Name>Entrance to Security gate - incoming</Name>
                       <CheckDirection>forwards</CheckDirection>
                       <CheckProcess>securityCheck</CheckProcess>
                       <Congestion>queue</Congestion>
                       <delays>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_VB_i" modification="new" version="any" status="active" order="1">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_VB_i" version="any" order="1">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Very_Busy_ingress"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT20M</MinimumLikelyDelay>
                           <AverageDelay>PT30M</AverageDelay>
                           <MaximumLikelyDelay>PT60M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_VB_d" modification="new" version="any" status="active" order="2">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_VB_d" version="any" order="2">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Very_Busy_during"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT8M</MinimumLikelyDelay>
                           <AverageDelay>PT15M</AverageDelay>
                           <MaximumLikelyDelay>PT30M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_VB_o" modification="new" version="any" status="active" order="99">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_VB_o" version="any" order="99">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Very_Busy_other"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>
                           <AverageDelay>PT3M</AverageDelay>
                           <MaximumLikelyDelay>PT6M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_B_i" modification="new" version="any" status="active" order="1">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_B_i" version="any" order="1">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Busy_ingress"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT25M</MinimumLikelyDelay>
                           <AverageDelay>PT25M</AverageDelay>
                           <MaximumLikelyDelay>PT50M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_B_d" modification="new" version="any" status="active" order="2">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_B_d" version="any" order="2">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Busy_during"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT6M</MinimumLikelyDelay>
                           <AverageDelay>PT15M</AverageDelay>
                           <MaximumLikelyDelay>PT30M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_B_o" modification="new" version="any" status="active" order="99">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_B_o" version="any" order="99">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Busy_other"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>
                           <AverageDelay>PT3M</AverageDelay>
                           <MaximumLikelyDelay>PT6M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_N_i" modification="new" version="any" status="active" order="1">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_N_i" version="any" order="1">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Normal_ingress"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT10M</MinimumLikelyDelay>
                           <AverageDelay>PT20M</AverageDelay>
                           <MaximumLikelyDelay>PT40M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_N_d" modification="new" version="any" status="active" order="2">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_N_d" version="any" order="2">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Normal_during"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT4M</MinimumLikelyDelay>
                           <AverageDelay>PT10M</AverageDelay>
                           <MaximumLikelyDelay>PT20M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_N_o" modification="new" version="any" status="active" order="99">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C1_Del_N_o" version="any" order="99">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Normal_other"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>
@@ -284,78 +284,78 @@
                         </CheckConstraintDelay>
                       </delays>
                     </CheckConstraint>
-                    <CheckConstraint id="naptPoi:8100OPK_E1_C2" modification="new" version="any" status="active" order="1">
+                    <CheckConstraint id="naptPoi:8100OPK_E1_C2" version="any" order="1">
                       <Name>Entrance to Security gate - Going Out</Name>
                       <CheckDirection>backwards</CheckDirection>
                       <CheckProcess>egress</CheckProcess>
                       <Congestion>queue</Congestion>
                       <delays>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_VB_d" modification="new" version="any" status="active" order="2">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_VB_d" version="any" order="2">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Very_Busy_during"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT8M</MinimumLikelyDelay>
                           <AverageDelay>PT15M</AverageDelay>
                           <MaximumLikelyDelay>PT30M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_VB_e" modification="new" version="any" status="active" order="3">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_VB_e" version="any" order="3">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Very_Busy_egress"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT10M</MinimumLikelyDelay>
                           <AverageDelay>PT20M</AverageDelay>
                           <MaximumLikelyDelay>PT30M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_VB_o" modification="new" version="any" status="active" order="99">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_VB_o" version="any" order="99">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Very_Busy_other"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>
                           <AverageDelay>PT3M</AverageDelay>
                           <MaximumLikelyDelay>PT6M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_B_d" modification="new" version="any" status="active" order="2">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_B_d" version="any" order="2">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Busy_during"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT6M</MinimumLikelyDelay>
                           <AverageDelay>PT15M</AverageDelay>
                           <MaximumLikelyDelay>PT30M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_B_e" modification="new" version="any" status="active" order="3">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_B_e" version="any" order="3">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Busy_egress"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT8M</MinimumLikelyDelay>
                           <AverageDelay>PT15M</AverageDelay>
                           <MaximumLikelyDelay>PT25M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_B_o" modification="new" version="any" status="active" order="99">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_B_o" version="any" order="99">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Busy_other"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>
                           <AverageDelay>PT3M</AverageDelay>
                           <MaximumLikelyDelay>PT6M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_N_d" modification="new" version="any" status="active" order="2">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_N_d" version="any" order="2">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Normal_during"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT4M</MinimumLikelyDelay>
                           <AverageDelay>PT10M</AverageDelay>
                           <MaximumLikelyDelay>PT20M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_N_e" modification="new" version="any" status="active" order="3">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_N_e" version="any" order="3">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Normal_egress"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT6M</MinimumLikelyDelay>
                           <AverageDelay>PT12M</AverageDelay>
                           <MaximumLikelyDelay>PT20M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_N_o" modification="new" version="any" status="active" order="99">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E1_C2_Del_N_o" version="any" order="99">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Normal_other"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>
@@ -367,20 +367,20 @@
                   </checkConstraints>
                   <EntranceType>gate</EntranceType>
                 </PointOfInterestEntrance>
-                <PointOfInterestEntrance id="naptPoi:8100OPK_E2" modification="new" version="any" status="active">
+                <PointOfInterestEntrance id="naptPoi:8100OPK_E2" version="any">
                   <Name>2012 Olympic Park North Entrance</Name>
-                  <types modificationSet="all">
+                  <types>
                     <TypeOfZoneRef version="any" ref="napt:type_of_zone@PIE"/>
                   </types>
-                  <Centroid modification="new" status="active">
+                  <Centroid>
                     <Location>
                       <gml:pos srsName="UKOS">1856565.33 37409.715</gml:pos>
                     </Location>
                   </Centroid>
-                  <placeTypes modificationSet="all">
+                  <placeTypes>
                     <TypeOfPlaceRef version="any" ref="napt:type_of_place@Venue"/>
                   </placeTypes>
-                  <PostalAddress id="naptPoi:8100OPK_E2_addr1" modification="new" version="any" status="active">
+                  <PostalAddress id="naptPoi:8100OPK_E2_addr1" version="any">
                     <BuildingName>North Entrance</BuildingName>
                     <AddressLine1>Temple Mill Lane</AddressLine1>
                     <Town>Stratford</Town>
@@ -388,79 +388,79 @@
                   </PostalAddress>
                   <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                   <LevelRef version="any" ref="naptPoi:8100OPK_Lvl_01"/>
-                  <checkConstraints modificationSet="all">
-                    <CheckConstraint id="naptPoi:8100OPK_E2_C1" modification="new" version="any" status="active" order="1">
+                  <checkConstraints>
+                    <CheckConstraint id="naptPoi:8100OPK_E2_C1" version="any" order="1">
                       <Name>Entrance to Security gate - incoming</Name>
                       <CheckDirection>forwards</CheckDirection>
                       <CheckProcess>securityCheck</CheckProcess>
                       <Congestion>queue</Congestion>
                       <delays>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C1_Del_VB_i" modification="new" version="any" status="active" order="1">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C1_Del_VB_i" version="any" order="1">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Very_Busy_ingress"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT20M</MinimumLikelyDelay>
                           <AverageDelay>PT30M</AverageDelay>
                           <MaximumLikelyDelay>PT60M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C1_Del_VB_d" modification="new" version="any" status="active" order="2">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C1_Del_VB_d" version="any" order="2">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Very_Busy_during"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT8M</MinimumLikelyDelay>
                           <AverageDelay>PT15M</AverageDelay>
                           <MaximumLikelyDelay>PT30M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C1_Del_VB_o" modification="new" version="any" status="active" order="99">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C1_Del_VB_o" version="any" order="99">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Very_Busy_other"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>
                           <AverageDelay>PT3M</AverageDelay>
                           <MaximumLikelyDelay>PT6M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C1_Del_B_i" modification="new" version="any" status="active" order="1">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C1_Del_B_i" version="any" order="1">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Busy_ingress"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT25M</MinimumLikelyDelay>
                           <AverageDelay>PT25M</AverageDelay>
                           <MaximumLikelyDelay>PT50M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C1_Del_B_d" modification="new" version="any" status="active" order="2">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C1_Del_B_d" version="any" order="2">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Busy_during"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT6M</MinimumLikelyDelay>
                           <AverageDelay>PT15M</AverageDelay>
                           <MaximumLikelyDelay>PT30M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C1_Del_B_o" modification="new" version="any" status="active" order="99">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C1_Del_B_o" version="any" order="99">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Busy_other"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>
                           <AverageDelay>PT3M</AverageDelay>
                           <MaximumLikelyDelay>PT6M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C1_Del_N_i" modification="new" version="any" status="active" order="1">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C1_Del_N_i" version="any" order="1">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Normal_ingress"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT10M</MinimumLikelyDelay>
                           <AverageDelay>PT20M</AverageDelay>
                           <MaximumLikelyDelay>PT40M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C1_Del_N_d" modification="new" version="any" status="active" order="2">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C1_Del_N_d" version="any" order="2">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Normal_during"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT4M</MinimumLikelyDelay>
                           <AverageDelay>PT10M</AverageDelay>
                           <MaximumLikelyDelay>PT20M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C1_Del_N_o" modification="new" version="any" status="active" order="99">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C1_Del_N_o" version="any" order="99">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Normal_other"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>
@@ -469,78 +469,78 @@
                         </CheckConstraintDelay>
                       </delays>
                     </CheckConstraint>
-                    <CheckConstraint id="naptPoi:8100OPK_E2_C2" modification="new" version="any" status="active" order="1">
+                    <CheckConstraint id="naptPoi:8100OPK_E2_C2" version="any" order="1">
                       <Name>Entrance to Security gate - Going Out</Name>
                       <CheckDirection>backwards</CheckDirection>
                       <CheckProcess>egress</CheckProcess>
                       <Congestion>queue</Congestion>
                       <delays>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C2_Del_VB_d" modification="new" version="any" status="active" order="2">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C2_Del_VB_d" version="any" order="2">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Very_Busy_during"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT8M</MinimumLikelyDelay>
                           <AverageDelay>PT15M</AverageDelay>
                           <MaximumLikelyDelay>PT30M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C2_Del_VB_e" modification="new" version="any" status="active" order="3">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C2_Del_VB_e" version="any" order="3">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Very_Busy_egress"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT10M</MinimumLikelyDelay>
                           <AverageDelay>PT20M</AverageDelay>
                           <MaximumLikelyDelay>PT30M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C2_Del_VB_o" modification="new" version="any" status="active" order="99">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C2_Del_VB_o" version="any" order="99">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Very_Busy_other"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>
                           <AverageDelay>PT3M</AverageDelay>
                           <MaximumLikelyDelay>PT6M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C2_Del_B_d" modification="new" version="any" status="active" order="2">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C2_Del_B_d" version="any" order="2">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Busy_during"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT6M</MinimumLikelyDelay>
                           <AverageDelay>PT15M</AverageDelay>
                           <MaximumLikelyDelay>PT30M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C2_Del_B_e" modification="new" version="any" status="active" order="3">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C2_Del_B_e" version="any" order="3">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Busy_egress"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT8M</MinimumLikelyDelay>
                           <AverageDelay>PT15M</AverageDelay>
                           <MaximumLikelyDelay>PT25M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C2_Del_B_o" modification="new" version="any" status="active" order="99">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C2_Del_B_o" version="any" order="99">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Busy_other"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>
                           <AverageDelay>PT3M</AverageDelay>
                           <MaximumLikelyDelay>PT6M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C2_Del_N_d" modification="new" version="any" status="active" order="2">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C2_Del_N_d" version="any" order="2">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Normal_during"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT4M</MinimumLikelyDelay>
                           <AverageDelay>PT10M</AverageDelay>
                           <MaximumLikelyDelay>PT20M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C2_Del_N_e" modification="new" version="any" status="active" order="3">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C2_Del_N_e" version="any" order="3">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Normal_egress"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT6M</MinimumLikelyDelay>
                           <AverageDelay>PT12M</AverageDelay>
                           <MaximumLikelyDelay>PT20M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C2_Del_N_o" modification="new" version="any" status="active" order="99">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E2_C2_Del_N_o" version="any" order="99">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Normal_other"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>
@@ -552,17 +552,17 @@
                   </checkConstraints>
                   <EntranceType>gate</EntranceType>
                 </PointOfInterestEntrance>
-                <PointOfInterestEntrance id="naptPoi:8100OPK_E3" modification="new" version="any" status="active">
+                <PointOfInterestEntrance id="naptPoi:8100OPK_E3" version="any">
                   <Name>2012 Olympic Park South Entrance</Name>
-                  <types modificationSet="all">
+                  <types>
                     <TypeOfZoneRef version="any" ref="napt:type_of_zone@PIE"/>
                   </types>
-                  <Centroid modification="new" status="active">
+                  <Centroid>
                     <Location>
                       <gml:pos srsName="UKOS">183681.0 538232.0</gml:pos>
                     </Location>
                   </Centroid>
-                  <PostalAddress id="naptPoi:8100OPK_E3_Addr1" modification="new" version="any" status="active">
+                  <PostalAddress id="naptPoi:8100OPK_E3_Addr1" version="any">
                     <BuildingName>South Entrance</BuildingName>
                     <AddressLine1>Burford Road</AddressLine1>
                     <Town>Stratford</Town>
@@ -570,79 +570,79 @@
                   </PostalAddress>
                   <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                   <LevelRef version="any" ref="naptPoi:8100OPK_Lvl_01"/>
-                  <checkConstraints modificationSet="all">
-                    <CheckConstraint id="naptPoi:8100OPK_E3_C1" modification="new" version="any" status="active" order="1">
+                  <checkConstraints>
+                    <CheckConstraint id="naptPoi:8100OPK_E3_C1" version="any" order="1">
                       <Name>Entrance to Security gate - incoming</Name>
                       <CheckDirection>forwards</CheckDirection>
                       <CheckProcess>securityCheck</CheckProcess>
                       <Congestion>queue</Congestion>
                       <delays>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C1_Del_VB_i" modification="new" version="any" status="active" order="1">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C1_Del_VB_i" version="any" order="1">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Very_Busy_ingress"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT20M</MinimumLikelyDelay>
                           <AverageDelay>PT30M</AverageDelay>
                           <MaximumLikelyDelay>PT60M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C1_Del_VB_d" modification="new" version="any" status="active" order="2">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C1_Del_VB_d" version="any" order="2">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Very_Busy_during"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT8M</MinimumLikelyDelay>
                           <AverageDelay>PT15M</AverageDelay>
                           <MaximumLikelyDelay>PT30M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C1_Del_VB_o" modification="new" version="any" status="active" order="99">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C1_Del_VB_o" version="any" order="99">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Very_Busy_other"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>
                           <AverageDelay>PT3M</AverageDelay>
                           <MaximumLikelyDelay>PT6M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C1_Del_B_i" modification="new" version="any" status="active" order="1">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C1_Del_B_i" version="any" order="1">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Busy_ingress"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT25M</MinimumLikelyDelay>
                           <AverageDelay>PT25M</AverageDelay>
                           <MaximumLikelyDelay>PT50M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C1_Del_B_d" modification="new" version="any" status="active" order="2">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C1_Del_B_d" version="any" order="2">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Busy_during"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT6M</MinimumLikelyDelay>
                           <AverageDelay>PT15M</AverageDelay>
                           <MaximumLikelyDelay>PT30M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C1_Del_B_o" modification="new" version="any" status="active" order="99">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C1_Del_B_o" version="any" order="99">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Busy_other"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>
                           <AverageDelay>PT3M</AverageDelay>
                           <MaximumLikelyDelay>PT6M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C1_Del_N_i" modification="new" version="any" status="active" order="1">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C1_Del_N_i" version="any" order="1">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Normal_ingress"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT10M</MinimumLikelyDelay>
                           <AverageDelay>PT20M</AverageDelay>
                           <MaximumLikelyDelay>PT40M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C1_Del_N_d" modification="new" version="any" status="active" order="2">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C1_Del_N_d" version="any" order="2">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Normal_during"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT4M</MinimumLikelyDelay>
                           <AverageDelay>PT10M</AverageDelay>
                           <MaximumLikelyDelay>PT20M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C1_Del_N_o" modification="new" version="any" status="active" order="99">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C1_Del_N_o" version="any" order="99">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Normal_other"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>
@@ -651,78 +651,78 @@
                         </CheckConstraintDelay>
                       </delays>
                     </CheckConstraint>
-                    <CheckConstraint id="naptPoi:8100OPK_E3_C2" modification="new" version="any" status="active" order="1">
+                    <CheckConstraint id="naptPoi:8100OPK_E3_C2" version="any" order="1">
                       <Name>Entrance to Security gate - Going Out</Name>
                       <CheckDirection>backwards</CheckDirection>
                       <CheckProcess>egress</CheckProcess>
                       <Congestion>queue</Congestion>
                       <delays>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C2_Del_VB_d" modification="new" version="any" status="active" order="2">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C2_Del_VB_d" version="any" order="2">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Very_Busy_during"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT8M</MinimumLikelyDelay>
                           <AverageDelay>PT15M</AverageDelay>
                           <MaximumLikelyDelay>PT30M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C2_Del_VB_e" modification="new" version="any" status="active" order="3">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C2_Del_VB_e" version="any" order="3">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Very_Busy_egress"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT10M</MinimumLikelyDelay>
                           <AverageDelay>PT20M</AverageDelay>
                           <MaximumLikelyDelay>PT30M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C2_Del_VB_o" modification="new" version="any" status="active" order="99">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C2_Del_VB_o" version="any" order="99">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Very_Busy_other"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>
                           <AverageDelay>PT3M</AverageDelay>
                           <MaximumLikelyDelay>PT6M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C2_Del_B_d" modification="new" version="any" status="active" order="2">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C2_Del_B_d" version="any" order="2">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Busy_during"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT6M</MinimumLikelyDelay>
                           <AverageDelay>PT15M</AverageDelay>
                           <MaximumLikelyDelay>PT30M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C2_Del_B_e" modification="new" version="any" status="active" order="3">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C2_Del_B_e" version="any" order="3">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Busy_egress"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT8M</MinimumLikelyDelay>
                           <AverageDelay>PT15M</AverageDelay>
                           <MaximumLikelyDelay>PT25M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C2_Del_B_o" modification="new" version="any" status="active" order="99">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C2_Del_B_o" version="any" order="99">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Busy_other"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>
                           <AverageDelay>PT3M</AverageDelay>
                           <MaximumLikelyDelay>PT6M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C2_Del_N_d" modification="new" version="any" status="active" order="2">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C2_Del_N_d" version="any" order="2">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Normal_during"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT4M</MinimumLikelyDelay>
                           <AverageDelay>PT10M</AverageDelay>
                           <MaximumLikelyDelay>PT20M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C2_Del_N_e" modification="new" version="any" status="active" order="3">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C2_Del_N_e" version="any" order="3">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Normal_egress"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT6M</MinimumLikelyDelay>
                           <AverageDelay>PT12M</AverageDelay>
                           <MaximumLikelyDelay>PT20M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C2_Del_N_o" modification="new" version="any" status="active" order="99">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E3_C2_Del_N_o" version="any" order="99">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Normal_other"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>
@@ -734,17 +734,17 @@
                   </checkConstraints>
                   <EntranceType>gate</EntranceType>
                 </PointOfInterestEntrance>
-                <PointOfInterestEntrance id="naptPoi:8100OPK_E4" modification="new" version="any" status="active">
+                <PointOfInterestEntrance id="naptPoi:8100OPK_E4" version="any">
                   <Name>2012 Olympic Park East Entrance</Name>
-                  <types modificationSet="all">
+                  <types>
                     <TypeOfZoneRef version="any" ref="napt:type_of_zone@PIE"/>
                   </types>
-                  <Centroid modification="new" status="active">
+                  <Centroid>
                     <Location>
                       <gml:pos srsName="UKOS">183839.455 537322.929</gml:pos>
                     </Location>
                   </Centroid>
-                  <PostalAddress id="naptPoi:8100OPK_E4_addr1" modification="new" version="any" status="active">
+                  <PostalAddress id="naptPoi:8100OPK_E4_addr1" version="any">
                     <BuildingName>Park West Entrance</BuildingName>
                     <AddressLine1>Warton Road</AddressLine1>
                     <Town>Stratford</Town>
@@ -752,79 +752,79 @@
                   </PostalAddress>
                   <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                   <LevelRef version="any" ref="naptPoi:8100OPK_Lvl_01"/>
-                  <checkConstraints modificationSet="all">
-                    <CheckConstraint id="naptPoi:8100OPK_E4_C1" modification="new" version="any" status="active" order="1">
+                  <checkConstraints>
+                    <CheckConstraint id="naptPoi:8100OPK_E4_C1" version="any" order="1">
                       <Name>Entrance to Security gate - incoming</Name>
                       <CheckDirection>forwards</CheckDirection>
                       <CheckProcess>securityCheck</CheckProcess>
                       <Congestion>queue</Congestion>
                       <delays>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C1_Del_VB_i" modification="new" version="any" status="active" order="1">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C1_Del_VB_i" version="any" order="1">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Very_Busy_ingress"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT20M</MinimumLikelyDelay>
                           <AverageDelay>PT30M</AverageDelay>
                           <MaximumLikelyDelay>PT60M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C1_Del_VB_d" modification="new" version="any" status="active" order="2">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C1_Del_VB_d" version="any" order="2">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Very_Busy_during"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT8M</MinimumLikelyDelay>
                           <AverageDelay>PT15M</AverageDelay>
                           <MaximumLikelyDelay>PT30M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C1_Del_VB_o" modification="new" version="any" status="active" order="99">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C1_Del_VB_o" version="any" order="99">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Very_Busy_other"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>
                           <AverageDelay>PT3M</AverageDelay>
                           <MaximumLikelyDelay>PT6M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C1_Del_B_i" modification="new" version="any" status="active" order="1">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C1_Del_B_i" version="any" order="1">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Busy_ingress"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT25M</MinimumLikelyDelay>
                           <AverageDelay>PT25M</AverageDelay>
                           <MaximumLikelyDelay>PT50M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C1_Del_B_d" modification="new" version="any" status="active" order="2">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C1_Del_B_d" version="any" order="2">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Busy_during"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT6M</MinimumLikelyDelay>
                           <AverageDelay>PT15M</AverageDelay>
                           <MaximumLikelyDelay>PT30M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C1_Del_B_o" modification="new" version="any" status="active" order="99">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C1_Del_B_o" version="any" order="99">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Busy_other"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>
                           <AverageDelay>PT3M</AverageDelay>
                           <MaximumLikelyDelay>PT6M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C1_Del_N_i" modification="new" version="any" status="active" order="1">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C1_Del_N_i" version="any" order="1">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Normal_ingress"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT10M</MinimumLikelyDelay>
                           <AverageDelay>PT20M</AverageDelay>
                           <MaximumLikelyDelay>PT40M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C1_Del_N_d" modification="new" version="any" status="active" order="2">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C1_Del_N_d" version="any" order="2">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Normal_during"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT4M</MinimumLikelyDelay>
                           <AverageDelay>PT10M</AverageDelay>
                           <MaximumLikelyDelay>PT20M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C1_Del_N_o" modification="new" version="any" status="active" order="99">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C1_Del_N_o" version="any" order="99">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Normal_other"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>
@@ -833,78 +833,78 @@
                         </CheckConstraintDelay>
                       </delays>
                     </CheckConstraint>
-                    <CheckConstraint id="naptPoi:8100OPK_E4_C2" modification="new" version="any" status="active" order="1">
+                    <CheckConstraint id="naptPoi:8100OPK_E4_C2" version="any" order="1">
                       <Name>Entrance to Security gate - Going Out</Name>
                       <CheckDirection>backwards</CheckDirection>
                       <CheckProcess>egress</CheckProcess>
                       <Congestion>queue</Congestion>
                       <delays>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C2_Del_VB_d" modification="new" version="any" status="active" order="2">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C2_Del_VB_d" version="any" order="2">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Very_Busy_during"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT8M</MinimumLikelyDelay>
                           <AverageDelay>PT15M</AverageDelay>
                           <MaximumLikelyDelay>PT30M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C2_Del_VB_e" modification="new" version="any" status="active" order="3">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C2_Del_VB_e" version="any" order="3">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Very_Busy_egress"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT10M</MinimumLikelyDelay>
                           <AverageDelay>PT20M</AverageDelay>
                           <MaximumLikelyDelay>PT30M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C2_Del_VB_o" modification="new" version="any" status="active" order="99">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C2_Del_VB_o" version="any" order="99">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Very_Busy_other"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>
                           <AverageDelay>PT3M</AverageDelay>
                           <MaximumLikelyDelay>PT6M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C2_Del_B_d" modification="new" version="any" status="active" order="2">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C2_Del_B_d" version="any" order="2">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Busy_during"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT6M</MinimumLikelyDelay>
                           <AverageDelay>PT15M</AverageDelay>
                           <MaximumLikelyDelay>PT30M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C2_Del_B_e" modification="new" version="any" status="active" order="3">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C2_Del_B_e" version="any" order="3">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Busy_egress"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT8M</MinimumLikelyDelay>
                           <AverageDelay>PT15M</AverageDelay>
                           <MaximumLikelyDelay>PT25M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C2_Del_B_o" modification="new" version="any" status="active" order="99">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C2_Del_B_o" version="any" order="99">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Busy_other"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>
                           <AverageDelay>PT3M</AverageDelay>
                           <MaximumLikelyDelay>PT6M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C2_Del_N_d" modification="new" version="any" status="active" order="2">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C2_Del_N_d" version="any" order="2">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Normal_during"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT4M</MinimumLikelyDelay>
                           <AverageDelay>PT10M</AverageDelay>
                           <MaximumLikelyDelay>PT20M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C2_Del_N_e" modification="new" version="any" status="active" order="3">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C2_Del_N_e" version="any" order="3">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Normal_egress"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT6M</MinimumLikelyDelay>
                           <AverageDelay>PT12M</AverageDelay>
                           <MaximumLikelyDelay>PT20M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C2_Del_N_o" modification="new" version="any" status="active" order="99">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_E4_C2_Del_N_o" version="any" order="99">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Normal_other"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>
@@ -917,11 +917,11 @@
                   <EntranceType>gate</EntranceType>
                 </PointOfInterestEntrance>
               </entrances>
-              <classifications modificationSet="all">
+              <classifications>
                 <PointOfInterestClassificationRef version="any" ref="nptg:PoiCat_Sports_OlympicPark"/>
               </classifications>
-              <navigationPaths modificationSet="all">
-                <NavigationPath id="naptPoi:8100OPK_N3.1i_OPK-E1_to_V1" modification="new" version="any" status="active">
+              <navigationPaths>
+                <NavigationPath id="naptPoi:8100OPK_N3.1i_OPK-E1_to_V1" version="any">
                   <Name>From Stratford  entrance E3 to Olympic Stadium</Name>
                   <Distance>500</Distance>
                   <From>
@@ -937,7 +937,7 @@
                     <MobilityRestrictedTravellerDuration>PT20M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
                 </NavigationPath>
-                <NavigationPath id="naptPoi:8100OPK_N3.2i_OPK-E1_to_V2-E1" modification="new" version="any" status="active">
+                <NavigationPath id="naptPoi:8100OPK_N3.2i_OPK-E1_to_V2-E1" version="any">
                   <Name>From Stratford  entrance E3 to Handball Arena</Name>
                   <Distance>1000</Distance>
                   <From>
@@ -954,7 +954,7 @@
                     <MobilityRestrictedTravellerDuration>PT30M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
                 </NavigationPath>
-                <NavigationPath id="naptPoi:8100OPK_N3.3i_OPK-E1_to_V3-E1" modification="new" version="any" status="active">
+                <NavigationPath id="naptPoi:8100OPK_N3.3i_OPK-E1_to_V3-E1" version="any">
                   <Name>From Stratford  entrance E3 to Hockey Centre </Name>
                   <Distance>1500</Distance>
                   <From>
@@ -971,7 +971,7 @@
                     <MobilityRestrictedTravellerDuration>PT35M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
                 </NavigationPath>
-                <NavigationPath id="naptPoi:8100OPK_N3.4i_OPK-E1_to_V4-E1" modification="new" version="any" status="active">
+                <NavigationPath id="naptPoi:8100OPK_N3.4i_OPK-E1_to_V4-E1" version="any">
                   <Name>From Stratford  entrance E3 to Aquatics Centre </Name>
                   <Distance>100</Distance>
                   <From>
@@ -988,7 +988,7 @@
                     <MobilityRestrictedTravellerDuration>PT10M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
                 </NavigationPath>
-                <NavigationPath id="naptPoi:8100OPK_N3.5i_OPK-E1_to_V5-E1" modification="new" version="any" status="active">
+                <NavigationPath id="naptPoi:8100OPK_N3.5i_OPK-E1_to_V5-E1" version="any">
                   <Name>From Stratford  entrance E3 to Water Polo Arena </Name>
                   <Distance>100</Distance>
                   <From>
@@ -1005,7 +1005,7 @@
                     <MobilityRestrictedTravellerDuration>PT10M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
                 </NavigationPath>
-                <NavigationPath id="naptPoi:8100OPK_N3.6i_OPK-E1_to_V6-E1" modification="new" version="any" status="active">
+                <NavigationPath id="naptPoi:8100OPK_N3.6i_OPK-E1_to_V6-E1" version="any">
                   <Name>From Stratford  entrance E3 to Velodrome</Name>
                   <Distance>1750</Distance>
                   <From>
@@ -1022,7 +1022,7 @@
                     <MobilityRestrictedTravellerDuration>PT30M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
                 </NavigationPath>
-                <NavigationPath id="naptPoi:8100OPK_N3.7i_OPK-E1_to_V7-E1" modification="new" version="any" status="active">
+                <NavigationPath id="naptPoi:8100OPK_N3.7i_OPK-E1_to_V7-E1" version="any">
                   <Name>From Stratford  entrance E3 to Basketball</Name>
                   <Distance>1750</Distance>
                   <From>
@@ -1039,7 +1039,7 @@
                     <MobilityRestrictedTravellerDuration>PT30M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
                 </NavigationPath>
-                <NavigationPath id="naptPoi:8100OPK_N3.8i_OPK-E1_to_V8-E1" modification="new" version="any" status="active">
+                <NavigationPath id="naptPoi:8100OPK_N3.8i_OPK-E1_to_V8-E1" version="any">
                   <Name>FromStratford  entrance E3 to BMX Track</Name>
                   <Distance>1850</Distance>
                   <From>
@@ -1056,7 +1056,7 @@
                     <MobilityRestrictedTravellerDuration>PT35M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
                 </NavigationPath>
-                <NavigationPath id="naptPoi:8100OPK_N3.9i_OPK-E1_to_V9-E1" modification="new" version="any" status="active">
+                <NavigationPath id="naptPoi:8100OPK_N3.9i_OPK-E1_to_V9-E1" version="any">
                   <Name>From Stratford  entrance E3 to Eton Manor</Name>
                   <Distance>2000</Distance>
                   <From>
@@ -1073,7 +1073,7 @@
                     <MobilityRestrictedTravellerDuration>PT30M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
                 </NavigationPath>
-                <NavigationPath id="naptPoi:8100OPK_N3.10i_OPK-E1_to_V10-E1" modification="new" version="any" status="active">
+                <NavigationPath id="naptPoi:8100OPK_N3.10i_OPK-E1_to_V10-E1" version="any">
                   <Name>From Stratford  entrance E3 to Press Centre</Name>
                   <Distance>1700</Distance>
                   <From>
@@ -1090,7 +1090,7 @@
                     <MobilityRestrictedTravellerDuration>PT30M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
                 </NavigationPath>
-                <NavigationPath id="naptPoi:8100OPK_N3.11i_OPK-E1_to_V11-E1" modification="new" version="any" status="active">
+                <NavigationPath id="naptPoi:8100OPK_N3.11i_OPK-E1_to_V11-E1" version="any">
                   <Name>From Stratford  entrance E3 to Warm Um area</Name>
                   <Distance>1200</Distance>
                   <From>
@@ -1106,7 +1106,7 @@
                     <MobilityRestrictedTravellerDuration>PT60M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
                 </NavigationPath>
-                <NavigationPath id="naptPoi:8100OPK_N3.1o_OPK-E1_to_V1" modification="new" version="any" status="active">
+                <NavigationPath id="naptPoi:8100OPK_N3.1o_OPK-E1_to_V1" version="any">
                   <Name>From Olympic Stadium to Stratford  entrance E3  </Name>
                   <Distance>500</Distance>
                   <From>
@@ -1122,7 +1122,7 @@
                     <MobilityRestrictedTravellerDuration>PT20M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
                 </NavigationPath>
-                <NavigationPath id="naptPoi:8100OPK_N3.2o_OPK-E1_to_V2-E1" modification="new" version="any" status="active">
+                <NavigationPath id="naptPoi:8100OPK_N3.2o_OPK-E1_to_V2-E1" version="any">
                   <Name>From Handball Arena to Stratford  entrance E3 </Name>
                   <Distance>1000</Distance>
                   <From>
@@ -1139,7 +1139,7 @@
                     <MobilityRestrictedTravellerDuration>PT30M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
                 </NavigationPath>
-                <NavigationPath id="naptPoi:8100OPK_N3.3o_OPK-E1_to_V3-E1" modification="new" version="any" status="active">
+                <NavigationPath id="naptPoi:8100OPK_N3.3o_OPK-E1_to_V3-E1" version="any">
                   <Name>From Hockey Centre to Stratford  entrance E3 </Name>
                   <Distance>1500</Distance>
                   <From>
@@ -1156,7 +1156,7 @@
                     <MobilityRestrictedTravellerDuration>PT35M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
                 </NavigationPath>
-                <NavigationPath id="naptPoi:8100OPK_N3.4o_OPK-E1_to_V4-E1" modification="new" version="any" status="active">
+                <NavigationPath id="naptPoi:8100OPK_N3.4o_OPK-E1_to_V4-E1" version="any">
                   <Name>From Aquatics Centre to Stratford  entrance E3 </Name>
                   <Distance>100</Distance>
                   <From>
@@ -1173,7 +1173,7 @@
                     <MobilityRestrictedTravellerDuration>PT10M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
                 </NavigationPath>
-                <NavigationPath id="naptPoi:8100OPK_N3.5o_OPK-E1_to_V5-E1" modification="new" version="any" status="active">
+                <NavigationPath id="naptPoi:8100OPK_N3.5o_OPK-E1_to_V5-E1" version="any">
                   <Name>From Water Polo to Stratford  entrance E3 Arena </Name>
                   <Distance>100</Distance>
                   <From>
@@ -1190,7 +1190,7 @@
                     <MobilityRestrictedTravellerDuration>PT10M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
                 </NavigationPath>
-                <NavigationPath id="naptPoi:8100OPK_N3.6o_OPK-E1_to_V6-E1" modification="new" version="any" status="active">
+                <NavigationPath id="naptPoi:8100OPK_N3.6o_OPK-E1_to_V6-E1" version="any">
                   <Name>From   Velodrome to Stratford  entrance E3 </Name>
                   <Distance>1750</Distance>
                   <From>
@@ -1207,7 +1207,7 @@
                     <MobilityRestrictedTravellerDuration>PT30M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
                 </NavigationPath>
-                <NavigationPath id="naptPoi:8100OPK_N3.7o_OPK-E1_to_V7-E1" modification="new" version="any" status="active">
+                <NavigationPath id="naptPoi:8100OPK_N3.7o_OPK-E1_to_V7-E1" version="any">
                   <Name>From Basketball to Stratford  entrance E3 </Name>
                   <Distance>1750</Distance>
                   <From>
@@ -1224,7 +1224,7 @@
                     <MobilityRestrictedTravellerDuration>PT30M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
                 </NavigationPath>
-                <NavigationPath id="naptPoi:8100OPK_N3.8o_V8-E1_to_OPK-E1" modification="new" version="any" status="active">
+                <NavigationPath id="naptPoi:8100OPK_N3.8o_V8-E1_to_OPK-E1" version="any">
                   <Name>From BMX Track to Stratford Entrance  E3  </Name>
                   <Distance>1850</Distance>
                   <From>
@@ -1241,7 +1241,7 @@
                     <MobilityRestrictedTravellerDuration>PT30M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
                 </NavigationPath>
-                <NavigationPath id="naptPoi:8100OPK_N3.9o_OPK-E1_to_V9-E1" modification="new" version="any" status="active">
+                <NavigationPath id="naptPoi:8100OPK_N3.9o_OPK-E1_to_V9-E1" version="any">
                   <Name>From Eton Manor to Stratford entrance E3 </Name>
                   <Distance>2000</Distance>
                   <From>
@@ -1258,7 +1258,7 @@
                     <MobilityRestrictedTravellerDuration>PT30M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
                 </NavigationPath>
-                <NavigationPath id="naptPoi:8100OPK_N3.10o_OPK-E1_to_V10-E1" modification="new" version="any" status="active">
+                <NavigationPath id="naptPoi:8100OPK_N3.10o_OPK-E1_to_V10-E1" version="any">
                   <Name>From Press Centre to Stratford  entrance E3 </Name>
                   <Distance>1700</Distance>
                   <From>
@@ -1275,7 +1275,7 @@
                     <MobilityRestrictedTravellerDuration>PT30M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
                 </NavigationPath>
-                <NavigationPath id="naptPoi:8100OPK_N3.11o_OPK-E1_to_V11-E1" modification="new" version="any" status="active">
+                <NavigationPath id="naptPoi:8100OPK_N3.11o_OPK-E1_to_V11-E1" version="any">
                   <Name>From  Warm Um area to Stratford  entrance E3 </Name>
                   <Distance>1200</Distance>
                   <From>
@@ -1293,61 +1293,61 @@
                 </NavigationPath>
               </navigationPaths>
             </PointOfInterest>
-            <PointOfInterest id="naptPoi:8100OPK_V1_STDM" modification="new" version="any" status="active">
+            <PointOfInterest id="naptPoi:8100OPK_V1_STDM" version="any">
               <Name>2012 Olympic Stadium</Name>
-              <types modificationSet="all">
+              <types>
                 <TypeOfZoneRef version="any" ref="napt:type_of_zone@POI"/>
               </types>
-              <placeTypes modificationSet="all">
+              <placeTypes>
                 <TypeOfPlaceRef version="any" ref="napt:type_of_place@Venue"/>
               </placeTypes>
               <ParentSiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
-              <classifications modificationSet="all">
+              <classifications>
                 <PointOfInterestClassificationRef version="any" ref="nptg:PoiCat_Sports_OlympicStadium"/>
               </classifications>
             </PointOfInterest>
-            <PointOfInterest id="naptPoi:8100OPK_V2_HOCK" modification="new" version="any" status="active">
+            <PointOfInterest id="naptPoi:8100OPK_V2_HOCK" version="any">
               <Name>Hockey Centre</Name>
-              <types modificationSet="all">
+              <types>
                 <TypeOfZoneRef version="any" ref="napt:type_of_zone@POI"/>
               </types>
-              <placeTypes modificationSet="all">
+              <placeTypes>
                 <TypeOfPlaceRef version="any" ref="napt:type_of_place@Venue"/>
               </placeTypes>
               <ParentSiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
-              <entrances modificationSet="all">
-                <PointOfInterestEntrance id="naptPoi:8100OPK_V2_HOCK_E1" modification="new" version="any" status="active">
+              <entrances>
+                <PointOfInterestEntrance id="naptPoi:8100OPK_V2_HOCK_E1" version="any">
                   <Name>Hockey Centre Entrance 1</Name>
-                  <types modificationSet="all">
+                  <types>
                     <TypeOfZoneRef version="any" ref="napt:type_of_zone@PIE"/>
                   </types>
                   <EntranceType>door</EntranceType>
                 </PointOfInterestEntrance>
-                <PointOfInterestEntrance id="naptPoi:8100OPK_V2_HOCK_E2" modification="new" version="any" status="active">
+                <PointOfInterestEntrance id="naptPoi:8100OPK_V2_HOCK_E2" version="any">
                   <Name>Hockey Centre Entrance 2</Name>
-                  <types modificationSet="all">
+                  <types>
                     <TypeOfZoneRef version="any" ref="napt:type_of_zone@PIE"/>
                   </types>
                   <EntranceType>door</EntranceType>
                 </PointOfInterestEntrance>
               </entrances>
-              <classifications modificationSet="all">
+              <classifications>
                 <PointOfInterestClassificationRef version="any" ref="nptg:PoiCat_Sports_Hockey"/>
               </classifications>
             </PointOfInterest>
-            <PointOfInterest id="naptPoi:8100OPK_V3_HAND" modification="new" version="any" status="active">
+            <PointOfInterest id="naptPoi:8100OPK_V3_HAND" version="any">
               <Name>Handball Arena</Name>
-              <types modificationSet="all">
+              <types>
                 <TypeOfZoneRef version="any" ref="napt:type_of_zone@POI"/>
               </types>
-              <placeTypes modificationSet="all">
+              <placeTypes>
                 <TypeOfPlaceRef version="any" ref="napt:type_of_place@Venue"/>
               </placeTypes>
               <ParentSiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
-              <entrances modificationSet="all">
-                <PointOfInterestEntrance id="naptPoi:8100OPK_V3_HAND_E1" modification="new" version="any" status="active">
+              <entrances>
+                <PointOfInterestEntrance id="naptPoi:8100OPK_V3_HAND_E1" version="any">
                   <Name>Handball Arena Entrance 1</Name>
-                  <types modificationSet="all">
+                  <types>
                     <TypeOfZoneRef version="any" ref="napt:type_of_zone@PIE"/>
                   </types>
                   <EntranceType>door</EntranceType>
@@ -1356,103 +1356,103 @@
                   <IsExit>true</IsExit>
                 </PointOfInterestEntrance>
               </entrances>
-              <classifications modificationSet="all">
+              <classifications>
                 <PointOfInterestClassificationRef version="any" ref="nptg:PoiCat_Sports_Handball"/>
               </classifications>
             </PointOfInterest>
-            <PointOfInterest id="naptPoi:8100OPK_V4_AQUA" modification="new" version="any" status="active">
+            <PointOfInterest id="naptPoi:8100OPK_V4_AQUA" version="any">
               <Name>Aquatics Centre</Name>
-              <types modificationSet="all">
+              <types>
                 <TypeOfZoneRef version="any" ref="napt:type_of_zone@POI"/>
               </types>
-              <placeTypes modificationSet="all">
+              <placeTypes>
                 <TypeOfPlaceRef version="any" ref="napt:type_of_place@Venue"/>
               </placeTypes>
               <ParentSiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
-              <entrances modificationSet="all">
-                <PointOfInterestEntrance id="naptPoi:8100OPK_V4_AQUA_E1" modification="new" version="any" status="active">
+              <entrances>
+                <PointOfInterestEntrance id="naptPoi:8100OPK_V4_AQUA_E1" version="any">
                   <Name>Aquatics Centre Entrance 1</Name>
-                  <types modificationSet="all">
+                  <types>
                     <TypeOfZoneRef version="any" ref="napt:type_of_zone@PIE"/>
                   </types>
                   <EntranceType>door</EntranceType>
                 </PointOfInterestEntrance>
-                <PointOfInterestEntrance id="naptPoi:8100OPK_V4_AQUA_E2" modification="new" version="any" status="active">
+                <PointOfInterestEntrance id="naptPoi:8100OPK_V4_AQUA_E2" version="any">
                   <Name>Aquatics Centre Entrance 2</Name>
-                  <types modificationSet="all">
+                  <types>
                     <TypeOfZoneRef version="any" ref="napt:type_of_zone@PIE"/>
                   </types>
                   <EntranceType>door</EntranceType>
                 </PointOfInterestEntrance>
               </entrances>
-              <classifications modificationSet="all">
+              <classifications>
                 <PointOfInterestClassificationRef version="any" ref="nptg:PoiCat_Sports_Aquatics"/>
               </classifications>
             </PointOfInterest>
-            <PointOfInterest id="naptPoi:8100OPK_V5_WPOL" modification="new" version="any" status="active">
+            <PointOfInterest id="naptPoi:8100OPK_V5_WPOL" version="any">
               <Name>Water Polo Arena</Name>
-              <types modificationSet="all">
+              <types>
                 <TypeOfZoneRef version="any" ref="napt:type_of_zone@POI"/>
               </types>
-              <placeTypes modificationSet="all">
+              <placeTypes>
                 <TypeOfPlaceRef version="any" ref="napt:type_of_place@Venue"/>
               </placeTypes>
               <ParentSiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
-              <entrances modificationSet="all">
-                <PointOfInterestEntrance id="naptPoi:8100OPK_V5_WPOL_E1" modification="new" version="any" status="active">
+              <entrances>
+                <PointOfInterestEntrance id="naptPoi:8100OPK_V5_WPOL_E1" version="any">
                   <Name>Water Polo Arena Entrance 1</Name>
-                  <types modificationSet="all">
+                  <types>
                     <TypeOfZoneRef version="any" ref="napt:type_of_zone@PIE"/>
                   </types>
                   <EntranceType>door</EntranceType>
                 </PointOfInterestEntrance>
-                <PointOfInterestEntrance id="naptPoi:8100OPK_V5_WPOL_E2" modification="new" version="any" status="active">
+                <PointOfInterestEntrance id="naptPoi:8100OPK_V5_WPOL_E2" version="any">
                   <Name>Water Polo Arena Entrance 2</Name>
-                  <types modificationSet="all">
+                  <types>
                     <TypeOfZoneRef version="any" ref="napt:type_of_zone@PIE"/>
                   </types>
                   <EntranceType>door</EntranceType>
                 </PointOfInterestEntrance>
               </entrances>
-              <classifications modificationSet="all">
+              <classifications>
                 <PointOfInterestClassificationRef version="any" ref="nptg:PoiCat_Sports_WaterPolo"/>
               </classifications>
             </PointOfInterest>
-            <PointOfInterest id="naptPoi:8100OPK_V6_BKTB" modification="new" version="any" status="active">
+            <PointOfInterest id="naptPoi:8100OPK_V6_BKTB" version="any">
               <Name>Basketball Arena</Name>
-              <types modificationSet="all">
+              <types>
                 <TypeOfZoneRef version="any" ref="napt:type_of_zone@POI"/>
               </types>
-              <placeTypes modificationSet="all">
+              <placeTypes>
                 <TypeOfPlaceRef version="any" ref="napt:type_of_place@Venue"/>
               </placeTypes>
               <ParentSiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
-              <entrances modificationSet="all">
-                <PointOfInterestEntrance id="naptPoi:8100OPK_V6_BKTB_E1" modification="new" version="any" status="active">
+              <entrances>
+                <PointOfInterestEntrance id="naptPoi:8100OPK_V6_BKTB_E1" version="any">
                   <Name>Basketball A rena Entrance 1</Name>
-                  <types modificationSet="all">
+                  <types>
                     <TypeOfZoneRef version="any" ref="napt:type_of_zone@PIE"/>
                   </types>
                   <EntranceType>door</EntranceType>
                 </PointOfInterestEntrance>
               </entrances>
-              <classifications modificationSet="all">
+              <classifications>
                 <PointOfInterestClassificationRef version="any" ref="nptg:PoiCat_Sports_Basketball"/>
               </classifications>
             </PointOfInterest>
-            <PointOfInterest id="naptPoi:8100OPK_V7_VELO" modification="new" version="any" status="active">
+            <PointOfInterest id="naptPoi:8100OPK_V7_VELO" version="any">
               <Name>Velodrome</Name>
-              <types modificationSet="all">
+              <types>
                 <TypeOfZoneRef version="any" ref="napt:type_of_zone@POI"/>
               </types>
-              <placeTypes modificationSet="all">
+              <placeTypes>
                 <TypeOfPlaceRef version="any" ref="napt:type_of_place@Venue"/>
               </placeTypes>
               <ParentSiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
-              <entrances modificationSet="all">
-                <PointOfInterestEntrance id="naptPoi:8100OPK_V7_VELO_E1" modification="new" version="any" status="active">
+              <entrances>
+                <PointOfInterestEntrance id="naptPoi:8100OPK_V7_VELO_E1" version="any">
                   <Name>Velodrome Entrance 1</Name>
-                  <types modificationSet="all">
+                  <types>
                     <TypeOfZoneRef version="any" ref="napt:type_of_zone@PIE"/>
                   </types>
                   <EntranceType>door</EntranceType>
@@ -1461,75 +1461,75 @@
                   <IsExit>true</IsExit>
                 </PointOfInterestEntrance>
               </entrances>
-              <classifications modificationSet="all">
+              <classifications>
                 <PointOfInterestClassificationRef version="any" ref="nptg:PoiCat_Sports_BMX"/>
               </classifications>
             </PointOfInterest>
-            <PointOfInterest id="naptPoi:8100OPK_V8_BMXT" modification="new" version="any" status="active">
+            <PointOfInterest id="naptPoi:8100OPK_V8_BMXT" version="any">
               <Name>BMX Track</Name>
-              <types modificationSet="all">
+              <types>
                 <TypeOfZoneRef version="any" ref="napt:type_of_zone@POI"/>
               </types>
-              <placeTypes modificationSet="all">
+              <placeTypes>
                 <TypeOfPlaceRef version="any" ref="napt:type_of_place@Venue"/>
               </placeTypes>
               <ParentSiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
-              <entrances modificationSet="all">
-                <PointOfInterestEntrance id="naptPoi:8100OPK_V8_BMXT_E1" modification="new" version="any" status="active">
+              <entrances>
+                <PointOfInterestEntrance id="naptPoi:8100OPK_V8_BMXT_E1" version="any">
                   <Name>BMX Track Entrance 1</Name>
-                  <types modificationSet="all">
+                  <types>
                     <TypeOfZoneRef version="any" ref="napt:type_of_zone@PIE"/>
                   </types>
-                  <checkConstraints modificationSet="all">
-                    <CheckConstraint id="naptPoi:8100OPK_V8_BMXT_E1_C1" modification="new" version="any" status="active" order="1">
+                  <checkConstraints>
+                    <CheckConstraint id="naptPoi:8100OPK_V8_BMXT_E1_C1" version="any" order="1">
                       <Name>Entrance to BMX gate - incoming</Name>
                       <CheckDirection>forwards</CheckDirection>
                       <CheckProcess>ingress</CheckProcess>
                       <AccessFeatureType>confinedSpace</AccessFeatureType>
                       <Congestion>queue</Congestion>
                       <delays>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_V8_BMXT_E1_C1_Del_VB_i" modification="new" version="any" status="active" order="1">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_V8_BMXT_E1_C1_Del_VB_i" version="any" order="1">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Very_Busy_ingress"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT10M</MinimumLikelyDelay>
                           <AverageDelay>PT15M</AverageDelay>
                           <MaximumLikelyDelay>PT25M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_V8_BMXT_E1_C1_Del_VB_o" modification="new" version="any" status="active" order="99">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_V8_BMXT_E1_C1_Del_VB_o" version="any" order="99">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Very_Busy_other"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT31M</MinimumLikelyDelay>
                           <AverageDelay>PT3M</AverageDelay>
                           <MaximumLikelyDelay>PT6M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_V8_BMXT_E1_C1_Del_B_i" modification="new" version="any" status="active" order="1">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_V8_BMXT_E1_C1_Del_B_i" version="any" order="1">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Busy_ingress"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT5M</MinimumLikelyDelay>
                           <AverageDelay>PT10M</AverageDelay>
                           <MaximumLikelyDelay>PT20M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_V8_BMXT_E1_C1_Del_B_o" modification="new" version="any" status="active" order="99">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_V8_BMXT_E1_C1_Del_B_o" version="any" order="99">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Busy_other"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>
                           <AverageDelay>PT3M</AverageDelay>
                           <MaximumLikelyDelay>PT6M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_V8_BMXT_E1_C1_Del_N_i" modification="new" version="any" status="active" order="1">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_V8_BMXT_E1_C1_Del_N_i" version="any" order="1">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Normal_ingress"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>
                           <AverageDelay>PT3M</AverageDelay>
                           <MaximumLikelyDelay>PT6M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_V8_BMXT_E1_C1_Del_N_o" modification="new" version="any" status="active" order="99">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_V8_BMXT_E1_C1_Del_N_o" version="any" order="99">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Normal_other"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>
@@ -1538,55 +1538,55 @@
                         </CheckConstraintDelay>
                       </delays>
                     </CheckConstraint>
-                    <CheckConstraint id="naptPoi:8100OPK_V8_BMXT_E1_C2" modification="new" version="any" status="active" order="1">
+                    <CheckConstraint id="naptPoi:8100OPK_V8_BMXT_E1_C2" version="any" order="1">
                       <Name>Entrance to Security gate - Going Out</Name>
                       <CheckDirection>backwards</CheckDirection>
                       <CheckProcess>egress</CheckProcess>
                       <AccessFeatureType>confinedSpace</AccessFeatureType>
                       <Congestion>queue</Congestion>
                       <delays>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_V8_BMXT_E1_C2_Del_VB_e" modification="new" version="any" status="active" order="3">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_V8_BMXT_E1_C2_Del_VB_e" version="any" order="3">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Very_Busy_egress"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT10M</MinimumLikelyDelay>
                           <AverageDelay>PT10M</AverageDelay>
                           <MaximumLikelyDelay>PT20M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_V8_BMXT_E1_C2_Del_VB_o" modification="new" version="any" status="active" order="99">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_V8_BMXT_E1_C2_Del_VB_o" version="any" order="99">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Very_Busy_other"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>
                           <AverageDelay>PT3M</AverageDelay>
                           <MaximumLikelyDelay>PT6M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_V8_BMXT_E1_C2_Del_B_e" modification="new" version="any" status="active" order="3">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_V8_BMXT_E1_C2_Del_B_e" version="any" order="3">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Busy_egress"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT8M</MinimumLikelyDelay>
                           <AverageDelay>PT10M</AverageDelay>
                           <MaximumLikelyDelay>PT20M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_V8_BMXT_E1_C2_Del_B_o" modification="new" version="any" status="active" order="99">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_V8_BMXT_E1_C2_Del_B_o" version="any" order="99">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Busy_other"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>
                           <AverageDelay>PT3M</AverageDelay>
                           <MaximumLikelyDelay>PT6M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_V8_BMXT_E1_C2_Del_N_e" modification="new" version="any" status="active" order="3">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_V8_BMXT_E1_C2_Del_N_e" version="any" order="3">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Normal_egress"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT6M</MinimumLikelyDelay>
                           <AverageDelay>PT3M</AverageDelay>
                           <MaximumLikelyDelay>PT6M</MaximumLikelyDelay>
                         </CheckConstraintDelay>
-                        <CheckConstraintDelay id="naptPoi:8100OPK_V8_BMXT_E1_C2_Del_N_o" modification="new" version="any" status="active" order="99">
-                          <validityConditions modificationSet="all">
+                        <CheckConstraintDelay id="naptPoi:8100OPK_V8_BMXT_E1_C2_Del_N_o" version="any" order="99">
+                          <validityConditions>
                             <AvailabilityConditionRef version="any" ref="oda:Avl_Normal_other"/>
                           </validityConditions>
                           <MinimumLikelyDelay>PT3M</MinimumLikelyDelay>
@@ -1599,57 +1599,57 @@
                   <EntranceType>door</EntranceType>
                 </PointOfInterestEntrance>
               </entrances>
-              <classifications modificationSet="all">
+              <classifications>
                 <PointOfInterestClassificationRef version="any" ref="nptg:PoiCat_Sports_BMX"/>
               </classifications>
             </PointOfInterest>
-            <PointOfInterest id="naptPoi:8100OPK_V9_EMAN" modification="new" version="any" status="active">
+            <PointOfInterest id="naptPoi:8100OPK_V9_EMAN" version="any">
               <Name>Eton Manor</Name>
-              <types modificationSet="all">
+              <types>
                 <TypeOfZoneRef version="any" ref="napt:type_of_zone@POI"/>
               </types>
-              <placeTypes modificationSet="all">
+              <placeTypes>
                 <TypeOfPlaceRef version="any" ref="napt:type_of_place@Venue"/>
               </placeTypes>
               <ParentSiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
-              <entrances modificationSet="all">
-                <PointOfInterestEntrance id="naptPoi:8100OPK_V9_EMAN_E1" modification="new" version="any" status="active">
+              <entrances>
+                <PointOfInterestEntrance id="naptPoi:8100OPK_V9_EMAN_E1" version="any">
                   <Name>Eton Manor Entrance 1</Name>
-                  <types modificationSet="all">
+                  <types>
                     <TypeOfZoneRef version="any" ref="napt:type_of_zone@PIE"/>
                   </types>
                   <EntranceType>door</EntranceType>
                 </PointOfInterestEntrance>
               </entrances>
-              <classifications modificationSet="all">
+              <classifications>
                 <PointOfInterestClassificationRef version="any" ref="nptg:PoiCat_Sports_SportsArea"/>
               </classifications>
             </PointOfInterest>
-            <PointOfInterest id="naptPoi:8100OPK_V10_PRSC" modification="new" version="any" status="active">
+            <PointOfInterest id="naptPoi:8100OPK_V10_PRSC" version="any">
               <Name>Media Centre</Name>
-              <types modificationSet="all">
+              <types>
                 <TypeOfZoneRef version="any" ref="napt:type_of_zone@POI"/>
               </types>
-              <placeTypes modificationSet="all">
+              <placeTypes>
                 <TypeOfPlaceRef version="any" ref="napt:type_of_place@Venue"/>
               </placeTypes>
               <ParentSiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
-              <entrances modificationSet="all">
-                <PointOfInterestEntrance id="naptPoi:8100OPK_V10_PRSC_E1" modification="new" version="any" status="active">
+              <entrances>
+                <PointOfInterestEntrance id="naptPoi:8100OPK_V10_PRSC_E1" version="any">
                   <Name>Media Centre Entrance 1</Name>
-                  <types modificationSet="all">
+                  <types>
                     <TypeOfZoneRef version="any" ref="napt:type_of_zone@PIE"/>
                   </types>
                   <EntranceType>door</EntranceType>
                 </PointOfInterestEntrance>
               </entrances>
-              <classifications modificationSet="all">
+              <classifications>
                 <PointOfInterestClassificationRef version="any" ref="nptg:PoiCat_Media_Centre"/>
               </classifications>
-              <spaces modificationSet="all">
-                <PointOfInterestSpace id="naptPoi:8100OPK_V10_PRSC_S1" modification="new" version="any" status="active">
+              <spaces>
+                <PointOfInterestSpace id="naptPoi:8100OPK_V10_PRSC_S1" version="any">
                   <Name>Press Centre</Name>
-                  <Centroid modification="new" status="active">
+                  <Centroid>
                     <Location>
                       <Longitude>-180</Longitude>
                       <Latitude>-90</Latitude>
@@ -1664,9 +1664,9 @@
                   <SiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
                   <LevelRef version="any" ref="naptPoi:8100OPK_Lvl_01"/>
                 </PointOfInterestSpace>
-                <PointOfInterestSpace id="naptPoi:8100OPK_V10_PRSC_S2" modification="new" version="any" status="active">
+                <PointOfInterestSpace id="naptPoi:8100OPK_V10_PRSC_S2" version="any">
                   <Name>Brodcasting Centre</Name>
-                  <Centroid modification="new" status="active">
+                  <Centroid>
                     <Location>
                       <Longitude>-180</Longitude>
                       <Latitude>-90</Latitude>
@@ -1683,235 +1683,235 @@
                 </PointOfInterestSpace>
               </spaces>
             </PointOfInterest>
-            <PointOfInterest id="naptPoi:8100OPK_V11_WARM" modification="new" version="any" status="active">
+            <PointOfInterest id="naptPoi:8100OPK_V11_WARM" version="any">
               <Name>Warm up Area</Name>
-              <types modificationSet="all">
+              <types>
                 <TypeOfZoneRef version="any" ref="napt:type_of_zone@POI"/>
               </types>
-              <placeTypes modificationSet="all">
+              <placeTypes>
                 <TypeOfPlaceRef version="any" ref="napt:type_of_place@Venue"/>
               </placeTypes>
               <ParentSiteRef version="any" ref="naptPoi:8100OPK" xsi:type="PointOfInterestRefStructure"/>
-              <classifications modificationSet="all">
+              <classifications>
                 <PointOfInterestClassificationRef version="any" ref="nptg:PoiCat_Sports_WarmUp"/>
               </classifications>
             </PointOfInterest>
           </pointsOfInterest>
-          <pointOfInterestClassifications modificationSet="all">
-            <PointOfInterestClassification id="nptg:PoiCat_Media_Press" modification="new" version="any" status="active">
+          <pointOfInterestClassifications>
+            <PointOfInterestClassification id="nptg:PoiCat_Media_Press" version="any">
               <Name>Press Centre</Name>
               <ShortName>Press</ShortName>
             </PointOfInterestClassification>
-            <PointOfInterestClassification id="nptg:PoiCat_Media_Centre" modification="new" version="any" status="active">
+            <PointOfInterestClassification id="nptg:PoiCat_Media_Centre" version="any">
               <Name>Media Centre</Name>
               <ShortName>Media</ShortName>
             </PointOfInterestClassification>
-            <PointOfInterestClassification id="nptg:PoiCat_Sports_Athletics" modification="new" version="any" status="active">
+            <PointOfInterestClassification id="nptg:PoiCat_Sports_Athletics" version="any">
               <Name>Athletics Track</Name>
               <ShortName>Athletics</ShortName>
             </PointOfInterestClassification>
-            <PointOfInterestClassification id="nptg:PoiCat_Sports_Aquatics" modification="new" version="any" status="active">
+            <PointOfInterestClassification id="nptg:PoiCat_Sports_Aquatics" version="any">
               <Name>Aquatics Centre</Name>
               <ShortName>Aquatics</ShortName>
             </PointOfInterestClassification>
-            <PointOfInterestClassification id="nptg:PoiCat_Sports_Basketball" modification="new" version="any" status="active">
+            <PointOfInterestClassification id="nptg:PoiCat_Sports_Basketball" version="any">
               <Name>Basketball Arena</Name>
               <ShortName>Basketball</ShortName>
             </PointOfInterestClassification>
-            <PointOfInterestClassification id="nptg:PoiCat_Sports_BMX" modification="new" version="any" status="active">
+            <PointOfInterestClassification id="nptg:PoiCat_Sports_BMX" version="any">
               <Name>BMX Track</Name>
               <ShortName>BMX</ShortName>
             </PointOfInterestClassification>
-            <PointOfInterestClassification id="nptg:PoiCat_Sports_Equestrianism" modification="new" version="any" status="active">
+            <PointOfInterestClassification id="nptg:PoiCat_Sports_Equestrianism" version="any">
               <Name>Equestrianism Ground</Name>
               <ShortName>Equestrianism</ShortName>
             </PointOfInterestClassification>
-            <PointOfInterestClassification id="nptg:PoiCat_Sports_Handball" modification="new" version="any" status="active">
+            <PointOfInterestClassification id="nptg:PoiCat_Sports_Handball" version="any">
               <Name>Handball Arena</Name>
               <ShortName>Handball</ShortName>
             </PointOfInterestClassification>
-            <PointOfInterestClassification id="nptg:PoiCat_Sports_Hockey" modification="new" version="any" status="active">
+            <PointOfInterestClassification id="nptg:PoiCat_Sports_Hockey" version="any">
               <Name>Hockey Arena</Name>
               <ShortName>Hockey</ShortName>
             </PointOfInterestClassification>
-            <PointOfInterestClassification id="nptg:PoiCat_Sports_Judo" modification="new" version="any" status="active">
+            <PointOfInterestClassification id="nptg:PoiCat_Sports_Judo" version="any">
               <Name>Judo Arean</Name>
               <ShortName>Judo</ShortName>
             </PointOfInterestClassification>
-            <PointOfInterestClassification id="nptg:PoiCat_Sports_OlympicStadium" modification="new" version="any" status="active">
+            <PointOfInterestClassification id="nptg:PoiCat_Sports_OlympicStadium" version="any">
               <Name>Olympic Stadium</Name>
               <ShortName>Olympic Stadium</ShortName>
             </PointOfInterestClassification>
-            <PointOfInterestClassification id="nptg:PoiCat_Sports_OlympicPark" modification="new" version="any" status="active">
+            <PointOfInterestClassification id="nptg:PoiCat_Sports_OlympicPark" version="any">
               <Name>Olympic Park</Name>
               <ShortName>Olympic Park</ShortName>
             </PointOfInterestClassification>
-            <PointOfInterestClassification id="nptg:PoiCat_Sports_SportsArea" modification="new" version="any" status="active">
+            <PointOfInterestClassification id="nptg:PoiCat_Sports_SportsArea" version="any">
               <Name>Sports Area</Name>
               <ShortName>Sports Area</ShortName>
             </PointOfInterestClassification>
-            <PointOfInterestClassification id="nptg:PoiCat_Sports_Velodrome" modification="new" version="any" status="active">
+            <PointOfInterestClassification id="nptg:PoiCat_Sports_Velodrome" version="any">
               <Name>Velodrome</Name>
               <ShortName>Velodrome</ShortName>
             </PointOfInterestClassification>
-            <PointOfInterestClassification id="nptg:PoiCat_Sports_WaterPolo" modification="new" version="any" status="active">
+            <PointOfInterestClassification id="nptg:PoiCat_Sports_WaterPolo" version="any">
               <Name>Water Polo Stadium</Name>
               <ShortName>Water Polo</ShortName>
             </PointOfInterestClassification>
-            <PointOfInterestClassification id="nptg:PoiCat_Sports_WarmUp" modification="new" version="any" status="active">
+            <PointOfInterestClassification id="nptg:PoiCat_Sports_WarmUp" version="any">
               <Name>Athletics warm up area</Name>
               <ShortName>Warm up area</ShortName>
             </PointOfInterestClassification>
           </pointOfInterestClassifications>
         </SiteFrame>
-        <ResourceFrame id="nptg:Types" created="2011-02-23T10:00:00Z" modification="new" version="001" status="active">
+        <ResourceFrame id="nptg:Types" created="2011-02-23T10:00:00Z" version="001">
           <Name>NaPTAN Types</Name>
-          <typesOfValue modificationSet="all">
-            <ValueSet id="napt:Stop_types" modification="new" version="any" status="active">
+          <typesOfValue>
+            <ValueSet id="napt:Stop_types" version="any">
               <Name>UK NaPTAN Zone  Types</Name>
               <values>
-                <TypeOfZone id="napt:type_of_zone@PIE" modification="new" version="any" status="active">
+                <TypeOfZone id="napt:type_of_zone@PIE" version="any">
                   <Name>Point of Interest Entrance</Name>
                 </TypeOfZone>
-                <TypeOfZone id="napt:type_of_zone@POI" modification="new" version="any" status="active">
+                <TypeOfZone id="napt:type_of_zone@POI" version="any">
                   <Name>Point of Interest</Name>
                 </TypeOfZone>
               </values>
             </ValueSet>
-            <ValueSet id="napt:Bus_Stop_types" modification="new" version="any" status="active">
+            <ValueSet id="napt:Bus_Stop_types" version="any">
               <Name>NAPTAN Type of Place</Name>
               <values>
-                <TypeOfPlace id="napt:type_of_place@Park" modification="new" version="any" status="active">
+                <TypeOfPlace id="napt:type_of_place@Park" version="any">
                   <Name>Park</Name>
                 </TypeOfPlace>
-                <TypeOfPlace id="napt:type_of_place@Venue" modification="new" version="any" status="active">
+                <TypeOfPlace id="napt:type_of_place@Venue" version="any">
                   <Name>Park</Name>
                 </TypeOfPlace>
               </values>
             </ValueSet>
           </typesOfValue>
         </ResourceFrame>
-        <ServiceCalendarFrame id="oda:CAL_01" modification="new" version="any" status="active">
+        <ServiceCalendarFrame id="oda:CAL_01" version="any">
           <Name>Olympic Park2 2012  </Name>
-          <ServiceCalendar id="oda:CAL_01" modification="new" version="any" status="active">
+          <ServiceCalendar id="oda:CAL_01" version="any">
             <FromDate>2012-07-27</FromDate>
             <ToDate>2012-08-07</ToDate>
           </ServiceCalendar>
-          <dayTypes modificationSet="all">
-            <DayType id="oda:DT01_Very_Busy" modification="new" version="any" status="active">
+          <dayTypes>
+            <DayType id="oda:DT01_Very_Busy" version="any">
               <Name>Very Busy Day</Name>
               <properties>
                 <PropertyOfDay>
                   <Crowding>veryBusy</Crowding>
                 </PropertyOfDay>
               </properties>
-              <timebands modificationSet="all">
+              <timebands>
                 <TimebandRef version="any" ref="oda:TMB01_ingress"/>
                 <TimebandRef version="any" ref="oda:TMB02_during"/>
                 <TimebandRef version="any" ref="oda:TMB03_egress"/>
               </timebands>
             </DayType>
-            <DayType id="oda:DT02_Busy" modification="new" version="any" status="active">
+            <DayType id="oda:DT02_Busy" version="any">
               <Name>Busy Day</Name>
               <properties>
                 <PropertyOfDay>
                   <Crowding>busy</Crowding>
                 </PropertyOfDay>
               </properties>
-              <timebands modificationSet="all">
+              <timebands>
                 <TimebandRef version="any" ref="oda:TMB01_ingress"/>
                 <TimebandRef version="any" ref="oda:TMB02_during"/>
                 <TimebandRef version="any" ref="oda:TMB03_egress"/>
               </timebands>
             </DayType>
-            <DayType id="oda:DT03_Normal" modification="new" version="any" status="active">
+            <DayType id="oda:DT03_Normal" version="any">
               <Name>Normal Day</Name>
               <properties>
                 <PropertyOfDay>
                   <Crowding>normal</Crowding>
                 </PropertyOfDay>
               </properties>
-              <timebands modificationSet="all">
+              <timebands>
                 <TimebandRef version="any" ref="oda:TMB01_ingress"/>
                 <TimebandRef version="any" ref="oda:TMB02_during"/>
                 <TimebandRef version="any" ref="oda:TMB03_egress"/>
               </timebands>
             </DayType>
-            <DayType id="oda:DT04_QUIET" modification="new" version="any" status="active">
+            <DayType id="oda:DT04_QUIET" version="any">
               <Name>Quiet Day</Name>
               <properties>
                 <PropertyOfDay>
                   <Crowding>quiet</Crowding>
                 </PropertyOfDay>
               </properties>
-              <timebands modificationSet="all">
+              <timebands>
                 <TimebandRef version="any" ref="oda:TMB01_ingress"/>
                 <TimebandRef version="any" ref="oda:TMB02_during"/>
                 <TimebandRef version="any" ref="oda:TMB03_egress"/>
               </timebands>
             </DayType>
           </dayTypes>
-          <timebands modificationSet="all">
-            <Timeband id="oda:TMB01_ingress" modification="new" version="any" status="active">
+          <timebands>
+            <Timeband id="oda:TMB01_ingress" version="any">
               <StartTime>09:00:00</StartTime>
               <EndTime>10:00:00</EndTime>
             </Timeband>
-            <Timeband id="oda:TMB02_during" modification="new" version="any" status="active">
+            <Timeband id="oda:TMB02_during" version="any">
               <StartTime>11:00:00</StartTime>
               <EndTime>15:00:00</EndTime>
             </Timeband>
-            <Timeband id="oda:TMB03_egress" modification="new" version="any" status="active">
+            <Timeband id="oda:TMB03_egress" version="any">
               <StartTime>15:00:00</StartTime>
               <EndTime>19:00:00</EndTime>
             </Timeband>
           </timebands>
-          <dayTypeAssignments modificationSet="all">
-            <DayTypeAssignment id="oda:DayAsgn_2012-07-27" modification="new" version="any" status="active" order="1">
+          <dayTypeAssignments>
+            <DayTypeAssignment id="oda:DayAsgn_2012-07-27" version="any" order="1">
               <Description>Friday 2012-07-27 Opening</Description>
               <Date>2012-07-27</Date>
               <DayTypeRef version="any" ref="oda:DT01_Very_Busy"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="oda:DayAsgn_2012-07-28" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="oda:DayAsgn_2012-07-28" version="any" order="1">
               <Description>Saturday 2012-07-28</Description>
               <Date>2012-07-28</Date>
               <DayTypeRef version="any" ref="oda:DT01_Very_Busy"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="oda:DayAsgn_2012-07-29" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="oda:DayAsgn_2012-07-29" version="any" order="1">
               <Description>Sunday 2012-07-29</Description>
               <Date>2012-07-29</Date>
               <DayTypeRef version="any" ref="oda:DT01_Very_Busy"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="oda:DayAsgn_2012-07-30" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="oda:DayAsgn_2012-07-30" version="any" order="1">
               <Description>Monday 2012-07-30</Description>
               <Date>2012-07-30</Date>
               <DayTypeRef version="any" ref="oda:DT02_Busy"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="oda:DayAsgn_2012-07-31" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="oda:DayAsgn_2012-07-31" version="any" order="1">
               <Description>Tuesday 2012-07-31</Description>
               <Date>2012-07-31</Date>
               <DayTypeRef version="any" ref="oda:DT03_Normal"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="oda:DayAsgn_2012-08-01" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="oda:DayAsgn_2012-08-01" version="any" order="1">
               <Description>Wednesday 2012-08-01</Description>
               <Date>2012-08-01</Date>
               <DayTypeRef version="any" ref="oda:DT03_Normal"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="oda:DayAsgn_2012-08-02" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="oda:DayAsgn_2012-08-02" version="any" order="1">
               <Description>Thusday 2012-08-02</Description>
               <Date>2012-08-02</Date>
               <DayTypeRef version="any" ref="oda:DT02_Busy"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="oda:DayAsgn_2012-08-03" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="oda:DayAsgn_2012-08-03" version="any" order="1">
               <Description>Friday 2012-08-03</Description>
               <Date>2012-08-03</Date>
               <DayTypeRef version="any" ref="oda:DT02_Busy"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="oda:DayAsgn_2012-08-04" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="oda:DayAsgn_2012-08-04" version="any" order="1">
               <Description>Saturday2012-08-04</Description>
               <Date>2012-08-04</Date>
               <DayTypeRef version="any" ref="oda:DT02_Busy"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="oda:DayAsgn_2012-08-05" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="oda:DayAsgn_2012-08-05" version="any" order="1">
               <Description>Sunday 2012-08-05</Description>
               <Date>2012-08-05</Date>
               <DayTypeRef version="any" ref="oda:DT02_Busy"/>

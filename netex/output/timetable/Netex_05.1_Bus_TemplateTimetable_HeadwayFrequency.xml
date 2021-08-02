@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PublicationDelivery xmlns:xi="http://www.w3.org/2001/XInclude" xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+<PublicationDelivery xmlns:xi="http://www.w3.org/2001/XInclude" xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <PublicationTimestamp>2010-12-17T09:30:47Z</PublicationTimestamp>
   <ParticipantRef>SYS001</ParticipantRef>
-  <PublicationRequest version="1.0">
+  <PublicationRequest>
     <RequestTimestamp>2010-12-17T09:30:47Z</RequestTimestamp>
     <ParticipantRef>SYS002</ParticipantRef>
     <topics>
       <NetworkFrameTopic>
         <selectionValidityConditions>
-          <AvailabilityCondition id="hde:01" modification="new" version="any" status="active">
+          <AvailabilityCondition id="hde:01" version="any">
             <FromDate>2010-11-01T00:00:00Z</FromDate>
           </AvailabilityCondition>
         </selectionValidityConditions>
@@ -19,8 +19,8 @@
   <PublicationRefreshInterval>P1M</PublicationRefreshInterval>
   <Description>Example  of simple Headwayal  template timetable   with three    journeys  </Description>
   <dataObjects>
-    <CompositeFrame id="hde:CF_1" modification="new" version="1" status="active">
-      <codespaces modificationSet="all">
+    <CompositeFrame id="hde:CF_1" version="1">
+      <codespaces>
         <Codespace id="mybus">
           <Xmlns>mybus</Xmlns>
           <XmlnsUrl>http://www.mybuses.eu/stuff</XmlnsUrl>
@@ -35,19 +35,19 @@
       <FrameDefaults>
         <DefaultCodespaceRef ref="mybus"/>
       </FrameDefaults>
-      <frames modificationSet="all">
-        <ServiceFrame id="mybus:svf_12" modification="new" version="any" status="active">
+      <frames>
+        <ServiceFrame id="mybus:svf_12" version="any">
           <Name>Stops for Winter timetable for route 234 </Name>
-          <lines modificationSet="all">
-            <Line id="mybus:LN_234" modification="new" version="any" status="active">
+          <lines>
+            <Line id="mybus:LN_234" version="any">
               <Name>Line 234 Alpha to Charley Green</Name>
               <ShortName>Line 234</ShortName>
               <TransportMode>bus</TransportMode>
               <PublicCode>234</PublicCode>
             </Line>
           </lines>
-          <scheduledStopPoints modificationSet="all">
-            <ScheduledStopPoint id="mybus:SSP_001" modification="new" version="any" status="active">
+          <scheduledStopPoints>
+            <ScheduledStopPoint id="mybus:SSP_001" version="any">
               <Name>Alpha &amp; Castle</Name>
               <Location>
                 <Longitude>53.0000</Longitude>
@@ -59,7 +59,7 @@
               <StopType>onstreetBus</StopType>
               <VehicleModes>bus</VehicleModes>
             </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_002" modification="new" version="any" status="active">
+            <ScheduledStopPoint id="mybus:SSP_002" version="any">
               <Name>Bravo Arch</Name>
               <Location>
                 <Longitude>53.2000</Longitude>
@@ -71,7 +71,7 @@
               <StopType>onstreetBus</StopType>
               <VehicleModes>bus</VehicleModes>
             </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_077" modification="new" version="any" status="active">
+            <ScheduledStopPoint id="mybus:SSP_077" version="any">
               <Name>Charley Green</Name>
               <Location>
                 <Longitude>53.3000</Longitude>
@@ -85,9 +85,9 @@
             </ScheduledStopPoint>
           </scheduledStopPoints>
         </ServiceFrame>
-        <TimetableFrame id="hde:TIM_24o_FS_Outbound" modification="new" version="001" status="active">
-          <validityConditions modificationSet="all">
-            <AvailabilityCondition id="hde:TIM_24o_FS_Outbound" modification="new" version="any" status="active">
+        <TimetableFrame id="hde:TIM_24o_FS_Outbound" version="001">
+          <validityConditions>
+            <AvailabilityCondition id="hde:TIM_24o_FS_Outbound" version="any">
               <Description>Sept  to March</Description>
               <FromDate>2010-11-01T00:00:00Z</FromDate>
               <ToDate>2011-03-31T00:00:00Z</ToDate>
@@ -95,16 +95,16 @@
           </validityConditions>
           <Name>Winter timetable for route 234 outbound</Name>
           <VehicleModes>bus</VehicleModes>
-          <vehicleJourneys modificationSet="all">
-            <TemplateServiceJourney id="hde:tvjh_24o_01" modification="new" version="any" status="active">
+          <vehicleJourneys>
+            <TemplateServiceJourney id="hde:tvjh_24o_01" version="any">
               <DepartureTime>10:00:00Z</DepartureTime>
-              <dayTypes modificationSet="all">
+              <dayTypes>
                 <DayTypeRef version="any" ref="hde:DT_01MTWTFSS"/>
               </dayTypes>
               <ServicePatternRef ref="hde:svp_24o">EXTERNAL</ServicePatternRef>
               <LineRef version="any" ref="mybus:LN_234"/>
               <calls>
-                <Call id="hde:tvjh_24o_02_001" modification="new" version="any" status="active" order="1">
+                <Call id="hde:tvjh_24o_02_001" version="any" order="1">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
                   <Arrival>
                     <ForAlighting>false</ForAlighting>
@@ -113,7 +113,7 @@
                     <Time>10:20:00Z</Time>
                   </Departure>
                 </Call>
-                <Call id="hde:tvjh_24o_02_002" modification="new" version="any" status="active" order="2">
+                <Call id="hde:tvjh_24o_02_002" version="any" order="2">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
                   <Arrival>
                     <Time>11:20:00Z</Time>
@@ -123,7 +123,7 @@
                     <WaitTime>PT2M</WaitTime>
                   </Departure>
                 </Call>
-                <Call id="hde:tvjh_24o_02_003" modification="new" version="any" status="active" order="3">
+                <Call id="hde:tvjh_24o_02_003" version="any" order="3">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
                   <Arrival>
                     <Time>12:20:00Z</Time>
@@ -133,8 +133,8 @@
                   </Departure>
                 </Call>
               </calls>
-              <frequencyGroups modificationSet="all">
-                <HeadwayJourneyGroup id="hde:hjg_24o_01" modification="new" version="any" status="active">
+              <frequencyGroups>
+                <HeadwayJourneyGroup id="hde:hjg_24o_01" version="any">
                   <Name>Regular  Interval service between 10am and 12:00 pm</Name>
                   <Description>About every 12 minutes</Description>
                   <FirstDepartureTime>10:00:00</FirstDepartureTime>
@@ -142,7 +142,7 @@
                   <ScheduledHeadwayInterval>PT12M</ScheduledHeadwayInterval>
                   <HeadwayDisplay>DisplayInsteadOfPassingTimes</HeadwayDisplay>
                 </HeadwayJourneyGroup>
-                <HeadwayJourneyGroup id="hde:hjg_24o_02" modification="new" version="any" status="active">
+                <HeadwayJourneyGroup id="hde:hjg_24o_02" version="any">
                   <Name>Regular  Interval service between 12am and 18:00 pm</Name>
                   <Description>About every 20 minutes</Description>
                   <FirstDepartureTime>12:00:00</FirstDepartureTime>
@@ -154,11 +154,11 @@
             </TemplateServiceJourney>
           </vehicleJourneys>
         </TimetableFrame>
-        <ServiceCalendarFrame id="hde:TIM_24o_FS_Outbound" modification="new" version="any" status="active">
+        <ServiceCalendarFrame id="hde:TIM_24o_FS_Outbound" version="any">
           <Name/>
-          <ServiceCalendar id="hde:TIM_24o_FS_Outbound" modification="new" version="any" status="active">
-            <dayTypes modificationSet="all">
-              <DayType id="hde:DT_01MTWTFSS" modification="new" version="any" status="active">
+          <ServiceCalendar id="hde:TIM_24o_FS_Outbound" version="any">
+            <dayTypes>
+              <DayType id="hde:DT_01MTWTFSS" version="any">
                 <Name>Everyday</Name>
                 <properties>
                   <PropertyOfDay>
@@ -166,7 +166,7 @@
                   </PropertyOfDay>
                 </properties>
               </DayType>
-              <DayType id="hde:DT_01MTWTF" modification="new" version="any" status="active">
+              <DayType id="hde:DT_01MTWTF" version="any">
                 <Name>Weekdays</Name>
                 <properties>
                   <PropertyOfDay>

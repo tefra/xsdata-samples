@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <PublicationTimestamp>2010-12-17T09:30:47Z</PublicationTimestamp>
   <ParticipantRef>SYS001</ParticipantRef>
-  <PublicationRequest version="1.0">
+  <PublicationRequest>
     <RequestTimestamp>2010-12-17T09:30:47Z</RequestTimestamp>
     <ParticipantRef>SYS002</ParticipantRef>
     <topics>
       <NetworkFrameTopic>
         <selectionValidityConditions>
-          <AvailabilityCondition id="hde:range" modification="new" version="any" status="active">
+          <AvailabilityCondition id="hde:range" version="any">
             <FromDate>2011-01-01T00:00:00Z</FromDate>
           </AvailabilityCondition>
         </selectionValidityConditions>
@@ -19,14 +19,14 @@
   <PublicationRefreshInterval>P1M</PublicationRefreshInterval>
   <Description>Example  of simple point to point fares</Description>
   <dataObjects>
-    <CompositeFrame id="myfares:DTA@Time_Interval" modification="new" version="1.0" status="active">
-      <validityConditions modificationSet="all">
-        <ValidBetween modification="new" status="active">
+    <CompositeFrame id="myfares:DTA@Time_Interval" version="1.0">
+      <validityConditions>
+        <ValidBetween>
           <FromDate>2011-01-01T00:00:00Z</FromDate>
           <ToDate>2011-07-01T00:00:00Z</ToDate>
         </ValidBetween>
       </validityConditions>
-      <codespaces modificationSet="all">
+      <codespaces>
         <Codespace id="mybus">
           <Xmlns>mybus</Xmlns>
           <XmlnsUrl>http://www.mybuses.eu/stuff</XmlnsUrl>
@@ -42,52 +42,52 @@
         <DefaultCodespaceRef ref="myfares"/>
         <DefaultCurrency>EUR</DefaultCurrency>
       </FrameDefaults>
-      <frames modificationSet="all">
-        <FareFrame id="myfares:DTA@Time_Interval@products" modification="new" version="1.0" status="active">
-          <prerequisites modificationSet="all">
+      <frames>
+        <FareFrame id="myfares:DTA@Time_Interval@products" version="1.0">
+          <prerequisites>
             <ServiceFrameRef version="1.0" ref="mybus:DTA@Time_Interval@network"/>
           </prerequisites>
-          <timeUnits modificationSet="all">
-            <TimeUnit id="myfares:1hour" modification="new" version="1.0" status="active">
+          <timeUnits>
+            <TimeUnit id="myfares:1hour" version="1.0">
               <Name>Time unit of 1 hour</Name>
             </TimeUnit>
           </timeUnits>
           <tariffs>
-            <Tariff id="myfares:Time_interval" modification="new" version="1.0" status="active">
+            <Tariff id="myfares:Time_interval" version="1.0">
               <Name>Zonal Fare</Name>
               <OperatorRef version="any" ref="mybus:DTA"/>
               <TypeOfTariffRef version="ntx:v1.0" ref="ntx:zonal"/>
               <TimeUnitRef version="1.0" ref="myfares:1hour"/>
-              <timeIntervals modificationSet="all">
-                <TimeInterval id="myfares:1hour" modification="new" version="1.0" status="active">
+              <timeIntervals>
+                <TimeInterval id="myfares:1hour" version="1.0">
                   <Name>One Hour</Name>
                   <Duration>PT1H</Duration>
                   <timeStructureFactors>
-                    <TimeStructureFactor id="myfares:tsf_1h" modification="new" version="1.0" status="active">
+                    <TimeStructureFactor id="myfares:tsf_1h" version="1.0">
                       <Name>One hour's  use</Name>
                       <Factor>1</Factor>
                       <TimeUnitRef version="1.0" ref="myfares:1hour"/>
                     </TimeStructureFactor>
                   </timeStructureFactors>
                 </TimeInterval>
-                <TimeInterval id="myfares:2hour" modification="new" version="1.0" status="active">
+                <TimeInterval id="myfares:2hour" version="1.0">
                   <Name>Two Hours</Name>
                   <Duration>PT2H</Duration>
                   <timeStructureFactors>
-                    <TimeStructureFactor id="myfares:tsf_2h" modification="new" version="1.0" status="active">
+                    <TimeStructureFactor id="myfares:tsf_2h" version="1.0">
                       <Name>Two hour's  use</Name>
                       <Factor>2</Factor>
                       <TimeUnitRef version="1.0" ref="myfares:1hour"/>
                     </TimeStructureFactor>
                   </timeStructureFactors>
                 </TimeInterval>
-                <TimeInterval id="myfares:1day" modification="new" version="1.0" status="active">
+                <TimeInterval id="myfares:1day" version="1.0">
                   <Name>All Day Use on day of purchase</Name>
                   <StartTime>06:00:00</StartTime>
                   <EndTime>02:00:00</EndTime>
                   <DayOffset>1</DayOffset>
                   <timeStructureFactors>
-                    <TimeStructureFactor id="myfares:tsf_day" modification="new" version="1.0" status="active">
+                    <TimeStructureFactor id="myfares:tsf_day" version="1.0">
                       <Name>All day use on day of purchase</Name>
                       <Factor>24</Factor>
                       <TimeUnitRef version="1.0" ref="myfares:1hour"/>
@@ -95,39 +95,39 @@
                   </timeStructureFactors>
                 </TimeInterval>
               </timeIntervals>
-              <fareStructureElements modificationSet="all">
-                <FareStructureElement id="myfares:Time_interval@access" modification="new" version="1.0" status="active">
-                  <GenericParameterAssignment id="myfares:Time_interval@access" modification="new" version="1.0" status="active" order="1">
+              <fareStructureElements>
+                <FareStructureElement id="myfares:Time_interval@access" version="1.0">
+                  <GenericParameterAssignment id="myfares:Time_interval@access" version="1.0" order="1">
                     <TypeOfAccessRightAssignmentRef ref="fxc:can_access" versionRef="fxc:v1.0"/>
                     <ValidityParameterGroupingType>XOR</ValidityParameterGroupingType>
-                    <validityParameters modificationSet="all">
+                    <validityParameters>
                       <TariffZoneRef version="any" ref="myfares:1"/>
                     </validityParameters>
                   </GenericParameterAssignment>
                 </FareStructureElement>
-                <FareStructureElement id="myfares:Time_interval@access_when" modification="new" version="1.0" status="active">
+                <FareStructureElement id="myfares:Time_interval@access_when" version="1.0">
                   <Name>Allowed periods for  use of a  zone</Name>
                   <timeStructureFactors>
                     <TimeStructureFactorRef version="1.0" ref="myfares:tsf_1h"/>
                     <TimeStructureFactorRef version="1.0" ref="myfares:tsf_2h"/>
                     <TimeStructureFactorRef version="1.0" ref="myfares:tsf_day"/>
                   </timeStructureFactors>
-                  <GenericParameterAssignment id="myfares:Time_interval@access_when" modification="new" version="1.0" status="active" order="1">
+                  <GenericParameterAssignment id="myfares:Time_interval@access_when" version="1.0" order="1">
                     <TypeOfAccessRightAssignmentRef ref="fxc:can_access_when" versionRef="fxc:v1.0"/>
                     <ValidityParameterGroupingType>XOR</ValidityParameterGroupingType>
                   </GenericParameterAssignment>
                 </FareStructureElement>
-                <FareStructureElement id="myfares:Time_interval@conditions_of_travel" modification="new" version="1.0" status="active">
+                <FareStructureElement id="myfares:Time_interval@conditions_of_travel" version="1.0">
                   <Name>Conditions of travel</Name>
-                  <GenericParameterAssignment id="myfares:Time_interval@conditions_of_travel" modification="new" version="1.0" status="active" order="1">
+                  <GenericParameterAssignment id="myfares:Time_interval@conditions_of_travel" version="1.0" order="1">
                     <Name>Conditions of travel</Name>
                     <TypeOfAccessRightAssignmentRef ref="fxc:condition_of_use" versionRef="fxc:v1.0"/>
                     <LimitationGroupingType>AND</LimitationGroupingType>
-                    <limitations modificationSet="all">
-                      <FrequencyOfUse id="myfares:Time_interval@conditions_of_travel@frequency" modification="new" version="1.0" status="active">
+                    <limitations>
+                      <FrequencyOfUse id="myfares:Time_interval@conditions_of_travel@frequency" version="1.0">
                         <FrequencyOfUseType>unlimited</FrequencyOfUseType>
                       </FrequencyOfUse>
-                      <Interchanging id="myfares:Time_interval@conditions_of_travel@interchanging" modification="new" version="1.0" status="active">
+                      <Interchanging id="myfares:Time_interval@conditions_of_travel@interchanging" version="1.0">
                         <CanInterchange>true</CanInterchange>
                         <CanBreakJourney>true</CanBreakJourney>
                       </Interchanging>
@@ -141,13 +141,13 @@
             </Tariff>
           </tariffs>
           <fareProducts>
-            <PreassignedFareProduct id="myfares:Period_pass" modification="new" version="1.0" status="active">
+            <PreassignedFareProduct id="myfares:Period_pass" version="1.0">
               <Name>1 zone use for specified period</Name>
               <TypeOfFareProductRef version="ntx:v1.0" ref="ntx:period_pass"/>
               <OperatorRef version="any" ref="mybus:DTA"/>
               <validableElements>
-                <ValidableElement id="myfares:Period_pass@travel" modification="new" version="1.0" status="active">
-                  <fareStructureElements modificationSet="all">
+                <ValidableElement id="myfares:Period_pass@travel" version="1.0">
+                  <fareStructureElements>
                     <FareStructureElementRef version="1.0" ref="myfares:Time_interval@access"/>
                     <FareStructureElementRef version="1.0" ref="myfares:Time_interval@access_when"/>
                     <FareStructureElementRef version="1.0" ref="myfares:Time_interval@conditions_of_travel"/>
@@ -155,17 +155,17 @@
                 </ValidableElement>
               </validableElements>
               <accessRightsInProduct>
-                <AccessRightInProduct id="myfares:Period_pass@travel" modification="new" version="1.0" status="active" order="1">
+                <AccessRightInProduct id="myfares:Period_pass@travel" version="1.0" order="1">
                   <ValidableElementRef version="1.0" ref="myfares:Period_pass@travel"/>
                 </AccessRightInProduct>
               </accessRightsInProduct>
             </PreassignedFareProduct>
           </fareProducts>
           <salesOfferPackages>
-            <SalesOfferPackage id="myfares:PeriodPass-SOP@p-ticket" modification="new" version="1.0" status="active">
+            <SalesOfferPackage id="myfares:PeriodPass-SOP@p-ticket" version="1.0">
               <Name>Printed et Period Pass</Name>
-              <distributionAssignments modificationSet="all">
-                <DistributionAssignment id="myfares:PeriodPass-SOP@p-ticket@atStop" modification="new" version="10" status="active" order="1">
+              <distributionAssignments>
+                <DistributionAssignment id="myfares:PeriodPass-SOP@p-ticket@atStop" version="10" order="1">
                   <Name>Onboard</Name>
                   <Description>Pay for ticket onboard</Description>
                   <DistributionChannelType>atStop</DistributionChannelType>
@@ -173,7 +173,7 @@
                   <PaymentMethods>cashAndCard</PaymentMethods>
                   <FulfilmentMethodRef ref="ntx:collect_on_board" versionRef="ntx:v1.0"/>
                 </DistributionAssignment>
-                <DistributionAssignment id="myfares:PeriodPass-SOP@p-ticket@onBoard" modification="new" version="1.0" status="active" order="2">
+                <DistributionAssignment id="myfares:PeriodPass-SOP@p-ticket@onBoard" version="1.0" order="2">
                   <Name>Onboard</Name>
                   <Description>Pay for ticket onboard</Description>
                   <DistributionChannelType>onBoard</DistributionChannelType>
@@ -182,25 +182,25 @@
                   <FulfilmentMethodRef ref="ntx:collect_on_board" versionRef="ntx:v1.0"/>
                 </DistributionAssignment>
               </distributionAssignments>
-              <salesOfferPackageElements modificationSet="all">
-                <SalesOfferPackageElement id="myfares:PeriodPass-SOP@p-ticket" modification="new" version="1.0" status="active" order="1">
+              <salesOfferPackageElements>
+                <SalesOfferPackageElement id="myfares:PeriodPass-SOP@p-ticket" version="1.0" order="1">
                   <TypeOfTravelDocumentRef version="any" ref="myfares:printed_ticket"/>
                   <PreassignedFareProductRef version="1.0" ref="myfares:Period_pass"/>
                 </SalesOfferPackageElement>
               </salesOfferPackageElements>
             </SalesOfferPackage>
-            <SalesOfferPackage id="myfares:PeriodPass-SOP@m-ticket" modification="new" version="1.0" status="active">
+            <SalesOfferPackage id="myfares:PeriodPass-SOP@m-ticket" version="1.0">
               <Name>Mobile ticket - Period Pass</Name>
-              <distributionAssignments modificationSet="all">
-                <DistributionAssignment id="myfares:PeriodPass-SOP@m-ticket@online" modification="new" version="10" status="active" order="1">
+              <distributionAssignments>
+                <DistributionAssignment id="myfares:PeriodPass-SOP@m-ticket@online" version="10" order="1">
                   <Name>Online</Name>
                   <DistributionChannelType>mobileDevice</DistributionChannelType>
                   <PaymentMethods>cardsOnly</PaymentMethods>
                   <FulfilmentMethodRef ref="ntx:mobile_app" versionRef="ntx:v1.0"/>
                 </DistributionAssignment>
               </distributionAssignments>
-              <salesOfferPackageElements modificationSet="all">
-                <SalesOfferPackageElement id="myfares:PeriodPass-SOP@m-ticket" modification="new" version="1.0" status="active" order="1">
+              <salesOfferPackageElements>
+                <SalesOfferPackageElement id="myfares:PeriodPass-SOP@m-ticket" version="1.0" order="1">
                   <TypeOfTravelDocumentRef version="any" ref="myfares:mobile_app"/>
                   <PreassignedFareProductRef version="1.0" ref="myfares:Period_pass"/>
                 </SalesOfferPackageElement>
@@ -208,23 +208,23 @@
             </SalesOfferPackage>
           </salesOfferPackages>
         </FareFrame>
-        <FareFrame id="myfares:DTA@Time_Interval@prices" modification="new" version="1.0" status="active">
-          <prerequisites modificationSet="all">
+        <FareFrame id="myfares:DTA@Time_Interval@prices" version="1.0">
+          <prerequisites>
             <FareFrameRef version="1.0" ref="myfares:DTA@Time_Interval@products"/>
           </prerequisites>
           <priceGroups>
-            <PriceGroup id="myfares:DTA@Time_interval" modification="new" version="1.0" status="active">
+            <PriceGroup id="myfares:DTA@Time_interval" version="1.0">
               <Name>Prices for Time Interval zonal  Products</Name>
               <members>
-                <TimeIntervalPrice id="myfares:1hour" modification="new" version="1.0" status="active">
+                <TimeIntervalPrice id="myfares:1hour" version="1.0">
                   <Amount>1.50</Amount>
                   <TimeIntervalRef version="1.0" ref="myfares:1hour"/>
                 </TimeIntervalPrice>
-                <TimeIntervalPrice id="myfares:2hour" modification="new" version="1.0" status="active">
+                <TimeIntervalPrice id="myfares:2hour" version="1.0">
                   <Amount>2.00</Amount>
                   <TimeIntervalRef version="1.0" ref="myfares:2hour"/>
                 </TimeIntervalPrice>
-                <TimeIntervalPrice id="myfares:1day" modification="new" version="1.0" status="active">
+                <TimeIntervalPrice id="myfares:1day" version="1.0">
                   <Amount>5.00</Amount>
                   <TimeIntervalRef version="1.0" ref="myfares:1day"/>
                 </TimeIntervalPrice>
@@ -232,132 +232,132 @@
             </PriceGroup>
           </priceGroups>
         </FareFrame>
-        <ServiceFrame id="mybus:DTA@Time_Interval@network" modification="new" version="1.0" status="active">
+        <ServiceFrame id="mybus:DTA@Time_Interval@network" version="1.0">
           <Name>Fares  for Winter timetable for Network</Name>
-          <prerequisites modificationSet="all">
+          <prerequisites>
             <ResourceFrameRef version="1.0" ref="mybus:DTA@Common_Resources"/>
           </prerequisites>
-          <Network id="mybus:DTA" modification="new" version="any" status="active">
+          <Network id="mybus:DTA" version="any">
             <OperatorRef version="any" ref="mybus:DTA"/>
-            <tariffZones modificationSet="all">
+            <tariffZones>
               <TariffZoneRef version="any" ref="myfares:1"/>
             </tariffZones>
           </Network>
-          <tariffZones modificationSet="all">
-            <TariffZone id="myfares:1" modification="new" version="any" status="active">
+          <tariffZones>
+            <TariffZone id="myfares:1" version="any">
               <Name>Zone 1</Name>
             </TariffZone>
           </tariffZones>
         </ServiceFrame>
-        <ResourceFrame id="mybus:DTA@Common_Resources" modification="new" version="1.0" status="active">
-          <codespaces modificationSet="all">
+        <ResourceFrame id="mybus:DTA@Common_Resources" version="1.0">
+          <codespaces>
             <Codespace id="ntx">
               <Xmlns>ntx</Xmlns>
               <XmlnsUrl>http://netex.org.uk/</XmlnsUrl>
               <Description>Netex built in value</Description>
             </Codespace>
           </codespaces>
-          <typesOfValue modificationSet="all">
-            <ValueSet id="ntx:Types_of_Tariff" modification="new" version="ntx:v1.0" status="active" classOfValues="TypeOfTariff">
+          <typesOfValue>
+            <ValueSet id="ntx:Types_of_Tariff" version="ntx:v1.0" classOfValues="TypeOfTariff">
               <Name>Types of Tariff</Name>
               <values>
-                <TypeOfTariff id="ntx:Distance_kilometers" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:Distance_kilometers" version="ntx:v1.0">
                   <Name>Kilometer Distance Kilometers</Name>
                 </TypeOfTariff>
-                <TypeOfTariff id="ntx:flat" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:flat" version="ntx:v1.0">
                   <Name>Flat</Name>
                 </TypeOfTariff>
-                <TypeOfTariff id="ntx:point_to_point" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:point_to_point" version="ntx:v1.0">
                   <Name>Point to point</Name>
                 </TypeOfTariff>
-                <TypeOfTariff id="ntx:zone_to_zone" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:zone_to_zone" version="ntx:v1.0">
                   <Name>Zone to Zone</Name>
                 </TypeOfTariff>
-                <TypeOfTariff id="ntx:zonal" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:zonal" version="ntx:v1.0">
                   <Name>Zonal</Name>
                 </TypeOfTariff>
-                <TypeOfTariff id="ntx:unit_distance" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:unit_distance" version="ntx:v1.0">
                   <Name>Unit distance (count of stops, sections, zones)</Name>
                 </TypeOfTariff>
-                <TypeOfTariff id="ntx:section" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:section" version="ntx:v1.0">
                   <Name>Section</Name>
                 </TypeOfTariff>
-                <TypeOfTariff id="ntx:banded" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:banded" version="ntx:v1.0">
                   <Name>Yime banded</Name>
                 </TypeOfTariff>
-                <TypeOfTariff id="ntx:stored_value" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:stored_value" version="ntx:v1.0">
                   <Name>Stored value</Name>
                 </TypeOfTariff>
-                <TypeOfTariff id="ntx:discount" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:discount" version="ntx:v1.0">
                   <Name>Discount value</Name>
                 </TypeOfTariff>
-                <TypeOfTariff id="ntx:multitrip" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:multitrip" version="ntx:v1.0">
                   <Name>Multitrip carnet</Name>
                 </TypeOfTariff>
-                <TypeOfTariff id="ntx:identity_card" modification="new" version="ntx:v1.0" status="active" nameOfClassifiedEntityClass="Tariff">
+                <TypeOfTariff id="ntx:identity_card" version="ntx:v1.0">
                   <Name>SIdentity</Name>
                 </TypeOfTariff>
               </values>
             </ValueSet>
-            <ValueSet id="ntx:Types_of_FareProduct" modification="new" version="ntx:v1.0" status="active" classOfValues="TypeOfFareProduct">
+            <ValueSet id="ntx:Types_of_FareProduct" version="ntx:v1.0" classOfValues="TypeOfFareProduct">
               <Name>Types of Fare Product</Name>
               <values>
-                <TypeOfFareProduct id="ntx:trip" modification="new" version="ntx:v1.0" status="active">
+                <TypeOfFareProduct id="ntx:trip" version="ntx:v1.0">
                   <Name>Trip product</Name>
                 </TypeOfFareProduct>
-                <TypeOfFareProduct id="ntx:multi_trip" modification="new" version="ntx:v1.0" status="active">
+                <TypeOfFareProduct id="ntx:multi_trip" version="ntx:v1.0">
                   <Name>Multitrip / carnet  product</Name>
                 </TypeOfFareProduct>
-                <TypeOfFareProduct id="ntx:period_pass" modification="new" version="ntx:v1.0" status="active">
+                <TypeOfFareProduct id="ntx:period_pass" version="ntx:v1.0">
                   <Name>Peroid pass product</Name>
                 </TypeOfFareProduct>
-                <TypeOfFareProduct id="ntx:day_pass" modification="new" version="ntx:v1.0" status="active">
+                <TypeOfFareProduct id="ntx:day_pass" version="ntx:v1.0">
                   <Name>Day pass product</Name>
                 </TypeOfFareProduct>
-                <TypeOfFareProduct id="ntx:discount_card" modification="new" version="ntx:v1.0" status="active">
+                <TypeOfFareProduct id="ntx:discount_card" version="ntx:v1.0">
                   <Name>Discount  product</Name>
                 </TypeOfFareProduct>
               </values>
             </ValueSet>
-            <ValueSet id="myfares:Types_of_Concession" modification="new" version="any" status="active" classOfValues="TypeOfConcession">
+            <ValueSet id="myfares:Types_of_Concession" version="any" classOfValues="TypeOfConcession">
               <Name>Types of concession</Name>
               <values>
-                <TypeOfConcession id="myfares:adult" modification="new" version="any" status="active">
+                <TypeOfConcession id="myfares:adult" version="any">
                   <Name>Adult</Name>
                 </TypeOfConcession>
-                <TypeOfConcession id="myfares:child" modification="new" version="any" status="active">
+                <TypeOfConcession id="myfares:child" version="any">
                   <Name>Student</Name>
                 </TypeOfConcession>
               </values>
             </ValueSet>
-            <ValueSet id="myfares:Types_of_TravelDocument" modification="new" version="any" status="active" classOfValues="TypeOfTravelDocument">
+            <ValueSet id="myfares:Types_of_TravelDocument" version="any" classOfValues="TypeOfTravelDocument">
               <Name>Types of concession</Name>
               <values>
-                <TypeOfTravelDocument id="myfares:printed_ticket" modification="new" version="any" status="active">
+                <TypeOfTravelDocument id="myfares:printed_ticket" version="any">
                   <Name>Paper ticket</Name>
                 </TypeOfTravelDocument>
-                <TypeOfTravelDocument id="myfares:mobile_app" modification="new" version="any" status="active">
+                <TypeOfTravelDocument id="myfares:mobile_app" version="any">
                   <Name>Mobile app</Name>
                 </TypeOfTravelDocument>
               </values>
             </ValueSet>
-            <ValueSet id="ntx:Types_of_AccessRightAssignment" modification="new" version="ntx:v1.0" status="active" classOfValues="TypeOfAccessRightAssignment">
+            <ValueSet id="ntx:Types_of_AccessRightAssignment" version="ntx:v1.0" classOfValues="TypeOfAccessRightAssignment">
               <Name>Types of Access Right Assignment</Name>
               <values>
-                <TypeOfAccessRightAssignment id="ntx:eligible" modification="new" version="ntx:v1.0" status="active">
+                <TypeOfAccessRightAssignment id="ntx:eligible" version="ntx:v1.0">
                   <Name>Eligible for a product or discount</Name>
                 </TypeOfAccessRightAssignment>
-                <TypeOfAccessRightAssignment id="ntx:can_access" modification="new" version="ntx:v1.0" status="active">
+                <TypeOfAccessRightAssignment id="ntx:can_access" version="ntx:v1.0">
                   <Name>Grants access rights to use or travel on</Name>
                 </TypeOfAccessRightAssignment>
-                <TypeOfAccessRightAssignment id="ntx:condition_of_use" modification="new" version="ntx:v1.0" status="active">
+                <TypeOfAccessRightAssignment id="ntx:condition_of_use" version="ntx:v1.0">
                   <Name>Defines a condition or restriction on use</Name>
                 </TypeOfAccessRightAssignment>
               </values>
             </ValueSet>
           </typesOfValue>
-          <organisations modificationSet="all">
-            <Operator id="mybus:DTA" modification="new" version="any" status="active">
+          <organisations>
+            <Operator id="mybus:DTA" version="any">
               <Name>Demo Transit Authority</Name>
             </Operator>
           </organisations>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <PublicationTimestamp>2010-12-17T09:30:47Z</PublicationTimestamp>
   <ParticipantRef>SYS001</ParticipantRef>
-  <PublicationRequest version="1.0">
+  <PublicationRequest>
     <RequestTimestamp>2010-12-17T09:30:47Z</RequestTimestamp>
     <ParticipantRef>SYS002</ParticipantRef>
     <topics>
       <NetworkFrameTopic>
         <selectionValidityConditions>
-          <AvailabilityCondition id="ao:CAL_02" modification="new" version="any" status="active">
+          <AvailabilityCondition id="ao:CAL_02" version="any">
             <FromDate>2010-11-01T00:00:00Z</FromDate>
           </AvailabilityCondition>
         </selectionValidityConditions>
@@ -19,8 +19,8 @@
   <PublicationRefreshInterval>P1M</PublicationRefreshInterval>
   <Description>Example  of simple timetable frame with two journeys and service calendar, with detailed timings</Description>
   <dataObjects>
-    <CompositeFrame id="ao:CAL_02" modification="new" version="1" status="active">
-      <codespaces modificationSet="all">
+    <CompositeFrame id="ao:CAL_02" version="1">
+      <codespaces>
         <Codespace id="mybus">
           <Xmlns>mybus</Xmlns>
           <XmlnsUrl>http://www.mybuses.eu/stuff</XmlnsUrl>
@@ -35,49 +35,49 @@
       <FrameDefaults>
         <DefaultCodespaceRef ref="mybus"/>
       </FrameDefaults>
-      <frames modificationSet="all">
-        <ServiceFrame id="ao:svf_12" modification="new" version="1" status="active">
+      <frames>
+        <ServiceFrame id="ao:svf_12" version="1">
           <Name>Stops for Winter timetable for route 24 </Name>
-          <directions modificationSet="all">
-            <Direction id="ao:DR_Westbound" modification="new" version="any" status="active">
+          <directions>
+            <Direction id="ao:DR_Westbound" version="any">
               <Name>Westbound</Name>
             </Direction>
-            <Direction id="ao:DR_Southbound" modification="new" version="any" status="active">
+            <Direction id="ao:DR_Southbound" version="any">
               <Name>Eastbound</Name>
             </Direction>
           </directions>
-          <routes modificationSet="all">
-            <Route id="ao:RT_24o" modification="new" version="any" status="active">
+          <routes>
+            <Route id="ao:RT_24o" version="any">
               <Name>Line 24 Alpha to Charley  (Details not GIVEN)</Name>
               <DirectionType>outbound</DirectionType>
               <DirectionRef version="any" ref="ao:DR_Westbound"/>
             </Route>
           </routes>
-          <lines modificationSet="all">
-            <Line id="ao:K66" modification="new" version="any" status="active">
+          <lines>
+            <Line id="ao:K66" version="any">
               <Name>Kocevje - Petrina</Name>
               <ShortName>K66</ShortName>
               <TransportMode>bus</TransportMode>
               <PublicCode>K66</PublicCode>
-              <routes modificationSet="all">
+              <routes>
                 <RouteRef ref="ao:RT_24o"/>
               </routes>
             </Line>
           </lines>
-          <destinationDisplays modificationSet="all">
-            <DestinationDisplay id="ao:DST_Bravo" modification="new" version="any" status="active">
+          <destinationDisplays>
+            <DestinationDisplay id="ao:DST_Bravo" version="any">
               <Name>Bravo</Name>
               <ShortName>Bravo</ShortName>
               <PublicCode>Bravo</PublicCode>
             </DestinationDisplay>
-            <DestinationDisplay id="ao:DST_Charley" modification="new" version="any" status="active">
+            <DestinationDisplay id="ao:DST_Charley" version="any">
               <Name>Charley</Name>
               <ShortName>Charley G</ShortName>
               <PublicCode>Charley</PublicCode>
             </DestinationDisplay>
           </destinationDisplays>
-          <scheduledStopPoints modificationSet="all">
-            <ScheduledStopPoint id="ao:Briga-p" modification="new" version="any" status="active">
+          <scheduledStopPoints>
+            <ScheduledStopPoint id="ao:Briga-p" version="any">
               <Name>Briga smer Petrina</Name>
               <Location>
                 <Longitude>53.0000</Longitude>
@@ -85,7 +85,7 @@
               </Location>
               <VehicleModes>bus</VehicleModes>
             </ScheduledStopPoint>
-            <ScheduledStopPoint id="ao:Briga-k" modification="new" version="any" status="active">
+            <ScheduledStopPoint id="ao:Briga-k" version="any">
               <Name>Briga smer  Kocevje</Name>
               <Location>
                 <Longitude>53.0000</Longitude>
@@ -93,7 +93,7 @@
               </Location>
               <VehicleModes>bus</VehicleModes>
             </ScheduledStopPoint>
-            <ScheduledStopPoint id="ao:Banjaloka-p" modification="new" version="any" status="active">
+            <ScheduledStopPoint id="ao:Banjaloka-p" version="any">
               <Name>BANJALOKA smer Petrina</Name>
               <Location>
                 <Longitude>53.2000</Longitude>
@@ -101,7 +101,7 @@
               </Location>
               <VehicleModes>bus</VehicleModes>
             </ScheduledStopPoint>
-            <ScheduledStopPoint id="ao:Banjaloka-k" modification="new" version="any" status="active">
+            <ScheduledStopPoint id="ao:Banjaloka-k" version="any">
               <Name>BANJALOKA smer Kocevje</Name>
               <Location>
                 <Longitude>53.2000</Longitude>
@@ -109,7 +109,7 @@
               </Location>
               <VehicleModes>bus</VehicleModes>
             </ScheduledStopPoint>
-            <ScheduledStopPoint id="ao:NovaSela-p" modification="new" version="any" status="active">
+            <ScheduledStopPoint id="ao:NovaSela-p" version="any">
               <Name>NOVA SELA  smer Kocevje</Name>
               <Location>
                 <Longitude>53.3000</Longitude>
@@ -117,7 +117,7 @@
               </Location>
               <VehicleModes>bus</VehicleModes>
             </ScheduledStopPoint>
-            <ScheduledStopPoint id="ao:NovaSela-k" modification="new" version="any" status="active">
+            <ScheduledStopPoint id="ao:NovaSela-k" version="any">
               <Name>NOVA SELA smer Petrina</Name>
               <Location>
                 <Longitude>53.3000</Longitude>
@@ -126,62 +126,62 @@
               <VehicleModes>bus</VehicleModes>
             </ScheduledStopPoint>
           </scheduledStopPoints>
-          <serviceLinks modificationSet="all">
-            <ServiceLink id="ao:Briga-p_to_Banjaloka-p" modification="new" version="any" status="active">
+          <serviceLinks>
+            <ServiceLink id="ao:Briga-p_to_Banjaloka-p" version="any">
               <FromPointRef version="any" ref="ao:Briga-p"/>
               <ToPointRef version="any" ref="ao:Banjaloka-p"/>
             </ServiceLink>
-            <ServiceLink id="ao:Banjaloka-p_to_NovaSela-p" modification="new" version="any" status="active">
+            <ServiceLink id="ao:Banjaloka-p_to_NovaSela-p" version="any">
               <FromPointRef version="any" ref="ao:Banjaloka-p"/>
               <ToPointRef version="any" ref="ao:NovaSela-p"/>
             </ServiceLink>
-            <ServiceLink id="ao:NovaSela-p_to_Banjaloka-p" modification="new" version="any" status="active">
+            <ServiceLink id="ao:NovaSela-p_to_Banjaloka-p" version="any">
               <FromPointRef version="any" ref="ao:NovaSela-p"/>
               <ToPointRef version="any" ref="ao:Banjaloka-p"/>
             </ServiceLink>
-            <ServiceLink id="ao:Banjaloka-p_to_Briga-p" modification="new" version="any" status="active">
+            <ServiceLink id="ao:Banjaloka-p_to_Briga-p" version="any">
               <FromPointRef version="any" ref="ao:Banjaloka-p"/>
               <ToPointRef version="any" ref="ao:Briga-p"/>
             </ServiceLink>
           </serviceLinks>
-          <servicePatterns modificationSet="all">
-            <ServicePattern id="ao:K66_outbound" modification="new" version="any" status="active">
+          <servicePatterns>
+            <ServicePattern id="ao:K66_outbound" version="any">
               <Name>Kocevje - Petrina</Name>
               <DirectionType>outbound</DirectionType>
-              <journeyPatterns modificationSet="all">
+              <journeyPatterns>
                 <ServiceJourneyPatternRef version="any" ref="ao:sjp_24o"/>
               </journeyPatterns>
               <pointsInSequence>
-                <StopPointInJourneyPattern id="ao:K66_outbound_24o_01" modification="new" version="any" status="active" order="1">
+                <StopPointInJourneyPattern id="ao:K66_outbound_24o_01" version="any" order="1">
                   <ScheduledStopPointRef version="any" ref="ao:Briga-p"/>
                   <ForAlighting>false</ForAlighting>
                 </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="ao:K66_outbound_24o_02" modification="new" version="any" status="active" order="2">
+                <StopPointInJourneyPattern id="ao:K66_outbound_24o_02" version="any" order="2">
                   <ScheduledStopPointRef version="any" ref="ao:Banjaloka-p"/>
                 </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="ao:K66_outbound_24o_03" modification="new" version="any" status="active" order="3">
+                <StopPointInJourneyPattern id="ao:K66_outbound_24o_03" version="any" order="3">
                   <ScheduledStopPointRef version="any" ref="ao:NovaSela-p"/>
                   <ForBoarding>false</ForBoarding>
                 </StopPointInJourneyPattern>
               </pointsInSequence>
             </ServicePattern>
           </servicePatterns>
-          <timingPoints modificationSet="all">
-            <TimingPoint id="ao:Briga-p_t1" modification="new" version="any" status="active">
+          <timingPoints>
+            <TimingPoint id="ao:Briga-p_t1" version="any">
               <Location>
                 <Longitude>53.2000</Longitude>
                 <Latitude>0.2000</Latitude>
               </Location>
               <TimingPointStatus>timingPoint</TimingPointStatus>
             </TimingPoint>
-            <TimingPoint id="ao:Briga-p_t2" modification="new" version="any" status="active">
+            <TimingPoint id="ao:Briga-p_t2" version="any">
               <Location>
                 <Longitude>53.3000</Longitude>
                 <Latitude>0.3000</Latitude>
               </Location>
               <TimingPointStatus>timingPoint</TimingPointStatus>
             </TimingPoint>
-            <TimingPoint id="ao:Banjaloka-p_t3" modification="new" version="any" status="active">
+            <TimingPoint id="ao:Banjaloka-p_t3" version="any">
               <Location>
                 <Longitude>53.4000</Longitude>
                 <Latitude>0.4000</Latitude>
@@ -189,139 +189,139 @@
               <TimingPointStatus>timingPoint</TimingPointStatus>
             </TimingPoint>
           </timingPoints>
-          <timingLinks modificationSet="all">
-            <TimingLink id="ao:Briga-p_to_NovaSela-p" modification="new" version="any" status="active">
+          <timingLinks>
+            <TimingLink id="ao:Briga-p_to_NovaSela-p" version="any">
               <Name>Overall timing Alpha  to  Charley reen</Name>
               <FromPointRef version="any" ref="ao:Briga-p"/>
               <ToPointRef version="any" ref="ao:NovaSela-p"/>
             </TimingLink>
-            <TimingLink id="ao:Briga-p_to_Briga-p_t1" modification="new" version="any" status="active">
+            <TimingLink id="ao:Briga-p_to_Briga-p_t1" version="any">
               <Name>After Alpha   t1</Name>
               <FromPointRef version="any" ref="ao:Briga-p"/>
               <ToPointRef version="any" ref="ao:Briga-p_t1"/>
             </TimingLink>
-            <TimingLink id="ao:Briga-p_t1_to_Briga-p_t2" modification="new" version="any" status="active">
+            <TimingLink id="ao:Briga-p_t1_to_Briga-p_t2" version="any">
               <Name>After Alpha   t1 to After Alpha  t2</Name>
               <FromPointRef version="any" ref="ao:Briga-p_t1"/>
               <ToPointRef version="any" ref="ao:Banjaloka-p_t3"/>
             </TimingLink>
-            <TimingLink id="ao:Briga-p_t2_to_Banjaloka-p" modification="new" version="any" status="active">
+            <TimingLink id="ao:Briga-p_t2_to_Banjaloka-p" version="any">
               <Name>After Alpha  t2 to Bravo</Name>
               <FromPointRef version="any" ref="ao:Briga-p_t2"/>
               <ToPointRef version="any" ref="ao:Banjaloka-p"/>
             </TimingLink>
-            <TimingLink id="ao:Banjaloka-p_to_Banjaloka-p_t3" modification="new" version="any" status="active">
+            <TimingLink id="ao:Banjaloka-p_to_Banjaloka-p_t3" version="any">
               <Name>Bravo to After Bravo t1</Name>
               <FromPointRef version="any" ref="ao:Banjaloka-p"/>
               <ToPointRef version="any" ref="ao:Banjaloka-p_t3"/>
             </TimingLink>
-            <TimingLink id="ao:Banjaloka-p_t3_to_NovaSela-p" modification="new" version="any" status="active">
+            <TimingLink id="ao:Banjaloka-p_t3_to_NovaSela-p" version="any">
               <Name>After Bravo t1 to Charley</Name>
               <FromPointRef version="any" ref="ao:Banjaloka-p_t3"/>
               <ToPointRef version="any" ref="ao:NovaSela-p"/>
             </TimingLink>
           </timingLinks>
-          <timingPatterns modificationSet="all">
-            <TimingPattern id="ao:tp_24o" modification="new" version="any" status="active">
+          <timingPatterns>
+            <TimingPattern id="ao:tp_24o" version="any">
               <Name>Route 24</Name>
               <RouteRef version="any" ref="ao:RT_24o"/>
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
-                <TimingPointInJourneyPattern id="ao:tpijp_24o_01" modification="new" version="any" status="active" order="1">
+                <TimingPointInJourneyPattern id="ao:tpijp_24o_01" version="any" order="1">
                   <TimingPointRef version="any" ref="ao:Briga-p"/>
                   <OnwardTimingLinkRef version="any" ref="ao:Briga-p_to_Briga-p_t1"/>
                 </TimingPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="ao:tpijp_24o_02" modification="new" version="any" status="active" order="2">
+                <TimingPointInJourneyPattern id="ao:tpijp_24o_02" version="any" order="2">
                   <TimingPointRef version="any" ref="ao:Briga-p_t1"/>
                   <OnwardTimingLinkRef version="any" ref="ao:Briga-p_t1_to_Briga-p_t2"/>
                 </TimingPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="ao:tpijp_24o_03" modification="new" version="any" status="active" order="3">
+                <TimingPointInJourneyPattern id="ao:tpijp_24o_03" version="any" order="3">
                   <TimingPointRef version="any" ref="ao:Briga-p_t2"/>
                   <OnwardTimingLinkRef version="any" ref="ao:Briga-p_t2_to_Banjaloka-p"/>
                 </TimingPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="ao:tpijp_24o_04" modification="new" version="any" status="active" order="4">
+                <TimingPointInJourneyPattern id="ao:tpijp_24o_04" version="any" order="4">
                   <TimingPointRef version="any" ref="ao:Banjaloka-p"/>
                   <OnwardTimingLinkRef version="any" ref="ao:Banjaloka-p_to_Banjaloka-p_t3"/>
                 </TimingPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="ao:tpijp_24o_05" modification="new" version="any" status="active" order="5">
+                <TimingPointInJourneyPattern id="ao:tpijp_24o_05" version="any" order="5">
                   <TimingPointRef version="any" ref="ao:Banjaloka-p_t3"/>
                   <OnwardTimingLinkRef version="any" ref="ao:Banjaloka-p_t3_to_NovaSela-p"/>
                 </TimingPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="ao:tpijp_24o_06" modification="new" version="any" status="active" order="6">
+                <TimingPointInJourneyPattern id="ao:tpijp_24o_06" version="any" order="6">
                   <TimingPointRef version="any" ref="ao:NovaSela-p"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
           </timingPatterns>
-          <journeyPatterns modificationSet="all">
-            <ServiceJourneyPattern id="ao:sjp_24o" modification="new" version="any" status="active">
+          <journeyPatterns>
+            <ServiceJourneyPattern id="ao:sjp_24o" version="any">
               <Name>Alpha to Charley - All POINTs</Name>
               <RouteRef version="any" ref="ao:RT_24o"/>
               <DirectionType>outbound</DirectionType>
               <runTimes>
-                <JourneyPatternRunTime id="ao:jprt_24o1_Briga-p_to_NovaSela-p" modification="new" version="any" status="active">
+                <JourneyPatternRunTime id="ao:jprt_24o1_Briga-p_to_NovaSela-p" version="any">
                   <TimeDemandTypeRef version="any" ref="ao:tdt_01"/>
                   <TimingLinkRef version="any" ref="ao:Briga-p_to_NovaSela-p"/>
                   <RunTime>PT70M</RunTime>
                 </JourneyPatternRunTime>
               </runTimes>
               <pointsInSequence>
-                <StopPointInJourneyPattern id="ao:pijp_24o_01" modification="new" version="any" status="active" order="1">
+                <StopPointInJourneyPattern id="ao:pijp_24o_01" version="any" order="1">
                   <ScheduledStopPointRef version="any" ref="ao:Briga-p"/>
                 </StopPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="ao:pijp_24o_02" modification="new" version="any" status="active" order="2">
+                <TimingPointInJourneyPattern id="ao:pijp_24o_02" version="any" order="2">
                   <TimingPointRef version="any" ref="ao:Briga-p_t1"/>
                 </TimingPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="ao:pijp_24o_03" modification="new" version="any" status="active" order="3">
+                <TimingPointInJourneyPattern id="ao:pijp_24o_03" version="any" order="3">
                   <TimingPointRef version="any" ref="ao:Briga-p_t2"/>
                 </TimingPointInJourneyPattern>
-                <StopPointInJourneyPattern id="ao:pijp_24o_04" modification="new" version="any" status="active" order="4">
+                <StopPointInJourneyPattern id="ao:pijp_24o_04" version="any" order="4">
                   <ScheduledStopPointRef version="any" ref="ao:Banjaloka-p"/>
                 </StopPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="ao:tpip_24o_05" modification="new" version="any" status="active" order="5">
+                <TimingPointInJourneyPattern id="ao:tpip_24o_05" version="any" order="5">
                   <TimingPointRef version="any" ref="ao:Banjaloka-p_t3"/>
                 </TimingPointInJourneyPattern>
-                <StopPointInJourneyPattern id="ao:tpip_24o_06" modification="new" version="any" status="active" order="6">
+                <StopPointInJourneyPattern id="ao:tpip_24o_06" version="any" order="6">
                   <ScheduledStopPointRef version="any" ref="ao:NovaSela-p"/>
                 </StopPointInJourneyPattern>
               </pointsInSequence>
               <linksInSequence>
-                <ServiceLinkInJourneyPattern id="ao:lijp_24o_01" modification="new" version="any" status="active" order="1">
+                <ServiceLinkInJourneyPattern id="ao:lijp_24o_01" version="any" order="1">
                   <ServiceLinkRef version="any" ref="ao:Briga-p_to_Banjaloka-p"/>
                 </ServiceLinkInJourneyPattern>
-                <ServiceLinkInJourneyPattern id="ao:lijp_24o_02" modification="new" version="any" status="active" order="2">
+                <ServiceLinkInJourneyPattern id="ao:lijp_24o_02" version="any" order="2">
                   <ServiceLinkRef version="any" ref="ao:Banjaloka-p_to_NovaSela-p"/>
                 </ServiceLinkInJourneyPattern>
               </linksInSequence>
             </ServiceJourneyPattern>
           </journeyPatterns>
-          <timeDemandTypes modificationSet="all">
-            <TimeDemandType id="ao:tdt_01" modification="new" version="any" status="active">
+          <timeDemandTypes>
+            <TimeDemandType id="ao:tdt_01" version="any">
               <Name>Normal Day</Name>
               <runTimes>
-                <JourneyRunTime id="ao:tdtr_TD01_Briga-p_to_Briga-p_t1" modification="new" version="any" status="active">
+                <JourneyRunTime id="ao:tdtr_TD01_Briga-p_to_Briga-p_t1" version="any">
                   <TimingLinkRef version="any" ref="ao:Briga-p_to_Briga-p_t1"/>
                   <RunTime>PT10M</RunTime>
                 </JourneyRunTime>
-                <JourneyRunTime id="ao:tdtr_TD01_Briga-p_t1_to_Briga-p_t2" modification="new" version="any" status="active">
+                <JourneyRunTime id="ao:tdtr_TD01_Briga-p_t1_to_Briga-p_t2" version="any">
                   <TimingLinkRef version="any" ref="ao:Briga-p_t1_to_Briga-p_t2"/>
                   <RunTime>PT10M</RunTime>
                 </JourneyRunTime>
-                <JourneyRunTime id="ao:tdtr_TD01_Briga-p_t2_to_Banjaloka-p" modification="new" version="any" status="active">
+                <JourneyRunTime id="ao:tdtr_TD01_Briga-p_t2_to_Banjaloka-p" version="any">
                   <TimingLinkRef version="any" ref="ao:Briga-p_t2_to_Banjaloka-p"/>
                   <RunTime>PT10M</RunTime>
                 </JourneyRunTime>
-                <JourneyRunTime id="ao:tdtr_TD01_Banjaloka-p_to_Banjaloka-p_t3" modification="new" version="any" status="active">
+                <JourneyRunTime id="ao:tdtr_TD01_Banjaloka-p_to_Banjaloka-p_t3" version="any">
                   <TimingLinkRef version="any" ref="ao:Banjaloka-p_to_Banjaloka-p_t3"/>
                   <RunTime>PT18M</RunTime>
                 </JourneyRunTime>
-                <JourneyRunTime id="ao:tdtr_TD01_Banjaloka-p_t3_to_NovaSela-p" modification="new" version="any" status="active">
+                <JourneyRunTime id="ao:tdtr_TD01_Banjaloka-p_t3_to_NovaSela-p" version="any">
                   <TimingLinkRef version="any" ref="ao:Banjaloka-p_t3_to_NovaSela-p"/>
                   <RunTime>PT20M</RunTime>
                 </JourneyRunTime>
               </runTimes>
               <waitTimes>
-                <JourneyWaitTime id="ao:tdwt_24o1_Banjaloka-p" modification="new" version="any" status="active">
+                <JourneyWaitTime id="ao:tdwt_24o1_Banjaloka-p" version="any">
                   <Name>Wait at Stop B</Name>
                   <ScheduledStopPointRef version="any" ref="ao:Banjaloka-p"/>
                   <WaitTime>PT2M</WaitTime>
@@ -329,26 +329,26 @@
               </waitTimes>
             </TimeDemandType>
           </timeDemandTypes>
-          <timeDemandTypeAssignments modificationSet="all">
-            <TimeDemandTypeAssignment id="ao:TA_001" modification="new" version="any" status="active" order="1">
+          <timeDemandTypeAssignments>
+            <TimeDemandTypeAssignment id="ao:TA_001" version="any" order="1">
               <TimeDemandTypeRef version="any" ref="ao:tdt_01"/>
               <TimebandRef ref="ao:tdt_01"/>
               <GroupOfTimingLinksRef version="any" ref="ao:Bogus"/>
             </TimeDemandTypeAssignment>
           </timeDemandTypeAssignments>
-          <timingLinkGroups modificationSet="all">
-            <GroupOfLinks id="ao:Bogus" modification="new" version="any" status="active">
+          <timingLinkGroups>
+            <GroupOfLinks id="ao:Bogus" version="any">
               <Name>bogus group</Name>
-              <members modificationSet="all">
+              <members>
                 <TimingLinkRef version="any" ref="ao:Briga-p_t2_to_Banjaloka-p"/>
                 <TimingLinkRef version="any" ref="ao:Banjaloka-p_to_Banjaloka-p_t3"/>
               </members>
             </GroupOfLinks>
           </timingLinkGroups>
         </ServiceFrame>
-        <TimetableFrame id="ao:TIM_23_O" modification="new" version="1" status="active">
-          <validityConditions modificationSet="all">
-            <AvailabilityCondition id="ao:Cnd001" modification="new" version="any" status="active">
+        <TimetableFrame id="ao:TIM_23_O" version="1">
+          <validityConditions>
+            <AvailabilityCondition id="ao:Cnd001" version="any">
               <Description>Sept  to April</Description>
               <FromDate>2009-01-01T00:00:00Z</FromDate>
               <ToDate>2009-12-31T00:00:00Z</ToDate>
@@ -356,10 +356,10 @@
           </validityConditions>
           <Name>Winter timetable for route 66 outbound</Name>
           <VehicleModes>bus</VehicleModes>
-          <vehicleJourneys modificationSet="all">
-            <ServiceJourney id="ao:K66_outbound_01" modification="new" version="any" status="active">
+          <vehicleJourneys>
+            <ServiceJourney id="ao:K66_outbound_01" version="any">
               <DepartureTime>14:20:00Z</DepartureTime>
-              <dayTypes modificationSet="all">
+              <dayTypes>
                 <DayTypeRef version="any" ref="ao:DT_02-Everyday-NotHoliday"/>
                 <DayTypeRef version="any" ref="ao:DT_ChristmasEve"/>
                 <DayTypeRef version="any" ref="ao:DT_ChristmasDay"/>
@@ -380,7 +380,7 @@
                 <DestinationDisplayRef version="any" ref="ao:DST_Charley"/>
               </JourneyPatternView>
               <runTimes>
-                <VehicleJourneyRunTime id="ao:vjrt_sj_24o_01" modification="new" status="active">
+                <VehicleJourneyRunTime id="ao:vjrt_sj_24o_01">
                   <Name>Overall run time</Name>
                   <TimeDemandTypeRef version="any" ref="ao:tdt_01"/>
                   <TimingLinkRef version="any" ref="ao:Briga-p_to_NovaSela-p"/>
@@ -388,7 +388,7 @@
                 </VehicleJourneyRunTime>
               </runTimes>
               <calls>
-                <Call id="ao:K66_outbound_01_001" modification="new" version="any" status="active" order="1">
+                <Call id="ao:K66_outbound_01_001" version="any" order="1">
                   <ScheduledStopPointRef version="any" ref="ao:Briga-p"/>
                   <OnwardTimingLinkView>
                     <TimingLinkRef version="any" ref="ao:Briga-p_to_Briga-p_t1"/>
@@ -402,7 +402,7 @@
                     <Time>14:00:00Z</Time>
                   </Departure>
                 </Call>
-                <Call id="ao:K66_outbound_01_002" modification="new" version="any" status="active" order="2">
+                <Call id="ao:K66_outbound_01_002" version="any" order="2">
                   <ScheduledStopPointRef version="any" ref="ao:Banjaloka-p"/>
                   <OnwardTimingLinkView>
                     <TimingLinkRef version="any" ref="ao:Banjaloka-p_to_Banjaloka-p_t3"/>
@@ -418,7 +418,7 @@
                   </Departure>
                   <Note>Arrival at Terminus</Note>
                 </Call>
-                <Call id="ao:K66_outbound_01_003" modification="new" version="any" status="active" order="3">
+                <Call id="ao:K66_outbound_01_003" version="any" order="3">
                   <ScheduledStopPointRef version="any" ref="ao:NovaSela-p"/>
                   <Arrival>
                     <Time>15:10:00Z</Time>
@@ -429,9 +429,9 @@
                 </Call>
               </calls>
             </ServiceJourney>
-            <ServiceJourney id="ao:K66_inbound_02" modification="new" version="any" status="active">
+            <ServiceJourney id="ao:K66_inbound_02" version="any">
               <DepartureTime>15:20:00Z</DepartureTime>
-              <dayTypes modificationSet="all">
+              <dayTypes>
                 <DayTypeRef version="any" ref="ao:DT_01-MF-NotHoliday"/>
               </dayTypes>
               <TimeDemandTypeRef version="any" ref="ao:tdt_01"/>
@@ -442,7 +442,7 @@
                 <DestinationDisplayRef version="any" ref="ao:DST_Charley"/>
               </JourneyPatternView>
               <runTimes>
-                <VehicleJourneyRunTime id="ao:vjrt_sj_24o_02" modification="new" status="active">
+                <VehicleJourneyRunTime id="ao:vjrt_sj_24o_02">
                   <Name>Overall run time</Name>
                   <TimeDemandTypeRef version="any" ref="ao:tdt_01"/>
                   <TimingLinkRef version="any" ref="ao:Briga-p_to_NovaSela-p"/>
@@ -450,7 +450,7 @@
                 </VehicleJourneyRunTime>
               </runTimes>
               <calls>
-                <Call id="ao:K66_inbound_02_001" modification="new" version="any" status="active" order="1">
+                <Call id="ao:K66_inbound_02_001" version="any" order="1">
                   <ScheduledStopPointRef version="any" ref="ao:Briga-p"/>
                   <OnwardTimingLinkView>
                     <TimingLinkRef version="any" ref="ao:Briga-p_to_Briga-p_t1"/>
@@ -464,13 +464,13 @@
                     <Time>15:00:00Z</Time>
                   </Departure>
                   <vias>
-                    <Via modification="new" status="active">
+                    <Via>
                       <DestinationDisplayRef version="any" ref="ao:DST_Bravo"/>
                     </Via>
                   </vias>
                   <ChangeOfDestinationDisplay>false</ChangeOfDestinationDisplay>
                 </Call>
-                <Call id="ao:K66_inbound_02_002" modification="new" version="any" status="active" order="2">
+                <Call id="ao:K66_inbound_02_002" version="any" order="2">
                   <ScheduledStopPointRef version="any" ref="ao:Banjaloka-p"/>
                   <OnwardTimingLinkView>
                     <TimingLinkRef version="any" ref="ao:Banjaloka-p_to_Banjaloka-p_t3"/>
@@ -485,7 +485,7 @@
                     <WaitTime>PT2M</WaitTime>
                   </Departure>
                 </Call>
-                <Call id="ao:K66_inbound_02_003" modification="new" version="any" status="active" order="3">
+                <Call id="ao:K66_inbound_02_003" version="any" order="3">
                   <ScheduledStopPointRef version="any" ref="ao:NovaSela-p"/>
                   <Arrival>
                     <Time>16:10:00Z</Time>
@@ -495,13 +495,13 @@
                   </Departure>
                 </Call>
               </calls>
-              <facilities modificationSet="all">
+              <facilities>
                 <ServiceFacilitySetRef version="any" ref="ao:sfs_24o_01"/>
               </facilities>
             </ServiceJourney>
           </vehicleJourneys>
-          <serviceFacilitySets modificationSet="all">
-            <ServiceFacilitySet id="ao:sfs_24o_01" modification="new" version="any" status="active">
+          <serviceFacilitySets>
+            <ServiceFacilitySet id="ao:sfs_24o_01" version="any">
               <ProvidedByRef ref="xyz:4567">EXTERNAL</ProvidedByRef>
               <AssistanceFacilityList>boardingAssistance conductor wheechairAssistance</AssistanceFacilityList>
               <FareClasses>standardClass</FareClasses>
@@ -513,14 +513,14 @@
             </ServiceFacilitySet>
           </serviceFacilitySets>
         </TimetableFrame>
-        <ServiceCalendarFrame id="ao:CAL_02" modification="new" version="1" status="active">
+        <ServiceCalendarFrame id="ao:CAL_02" version="1">
           <Name>Service Calendar Nov to April 2010  (Compact Coding) </Name>
-          <ServiceCalendar id="ao:CAL_02" modification="new" version="any" status="active">
+          <ServiceCalendar id="ao:CAL_02" version="any">
             <FromDate>2010-11-01</FromDate>
             <ToDate>2010-11-14</ToDate>
           </ServiceCalendar>
-          <dayTypes modificationSet="all">
-            <DayType id="ao:DT_01-MF-NotHoliday" modification="new" version="any" status="active">
+          <dayTypes>
+            <DayType id="ao:DT_01-MF-NotHoliday" version="any">
               <Name>Weekdays unless a holiday</Name>
               <properties>
                 <PropertyOfDay>
@@ -529,7 +529,7 @@
                 </PropertyOfDay>
               </properties>
             </DayType>
-            <DayType id="ao:DT_02-Everyday-NotHoliday" modification="new" version="any" status="active">
+            <DayType id="ao:DT_02-Everyday-NotHoliday" version="any">
               <Name>Everyday unless a holiday</Name>
               <properties>
                 <PropertyOfDay>
@@ -538,7 +538,7 @@
                 </PropertyOfDay>
               </properties>
             </DayType>
-            <DayType id="ao:DT_03-WE-NotHoliday" modification="new" version="any" status="active">
+            <DayType id="ao:DT_03-WE-NotHoliday" version="any">
               <Name>Weekends unless a holiday</Name>
               <properties>
                 <PropertyOfDay>
@@ -547,7 +547,7 @@
                 </PropertyOfDay>
               </properties>
             </DayType>
-            <DayType id="ao:DT_04-AA-NotHoliday" modification="new" version="any" status="active">
+            <DayType id="ao:DT_04-AA-NotHoliday" version="any">
               <Name>Holidays</Name>
               <properties>
                 <PropertyOfDay>
@@ -556,7 +556,7 @@
                 </PropertyOfDay>
               </properties>
             </DayType>
-            <DayType id="ao:DT_ChristmasEve" modification="new" version="any" status="active">
+            <DayType id="ao:DT_ChristmasEve" version="any">
               <Name>Christmas Ev e  </Name>
               <properties>
                 <PropertyOfDay>
@@ -565,7 +565,7 @@
                 </PropertyOfDay>
               </properties>
             </DayType>
-            <DayType id="ao:DT_ChristmasDay" modification="new" version="any" status="active">
+            <DayType id="ao:DT_ChristmasDay" version="any">
               <Name>Christmas Day  </Name>
               <properties>
                 <PropertyOfDay>
@@ -574,7 +574,7 @@
                 </PropertyOfDay>
               </properties>
             </DayType>
-            <DayType id="ao:DT_ChristmasDayDisplacement" modification="new" version="any" status="active">
+            <DayType id="ao:DT_ChristmasDayDisplacement" version="any">
               <Name>Christmas Day Displacement holidday </Name>
               <properties>
                 <PropertyOfDay>
@@ -583,7 +583,7 @@
                 </PropertyOfDay>
               </properties>
             </DayType>
-            <DayType id="ao:DT_NewYearsEve" modification="new" version="any" status="active">
+            <DayType id="ao:DT_NewYearsEve" version="any">
               <Name>NewYear's Eve  </Name>
               <properties>
                 <PropertyOfDay>
@@ -592,7 +592,7 @@
                 </PropertyOfDay>
               </properties>
             </DayType>
-            <DayType id="ao:DT_NewYearsDay" modification="new" version="any" status="active">
+            <DayType id="ao:DT_NewYearsDay" version="any">
               <Name>NewYear's  Day  </Name>
               <properties>
                 <PropertyOfDay>
@@ -601,7 +601,7 @@
                 </PropertyOfDay>
               </properties>
             </DayType>
-            <DayType id="ao:DT_2ndJanuary" modification="new" version="any" status="active">
+            <DayType id="ao:DT_2ndJanuary" version="any">
               <Name>2nd January Holiday (Scotland)  </Name>
               <properties>
                 <PropertyOfDay>
@@ -610,7 +610,7 @@
                 </PropertyOfDay>
               </properties>
             </DayType>
-            <DayType id="ao:DT_NewYearsDayDisplacement" modification="new" version="any" status="active">
+            <DayType id="ao:DT_NewYearsDayDisplacement" version="any">
               <Name>NewYear's  Day Displacement holiday </Name>
               <properties>
                 <PropertyOfDay>
@@ -619,7 +619,7 @@
                 </PropertyOfDay>
               </properties>
             </DayType>
-            <DayType id="ao:DT_GoodFriday" modification="new" version="any" status="active">
+            <DayType id="ao:DT_GoodFriday" version="any">
               <Name>Good Friday </Name>
               <properties>
                 <PropertyOfDay>
@@ -628,7 +628,7 @@
                 </PropertyOfDay>
               </properties>
             </DayType>
-            <DayType id="ao:DT_EasterSunday" modification="new" version="any" status="active">
+            <DayType id="ao:DT_EasterSunday" version="any">
               <Name>Easter Sunday  </Name>
               <properties>
                 <PropertyOfDay>
@@ -637,7 +637,7 @@
                 </PropertyOfDay>
               </properties>
             </DayType>
-            <DayType id="ao:DT_EasterMonday" modification="new" version="any" status="active">
+            <DayType id="ao:DT_EasterMonday" version="any">
               <Name>Easter Monday</Name>
               <properties>
                 <PropertyOfDay>
@@ -647,22 +647,22 @@
               </properties>
             </DayType>
           </dayTypes>
-          <operatingDays modificationSet="all">
-            <OperatingDay id="ao:OD_2010-11-01" modification="new" version="any" status="active">
+          <operatingDays>
+            <OperatingDay id="ao:OD_2010-11-01" version="any">
               <CalendarDate>2010-11-01</CalendarDate>
               <Name>Monday 2010-11-01</Name>
               <EarliestTime>02:00:00</EarliestTime>
               <DayLength>PT24H</DayLength>
             </OperatingDay>
-            <OperatingDay id="ao:OD_2011-04-30" modification="new" version="any" status="active">
+            <OperatingDay id="ao:OD_2011-04-30" version="any">
               <CalendarDate>2011-04-30</CalendarDate>
               <Name>Saturday 2011-04-30</Name>
               <EarliestTime>02:00:00</EarliestTime>
               <DayLength>PT24H</DayLength>
             </OperatingDay>
           </operatingDays>
-          <operatingPeriods modificationSet="all">
-            <OperatingPeriod id="ao:op_010" modification="new" version="any" status="active">
+          <operatingPeriods>
+            <OperatingPeriod id="ao:op_010" version="any">
               <Name>WInter 2011</Name>
               <FromOperatingDayRef version="any" ref="ao:OD_2010-11-01"/>
               <ToOperatingDayRef version="any" ref="ao:OD_2011-04-30"/>
@@ -670,128 +670,128 @@
               <Season>Winter</Season>
             </OperatingPeriod>
           </operatingPeriods>
-          <dayTypeAssignments modificationSet="all">
-            <DayTypeAssignment id="ao:DayAsgn_2010-11-01" modification="new" version="any" status="active" order="1">
+          <dayTypeAssignments>
+            <DayTypeAssignment id="ao:DayAsgn_2010-11-01" version="any" order="1">
               <Description>Monday 2010-11-01</Description>
               <OperatingDayRef version="any" ref="ao:OD_2010-11-01"/>
               <DayTypeRef version="any" ref="ao:DT_01-MF-NotHoliday"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="ao:DayAsgn_2010-11-02" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="ao:DayAsgn_2010-11-02" version="any" order="1">
               <Description>Tuesday 2010-11-02</Description>
               <Date>2010-11-02</Date>
               <DayTypeRef version="any" ref="ao:DT_01-MF-NotHoliday"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="ao:DayAsgn_2010-11-03" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="ao:DayAsgn_2010-11-03" version="any" order="1">
               <Description>Wednesday 2010-11-03</Description>
               <Date>2010-11-03</Date>
               <DayTypeRef version="any" ref="ao:DT_01-MF-NotHoliday"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="ao:DayAsgn_2010-11-04" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="ao:DayAsgn_2010-11-04" version="any" order="1">
               <Description>Thusday 2010-11-04</Description>
               <Date>2010-11-04</Date>
               <DayTypeRef version="any" ref="ao:DT_01-MF-NotHoliday"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="ao:DayAsgn_2010-11-05" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="ao:DayAsgn_2010-11-05" version="any" order="1">
               <Description>MFriday 2010-11-05</Description>
               <Date>2010-11-05</Date>
               <DayTypeRef version="any" ref="ao:DT_01-MF-NotHoliday"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="ao:DayAsgn_2010-11-06" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="ao:DayAsgn_2010-11-06" version="any" order="1">
               <Description>Saturday 2010-11-06</Description>
               <Date>2010-11-06</Date>
               <DayTypeRef version="any" ref="ao:DT_03-WE-NotHoliday"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="ao:DayAsgn_2010-11-07" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="ao:DayAsgn_2010-11-07" version="any" order="1">
               <Description>Sunday 2010-11-07</Description>
               <Date>2010-11-07</Date>
               <DayTypeRef version="any" ref="ao:DT_03-WE-NotHoliday"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="ao:DayAsgn_2010-11-08" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="ao:DayAsgn_2010-11-08" version="any" order="1">
               <Description>Monday 2010-11-08</Description>
               <Date>2010-11-08</Date>
               <DayTypeRef version="any" ref="ao:DT_01-MF-NotHoliday"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="ao:DayAsgn_2010-11-09" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="ao:DayAsgn_2010-11-09" version="any" order="1">
               <Description>Tuesday 2010-11-09</Description>
               <Date>2010-11-09</Date>
               <DayTypeRef version="any" ref="ao:DT_01-MF-NotHoliday"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="ao:DayAsgn_2010-11-10" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="ao:DayAsgn_2010-11-10" version="any" order="1">
               <Description>Wednesday 2010-11-10</Description>
               <Date>2010-11-10</Date>
               <DayTypeRef version="any" ref="ao:DT_01-MF-NotHoliday"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="ao:DayAsgn_2010-11-11" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="ao:DayAsgn_2010-11-11" version="any" order="1">
               <Description>Thusday 2010-11-11</Description>
               <Date>2010-11-11</Date>
               <DayTypeRef version="any" ref="ao:DT_01-MF-NotHoliday"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="ao:DayAsgn_2010-11-12" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="ao:DayAsgn_2010-11-12" version="any" order="1">
               <Description>MFriday 2010-11-12</Description>
               <Date>2010-11-12</Date>
               <DayTypeRef version="any" ref="ao:DT_01-MF-NotHoliday"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="ao:DayAsgn_2010-11-13" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="ao:DayAsgn_2010-11-13" version="any" order="1">
               <Description>Saturday 2010-11-13</Description>
               <Date>2010-11-13</Date>
               <DayTypeRef version="any" ref="ao:DT_03-WE-NotHoliday"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="ao:DayAsgn_2010-11-14" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="ao:DayAsgn_2010-11-14" version="any" order="1">
               <Description>Sunday 2010-11-14</Description>
               <Date>2010-11-14</Date>
               <DayTypeRef version="any" ref="ao:DT_03-WE-NotHoliday"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="ao:DayAsgn_2010-12-24" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="ao:DayAsgn_2010-12-24" version="any" order="1">
               <Description>Sunday 2010-12-24</Description>
               <Date>2010-12-31</Date>
               <DayTypeRef version="any" ref="ao:DT_ChristmasEve"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="ao:DayAsgn_2010-12-25" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="ao:DayAsgn_2010-12-25" version="any" order="1">
               <Description>Saturday 2010-12-25 Christams Day</Description>
               <Date>2010-12-25</Date>
               <DayTypeRef version="any" ref="ao:DT_ChristmasDay"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="ao:DayAsgn_2010-12-27" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="ao:DayAsgn_2010-12-27" version="any" order="1">
               <Description>Monday 2010-12-27 (Christjmas Day displacement holiday)</Description>
               <Date>2010-12-27</Date>
               <DayTypeRef version="any" ref="ao:DT_ChristmasDayDisplacement"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="ao:DayAsgn_2010-12-31" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="ao:DayAsgn_2010-12-31" version="any" order="1">
               <Description>Friday 2010-12-31  New Years eve</Description>
               <Date>2010-12-31</Date>
               <DayTypeRef version="any" ref="ao:DT_NewYearsEve"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="ao:DayAsgn_2011-01-01" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="ao:DayAsgn_2011-01-01" version="any" order="1">
               <Description>Saturday  2011-01-01 New Years day</Description>
               <Date>2011-01-01</Date>
               <DayTypeRef version="any" ref="ao:DT_NewYearsDay"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="ao:DayAsgn_2011-01-03" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="ao:DayAsgn_2011-01-03" version="any" order="1">
               <Description>Satuurday  2011-01-03 New Years day displacement</Description>
               <Date>2011-01-03</Date>
               <DayTypeRef version="any" ref="ao:DT_NewYearsDayDisplacement"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="ao:DayAsgn_&gt;2011-04-22" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="ao:DayAsgn_&gt;2011-04-22" version="any" order="1">
               <Description>Friday 2011-04-22 Good Friday</Description>
               <Date>2011-04-22</Date>
               <DayTypeRef version="any" ref="ao:DT_GoodFriday"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="ao:DayAsgn_&gt;2011-04-24" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="ao:DayAsgn_&gt;2011-04-24" version="any" order="1">
               <Description>Sunday 2011-04-24 Easter Sunday</Description>
               <Date>2011-04-24</Date>
               <DayTypeRef version="any" ref="ao:DT_EasterSunday"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="ao:DayAsgn_&gt;2011-04-25" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="ao:DayAsgn_&gt;2011-04-25" version="any" order="1">
               <Description>Monday 2011-04-25 Easter Monday</Description>
               <Date>2011-04-25</Date>
               <DayTypeRef version="any" ref="ao:DT_EasterMonday"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="ao:DayAsgn_2011-04-29" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="ao:DayAsgn_2011-04-29" version="any" order="1">
               <Description>Friday2011-04-29</Description>
               <Date>2011-04-29</Date>
               <DayTypeRef version="any" ref="ao:DT_01-MF-NotHoliday"/>
             </DayTypeAssignment>
-            <DayTypeAssignment id="ao:DayAsgn_2011-04-30" modification="new" version="any" status="active" order="1">
+            <DayTypeAssignment id="ao:DayAsgn_2011-04-30" version="any" order="1">
               <Description>Saturday 2011-04-30</Description>
               <OperatingDayRef version="any" ref="ao:OD_2011-04-30"/>
               <DayTypeRef version="any" ref="ao:DT_03-WE-NotHoliday"/>

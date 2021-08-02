@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <PublicationTimestamp>2010-08-17T09:30:47Z</PublicationTimestamp>
   <ParticipantRef>SYS001</ParticipantRef>
-  <PublicationRequest version="1.0">
+  <PublicationRequest>
     <RequestTimestamp>2010-08-17T09:30:47Z</RequestTimestamp>
     <ParticipantRef>SYS002</ParticipantRef>
   </PublicationRequest>
   <PublicationRefreshInterval>P7D</PublicationRefreshInterval>
   <Description>Netex basic Versioning Example Step 05 Variant using GENERAL FRAME references.</Description>
   <dataObjects>
-    <GeneralFrame id="mybus:ntwkf001" created="2010-05-17T09:30:47Z" changed="2010-05-22T10:30:51Z" modification="new" version="005" status="active" derivedFromVersionRef="004" responsibilitySetRef="mybus:RS_10">
-      <validityConditions modificationSet="all">
-        <AvailabilityCondition id="mybus:VC002_mf" created="2010-05-18T10:30:47Z" modification="new" version="003" status="active">
+    <GeneralFrame id="mybus:ntwkf001" created="2010-05-17T09:30:47Z" changed="2010-05-22T10:30:51Z" version="005" derivedFromVersionRef="004" responsibilitySetRef="mybus:RS_10">
+      <validityConditions>
+        <AvailabilityCondition id="mybus:VC002_mf" created="2010-05-18T10:30:47Z" version="003">
           <Description>Use when no ice</Description>
           <FromDate>2010-05-17T00:00:00Z</FromDate>
           <ToDate>2011-05-17T00:00:00Z</ToDate>
-          <dayTypes modificationSet="all">
+          <dayTypes>
             <DayTypeRef ref="mybus:DT001_MF"/>
           </dayTypes>
         </AvailabilityCondition>
       </validityConditions>
       <Name>My Network  Version 4 One link has been removed. Baseline is version 3 as Links  needs exist</Name>
       <BaselineVersionFrameRef ref="mybus:GeneralFrame:003">EXTERNAL</BaselineVersionFrameRef>
-      <codespaces modificationSet="all">
+      <codespaces>
         <Codespace id="mybus">
           <Xmlns>mybus</Xmlns>
           <XmlnsUrl>http://www.mybuses.eu/stuff</XmlnsUrl>
@@ -33,26 +33,26 @@
         <DefaultCodespaceRef ref="mybus"/>
         <DefaultResponsibilitySetRef ref="mybus:RS_10"/>
       </FrameDefaults>
-      <members modificationSet="all">
-        <GeneralFrameMember id="mybus:ntwkf001_01" modification="new" status="active">
+      <members>
+        <GeneralFrameMember id="mybus:ntwkf001_01">
           <ScheduledStopPointRef ref="mybus:SSP0001A"/>
         </GeneralFrameMember>
-        <GeneralFrameMember id="mybus:ntwkf001_02" modification="new" status="active">
+        <GeneralFrameMember id="mybus:ntwkf001_02">
           <ScheduledStopPointRef ref="mybus:SSP0001B"/>
         </GeneralFrameMember>
-        <GeneralFrameMember id="mybus:ntwkf001_05" modification="new" status="active">
+        <GeneralFrameMember id="mybus:ntwkf001_05">
           <ScheduledStopPointRef ref="mybus:SSP0001C"/>
         </GeneralFrameMember>
-        <GeneralFrameMember id="mybus:ntwkf001_03" modification="new" status="active">
+        <GeneralFrameMember id="mybus:ntwkf001_03">
           <DayTypeRef ref="mybus:DT001_MF"/>
         </GeneralFrameMember>
-        <GeneralFrameMember id="mybus:ntwkf001_04" modification="new" status="active">
+        <GeneralFrameMember id="mybus:ntwkf001_04">
           <ServiceLinkRef ref="mybu:SL_AtoB01"/>
         </GeneralFrameMember>
-        <GeneralFrameMember id="mybus:ntwkf001_06" modification="new" status="active">
+        <GeneralFrameMember id="mybus:ntwkf001_06">
           <ServiceLinkRef ref="mybu:SL_BtoC01"/>
         </GeneralFrameMember>
-        <GeneralFrameMember id="mybus:ntwkf001_07" modification="new" status="active">
+        <GeneralFrameMember id="mybus:ntwkf001_07">
           <ServicePatternRef ref="mybus:SP001"/>
         </GeneralFrameMember>
       </members>

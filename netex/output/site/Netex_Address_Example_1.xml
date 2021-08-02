@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <PublicationTimestamp>2001-12-17T09:30:47Z</PublicationTimestamp>
   <ParticipantRef>SYS001</ParticipantRef>
-  <PublicationRequest version="1.0">
+  <PublicationRequest>
     <RequestTimestamp>2001-12-17T09:30:47Z</RequestTimestamp>
     <ParticipantRef>SYS002</ParticipantRef>
   </PublicationRequest>
   <PublicationRefreshInterval>PT5M0S</PublicationRefreshInterval>
   <dataObjects>
-    <SiteFrame id="SiteFrame:SF01" modification="new" version="any" status="active">
-      <validityConditions modificationSet="all">
-        <AvailabilityCondition id="mysite:PP01_OpeningHours" modification="new" version="any" status="active">
-          <dayTypes modificationSet="all">
-            <DayType id="mysite:EveryDay" modification="new" version="any" status="active">
+    <SiteFrame id="SiteFrame:SF01" version="any">
+      <validityConditions>
+        <AvailabilityCondition id="mysite:PP01_OpeningHours" version="any">
+          <dayTypes>
+            <DayType id="mysite:EveryDay" version="any">
               <Name>Every day</Name>
               <properties>
                 <PropertyOfDay>
@@ -22,16 +22,16 @@
             </DayType>
             <DayTypeRef ref=""/>
           </dayTypes>
-          <timebands modificationSet="all">
-            <Timeband id="mysite:OpeningHours" modification="new" version="any" status="active">
+          <timebands>
+            <Timeband id="mysite:OpeningHours" version="any">
               <StartTime>06:30:00</StartTime>
               <EndTime>12:00:00</EndTime>
             </Timeband>
           </timebands>
         </AvailabilityCondition>
-        <AvailabilityCondition id="mysite:PP01_ExitHours" modification="new" version="any" status="active">
-          <dayTypes modificationSet="all">
-            <DayType id="mysite:24HrsEveryDay" modification="new" version="any" status="active">
+        <AvailabilityCondition id="mysite:PP01_ExitHours" version="any">
+          <dayTypes>
+            <DayType id="mysite:24HrsEveryDay" version="any">
               <Name>Every day</Name>
               <properties>
                 <PropertyOfDay>
@@ -43,7 +43,7 @@
           </dayTypes>
         </AvailabilityCondition>
       </validityConditions>
-      <codespaces modificationSet="all">
+      <codespaces>
         <Codespace id="mypark">
           <Xmlns>mypark</Xmlns>
           <XmlnsUrl>http://www.pkgdata.co.uk/data</XmlnsUrl>
@@ -53,15 +53,15 @@
       <FrameDefaults>
         <DefaultCodespaceRef ref="mypark"/>
       </FrameDefaults>
-      <parkings modificationSet="all">
-        <Parking id="mysite::PP01" dataSourceRef="parkopedia" modification="new" version="any" status="active">
-          <validityConditions modificationSet="all">
+      <parkings>
+        <Parking id="mysite::PP01" dataSourceRef="parkopedia" version="any">
+          <validityConditions>
             <AvailabilityConditionRef version="any" ref="mysite:PP01_OpeningHours"/>
           </validityConditions>
           <Name>Barcester  CIty centre  Car Park</Name>
           <ShortName>CIty Car Park</ShortName>
           <Description>Mult storey next to Sainsbury . Three storeys 220 public and 30 disabled places </Description>
-          <Centroid id="xyz" modification="new" status="active">
+          <Centroid id="xyz">
             <Location id="xyz12" srsName="WGS84">
               <Longitude>-180</Longitude>
               <Latitude>-90</Latitude>
@@ -69,7 +69,7 @@
           </Centroid>
           <Url>http://www.barpark.co.uk</Url>
           <Image>http://ww.mycarpark.com/prettypicture.jpg</Image>
-          <PostalAddress id="PostalAddress:PP01_01" modification="new" version="any" status="active">
+          <PostalAddress id="PostalAddress:PP01_01" version="any">
             <CountryRef ref="uk">String</CountryRef>
             <HouseNumber>27</HouseNumber>
             <Street>High Street</Street>
@@ -80,16 +80,16 @@
           <PublicUse>all</PublicUse>
           <Covered>indoors</Covered>
           <AllAreasWheelchairAccessible>false</AllAreasWheelchairAccessible>
-          <facilities modificationSet="all">
-            <SiteFacilitySet id="mysite:SSP_02456A" modification="new" version="any" status="active">
+          <facilities>
+            <SiteFacilitySet id="mysite:SSP_02456A" version="any">
               <AccessibilityToolList>pushchair wheelchair</AccessibilityToolList>
             </SiteFacilitySet>
           </facilities>
           <SiteType>retail</SiteType>
           <AtCentre>true</AtCentre>
-          <entrances modificationSet="all">
-            <ParkingEntranceForVehicles id="mysite:PP_E11_Entrance" modification="new" version="any" status="active">
-              <validityConditions modificationSet="all">
+          <entrances>
+            <ParkingEntranceForVehicles id="mysite:PP_E11_Entrance" version="any">
+              <validityConditions>
                 <AvailabilityConditionRef version="any" ref="mysite:PP01_OpeningHours"/>
               </validityConditions>
               <Name>Main Vehicle Entrance from street</Name>
@@ -102,8 +102,8 @@
               <Width>14.0</Width>
               <Height>12.0</Height>
             </ParkingEntranceForVehicles>
-            <ParkingEntranceForVehicles id="mysite:PP_E12_Exit" modification="new" version="any" status="active">
-              <validityConditions modificationSet="all">
+            <ParkingEntranceForVehicles id="mysite:PP_E12_Exit" version="any">
+              <validityConditions>
                 <AvailabilityConditionRef version="any" ref="mysite:PP01_ExitHours"/>
               </validityConditions>
               <Name>Main Vehicle Exit to street</Name>
@@ -117,8 +117,8 @@
               <Height>12.0</Height>
             </ParkingEntranceForVehicles>
           </entrances>
-          <accesses modificationSet="all">
-            <Access id="mysite:PP_01" modification="new" version="any" status="active">
+          <accesses>
+            <Access id="mysite:PP_01" version="any">
               <Description>Walk to Station</Description>
               <TransferDuration>
                 <DefaultDuration>PT10M</DefaultDuration>
@@ -150,19 +150,19 @@
           <ParkingReservation>noReservations</ParkingReservation>
           <BookingUrl>http://www.bookmyparking.com</BookingUrl>
           <parkingProperties>
-            <ParkingProperties id="mysite:PP01" modification="new" version="any" status="active">
+            <ParkingProperties id="mysite:PP01" version="any">
               <ParkingUserTypes>allUsers</ParkingUserTypes>
               <ParkingStayList>all</ParkingStayList>
               <MaximumStay>PT48H</MaximumStay>
-              <spaces modificationSet="all">
-                <ParkingCapacity id="mysite:PP01_01_disabled" modification="new" version="any" status="active">
+              <spaces>
+                <ParkingCapacity id="mysite:PP01_01_disabled" version="any">
                   <ParentRef ref="mysite::PP01"/>
                   <ParkingUserType>registeredDisabled</ParkingUserType>
                   <ParkingVehicleType>passengerCar</ParkingVehicleType>
                   <ParkingStayType>unlimited</ParkingStayType>
                   <NumberOfSpaces>30</NumberOfSpaces>
                 </ParkingCapacity>
-                <ParkingCapacity id="mysite:PP01_other" modification="new" version="any" status="active">
+                <ParkingCapacity id="mysite:PP01_other" version="any">
                   <ParentRef ref="mysite::PP01_01_01"/>
                   <ParkingUserType>allUsers</ParkingUserType>
                   <ParkingVehicleType>passengerCar</ParkingVehicleType>
@@ -172,18 +172,18 @@
               </spaces>
             </ParkingProperties>
           </parkingProperties>
-          <vehicleEntrances modificationSet="all">
+          <vehicleEntrances>
             <ParkingEntranceForVehiclesRef version="any" ref="mysite:PP_E11_Entrance"/>
             <ParkingEntranceForVehiclesRef version="any" ref="mysite:PP_E12_Exit"/>
           </vehicleEntrances>
         </Parking>
-        <Parking id="mysite::PS22" dataSourceRef="parkopedia" modification="new" version="any" status="active">
-          <validityConditions modificationSet="all">
-            <AvailabilityCondition id="mysite:ParkingChargeHours" modification="new" version="any" status="active">
+        <Parking id="mysite::PS22" dataSourceRef="parkopedia" version="any">
+          <validityConditions>
+            <AvailabilityCondition id="mysite:ParkingChargeHours" version="any">
               <Name>Charged Parking times</Name>
               <Description>Modnay to friday not PublicHolidays</Description>
-              <dayTypes modificationSet="all">
-                <DayType id="mysite:WorkingDay" modification="new" version="any" status="active">
+              <dayTypes>
+                <DayType id="mysite:WorkingDay" version="any">
                   <Name>Working day</Name>
                   <properties>
                     <PropertyOfDay>
@@ -195,8 +195,8 @@
                 </DayType>
                 <DayTypeRef ref=""/>
               </dayTypes>
-              <timebands modificationSet="all">
-                <Timeband id="mysite:ParkingChargeHours" modification="new" version="any" status="active">
+              <timebands>
+                <Timeband id="mysite:ParkingChargeHours" version="any">
                   <StartTime>08:30:00</StartTime>
                   <EndTime>05:30:00</EndTime>
                 </Timeband>
@@ -207,15 +207,15 @@
           <ShortName>CIty Car Park</ShortName>
           <Description>On street parking metered 8.30 to 6 pm Mondat to Friday  </Description>
           <Url>http://www.barpccyparkingregs.co.uk</Url>
-          <AccessibilityAssessment id="mysite::PS22_01" modification="new" version="any" status="active">
+          <AccessibilityAssessment id="mysite::PS22_01" version="any">
             <MobilityImpairedAccess>true</MobilityImpairedAccess>
           </AccessibilityAssessment>
           <AccessModes>foot</AccessModes>
           <PublicUse>all</PublicUse>
           <Covered>outdoors</Covered>
           <AllAreasWheelchairAccessible>true</AllAreasWheelchairAccessible>
-          <accesses modificationSet="all">
-            <Access id="mysite:PS_s2" modification="new" version="any" status="active">
+          <accesses>
+            <Access id="mysite:PS_s2" version="any">
               <Description>Walk to Station</Description>
               <TransferDuration>
                 <DefaultDuration>PT15M</DefaultDuration>
@@ -253,18 +253,18 @@
           </PaymentByMobile>
           <FreeParkingOutOfHours>true</FreeParkingOutOfHours>
           <parkingProperties>
-            <ParkingProperties id="mysite:PS22" modification="new" version="any" status="active">
+            <ParkingProperties id="mysite:PS22" version="any">
               <ParkingUserTypes>all</ParkingUserTypes>
               <ParkingStayList>unlimited</ParkingStayList>
-              <spaces modificationSet="all">
-                <ParkingCapacity id="mysite:PS22_01_disabled" modification="new" version="any" status="active">
+              <spaces>
+                <ParkingCapacity id="mysite:PS22_01_disabled" version="any">
                   <ParentRef ref="mysite::PS22"/>
                   <ParkingUserType>registeredDisabled</ParkingUserType>
                   <ParkingVehicleType>passengerCar</ParkingVehicleType>
                   <ParkingStayType>unlimited</ParkingStayType>
                   <NumberOfSpaces>5</NumberOfSpaces>
                 </ParkingCapacity>
-                <ParkingCapacity id="mysite:PS22_other" modification="new" version="any" status="active">
+                <ParkingCapacity id="mysite:PS22_other" version="any">
                   <ParentRef ref="mysite::PS22_01_01"/>
                   <ParkingUserType>allUsers</ParkingUserType>
                   <ParkingVehicleType>passengerCar</ParkingVehicleType>

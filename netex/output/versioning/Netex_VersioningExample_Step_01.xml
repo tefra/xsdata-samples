@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <PublicationTimestamp>2010-05-17T09:30:47Z</PublicationTimestamp>
   <ParticipantRef>SYS001</ParticipantRef>
-  <PublicationRequest version="1.0">
+  <PublicationRequest>
     <RequestTimestamp>2001-12-17T09:30:47Z</RequestTimestamp>
     <ParticipantRef>SYS002</ParticipantRef>
     <topics>
@@ -15,8 +15,8 @@
   <PublicationRefreshInterval>P7D</PublicationRefreshInterval>
   <Description>Netex basic Versioning Example Step 01</Description>
   <dataObjects>
-    <CompositeFrame id="mybus:ntwkf001" modification="new" version="001" status="active">
-      <codespaces modificationSet="all">
+    <CompositeFrame id="mybus:ntwkf001" version="001">
+      <codespaces>
         <Codespace id="mybus">
           <Xmlns>mybus</Xmlns>
           <XmlnsUrl>http://www.mybuses.eu/stuff</XmlnsUrl>
@@ -27,29 +27,29 @@
         <DefaultCodespaceRef ref="mybus"/>
         <DefaultResponsibilitySetRef ref="mybus:RS_10">EXTERNAL</DefaultResponsibilitySetRef>
       </FrameDefaults>
-      <versions modificationSet="all">
-        <Version id="mybus:ntwkf001" created="2010-05-17T09:30:47Z" modification="new" version="002" status="active">
+      <versions>
+        <Version id="mybus:ntwkf001" created="2010-05-17T09:30:47Z" version="002">
           <Status>versioned</Status>
           <Description>Version 1 of Composite Frame </Description>
           <VersionType>baseline</VersionType>
         </Version>
       </versions>
-      <frames modificationSet="all">
-        <ServiceFrame id="mybus:ntwkf001@service" created="2010-05-17T09:30:47Z" modification="new" version="001" status="active" responsibilitySetRef="mybus:RS_10">
+      <frames>
+        <ServiceFrame id="mybus:ntwkf001@service" created="2010-05-17T09:30:47Z" version="001" responsibilitySetRef="mybus:RS_10">
           <Name>My Network  (V1) </Name>
-          <versions modificationSet="all">
-            <Version id="mybus:ntwkf001@service" created="2010-05-17T09:30:47Z" modification="new" version="001" status="active">
+          <versions>
+            <Version id="mybus:ntwkf001@service" created="2010-05-17T09:30:47Z" version="001">
               <Status>versioned</Status>
               <Description>Version 1 of Service Frame </Description>
               <VersionType>baseline</VersionType>
             </Version>
-            <Version id="mybus:SSP0001A" created="2010-05-17T09:30:47Z" modification="new" version="001" status="active">
+            <Version id="mybus:SSP0001A" created="2010-05-17T09:30:47Z" version="001">
               <Status>versioned</Status>
               <Description>Version 1 of StopPoint SSP001A </Description>
             </Version>
           </versions>
-          <scheduledStopPoints modificationSet="all">
-            <ScheduledStopPoint id="mybus:SSP0001A" created="2010-05-17T09:30:47Z" modification="new" version="001" status="active" responsibilitySetRef="mybus:RS_10">
+          <scheduledStopPoints>
+            <ScheduledStopPoint id="mybus:SSP0001A" created="2010-05-17T09:30:47Z" version="001" responsibilitySetRef="mybus:RS_10">
               <Name>Haltstelle A</Name>
               <Description>Version one of stop A</Description>
             </ScheduledStopPoint>

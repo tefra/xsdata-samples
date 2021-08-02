@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <PublicationTimestamp>2010-12-17T09:30:47Z</PublicationTimestamp>
   <ParticipantRef>SYS001</ParticipantRef>
-  <PublicationRequest version="1.0">
+  <PublicationRequest>
     <RequestTimestamp>2010-12-17T09:30:47Z</RequestTimestamp>
     <ParticipantRef>SYS002</ParticipantRef>
     <topics>
       <NetworkFrameTopic>
         <selectionValidityConditions>
-          <AvailabilityCondition id="hde:CAL_02" modification="new" version="any" status="active">
+          <AvailabilityCondition id="hde:CAL_02" version="any">
             <FromDate>2010-11-01T00:00:00Z</FromDate>
           </AvailabilityCondition>
         </selectionValidityConditions>
@@ -93,8 +93,8 @@ The Calendar is shown coded as
 	
 	</Description>
   <dataObjects>
-    <CompositeFrame id="hde:CAL_02" modification="new" version="1" status="active">
-      <codespaces modificationSet="all">
+    <CompositeFrame id="hde:CAL_02" version="1">
+      <codespaces>
         <Codespace id="mybus">
           <Xmlns>mybus</Xmlns>
           <XmlnsUrl>http://www.mybuses.eu/stuff</XmlnsUrl>
@@ -109,74 +109,74 @@ The Calendar is shown coded as
       <FrameDefaults>
         <DefaultCodespaceRef ref="mybus"/>
       </FrameDefaults>
-      <frames modificationSet="all">
-        <ServiceFrame id="mybus:svf_24" modification="new" version="1" status="active">
+      <frames>
+        <ServiceFrame id="mybus:svf_24" version="1">
           <Name>Stops for Winter timetable for route 24 </Name>
-          <directions modificationSet="all">
-            <Direction id="mybus:DR_Westbound" modification="new" version="any" status="active">
+          <directions>
+            <Direction id="mybus:DR_Westbound" version="any">
               <Name>To Alpha</Name>
             </Direction>
-            <Direction id="mybus:DR_Southbound" modification="new" version="any" status="active">
+            <Direction id="mybus:DR_Southbound" version="any">
               <Name>To Tau </Name>
             </Direction>
           </directions>
-          <routePoints modificationSet="all">
-            <RoutePoint id="mybus:RP_001" modification="new" version="any" status="active">
+          <routePoints>
+            <RoutePoint id="mybus:RP_001" version="any">
               <Name>Alpha  </Name>
             </RoutePoint>
-            <RoutePoint id="mybus:RP_002" modification="new" version="any" status="active">
+            <RoutePoint id="mybus:RP_002" version="any">
               <Name>Beta  </Name>
             </RoutePoint>
-            <RoutePoint id="mybus:RP_077" modification="new" version="any" status="active">
+            <RoutePoint id="mybus:RP_077" version="any">
               <Name>Charley  </Name>
             </RoutePoint>
           </routePoints>
-          <routeLinks modificationSet="all">
-            <RouteLink id="mybus:RP_001+RP_002" modification="new" version="any" status="active">
+          <routeLinks>
+            <RouteLink id="mybus:RP_001+RP_002" version="any">
               <Name>Alpha to Bravo</Name>
               <FromPointRef version="any" ref="mybus:RP_001"/>
               <ToPointRef version="any" ref="mybus:RP_002"/>
             </RouteLink>
-            <RouteLink id="mybus:RP_002+RP_077" modification="new" version="any" status="active">
+            <RouteLink id="mybus:RP_002+RP_077" version="any">
               <Name>Bravo to </Name>
               <FromPointRef version="any" ref="mybus:RP_002"/>
               <ToPointRef version="any" ref="mybus:RP_077"/>
             </RouteLink>
           </routeLinks>
-          <routes modificationSet="all">
-            <Route id="mybus:RT_24o" modification="new" version="any" status="active">
+          <routes>
+            <Route id="mybus:RT_24o" version="any">
               <Name>Line 24 Alpha to Charley   </Name>
               <DirectionType>outbound</DirectionType>
               <DirectionRef version="any" ref="mybus:DR_Westbound"/>
               <pointsInSequence>
-                <PointOnRoute id="mybus:RT_24o@01" modification="new" version="any" status="active" order="1">
+                <PointOnRoute id="mybus:RT_24o@01" version="any" order="1">
                   <RoutePointRef version="any" ref="mybus:RP_001"/>
                 </PointOnRoute>
-                <PointOnRoute id="mybus:RT_24o@02" modification="new" version="any" status="active" order="2">
+                <PointOnRoute id="mybus:RT_24o@02" version="any" order="2">
                   <RoutePointRef version="any" ref="mybus:RP_002"/>
                 </PointOnRoute>
-                <PointOnRoute id="mybus:RT_24o@03" modification="new" version="any" status="active" order="3">
+                <PointOnRoute id="mybus:RT_24o@03" version="any" order="3">
                   <RoutePointRef version="any" ref="mybus:RP_077"/>
                 </PointOnRoute>
               </pointsInSequence>
             </Route>
           </routes>
-          <flexiblePointProperties modificationSet="all">
-            <FlexiblePointProperties id="mybus:RP_077" modification="new" version="any" status="active">
+          <flexiblePointProperties>
+            <FlexiblePointProperties id="mybus:RP_077" version="any">
               <PointOnRouteRef version="any" ref="mybus:RT_24o@03" order="3"/>
               <PointStandingForAZone>true</PointStandingForAZone>
             </FlexiblePointProperties>
           </flexiblePointProperties>
-          <flexibleLinkProperties modificationSet="all">
-            <FlexibleLinkProperties id="mybus:RP_002+RP_077" modification="new" version="any" status="active">
+          <flexibleLinkProperties>
+            <FlexibleLinkProperties id="mybus:RP_002+RP_077" version="any">
               <RouteLinkRef version="any" ref="mybus:RP_002+RP_077"/>
               <MayBeSkipped>true</MayBeSkipped>
               <OnMainRoute>false</OnMainRoute>
               <UnscheduledPath>true</UnscheduledPath>
             </FlexibleLinkProperties>
           </flexibleLinkProperties>
-          <lines modificationSet="all">
-            <FlexibleLine id="mybus:FL_24" modification="new" version="any" status="active">
+          <lines>
+            <FlexibleLine id="mybus:FL_24" version="any">
               <Name>Line 24 Alpha  to Tau FLEXIBLE SERVICE </Name>
               <ShortName>Line 24</ShortName>
               <TransportMode>bus</TransportMode>
@@ -190,27 +190,27 @@ The Calendar is shown coded as
               <MinimumBookingPeriod>PT30M</MinimumBookingPeriod>
             </FlexibleLine>
           </lines>
-          <destinationDisplays modificationSet="all">
-            <DestinationDisplay id="mybus:DST_Alpha" modification="new" version="any" status="active">
+          <destinationDisplays>
+            <DestinationDisplay id="mybus:DST_Alpha" version="any">
               <Name>Alpha</Name>
               <ShortName>Alpha</ShortName>
               <PublicCode>Alpha</PublicCode>
             </DestinationDisplay>
-            <DestinationDisplay id="mybus:DST_Charley" modification="new" version="any" status="active">
+            <DestinationDisplay id="mybus:DST_Charley" version="any">
               <Name>Charley</Name>
               <ShortName>Charley G</ShortName>
               <PublicCode>Charley</PublicCode>
             </DestinationDisplay>
           </destinationDisplays>
-          <scheduledStopPoints modificationSet="all">
-            <ScheduledStopPoint id="mybus:SSP_001" modification="new" version="any" status="active">
+          <scheduledStopPoints>
+            <ScheduledStopPoint id="mybus:SSP_001" version="any">
               <Name>Alpha  </Name>
               <ShortName>Alpha</ShortName>
               <PublicCode>ALPH</PublicCode>
               <StopType>onstreetBus</StopType>
               <VehicleModes>bus</VehicleModes>
             </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_002" modification="new" version="any" status="active">
+            <ScheduledStopPoint id="mybus:SSP_002" version="any">
               <Name>Bravo Street</Name>
               <Location>
                 <Longitude>53.2000</Longitude>
@@ -221,7 +221,7 @@ The Calendar is shown coded as
               <StopType>onstreetBus</StopType>
               <VehicleModes>bus</VehicleModes>
             </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_077" modification="new" version="any" status="active">
+            <ScheduledStopPoint id="mybus:SSP_077" version="any">
               <Name>Tau</Name>
               <Location>
                 <Longitude>53.3000</Longitude>
@@ -231,60 +231,60 @@ The Calendar is shown coded as
               <VehicleModes>bus</VehicleModes>
             </ScheduledStopPoint>
           </scheduledStopPoints>
-          <serviceLinks modificationSet="all">
-            <ServiceLink id="mybus:SSP_001+SSP_002" modification="new" version="any" status="active">
+          <serviceLinks>
+            <ServiceLink id="mybus:SSP_001+SSP_002" version="any">
               <Name>Alpha to Bravo</Name>
               <FromPointRef version="any" ref="mybus:SSP_001"/>
               <ToPointRef version="any" ref="mybus:SSP_002"/>
             </ServiceLink>
-            <ServiceLink id="mybus:SSP_002+SSP_077" modification="new" version="any" status="active">
+            <ServiceLink id="mybus:SSP_002+SSP_077" version="any">
               <Name>Bravo to </Name>
               <FromPointRef version="any" ref="mybus:SSP_002"/>
               <ToPointRef version="any" ref="mybus:SSP_077"/>
             </ServiceLink>
           </serviceLinks>
-          <servicePatterns modificationSet="all">
-            <ServicePattern id="hde:svp_24o" modification="new" version="any" status="active">
+          <servicePatterns>
+            <ServicePattern id="hde:svp_24o" version="any">
               <Name>Alpha to Charley</Name>
               <RouteRef version="any" ref="mybus:RT_24o"/>
               <DirectionType>outbound</DirectionType>
-              <journeyPatterns modificationSet="all">
+              <journeyPatterns>
                 <ServiceJourneyPatternRef version="any" ref="hde:sjp_24o"/>
               </journeyPatterns>
               <pointsInSequence>
-                <StopPointInJourneyPattern id="hde:spijp_24o@01" modification="new" version="any" status="active" order="1">
+                <StopPointInJourneyPattern id="hde:spijp_24o@01" version="any" order="1">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
                   <OnwardServiceLinkRef version="any" ref="mybus:SSP_001+SSP_002">Redundant Information!</OnwardServiceLinkRef>
                   <ForAlighting>false</ForAlighting>
                 </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="hde:spijp_24o@02" modification="new" version="any" status="active" order="2">
+                <StopPointInJourneyPattern id="hde:spijp_24o@02" version="any" order="2">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
                   <OnwardServiceLinkRef version="any" ref="mybus:SSP_002+SSP_077">Redundant Information!</OnwardServiceLinkRef>
                 </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="hde:spijp_24o@03" modification="new" version="any" status="active" order="3">
+                <StopPointInJourneyPattern id="hde:spijp_24o@03" version="any" order="3">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
                   <ForBoarding>false</ForBoarding>
                 </StopPointInJourneyPattern>
               </pointsInSequence>
               <linksInSequence>
-                <ServiceLinkInJourneyPattern id="hde:slijp_24o@01" modification="new" version="any" status="active" order="1">
+                <ServiceLinkInJourneyPattern id="hde:slijp_24o@01" version="any" order="1">
                   <ServiceLinkRef version="any" ref="mybus:SSP_001+SSP_002"/>
                 </ServiceLinkInJourneyPattern>
-                <ServiceLinkInJourneyPattern id="hde:slijp_24o@02" modification="new" version="any" status="active" order="2">
+                <ServiceLinkInJourneyPattern id="hde:slijp_24o@02" version="any" order="2">
                   <ServiceLinkRef version="any" ref="mybus:SSP_002+SSP_077"/>
                 </ServiceLinkInJourneyPattern>
               </linksInSequence>
             </ServicePattern>
           </servicePatterns>
-          <stopAssignments modificationSet="all">
-            <FlexibleStopAssignment id="hde:fsa_SSP_077+fsp_Sigma" modification="new" version="any" status="active">
+          <stopAssignments>
+            <FlexibleStopAssignment id="hde:fsa_SSP_077+fsp_Sigma" version="any">
               <Description lang="en">Assigns Charley to Tau Zone </Description>
               <ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
               <FlexibleStopPlaceRef version="any" ref="mybus:fsp_Tau"/>
             </FlexibleStopAssignment>
           </stopAssignments>
-          <timingPoints modificationSet="all">
-            <TimingPoint id="mybus:SSP_001_t1" modification="new" version="any" status="active">
+          <timingPoints>
+            <TimingPoint id="mybus:SSP_001_t1" version="any">
               <Name>Between  Alpha   and Bravo Point 1</Name>
               <Location>
                 <Longitude>53.2000</Longitude>
@@ -292,7 +292,7 @@ The Calendar is shown coded as
               </Location>
               <TimingPointStatus>timingPoint</TimingPointStatus>
             </TimingPoint>
-            <TimingPoint id="mybus:SSP_001_t2" modification="new" version="any" status="active">
+            <TimingPoint id="mybus:SSP_001_t2" version="any">
               <Name>Between  Alpha   and Bravo  Point 2</Name>
               <Location>
                 <Longitude>53.3000</Longitude>
@@ -300,7 +300,7 @@ The Calendar is shown coded as
               </Location>
               <TimingPointStatus>timingPoint</TimingPointStatus>
             </TimingPoint>
-            <TimingPoint id="mybus:SSP_002_t3" modification="new" version="any" status="active">
+            <TimingPoint id="mybus:SSP_002_t3" version="any">
               <Name>Between  Bravo   and Charley  Point 1</Name>
               <Location>
                 <Longitude>53.4000</Longitude>
@@ -309,122 +309,122 @@ The Calendar is shown coded as
               <TimingPointStatus>timingPoint</TimingPointStatus>
             </TimingPoint>
           </timingPoints>
-          <timingLinks modificationSet="all">
-            <TimingLink id="mybus:SSP_001+SSP_077" modification="new" version="any" status="active">
+          <timingLinks>
+            <TimingLink id="mybus:SSP_001+SSP_077" version="any">
               <Name>Overall timing Alpha  to  Charley reen</Name>
               <FromPointRef version="any" ref="mybus:SSP_001"/>
               <ToPointRef version="any" ref="mybus:SSP_077"/>
             </TimingLink>
-            <TimingLink id="mybus:SSP_001+SSP_001_t1" modification="new" version="any" status="active">
+            <TimingLink id="mybus:SSP_001+SSP_001_t1" version="any">
               <Name>After Alpha   t1</Name>
               <FromPointRef version="any" ref="mybus:SSP_001"/>
               <ToPointRef version="any" ref="mybus:SSP_001_t1"/>
             </TimingLink>
-            <TimingLink id="mybus:SSP_001_t1+SSP_001_t2" modification="new" version="any" status="active">
+            <TimingLink id="mybus:SSP_001_t1+SSP_001_t2" version="any">
               <Name>After Alpha   t1 to After Alpha  t2</Name>
               <FromPointRef version="any" ref="mybus:SSP_001_t1"/>
               <ToPointRef version="any" ref="mybus:SSP_002_t3"/>
             </TimingLink>
-            <TimingLink id="mybus:SSP_001_t2+SSP_002" modification="new" version="any" status="active">
+            <TimingLink id="mybus:SSP_001_t2+SSP_002" version="any">
               <Name>After Alpha  t2 to Bravo</Name>
               <FromPointRef version="any" ref="mybus:SSP_001_t2"/>
               <ToPointRef version="any" ref="mybus:SSP_002"/>
             </TimingLink>
-            <TimingLink id="mybus:SSP_002+SSP_002_t3" modification="new" version="any" status="active">
+            <TimingLink id="mybus:SSP_002+SSP_002_t3" version="any">
               <Name>Bravo to After Bravo t1</Name>
               <FromPointRef version="any" ref="mybus:SSP_002"/>
               <ToPointRef version="any" ref="mybus:SSP_002_t3"/>
             </TimingLink>
-            <TimingLink id="mybus:SSP_002_t3+SSP_077" modification="new" version="any" status="active">
+            <TimingLink id="mybus:SSP_002_t3+SSP_077" version="any">
               <Name>After Bravo t1 to Charley</Name>
               <FromPointRef version="any" ref="mybus:SSP_002_t3"/>
               <ToPointRef version="any" ref="mybus:SSP_077"/>
             </TimingLink>
           </timingLinks>
-          <timingPatterns modificationSet="all">
-            <TimingPattern id="hde:tp_24o" modification="new" version="any" status="active">
+          <timingPatterns>
+            <TimingPattern id="hde:tp_24o" version="any">
               <Name>Route 24</Name>
               <RouteRef version="any" ref="mybus:RT_24o"/>
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
-                <TimingPointInJourneyPattern id="hde:tpijp_24o@01" modification="new" version="any" status="active" order="1">
+                <TimingPointInJourneyPattern id="hde:tpijp_24o@01" version="any" order="1">
                   <TimingPointRef version="any" ref="mybus:SSP_001"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:SSP_001+SSP_001_t1"/>
                 </TimingPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="hde:tpijp_24o@02" modification="new" version="any" status="active" order="2">
+                <TimingPointInJourneyPattern id="hde:tpijp_24o@02" version="any" order="2">
                   <TimingPointRef version="any" ref="mybus:SSP_001_t1"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:SSP_001_t1+SSP_001_t2"/>
                 </TimingPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="hde:tpijp_24o@03" modification="new" version="any" status="active" order="3">
+                <TimingPointInJourneyPattern id="hde:tpijp_24o@03" version="any" order="3">
                   <TimingPointRef version="any" ref="mybus:SSP_001_t2"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:SSP_001_t2+SSP_002"/>
                 </TimingPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="hde:tpijp_24o@04" modification="new" version="any" status="active" order="4">
+                <TimingPointInJourneyPattern id="hde:tpijp_24o@04" version="any" order="4">
                   <TimingPointRef version="any" ref="mybus:SSP_002"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:SSP_002+SSP_002_t3"/>
                 </TimingPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="hde:tpijp_24o@05" modification="new" version="any" status="active" order="5">
+                <TimingPointInJourneyPattern id="hde:tpijp_24o@05" version="any" order="5">
                   <TimingPointRef version="any" ref="mybus:SSP_002_t3"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:SSP_002_t3+SSP_077"/>
                 </TimingPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="hde:tpijp_24o@06" modification="new" version="any" status="active" order="6">
+                <TimingPointInJourneyPattern id="hde:tpijp_24o@06" version="any" order="6">
                   <TimingPointRef version="any" ref="mybus:SSP_077"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
           </timingPatterns>
-          <journeyPatterns modificationSet="all">
-            <ServiceJourneyPattern id="hde:sjp_24o" modification="new" version="any" status="active">
+          <journeyPatterns>
+            <ServiceJourneyPattern id="hde:sjp_24o" version="any">
               <Name>Alpha to Charley</Name>
               <RouteRef version="any" ref="mybus:RT_24o"/>
               <DirectionType>outbound</DirectionType>
               <runTimes>
-                <JourneyPatternRunTime id="mybus:jprt_24o1_SSP_001+SSP_077" modification="new" version="any" status="active">
+                <JourneyPatternRunTime id="mybus:jprt_24o1_SSP_001+SSP_077" version="any">
                   <TimingLinkRef version="any" ref="mybus:SSP_001+SSP_077"/>
                   <RunTime>PT70M</RunTime>
                 </JourneyPatternRunTime>
               </runTimes>
               <pointsInSequence>
-                <StopPointInJourneyPattern id="hde:pijp_24o@01" modification="new" version="any" status="active" order="1">
+                <StopPointInJourneyPattern id="hde:pijp_24o@01" version="any" order="1">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
                 </StopPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="hde:pijp_24o@02" modification="new" version="any" status="active" order="2">
+                <TimingPointInJourneyPattern id="hde:pijp_24o@02" version="any" order="2">
                   <TimingPointRef version="any" ref="mybus:SSP_001_t1"/>
                 </TimingPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="hde:pijp_24o@03" modification="new" version="any" status="active" order="3">
+                <TimingPointInJourneyPattern id="hde:pijp_24o@03" version="any" order="3">
                   <TimingPointRef version="any" ref="mybus:SSP_001_t2"/>
                 </TimingPointInJourneyPattern>
-                <StopPointInJourneyPattern id="hde:pijp_24o@04" modification="new" version="any" status="active" order="4">
+                <StopPointInJourneyPattern id="hde:pijp_24o@04" version="any" order="4">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
                 </StopPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="hde:tpip_24o@05" modification="new" version="any" status="active" order="5">
+                <TimingPointInJourneyPattern id="hde:tpip_24o@05" version="any" order="5">
                   <TimingPointRef version="any" ref="mybus:SSP_002_t3"/>
                 </TimingPointInJourneyPattern>
-                <StopPointInJourneyPattern id="hde:tpip_24o@06" modification="new" version="any" status="active" order="6">
+                <StopPointInJourneyPattern id="hde:tpip_24o@06" version="any" order="6">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
                 </StopPointInJourneyPattern>
               </pointsInSequence>
               <linksInSequence>
-                <ServiceLinkInJourneyPattern id="hde:lijp_24o@01" modification="new" version="any" status="active" order="1">
+                <ServiceLinkInJourneyPattern id="hde:lijp_24o@01" version="any" order="1">
                   <ServiceLinkRef version="any" ref="mybus:SSP_001+SSP_002"/>
                 </ServiceLinkInJourneyPattern>
-                <ServiceLinkInJourneyPattern id="hde:lijp_24o@02" modification="new" version="any" status="active" order="2">
+                <ServiceLinkInJourneyPattern id="hde:lijp_24o@02" version="any" order="2">
                   <ServiceLinkRef version="any" ref="mybus:SSP_002+SSP_077"/>
                 </ServiceLinkInJourneyPattern>
               </linksInSequence>
             </ServiceJourneyPattern>
           </journeyPatterns>
         </ServiceFrame>
-        <TimetableFrame id="hde:TIM_02" modification="new" version="1" status="active">
-          <validityConditions modificationSet="all">
-            <AvailabilityCondition id="hde:AC_runs_02" modification="new" version="any" status="active">
+        <TimetableFrame id="hde:TIM_02" version="1">
+          <validityConditions>
+            <AvailabilityCondition id="hde:AC_runs_02" version="any">
               <Description>Operating  times for service</Description>
               <IsAvailable>true</IsAvailable>
-              <dayTypes modificationSet="all">
+              <dayTypes>
                 <DayTypeRef version="any" ref="hde:DT_01-MF-NotHoliday"/>
               </dayTypes>
-              <timebands modificationSet="all">
-                <Timeband id="hde:AC_runs_01" modification="new" version="any" status="active">
+              <timebands>
+                <Timeband id="hde:AC_runs_01" version="any">
                   <StartTime>19:00:00</StartTime>
                   <EndTime>17:00:00</EndTime>
                 </Timeband>
@@ -436,35 +436,35 @@ The Calendar is shown coded as
           <LineView>
             <FlexibleLineRef version="any" ref="mybus:FL_24"/>
           </LineView>
-          <bookingTimes modificationSet="all">
-            <AvailabilityCondition id="hde:AC_booking_01" modification="new" version="any" status="active">
+          <bookingTimes>
+            <AvailabilityCondition id="hde:AC_booking_01" version="any">
               <Description>Booking times for service</Description>
               <IsAvailable>true</IsAvailable>
-              <dayTypes modificationSet="all">
+              <dayTypes>
                 <DayTypeRef version="any" ref="hde:DT_01-MF-NotHoliday"/>
               </dayTypes>
-              <timebands modificationSet="all">
-                <Timeband id="hde:AC_booking_01" modification="new" version="any" status="active">
+              <timebands>
+                <Timeband id="hde:AC_booking_01" version="any">
                   <StartTime>08:30:00</StartTime>
                   <EndTime>12:00:00</EndTime>
                 </Timeband>
-                <Timeband id="hde:AC_booking_02" modification="new" version="any" status="active">
+                <Timeband id="hde:AC_booking_02" version="any">
                   <StartTime>13:00:00</StartTime>
                   <EndTime>16:30:00</EndTime>
                 </Timeband>
               </timebands>
             </AvailabilityCondition>
           </bookingTimes>
-          <vehicleJourneys modificationSet="all">
-            <ServiceJourney id="hde:sj_24o@01" modification="new" version="any" status="active">
-              <journeyAccountings modificationSet="all">
-                <JourneyAccounting id="mytim:sj_24o@01_01" modification="new" version="any" status="active" order="1">
+          <vehicleJourneys>
+            <ServiceJourney id="hde:sj_24o@01" version="any">
+              <journeyAccountings>
+                <JourneyAccounting id="mytim:sj_24o@01_01" version="any" order="1">
                   <OrganisationRef ref="txc:xshire" xsi:type="AuthorityRefStructure">EXTERNAL</OrganisationRef>
                   <AccountingType>subsidy</AccountingType>
                   <Partial>false</Partial>
                   <Distance>20</Distance>
                 </JourneyAccounting>
-                <JourneyAccounting id="mytim:sj_24o@01_02" modification="new" version="any" status="active" order="2">
+                <JourneyAccounting id="mytim:sj_24o@01_02" version="any" order="2">
                   <OrganisationRef ref="txc:xshire" xsi:type="AuthorityRefStructure">EXTERNAL</OrganisationRef>
                   <AccountingType>contract</AccountingType>
                   <Partial>false</Partial>
@@ -481,40 +481,40 @@ The Calendar is shown coded as
                 <DestinationDisplayRef version="any" ref="mybus:DST_Charley"/>
               </JourneyPatternView>
               <runTimes>
-                <VehicleJourneyRunTime id="hde:vjrt_sj_24o@01" modification="new" status="active">
+                <VehicleJourneyRunTime id="hde:vjrt_sj_24o@01">
                   <Name>Overall run time</Name>
                   <TimingLinkRef version="any" ref="mybus:SSP_001+SSP_077"/>
                   <RunTime>PT70M</RunTime>
                 </VehicleJourneyRunTime>
               </runTimes>
               <passingTimes>
-                <TimetabledPassingTime id="mybus:tpt_24o@01_SSP_001" modification="new" version="any" status="active">
+                <TimetabledPassingTime id="mybus:tpt_24o@01_SSP_001" version="any">
                   <StopPointInJourneyPatternRef version="any" ref="hde:spijp_24o@01"/>
                   <DepartureTime>14:00:00Z</DepartureTime>
                 </TimetabledPassingTime>
-                <TimetabledPassingTime id="hde:tpt_24o@01_SSP_001_t1" modification="new" version="any" status="active">
+                <TimetabledPassingTime id="hde:tpt_24o@01_SSP_001_t1" version="any">
                   <TimingPointInJourneyPatternRef version="any" ref="hde:tpijp_24o@02"/>
                   <DepartureTime>14:10:00Z</DepartureTime>
                 </TimetabledPassingTime>
-                <TimetabledPassingTime id="hde:tpt_24o@01_SSP_001_t2" modification="new" version="any" status="active">
+                <TimetabledPassingTime id="hde:tpt_24o@01_SSP_001_t2" version="any">
                   <TimingPointInJourneyPatternRef version="any" ref="hde:tpijp_24o@03"/>
                   <DepartureTime>14:20:00Z</DepartureTime>
                 </TimetabledPassingTime>
-                <TimetabledPassingTime id="mybus:tpt_24o@01_SSP_002" modification="new" version="any" status="active">
+                <TimetabledPassingTime id="mybus:tpt_24o@01_SSP_002" version="any">
                   <StopPointInJourneyPatternRef version="any" ref="hde:spijp_24o@02"/>
                   <DepartureTime>14:30:00Z</DepartureTime>
                 </TimetabledPassingTime>
-                <TimetabledPassingTime id="hde:tpt_24o@01_SSP_002_t3" modification="new" version="any" status="active">
+                <TimetabledPassingTime id="hde:tpt_24o@01_SSP_002_t3" version="any">
                   <TimingPointInJourneyPatternRef version="any" ref="hde:tpijp_24o@05"/>
                   <DepartureTime>14:50:00Z</DepartureTime>
                 </TimetabledPassingTime>
-                <TimetabledPassingTime id="mybus:tpt_24o@01_SSP_077" modification="new" version="any" status="active">
+                <TimetabledPassingTime id="mybus:tpt_24o@01_SSP_077" version="any">
                   <StopPointInJourneyPatternRef version="any" ref="hde:spijp_24o@03"/>
                   <ArrivalTime>15:10:00Z</ArrivalTime>
                 </TimetabledPassingTime>
               </passingTimes>
               <calls>
-                <Call id="hde:sj_24o@01_001" modification="new" version="any" status="active" order="1">
+                <Call id="hde:sj_24o@01_001" version="any" order="1">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
                   <OnwardTimingLinkView>
                     <TimingLinkRef version="any" ref="mybus:SSP_001+SSP_001_t1"/>
@@ -528,7 +528,7 @@ The Calendar is shown coded as
                     <Time>14:00:00Z</Time>
                   </Departure>
                 </Call>
-                <Call id="hde:sj_24o@01_002" modification="new" version="any" status="active" order="2">
+                <Call id="hde:sj_24o@01_002" version="any" order="2">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
                   <OnwardTimingLinkView>
                     <TimingLinkRef version="any" ref="mybus:SSP_002+SSP_002_t3"/>
@@ -544,7 +544,7 @@ The Calendar is shown coded as
                   </Departure>
                   <Note>Arrival at Terminus</Note>
                 </Call>
-                <Call id="hde:sj_24o@01_003" modification="new" version="any" status="active" order="3">
+                <Call id="hde:sj_24o@01_003" version="any" order="3">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
                   <Arrival>
                     <Time>15:10:00Z</Time>
@@ -554,7 +554,7 @@ The Calendar is shown coded as
                   </Departure>
                 </Call>
               </calls>
-              <FlexibleServiceProperties id="hde:FlexibleServiceProperties:sj_24o@02" modification="new" version="1" status="active">
+              <FlexibleServiceProperties id="hde:FlexibleServiceProperties:sj_24o@02" version="1">
                 <TypeOfFlexibleServiceRef version="any" ref="myfs"/>
                 <BookingMethods>online callOffice</BookingMethods>
                 <BookingAccess>public</BookingAccess>
@@ -562,9 +562,9 @@ The Calendar is shown coded as
                 <MinimumBookingPeriod>PT2H</MinimumBookingPeriod>
               </FlexibleServiceProperties>
             </ServiceJourney>
-            <ServiceJourney id="hde:sj_24o@02" modification="new" version="any" status="active">
+            <ServiceJourney id="hde:sj_24o@02" version="any">
               <DepartureTime>15:20:00Z</DepartureTime>
-              <dayTypes modificationSet="all">
+              <dayTypes>
                 <DayTypeRef version="any" ref="hde:DT_01-MF-NotHoliday"/>
               </dayTypes>
               <ServicePatternRef version="any" ref="hde:svp_24o"/>
@@ -576,40 +576,40 @@ The Calendar is shown coded as
                 <DestinationDisplayRef version="any" ref="mybus:DST_Charley"/>
               </JourneyPatternView>
               <runTimes>
-                <VehicleJourneyRunTime id="hde:vjrt_sj_24o@02" modification="new" status="active">
+                <VehicleJourneyRunTime id="hde:vjrt_sj_24o@02">
                   <Name>Overall run time</Name>
                   <TimingLinkRef version="any" ref="mybus:SSP_001+SSP_077"/>
                   <RunTime>PT70M</RunTime>
                 </VehicleJourneyRunTime>
               </runTimes>
               <passingTimes>
-                <TimetabledPassingTime id="mybus:tpt_24o@02_SSP_001" modification="new" version="any" status="active">
+                <TimetabledPassingTime id="mybus:tpt_24o@02_SSP_001" version="any">
                   <StopPointInJourneyPatternRef version="any" ref="hde:spijp_24o@01"/>
                   <DepartureTime>15:00:00Z</DepartureTime>
                 </TimetabledPassingTime>
-                <TimetabledPassingTime id="hde:tpt_24o@02_SSP_001_t1" modification="new" version="any" status="active">
+                <TimetabledPassingTime id="hde:tpt_24o@02_SSP_001_t1" version="any">
                   <TimingPointInJourneyPatternRef version="any" ref="hde:tpijp_24o@02"/>
                   <DepartureTime>15:10:00Z</DepartureTime>
                 </TimetabledPassingTime>
-                <TimetabledPassingTime id="hde:tpt_24o@02_SSP_001_t2" modification="new" version="any" status="active">
+                <TimetabledPassingTime id="hde:tpt_24o@02_SSP_001_t2" version="any">
                   <TimingPointInJourneyPatternRef version="any" ref="hde:tpijp_24o@03"/>
                   <DepartureTime>15:20:00Z</DepartureTime>
                 </TimetabledPassingTime>
-                <TimetabledPassingTime id="mybus:tpt_24o@02_SSP_002" modification="new" version="any" status="active">
+                <TimetabledPassingTime id="mybus:tpt_24o@02_SSP_002" version="any">
                   <StopPointInJourneyPatternRef version="any" ref="hde:spijp_24o@02"/>
                   <DepartureTime>15:30:00Z</DepartureTime>
                 </TimetabledPassingTime>
-                <TimetabledPassingTime id="hde:tpt_24o@02_SSP_002_t3" modification="new" version="any" status="active">
+                <TimetabledPassingTime id="hde:tpt_24o@02_SSP_002_t3" version="any">
                   <TimingPointInJourneyPatternRef version="any" ref="hde:tpijp_24o@05"/>
                   <DepartureTime>15:50:00Z</DepartureTime>
                 </TimetabledPassingTime>
-                <TimetabledPassingTime id="mybus:tpt_24o@02_SSP_077" modification="new" version="any" status="active">
+                <TimetabledPassingTime id="mybus:tpt_24o@02_SSP_077" version="any">
                   <StopPointInJourneyPatternRef version="any" ref="hde:spijp_24o@03"/>
                   <ArrivalTime>16:10:00Z</ArrivalTime>
                 </TimetabledPassingTime>
               </passingTimes>
               <calls>
-                <Call id="hde:sj_24o@02_001" modification="new" version="any" status="active" order="1">
+                <Call id="hde:sj_24o@02_001" version="any" order="1">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_001"/>
                   <OnwardTimingLinkView>
                     <TimingLinkRef version="any" ref="mybus:SSP_001+SSP_001_t1"/>
@@ -623,13 +623,13 @@ The Calendar is shown coded as
                     <Time>15:00:00Z</Time>
                   </Departure>
                   <vias>
-                    <Via modification="new" status="active">
+                    <Via>
                       <DestinationDisplayRef version="any" ref="mybus:DST_Alpha"/>
                     </Via>
                   </vias>
                   <ChangeOfDestinationDisplay>true</ChangeOfDestinationDisplay>
                 </Call>
-                <Call id="hde:sj_24o@02_002" modification="new" version="any" status="active" order="2">
+                <Call id="hde:sj_24o@02_002" version="any" order="2">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_002"/>
                   <OnwardTimingLinkView>
                     <TimingLinkRef version="any" ref="mybus:SSP_002+SSP_002_t3"/>
@@ -644,14 +644,14 @@ The Calendar is shown coded as
                     <WaitTime>PT2M</WaitTime>
                   </Departure>
                 </Call>
-                <Call id="hde:sj_24o@02_003" modification="new" version="any" status="active" order="3">
+                <Call id="hde:sj_24o@02_003" version="any" order="3">
                   <ScheduledStopPointRef version="any" ref="mybus:SSP_077"/>
                   <Departure>
                     <ForBoarding>false</ForBoarding>
                   </Departure>
                 </Call>
               </calls>
-              <FlexibleServiceProperties id="hde:FlexibleServiceProperties:sj_24o@02" modification="new" version="1" status="active">
+              <FlexibleServiceProperties id="hde:FlexibleServiceProperties:sj_24o@02" version="1">
                 <TypeOfFlexibleServiceRef version="any" ref="myfs"/>
                 <BookingMethods>online callOffice</BookingMethods>
                 <BookingAccess>public</BookingAccess>
@@ -661,31 +661,31 @@ The Calendar is shown coded as
               </FlexibleServiceProperties>
             </ServiceJourney>
           </vehicleJourneys>
-          <notices modificationSet="all">
-            <Notice id="hde:sj_24o@02_BN" modification="new" version="1" status="active">
+          <notices>
+            <Notice id="hde:sj_24o@02_BN" version="1">
               <Text>
 									Bookings must be made at elast two houyrs begfore</Text>
             </Notice>
           </notices>
         </TimetableFrame>
-        <SiteFrame id="mybus:svf_24" modification="new" version="1" status="active">
+        <SiteFrame id="mybus:svf_24" version="1">
           <Name>Stops for Winter timetable for Flexible Route 12 </Name>
-          <flexibleStopPlaces modificationSet="all">
-            <FlexibleStopPlace id="mybus:fsp_Tau" modification="new" version="any" status="active">
+          <flexibleStopPlaces>
+            <FlexibleStopPlace id="mybus:fsp_Tau" version="any">
               <Name>Flexible Zone Tau</Name>
               <ShortName>Tau</ShortName>
               <Description>Area around Beta ville</Description>
-              <Centroid modification="new" status="active">
+              <Centroid>
                 <Location>
                   <Longitude>53.0000</Longitude>
                   <Latitude>0.1000</Latitude>
                 </Location>
               </Centroid>
               <areas>
-                <FlexibleArea id="mybus:fa_Tau_01" modification="new" version="any" status="active">
+                <FlexibleArea id="mybus:fa_Tau_01" version="any">
                   <Name>ZONE Tau    Area 1 -   </Name>
                   <ShortName>Sigma 1</ShortName>
-                  <Centroid modification="new" status="active">
+                  <Centroid>
                     <Location>
                       <gml:pos>12345.76</gml:pos>
                       <Precision>12</Precision>
@@ -705,10 +705,10 @@ The Calendar is shown coded as
                   <BoardingUse>true</BoardingUse>
                   <AlightingUse>true</AlightingUse>
                 </FlexibleArea>
-                <FlexibleArea id="mybus:fa_Tau_02" modification="new" version="any" status="active">
+                <FlexibleArea id="mybus:fa_Tau_02" version="any">
                   <Name>ZONE Tau    Area 2 -   </Name>
                   <ShortName>Sigma 2</ShortName>
-                  <Centroid modification="new" status="active">
+                  <Centroid>
                     <Location>
                       <gml:pos>12345.76</gml:pos>
                       <Precision>12</Precision>
@@ -733,14 +733,14 @@ The Calendar is shown coded as
             </FlexibleStopPlace>
           </flexibleStopPlaces>
         </SiteFrame>
-        <ServiceCalendarFrame id="hde:CAL_02" modification="new" version="1" status="active">
+        <ServiceCalendarFrame id="hde:CAL_02" version="1">
           <Name>Service Calendar Nov to Jan 2011   </Name>
-          <ServiceCalendar id="hde:CAL_02" modification="new" version="any" status="active">
+          <ServiceCalendar id="hde:CAL_02" version="any">
             <FromDate>2010-11-01</FromDate>
             <ToDate>2011-01-14</ToDate>
           </ServiceCalendar>
-          <dayTypes modificationSet="all">
-            <DayType id="hde:DT_01-MF-NotHoliday" modification="new" version="any" status="active">
+          <dayTypes>
+            <DayType id="hde:DT_01-MF-NotHoliday" version="any">
               <Name>Weekdays unless a holiday</Name>
               <properties>
                 <PropertyOfDay>
