@@ -514,6 +514,7 @@ class StrucDocRenderMultiMedia:
         metadata={
             "name": "referencedObject",
             "type": "Attribute",
+            "required": True,
             "tokens": True,
         }
     )

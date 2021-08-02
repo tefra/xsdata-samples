@@ -37,6 +37,7 @@ class DestinationDisplayVariantVersionStructure(DataManagedObjectStructure):
             "name": "DestinationDisplayVariantMediaType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "required": True,
         }
     )
     name: Optional[MultilingualString] = field(

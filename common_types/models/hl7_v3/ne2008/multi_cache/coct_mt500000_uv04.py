@@ -109,6 +109,7 @@ class CoctMt500000Uv04AccommodationCoverage:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -117,6 +118,7 @@ class CoctMt500000Uv04AccommodationCoverage:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -179,6 +181,7 @@ class CoctMt500000Uv04CarrierOrganization:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -240,6 +243,7 @@ class CoctMt500000Uv04EmployerOrganization:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -308,6 +312,7 @@ class CoctMt500000Uv04PolicyHolderOrganization:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -371,6 +376,7 @@ class CoctMt500000Uv04CarrierRole:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -489,6 +495,7 @@ class CoctMt500000Uv04Limitation:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -545,6 +552,7 @@ class CoctMt500000Uv04Author:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -616,6 +624,7 @@ class CoctMt500000Uv04PolicyHolderPerson:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -624,6 +633,7 @@ class CoctMt500000Uv04PolicyHolderPerson:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -693,6 +703,7 @@ class CoctMt500000Uv04PolicyHolder:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -749,6 +760,7 @@ class CoctMt500000Uv04Holder:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -850,6 +862,7 @@ class CoctMt500000Uv04PolicyOrAccount:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -858,6 +871,7 @@ class CoctMt500000Uv04PolicyOrAccount:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -921,6 +935,7 @@ class CoctMt500000Uv04Beneficiary:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 

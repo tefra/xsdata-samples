@@ -127,6 +127,7 @@ class RepcMt000400Uv01Author5:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     context_control_code: str = field(
@@ -333,6 +334,7 @@ class RepcMt000400Uv01Custodian:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -403,6 +405,7 @@ class RepcMt000400Uv01ActCategory:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -411,6 +414,7 @@ class RepcMt000400Uv01ActCategory:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -497,6 +501,7 @@ class RepcMt000400Uv01ActList:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -505,5 +510,6 @@ class RepcMt000400Uv01ActList:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )

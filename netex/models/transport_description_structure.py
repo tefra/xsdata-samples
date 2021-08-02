@@ -13,6 +13,7 @@ class TransportDescriptionStructure:
             "name": "CommunicationsTransportMethod",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
+            "required": True,
         }
     )
     compression_method: CompressionMethodEnumeration = field(
@@ -21,5 +22,6 @@ class TransportDescriptionStructure:
             "name": "CompressionMethod",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
+            "required": True,
         }
     )

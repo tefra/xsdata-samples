@@ -10,5 +10,8 @@ class CouchetteFacility:
         namespace = "http://www.netex.org.uk/netex"
 
     value: CouchetteFacilityEnumeration = field(
-        default=CouchetteFacilityEnumeration.UNKNOWN
+        default=CouchetteFacilityEnumeration.UNKNOWN,
+        metadata={
+            "required": True,
+        }
     )

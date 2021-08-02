@@ -80,6 +80,7 @@ class PrpaMt900350Uv02Admitter:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -159,6 +160,7 @@ class PrpaMt900350Uv02Attender:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -230,6 +232,7 @@ class PrpaMt900350Uv02ResponsibleParty:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -397,6 +400,7 @@ class PrpaMt900350Uv02EncounterEvent:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -405,5 +409,6 @@ class PrpaMt900350Uv02EncounterEvent:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )

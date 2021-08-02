@@ -10,5 +10,8 @@ class FunicularSubmode:
         namespace = "http://www.netex.org.uk/netex"
 
     value: FunicularSubmodeEnumeration = field(
-        default=FunicularSubmodeEnumeration.UNKNOWN
+        default=FunicularSubmodeEnumeration.UNKNOWN,
+        metadata={
+            "required": True,
+        }
     )

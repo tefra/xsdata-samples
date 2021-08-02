@@ -15,5 +15,6 @@ class ParkingTableVersionedReference(VersionedReference):
         metadata={
             "name": "targetClass",
             "type": "Attribute",
+            "required": True,
         }
     )

@@ -493,6 +493,7 @@ class SlistPq(Any):
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
+            "required": True,
             "tokens": True,
         }
     )
@@ -533,6 +534,7 @@ class SlistTs(Any):
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
+            "required": True,
             "tokens": True,
         }
     )

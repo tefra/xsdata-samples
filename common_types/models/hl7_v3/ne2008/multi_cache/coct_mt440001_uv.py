@@ -109,6 +109,7 @@ class CoctMt440001UvValuedItem:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -117,5 +118,6 @@ class CoctMt440001UvValuedItem:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )

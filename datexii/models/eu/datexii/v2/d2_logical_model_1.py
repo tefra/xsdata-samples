@@ -46,5 +46,6 @@ class D2LogicalModel1:
         metadata={
             "name": "modelBaseVersion",
             "type": "Attribute",
+            "required": True,
         }
     )

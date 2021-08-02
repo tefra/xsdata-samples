@@ -112,6 +112,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01Subject5:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -241,6 +242,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -249,6 +251,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -304,6 +307,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01Subject1:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -680,5 +684,6 @@ class QupcIn043200Uv01(QupcIn043200Uv01McciMt000300Uv01Message):
         metadata={
             "name": "ITSVersion",
             "type": "Attribute",
+            "required": True,
         }
     )

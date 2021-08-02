@@ -95,5 +95,6 @@ class CoctMt140007UvDevice:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )

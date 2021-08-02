@@ -158,6 +158,7 @@ class CoctMt050000Uv01Patient:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )

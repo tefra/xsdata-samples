@@ -10,5 +10,8 @@ class LuggageCarriageFacility:
         namespace = "http://www.netex.org.uk/netex"
 
     value: LuggageCarriageEnumeration = field(
-        default=LuggageCarriageEnumeration.UNKNOWN
+        default=LuggageCarriageEnumeration.UNKNOWN,
+        metadata={
+            "required": True,
+        }
     )

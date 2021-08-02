@@ -494,6 +494,7 @@ class RepcMt000301UvLinks:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -577,6 +578,7 @@ class RepcMt000301UvOrganization:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -773,6 +775,7 @@ class RepcMt000301UvPlace:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -836,6 +839,7 @@ class RepcMt000301UvRecordTarget:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -969,6 +973,7 @@ class RepcMt000301UvResponsibleParty:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -1024,6 +1029,7 @@ class RepcMt000301UvResponsibleParty2:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     context_control_code: Optional[ContextControl] = field(
@@ -1670,6 +1676,7 @@ class RepcMt000301UvConditionNodeEvent:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -1678,6 +1685,7 @@ class RepcMt000301UvConditionNodeEvent:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -1996,6 +2004,7 @@ class RepcMt000301UvConditionNamed:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )

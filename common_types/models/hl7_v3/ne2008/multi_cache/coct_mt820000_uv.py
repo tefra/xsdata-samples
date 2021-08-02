@@ -114,6 +114,7 @@ class CoctMt820000UvHealthCareProvider:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -252,6 +253,7 @@ class CoctMt820000UvPerson:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -260,6 +262,7 @@ class CoctMt820000UvPerson:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -523,5 +526,6 @@ class CoctMt820000UvCareProvision:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )

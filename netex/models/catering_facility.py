@@ -10,5 +10,8 @@ class CateringFacility:
         namespace = "http://www.netex.org.uk/netex"
 
     value: CateringFacilityEnumeration = field(
-        default=CateringFacilityEnumeration.UNKNOWN
+        default=CateringFacilityEnumeration.UNKNOWN,
+        metadata={
+            "required": True,
+        }
     )

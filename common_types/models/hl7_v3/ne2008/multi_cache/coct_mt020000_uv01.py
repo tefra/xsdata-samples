@@ -91,6 +91,7 @@ class CoctMt020000Uv01ActAppointmentRequest:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -153,6 +154,7 @@ class CoctMt020000Uv01ActRequest:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -208,6 +210,7 @@ class CoctMt020000Uv01ReferencedOrder:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -264,6 +267,7 @@ class CoctMt020000Uv01ScheduleRequest:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -360,5 +364,6 @@ class CoctMt020000Uv01Appointment:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )

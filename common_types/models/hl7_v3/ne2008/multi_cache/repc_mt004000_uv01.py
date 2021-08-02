@@ -218,6 +218,7 @@ class RepcMt004000Uv01Author:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -444,6 +445,7 @@ class RepcMt004000Uv01DataEnterer:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -982,6 +984,7 @@ class RepcMt004000Uv01PrimaryInformationRecipient:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -1122,6 +1125,7 @@ class RepcMt004000Uv01RecordTarget:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -1183,6 +1187,7 @@ class RepcMt004000Uv01Reference:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1254,6 +1259,7 @@ class RepcMt004000Uv01ReplacementOf:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1757,6 +1763,7 @@ class RepcMt004000Uv01CareProvisionEvent:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     negation_ind: Optional[str] = field(

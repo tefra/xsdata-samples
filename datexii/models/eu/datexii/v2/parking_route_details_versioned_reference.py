@@ -15,5 +15,6 @@ class ParkingRouteDetailsVersionedReference(VersionedReference):
         metadata={
             "name": "targetClass",
             "type": "Attribute",
+            "required": True,
         }
     )

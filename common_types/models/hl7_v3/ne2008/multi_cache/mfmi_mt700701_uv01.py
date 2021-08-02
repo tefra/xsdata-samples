@@ -127,6 +127,7 @@ class MfmiMt700701Uv01ActDefinition:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -189,6 +190,7 @@ class MfmiMt700701Uv01Author1:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -267,6 +269,7 @@ class MfmiMt700701Uv01Author2:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -439,6 +442,7 @@ class MfmiMt700701Uv01Custodian:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -516,6 +520,7 @@ class MfmiMt700701Uv01DataEnterer:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -928,6 +933,7 @@ class MfmiMt700701Uv01Definition:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -990,6 +996,7 @@ class MfmiMt700701Uv01RegistrationRequest:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -998,6 +1005,7 @@ class MfmiMt700701Uv01RegistrationRequest:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -1108,6 +1116,7 @@ class MfmiMt700701Uv01Subject4:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1249,6 +1258,7 @@ class MfmiMt700701Uv01PriorRegistration:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -1257,6 +1267,7 @@ class MfmiMt700701Uv01PriorRegistration:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -1312,6 +1323,7 @@ class MfmiMt700701Uv01ReplacementOf:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )

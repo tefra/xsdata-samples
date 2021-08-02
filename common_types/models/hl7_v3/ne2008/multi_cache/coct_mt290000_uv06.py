@@ -178,6 +178,7 @@ class CoctMt290000Uv06AdministrativeDiagnosis:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -240,6 +241,7 @@ class CoctMt290000Uv06AdministrativeDiagnosisReference:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -301,6 +303,7 @@ class CoctMt290000Uv06BillableModifier:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -446,6 +449,7 @@ class CoctMt290000Uv06Device2:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -545,6 +549,7 @@ class CoctMt290000Uv06InjuryPlace:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -784,6 +789,7 @@ class CoctMt290000Uv06ManufacturedProductOrganization:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -859,6 +865,7 @@ class CoctMt290000Uv06NonPersonLivingSubject:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -942,6 +949,7 @@ class CoctMt290000Uv06PresentingIndication:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -1026,6 +1034,7 @@ class CoctMt290000Uv06ProviderPerson:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -1034,6 +1043,7 @@ class CoctMt290000Uv06ProviderPerson:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -1241,6 +1251,7 @@ class CoctMt290000Uv06Substitution:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -1249,6 +1260,7 @@ class CoctMt290000Uv06Substitution:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -1326,6 +1338,7 @@ class CoctMt290000Uv06HealthCareProvider:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1558,6 +1571,7 @@ class CoctMt290000Uv06Product2:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -1793,6 +1807,7 @@ class CoctMt290000Uv06ReusableDevice:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -1847,6 +1862,7 @@ class CoctMt290000Uv06Subject:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1903,6 +1919,7 @@ class CoctMt290000Uv06Subject2:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1959,6 +1976,7 @@ class CoctMt290000Uv06IndirectAuthorithyOver:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -2014,6 +2032,7 @@ class CoctMt290000Uv06Origin:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -2122,6 +2141,7 @@ class CoctMt290000Uv06PatientEncounter:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -2130,6 +2150,7 @@ class CoctMt290000Uv06PatientEncounter:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -2185,6 +2206,7 @@ class CoctMt290000Uv06Product1:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -2255,6 +2277,7 @@ class CoctMt290000Uv06SpecimenCollectionEvent:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -2563,6 +2586,7 @@ class CoctMt290000Uv06Injury:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -2618,6 +2642,7 @@ class CoctMt290000Uv06Author:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -2680,6 +2705,7 @@ class CoctMt290000Uv06Author1:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -2742,6 +2768,7 @@ class CoctMt290000Uv06Author2:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -2797,6 +2824,7 @@ class CoctMt290000Uv06Consultant:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -2978,6 +3006,7 @@ class CoctMt290000Uv06ResponsibleParty:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -3041,6 +3070,7 @@ class CoctMt290000Uv06SecondaryPerformer:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -3133,6 +3163,7 @@ class CoctMt290000Uv06PatientCareProvisionRequest:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -3209,6 +3240,7 @@ class CoctMt290000Uv06ServiceRequest:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 

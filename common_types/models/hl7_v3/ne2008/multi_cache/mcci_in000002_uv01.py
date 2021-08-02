@@ -16,5 +16,6 @@ class McciIn000002Uv01(McciMt000200Uv01Message):
         metadata={
             "name": "ITSVersion",
             "type": "Attribute",
+            "required": True,
         }
     )

@@ -264,6 +264,7 @@ class PrpaMt201302Uv02CoveredParty:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -1543,6 +1544,7 @@ class PrpaMt201302Uv02Member:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1679,6 +1681,7 @@ class PrpaMt201302Uv02PatientOfOtherProvider:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -2702,6 +2705,7 @@ class PrpaMt201302Uv02Patient:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )

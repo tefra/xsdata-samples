@@ -95,5 +95,6 @@ class CoctMt150002Uv01Organization:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )

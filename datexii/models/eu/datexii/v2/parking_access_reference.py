@@ -15,5 +15,6 @@ class ParkingAccessReference(Reference):
         metadata={
             "name": "targetClass",
             "type": "Attribute",
+            "required": True,
         }
     )

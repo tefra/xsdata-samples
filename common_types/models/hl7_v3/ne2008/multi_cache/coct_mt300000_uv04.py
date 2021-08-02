@@ -122,6 +122,7 @@ class CoctMt300000Uv04Destination:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -175,6 +176,7 @@ class CoctMt300000Uv04HealthCareProvider:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -355,6 +357,7 @@ class CoctMt300000Uv04Origin:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -416,6 +419,7 @@ class CoctMt300000Uv04PrescriberPerson:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -424,6 +428,7 @@ class CoctMt300000Uv04PrescriberPerson:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -479,6 +484,7 @@ class CoctMt300000Uv04Subject:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -604,6 +610,7 @@ class CoctMt300000Uv04SupplyOrder:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -949,6 +956,7 @@ class CoctMt300000Uv04Author:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -1004,6 +1012,7 @@ class CoctMt300000Uv04Product:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -1074,6 +1083,7 @@ class CoctMt300000Uv04Substitution:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -1082,6 +1092,7 @@ class CoctMt300000Uv04Substitution:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -1263,6 +1274,7 @@ class CoctMt300000Uv04SubstanceAdministrationOrder:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -1271,6 +1283,7 @@ class CoctMt300000Uv04SubstanceAdministrationOrder:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
+            "required": True,
         }
     )
 
@@ -1422,6 +1435,7 @@ class CoctMt300000Uv04SubstanceAdministrationIntent:
         metadata={
             "name": "classCode",
             "type": "Attribute",
+            "required": True,
         }
     )
     mood_code: Optional[ActMoodIntent] = field(
