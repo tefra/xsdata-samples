@@ -12,7 +12,7 @@ def pytest_addoption(parser):
         "--output-format",
         action="store",
         default="dataclasses",
-        choices=["dataclasses", "attrs"],
+        choices=["dataclasses", "attrs", "pydantic"],
         help="Class type format",
     )
 
