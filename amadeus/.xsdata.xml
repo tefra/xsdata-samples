@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Config xmlns="http://pypi.org/project/xsdata" version="21.8">
+<Config xmlns="http://pypi.org/project/xsdata" version="21.11">
   <Output maxLineLength="79">
     <Package>amadeus.models</Package>
     <Format repr="true" eq="true" order="false" unsafeHash="false" frozen="false" slots="false" kwOnly="false">dataclasses</Format>
@@ -15,10 +15,10 @@
     <ModuleName case="snakeCase" safePrefix="mod"/>
     <PackageName case="snakeCase" safePrefix="pkg"/>
   </Conventions>
-  <Aliases>
-    <ClassName source="CriteriaiDetaislType" target="CriteriaDetailsType"/>
-    <ModuleName source="AMA_WSLink" target="ws_link"/>
-    <ModuleName source="Fare_MasterPricerTravelBoardSearch_15_3_1A" target="master_pricer"/>
-    <ModuleName source="Fare_MasterPricerTravelBoardSearchReply_15_3_1A" target="master_pricer_reply"/>
-  </Aliases>
+  <Substitutions>
+    <Substitution type="class" search="CriteriaiDetaislType" replace="CriteriaDetailsType"/>
+    <Substitution type="module" search="AMA_WSLink" replace="ws_link"/>
+    <Substitution type="module" search="Fare_MasterPricerTravelBoardSearch_15_3_1A" replace="master_pricer"/>
+    <Substitution type="module" search="Fare_MasterPricerTravelBoardSearchReply_15_3_1A" replace="master_pricer_reply"/>
+  </Substitutions>
 </Config>

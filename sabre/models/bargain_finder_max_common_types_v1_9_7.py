@@ -84,7 +84,7 @@ class EquipmentType:
     Attributes
         value:
         air_equip_type: This is the 3 character IATA code.
-        changeof_gauge: Indicates there is an equipment change.
+        change_of_gauge: Indicates there is an equipment change.
     """
     value: str = field(
         default="",
@@ -102,7 +102,7 @@ class EquipmentType:
             "max_length": 3,
         }
     )
-    changeof_gauge: bool = field(
+    change_of_gauge: bool = field(
         default=False,
         metadata={
             "name": "ChangeofGauge",

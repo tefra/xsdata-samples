@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Config xmlns="http://pypi.org/project/xsdata" version="21.8">
+<Config xmlns="http://pypi.org/project/xsdata" version="21.11">
   <Output maxLineLength="79">
     <Package>common_types.models</Package>
     <Format repr="true" eq="true" order="false" unsafeHash="false" frozen="false" slots="false" kwOnly="false">dataclasses</Format>
@@ -15,8 +15,8 @@
     <ModuleName case="snakeCase" safePrefix="mod"/>
     <PackageName case="snakeCase" safePrefix="pkg"/>
   </Conventions>
-  <Aliases>
-    <PackageName source="coreschemas" target="core"/>
-    <PackageName source="multicacheschemas" target="multi_cache"/>
-  </Aliases>
+  <Substitutions>
+    <Substitution type="package" search="coreschemas" replace="core"/>
+    <Substitution type="package" search="multicacheschemas" replace="multi_cache"/>
+  </Substitutions>
 </Config>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Config xmlns="http://pypi.org/project/xsdata" version="21.8">
+<Config xmlns="http://pypi.org/project/xsdata" version="21.11">
   <Output maxLineLength="79">
     <Package>travelport.models</Package>
     <Format repr="true" eq="true" order="false" unsafeHash="false" frozen="false" slots="false" kwOnly="false">dataclasses</Format>
@@ -15,11 +15,11 @@
     <ModuleName case="snakeCase" safePrefix="mod"/>
     <PackageName case="snakeCase" safePrefix="pkg"/>
   </Conventions>
-  <Aliases>
-    <PackageName source="http://www.travelport.com/schema/common_v48_0" target="common"/>
-    <PackageName source="http://www.travelport.com/schema/rail_v48_0" target="rail"/>
-    <PackageName source="http://www.travelport.com/schema/air_v48_0" target="air"/>
-    <PackageName source="http://www.travelport.com/service/air_v48_0" target="services"/>
-    <PackageName source="http://www.travelport.com/soa/common/security/SessionContext_v1" target="session"/>
-  </Aliases>
+  <Substitutions>
+    <Substitution type="package" search="http://www.travelport.com/schema/common_v48_0" replace="common"/>
+    <Substitution type="package" search="http://www.travelport.com/schema/rail_v48_0" replace="rail"/>
+    <Substitution type="package" search="http://www.travelport.com/schema/air_v48_0" replace="air"/>
+    <Substitution type="package" search="http://www.travelport.com/service/air_v48_0" replace="services"/>
+    <Substitution type="package" search="http://www.travelport.com/soa/common/security/SessionContext_v1" replace="session"/>
+  </Substitutions>
 </Config>
