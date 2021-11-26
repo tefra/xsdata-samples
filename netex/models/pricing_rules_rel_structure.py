@@ -5,7 +5,6 @@ from .frame_containment_structure import FrameContainmentStructure
 from .limiting_rule import LimitingRule
 from .limiting_rule_in_context import LimitingRuleInContext
 from .pricing_rule_1 import PricingRule1
-from .pricing_rule_2 import PricingRule2
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -43,14 +42,6 @@ class PricingRulesRelStructure(FrameContainmentStructure):
         default_factory=list,
         metadata={
             "name": "PricingRule",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_pricing_rule: List[PricingRule2] = field(
-        default_factory=list,
-        metadata={
-            "name": "PricingRule_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

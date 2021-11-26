@@ -3,7 +3,6 @@ from typing import List
 from .access_equipment import AccessEquipment
 from .access_vehicle_equipment import AccessVehicleEquipment
 from .access_vehicle_equipment_ref import AccessVehicleEquipmentRef
-from .actual_vehicle_equipment import ActualVehicleEquipment
 from .assistance_booking_service import AssistanceBookingService
 from .assistance_booking_service_ref import AssistanceBookingServiceRef
 from .assistance_service import AssistanceService
@@ -27,16 +26,12 @@ from .help_point_equipment import HelpPointEquipment
 from .help_point_equipment_ref import HelpPointEquipmentRef
 from .hire_service import HireService
 from .hire_service_ref import HireServiceRef
-from .installed_equipment import InstalledEquipment
-from .installed_equipment_ref import InstalledEquipmentRef
 from .left_luggage_service import LeftLuggageService
 from .left_luggage_service_ref import LeftLuggageServiceRef
 from .lift_equipment import LiftEquipment
-from .local_service import LocalService
 from .local_service_ref import LocalServiceRef
 from .lost_property_service import LostPropertyService
 from .lost_property_service_ref import LostPropertyServiceRef
-from .luggage_locker_equipment import LuggageLockerEquipment
 from .luggage_service import LuggageService
 from .luggage_service_ref import LuggageServiceRef
 from .meeting_point_service import MeetingPointService
@@ -44,13 +39,11 @@ from .meeting_point_service_ref import MeetingPointServiceRef
 from .money_service import MoneyService
 from .money_service_ref import MoneyServiceRef
 from .other_place_equipment import OtherPlaceEquipment
-from .passenger_equipment import PassengerEquipment
 from .passenger_equipment_ref import PassengerEquipmentRef
 from .passenger_information_equipment import PassengerInformationEquipment
 from .passenger_information_equipment_ref import PassengerInformationEquipmentRef
 from .passenger_safety_equipment import PassengerSafetyEquipment
 from .passenger_safety_equipment_ref import PassengerSafetyEquipmentRef
-from .place_equipment import PlaceEquipment
 from .place_lighting import PlaceLighting
 from .place_sign import PlaceSign
 from .queueing_equipment import QueueingEquipment
@@ -66,8 +59,6 @@ from .sanitary_equipment_ref import SanitaryEquipmentRef
 from .seating_equipment import SeatingEquipment
 from .shelter_equipment import ShelterEquipment
 from .sign_equipment import SignEquipment
-from .site_equipment import SiteEquipment
-from .stair_equipment import StairEquipment
 from .staircase_equipment import StaircaseEquipment
 from .ticket_validator_equipment import TicketValidatorEquipment
 from .ticketing_equipment import TicketingEquipment
@@ -77,7 +68,6 @@ from .travelator_equipment import TravelatorEquipment
 from .trolley_stand_equipment import TrolleyStandEquipment
 from .vehicle_charging_equipment import VehicleChargingEquipment
 from .vehicle_equipment_ref import VehicleEquipmentRef
-from .waiting_equipment import WaitingEquipment
 from .waiting_room_equipment import WaitingRoomEquipment
 from .wheelchair_vehicle_equipment import WheelchairVehicleEquipment
 from .wheelchair_vehicle_ref import WheelchairVehicleRef
@@ -141,11 +131,6 @@ class ExplicitEquipmentsRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "InstalledEquipmentRef",
-                    "type": InstalledEquipmentRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "RetailDevice",
                     "type": RetailDevice,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -178,21 +163,6 @@ class ExplicitEquipmentsRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "WaitingRoomEquipment",
                     "type": WaitingRoomEquipment,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "WaitingEquipment",
-                    "type": WaitingEquipment,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "LuggageLockerEquipment",
-                    "type": LuggageLockerEquipment,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "SiteEquipment",
-                    "type": SiteEquipment,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -233,11 +203,6 @@ class ExplicitEquipmentsRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "EscalatorEquipment",
                     "type": EscalatorEquipment,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "StairEquipment",
-                    "type": StairEquipment,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -296,11 +261,6 @@ class ExplicitEquipmentsRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "PlaceEquipment",
-                    "type": PlaceEquipment,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "PassengerInformationEquipment",
                     "type": PassengerInformationEquipment,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -323,21 +283,6 @@ class ExplicitEquipmentsRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "SanitaryEquipment",
                     "type": SanitaryEquipment,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ActualVehicleEquipment",
-                    "type": ActualVehicleEquipment,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "PassengerEquipment",
-                    "type": PassengerEquipment,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "InstalledEquipment",
-                    "type": InstalledEquipment,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -483,11 +428,6 @@ class ExplicitEquipmentsRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "TicketingService",
                     "type": TicketingService,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "LocalService",
-                    "type": LocalService,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

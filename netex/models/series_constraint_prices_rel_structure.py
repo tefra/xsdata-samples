@@ -1,7 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
 from .cell_ref_1 import CellRef1
-from .cell_ref_2 import CellRef2
 from .series_constraint_price_ref import SeriesConstraintPriceRef
 from .series_constraint_price_versioned_child_structure import SeriesConstraintPriceVersionedChildStructure
 from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
@@ -14,7 +13,7 @@ class SeriesConstraintPricesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "seriesConstraintPrices_RelStructure"
 
-    choice: List[object] = field(
+    series_constraint_price_ref_or_series_constraint_price_or_cell_ref: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -32,11 +31,6 @@ class SeriesConstraintPricesRelStructure(StrictContainmentAggregationStructure):
                 {
                     "name": "CellRef",
                     "type": CellRef1,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "CellRef_",
-                    "type": CellRef2,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

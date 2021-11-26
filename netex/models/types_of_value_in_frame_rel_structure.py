@@ -61,7 +61,6 @@ from .type_of_transfer import TypeOfTransfer
 from .type_of_travel_document import TypeOfTravelDocument
 from .type_of_usage_parameter import TypeOfUsageParameter
 from .type_of_validity import TypeOfValidity
-from .type_of_value import TypeOfValue
 from .type_of_version import TypeOfVersion
 from .type_of_zone import TypeOfZone
 from .types_of_frame_rel_structure import TypeOfFrame
@@ -398,11 +397,6 @@ class TypesOfValueInFrameRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "TypeOfVersion",
                     "type": TypeOfVersion,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TypeOfValue",
-                    "type": TypeOfValue,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

@@ -6,7 +6,6 @@ from .groups_of_lines_in_frame_rel_structure import GroupsOfLinesInFrameRelStruc
 from .groups_of_transport_organisations_refs_rel_structure import GroupsOfTransportOrganisationsRefsRelStructure
 from .operator_ref import OperatorRef
 from .tariff_zone_refs_rel_structure import TariffZoneRefsRelStructure
-from .transport_organisation_ref import TransportOrganisationRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -28,14 +27,6 @@ class NetworkVersionStructure(GroupOfLinesVersionStructure):
         default=None,
         metadata={
             "name": "OperatorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    transport_organisation_ref: Optional[TransportOrganisationRef] = field(
-        default=None,
-        metadata={
-            "name": "TransportOrganisationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

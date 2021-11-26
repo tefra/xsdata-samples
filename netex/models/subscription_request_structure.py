@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from typing import List
-from .abstract_functional_service_subscription_request import AbstractFunctionalServiceSubscriptionRequest
 from .abstract_subscription_request_structure import AbstractSubscriptionRequestStructure
 from .data_object_subscription_request import DataObjectSubscriptionRequest
 
@@ -15,13 +14,5 @@ class SubscriptionRequestStructure(AbstractSubscriptionRequestStructure):
             "name": "DataObjectSubscriptionRequest",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    abstract_functional_service_subscription_request: List[AbstractFunctionalServiceSubscriptionRequest] = field(
-        default_factory=list,
-        metadata={
-            "name": "AbstractFunctionalServiceSubscriptionRequest",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
         }
     )

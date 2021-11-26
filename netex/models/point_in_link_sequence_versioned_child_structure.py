@@ -6,7 +6,6 @@ from .dated_vehicle_journey_ref import DatedVehicleJourneyRef
 from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
 from .dead_run_ref import DeadRunRef
 from .journey_pattern_ref import JourneyPatternRef
-from .journey_ref import JourneyRef
 from .link_sequence_ref import LinkSequenceRef
 from .multilingual_string import MultilingualString
 from .navigation_path_ref import NavigationPathRef
@@ -80,14 +79,6 @@ class PointInLinkSequenceVersionedChildStructure(VersionedChildStructure):
         default=None,
         metadata={
             "name": "VehicleJourneyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    journey_ref: Optional[JourneyRef] = field(
-        default=None,
-        metadata={
-            "name": "JourneyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

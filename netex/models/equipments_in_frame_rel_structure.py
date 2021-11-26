@@ -2,7 +2,6 @@ from dataclasses import dataclass, field
 from typing import List
 from .access_equipment import AccessEquipment
 from .access_vehicle_equipment import AccessVehicleEquipment
-from .actual_vehicle_equipment import ActualVehicleEquipment
 from .assistance_booking_service import AssistanceBookingService
 from .assistance_service import AssistanceService
 from .catering_service import CateringService
@@ -13,25 +12,19 @@ from .crossing_equipment import CrossingEquipment
 from .customer_service import CustomerService
 from .cycle_storage_equipment import CycleStorageEquipment
 from .entrance_equipment import EntranceEquipment
-from .equipment import Equipment
 from .escalator_equipment import EscalatorEquipment
 from .general_sign import GeneralSign
 from .heading_sign import HeadingSign
 from .help_point_equipment import HelpPointEquipment
 from .hire_service import HireService
-from .installed_equipment import InstalledEquipment
 from .left_luggage_service import LeftLuggageService
 from .lift_equipment import LiftEquipment
-from .local_service import LocalService
 from .lost_property_service import LostPropertyService
-from .luggage_locker_equipment import LuggageLockerEquipment
 from .luggage_service import LuggageService
 from .meeting_point_service import MeetingPointService
 from .money_service import MoneyService
-from .passenger_equipment import PassengerEquipment
 from .passenger_information_equipment import PassengerInformationEquipment
 from .passenger_safety_equipment import PassengerSafetyEquipment
-from .place_equipment import PlaceEquipment
 from .place_lighting import PlaceLighting
 from .place_sign import PlaceSign
 from .queueing_equipment import QueueingEquipment
@@ -44,8 +37,6 @@ from .sanitary_equipment import SanitaryEquipment
 from .seating_equipment import SeatingEquipment
 from .shelter_equipment import ShelterEquipment
 from .sign_equipment import SignEquipment
-from .site_equipment import SiteEquipment
-from .stair_equipment import StairEquipment
 from .staircase_equipment import StaircaseEquipment
 from .ticket_validator_equipment import TicketValidatorEquipment
 from .ticketing_equipment import TicketingEquipment
@@ -53,7 +44,6 @@ from .ticketing_service import TicketingService
 from .travelator_equipment import TravelatorEquipment
 from .trolley_stand_equipment import TrolleyStandEquipment
 from .vehicle_charging_equipment import VehicleChargingEquipment
-from .waiting_equipment import WaitingEquipment
 from .waiting_room_equipment import WaitingRoomEquipment
 from .wheelchair_vehicle_equipment import WheelchairVehicleEquipment
 
@@ -177,14 +167,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    local_service: List[LocalService] = field(
-        default_factory=list,
-        metadata={
-            "name": "LocalService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     retail_device: List[RetailDevice] = field(
         default_factory=list,
         metadata={
@@ -237,30 +219,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "WaitingRoomEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    waiting_equipment: List[WaitingEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "WaitingEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    luggage_locker_equipment: List[LuggageLockerEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "LuggageLockerEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    site_equipment: List[SiteEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "SiteEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -325,14 +283,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "EscalatorEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    stair_equipment: List[StairEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "StairEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -425,14 +375,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    place_equipment: List[PlaceEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "PlaceEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     passenger_information_equipment: List[PassengerInformationEquipment] = field(
         default_factory=list,
         metadata={
@@ -469,38 +411,6 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "SanitaryEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    actual_vehicle_equipment: List[ActualVehicleEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "ActualVehicleEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    passenger_equipment: List[PassengerEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "PassengerEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    installed_equipment: List[InstalledEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "InstalledEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    equipment: List[Equipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "Equipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

@@ -1,7 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from .cell_ref_1 import CellRef1
-from .cell_ref_2 import CellRef2
 from .fare_price_versioned_child_structure import FarePriceVersionedChildStructure
 from .geographical_unit_price_ref import GeographicalUnitPriceRef
 from .geographical_unit_ref import GeographicalUnitRef
@@ -37,7 +36,7 @@ class GeographicalUnitPricesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "geographicalUnitPrices_RelStructure"
 
-    choice: List[object] = field(
+    geographical_unit_price_ref_or_geographical_unit_price_or_cell_ref: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -55,11 +54,6 @@ class GeographicalUnitPricesRelStructure(StrictContainmentAggregationStructure):
                 {
                     "name": "CellRef",
                     "type": CellRef1,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "CellRef_",
-                    "type": CellRef2,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

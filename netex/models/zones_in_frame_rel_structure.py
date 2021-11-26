@@ -2,9 +2,7 @@ from dataclasses import dataclass, field
 from typing import List
 from .access_space import AccessSpace
 from .access_zone import AccessZone
-from .address import Address
 from .addressable_place import AddressablePlace
-from .administrative_zone_2 import AdministrativeZone2
 from .administrative_zone_version_structure import (
     AdministrativeZone1,
     TransportAdministrativeZone,
@@ -27,9 +25,7 @@ from .parking_bay import ParkingBay
 from .parking_component import ParkingComponent
 from .parking_entrance_for_vehicles import ParkingEntranceForVehicles
 from .parking_passenger_entrance import ParkingPassengerEntrance
-from .place import Place
 from .point_of_interest import PointOfInterest
-from .point_of_interest_component import PointOfInterestComponent
 from .point_of_interest_entrance import PointOfInterestEntrance
 from .point_of_interest_space import PointOfInterestSpace
 from .point_of_interest_vehicle_entrance import PointOfInterestVehicleEntrance
@@ -38,19 +34,12 @@ from .quay import Quay
 from .road_address import RoadAddress
 from .routing_constraint_zone import RoutingConstraintZone
 from .service_site import ServiceSite
-from .site import Site
-from .site_component import SiteComponent
-from .site_element import SiteElement
 from .stop_area import StopArea
 from .stop_place import StopPlace
-from .stop_place_component import StopPlaceComponent
 from .stop_place_entrance import StopPlaceEntrance
-from .stop_place_space import StopPlaceSpace
 from .stop_place_vehicle_entrance import StopPlaceVehicleEntrance
 from .tariff_zone_1 import TariffZone1
-from .tariff_zone_2 import TariffZone2
 from .topographic_place import TopographicPlace
-from .vehicle_entrance import VehicleEntrance
 from .vehicle_stopping_place import VehicleStoppingPlace
 from .vehicle_stopping_position import VehicleStoppingPosition
 from .zone import Zone
@@ -119,14 +108,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    point_of_interest_component: List[PointOfInterestComponent] = field(
-        default_factory=list,
-        metadata={
-            "name": "PointOfInterestComponent",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     vehicle_stopping_place: List[VehicleStoppingPlace] = field(
         default_factory=list,
         metadata={
@@ -155,22 +136,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "Quay",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    stop_place_space: List[StopPlaceSpace] = field(
-        default_factory=list,
-        metadata={
-            "name": "StopPlaceSpace",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    stop_place_component: List[StopPlaceComponent] = field(
-        default_factory=list,
-        metadata={
-            "name": "StopPlaceComponent",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -263,26 +228,10 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    vehicle_entrance: List[VehicleEntrance] = field(
-        default_factory=list,
-        metadata={
-            "name": "VehicleEntrance",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     entrance: List[Entrance] = field(
         default_factory=list,
         metadata={
             "name": "Entrance",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    site_component: List[SiteComponent] = field(
-        default_factory=list,
-        metadata={
-            "name": "SiteComponent",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -315,22 +264,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "ServiceSite",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    site: List[Site] = field(
-        default_factory=list,
-        metadata={
-            "name": "Site",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    site_element: List[SiteElement] = field(
-        default_factory=list,
-        metadata={
-            "name": "SiteElement",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -391,22 +324,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    address: List[Address] = field(
-        default_factory=list,
-        metadata={
-            "name": "Address",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    place: List[Place] = field(
-        default_factory=list,
-        metadata={
-            "name": "Place",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     transport_administrative_zone: List[TransportAdministrativeZone] = field(
         default_factory=list,
         metadata={
@@ -423,14 +340,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_administrative_zone: List[AdministrativeZone2] = field(
-        default_factory=list,
-        metadata={
-            "name": "AdministrativeZone_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     fare_zone: List[FareZone] = field(
         default_factory=list,
         metadata={
@@ -443,14 +352,6 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "TariffZone",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_tariff_zone: List[TariffZone2] = field(
-        default_factory=list,
-        metadata={
-            "name": "TariffZone_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

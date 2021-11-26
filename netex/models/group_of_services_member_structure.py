@@ -6,7 +6,6 @@ from .dated_vehicle_journey_ref import DatedVehicleJourneyRef
 from .dead_run_ref import DeadRunRef
 from .group_of_services_ref_structure import GroupOfServicesRefStructure
 from .journey_designator import JourneyDesignator
-from .journey_ref import JourneyRef
 from .notice_assignment_views_rel_structure import NoticeAssignmentViewsRelStructure
 from .service_designator import ServiceDesignator
 from .service_journey_ref import ServiceJourneyRef
@@ -80,14 +79,6 @@ class GroupOfServicesMemberStructure(AbstractGroupMemberVersionedChildStructure)
         default=None,
         metadata={
             "name": "VehicleJourneyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    journey_ref: Optional[JourneyRef] = field(
-        default=None,
-        metadata={
-            "name": "JourneyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

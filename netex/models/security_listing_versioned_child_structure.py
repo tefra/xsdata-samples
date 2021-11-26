@@ -3,7 +3,6 @@ from typing import Optional
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .blacklist_ref import BlacklistRef
 from .multilingual_string import MultilingualString
-from .security_list_ref import SecurityListRef
 from .whitelist_ref import WhitelistRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -34,14 +33,6 @@ class SecurityListingVersionedChildStructure(VersionedChildStructure):
         default=None,
         metadata={
             "name": "BlacklistRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    security_list_ref: Optional[SecurityListRef] = field(
-        default=None,
-        metadata={
-            "name": "SecurityListRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

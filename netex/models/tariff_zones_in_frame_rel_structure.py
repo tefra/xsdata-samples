@@ -3,7 +3,6 @@ from typing import List
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .fare_zone import FareZone
 from .tariff_zone_1 import TariffZone1
-from .tariff_zone_2 import TariffZone2
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -25,14 +24,6 @@ class TariffZonesInFrameRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "TariffZone",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_tariff_zone: List[TariffZone2] = field(
-        default_factory=list,
-        metadata={
-            "name": "TariffZone_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

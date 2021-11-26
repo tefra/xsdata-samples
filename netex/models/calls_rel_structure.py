@@ -1,7 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
 from .call_1 import Call1
-from .call_2 import Call2
 from .call_z import CallZ
 from .dated_call import DatedCall
 from .dated_call_z import DatedCallZ
@@ -43,14 +42,6 @@ class CallsRelStructure(StrictContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "Call",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_call: List[Call2] = field(
-        default_factory=list,
-        metadata={
-            "name": "Call_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

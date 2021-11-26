@@ -22,7 +22,6 @@ from .parking_price_ref import ParkingPriceRef
 from .price_rule_step_results_rel_structure import PriceRuleStepResultsRelStructure
 from .price_unit_ref import PriceUnitRef
 from .pricing_rule_1 import PricingRule1
-from .pricing_rule_2 import PricingRule2
 from .pricing_rule_ref import PricingRuleRef
 from .pricing_service_ref import PricingServiceRef
 from .private_code import PrivateCode
@@ -335,14 +334,6 @@ class CellPriceStructure:
         default=None,
         metadata={
             "name": "PricingRule",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_pricing_rule: Optional[PricingRule2] = field(
-        default=None,
-        metadata={
-            "name": "PricingRule_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

@@ -3,7 +3,6 @@ from typing import List
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .flexible_line import FlexibleLine
 from .line_1 import Line1
-from .line_2 import Line2
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -25,14 +24,6 @@ class LinesInFrameRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "Line",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_line: List[Line2] = field(
-        default_factory=list,
-        metadata={
-            "name": "Line_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

@@ -12,8 +12,6 @@ from .customer_purchase_package_price import CustomerPurchasePackagePrice
 from .customer_purchase_package_price_ref import CustomerPurchasePackagePriceRef
 from .distance_matrix_element_price import DistanceMatrixElementPrice
 from .distance_matrix_element_price_ref import DistanceMatrixElementPriceRef
-from .fare_price_1 import FarePrice1
-from .fare_price_2 import FarePrice2
 from .fare_price_ref import FarePriceRef
 from .fare_product_price import FareProductPrice
 from .fare_product_price_ref import FareProductPriceRef
@@ -26,7 +24,6 @@ from .geographical_interval_price_ref import GeographicalIntervalPriceRef
 from .geographical_unit_price import GeographicalUnitPrice
 from .geographical_unit_price_ref import GeographicalUnitPriceRef
 from .parking_price_ref import ParkingPriceRef
-from .price_group_2 import PriceGroup2
 from .price_group_ref import PriceGroupRef
 from .quality_structure_factor_price import QualityStructureFactorPrice
 from .quality_structure_factor_price_ref import QualityStructureFactorPriceRef
@@ -238,23 +235,8 @@ class CompositePricesRelStructure(StrictContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "FarePrice",
-                    "type": FarePrice1,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "FarePrice_",
-                    "type": FarePrice2,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "PriceGroup",
                     "type": PriceGroup1,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "PriceGroup_",
-                    "type": PriceGroup2,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

@@ -2,7 +2,6 @@ from dataclasses import dataclass, field
 from typing import List
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .notice_assignment_1 import NoticeAssignment1
-from .notice_assignment_2 import NoticeAssignment2
 from .notice_assignment_view import NoticeAssignmentView
 from .sales_notice_assignment import SalesNoticeAssignment
 
@@ -14,7 +13,7 @@ class NoticeAssignmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "noticeAssignments_RelStructure"
 
-    choice: List[object] = field(
+    sales_notice_assignment_or_notice_assignment_or_notice_assignment_view: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -27,11 +26,6 @@ class NoticeAssignmentsRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "NoticeAssignment",
                     "type": NoticeAssignment1,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "NoticeAssignment_",
-                    "type": NoticeAssignment2,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

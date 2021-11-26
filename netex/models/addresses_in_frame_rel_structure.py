@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from typing import List
-from .address import Address
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .postal_address import PostalAddress
 from .road_address import RoadAddress
@@ -25,14 +24,6 @@ class AddressesInFrameRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "RoadAddress",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    address: List[Address] = field(
-        default_factory=list,
-        metadata={
-            "name": "Address",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

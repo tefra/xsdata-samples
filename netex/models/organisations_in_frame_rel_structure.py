@@ -5,12 +5,9 @@ from .containment_aggregation_structure import ContainmentAggregationStructure
 from .general_organisation import GeneralOrganisation
 from .management_agent import ManagementAgent
 from .operator import Operator
-from .organisation_1 import Organisation1
-from .organisation_2 import Organisation2
 from .other_organisation import OtherOrganisation
 from .retail_consortium import RetailConsortium
 from .serviced_organisation import ServicedOrganisation
-from .transport_organisation import TransportOrganisation
 from .travel_agent import TravelAgent
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -41,14 +38,6 @@ class OrganisationsInFrameRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "Operator",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    transport_organisation: List[TransportOrganisation] = field(
-        default_factory=list,
-        metadata={
-            "name": "TransportOrganisation_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -89,22 +78,6 @@ class OrganisationsInFrameRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "OtherOrganisation",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    organisation: List[Organisation1] = field(
-        default_factory=list,
-        metadata={
-            "name": "Organisation",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_organisation: List[Organisation2] = field(
-        default_factory=list,
-        metadata={
-            "name": "Organisation_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

@@ -6,7 +6,6 @@ from .alternative_texts_rel_structure import (
     SimpleAvailabilityCondition,
     ValidDuring,
     ValidityCondition1,
-    ValidityCondition2,
     ValidityRuleParameter,
     ValidityTrigger,
 )
@@ -27,7 +26,6 @@ from .timetable_frame_ref import TimetableFrameRef
 from .topic_structure import TopicStructure
 from .type_of_frame_ref import TypeOfFrameRef
 from .vehicle_schedule_frame_ref import VehicleScheduleFrameRef
-from .version_frame_ref import VersionFrameRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -148,11 +146,6 @@ class NetworkFrameTopicStructure(TopicStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "VersionFrameRef",
-                    "type": VersionFrameRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "NetworkFilterByValue",
                     "type": NetworkFilterByValueStructure,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -196,11 +189,6 @@ class NetworkFrameTopicStructure(TopicStructure):
                     {
                         "name": "ValidityCondition",
                         "type": ValidityCondition1,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
-                        "name": "ValidityCondition_",
-                        "type": ValidityCondition2,
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                 ),

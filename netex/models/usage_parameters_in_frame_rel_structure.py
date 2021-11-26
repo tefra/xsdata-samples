@@ -28,8 +28,6 @@ from .step_limit import StepLimit
 from .subscribing import Subscribing
 from .suspending import Suspending
 from .transferability import Transferability
-from .usage_parameter_1 import UsageParameter1
-from .usage_parameter_2 import UsageParameter2
 from .usage_validity_period import UsageValidityPeriod
 from .user_profile import UserProfile
 
@@ -269,22 +267,6 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
         default_factory=list,
         metadata={
             "name": "Reselling",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    usage_parameter: List[UsageParameter1] = field(
-        default_factory=list,
-        metadata={
-            "name": "UsageParameter",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_usage_parameter: List[UsageParameter2] = field(
-        default_factory=list,
-        metadata={
-            "name": "UsageParameter_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

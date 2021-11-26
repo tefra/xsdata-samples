@@ -6,7 +6,6 @@ from .fare_zone_ref import FareZoneRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .stop_area_ref import StopAreaRef
 from .tariff_zone_ref_1 import TariffZoneRef1
-from .tariff_zone_ref_2 import TariffZoneRef2
 from .transport_administrative_zone_ref import TransportAdministrativeZoneRef
 from .zone_ref import ZoneRef
 
@@ -62,14 +61,6 @@ class ZoneRefsRelStructure(OneToManyRelationshipStructure):
         default=None,
         metadata={
             "name": "TariffZoneRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_tariff_zone_ref: Optional[TariffZoneRef2] = field(
-        default=None,
-        metadata={
-            "name": "TariffZoneRef_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

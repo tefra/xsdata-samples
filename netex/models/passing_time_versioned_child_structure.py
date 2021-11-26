@@ -5,7 +5,6 @@ from .dated_special_service_ref import DatedSpecialServiceRef
 from .dated_vehicle_journey_ref import DatedVehicleJourneyRef
 from .dead_run_ref import DeadRunRef
 from .fare_point_in_pattern_ref import FarePointInPatternRef
-from .journey_ref import JourneyRef
 from .point_in_journey_pattern_ref import PointInJourneyPatternRef
 from .service_journey_ref import ServiceJourneyRef
 from .special_service_ref import SpecialServiceRef
@@ -74,14 +73,6 @@ class PassingTimeVersionedChildStructure(VersionedChildStructure):
         default=None,
         metadata={
             "name": "VehicleJourneyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    journey_ref: Optional[JourneyRef] = field(
-        default=None,
-        metadata={
-            "name": "JourneyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

@@ -7,7 +7,6 @@ from .dead_run_ref import DeadRunRef
 from .driver_ref import DriverRef
 from .external_object_ref_structure import ExternalObjectRefStructure
 from .journey_pattern_ref_structure import JourneyPatternRefStructure
-from .journey_ref import JourneyRef
 from .operating_day_ref import OperatingDayRef
 from .service_journey_ref import ServiceJourneyRef
 from .special_service_ref import SpecialServiceRef
@@ -76,14 +75,6 @@ class DatedVehicleJourneyVersionStructure(VehicleJourneyVersionStructure):
         default=None,
         metadata={
             "name": "VehicleJourneyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    journey_ref: Optional[JourneyRef] = field(
-        default=None,
-        metadata={
-            "name": "JourneyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

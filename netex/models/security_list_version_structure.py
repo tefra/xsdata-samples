@@ -11,7 +11,6 @@ from .other_organisation_ref import OtherOrganisationRef
 from .retail_consortium_ref import RetailConsortiumRef
 from .security_listings_rel_structure import SecurityListingsRelStructure
 from .serviced_organisation_ref import ServicedOrganisationRef
-from .transport_organisation_ref import TransportOrganisationRef
 from .travel_agent_ref import TravelAgentRef
 from .type_of_security_list_ref import TypeOfSecurityListRef
 
@@ -67,14 +66,6 @@ class SecurityListVersionStructure(DataManagedObjectStructure):
         default=None,
         metadata={
             "name": "OperatorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    transport_organisation_ref: Optional[TransportOrganisationRef] = field(
-        default=None,
-        metadata={
-            "name": "TransportOrganisationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

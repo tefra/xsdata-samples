@@ -1,11 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List
 from .access_vehicle_equipment_ref import AccessVehicleEquipmentRef
-from .actual_vehicle_equipment import ActualVehicleEquipment
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .help_point_equipment import HelpPointEquipment
 from .help_point_equipment_ref import HelpPointEquipmentRef
-from .passenger_equipment import PassengerEquipment
 from .passenger_equipment_ref import PassengerEquipmentRef
 from .passenger_information_equipment import PassengerInformationEquipment
 from .passenger_safety_equipment import PassengerSafetyEquipment
@@ -93,16 +91,6 @@ class PassengerEquipmentsRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "SanitaryEquipment",
                     "type": SanitaryEquipment,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ActualVehicleEquipment",
-                    "type": ActualVehicleEquipment,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "PassengerEquipment",
-                    "type": PassengerEquipment,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

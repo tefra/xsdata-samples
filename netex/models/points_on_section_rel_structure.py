@@ -2,7 +2,6 @@ from dataclasses import dataclass, field
 from typing import List
 from .point_on_line_section import PointOnLineSection
 from .point_on_section_1 import PointOnSection1
-from .point_on_section_2 import PointOnSection2
 from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -25,14 +24,6 @@ class PointsOnSectionRelStructure(StrictContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "PointOnSection",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_point_on_section: List[PointOnSection2] = field(
-        default_factory=list,
-        metadata={
-            "name": "PointOnSection_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

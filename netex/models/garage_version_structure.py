@@ -12,7 +12,6 @@ from .organisation_ref import OrganisationRef
 from .other_organisation_ref import OtherOrganisationRef
 from .retail_consortium_ref import RetailConsortiumRef
 from .serviced_organisation_ref import ServicedOrganisationRef
-from .transport_organisation_ref import TransportOrganisationRef
 from .transport_organisation_refs_rel_structure import TransportOrganisationRefsRelStructure
 from .travel_agent_ref import TravelAgentRef
 
@@ -52,14 +51,6 @@ class GarageVersionStructure(AddressablePlaceVersionStructure):
         default=None,
         metadata={
             "name": "OperatorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    transport_organisation_ref: Optional[TransportOrganisationRef] = field(
-        default=None,
-        metadata={
-            "name": "TransportOrganisationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

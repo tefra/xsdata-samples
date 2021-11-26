@@ -10,7 +10,6 @@ from .dead_run_ref import DeadRunRef
 from .derived_view_structure import DerivedViewStructure
 from .flexible_line_ref import FlexibleLineRef
 from .journey_meeting_ref import JourneyMeetingRef
-from .journey_ref import JourneyRef
 from .line_derived_view_structure import LineDerivedViewStructure
 from .line_ref import LineRef
 from .multilingual_string import MultilingualString
@@ -170,14 +169,6 @@ class JourneyMeetingDerivedViewStructure(DerivedViewStructure):
         default=None,
         metadata={
             "name": "VehicleJourneyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    journey_ref: Optional[JourneyRef] = field(
-        default=None,
-        metadata={
-            "name": "JourneyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

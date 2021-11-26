@@ -9,7 +9,6 @@ from .organisation_ref import OrganisationRef
 from .other_organisation_ref import OtherOrganisationRef
 from .retail_consortium_ref import RetailConsortiumRef
 from .serviced_organisation_ref import ServicedOrganisationRef
-from .transport_organisation_ref import TransportOrganisationRef
 from .travel_agent_ref import TravelAgentRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -40,14 +39,6 @@ class OrganisationRefsRelStructure(OneToManyRelationshipStructure):
         default_factory=list,
         metadata={
             "name": "OperatorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    transport_organisation_ref: List[TransportOrganisationRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TransportOrganisationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

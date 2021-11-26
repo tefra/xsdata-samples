@@ -81,11 +81,6 @@ class DayTypesRelStructure(ContainmentAggregationStructure):
                     "type": Type["DayType1"],
                     "namespace": "http://www.netex.org.uk/netex",
                 },
-                {
-                    "name": "DayType_",
-                    "type": Type["DayType2"],
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
             ),
         }
     )
@@ -179,11 +174,6 @@ class ValidityConditionsRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "ValidityCondition",
                     "type": Type["ValidityCondition1"],
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ValidityCondition_",
-                    "type": Type["ValidityCondition2"],
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
@@ -441,13 +431,6 @@ class DayTypeVersionStructure(DataManagedObjectStructure):
 
 
 @dataclass
-class DayType2(DataManagedObjectStructure):
-    class Meta:
-        name = "DayType_"
-        namespace = "http://www.netex.org.uk/netex"
-
-
-@dataclass
 class OperatingDayVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "OperatingDay_VersionStructure"
@@ -604,13 +587,6 @@ class ValidityConditionVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-
-
-@dataclass
-class ValidityCondition2(DataManagedObjectStructure):
-    class Meta:
-        name = "ValidityCondition_"
-        namespace = "http://www.netex.org.uk/netex"
 
 
 @dataclass

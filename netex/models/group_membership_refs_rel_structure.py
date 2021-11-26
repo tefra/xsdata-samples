@@ -3,11 +3,9 @@ from typing import List
 from .access_zone_ref import AccessZoneRef
 from .administrative_zone_ref import AdministrativeZoneRef
 from .fare_zone_ref import FareZoneRef
-from .group_of_points_ref_2 import GroupOfPointsRef2
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .stop_area_ref import StopAreaRef
 from .tariff_zone_ref_1 import TariffZoneRef1
-from .tariff_zone_ref_2 import TariffZoneRef2
 from .transport_administrative_zone_ref import TransportAdministrativeZoneRef
 from .zone_ref import ZoneRef
 
@@ -67,26 +65,10 @@ class GroupMembershipRefsRelStructure(OneToManyRelationshipStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_tariff_zone_ref: List[TariffZoneRef2] = field(
-        default_factory=list,
-        metadata={
-            "name": "TariffZoneRef_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     zone_ref: List[ZoneRef] = field(
         default_factory=list,
         metadata={
             "name": "ZoneRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    group_of_points_ref: List[GroupOfPointsRef2] = field(
-        default_factory=list,
-        metadata={
-            "name": "GroupOfPointsRef_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

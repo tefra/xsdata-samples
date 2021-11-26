@@ -18,11 +18,9 @@ from .entitlement_product_ref import EntitlementProductRef
 from .entitlement_required_ref import EntitlementRequiredRef
 from .exchanging_ref import ExchangingRef
 from .fare_demand_factor_ref import FareDemandFactorRef
-from .fare_interval_ref import FareIntervalRef
 from .fare_product_ref import FareProductRef
 from .fare_quota_factor_ref import FareQuotaFactorRef
 from .fare_structure_element_ref import FareStructureElementRef
-from .fare_structure_factor_ref import FareStructureFactorRef
 from .frequency_of_use_ref import FrequencyOfUseRef
 from .fulfilment_method_ref import FulfilmentMethodRef
 from .geographical_interval_ref import GeographicalIntervalRef
@@ -61,7 +59,6 @@ from .time_interval_ref import TimeIntervalRef
 from .time_structure_factor_ref import TimeStructureFactorRef
 from .transferability_ref import TransferabilityRef
 from .usage_discount_right_ref import UsageDiscountRightRef
-from .usage_parameter_ref import UsageParameterRef
 from .usage_validity_period_ref import UsageValidityPeriodRef
 from .user_profile_ref import UserProfileRef
 from .validable_element_ref import ValidableElementRef
@@ -346,14 +343,6 @@ class PriceableObjectRefsRelStructure(OneToManyRelationshipStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    usage_parameter_ref: List[UsageParameterRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "UsageParameterRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     sales_offer_package_element_ref: List[SalesOfferPackageElementRef] = field(
         default_factory=list,
         metadata={
@@ -514,14 +503,6 @@ class PriceableObjectRefsRelStructure(OneToManyRelationshipStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    fare_interval_ref: List[FareIntervalRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareIntervalRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     parking_charge_band_ref: List[ParkingChargeBandRef] = field(
         default_factory=list,
         metadata={
@@ -566,14 +547,6 @@ class PriceableObjectRefsRelStructure(OneToManyRelationshipStructure):
         default_factory=list,
         metadata={
             "name": "GeographicalStructureFactorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_structure_factor_ref: List[FareStructureFactorRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareStructureFactorRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

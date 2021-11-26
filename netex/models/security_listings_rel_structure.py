@@ -5,8 +5,6 @@ from .customer_account_security_listing import CustomerAccountSecurityListing
 from .customer_security_listing import CustomerSecurityListing
 from .fare_contract_security_listing import FareContractSecurityListing
 from .retail_device_security_listing import RetailDeviceSecurityListing
-from .security_listing_1 import SecurityListing1
-from .security_listing_2 import SecurityListing2
 from .travel_document_security_listing import TravelDocumentSecurityListing
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -53,22 +51,6 @@ class SecurityListingsRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "CustomerAccountSecurityListing",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    security_listing: List[SecurityListing1] = field(
-        default_factory=list,
-        metadata={
-            "name": "SecurityListing",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_security_listing: List[SecurityListing2] = field(
-        default_factory=list,
-        metadata={
-            "name": "SecurityListing_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .administrative_zone_2 import AdministrativeZone2
 from .administrative_zone_ref import AdministrativeZoneRef
 from .all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
 from .authority_ref import AuthorityRef
@@ -15,7 +14,6 @@ from .private_code_structure import PrivateCodeStructure
 from .responsibility_sets_rel_structure import ResponsibilitySetsRelStructure
 from .retail_consortium_ref import RetailConsortiumRef
 from .serviced_organisation_ref import ServicedOrganisationRef
-from .transport_organisation_ref import TransportOrganisationRef
 from .travel_agent_ref import TravelAgentRef
 from .zone_version_structure import ZoneVersionStructure
 
@@ -55,14 +53,6 @@ class AdministrativeZoneVersionStructure(ZoneVersionStructure):
         default=None,
         metadata={
             "name": "OperatorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    transport_organisation_ref: Optional[TransportOrganisationRef] = field(
-        default=None,
-        metadata={
-            "name": "TransportOrganisationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -173,7 +163,7 @@ class AdministrativeZonesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "administrativeZones_RelStructure"
 
-    choice: List[object] = field(
+    administrative_zone_ref_or_transport_administrative_zone_or_administrative_zone: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -191,11 +181,6 @@ class AdministrativeZonesRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "AdministrativeZone",
                     "type": AdministrativeZone1,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "AdministrativeZone_",
-                    "type": AdministrativeZone2,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

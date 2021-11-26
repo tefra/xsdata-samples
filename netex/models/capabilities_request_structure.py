@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .abstract_functional_service_capabilities_request import AbstractFunctionalServiceCapabilitiesRequest
 from .data_object_capabilities_request import DataObjectCapabilitiesRequest
 from .request_structure import RequestStructure
 
@@ -15,14 +14,6 @@ class CapabilitiesRequestStructure(RequestStructure):
             "name": "DataObjectCapabilitiesRequest",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    abstract_functional_service_capabilities_request: Optional[AbstractFunctionalServiceCapabilitiesRequest] = field(
-        default=None,
-        metadata={
-            "name": "AbstractFunctionalServiceCapabilitiesRequest",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
         }
     )
     version: str = field(

@@ -28,7 +28,6 @@ from .serviced_organisation_ref import ServicedOrganisationRef
 from .time_intervals_rel_structure import TimeIntervalsRelStructure
 from .time_structure_factors_rel_structure import TimeStructureFactorsRelStructure
 from .time_unit_ref import TimeUnitRef
-from .transport_organisation_ref import TransportOrganisationRef
 from .travel_agent_ref import TravelAgentRef
 from .type_of_tariff_ref import TypeOfTariffRef
 from .vehicle_type_refs_rel_structure import VehicleTypeRefsRelStructure
@@ -101,14 +100,6 @@ class ParkingTariffVersionStructure(DataManagedObjectStructure):
         default=None,
         metadata={
             "name": "OperatorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    transport_organisation_ref: Optional[TransportOrganisationRef] = field(
-        default=None,
-        metadata={
-            "name": "TransportOrganisationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

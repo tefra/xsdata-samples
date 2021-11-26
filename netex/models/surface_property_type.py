@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
-from .abstract_surface import AbstractSurface
 from .nil_reason_enumeration_value import NilReasonEnumerationValue
 from .polygon import Polygon
 
@@ -13,14 +12,6 @@ class SurfacePropertyType:
         default=None,
         metadata={
             "name": "Polygon",
-            "type": "Element",
-            "namespace": "http://www.opengis.net/gml/3.2",
-        }
-    )
-    abstract_surface: Optional[AbstractSurface] = field(
-        default=None,
-        metadata={
-            "name": "AbstractSurface",
             "type": "Element",
             "namespace": "http://www.opengis.net/gml/3.2",
         }

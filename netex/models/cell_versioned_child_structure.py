@@ -14,7 +14,6 @@ from .capping_rule_price import CappingRulePrice
 from .capping_rule_price_ref import CappingRulePriceRef
 from .capping_rule_ref import CappingRuleRef
 from .cell_ref_1 import CellRef1
-from .cell_ref_2 import CellRef2
 from .charging_policy_ref import ChargingPolicyRef
 from .class_of_use_ref import ClassOfUseRef
 from .commercial_profile_ref import CommercialProfileRef
@@ -41,9 +40,6 @@ from .exchanging_ref import ExchangingRef
 from .facility_set_ref import FacilitySetRef
 from .fare_class_enumeration import FareClassEnumeration
 from .fare_demand_factor_ref import FareDemandFactorRef
-from .fare_interval_ref import FareIntervalRef
-from .fare_price_1 import FarePrice1
-from .fare_price_2 import FarePrice2
 from .fare_price_ref import FarePriceRef
 from .fare_price_versioned_child_structure import FarePriceVersionedChildStructure
 from .fare_product_price import FareProductPrice
@@ -54,8 +50,6 @@ from .fare_section_ref import FareSectionRef
 from .fare_structure_element_price import FareStructureElementPrice
 from .fare_structure_element_price_ref import FareStructureElementPriceRef
 from .fare_structure_element_ref import FareStructureElementRef
-from .fare_structure_factor_ref import FareStructureFactorRef
-from .fare_table_2 import FareTable2
 from .fare_table_column_ref_structure import FareTableColumnRefStructure
 from .fare_table_column_versioned_child_structure import FareTableColumnsRelStructure
 from .fare_table_ref import FareTableRef
@@ -103,7 +97,6 @@ from .payment_method_enumeration import PaymentMethodEnumeration
 from .penalty_policy_ref import PenaltyPolicyRef
 from .point_of_interest_ref import PointOfInterestRef
 from .preassigned_fare_product_ref import PreassignedFareProductRef
-from .price_group_2 import PriceGroup2
 from .price_group_ref import PriceGroupRef
 from .priceable_object_ref import PriceableObjectRef
 from .priceable_object_refs_rel_structure import PriceableObjectRefsRelStructure
@@ -164,7 +157,6 @@ from .time_unit_ref import TimeUnitRef
 from .train_number_ref import TrainNumberRef
 from .train_ref import TrainRef
 from .transferability_ref import TransferabilityRef
-from .transport_organisation_ref import TransportOrganisationRef
 from .travel_agent_ref import TravelAgentRef
 from .type_of_fare_product_ref import TypeOfFareProductRef
 from .type_of_fare_structure_factor_ref import TypeOfFareStructureFactorRef
@@ -176,7 +168,6 @@ from .type_of_travel_document_ref import TypeOfTravelDocumentRef
 from .usage_discount_right_ref import UsageDiscountRightRef
 from .usage_parameter_price import UsageParameterPrice
 from .usage_parameter_price_ref import UsageParameterPriceRef
-from .usage_parameter_ref import UsageParameterRef
 from .usage_parameter_refs_rel_structure import UsageParameterRefsRelStructure
 from .usage_validity_period_ref import UsageValidityPeriodRef
 from .used_in_refs_rel_structure import UsedInRefsRelStructure
@@ -498,22 +489,6 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    fare_price: Optional[FarePrice1] = field(
-        default=None,
-        metadata={
-            "name": "FarePrice",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_fare_price: Optional[FarePrice2] = field(
-        default=None,
-        metadata={
-            "name": "FarePrice_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     price_group_ref: Optional[PriceGroupRef] = field(
         default=None,
         metadata={
@@ -794,14 +769,6 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    usage_parameter_ref: List[UsageParameterRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "UsageParameterRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     sales_offer_package_element_ref: List[SalesOfferPackageElementRef] = field(
         default_factory=list,
         metadata={
@@ -962,14 +929,6 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    fare_interval_ref: List[FareIntervalRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareIntervalRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     parking_charge_band_ref: List[ParkingChargeBandRef] = field(
         default_factory=list,
         metadata={
@@ -1014,14 +973,6 @@ class CellVersionedChildStructure(VersionedChildStructure):
         default_factory=list,
         metadata={
             "name": "GeographicalStructureFactorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_structure_factor_ref: List[FareStructureFactorRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareStructureFactorRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -1451,16 +1402,6 @@ class CellsRelStructure(StrictContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "FarePrice",
-                    "type": FarePrice1,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "FarePrice_",
-                    "type": FarePrice2,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "CustomerPurchasePackagePriceRef",
                     "type": CustomerPurchasePackagePriceRef,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -1637,14 +1578,6 @@ class FareTableVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    transport_organisation_ref: Optional[TransportOrganisationRef] = field(
-        default=None,
-        metadata={
-            "name": "TransportOrganisationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     general_organisation_ref: Optional[GeneralOrganisationRef] = field(
         default=None,
         metadata={
@@ -1806,11 +1739,6 @@ class FareTablesRelStructure(StrictContainmentAggregationStructure):
                 {
                     "name": "FareTable",
                     "type": FareTable1,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "FareTable_",
-                    "type": FareTable2,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
@@ -2218,11 +2146,6 @@ class FarePricesRelStructure(StrictContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "CellRef_",
-                    "type": CellRef2,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "CustomerPurchasePackagePrice",
                     "type": CustomerPurchasePackagePrice,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -2305,16 +2228,6 @@ class FarePricesRelStructure(StrictContainmentAggregationStructure):
                 {
                     "name": "SeriesConstraintPrice",
                     "type": SeriesConstraintPrice,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "FarePrice",
-                    "type": FarePrice1,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "FarePrice_",
-                    "type": FarePrice2,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
@@ -2516,7 +2429,7 @@ class PriceGroupsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "priceGroups_RelStructure"
 
-    price_group_ref_or_price_group_or_price_group: List[object] = field(
+    price_group_ref_or_price_group: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -2529,11 +2442,6 @@ class PriceGroupsRelStructure(StrictContainmentAggregationStructure):
                 {
                     "name": "PriceGroup",
                     "type": PriceGroup1,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "PriceGroup_",
-                    "type": PriceGroup2,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

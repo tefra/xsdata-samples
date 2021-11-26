@@ -35,7 +35,6 @@ from .capped_discount_right_ref import CappedDiscountRightRef
 from .capping_rule_price_ref import CappingRulePriceRef
 from .capping_rule_ref import CappingRuleRef
 from .cell_ref_1 import CellRef1
-from .cell_ref_2 import CellRef2
 from .charging_moment_ref import ChargingMomentRef
 from .charging_policy_ref import ChargingPolicyRef
 from .class_of_use_ref import ClassOfUseRef
@@ -108,9 +107,7 @@ from .fare_contract_ref import FareContractRef
 from .fare_contract_security_listing_ref import FareContractSecurityListingRef
 from .fare_day_type_ref import FareDayTypeRef
 from .fare_demand_factor_ref import FareDemandFactorRef
-from .fare_element_in_sequence_ref import FareElementInSequenceRef
 from .fare_frame_ref import FareFrameRef
-from .fare_interval_ref import FareIntervalRef
 from .fare_price_ref import FarePriceRef
 from .fare_product_price_ref import FareProductPriceRef
 from .fare_product_ref import FareProductRef
@@ -121,11 +118,9 @@ from .fare_section_ref import FareSectionRef
 from .fare_structure_element_in_sequence_ref import FareStructureElementInSequenceRef
 from .fare_structure_element_price_ref import FareStructureElementPriceRef
 from .fare_structure_element_ref import FareStructureElementRef
-from .fare_structure_factor_ref import FareStructureFactorRef
 from .fare_table_column_ref import FareTableColumnRef
 from .fare_table_ref import FareTableRef
 from .fare_table_row_ref import FareTableRowRef
-from .fare_unit_ref import FareUnitRef
 from .fare_zone_ref import FareZoneRef
 from .flexible_area_ref import FlexibleAreaRef
 from .flexible_line_ref import FlexibleLineRef
@@ -151,14 +146,9 @@ from .geographical_unit_ref import GeographicalUnitRef
 from .group_of_customer_purchase_packages_ref import GroupOfCustomerPurchasePackagesRef
 from .group_of_distance_matrix_elements_ref import GroupOfDistanceMatrixElementsRef
 from .group_of_distribution_channels_ref import GroupOfDistributionChannelsRef
-from .group_of_entities_ref_1 import GroupOfEntitiesRef1
-from .group_of_entities_ref_2 import GroupOfEntitiesRef2
 from .group_of_lines_ref import GroupOfLinesRef
-from .group_of_link_sequences_ref import GroupOfLinkSequencesRef
 from .group_of_operators_ref import GroupOfOperatorsRef
 from .group_of_places_ref import GroupOfPlacesRef
-from .group_of_points_ref_1 import GroupOfPointsRef1
-from .group_of_points_ref_2 import GroupOfPointsRef2
 from .group_of_sales_offer_packages_ref import GroupOfSalesOfferPackagesRef
 from .group_of_services_ref import GroupOfServicesRef
 from .group_of_stop_places_ref import GroupOfStopPlacesRef
@@ -167,11 +157,8 @@ from .group_of_timing_links_ref import GroupOfTimingLinksRef
 from .group_ticket_ref import GroupTicketRef
 from .hail_and_ride_area_ref import HailAndRideAreaRef
 from .headway_journey_group_ref import HeadwayJourneyGroupRef
-from .headway_ref import HeadwayRef
 from .info_link import InfoLink
 from .infrastructure_frame_ref import InfrastructureFrameRef
-from .infrastructure_link_ref import InfrastructureLinkRef
-from .infrastructure_point_ref import InfrastructurePointRef
 from .interchange_ref import InterchangeRef
 from .interchange_rule_ref import InterchangeRuleRef
 from .interchange_rule_timing_ref import InterchangeRuleTimingRef
@@ -185,7 +172,6 @@ from .journey_pattern_layover_ref import JourneyPatternLayoverRef
 from .journey_pattern_ref import JourneyPatternRef
 from .journey_pattern_run_time_ref import JourneyPatternRunTimeRef
 from .journey_pattern_wait_time_ref import JourneyPatternWaitTimeRef
-from .journey_ref import JourneyRef
 from .journey_timing_ref import JourneyTimingRef
 from .layer_ref import LayerRef
 from .level_ref import LevelRef
@@ -196,7 +182,6 @@ from .line_ref import LineRef
 from .line_section_ref import LineSectionRef
 from .link_projection import LinkProjection
 from .link_projection_ref import LinkProjectionRef
-from .link_ref import LinkRef
 from .link_sequence_projection import LinkSequenceProjection
 from .link_sequence_projection_ref import LinkSequenceProjectionRef
 from .link_sequence_ref import LinkSequenceRef
@@ -241,21 +226,18 @@ from .parking_ref import ParkingRef
 from .parking_tariff_ref import ParkingTariffRef
 from .passenger_capacity_ref import PassengerCapacityRef
 from .passenger_carrying_requirement_ref import PassengerCarryingRequirementRef
-from .passenger_information_request_ref import PassengerInformationRequestRef
 from .passenger_seat_ref import PassengerSeatRef
 from .passing_time_ref import PassingTimeRef
 from .path_junction_ref import PathJunctionRef
 from .path_link_ref import PathLinkRef
 from .penalty_policy_ref import PenaltyPolicyRef
 from .place_ref_1 import PlaceRef1
-from .place_ref_2 import PlaceRef2
 from .point_of_interest_classification_ref import PointOfInterestClassificationRef
 from .point_of_interest_entrance_ref import PointOfInterestEntranceRef
 from .point_of_interest_hierarchy_ref import PointOfInterestHierarchyRef
 from .point_of_interest_ref import PointOfInterestRef
 from .point_of_interest_space_ref import PointOfInterestSpaceRef
 from .point_of_interest_vehicle_entrance_ref import PointOfInterestVehicleEntranceRef
-from .point_on_link_ref import PointOnLinkRef
 from .point_projection import PointProjection
 from .point_projection_ref import PointProjectionRef
 from .point_ref import PointRef
@@ -268,8 +250,6 @@ from .pricing_parameter_set_ref import PricingParameterSetRef
 from .pricing_rule_ref import PricingRuleRef
 from .pricing_service_ref import PricingServiceRef
 from .profile_parameter_ref import ProfileParameterRef
-from .projection import Projection
-from .projection_ref import ProjectionRef
 from .purchase_window_ref import PurchaseWindowRef
 from .purpose_of_equipment_profile_ref import PurposeOfEquipmentProfileRef
 from .purpose_of_grouping_ref import PurposeOfGroupingRef
@@ -320,8 +300,6 @@ from .scheduled_stop_point_ref import ScheduledStopPointRef
 from .schematic_map_member_ref import SchematicMapMemberRef
 from .schematic_map_ref import SchematicMapRef
 from .section_ref import SectionRef
-from .security_list_ref import SecurityListRef
-from .security_listing_ref import SecurityListingRef
 from .series_constraint_price_ref import SeriesConstraintPriceRef
 from .series_constraint_ref import SeriesConstraintRef
 from .service_access_right_ref import ServiceAccessRightRef
@@ -364,7 +342,6 @@ from .target_passing_time_ref import TargetPassingTimeRef
 from .tariff_object_ref import TariffObjectRef
 from .tariff_ref import TariffRef
 from .tariff_zone_ref_1 import TariffZoneRef1
-from .tariff_zone_ref_2 import TariffZoneRef2
 from .template_service_journey_ref import TemplateServiceJourneyRef
 from .third_party_product_ref import ThirdPartyProductRef
 from .time_demand_profile_ref import TimeDemandProfileRef
@@ -392,10 +369,8 @@ from .train_element_ref import TrainElementRef
 from .train_in_compound_train_ref import TrainInCompoundTrainRef
 from .train_number_ref import TrainNumberRef
 from .train_ref import TrainRef
-from .transfer_ref import TransferRef
 from .transferability_ref import TransferabilityRef
 from .transport_administrative_zone_ref import TransportAdministrativeZoneRef
-from .transport_organisation_ref import TransportOrganisationRef
 from .travel_agent_ref import TravelAgentRef
 from .travel_document_ref import TravelDocumentRef
 from .travel_document_security_listing_ref import TravelDocumentSecurityListingRef
@@ -409,7 +384,6 @@ from .type_of_concession_ref import TypeOfConcessionRef
 from .type_of_congestion_ref import TypeOfCongestionRef
 from .type_of_customer_account_ref import TypeOfCustomerAccountRef
 from .type_of_delivery_variant_ref import TypeOfDeliveryVariantRef
-from .type_of_entity_ref import TypeOfEntityRef
 from .type_of_equipment_ref import TypeOfEquipmentRef
 from .type_of_facility_ref import TypeOfFacilityRef
 from .type_of_fare_contract_entry_ref import TypeOfFareContractEntryRef
@@ -449,11 +423,9 @@ from .type_of_transfer_ref import TypeOfTransferRef
 from .type_of_travel_document_ref import TypeOfTravelDocumentRef
 from .type_of_usage_parameter_ref import TypeOfUsageParameterRef
 from .type_of_validity_ref import TypeOfValidityRef
-from .type_of_value_ref import TypeOfValueRef
 from .type_of_zone_ref import TypeOfZoneRef
 from .usage_discount_right_ref import UsageDiscountRightRef
 from .usage_parameter_price_ref import UsageParameterPriceRef
-from .usage_parameter_ref import UsageParameterRef
 from .usage_validity_period_ref import UsageValidityPeriodRef
 from .user_profile_eligibility_ref import UserProfileEligibilityRef
 from .user_profile_ref import UserProfileRef
@@ -478,7 +450,6 @@ from .vehicle_stopping_place_ref import VehicleStoppingPlaceRef
 from .vehicle_stopping_position_ref import VehicleStoppingPositionRef
 from .vehicle_type_preference_ref import VehicleTypePreferenceRef
 from .vehicle_type_ref import VehicleTypeRef
-from .version_frame_ref import VersionFrameRef
 from .version_of_object_ref import VersionOfObjectRef
 from .version_ref import VersionRef
 from .whitelist_ref import WhitelistRef
@@ -564,14 +535,6 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
         default=None,
         metadata={
             "name": "TripPlanRequestRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    passenger_information_request_ref: Optional[PassengerInformationRequestRef] = field(
-        default=None,
-        metadata={
-            "name": "PassengerInformationRequestRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -728,14 +691,6 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    fare_unit_ref: Optional[FareUnitRef] = field(
-        default=None,
-        metadata={
-            "name": "FareUnitRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     controllable_element_in_sequence_ref: Optional[ControllableElementInSequenceRef] = field(
         default=None,
         metadata={
@@ -760,26 +715,10 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    fare_element_in_sequence_ref: Optional[FareElementInSequenceRef] = field(
-        default=None,
-        metadata={
-            "name": "FareElementInSequenceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     cell_ref: Optional[CellRef1] = field(
         default=None,
         metadata={
             "name": "CellRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_cell_ref: Optional[CellRef2] = field(
-        default=None,
-        metadata={
-            "name": "CellRef_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -1200,14 +1139,6 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    usage_parameter_ref: Optional[UsageParameterRef] = field(
-        default=None,
-        metadata={
-            "name": "UsageParameterRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     sales_offer_package_element_ref: Optional[SalesOfferPackageElementRef] = field(
         default=None,
         metadata={
@@ -1368,14 +1299,6 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    fare_interval_ref: Optional[FareIntervalRef] = field(
-        default=None,
-        metadata={
-            "name": "FareIntervalRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     parking_charge_band_ref: Optional[ParkingChargeBandRef] = field(
         default=None,
         metadata={
@@ -1420,14 +1343,6 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
         default=None,
         metadata={
             "name": "GeographicalStructureFactorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_structure_factor_ref: Optional[FareStructureFactorRef] = field(
-        default=None,
-        metadata={
-            "name": "FareStructureFactorRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -1944,14 +1859,6 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    headway_ref: Optional[HeadwayRef] = field(
-        default=None,
-        metadata={
-            "name": "HeadwayRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     journey_timing_ref: Optional[JourneyTimingRef] = field(
         default=None,
         metadata={
@@ -2056,14 +1963,6 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    security_listing_ref: Optional[SecurityListingRef] = field(
-        default=None,
-        metadata={
-            "name": "SecurityListingRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     whitelist_ref: Optional[WhitelistRef] = field(
         default=None,
         metadata={
@@ -2076,14 +1975,6 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
         default=None,
         metadata={
             "name": "BlacklistRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    security_list_ref: Optional[SecurityListRef] = field(
-        default=None,
-        metadata={
-            "name": "SecurityListRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -2328,22 +2219,6 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    projection_ref: Optional[ProjectionRef] = field(
-        default=None,
-        metadata={
-            "name": "ProjectionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    group_of_link_sequences_ref: Optional[GroupOfLinkSequencesRef] = field(
-        default=None,
-        metadata={
-            "name": "GroupOfLinkSequencesRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     dated_vehicle_journey_ref: Optional[DatedVehicleJourneyRef] = field(
         default=None,
         metadata={
@@ -2396,14 +2271,6 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
         default=None,
         metadata={
             "name": "VehicleJourneyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    journey_ref: Optional[JourneyRef] = field(
-        default=None,
-        metadata={
-            "name": "JourneyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -2580,14 +2447,6 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
         default=None,
         metadata={
             "name": "AccessRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    transfer_ref: Optional[TransferRef] = field(
-        default=None,
-        metadata={
-            "name": "TransferRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -2888,14 +2747,6 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    place_ref: Optional[PlaceRef2] = field(
-        default=None,
-        metadata={
-            "name": "PlaceRef_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     service_link_ref: Optional[ServiceLinkRef] = field(
         default=None,
         metadata={
@@ -2960,26 +2811,10 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    infrastructure_link_ref: Optional[InfrastructureLinkRef] = field(
-        default=None,
-        metadata={
-            "name": "InfrastructureLinkRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     activation_link_ref: Optional[ActivationLinkRef] = field(
         default=None,
         metadata={
             "name": "ActivationLinkRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    link_ref: Optional[LinkRef] = field(
-        default=None,
-        metadata={
-            "name": "LinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -3072,14 +2907,6 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    infrastructure_point_ref: Optional[InfrastructurePointRef] = field(
-        default=None,
-        metadata={
-            "name": "InfrastructurePointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     traffic_control_point_ref: Optional[TrafficControlPointRef] = field(
         default=None,
         metadata={
@@ -3100,14 +2927,6 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
         default=None,
         metadata={
             "name": "ActivationPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    point_on_link_ref: Optional[PointOnLinkRef] = field(
-        default=None,
-        metadata={
-            "name": "PointOnLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -3280,14 +3099,6 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    transport_organisation_ref: Optional[TransportOrganisationRef] = field(
-        default=None,
-        metadata={
-            "name": "TransportOrganisationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     general_organisation_ref: Optional[GeneralOrganisationRef] = field(
         default=None,
         metadata={
@@ -3380,14 +3191,6 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
         default=None,
         metadata={
             "name": "LineRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    group_of_entities_ref: Optional[GroupOfEntitiesRef1] = field(
-        default=None,
-        metadata={
-            "name": "GroupOfEntitiesRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -3592,18 +3395,10 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_place_ref: Optional[PlaceRef1] = field(
+    place_ref: Optional[PlaceRef1] = field(
         default=None,
         metadata={
             "name": "PlaceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    group_of_points_ref: Optional[GroupOfPointsRef1] = field(
-        default=None,
-        metadata={
-            "name": "GroupOfPointsRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -3656,26 +3451,10 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_tariff_zone_ref: Optional[TariffZoneRef2] = field(
-        default=None,
-        metadata={
-            "name": "TariffZoneRef_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     zone_ref: Optional[ZoneRef] = field(
         default=None,
         metadata={
             "name": "ZoneRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_group_of_points_ref: Optional[GroupOfPointsRef2] = field(
-        default=None,
-        metadata={
-            "name": "GroupOfPointsRef_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -3708,14 +3487,6 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
         default=None,
         metadata={
             "name": "GeneralGroupOfEntitiesRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_group_of_entities_ref: Optional[GroupOfEntitiesRef2] = field(
-        default=None,
-        metadata={
-            "name": "GroupOfEntitiesRef_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -3812,14 +3583,6 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
         default=None,
         metadata={
             "name": "CompositeFrameRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    version_frame_ref: Optional[VersionFrameRef] = field(
-        default=None,
-        metadata={
-            "name": "VersionFrameRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -4280,22 +4043,6 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    type_of_entity_ref: Optional[TypeOfEntityRef] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfEntityRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_value_ref: Optional[TypeOfValueRef] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfValueRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     data_source_ref: Optional[DataSourceRef] = field(
         default=None,
         metadata={
@@ -4402,14 +4149,6 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
         default=None,
         metadata={
             "name": "PointProjection",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    projection: Optional[Projection] = field(
-        default=None,
-        metadata={
-            "name": "Projection",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

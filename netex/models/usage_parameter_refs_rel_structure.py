@@ -29,7 +29,6 @@ from .step_limit_ref import StepLimitRef
 from .subscribing_ref import SubscribingRef
 from .suspending_ref import SuspendingRef
 from .transferability_ref import TransferabilityRef
-from .usage_parameter_ref import UsageParameterRef
 from .usage_validity_period_ref import UsageValidityPeriodRef
 from .user_profile_ref import UserProfileRef
 
@@ -277,14 +276,6 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
         default_factory=list,
         metadata={
             "name": "PurchaseWindowRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    usage_parameter_ref: List[UsageParameterRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "UsageParameterRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

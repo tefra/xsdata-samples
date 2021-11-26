@@ -1,7 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
 from .activation_point_1 import ActivationPoint1
-from .activation_point_2 import ActivationPoint2
 from .beacon_point import BeaconPoint
 from .containment_aggregation_structure import ContainmentAggregationStructure
 
@@ -25,14 +24,6 @@ class ActivationPointsInFrameRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "ActivationPoint",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_activation_point: List[ActivationPoint2] = field(
-        default_factory=list,
-        metadata={
-            "name": "ActivationPoint_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

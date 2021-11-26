@@ -10,7 +10,6 @@ from .line_ref import LineRef
 from .local_service_version_structure import LocalServiceVersionStructure
 from .notice_assignments_rel_structure import NoticeAssignmentsRelStructure
 from .operator_ref import OperatorRef
-from .transport_organisation_ref import TransportOrganisationRef
 from .version_of_object_ref_structure import VersionOfObjectRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -73,14 +72,6 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
         default=None,
         metadata={
             "name": "OperatorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    transport_organisation_ref: Optional[TransportOrganisationRef] = field(
-        default=None,
-        metadata={
-            "name": "TransportOrganisationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

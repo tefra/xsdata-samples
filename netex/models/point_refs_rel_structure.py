@@ -5,10 +5,8 @@ from .beacon_point_ref import BeaconPointRef
 from .border_point_ref import BorderPointRef
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
 from .garage_point_ref import GaragePointRef
-from .infrastructure_point_ref import InfrastructurePointRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .parking_point_ref import ParkingPointRef
-from .point_on_link_ref import PointOnLinkRef
 from .point_ref import PointRef
 from .railway_point_ref import RailwayPointRef
 from .relief_point_ref import ReliefPointRef
@@ -115,14 +113,6 @@ class PointRefsRelStructure(OneToManyRelationshipStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    infrastructure_point_ref: List[InfrastructurePointRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "InfrastructurePointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     traffic_control_point_ref: List[TrafficControlPointRef] = field(
         default_factory=list,
         metadata={
@@ -143,14 +133,6 @@ class PointRefsRelStructure(OneToManyRelationshipStructure):
         default_factory=list,
         metadata={
             "name": "ActivationPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    point_on_link_ref: List[PointOnLinkRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "PointOnLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

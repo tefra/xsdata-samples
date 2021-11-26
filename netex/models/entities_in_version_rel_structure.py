@@ -1,12 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Type
 from xsdata.models.datatype import XmlDateTime
-from .abstract_group_member import AbstractGroupMember
 from .access import Access
 from .access_equipment import AccessEquipment
 from .access_right_in_product import AccessRightInProduct
 from .access_right_parameter_assignment_1 import AccessRightParameterAssignment1
-from .access_right_parameter_assignment_2 import AccessRightParameterAssignment2
 from .access_space import AccessSpace
 from .access_vehicle_equipment import AccessVehicleEquipment
 from .access_zone import AccessZone
@@ -16,11 +14,7 @@ from .accountable_element import AccountableElement
 from .activation_assignment import ActivationAssignment
 from .activation_link import ActivationLink
 from .activation_point_1 import ActivationPoint1
-from .activation_point_2 import ActivationPoint2
-from .actual_vehicle_equipment import ActualVehicleEquipment
-from .address import Address
 from .addressable_place import AddressablePlace
-from .administrative_zone_2 import AdministrativeZone2
 from .administrative_zone_version_structure import (
     AdministrativeZone1,
     TransportAdministrativeZone,
@@ -31,20 +25,16 @@ from .alternative_texts_rel_structure import (
     AlternativeText,
     AvailabilityCondition,
     DayType1,
-    DayType2,
     FareDayType,
     OperatingDay,
     OrganisationDayType,
     SimpleAvailabilityCondition,
     ValidDuring,
     ValidityCondition1,
-    ValidityCondition2,
     ValidityRuleParameter,
     ValidityTrigger,
 )
 from .amount_of_price_unit_product import AmountOfPriceUnitProduct
-from .assignment_1 import Assignment1
-from .assignment_2 import Assignment2
 from .assistance_booking_service import AssistanceBookingService
 from .assistance_service import AssistanceService
 from .authority import Authority
@@ -60,7 +50,6 @@ from .capped_discount_right import CappedDiscountRight
 from .capping_rule import CappingRule
 from .capping_rule_price import CappingRulePrice
 from .catering_service import CateringService
-from .cell_2 import Cell2
 from .cell_versioned_child_structure import (
     Cell1,
     FareTableInContext,
@@ -78,7 +67,6 @@ from .class_of_use import ClassOfUse
 from .codespace_assignment import CodespaceAssignment
 from .commercial_profile import CommercialProfile
 from .commercial_profile_eligibility import CommercialProfileEligibility
-from .common_frame import CommonFrame
 from .common_version_frame_structure import CommonVersionFrameStructure
 from .communication_service import CommunicationService
 from .companion_profile import CompanionProfile
@@ -102,7 +90,6 @@ from .customer_account import CustomerAccount
 from .customer_account_security_listing import CustomerAccountSecurityListing
 from .customer_account_status import CustomerAccountStatus
 from .customer_eligibility_1 import CustomerEligibility1
-from .customer_eligibility_2 import CustomerEligibility2
 from .customer_purchase_package import CustomerPurchasePackage
 from .customer_purchase_package_element import CustomerPurchasePackageElement
 from .customer_purchase_package_price import CustomerPurchasePackagePrice
@@ -110,8 +97,6 @@ from .customer_purchase_parameter_assignment import CustomerPurchaseParameterAss
 from .customer_security_listing import CustomerSecurityListing
 from .customer_service import CustomerService
 from .cycle_storage_equipment import CycleStorageEquipment
-from .data_managed_object import DataManagedObject
-from .data_managed_object_view import DataManagedObjectView
 from .data_source import DataSource
 from .dated_passing_time import DatedPassingTime
 from .dated_service_journey import DatedServiceJourney
@@ -145,11 +130,9 @@ from .eligibility_change_policy import EligibilityChangePolicy
 from .entitlement_given import EntitlementGiven
 from .entitlement_product import EntitlementProduct
 from .entitlement_required import EntitlementRequired
-from .entity_in_version import EntityInVersion
 from .entity_structure import EntityStructure
 from .entrance import Entrance
 from .entrance_equipment import EntranceEquipment
-from .equipment import Equipment
 from .equipment_place import EquipmentPlace
 from .equipment_position import EquipmentPosition
 from .escalator_equipment import EscalatorEquipment
@@ -157,7 +140,6 @@ from .estimated_passing_time import EstimatedPassingTime
 from .exchanging import Exchanging
 from .facility_requirement import FacilityRequirement
 from .fare_contract import FareContract
-from .fare_contract_entry_1 import FareContractEntry1
 from .fare_contract_entry_2 import FareContractEntry2
 from .fare_contract_security_listing import FareContractSecurityListing
 from .fare_demand_factor import FareDemandFactor
@@ -165,10 +147,6 @@ from .fare_element_in_sequence import FareElementInSequence
 from .fare_frame import FareFrame
 from .fare_interval import FareInterval
 from .fare_point_in_pattern import FarePointInPattern
-from .fare_price_1 import FarePrice1
-from .fare_price_2 import FarePrice2
-from .fare_product_1 import FareProduct1
-from .fare_product_2 import FareProduct2
 from .fare_product_price import FareProductPrice
 from .fare_quota_factor import FareQuotaFactor
 from .fare_scheduled_stop_point import FareScheduledStopPoint
@@ -176,7 +154,6 @@ from .fare_structure_element import FareStructureElement
 from .fare_structure_element_in_sequence import FareStructureElementInSequence
 from .fare_structure_element_price import FareStructureElementPrice
 from .fare_structure_factor import FareStructureFactor
-from .fare_table_2 import FareTable2
 from .fare_unit import FareUnit
 from .fare_zone import FareZone
 from .flexible_area import FlexibleArea
@@ -210,7 +187,6 @@ from .geographical_unit_price import GeographicalUnitPrice
 from .group_constraint_member import GroupConstraintMember
 from .group_of_distance_matrix_elements import GroupOfDistanceMatrixElements
 from .group_of_distribution_channels import GroupOfDistributionChannels
-from .group_of_entities import GroupOfEntities
 from .group_of_lines import GroupOfLines
 from .group_of_link_sequences import GroupOfLinkSequences
 from .group_of_links import GroupOfLinks
@@ -228,33 +204,21 @@ from .headway_journey_group import HeadwayJourneyGroup
 from .help_point_equipment import HelpPointEquipment
 from .hire_service import HireService
 from .infrastructure_frame import InfrastructureFrame
-from .infrastructure_link_1 import InfrastructureLink1
-from .infrastructure_link_2 import InfrastructureLink2
-from .infrastructure_link_restriction import InfrastructureLinkRestriction
-from .infrastructure_point import InfrastructurePoint
-from .installed_equipment import InstalledEquipment
-from .interchange_1 import Interchange1
-from .interchange_2 import Interchange2
 from .interchange_rule import InterchangeRule
 from .interchange_rule_timing import InterchangeRuleTiming
 from .interchanging import Interchanging
-from .journey_1 import Journey1
-from .journey_2 import Journey2
 from .journey_accounting import JourneyAccounting
-from .journey_frequency_group import JourneyFrequencyGroup
 from .journey_headway import JourneyHeadway
 from .journey_layover import JourneyLayover
 from .journey_meeting import JourneyMeeting
 from .journey_part import JourneyPart
 from .journey_part_couple import JourneyPartCouple
 from .journey_part_position import JourneyPartPosition
-from .journey_pattern_2 import JourneyPattern2
 from .journey_pattern_headway import JourneyPatternHeadway
 from .journey_pattern_layover import JourneyPatternLayover
 from .journey_pattern_run_time import JourneyPatternRunTime
 from .journey_pattern_wait_time import JourneyPatternWaitTime
 from .journey_run_time import JourneyRunTime
-from .journey_timing import JourneyTiming
 from .journey_wait_time import JourneyWaitTime
 from .layer import Layer
 from .left_luggage_service import LeftLuggageService
@@ -263,27 +227,19 @@ from .lift_equipment import LiftEquipment
 from .limiting_rule import LimitingRule
 from .limiting_rule_in_context import LimitingRuleInContext
 from .line_1 import Line1
-from .line_2 import Line2
 from .line_network import LineNetwork
 from .line_shape import LineShape
-from .link import Link
 from .link_in_journey_pattern import LinkInJourneyPattern
-from .link_in_link_sequence import LinkInLinkSequence
 from .link_on_section import LinkOnSection
 from .link_projection import LinkProjection
-from .link_sequence import LinkSequence
 from .link_sequence_projection import LinkSequenceProjection
 from .link_sequence_version_structure import (
     JourneyPattern1,
     SectionInSequence,
 )
-from .local_service import LocalService
-from .log import Log
-from .log_entry import LogEntry
 from .logical_display import LogicalDisplay
 from .lost_property_service import LostPropertyService
 from .luggage_allowance import LuggageAllowance
-from .luggage_locker_equipment import LuggageLockerEquipment
 from .luggage_service import LuggageService
 from .management_agent import ManagementAgent
 from .meeting_point_service import MeetingPointService
@@ -294,11 +250,9 @@ from .month_validity_offset import MonthValidityOffset
 from .navigation_path import NavigationPath
 from .navigation_path_assignment import NavigationPathAssignment
 from .network import Network
-from .network_restriction import NetworkRestriction
 from .normal_dated_vehicle_journey import NormalDatedVehicleJourney
 from .notice import Notice
 from .notice_assignment_1 import NoticeAssignment1
-from .notice_assignment_2 import NoticeAssignment2
 from .observed_passing_time import ObservedPassingTime
 from .offered_travel_specification import OfferedTravelSpecification
 from .onboard_stay import OnboardStay
@@ -307,10 +261,7 @@ from .operating_department import OperatingDepartment
 from .operating_period import OperatingPeriod
 from .operational_context import OperationalContext
 from .operator import Operator
-from .organisation_1 import Organisation1
-from .organisation_2 import Organisation2
 from .organisation_part_1 import OrganisationPart1
-from .organisation_part_2 import OrganisationPart2
 from .organisational_unit import OrganisationalUnit
 from .other_organisation import OtherOrganisation
 from .overtaking_possibility import OvertakingPossibility
@@ -322,12 +273,10 @@ from .parking_component import ParkingComponent
 from .parking_entrance_for_vehicles import ParkingEntranceForVehicles
 from .parking_passenger_entrance import ParkingPassengerEntrance
 from .parking_point_1 import ParkingPoint1
-from .parking_point_2 import ParkingPoint2
 from .parking_properties import ParkingProperties
 from .parking_tariff import ParkingTariff
 from .passenger_carrying_requirement import PassengerCarryingRequirement
 from .passenger_carrying_requirements_view import PassengerCarryingRequirementsView
-from .passenger_equipment import PassengerEquipment
 from .passenger_information_equipment import PassengerInformationEquipment
 from .passenger_safety_equipment import PassengerSafetyEquipment
 from .passenger_stop_assignment import PassengerStopAssignment
@@ -337,18 +286,14 @@ from .path_junction import PathJunction
 from .path_link import PathLink
 from .path_link_in_sequence import PathLinkInSequence
 from .penalty_policy import PenaltyPolicy
-from .place import Place
-from .place_equipment import PlaceEquipment
 from .place_in_sequence import PlaceInSequence
 from .place_lighting import PlaceLighting
 from .place_sign import PlaceSign
 from .point_2 import Point2
 from .point_in_journey_pattern import PointInJourneyPattern
-from .point_in_link_sequence import PointInLinkSequence
 from .point_of_interest import PointOfInterest
 from .point_of_interest_classification import PointOfInterestClassification
 from .point_of_interest_classification_hierarchy import PointOfInterestClassificationHierarchy
-from .point_of_interest_component import PointOfInterestComponent
 from .point_of_interest_entrance import PointOfInterestEntrance
 from .point_of_interest_space import PointOfInterestSpace
 from .point_of_interest_vehicle_entrance import PointOfInterestVehicleEntrance
@@ -356,25 +301,18 @@ from .point_on_line_section import PointOnLineSection
 from .point_on_link import PointOnLink
 from .point_on_route import PointOnRoute
 from .point_on_section_1 import PointOnSection1
-from .point_on_section_2 import PointOnSection2
 from .point_projection import PointProjection
 from .postal_address import PostalAddress
 from .preassigned_fare_product import PreassignedFareProduct
-from .price_group_2 import PriceGroup2
 from .price_unit import PriceUnit
-from .priceable_object_1 import PriceableObject1
-from .priceable_object_2 import PriceableObject2
 from .pricing_parameter_set import PricingParameterSet
 from .pricing_rule_1 import PricingRule1
-from .pricing_rule_2 import PricingRule2
 from .pricing_service import PricingService
-from .projection import Projection
 from .purchase_window import PurchaseWindow
 from .purpose_of_equipment_profile import PurposeOfEquipmentProfile
 from .purpose_of_grouping import PurposeOfGrouping
 from .purpose_of_journey_partition import PurposeOfJourneyPartition
 from .quality_structure_factor_1 import QualityStructureFactor1
-from .quality_structure_factor_2 import QualityStructureFactor2
 from .quality_structure_factor_price import QualityStructureFactorPrice
 from .quay import Quay
 from .queueing_equipment import QueueingEquipment
@@ -384,7 +322,6 @@ from .ramp_equipment import RampEquipment
 from .refunding import Refunding
 from .relief_opportunity import ReliefOpportunity
 from .relief_point_1 import ReliefPoint1
-from .relief_point_2 import ReliefPoint2
 from .replacing import Replacing
 from .requested_travel_specification import RequestedTravelSpecification
 from .reselling import Reselling
@@ -392,7 +329,6 @@ from .reserving import Reserving
 from .residential_qualification import ResidentialQualification
 from .residential_qualification_eligibility import ResidentialQualificationEligibility
 from .resource_frame import ResourceFrame
-from .responsibility_role import ResponsibilityRole
 from .responsibility_set import ResponsibilitySet
 from .restricted_manoeuvre import RestrictedManoeuvre
 from .retail_consortium import RetailConsortium
@@ -407,7 +343,6 @@ from .rough_surface import RoughSurface
 from .round_trip import RoundTrip
 from .rounding import Rounding
 from .route_1 import Route1
-from .route_2 import Route2
 from .route_instruction import RouteInstruction
 from .route_link import RouteLink
 from .route_point import RoutePoint
@@ -428,9 +363,6 @@ from .sanitary_equipment import SanitaryEquipment
 from .scheduled_stop_point import ScheduledStopPoint
 from .schematic_map import SchematicMap
 from .seating_equipment import SeatingEquipment
-from .security_list import SecurityList
-from .security_listing_1 import SecurityListing1
-from .security_listing_2 import SecurityListing2
 from .series_constraint import SeriesConstraint
 from .series_constraint_price import SeriesConstraintPrice
 from .service_access_right_1 import ServiceAccessRight1
@@ -440,7 +372,6 @@ from .service_calendar_frame import ServiceCalendarFrame
 from .service_exclusion import ServiceExclusion
 from .service_frame import ServiceFrame
 from .service_journey_1 import ServiceJourney1
-from .service_journey_2 import ServiceJourney2
 from .service_journey_interchange import ServiceJourneyInterchange
 from .service_journey_pattern import ServiceJourneyPattern
 from .service_journey_pattern_interchange import ServiceJourneyPatternInterchange
@@ -451,27 +382,19 @@ from .service_site import ServiceSite
 from .serviced_organisation import ServicedOrganisation
 from .shelter_equipment import ShelterEquipment
 from .sign_equipment import SignEquipment
-from .site import Site
-from .site_component import SiteComponent
 from .site_connection import SiteConnection
-from .site_element import SiteElement
-from .site_equipment import SiteEquipment
 from .site_frame import SiteFrame
 from .site_path_link import SitePathLink
 from .special_service import SpecialService
 from .specific_parameter_assignment_version_structure import SpecificParameterAssignment
-from .stair_equipment import StairEquipment
 from .stair_flight import StairFlight
 from .staircase_equipment import StaircaseEquipment
 from .standard_fare_table import StandardFareTable
 from .start_time_at_stop_point import StartTimeAtStopPoint
 from .step_limit import StepLimit
 from .stop_area import StopArea
-from .stop_assignment import StopAssignment
 from .stop_place import StopPlace
-from .stop_place_component import StopPlaceComponent
 from .stop_place_entrance import StopPlaceEntrance
-from .stop_place_space import StopPlaceSpace
 from .stop_place_vehicle_entrance import StopPlaceVehicleEntrance
 from .stop_point_in_journey_pattern import StopPointInJourneyPattern
 from .submode import Submode
@@ -481,7 +404,6 @@ from .suspending import Suspending
 from .target_passing_time import TargetPassingTime
 from .tariff import Tariff
 from .tariff_zone_1 import TariffZone1
-from .tariff_zone_2 import TariffZone2
 from .template_service_journey import TemplateServiceJourney
 from .template_vehicle_journey import TemplateVehicleJourney
 from .third_party_product import ThirdPartyProduct
@@ -505,7 +427,6 @@ from .timing_link import TimingLink
 from .timing_link_in_journey_pattern import TimingLinkInJourneyPattern
 from .timing_pattern import TimingPattern
 from .timing_point_1 import TimingPoint1
-from .timing_point_2 import TimingPoint2
 from .timing_point_in_journey_pattern import TimingPointInJourneyPattern
 from .topographic_place import TopographicPlace
 from .topographic_projection import TopographicProjection
@@ -518,10 +439,8 @@ from .train_component_label_assignment import TrainComponentLabelAssignment
 from .train_element import TrainElement
 from .train_number import TrainNumber
 from .train_stop_assignment import TrainStopAssignment
-from .transfer import Transfer
 from .transfer_restriction import TransferRestriction
 from .transferability import Transferability
-from .transport_organisation import TransportOrganisation
 from .travel_agent import TravelAgent
 from .travel_document import TravelDocument
 from .travel_document_security_listing import TravelDocumentSecurityListing
@@ -576,14 +495,11 @@ from .type_of_transfer import TypeOfTransfer
 from .type_of_travel_document import TypeOfTravelDocument
 from .type_of_usage_parameter import TypeOfUsageParameter
 from .type_of_validity import TypeOfValidity
-from .type_of_value import TypeOfValue
 from .type_of_version import TypeOfVersion
 from .type_of_zone import TypeOfZone
 from .types_of_frame_rel_structure import TypeOfFrame
 from .uic_operating_period import UicOperatingPeriod
 from .usage_discount_right import UsageDiscountRight
-from .usage_parameter_1 import UsageParameter1
-from .usage_parameter_2 import UsageParameter2
 from .usage_parameter_price import UsageParameterPrice
 from .usage_validity_period import UsageValidityPeriod
 from .user_profile import UserProfile
@@ -594,10 +510,8 @@ from .validity_parameter_assignment import ValidityParameterAssignment
 from .value_set import ValueSet
 from .vehicle import Vehicle
 from .vehicle_charging_equipment import VehicleChargingEquipment
-from .vehicle_entrance import VehicleEntrance
 from .vehicle_equipment_profile import VehicleEquipmentProfile
 from .vehicle_journey_1 import VehicleJourney1
-from .vehicle_journey_2 import VehicleJourney2
 from .vehicle_journey_headway import VehicleJourneyHeadway
 from .vehicle_journey_layover import VehicleJourneyLayover
 from .vehicle_journey_run_time import VehicleJourneyRunTime
@@ -607,7 +521,6 @@ from .vehicle_manoeuvring_requirement import VehicleManoeuvringRequirement
 from .vehicle_model import VehicleModel
 from .vehicle_position_alignment import VehiclePositionAlignment
 from .vehicle_quay_alignment import VehicleQuayAlignment
-from .vehicle_requirement import VehicleRequirement
 from .vehicle_schedule_frame import VehicleScheduleFrame
 from .vehicle_service import VehicleService
 from .vehicle_service_part import VehicleServicePart
@@ -618,9 +531,6 @@ from .vehicle_type_at_point import VehicleTypeAtPoint
 from .vehicle_type_preference import VehicleTypePreference
 from .vehicle_type_stop_assignment import VehicleTypeStopAssignment
 from .version import Version
-from .version_frame import VersionFrame
-from .versioned_child import VersionedChild
-from .waiting_equipment import WaitingEquipment
 from .waiting_room_equipment import WaitingRoomEquipment
 from .wheelchair_vehicle_equipment import WheelchairVehicleEquipment
 from .whitelist import Whitelist
@@ -665,14 +575,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "CustomerEligibility",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_customer_eligibility: List[CustomerEligibility2] = field(
-        default_factory=list,
-        metadata={
-            "name": "CustomerEligibility_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -729,14 +631,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "Cell",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_cell: List[Cell2] = field(
-        default_factory=list,
-        metadata={
-            "name": "Cell_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -873,22 +767,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "SeriesConstraintPrice",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_price: List[FarePrice1] = field(
-        default_factory=list,
-        metadata={
-            "name": "FarePrice",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_fare_price: List[FarePrice2] = field(
-        default_factory=list,
-        metadata={
-            "name": "FarePrice_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -1149,14 +1027,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    journey_timing: List[JourneyTiming] = field(
-        default_factory=list,
-        metadata={
-            "name": "JourneyTiming",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     travel_document_security_listing: List[TravelDocumentSecurityListing] = field(
         default_factory=list,
         metadata={
@@ -1193,22 +1063,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "CustomerAccountSecurityListing",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    security_listing: List[SecurityListing1] = field(
-        default_factory=list,
-        metadata={
-            "name": "SecurityListing",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_security_listing: List[SecurityListing2] = field(
-        default_factory=list,
-        metadata={
-            "name": "SecurityListing_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -1257,14 +1111,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "TimingLinkInJourneyPattern",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    link_in_link_sequence: List[LinkInLinkSequence] = field(
-        default_factory=list,
-        metadata={
-            "name": "LinkInLinkSequence",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -1333,22 +1179,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_point_on_section: List[PointOnSection2] = field(
-        default_factory=list,
-        metadata={
-            "name": "PointOnSection_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    point_in_link_sequence: List[PointInLinkSequence] = field(
-        default_factory=list,
-        metadata={
-            "name": "PointInLinkSequence",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     section_in_sequence: List[SectionInSequence] = field(
         default_factory=list,
         metadata={
@@ -1405,26 +1235,10 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    abstract_group_member: List[AbstractGroupMember] = field(
-        default_factory=list,
-        metadata={
-            "name": "AbstractGroupMember",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     alternative_text: List[AlternativeText] = field(
         default_factory=list,
         metadata={
             "name": "AlternativeText",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    versioned_child: List[VersionedChild] = field(
-        default_factory=list,
-        metadata={
-            "name": "VersionedChild",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -1485,15 +1299,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    fare_contract_entry: List[FareContractEntry1] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareContractEntry",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_fare_contract_entry: List[FareContractEntry2] = field(
+    fare_contract_entry: List[FareContractEntry2] = field(
         default_factory=list,
         metadata={
             "name": "FareContractEntry_",
@@ -1645,22 +1451,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    fare_product: List[FareProduct1] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareProduct",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_fare_product: List[FareProduct2] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareProduct_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     service_access_right: List[ServiceAccessRight1] = field(
         default_factory=list,
         metadata={
@@ -1705,14 +1495,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "QualityStructureFactor",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_quality_structure_factor: List[QualityStructureFactor2] = field(
-        default_factory=list,
-        metadata={
-            "name": "QualityStructureFactor_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -1965,22 +1747,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    usage_parameter: List[UsageParameter1] = field(
-        default_factory=list,
-        metadata={
-            "name": "UsageParameter",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_usage_parameter: List[UsageParameter2] = field(
-        default_factory=list,
-        metadata={
-            "name": "UsageParameter_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     geographical_interval: List[GeographicalInterval] = field(
         default_factory=list,
         metadata={
@@ -2093,22 +1859,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    priceable_object: List[PriceableObject1] = field(
-        default_factory=list,
-        metadata={
-            "name": "PriceableObject",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_priceable_object: List[PriceableObject2] = field(
-        default_factory=list,
-        metadata={
-            "name": "PriceableObject_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     pricing_service: List[PricingService] = field(
         default_factory=list,
         metadata={
@@ -2145,14 +1895,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "PricingRule",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_pricing_rule: List[PricingRule2] = field(
-        default_factory=list,
-        metadata={
-            "name": "PricingRule_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -2397,14 +2139,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_service_journey: List[ServiceJourney2] = field(
-        default_factory=list,
-        metadata={
-            "name": "ServiceJourney_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     template_vehicle_journey: List[TemplateVehicleJourney] = field(
         default_factory=list,
         metadata={
@@ -2417,30 +2151,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "VehicleJourney",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_vehicle_journey: List[VehicleJourney2] = field(
-        default_factory=list,
-        metadata={
-            "name": "VehicleJourney_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    journey: List[Journey1] = field(
-        default_factory=list,
-        metadata={
-            "name": "Journey",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_journey: List[Journey2] = field(
-        default_factory=list,
-        metadata={
-            "name": "Journey_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -2477,14 +2187,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    interchange: List[Interchange1] = field(
-        default_factory=list,
-        metadata={
-            "name": "Interchange",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     service_journey_pattern_interchange: List[ServiceJourneyPatternInterchange] = field(
         default_factory=list,
         metadata={
@@ -2505,14 +2207,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "DefaultInterchange",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_interchange: List[Interchange2] = field(
-        default_factory=list,
-        metadata={
-            "name": "Interchange_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -2589,14 +2283,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    stop_assignment: List[StopAssignment] = field(
-        default_factory=list,
-        metadata={
-            "name": "StopAssignment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     logical_display: List[LogicalDisplay] = field(
         default_factory=list,
         metadata={
@@ -2665,14 +2351,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "Line",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_line: List[Line2] = field(
-        default_factory=list,
-        metadata={
-            "name": "Line_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -2773,14 +2451,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    vehicle_requirement: List[VehicleRequirement] = field(
-        default_factory=list,
-        metadata={
-            "name": "VehicleRequirement",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     vehicle_type: List[VehicleType] = field(
         default_factory=list,
         metadata={
@@ -2801,14 +2471,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "Blacklist",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    security_list: List[SecurityList] = field(
-        default_factory=list,
-        metadata={
-            "name": "SecurityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -2957,14 +2619,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    local_service: List[LocalService] = field(
-        default_factory=list,
-        metadata={
-            "name": "LocalService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     retail_device: List[RetailDevice] = field(
         default_factory=list,
         metadata={
@@ -3017,30 +2671,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "WaitingRoomEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    waiting_equipment: List[WaitingEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "WaitingEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    luggage_locker_equipment: List[LuggageLockerEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "LuggageLockerEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    site_equipment: List[SiteEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "SiteEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -3105,14 +2735,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "EscalatorEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    stair_equipment: List[StairEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "StairEquipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -3205,14 +2827,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    place_equipment: List[PlaceEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "PlaceEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     passenger_information_equipment: List[PassengerInformationEquipment] = field(
         default_factory=list,
         metadata={
@@ -3249,38 +2863,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "SanitaryEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    actual_vehicle_equipment: List[ActualVehicleEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "ActualVehicleEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    passenger_equipment: List[PassengerEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "PassengerEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    installed_equipment: List[InstalledEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "InstalledEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    equipment: List[Equipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "Equipment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -3325,14 +2907,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_journey_pattern: List[JourneyPattern2] = field(
-        default_factory=list,
-        metadata={
-            "name": "JourneyPattern_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     flexible_route: List[FlexibleRoute] = field(
         default_factory=list,
         metadata={
@@ -3349,26 +2923,10 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_route: List[Route2] = field(
-        default_factory=list,
-        metadata={
-            "name": "Route_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     timing_pattern: List[TimingPattern] = field(
         default_factory=list,
         metadata={
             "name": "TimingPattern",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    link_sequence: List[LinkSequence] = field(
-        default_factory=list,
-        metadata={
-            "name": "LinkSequence",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -3401,14 +2959,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "Access",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    transfer: List[Transfer] = field(
-        default_factory=list,
-        metadata={
-            "name": "Transfer",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -3453,14 +3003,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_organisation_part: List[OrganisationPart2] = field(
-        default_factory=list,
-        metadata={
-            "name": "OrganisationPart_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     retail_consortium: List[RetailConsortium] = field(
         default_factory=list,
         metadata={
@@ -3481,14 +3023,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "Operator",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    transport_organisation: List[TransportOrganisation] = field(
-        default_factory=list,
-        metadata={
-            "name": "TransportOrganisation_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -3533,22 +3067,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    organisation: List[Organisation1] = field(
-        default_factory=list,
-        metadata={
-            "name": "Organisation",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_organisation: List[Organisation2] = field(
-        default_factory=list,
-        metadata={
-            "name": "Organisation_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     service_link: List[ServiceLink] = field(
         default_factory=list,
         metadata={
@@ -3589,14 +3107,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    infrastructure_link: List[InfrastructureLink1] = field(
-        default_factory=list,
-        metadata={
-            "name": "InfrastructureLink",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     wire_element: List[WireElement] = field(
         default_factory=list,
         metadata={
@@ -3621,26 +3131,10 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_infrastructure_link: List[InfrastructureLink2] = field(
-        default_factory=list,
-        metadata={
-            "name": "InfrastructureLink_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     activation_link: List[ActivationLink] = field(
         default_factory=list,
         metadata={
             "name": "ActivationLink",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    link: List[Link] = field(
-        default_factory=list,
-        metadata={
-            "name": "Link",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -3701,14 +3195,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_parking_point: List[ParkingPoint2] = field(
-        default_factory=list,
-        metadata={
-            "name": "ParkingPoint_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     relief_point: List[ReliefPoint1] = field(
         default_factory=list,
         metadata={
@@ -3717,26 +3203,10 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_relief_point: List[ReliefPoint2] = field(
-        default_factory=list,
-        metadata={
-            "name": "ReliefPoint_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     timing_point: List[TimingPoint1] = field(
         default_factory=list,
         metadata={
             "name": "TimingPoint",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_timing_point: List[TimingPoint2] = field(
-        default_factory=list,
-        metadata={
-            "name": "TimingPoint_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -3765,14 +3235,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    infrastructure_point: List[InfrastructurePoint] = field(
-        default_factory=list,
-        metadata={
-            "name": "InfrastructurePoint",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     traffic_control_point: List[TrafficControlPoint] = field(
         default_factory=list,
         metadata={
@@ -3793,14 +3255,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "ActivationPoint",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_activation_point: List[ActivationPoint2] = field(
-        default_factory=list,
-        metadata={
-            "name": "ActivationPoint_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -3865,30 +3319,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "PointProjection",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    projection: List[Projection] = field(
-        default_factory=list,
-        metadata={
-            "name": "Projection",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    log_entry: List[LogEntry] = field(
-        default_factory=list,
-        metadata={
-            "name": "LogEntry",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    log: List[Log] = field(
-        default_factory=list,
-        metadata={
-            "name": "Log",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -3989,22 +3419,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    common_frame: List[CommonFrame] = field(
-        default_factory=list,
-        metadata={
-            "name": "CommonFrame",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    version_frame: List[VersionFrame] = field(
-        default_factory=list,
-        metadata={
-            "name": "VersionFrame",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     uic_operating_period: List[UicOperatingPeriod] = field(
         default_factory=list,
         metadata={
@@ -4101,14 +3515,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_access_right_parameter_assignment: List[AccessRightParameterAssignment2] = field(
-        default_factory=list,
-        metadata={
-            "name": "AccessRightParameterAssignment_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     journey_accounting: List[JourneyAccounting] = field(
         default_factory=list,
         metadata={
@@ -4197,26 +3603,10 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    infrastructure_link_restriction: List[InfrastructureLinkRestriction] = field(
-        default_factory=list,
-        metadata={
-            "name": "InfrastructureLinkRestriction",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     vehicle_type_at_point: List[VehicleTypeAtPoint] = field(
         default_factory=list,
         metadata={
             "name": "VehicleTypeAtPoint",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    network_restriction: List[NetworkRestriction] = field(
-        default_factory=list,
-        metadata={
-            "name": "NetworkRestriction",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -4245,34 +3635,10 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_notice_assignment: List[NoticeAssignment2] = field(
-        default_factory=list,
-        metadata={
-            "name": "NoticeAssignment_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     day_type_assignment: List[DayTypeAssignment] = field(
         default_factory=list,
         metadata={
             "name": "DayTypeAssignment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    assignment: List[Assignment1] = field(
-        default_factory=list,
-        metadata={
-            "name": "Assignment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_assignment: List[Assignment2] = field(
-        default_factory=list,
-        metadata={
-            "name": "Assignment_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -4317,14 +3683,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_day_type: List[DayType2] = field(
-        default_factory=list,
-        metadata={
-            "name": "DayType_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     group_of_distribution_channels: List[GroupOfDistributionChannels] = field(
         default_factory=list,
         metadata={
@@ -4345,14 +3703,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "PriceGroup",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_price_group: List[PriceGroup2] = field(
-        default_factory=list,
-        metadata={
-            "name": "PriceGroup_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -4381,14 +3731,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_fare_table: List[FareTable2] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareTable_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     group_of_services: List[GroupOfServices] = field(
         default_factory=list,
         metadata={
@@ -4409,14 +3751,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "HeadwayJourneyGroup",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    journey_frequency_group: List[JourneyFrequencyGroup] = field(
-        default_factory=list,
-        metadata={
-            "name": "JourneyFrequencyGroup",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -4533,14 +3867,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    point_of_interest_component: List[PointOfInterestComponent] = field(
-        default_factory=list,
-        metadata={
-            "name": "PointOfInterestComponent",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     vehicle_stopping_place: List[VehicleStoppingPlace] = field(
         default_factory=list,
         metadata={
@@ -4569,22 +3895,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "Quay",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    stop_place_space: List[StopPlaceSpace] = field(
-        default_factory=list,
-        metadata={
-            "name": "StopPlaceSpace",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    stop_place_component: List[StopPlaceComponent] = field(
-        default_factory=list,
-        metadata={
-            "name": "StopPlaceComponent",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -4677,26 +3987,10 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    vehicle_entrance: List[VehicleEntrance] = field(
-        default_factory=list,
-        metadata={
-            "name": "VehicleEntrance",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     entrance: List[Entrance] = field(
         default_factory=list,
         metadata={
             "name": "Entrance",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    site_component: List[SiteComponent] = field(
-        default_factory=list,
-        metadata={
-            "name": "SiteComponent",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -4729,22 +4023,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "ServiceSite",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    site: List[Site] = field(
-        default_factory=list,
-        metadata={
-            "name": "Site",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    site_element: List[SiteElement] = field(
-        default_factory=list,
-        metadata={
-            "name": "SiteElement",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -4805,22 +4083,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    address: List[Address] = field(
-        default_factory=list,
-        metadata={
-            "name": "Address",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    place: List[Place] = field(
-        default_factory=list,
-        metadata={
-            "name": "Place",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     transport_administrative_zone: List[TransportAdministrativeZone] = field(
         default_factory=list,
         metadata={
@@ -4837,14 +4099,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_administrative_zone: List[AdministrativeZone2] = field(
-        default_factory=list,
-        metadata={
-            "name": "AdministrativeZone_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     fare_zone: List[FareZone] = field(
         default_factory=list,
         metadata={
@@ -4857,14 +4111,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "TariffZone",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_tariff_zone: List[TariffZone2] = field(
-        default_factory=list,
-        metadata={
-            "name": "TariffZone_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -4913,22 +4159,6 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "GeneralGroupOfEntities",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    group_of_entities: List[GroupOfEntities] = field(
-        default_factory=list,
-        metadata={
-            "name": "GroupOfEntities",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    responsibility_role: List[ResponsibilityRole] = field(
-        default_factory=list,
-        metadata={
-            "name": "ResponsibilityRole",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -5453,26 +4683,10 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    type_of_value: List[TypeOfValue] = field(
-        default_factory=list,
-        metadata={
-            "name": "TypeOfValue",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     passing_time_view: List[PassingTimeView] = field(
         default_factory=list,
         metadata={
             "name": "PassingTimeView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    data_managed_object_view: List[DataManagedObjectView] = field(
-        default_factory=list,
-        metadata={
-            "name": "DataManagedObjectView",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -5525,34 +4739,10 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_validity_condition: List[ValidityCondition2] = field(
-        default_factory=list,
-        metadata={
-            "name": "ValidityCondition_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     version: List[Version] = field(
         default_factory=list,
         metadata={
             "name": "Version",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    data_managed_object: List[DataManagedObject] = field(
-        default_factory=list,
-        metadata={
-            "name": "DataManagedObject",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    entity_in_version: List[EntityInVersion] = field(
-        default_factory=list,
-        metadata={
-            "name": "EntityInVersion",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -5641,11 +4831,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "TravelSpecification_",
                     "type": TravelSpecification2,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "FareContractEntry",
-                    "type": FareContractEntry1,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -5744,16 +4929,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "FareProduct",
-                    "type": FareProduct1,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "FareProduct_",
-                    "type": FareProduct2,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "ServiceAccessRight",
                     "type": ServiceAccessRight1,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -5781,11 +4956,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "QualityStructureFactor",
                     "type": QualityStructureFactor1,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "QualityStructureFactor_",
-                    "type": QualityStructureFactor2,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -5944,16 +5114,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "UsageParameter",
-                    "type": UsageParameter1,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "UsageParameter_",
-                    "type": UsageParameter2,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "GeographicalInterval",
                     "type": GeographicalInterval,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -6024,16 +5184,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "PriceableObject",
-                    "type": PriceableObject1,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "PriceableObject_",
-                    "type": PriceableObject2,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "PricingService",
                     "type": PricingService,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -6056,11 +5206,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "PricingRule",
                     "type": PricingRule1,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "PricingRule_",
-                    "type": PricingRule2,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -6214,11 +5359,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "ServiceJourney_",
-                    "type": ServiceJourney2,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "TemplateVehicleJourney",
                     "type": TemplateVehicleJourney,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -6226,21 +5366,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "VehicleJourney",
                     "type": VehicleJourney1,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "VehicleJourney_",
-                    "type": VehicleJourney2,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "Journey",
-                    "type": Journey1,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "Journey_",
-                    "type": Journey2,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -6264,11 +5389,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "Interchange",
-                    "type": Interchange1,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "ServiceJourneyPatternInterchange",
                     "type": ServiceJourneyPatternInterchange,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -6281,11 +5401,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "DefaultInterchange",
                     "type": DefaultInterchange,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "Interchange_",
-                    "type": Interchange2,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -6334,11 +5449,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "StopAssignment",
-                    "type": StopAssignment,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "LogicalDisplay",
                     "type": LogicalDisplay,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -6381,11 +5491,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "Line",
                     "type": Line1,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "Line_",
-                    "type": Line2,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -6449,11 +5554,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "VehicleRequirement",
-                    "type": VehicleRequirement,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "VehicleType",
                     "type": VehicleType,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -6466,11 +5566,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "Blacklist",
                     "type": Blacklist,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "SecurityList",
-                    "type": SecurityList,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -6564,11 +5659,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "LocalService",
-                    "type": LocalService,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "RetailDevice",
                     "type": RetailDevice,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -6601,21 +5691,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "WaitingRoomEquipment",
                     "type": WaitingRoomEquipment,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "WaitingEquipment",
-                    "type": WaitingEquipment,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "LuggageLockerEquipment",
-                    "type": LuggageLockerEquipment,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "SiteEquipment",
-                    "type": SiteEquipment,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -6656,11 +5731,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "EscalatorEquipment",
                     "type": EscalatorEquipment,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "StairEquipment",
-                    "type": StairEquipment,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -6719,11 +5789,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "PlaceEquipment",
-                    "type": PlaceEquipment,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "PassengerInformationEquipment",
                     "type": PassengerInformationEquipment,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -6746,26 +5811,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "SanitaryEquipment",
                     "type": SanitaryEquipment,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ActualVehicleEquipment",
-                    "type": ActualVehicleEquipment,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "PassengerEquipment",
-                    "type": PassengerEquipment,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "InstalledEquipment",
-                    "type": InstalledEquipment,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "Equipment",
-                    "type": Equipment,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -6794,11 +5839,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "JourneyPattern_",
-                    "type": JourneyPattern2,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "FlexibleRoute",
                     "type": FlexibleRoute,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -6809,18 +5849,8 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "Route_",
-                    "type": Route2,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "TimingPattern",
                     "type": TimingPattern,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "LinkSequence",
-                    "type": LinkSequence,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -6841,11 +5871,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "Access",
                     "type": Access,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "Transfer",
-                    "type": Transfer,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -6874,11 +5899,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "OrganisationPart_",
-                    "type": OrganisationPart2,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "RetailConsortium",
                     "type": RetailConsortium,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -6891,11 +5911,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "Operator",
                     "type": Operator,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TransportOrganisation_",
-                    "type": TransportOrganisation,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -6924,16 +5939,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "Organisation",
-                    "type": Organisation1,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "Organisation_",
-                    "type": Organisation2,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "ServiceLink",
                     "type": ServiceLink,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -6959,11 +5964,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "InfrastructureLink",
-                    "type": InfrastructureLink1,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "WireElement",
                     "type": WireElement,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -6979,18 +5979,8 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "InfrastructureLink_",
-                    "type": InfrastructureLink2,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "ActivationLink",
                     "type": ActivationLink,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "Link",
-                    "type": Link,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -7029,28 +6019,13 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "ParkingPoint_",
-                    "type": ParkingPoint2,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "ReliefPoint",
                     "type": ReliefPoint1,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "ReliefPoint_",
-                    "type": ReliefPoint2,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "TimingPoint",
                     "type": TimingPoint1,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TimingPoint_",
-                    "type": TimingPoint2,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -7069,11 +6044,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "InfrastructurePoint",
-                    "type": InfrastructurePoint,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "TrafficControlPoint",
                     "type": TrafficControlPoint,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -7086,11 +6056,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "ActivationPoint",
                     "type": ActivationPoint1,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ActivationPoint_",
-                    "type": ActivationPoint2,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -7131,21 +6096,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "PointProjection",
                     "type": PointProjection,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "Projection",
-                    "type": Projection,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "LogEntry",
-                    "type": LogEntry,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "Log",
-                    "type": Log,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -7209,16 +6159,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "CommonFrame",
-                    "type": CommonFrame,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "VersionFrame",
-                    "type": VersionFrame,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "UicOperatingPeriod",
                     "type": UicOperatingPeriod,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -7279,11 +6219,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "AccessRightParameterAssignment_",
-                    "type": AccessRightParameterAssignment2,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "JourneyAccounting",
                     "type": JourneyAccounting,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -7339,18 +6274,8 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "InfrastructureLinkRestriction",
-                    "type": InfrastructureLinkRestriction,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "VehicleTypeAtPoint",
                     "type": VehicleTypeAtPoint,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "NetworkRestriction",
-                    "type": NetworkRestriction,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -7369,23 +6294,8 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "NoticeAssignment_",
-                    "type": NoticeAssignment2,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "DayTypeAssignment",
                     "type": DayTypeAssignment,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "Assignment",
-                    "type": Assignment1,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "Assignment_",
-                    "type": Assignment2,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -7414,11 +6324,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "DayType_",
-                    "type": DayType2,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "GroupOfDistributionChannels",
                     "type": GroupOfDistributionChannels,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -7431,11 +6336,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "PriceGroup",
                     "type": PriceGroup1,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "PriceGroup_",
-                    "type": PriceGroup2,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -7454,11 +6354,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "FareTable_",
-                    "type": FareTable2,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "GroupOfServices",
                     "type": GroupOfServices,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -7471,11 +6366,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "HeadwayJourneyGroup",
                     "type": HeadwayJourneyGroup,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "JourneyFrequencyGroup",
-                    "type": JourneyFrequencyGroup,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -7549,11 +6439,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "PointOfInterestComponent",
-                    "type": PointOfInterestComponent,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "VehicleStoppingPlace",
                     "type": VehicleStoppingPlace,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -7571,16 +6456,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "Quay",
                     "type": Quay,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "StopPlaceSpace",
-                    "type": StopPlaceSpace,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "StopPlaceComponent",
-                    "type": StopPlaceComponent,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -7639,18 +6514,8 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "VehicleEntrance",
-                    "type": VehicleEntrance,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "Entrance",
                     "type": Entrance,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "SiteComponent",
-                    "type": SiteComponent,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -7671,16 +6536,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "ServiceSite",
                     "type": ServiceSite,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "Site",
-                    "type": Site,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "SiteElement",
-                    "type": SiteElement,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -7719,16 +6574,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "Address",
-                    "type": Address,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "Place",
-                    "type": Place,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "TransportAdministrativeZone",
                     "type": TransportAdministrativeZone,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -7739,11 +6584,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "AdministrativeZone_",
-                    "type": AdministrativeZone2,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "FareZone",
                     "type": FareZone,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -7751,11 +6591,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "TariffZone",
                     "type": TariffZone1,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TariffZone_",
-                    "type": TariffZone2,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -7786,16 +6621,6 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "GeneralGroupOfEntities",
                     "type": GeneralGroupOfEntities,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "GroupOfEntities",
-                    "type": GroupOfEntities,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ResponsibilityRole",
-                    "type": ResponsibilityRole,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -8124,18 +6949,8 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "TypeOfValue",
-                    "type": TypeOfValue,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "PassingTimeView",
                     "type": PassingTimeView,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "DataManagedObjectView",
-                    "type": DataManagedObjectView,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -8169,18 +6984,8 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "ValidityCondition_",
-                    "type": ValidityCondition2,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "Version",
                     "type": Version,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "DataManagedObject",
-                    "type": DataManagedObject,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -8302,14 +7107,6 @@ class FramesRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "ServiceCalendarFrame",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    common_frame: List[CommonFrame] = field(
-        default_factory=list,
-        metadata={
-            "name": "CommonFrame",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

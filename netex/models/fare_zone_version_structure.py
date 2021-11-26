@@ -9,7 +9,6 @@ from .operator_ref import OperatorRef
 from .scoping_method_enumeration import ScopingMethodEnumeration
 from .tariff_zone_refs_rel_structure import TariffZoneRefsRelStructure
 from .tariff_zone_version_structure import TariffZoneVersionStructure
-from .transport_organisation_ref import TransportOrganisationRef
 from .zone_topology_enumeration import ZoneTopologyEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -56,14 +55,6 @@ class FareZoneVersionStructure(TariffZoneVersionStructure):
         default=None,
         metadata={
             "name": "OperatorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    transport_organisation_ref: Optional[TransportOrganisationRef] = field(
-        default=None,
-        metadata={
-            "name": "TransportOrganisationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

@@ -1,7 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
 from .cell_ref_1 import CellRef1
-from .cell_ref_2 import CellRef2
 from .fare_product_price import FareProductPrice
 from .fare_product_price_ref import FareProductPriceRef
 from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
@@ -14,7 +13,7 @@ class FareProductPricesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "fareProductPrices_RelStructure"
 
-    choice: List[object] = field(
+    fare_product_price_ref_or_cell_ref_or_fare_product_price: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -27,11 +26,6 @@ class FareProductPricesRelStructure(StrictContainmentAggregationStructure):
                 {
                     "name": "CellRef",
                     "type": CellRef1,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "CellRef_",
-                    "type": CellRef2,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

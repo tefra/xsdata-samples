@@ -1,7 +1,5 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .abstract_discovery_delivery import AbstractDiscoveryDelivery
-from .abstract_discovery_request import AbstractDiscoveryRequest
 from .capabilities_request import CapabilitiesRequest
 from .capabilities_response import CapabilitiesResponse
 from .check_status_request import CheckStatusRequest
@@ -88,14 +86,6 @@ class SiriSchema:
             "namespace": "http://www.siri.org.uk/siri",
         }
     )
-    abstract_discovery_request: Optional[AbstractDiscoveryRequest] = field(
-        default=None,
-        metadata={
-            "name": "AbstractDiscoveryRequest",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        }
-    )
     subscription_response: Optional[SubscriptionResponse] = field(
         default=None,
         metadata={
@@ -148,14 +138,6 @@ class SiriSchema:
         default=None,
         metadata={
             "name": "CapabilitiesResponse",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        }
-    )
-    abstract_discovery_delivery: Optional[AbstractDiscoveryDelivery] = field(
-        default=None,
-        metadata={
-            "name": "AbstractDiscoveryDelivery",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
         }

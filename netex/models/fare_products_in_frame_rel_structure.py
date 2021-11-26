@@ -2,8 +2,6 @@ from dataclasses import dataclass, field
 from typing import List
 from .amount_of_price_unit_product import AmountOfPriceUnitProduct
 from .capped_discount_right import CappedDiscountRight
-from .fare_product_1 import FareProduct1
-from .fare_product_2 import FareProduct2
 from .frame_containment_structure import FrameContainmentStructure
 from .preassigned_fare_product import PreassignedFareProduct
 from .sale_discount_right import SaleDiscountRight
@@ -71,22 +69,6 @@ class FareProductsInFrameRelStructure(FrameContainmentStructure):
         default_factory=list,
         metadata={
             "name": "SaleDiscountRight",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_product: List[FareProduct1] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareProduct",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_fare_product: List[FareProduct2] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareProduct_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

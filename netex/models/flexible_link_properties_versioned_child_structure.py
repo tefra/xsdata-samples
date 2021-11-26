@@ -3,9 +3,7 @@ from typing import Optional
 from .activation_link_ref import ActivationLinkRef
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .flexible_link_type_enumeration import FlexibleLinkTypeEnumeration
-from .infrastructure_link_ref import InfrastructureLinkRef
 from .line_link_ref import LineLinkRef
-from .link_ref import LinkRef
 from .path_link_ref import PathLinkRef
 from .railway_link_ref import RailwayLinkRef
 from .road_link_ref import RoadLinkRef
@@ -86,26 +84,10 @@ class FlexibleLinkPropertiesVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    infrastructure_link_ref: Optional[InfrastructureLinkRef] = field(
-        default=None,
-        metadata={
-            "name": "InfrastructureLinkRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     activation_link_ref: Optional[ActivationLinkRef] = field(
         default=None,
         metadata={
             "name": "ActivationLinkRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    link_ref: Optional[LinkRef] = field(
-        default=None,
-        metadata={
-            "name": "LinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

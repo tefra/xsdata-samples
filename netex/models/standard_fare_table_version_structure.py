@@ -13,7 +13,6 @@ from .priceable_object_refs_rel_structure import PriceableObjectRefsRelStructure
 from .retail_consortium_ref import RetailConsortiumRef
 from .rounding_ref import RoundingRef
 from .serviced_organisation_ref import ServicedOrganisationRef
-from .transport_organisation_ref import TransportOrganisationRef
 from .travel_agent_ref import TravelAgentRef
 from .type_of_fare_table_ref import TypeOfFareTableRef
 from .used_in_refs_rel_structure import UsedInRefsRelStructure
@@ -94,14 +93,6 @@ class StandardFareTableVersionStructure(GroupOfEntitiesVersionStructure):
         default=None,
         metadata={
             "name": "OperatorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    transport_organisation_ref: Optional[TransportOrganisationRef] = field(
-        default=None,
-        metadata={
-            "name": "TransportOrganisationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

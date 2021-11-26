@@ -5,7 +5,6 @@ from .dated_vehicle_journey_ref import DatedVehicleJourneyRef
 from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
 from .dead_run_ref import DeadRunRef
 from .journey_pattern_ref import JourneyPatternRef
-from .journey_ref import JourneyRef
 from .link_sequence_ref import LinkSequenceRef
 from .navigation_path_ref import NavigationPathRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -78,14 +77,6 @@ class LinkSequenceRefsRelStructure(OneToManyRelationshipStructure):
         default_factory=list,
         metadata={
             "name": "VehicleJourneyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    journey_ref: List[JourneyRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "JourneyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

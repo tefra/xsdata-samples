@@ -2,7 +2,6 @@ from dataclasses import dataclass, field
 from typing import List
 from .access_right_in_product_ref import AccessRightInProductRef
 from .controllable_element_in_sequence_ref import ControllableElementInSequenceRef
-from .fare_element_in_sequence_ref import FareElementInSequenceRef
 from .fare_structure_element_in_sequence_ref import FareStructureElementInSequenceRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 
@@ -34,14 +33,6 @@ class FareElementInSequenceRefsRelStructure(OneToManyRelationshipStructure):
         default_factory=list,
         metadata={
             "name": "AccessRightInProductRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_element_in_sequence_ref: List[FareElementInSequenceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareElementInSequenceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

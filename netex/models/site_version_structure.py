@@ -23,7 +23,6 @@ from .topographic_place_ref import TopographicPlaceRef
 from .topographic_place_ref_structure import TopographicPlaceRefStructure
 from .topographic_place_refs_rel_structure import TopographicPlaceRefsRelStructure
 from .topographic_place_view import TopographicPlaceView
-from .transport_organisation_ref import TransportOrganisationRef
 from .travel_agent_ref import TravelAgentRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -102,14 +101,6 @@ class SiteVersionStructure(SiteElementVersionStructure):
         default=None,
         metadata={
             "name": "OperatorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    transport_organisation_ref: Optional[TransportOrganisationRef] = field(
-        default=None,
-        metadata={
-            "name": "TransportOrganisationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

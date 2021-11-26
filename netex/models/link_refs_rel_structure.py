@@ -2,10 +2,8 @@ from dataclasses import dataclass, field
 from typing import List
 from .activation_link_ref import ActivationLinkRef
 from .activation_link_ref_by_value import ActivationLinkRefByValue
-from .infrastructure_link_ref import InfrastructureLinkRef
 from .line_link_ref import LineLinkRef
 from .line_link_ref_by_value import LineLinkRefByValue
-from .link_ref import LinkRef
 from .link_ref_by_value import LinkRefByValue
 from .modal_link_ref_by_value import ModalLinkRefByValue
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -78,18 +76,8 @@ class LinkRefsRelStructure(OneToManyRelationshipStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "InfrastructureLinkRef",
-                    "type": InfrastructureLinkRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "ActivationLinkRef",
                     "type": ActivationLinkRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "LinkRef",
-                    "type": LinkRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

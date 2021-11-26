@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .abstract_ring import AbstractRing
 from .linear_ring import LinearRing
 
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
@@ -12,14 +11,6 @@ class AbstractRingPropertyType:
         default=None,
         metadata={
             "name": "LinearRing",
-            "type": "Element",
-            "namespace": "http://www.opengis.net/gml/3.2",
-        }
-    )
-    abstract_ring: Optional[AbstractRing] = field(
-        default=None,
-        metadata={
-            "name": "AbstractRing",
             "type": "Element",
             "namespace": "http://www.opengis.net/gml/3.2",
         }

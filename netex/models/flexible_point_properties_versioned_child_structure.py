@@ -6,9 +6,7 @@ from .beacon_point_ref import BeaconPointRef
 from .border_point_ref import BorderPointRef
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
 from .garage_point_ref import GaragePointRef
-from .infrastructure_point_ref import InfrastructurePointRef
 from .parking_point_ref import ParkingPointRef
-from .point_on_link_ref import PointOnLinkRef
 from .point_on_route_ref import PointOnRouteRef
 from .point_ref import PointRef
 from .railway_point_ref import RailwayPointRef
@@ -124,14 +122,6 @@ class FlexiblePointPropertiesVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    infrastructure_point_ref: Optional[InfrastructurePointRef] = field(
-        default=None,
-        metadata={
-            "name": "InfrastructurePointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     traffic_control_point_ref: Optional[TrafficControlPointRef] = field(
         default=None,
         metadata={
@@ -152,14 +142,6 @@ class FlexiblePointPropertiesVersionedChildStructure(VersionedChildStructure):
         default=None,
         metadata={
             "name": "ActivationPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    point_on_link_ref: Optional[PointOnLinkRef] = field(
-        default=None,
-        metadata={
-            "name": "PointOnLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

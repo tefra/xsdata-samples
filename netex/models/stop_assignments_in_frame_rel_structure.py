@@ -5,7 +5,6 @@ from .dynamic_stop_assignment import DynamicStopAssignment
 from .flexible_stop_assignment import FlexibleStopAssignment
 from .navigation_path_assignment import NavigationPathAssignment
 from .passenger_stop_assignment import PassengerStopAssignment
-from .stop_assignment import StopAssignment
 from .train_stop_assignment import TrainStopAssignment
 from .vehicle_journey_stop_assignment import VehicleJourneyStopAssignment
 
@@ -61,14 +60,6 @@ class StopAssignmentsInFrameRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "PassengerStopAssignment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    stop_assignment: List[StopAssignment] = field(
-        default_factory=list,
-        metadata={
-            "name": "StopAssignment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

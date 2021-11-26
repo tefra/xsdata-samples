@@ -2,7 +2,6 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
 from .activation_point_1 import ActivationPoint1
-from .activation_point_2 import ActivationPoint2
 from .activation_point_ref import ActivationPointRef
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .beacon_point import BeaconPoint
@@ -13,21 +12,16 @@ from .fare_scheduled_stop_point import FareScheduledStopPoint
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
 from .garage_point import GaragePoint
 from .garage_point_ref import GaragePointRef
-from .infrastructure_point import InfrastructurePoint
-from .infrastructure_point_ref import InfrastructurePointRef
 from .link_ref_structure import LinkRefStructure
 from .multilingual_string import MultilingualString
 from .parking_point_1 import ParkingPoint1
-from .parking_point_2 import ParkingPoint2
 from .parking_point_ref import ParkingPointRef
 from .path_junction import PathJunction
 from .point_2 import Point2
-from .point_on_link_ref import PointOnLinkRef
 from .point_ref import PointRef
 from .railway_junction import RailwayJunction
 from .railway_point_ref import RailwayPointRef
 from .relief_point_1 import ReliefPoint1
-from .relief_point_2 import ReliefPoint2
 from .relief_point_ref import ReliefPointRef
 from .road_junction import RoadJunction
 from .road_point_ref import RoadPointRef
@@ -36,7 +30,6 @@ from .route_point_ref import RoutePointRef
 from .scheduled_stop_point import ScheduledStopPoint
 from .scheduled_stop_point_ref import ScheduledStopPointRef
 from .timing_point_1 import TimingPoint1
-from .timing_point_2 import TimingPoint2
 from .timing_point_ref import TimingPointRef
 from .traffic_control_point import TrafficControlPoint
 from .traffic_control_point_ref import TrafficControlPointRef
@@ -163,14 +156,6 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    infrastructure_point_ref: Optional[InfrastructurePointRef] = field(
-        default=None,
-        metadata={
-            "name": "InfrastructurePointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     traffic_control_point_ref: Optional[TrafficControlPointRef] = field(
         default=None,
         metadata={
@@ -191,14 +176,6 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
         default=None,
         metadata={
             "name": "ActivationPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    point_on_link_ref: Optional[PointOnLinkRef] = field(
-        default=None,
-        metadata={
-            "name": "PointOnLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -267,14 +244,6 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_parking_point: Optional[ParkingPoint2] = field(
-        default=None,
-        metadata={
-            "name": "ParkingPoint_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     relief_point: Optional[ReliefPoint1] = field(
         default=None,
         metadata={
@@ -283,26 +252,10 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_relief_point: Optional[ReliefPoint2] = field(
-        default=None,
-        metadata={
-            "name": "ReliefPoint_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     timing_point: Optional[TimingPoint1] = field(
         default=None,
         metadata={
             "name": "TimingPoint",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_timing_point: Optional[TimingPoint2] = field(
-        default=None,
-        metadata={
-            "name": "TimingPoint_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -331,14 +284,6 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    infrastructure_point: Optional[InfrastructurePoint] = field(
-        default=None,
-        metadata={
-            "name": "InfrastructurePoint",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     traffic_control_point: Optional[TrafficControlPoint] = field(
         default=None,
         metadata={
@@ -359,14 +304,6 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
         default=None,
         metadata={
             "name": "ActivationPoint",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_activation_point: Optional[ActivationPoint2] = field(
-        default=None,
-        metadata={
-            "name": "ActivationPoint_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

@@ -20,7 +20,6 @@ from .parking_entrance_ref import ParkingEntranceRef
 from .parking_passenger_entrance_ref import ParkingPassengerEntranceRef
 from .parking_ref import ParkingRef
 from .path_junction_ref import PathJunctionRef
-from .place_ref_2 import PlaceRef2
 from .point_of_interest_entrance_ref import PointOfInterestEntranceRef
 from .point_of_interest_ref import PointOfInterestRef
 from .point_of_interest_space_ref import PointOfInterestSpaceRef
@@ -356,14 +355,6 @@ class NetworkFilterByValueStructure(ObjectFilterByValueStructure):
             default_factory=list,
             metadata={
                 "name": "AddressRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            }
-        )
-        place_ref: List[PlaceRef2] = field(
-            default_factory=list,
-            metadata={
-                "name": "PlaceRef_",
                 "type": "Element",
                 "namespace": "http://www.netex.org.uk/netex",
             }

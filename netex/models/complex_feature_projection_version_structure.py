@@ -7,9 +7,7 @@ from .complex_feature_ref_structure import ComplexFeatureRefStructure
 from .complex_feature_refs_rel_structure import ComplexFeatureRefsRelStructure
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
 from .garage_point_ref import GaragePointRef
-from .infrastructure_point_ref import InfrastructurePointRef
 from .parking_point_ref import ParkingPointRef
-from .point_on_link_ref import PointOnLinkRef
 from .point_ref import PointRef
 from .projection_version_structure import ProjectionVersionStructure
 from .railway_point_ref import RailwayPointRef
@@ -133,14 +131,6 @@ class ComplexFeatureProjectionVersionStructure(ProjectionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    infrastructure_point_ref: List[InfrastructurePointRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "InfrastructurePointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     traffic_control_point_ref: List[TrafficControlPointRef] = field(
         default_factory=list,
         metadata={
@@ -161,14 +151,6 @@ class ComplexFeatureProjectionVersionStructure(ProjectionVersionStructure):
         default_factory=list,
         metadata={
             "name": "ActivationPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    point_on_link_ref: List[PointOnLinkRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "PointOnLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

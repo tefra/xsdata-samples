@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
-from .abstract_curve import AbstractCurve
 from .line_string import LineString
 from .nil_reason_enumeration_value import NilReasonEnumerationValue
 
@@ -13,14 +12,6 @@ class CurvePropertyType:
         default=None,
         metadata={
             "name": "LineString",
-            "type": "Element",
-            "namespace": "http://www.opengis.net/gml/3.2",
-        }
-    )
-    abstract_curve: Optional[AbstractCurve] = field(
-        default=None,
-        metadata={
-            "name": "AbstractCurve",
             "type": "Element",
             "namespace": "http://www.opengis.net/gml/3.2",
         }

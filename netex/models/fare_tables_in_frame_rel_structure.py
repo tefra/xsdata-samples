@@ -4,7 +4,6 @@ from .cell_versioned_child_structure import (
     FareTableInContext,
     FareTable1,
 )
-from .fare_table_2 import FareTable2
 from .frame_containment_structure import FrameContainmentStructure
 from .standard_fare_table import StandardFareTable
 
@@ -36,14 +35,6 @@ class FareTablesInFrameRelStructure(FrameContainmentStructure):
         default_factory=list,
         metadata={
             "name": "FareTable",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_fare_table: List[FareTable2] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareTable_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

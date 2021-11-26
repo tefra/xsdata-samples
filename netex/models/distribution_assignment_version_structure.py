@@ -37,7 +37,6 @@ from .supplement_product_ref import SupplementProductRef
 from .third_party_product_ref import ThirdPartyProductRef
 from .ticketing_service_facility_enumeration import TicketingServiceFacilityEnumeration
 from .topographic_place_ref import TopographicPlaceRef
-from .transport_organisation_ref import TransportOrganisationRef
 from .travel_agent_ref import TravelAgentRef
 from .usage_discount_right_ref import UsageDiscountRightRef
 
@@ -318,14 +317,6 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
         default=None,
         metadata={
             "name": "OperatorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    transport_organisation_ref: Optional[TransportOrganisationRef] = field(
-        default=None,
-        metadata={
-            "name": "TransportOrganisationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

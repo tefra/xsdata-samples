@@ -12,12 +12,10 @@ from .dynamic_advertisement_enumeration import DynamicAdvertisementEnumeration
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
 from .flexible_point_properties import FlexiblePointProperties
 from .garage_point_ref import GaragePointRef
-from .infrastructure_point_ref import InfrastructurePointRef
 from .multilingual_string import MultilingualString
 from .notice_assignments_rel_structure import NoticeAssignmentsRelStructure
 from .parking_point_ref import ParkingPointRef
 from .point_in_journey_pattern_ref_structure import PointInJourneyPatternRefStructure
-from .point_on_link_ref import PointOnLinkRef
 from .point_ref import PointRef
 from .railway_point_ref import RailwayPointRef
 from .relief_point_ref import ReliefPointRef
@@ -128,14 +126,6 @@ class DeadRunCallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    infrastructure_point_ref: Optional[InfrastructurePointRef] = field(
-        default=None,
-        metadata={
-            "name": "InfrastructurePointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     traffic_control_point_ref: Optional[TrafficControlPointRef] = field(
         default=None,
         metadata={
@@ -156,14 +146,6 @@ class DeadRunCallVersionedChildStructure(VersionedChildStructure):
         default=None,
         metadata={
             "name": "ActivationPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    point_on_link_ref: Optional[PointOnLinkRef] = field(
-        default=None,
-        metadata={
-            "name": "PointOnLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

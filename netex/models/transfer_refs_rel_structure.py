@@ -5,7 +5,6 @@ from .connection_ref import ConnectionRef
 from .default_connection_ref import DefaultConnectionRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .site_connection_ref import SiteConnectionRef
-from .transfer_ref import TransferRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -43,14 +42,6 @@ class TransferRefsRelStructure(OneToManyRelationshipStructure):
         default_factory=list,
         metadata={
             "name": "AccessRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    transfer_ref: List[TransferRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TransferRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

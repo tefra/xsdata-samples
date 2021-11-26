@@ -19,7 +19,6 @@ from .general_sign_ref import GeneralSignRef
 from .heading_sign_ref import HeadingSignRef
 from .help_point_equipment_ref import HelpPointEquipmentRef
 from .hire_service_ref import HireServiceRef
-from .installed_equipment_ref import InstalledEquipmentRef
 from .left_luggage_service_ref import LeftLuggageServiceRef
 from .lift_equipment_ref import LiftEquipmentRef
 from .local_service_ref import LocalServiceRef
@@ -486,14 +485,6 @@ class VehicleEquipmentProfileVersionStructure(DataManagedObjectStructure):
         default=None,
         metadata={
             "name": "PassengerEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    installed_equipment_ref: Optional[InstalledEquipmentRef] = field(
-        default=None,
-        metadata={
-            "name": "InstalledEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

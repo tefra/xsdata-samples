@@ -5,7 +5,6 @@ from .connection import Connection
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .default_connection import DefaultConnection
 from .site_connection import SiteConnection
-from .transfer import Transfer
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -43,14 +42,6 @@ class TransfersInFrameRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "Access",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    transfer: List[Transfer] = field(
-        default_factory=list,
-        metadata={
-            "name": "Transfer",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

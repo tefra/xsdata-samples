@@ -217,7 +217,6 @@ from .alternative_texts_rel_structure import (
     DataManagedObjectStructure,
     DayType1,
     DayTypeVersionStructure,
-    DayType2,
     EntityInVersionStructure,
     FareDayType,
     FareDayTypeVersionedStructure,
@@ -233,7 +232,6 @@ from .alternative_texts_rel_structure import (
     ValidDuringVersionStructure,
     ValidityCondition1,
     ValidityConditionVersionStructure,
-    ValidityCondition2,
     ValidityRuleParameter,
     ValidityRuleParameterVersionStructure,
     ValidityTrigger,
@@ -756,6 +754,7 @@ from .dated_vehicle_journey_ref_structure import DatedVehicleJourneyRefStructure
 from .dated_vehicle_journey_version_structure import DatedVehicleJourneyVersionStructure
 from .day_event_enumeration import DayEventEnumeration
 from .day_of_week_enumeration import DayOfWeekEnumeration
+from .day_type_2 import DayType2
 from .day_type_assignment import DayTypeAssignment
 from .day_type_assignment_ref import DayTypeAssignmentRef
 from .day_type_assignment_ref_structure import DayTypeAssignmentRefStructure
@@ -1745,9 +1744,7 @@ from .link_sequence_version_structure import (
     LinkSequenceVersionStructure,
     SectionInSequence,
     SectionInSequenceVersionedChildStructure,
-    Section1,
     SectionVersionStructure,
-    Section2,
     SectionsInSequenceRelStructure,
 )
 from .link_type_refs_rel_structure import LinkTypeRefsRelStructure
@@ -2730,6 +2727,8 @@ from .seating_equipment import SeatingEquipment
 from .seating_equipment_ref import SeatingEquipmentRef
 from .seating_equipment_ref_structure import SeatingEquipmentRefStructure
 from .seating_equipment_version_structure import SeatingEquipmentVersionStructure
+from .section_1 import Section1
+from .section_2 import Section2
 from .section_ref import SectionRef
 from .section_ref_structure import SectionRefStructure
 from .section_type_enumeration import SectionTypeEnumeration
@@ -3692,6 +3691,7 @@ from .validable_element_ref_structure import ValidableElementRefStructure
 from .validable_element_version_structure import ValidableElementVersionStructure
 from .validable_elements_in_frame_rel_structure import ValidableElementsInFrameRelStructure
 from .validable_elements_rel_structure import ValidableElementsRelStructure
+from .validity_condition_2 import ValidityCondition2
 from .validity_condition_ref import ValidityConditionRef
 from .validity_condition_ref_structure import ValidityConditionRefStructure
 from .validity_condition_refs_rel_structure import ValidityConditionRefsRelStructure
@@ -4122,7 +4122,6 @@ __all__ = [
     "DataManagedObjectStructure",
     "DayType1",
     "DayTypeVersionStructure",
-    "DayType2",
     "EntityInVersionStructure",
     "FareDayType",
     "FareDayTypeVersionedStructure",
@@ -4138,7 +4137,6 @@ __all__ = [
     "ValidDuringVersionStructure",
     "ValidityCondition1",
     "ValidityConditionVersionStructure",
-    "ValidityCondition2",
     "ValidityRuleParameter",
     "ValidityRuleParameterVersionStructure",
     "ValidityTrigger",
@@ -4658,6 +4656,7 @@ __all__ = [
     "DatedVehicleJourneyVersionStructure",
     "DayEventEnumeration",
     "DayOfWeekEnumeration",
+    "DayType2",
     "DayTypeAssignment",
     "DayTypeAssignmentRef",
     "DayTypeAssignmentRefStructure",
@@ -5636,9 +5635,7 @@ __all__ = [
     "LinkSequenceVersionStructure",
     "SectionInSequence",
     "SectionInSequenceVersionedChildStructure",
-    "Section1",
     "SectionVersionStructure",
-    "Section2",
     "SectionsInSequenceRelStructure",
     "LinkTypeRefsRelStructure",
     "LinkVersionStructure",
@@ -6620,6 +6617,8 @@ __all__ = [
     "SeatingEquipmentRef",
     "SeatingEquipmentRefStructure",
     "SeatingEquipmentVersionStructure",
+    "Section1",
+    "Section2",
     "SectionRef",
     "SectionRefStructure",
     "SectionTypeEnumeration",
@@ -7578,6 +7577,7 @@ __all__ = [
     "ValidableElementVersionStructure",
     "ValidableElementsInFrameRelStructure",
     "ValidableElementsRelStructure",
+    "ValidityCondition2",
     "ValidityConditionRef",
     "ValidityConditionRefStructure",
     "ValidityConditionRefsRelStructure",

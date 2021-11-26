@@ -4,7 +4,6 @@ from typing import Optional
 from xsdata.models.datatype import XmlDateTime
 from .capping_rule_price_ref import CappingRulePriceRef
 from .cell_ref_1 import CellRef1
-from .cell_ref_2 import CellRef2
 from .controllable_element_price_ref import ControllableElementPriceRef
 from .customer_purchase_package_price_ref import CustomerPurchasePackagePriceRef
 from .distance_matrix_element_price_ref import DistanceMatrixElementPriceRef
@@ -18,7 +17,6 @@ from .geographical_interval_price_ref import GeographicalIntervalPriceRef
 from .geographical_unit_price_ref import GeographicalUnitPriceRef
 from .notice_assignments_rel_structure import NoticeAssignmentsRelStructure
 from .parking_price_ref import ParkingPriceRef
-from .passenger_information_request_ref import PassengerInformationRequestRef
 from .payment_method_enumeration import PaymentMethodEnumeration
 from .price_rule_step_results_rel_structure import PriceRuleStepResultsRelStructure
 from .price_unit_ref import PriceUnitRef
@@ -108,14 +106,6 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
         default=None,
         metadata={
             "name": "TripPlanRequestRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    passenger_information_request_ref: Optional[PassengerInformationRequestRef] = field(
-        default=None,
-        metadata={
-            "name": "PassengerInformationRequestRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -268,14 +258,6 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
         default=None,
         metadata={
             "name": "CellRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_cell_ref: Optional[CellRef2] = field(
-        default=None,
-        metadata={
-            "name": "CellRef_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

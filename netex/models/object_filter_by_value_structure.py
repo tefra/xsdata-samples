@@ -37,7 +37,6 @@ from .capped_discount_right_ref import CappedDiscountRightRef
 from .capping_rule_price_ref import CappingRulePriceRef
 from .capping_rule_ref import CappingRuleRef
 from .cell_ref_1 import CellRef1
-from .cell_ref_2 import CellRef2
 from .charging_moment_ref import ChargingMomentRef
 from .charging_policy_ref import ChargingPolicyRef
 from .check_constraint_delay_ref import CheckConstraintDelayRef
@@ -117,9 +116,7 @@ from .fare_contract_ref import FareContractRef
 from .fare_contract_security_listing_ref import FareContractSecurityListingRef
 from .fare_day_type_ref import FareDayTypeRef
 from .fare_demand_factor_ref import FareDemandFactorRef
-from .fare_element_in_sequence_ref import FareElementInSequenceRef
 from .fare_frame_ref import FareFrameRef
-from .fare_interval_ref import FareIntervalRef
 from .fare_price_ref import FarePriceRef
 from .fare_product_price_ref import FareProductPriceRef
 from .fare_product_ref import FareProductRef
@@ -130,11 +127,9 @@ from .fare_section_ref import FareSectionRef
 from .fare_structure_element_in_sequence_ref import FareStructureElementInSequenceRef
 from .fare_structure_element_price_ref import FareStructureElementPriceRef
 from .fare_structure_element_ref import FareStructureElementRef
-from .fare_structure_factor_ref import FareStructureFactorRef
 from .fare_table_column_ref import FareTableColumnRef
 from .fare_table_ref import FareTableRef
 from .fare_table_row_ref import FareTableRowRef
-from .fare_unit_ref import FareUnitRef
 from .fare_zone_ref import FareZoneRef
 from .flexible_area_ref import FlexibleAreaRef
 from .flexible_line_ref import FlexibleLineRef
@@ -161,14 +156,9 @@ from .geographical_unit_ref import GeographicalUnitRef
 from .group_of_customer_purchase_packages_ref import GroupOfCustomerPurchasePackagesRef
 from .group_of_distance_matrix_elements_ref import GroupOfDistanceMatrixElementsRef
 from .group_of_distribution_channels_ref import GroupOfDistributionChannelsRef
-from .group_of_entities_ref_1 import GroupOfEntitiesRef1
-from .group_of_entities_ref_2 import GroupOfEntitiesRef2
 from .group_of_lines_ref import GroupOfLinesRef
-from .group_of_link_sequences_ref import GroupOfLinkSequencesRef
 from .group_of_operators_ref import GroupOfOperatorsRef
 from .group_of_places_ref import GroupOfPlacesRef
-from .group_of_points_ref_1 import GroupOfPointsRef1
-from .group_of_points_ref_2 import GroupOfPointsRef2
 from .group_of_sales_offer_packages_ref import GroupOfSalesOfferPackagesRef
 from .group_of_services_ref import GroupOfServicesRef
 from .group_of_stop_places_ref import GroupOfStopPlacesRef
@@ -177,11 +167,8 @@ from .group_of_timing_links_ref import GroupOfTimingLinksRef
 from .group_ticket_ref import GroupTicketRef
 from .hail_and_ride_area_ref import HailAndRideAreaRef
 from .headway_journey_group_ref import HeadwayJourneyGroupRef
-from .headway_ref import HeadwayRef
 from .infrastructure_frame_ref import InfrastructureFrameRef
-from .infrastructure_link_ref import InfrastructureLinkRef
 from .infrastructure_link_restriction_ref import InfrastructureLinkRestrictionRef
-from .infrastructure_point_ref import InfrastructurePointRef
 from .interchange_ref import InterchangeRef
 from .interchange_rule_ref import InterchangeRuleRef
 from .interchange_rule_timing_ref import InterchangeRuleTimingRef
@@ -196,7 +183,6 @@ from .journey_pattern_layover_ref import JourneyPatternLayoverRef
 from .journey_pattern_ref import JourneyPatternRef
 from .journey_pattern_run_time_ref import JourneyPatternRunTimeRef
 from .journey_pattern_wait_time_ref import JourneyPatternWaitTimeRef
-from .journey_ref import JourneyRef
 from .journey_timing_ref import JourneyTimingRef
 from .layer_ref import LayerRef
 from .level_ref import LevelRef
@@ -206,7 +192,6 @@ from .line_network_ref import LineNetworkRef
 from .line_ref import LineRef
 from .line_section_ref import LineSectionRef
 from .link_projection_ref import LinkProjectionRef
-from .link_ref import LinkRef
 from .link_sequence_projection_ref import LinkSequenceProjectionRef
 from .link_sequence_ref import LinkSequenceRef
 from .log_entry_ref import LogEntryRef
@@ -252,7 +237,6 @@ from .parking_ref import ParkingRef
 from .parking_tariff_ref import ParkingTariffRef
 from .passenger_capacity_ref import PassengerCapacityRef
 from .passenger_carrying_requirement_ref import PassengerCarryingRequirementRef
-from .passenger_information_request_ref import PassengerInformationRequestRef
 from .passenger_seat_ref import PassengerSeatRef
 from .passenger_stop_assignment_ref import PassengerStopAssignmentRef
 from .passing_time_ref import PassingTimeRef
@@ -261,14 +245,12 @@ from .path_junction_ref import PathJunctionRef
 from .path_link_ref import PathLinkRef
 from .penalty_policy_ref import PenaltyPolicyRef
 from .place_ref_1 import PlaceRef1
-from .place_ref_2 import PlaceRef2
 from .point_of_interest_classification_ref import PointOfInterestClassificationRef
 from .point_of_interest_entrance_ref import PointOfInterestEntranceRef
 from .point_of_interest_hierarchy_ref import PointOfInterestHierarchyRef
 from .point_of_interest_ref import PointOfInterestRef
 from .point_of_interest_space_ref import PointOfInterestSpaceRef
 from .point_of_interest_vehicle_entrance_ref import PointOfInterestVehicleEntranceRef
-from .point_on_link_ref import PointOnLinkRef
 from .point_projection_ref import PointProjectionRef
 from .point_ref import PointRef
 from .postal_address_ref import PostalAddressRef
@@ -280,7 +262,6 @@ from .pricing_parameter_set_ref import PricingParameterSetRef
 from .pricing_rule_ref import PricingRuleRef
 from .pricing_service_ref import PricingServiceRef
 from .profile_parameter_ref import ProfileParameterRef
-from .projection_ref import ProjectionRef
 from .purchase_window_ref import PurchaseWindowRef
 from .purpose_of_equipment_profile_ref import PurposeOfEquipmentProfileRef
 from .purpose_of_grouping_ref import PurposeOfGroupingRef
@@ -333,8 +314,6 @@ from .scheduled_stop_point_ref import ScheduledStopPointRef
 from .schematic_map_member_ref import SchematicMapMemberRef
 from .schematic_map_ref import SchematicMapRef
 from .section_ref import SectionRef
-from .security_list_ref import SecurityListRef
-from .security_listing_ref import SecurityListingRef
 from .series_constraint_price_ref import SeriesConstraintPriceRef
 from .series_constraint_ref import SeriesConstraintRef
 from .service_access_right_ref import ServiceAccessRightRef
@@ -379,7 +358,6 @@ from .target_passing_time_ref import TargetPassingTimeRef
 from .tariff_object_ref import TariffObjectRef
 from .tariff_ref import TariffRef
 from .tariff_zone_ref_1 import TariffZoneRef1
-from .tariff_zone_ref_2 import TariffZoneRef2
 from .template_service_journey_ref import TemplateServiceJourneyRef
 from .third_party_product_ref import ThirdPartyProductRef
 from .time_demand_profile_ref import TimeDemandProfileRef
@@ -409,11 +387,9 @@ from .train_in_compound_train_ref import TrainInCompoundTrainRef
 from .train_number_ref import TrainNumberRef
 from .train_ref import TrainRef
 from .train_stop_assignment_ref import TrainStopAssignmentRef
-from .transfer_ref import TransferRef
 from .transfer_restriction_ref import TransferRestrictionRef
 from .transferability_ref import TransferabilityRef
 from .transport_administrative_zone_ref import TransportAdministrativeZoneRef
-from .transport_organisation_ref import TransportOrganisationRef
 from .travel_agent_ref import TravelAgentRef
 from .travel_document_ref import TravelDocumentRef
 from .travel_document_security_listing_ref import TravelDocumentSecurityListingRef
@@ -427,7 +403,6 @@ from .type_of_concession_ref import TypeOfConcessionRef
 from .type_of_congestion_ref import TypeOfCongestionRef
 from .type_of_customer_account_ref import TypeOfCustomerAccountRef
 from .type_of_delivery_variant_ref import TypeOfDeliveryVariantRef
-from .type_of_entity_ref import TypeOfEntityRef
 from .type_of_equipment_ref import TypeOfEquipmentRef
 from .type_of_facility_ref import TypeOfFacilityRef
 from .type_of_fare_contract_entry_ref import TypeOfFareContractEntryRef
@@ -467,11 +442,9 @@ from .type_of_transfer_ref import TypeOfTransferRef
 from .type_of_travel_document_ref import TypeOfTravelDocumentRef
 from .type_of_usage_parameter_ref import TypeOfUsageParameterRef
 from .type_of_validity_ref import TypeOfValidityRef
-from .type_of_value_ref import TypeOfValueRef
 from .type_of_zone_ref import TypeOfZoneRef
 from .usage_discount_right_ref import UsageDiscountRightRef
 from .usage_parameter_price_ref import UsageParameterPriceRef
-from .usage_parameter_ref import UsageParameterRef
 from .usage_validity_period_ref import UsageValidityPeriodRef
 from .user_profile_eligibility_ref import UserProfileEligibilityRef
 from .user_profile_ref import UserProfileRef
@@ -499,7 +472,6 @@ from .vehicle_type_at_point_ref import VehicleTypeAtPointRef
 from .vehicle_type_preference_ref import VehicleTypePreferenceRef
 from .vehicle_type_ref import VehicleTypeRef
 from .vehicle_type_stop_assignment_ref import VehicleTypeStopAssignmentRef
-from .version_frame_ref import VersionFrameRef
 from .version_of_object_ref import VersionOfObjectRef
 from .version_ref import VersionRef
 from .whitelist_ref import WhitelistRef
@@ -583,11 +555,6 @@ class ObjectFilterByValueStructure:
                     {
                         "name": "TripPlanRequestRef",
                         "type": TripPlanRequestRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
-                        "name": "PassengerInformationRequestRef",
-                        "type": PassengerInformationRequestRef,
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                     {
@@ -686,11 +653,6 @@ class ObjectFilterByValueStructure:
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                     {
-                        "name": "FareUnitRef",
-                        "type": FareUnitRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
                         "name": "ControllableElementInSequenceRef",
                         "type": ControllableElementInSequenceRef,
                         "namespace": "http://www.netex.org.uk/netex",
@@ -706,18 +668,8 @@ class ObjectFilterByValueStructure:
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                     {
-                        "name": "FareElementInSequenceRef",
-                        "type": FareElementInSequenceRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
                         "name": "CellRef",
                         "type": CellRef1,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
-                        "name": "CellRef_",
-                        "type": CellRef2,
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                     {
@@ -981,11 +933,6 @@ class ObjectFilterByValueStructure:
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                     {
-                        "name": "UsageParameterRef",
-                        "type": UsageParameterRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
                         "name": "SalesOfferPackageElementRef",
                         "type": SalesOfferPackageElementRef,
                         "namespace": "http://www.netex.org.uk/netex",
@@ -1086,11 +1033,6 @@ class ObjectFilterByValueStructure:
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                     {
-                        "name": "FareIntervalRef",
-                        "type": FareIntervalRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
                         "name": "ParkingChargeBandRef",
                         "type": ParkingChargeBandRef,
                         "namespace": "http://www.netex.org.uk/netex",
@@ -1118,11 +1060,6 @@ class ObjectFilterByValueStructure:
                     {
                         "name": "GeographicalStructureFactorRef",
                         "type": GeographicalStructureFactorRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
-                        "name": "FareStructureFactorRef",
-                        "type": FareStructureFactorRef,
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                     {
@@ -1446,11 +1383,6 @@ class ObjectFilterByValueStructure:
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                     {
-                        "name": "HeadwayRef",
-                        "type": HeadwayRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
                         "name": "JourneyTimingRef",
                         "type": JourneyTimingRef,
                         "namespace": "http://www.netex.org.uk/netex",
@@ -1516,11 +1448,6 @@ class ObjectFilterByValueStructure:
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                     {
-                        "name": "SecurityListingRef",
-                        "type": SecurityListingRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
                         "name": "WhitelistRef",
                         "type": WhitelistRef,
                         "namespace": "http://www.netex.org.uk/netex",
@@ -1528,11 +1455,6 @@ class ObjectFilterByValueStructure:
                     {
                         "name": "BlacklistRef",
                         "type": BlacklistRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
-                        "name": "SecurityListRef",
-                        "type": SecurityListRef,
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                     {
@@ -1686,16 +1608,6 @@ class ObjectFilterByValueStructure:
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                     {
-                        "name": "ProjectionRef",
-                        "type": ProjectionRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
-                        "name": "GroupOfLinkSequencesRef",
-                        "type": GroupOfLinkSequencesRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
                         "name": "DatedVehicleJourneyRef",
                         "type": DatedVehicleJourneyRef,
                         "namespace": "http://www.netex.org.uk/netex",
@@ -1728,11 +1640,6 @@ class ObjectFilterByValueStructure:
                     {
                         "name": "VehicleJourneyRef",
                         "type": VehicleJourneyRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
-                        "name": "JourneyRef",
-                        "type": JourneyRef,
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                     {
@@ -1843,11 +1750,6 @@ class ObjectFilterByValueStructure:
                     {
                         "name": "AccessRef",
                         "type": AccessRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
-                        "name": "TransferRef",
-                        "type": TransferRef,
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                     {
@@ -2036,11 +1938,6 @@ class ObjectFilterByValueStructure:
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                     {
-                        "name": "PlaceRef_",
-                        "type": PlaceRef2,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
                         "name": "ServiceLinkRef",
                         "type": ServiceLinkRef,
                         "namespace": "http://www.netex.org.uk/netex",
@@ -2081,18 +1978,8 @@ class ObjectFilterByValueStructure:
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                     {
-                        "name": "InfrastructureLinkRef",
-                        "type": InfrastructureLinkRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
                         "name": "ActivationLinkRef",
                         "type": ActivationLinkRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
-                        "name": "LinkRef",
-                        "type": LinkRef,
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                     {
@@ -2151,11 +2038,6 @@ class ObjectFilterByValueStructure:
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                     {
-                        "name": "InfrastructurePointRef",
-                        "type": InfrastructurePointRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
                         "name": "TrafficControlPointRef",
                         "type": TrafficControlPointRef,
                         "namespace": "http://www.netex.org.uk/netex",
@@ -2168,11 +2050,6 @@ class ObjectFilterByValueStructure:
                     {
                         "name": "ActivationPointRef",
                         "type": ActivationPointRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
-                        "name": "PointOnLinkRef",
-                        "type": PointOnLinkRef,
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                     {
@@ -2281,11 +2158,6 @@ class ObjectFilterByValueStructure:
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                     {
-                        "name": "TransportOrganisationRef",
-                        "type": TransportOrganisationRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
                         "name": "GeneralOrganisationRef",
                         "type": GeneralOrganisationRef,
                         "namespace": "http://www.netex.org.uk/netex",
@@ -2343,11 +2215,6 @@ class ObjectFilterByValueStructure:
                     {
                         "name": "LineRef",
                         "type": LineRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
-                        "name": "GroupOfEntitiesRef",
-                        "type": GroupOfEntitiesRef1,
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                     {
@@ -2481,11 +2348,6 @@ class ObjectFilterByValueStructure:
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                     {
-                        "name": "GroupOfPointsRef",
-                        "type": GroupOfPointsRef1,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
                         "name": "StopAreaRef",
                         "type": StopAreaRef,
                         "namespace": "http://www.netex.org.uk/netex",
@@ -2516,18 +2378,8 @@ class ObjectFilterByValueStructure:
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                     {
-                        "name": "TariffZoneRef_",
-                        "type": TariffZoneRef2,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
                         "name": "ZoneRef",
                         "type": ZoneRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
-                        "name": "GroupOfPointsRef_",
-                        "type": GroupOfPointsRef2,
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                     {
@@ -2548,11 +2400,6 @@ class ObjectFilterByValueStructure:
                     {
                         "name": "GeneralGroupOfEntitiesRef",
                         "type": GeneralGroupOfEntitiesRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
-                        "name": "GroupOfEntitiesRef_",
-                        "type": GroupOfEntitiesRef2,
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                     {
@@ -2613,11 +2460,6 @@ class ObjectFilterByValueStructure:
                     {
                         "name": "CompositeFrameRef",
                         "type": CompositeFrameRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
-                        "name": "VersionFrameRef",
-                        "type": VersionFrameRef,
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                     {
@@ -2903,16 +2745,6 @@ class ObjectFilterByValueStructure:
                     {
                         "name": "TypeOfFrameRef",
                         "type": TypeOfFrameRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
-                        "name": "TypeOfEntityRef",
-                        "type": TypeOfEntityRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
-                        "name": "TypeOfValueRef",
-                        "type": TypeOfValueRef,
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                     {

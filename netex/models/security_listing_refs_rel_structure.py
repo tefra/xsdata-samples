@@ -5,7 +5,6 @@ from .customer_security_listing_ref import CustomerSecurityListingRef
 from .fare_contract_security_listing_ref import FareContractSecurityListingRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .retail_device_security_listing_ref import RetailDeviceSecurityListingRef
-from .security_listing_ref import SecurityListingRef
 from .travel_document_security_listing_ref import TravelDocumentSecurityListingRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -52,14 +51,6 @@ class SecurityListingRefsRelStructure(OneToManyRelationshipStructure):
         default_factory=list,
         metadata={
             "name": "CustomerSecurityListingRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    security_listing_ref: List[SecurityListingRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "SecurityListingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

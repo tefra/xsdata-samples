@@ -2,7 +2,6 @@ from dataclasses import dataclass, field
 from typing import List
 from .blacklist_ref import BlacklistRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
-from .security_list_ref import SecurityListRef
 from .whitelist_ref import WhitelistRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -25,14 +24,6 @@ class SecuritylistRefsRelStructure(OneToManyRelationshipStructure):
         default_factory=list,
         metadata={
             "name": "BlacklistRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    security_list_ref: List[SecurityListRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "SecurityListRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

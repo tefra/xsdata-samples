@@ -36,7 +36,6 @@ from .tariffs_in_frame_rel_structure import TariffsInFrameRelStructure
 from .time_intervals_rel_structure import TimeIntervalsRelStructure
 from .time_structure_factors_rel_structure import TimeStructureFactorsRelStructure
 from .time_units_rel_structure import TimeUnitsRelStructure
-from .transport_organisation_ref import TransportOrganisationRef
 from .types_of_travel_document_in_frame_rel_structure import TypesOfTravelDocumentInFrameRelStructure
 from .usage_parameters_in_frame_rel_structure import UsageParametersInFrameRelStructure
 from .validable_elements_in_frame_rel_structure import ValidableElementsInFrameRelStructure
@@ -70,14 +69,6 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
         default=None,
         metadata={
             "name": "OperatorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    transport_organisation_ref: Optional[TransportOrganisationRef] = field(
-        default=None,
-        metadata={
-            "name": "TransportOrganisationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

@@ -13,7 +13,6 @@ from .service_frame_ref import ServiceFrameRef
 from .site_frame_ref import SiteFrameRef
 from .timetable_frame_ref import TimetableFrameRef
 from .vehicle_schedule_frame_ref import VehicleScheduleFrameRef
-from .version_frame_ref import VersionFrameRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -115,14 +114,6 @@ class VersionFrameRefsRelStructure(OneToManyRelationshipStructure):
         default_factory=list,
         metadata={
             "name": "CompositeFrameRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    version_frame_ref: List[VersionFrameRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "VersionFrameRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

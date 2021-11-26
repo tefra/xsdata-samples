@@ -46,7 +46,6 @@ from .service_journey_pattern_ref import ServiceJourneyPatternRef
 from .service_pattern_ref import ServicePatternRef
 from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
 from .timing_pattern_ref import TimingPatternRef
-from .transport_organisation_ref import TransportOrganisationRef
 from .type_of_journey_pattern_ref import TypeOfJourneyPatternRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -294,13 +293,6 @@ class SectionVersionStructure(LinkSequenceVersionStructure):
 
 
 @dataclass
-class Section2(LinkSequenceVersionStructure):
-    class Meta:
-        name = "Section_"
-        namespace = "http://www.netex.org.uk/netex"
-
-
-@dataclass
 class CommonSectionVersionStructure(SectionVersionStructure):
     class Meta:
         name = "CommonSection_VersionStructure"
@@ -428,21 +420,6 @@ class LineSectionVersionStructure(SectionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    transport_organisation_ref: Optional[TransportOrganisationRef] = field(
-        default=None,
-        metadata={
-            "name": "TransportOrganisationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-
-
-@dataclass
-class Section1(SectionVersionStructure):
-    class Meta:
-        name = "Section"
-        namespace = "http://www.netex.org.uk/netex"
 
 
 @dataclass
@@ -613,22 +590,6 @@ class SectionInSequenceVersionedChildStructure(LinkInLinkSequenceVersionedChildS
         default=None,
         metadata={
             "name": "GeneralSection",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    section: Optional[Section1] = field(
-        default=None,
-        metadata={
-            "name": "Section",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_section: Optional[Section2] = field(
-        default=None,
-        metadata={
-            "name": "Section_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

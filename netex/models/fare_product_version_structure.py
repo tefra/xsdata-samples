@@ -21,7 +21,6 @@ from .service_access_right_version_structure import ServiceAccessRightVersionStr
 from .supplement_product_ref import SupplementProductRef
 from .tariff_refs_rel_structure import TariffRefsRelStructure
 from .third_party_product_ref import ThirdPartyProductRef
-from .transport_organisation_ref import TransportOrganisationRef
 from .type_of_fare_product_ref import TypeOfFareProductRef
 from .type_of_fare_product_refs_rel_structure import TypeOfFareProductRefsRelStructure
 from .usage_discount_right_ref import UsageDiscountRightRef
@@ -79,14 +78,6 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
         default=None,
         metadata={
             "name": "OperatorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    transport_organisation_ref: Optional[TransportOrganisationRef] = field(
-        default=None,
-        metadata={
-            "name": "TransportOrganisationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

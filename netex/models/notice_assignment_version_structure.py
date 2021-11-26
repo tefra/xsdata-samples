@@ -10,7 +10,6 @@ from .fare_section_ref import FareSectionRef
 from .general_group_of_entities_ref_structure import GeneralGroupOfEntitiesRefStructure
 from .general_section_ref import GeneralSectionRef
 from .journey_pattern_ref import JourneyPatternRef
-from .journey_ref import JourneyRef
 from .line_section_ref import LineSectionRef
 from .link_sequence_ref import LinkSequenceRef
 from .navigation_path_ref import NavigationPathRef
@@ -122,14 +121,6 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
         default=None,
         metadata={
             "name": "VehicleJourneyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    journey_ref: Optional[JourneyRef] = field(
-        default=None,
-        metadata={
-            "name": "JourneyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

@@ -3,7 +3,6 @@ from typing import List
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .flexible_route import FlexibleRoute
 from .route_1 import Route1
-from .route_2 import Route2
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -25,14 +24,6 @@ class RoutesInFrameRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "Route",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_route: List[Route2] = field(
-        default_factory=list,
-        metadata={
-            "name": "Route_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

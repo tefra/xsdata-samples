@@ -17,7 +17,6 @@ from .hire_service import HireService
 from .hire_service_ref import HireServiceRef
 from .left_luggage_service import LeftLuggageService
 from .left_luggage_service_ref import LeftLuggageServiceRef
-from .local_service import LocalService
 from .local_service_ref import LocalServiceRef
 from .lost_property_service import LostPropertyService
 from .lost_property_service_ref import LostPropertyServiceRef
@@ -188,11 +187,6 @@ class LocalServicesRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "TicketingService",
                     "type": TicketingService,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "LocalService",
-                    "type": LocalService,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

@@ -7,7 +7,6 @@ from .type_of_access_right_assignment_ref import TypeOfAccessRightAssignmentRef
 from .type_of_congestion_ref import TypeOfCongestionRef
 from .type_of_customer_account_ref import TypeOfCustomerAccountRef
 from .type_of_delivery_variant_ref import TypeOfDeliveryVariantRef
-from .type_of_entity_ref import TypeOfEntityRef
 from .type_of_equipment_ref import TypeOfEquipmentRef
 from .type_of_facility_ref import TypeOfFacilityRef
 from .type_of_fare_contract_entry_ref import TypeOfFareContractEntryRef
@@ -367,14 +366,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
         default_factory=list,
         metadata={
             "name": "TypeOfFrameRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_entity_ref: List[TypeOfEntityRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TypeOfEntityRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

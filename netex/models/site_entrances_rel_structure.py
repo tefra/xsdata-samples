@@ -16,7 +16,6 @@ from .stop_place_entrance import StopPlaceEntrance
 from .stop_place_entrance_ref import StopPlaceEntranceRef
 from .stop_place_vehicle_entrance import StopPlaceVehicleEntrance
 from .stop_place_vehicle_entrance_ref import StopPlaceVehicleEntranceRef
-from .vehicle_entrance import VehicleEntrance
 from .vehicle_entrance_ref import VehicleEntranceRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -105,11 +104,6 @@ class SiteEntrancesRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "StopPlaceEntrance",
                     "type": StopPlaceEntrance,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "VehicleEntrance",
-                    "type": VehicleEntrance,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

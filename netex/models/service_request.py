@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from typing import List
-from .abstract_functional_service_request import AbstractFunctionalServiceRequest
 from .data_object_request import DataObjectRequest
 from .service_request_structure import ServiceRequestStructure
 
@@ -18,12 +17,5 @@ class ServiceRequest(ServiceRequestStructure):
             "name": "DataObjectRequest",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    abstract_functional_service_request: List[AbstractFunctionalServiceRequest] = field(
-        default_factory=list,
-        metadata={
-            "name": "AbstractFunctionalServiceRequest",
-            "type": "Element",
         }
     )

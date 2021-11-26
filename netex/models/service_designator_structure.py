@@ -9,7 +9,6 @@ from .flexible_line_ref import FlexibleLineRef
 from .line_ref import LineRef
 from .operator_ref import OperatorRef
 from .scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
-from .transport_organisation_ref import TransportOrganisationRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -100,14 +99,6 @@ class ServiceDesignatorStructure:
         default=None,
         metadata={
             "name": "OperatorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    transport_organisation_ref: Optional[TransportOrganisationRef] = field(
-        default=None,
-        metadata={
-            "name": "TransportOrganisationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

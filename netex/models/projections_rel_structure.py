@@ -9,8 +9,6 @@ from .link_sequence_projection import LinkSequenceProjection
 from .link_sequence_projection_ref import LinkSequenceProjectionRef
 from .point_projection import PointProjection
 from .point_projection_ref import PointProjectionRef
-from .projection import Projection
-from .projection_ref import ProjectionRef
 from .topographic_projection import TopographicProjection
 from .topographic_projection_ref import TopographicProjectionRef
 from .zone_projection import ZoneProjection
@@ -60,11 +58,6 @@ class ProjectionsRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "ProjectionRef",
-                    "type": ProjectionRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "TopographicProjection",
                     "type": TopographicProjection,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -92,11 +85,6 @@ class ProjectionsRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "PointProjection",
                     "type": PointProjection,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "Projection",
-                    "type": Projection,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

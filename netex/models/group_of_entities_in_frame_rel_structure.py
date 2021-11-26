@@ -2,9 +2,7 @@ from dataclasses import dataclass, field
 from typing import List
 from .access_space import AccessSpace
 from .access_zone import AccessZone
-from .address import Address
 from .addressable_place import AddressablePlace
-from .administrative_zone_2 import AdministrativeZone2
 from .administrative_zone_version_structure import (
     AdministrativeZone1,
     TransportAdministrativeZone,
@@ -20,7 +18,6 @@ from .country import Country
 from .crew_base import CrewBase
 from .entrance import Entrance
 from .equipment_place import EquipmentPlace
-from .fare_table_2 import FareTable2
 from .fare_zone import FareZone
 from .flexible_area import FlexibleArea
 from .flexible_quay import FlexibleQuay
@@ -30,7 +27,6 @@ from .general_group_of_entities import GeneralGroupOfEntities
 from .general_zone import GeneralZone
 from .group_of_distance_matrix_elements import GroupOfDistanceMatrixElements
 from .group_of_distribution_channels import GroupOfDistributionChannels
-from .group_of_entities import GroupOfEntities
 from .group_of_lines import GroupOfLines
 from .group_of_link_sequences import GroupOfLinkSequences
 from .group_of_links import GroupOfLinks
@@ -41,7 +37,6 @@ from .group_of_services import GroupOfServices
 from .group_of_timing_links import GroupOfTimingLinks
 from .hail_and_ride_area import HailAndRideArea
 from .headway_journey_group import HeadwayJourneyGroup
-from .journey_frequency_group import JourneyFrequencyGroup
 from .layer import Layer
 from .network import Network
 from .parking import Parking
@@ -50,33 +45,23 @@ from .parking_bay import ParkingBay
 from .parking_component import ParkingComponent
 from .parking_entrance_for_vehicles import ParkingEntranceForVehicles
 from .parking_passenger_entrance import ParkingPassengerEntrance
-from .place import Place
 from .point_of_interest import PointOfInterest
-from .point_of_interest_component import PointOfInterestComponent
 from .point_of_interest_entrance import PointOfInterestEntrance
 from .point_of_interest_space import PointOfInterestSpace
 from .point_of_interest_vehicle_entrance import PointOfInterestVehicleEntrance
 from .postal_address import PostalAddress
-from .price_group_2 import PriceGroup2
 from .quay import Quay
 from .rhythmical_journey_group import RhythmicalJourneyGroup
 from .road_address import RoadAddress
 from .routing_constraint_zone import RoutingConstraintZone
 from .service_site import ServiceSite
-from .site import Site
-from .site_component import SiteComponent
-from .site_element import SiteElement
 from .standard_fare_table import StandardFareTable
 from .stop_area import StopArea
 from .stop_place import StopPlace
-from .stop_place_component import StopPlaceComponent
 from .stop_place_entrance import StopPlaceEntrance
-from .stop_place_space import StopPlaceSpace
 from .stop_place_vehicle_entrance import StopPlaceVehicleEntrance
 from .tariff_zone_1 import TariffZone1
-from .tariff_zone_2 import TariffZone2
 from .topographic_place import TopographicPlace
-from .vehicle_entrance import VehicleEntrance
 from .vehicle_stopping_place import VehicleStoppingPlace
 from .vehicle_stopping_position import VehicleStoppingPosition
 from .zone import Zone
@@ -113,14 +98,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_price_group: List[PriceGroup2] = field(
-        default_factory=list,
-        metadata={
-            "name": "PriceGroup_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     standard_fare_table: List[StandardFareTable] = field(
         default_factory=list,
         metadata={
@@ -145,14 +122,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_fare_table: List[FareTable2] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareTable_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     group_of_services: List[GroupOfServices] = field(
         default_factory=list,
         metadata={
@@ -173,14 +142,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "HeadwayJourneyGroup",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    journey_frequency_group: List[JourneyFrequencyGroup] = field(
-        default_factory=list,
-        metadata={
-            "name": "JourneyFrequencyGroup",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -297,14 +258,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    point_of_interest_component: List[PointOfInterestComponent] = field(
-        default_factory=list,
-        metadata={
-            "name": "PointOfInterestComponent",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     vehicle_stopping_place: List[VehicleStoppingPlace] = field(
         default_factory=list,
         metadata={
@@ -333,22 +286,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "Quay",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    stop_place_space: List[StopPlaceSpace] = field(
-        default_factory=list,
-        metadata={
-            "name": "StopPlaceSpace",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    stop_place_component: List[StopPlaceComponent] = field(
-        default_factory=list,
-        metadata={
-            "name": "StopPlaceComponent",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -441,26 +378,10 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    vehicle_entrance: List[VehicleEntrance] = field(
-        default_factory=list,
-        metadata={
-            "name": "VehicleEntrance",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     entrance: List[Entrance] = field(
         default_factory=list,
         metadata={
             "name": "Entrance",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    site_component: List[SiteComponent] = field(
-        default_factory=list,
-        metadata={
-            "name": "SiteComponent",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -493,22 +414,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "ServiceSite",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    site: List[Site] = field(
-        default_factory=list,
-        metadata={
-            "name": "Site",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    site_element: List[SiteElement] = field(
-        default_factory=list,
-        metadata={
-            "name": "SiteElement",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -569,22 +474,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    address: List[Address] = field(
-        default_factory=list,
-        metadata={
-            "name": "Address",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    place: List[Place] = field(
-        default_factory=list,
-        metadata={
-            "name": "Place",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     transport_administrative_zone: List[TransportAdministrativeZone] = field(
         default_factory=list,
         metadata={
@@ -601,14 +490,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    netex_org_uk_netex_administrative_zone: List[AdministrativeZone2] = field(
-        default_factory=list,
-        metadata={
-            "name": "AdministrativeZone_",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     fare_zone: List[FareZone] = field(
         default_factory=list,
         metadata={
@@ -621,14 +502,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "TariffZone",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_tariff_zone: List[TariffZone2] = field(
-        default_factory=list,
-        metadata={
-            "name": "TariffZone_",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
@@ -677,14 +550,6 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
         default_factory=list,
         metadata={
             "name": "GeneralGroupOfEntities",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    group_of_entities: List[GroupOfEntities] = field(
-        default_factory=list,
-        metadata={
-            "name": "GroupOfEntities",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

@@ -4,7 +4,6 @@ from .dated_special_service_ref import DatedSpecialServiceRef
 from .dated_vehicle_journey_ref import DatedVehicleJourneyRef
 from .dead_run_ref import DeadRunRef
 from .journey_designator import JourneyDesignator
-from .journey_ref import JourneyRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .service_designator import ServiceDesignator
 from .service_journey_ref import ServiceJourneyRef
@@ -58,11 +57,6 @@ class JourneyRefsRelStructure(OneToManyRelationshipStructure):
                 {
                     "name": "VehicleJourneyRef",
                     "type": VehicleJourneyRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "JourneyRef",
-                    "type": JourneyRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

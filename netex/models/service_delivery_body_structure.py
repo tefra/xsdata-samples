@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .abstract_functional_service_delivery import AbstractFunctionalServiceDelivery
 from .capability_not_supported_error import CapabilityNotSupportedError
 from .data_object_delivery import DataObjectDelivery
 from .other_error import OtherError
@@ -40,14 +39,6 @@ class ServiceDeliveryBodyStructure:
             "name": "DataObjectDelivery",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    abstract_functional_service_delivery: List[AbstractFunctionalServiceDelivery] = field(
-        default_factory=list,
-        metadata={
-            "name": "AbstractFunctionalServiceDelivery",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
         }
     )
     srs_name: Optional[str] = field(

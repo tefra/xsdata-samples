@@ -11,7 +11,6 @@ from .controllable_element_ref import ControllableElementRef
 from .distance_matrix_element_inverse_ref import DistanceMatrixElementInverseRef
 from .distance_matrix_element_ref import DistanceMatrixElementRef
 from .distance_matrix_element_view import DistanceMatrixElementView
-from .fare_element_in_sequence_ref import FareElementInSequenceRef
 from .fare_product_ref import FareProductRef
 from .fare_structure_element_in_sequence_ref import FareStructureElementInSequenceRef
 from .fare_structure_element_ref import FareStructureElementRef
@@ -189,14 +188,6 @@ class AccessRightParameterAssignmentVersionStructure(AssignmentVersionStructure1
         default=None,
         metadata={
             "name": "AccessRightInProductRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_element_in_sequence_ref: Optional[FareElementInSequenceRef] = field(
-        default=None,
-        metadata={
-            "name": "FareElementInSequenceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }

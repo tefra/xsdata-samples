@@ -56,9 +56,6 @@ from .suspending import Suspending
 from .suspending_ref import SuspendingRef
 from .transferability import Transferability
 from .transferability_ref import TransferabilityRef
-from .usage_parameter_1 import UsageParameter1
-from .usage_parameter_2 import UsageParameter2
-from .usage_parameter_ref import UsageParameterRef
 from .usage_validity_period import UsageValidityPeriod
 from .usage_validity_period_ref import UsageValidityPeriodRef
 from .user_profile import UserProfile
@@ -228,11 +225,6 @@ class UsageParametersRelStructure(OneToManyRelationshipStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "UsageParameterRef",
-                    "type": UsageParameterRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "SalesOfferPackageEntitlementRequired",
                     "type": SalesOfferPackageEntitlementRequired,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -375,16 +367,6 @@ class UsageParametersRelStructure(OneToManyRelationshipStructure):
                 {
                     "name": "Reselling",
                     "type": Reselling,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "UsageParameter",
-                    "type": UsageParameter1,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "UsageParameter_",
-                    "type": UsageParameter2,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

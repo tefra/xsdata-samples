@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from typing import List
-from .common_frame import CommonFrame
 from .driver_schedule_frame import DriverScheduleFrame
 from .entities_in_version_rel_structure import (
     CompositeFrame,
@@ -87,11 +86,6 @@ class DataObjectsRelStructure:
                 {
                     "name": "ServiceCalendarFrame",
                     "type": ServiceCalendarFrame,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "CommonFrame",
-                    "type": CommonFrame,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

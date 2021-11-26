@@ -1,7 +1,5 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .infrastructure_link_ref import InfrastructureLinkRef
-from .infrastructure_point_ref import InfrastructurePointRef
 from .railway_link_ref import RailwayLinkRef
 from .railway_point_ref import RailwayPointRef
 from .road_link_ref import RoadLinkRef
@@ -44,14 +42,6 @@ class VehicleStoppingPlaceVersionStructure(StopPlaceSpaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    infrastructure_link_ref: Optional[InfrastructureLinkRef] = field(
-        default=None,
-        metadata={
-            "name": "InfrastructureLinkRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     wire_point_ref: Optional[WirePointRef] = field(
         default=None,
         metadata={
@@ -72,14 +62,6 @@ class VehicleStoppingPlaceVersionStructure(StopPlaceSpaceVersionStructure):
         default=None,
         metadata={
             "name": "RailwayPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    infrastructure_point_ref: Optional[InfrastructurePointRef] = field(
-        default=None,
-        metadata={
-            "name": "InfrastructurePointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         }
