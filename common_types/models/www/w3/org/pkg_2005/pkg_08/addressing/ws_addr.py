@@ -63,20 +63,6 @@ class AttributedUnsignedLongType:
     )
 
 
-class FaultCodesType(Enum):
-    TNS_INVALID_ADDRESSING_HEADER = QName("{http://www.w3.org/2005/08/addressing}InvalidAddressingHeader")
-    TNS_INVALID_ADDRESS = QName("{http://www.w3.org/2005/08/addressing}InvalidAddress")
-    TNS_INVALID_EPR = QName("{http://www.w3.org/2005/08/addressing}InvalidEPR")
-    TNS_INVALID_CARDINALITY = QName("{http://www.w3.org/2005/08/addressing}InvalidCardinality")
-    TNS_MISSING_ADDRESS_IN_EPR = QName("{http://www.w3.org/2005/08/addressing}MissingAddressInEPR")
-    TNS_DUPLICATE_MESSAGE_ID = QName("{http://www.w3.org/2005/08/addressing}DuplicateMessageID")
-    TNS_ACTION_MISMATCH = QName("{http://www.w3.org/2005/08/addressing}ActionMismatch")
-    TNS_MESSAGE_ADDRESSING_HEADER_REQUIRED = QName("{http://www.w3.org/2005/08/addressing}MessageAddressingHeaderRequired")
-    TNS_DESTINATION_UNREACHABLE = QName("{http://www.w3.org/2005/08/addressing}DestinationUnreachable")
-    TNS_ACTION_NOT_SUPPORTED = QName("{http://www.w3.org/2005/08/addressing}ActionNotSupported")
-    TNS_ENDPOINT_UNAVAILABLE = QName("{http://www.w3.org/2005/08/addressing}EndpointUnavailable")
-
-
 @dataclass
 class MetadataType:
     any_element: List[object] = field(

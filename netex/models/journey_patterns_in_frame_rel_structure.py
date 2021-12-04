@@ -3,7 +3,7 @@ from typing import List
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .dead_run_journey_pattern import DeadRunJourneyPattern
 from .journey_pattern_view import JourneyPatternView
-from .link_sequence_version_structure import JourneyPattern1
+from .link_sequence_version_structure import JourneyPattern
 from .service_journey_pattern import ServiceJourneyPattern
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -31,7 +31,7 @@ class JourneyPatternsInFrameRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "JourneyPattern",
-                    "type": JourneyPattern1,
+                    "type": JourneyPattern,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

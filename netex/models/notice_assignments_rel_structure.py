@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
 from .containment_aggregation_structure import ContainmentAggregationStructure
-from .notice_assignment_1 import NoticeAssignment1
+from .notice_assignment import NoticeAssignment
 from .notice_assignment_view import NoticeAssignmentView
 from .sales_notice_assignment import SalesNoticeAssignment
 
@@ -25,7 +25,7 @@ class NoticeAssignmentsRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "NoticeAssignment",
-                    "type": NoticeAssignment1,
+                    "type": NoticeAssignment,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

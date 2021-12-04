@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
-from .access_right_parameter_assignment_1 import AccessRightParameterAssignment1
+from .access_right_parameter_assignment import AccessRightParameterAssignment
 from .customer_purchase_parameter_assignment import CustomerPurchaseParameterAssignment
 from .frame_containment_structure import FrameContainmentStructure
 from .generic_parameter_assignment_version_structure import (
@@ -50,7 +50,7 @@ class AccessRightParameterAssignmentsInFrameRelStructure(FrameContainmentStructu
                 },
                 {
                     "name": "AccessRightParameterAssignment",
-                    "type": AccessRightParameterAssignment1,
+                    "type": AccessRightParameterAssignment,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

@@ -6,7 +6,7 @@ from .control_centre_ref import ControlCentreRef
 from .department import Department
 from .department_ref import DepartmentRef
 from .operating_department import OperatingDepartment
-from .organisation_part_1 import OrganisationPart1
+from .organisation_part import OrganisationPart
 from .organisation_part_ref import OrganisationPartRef
 from .organisational_unit_ref import OrganisationalUnitRef
 
@@ -60,7 +60,7 @@ class OrganisationPartsRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "OrganisationPart",
-                    "type": OrganisationPart1,
+                    "type": OrganisationPart,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

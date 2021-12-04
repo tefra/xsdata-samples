@@ -13,7 +13,7 @@ from .capped_discount_right_ref import CappedDiscountRightRef
 from .capping_rule_price import CappingRulePrice
 from .capping_rule_price_ref import CappingRulePriceRef
 from .capping_rule_ref import CappingRuleRef
-from .cell_ref_1 import CellRef1
+from .cell_ref import CellRef
 from .charging_policy_ref import ChargingPolicyRef
 from .class_of_use_ref import ClassOfUseRef
 from .commercial_profile_ref import CommercialProfileRef
@@ -144,7 +144,7 @@ from .subscribing_ref import SubscribingRef
 from .supplement_product_ref import SupplementProductRef
 from .suspending_ref import SuspendingRef
 from .tariff_ref import TariffRef
-from .tariff_zone_ref_1 import TariffZoneRef1
+from .tariff_zone_ref import TariffZoneRef
 from .template_service_journey_ref import TemplateServiceJourneyRef
 from .third_party_product_ref import ThirdPartyProductRef
 from .time_interval_price import TimeIntervalPrice
@@ -1089,7 +1089,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    tariff_zone_ref: Optional[TariffZoneRef1] = field(
+    tariff_zone_ref: Optional[TariffZoneRef] = field(
         default=None,
         metadata={
             "name": "TariffZoneRef",
@@ -1290,9 +1290,8 @@ class CellVersionedChildStructure(VersionedChildStructure):
 
 
 @dataclass
-class Cell1(CellVersionedChildStructure):
+class Cell(CellVersionedChildStructure):
     class Meta:
-        name = "Cell"
         namespace = "http://www.netex.org.uk/netex"
 
 
@@ -1308,7 +1307,7 @@ class CellsRelStructure(StrictContainmentAggregationStructure):
             "choices": (
                 {
                     "name": "Cell",
-                    "type": Cell1,
+                    "type": Cell,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -1493,7 +1492,7 @@ class CellsRelStructure(StrictContainmentAggregationStructure):
                 },
                 {
                     "name": "CellRef",
-                    "type": CellRef1,
+                    "type": CellRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
@@ -1694,15 +1693,14 @@ class FareTableVersionStructure(GroupOfEntitiesVersionStructure):
 
 
 @dataclass
-class FareTableInContext(FareTableVersionStructure):
+class FareTable(FareTableVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class FareTable1(FareTableVersionStructure):
+class FareTableInContext(FareTableVersionStructure):
     class Meta:
-        name = "FareTable"
         namespace = "http://www.netex.org.uk/netex"
 
 
@@ -1738,7 +1736,7 @@ class FareTablesRelStructure(StrictContainmentAggregationStructure):
                 },
                 {
                     "name": "FareTable",
-                    "type": FareTable1,
+                    "type": FareTable,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
@@ -2142,7 +2140,7 @@ class FarePricesRelStructure(StrictContainmentAggregationStructure):
                 },
                 {
                     "name": "CellRef",
-                    "type": CellRef1,
+                    "type": CellRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -2418,9 +2416,8 @@ class PriceGroupVersionStructure(GroupOfEntitiesVersionStructure):
 
 
 @dataclass
-class PriceGroup1(PriceGroupVersionStructure):
+class PriceGroup(PriceGroupVersionStructure):
     class Meta:
-        name = "PriceGroup"
         namespace = "http://www.netex.org.uk/netex"
 
 
@@ -2441,7 +2438,7 @@ class PriceGroupsRelStructure(StrictContainmentAggregationStructure):
                 },
                 {
                     "name": "PriceGroup",
-                    "type": PriceGroup1,
+                    "type": PriceGroup,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

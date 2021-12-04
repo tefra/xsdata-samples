@@ -23,7 +23,7 @@ from .service_site_ref import ServiceSiteRef
 from .site_facility_set_ref import SiteFacilitySetRef
 from .site_ref import SiteRef
 from .stop_place_ref import StopPlaceRef
-from .tariff_zone_ref_1 import TariffZoneRef1
+from .tariff_zone_ref import TariffZoneRef
 from .template_service_journey_ref import TemplateServiceJourneyRef
 from .train_number_ref import TrainNumberRef
 from .type_of_fare_product_ref import TypeOfFareProductRef
@@ -117,7 +117,7 @@ class FareTableSpecificsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    tariff_zone_ref: Optional[TariffZoneRef1] = field(
+    tariff_zone_ref: Optional[TariffZoneRef] = field(
         default=None,
         metadata={
             "name": "TariffZoneRef",

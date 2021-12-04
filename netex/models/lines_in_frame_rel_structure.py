@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from typing import List
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .flexible_line import FlexibleLine
-from .line_1 import Line1
+from .line import Line
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -20,7 +20,7 @@ class LinesInFrameRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    line: List[Line1] = field(
+    line: List[Line] = field(
         default_factory=list,
         metadata={
             "name": "Line",

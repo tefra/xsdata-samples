@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from typing import List
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .fare_zone import FareZone
-from .tariff_zone_1 import TariffZone1
+from .tariff_zone import TariffZone
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -20,7 +20,7 @@ class TariffZonesInFrameRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    tariff_zone: List[TariffZone1] = field(
+    tariff_zone: List[TariffZone] = field(
         default_factory=list,
         metadata={
             "name": "TariffZone",

@@ -137,14 +137,10 @@ from .asynchronous_server_call_point_subtypes_enum import AsynchronousServerCall
 from .asynchronous_server_call_result_point import AsynchronousServerCallResultPoint
 from .asynchronous_server_call_result_point_subtypes_enum import AsynchronousServerCallResultPointSubtypesEnum
 from .asynchronous_server_call_returns_event import AsynchronousServerCallReturnsEvent
-from .atomic_sw_component_type_subtypes_enum import AtomicSwComponentTypeSubtypesEnum
 from .atp_blueprint_subtypes_enum import AtpBlueprintSubtypesEnum
 from .atp_blueprintable_subtypes_enum import AtpBlueprintableSubtypesEnum
-from .atp_classifier_subtypes_enum import AtpClassifierSubtypesEnum
 from .atp_definition_subtypes_enum import AtpDefinitionSubtypesEnum
 from .atp_feature_subtypes_enum import AtpFeatureSubtypesEnum
-from .atp_prototype_subtypes_enum import AtpPrototypeSubtypesEnum
-from .atp_type_subtypes_enum import AtpTypeSubtypesEnum
 from .auto_collect_enum import AutoCollectEnum
 from .auto_collect_enum_simple import AutoCollectEnumSimple
 from .autosar import Autosar
@@ -569,7 +565,6 @@ from .data_format_element_reference_subtypes_enum import DataFormatElementRefere
 from .data_format_tailoring import DataFormatTailoring
 from .data_id_mode_enum import DataIdModeEnum
 from .data_id_mode_enum_simple import DataIdModeEnumSimple
-from .data_interface_subtypes_enum import DataInterfaceSubtypesEnum
 from .data_limit_kind_enum import DataLimitKindEnum
 from .data_limit_kind_enum_simple import DataLimitKindEnumSimple
 from .data_prototype_group import DataPrototypeGroup
@@ -955,7 +950,6 @@ from .diagnostic_security_level import DiagnosticSecurityLevel
 from .diagnostic_security_level_interface import DiagnosticSecurityLevelInterface
 from .diagnostic_security_level_port_mapping import DiagnosticSecurityLevelPortMapping
 from .diagnostic_security_level_subtypes_enum import DiagnosticSecurityLevelSubtypesEnum
-from .diagnostic_service_class_subtypes_enum import DiagnosticServiceClassSubtypesEnum
 from .diagnostic_service_data_identifier_port_mapping import DiagnosticServiceDataIdentifierPortMapping
 from .diagnostic_service_data_mapping import DiagnosticServiceDataMapping
 from .diagnostic_service_generic_mapping import DiagnosticServiceGenericMapping
@@ -1385,7 +1379,6 @@ from .free_format import FreeFormat
 from .full_binding_time_enum import FullBindingTimeEnum
 from .full_binding_time_enum_simple import FullBindingTimeEnumSimple
 from .function_group_set import FunctionGroupSet
-from .function_group_set_subtypes_enum import FunctionGroupSetSubtypesEnum
 from .function_group_state_in_function_group_set_instance_ref import FunctionGroupStateInFunctionGroupSetInstanceRef
 from .function_inhibition_availability_needs import FunctionInhibitionAvailabilityNeeds
 from .function_inhibition_needs import FunctionInhibitionNeeds
@@ -2287,7 +2280,6 @@ from .sender_rec_record_element_mapping import (
 )
 from .sender_receiver_composite_element_to_signal_mapping import SenderReceiverCompositeElementToSignalMapping
 from .sender_receiver_interface import SenderReceiverInterface
-from .sender_receiver_interface_subtypes_enum import SenderReceiverInterfaceSubtypesEnum
 from .sender_receiver_to_signal_group_mapping import SenderReceiverToSignalGroupMapping
 from .sender_receiver_to_signal_mapping import SenderReceiverToSignalMapping
 from .sensor_actuator_sw_component_type import SensorActuatorSwComponentType
@@ -3007,14 +2999,10 @@ __all__ = [
     "AsynchronousServerCallResultPoint",
     "AsynchronousServerCallResultPointSubtypesEnum",
     "AsynchronousServerCallReturnsEvent",
-    "AtomicSwComponentTypeSubtypesEnum",
     "AtpBlueprintSubtypesEnum",
     "AtpBlueprintableSubtypesEnum",
-    "AtpClassifierSubtypesEnum",
     "AtpDefinitionSubtypesEnum",
     "AtpFeatureSubtypesEnum",
-    "AtpPrototypeSubtypesEnum",
-    "AtpTypeSubtypesEnum",
     "AutoCollectEnum",
     "AutoCollectEnumSimple",
     "Autosar",
@@ -3435,7 +3423,6 @@ __all__ = [
     "DataFormatTailoring",
     "DataIdModeEnum",
     "DataIdModeEnumSimple",
-    "DataInterfaceSubtypesEnum",
     "DataLimitKindEnum",
     "DataLimitKindEnumSimple",
     "DataPrototypeGroup",
@@ -3821,7 +3808,6 @@ __all__ = [
     "DiagnosticSecurityLevelInterface",
     "DiagnosticSecurityLevelPortMapping",
     "DiagnosticSecurityLevelSubtypesEnum",
-    "DiagnosticServiceClassSubtypesEnum",
     "DiagnosticServiceDataIdentifierPortMapping",
     "DiagnosticServiceDataMapping",
     "DiagnosticServiceGenericMapping",
@@ -4249,7 +4235,6 @@ __all__ = [
     "FullBindingTimeEnum",
     "FullBindingTimeEnumSimple",
     "FunctionGroupSet",
-    "FunctionGroupSetSubtypesEnum",
     "FunctionGroupStateInFunctionGroupSetInstanceRef",
     "FunctionInhibitionAvailabilityNeeds",
     "FunctionInhibitionNeeds",
@@ -5143,7 +5128,6 @@ __all__ = [
     "SenderRecRecordTypeMapping",
     "SenderReceiverCompositeElementToSignalMapping",
     "SenderReceiverInterface",
-    "SenderReceiverInterfaceSubtypesEnum",
     "SenderReceiverToSignalGroupMapping",
     "SenderReceiverToSignalMapping",
     "SensorActuatorSwComponentType",

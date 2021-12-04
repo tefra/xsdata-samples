@@ -5769,14 +5769,6 @@ class TypeAtpcoglobalIndicator(Enum):
     ZZ = "ZZ"
 
 
-class TypeAlliance(Enum):
-    STAR_ALLIANCE = "StarAlliance"
-    ONE_WORLD = "OneWorld"
-    KLMNORTHWEST_ALLIANCE = "KLMNorthwestAlliance"
-    SKY_TEAM = "SkyTeam"
-    OWCODE = "OWCode"
-
-
 @dataclass
 class TypeAnchorFlightData:
     """To support Anchor flight search contain the anchor flight details.
@@ -5946,43 +5938,6 @@ class TypeConnectionIndicator(Enum):
     AVAILABILITY_AND_PRICING = "AvailabilityAndPricing"
     TURN_AROUND = "TurnAround"
     STOPOVER = "Stopover"
-
-
-class TypeCouponStatus(Enum):
-    """
-    ATA/IATA Standard coupon status.
-
-    Properties
-    ----------
-    A: Code="A" Status="Airport Controlled".
-    C: Code="C" Status="Checked In"
-    F: Code="F" Status="Flown/Used"
-    L: Code="L" Status="Boarded/Lifted"
-    O: Code="O" Status="Open"
-    P: Code="P" Status="Printed"
-    R: Code="R" Status="Refunded"
-    E: Code="E" Status="Exchanged"
-    V: Code="V" Status="Void"
-    Z: Code="Z" Status="Archived/Carrier Modified"
-    U: Code="U" Status="Unavailable"
-    S: Code="S" Status="Suspended"
-    I: Code="I" Status="Irregular Ops"
-    D: Code="D" "Deleted/Removed"
-    """
-    A = "A"
-    C = "C"
-    F = "F"
-    L = "L"
-    O = "O"
-    P = "P"
-    R = "R"
-    E = "E"
-    V = "V"
-    Z = "Z"
-    U = "U"
-    S = "S"
-    I = "I"
-    D = "D"
 
 
 @dataclass
@@ -6618,17 +6573,6 @@ class TypePurposeCode(Enum):
     BUSINESS = "Business"
     PLEASURE = "Pleasure"
     CHARTER_SERVICE = "CharterService"
-
-
-class TypeReportingType(Enum):
-    """
-    The valid reporting types.
-    """
-    AVAILABILITY_FAILURE = "AvailabilityFailure"
-    PRICE_DISCREPANCIES = "PriceDiscrepancies"
-    MARRIAGE_DISCREPANCIES = "MarriageDiscrepancies"
-    SUCCESS = "Success"
-    SCHEDULE_DISCREPANCIES = "ScheduleDiscrepancies"
 
 
 class TypeRowLocation(Enum):

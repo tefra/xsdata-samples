@@ -40,7 +40,7 @@ from .passenger_equipment_ref import PassengerEquipmentRef
 from .passenger_information_equipment_ref import PassengerInformationEquipmentRef
 from .passenger_safety_equipment_ref import PassengerSafetyEquipmentRef
 from .place_lighting_equipment_ref import PlaceLightingEquipmentRef
-from .place_ref_1 import PlaceRef1
+from .place_ref import PlaceRef
 from .place_sign_ref import PlaceSignRef
 from .queueing_equipment_ref import QueueingEquipmentRef
 from .ramp_equipment_ref import RampEquipmentRef
@@ -75,7 +75,7 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "CheckConstraint_VersionStructure"
 
-    place_ref: Optional[PlaceRef1] = field(
+    place_ref: Optional[PlaceRef] = field(
         default=None,
         metadata={
             "name": "PlaceRef",

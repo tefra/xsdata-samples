@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
-from .cell_ref_1 import CellRef1
+from .cell_ref import CellRef
 from .fulfilment_method_price_ref import FulfilmentMethodPriceRef
 from .fulfilment_method_price_versioned_child_structure import FulfilmentMethodPriceVersionedChildStructure
 from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
@@ -30,7 +30,7 @@ class FulfilmentMethodPricesRelStructure(StrictContainmentAggregationStructure):
                 },
                 {
                     "name": "CellRef",
-                    "type": CellRef1,
+                    "type": CellRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

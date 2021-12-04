@@ -6,7 +6,7 @@ from .postal_address_ref import PostalAddressRef
 from .quay_ref import QuayRef
 from .road_address_ref import RoadAddressRef
 from .scheduled_stop_point_view import ScheduledStopPointView
-from .tariff_zone_ref_1 import TariffZoneRef1
+from .tariff_zone_ref import TariffZoneRef
 from .topographic_place_view import TopographicPlaceView
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -70,7 +70,7 @@ class TravelSpecificationSummaryEndpointStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    tariff_zone_ref: List[TariffZoneRef1] = field(
+    tariff_zone_ref: List[TariffZoneRef] = field(
         default_factory=list,
         metadata={
             "name": "TariffZoneRef",

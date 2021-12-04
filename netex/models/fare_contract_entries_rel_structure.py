@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
 from .containment_aggregation_structure import ContainmentAggregationStructure
-from .fare_contract_entry_2 import FareContractEntry2
+from .fare_contract_entry import FareContractEntry
 from .fare_contract_entry_ref import FareContractEntryRef
 from .offered_travel_specification import OfferedTravelSpecification
 from .offered_travel_specification_ref import OfferedTravelSpecificationRef
@@ -78,7 +78,7 @@ class FareContractEntriesRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "FareContractEntry_",
-                    "type": FareContractEntry2,
+                    "type": FareContractEntry,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

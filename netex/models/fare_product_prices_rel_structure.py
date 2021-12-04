@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
-from .cell_ref_1 import CellRef1
+from .cell_ref import CellRef
 from .fare_product_price import FareProductPrice
 from .fare_product_price_ref import FareProductPriceRef
 from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
@@ -25,7 +25,7 @@ class FareProductPricesRelStructure(StrictContainmentAggregationStructure):
                 },
                 {
                     "name": "CellRef",
-                    "type": CellRef1,
+                    "type": CellRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

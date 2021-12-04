@@ -338,9 +338,8 @@ class GeneralSectionVersionStructure(SectionVersionStructure):
 
 
 @dataclass
-class JourneyPattern1(JourneyPatternVersionStructure):
+class JourneyPattern(JourneyPatternVersionStructure):
     class Meta:
-        name = "JourneyPattern"
         namespace = "http://www.netex.org.uk/netex"
 
 
@@ -465,7 +464,7 @@ class FareSectionVersionStructure(GeneralSectionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    journey_pattern: Optional[JourneyPattern1] = field(
+    journey_pattern: Optional[JourneyPattern] = field(
         default=None,
         metadata={
             "name": "JourneyPattern",

@@ -157,7 +157,7 @@ class PenaltyApplication(Enum):
     BEFORE = "Before"
 
 
-class PenaltyType1(Enum):
+class PenaltyType(Enum):
     REFUND = "Refund"
     EXCHANGE = "Exchange"
 
@@ -690,7 +690,7 @@ class PassengerTypeQuantityType(TravelerCountType):
                         equivalent to the ISO 4217 standard "minor
                         unit".
                 """
-                type: Optional[PenaltyType1] = field(
+                type: Optional[PenaltyType] = field(
                     default=None,
                     metadata={
                         "name": "Type",

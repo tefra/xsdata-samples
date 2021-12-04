@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from typing import List
 from .commercial_profile_eligibility import CommercialProfileEligibility
 from .containment_aggregation_structure import ContainmentAggregationStructure
-from .customer_eligibility_1 import CustomerEligibility1
+from .customer_eligibility import CustomerEligibility
 from .residential_qualification_eligibility import ResidentialQualificationEligibility
 from .user_profile_eligibility import UserProfileEligibility
 
@@ -38,7 +38,7 @@ class CustomerEligibilitiesRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    customer_eligibility: List[CustomerEligibility1] = field(
+    customer_eligibility: List[CustomerEligibility] = field(
         default_factory=list,
         metadata={
             "name": "CustomerEligibility",

@@ -788,30 +788,6 @@ class TypeRailSegmentInfo(Enum):
     SERVICES = "Services"
 
 
-class TypeRailTicketStatus(Enum):
-    """
-    Status Types for Ticket Info.
-    """
-    NOT_PRINT_READY = "Not Print Ready"
-    CAN_BE_PRINTED = "Can Be Printed"
-    QUEUED_SENT_TO_PRINT_MODULE = "Queued (sent to print module)"
-    PRINTED = "Printed"
-
-
-class TypeResponseType(Enum):
-    """Indicates the type of information to be returned in
-    RailShopModifyAPIResponse.
-
-    Values are “Schedules” or “Availability” or “Fares”.  If not sent,
-    “Fares” will be mapped if the request is for a specific rail
-    segments, otherwise “Availability” will be mapped. Provider
-    Supported RCH.
-    """
-    AVAILABILITY = "Availability"
-    SCHEDULES = "Schedules"
-    FARES = "Fares"
-
-
 class TypeTransportMode(Enum):
     """
     Enumeration of all Train Transport Modes.

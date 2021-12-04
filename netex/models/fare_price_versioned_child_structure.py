@@ -22,7 +22,7 @@ from .multilingual_string import MultilingualString
 from .parking_price_ref import ParkingPriceRef
 from .price_rule_step_results_rel_structure import PriceRuleStepResultsRelStructure
 from .price_unit_ref import PriceUnitRef
-from .pricing_rule_1 import PricingRule1
+from .pricing_rule import PricingRule
 from .pricing_rule_ref import PricingRuleRef
 from .pricing_service_ref import PricingServiceRef
 from .private_code import PrivateCode
@@ -334,7 +334,7 @@ class FarePriceVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    pricing_rule: Optional[PricingRule1] = field(
+    pricing_rule: Optional[PricingRule] = field(
         default=None,
         metadata={
             "name": "PricingRule",

@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from typing import List
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .flexible_route import FlexibleRoute
-from .route_1 import Route1
+from .route import Route
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -20,7 +20,7 @@ class RoutesInFrameRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    route: List[Route1] = field(
+    route: List[Route] = field(
         default_factory=list,
         metadata={
             "name": "Route",

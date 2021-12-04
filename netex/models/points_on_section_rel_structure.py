@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
 from .point_on_line_section import PointOnLineSection
-from .point_on_section_1 import PointOnSection1
+from .point_on_section import PointOnSection
 from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -20,7 +20,7 @@ class PointsOnSectionRelStructure(StrictContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    point_on_section: List[PointOnSection1] = field(
+    point_on_section: List[PointOnSection] = field(
         default_factory=list,
         metadata={
             "name": "PointOnSection",

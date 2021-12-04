@@ -2,8 +2,8 @@ from dataclasses import dataclass, field
 from typing import List
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .garage_point import GaragePoint
-from .parking_point_1 import ParkingPoint1
-from .relief_point_1 import ReliefPoint1
+from .parking_point import ParkingPoint
+from .relief_point import ReliefPoint
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -13,7 +13,7 @@ class ReliefPointsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "reliefPointsInFrame_RelStructure"
 
-    parking_point: List[ParkingPoint1] = field(
+    parking_point: List[ParkingPoint] = field(
         default_factory=list,
         metadata={
             "name": "ParkingPoint",
@@ -29,7 +29,7 @@ class ReliefPointsInFrameRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    relief_point: List[ReliefPoint1] = field(
+    relief_point: List[ReliefPoint] = field(
         default_factory=list,
         metadata={
             "name": "ReliefPoint",

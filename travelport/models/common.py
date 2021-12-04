@@ -1810,23 +1810,6 @@ class OptionalServiceApplicabilityType(Enum):
     OTHER = "Other"
 
 
-class OptionalServicesTypeCodeGroupType(Enum):
-    """
-    Properties
-    ----------
-    ADDITIONAL_OPTION: Identifies an additional option which has to be
-        paid for.
-    FREE_OPTION: Identifies an additional option which can be selected
-        without additional charge
-    DISCOUNT_OPTION: Identifies an option included in the base fare, and
-        can be de-selected by the user resulting in a discount in the
-        price
-    """
-    ADDITIONAL_OPTION = "AdditionalOption"
-    FREE_OPTION = "FreeOption"
-    DISCOUNT_OPTION = "DiscountOption"
-
-
 class OtherGuaranteeInfoType(Enum):
     IATA_ARC_NUMBER = "IATA/ARC Number"
     AGENCY_ADDRESS = "Agency Address"
@@ -3079,17 +3062,6 @@ class TravelerType:
     )
 
 
-class UrticketStatus(Enum):
-    """
-    Information on whether the Universal Record ticket status is Ticketed,
-    Unticketed , Partially Ticketed or Not Applicable status.
-    """
-    TICKETED = "Ticketed"
-    UNTICKETED = "Unticketed"
-    PARTIALLY_TICKETED = "Partially Ticketed"
-    NOT_APPLICABLE = "Not Applicable"
-
-
 @dataclass
 class UnitedNations:
     """
@@ -3296,70 +3268,6 @@ class TypeDistance(Enum):
     KM = "KM"
 
 
-class TypeDoorCount(Enum):
-    TWO_TO_THREE_DOORS = "TwoToThreeDoors"
-    TWO_TO_FOUR_DOORS = "TwoToFourDoors"
-    FOUR_TO_FIVE_DOORS = "FourToFiveDoors"
-
-
-class TypeElement(Enum):
-    """
-    Defines the list of available data types for modifications.
-    """
-    PAYMENT = "Payment"
-    CREDIT_CARD_AUTHORIZATION = "CreditCardAuthorization"
-    DELIVERY_INFO = "DeliveryInfo"
-    FORM_OF_PAYMENT = "FormOfPayment"
-    ACTION_STATUS = "ActionStatus"
-    OSI = "OSI"
-    GENERAL_REMARK = "GeneralRemark"
-    UNASSOCIATED_REMARK = "UnassociatedRemark"
-    ACCOUNTING_REMARK = "AccountingRemark"
-    POST_SCRIPT = "PostScript"
-    AIR_RESERVATION_AIR_SEGMENT_UPDATE = "AirReservationAirSegmentUpdate"
-    AIR_SEGMENT = "AirSegment"
-    PHONE_NUMBER = "PhoneNumber"
-    EMAIL = "Email"
-    LOYALTY_CARD = "LoyaltyCard"
-    SSR = "SSR"
-    SEAT_ASSIGNMENT = "SeatAssignment"
-    SPECIFIC_SEAT_ASSIGNMENT = "SpecificSeatAssignment"
-    AUTO_SEAT_ASSIGNMENT = "AutoSeatAssignment"
-    AIR_PRICING_INFO = "AirPricingInfo"
-    VEHICLE_SPECIAL_REQUEST = "VehicleSpecialRequest"
-    SPECIAL_EQUIPMENT = "SpecialEquipment"
-    XMLREMARK = "XMLRemark"
-    ADDRESS = "Address"
-    TICKETING_MODIFIERS = "TicketingModifiers"
-    GUARANTEE = "Guarantee"
-    DELIVERY_ADDRESS = "DeliveryAddress"
-    SERVICE_FEE_INFO = "ServiceFeeInfo"
-    LINKED_UNIVERSAL_RECORD = "LinkedUniversalRecord"
-    NAME_REMARK = "NameRemark"
-    PASSIVE_SEGMENT = "PassiveSegment"
-    PAYMENT_INFORMATION = "PaymentInformation"
-    CUSTOMER_ID = "CustomerID"
-    DRIVERS_LICENSE = "DriversLicense"
-    ASSOCIATED_REMARK = "AssociatedRemark"
-    COLLECTION_ADDRESS = "CollectionAddress"
-    HOTEL_SPECIAL_REQUEST = "HotelSpecialRequest"
-    CORPORATE_DISCOUNT_ID = "CorporateDiscountID"
-    COMMISSION_REMARK = "CommissionRemark"
-    POCKET_ITINERARY_REMARK = "PocketItineraryRemark"
-    CUSTOMIZED_NAME_DATA = "CustomizedNameData"
-    INVOICE_REMARK = "InvoiceRemark"
-    THIRD_PARTY_INFORMATION = "ThirdPartyInformation"
-    TRAVEL_COMPLIANCE = "TravelCompliance"
-    REVIEW_BOOKING = "ReviewBooking"
-    CONSOLIDATOR_REMARK = "ConsolidatorRemark"
-    BOOKING_TRAVELER = "BookingTraveler"
-    APPLIED_PROFILE = "AppliedProfile"
-    TRIP_NAME = "TripName"
-    TRAVEL_PURPOSE = "TravelPurpose"
-    BOOKING_CONFIRMATION = "BookingConfirmation"
-    BRAND = "Brand"
-
-
 class TypeElementStatus(Enum):
     """Values to specify the state of the element.
 
@@ -3422,17 +3330,6 @@ class TypeFormOfRefund(Enum):
     FORM_OF_PAYMENT = "FormOfPayment"
 
 
-class TypeFuel(Enum):
-    PETROL = "Petrol"
-    DIESEL = "Diesel"
-    HYBRID = "Hybrid"
-    ELECTRIC = "Electric"
-    LPGCNG = "LPGCNG"
-    HYDROGEN = "Hydrogen"
-    MULTI_FUEL = "MultiFuel"
-    ETHANOL = "Ethanol"
-
-
 class TypeFulfillmentIdtype(Enum):
     """
     IdentificationType to define how the customer will identify himself when
@@ -3442,26 +3339,6 @@ class TypeFulfillmentIdtype(Enum):
     CREDIT_CARD = "Credit Card"
     EURO_CHEQUE_CARD = "Euro Cheque Card"
     COLLECTION_REFERENCE = "Collection Reference"
-
-
-class TypeFulfillmentType(Enum):
-    """
-    Defines how the client wishes to receive travel documents, e.g. collect
-    ticket at a kiosk, print in agency.
-    """
-    KIOSK = "Kiosk"
-    TRAVEL_AGENCY = "Travel Agency"
-    COURIER = "Courier"
-    STANDARD_MAIL = "Standard Mail"
-    TICKETLESS = "Ticketless"
-    TICKET_OFFICE = "Ticket Office"
-    EXPRESS_MAIL = "Express Mail"
-    CORPORATE_KIOSK = "Corporate Kiosk"
-    TRAIN_STATION_SERVICE_DESK = "Train Station Service Desk"
-    DIRECT_PRINTING_OF_TICKET = "Direct Printing of Ticket"
-    PRINTING_OF_TICKET_AT_HOME = "Printing of Ticket at Home"
-    DIGITAL_PRINTING_OF_TICKET_AT_HOME = "Digital Printing of Ticket at Home"
-    RETRIEVE_TICKET_AT_EUROSTAR_IN_LONDON = "Retrieve Ticket at Eurostar in London"
 
 
 @dataclass
@@ -3489,48 +3366,6 @@ class TypeGuaranteeInformationType(Enum):
     DEPOSIT = "Deposit"
 
 
-class TypeImageSize(Enum):
-    """The image size.
-
-    T - Thumbnail
-    I - Minimum
-    S - Small
-    M - Medium
-    L - Large
-    E - Extra Large
-    G - Guaranteed
-    F - Forced
-    B - Big
-    J - Jumbo
-    O - Original
-    H - Huge
-    C - Colossal
-    """
-    T = "T"
-    I = "I"
-    S = "S"
-    M = "M"
-    L = "L"
-    E = "E"
-    G = "G"
-    F = "F"
-    B = "B"
-    J = "J"
-    O = "O"
-    H = "H"
-    C = "C"
-
-
-class TypeInvoiceRecordCategory(Enum):
-    """
-    Invoice record type: Invoice, Void, Refund, Manual.
-    """
-    INVOICE = "Invoice"
-    VOID = "Void"
-    REFUND = "Refund"
-    MANUAL = "Manual"
-
-
 class TypeItineraryCode(Enum):
     """
     Properties
@@ -3540,17 +3375,6 @@ class TypeItineraryCode(Enum):
     """
     INTERNATIONAL = "International"
     DOMESTIC = "Domestic"
-
-
-class TypeItineraryType(Enum):
-    """
-    Properties
-    ----------
-    NEW: Indicates the itinerary is New
-    ORIGINAL: Indicates the itinerary is Original
-    """
-    NEW = "New"
-    ORIGINAL = "Original"
 
 
 @dataclass
@@ -3571,17 +3395,6 @@ class TypeKeyBasedReference:
     )
 
 
-class TypeLicenseCode(Enum):
-    """
-    The type of license assigned to an agent.
-    """
-    STANDARD = "Standard"
-    STANDARD_PLUS = "Standard Plus"
-    ENTERPRISE = "Enterprise"
-    TE_ONLY = "TE Only"
-    U_API = "uAPI"
-
-
 class TypeLoggingLevel(Enum):
     """
     The type of various Logging levels.
@@ -3592,34 +3405,6 @@ class TypeLoggingLevel(Enum):
     WARN = "WARN"
     ERROR = "ERROR"
     FATAL = "FATAL"
-
-
-class TypeMcofeeType(Enum):
-    """
-    The available Airline service fee types for an MCO.
-    """
-    CURRENTLY = "CURRENTLY"
-    UNDEFINED = "UNDEFINED"
-
-
-class TypeMcostatus(Enum):
-    """
-    The available status codes for an MCO.
-    """
-    OPEN = "Open"
-    USED = "Used"
-    REFUNDED = "Refunded"
-    VOIDED = "Voided"
-    EXPIRED = "Expired"
-
-
-class TypeMcotype(Enum):
-    """
-    The available types for an MCO.
-    """
-    AGENCY_SERVICE_FEE = "AgencyServiceFee"
-    EXCHANGE_RESIDUAL = "ExchangeResidual"
-    AIRLINE_SERVICE_FEE = "AirlineServiceFee"
 
 
 @dataclass
@@ -3678,13 +3463,6 @@ class TypeOtasubKey:
             "type": "Attribute",
         }
     )
-
-
-class TypeOtherImageSize(Enum):
-    """
-    Other unknown image sizes.
-    """
-    X = "X"
 
 
 class TypePolicy(Enum):
@@ -3765,61 +3543,10 @@ class TypeProduct(Enum):
     OTHER = "Other"
 
 
-class TypeProfileApplicability(Enum):
-    """
-    The applicability of the profile or profile template value.
-    """
-    ALWAYS = "Always"
-    OPTIONAL = "Optional"
-    NEVER = "Never"
-
-
-class TypeProfileEntityStatus(Enum):
-    """Status of the given profile/entity.
-
-    Any profile with a status other than Active cannot perform most
-    transactions.
-    """
-    ACTIVE = "Active"
-    INACTIVE = "Inactive"
-
-
-class TypeProfileEntityStatusWithDelete(Enum):
-    """
-    Specify whether the change is to update or delete the field.
-    """
-    DELETED = "Deleted"
-    ACTIVE = "Active"
-    INACTIVE = "Inactive"
-
-
 class TypeProfileLevel(Enum):
     """
     The type of the profile or profile template.
     """
-    AGENCY = "Agency"
-    BRANCH = "Branch"
-    BRANCH_GROUP = "BranchGroup"
-    AGENT = "Agent"
-    ACCOUNT = "Account"
-    TRAVELER_GROUP = "TravelerGroup"
-    TRAVELER = "Traveler"
-
-
-class TypeProfileLevelWithCredential(Enum):
-    """
-    The "profile level" used for association of workflow etc.
-    """
-    AGENCY = "Agency"
-    BRANCH = "Branch"
-    AGENT = "Agent"
-
-
-class TypeProfileLevelWithSystem(Enum):
-    """
-    The "profile level" used for association of workflow etc.
-    """
-    SYSTEM = "System"
     AGENCY = "Agency"
     BRANCH = "Branch"
     BRANCH_GROUP = "BranchGroup"
@@ -3874,13 +3601,6 @@ class TypeProviderReservationDetail:
     )
 
 
-class TypeProviderToken(Enum):
-    """
-    List of known hosts with terminal access.
-    """
-    SABRE = "Sabre"
-
-
 class TypePurchaseWindow(Enum):
     """
     The purchase windows available for merchandising service.
@@ -3890,37 +3610,6 @@ class TypePurchaseWindow(Enum):
     CHECK_IN_ONLY = "CheckInOnly"
     ANYTIME = "Anytime"
     POST_TICKETING = "PostTicketing"
-
-
-class TypeQueueModifyAction(Enum):
-    """
-    Queue action: remove, requeue, move, add, unlock.
-    """
-    REMOVE = "Remove"
-    REQUEUE = "Requeue"
-    MOVE = "Move"
-    ADD = "Add"
-    UNLOCK = "Unlock"
-
-
-class TypeRateCategory(Enum):
-    """
-    The category of the rate (Best, etc)
-    """
-    ASSOCIATION = "Association"
-    BUSINESS = "Business"
-    CORPORATE = "Corporate"
-    GOVERNMENT = "Government"
-    INDUSTRY = "Industry"
-    PACKAGE = "Package"
-    INCLUSIVE = "Inclusive"
-    PROMOTIONAL = "Promotional"
-    CREDENTIAL = "Credential"
-    STANDARD = "Standard"
-    CONSORTIUM = "Consortium"
-    CONVENTION = "Convention"
-    NEGOTIATED = "Negotiated"
-    PREPAY = "Prepay"
 
 
 @dataclass
@@ -3952,42 +3641,6 @@ class TypeRateDescription:
             "type": "Attribute",
         }
     )
-
-
-class TypeRateGuarantee(Enum):
-    """
-    The guarantee for this rate.
-    """
-    RATE_GUARANTEED = "Rate Guaranteed"
-    RATE_QUOTED = "Rate Quoted"
-    AGENT_ENTERED = "Agent Entered"
-
-
-class TypeRateTimePeriod(Enum):
-    """
-    The period for the rate code (daily, weekly, etc)
-    """
-    HOURLY = "Hourly"
-    DAILY = "Daily"
-    WEEKLY = "Weekly"
-    MONTHLY = "Monthly"
-    WEEKEND_DAY = "WeekendDay"
-    OTHER = "Other"
-    PACKAGE = "Package"
-    BUNDLE = "Bundle"
-    TOTAL = "Total"
-
-
-class TypeRecordStatus(Enum):
-    """
-    Information on whether the Universal Record is Current, Past , Cancelled or
-    Any status.
-    """
-    ALL = "All"
-    PAST = "Past"
-    CURRENT = "Current"
-    CANCELED = "Canceled"
-    UNKNOWN = "Unknown"
 
 
 @dataclass
@@ -4086,17 +3739,6 @@ class TypeReqSeat(Enum):
     MIDDLE = "Middle"
 
 
-class TypeReserveRequirement(Enum):
-    """
-    Type of payment required to reserve travel i.e. Hotel Reservation
-    requirement.
-    """
-    DEPOSIT = "Deposit"
-    GUARANTEE = "Guarantee"
-    PREPAYMENT = "Prepayment"
-    OTHER = "Other"
-
-
 class TypeResidency(Enum):
     """
     The passenger residency type.Residence Type can be Employee, National or
@@ -4152,17 +3794,6 @@ class TypeSegmentRef:
             "required": True,
         }
     )
-
-
-class TypeSource(Enum):
-    """
-    The source/level at which is item is defined (available through
-    inheritance)
-    """
-    AGENCY = "Agency"
-    BRANCH_GROUP = "BranchGroup"
-    BRANCH = "Branch"
-    AGENT = "Agent"
 
 
 @dataclass
@@ -4311,120 +3942,6 @@ class TypeTimeRange:
             "required": True,
         }
     )
-
-
-class TypeTrinary(Enum):
-    """
-    Extension of boolean, that allows for unknown values.
-    """
-    TRUE = "true"
-    FALSE = "false"
-    UNKNOWN = "unknown"
-
-
-class TypeVehicleCategory(Enum):
-    """
-    The category of vehicle.
-    """
-    CAR = "Car"
-    VAN = "Van"
-    SUV = "SUV"
-    CONVERTIBLE = "Convertible"
-    TRUCK = "Truck"
-    STATION_WAGON = "StationWagon"
-    PICKUP = "Pickup"
-    ALL_TERRAIN = "AllTerrain"
-    RECREATIONAL = "Recreational"
-    SPORT = "Sport"
-    SPECIAL = "Special"
-    EXTENDED_CAB_PICKUP = "ExtendedCabPickup"
-    REGULAR_CAB_PICKUP = "RegularCabPickup"
-    SPECIAL_OFFER = "SpecialOffer"
-    COUPE = "Coupe"
-    MONOSPACE = "Monospace"
-    ROADSTER = "Roadster"
-    CROSSOVER = "Crossover"
-    MOTORCYCLE = "Motorcycle"
-    LIMO = "Limo"
-    MOTORHOME = "Motorhome"
-    TWO_WHEEL_VEHICLE = "TwoWheelVehicle"
-    COMMERCIAL_VAN_OR_TRUCK = "CommercialVanOrTruck"
-
-
-class TypeVehicleClass(Enum):
-    """
-    The class of vehicle.
-    """
-    MINI = "Mini"
-    ECONOMY = "Economy"
-    COMPACT = "Compact"
-    INTERMEDIATE = "Intermediate"
-    STANDARD = "Standard"
-    FULLSIZE = "Fullsize"
-    LUXURY = "Luxury"
-    PREMIUM = "Premium"
-    SPECIAL = "Special"
-    MINI_ELITE = "MiniElite"
-    ECONOMY_ELITE = "EconomyElite"
-    COMPACT_ELITE = "CompactElite"
-    INTERMEDIATE_ELITE = "IntermediateElite"
-    STANDARD_ELITE = "StandardElite"
-    FULLSIZE_ELITE = "FullsizeElite"
-    PREMIUM_ELITE = "PremiumElite"
-    LUXURY_ELITE = "LuxuryElite"
-    OVERSIZE = "Oversize"
-    SUBCOMPACT = "Subcompact"
-    MINIVAN = "Minivan"
-    TWELVE_PASSENGER_VAN = "TwelvePassengerVan"
-    MOVING_VAN = "MovingVan"
-    FIFTEEN_PASSENGER_VAN = "FifteenPassengerVan"
-    CARGO_VAN = "CargoVan"
-    TWELVE_FOOT_TRUCK = "TwelveFootTruck"
-    TWENTY_FOOT_TRUCK = "TwentyFootTruck"
-    TWENTYFOUR_FOOT_TRUCK = "TwentyfourFootTruck"
-    TWENTYSIX_FOOT_TRUCK = "TwentysixFootTruck"
-    MOPED = "Moped"
-    STRETCH = "Stretch"
-    REGULAR = "Regular"
-    UNIQUE = "Unique"
-    EXOTIC = "Exotic"
-    SMALL_OR_MEDIUM_TRUCK = "SmallOrMediumTruck"
-    LARGE_TRUCK = "LargeTruck"
-    SMALL_SUV = "SmallSUV"
-    MEDIUM_SUV = "MediumSUV"
-    LARGE_SUV = "LargeSUV"
-    EXOTIC_SUV = "ExoticSUV"
-    FOUR_WHEEL_DRIVE = "FourWheelDrive"
-
-
-class TypeVehicleLocation(Enum):
-    """
-    The type of location requested, such as resort, city center.
-    """
-    TERMINAL = "Terminal"
-    SHUTTLE_ON_AIRPORT = "ShuttleOnAirport"
-    SHUTTLE_OFF_AIRPORT = "ShuttleOffAirport"
-    RAILWAY_STATION = "RailwayStation"
-    HOTEL = "Hotel"
-    CAR_DEALER = "CarDealer"
-    CITY_CENTER_DOWNTOWN = "CityCenterDowntown"
-    EAST_OF_CITY_CENTER = "EastOfCityCenter"
-    SOUTH_OF_CITY_CENTER = "SouthOfCityCenter"
-    WEST_OF_CITY_CENTER = "WestOfCityCenter"
-    NORTH_OF_CITY_CENTER = "NorthOfCityCenter"
-    PORT_OR_FERRY = "PortOrFerry"
-    NEAR_RESORT = "NearResort"
-    AIRPORT = "Airport"
-    UNKNOWN = "Unknown"
-
-
-class TypeVehicleTransmission(Enum):
-    AUTOMATIC = "Automatic"
-    AUTOMATIC4_WD = "Automatic4WD"
-    AUTOMATIC_AWD = "AutomaticAWD"
-    MANUAL = "Manual"
-    MANUAL4_WD = "Manual4WD"
-    MANUAL_AWD = "ManualAWD"
 
 
 @dataclass

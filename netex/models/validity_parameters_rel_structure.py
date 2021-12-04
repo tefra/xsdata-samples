@@ -60,7 +60,7 @@ from .stop_place_entrance_ref import StopPlaceEntranceRef
 from .stop_place_ref import StopPlaceRef
 from .stop_place_space_ref import StopPlaceSpaceRef
 from .stop_place_vehicle_entrance_ref import StopPlaceVehicleEntranceRef
-from .tariff_zone_ref_1 import TariffZoneRef1
+from .tariff_zone_ref import TariffZoneRef
 from .template_service_journey_ref import TemplateServiceJourneyRef
 from .topographic_place_ref import TopographicPlaceRef
 from .train_component_label_assignment_ref import TrainComponentLabelAssignmentRef
@@ -205,7 +205,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequential": True,
         }
     )
-    tariff_zone_ref: List[TariffZoneRef1] = field(
+    tariff_zone_ref: List[TariffZoneRef] = field(
         default_factory=list,
         metadata={
             "name": "TariffZoneRef",

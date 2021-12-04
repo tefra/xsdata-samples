@@ -1,7 +1,0 @@
-from enum import Enum
-
-__NAMESPACE__ = "http://autosar.org/schema/r4.0"
-
-
-class FunctionGroupSetSubtypesEnum(Enum):
-    FUNCTION_GROUP_SET = "FUNCTION-GROUP-SET"

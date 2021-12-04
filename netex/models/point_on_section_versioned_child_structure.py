@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from .activation_link_ref import ActivationLinkRef
-from .activation_point_1 import ActivationPoint1
+from .activation_point import ActivationPoint
 from .activation_point_ref import ActivationPointRef
 from .beacon_point import BeaconPoint
 from .beacon_point_ref import BeaconPointRef
@@ -12,7 +12,7 @@ from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
 from .garage_point import GaragePoint
 from .garage_point_ref import GaragePointRef
 from .line_link_ref import LineLinkRef
-from .parking_point_1 import ParkingPoint1
+from .parking_point import ParkingPoint
 from .parking_point_ref import ParkingPointRef
 from .path_junction import PathJunction
 from .path_link_ref import PathLinkRef
@@ -22,7 +22,7 @@ from .point_ref import PointRef
 from .railway_junction import RailwayJunction
 from .railway_link_ref import RailwayLinkRef
 from .railway_point_ref import RailwayPointRef
-from .relief_point_1 import ReliefPoint1
+from .relief_point import ReliefPoint
 from .relief_point_ref import ReliefPointRef
 from .road_junction import RoadJunction
 from .road_link_ref import RoadLinkRef
@@ -34,7 +34,7 @@ from .scheduled_stop_point import ScheduledStopPoint
 from .scheduled_stop_point_ref import ScheduledStopPointRef
 from .service_link_ref import ServiceLinkRef
 from .timing_link_ref import TimingLinkRef
-from .timing_point_1 import TimingPoint1
+from .timing_point import TimingPoint
 from .timing_point_ref import TimingPointRef
 from .traffic_control_point import TrafficControlPoint
 from .traffic_control_point_ref import TrafficControlPointRef
@@ -210,7 +210,7 @@ class PointOnSectionVersionedChildStructure(PointInLinkSequenceVersionedChildStr
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    parking_point: Optional[ParkingPoint1] = field(
+    parking_point: Optional[ParkingPoint] = field(
         default=None,
         metadata={
             "name": "ParkingPoint",
@@ -226,7 +226,7 @@ class PointOnSectionVersionedChildStructure(PointInLinkSequenceVersionedChildStr
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    relief_point: Optional[ReliefPoint1] = field(
+    relief_point: Optional[ReliefPoint] = field(
         default=None,
         metadata={
             "name": "ReliefPoint",
@@ -234,7 +234,7 @@ class PointOnSectionVersionedChildStructure(PointInLinkSequenceVersionedChildStr
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    timing_point: Optional[TimingPoint1] = field(
+    timing_point: Optional[TimingPoint] = field(
         default=None,
         metadata={
             "name": "TimingPoint",
@@ -282,7 +282,7 @@ class PointOnSectionVersionedChildStructure(PointInLinkSequenceVersionedChildStr
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    activation_point: Optional[ActivationPoint1] = field(
+    activation_point: Optional[ActivationPoint] = field(
         default=None,
         metadata={
             "name": "ActivationPoint",

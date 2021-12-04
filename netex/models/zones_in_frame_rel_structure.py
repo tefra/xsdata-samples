@@ -4,7 +4,7 @@ from .access_space import AccessSpace
 from .access_zone import AccessZone
 from .addressable_place import AddressablePlace
 from .administrative_zone_version_structure import (
-    AdministrativeZone1,
+    AdministrativeZone,
     TransportAdministrativeZone,
 )
 from .boarding_position import BoardingPosition
@@ -38,7 +38,7 @@ from .stop_area import StopArea
 from .stop_place import StopPlace
 from .stop_place_entrance import StopPlaceEntrance
 from .stop_place_vehicle_entrance import StopPlaceVehicleEntrance
-from .tariff_zone_1 import TariffZone1
+from .tariff_zone import TariffZone
 from .topographic_place import TopographicPlace
 from .vehicle_stopping_place import VehicleStoppingPlace
 from .vehicle_stopping_position import VehicleStoppingPosition
@@ -332,7 +332,7 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    administrative_zone: List[AdministrativeZone1] = field(
+    administrative_zone: List[AdministrativeZone] = field(
         default_factory=list,
         metadata={
             "name": "AdministrativeZone",
@@ -348,7 +348,7 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    tariff_zone: List[TariffZone1] = field(
+    tariff_zone: List[TariffZone] = field(
         default_factory=list,
         metadata={
             "name": "TariffZone",

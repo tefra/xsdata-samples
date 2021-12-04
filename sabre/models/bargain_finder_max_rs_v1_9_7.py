@@ -12,7 +12,7 @@ from sabre.models.bargain_finder_max_common_types_v1_9_7 import (
     OtaPayloadStdAttributesTarget,
     OtaPayloadStdAttributesTransactionStatusCode,
     PassengerTypeQuantityType,
-    PenaltyType1,
+    PenaltyType,
     StayRestrictionsType,
 )
 
@@ -768,18 +768,6 @@ class PtcfareBreakdownTypeReissueExchange(Enum):
 class PenaltyApplicability(Enum):
     AFTER = "After"
     BEFORE = "Before"
-
-
-class PenaltyType2(Enum):
-    REFUND = "Refund"
-    EXCHANGE = "Exchange"
-
-
-class PollingStatusType(Enum):
-    RECEIVED = "received"
-    IN_PROGRESS = "in progress"
-    COMPLETE = "complete"
-    ERROR = "error"
 
 
 @dataclass
@@ -2836,7 +2824,7 @@ class FareType:
                     "namespace": "http://www.opentravel.org/OTA/2003/05",
                 }
             )
-            type: Optional[PenaltyType1] = field(
+            type: Optional[PenaltyType] = field(
                 default=None,
                 metadata={
                     "name": "Type",

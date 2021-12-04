@@ -130,9 +130,8 @@ class AdministrativeZoneVersionStructure(ZoneVersionStructure):
 
 
 @dataclass
-class AdministrativeZone1(AdministrativeZoneVersionStructure):
+class AdministrativeZone(AdministrativeZoneVersionStructure):
     class Meta:
-        name = "AdministrativeZone"
         namespace = "http://www.netex.org.uk/netex"
 
 
@@ -180,7 +179,7 @@ class AdministrativeZonesRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "AdministrativeZone",
-                    "type": AdministrativeZone1,
+                    "type": AdministrativeZone,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

@@ -7,11 +7,6 @@ class LangValue(Enum):
     VALUE = ""
 
 
-class SpaceValue(Enum):
-    DEFAULT = "default"
-    PRESERVE = "preserve"
-
-
 class OtherHeiIdValue(Enum):
     """
     :cvar PREVIOUS_SCHAC: A previously used SCHAC identifier. Servers
@@ -88,22 +83,6 @@ class Empty:
     """
     class Meta:
         target_namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
-
-
-class Gender(Enum):
-    """ISO/IEC 5218 code of human sex.
-
-    https://en.wikipedia.org/wiki/ISO/IEC_5218
-
-    :cvar VALUE_0: not known
-    :cvar VALUE_1: male
-    :cvar VALUE_2: female
-    :cvar VALUE_9: not applicable
-    """
-    VALUE_0 = 0
-    VALUE_1 = 1
-    VALUE_2 = 2
-    VALUE_9 = 9
 
 
 @dataclass

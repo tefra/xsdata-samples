@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
-from .cell_ref_1 import CellRef1
+from .cell_ref import CellRef
 from .geographical_interval_price_ref import GeographicalIntervalPriceRef
 from .geographical_interval_price_versioned_child_structure import GeographicalIntervalPriceVersionedChildStructure
 from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
@@ -30,7 +30,7 @@ class GeographicalIntervalPricesRelStructure(StrictContainmentAggregationStructu
                 },
                 {
                     "name": "CellRef",
-                    "type": CellRef1,
+                    "type": CellRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

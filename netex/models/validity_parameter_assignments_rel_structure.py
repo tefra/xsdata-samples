@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
-from .access_right_parameter_assignment_1 import AccessRightParameterAssignment1
+from .access_right_parameter_assignment import AccessRightParameterAssignment
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .customer_purchase_parameter_assignment import CustomerPurchaseParameterAssignment
 from .generic_parameter_assignment_version_structure import (
@@ -58,7 +58,7 @@ class ValidityParameterAssignmentsRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    access_right_parameter_assignment: List[AccessRightParameterAssignment1] = field(
+    access_right_parameter_assignment: List[AccessRightParameterAssignment] = field(
         default_factory=list,
         metadata={
             "name": "AccessRightParameterAssignment",

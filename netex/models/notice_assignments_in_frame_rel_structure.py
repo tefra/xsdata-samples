@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
 from .containment_aggregation_structure import ContainmentAggregationStructure
-from .notice_assignment_1 import NoticeAssignment1
+from .notice_assignment import NoticeAssignment
 from .sales_notice_assignment import SalesNoticeAssignment
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -20,7 +20,7 @@ class NoticeAssignmentsInFrameRelStructure(ContainmentAggregationStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    notice_assignment: List[NoticeAssignment1] = field(
+    notice_assignment: List[NoticeAssignment] = field(
         default_factory=list,
         metadata={
             "name": "NoticeAssignment",

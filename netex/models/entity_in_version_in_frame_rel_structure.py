@@ -34,7 +34,7 @@ from .cancelling_ref import CancellingRef
 from .capped_discount_right_ref import CappedDiscountRightRef
 from .capping_rule_price_ref import CappingRulePriceRef
 from .capping_rule_ref import CappingRuleRef
-from .cell_ref_1 import CellRef1
+from .cell_ref import CellRef
 from .charging_moment_ref import ChargingMomentRef
 from .charging_policy_ref import ChargingPolicyRef
 from .class_of_use_ref import ClassOfUseRef
@@ -231,7 +231,7 @@ from .path_junction_ref import PathJunctionRef
 from .path_link_ref import PathLinkRef
 from .path_link_ref_by_value import PathLinkRefByValue
 from .penalty_policy_ref import PenaltyPolicyRef
-from .place_ref_1 import PlaceRef1
+from .place_ref import PlaceRef
 from .point_of_interest_classification_ref import PointOfInterestClassificationRef
 from .point_of_interest_entrance_ref import PointOfInterestEntranceRef
 from .point_of_interest_hierarchy_ref import PointOfInterestHierarchyRef
@@ -344,7 +344,7 @@ from .suspending_ref import SuspendingRef
 from .target_passing_time_ref import TargetPassingTimeRef
 from .tariff_object_ref import TariffObjectRef
 from .tariff_ref import TariffRef
-from .tariff_zone_ref_1 import TariffZoneRef1
+from .tariff_zone_ref import TariffZoneRef
 from .template_service_journey_ref import TemplateServiceJourneyRef
 from .third_party_product_ref import ThirdPartyProductRef
 from .time_demand_profile_ref import TimeDemandProfileRef
@@ -627,7 +627,7 @@ class EntityInVersionInFrameRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "CellRef",
-                    "type": CellRef1,
+                    "type": CellRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -2302,7 +2302,7 @@ class EntityInVersionInFrameRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "PlaceRef",
-                    "type": PlaceRef1,
+                    "type": PlaceRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -2332,7 +2332,7 @@ class EntityInVersionInFrameRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "TariffZoneRef",
-                    "type": TariffZoneRef1,
+                    "type": TariffZoneRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

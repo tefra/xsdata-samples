@@ -78,7 +78,7 @@ class DayTypesRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "DayType",
-                    "type": Type["DayType1"],
+                    "type": Type["DayType"],
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
@@ -173,7 +173,7 @@ class ValidityConditionsRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "ValidityCondition",
-                    "type": Type["ValidityCondition1"],
+                    "type": Type["ValidityCondition"],
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
@@ -596,9 +596,8 @@ class AlternativeText(AlternativeTextVersionedChildStructure):
 
 
 @dataclass
-class DayType1(DayTypeVersionStructure):
+class DayType(DayTypeVersionStructure):
     class Meta:
-        name = "DayType"
         namespace = "http://www.netex.org.uk/netex"
 
 
@@ -661,9 +660,8 @@ class ValidBetweenVersionStructure(ValidityConditionVersionStructure):
 
 
 @dataclass
-class ValidityCondition1(ValidityConditionVersionStructure):
+class ValidityCondition(ValidityConditionVersionStructure):
     class Meta:
-        name = "ValidityCondition"
         namespace = "http://www.netex.org.uk/netex"
 
 

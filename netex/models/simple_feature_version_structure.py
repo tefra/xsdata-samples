@@ -5,7 +5,7 @@ from .administrative_zone_ref import AdministrativeZoneRef
 from .fare_zone_ref import FareZoneRef
 from .group_of_points_version_structure import GroupOfPointsVersionStructure
 from .stop_area_ref import StopAreaRef
-from .tariff_zone_ref_1 import TariffZoneRef1
+from .tariff_zone_ref import TariffZoneRef
 from .transport_administrative_zone_ref import TransportAdministrativeZoneRef
 from .zone_ref import ZoneRef
 
@@ -57,7 +57,7 @@ class SimpleFeatureVersionStructure(GroupOfPointsVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    tariff_zone_ref: Optional[TariffZoneRef1] = field(
+    tariff_zone_ref: Optional[TariffZoneRef] = field(
         default=None,
         metadata={
             "name": "TariffZoneRef",

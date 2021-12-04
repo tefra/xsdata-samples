@@ -1,6 +1,5 @@
 from ewp.models.catalogue import (
     Empty,
-    Gender,
     HttpwithOptionalLang,
     ManifestApiEntryBase,
     MultilineStringWithOptionalLang,
@@ -16,13 +15,11 @@ from ewp.models.catalogue import (
     Host,
     LangValue,
     Manifest,
-    SpaceValue,
     SuccessUserMessage,
 )
 
 __all__ = [
     "Empty",
-    "Gender",
     "HttpwithOptionalLang",
     "ManifestApiEntryBase",
     "MultilineStringWithOptionalLang",
@@ -38,6 +35,5 @@ __all__ = [
     "Host",
     "LangValue",
     "Manifest",
-    "SpaceValue",
     "SuccessUserMessage",
 ]

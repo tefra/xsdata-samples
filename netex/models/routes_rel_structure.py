@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
 from .containment_aggregation_structure import ContainmentAggregationStructure
-from .route_1 import Route1
+from .route import Route
 from .route_ref import RouteRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -24,7 +24,7 @@ class RoutesRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "Route",
-                    "type": Route1,
+                    "type": Route,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

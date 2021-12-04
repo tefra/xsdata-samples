@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
-from .cell_ref_1 import CellRef1
+from .cell_ref import CellRef
 from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
 from .validable_element_price import ValidableElementPrice
 from .validable_element_price_ref import ValidableElementPriceRef
@@ -30,7 +30,7 @@ class ValidableElementPricesRelStructure(StrictContainmentAggregationStructure):
                 },
                 {
                     "name": "CellRef",
-                    "type": CellRef1,
+                    "type": CellRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

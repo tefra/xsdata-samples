@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .cell_ref_1 import CellRef1
+from .cell_ref import CellRef
 from .fare_price_versioned_child_structure import FarePriceVersionedChildStructure
 from .geographical_unit_price_ref import GeographicalUnitPriceRef
 from .geographical_unit_ref import GeographicalUnitRef
@@ -53,7 +53,7 @@ class GeographicalUnitPricesRelStructure(StrictContainmentAggregationStructure):
                 },
                 {
                     "name": "CellRef",
-                    "type": CellRef1,
+                    "type": CellRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
