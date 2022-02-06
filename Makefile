@@ -1,91 +1,98 @@
 OUTPUT_FORMAT ?= dataclasses
 
 build-amadeus: schema = amadeus/schemas
-build-sabre: schema = sabre/schemas
-build-travelport: schema = travelport/schemas/air_v48_0/Air.wsdl
+build-autosar: schema = autosar/schemas/AUTOSAR_00049_COMPACT.xsd
+build-bpmn: schema = bpmn/schemas/BPMN20.xsd
 build-common_types: schema = common_types/Common-Types/src/main/resources/schemas/nhinc/hl7
-build-reqif: schema = reqif/schemas/reqif.xsd
-build-npo: schema = npo/schemas/rs.poms.omroep.nl/v1/schema/api_2013.xsd
 build-datexii: schema = datexii/schemas
 build-ewp: schema = ewp/schemas/ewp-specs-api-discovery/stable-v5/manifest.xsd
-build-ubl: schema = ubl/schemas/maindoc
 build-netex: schema = netex/NeTEx/xsd/NeTEx_publication.xsd
+build-npo: schema = npo/schemas/rs.poms.omroep.nl/v1/schema/api_2013.xsd
+build-reqif: schema = reqif/schemas/reqif.xsd
+build-sabre: schema = sabre/schemas
 build-spacex: schema = spacex/launches.json
-build-autosar: schema = autosar/schemas/AUTOSAR_00049_COMPACT.xsd
+build-travelport: schema = travelport/schemas/air_v48_0/Air.wsdl
+build-ubl: schema = ubl/schemas/maindoc
 
 builds = $\
 	build-amadeus $\
-	build-sabre $\
-	build-travelport $\
+	build-autosar $\
+	build-bpmn $\
 	build-common_types $\
-	build-reqif $\
-	build-npo $\
 	build-datexii $\
 	build-ewp $\
-	build-ubl $\
+	build-netex $\
+	build-npo $\
+	build-reqif $\
+	build-sabre $\
 	build-spacex $\
-	build-autosar $\
-	build-netex
+	build-travelport $\
+	build-ubl
 
 tests = $\
 	test-amadeus $\
-	test-sabre $\
-	test-travelport $\
-	test-common_types $\
-	test-reqif $\
-	test-npo $\
-	test-datexii $\
-	test-ewp $\
-	test-ubl $\
-	test-defxml $\
-	test-spacex $\
 	test-autosar $\
-	test-netex
+	test-bpmn $\
+	test-common_types $\
+	test-datexii $\
+	test-defxml $\
+	test-ewp $\
+	test-netex $\
+	test-npo $\
+	test-reqif $\
+	test-sabre $\
+	test-spacex $\
+	test-travelport $\
+	test-ubl
 
 mypies = $\
 	mypy-amadeus $\
-	mypy-sabre $\
-	mypy-travelport $\
-	mypy-common_types $\
-	mypy-reqif $\
-	mypy-npo $\
-	mypy-datexii $\
-	mypy-ewp $\
-	mypy-ubl $\
-	mypy-defxml $\
-	mypy-spacex $\
 	mypy-autosar $\
-	mypy-netex
+	mypy-bpmn $\
+	mypy-common_types $\
+	mypy-datexii $\
+	mypy-defxml $\
+	mypy-ewp $\
+	mypy-netex $\
+	mypy-npo $\
+	mypy-reqif $\
+	mypy-sabre $\
+	mypy-spacex $\
+	mypy-travelport $\
+	mypy-ubl
 
 init-configs = $\
 	init-config-amadeus $\
-	init-config-sabre $\
-	init-config-travelport $\
-	init-config-common_types $\
-	init-config-reqif $\
-	init-config-npo $\
-	init-config-datexii $\
-	init-config-ewp $\
-	init-config-ubl $\
-	init-config-spacex $\
 	init-config-autosar $\
-	init-config-netex
+	init-config-bpmn $\
+	init-config-common_types $\
+	init-config-datexii $\
+	init-config-defxml $\
+	init-config-ewp $\
+	init-config-netex $\
+	init-config-npo $\
+	init-config-reqif $\
+	init-config-sabre $\
+	init-config-spacex $\
+	init-config-travelport $\
+	init-config-ubl
 
 all: $(builds) $(tests) $(mypies)
 
 amadeus: build-amadeus test-amadeus mypy-amadeus
-sabre: build-sabre test-sabre mypy-sabre
-travelport: build-travelport test-travelport mypy-travelport
-common_types: build-common_types test-common_types mypy-common_types
-reqif: build-reqif test-reqif mypy-reqif
-npo: build-npo test-npo mypy-npo
-datexii: build-datexii test-datexii mypy-datexii
-ewp: build-ewp test-ewp mypy-ewp
-ubl: build-ubl test-ubl mypy-ubl
-netex: build-netex test-netex mypy-netex
-defxml: test-defxml mypy-defxml
-spacex: build-spacex test-spacex mypy-spacex
 autosar: build-autosar test-autosar mypy-autosar
+bpmn: build-bpmn test-bpmn mypy-bpmn
+common_types: build-common_types test-common_types mypy-common_types
+datexii: build-datexii test-datexii mypy-datexii
+defxml: test-defxml mypy-defxml
+ewp: build-ewp test-ewp mypy-ewp
+netex: build-netex test-netex mypy-netex
+npo: build-npo test-npo mypy-npo
+reqif: build-reqif test-reqif mypy-reqif
+sabre: build-sabre test-sabre mypy-sabre
+spacex: build-spacex test-spacex mypy-spacex
+travelport: build-travelport test-travelport mypy-travelport
+ubl: build-ubl test-ubl mypy-ubl
 
 build: $(builds)
 test: $(tests)
