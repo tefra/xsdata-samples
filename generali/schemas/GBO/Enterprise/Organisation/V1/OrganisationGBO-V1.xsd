@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--(c) Reply Limited. All rights reserved. -->
+
+<!--  $Id: OrganisationGBO-V1.xsd 1131 2017-03-13 14:32:55Z schiachm $ -->
+
+<xsd:schema
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:cmn="http://generali.com/enterprise-services/core/gbo/common/v1"
+	xmlns:cdt="http://generali.com/enterprise-services/core/gbo/common/core-types/v1"
+	xmlns:ext="http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1/extensions"
+	xmlns:tns="http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1"
+	xmlns:ecmn="http://generali.com/enterprise-services/core/gbo/enterprise/common/v1"
+	targetNamespace="http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1"
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	version="1.0">
+	<xsd:annotation>
+		<xsd:documentation>
+			<description>Business Object supporting retrieving a customer's information.</description>
+		</xsd:documentation>
+	</xsd:annotation>
+    
+    <!-- +++++++++++++++++++++++ -->
+    <!--       Imports           -->
+    <!-- +++++++++++++++++++++++ -->
+
+	<xsd:import
+		namespace="http://generali.com/enterprise-services/core/gbo/common/core-types/v1"
+		schemaLocation="../../../../GBO/Common/V1/CoreTypes.xsd" />
+
+	<xsd:import
+		namespace="http://generali.com/enterprise-services/core/gbo/common/v1"
+		schemaLocation="../../../../GBO/Common/V1/Components.xsd" />
+		
+	<xsd:import namespace="http://generali.com/enterprise-services/core/gbo/enterprise/common/v1"
+		schemaLocation="../../Common/V1/Components.xsd" />
+
+    <!-- +++++++++++++++++++++++ -->
+    <!--       Declarations      -->
+    <!-- +++++++++++++++++++++++ -->
+
+	<xsd:complexType name="OrganisationGBOType">
+		<xsd:annotation>
+			<xsd:documentation>
+-				<xsd:description>Documentation for the elements below can be found at
+					https://itservices.generali.co.uk/workspace/display/BPR/Organization+Data+Dictionary
+				</xsd:description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="DUNSNumber" type="cmn:DUNSType"
+				minOccurs="0" />
+			<xsd:element name="GUNSNumber" type="ecmn:GUNSType"
+				minOccurs="0" />
+			<xsd:element name="FullName" type="xsd:string"
+				minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						The legal name of the Organisation
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="PrimaryAddress" type="cmn:AddressType" />
+			<xsd:element name="GenGlobalUltimateGUNS"
+				type="ecmn:GUNSType" minOccurs="0" />
+			<xsd:element name="UltimateGUNSName" type="xsd:token"
+				minOccurs="0" />
+			<xsd:element name="UltimateDUNSNumber" type="cmn:DUNSType"
+				minOccurs="0" />
+			<xsd:element name="NationalID" type="xsd:token"
+				minOccurs="0" />
+			<xsd:element name="NationalIDType" type="xsd:token"
+				minOccurs="0" />
+			<xsd:element name="SIC" type="xsd:token" minOccurs="0" />
+			<xsd:element name="OutOfBusiness" type="xsd:boolean"
+				minOccurs="0" />
+			<xsd:element name="PartyRoles" minOccurs="0" 
+				maxOccurs="1">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Role" minOccurs="0"
+							maxOccurs="unbounded" type="xsd:token" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="Duplicate" type="xsd:boolean"
+				minOccurs="0" />
+			<xsd:element name="IsLinked" type="xsd:boolean"
+				minOccurs="0" />
+			<xsd:element name="Active" type="xsd:boolean" minOccurs="0" />
+			<xsd:element name="CreationDate" type="xsd:dateTime"
+				minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<description>
+							The date and time the business object or
+							component was created. A date and time
+							formatted in compliance with the ISO8601
+							standard must be used.
+						</description>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DateLastUpdate" type="xsd:dateTime"
+				minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<description>
+							The date and time the business object or
+							component was last modified. A date and time
+							formatted in compliance with the ISO8601
+							standard must be used.
+						</description>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="UserLastChangeBy" type="xsd:token"
+				minOccurs="0" />
+			<xsd:element name="ExtendedRecord"
+				type="tns:ExtendedRecordType" minOccurs="0" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="ExtendedRecordType">
+		<xsd:sequence>
+			<xsd:element name="DomesticUltimateDUNSNumber" type="cmn:DUNSType"
+				minOccurs="0" />
+			<xsd:element name="DomesticUltimateGUNSNumber" type="ecmn:GUNSType"
+				minOccurs="0" />
+			<xsd:element name="DomesticUltimateGUNSName" type="xsd:token"
+				minOccurs="0" />
+			<xsd:element name="GlobalUltimateCountryCode" type="cmn:ISOAlpha2CodeType" minOccurs="0" />
+			<xsd:element name="CompanyLevels" minOccurs="0" 
+				maxOccurs="1">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="CompanyLevel" type="xsd:token" minOccurs="0"
+							maxOccurs="unbounded" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="CompanyLegalStatus" type="ecmn:LegalStatusCodeType"
+				minOccurs="0" maxOccurs="1" />
+			<xsd:element name="YearStarted" type="xsd:integer"
+				minOccurs="0" maxOccurs="1" />
+			<xsd:element name="Turnover" type="cdt:AmountType"
+				minOccurs="0" />
+			<xsd:element name="TurnoverCurrency" type="xsd:token"
+				minOccurs="0" />
+			<xsd:element name="TurnoverAccuracy" type="xsd:integer"
+				minOccurs="0" />
+			<xsd:element name="NumberOfEmployees" type="xsd:integer"
+				minOccurs="0" />
+			<xsd:element name="EmployeeAccuracy" type="xsd:integer" minOccurs="0" />
+			<xsd:element name="AssignedTurnoverTreeBelowEUR" type="cdt:AmountType" minOccurs="0" nillable="true">
+				<xsd:annotation>
+					<xsd:documentation>
+						Turnover value (EUR at today's FX rate?????)
+						assigned by D&amp;B to this legal entity and all
+						entities below in the in the corporate tree.
+						Only available for legal entities that are part
+						of a corporate family, blank for all standalone
+						or unlinked entities
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AssignedTurnoverDomesticGroupEUR" type="cdt:AmountType" minOccurs="0" nillable="true" />
+			<xsd:element name="AssignedTurnoverGlobalGroupEUR" type="cdt:AmountType" minOccurs="0" nillable="true" />
+			<xsd:element name="AssignedNumberOfEmployeesTreeBelow" type="xsd:decimal" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						Number of employees assigned by D&amp;B to this
+						legal entity and all entities below in the
+						corporate tree.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AssignedNumberOfEmployeesDomesticGroup" type="xsd:decimal" minOccurs="0" />
+			<xsd:element name="AssignedNumberOfEmployeesGlobalGroup" type="xsd:decimal" minOccurs="0" />
+			<xsd:element name="AssignedSIC4DU" type="xsd:token" minOccurs="0" />
+			<xsd:element name="AssignedSIC4NameDU" type="xsd:token" minOccurs="0" />
+			<xsd:element name="AssignedSIC2DU" type="xsd:token" minOccurs="0" />
+			<xsd:element name="AssignedSIC2NameDU" type="xsd:token" minOccurs="0" />
+			<xsd:element name="AssignedSICDUProportionCode" type="xsd:integer" minOccurs="0" />
+			<xsd:element name="AssignedSIC4GU" type="xsd:token" minOccurs="0" />
+			<xsd:element name="AssignedSIC4NameGU" type="xsd:token" minOccurs="0" />
+			<xsd:element name="AssignedSIC2GU" type="xsd:token" minOccurs="0" />
+			<xsd:element name="AssignedSIC2NameGU" type="xsd:token" minOccurs="0" />
+			<xsd:element name="AssignedSICGUProportionCode" type="xsd:integer" minOccurs="0" />
+			<xsd:element name="IsPartOfCorporateTree" type="xsd:boolean" minOccurs="0" />
+			<xsd:element name="IsStandalone" type="xsd:boolean" minOccurs="0" />
+			<xsd:element name="ThisLevelInCorporateTree" type="xsd:integer"
+				minOccurs="0" />
+			<xsd:element name="NumberOfLevelInCorporateTree" type="xsd:integer"
+				minOccurs="0" />	
+			<xsd:element name="NumberOfCountriesInGroup" type="xsd:integer"
+				minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						Number of countries in the corporate tree. Blank
+						if this is a standalone company or no data is
+						available
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>	
+			<xsd:element name="NationalOrMultinationalCode" type="xsd:integer"
+				minOccurs="0" />
+			<xsd:element name="NationalOrMultinationalCodeExcBranches"
+				type="xsd:integer" minOccurs="0" />
+			<xsd:element name="TreeBelowSites" type="xsd:decimal"
+				minOccurs="0" />
+			<xsd:element name="TreeBelowSitesExcludingBranch" type="xsd:decimal"
+				minOccurs="0" />	
+			<xsd:element name="NumberOfSitesGUGroup" type="xsd:integer"
+				minOccurs="0" />
+			<xsd:element name="NumberOfSitesGUGroupExcBranches" type="xsd:integer"
+				minOccurs="0" />
+			<xsd:element name="NumberOfSitesGUGroupInThisCountry"
+				type="xsd:integer" minOccurs="0" />
+			<xsd:element name="NumberOfSitesGUGroupInThisCountryExcBranches"
+				type="xsd:integer" minOccurs="0" />
+			<xsd:element name="NumberOfSitesDUGroup" type="xsd:integer"
+				minOccurs="0" />
+			<xsd:element name="NumberOfSitesDUGroupExcBranches" type="xsd:integer"
+				minOccurs="0" />
+			<xsd:element name="NumberOfEUSitesGUGroup" type="xsd:integer" minOccurs="0"/>
+			<xsd:element name="NumberOfEUSitesGUGroupExcBranches"
+				type="xsd:integer" minOccurs="0"/>
+			<xsd:element name="BusinessLines" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<description>ID is the business line this legal entity is in use
+							e.g. EAGCS (Europe Assistance - GCS division)</description>
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="BusinessLine" type="xsd:token" minOccurs="0" maxOccurs="unbounded" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="DomesticUltimate" type="xsd:boolean"
+				minOccurs="0" />
+			<xsd:element name="GlobalUltimate" type="xsd:boolean" minOccurs="0" />
+			<xsd:element name="Senders" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Sender" type="xsd:token" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			
+			<xsd:element name="DuplicatedGUNSNumbers" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="DuplicatedGUNSNumber" type="ecmn:GUNSType"
+							minOccurs="0" maxOccurs="unbounded" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="AcquiredFromDnB" type="xsd:dateTime"
+				minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<description>
+							The date on which the organisation was
+							incorporated, i.e. registered with the local
+							Companies House or similar.
+						</description>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="RefreshedByDandB" type="xsd:dateTime"
+				minOccurs="0" />
+			<xsd:element name="RefreshCount" type="xsd:integer"
+				minOccurs="0" />
+			
+			<xsd:element name="UserCreatedBy" type="xsd:token"
+				minOccurs="0" />	
+			<xsd:element name="ExportedDate" type="xsd:dateTime" minOccurs="0" />
+			<!-- Deprecated keep for temporary compatibility, should remove next version
+			 -->
+			<xsd:element name="LocalIds" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+					@deprecated: keep for local reference, should be removed soon
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="LocalId" type="xsd:token" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="PartyLocalIds" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="PartyLocalId" type="tns:PartyLocalIdType" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="PartyLocalIdType">
+		<xsd:sequence>
+			<xsd:element name="Id" type="xsd:token" />
+			<xsd:element name="Sender" type="xsd:token" />
+			<xsd:element name="PartyType" type="xsd:token" />
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

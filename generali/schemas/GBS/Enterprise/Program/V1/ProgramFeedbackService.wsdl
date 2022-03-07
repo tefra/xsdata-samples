@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- $Id: ProgramFeedbackService.wsdl 1156 2017-04-07 09:28:05Z schiachm $ -->
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	name="ProgramService" targetNamespace="http://xmlns.generali.com/services/program/FeedbackProgramService/v1">
+	<wsdl:types>
+		<xsd:schema
+			xmlns:tns="http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
+			targetNamespace="http://xmlns.generali.com/services/program/FeedbackProgramService/v1">
+			<xsd:include
+				schemaLocation="./ProgramFeedbackService.xsd" />
+		</xsd:schema>
+			
+	</wsdl:types> 
+	<wsdl:message name="FeedbackProgramPoliciesRequest">
+		<wsdl:part name="parameters" element="tns:FeedbackProgramPolicies">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="FeedbackProgramPoliciesResponse">
+		<wsdl:part name="parameters" element="tns:FeedbackProgramPoliciesResponse">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:portType name="FeedbackProgramService">
+		<wsdl:operation name="FeedbackProgramPolicies">
+			<wsdl:input message="tns:FeedbackProgramPoliciesRequest"></wsdl:input>
+			<wsdl:output message="tns:FeedbackProgramPoliciesResponse"></wsdl:output>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="FeedbackProgramServiceSOAP" type="tns:FeedbackProgramService">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="FeedbackProgramPolicies">
+			<soap:operation
+				soapAction="FeedbackProgramPolicies" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="FeedbackProgramService">
+		<wsdl:port binding="tns:FeedbackProgramServiceSOAP" name="FeedbackProgramServiceSOAP">
+			<wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#UP_policy"/>
+			<soap:address
+				location="https://services-dev.generali.co.uk/services/external/GIP/v1/FeedbackProgramService" />
+		</wsdl:port>
+	</wsdl:service>
+	<wsp:Policy xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="UP_policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+                    <wsp:Policy>
+                        <sp:TransportToken>
+                            <wsp:Policy>
+                                <sp:HttpsToken>
+                                    <wsp:Policy/>
+                                </sp:HttpsToken>
+                            </wsp:Policy>
+                        </sp:TransportToken>
+                        <sp:Layout>
+                            <wsp:Policy>
+                                <sp:Strict/>
+                            </wsp:Policy>
+                        </sp:Layout>
+                        <sp:IncludeTimestamp/>
+                        <sp:AlgorithmSuite>
+                            <wsp:Policy>
+                                <sp:Basic128/>
+                            </wsp:Policy>
+                        </sp:AlgorithmSuite>
+                    </wsp:Policy>
+                </sp:TransportBinding>
+                <sp:SupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+                    <wsp:Policy>
+                        <sp:UsernameToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient">
+                            <wsp:Policy>
+                                <sp:WssUsernameToken11/>
+                            </wsp:Policy>
+                        </sp:UsernameToken>
+                    </wsp:Policy>
+                </sp:SupportingTokens>
+            </wsp:All>
+        </wsp:ExactlyOne>
+	</wsp:Policy>
+</wsdl:definitions>

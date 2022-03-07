@@ -1,0 +1,307 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://api-v1.generali.com/enterprise-resources/{access-type}/core/gbo/commons",
+	"title": "Query",
+	"description": "A data object that allows simple and complex query criteria to be specified against which a set of business objects can be matched.",
+	"type": "object",
+	"properties": 
+	{
+		"identification": 
+		{
+			"type": "object",
+			"description": "A component within the query that specifies a specific instance of a business to retrieve. The ID specified represents the primary key of the business object as configured through the IDs/ID[/@schemeName=''] field.",
+			"properties": 
+			{
+				"ids": 
+				{
+					"type": "array",
+					"properties": 
+					{
+						"id": 
+						{
+							"type": "object",
+							"description": "The identifier of the business object or component. This should be used to identify instances of a business object or component. Where the component is being used to reference another business object then this is the ",
+							"properties": 
+							{
+								"$": 
+								{
+									"type": "string"
+								},
+
+								"@scheme-name": 
+								{
+									"type": "string"
+								},
+
+								"@scheme-agency-name": 
+								{
+									"type": "string"
+								}
+							},
+
+							"required": 
+							[
+								"$"
+							]
+						}
+					}
+				},
+
+				"name-text": 
+				{
+					"type": "string",
+					"description": "The name of the instance of a business object or component."
+				},
+
+				"desc-text": 
+				{
+					"type": "string",
+					"description": "A free text description of a business object or component."
+				},
+
+				"type-code": 
+				{
+					"type": "object",
+					"description": "A classification of the business object or component. This identifies the sub-type of the instance of object or component.",
+					"properties": 
+					{
+						"$": 
+						{
+							"type": "string"
+						},
+
+						"@list-agency-name": 
+						{
+							"type": "string"
+						},
+
+						"@list-name": 
+						{
+							"type": "string"
+						}
+					},
+
+					"required": 
+					[
+						"$"
+					]
+				},
+
+				"categories": 
+				{
+					"type": "array",
+					"properties": 
+					{
+						"category-code": 
+						{
+							"type": "object",
+							"description": "A classification applied to the business object or component. More than one classification scheme can be applied using the @listName attribute to identify the type of code list being used. The classification scheme can be used to group instances of the object or component.",
+							"properties": 
+							{
+								
+							}
+						}
+					}
+				},
+
+				"status-code": 
+				{
+					"type": "object",
+					"description": "The lifecycle state of the business object or component. This field is used to track the specific state an instance of an object or component is in; e.g. the Customer Bill is Active or the Customer Request has been Cancelled.",
+					"properties": 
+					{
+						"$": 
+						{
+							"type": "string"
+						},
+
+						"@list-agency-name": 
+						{
+							"type": "string"
+						},
+
+						"@list-name": 
+						{
+							"type": "string"
+						}
+					},
+
+					"required": 
+					[
+						"$"
+					]
+				},
+
+				"version-id": 
+				{
+					"type": "object",
+					"description": "A field that identifies the specific version of an instance of a business object or component. This field should be used in support of multi-agent environments to control the concurrency (locking) of the instance.",
+					"properties": 
+					{
+						"$": 
+						{
+							"type": "string"
+						},
+
+						"@scheme-name": 
+						{
+							"type": "string"
+						},
+
+						"@scheme-agency-name": 
+						{
+							"type": "string"
+						}
+					},
+
+					"required": 
+					[
+						"$"
+					]
+				},
+
+				"created-date-time": 
+				{
+					"type": "string",
+					"format": "date-time"
+				},
+
+				"created-by-id": 
+				{
+					"type": "object",
+					"description": "The unique ID of the User that created the instance of the business object or component. This should be used as a reference to the IDM system and the details about that User.",
+					"properties": 
+					{
+						"$": 
+						{
+							"type": "string"
+						},
+
+						"@scheme-name": 
+						{
+							"type": "string"
+						},
+
+						"@scheme-agency-name": 
+						{
+							"type": "string"
+						}
+					},
+
+					"required": 
+					[
+						"$"
+					]
+				},
+
+				"last-modified-date-time": 
+				{
+					"type": "string",
+					"format": "date-time"
+				},
+
+				"last-modified-by-id": 
+				{
+					"type": "object",
+					"description": "The unique ID of the User that last modified the instance of the business object or component. This should be used as a reference to the IDM system and the details about that User.",
+					"properties": 
+					{
+						"$": 
+						{
+							"type": "string"
+						},
+
+						"@scheme-name": 
+						{
+							"type": "string"
+						},
+
+						"@scheme-agency-name": 
+						{
+							"type": "string"
+						}
+					},
+
+					"required": 
+					[
+						"$"
+					]
+				},
+
+				"validity-period": 
+				{
+					"type": "object",
+					"description": "A component that states the date and time from which this business object is effective (or valid) and the date and time to which it is effective. Again the ISO8601 standard must be used.",
+					"properties": 
+					{
+						"from-date-time": 
+						{
+							"type": "string",
+							"format": "date-time"
+						},
+
+						"to-date-time": 
+						{
+							"type": "string",
+							"format": "date-time"
+						},
+
+						"duration": 
+						{
+							"type": "string",
+							"description": "The duration from the start date of the time period."
+						}
+					}
+				}
+			}
+		},
+
+		"criteria": 
+		{
+			"type": "object",
+			"description": "",
+			"properties": 
+			{
+				"query-expression": 
+				{
+					"type": "array",
+					"properties": 
+					{
+						"value-expression": 
+						{
+							"type": "array",
+							"properties": 
+							{
+								"value": 
+								{
+									"type": "string",
+									"description": "The value to be matched in a query criteria. The repeating structure allows more than one value to be specified; these must be taken as an implict OR function; i.e. This Value-1 OR Value-2 OR Value-3."
+								}
+							}
+						},
+
+						"query-expression": 
+						{
+							"type": "array",
+							"properties": 
+							{
+								"value-expression": 
+								{
+									"type": "array",
+									"properties": 
+									{
+										"value": 
+										{
+											"type": "string",
+											"description": "The value to be matched in a query criteria. The repeating structure allows more than one value to be specified; these must be taken as an implict OR function; i.e. This Value-1 OR Value-2 OR Value-3."
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

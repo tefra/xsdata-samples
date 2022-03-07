@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--(c) Reply Limited. All rights reserved. -->
+<!--  $Id: NotifyProgramGBM-V1.xsd 773 2017-01-27 11:56:45Z schiachm $ -->
+<xsd:schema
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:cmn="http://generali.com/enterprise-services/core/gbo/common/v1"
+	xmlns:tns="http://generali.com/enterprise-services/core/gbm/enterprise/agreement/v1"
+	xmlns:gbo="http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+	targetNamespace="http://generali.com/enterprise-services/core/gbm/enterprise/agreement/v1"
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	version="1.0">
+	<xsd:annotation>
+		<xsd:documentation>
+			<description>Service supporting retrieving a agreement information.</description>
+		</xsd:documentation>
+	</xsd:annotation>
+    
+	<!-- ===================== Imports ============================ -->
+	<xsd:import
+		namespace="http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+		schemaLocation="../../../../GBO/Enterprise/Agreement/V1/AgreementGBO-V1.xsd" />
+	<xsd:import
+		namespace="http://generali.com/enterprise-services/core/gbo/common/v1"
+		schemaLocation="../../../../GBO/Common/V1/Components.xsd" />
+	
+
+
+	<xsd:complexType name="NotifyProgramGBMRequestType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The definition of the message used to retrieve an agreement</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="cmn:BaseGBMHeaderType">
+				<xsd:sequence>
+					<xsd:element
+						name="ProgramGBO"
+						type="gbo:ProgramGBOType">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The business object to retrieve</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element
+		name="NotifyProgramGBMRequest"
+		type="tns:NotifyProgramGBMRequestType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The definition of the request message that supports retrieval of a agreement</description>
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="NotifyProgramGBMResponseType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The definition of the response message that supports retrieve of a agreement</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="cmn:BaseGBMType">
+				<xsd:sequence>
+					<xsd:element name="Status" type="xsd:token" />
+					<xsd:element name="ErrorMessage" type="xsd:string" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element
+		name="NotifyProgramGBMResponse"
+		type="tns:NotifyProgramGBMResponseType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The definition of the response message that supports retrieve of a program</description>
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+
+	
+</xsd:schema>

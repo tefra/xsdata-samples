@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  $Id: CoreTypes.xsd 1449 2019-02-19 12:23:11Z shingtes $ -->
+<!-- ====================================================================== -->
+<!-- ===== Core Component Type Schema Module                                                          ===== -->
+<!-- ====================================================================== -->
+<!--
+  	Scheme agency: 	UN/CEFACT
+  	Scheme version:	2.0
+  	Schema date: 	02 February 2014
+  	
+  	Copyright (C) UN/CEFACT (2007). All Rights Reserved.
+
+	This document and translations of it may be copied and furnished to others, 
+	and derivative works that comment on or otherwise explain it or assist 
+	in its implementation may be prepared, copied, published and distributed, 
+	in whole or in part, without restriction of any kind, provided that the 
+	above copyright notice and this paragraph are included on all such copies 
+	and derivative works. However, this document itself may not be modified in 
+	any way, such as by removing the copyright notice or references to 
+	UN/CEFACT, except as needed for the purpose of developing UN/CEFACT 
+	specifications, in which case the procedures for copyrights defined in the 
+	UN/CEFACT Intellectual Property Rights document must be followed, or as 
+	required to translate it into languages other than English.
+
+	The limited permissions granted above are perpetual and will not be revoked 
+	by UN/CEFACT or its successors or assigns.
+
+
+	This document and the information contained herein is provided on an "AS IS"
+	basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING 
+	BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL 
+	NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR 
+	FITNESS FOR A PARTICULAR PURPOSE.
+-->
+<xsd:schema
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:cct="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2"
+	xmlns:tns="http://generali.com/enterprise-services/core/gbo/common/core-types/v1"
+	targetNamespace="http://generali.com/enterprise-services/core/gbo/common/core-types/v1"
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	version="1.0">
+
+	<xsd:annotation>
+		<xsd:documentation>
+			<description>The definition of the core data types from which all fields are derived. These a set of modified types based on the UN/CEFACT CCTS v3.</description>
+			<links>
+				<link rel="self">./CoreTypes.xsd</link>
+			</links>
+		</xsd:documentation>
+	</xsd:annotation>
+    
+	<!-- =================================================================== -->
+	<!-- ===== Type Definitions                                        ===== -->
+	<!-- =================================================================== -->
+	<!-- ===== Amount. Type                                            ===== -->
+	<!-- =================================================================== -->
+	<xsd:complexType name="AmountType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				<cct:UniqueID>UNDT000001</cct:UniqueID>
+				<cct:Acronym>CCT</cct:Acronym>
+				<cct:DictionaryEntryName>Amount. Type</cct:DictionaryEntryName>
+				<cct:Version>2.01</cct:Version>
+				<cct:Definition>A number of monetary units specified in a currency where the unit of the currency is explicit or implied.</cct:Definition>
+				<cct:PrimaryRepresentationTerm>Amount</cct:PrimaryRepresentationTerm>
+				<cct:PrimitiveType>decimal</cct:PrimitiveType>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:decimal">
+				<xsd:attribute
+					name="currencyID"
+					type="xsd:token"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<cct:Name>Amount. Currency. Identifier</cct:Name>
+							<cct:Definition>The currency of the amount.</cct:Definition>
+							<cct:PrimitiveType>string</cct:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute
+					name="currencyCodeListVersionID"
+					type="xsd:token"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<cct:Name>Amount Currency. Code List Version. Identifier</cct:Name>
+							<cct:Definition>The VersionID of the UN/ECE Rec9 code list.</cct:Definition>
+							<cct:PrimitiveType>string</cct:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute
+					name="unitCode"
+					type="xsd:token"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<cct:Name>Amount. Unit Code</cct:Name>
+							<cct:Definition>The unit of the amount.</cct:Definition>
+							<cct:PrimitiveType>string</cct:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- =================================================================== -->
+	<!-- ===== Binary Object. Type                                     ===== -->
+	<!-- =================================================================== -->
+	<xsd:complexType name="BinaryObjectType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				<cct:UniqueID>UNDT000002</cct:UniqueID>
+				<cct:Acronym>CCT</cct:Acronym>
+				<cct:DictionaryEntryName>Binary Object. Type</cct:DictionaryEntryName>
+				<cct:Version>2.01</cct:Version>
+				<cct:Definition>A set of finite-length sequences of binary octets.</cct:Definition>
+				<cct:PrimaryRepresentationTerm>Binary Object</cct:PrimaryRepresentationTerm>
+				<cct:PrimitiveType>binary</cct:PrimitiveType>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:base64Binary">
+				<xsd:attribute
+					name="format"
+					type="xsd:string"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<cct:Name>Binary Object. Format. Text</cct:Name>
+							<cct:Definition>The format of the binary content.</cct:Definition>
+							<cct:PrimitiveType>string</cct:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute
+					name="mimeCode"
+					type="xsd:token"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<cct:Name>Binary Object. Mime. Code</cct:Name>
+							<cct:Definition>The mime type of the binary object.</cct:Definition>
+							<cct:PrimitiveType>string</cct:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute
+					name="encodingCode"
+					type="xsd:token"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<cct:Name>Binary Object. Encoding. Code</cct:Name>
+							<cct:Definition>Specifies the decoding algorithm of the binary object.</cct:Definition>
+							<cct:PrimitiveType>string</cct:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute
+					name="characterSetCode"
+					type="xsd:token"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<cct:Name>Binary Object. Character Set. Code</cct:Name>
+							<cct:Definition>The character set of the binary object if the mime type is text.</cct:Definition>
+							<cct:PrimitiveType>string</cct:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute
+					name="uri"
+					type="xsd:anyURI"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<cct:Name>Binary Object. Uniform Resource. Identifier</cct:Name>
+							<cct:Definition>The Uniform Resource Identifier that identifies where the binary object is located.</cct:Definition>
+							<cct:PrimitiveType>string</cct:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute
+					name="fileName"
+					type="xsd:string"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<cct:Name>Binary Object. File. Name</cct:Name>
+							<cct:Definition>The filename of the binary object.</cct:Definition>
+							<cct:PrimitiveType>string</cct:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- =================================================================== -->
+	<!-- ===== Code. Type                                              ===== -->
+	<!-- =================================================================== -->
+	<xsd:complexType name="CodeType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				<cct:UniqueID>UNDT000003</cct:UniqueID>
+				<cct:Acronym>CCT</cct:Acronym>
+				<cct:DictionaryEntryName>Code. Type</cct:DictionaryEntryName>
+				<cct:Version>2.01</cct:Version>
+				<cct:Definition>A character string (letters, figures, or symbols) that for brevity and/or languange independence may be used to represent or replace a definitive value or text of an attribute together with relevant supplementary information.
+				</cct:Definition>
+				<cct:PrimaryRepresentationTerm>Code</cct:PrimaryRepresentationTerm>
+				<cct:PrimitiveType>string</cct:PrimitiveType>
+				<cct:UsageRule>Should not be used if the character string identifies an instance of an object class or an object in the real world, in which case the Identifier. Type should be used.
+				</cct:UsageRule>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:token">
+				<xsd:attribute
+					name="listID"
+					type="xsd:token"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<cct:Name>Code List. Identifier</cct:Name>
+							<cct:Definition>The identification of a list of codes.</cct:Definition>
+							<cct:PrimitiveType>string</cct:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute
+					name="listAgencyID"
+					type="xsd:token"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<cct:Name>Code List. Agency. Identifier</cct:Name>
+							<cct:Definition>An agency that maintains one or more lists of codes.</cct:Definition>
+							<cct:PrimitiveType>string</cct:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute
+					name="listAgencyName"
+					type="xsd:string"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<cct:Name>Code List. Agency Name. Text</cct:Name>
+							<cct:Definition>The name of the agency that maintains the list of codes.</cct:Definition>
+							<cct:PrimitiveType>string</cct:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute
+					name="listName"
+					type="xsd:string"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<cct:Name>Code List. Name. Text</cct:Name>
+							<cct:Definition>The name of a list of codes.</cct:Definition>
+							<cct:PrimitiveType>string</cct:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute
+					name="listVersionID"
+					type="xsd:token"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<cct:Name>Code List. Version. Identifier</cct:Name>
+							<cct:Definition>The version of the list of codes.</cct:Definition>
+							<cct:PrimitiveType>string</cct:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute
+					name="name"
+					type="xsd:string"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<cct:Name>Code. Name. Text</cct:Name>
+							<cct:Definition>The textual equivalent of the code content component.</cct:Definition>
+							<cct:PrimitiveType>string</cct:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute
+					name="languageID"
+					type="xsd:language"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<cct:Name>Language. Identifier</cct:Name>
+							<cct:Definition>The identifier of the language used in the code name.</cct:Definition>
+							<cct:PrimitiveType>string</cct:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute
+					name="listURI"
+					type="xsd:anyURI"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<cct:Name>Code List. Uniform Resource. Identifier</cct:Name>
+							<cct:Definition>The Uniform Resource Identifier that identifies where the code list is located.</cct:Definition>
+							<cct:PrimitiveType>string</cct:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute
+					name="listSchemeURI"
+					type="xsd:anyURI"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<cct:Name>Code List Scheme. Uniform Resource. Identifier</cct:Name>
+							<cct:Definition>The Uniform Resource Identifier that identifies where the code list scheme is located.</cct:Definition>
+							<cct:PrimitiveType>string</cct:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- =================================================================== -->
+	<!-- ===== Date Time. Type                                         ===== -->
+	<!-- =================================================================== -->
+	<xsd:complexType name="DateTimeType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				<cct:UniqueID>UNDT000004</cct:UniqueID>
+				<cct:Acronym>CCT</cct:Acronym>
+				<cct:DictionaryEntryName>Date Time. Type</cct:DictionaryEntryName>
+				<cct:Version>2.01</cct:Version>
+				<cct:Definition>A particular point in the progression of time together with the relevant supplementary information.</cct:Definition>
+				<cct:PrimaryRepresentationTerm>Date Time</cct:PrimaryRepresentationTerm>
+				<cct:PrimitiveType>dateTime</cct:PrimitiveType>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:dateTime" />
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- =================================================================== -->
+	<!-- ===== Identifier. Type                                        ===== -->
+	<!-- =================================================================== -->
+	<xsd:complexType name="IDType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				<cct:UniqueID>UNDT000005</cct:UniqueID>
+				<cct:Acronym>CCT</cct:Acronym>
+				<cct:DictionaryEntryName>Identifier. Type</cct:DictionaryEntryName>
+				<cct:Version>2.01</cct:Version>
+				<cct:Definition>A character string to identify and distinguish uniquely, one instance of an object in an identification scheme from all other
+					objects in the same scheme together with relevant supplementary information.
+				</cct:Definition>
+				<cct:PrimaryRepresentationTerm>Identifier</cct:PrimaryRepresentationTerm>
+				<cct:PrimitiveType>string</cct:PrimitiveType>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:token">
+				<xsd:attribute
+					name="schemeID"
+					type="xsd:token"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<cct:Name>Identification Scheme. Identifier</cct:Name>
+							<cct:Definition>The identification of the identification scheme.</cct:Definition>
+							<cct:PrimitiveType>string</cct:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute
+					name="schemeName"
+					type="xsd:string"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<cct:Name>Identification Scheme. Name. Text</cct:Name>
+							<cct:Definition>The name of the identification scheme.</cct:Definition>
+							<cct:PrimitiveType>string</cct:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute
+					name="schemeAgencyID"
+					type="xsd:token"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<cct:Name>Identification Scheme. Agency. Identifier</cct:Name>
+							<cct:Definition>The identification of the agency that maintains the identification scheme.</cct:Definition>
+							<cct:PrimitiveType>string</cct:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute
+					name="schemeAgencyName"
+					type="xsd:string"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<cct:Name>Identification Scheme. Agency Name. Text</cct:Name>
+							<cct:Definition>The name of the agency that maintains the identification scheme.</cct:Definition>
+							<cct:PrimitiveType>string</cct:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute
+					name="schemeVersionID"
+					type="xsd:token"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<cct:Name>Identification Scheme. Version. Identifier</cct:Name>
+							<cct:Definition>The version of the identification scheme.</cct:Definition>
+							<cct:PrimitiveType>string</cct:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute
+					name="schemeDataURI"
+					type="xsd:anyURI"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<cct:Name>Identification Scheme Data. Uniform Resource. Identifier</cct:Name>
+							<cct:Definition>The Uniform Resource Identifier that identifies where the identification scheme data is located.</cct:Definition>
+							<cct:PrimitiveType>string</cct:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute
+					name="schemeURI"
+					type="xsd:anyURI"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<cct:Name>Identification Scheme. Uniform Resource. Identifier</cct:Name>
+							<cct:Definition>The Uniform Resource Identifier that identifies where the identification scheme is located.</cct:Definition>
+							<cct:PrimitiveType>string</cct:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: IndicatorType                         ===== -->
+<!-- ================================================================== -->
+	<xsd:complexType name="IndicatorType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				<cct:UniqueID>UDT0000012</cct:UniqueID>
+				<cct:Acronym>UDT</cct:Acronym>
+				<cct:DictionaryEntryName>Indicator. Type</cct:DictionaryEntryName>
+				<cct:Version>2.01</cct:Version>
+				<cct:Definition>A list of two mutually exclusive Boolean values that express the only possible states of a Property.</cct:Definition>
+				<cct:PrimitiveType>boolean</cct:PrimitiveType>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:boolean" />
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- =================================================================== -->
+	<!-- ===== Measure. Type                                           ===== -->
+	<!-- =================================================================== -->
+	<xsd:complexType name="MeasureType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				<cct:UniqueID>UNDT000007</cct:UniqueID>
+				<cct:Acronym>CCT</cct:Acronym>
+				<cct:DictionaryEntryName>Measure. Type</cct:DictionaryEntryName>
+				<cct:Version>2.01</cct:Version>
+				<cct:Definition>A numeric value determined by measuring an object along with the specified unit of measure.</cct:Definition>
+				<cct:PrimaryRepresentationTerm>Measure</cct:PrimaryRepresentationTerm>
+				<cct:PrimitiveType>decimal</cct:PrimitiveType>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:decimal">
+				<xsd:attribute
+					name="unitCode"
+					type="xsd:token"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<cct:Name>Measure. Unit. Code</cct:Name>
+							<cct:Definition>The type of unit of measure.</cct:Definition>
+							<cct:PrimitiveType>string</cct:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute
+					name="unitCodeListVersionID"
+					type="xsd:token"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<cct:Name>Measure Unit. Code List Version. Identifier</cct:Name>
+							<cct:Definition>The version of the measure unit code list.</cct:Definition>
+							<cct:PrimitiveType>string</cct:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- =================================================================== -->
+	<!-- ===== Numeric. Type                                           ===== -->
+	<!-- =================================================================== -->
+	<xsd:complexType name="NumericType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				<cct:UniqueID>UNDT000008</cct:UniqueID>
+				<cct:Acronym>CCT</cct:Acronym>
+				<cct:DictionaryEntryName>Numeric. Type</cct:DictionaryEntryName>
+				<cct:Version>2.01</cct:Version>
+				<cct:Definition>Numeric information that is assigned or is determined by calculation, counting, or sequencing. It does not require a unit of
+					quantity or unit of measure.
+				</cct:Definition>
+				<cct:PrimaryRepresentationTerm>Numeric</cct:PrimaryRepresentationTerm>
+				<cct:PrimitiveType>decimal</cct:PrimitiveType>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:decimal" />
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- =================================================================== -->
+	<!-- ===== Quantity. Type                                          ===== -->
+	<!-- =================================================================== -->
+	<xsd:complexType name="QuantityType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				<cct:UniqueID>UNDT000009</cct:UniqueID>
+				<cct:Acronym>CCT</cct:Acronym>
+				<cct:DictionaryEntryName>Quantity. Type</cct:DictionaryEntryName>
+				<cct:Version>2.01</cct:Version>
+				<cct:Definition>A counted number of non-monetary units possibly including fractions.</cct:Definition>
+				<cct:PrimaryRepresentationTerm>Quantity</cct:PrimaryRepresentationTerm>
+				<cct:PrimitiveType>decimal</cct:PrimitiveType>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:decimal">
+				<xsd:attribute
+					name="unitCode"
+					type="xsd:token"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<cct:Name>Quantity. Unit. Code</cct:Name>
+							<cct:Definition>The unit of the quantity</cct:Definition>
+							<cct:PrimitiveType>string</cct:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute
+					name="unitCodeListID"
+					type="xsd:token"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<cct:Name>Quantity Unit. Code List. Identifier</cct:Name>
+							<cct:Definition>The quantity unit code list.</cct:Definition>
+							<cct:PrimitiveType>string</cct:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute
+					name="unitCodeListAgencyID"
+					type="xsd:token"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<cct:Name>Quantity Unit. Code List Agency. Identifier</cct:Name>
+							<cct:Definition>The identification of the agency that maintains the quantity unit code list</cct:Definition>
+							<cct:PrimitiveType>string</cct:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute
+					name="unitCodeListAgencyName"
+					type="xsd:string"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<cct:Name>Quantity Unit. Code List Agency. Name</cct:Name>
+							<cct:Definition>The name of the agency which maintains the quantity unit code list.</cct:Definition>
+							<cct:PrimitiveType>string</cct:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- =================================================================== -->
+	<!-- ===== Text. Type                                              ===== -->
+	<!-- =================================================================== -->
+	<xsd:complexType name="TextType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				<cct:UniqueID>UNDT000010</cct:UniqueID>
+				<cct:Acronym>CCT</cct:Acronym>
+				<cct:DictionaryEntryName>Text. Type</cct:DictionaryEntryName>
+				<cct:Version>2.01</cct:Version>
+				<cct:Definition>A character string (i.e. a finite set of characters) generally in the form of words of a language.</cct:Definition>
+				<cct:PrimaryRepresentationTerm>Text</cct:PrimaryRepresentationTerm>
+				<cct:PrimitiveType>string</cct:PrimitiveType>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute
+					name="languageID"
+					type="xsd:language"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<cct:Name>Language. Identifier</cct:Name>
+							<cct:Definition>The identifier of the language used in the content component.</cct:Definition>
+							<cct:PrimitiveType>string</cct:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute
+					name="languageLocaleID"
+					type="xsd:token"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<cct:Name>Language Locale. Identifier</cct:Name>
+							<cct:Definition>The identification of the locale of the language.</cct:Definition>
+							<cct:PrimitiveType>string</cct:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- ================================================================== -->
+	<!-- ===== Type Definition: DateType                              ===== -->
+	<!-- ================================================================== -->
+	<xsd:complexType name="DateType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				<cct:UniqueID>UDT000009</cct:UniqueID>
+				<cct:Acronym>UDT</cct:Acronym>
+				<cct:DictionaryEntryName>Date. Type</cct:DictionaryEntryName>
+				<cct:Version>2.01</cct:Version>
+				<cct:Definition>A particular point in the progression of time together with the relevant supplementary information.</cct:Definition>
+				<cct:PrimitiveType>date</cct:PrimitiveType>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:date" />
+		</xsd:simpleContent>
+	</xsd:complexType>
+    <!-- ================================================================== -->
+    <!-- ===== Type Definition: URIType                              ===== -->
+    <!-- ================================================================== -->
+	<xsd:complexType name="URIType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				<cct:DictionaryEntryName>URI. Type</cct:DictionaryEntryName>
+				<cct:Version>2.00</cct:Version>
+				<cct:Definition>A particular URI conforming to RFC3689.</cct:Definition>
+				<cct:PrimitiveType>URI</cct:PrimitiveType>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:anyURI" />
+		</xsd:simpleContent>
+	</xsd:complexType>  
+    <!-- ================================================================== -->
+    <!-- ===== Type Definition: URIType                              ===== -->
+    <!-- ================================================================== -->
+	<xsd:simpleType name="UUIDType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				<cct:DictionaryEntryName>UUID. Type</cct:DictionaryEntryName>
+				<cct:Version>2.00</cct:Version>
+				<cct:Definition>A particular UUID conforming to the Type 4 generation algorithm.</cct:Definition>
+				<cct:PrimitiveType>URI</cct:PrimitiveType>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:anyURI">
+			<xsd:pattern value="uuid:[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}" />
+		</xsd:restriction>
+	</xsd:simpleType>   
+    <!-- ================================================================== -->
+    <!-- ===== Type Definition: PercentType                              ===== -->
+    <!-- ================================================================== -->
+	<xsd:complexType name="PercentType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				<cct:DictionaryEntryName>Percent. Type</cct:DictionaryEntryName>
+				<cct:Version>2.00</cct:Version>
+				<cct:Definition>A particular percentage, a ratio of two measures.</cct:Definition>
+				<cct:PrimitiveType>URI</cct:PrimitiveType>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:decimal" />
+		</xsd:simpleContent>
+	</xsd:complexType>
+    <!-- ================================================================== -->
+    <!-- ===== Type Definition: NumberType                              ===== -->
+    <!-- ================================================================== -->
+	<xsd:complexType name="NumberType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				<cct:DictionaryEntryName>Number. Type</cct:DictionaryEntryName>
+				<cct:Version>2.00</cct:Version>
+				<cct:Definition>A particular whole number.</cct:Definition>
+				<cct:PrimitiveType>Integer</cct:PrimitiveType>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:integer" />
+		</xsd:simpleContent>
+	</xsd:complexType>
+    <!-- ================================================================== -->
+    <!-- ===== Type Definition: DurationType                              ===== -->
+    <!-- ================================================================== -->
+	<xsd:complexType name="DurationType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				<cct:DictionaryEntryName>Duration. Type</cct:DictionaryEntryName>
+				<cct:Version>2.00</cct:Version>
+				<cct:Definition>A time duration, using the standard XML type to support 2 days or 3 minutes.</cct:Definition>
+				<cct:PrimitiveType>Duration</cct:PrimitiveType>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:duration" />
+		</xsd:simpleContent>
+	</xsd:complexType>
+    <!-- ================================================================== -->
+    <!-- ===== Type Definition: TimeType                              ===== -->
+    <!-- ================================================================== -->
+	<xsd:complexType name="TimeType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				<cct:DictionaryEntryName>Time. Type</cct:DictionaryEntryName>
+				<cct:Version>2.00</cct:Version>
+				<cct:Definition>A time.</cct:Definition>
+				<cct:PrimitiveType>Time</cct:PrimitiveType>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:time" />
+		</xsd:simpleContent>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--(c) Reply Limited. All rights reserved. -->
+
+<!-- $Id: Header.xsd 713 2016-12-19 12:30:41Z schiachm $ -->
+<xsd:schema
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:cmn="http://generali.com/enterprise-services/core/gbo/common/v1"
+	xmlns:gfo="http://generali.com/enterprise-services/core/gbo/common/faults/v1"
+	xmlns:tns="http://generali.com/enterprise-services/core/gbo/common/headers/v1"
+	targetNamespace="http://generali.com/enterprise-services/core/gbo/common/headers/v1"
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	version="1.0">
+	<xsd:annotation>
+		<xsd:documentation>
+			<description>Schema Definition for the Header Object</description>
+			<links>
+				<link rel="self">./Header.xsd</link>
+			</links>
+		</xsd:documentation>
+	</xsd:annotation>
+	
+	<!-- ====================================================================== -->
+	<!-- ===== Imports ===== -->
+	<!-- ====================================================================== -->
+	
+	<xsd:import
+		namespace="http://generali.com/enterprise-services/core/gbo/common/faults/v1"
+		schemaLocation="Fault.xsd" />
+	<xsd:import
+		namespace="http://generali.com/enterprise-services/core/gbo/common/v1"
+		schemaLocation="Components.xsd" />
+
+
+	<xsd:complexType name="BaseHeaderType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The base type for the SOAP message headers.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:complexType>
+
+	<xsd:element
+		name="Tracking"
+		type="tns:TrackingType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>Holds in-flight tracking information.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+
+	<xsd:complexType name="TrackingType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>Holds in-flight tracking information.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="tns:BaseHeaderType">
+				<xsd:sequence>
+					<xsd:element
+						name="TrackingID"
+						type="xsd:token">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>A identifier used to track a set of messages across a number of individual request/response interactions. This ID may exceed a process boundary.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="ConversationID"
+						type="xsd:token">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>A identifier used to track a set of messages across a number of individual request/response interactions within a process, identifies the process instance. This ID may not exceed a process boundary.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:element
+		name="Source"
+		type="tns:SourceType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The specification of the source country, locale, system of the message.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+
+	<xsd:complexType name="SourceType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The specification of the source country, locale, system of the message.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="tns:BaseSystemTraceabilityType">
+				<xsd:sequence>
+					<xsd:element
+						name="SentDateTime"
+						type="xsd:dateTime"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The date and time on which the message was sent.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:element
+		name="Target"
+		type="tns:TargetType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The specification of the target country, locale, system of the message.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+
+	<xsd:complexType name="TargetType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The specification of the target country, locale, system of the message.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="tns:BaseSystemTraceabilityType">
+				<xsd:sequence>
+					<xsd:element
+						name="ReceivedDateTime"
+						type="xsd:dateTime"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The date and time the message was received at the target system. Only applicable when the target header is part of a response message.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="BaseSystemTraceabilityType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The base type for the source and destination system information in the header.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="tns:BaseHeaderType">
+				<xsd:sequence>
+					<xsd:element
+						name="CountryCode"
+						type="cmn:ISOAlpha2CodeType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The ISO3166-2 country code.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="CountryName"
+						type="xsd:string"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The name of the country in which the system resides.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="LanguageCode"
+						type="xsd:token"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The ISO639-1 language code.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="OperatorName"
+						type="xsd:normalizedString"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The organisation that operates the system.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="SystemID"
+						type="xsd:normalizedString"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The logical identifier of the system.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+			 		<xsd:element
+						name="SystemName"
+						type="xsd:normalizedString"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The logical name of the system.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:element
+		name="Cache"
+		type="tns:CacheType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>Mandatory cache parameter support by all services (a service must understand the directive even if no caching support in the service – this allows for future extensibility of the service implementation)</description>
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+
+	<xsd:complexType name="CacheType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>Mandatory cache parameter supported by all services (a service must understand the directive even if no caching support in the service – this allows for future extensibility of the service implementation)</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="tns:BaseHeaderType">
+				<xsd:sequence>
+					<xsd:element
+						name="UseCache"
+						type="tns:CacheOptions">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>Indicates whether caching should be used or not.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="MaxAgeQuantity"
+						type="xsd:integer"
+						minOccurs="0" />
+					<xsd:element
+						name="LastModifiedDateTime"
+						type="xsd:dateTime"
+						minOccurs="0" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:simpleType name="CacheOptions">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="yes">
+				<xsd:annotation>
+					<xsd:documentation>
+						<description>Use cache during queries by default (code may override this).</description>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="no">
+				<xsd:annotation>
+					<xsd:documentation>
+						<description>Cache must be ignored, retrieve data from the back-end instead</description>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="default">
+				<xsd:annotation>
+					<xsd:documentation>
+						<description>The service can decide whether or not to use a cache</description>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:element
+		name="ResultStatus"
+		type="tns:ResultStatusType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>For business faults records the error or warning generated by the server.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+
+	<xsd:complexType name="ResultStatusType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>For business faults records the error or warning generated by the server.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="gfo:FaultType">
+				<xsd:sequence />
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+
+	<xsd:element
+		name="QueryResult"
+		type="tns:QueryResultType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>A header providing meta-data about the result of a query.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+
+	<xsd:complexType name="QueryResultType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>A header providing meta-data about the result of a query.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="tns:BaseHeaderType">
+				<xsd:sequence>
+					<xsd:element
+						name="TotalCount" type="xsd:integer">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The total number of records matched in the query and possibly returned in the payload of the response message.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+</xsd:schema>

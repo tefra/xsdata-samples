@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--(c) Reply Limited. All rights reserved. -->
+<!--  $Id: GetProgramGBM-V1.xsd 716 2016-12-19 13:03:30Z schiachm $ -->
+<xsd:schema
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:cmn="http://generali.com/enterprise-services/core/gbo/common/v1"
+	xmlns:tns="http://generali.com/enterprise-services/core/gbm/enterprise/agreement/v1"
+	xmlns:gbo="http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+	targetNamespace="http://generali.com/enterprise-services/core/gbm/enterprise/agreement/v1"
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	version="1.0">
+	<xsd:annotation>
+		<xsd:documentation>
+			<description>Service supporting retrieving a agreement information.</description>
+		</xsd:documentation>
+	</xsd:annotation>
+    
+	<!-- ===================== Imports ============================ -->
+	<xsd:import
+		namespace="http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+		schemaLocation="../../../../GBO/Enterprise/Agreement/V1/AgreementGBO-V1.xsd" />
+	<xsd:import
+		namespace="http://generali.com/enterprise-services/core/gbo/common/v1"
+		schemaLocation="../../../../GBO/Common/V1/Components.xsd" />
+	
+
+	<xsd:complexType name="ProgramReqAppDataType">
+		<xsd:sequence>
+			<xsd:any
+				namespace="##any"
+				maxOccurs="unbounded"
+				processContents="lax" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="ProgramRespAppDataType">
+		<xsd:sequence>
+			<xsd:any
+				namespace="##any"
+				maxOccurs="unbounded"
+				processContents="lax" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="GetProgramGBMRequestType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The definition of the message used to retrieve an agreement</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="cmn:BaseGBMType">
+				<xsd:sequence>
+					<xsd:element
+						name="AppData"
+						type="tns:ProgramReqAppDataType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>A component of the GBM that allows application specific or pre-processing information to be added.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="ProgramGBO"
+						type="cmn:BaseGBOType">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The business object to retrieve</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element
+		name="GetProgramGBMRequest"
+		type="tns:GetProgramGBMRequestType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The definition of the request message that supports retrieval of a agreement</description>
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="GetProgramGBMResponseType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The definition of the response message that supports retrieve of a agreement</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="cmn:BaseGBMType">
+				<xsd:sequence>
+					<xsd:element
+						name="AppData"
+						type="tns:ProgramRespAppDataType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>A component of the GBM that allows application specific or pre-processing information to be added.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="ProgramGBO"
+						type="gbo:ProgramGBOType">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The business object to retrieve</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element
+		name="GetProgramGBMResponse"
+		type="tns:GetProgramGBMResponseType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The definition of the response message that supports retrieve of a program</description>
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+
+
+</xsd:schema>

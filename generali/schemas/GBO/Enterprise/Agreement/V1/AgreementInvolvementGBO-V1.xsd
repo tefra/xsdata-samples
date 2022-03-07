@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--(c) Reply Limited. All rights reserved. -->
+<!--  $Id: AgreementInvolvementGBO-V1.xsd 1432 2018-11-26 12:20:07Z shingtes $ -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmn="http://generali.com/enterprise-services/core/gbo/common/v1"
+	xmlns:cdt="http://generali.com/enterprise-services/core/gbo/common/core-types/v1"
+	xmlns:tns="http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+	xmlns:ecmn="http://generali.com/enterprise-services/core/gbo/enterprise/common/v1"
+	targetNamespace="http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+	elementFormDefault="qualified" attributeFormDefault="unqualified"
+	version="1.0">
+	<xsd:annotation>
+		<xsd:documentation>
+			<description></description>
+		</xsd:documentation>
+	</xsd:annotation>
+
+	<!-- +++++++++++++++++++++++ -->
+	<!-- Imports -->
+	<!-- +++++++++++++++++++++++ -->
+
+	<xsd:import
+		namespace="http://generali.com/enterprise-services/core/gbo/common/core-types/v1"
+		schemaLocation="../../../../GBO/Common/V1/CoreTypes.xsd" />
+
+	<xsd:import
+		namespace="http://generali.com/enterprise-services/core/gbo/common/v1"
+		schemaLocation="../../../../GBO/Common/V1/Components.xsd" />
+
+	<xsd:import
+		namespace="http://generali.com/enterprise-services/core/gbo/enterprise/common/v1"
+		schemaLocation="../../Common/V1/Components.xsd" />
+
+	<!-- +++++++++++++++++++++++ -->
+	<!-- Declarations -->
+	<!-- +++++++++++++++++++++++ -->
+
+	
+
+	<xsd:complexType name="ContactInvolvement">
+		<xsd:complexContent>
+			<xsd:extension base="ecmn:ContactInvolvement">
+				<xsd:attribute name="ContactInvolvementType"
+					type="tns:ContactInvolvementEnum" />
+			</xsd:extension>
+
+		</xsd:complexContent>
+	</xsd:complexType>
+
+
+
+	<xsd:complexType name="ContactsInvolvement">
+		<xsd:sequence>
+			<xsd:element name="Contact" type="tns:ContactInvolvement"
+				minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+
+	<xsd:simpleType name="ContactInvolvementEnum">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Primary" />
+			<xsd:enumeration value="Accounting" />
+			<xsd:enumeration value="Escalation" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="ProducerInvolvementType">
+		<xsd:complexContent>
+			<xsd:extension base="ecmn:OrganisationInvolvementType">
+				<xsd:sequence>
+					<xsd:element name="OrganisationRole" type="ecmn:InsurerRoleType" />
+					<xsd:element name="ProducerAgreementIdentifier" type="cdt:IDType" minOccurs="0"/>
+					<xsd:element name="ProducingCountry" type="cmn:ISOAlpha2CodeType" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="IntermediaryInvolvementType">
+		<xsd:complexContent>
+			<xsd:extension base="ecmn:OrganisationInvolvementType">
+				<xsd:sequence>
+					<xsd:element name="OrganisationRole" type="ecmn:IntermediaryRoleType" />
+					<xsd:element name="IntermediaryType" type="ecmn:IntermediaryTypeEnum" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="FrontingInvolvementType">
+		<xsd:complexContent>
+			<xsd:extension base="ecmn:OrganisationInvolvementType">
+				<xsd:sequence>
+					<xsd:element name="OrganisationRole" type="ecmn:InsurerRoleType" />
+					<xsd:element name="FrontingAgreementIdentifier" type="cdt:IDType" minOccurs="0"/>
+					<xsd:element name="FrontingCountry" type="cmn:ISOAlpha2CodeType" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="CoinsurerInvolvementType">
+		<xsd:complexContent>
+			<xsd:extension base="ecmn:OrganisationInvolvementType">
+				<xsd:sequence>
+					<xsd:element name="ApplyTo" type="ecmn:PremiumTypeEnum" minOccurs="0"/>
+					<xsd:element name="OrganisationRole" type="ecmn:InsurerRoleType" minOccurs="0"/>
+					<!-- GER-3299 - Added SequenceNumber for Coinsurer segment -->
+					<xsd:element name="SequenceNumber" type="cdt:NumericType" minOccurs="0"/>
+					<xsd:element name="CoinsurancePercentage" type="cdt:PercentType" minOccurs="0"/>
+					<xsd:element name="InvolvementType" type="tns:CoinsurerInvolvementTypeEnum" minOccurs="0"/>
+					<xsd:element name="CommisionPercentage" type="cdt:PercentType" minOccurs="0"/>
+					<xsd:element name="CoinsurerReference" type="cdt:CodeType" minOccurs="0"/>
+					<xsd:element name="RetainedRiskShare" type="cdt:PercentType" minOccurs="0"/>
+					<xsd:element name="OverriderPercentage" type="cdt:PercentType" minOccurs="0"/>
+					<xsd:element name="LocalCededShare" type="cdt:PercentType" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:simpleType name="CoinsurerInvolvementTypeEnum">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Leader" />
+			<xsd:enumeration value="Follower" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:complexType name="CedantInvolvementType">
+		<xsd:complexContent>
+			<xsd:extension base="ecmn:OrganisationInvolvementType">
+				<xsd:sequence>
+					<xsd:element name="OrganisationRole" type="ecmn:InsurerRoleType" />
+					<xsd:element name="PolicyIdentifier" type="cdt:IDType" minOccurs="0"/>
+					<xsd:element name="SequenceNumber" type="cdt:NumericType" minOccurs="0"/>
+					<xsd:element name="CededRiskShare" type="cdt:PercentType" minOccurs="0"/>
+					<xsd:element name="RetainedRiskShare" type="cdt:PercentType" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="ReinsurerInvolvementType">
+		<xsd:complexContent>
+			<xsd:extension base="ecmn:OrganisationInvolvementType">
+				<xsd:sequence>
+					<xsd:element name="OrganisationRole" type="ecmn:InsurerRoleType" />
+					<xsd:element name="PolicyIdentifier" type="cdt:IDType" minOccurs="0"/>
+					<xsd:element name="SequenceNumber" type="cdt:NumericType" />
+					<!-- GER-3299 - Added ParentSequenceNumber as the optional field -->
+					<xsd:element name="ParentSequenceNumber" type="cdt:NumericType" minOccurs="0" />
+					<xsd:element name="RiskShare" type="cdt:PercentType" />
+					<xsd:element name="RetainedRiskShare" type="cdt:PercentType" />
+					<xsd:element name="OverriderPercentage" type="cdt:PercentType" />
+					<xsd:element name="CoverType" type="tns:CoverTypeEnum" minOccurs="0"/>
+					<xsd:element name="LocalCededShare" type="cdt:PercentType" minOccurs="0"/>
+					<xsd:element name="RITaxes" type="cmn:ValueType" minOccurs="0"/>
+					<xsd:element name="RITaxesApplyTo" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:token">
+								<xsd:enumeration value="Net"/>
+								<xsd:enumeration value="Gross"/>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="ReinsuranceNature" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:token">
+								<xsd:enumeration value="Facultative" />
+								<xsd:enumeration value="Treaty" />
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="ReinsuranceType" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:token">
+								<xsd:enumeration value="Proportional" />
+								<xsd:enumeration value="Non-Proportional" />
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<!-- GER-3299 - Added InsuranceFlowType -->
+	<xsd:complexType name="InsuranceFlowType">
+		<xsd:complexContent>
+			<xsd:extension base="ecmn:OrganisationInvolvementType">
+				<xsd:sequence>
+					<xsd:element name="SequenceNumber" type="cdt:NumericType" />
+					<xsd:element name="RiskShare" type="cdt:PercentType" />
+					<xsd:element name="Cedants" minOccurs="0">
+    					<xsd:complexType>
+    						<xsd:sequence>
+    							<xsd:element name="Cedant"
+    								type="tns:CedantInvolvementType" minOccurs="0"
+    								maxOccurs="unbounded" />
+    						</xsd:sequence>
+    					</xsd:complexType>
+    				</xsd:element>
+					<xsd:element name="CoinsurerInvolvements" minOccurs="0">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="Coinsurer" type="tns:CoinsurerInvolvementType" maxOccurs="unbounded" minOccurs="0"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="Reinsurers" minOccurs="0">
+    					<xsd:complexType>
+    						<xsd:sequence>
+    							<xsd:element name="Reinsurer"
+    								maxOccurs="unbounded" type="tns:ReinsurerInvolvementType" />
+    						</xsd:sequence>
+    					</xsd:complexType>
+    				</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:simpleType name="CoverTypeEnum">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Flexa" />
+			<xsd:enumeration value="AllRisks" />
+			<xsd:enumeration value="Terrorism" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:complexType name="UnderwriterInvolvement">
+		<xsd:complexContent>
+			<xsd:extension base="ecmn:ContactInvolvement">
+				<xsd:sequence>
+					<xsd:element name="UnderwriterRole" type="tns:UnderwriterRoleType" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="UnderwriterRoleType">
+		<xsd:sequence>
+			<xsd:element name="UnderwriterType">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:token">
+						<xsd:enumeration value="Assistant Underwriter" />
+						<xsd:enumeration value="Underwriter"/>
+						<xsd:enumeration value="Backup Underwriter"/>
+						<xsd:enumeration value="Chief Underwriter" />
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+   		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="PolicyholderInvolvement">
+		<xsd:sequence>
+			<xsd:element name="InsuredRole" type="ecmn:InsuredRoleType" /> 
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	
+	<xsd:complexType name="InsuredInvolvement">
+		<xsd:sequence>
+			<xsd:element name="InsuredRole" type="ecmn:InsuredRoleType" />
+			<xsd:element name="Type">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:token">
+						<xsd:enumeration value="Principal"/>
+						<xsd:enumeration value="PolicyHolder"/> <!--  Added PolicyHolder based on GER-2480 03/10/2018 -->
+						<xsd:enumeration value="Additional"/>
+						<xsd:enumeration value="Local"/>		<!--  Added Local based on GER-2480 03/10/2018 -->
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element> 
+		</xsd:sequence>
+	</xsd:complexType>
+	
+
+	
+	<xsd:complexType name="MultinationalFrontingOfficeRoleType">
+		<xsd:complexContent>
+			<xsd:extension base="ecmn:IndividualRoleType"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="AccountManagerInvolvementType">
+		<xsd:sequence>
+			<xsd:element name="MultinationalFrontingOfficeRole" type="tns:MultinationalFrontingOfficeRoleType" />
+			<xsd:element name="AccountManagerType">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:token">
+						<xsd:enumeration value="AccountManager" />
+						<xsd:enumeration value="BackupAccountManager"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	
+</xsd:schema>

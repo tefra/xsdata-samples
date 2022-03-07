@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--(c) Reply Limited. All rights reserved. -->
+
+<!--  $Id: NotifyOrganisationGBM-V2.xsd 1164 2017-04-13 10:56:58Z schiachm $ -->
+
+<xsd:schema
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:cmn="http://generali.com/enterprise-services/core/gbo/common/v1"
+	xmlns:crt="http://generali.com/enterprise-services/core/gbo/common/core-types/v1"
+	xmlns:tns="http://generali.com/enterprise-services/core/gbm/enterprise/organisation/v2"
+	xmlns:gbo="http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2"
+	targetNamespace="http://generali.com/enterprise-services/core/gbm/enterprise/organisation/v2"
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	version="1.0">
+	<xsd:annotation>
+		<xsd:documentation>
+			<description>Service supporting notifying organisation information.</description>
+		</xsd:documentation>
+	</xsd:annotation>
+    
+	<!-- ===================== Imports ============================ -->
+	<xsd:import
+		namespace="http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2"
+		schemaLocation="../../../../GBO/Enterprise/Organisation/V2/OrganisationGBO-V2.xsd" />
+	<xsd:import
+		namespace="http://generali.com/enterprise-services/core/gbo/common/v1"
+		schemaLocation="../../../../GBO/Common/V1/Components.xsd" />
+	<xsd:import
+		namespace="http://generali.com/enterprise-services/core/gbo/common/core-types/v1"
+		schemaLocation="../../../../GBO/Common/V1/CoreTypes.xsd" />
+
+
+
+	<xsd:complexType name="NotifyOrganisationGBMRequestType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The definition of the request message that supports notifying on an Organisation</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="cmn:BaseGBMHeaderType">
+				<xsd:sequence>
+					<xsd:element
+						name="OrganisationGBO"
+						type="gbo:OrganisationGBOType">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The business object to notify on</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element
+		name="NotifyOrganisationGBMRequest"
+		type="tns:NotifyOrganisationGBMRequestType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The definition of the response message that supports notifying on an Organisation</description>
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="NotifyOrganisationGBMResponseType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The definition of the response message that supports acknowledgement for an Organisation notification</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element
+				name="Acknowledgement"
+				type="crt:UUIDType">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element
+		name="NotifyOrganisationGBMResponse"
+		type="tns:NotifyOrganisationGBMResponseType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The definition of the response message that supports acknowledgement for an Organisation notification</description>
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+
+</xsd:schema>

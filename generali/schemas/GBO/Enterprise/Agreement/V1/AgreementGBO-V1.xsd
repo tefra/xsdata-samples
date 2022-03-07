@@ -1,0 +1,1349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--(c) Reply Limited. All rights reserved. -->
+<!--  $Id: AgreementGBO-V1.xsd 1532 2020-07-16 17:48:18Z sanghvis $ 
+	Service model 1.2.1
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:cmn="http://generali.com/enterprise-services/core/gbo/common/v1"
+	xmlns:cdt="http://generali.com/enterprise-services/core/gbo/common/core-types/v1"
+	xmlns:tns="http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+	xmlns:ecmn="http://generali.com/enterprise-services/core/gbo/enterprise/common/v1"
+	targetNamespace="http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+	elementFormDefault="qualified" attributeFormDefault="unqualified"
+	version="1.0">
+	
+	<!-- v 1.1				RM      05/10/2018		- ESB-164: Added CountryOfBusiness.	
+							AS		09/10/2018	 	ESB-174: 
+																- Floater, Accuracy Level, AUNS Number added to Components XSD, 
+																- isCentralisedPayment added to Global XSD
+																- ClaimsTrigger added to Global XSD
+																- Cover level fields added to Global XSD - InstructDate, DateSentToBroker, DatePolicyIssued, PaymentDate
+																- CollectedAmounts representing Premium Collected Amount for each currency added to Global XSD
+																- Documents Structure Added to Global XSD, Document Type Structure added to Components XSD.
+							SS		14/11/2018		- ESB-176: Added ToPortalindicator
+							SS		20/11/2018		- ESB-177 Added GWPShare, SharePercentage and NumberOfPTLayers
+							SS		18/02/2019		- ESB-183 Added CountryOfRisk for CRM Submission
+							SS		11/06/2019		- ESB-193 (and GER-2699) Added Documents at Program level (under ProgramGBOType)
+							SS		01/08/2019		- GER-2767 - CAT Peril structure extended - Added new IndemnityType and Indemnity under LimitType; Added SeparateDeductible under DeductibleType
+													- GER-2775 - Added ClearingHouseFlag 
+													- ESB-201 - Added WorldwideFlag
+							RM		21/08/2019		- GER-2820: Added StateRegionCode, StateRegionName, CountryOfPerilCode, CountryOfPerilName, ZipCodeOfPeril
+		v2.1				RM		29/01/2020		- GER-2854: SanctionAndComplianceFlag
+		v2.2				RM		07/05/2020		- Renamed from ClearingHouseIndicator to MPRIndicator
+													- GER-2914: Added ReinsurancePolicyRef field within DocumentType in /Common/V1/Compponent.xsd.
+							SS		11/05/2020		- MPR-40: Deduction Section Value Type change to - ValueTypeDeduction. Change also in GBO/Common/V1/Compponent.xsd.
+							SS		16/07/2020		- GER-3147: Added 'Short Description' for SIC Code component and added Indemnity segment for Exposures (BI)
+																(Change in Components.xsd and AgreementGBO-V1.xsd)
+							SS		01/06/2021		- GER-3299: Added SequenceNumber for CoinsurerInvolvement segment
+																Added ParentSequenceNumber for Reinsurers segment
+																Added InsuranceFlows segment and its complex type
+		v2.3				SS		02/09/2021		- Added Claims elements and Engineering fields at Program level
+		v2.4				SS		13/10/2021		- Changed CountryOfRisk to mandatory
+													  Added Engineering LOB related fields
+													  Added Marine LOB related fields
+													  Added 'SubType' to 'CodeDescriptionType'
+													  Added CyberExclusion Fields
+													  Added Pricing Fields
+													  Added multiple fields including new TimeSpecification attribute in Perils
+													  Also updated :
+													  /GBO/Common/V1/Components.xsd
+													  /GBO/Enterprise/Common/V1/Components.xsd
+													  Added Extension Exposure under Pricing
+
+													
+-->	 
+	<xsd:annotation>
+		<xsd:documentation>
+			<description>Business Object supporting retrieving a customer's
+				information.</description>
+		</xsd:documentation>
+	</xsd:annotation>
+
+	<!-- +++++++++++++++++++++++ -->
+	<!-- Imports -->
+	<!-- +++++++++++++++++++++++ -->
+
+	<xsd:import
+		namespace="http://generali.com/enterprise-services/core/gbo/common/core-types/v1"
+		schemaLocation="../../../../GBO/Common/V1/CoreTypes.xsd" />
+
+	<xsd:import
+		namespace="http://generali.com/enterprise-services/core/gbo/common/v1"
+		schemaLocation="../../../../GBO/Common/V1/Components.xsd" />
+
+	<xsd:import
+		namespace="http://generali.com/enterprise-services/core/gbo/enterprise/common/v1"
+		schemaLocation="../../Common/V1/Components.xsd" />
+		
+	<xsd:include schemaLocation="AgreementInvolvementGBO-V1.xsd"></xsd:include>
+
+	<!-- +++++++++++++++++++++++ -->
+	<!-- Declarations -->
+	<!-- +++++++++++++++++++++++ -->
+	<xsd:element name="Program" type="tns:ProgramGBOType"/>
+	
+	<xsd:complexType name="AgreementType">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:BaseGBOType">
+				<xsd:sequence>
+					<xsd:element name="ExpiryDate" type="cdt:DateTimeType" />
+    				<xsd:element name="InceptionDate" type="cdt:DateTimeType" />
+    				<xsd:element name="Renewable" type="xsd:boolean" minOccurs="0"/>
+    				<xsd:element name="IssueDate" type="cdt:DateTimeType" minOccurs="0"/>
+    				<xsd:element name="LayerAttachmentPoint" type="cdt:AmountType" minOccurs="0"/>
+    				<xsd:element name="LastRenewalDate" type="cdt:DateTimeType" minOccurs="0"/>
+    				<xsd:element name="Endorsed" type="xsd:boolean" minOccurs="0" />
+    				<xsd:element name="EndorsmentVersion" type="xsd:token" minOccurs="0" />
+    				<xsd:element name="Status" type="xsd:token" />
+    				<xsd:element name="StatusDate" type="cdt:DateTimeType" minOccurs="0"/>
+					<xsd:element name="StatusNotes" type="cdt:TextType" minOccurs="0"/>
+					<xsd:element name="SumInsured" type="cdt:AmountType" minOccurs="0"/>
+					<xsd:element name="TotalLayers" type="cdt:NumberType" minOccurs="0"/>
+    				<xsd:element name="RenewedFrom" type="cdt:IDType" minOccurs="0"/>
+    				<xsd:element name="UnderwritingYear" type="xsd:nonNegativeInteger" />
+					<xsd:element name="Version" type="xsd:nonNegativeInteger" />
+					<xsd:element name="AccountManagers" minOccurs="0">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="AccountManager" type="tns:AccountManagerInvolvementType" minOccurs="1" maxOccurs="unbounded" />
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="BusinessOrigin" type="tns:BusinessOriginEnum" minOccurs="0"/>
+					<xsd:element name="ClassificationCode" type="tns:ClassificationCodeEnum" minOccurs="0"></xsd:element>
+					<xsd:element name="CoinsurerInvolvements" minOccurs="0">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="Coinsurer" type="tns:CoinsurerInvolvementType" maxOccurs="unbounded" minOccurs="0"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="Contacts" type="tns:ContactsInvolvement" minOccurs="0"/>
+					<xsd:element name="InsuredInvolvement" minOccurs="0">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="Insured" type="tns:InsuredInvolvement" maxOccurs="unbounded" minOccurs="0"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<!--  fast change for backward compatibility, future will have better one -->
+					<xsd:element name="Intermediary"
+						type="tns:IntermediaryInvolvementType" minOccurs="0" maxOccurs="unbounded"/>
+					
+					<xsd:element name="Underwriters" minOccurs="0">	
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="Underwriter" type="tns:UnderwriterInvolvement" minOccurs="1" maxOccurs="unbounded"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					
+					<xsd:element name="LayerType" type="tns:LayerTypeEnum" minOccurs="1">
+					</xsd:element>
+					<xsd:element name="LineOfBusiness" type="ecmn:LineOfBusinessType" />
+					<xsd:element name="PayoutBenefits" minOccurs="0">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="PayoutBenefit" type="tns:PayoutBenefit" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					
+					<xsd:element name="LocalCurrency" type="cdt:CodeType" minOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>The currency code, should be an ISO 3 digit code</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="RemittanceCurrency" type="cdt:CodeType" minOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>The currency code, should be an ISO 3 digit code</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>				
+					<xsd:element name="LocalData" type="cmn:LocalDataType" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>This element contains a key value implementation for local data tab.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+				
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	
+	   <xsd:complexType name="ProgramGBOType">
+    	<xsd:complexContent>
+    		<xsd:extension base="tns:AgreementType">
+    			<xsd:sequence>
+    				<xsd:element name="LongTermAgreement"
+    					type="xsd:boolean" minOccurs="0" />
+    				<xsd:element name="LongTermStartDate"
+    					type="cdt:DateTimeType" minOccurs="0" />
+    				<xsd:element name="LongTermEndDate"
+    					type="cdt:DateTimeType" minOccurs="0" />
+    				<xsd:element name="OnRiskSince"
+    					type="cdt:DateTimeType" minOccurs="0" />
+    				<xsd:element name="RenewalDate"
+    					type="cdt:DateTimeType" minOccurs="0" />
+    				<xsd:element name="YearSequenceNumber"
+    					type="xsd:nonNegativeInteger" />
+    				<xsd:element name="Producer"
+    					type="tns:ProducerInvolvementType" minOccurs="1" />
+    				<xsd:element name="CancellationDaysNotice"
+    					type="cdt:NumberType" />
+    				<xsd:element name="Risks" minOccurs="0"
+    					maxOccurs="1">
+    					<xsd:complexType>
+    						<xsd:sequence>
+    							<xsd:element name="Risk"
+    								type="tns:RiskType" minOccurs="0" maxOccurs="unbounded">
+    							</xsd:element>
+    						</xsd:sequence>
+    					</xsd:complexType>
+    				</xsd:element>
+    				<xsd:element name="Covers" minOccurs="1">
+    					<xsd:complexType>
+    						<xsd:sequence>
+    							<xsd:element name="Cover"
+    								type="tns:CoverGBOType" minOccurs="0" maxOccurs="unbounded" />
+    						</xsd:sequence>
+    					</xsd:complexType>
+    				</xsd:element>
+    				<xsd:element name="Deductibles"
+    					type="tns:DeductiblesType" minOccurs="0" />
+    				<xsd:element name="Limits" type="tns:LimitsType"
+    					minOccurs="0" />
+    				<xsd:element name="PremiumFactors" minOccurs="0">
+    					<xsd:complexType>
+    						<xsd:sequence>
+    							<xsd:element name="PremiumFactor"
+    								type="tns:PremiumFactorType" minOccurs="0"
+    								maxOccurs="unbounded" />
+    						</xsd:sequence>
+    					</xsd:complexType>
+    				</xsd:element>
+    				<xsd:element name="Perils"
+    					type="tns:PerilsStructureType" minOccurs="0" />
+    				<!-- Changed the SicCode type as part of GER-3147 -->
+    				<xsd:element name="SiCCode"
+    					type="cmn:SicClassificationType" minOccurs="0" />
+    				<!--  this should be one, but  right now GeR doesn't provide it, if not present use AccountSicCode-->
+    				<xsd:element name="LegalCost"
+    					type="tns:LegalCostType" minOccurs="0" />
+    				<!--  this element is mandatory for Casualty and Financial line (mainly where liability are involved) -->
+    				<xsd:element name="TotalPremium"
+    					type="tns:TotalPremiumType" minOccurs="0" />
+    				<!--  added for Program level premium -->
+    				<xsd:element name="ProgramLimitOfIndemnity"
+    					type="cdt:AmountType" minOccurs="0" />
+    				<xsd:element name="PharmaceuticalRisk"
+    					type="xsd:boolean" minOccurs="0" />
+    				<xsd:element name="IsCentralisedPremiumPayment"
+    					type="xsd:boolean" minOccurs="0" />
+    				<!--  ESB-174: C&B Project: Added isCentralisedPremiumPayment at Program Level -->
+    				<xsd:element name="ToPortalIndicator"
+    					type="cdt:TextType" minOccurs="0" />
+    				<!--  C&B Portal included to filter/route messages -->
+    				<xsd:element name="Documents" minOccurs="0">
+    					<xsd:complexType>
+    						<xsd:sequence>
+    							<xsd:element name="Document"
+    								type="ecmn:DocumentType" minOccurs="0"
+    								maxOccurs="unbounded" />
+    						</xsd:sequence>
+    					</xsd:complexType>
+    				</xsd:element>
+    				<xsd:element name="MPRIndicator" type="xsd:boolean" minOccurs="0"></xsd:element> <!-- renamed ClearingHouseFlat to MPRIndicator -->
+    				<!-- v5.13 GER-2854: SanctionAndComplianceFlag -->
+    				<xsd:element name="SanctionAndComplianceFlag" type="xsd:boolean" minOccurs="0"></xsd:element>
+					<!-- v2.4 Adding Pricing Segment -->
+					<xsd:element name="Pricing" type="tns:PricingType" minOccurs="0" />
+					<!-- v2.4 Adding Cyber Exclusion Fields -->
+					<xsd:element name="CyberExclusion" type="tns:CyberExclusionType" minOccurs="0" />
+					<!-- v2.3 Adding fields for Claims and Engineering specific data -->
+					<xsd:element name="FamilySubmissionReference" type="xsd:string"  minOccurs="0"/>
+					<xsd:element name="CarSubmissionReference" type="xsd:string" minOccurs="0" />
+					<xsd:element name="ProjectTypeCode" type="xsd:string" minOccurs="0" />
+					<xsd:element name="PublishClaimsWithPaidValues" type="xsd:boolean"  minOccurs="0" />
+					<xsd:element name="PublishClaimsWithoutPaidValues" type="xsd:boolean"  minOccurs="0" />
+    			</xsd:sequence>
+    		</xsd:extension>
+    	</xsd:complexContent>
+    </xsd:complexType>
+    
+	<xsd:simpleType name="LayerTypeEnum">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Primary"/>
+			<xsd:enumeration value="Excess"/>
+			<xsd:enumeration value="QuotaShare"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="BusinessOriginEnum">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="NewBusiness" />
+			<xsd:enumeration value="Renewal" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="ClassificationCodeEnum">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Multinational" />
+			<xsd:enumeration value="Mononational" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<!-- v2.4 Adding Cyber Exclusion Complex Type -->
+	<xsd:complexType name="CyberExclusionType">
+		<xsd:sequence>
+			<xsd:element name="Excluded" type="xsd:boolean" minOccurs="0" />
+			<xsd:element name="Type" type="xsd:string" minOccurs="0" />
+			<xsd:element name="CoverType" type="xsd:string" minOccurs="0" />
+			<xsd:element name="Limit" type="tns:LimitType" minOccurs="0" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<!-- v2.4 Start : Adding Pricing Complex Types -->
+	<xsd:complexType name="PricingType">
+		<xsd:sequence>
+			<xsd:element name="InvolvementType" type="xsd:string" minOccurs="0" />
+			<xsd:element name="ProducingCountryName" type="xsd:string" minOccurs="0" />
+			<xsd:element name="Layers" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Layer" type="tns:PricingLayerType" minOccurs="0" maxOccurs="unbounded" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="Deductions" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Deduction" type="tns:PricingDeductionType" minOccurs="0" maxOccurs="unbounded" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="Extensions" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Extension" type="tns:PricingExtensionType" minOccurs="0" maxOccurs="unbounded" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="Deductibles" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Deductible" type="tns:PricingInterestType" minOccurs="0" maxOccurs="unbounded" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="Limits" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Limit" type="tns:PricingInterestType" minOccurs="0" maxOccurs="unbounded" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="PricingAmounts" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="PricingAmount" type="tns:PricingAmountType" minOccurs="0" maxOccurs="unbounded" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="PricingLayerType">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:BaseIdentifiedComponentType">
+				<xsd:sequence>
+					<xsd:element name="Primary" type="xsd:boolean" minOccurs="0" />
+					<xsd:element name="AttachmentPoint" type="cdt:NumericType" minOccurs="0" />
+					<xsd:element name="Limit" minOccurs="0">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="Value" type="cmn:ValueType" minOccurs="0" />
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="POShare" type="cdt:NumericType" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="PricingDeductionType">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:BaseIdentifiedComponentType">
+				<xsd:sequence>
+					<xsd:element name="DeductionType" type="cmn:CodeDescriptionType" minOccurs="0" />
+					<xsd:element name="Value" type="cmn:ValueType" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="PricingExtensionType">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:BaseIdentifiedComponentType">
+				<xsd:sequence>
+					<xsd:element name="Code" type="xsd:string" minOccurs="0" />
+					<xsd:element name="RateBasis" type="xsd:string" minOccurs="0" />
+					<xsd:element name="RatePC" type="cdt:NumericType" minOccurs="0" />
+					<xsd:element name="Exposure" type="cdt:NumericType" minOccurs="0" />
+					<xsd:element name="Sublimit" type="cdt:NumericType" minOccurs="0" />
+					<xsd:element name="Premium" type="cdt:NumericType" minOccurs="0" />
+					<xsd:element name="Comment" type="xsd:string" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="PricingInterestType">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:BaseIdentifiedComponentType">
+				<xsd:sequence>
+					<xsd:element name="AmountTypes" minOccurs="0">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="AmountType" type="tns:PricingInterestAmountType" minOccurs="0" maxOccurs="unbounded" />
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="PricingInterestAmountType">
+		<xsd:sequence>
+			<xsd:element name="Value" type="cmn:ValueType" minOccurs="0" />
+			<xsd:element name="Type" type="xsd:string" minOccurs="0" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+
+	<xsd:complexType name="PricingAmountType">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:BaseIdentifiedComponentType">
+				<xsd:sequence>
+					<xsd:element name="Premium" type="tns:PricingPremiumType" minOccurs="0" />
+					<xsd:element name="ActualCommission" type="cdt:NumericType" minOccurs="0" />
+					<xsd:element name="GeneraliGwpShare" type="cdt:NumericType" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="PricingPremiumType">
+		<xsd:sequence>
+			<xsd:element name="Gross" type="cdt:NumericType" minOccurs="0" />
+			<xsd:element name="Actual" type="cdt:NumericType" minOccurs="0" />
+			<xsd:element name="MinimumAcceptable" type="cdt:NumericType" minOccurs="0" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<!-- v2.4 End : Adding Pricing Complex Type -->
+	
+	<xsd:complexType name="LimitType">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:BaseIdentifiedComponentType">
+				<xsd:sequence>
+					<xsd:element name="Value" type="cmn:ValueType" />
+					<xsd:element name="Maximum" type="cdt:AmountType"
+						minOccurs="0" />
+					<xsd:element name="Minimum" type="cdt:AmountType"
+						minOccurs="0" />
+					<xsd:element name="Basis"
+						type="cmn:CodeDescriptionType" />
+					<!-- v2.4 Added TimeSpecification Attribute -->
+					<xsd:element name="TimeSpecification" type="cdt:NumericType" 
+					minOccurs="0" />
+					
+					<xsd:element name="RestrictedToGeography"
+						minOccurs="0">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="Geography"
+									type="cmn:GeographyType" minOccurs="0" maxOccurs="unbounded" />
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="ValueAppliesTo"
+						type="cmn:CodeDescriptionType" />
+					<xsd:element name="Type">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:token">
+								<xsd:enumeration value="Main"></xsd:enumeration>
+								<xsd:enumeration value="SubLimit"></xsd:enumeration>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="Indemnity" type="tns:IndemnityType" minOccurs="0"></xsd:element>
+				</xsd:sequence>
+				<xsd:attribute name="Grouped" default="false" type="xsd:boolean" />				
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="LimitsType">
+		<xsd:sequence>
+			<xsd:element name="Limit" type="tns:LimitType" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="ClausesType">
+		<xsd:sequence>
+			<xsd:element name="Clause" type="tns:ClauseType"
+				minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="DeductibleType">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:BaseIdentifiedComponentType">
+				<xsd:sequence>
+					<xsd:element name="Value" type="cmn:ValueType"
+						minOccurs="0" />
+					<xsd:element name="Basis"
+						type="cmn:CodeDescriptionType" minOccurs="0" />
+					<xsd:element name="ValueAppliesTo"
+						type="cmn:CodeDescriptionType" minOccurs="0" />
+					<xsd:element name="RestrictedToGeography"
+						minOccurs="0">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="Geography"
+									type="cmn:GeographyType" minOccurs="0" maxOccurs="unbounded" />
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="DeductibleType" default="Main"
+						minOccurs="1">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:token">
+								<xsd:enumeration value="Main" />
+								<xsd:enumeration
+									value="PerilPolicyDeductible" />
+								<xsd:enumeration
+									value="PerilRiskDeductible" />
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="Maximum" type="cdt:AmountType"
+						minOccurs="0" />
+					<xsd:element name="Minimum" type="cdt:AmountType"
+						minOccurs="0" />
+					<xsd:element name="SeparateDeductible" type="xsd:boolean" minOccurs="0"></xsd:element>
+				</xsd:sequence>
+				<xsd:attribute name="Grouped" default="false" type="xsd:boolean" />	
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="AppliedDeductionsType">
+		<xsd:sequence>
+			<xsd:element name="AppliedDeduction" type="tns:AppliedDeductionType" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="AppliedDeductionType">
+		<xsd:sequence>
+			<xsd:element name="Amount" type="cdt:AmountType" minOccurs="0" />
+			<xsd:element name="Premium" type="tns:PremiumType" minOccurs="0" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="DeductiblesType">
+		<xsd:sequence>
+			<xsd:element name="Deductible" type="tns:DeductibleType"
+				minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	
+	<xsd:complexType name="CoverageType">
+		<xsd:sequence>
+			<xsd:element name="Limits" type="tns:LimitsType"
+				minOccurs="0" />
+			<xsd:element name="Deductibles" type="tns:DeductiblesType" minOccurs="0"></xsd:element>
+			<xsd:element name="Exposures" type="tns:ExposuresType" minOccurs="0"/>
+			<xsd:element name="Premium" type="tns:PremiumType" minOccurs="0"/>
+			
+			<xsd:element name="CoverageCode" type="cdt:CodeType" minOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The coverage code will be mapped in the reference data, no need to have an 
+					enum in the ServiceModel</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Clauses" type="tns:ClausesType" minOccurs="0" />
+			<xsd:element name="EffectiveDate" type="cdt:DateTimeType" minOccurs="0" />
+			<xsd:element name="EndDate" type="cdt:DateTimeType" minOccurs="0" />
+			<xsd:element name="RetroactiveDate" type="cdt:DateTimeType" minOccurs="0" />
+			<xsd:element name="TermDate" type="cdt:DateTimeType" minOccurs="0" />
+			<xsd:element name="GeographicalScope" type="cmn:GeographicalScope" minOccurs="0"/>
+			<xsd:element name="ClaimsTrigger" type="xsd:string" minOccurs="0"/>   <!--  ESB-174: C&B Project : Added Claims Trigger 09/10/2018 -->																									  
+		</xsd:sequence>
+	</xsd:complexType>
+
+	
+	<xsd:complexType name="CoveragesType">
+		<xsd:sequence>
+			<xsd:element name="Coverage" type="tns:CoverageType"
+				minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="PerilsStructureType">
+		<xsd:sequence>
+			<xsd:element name="PerilStructure" type="tns:PerilStructureType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="PerilStructureType">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:BaseIdentifiedComponentType">
+				<xsd:sequence>
+					<xsd:element name="Limits" type="tns:LimitsType"
+						minOccurs="0">
+					</xsd:element>
+					<xsd:element name="Deductibles"
+						type="tns:DeductiblesType" minOccurs="0">
+					</xsd:element>
+					<xsd:element name="Peril" type="ecmn:PerilType" />
+					<xsd:element name="WorldwideFlag" type="xsd:string" minOccurs="0"></xsd:element>
+<!-- Change Start - RM		21/08/2019		- GER-2820: Added StateRegionCode, StateRegionName, CountryOfPerilCode, CountryOfPerilName, ZipCodeOfPeril -->	
+					<xsd:element type="xsd:string" name="StateRegionCode" minOccurs="0" maxOccurs="1" />
+					<xsd:element type="xsd:string" name="StateRegionName" minOccurs="0" maxOccurs="1" />
+					<xsd:element type="cmn:ISOAlpha2CodeType" name="CountryOfPerilCode" minOccurs="0" maxOccurs="1" />
+					<xsd:element type="xsd:string" name="CountryOfPerilName" minOccurs="0" maxOccurs="1" />
+					<xsd:element type="xsd:string" name="ZipCodeOfPeril" minOccurs="0" maxOccurs="1" />	
+<!-- Change end -->
+				</xsd:sequence>
+				<xsd:attribute name="Included" type="xsd:boolean" />
+			</xsd:extension>
+		</xsd:complexContent>
+		
+	</xsd:complexType>
+
+	<xsd:complexType name="DeductionType">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:BaseIdentifiedComponentType">
+				<xsd:sequence>
+					<xsd:element name="Calculated" type="xsd:boolean" />
+					<xsd:element name="Value" type="cmn:ValueTypeDeduction" />
+					<xsd:element name="AppliesToPremiumType" type="ecmn:DeductionApplyToEnum" />
+					<xsd:element name="ValueType" type="tns:PremiumValueEnum" minOccurs="0"/>
+					<xsd:element name="DeductionType" type="cmn:CodeDescriptionType"/>
+					<xsd:element name="TimeApplied" type="tns:TimeAppliedEnum" minOccurs="0"/>
+					<xsd:element name="AppliedDeductions" type="tns:AppliedDeductionsType" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="TimeAppliedEnum">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="OnRenewal" />
+			<xsd:enumeration value="OnExpiry" />
+			<xsd:enumeration value="FirstInstalment" />
+			<xsd:enumeration value="LastInstalment" />
+			<xsd:enumeration value="SkipFirstInstalment" />
+			<xsd:enumeration value="EquallyAcrossAllInstalment" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	
+	
+	<xsd:simpleType name="PremiumValueEnum">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Flat"/>
+			<xsd:enumeration value="Adjustable"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	
+	<xsd:complexType name="DeductionsType">
+		<xsd:sequence>
+			<xsd:element name="Deduction" type="tns:DeductionType"
+				minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="TotalDeductionsType">
+		<xsd:sequence>
+			<xsd:element name="Deduction" type="tns:DeductionType"
+				minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+
+	<xsd:complexType name="PremiumType">
+		<xsd:sequence>
+			<xsd:element name="IsMinimum" type="xsd:boolean"
+				minOccurs="0" />
+			<xsd:element name="DaysOfCredit" type="cdt:NumberType"
+				minOccurs="0" />
+			<xsd:element name="CATNAT" type="cdt:AmountType"
+				minOccurs="0" />
+			<xsd:element name="GAREAT" type="cdt:AmountType"
+				minOccurs="0" />
+			<xsd:element name="Gross" type="cdt:AmountType"
+				minOccurs="0" />
+			<xsd:element name="Net" type="cdt:AmountType" minOccurs="0" />
+			<xsd:element name="Technical" type="cdt:AmountType"
+				minOccurs="0" />
+			<xsd:element name="NumberOfInstallments"
+				type="cdt:NumberType" />
+			<xsd:element name="Description" type="cdt:TextType"
+				minOccurs="0" />
+			<xsd:element name="Identifier" type="cdt:IDType"
+				minOccurs="0" />
+			<xsd:element name="ReserveHeld" type="cdt:AmountType"
+				minOccurs="0" />
+			<xsd:element name="SettlementDueDate" type="cdt:DateType"
+				minOccurs="0" />
+			<xsd:element name="Payment" type="tns:PremiumValueEnum"
+				minOccurs="0" />
+			<xsd:element name="Warranty" type="tns:WarrantyEnum"
+				minOccurs="0" />
+			<xsd:element name="InstalmentTerm"
+				type="tns:InstalmentTermEnum" minOccurs="0" />
+			<xsd:element name="PremiumAllocations" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="PremiumAllocation"
+							type="ecmn:PremiumAllocationType" minOccurs="0"
+							maxOccurs="unbounded" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+
+			<!-- ESB-174: C&B Project : Added Collected Amounts representing Premium Collected Amounts for different countries -->
+
+			<xsd:element name="CollectedAmounts" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="CollectedAmount"
+							type="ecmn:PaymentTransactionType" minOccurs="0"
+							maxOccurs="unbounded" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="GWPShare" type="cdt:AmountType"
+				minOccurs="0">
+			</xsd:element>
+			<xsd:element name="SharePercentage" type="cdt:PercentType"
+				minOccurs="0">
+			</xsd:element>
+			<xsd:element name="NumberOfPTLayers" type="cdt:NumberType" minOccurs="0"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="TotalPremiumType">
+		<xsd:sequence>
+			<xsd:element name="WarrantyAppliesAfterDays" type="cdt:NumericType" />
+			<xsd:element name="PPWBasis" type="tns:WarrantyEnum" minOccurs="0"/> 
+			<xsd:element name="InstalmentPlans" type="tns:InstalmentPlansType" minOccurs="0"/>
+			<xsd:element name="Currency" type="cdt:CodeType" />
+			<xsd:element name="Premiums" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Premium" type="tns:PremiumType" minOccurs="0" maxOccurs="unbounded" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="InstalmentPlansType">
+		<xsd:sequence>
+			<xsd:element name="InstalmentPlan" minOccurs="0" maxOccurs="unbounded">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="StartDate" type="cdt:DateTimeType" minOccurs="0"/>
+						<xsd:element name="EndDate" type="cdt:DateTimeType" minOccurs="0"/>
+						<xsd:element name="NumberOfInstalment" type="cdt:NumericType"/>
+						<xsd:element name="InstalmentBasis" type="tns:InstalmentBasisEnum" />
+						<xsd:element name="InstalmentDate" type="tns:InstalmentDateEnum" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="InstalmentBasisEnum">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Quarterly"/>
+			<xsd:enumeration value="Annual"/>
+			<xsd:enumeration value="Half-yearly"/>
+			<xsd:enumeration value="Bespoke"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="InstalmentDateEnum">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="AccountingDate"/>
+			<xsd:enumeration value="DueDate"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="WarrantyEnum">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Inception"/>
+			<xsd:enumeration value="Bound"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="InstalmentTermEnum">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Day"/>
+			<xsd:enumeration value="Week"/>
+			<xsd:enumeration value="Month"/>
+			<xsd:enumeration value="Year" />
+			<xsd:enumeration value="Bespoke"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="PolicyTypeEnum">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Admitted" />
+			<xsd:enumeration value="FreedomOfService" />
+			<xsd:enumeration value="NonAdmitted" />
+			<xsd:enumeration value="Master" />
+			<xsd:enumeration value="Layer" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<!-- 
+	<xsd:simpleType name="AgreementTypeEnum">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Admitted" />
+			<xsd:enumeration value="FreedomOfService" />
+			<xsd:enumeration value="NonAdmitted" />
+			<xsd:enumeration value="Master" />
+			<xsd:enumeration value="Layer" />
+		</xsd:restriction>
+	</xsd:simpleType>
+ -->
+<!-- 
+	<xsd:complexType name="ClaimsType">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:BaseIdentifiedComponentType">
+				<xsd:sequence>
+					<xsd:element name="DateOfLoss" type="cdt:DateTimeType"/>
+					<xsd:element name="DateReported" type="cdt:DateTimeType"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+ -->
+ 
+	<xsd:complexType name="ClauseType">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:BaseIdentifiedComponentType">
+				<xsd:sequence>
+					<xsd:element name="Code" type="cdt:CodeType"  minOccurs="0"/>
+					<xsd:element name="Wording" type="cdt:TextType" minOccurs="0"/>
+                    <xsd:element name="Limits" type="tns:LimitsType" minOccurs="0"/>
+                    <xsd:element name="Deductibles" type="tns:DeductiblesType" minOccurs="0" />
+				</xsd:sequence>
+				<xsd:attribute name="IsIncluded" type="xsd:boolean" />
+				<xsd:attribute name="IsCustom" type="xsd:boolean" />
+				<xsd:attribute name="IsExtension" type="xsd:boolean" default="false" />
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+    
+    <xsd:complexType name="PremiumFactorType">
+    	<xsd:complexContent>
+    		<xsd:extension base="cmn:BaseComponentType">
+    			<xsd:sequence>
+    				<xsd:element name="Amount" type="cdt:AmountType" />
+    				<xsd:element name="Description" type="cdt:TextType" />
+    				<xsd:element name="Percentage" type="cdt:PercentType" />
+    				
+    				
+    			</xsd:sequence>
+    		</xsd:extension>
+    		
+    	</xsd:complexContent>
+    </xsd:complexType>
+    
+    <xsd:complexType name="CoverGBOType">
+    	<xsd:complexContent>
+    		<xsd:extension base="tns:AgreementType">
+    			<xsd:sequence>
+    				<xsd:element name="DeclarationNumber"
+    					type="cdt:IDType" minOccurs="0" />
+    				<xsd:element name="ClaimJurisdiction"
+    					type="cdt:TextType" />
+    				<xsd:element name="CostInAddition"
+    					type="xsd:boolean" default="false" />
+    				<xsd:element name="PolicyJurisdiction"
+    					type="cdt:TextType" />
+    				<xsd:element name="Layer" type="cdt:NumberType"
+    					minOccurs="0" />
+    				<xsd:element name="Share" type="cdt:PercentType"
+    					minOccurs="0" />
+    				<xsd:element name="Visible" type="xsd:boolean" />
+    				<xsd:element name="CountryOfBusiness"
+    					type="cmn:ISOAlpha2CodeType" minOccurs="0" />
+    				<!-- Added as part of ESB-164 -->
+    				<xsd:element name="Cedants" minOccurs="0">
+    					<xsd:complexType>
+    						<xsd:sequence>
+    							<xsd:element name="Cedant"
+    								type="tns:CedantInvolvementType" minOccurs="0"
+    								maxOccurs="unbounded" />
+    						</xsd:sequence>
+    					</xsd:complexType>
+    				</xsd:element>
+    				<xsd:element name="Front" minOccurs="0"
+    					type="tns:FrontingInvolvementType" />
+    				<xsd:element name="Reinsurers" minOccurs="0">
+    					<xsd:complexType>
+    						<xsd:sequence>
+    							<xsd:element name="Reinsurer"
+    								maxOccurs="unbounded" type="tns:ReinsurerInvolvementType" />
+    						</xsd:sequence>
+    					</xsd:complexType>
+    				</xsd:element>
+					
+					<!-- GER-3299 - Added InsuranceFlows segment -->
+					<xsd:element name="InsuranceFlows" minOccurs="0">
+    					<xsd:complexType>
+    						<xsd:sequence>
+    							<xsd:element name="InsuranceFlow"
+    								maxOccurs="unbounded" type="tns:InsuranceFlowType" />
+    						</xsd:sequence>
+    					</xsd:complexType>
+    				</xsd:element>
+
+    				<xsd:element name="Risks" minOccurs="0"
+    					maxOccurs="1">
+    					<xsd:complexType>
+    						<xsd:sequence>
+    							<xsd:element name="Risk"
+    								type="tns:RiskType" minOccurs="0" maxOccurs="unbounded">
+    							</xsd:element>
+    						</xsd:sequence>
+    					</xsd:complexType>
+    				</xsd:element>
+					
+					<!-- v2.4 Added Marine Vessel segment -->
+					<xsd:element name="Vessels" minOccurs="0">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element type="tns:VesselType" name="Vessel" minOccurs="0" maxOccurs="unbounded" />
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+    				
+					<xsd:element name="PolicyType"
+    					type="tns:PolicyTypeEnum" />
+    				<xsd:element name="Coverages"
+    					type="tns:CoveragesType" />
+    				<xsd:element name="PolicyHolderInvolvement"
+    					type="tns:PolicyholderInvolvement" minOccurs="0" />
+    				<xsd:element name="Deductibles"
+    					type="tns:DeductiblesType" minOccurs="0" />
+    				<xsd:element name="Deductions"
+    					type="tns:DeductionsType" />
+    				<xsd:element name="TotalDeductions"
+    					type="tns:TotalDeductionsType" />
+    				<xsd:element name="Extensions"
+    					type="tns:ExtensionsType" minOccurs="0" />
+
+    				<xsd:element name="Limits" type="tns:LimitsType"
+    					minOccurs="0" />
+    				<xsd:element name="Exposures"
+    					type="tns:ExposuresType" minOccurs="0">
+    				</xsd:element>
+    				<!--
+    					Removed as for Oliver input 
+    					<xsd:element name="PerilStructure" type="tns:PerilsType" minOccurs="0"/>
+    				-->
+    				<xsd:element name="Premiums">
+    					<xsd:complexType>
+    						<xsd:sequence>
+    							<xsd:element name="Premium"
+    								type="tns:PremiumType" minOccurs="0" maxOccurs="unbounded" />
+    						</xsd:sequence>
+    					</xsd:complexType>
+    				</xsd:element>
+    				<xsd:element name="TotalPremium"
+    					type="tns:TotalPremiumType" minOccurs="0" />
+    				<xsd:element name="Clauses" type="tns:ClausesType"
+    					minOccurs="0" />
+    				<xsd:element name="ExchangeRate"
+    					type="cdt:NumericType" minOccurs="0" default="1.00" />
+    				<xsd:element name="IsCentralisedPremiumPayment"
+    					type="xsd:boolean" minOccurs="0" />
+    				<!--  ESB-174: C&B Project Added isCentralisedPremiumPayment at Cover Level -->
+
+    				<!--  ESB-174: C&B Project : Added below fields-->
+
+    				<xsd:element name="InstructDate"
+    					type="cdt:DateTimeType" minOccurs="0" />
+    				<xsd:element name="DateSentToBroker"
+    					type="cdt:DateTimeType" minOccurs="0" />
+    				<xsd:element name="DatePolicyIssued"
+    					type="cdt:DateTimeType" minOccurs="0" />
+    				<xsd:element name="PaymentDate"
+    					type="cdt:DateTimeType" minOccurs="0" />
+
+    				<!--  ESB-174: C&B Project : Documents Structure added here  -->
+
+    				<xsd:element name="Documents" minOccurs="0">
+    					<xsd:complexType>
+    						<xsd:sequence>
+    							<xsd:element name="Document"
+    								type="ecmn:DocumentType" minOccurs="0"
+    								maxOccurs="unbounded" />
+    						</xsd:sequence>
+    					</xsd:complexType>
+    				</xsd:element>
+    				<xsd:element name="CountryOfRisk" type="cmn:ISOAlpha2CodeType"></xsd:element>
+					<!-- v2.3 Adding new segment for Claims	-->
+					<xsd:element name="Claims" minOccurs="0">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="Claim" type="tns:ClaimType" minOccurs="0" maxOccurs="unbounded" />
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<!-- v2.4 Adding new segment for Engineering Fields -->
+					<xsd:element name="Engineering" type="tns:EngineeringType" minOccurs="0" />
+    			</xsd:sequence>
+    		</xsd:extension>
+    	</xsd:complexContent>
+    </xsd:complexType>
+	
+	<!-- v2.3 Adding new complex type for Claims	-->
+	
+	<xsd:complexType name="ClaimType">
+		<xsd:sequence>
+			<xsd:element type="xsd:string" name="ClaimNumber" />
+			<xsd:element type="xsd:string" name="PolicyNumber" />
+			<xsd:element type="xsd:string" name="Status" />
+			<xsd:element type="xsd:string" name="Source" />
+			<xsd:element type="xsd:string" name="Contact" />
+			<xsd:element type="xsd:string" name="Interest" minOccurs="0" />
+			<xsd:element type="cdt:DateTimeType" name="DateOpen" />
+			<xsd:element type="cdt:DateTimeType" name="DateLastTransaction" />
+			<xsd:element type="cdt:DateTimeType" name="DateOfLoss" minOccurs="0" />
+			<xsd:element type="cdt:DateTimeType" name="DateReported" minOccurs="0" />
+			<xsd:element type="cdt:DateTimeType" name="DateLastUpdated" />
+			<xsd:element type="xsd:string" name="LastUpdateBy" />
+			<xsd:element type="xsd:string" name="Adjuster" minOccurs="0" />
+			<xsd:element type="xsd:string" name="Comments" minOccurs="0" />
+			<xsd:element type="xsd:string" name="CauseOfLoss" minOccurs="0" />
+			<xsd:element type="xsd:string" name="LossDescription" minOccurs="0" />
+			<xsd:element type="xsd:string" name="LocationKey" minOccurs="0" />
+			<xsd:element type="cmn:AddressType" name="Address" minOccurs="0" />
+			<xsd:element type="xsd:string" name="Currency" />
+			<xsd:element type="cdt:AmountType" name="Deductibles" />
+			<xsd:element type="cdt:AmountType" name="PaidClaim" />
+			<xsd:element type="cdt:AmountType" name="PaidVendorFee" />
+			<xsd:element type="cdt:AmountType" name="RecoveryReserve" minOccurs="0" />
+			<xsd:element type="cdt:AmountType" name="ClaimReserve" />
+			<xsd:element type="cdt:AmountType" name="VendorFeeReserve" />
+			<xsd:element type="cdt:AmountType" name="TotalIncurred" minOccurs="0" />
+			<xsd:element type="xsd:string" name="ProducingOfficeContact" minOccurs="0" />
+			<xsd:element type="xsd:string" name="FrontingOfficeContact" minOccurs="0" />
+		</xsd:sequence>
+	</xsd:complexType>
+    
+	<!-- v2.4 Start: Adding 3 Engineering related complex type, 1 Simple Type and 2 Vessel Types for Marine -->
+	<xsd:complexType name="EngineeringType">
+		<xsd:sequence>
+			<xsd:element type="cdt:DateTimeType" name="SignoffDate" minOccurs="0" />
+			<xsd:element type="cdt:NumberType" name="TestCommissionDays" minOccurs="0" />
+			<xsd:element type="tns:EngineeringMaintenanceType" name="MaintenanceRecord" minOccurs="0" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="EngineeringMaintenanceType">
+		<xsd:sequence>
+			<xsd:element type="cdt:DateTimeType" name="InceptionDate" />
+			<xsd:element type="cdt:DateTimeType" name="ExpiryDate" />
+			<xsd:element name="Years">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Maintenance" type="tns:MaintenanceType" minOccurs="1" maxOccurs="unbounded" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="MaintenanceType">
+		<xsd:sequence>
+			<xsd:element type="cdt:NumberType" name="Year" />
+			<xsd:element type="tns:MaintenanceTypeEnum" name="Type" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="MaintenanceTypeEnum">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Visit"/>
+			<xsd:enumeration value="Extended"/>
+			<xsd:enumeration value="Guarantee"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:complexType name="VesselType">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:BaseIdentifiedComponentType">
+				<xsd:sequence>
+					<xsd:element type="xsd:string" name="ImoNumber" minOccurs="0"/>
+					<xsd:element type="xsd:boolean" name="Top" minOccurs="0"/>
+					<xsd:element type="xsd:string" name="Flag" minOccurs="0"/>
+					<xsd:element type="xsd:string" name="Name" minOccurs="0"/>
+					<xsd:element type="xsd:string" name="Segment" minOccurs="0"/>
+					<xsd:element type="cdt:NumericType" name="GrossTonnage" minOccurs="0"/>
+					<xsd:element type="cdt:NumericType" name="DWT" minOccurs="0"/>
+					<xsd:element type="cdt:NumberType" name="Score" minOccurs="0"/>
+					<xsd:element type="xsd:string" name="ClassificationSociety" minOccurs="0"/>
+					<xsd:element type="xsd:nonNegativeInteger" name="BuiltYear" minOccurs="0"/>
+					<xsd:element name="VesselInterests" minOccurs="0">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element type="tns:VesselInterestType" name="VesselInterest"
+									minOccurs="0" maxOccurs="unbounded"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="VesselInterestType">
+		<xsd:sequence>
+			<xsd:element type="xsd:string" name="TemplateName" minOccurs="0"/>
+			<xsd:element type="xsd:string" name="Currency" minOccurs="0"/>
+			<xsd:element type="cdt:AmountType" name="Value" minOccurs="0"/>
+			<xsd:element type="cdt:NumericType" name="Rate" minOccurs="0"/>
+			<xsd:element type="cdt:AmountType" name="Deductible" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<!-- v2.4 End: Adding 3 Engineering related complex type, 1 Simple Type and 2 Vessel Types for Marine -->
+	
+    <xsd:complexType name="PayoutBenefit">
+    	<xsd:complexContent>
+    		<xsd:extension base="cmn:BaseIdentifiedComponentType"></xsd:extension>
+    	</xsd:complexContent>
+    </xsd:complexType>
+    
+    <xsd:complexType name="ExtensionsType">
+    	<xsd:sequence>
+    		<xsd:element name="Extension" type="tns:ExtensionType" minOccurs="0" maxOccurs="unbounded"/>
+    	</xsd:sequence>
+    </xsd:complexType>
+    
+    
+    <xsd:complexType name="ExtensionType">
+    	<xsd:sequence>
+    		<xsd:element name="EffectiveDate" type="cdt:DateTimeType" minOccurs="0"/>
+    		<xsd:element name="EndDate" type="cdt:DateTimeType" minOccurs="0"/>
+    		<xsd:element name="RetroactiveDate" type="cdt:DateTimeType" minOccurs="0" />
+    		<xsd:element name="TermDate" type="cdt:DateTimeType" minOccurs="0"/>
+    		<xsd:element name="Premium" type="tns:PremiumType" minOccurs="0"/>
+    		<xsd:element name="Exposures" type="tns:ExposuresType" minOccurs="0" />
+    		<xsd:element name="Deductibles" type="tns:DeductiblesType" minOccurs="0" />
+    		<xsd:element name="Clauses" type="tns:ClausesType" minOccurs="0" />
+    		<xsd:element name="Limits" type="tns:LimitsType" minOccurs="0" />
+    		<xsd:element name="ExtensionCode" type="cmn:CodeDescriptionType"  />
+    		<xsd:element name="GeographicalScope" type="cmn:GeographicalScope" minOccurs="0"/>
+    	</xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="ExposuresType">
+		<xsd:sequence>
+			<xsd:element name="Exposure" type="tns:ExposureType" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="ExposureType">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:BaseIdentifiedComponentType">
+				<xsd:sequence>
+					<xsd:element name="AnnualRate" type="cdt:AmountType" />
+					<xsd:element name="EstimatedValue" type="cmn:AmountOrQuantityType" />
+					<!--  Removed I think is not needed -->
+					<!-- <xsd:element name="ExposureSpecification" type="ecmn:ExposureSpecificationType" minOccurs="0"/> -->
+					<xsd:element name="Premium" type="tns:PremiumType" minOccurs="0"/>
+					<xsd:element name="CalculationFactor" type="cdt:NumericType" minOccurs="0" />
+					<xsd:element name="ApplyRateType">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:token">
+								<xsd:enumeration value="Rate" />
+								<xsd:enumeration value="Flat" />
+								<xsd:enumeration value="PerMills" />
+								<xsd:enumeration value="Unit"/>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					
+					<xsd:element name="Unit" type="cmn:CodeDescriptionType" minOccurs="0"/>
+					<xsd:element name="Item" type="cmn:CodeDescriptionType" minOccurs="0"/>
+					<xsd:element name="Basis" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:token">
+								<xsd:enumeration value="AverageValue"/>
+								<xsd:enumeration value="Percentage"/>
+								<xsd:enumeration value="ActualValue"/>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="CalculationRateType" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:token">
+								<xsd:enumeration value="AverageValue"/>
+								<xsd:enumeration value="Percentage"/>
+								<xsd:enumeration value="ActualValue"/>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="Coverage" type="tns:CoverageType" minOccurs="0" />
+					<xsd:element name="MFL" type="cmn:PercValueType" minOccurs="0" />
+					<xsd:element name="UnitPrice" type="cdt:AmountType" minOccurs="0" />
+					<!--  Added as part of GER-3147 -->
+					<xsd:element name="Indemnity" type="tns:IndemnityType" minOccurs="0"></xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="RiskType">
+    	<xsd:sequence>
+			<xsd:element name="RiskElement" type="tns:RiskElementInvolvementType"/>
+			
+    	</xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="RiskInvolvement">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:BaseIdentifiedComponentType">
+				<xsd:sequence>
+					<xsd:element name="ExposuresFor" type="tns:ExposuresType" minOccurs="0"/>
+					<xsd:element name="Limits" type="tns:LimitsType" minOccurs="0" />
+					<xsd:element name="Deductibles" type="tns:DeductiblesType" minOccurs="0" />
+					<xsd:element name="PerilsStructure" type="tns:PerilsStructureType" minOccurs="0" />
+					<xsd:element name="LocalAssetGroup" type="cdt:CodeType" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="RiskPartyInvolvement">
+		<xsd:complexContent>
+			<xsd:extension base="tns:RiskInvolvement">
+				<xsd:sequence>
+					<xsd:element name="InsuredRole" type="ecmn:InsuredRoleType" /> 
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+		
+	</xsd:complexType>
+	
+	<xsd:complexType name="RiskElementInvolvementType">
+		<xsd:complexContent>
+			<xsd:extension base="tns:RiskInvolvement">
+				<xsd:sequence>
+					<xsd:element name="InsuredRiskElement" type="ecmn:RiskElementRoleType" />
+					<xsd:element name="Validity" type="cmn:TimePeriodType" minOccurs="0"/>
+					<xsd:element name="ClassificationCode" type="cmn:ClassificationType" minOccurs="0"/>
+					<!-- v2.4 Adding Engineering Related Location Segments -->
+					<xsd:element name="EngineeringCarEar" type="tns:EngineeringCarEarType" minOccurs="0" />
+					<xsd:element name="EngineeringMb" type="tns:EngineeringMbType" minOccurs="0" />
+					<xsd:element name="EngineeringPm" type="tns:EngineeringPmType" minOccurs="0" />
+ 				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<!-- v2.4 : Start - Adding Engineering Related Location Complex Types -->
+	
+	<xsd:complexType name="EngineeringCarEarType">
+		<xsd:sequence>
+			<xsd:element type="cdt:AmountType" name="InsuredValuesMD" minOccurs="0" />
+			<xsd:element type="cdt:NumericType" name="RateMD" minOccurs="0" />
+			<xsd:element type="cdt:AmountType" name="InsuredValuesCpmCpeMB" minOccurs="0" />
+			<xsd:element type="cdt:NumericType" name="RateCpmCpeMB" minOccurs="0" />
+			<xsd:element type="cdt:AmountType" name="InsuredValuesMDOther" minOccurs="0" />
+			<xsd:element type="cdt:NumericType" name="RateMDOther" minOccurs="0" />
+			<xsd:element type="cdt:AmountType" name="InsuredValuesAlopDsu" minOccurs="0" />
+			<xsd:element type="cdt:NumericType" name="MonthsAlopDsu" minOccurs="0" />
+			<xsd:element type="cdt:AmountType" name="CalcBasisAlopDsuValue" minOccurs="0" />
+			<xsd:element type="cdt:AmountType" name="CalcBasisAlopDsuPC" minOccurs="0" />
+			<xsd:element type="cdt:NumericType" name="RateAlopDsu" minOccurs="0" />
+			<xsd:element type="cdt:AmountType" name="MFLAlopDsuPC" minOccurs="0" />
+			<xsd:element type="cdt:AmountType" name="DeductibleMDOtherValue" minOccurs="0" />
+			<xsd:element type="cdt:NumericType" name="DeductibleDaysAlopDsu" minOccurs="0" />
+			<xsd:element type="cdt:AmountType" name="MFLMachinery" minOccurs="0" />
+			<xsd:element type="cdt:AmountType" name="MFLProjectPC" minOccurs="0" />
+			<xsd:element type="cdt:AmountType" name="MFLMDOtherValue" minOccurs="0" />
+			<xsd:element type="cdt:AmountType" name="MFLMDOtherPC" minOccurs="0" />
+			<xsd:element type="cdt:AmountType" name="DeductibleProject" minOccurs="0" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="EngineeringMbType">
+		<xsd:sequence>
+			<xsd:element type="xsd:string"  name="MachineryManufacturer" minOccurs="0" />
+			<xsd:element type="xsd:string"  name="MachineryModel" minOccurs="0" />
+			<xsd:element type="xsd:string"  name="MachinerySerialNumber" minOccurs="0" />
+			<xsd:element type="cdt:AmountType" name="InsuredValuesMachinery" minOccurs="0" />
+			<xsd:element type="cdt:NumericType" name="RateMBMachinery" minOccurs="0" />
+			<xsd:element type="cdt:AmountType" name="MFLMachinery" minOccurs="0" />
+			<xsd:element type="cdt:NumericType" name="RateAllRisksMachinery" minOccurs="0" />
+			<xsd:element type="cdt:NumericType" name="RateMBBI" minOccurs="0" />
+			<xsd:element type="cdt:NumericType" name="RateAllRisksBI" minOccurs="0" />
+			<xsd:element type="cdt:NumericType" name="MFLOther" minOccurs="0" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="EngineeringPmType">
+		<xsd:sequence>
+			<xsd:element type="xsd:string"  name="MachineryType" minOccurs="0" />
+			<xsd:element type="cdt:AmountType" name="InsuredValuesCpmCpeMachinery" minOccurs="0" />
+			<xsd:element type="cdt:NumericType" name="RateCpmCpeMachinery" minOccurs="0" />
+			<xsd:element type="cdt:NumericType" name="MFLMachinery" minOccurs="0" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<!-- v2.4 : End - Adding Engineering Related Location Complex Types -->
+	
+	<xsd:complexType name="LegalCostType">
+		<xsd:sequence>
+			<xsd:element name="Amount" type="cdt:AmountType"/>
+			<xsd:element name="CostType">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:token">
+						<xsd:enumeration value="Inclusive"/>
+						<xsd:enumeration value="Unlimited"/>
+						<xsd:enumeration value="FixAmount"/>
+						<xsd:enumeration value="PercentOfLimit"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="IndemnityType">
+		<xsd:sequence>
+			<xsd:element name="Limit" type="cdt:AmountType"
+				minOccurs="0">
+			</xsd:element>
+			<xsd:element name="Period" type="cdt:QuantityType" minOccurs="0"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>
+

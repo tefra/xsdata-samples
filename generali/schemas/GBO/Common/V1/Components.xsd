@@ -1,0 +1,2496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--(c) Reply Limited. All rights reserved. -->
+<!--  
+	$Id: Components.xsd 1532 2020-07-16 17:48:18Z sanghvis $
+					SS		11/05/2020		MPR-40: Added ValueTypeDeduction complex type in GBO/Common/V1/Compponent.xsd.
+					SS		16/07/2020		GER-3147:Added 'Short Description' for SIC Code component and added Indemnity segment for Exposures (BI)
+													(Change in Components.xsd and AgreementGBO-V1.xsd)
+		v2.4		SS		13/10/2021		Added 'SubType' to CodeDescriptionType
+											Added 'FullName' wherever 'NameText' exists
+ -->
+<xsd:schema
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:cdt="http://generali.com/enterprise-services/core/gbo/common/core-types/v1"
+	xmlns:tns="http://generali.com/enterprise-services/core/gbo/common/v1"
+	targetNamespace="http://generali.com/enterprise-services/core/gbo/common/v1"
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	version="1.0">
+	
+	<xsd:annotation>
+		<xsd:documentation>
+			<description>The schema containing the declarations of the common components.</description>
+			<links>
+				<link rel="self">./Components.xsd</link>
+			</links>
+		</xsd:documentation>
+	</xsd:annotation>
+
+    <!-- ++++++++++++++++++++++++++++++ -->
+    <!--             Imports            -->
+    <!-- ++++++++++++++++++++++++++++++ -->
+	<xsd:import
+		namespace="http://generali.com/enterprise-services/core/gbo/common/core-types/v1"
+		schemaLocation="CoreTypes.xsd" />
+
+
+    <!-- ++++++++++++++++++++++++++++++ -->
+    <!--             Declarations       -->
+    <!-- ++++++++++++++++++++++++++++++ -->
+  
+    <xsd:complexType name="CountryGBOType">
+		<xsd:annotation>
+			<xsd:documentation></xsd:documentation>
+		</xsd:annotation>
+			<xsd:sequence>
+				<xsd:element
+					name="ISOCode2"
+					type="tns:ISOAlpha2CodeType"
+					maxOccurs="1">
+				</xsd:element>
+				<xsd:element
+					name="ISOCode3"
+					type="tns:ISOAlpha3CodeType"
+					maxOccurs="1" minOccurs="0">
+				</xsd:element>
+				<xsd:element name="name" type="cdt:TextType" minOccurs="0" />
+				<xsd:element
+					name="subdivisions"
+					type="tns:SubdivisionsType"
+					minOccurs="0" maxOccurs="1">
+				</xsd:element>
+			</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="SubdivisionsType">
+		<xsd:sequence>
+			<xsd:element name="subdivision" minOccurs="1" maxOccurs="unbounded" type="tns:SubDivisionType"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="SubDivisionType">
+		<xsd:annotation>
+			<xsd:documentation></xsd:documentation>
+		</xsd:annotation>
+			<xsd:sequence>
+				<xsd:element
+					name="subdivisionCode"
+					type="xsd:token"
+					maxOccurs="1" 
+					minOccurs="0">
+				</xsd:element>
+				<xsd:element
+					name="name"
+					type="xsd:token"
+					maxOccurs="1" 
+					minOccurs="0">
+				</xsd:element>
+				<xsd:element
+					name="subdivisionCategory"
+					type="xsd:token"
+					maxOccurs="1"
+					minOccurs="0" >
+				</xsd:element>
+				<xsd:element
+					name="subdivisions"
+					type="tns:SubdivisionsType"
+					minOccurs="0" 
+					maxOccurs="1">
+				</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="ISOAlpha2CodeType">
+		<xsd:annotation>
+			<xsd:documentation>ISO 3166-1 is part of the ISO 3166 standard published by the International Organization for Standardization (ISO), and defines codes for the names of countries, dependent territories, and special areas of geographical interest - ISO-Alpha2</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:token">
+			<xsd:pattern value="[A-Z][A-Z]" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="ISOAlpha3CodeType">
+		<xsd:annotation>
+			<xsd:documentation>ISO 3166-1 is part of the ISO 3166 standard published by the International Organization for Standardization (ISO), and defines codes for the names of countries, dependent territories, and special areas of geographical interest - ISO Alpha 3</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:token">
+			<xsd:pattern value="[A-Z][A-Z][A-Z]" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="StatusCodeType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Active" />
+			<xsd:enumeration value="Inactive" />
+		</xsd:restriction>
+	</xsd:simpleType>
+    
+    <xsd:simpleType name="DUNSType">
+		<xsd:annotation>
+			<xsd:documentation>The DUNS number pattern, the value should be like 000000001</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="9" />
+			<xsd:pattern value="([0-9]{9})" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:complexType name="ClassificationType">
+		<xsd:sequence>
+			<xsd:element name="Code" type="cdt:CodeType"/>
+			<xsd:element name="Type" type="tns:SICTypeEnum"/>
+			<!-- Maybe this enum may become a code/value -->
+			<xsd:element name="Description" type="cdt:TextType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<!-- Added as part of GER-3147 -->
+	<xsd:complexType name="SicClassificationType">
+		<xsd:sequence>
+			<xsd:element name="Code" type="cdt:CodeType"/>
+			<xsd:element name="Type" type="tns:SICTypeEnum"/>
+			<xsd:element name="ShortDescription" type="cdt:TextType" minOccurs="0"/>
+			<!-- Maybe this enum may become a code/value -->
+			<xsd:element name="Description" type="cdt:TextType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="SICTypeEnum">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Division" />
+			<xsd:enumeration value="MajorGroup" />
+			<xsd:enumeration value="IndustryGroup" />
+			<xsd:enumeration value="Industry" />
+			<xsd:enumeration value="Sub-Industry" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:complexType name="GeographyType">
+			<xsd:sequence>
+				<xsd:element name="Description" type="cdt:TextType" minOccurs="0"></xsd:element>
+				<xsd:element name="Name" type="cdt:CodeType"/>
+				<xsd:element name="Country" type="tns:CountryGBOType" minOccurs="0"/>
+				<xsd:element name="Address" minOccurs="0" >
+					<xsd:complexType>
+						<xsd:choice>
+							<xsd:element name="Address" type="tns:AddressType"></xsd:element>
+							<xsd:element name="GeocodedAddress" type="tns:GeoCodedAddressType"></xsd:element>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+		
+		<xsd:complexType name="AddressType">
+			<xsd:sequence>
+				<xsd:element name="AddressLine1" type="xsd:token"
+					minOccurs="1" />
+				<xsd:element name="AddressLine2" type="xsd:token"
+					minOccurs="0" />
+				<xsd:element name="State" type="xsd:token"
+					minOccurs="0" />
+				<xsd:element name="City" type="xsd:token" minOccurs="0" />
+				<xsd:element name="ZipCode" type="xsd:token"
+					minOccurs="0" />
+				<xsd:element name="Country" type="tns:CountryGBOType"
+					minOccurs="1" />
+			</xsd:sequence>
+		</xsd:complexType>
+		
+		<xsd:complexType name="GeoCodedAddressType">
+			<xsd:complexContent>
+				<xsd:extension base="tns:AddressType">
+					<xsd:sequence>
+						<xsd:element name="GeocodedAddresLine1" type="xsd:token" minOccurs="0" />
+						<xsd:element name="GeocodedAddresLine2" type="xsd:token" minOccurs="0" />
+						<xsd:element name="GeocodedState" type="xsd:token" minOccurs="0" />
+						<xsd:element name="GeocodedTown" type="xsd:token" minOccurs="0" />
+						<xsd:element name="GeocodedZipCode" type="xsd:token" minOccurs="0" />
+						<xsd:element name="GeocodedCountry" type="tns:CountryGBOType" minOccurs="0" />
+						<xsd:element name="GeocodedAccuracy" type="tns:GeocodedAccuracyEnum" minOccurs="0"/>
+						<xsd:element name="GlobalPositionAddress" type="tns:GeographicLocationType" minOccurs="0"/>
+						<xsd:element name="CrestaZone" type="tns:CrestaZoneType" minOccurs="0"/>
+						<xsd:element name="AccuracyLevel" type="xsd:token" minOccurs="0"/> <!--  Added Accuracy Level 02/10/2018 -->
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+		
+		<xsd:simpleType name="GeocodedAccuracyEnum">
+			<xsd:restriction base="xsd:token">
+				<xsd:enumeration value="Postcode"></xsd:enumeration>
+				<xsd:enumeration value="Street"></xsd:enumeration>
+			</xsd:restriction>
+		</xsd:simpleType>
+		
+		<xsd:complexType name="GlobalPositionAddressType">
+			<xsd:sequence>
+				<xsd:element name="Latitude" type="cdt:NumericType"/>
+				<xsd:element name="Longitude" type="cdt:NumericType"/>
+				<xsd:element name="WGSCode" type="cdt:IDType">
+					<xsd:annotation>
+					<xsd:documentation>The World Geodetic System (WGS) is a standard for use in cartography, geodesy, and navigation including by GPS. 
+						It comprises a standard coordinate system for the Earth, a standard spheroidal reference surface (the datum or reference ellipsoid) for raw altitude data, 
+						and a gravitational equipotential surface (the geoid) that defines the nominal sea level.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+		
+		<xsd:complexType name="CrestaZoneType">
+			<xsd:sequence>
+				<xsd:element name="CrestaZoneIdentifier" type="cdt:IDType" />
+				<xsd:element name="CrestaZoneName" type="cdt:IDType" minOccurs="0"/>
+				<xsd:element name="CrestaSubZoneIdentifier" type="cdt:IDType" minOccurs="0"/>
+				<xsd:element name="CrestaSubZoneName" type="cdt:IDType" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+		
+		<xsd:complexType name="SMSNumberType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>
+					<description>The definition for an SMS number.</description>
+				</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element
+				name="FullNumberText"
+				type="cdt:TextType"
+				minOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<description>
+							<description>The full SMS number.</description>
+						</description>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="TelephoneNumberType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>A definition of a land line telephone number or MSISDN.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element
+				name="FullNumberText"
+				type="cdt:TextType"
+				minOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<description>
+							<description>The full telephone number, e.g. +44 0790 028 2454</description>
+						</description>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element
+				name="CountryCodeText"
+				type="tns:TelephoneNumberCountryCodeType"
+				minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<description>
+							<description>The Country Code of the Telephone Number, 1-3 digits.</description>
+						</description>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element
+				name="IdentificationCodeText"
+				type="tns:TelephoneNumberIdentificationCodeType"
+				minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<description>
+							<description>The Identification Code or Destination Code of the Telephone Number, 1-3 digits.</description>
+						</description>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element
+				name="SubscriberNumberText"
+				type="tns:TelephoneNumberSubscriberNumberType"
+				minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<description>
+							<description>The Subscriber Number of the Telephone Number, 1-3 digits.</description>
+						</description>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="TelephoneNumberCountryCodeType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>
+					<description>The definition Country Code part of a Telephone Number.</description>
+				</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:restriction base="cdt:TextType">
+            <!-- 
+                <xsd:minLength value="1"/>
+                <xsd:maxLength value="3"/>
+            -->
+			</xsd:restriction>
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="TelephoneNumberSubscriberNumberType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>
+					<description>The definition Subscriber Number part of a Telephone Number.</description>
+				</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:restriction base="cdt:TextType" />
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="TelephoneNumberIdentificationCodeType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>
+					<description>The definition Identification Code or Destination Code part of a Telephone Number.</description>
+				</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:restriction base="cdt:TextType" />
+		</xsd:simpleContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="ThingActorType">
+		<xsd:annotation>
+			<xsd:documentation>A type defining the details of a thing, examples of thing include servers, vehicles, aircraft, etc.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="tns:BaseComponentType">
+				<xsd:sequence />
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="EmailAddressType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>A Email Address conforming to RFC5321 and RFC5322.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element
+				name="FullAddressText"
+				type="tns:EmailAddressFullType"
+				minOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<description>The full email address e.g. peter.jackson@vodafone.com</description>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element
+				name="DomainPartText"
+				type="tns:EmailAddressDomainPartType"
+				minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<description>The domain e.g. vodafone.com, without the @ symbol.</description>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element
+				name="LocalPartText"
+				type="tns:EmailAddressLocalPartType"
+				minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<description>The username e.g. peter.jackson</description>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+
+	<xsd:complexType name="EmailAddressFullType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>
+					<description>The definition of the local part of an Email Address.</description>
+				</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:restriction base="cdt:TextType">
+				<xsd:pattern value=".*@.*" />
+			</xsd:restriction>
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+
+	<xsd:complexType name="EmailAddressLocalPartType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The definition of the local part of an Email Address.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:restriction base="cdt:TextType">
+				<xsd:maxLength value="64" />
+			</xsd:restriction>
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="EmailAddressDomainPartType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The definition of the domain part of an Email Address.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:restriction base="cdt:TextType">
+				<xsd:maxLength value="253" />
+			</xsd:restriction>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="GeographicLocationType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>A geographic location, latitude and longitude</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="tns:BaseSimpleComponentType">
+				<xsd:sequence>
+					<xsd:element
+						name="AltitudeMeasure"
+						type="cdt:MeasureType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The measure of the altitude that reflects the vertical elevation of an object above a surface for this geographical coordinate (Reference ISO 6709</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="LatitudeMeasure"
+						type="cdt:MeasureType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The measure of the latitude as an angular distance north or south from the Equator meridian to the meridian of a specific place for this geographical coordinate. (Reference ISO 6709)</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="LongitudeMeasure"
+						type="cdt:MeasureType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The measure of the longitude as an angular distance east or west from the Greenwich meridian to the meridian of a specific place (Reference ISO 6709)</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="LatitudeDirectionCode"
+						type="cdt:CodeType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The indication of whether the latitude compass direction from the Equator meridian to the meridian of a specific place is North (+) or South (-). (Reference ISO 6709)</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="LongitudeDirectionCode"
+						type="cdt:CodeType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The indication of whether the longitude as a compass direction from the Greenwich meridian to the meridian of a specific place is East (-) or West (+) for this geographical coordinate. (Reference ISO 6709)</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="SystemID"
+						type="cdt:IDType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>A unique identifier of the system used for measuring a geographical coordinate other than Global Positioning System</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="CodeDescriptionType">
+		<xsd:sequence>
+			<xsd:element name="Code" type="cdt:CodeType"/>
+			<xsd:element name="Description" type="cdt:TextType" minOccurs="0"/>
+			<!-- Adding Subtype to code description -->
+			<xsd:element name="Subtype" type="cdt:TextType" minOccurs="0" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="GeographicalScope">
+		<xsd:complexContent>
+			<xsd:extension base="tns:CodeDescriptionType"></xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="ValueType">
+		<xsd:choice>
+			<xsd:element name="Amount" type="cdt:AmountType" />
+			<xsd:element name="Percentage" type="cdt:PercentType" />
+			<xsd:element name="Quantity" type="cdt:QuantityType" />
+		</xsd:choice>
+	</xsd:complexType>
+	
+	<!--  MPR-40 - Shrenika - 11/05/2020 - Changes added for new Deduction Type -->
+	
+	<xsd:complexType name="ValueTypeDeduction">
+        <xsd:sequence>
+            <xsd:element name="Percentage" type="cdt:PercentType" minOccurs="0"/>
+            <xsd:element name="Amount" type="cdt:AmountType" minOccurs="0"/>
+            <xsd:element name="Quantity" type="cdt:QuantityType" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+	<xsd:complexType name="AmountOrQuantityType">
+		
+		<xsd:choice>
+			<xsd:element name="Amount" type="cdt:AmountType" />
+			<xsd:element name="Quantity" type="cdt:NumericType" />
+		</xsd:choice>
+	</xsd:complexType>
+	
+	<xsd:complexType name="PercValueType">
+		<xsd:choice>
+			<xsd:element name="Amount" type="cdt:AmountType" />
+			<xsd:element name="Percentage" type="cdt:PercentType" />
+		</xsd:choice>
+	</xsd:complexType>
+	
+	<xsd:complexType name="BaseComponentType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>Base type for all business objects and components.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute
+			name="actionCode"
+			type="xsd:token"
+			use="optional">
+			<xsd:annotation>
+				<xsd:documentation>
+					<description>The @actionCode attribute is used within a modification operation to indicate the action (add, update, delete) intended on a component.</description>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+
+
+	<xsd:complexType name="BaseIdentifiedComponentType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The base type for all business objects and components with an identifier and a lifecycle state.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="tns:BaseComponentType">
+				<xsd:sequence>
+					<xsd:element
+						name="IDs"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The set of Identifiers for the business object or component. These should be used to uniquely identifier instances of the business object or component.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element
+									name="ID"
+									type="cdt:IDType"
+									maxOccurs="unbounded">
+									<xsd:annotation>
+										<xsd:documentation>
+											<description>The identifier of the business object or component. This should be used to identify instances of a business object or component. Where the component is being used to reference another business object then this is the "primary key" of the target object. Use the attributes
+												@schemeName and @schemeAgencyName to identify type of Identifier.</description>
+										</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element
+						name="NameText"
+						type="cdt:TextType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The name of the instance of a business object or component.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="DescText"
+						type="cdt:TextType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>A free text description of a business object or component.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="FullName"
+						type="cdt:TextType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>Full Name of the characteristic.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="StatusCode"
+						type="cdt:CodeType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The lifecycle state of the business object or component. This field is used to track the specific state an instance of an object or component is in, e.g. the Customer Bill is Active or the Customer Request has been Cancelled.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="VersionID"
+						type="cdt:IDType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>A field that identifies the specific version of an instance of a business object or component. This field should be used in support of multi-agent environments to control the concurrency (locking) of the instance.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="CreationDate"
+						type="cdt:DateTimeType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The date and time the business object or component was created. A date and time formatted in compliance with the ISO8601 standard must be used.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="CreatedByID"
+						type="cdt:IDType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The unique ID of the User that created the instance of the business object or component. This should be used as a reference to the IDM system and the details about that User.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="DateLastUpdate"
+						type="cdt:DateTimeType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The date and time the business object or component was last modified. A date and time formatted in compliance with the ISO8601 standard must be used.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="LastModifiedByID"
+						type="cdt:IDType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The unique ID of the User that last modified the instance of the business object or component. This should be used as a reference to the IDM system and the details about that User.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="Notes" type="cdt:TextType" minOccurs="0"></xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="BaseReferenceComponentType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The base type for all components with an identifier and a lifecycle state that reference another business object.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="tns:BaseComponentType">
+				<xsd:sequence>
+					<xsd:element
+						name="IDs"
+						minOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The set of Identifiers for the business object or component. These should be used to uniquely identifier instances of the business object or component.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element
+									name="ID"
+									type="cdt:IDType"
+									maxOccurs="unbounded">
+									<xsd:annotation>
+										<xsd:documentation>
+											<description>The identifier of the business object or component. This should be used to identify instances of a business object or component. Where the component is being used to reference another business object then this is the "primary key" of the target object. Use the attributes
+												@schemeName and @schemeAgencyName to identify type of Identifier.</description>
+										</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element
+						name="NameText"
+						type="cdt:TextType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The name of the instance of a business object or component.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="DescText"
+						type="cdt:TextType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>A free text description of a business object or component.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="FullName"
+						type="cdt:TextType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>Full Name of the characteristic.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="TypeCode"
+						type="cdt:CodeType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>A classification of the business object or component. This identifies the sub-type of the instance of object or component.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="Categories"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The set of classifications for the business object or component.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element
+									name="CategoryCode"
+									maxOccurs="unbounded">
+									<xsd:annotation>
+										<xsd:documentation>
+											<description>A classification applied to the business object or component. More than one classification scheme can be applied using the @listName attribute to identify the type of code list being used. The classification scheme can be used to group instances of the object or component.</description>
+										</xsd:documentation>
+									</xsd:annotation>
+									<xsd:complexType>
+										<xsd:simpleContent>
+											<xsd:extension base="cdt:CodeType">
+												<xsd:attribute
+													name="listHierarchyID"
+													type="xsd:token"
+													use="optional">
+													<xsd:annotation>
+														<xsd:documentation>An indication of the depth in a classification hierarchy</xsd:documentation>
+													</xsd:annotation>
+												</xsd:attribute>
+											</xsd:extension>
+										</xsd:simpleContent>
+									</xsd:complexType>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element
+						name="StatusCode"
+						type="cdt:CodeType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The lifecycle state of the business object or component. This field is used to track the specific state an instance of an object or component is in, e.g. the Customer Bill is Active or the Customer Request has been Cancelled.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="VersionID"
+						type="cdt:IDType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>A field that identifies the specific version of an instance of a business object or component. This field should be used in support of multi-agent environments to control the concurrency (locking) of the instance.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="CreatedDateTime"
+						type="cdt:DateTimeType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The date and time the business object or component was created. A date and time formatted in compliance with the ISO8601 standard must be used.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="CreatedByID"
+						type="cdt:IDType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The unique ID of the User that created the instance of the business object or component. This should be used as a reference to the IDM system and the details about that User.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="LastModifiedDateTime"
+						type="cdt:DateTimeType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The date and time the business object or component was last modified. A date and time formatted in compliance with the ISO8601 standard must be used.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="LastModifiedByID"
+						type="cdt:IDType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The unique ID of the User that last modified the instance of the business object or component. This should be used as a reference to the IDM system and the details about that User.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="ValidityPeriod"
+						type="tns:TimePeriodType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>A component that states the date and time from which this business object is effective (or valid) and the date and time to which it is effective. Again the ISO8601 standard must be used.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+				<xsd:attribute
+					name="relationshipTypeCode"
+					type="xsd:token"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation>
+							<description>An attribute holding the relationship of the parent context with the referenced business object or component.</description>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute
+					name="businessObjectTypeCode"
+					type="xsd:token"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation>
+							<description>The type of the business object being referenced, i.e. Advanced Shipment Notification or Sales Order.</description>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="BaseReferenceComponentOptionalType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The base type for all components with an identifier and a lifecycle state that reference another business object.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="tns:BaseComponentType">
+				<xsd:sequence>
+					<xsd:element
+						name="IDs"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The set of Identifiers for the business object or component. These should be used to uniquely identifier instances of the business object or component.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element
+									name="ID"
+									type="cdt:IDType"
+									maxOccurs="unbounded">
+									<xsd:annotation>
+										<xsd:documentation>
+											<description>The identifier of the business object or component. This should be used to identify instances of a business object or component. Where the component is being used to reference another business object then this is the "primary key" of the target object. Use the attributes
+												@schemeName and @schemeAgencyName to identify type of Identifier.</description>
+										</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element
+						name="NameText"
+						type="cdt:TextType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The name of the instance of a business object or component.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="DescText"
+						type="cdt:TextType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>A free text description of a business object or component.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="FullName"
+						type="cdt:TextType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>Full Name of the characteristic.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="TypeCode"
+						type="cdt:CodeType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>A classification of the business object or component. This identifies the sub-type of the instance of object or component.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="Categories"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The set of classifications for the business object or component.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element
+									name="CategoryCode"
+									maxOccurs="unbounded">
+									<xsd:annotation>
+										<xsd:documentation>
+											<description>A classification applied to the business object or component. More than one classification scheme can be applied using the @listName attribute to identify the type of code list being used. The classification scheme can be used to group instances of the object or component.</description>
+										</xsd:documentation>
+									</xsd:annotation>
+									<xsd:complexType>
+										<xsd:simpleContent>
+											<xsd:extension base="cdt:CodeType">
+												<xsd:attribute
+													name="listHierarchyID"
+													type="xsd:token"
+													use="optional">
+													<xsd:annotation>
+														<xsd:documentation>An indication of the depth in a classification hierarchy</xsd:documentation>
+													</xsd:annotation>
+												</xsd:attribute>
+											</xsd:extension>
+										</xsd:simpleContent>
+									</xsd:complexType>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element
+						name="StatusCode"
+						type="cdt:CodeType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The lifecycle state of the business object or component. This field is used to track the specific state an instance of an object or component is in, e.g. the Customer Bill is Active or the Customer Request has been Cancelled.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="VersionID"
+						type="cdt:IDType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>A field that identifies the specific version of an instance of a business object or component. This field should be used in support of multi-agent environments to control the concurrency (locking) of the instance.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="CreatedDateTime"
+						type="cdt:DateTimeType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The date and time the business object or component was created. A date and time formatted in compliance with the ISO8601 standard must be used.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="CreatedByID"
+						type="cdt:IDType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The unique ID of the User that created the instance of the business object or component. This should be used as a reference to the IDM system and the details about that User.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="LastModifiedDateTime"
+						type="cdt:DateTimeType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The date and time the business object or component was last modified. A date and time formatted in compliance with the ISO8601 standard must be used.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="LastModifiedByID"
+						type="cdt:IDType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The unique ID of the User that last modified the instance of the business object or component. This should be used as a reference to the IDM system and the details about that User.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="ValidityPeriod"
+						type="tns:TimePeriodType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>A component that states the date and time from which this business object is effective (or valid) and the date and time to which it is effective. Again the ISO8601 standard must be used.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+				<xsd:attribute
+					name="relationshipTypeCode"
+					type="xsd:token"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation>
+							<description>An attribute holding the relationship of the parent context with the referenced business object or component.</description>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute
+					name="businessObjectTypeCode"
+					type="xsd:token"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation>
+							<description>The type of the business object being referenced, i.e. Advanced Shipment Notification or Sales Order.</description>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+
+	<xsd:complexType name="BaseSimpleComponentType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>A simple component that is not identified, it contains fields for a name, description and type.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="tns:BaseComponentType">
+				<xsd:sequence>
+					<xsd:element
+						name="NameText"
+						type="cdt:TextType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The name of the characteristic.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="DescText"
+						type="cdt:TextType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The description of the characteristic.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="FullName"
+						type="cdt:TextType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>Full Name of the characteristic.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="TypeCode"
+						type="cdt:CodeType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The type of the characteristic.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="BaseGBOType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The base type of the business object.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="tns:BaseIdentifiedComponentType" />
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:attributeGroup name="HierarchyAttrGroup">
+		<xsd:annotation>
+			<xsd:documentation>The set of attributes supporting the construction of a hierarchy of objects.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute
+			name="parentID"
+			type="xsd:token"
+			use="optional">
+			<xsd:annotation>
+				<xsd:documentation>The ID of the parent of this object within the hierarchy, must be ignored if isRootInd is true.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute
+			name="hierarchyID"
+			type="xsd:integer"
+			use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Provides the level (depth) of the object within the hierarchy.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute
+			name="hierarchyName"
+			type="xsd:string"
+			use="optional">
+			<xsd:annotation>
+				<xsd:documentation>The name of the hierarchy</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute
+			name="isLeafInd"
+			type="xsd:boolean"
+			use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Indicates that this is a leaf object within the hierarchy, i.e. there are no child objects.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute
+			name="isRootInd"
+			type="xsd:boolean"
+			use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Indicates that this is the root object within the hierarchy.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:attributeGroup>
+
+	<xsd:complexType name="BaseGBODetailsType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The base type for the business object details components.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="tns:BaseComponentType" />
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="BaseGBORelatedType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The base type for the business object related components.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="tns:BaseReferenceComponentType" />
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="BaseGBORolesType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The base type for the business object roles components.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="tns:BaseComponentType" />
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="BaseGBOPartsType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The base type for the business object parts components.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="tns:BaseComponentType">
+				<xsd:sequence>
+					<xsd:element
+						name="Notes"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The set of notes or comments for the parent context.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element
+									name="Note"
+									type="tns:NoteType"
+									maxOccurs="unbounded">
+									<xsd:annotation>
+										<xsd:documentation>
+											<description>Notes related to the entity.</description>
+										</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element
+						name="Characteristics"
+						type="tns:CharacteristicsType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>A type that provides a specification for the parent context. This is the set of characteristics (name-value pairs) used to specify the parent context.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="StatusHistory"
+						type="tns:StatusHistoryType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The history of the lifecycle of the parent context.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="BaseGBMType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The base type of the business message.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="BaseGBMHeaderType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The base type of the business message.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Header" type="tns:HeaderType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="HeaderType">
+		<xsd:annotation>
+			<xsd:documentation>The header is mandatory for all messages and 
+				provides information that a service may need in order to
+				communicate or process the message. It contains non-business fields
+				which assist in the handling of the message, such as a ConversationID,
+				for auditing/tracking.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="SourceSystem" type="xsd:token" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The identifier of the system that generated the message.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TargetSystems" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The identifier of the target system(s).</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="TargetSystem" type="xsd:token" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="ConversationID" type="xsd:token" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Identifies a conversation or flow of a message
+						through a series of services. This allows the life of a request to
+						be tracked from the point it is received in the integration layer,
+						through to its eventual destination.
+
+						This is used to enable
+						visibility of multiple message hops in a single
+						integration flow.
+						Correlation of individual messages for
+						interaction purposes (for
+						example Request-Reply), should be
+						achieved using the wsa:RelatesTo
+						element instead.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MessageID" type="xsd:token" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The Identifier of the transmission.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Properties" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The identifier of the target system(s).</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Property" minOccurs="0" maxOccurs="unbounded">
+							<xsd:complexType>
+								<xsd:simpleContent>
+									<xsd:extension base="xsd:token">
+										<xsd:attribute name="key" type="xsd:token" use="required" />
+									</xsd:extension>
+								</xsd:simpleContent>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="CreationDateTime" type="cdt:DateTimeType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The date and time that this message was generated.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Event" type="xsd:token" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="BaseGBMEventType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The base definition of all business events and notifications.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="tns:BaseGBMType">
+				<xsd:attribute
+					name="eventCode"
+					type="tns:EventCodeType"
+					use="required">
+					<xsd:annotation>
+						<xsd:documentation>
+							<description>A value representing the event that occurred on the publishing system to generate this notify event.</description>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute
+					name="businessEventCode"
+					type="xsd:token"
+					use="optional">
+					<xsd:annotation>
+						<xsd:documentation>
+							<description>A value representing the business event that occurred on the publishing system to generate this notify event.</description>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="TimePeriodType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>A component that states the date and time from which this business object is effective (or valid) and the date and time to which it is effective. Again the ISO8601 standard must be used.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element
+				name="FromDateTime"
+				type="cdt:DateTimeType"
+				minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<description>The timestamp from which the business object or component is effective.</description>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:choice minOccurs="0">
+				<xsd:element
+					name="ToDateTime"
+					type="cdt:DateTimeType"
+					minOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>
+							<description>The timestamp to which the business object or component is effective.</description>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element
+					name="Duration"
+					type="cdt:DurationType"
+					minOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>
+							<description>The duration from the start date of the time period.</description>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="CharacteristicsType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The set of characteristics for a business object.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element
+				name="Characteristic"
+				type="tns:CharacteristicType"
+				maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>
+						<description>A characteristic, a name and value. An Example might be Colour="Black" or Memory="32 GBytes".</description>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="CharacteristicType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>A characteristic, a name and value. An Example might be Colour="Black" or Memory="32 GBytes".</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="tns:BaseSimpleComponentType">
+				<xsd:sequence>
+					<xsd:element name="Values">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element
+									name="Value"
+									type="tns:CharacteristicValueType"
+									maxOccurs="unbounded">
+									<xsd:annotation>
+										<xsd:documentation>
+											<description>A value of the characteristic.</description>
+										</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="CharacteristicValueType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>A value of the characteristic.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="tns:BaseComponentType">
+				<xsd:sequence>
+					<xsd:choice minOccurs="1">
+						<xsd:element
+							name="Text"
+							type="cdt:TextType"
+							minOccurs="1" />
+						<xsd:element
+							name="Code"
+							type="cdt:CodeType"
+							minOccurs="1" />
+						<xsd:element
+							name="Amount"
+							type="cdt:AmountType"
+							minOccurs="1" />
+						<xsd:element
+							name="Quantity"
+							type="cdt:QuantityType"
+							minOccurs="1" />
+						<xsd:element
+							name="Numeric"
+							type="cdt:NumericType"
+							minOccurs="1" />
+						<xsd:element
+							name="Percent"
+							type="cdt:PercentType"
+							minOccurs="1" />
+						<xsd:element
+							name="Indicator"
+							type="cdt:IndicatorType"
+							minOccurs="1" />
+						<xsd:element
+							name="Duration"
+							type="cdt:DurationType"
+							minOccurs="1" />
+						<xsd:element
+							name="Time"
+							type="cdt:TimeType"
+							minOccurs="1" />
+						<xsd:element
+							name="Date"
+							type="cdt:DateType"
+							minOccurs="1" />
+						<xsd:element
+							name="DateTime"
+							type="cdt:DateTimeType"
+							minOccurs="1" />
+					</xsd:choice>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="AttachmentType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>A type that specifies an attachment to a business object either as an embedded object or as a reference to an external document.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="tns:BaseIdentifiedComponentType">
+				<xsd:sequence>
+					<xsd:element
+						name="SizeMeasure"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The size in Bytes of the of the document or attachment. If this component contains the embedded data then the size is the size of the embedded data, if it is a reference without the data then it is the size of the referenced document.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:simpleContent>
+								<xsd:restriction base="cdt:MeasureType">
+									<xsd:attribute
+										name="unitCode"
+										type="tns:SimpleUomAmountOfInformationCodeType"
+										use="required" />
+								</xsd:restriction>
+							</xsd:simpleContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:choice minOccurs="1">
+						<xsd:element
+							name="BinaryObject"
+							type="cdt:BinaryObjectType"
+							minOccurs="1">
+							<xsd:annotation>
+								<xsd:documentation>
+									<description>Stores embedded base64 encoded data. Used to carry documents, images, etc. within the parent business object.</description>
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element
+							name="ReferenceURI"
+							type="cdt:URIType"
+							minOccurs="1">
+							<xsd:annotation>
+								<xsd:documentation>
+									<description>A URI reference to an external document.</description>
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+
+					</xsd:choice>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="NoteType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>Notes related to the entity</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="tns:BaseSimpleComponentType">
+				<xsd:sequence>
+					<xsd:element
+						name="Text"
+						type="cdt:TextType"
+						minOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>Textual content of the Note</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="LastModifiedDateTime"
+						type="cdt:DateTimeType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>Last Modified time of the notes</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="AgentID"
+						type="cdt:IDType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>Agent or user who updated or created the notes</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="StatusHistoryType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>A history of the lifecycle state transistions of a business object. Each transition records the date and time and should record the target lifecycle status.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element
+				name="StateTransition"
+				minOccurs="1"
+				maxOccurs="unbounded">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:extension base="tns:BaseSimpleComponentType">
+							<xsd:sequence>
+								<xsd:element
+									name="FromStatusCode"
+									type="cdt:CodeType"
+									minOccurs="0">
+									<xsd:annotation>
+										<xsd:documentation>
+											<description>The source lifecycle state of the transition, i.e. the state from which the transition is moving, for example: from "Active" to "Cancelled".</description>
+										</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element
+									name="ToStatusCode"
+									type="cdt:CodeType"
+									minOccurs="0">
+									<xsd:annotation>
+										<xsd:documentation>
+											<description>The target lifecycle state of the transition, i.e. the state to which the transition is moving, for example: from "Active" to "Cancelled".</description>
+										</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element
+									name="EffectiveDateTime"
+									type="cdt:DateTimeType"
+									minOccurs="0">
+									<xsd:annotation>
+										<xsd:documentation>
+											<description>The date and time of the transistion, i.e. the timestamp of when the target state was entered.</description>
+										</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element
+									name="Reasons"
+									minOccurs="0">
+									<xsd:complexType>
+										<xsd:sequence>
+											<xsd:element
+												name="ReasonCode"
+												maxOccurs="unbounded">
+												<xsd:annotation>
+													<xsd:documentation>
+														<description>The code describing why the transition occured.</description>
+													</xsd:documentation>
+												</xsd:annotation>
+												<xsd:complexType>
+													<xsd:complexContent>
+														<xsd:extension base="cdt:CodeType">
+															<xsd:attribute
+																name="listHierarchyID"
+																type="xsd:token"
+																use="optional">
+																<xsd:annotation>
+																	<xsd:documentation>An indication of the depth in a classification hierarchy</xsd:documentation>
+																</xsd:annotation>
+															</xsd:attribute>
+														</xsd:extension>
+													</xsd:complexContent>
+												</xsd:complexType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:complexType>
+								</xsd:element>
+								
+								<xsd:element
+									name="ChangedByUserID"
+									type="cdt:IDType"
+									minOccurs="0">
+									<xsd:annotation>
+										<xsd:documentation>
+											<description>A reference to the User [Account] who initiated the lifecycle state transition.</description>
+										</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:extension>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="ActionCodeType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>A codelist used to identify what action has been taken on a component within a Update, Notify or Sync operation.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Add" />
+			<xsd:enumeration value="Update" />
+			<xsd:enumeration value="Delete" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="QueryOperatorCodeType">
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="Equals" />
+			<xsd:enumeration value="Not Equals" />
+			<xsd:enumeration value="Greater Than" />
+			<xsd:enumeration value="Greater Than Equals" />
+			<xsd:enumeration value="Less Than" />
+			<xsd:enumeration value="Less Than Equals" />
+			<xsd:enumeration value="Contains" />
+			<xsd:enumeration value="Does Not Contain" />
+			<xsd:enumeration value="Like" />
+			<xsd:enumeration value="Not Like" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="QueryAlgorithmCodeType">
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="Strict" />
+			<xsd:enumeration value="RegEx" />
+			<xsd:enumeration value="Fuzzy" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="LogicalOperatorCodeType">
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="And" />
+			<xsd:enumeration value="Or" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="SortOrderCodeType">
+		<xsd:annotation>
+			<xsd:documentation>The direction by which to sort a set of values.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="ASC" />
+			<xsd:enumeration value="DSC" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="CollationAlgorithmCodeType">
+		<xsd:annotation>
+			<xsd:documentation>The collation (sort) algorithm to use in the sorting to the result set</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="UTS#10" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="EventCodeType">
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="Created" />
+			<xsd:enumeration value="Updated" />
+			<xsd:enumeration value="Deleted" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="FaultSeverityCodeType">
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="Critical" />
+			<xsd:enumeration value="Major" />
+			<xsd:enumeration value="Minor" />
+			<xsd:enumeration value="Warning" />
+			<xsd:enumeration value="Information" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="FaultCategoryCodeType">
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="Business" />
+			<xsd:enumeration value="Technical" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+
+	<xsd:simpleType name="SimpleCountryCodeType">
+		<xsd:restriction base="xsd:token" />
+	</xsd:simpleType>
+
+	<xsd:simpleType name="SimpleCurrencyCodeType">
+		<xsd:restriction base="xsd:token" />
+	</xsd:simpleType>
+
+	<xsd:simpleType name="SimpleLanguageCodeType">
+		<xsd:restriction base="xsd:token" />
+	</xsd:simpleType>
+
+	<xsd:simpleType name="SimpleGenderCodeType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>A codelsit indicating the gender of an individual in the normal run of things or of a concept if applicable, i.e. Words can have gender in French and German.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Male" />
+			<xsd:enumeration value="Female" />
+			<xsd:enumeration value="Neutral" />
+			<xsd:enumeration value="Other" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="GenderCodeType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>A codelist indicating the gender of an individual in the normal run of things or of a concept if applicable, i.e. Words can have gender in French and German.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:restriction base="cdt:CodeType">
+				<xsd:enumeration value="Male" />
+				<xsd:enumeration value="Female" />
+				<xsd:enumeration value="Neutral" />
+				<xsd:enumeration value="Other" />
+			</xsd:restriction>
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+	<xsd:simpleType name="SimpleMaritalStatusCodeType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>A codelist indicating the marital status of an individual.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Single" />
+			<xsd:enumeration value="Married" />
+			<xsd:enumeration value="Divorced" />
+			<xsd:enumeration value="Widowed" />
+			<xsd:enumeration value="Cohabiting" />
+			<xsd:enumeration value="Civil Partnership" />
+			<xsd:enumeration value="Domestic Partnership" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="MaritalStatusCodeType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>A codelist indicating the marital status of an individual.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:restriction base="cdt:CodeType">
+				<xsd:enumeration value="Single" />
+				<xsd:enumeration value="Married" />
+				<xsd:enumeration value="Divorced" />
+				<xsd:enumeration value="Widowed" />
+				<xsd:enumeration value="Cohabiting" />
+				<xsd:enumeration value="Civil Partnership" />
+				<xsd:enumeration value="Domestic Partnership" />
+			</xsd:restriction>
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+	<xsd:simpleType name="SimpleMetricUoMLengthCodeType">
+		<xsd:annotation>
+			<xsd:documentation>A codelist restricting the values to metric (SI) lengths.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Centimetre" />
+			<xsd:enumeration value="Kilometre" />
+			<xsd:enumeration value="Metre" />
+			<xsd:enumeration value="Micrometre" />
+			<xsd:enumeration value="Milimetre" />
+			<xsd:enumeration value="Nanometre" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+
+	<xsd:complexType name="MetricUoMLengthCodeType">
+		<xsd:annotation>
+			<xsd:documentation>A codelist restricting the values to metric (SI) lengths.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:restriction base="cdt:CodeType">
+				<xsd:enumeration value="Centimetre" />
+				<xsd:enumeration value="Kilometre" />
+				<xsd:enumeration value="Metre" />
+				<xsd:enumeration value="Micrometre" />
+				<xsd:enumeration value="Milimetre" />
+				<xsd:enumeration value="Nanometre" />
+			</xsd:restriction>
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+	<xsd:simpleType name="SimpleMetricUoMMassCodeType">
+		<xsd:annotation>
+			<xsd:documentation>A codelist restricting the values to metric (SI) mass.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Gram" />
+			<xsd:enumeration value="Kilogram" />
+			<xsd:enumeration value="Milligram" />
+			<xsd:enumeration value="Tonne" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="MetricUoMMassCodeType">
+		<xsd:annotation>
+			<xsd:documentation>A codelist restricting the values to metric (SI) mass.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:restriction base="cdt:CodeType">
+				<xsd:enumeration value="Gram" />
+				<xsd:enumeration value="Kilogram" />
+				<xsd:enumeration value="Milligram" />
+				<xsd:enumeration value="Tonne" />
+			</xsd:restriction>
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+	<xsd:simpleType name="SimpleUoMTimeCodeType">
+		<xsd:annotation>
+			<xsd:documentation>A codelist restricting a unit of measure for a time value.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Day" />
+			<xsd:enumeration value="Hour" />
+			<xsd:enumeration value="Minute" />
+			<xsd:enumeration value="Month" />
+			<xsd:enumeration value="Second" />
+			<xsd:enumeration value="Tropical Year" />
+			<xsd:enumeration value="Week" />
+			<xsd:enumeration value="Year" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+
+	<xsd:complexType name="UoMTimeCodeType">
+		<xsd:annotation>
+			<xsd:documentation>A codelist restricting a unit of measure for a time value.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:restriction base="cdt:CodeType">
+				<xsd:enumeration value="Second" />
+				<xsd:enumeration value="Day" />
+				<xsd:enumeration value="Week" />
+				<xsd:enumeration value="Minute" />
+				<xsd:enumeration value="Hour" />
+				<xsd:enumeration value="Month" />
+				<xsd:enumeration value="Year" />
+				<xsd:enumeration value="Tropical Year" />
+			</xsd:restriction>
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+	<xsd:simpleType name="SimpleUKSpecifiedQuantityAlcoholCodeType">
+		<xsd:annotation>
+			<xsd:documentation>A codelist restricting a code to the set that can be sold in the UK for alcohol.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Bottle" />
+			<xsd:enumeration value="Box" />
+			<xsd:enumeration value="Glass" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="UKSpecifiedQuantityAlcoholCodeType">
+		<xsd:annotation>
+			<xsd:documentation>A codelist restricting a code to the set that can be sold in the UK for alcohol.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:restriction base="cdt:CodeType">
+				<xsd:enumeration value="Bottle" />
+				<xsd:enumeration value="Box" />
+				<xsd:enumeration value="Glass" />
+			</xsd:restriction>
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+	<xsd:simpleType name="SimpleUKSpecifiedQuantitySolidFuelCodeType">
+		<xsd:annotation>
+			<xsd:documentation>A codelist restricting a code to the set that can be sold in the UK for solid fuel.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="25 kg" />
+			<xsd:enumeration value="50 kg" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="UKSpecifiedQuantitySolidFuelCodeType">
+		<xsd:annotation>
+			<xsd:documentation>A codelist restricting a code to the set that can be sold in the UK for solid fuel.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:restriction base="cdt:CodeType">
+				<xsd:enumeration value="25 kg" />
+				<xsd:enumeration value="50 kg" />
+			</xsd:restriction>
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+	<xsd:simpleType name="SimpleUomTemperatureCodeType">
+		<xsd:annotation>
+			<xsd:documentation>A codelist for temperature.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Degree Celsius" />
+			<xsd:enumeration value="Degree Farenheit" />
+			<xsd:enumeration value="Degree Rankine" />
+			<xsd:enumeration value="Degree Reaumur" />
+			<xsd:enumeration value="Kelvin" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="UomTemperatureCodeType">
+		<xsd:annotation>
+			<xsd:documentation>A codelist for temperature.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:restriction base="cdt:CodeType">
+				<xsd:enumeration value="Degree Celsius" />
+				<xsd:enumeration value="Degree Farenheit" />
+				<xsd:enumeration value="Degree Rankine" />
+				<xsd:enumeration value="Degree Reaumur" />
+				<xsd:enumeration value="Kelvin" />
+			</xsd:restriction>
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+	<xsd:simpleType name="SimpleUomAmountOfInformationCodeType">
+		<xsd:annotation>
+			<xsd:documentation>A codelist for the amount of information.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Bit" />
+			<xsd:enumeration value="Byte" />
+			<xsd:enumeration value="Gibibyte" />
+			<xsd:enumeration value="Kibibyte" />
+			<xsd:enumeration value="Mebibyte" />
+			<xsd:enumeration value="Pebibyte" />
+			<xsd:enumeration value="Tebibyte" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="UomAmountOfInformationCodeType">
+		<xsd:annotation>
+			<xsd:documentation>A codelist for the amount of information.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:restriction base="cdt:CodeType">
+				<xsd:enumeration value="Bit" />
+				<xsd:enumeration value="Byte" />
+				<xsd:enumeration value="Gibibyte" />
+				<xsd:enumeration value="Kibibyte" />
+				<xsd:enumeration value="Mebibyte" />
+				<xsd:enumeration value="Pebibyte" />
+				<xsd:enumeration value="Tebibyte" />
+			</xsd:restriction>
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+	<xsd:simpleType name="SimpleUomAmountOfInformationSICodeType">
+		<xsd:annotation>
+			<xsd:documentation>A codelist for the amount of information (SI version).</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Bit" />
+			<xsd:enumeration value="Byte" />
+			<xsd:enumeration value="Gigabyte" />
+			<xsd:enumeration value="Kilobyte" />
+			<xsd:enumeration value="Megabyte" />
+			<xsd:enumeration value="Petabyte" />
+			<xsd:enumeration value="Terabyte" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="UomAmountOfInformationSICodeType">
+		<xsd:annotation>
+			<xsd:documentation>A codelist for the amount of information (SI version).</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:restriction base="cdt:CodeType">
+				<xsd:enumeration value="Bit" />
+				<xsd:enumeration value="Byte" />
+				<xsd:enumeration value="Gigabyte" />
+				<xsd:enumeration value="Kilobyte" />
+				<xsd:enumeration value="Megabyte" />
+				<xsd:enumeration value="Petabyte" />
+				<xsd:enumeration value="Terabyte" />
+			</xsd:restriction>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="CheckType">
+		<xsd:annotation>
+			<xsd:documentation>The schema containing the declarations for the framework check object. This is used to support the verification of a business object with a authoritative third-party reference, e.g. Dun and Bradstreet or a Postal Address lookup.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="tns:BaseIdentifiedComponentType">
+				<xsd:sequence>
+					<xsd:element
+						name="MadeAgainst"
+						type="tns:ChecksMadeAgainstType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>The object against which the set of checks have been made.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+
+					<xsd:element
+						name="MadeBy"
+						type="tns:ChecksMadeByType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>The person or organisation that made the checks against the business object.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="ChecksMadeAgainstType">
+		<xsd:annotation>
+			<xsd:documentation>The object against which the set of checks have been made.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="tns:BaseIdentifiedComponentType" />
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="ChecksMadeByType">
+		<xsd:annotation>
+			<xsd:documentation>The person or organisation that made the checks against the business object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="tns:BaseIdentifiedComponentType" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="QueryType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>A data object that allows simple and complex query criteria to be specified against which a set of business objects can be matched.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:choice maxOccurs="1">
+				<xsd:element
+					name="Identification"
+					type="tns:BaseIdentifiedComponentType"
+					maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>
+							<description>A component within the query that specifies a specific instance of a business to retrieve. The ID specified represents the primary key of the business object as configured through the IDs/ID[/@schemeName=''] field.</description>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:sequence>
+					<xsd:element
+						name="Criteria"
+						type="tns:QueryCriteriaType"
+						maxOccurs="1" />
+					<xsd:element
+						name="SortExpression"
+						type="tns:SortExpressionType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>A component holding the specification of the sorting required on the query.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attribute
+			name="businessObject"
+			type="xsd:token"
+			use="optional">
+			<xsd:annotation>
+				<xsd:documentation>
+					<description>If the Query object is being used as a generic query capability then this attribute indicates the VBO being searched on. If the query is on a specific VBS then it should not be present. If present and different from the VBO then it must be ignored.</description>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:complexType name="QueryCriteriaType">
+		<xsd:sequence>
+			<xsd:element name="QueryExpression">
+				<xsd:annotation>
+					<xsd:documentation>
+						<description>A query expression that allows complex queries to be formulated out of a series of value expressions (criteria).</description>
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:choice>
+						<xsd:element
+							name="ValueExpression"
+							type="tns:ValueExpressionType"
+							minOccurs="0"
+							maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>
+									<description>The value to be matched in a query criteria. The repeating structure allows more than one value to be specified, these must be taken as an implict OR function, i.e. This Value-1 OR Value-2 OR Value-3.</description>
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element
+							name="QueryExpression"
+							type="tns:QueryExpressionType"
+							minOccurs="0"
+							maxOccurs="1">
+							<xsd:annotation>
+								<xsd:documentation>
+									<description>A query expression that allows complex queries to be formulated out of a series of value expressions (criteria).</description>
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:choice>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute
+			name="startIndex"
+			type="xsd:integer"
+			use="optional">
+			<xsd:annotation>
+				<xsd:documentation>
+					<description>A field that supports the specification of pagination by a requester. The start index indicates the number of the instance matching the query criteria from which the page to be returned starts.</description>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute
+			name="indexPerPage"
+			type="xsd:integer"
+			use="optional">
+			<xsd:annotation>
+				<xsd:documentation>
+					<description>A field that supports the specification of the size of the page to be returned in a query.</description>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute
+			name="matchingAlgorithm"
+			type="tns:QueryAlgorithmCodeType"
+			use="optional">
+			<xsd:annotation>
+				<xsd:documentation>
+					<description>An optional indicator of either the strength of matching or the specific algorithm to use in matching the records on the server. The default is Strict, i.e. match strings exactly.</description>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:complexType name="ValueExpressionType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>A component representing an expression of a query criteria used in a Get List. For example, find me the matching set of business objects where the Path Equals the Value. The Equals being the operator code, e.g. equals, less than, etc.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element
+				name="Value"
+				type="cdt:TextType"
+				minOccurs="0"
+				maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>
+						<description>The value to be matched in a query criteria. The repeating structure allows more than one value to be specified, these must be taken as an implict OR function, i.e. This Value-1 OR Value-2 OR Value-3.</description>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute
+			name="operatorCode"
+			type="tns:QueryOperatorCodeType">
+			<xsd:annotation>
+				<xsd:documentation>
+					<description>The value from the codelist representing the operator to apply between the Path and the Value. Examples include Equals, Less Than, etc.</description>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute
+			name="path"
+			type="xsd:string">
+			<xsd:annotation>
+				<xsd:documentation>
+					<description>The path to the field within the business object to be used in the query. This field must use an XPath notation as per the MBP to provide a unique reference.</description>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:complexType name="QueryExpressionType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>A query expression that allows complex queries to be formulated out of a series of value expressions (criteria).</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element
+				name="ValueExpression"
+				type="tns:ValueExpressionType"
+				minOccurs="0"
+				maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>
+						<description>The value to be matched in a query criteria. The repeating structure allows more than one value to be specified, these must be taken as an implict OR function, i.e. This Value-1 OR Value-2 OR Value-3.</description>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute
+			name="logicalOperatorCode"
+			type="tns:LogicalOperatorCodeType">
+			<xsd:annotation>
+				<xsd:documentation>
+					<description>A field indicating how consecutive query expression should be evaluated, e.g. Condition-1 AND Condition-2.</description>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute
+			name="negationIndicator"
+			type="xsd:boolean"
+			use="optional">
+			<xsd:annotation>
+				<xsd:documentation>
+					<description>An indicator of whether the query expression should have a NOT applied to it, i.e. does NOT equal or is NOT less than.</description>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:complexType name="SortExpressionType">
+		<xsd:annotation>
+			<xsd:documentation>A component holding the specification of the sorting required on the query.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element
+				name="PathText"
+				type="xsd:string"
+				maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>The path by which to sort the result set returned from the query.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute
+			name="sortOrderCode"
+			type="tns:SortOrderCodeType"
+			use="optional">
+			<xsd:annotation>
+				<xsd:documentation>The direction by which to sort a set of values.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute
+			name="collationAlgorithmCode"
+			type="tns:CollationAlgorithmCodeType"
+			use="optional">
+			<xsd:annotation>
+				<xsd:documentation>The collation (sort) algorithm to use in the sorting to the result set</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+	
+	<xsd:complexType name="LocalDataType">
+		<xsd:sequence>
+			<xsd:element name="Entry" minOccurs="0" maxOccurs="unbounded">
+				<xsd:complexType >
+					<xsd:sequence>
+						<xsd:element name="Value" type="xsd:token" minOccurs="1" maxOccurs="unbounded"/>
+					</xsd:sequence>
+					<xsd:attribute name="Key" type="xsd:token" use="required"/>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

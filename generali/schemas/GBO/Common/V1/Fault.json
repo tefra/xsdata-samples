@@ -1,0 +1,282 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "http://api-v1.generali.com/enterprise-resources/{access-type}/core/gbo/common/faults",
+	"title": "Fault",
+	"description": "The fault object used to hold values for an error occurring within a middleware component; intended to be used as part of a SOAP:detail tag within the fault as per the SOAP 1.1 specification.",
+	"type": "object",
+	"properties": 
+	{
+		"originator": 
+		{
+			"type": "array",
+			"properties": 
+			{
+				"address": 
+				{
+					"type": "string",
+					"description": ""
+				},
+
+				"reference-parameters": 
+				{
+					"type": "array",
+					"properties": 
+					{
+						
+					}
+				},
+
+				"metadata": 
+				{
+					"type": "array",
+					"properties": 
+					{
+						
+					}
+				}
+			}
+		},
+
+		"error-code": 
+		{
+			"type": "array",
+			"properties": 
+			{
+				
+			}
+		},
+
+		"description": 
+		{
+			"type": "string",
+			"description": ""
+		},
+
+		"fault-cause": 
+		{
+			"type": "object",
+			"description": "",
+			"properties": 
+			{
+				
+			}
+		},
+
+		"characteristics": 
+		{
+			"type": "array",
+			"properties": 
+			{
+				"characteristic": 
+				{
+					"type": "object",
+					"description": "A characteristic; a name and value. An Example might be Colour=",
+					"properties": 
+					{
+						"name-text": 
+						{
+							"type": "string",
+							"description": "The name of the characteristic."
+						},
+
+						"desc-text": 
+						{
+							"type": "string",
+							"description": "The description of the characteristic."
+						},
+
+						"type-code": 
+						{
+							"type": "object",
+							"description": "The type of the characteristic.",
+							"properties": 
+							{
+								"$": 
+								{
+									"type": "string"
+								},
+
+								"@list-agency-name": 
+								{
+									"type": "string"
+								},
+
+								"@list-name": 
+								{
+									"type": "string"
+								}
+							},
+
+							"required": 
+							[
+								"$"
+							]
+						},
+
+						"values": 
+						{
+							"type": "array",
+							"properties": 
+							{
+								"value": 
+								{
+									"type": "object",
+									"description": "A value of the characteristic.",
+									"properties": 
+									{
+										"text": 
+										{
+											"type": "string",
+											"description": ""
+										},
+
+										"code": 
+										{
+											"type": "object",
+											"description": "",
+											"properties": 
+											{
+												"$": 
+												{
+													"type": "string"
+												},
+
+												"@list-agency-name": 
+												{
+													"type": "string"
+												},
+
+												"@list-name": 
+												{
+													"type": "string"
+												}
+											},
+
+											"required": 
+											[
+												"$"
+											]
+										},
+
+										"amount": 
+										{
+											"type": "object",
+											"description": "",
+											"properties": 
+											{
+												"$": 
+												{
+													"type": "number"
+												},
+
+												"@currency-id": 
+												{
+													"type": "string"
+												}
+											},
+
+											"required": 
+											[
+												"$"
+											]
+										},
+
+										"quantity": 
+										{
+											"type": "object",
+											"description": "",
+											"properties": 
+											{
+												"$": 
+												{
+													"type": "number"
+												},
+
+												"@unit-code": 
+												{
+													"type": "string"
+												}
+											},
+
+											"required": 
+											[
+												"$"
+											]
+										},
+
+										"numeric": 
+										{
+											"type": "number",
+											"description": ""
+										},
+
+										"percent": 
+										{
+											"type": "number",
+											"description": ""
+										},
+
+										"indicator": 
+										{
+											"type": "boolean",
+											"description": ""
+										},
+
+										"duration": 
+										{
+											"type": "string",
+											"description": ""
+										},
+
+										"time": 
+										{
+											"type": "string",
+											"description": ""
+										},
+
+										"date": 
+										{
+											"type": "string",
+											"description": ""
+										},
+
+										"date-time": 
+										{
+											"type": "string",
+											"format": "date-time"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+
+		"failures": 
+		{
+			"type": "array",
+			"properties": 
+			{
+				"failure": 
+				{
+					"type": "object",
+					"description": "A component that describes individual failures within the fault. This component is used to support multiple causes to the fault; i.e. where the fault is generated from one or more API calls or one or more validation failures.",
+					"properties": 
+					{
+						"data-ref": 
+						{
+							"type": "object",
+							"description": "A reference to the specific field or component within the GBO that generated the failure.",
+							"properties": 
+							{
+								
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id$ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" >
+    <element name="Error" >
+	    <complexType >
+	    	<sequence>
+	    		<element name="Timestamp" type="dateTime"></element>
+	    		<element name="Code" type="string"></element>
+	    		<element name="Message" type="string" minOccurs="0" nillable="true"></element>
+	    		<element name="Payload" type="string" minOccurs="0" nillable="true"></element>
+	    	</sequence>
+	    </complexType>
+    </element>
+</schema>

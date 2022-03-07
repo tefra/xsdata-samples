@@ -1,0 +1,1324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--(c) Reply Limited. All rights reserved. -->
+
+<!--  $Id: Components.xsd 1543 2020-11-24 11:57:33Z sanghvis $ 
+		v1.1				RM		07/05/2020		- GER-2914: Added ReinsurancePolicyRef field within DocumentType in /Common/V1/Compponent.xsd.
+        v1.2	            SS      24/11/2020      - Changes as part of Lead Management
+		v2.4				SS		13/10/2021		- CoverName added as part of ContactType
+-->
+<xsd:schema
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:cdt="http://generali.com/enterprise-services/core/gbo/common/core-types/v1"
+	xmlns:tns="http://generali.com/enterprise-services/core/gbo/enterprise/common/v1"
+	xmlns:cmn="http://generali.com/enterprise-services/core/gbo/common/v1"
+	targetNamespace="http://generali.com/enterprise-services/core/gbo/enterprise/common/v1"
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	version="1.0">
+
+	<xsd:annotation>
+		<xsd:documentation>
+			<description>The schema containing the declarations of the common components.</description>
+			<links>
+				<link rel="self">./Components.xsd</link>
+			</links>
+		</xsd:documentation>
+	</xsd:annotation>
+
+    <!-- ++++++++++++++++++++++++++++++ -->
+    <!--             Imports            -->
+    <!-- ++++++++++++++++++++++++++++++ -->
+	<xsd:import
+		namespace="http://generali.com/enterprise-services/core/gbo/common/core-types/v1"
+		schemaLocation="../../../Common/V1/CoreTypes.xsd" />
+
+	
+	<xsd:import
+		namespace="http://generali.com/enterprise-services/core/gbo/common/v1"
+		schemaLocation="../../../Common/V1/Components.xsd" />
+	
+	<xsd:complexType name="ActorRoleReferenceType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>A component defining a reference to a Party indicating the Role being undertaken by the Individual or Organisation.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="cmn:BaseReferenceComponentType">
+				<xsd:sequence>
+					<xsd:choice minOccurs="0">
+						<xsd:element
+							name="Organisation"
+							type="tns:OrganisationActorType"
+							minOccurs="1">
+							<xsd:annotation>
+								<xsd:documentation>
+									<description>The details of the organisation actor.</description>
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element
+							name="Individual"
+							type="tns:IndividualActorType"
+							minOccurs="1">
+							<xsd:annotation>
+								<xsd:documentation>
+									<description>The details of the individual actor.</description>
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element
+							name="Thing"
+							type="cmn:ThingActorType"
+							minOccurs="1">
+							<xsd:annotation>
+								<xsd:documentation>The details of the thing actor.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:choice>
+					<xsd:element
+						name="ContactPoints"
+						minOccurs="0">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element
+									name="ContactPoint"
+									type="tns:ContactPointType"
+									maxOccurs="unbounded">
+									<xsd:annotation>
+										<xsd:documentation>A specific contact point for the actor.</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+						<xsd:unique name="ActorContactPointType">
+							<xsd:selector xpath="./tns:ContactPoint" />
+							<xsd:field xpath="./tns:ContactPoint/tns:TypeCode" />
+						</xsd:unique>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="IndividualActorType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description></description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="cmn:BaseComponentType">
+				<xsd:sequence>
+					<xsd:element
+						name="Name"
+						type="tns:IndividualActorNameType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The name of the individual.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="BirthDate"
+						type="cdt:DateType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>Date on which the Individual was born.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="DeathDate"
+						type="cdt:DateType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>Date on which the Individual died.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="DeathIndicator"
+						type="cdt:IndicatorType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>Flag indicating whether the Individual has died</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="NationalityCode"
+						minOccurs="0" type="cdt:CodeType">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>Nationality of the Individual</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="LanguageCode"
+						type="cmn:SimpleLanguageCodeType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>Language of the Individual</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="GenderCode"
+						type="cmn:GenderCodeType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>Gender of the Individual</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="MaritalStatusCode"
+						type="cmn:MaritalStatusCodeType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>Martial status of the Individual</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="EmployeeCode" type="cdt:CodeType" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="IndividualActorNameType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description></description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="cmn:BaseComponentType">
+				<xsd:sequence>
+					<xsd:element
+						name="TitleCode"
+						type="cdt:CodeType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>Is the title of the person. e.g. Mr., Dr. Ms. </description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="FirstNameText"
+						type="cdt:TextType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The primary chosen name. Also known as given name.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="MiddleNameText"
+						type="cdt:TextType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The person middle name</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="MiddleInitialText"
+						type="cdt:TextType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The person middle initial name</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="FamilyNameText"
+						type="cdt:TextType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The person family name</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="PrefixCode"
+						type="cdt:CodeType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>Prefix to the last name that is not considered part of the last name, such as German von or French dela, etc.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="SuffixCode"
+						type="cdt:CodeType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>Suffix to the last name, such as Senior, III, the Third etc. </description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="SalutationText"
+						type="cdt:TextType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>Way the person is addressed e.g. Honorable etc</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="FormattedNameText"
+						type="cdt:TextType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>Formatted name</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="AristocraticTitleCode"
+						type="cdt:CodeType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>Aristocratic Title e.g. Duke, Knight</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="LegalNameText"
+						type="cdt:TextType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>Legal Name by which the person is addressed</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="PreferredGivenNameText"
+						type="cdt:TextType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>Name by which the person prefers to be addressed</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="OrganisationActorType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The definition of an Organisation parties basic details</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="cmn:BaseComponentType">
+			<xsd:sequence>
+				<xsd:element type="cdt:TextType" name="LegalName">
+					<xsd:annotation>
+						<xsd:documentation>The legal name of the Organisation</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="GUNSNumber" type="tns:GUNSType">
+					<xsd:annotation>
+						<xsd:documentation>
+							The Generali Universal Numbering System, abbreviated as GUNS, is the unique identifier assigned by Generali 
+							to a single business entity held in the Business Partner Repository (BPR).
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="DUNSNumber" type="cmn:DUNSType">
+					<xsd:annotation>
+						<xsd:documentation>
+							The D&amp;B Universal Numbering System, abbreviated as DUNS, is the unique identifier assigned by D&amp;B.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="NationalId" type="cdt:IDType" />
+			</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:group name="OrganisationActorGroup">
+		<xsd:annotation>
+			<xsd:documentation></xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element type="cdt:TextType" name="LegalName" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The legal name of the Organisation</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="GUNSNumber" type="tns:GUNSType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						The Generali Universal Numbering System, abbreviated as GUNS, is the unique identifier assigned by Generali 
+						to a single business entity held in the Business Partner Repository (BPR).
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DUNSNumber" type="cmn:DUNSType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						The Generali Universal Numbering System, abbreviated as GUNS, is the unique identifier assigned by Generali 
+						to a single business entity held in the Business Partner Repository (BPR).
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group> 
+
+	
+	
+	<xsd:simpleType name="AccuracyCodeList">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Actual"/>
+			<xsd:enumeration value="Estimated"/>
+			<xsd:enumeration value="Modeled"/>
+			<xsd:enumeration value="NotAvailable"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:complexType name="NumberWithAccuracyType">
+		<xsd:complexContent>
+			<xsd:extension base="cdt:NumericType">
+				<xsd:attribute name="Accuracy" type="tns:AccuracyCodeList"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="AmountWithAccuracyType">
+		<xsd:complexContent>
+			<xsd:extension base="cdt:AmountType">
+				<xsd:attribute name="Accuracy" type="tns:AccuracyCodeList"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="OrganisationReferencesType">
+		<xsd:sequence>
+			<xsd:element name="OrganisationReference" type="tns:OrganisationReferenceType" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>
+						The ID of the organisation in external system, could be the Company VAT Number, the SiretNumber, could be D&amp;B number 
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="OrganisationReferenceType">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:BaseIdentifiedComponentType">
+				<xsd:sequence>
+					<xsd:element name="Sender" minOccurs="0" >
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:extension base="cdt:CodeType">
+									<xsd:attribute name="referenceType" type="tns:ReferenceSourceType" />
+								</xsd:extension>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+				<xsd:attribute name="active" type="xsd:boolean"/>
+				<xsd:attribute name="external" type="xsd:boolean"/>
+			</xsd:extension>
+			
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="ReferenceSourceType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="LocalCountryReference"></xsd:enumeration>
+			<xsd:enumeration value="BusinessLineReference"></xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="ContactPointType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>A type defining a contact point. This is the address at which someone or something may be contacted.</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="cmn:BaseSimpleComponentType">
+				<xsd:sequence>
+					<xsd:choice>
+						<xsd:element
+							name="Email"
+							type="cmn:EmailAddressFullType" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>
+									<description>The contact point is an Email Address.</description>
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element
+							name="Telephone"
+							type="cmn:TelephoneNumberType" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>
+									<description>Telephone as contact point</description>
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element
+							name="Postal"
+							type="cmn:GeographyType" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>
+									<description>Postal as contact point</description>
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element
+							name="SMS"
+							type="cmn:TelephoneNumberType" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>
+									<description>SMS as contact point</description>
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element
+							name="Fax"
+							type="cmn:TelephoneNumberType" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>
+									<description>SMS as contact point</description>
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:choice>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+
+	
+
+	
+
+	<xsd:complexType name="PostalAddressType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>
+					<description>A definition of a postal address.</description>
+				</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element
+				name="OccupantNameText"
+				type="cdt:TextType"
+				minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<description>The occupant at this address</description>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+			<xsd:choice minOccurs="0">
+				<xsd:sequence minOccurs="1">
+					<xsd:element
+						name="AddressLine1Text"
+						type="cdt:TextType">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The first line of the postal address</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="AddressLine2Text"
+						type="cdt:TextType">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The first line of the postal address</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="AddressLine3Text"
+						type="cdt:TextType">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The first line of the postal address</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+				<xsd:sequence minOccurs="1">
+					<xsd:element
+						name="PortalDoorText"
+						type="cdt:TextType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The portal door number of the apartment or flat</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="PortalText"
+						type="cdt:TextType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The portal name of the apartment or flat</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="FloorNumberText"
+						type="cdt:TextType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The floor number within a building</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="FloorType"
+						type="cdt:CodeType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>A description of the level within a building where numbers are not used</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="BuildingNumberText"
+						type="cdt:TextType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The building number expressed as text, for this address. e.g. 38, 55a</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="BuildingNameText"
+						type="cdt:TextType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The building name, expressed as text, of this address</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="StreetNameText"
+						type="cdt:TextType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The street, expressed as text, of this address</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="StreetSuffixText"
+						type="cdt:TextType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>A modifier to a street name often to denote a relative direction</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="StreetType"
+						type="cdt:CodeType"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The kind of thoroughfare. Example alley, avenue, boulevard, crescent etc</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:choice>
+			<xsd:element
+				name="PostCodeID"
+				type="cdt:IDType"
+				minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<description>
+							<description>The PostCode or ZipCode of the postal address.</description>
+						</description>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element
+				name="CountyText"
+				type="cdt:TextType"
+				minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<description>Name of the county in which the city falls, where applicable</description>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element
+				name="CountryCodeID"
+				type="cdt:CodeType"
+				minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<description>
+							<description>The ISO3166 country code for the address.</description>
+						</description>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element
+				name="CountryNameText"
+				type="cdt:TextType"
+				minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<description>
+							<description>The full name of the country.</description>
+						</description>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	
+
+	<xsd:complexType name="ContactPersonType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description></description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="cmn:BaseIdentifiedComponentType">
+				<xsd:sequence>
+					<xsd:element
+						name="Individual"
+						type="tns:IndividualActorType"
+						minOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The details of the individual who is the contact.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element
+						name="ContactPoints"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The set of contact points for the contact person.</description>
+							</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element
+									name="ContactPoint"
+									type="tns:ContactPointType"
+									maxOccurs="unbounded" />
+							</xsd:sequence>
+						</xsd:complexType>
+						<xsd:unique name="ContactPersonContactPointType">
+							<xsd:selector xpath="./tns:ContactPoint" />
+							<xsd:field xpath="./tns:ContactPoint/tns:TypeCode" />
+						</xsd:unique>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	
+	
+	<xsd:simpleType name="OrganisationRelationshipType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="UltimateParent" />
+			<xsd:enumeration value="DomesticParent" />
+			<xsd:enumeration value="GeneraliUltimateParent" />
+			<xsd:enumeration value="GeneraliDomesticParent" />
+			<xsd:enumeration value="ImmediateParent"></xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+
+	<xsd:simpleType name="IsurerRoleFacetType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="FrontingOffice" />
+			<xsd:enumeration value="Cedant"/>
+			<xsd:enumeration value="Reinsurer"/>
+			<xsd:enumeration value="Producer"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	
+	
+	<xsd:simpleType name="GUNSType">
+		<xsd:annotation>
+			<xsd:documentation>The GUNS number pattern, the value should be like G000000001</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="10" />
+			<xsd:pattern value="G([0-9]{9})" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<!-- Shrenika - Added as part of Lead Management Initiative -->
+	
+	<xsd:simpleType name="LeadType">
+		<xsd:annotation>
+			<xsd:documentation>The Lead ID pattern, the value should be like L000000001</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="10" />
+			<xsd:pattern value="L([0-9]{9})" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="OrganisationTypeCode">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="D&amp;B"/>
+			<xsd:enumeration value="Generali"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="TradingStatusCodeType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Active"></xsd:enumeration>
+			<xsd:enumeration value="OutOfBusiness"></xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="LegalStatusCodeType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Unknown"></xsd:enumeration>
+			<xsd:enumeration value="Corporation"></xsd:enumeration>
+			<xsd:enumeration value="JointVenture"></xsd:enumeration>
+			<xsd:enumeration value="Partnership"></xsd:enumeration>
+			<xsd:enumeration value="ForeignCompany"></xsd:enumeration>
+			<xsd:enumeration value="Not Available"></xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:complexType name="OrganisationRoleType" >
+    	<xsd:complexContent>
+    		<xsd:annotation>
+    			<xsd:documentation>The basic organisation role, more a marker interface than a real element</xsd:documentation>
+    		</xsd:annotation>
+    		<xsd:extension base="cmn:BaseGBORolesType">
+    			<xsd:sequence>
+    				<xsd:group ref="tns:OrganisationActorGroup" minOccurs="0"></xsd:group>
+    			</xsd:sequence>
+    		</xsd:extension>
+    	</xsd:complexContent>
+   	</xsd:complexType>
+   	
+   	<xsd:complexType name="InsurerRoleType" >
+    	<xsd:complexContent>
+    		<xsd:annotation>
+    			<xsd:documentation>The basic organisation role, more a marker interface than a real element</xsd:documentation>
+    		</xsd:annotation>
+    		<xsd:extension base="tns:OrganisationRoleType">
+    			<xsd:sequence>
+    				<xsd:element name="InsurerCapabilities">
+    					<xsd:complexType>
+    						<xsd:sequence>
+    							 <xsd:element name="InsurerCapability" type="tns:InsurerCapabilityType" maxOccurs="unbounded"/>
+    						</xsd:sequence>
+    					</xsd:complexType>
+    				</xsd:element>
+    			</xsd:sequence>
+    		</xsd:extension>
+    	</xsd:complexContent>
+   	</xsd:complexType>
+   	
+   	<xsd:complexType name="IntermediaryRoleType" >
+    	<xsd:complexContent>
+    		<xsd:annotation>
+    			<xsd:documentation>The role of intermediary</xsd:documentation>
+    		</xsd:annotation>
+    		<xsd:extension base="tns:OrganisationRoleType">
+    		</xsd:extension>
+    	</xsd:complexContent>
+   	</xsd:complexType>
+   	
+   	<xsd:simpleType name="IntermediaryTypeEnum">
+   		<xsd:restriction base="xsd:token">
+   			<xsd:enumeration value="Agency" />
+   			<xsd:enumeration value="Broker" />
+   		</xsd:restriction>
+   	</xsd:simpleType>
+   	
+   	<xsd:simpleType name="InsurerCapabilityType">
+   		<xsd:restriction base="xsd:token">
+   			<xsd:enumeration value="Cedant" />
+   			<xsd:enumeration value="Fronting"/>
+   			<xsd:enumeration value="Producing" />
+   			<xsd:enumeration value="Reinsurer" />
+   			<xsd:enumeration value="Coinsurer" />
+   		</xsd:restriction>
+   	</xsd:simpleType>
+   	
+   	<xsd:complexType name="InsuredRoleType" >
+    	<xsd:complexContent>
+    		<xsd:annotation>
+    			<xsd:documentation>The role of the insured</xsd:documentation>
+    		</xsd:annotation>
+    		<xsd:extension base="tns:OrganisationRoleType">
+    			
+    		</xsd:extension>
+    	</xsd:complexContent>
+   	</xsd:complexType>
+   	
+   	<xsd:complexType name="ContactInvolvement">
+		<xsd:sequence>
+		<xsd:choice>	
+			<xsd:element name="ContactPerson" type="tns:ContactPersonType">
+				<xsd:annotation>
+					<xsd:documentation>
+						A contact person for the
+						organisation.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ContactPoint" type="tns:ContactPointType" />
+		</xsd:choice>
+		<xsd:element name="CoverName" type="xsd:string" minOccurs="0" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="IndividualRoleType">
+		<xsd:choice>
+			<xsd:element name="Individual" type="tns:ContactPersonType">
+				<xsd:annotation>
+					<xsd:documentation>
+						A contact person for the
+						organisation.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:choice>
+	</xsd:complexType>
+	
+	<xsd:complexType name="LineOfBusinessType">
+		<xsd:sequence>
+			<xsd:element name="LineOfBusiness" type="tns:LineOfBusinessDetailType" />
+			<xsd:element name="SubLineOfBusiness" type="tns:LineOfBusinessDetailType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="LineOfBusinessDetailType">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:CodeDescriptionType"></xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="OrganisationInvolvementType">
+    	
+    </xsd:complexType>
+    
+    
+    <xsd:complexType name="RiskElementType" abstract="true">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:BaseIdentifiedComponentType"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	
+	
+	
+	<xsd:complexType name="StructureType">
+		<xsd:complexContent>
+			<xsd:extension base="tns:RiskElementType">
+				<xsd:sequence> 
+					<xsd:element name="AdditionalInformation" type="cdt:TextType" minOccurs="0"/>
+					<xsd:element name="AutomaticFireDetectionCoveragePercentage" type="cdt:PercentType" minOccurs="0"/>
+					<xsd:element name="AutomaticSprinklerCoveragePercentage" type="cdt:PercentType" minOccurs="0"/>
+					<xsd:element name="CombustiblePercentage" type="cdt:PercentType" minOccurs="0"/>
+					<xsd:element name="ConstructionYear" type="cdt:NumberType" minOccurs="0"/>
+					<xsd:element name="HighlyProtectedRiskPercentage" type="cdt:PercentType" minOccurs="0"/>
+					<xsd:element name="SurveyReportAvailable" type="xsd:boolean" minOccurs="0"/>
+					<xsd:element name="NonCombustiblePercentage" type="cdt:PercentType" minOccurs="0"/>
+					<xsd:element name="PartCombustiblePercentage" type="cdt:PercentType" minOccurs="0"/>
+					<xsd:element name="QualityRating" type="cdt:CodeType" minOccurs="0"/>
+					<xsd:element name="StructureAreaM2" type="cdt:NumericType" minOccurs="0"/>
+					<xsd:element name="SurveyReportDate" type="cdt:DateTimeType" minOccurs="0"/>
+					<xsd:element name="TopLocation" type="xsd:boolean" minOccurs="0"/>
+					<xsd:element name="ConstructionType" type="cdt:CodeType" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="ExpansiveStructureType">
+		<xsd:complexContent>
+			<xsd:extension base="tns:StructureType">
+				<xsd:sequence>
+					<xsd:element name="Number" type="cdt:NumberType" minOccurs="0"/>
+					<xsd:element name="GeographicLocations" minOccurs="0">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="GeographicLocation" type="cmn:GeographyType" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="PipeLineType">
+		<xsd:complexContent>
+			<xsd:extension base="tns:ExpansiveStructureType" />
+		</xsd:complexContent>
+	</xsd:complexType>	
+	
+	<xsd:complexType name="LandType">
+		<xsd:complexContent>
+			<xsd:extension base="tns:ExpansiveStructureType">
+				<xsd:sequence>
+					<xsd:element name="LandAreaM2" type="cdt:NumberType" />
+					<xsd:element name="SoliType" type="cdt:TextType" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="RailwayTrackType">
+		<xsd:complexContent>
+			<xsd:extension base="tns:ExpansiveStructureType">
+				<xsd:sequence>
+					<xsd:element name="Electrified" type="xsd:boolean" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="SinglePointStructureType">
+		<xsd:complexContent>
+			<xsd:extension base="tns:StructureType">
+				<xsd:sequence>
+					<xsd:element name="GeographicLocation" type="cmn:GeographyType" minOccurs="0" maxOccurs="1"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="BuildingType">
+		<xsd:complexContent>
+			<xsd:extension base="tns:SinglePointStructureType">
+				<xsd:sequence>
+					<xsd:element name="FloorAreaM2" type="cdt:NumericType" minOccurs="0"/>
+					<xsd:element name="FloorCount" type="cdt:NumberType" minOccurs="0"/>
+					<xsd:element name="FloorsOccupied" type="cdt:TextType" minOccurs="0"/>
+					<xsd:element name="HeightInMeter" type="cdt:QuantityType" minOccurs="0"/>
+					<xsd:element name="LiftCount" type="cdt:NumberType" minOccurs="0"/>
+					<xsd:element name="LowestFloorOccupied" type="cdt:TextType" minOccurs="0"/>
+					<xsd:element name="CompletitionState" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:token">
+								<xsd:enumeration value="Completed"/>
+								<xsd:enumeration value="InConstruction"/>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="Occupancy" type="cmn:CodeDescriptionType" minOccurs="0"/>
+ 				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="LiabilityType">
+		<xsd:complexContent>
+			<xsd:extension base="tns:RiskElementType">
+				<xsd:sequence>
+					<xsd:element name="Rating" type="cdt:CodeType" minOccurs="0"/>
+					<xsd:element name="ShareCapital" type="cdt:NumericType" minOccurs="0"/>
+					<xsd:element name="LiablityType" type="cmn:CodeDescriptionType" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="VehicleType">
+		<xsd:complexContent>
+			<xsd:extension base="tns:RiskElementType">
+				<xsd:sequence>
+					<xsd:element name="ManufacturedDate" type="cdt:DateType" minOccurs="0"/>
+					<xsd:element name="Manufacturer" type="cdt:TextType" minOccurs="0"/>
+					<xsd:element name="Model" type="cdt:TextType" minOccurs="0"/>
+					<xsd:element name="VehicleIdentifier" type="cdt:CodeType" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="TrainType">
+		<xsd:complexContent>
+			<xsd:extension base="tns:VehicleType">
+				<xsd:sequence>
+					<xsd:element name="NumberOfCarriages" type="cdt:NumberType" minOccurs="0"/>
+					<xsd:element name="PrimaryDepot" type="cdt:TextType" minOccurs="0"/>
+					<xsd:element name="SeatedCapacity" type="cdt:NumericType" minOccurs="0"/>
+					<xsd:element name="StandingCapacity" type="cdt:NumberType" minOccurs="0"/>
+					<xsd:element name="TotalCapacity" type="cdt:NumberType" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="AircraftType">
+		<xsd:complexContent>
+			<xsd:extension base="tns:VehicleType">
+				<xsd:sequence>
+					<xsd:element name="CrewSeatCount" type="cdt:NumberType" minOccurs="0"/>
+					<xsd:element name="PilotSeatCount" type="cdt:NumberType" minOccurs="0"/>
+					<xsd:element name="PrimaryHangar" type="cdt:TextType" minOccurs="0"/>
+					<xsd:element name="SeatCapacity" type="cdt:NumberType" minOccurs="0"/>
+					<xsd:element name="AircarftType" minOccurs="0">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:token">
+								<xsd:enumeration value="Fixed Wing Aircraft"/>
+								<xsd:enumeration value="Rotor Wing Aircraft"/>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="HelicopterType">
+		<xsd:complexContent>
+			<xsd:extension base="tns:AircraftType" />
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="VesselType">
+		<xsd:complexContent>
+			<xsd:extension base="tns:VehicleType">
+				<xsd:sequence>
+					<xsd:element name="PassengerCapacity" type="cdt:NumberType" minOccurs="0"/>
+					<xsd:element name="PrimaryPort" type="cdt:TextType" minOccurs="0"/>
+					<xsd:element name="VehicleCapacity" type="cdt:NumberType" minOccurs="0"/>
+					<xsd:element name="WatersNavigated" type="cmn:CodeDescriptionType" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="ShipType">
+		<xsd:complexContent>
+			<xsd:extension base="tns:VesselType"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="HovercraftType">
+		<xsd:complexContent>
+			<xsd:extension base="tns:VesselType"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	
+	
+	<xsd:complexType name="RiskElementRoleType">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:BaseReferenceComponentOptionalType">    <!-- Added IDs which will hold AUNS Number where schemeID=AUNSNumber -->
+
+		<xsd:sequence>
+			<xsd:choice minOccurs="0"> <!-- Made optional as part of ESB-164 -->
+				<xsd:element name="Building" type="tns:BuildingType"/>
+				<xsd:element name="PipeLine" type="tns:PipeLineType"/>
+				<xsd:element name="Land" type="tns:LandType" />
+				<xsd:element name="RailwayTrack" type="tns:RailwayTrackType"/>
+				<xsd:element name="Liability" type="tns:LiabilityType"/>
+				<xsd:element name="Train" type="tns:TrainType"/>
+				<xsd:element name="Aircraft" type="tns:AircraftType"/>
+				<xsd:element name="Helicopter" type="tns:HelicopterType"/>
+				<xsd:element name="Ship" type="tns:ShipType" />
+				<xsd:element name="Hovercraft" type="tns:HovercraftType" />
+				<xsd:element name="Vessel" type="tns:VesselType" />
+				<xsd:element name="SinglePoint" type="tns:SinglePointStructureType" />
+				<xsd:element name="ExpansiveStructure" type="tns:ExpansiveStructureType" />
+			</xsd:choice>
+			<xsd:element name="Owner" type="tns:GUNSType" minOccurs="0"/>
+			<xsd:element name="Floater" type="xsd:boolean" minOccurs="0"/>  <!--  Added Floater 02/10/2018 -->
+		</xsd:sequence>
+		</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+
+	
+	<xsd:complexType name="PhysicalObjectGroupRoleType">
+		<xsd:sequence>
+			<xsd:element name="PhysicalObjectGroup" type="tns:PhysicalObjectGroupType"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="PhysicalObjectGroupType">
+		<xsd:sequence>
+			<xsd:element name="PhysicalObject" type="tns:RiskElementType" maxOccurs="unbounded"></xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="maxAllowed" type="xsd:nonNegativeInteger" />
+	</xsd:complexType>
+	
+	
+	<xsd:complexType name="PremiumBasisType">
+		<xsd:sequence>
+			<xsd:element name="Value" type="cdt:AmountType"/>
+			<xsd:element name="Basis">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:token">
+						<xsd:enumeration value="EstimatedValue" />
+						<xsd:enumeration value="Value" />
+						<xsd:enumeration value="Percentage" />
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="PremiumTypeEnum">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Gross" />
+			<xsd:enumeration value="Net" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="DeductionApplyToEnum">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Gross" />
+			<xsd:enumeration value="Net" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:complexType name="ExposureSpecificationType">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:BaseGBOType">
+				<xsd:sequence>
+					<xsd:element name="SpecificationBase" type="tns:SpecificationBaseType" minOccurs="0" maxOccurs="1"/>
+					<xsd:element name="LineOfBusiness" type="tns:LineOfBusinessDetailType" minOccurs="0" maxOccurs="1"/>
+					<xsd:element name="Item" minOccurs="0" maxOccurs="1" type="tns:ExposureItemType"></xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="PerilType">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:CodeDescriptionType"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="SpecificationBaseType">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:CodeDescriptionType"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="ExposureItemType">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:CodeDescriptionType"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="PremiumAllocationType">
+		<xsd:sequence>
+			<xsd:element type="cmn:ISOAlpha2CodeType" name="CountryCode" />
+			<xsd:element type="cdt:AmountType" name="BeginningOfYear" />
+			<xsd:element type="cdt:AmountType" name="BeginningOfYearLocalShare" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<!--  Added Common Document Type Structure -->
+	
+	 <xsd:complexType name="DocumentType">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:BaseReferenceComponentType">
+				<xsd:sequence>
+					<!-- We already have CreatedBy in the BaseIdentifiedComponentType. This represents Author -->
+					<!-- We already have CreationDate and DateLastUpdate  in the BaseIdentifiedComponentType -->
+					<!-- We already have a name in the BaseIdentifiedComponentType. This can be used for title -->
+					<!-- Type will be part of BaseReferenceComponentType -->
+					<xsd:element name="Note" type="xsd:string"
+						minOccurs="0" /><!-- Only occurs if DocTabType is Policy Wordings-->
+					<xsd:element name="DocumentLocation"
+						type="xsd:anyURI" minOccurs="0" />
+					<xsd:element name="FileType" type="xsd:string"
+						minOccurs="0" />
+					<xsd:element name="Author" type="cdt:TextType"
+						minOccurs="0">
+					</xsd:element>
+					<xsd:element name="DocType" type="cdt:TextType"
+						minOccurs="0">
+					</xsd:element>
+					<xsd:element name="LocalPolicyRef"
+						type="cdt:TextType" minOccurs="0">
+					</xsd:element>
+					<xsd:element name="IssueDate"
+						type="cdt:DateTimeType" minOccurs="0">
+					</xsd:element>
+					<xsd:element name="ProducingOfficeRef"
+						type="cdt:TextType" minOccurs="0">
+					</xsd:element>
+					<xsd:element name="AdditionalInformation" type="cdt:TextType" minOccurs="0"></xsd:element>
+					<xsd:element name="CDMSDocumentLocation"
+						type="xsd:anyURI" minOccurs="0" />
+					<xsd:element name="ReinsurancePolicyRef" type="cdt:TextType" minOccurs="0"></xsd:element>	
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--  Added Common PaymentTransaction Structure -->
+	
+	 <xsd:complexType name="PaymentTransactionType">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:BaseReferenceComponentType">
+				<xsd:sequence>
+					<xsd:element name="PaymentDate" type="cdt:DateTimeType" minOccurs="0"/>
+					<xsd:element name="PaymentDueDate" type="cdt:DateTimeType" minOccurs="0"/>
+					<xsd:element name="Amount" type="cdt:AmountType" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>	
+
+</xsd:schema>

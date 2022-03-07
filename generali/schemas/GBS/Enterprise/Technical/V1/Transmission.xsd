@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--(c) Reply Limited. All rights reserved. -->
+<!--  $Id: Transmission.xsd 779 2017-02-08 12:28:45Z schiachm $ -->
+<xsd:schema
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:cmn="http://generali.com/enterprise-services/core/gbo/common/v1"
+	xmlns:tns="http://generali.com/enterprise-services/core/gbm/technical/v1"
+	targetNamespace="http://generali.com/enterprise-services/core/gbm/technical/v1"
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	version="1.0">
+	<xsd:annotation>
+		<xsd:documentation>
+			<description>Service supporting retrieving a agreement information.</description>
+		</xsd:documentation>
+	</xsd:annotation>
+    
+	<!-- ===================== Imports ============================ -->
+	<xsd:import
+		namespace="http://generali.com/enterprise-services/core/gbo/common/v1"
+		schemaLocation="../../../../GBO/Common/V1/Components.xsd" />
+	
+
+	<xsd:complexType name="PayloadType">
+		<xsd:sequence>
+			<xsd:any minOccurs="1"  processContents="skip"></xsd:any>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="TransmissionRequestType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The definition of the message used to retrieve an agreement</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="cmn:BaseGBMHeaderType">
+				<xsd:sequence>
+					<xsd:element
+						name="Payload"
+						type="tns:PayloadType">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The business object to retrieve</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element
+		name="TransmissionRequest"
+		type="tns:TransmissionRequestType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The definition of the request message that supports retrieval of a agreement</description>
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="TransmissionResponseType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The definition of the response message that supports retrieve of a agreement</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="cmn:BaseGBMType">
+				<xsd:sequence>
+					<xsd:element name="Status" type="xsd:token" />
+					<xsd:element name="ErrorMessage" type="xsd:string" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element
+		name="TransmissionResponse"
+		type="tns:TransmissionResponseType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The definition of the response message that supports retrieve of a program</description>
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+
+	
+</xsd:schema>

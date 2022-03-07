@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--(c) Reply Limited. All rights reserved. -->
+<wsdl:definitions
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:wsa="http://www.w3.org/2005/08/addressing"
+	xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"
+	xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+	xmlns:wssem="http://lsdis.cs.uga.edu/projects/meteor-s/wsdl-s/"
+	xmlns:soap11="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:gfo="http://generali.com/enterprise-services/core/gbo/common/faults/v1"
+	xmlns:gho="http://generali.com/enterprise-services/core/gbo/common/headers/v1"
+	xmlns:gbm="http://generali.com/enterprise-services/core/gbm/enterprise/organisation/v1"
+	xmlns:gbs="http://generali.com/enterprise-services/core/gbs/enterprise/organisation/v1"
+	targetNamespace="http://generali.com/enterprise-services/core/gbs/enterprise/organisation/v1"
+	name="Organisation">
+
+
+	<wsdl:documentation>
+		<description>Service supporting retrieving a organisation information.</description>
+		<version>1.0</version>
+	</wsdl:documentation>
+	
+    
+    <!-- Show support for WS-Policy and the attachment of policy assertions -->
+	<wsp:UsingPolicy wsdl:Required="true" />
+	
+    
+    <!-- The categorisation of the service as defined by the service architecture -->
+	<wssem:category
+		name="Entity Service"
+		taxonomyURI="http://uk.co.replyltd/enterprise-services/Taxonomy.owl#" />
+
+
+	<wsdl:types>
+		<xsd:schema
+			targetNamespace="http://generali.com/enterprise-services/core/gbs/enterprise/organisation/v1"
+			elementFormDefault="qualified">
+			<xsd:import
+				namespace="http://generali.com/enterprise-services/core/gbm/enterprise/organisation/v1"
+				schemaLocation="./GetOrganisationGBM-V1.xsd" />
+			<xsd:import
+				namespace="http://generali.com/enterprise-services/core/gbo/common/faults/v1"
+				schemaLocation="../../../../GBO/Common/V1/Fault.xsd" />
+			<xsd:import
+				namespace="http://generali.com/enterprise-services/core/gbo/common/headers/v1"
+				schemaLocation="../../../../GBO/Common/V1/Header.xsd" />
+		</xsd:schema>
+	</wsdl:types>
+	
+    <!--Service Operations Message Structures -->
+	<wsdl:message name="GetOrganisationReqMessage">
+		<wsdl:documentation>
+			<description>This message is used as the request payload to the Get Organisation operation</description>
+		</wsdl:documentation>
+		<wsdl:part
+			name="OrganisationDetails"
+			element="gbm:GetOrganisationGBMRequest" />
+	</wsdl:message>
+
+	<wsdl:message name="GetOrganisationRespMessage">
+		<wsdl:documentation>
+			<description>This message is used as the request payload to the Get Organisation operation</description>
+		</wsdl:documentation>
+		<wsdl:part
+			name="OrganisationDetails"
+			element="gbm:GetOrganisationGBMResponse" />
+	</wsdl:message>
+
+    
+    
+	<!--Supporting Messages-->
+	<wsdl:message name="Fault">
+		<wsdl:documentation>
+			<description>This message is used for propagating Error Context and Error Message</description>
+		</wsdl:documentation>
+		<wsdl:part
+			name="Fault"
+			element="gfo:Fault" />
+	</wsdl:message>
+
+	<wsdl:message name="MessageHeaders">
+		<wsdl:documentation>
+			<description>This message is used as the header for SOAP request</description>
+		</wsdl:documentation>
+		<wsdl:part
+			name="Source"
+			element="gho:Source" />
+		<wsdl:part
+			name="Target"
+			element="gho:Target" />
+		<wsdl:part
+			name="Tracking"
+			element="gho:Tracking" />
+		<wsdl:part
+			name="Cache"
+			element="gho:Cache" />
+		<wsdl:part
+			name="QueryResult"
+			element="gho:QueryResult" />
+		<wsdl:part
+			name="ResultStatus"
+			element="gho:ResultStatus" />
+	</wsdl:message>
+
+	<wsdl:portType name="OrganisationInterface">
+		<wsdl:documentation>
+			<description>The interface contains operations for the Organisation Service</description>
+		</wsdl:documentation>
+		<wsdl:operation name="GetOrganisation">
+			<wsdl:documentation>
+				<description>An operation that allows a consumer to Get a Organisation</description>
+			</wsdl:documentation>
+			<wsdl:input
+				name="GetOrganisationRequest"
+				message="gbs:GetOrganisationReqMessage"
+				wsaw:Action="http://generali.com/enterprise-services/core/gbs/enterprise/organisation/v1/get" />
+			<wsdl:output
+				name="GetOrganisationResponse"
+				message="gbs:GetOrganisationRespMessage" />
+			<wsdl:fault
+				name="Fault"
+				message="gbs:Fault" />
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:portType name="OrganisationReqInterface">
+		<wsdl:documentation>
+			<description>The interface contains operations for the Organisation Service</description>
+		</wsdl:documentation>
+		<wsdl:operation name="GetOrganisation">
+			<wsdl:documentation>
+				<description>An operation that allows a consumer to Get a Organisation</description>
+			</wsdl:documentation>
+			<wsdl:input
+				name="GetOrganisationRequest"
+				message="gbs:GetOrganisationReqMessage"
+				wsaw:Action="http://generali.com/enterprise-services/core/gbs/enterprise/organisation/v1/get" />
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:portType name="OrganisationRespInterface">
+		<wsdl:documentation>
+			<description>The interface contains operations for the Organisation Service</description>
+		</wsdl:documentation>
+		<wsdl:operation name="GetOrganisation">
+			<wsdl:documentation>
+				<description>An operation that allows a consumer to Get a Organisation</description>
+			</wsdl:documentation>
+			<wsdl:input
+				name="GetOrganisationResponse"
+				message="gbs:GetOrganisationRespMessage"
+				wsaw:Action="http://generali.com/enterprise-services/core/gbs/enterprise/organisation/v1/show" />
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:binding
+		name="OrganisationInterface-SOAP11-HTTPBinding"
+		type="gbs:OrganisationInterface">
+		<wsdl:documentation>
+			<description>A binding that supports a SOAP 1.1 HTTP endpoint.</description>
+		</wsdl:documentation>
+
+		<soap11:binding
+			style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" /> 
+
+		<!-- Use WS-Addressing v1.0 -->
+		<wsaw:UsingAddressing wsdl:required="true" />
+
+		<wsdl:operation name="GetOrganisation">
+			<soap11:operation
+				soapAction="http://generali.com/enterprise-services/core/gbs/enterprise/organisation/v1/get"
+				style="document" />
+
+			<wsdl:input name="GetOrganisationRequest">
+				<soap11:header
+					message="gbs:MessageHeaders"
+					part="Source"
+					use="literal" />
+				<soap11:header
+					message="gbs:MessageHeaders"
+					part="Target"
+					use="literal" />
+				<soap11:header
+					message="gbs:MessageHeaders"
+					part="Tracking"
+					use="literal" />
+				<soap11:header
+					message="gbs:MessageHeaders"
+					part="Cache"
+					use="literal" />
+				<soap11:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="GetOrganisationResponse">
+				<soap11:header
+					message="gbs:MessageHeaders"
+					part="Target"
+					use="literal" />
+				<soap11:header
+					message="gbs:MessageHeaders"
+					part="Tracking"
+					use="literal" />
+				<soap11:header
+					message="gbs:MessageHeaders"
+					part="Cache"
+					use="literal" />
+				<soap11:header
+					message="gbs:MessageHeaders"
+					part="ResultStatus"
+					use="literal" />
+				<soap11:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+
+
+
+</wsdl:definitions>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: ProgramFeedbackService.xsd 1524 2020-05-07 16:04:20Z madhavar $ -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" 
+	xmlns:tns="http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
+	targetNamespace="http://xmlns.generali.com/services/program/FeedbackProgramService/v1">
+	<xsd:element name="FeedbackProgramPolicies">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="ConsumerID" minOccurs="1"
+					maxOccurs="1" type="xsd:token">
+					<xsd:annotation>
+						<xsd:documentation>
+							Consumer's ID or token. Maps to a username
+							or
+							ID in GeR.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="TransmissionID" type="xsd:token"
+					minOccurs="0" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>
+							Event which triggered this update by the
+							consumer. Maps to PCR transmission key.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="ProgramID" type="xsd:token"
+					minOccurs="0" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>
+							Program reference in GeR.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="LocalProgramID" type="xsd:token"
+					minOccurs="0" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>
+							Program identifier used in the local
+							system.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element ref="tns:Policies" minOccurs="0" maxOccurs="1"></xsd:element>
+				<xsd:element ref="tns:Status" minOccurs="0" />
+				<xsd:element name="Errors"  type="tns:ErrorsType" minOccurs="0" maxOccurs="1"/>
+		
+			</xsd:sequence>
+            <xsd:attribute name="action" type="xsd:token" use="optional">
+                <xsd:annotation>
+                    <xsd:documentation>This identify the stage of the contract, for SIPO could be:
+                    technicalCheck, businessCheck, issuance, final </xsd:documentation>
+                </xsd:annotation>
+            </xsd:attribute>
+		</xsd:complexType>
+        
+	</xsd:element>
+	
+	<xsd:element name="FeedbackProgramPoliciesResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="ResponseCode" type="xsd:string"
+					minOccurs="1" maxOccurs="1">
+				</xsd:element>
+				<xsd:element name="ResponseText" type="xsd:string"
+					minOccurs="0" maxOccurs="1"></xsd:element>
+				<xsd:element name="RequestID" type="xsd:string"
+					minOccurs="0" maxOccurs="1">
+					<xsd:annotation>
+						<xsd:documentation>If the request was successfully queued, a
+							RequestID will be returned.
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="ConsumerType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:token"></xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="PolicyType">
+		<xsd:sequence>
+			<xsd:element name="PolicyID" type="xsd:string"></xsd:element>
+			<xsd:element ref="tns:Status" minOccurs="0" />
+			<xsd:element ref="tns:LocalPolicies"></xsd:element>
+			<xsd:element name="Errors" type="tns:ErrorsType"
+				minOccurs="0"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="PoliciesType">
+		<xsd:sequence>
+			<xsd:element ref="tns:Policy" minOccurs="1" maxOccurs="unbounded"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="Policies" type="tns:PoliciesType"></xsd:element>
+
+	<xsd:complexType name="LocalPoliciesType">
+		<xsd:sequence>
+			<xsd:element name="LocalPolicy" minOccurs="0" maxOccurs="unbounded">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element type="xsd:token" name="LocalPolicyID" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>Reference(s) used in the local system to
+									represent this policy.
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element type="xsd:token" name="LocalPolicyReference" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>Reference(s) used in the local system to 
+									represent this policy, before a Policy ID is generated 
+									(introduced due to ESP requirement)
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element type="xsd:token" name="ProducingOfficeRef" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>This would be the Producing office Policy reference
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element type="xsd:token" name="ReinsurancePolicyRef" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>This would be the Reinsurance Policy Reference used by Clearing house countries
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>						
+						<xsd:element ref="tns:Status" minOccurs="1" />
+						<xsd:element name="PartyIDs" minOccurs="0">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="PartyID" maxOccurs="unbounded"
+										minOccurs="1" >
+										<xsd:complexType>
+											<xsd:simpleContent>
+												<xsd:extension base="xsd:token">
+													<xsd:attribute name="PartyType" type="xsd:token">
+														<xsd:annotation>
+															<xsd:documentation>
+																Party type will be one of the following:
+																INS - Insured
+																CED - Cedant
+																REI - Reinsurer
+																BRK - Broker
+																INC - Insurer
+															</xsd:documentation>
+														</xsd:annotation>
+													</xsd:attribute>
+													<xsd:attribute name="PartyGUNS" type="xsd:token" use="required" />
+												</xsd:extension>
+											</xsd:simpleContent>
+										</xsd:complexType>
+									</xsd:element>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="Risks" minOccurs="0">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="Risk" type="tns:RiskType" minOccurs="0" maxOccurs="unbounded" />
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<!-- add an element for coverage and location... looks tricky, need 
+							Luca -->
+						<xsd:element name="ReinsuranceAgreements" minOccurs="0">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="ReinsuranceAgreementID"
+										maxOccurs="unbounded" minOccurs="1" type="xsd:token" />
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="InceptionDate" minOccurs="0" type="xsd:dateTime" nillable="true"/>
+						<xsd:element name="IssuanceDate" minOccurs="0" type="xsd:dateTime" nillable="true"/>
+						<xsd:element name="ExpiryDate" minOccurs="0" type="xsd:dateTime" nillable="true"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ErrorsType">
+		<xsd:sequence>
+			<xsd:element name="ErrorItem" type="tns:ErrorElementType"
+				minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ErrorElementType">
+		<xsd:sequence>
+			<xsd:element name="Code" type="xsd:token" />
+			<xsd:element name="Description" type="xsd:string" />
+			<xsd:element name="Type">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:token">
+						<xsd:enumeration value="Business" />
+						<xsd:enumeration value="Technical" />
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="Level" >
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:token">
+						<xsd:enumeration value="ERROR" />
+						<xsd:enumeration value="WARN" />
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="Policy" type="tns:PolicyType"/>
+	<xsd:element name="LocalPolicies" type="tns:LocalPoliciesType"/>
+	
+	<xsd:complexType name="RiskType">
+		<xsd:sequence>
+			<xsd:element name="GlobalRiskID" type="xsd:token" />
+			<xsd:element name="LocalRiskID" type="xsd:token" />
+			<xsd:element name="ReinsuranceAgreement" type="xsd:token" minOccurs="0"/>
+			<xsd:element name="Locations" minOccurs="0" maxOccurs="1">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Location" type="tns:LocationType" minOccurs="0" maxOccurs="1"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="LocationType">
+		<xsd:sequence>
+			<xsd:element name="GlobalLocationID" type="xsd:token" />
+			<xsd:element name="LocalLocationID" type="xsd:token" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="Status" >
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:token">
+				<xsd:enumeration value="SUCCESS"/>
+				<xsd:enumeration value="WARNING"/>
+				<xsd:enumeration value="FAIL"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+</xsd:schema>

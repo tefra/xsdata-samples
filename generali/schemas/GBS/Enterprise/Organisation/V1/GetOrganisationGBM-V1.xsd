@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--(c) Reply Limited. All rights reserved. -->
+
+<!--  $Id: GetOrganisationGBM-V1.xsd 723 2016-12-21 14:14:44Z schiachm $ -->
+
+<xsd:schema
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:cmn="http://generali.com/enterprise-services/core/gbo/common/v1"
+	xmlns:tns="http://generali.com/enterprise-services/core/gbm/enterprise/organisation/v1"
+	xmlns:gbo="http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1"
+	targetNamespace="http://generali.com/enterprise-services/core/gbm/enterprise/organisation/v1"
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	version="1.0">
+	<xsd:annotation>
+		<xsd:documentation>
+			<description>Service supporting retrieving an organisation information.</description>
+		</xsd:documentation>
+	</xsd:annotation>
+    
+	<!-- ===================== Imports ============================ -->
+	<xsd:import
+		namespace="http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1"
+		schemaLocation="../../../../GBO/Enterprise/Organisation/V1/OrganisationGBO-V1.xsd" />
+	<xsd:import
+		namespace="http://generali.com/enterprise-services/core/gbo/common/v1"
+		schemaLocation="../../../../GBO/Common/V1/Components.xsd" />
+	
+	
+
+	<xsd:complexType name="GetOrganisationGBMResponseType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The definition of the response message that supports retrieval of an Organisation</description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="cmn:BaseGBMHeaderType">
+				<xsd:sequence>
+					
+					<xsd:element
+						name="OrganisationGBO"
+						type="gbo:OrganisationGBOType">
+						<xsd:annotation>
+							<xsd:documentation>
+								<description>The business object to retrieve</description>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element
+		name="GetOrganisationGBMResponse"
+		type="tns:GetOrganisationGBMResponseType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<description>The definition of the response message that supports retrieval of an Organisation</description>
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+
+
+</xsd:schema>

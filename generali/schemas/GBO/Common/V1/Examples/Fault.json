@@ -1,0 +1,114 @@
+{
+	"@schemaLocation": "application/vnd.generali.faults.v1+json",
+	"_links": 
+	{
+		"self": 
+		{
+			"href": "http://api-v{version}.generali.com/enterprise-resources/{access-type}/core/gbo/common/faults/{id}"
+		},
+
+		"find": 
+		{
+			"href": "http://api-v{version}.generali.com/enterprise-resources/{access-type}/core/gbo/common/faults"
+		}
+	},
+
+	"originator": 
+	[
+		{
+			"address": "",
+			"reference-parameters": 
+			[
+				{
+					
+				}
+			],
+
+			"metadata": 
+			[
+				{
+					
+				}
+			]
+		}
+	],
+
+	"error-code": 
+	[
+		{
+			"@dialect": ""
+		}
+	],
+
+	"description": "",
+	"fault-cause": 
+	{
+		
+	},
+
+	"characteristics": 
+	[
+		{
+			"characteristic": 
+			{
+				"name-text": "",
+				"desc-text": "",
+				"type-code": 
+				{
+					"$": "",
+					"@list-agency-name": "Glue Reply",
+					"@list-name": ""
+				},
+
+				"values": 
+				[
+					{
+						"value": 
+						{
+							"text": "",
+							"code": 
+							{
+								"$": "",
+								"@list-agency-name": "Glue Reply",
+								"@list-name": ""
+							},
+
+							"amount": 
+							{
+								"$": "",
+								"@currency-id": "123"
+							},
+
+							"quantity": 
+							{
+								"$": "",
+								"@unit-code": ""
+							},
+
+							"numeric": "",
+							"percent": "20",
+							"indicator": "",
+							"duration": "P0Y0M2D",
+							"time": "",
+							"date": "2015-10-01",
+							"date-time": "2015-10-01T00:00:00Z"
+						}
+					}
+				]
+			}
+		}
+	],
+
+	"failures": 
+	[
+		{
+			"failure": 
+			{
+				"data-ref": 
+				{
+					
+				}
+			}
+		}
+	]
+}

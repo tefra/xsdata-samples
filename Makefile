@@ -6,6 +6,7 @@ build-bpmn: schema = bpmn/schemas/BPMN20.xsd
 build-common_types: schema = common_types/Common-Types/src/main/resources/schemas/nhinc/hl7
 build-datexii: schema = datexii/schemas
 build-ewp: schema = ewp/schemas/ewp-specs-api-discovery/stable-v5/manifest.xsd
+build-generali: schema = generali/schemas -r
 build-netex: schema = netex/NeTEx/xsd/NeTEx_publication.xsd
 build-npo: schema = npo/schemas/rs.poms.omroep.nl/v1/schema/api_2013.xsd
 build-reqif: schema = reqif/schemas/reqif.xsd
@@ -21,6 +22,7 @@ builds = $\
 	build-common_types $\
 	build-datexii $\
 	build-ewp $\
+	build-generali $\
 	build-netex $\
 	build-npo $\
 	build-reqif $\
@@ -37,6 +39,7 @@ tests = $\
 	test-datexii $\
 	test-defxml $\
 	test-ewp $\
+	test-generali $\
 	test-netex $\
 	test-npo $\
 	test-reqif $\
@@ -53,6 +56,7 @@ mypies = $\
 	mypy-datexii $\
 	mypy-defxml $\
 	mypy-ewp $\
+	mypy-generali $\
 	mypy-netex $\
 	mypy-npo $\
 	mypy-reqif $\
@@ -69,6 +73,7 @@ init-configs = $\
 	init-config-datexii $\
 	init-config-defxml $\
 	init-config-ewp $\
+	init-config-generali $\
 	init-config-netex $\
 	init-config-npo $\
 	init-config-reqif $\
@@ -86,6 +91,7 @@ common_types: build-common_types test-common_types mypy-common_types
 datexii: build-datexii test-datexii mypy-datexii
 defxml: test-defxml mypy-defxml
 ewp: build-ewp test-ewp mypy-ewp
+generali: build-generali test-generali mypy-generali
 netex: build-netex test-netex mypy-netex
 npo: build-npo test-npo mypy-npo
 reqif: build-reqif test-reqif mypy-reqif
