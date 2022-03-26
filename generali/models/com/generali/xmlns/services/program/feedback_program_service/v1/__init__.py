@@ -1,6 +1,3 @@
-from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.agreement_interface_notify_agreement import AgreementInterfaceNotifyAgreement
-from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.agreement_interface_notify_agreement_input import AgreementInterfaceNotifyAgreementInput
-from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.agreement_interface_notify_agreement_output import AgreementInterfaceNotifyAgreementOutput
 from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.error_element_type import ErrorElementType
 from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.error_element_type_level import ErrorElementTypeLevel
 from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.error_element_type_type import ErrorElementTypeType
@@ -9,9 +6,6 @@ from generali.models.com.generali.xmlns.services.program.feedback_program_servic
 from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.errors_type import ErrorsType
 from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.feedback_program_policies import FeedbackProgramPolicies
 from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.feedback_program_policies_response import FeedbackProgramPoliciesResponse
-from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.feedback_program_service_feedback_program_policies import FeedbackProgramServiceFeedbackProgramPolicies
-from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.feedback_program_service_feedback_program_policies_input import FeedbackProgramServiceFeedbackProgramPoliciesInput
-from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.feedback_program_service_feedback_program_policies_output import FeedbackProgramServiceFeedbackProgramPoliciesOutput
 from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.local_policies import LocalPolicies
 from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.local_policies_type import LocalPoliciesType
 from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.local_policy import LocalPolicy
@@ -32,9 +26,6 @@ from generali.models.com.generali.xmlns.services.program.feedback_program_servic
 from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.status_value import StatusValue
 
 __all__ = [
-    "AgreementInterfaceNotifyAgreement",
-    "AgreementInterfaceNotifyAgreementInput",
-    "AgreementInterfaceNotifyAgreementOutput",
     "ErrorElementType",
     "ErrorElementTypeLevel",
     "ErrorElementTypeType",
@@ -43,9 +34,6 @@ __all__ = [
     "ErrorsType",
     "FeedbackProgramPolicies",
     "FeedbackProgramPoliciesResponse",
-    "FeedbackProgramServiceFeedbackProgramPolicies",
-    "FeedbackProgramServiceFeedbackProgramPoliciesInput",
-    "FeedbackProgramServiceFeedbackProgramPoliciesOutput",
     "LocalPolicies",
     "LocalPoliciesType",
     "LocalPolicy",

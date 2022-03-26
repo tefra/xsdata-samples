@@ -1,0 +1,15 @@
+from generali.models.com.generali.enterprise_services.core.gbs.enterprise.agreement.v1.agreement_interface_notify_agreement import AgreementInterfaceNotifyAgreement
+from generali.models.com.generali.enterprise_services.core.gbs.enterprise.agreement.v1.agreement_interface_notify_agreement_input import AgreementInterfaceNotifyAgreementInput
+from generali.models.com.generali.enterprise_services.core.gbs.enterprise.agreement.v1.agreement_interface_notify_agreement_output import AgreementInterfaceNotifyAgreementOutput
+from generali.models.com.generali.enterprise_services.core.gbs.enterprise.agreement.v1.feedback_program_service_feedback_program_policies import FeedbackProgramServiceFeedbackProgramPolicies
+from generali.models.com.generali.enterprise_services.core.gbs.enterprise.agreement.v1.feedback_program_service_feedback_program_policies_input import FeedbackProgramServiceFeedbackProgramPoliciesInput
+from generali.models.com.generali.enterprise_services.core.gbs.enterprise.agreement.v1.feedback_program_service_feedback_program_policies_output import FeedbackProgramServiceFeedbackProgramPoliciesOutput
+
+__all__ = [
+    "AgreementInterfaceNotifyAgreement",
+    "AgreementInterfaceNotifyAgreementInput",
+    "AgreementInterfaceNotifyAgreementOutput",
+    "FeedbackProgramServiceFeedbackProgramPolicies",
+    "FeedbackProgramServiceFeedbackProgramPoliciesInput",
+    "FeedbackProgramServiceFeedbackProgramPoliciesOutput",
+]

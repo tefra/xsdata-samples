@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from typing import Optional
 from generali.models.com.generali.enterprise_services.core.gbm.enterprise.agreement.v1.notify_program_gbmrequest import NotifyProgramGbmrequest
 
-__NAMESPACE__ = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
+__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbs/enterprise/agreement/v1"
 
 
 @dataclass
