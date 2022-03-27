@@ -108,7 +108,7 @@ init-config: $(init-configs)
 build-%:
 	@echo "**** Generating models: $* ****"
 	@rm -rf $*/models
-	xsdata $(schema) --config $*/.xsdata.xml --output $(OUTPUT_FORMAT)
+	xsdata $(schema) --config $*/.xsdata.xml --output $(OUTPUT_FORMAT) $(CLI_FLAGS)
 
 test-%:
 	@echo "**** Running tests: $* ****"
