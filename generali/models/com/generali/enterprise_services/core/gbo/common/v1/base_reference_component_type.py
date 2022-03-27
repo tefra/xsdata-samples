@@ -1,10 +1,12 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xsdata.models.datatype import XmlDateTime
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import CodeType
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.idtype import Idtype
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import TextType
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_component_type import BaseComponentType
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_reference_component_type_categories import BaseReferenceComponentTypeCategories
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_reference_component_type_ids import BaseReferenceComponentTypeIds
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.time_period_type import TimePeriodType
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
@@ -68,7 +70,7 @@ class BaseReferenceComponentType(BaseComponentType):
         the business object being referenced, i.e. Advanced Shipment
         Notification or Sales Order.</description>
     """
-    ids: Optional["BaseReferenceComponentType.Ids"] = field(
+    ids: Optional[BaseReferenceComponentTypeIds] = field(
         default=None,
         metadata={
             "name": "IDs",
@@ -109,7 +111,7 @@ class BaseReferenceComponentType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         }
     )
-    categories: Optional["BaseReferenceComponentType.Categories"] = field(
+    categories: Optional[BaseReferenceComponentTypeCategories] = field(
         default=None,
         metadata={
             "name": "Categories",
@@ -187,58 +189,3 @@ class BaseReferenceComponentType(BaseComponentType):
             "type": "Attribute",
         }
     )
-
-    @dataclass
-    class Ids:
-        """
-        :ivar id: <description xmlns="">The identifier of the business
-            object or component. This should be used to identify
-            instances of a business object or component. Where the
-            component is being used to reference another business object
-            then this is the "primary key" of the target object. Use the
-            attributes @schemeName and @schemeAgencyName to identify
-            type of Identifier.</description>
-        """
-        id: List[Idtype] = field(
-            default_factory=list,
-            metadata={
-                "name": "ID",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-                "min_occurs": 1,
-            }
-        )
-
-    @dataclass
-    class Categories:
-        """
-        :ivar category_code: <description xmlns="">A classification
-            applied to the business object or component. More than one
-            classification scheme can be applied using the @listName
-            attribute to identify the type of code list being used. The
-            classification scheme can be used to group instances of the
-            object or component.</description>
-        """
-        category_code: List["BaseReferenceComponentType.Categories.CategoryCode"] = field(
-            default_factory=list,
-            metadata={
-                "name": "CategoryCode",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-                "min_occurs": 1,
-            }
-        )
-
-        @dataclass
-        class CategoryCode(CodeType):
-            """
-            :ivar list_hierarchy_id: An indication of the depth in a
-                classification hierarchy
-            """
-            list_hierarchy_id: Optional[str] = field(
-                default=None,
-                metadata={
-                    "name": "listHierarchyID",
-                    "type": "Attribute",
-                }
-            )

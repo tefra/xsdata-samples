@@ -1,20 +1,30 @@
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.address_type import AddressType
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.amount_or_quantity_type import AmountOrQuantityType
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.attachment_type import AttachmentType
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.attachment_type_size_measure import AttachmentTypeSizeMeasure
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_component_type import BaseComponentType
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_gbmevent_type import BaseGbmeventType
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_gbmheader_type import BaseGbmheaderType
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_gbmtype import BaseGbmtype
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_gbodetails_type import BaseGbodetailsType
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_gboparts_type import BaseGbopartsType
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_gboparts_type_notes import BaseGbopartsTypeNotes
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_gborelated_type import BaseGborelatedType
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_gboroles_type import BaseGborolesType
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_gbotype import BaseGbotype
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_identified_component_type import BaseIdentifiedComponentType
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_identified_component_type_ids import BaseIdentifiedComponentTypeIds
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_reference_component_optional_type import BaseReferenceComponentOptionalType
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_reference_component_optional_type_categories import BaseReferenceComponentOptionalTypeCategories
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_reference_component_optional_type_categories_category_code import BaseReferenceComponentOptionalTypeCategoriesCategoryCode
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_reference_component_optional_type_ids import BaseReferenceComponentOptionalTypeIds
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_reference_component_type import BaseReferenceComponentType
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_reference_component_type_categories import BaseReferenceComponentTypeCategories
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_reference_component_type_categories_category_code import BaseReferenceComponentTypeCategoriesCategoryCode
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_reference_component_type_ids import BaseReferenceComponentTypeIds
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_simple_component_type import BaseSimpleComponentType
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.characteristic_type import CharacteristicType
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.characteristic_type_values import CharacteristicTypeValues
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.characteristic_value_type import CharacteristicValueType
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.characteristics_type import CharacteristicsType
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.check_type import CheckType
@@ -38,9 +48,14 @@ from generali.models.com.generali.enterprise_services.core.gbo.common.v1.geocode
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.geographic_location_type import GeographicLocationType
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.geographical_scope import GeographicalScope
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.geography_type import GeographyType
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.geography_type_address import GeographyTypeAddress
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.global_position_address_type import GlobalPositionAddressType
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.header_type import HeaderType
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.header_type_properties import HeaderTypeProperties
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.header_type_properties_property import HeaderTypePropertiesProperty
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.header_type_target_systems import HeaderTypeTargetSystems
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.local_data_type import LocalDataType
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.local_data_type_entry import LocalDataTypeEntry
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.logical_operator_code_type import LogicalOperatorCodeType
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.marital_status_code_type import MaritalStatusCodeType
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.metric_uo_mlength_code_type import MetricUoMlengthCodeType
@@ -49,6 +64,7 @@ from generali.models.com.generali.enterprise_services.core.gbo.common.v1.note_ty
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.perc_value_type import PercValueType
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.query_algorithm_code_type import QueryAlgorithmCodeType
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.query_criteria_type import QueryCriteriaType
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.query_criteria_type_query_expression import QueryCriteriaTypeQueryExpression
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.query_expression_type import QueryExpressionType
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.query_operator_code_type import QueryOperatorCodeType
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.query_type import QueryType
@@ -59,6 +75,9 @@ from generali.models.com.generali.enterprise_services.core.gbo.common.v1.smsnumb
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.sort_expression_type import SortExpressionType
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.sort_order_code_type import SortOrderCodeType
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.status_history_type import StatusHistoryType
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.status_history_type_state_transition import StatusHistoryTypeStateTransition
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.status_history_type_state_transition_reasons import StatusHistoryTypeStateTransitionReasons
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.status_history_type_state_transition_reasons_reason_code import StatusHistoryTypeStateTransitionReasonsReasonCode
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.sub_division_type import (
     SubDivisionType,
     SubdivisionsType,
@@ -83,20 +102,30 @@ __all__ = [
     "AddressType",
     "AmountOrQuantityType",
     "AttachmentType",
+    "AttachmentTypeSizeMeasure",
     "BaseComponentType",
     "BaseGbmeventType",
     "BaseGbmheaderType",
     "BaseGbmtype",
     "BaseGbodetailsType",
     "BaseGbopartsType",
+    "BaseGbopartsTypeNotes",
     "BaseGborelatedType",
     "BaseGborolesType",
     "BaseGbotype",
     "BaseIdentifiedComponentType",
+    "BaseIdentifiedComponentTypeIds",
     "BaseReferenceComponentOptionalType",
+    "BaseReferenceComponentOptionalTypeCategories",
+    "BaseReferenceComponentOptionalTypeCategoriesCategoryCode",
+    "BaseReferenceComponentOptionalTypeIds",
     "BaseReferenceComponentType",
+    "BaseReferenceComponentTypeCategories",
+    "BaseReferenceComponentTypeCategoriesCategoryCode",
+    "BaseReferenceComponentTypeIds",
     "BaseSimpleComponentType",
     "CharacteristicType",
+    "CharacteristicTypeValues",
     "CharacteristicValueType",
     "CharacteristicsType",
     "CheckType",
@@ -120,9 +149,14 @@ __all__ = [
     "GeographicLocationType",
     "GeographicalScope",
     "GeographyType",
+    "GeographyTypeAddress",
     "GlobalPositionAddressType",
     "HeaderType",
+    "HeaderTypeProperties",
+    "HeaderTypePropertiesProperty",
+    "HeaderTypeTargetSystems",
     "LocalDataType",
+    "LocalDataTypeEntry",
     "LogicalOperatorCodeType",
     "MaritalStatusCodeType",
     "MetricUoMlengthCodeType",
@@ -131,6 +165,7 @@ __all__ = [
     "PercValueType",
     "QueryAlgorithmCodeType",
     "QueryCriteriaType",
+    "QueryCriteriaTypeQueryExpression",
     "QueryExpressionType",
     "QueryOperatorCodeType",
     "QueryType",
@@ -141,6 +176,9 @@ __all__ = [
     "SortExpressionType",
     "SortOrderCodeType",
     "StatusHistoryType",
+    "StatusHistoryTypeStateTransition",
+    "StatusHistoryTypeStateTransitionReasons",
+    "StatusHistoryTypeStateTransitionReasonsReasonCode",
     "SubDivisionType",
     "SubdivisionsType",
     "TelephoneNumberCountryCodeType",

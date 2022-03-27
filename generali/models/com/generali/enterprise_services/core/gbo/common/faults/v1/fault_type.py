@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.faults.v1.failure_type import FailureType
+from typing import Optional
+from generali.models.com.generali.enterprise_services.core.gbo.common.faults.v1.fault_type_failures import FaultTypeFailures
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.characteristics_type import CharacteristicsType
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.fault_category_code_type import FaultCategoryCodeType
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.fault_severity_code_type import FaultSeverityCodeType
@@ -97,7 +97,7 @@ class FaultType(BaseFaultType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/faults/v1",
         }
     )
-    failures: Optional["FaultType.Failures"] = field(
+    failures: Optional[FaultTypeFailures] = field(
         default=None,
         metadata={
             "name": "Failures",
@@ -105,22 +105,3 @@ class FaultType(BaseFaultType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/faults/v1",
         }
     )
-
-    @dataclass
-    class Failures:
-        """
-        :ivar failure: <description xmlns="">A component that describes
-            individual failures within the fault. This component is used
-            to support multiple causes to the fault, i.e. where the
-            fault is generated from one or more API calls or one or more
-            validation failures.</description>
-        """
-        failure: List[FailureType] = field(
-            default_factory=list,
-            metadata={
-                "name": "Failure",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/common/faults/v1",
-                "min_occurs": 1,
-            }
-        )

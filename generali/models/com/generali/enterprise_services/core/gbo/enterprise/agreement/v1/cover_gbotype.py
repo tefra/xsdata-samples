@@ -1,13 +1,19 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import List, Optional
+from typing import Optional
 from xsdata.models.datatype import XmlDateTime
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.idtype import Idtype
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import TextType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.agreement_type import AgreementType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.cedant_involvement_type import CedantInvolvementType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.claim_type import ClaimType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.clauses_type import ClausesType
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.cover_gbotype_cedants import CoverGbotypeCedants
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.cover_gbotype_claims import CoverGbotypeClaims
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.cover_gbotype_documents import CoverGbotypeDocuments
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.cover_gbotype_insurance_flows import CoverGbotypeInsuranceFlows
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.cover_gbotype_premiums import CoverGbotypePremiums
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.cover_gbotype_reinsurers import CoverGbotypeReinsurers
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.cover_gbotype_risks import CoverGbotypeRisks
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.cover_gbotype_vessels import CoverGbotypeVessels
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.coverage_type import ExposuresType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.coverages_type import CoveragesType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.deductibles_type import DeductiblesType
@@ -15,17 +21,11 @@ from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreem
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.engineering_type import EngineeringType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.extensions_type import ExtensionsType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.fronting_involvement_type import FrontingInvolvementType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.insurance_flow_type import InsuranceFlowType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.limits_type import LimitsType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.policy_type_enum import PolicyTypeEnum
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.policyholder_involvement import PolicyholderInvolvement
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.premium_type import PremiumType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.reinsurer_involvement_type import ReinsurerInvolvementType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.risk_type import RiskType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.total_deductions_type import TotalDeductionsType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.total_premium_type import TotalPremiumType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.vessel_type import VesselType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.document_type import DocumentType
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
 
@@ -104,7 +104,7 @@ class CoverGbotype(AgreementType):
             "pattern": r"[A-Z][A-Z]",
         }
     )
-    cedants: Optional["CoverGbotype.Cedants"] = field(
+    cedants: Optional[CoverGbotypeCedants] = field(
         default=None,
         metadata={
             "name": "Cedants",
@@ -120,7 +120,7 @@ class CoverGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         }
     )
-    reinsurers: Optional["CoverGbotype.Reinsurers"] = field(
+    reinsurers: Optional[CoverGbotypeReinsurers] = field(
         default=None,
         metadata={
             "name": "Reinsurers",
@@ -128,7 +128,7 @@ class CoverGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         }
     )
-    insurance_flows: Optional["CoverGbotype.InsuranceFlows"] = field(
+    insurance_flows: Optional[CoverGbotypeInsuranceFlows] = field(
         default=None,
         metadata={
             "name": "InsuranceFlows",
@@ -136,7 +136,7 @@ class CoverGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         }
     )
-    risks: Optional["CoverGbotype.Risks"] = field(
+    risks: Optional[CoverGbotypeRisks] = field(
         default=None,
         metadata={
             "name": "Risks",
@@ -144,7 +144,7 @@ class CoverGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         }
     )
-    vessels: Optional["CoverGbotype.Vessels"] = field(
+    vessels: Optional[CoverGbotypeVessels] = field(
         default=None,
         metadata={
             "name": "Vessels",
@@ -228,7 +228,7 @@ class CoverGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         }
     )
-    premiums: Optional["CoverGbotype.Premiums"] = field(
+    premiums: Optional[CoverGbotypePremiums] = field(
         default=None,
         metadata={
             "name": "Premiums",
@@ -301,7 +301,7 @@ class CoverGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         }
     )
-    documents: Optional["CoverGbotype.Documents"] = field(
+    documents: Optional[CoverGbotypeDocuments] = field(
         default=None,
         metadata={
             "name": "Documents",
@@ -319,7 +319,7 @@ class CoverGbotype(AgreementType):
             "pattern": r"[A-Z][A-Z]",
         }
     )
-    claims: Optional["CoverGbotype.Claims"] = field(
+    claims: Optional[CoverGbotypeClaims] = field(
         default=None,
         metadata={
             "name": "Claims",
@@ -335,93 +335,3 @@ class CoverGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         }
     )
-
-    @dataclass
-    class Cedants:
-        cedant: List[CedantInvolvementType] = field(
-            default_factory=list,
-            metadata={
-                "name": "Cedant",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            }
-        )
-
-    @dataclass
-    class Reinsurers:
-        reinsurer: List[ReinsurerInvolvementType] = field(
-            default_factory=list,
-            metadata={
-                "name": "Reinsurer",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-                "min_occurs": 1,
-            }
-        )
-
-    @dataclass
-    class InsuranceFlows:
-        insurance_flow: List[InsuranceFlowType] = field(
-            default_factory=list,
-            metadata={
-                "name": "InsuranceFlow",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-                "min_occurs": 1,
-            }
-        )
-
-    @dataclass
-    class Risks:
-        risk: List[RiskType] = field(
-            default_factory=list,
-            metadata={
-                "name": "Risk",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            }
-        )
-
-    @dataclass
-    class Vessels:
-        vessel: List[VesselType] = field(
-            default_factory=list,
-            metadata={
-                "name": "Vessel",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            }
-        )
-
-    @dataclass
-    class Premiums:
-        premium: List[PremiumType] = field(
-            default_factory=list,
-            metadata={
-                "name": "Premium",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            }
-        )
-
-    @dataclass
-    class Documents:
-        document: List[DocumentType] = field(
-            default_factory=list,
-            metadata={
-                "name": "Document",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            }
-        )
-
-    @dataclass
-    class Claims:
-        claim: List[ClaimType] = field(
-            default_factory=list,
-            metadata={
-                "name": "Claim",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            }
-        )

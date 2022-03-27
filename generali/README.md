@@ -1,5 +1,9 @@
 # Generali Enterprise [services](http://generali.com)
 
+## Highlights
+- Move inner types to upper level
+- Enumeration restrictions
+
 ## Makefile commands
 
 ```console

@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_identified_component_type import BaseIdentifiedComponentType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.value_type import ValueType
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.pricing_layer_type_limit import PricingLayerTypeLimit
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
 
@@ -25,7 +25,7 @@ class PricingLayerType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         }
     )
-    limit: Optional["PricingLayerType.Limit"] = field(
+    limit: Optional[PricingLayerTypeLimit] = field(
         default=None,
         metadata={
             "name": "Limit",
@@ -41,14 +41,3 @@ class PricingLayerType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         }
     )
-
-    @dataclass
-    class Limit:
-        value: Optional[ValueType] = field(
-            default=None,
-            metadata={
-                "name": "Value",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            }
-        )

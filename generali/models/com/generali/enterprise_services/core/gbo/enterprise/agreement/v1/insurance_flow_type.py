@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import List, Optional
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.cedant_involvement_type import CedantInvolvementType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.coinsurer_involvement_type import CoinsurerInvolvementType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.reinsurer_involvement_type import ReinsurerInvolvementType
+from typing import Optional
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.insurance_flow_type_cedants import InsuranceFlowTypeCedants
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.insurance_flow_type_coinsurer_involvements import InsuranceFlowTypeCoinsurerInvolvements
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.insurance_flow_type_reinsurers import InsuranceFlowTypeReinsurers
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.organisation_involvement_type import OrganisationInvolvementType
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
@@ -29,7 +29,7 @@ class InsuranceFlowType(OrganisationInvolvementType):
             "required": True,
         }
     )
-    cedants: Optional["InsuranceFlowType.Cedants"] = field(
+    cedants: Optional[InsuranceFlowTypeCedants] = field(
         default=None,
         metadata={
             "name": "Cedants",
@@ -37,7 +37,7 @@ class InsuranceFlowType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         }
     )
-    coinsurer_involvements: Optional["InsuranceFlowType.CoinsurerInvolvements"] = field(
+    coinsurer_involvements: Optional[InsuranceFlowTypeCoinsurerInvolvements] = field(
         default=None,
         metadata={
             "name": "CoinsurerInvolvements",
@@ -45,7 +45,7 @@ class InsuranceFlowType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         }
     )
-    reinsurers: Optional["InsuranceFlowType.Reinsurers"] = field(
+    reinsurers: Optional[InsuranceFlowTypeReinsurers] = field(
         default=None,
         metadata={
             "name": "Reinsurers",
@@ -53,37 +53,3 @@ class InsuranceFlowType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         }
     )
-
-    @dataclass
-    class Cedants:
-        cedant: List[CedantInvolvementType] = field(
-            default_factory=list,
-            metadata={
-                "name": "Cedant",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            }
-        )
-
-    @dataclass
-    class CoinsurerInvolvements:
-        coinsurer: List[CoinsurerInvolvementType] = field(
-            default_factory=list,
-            metadata={
-                "name": "Coinsurer",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            }
-        )
-
-    @dataclass
-    class Reinsurers:
-        reinsurer: List[ReinsurerInvolvementType] = field(
-            default_factory=list,
-            metadata={
-                "name": "Reinsurer",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-                "min_occurs": 1,
-            }
-        )

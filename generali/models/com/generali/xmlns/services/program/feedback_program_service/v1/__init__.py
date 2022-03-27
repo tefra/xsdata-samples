@@ -8,6 +8,11 @@ from generali.models.com.generali.xmlns.services.program.feedback_program_servic
 from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.feedback_program_policies_response import FeedbackProgramPoliciesResponse
 from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.local_policies import LocalPolicies
 from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.local_policies_type import LocalPoliciesType
+from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.local_policies_type_local_policy import LocalPoliciesTypeLocalPolicy
+from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.local_policies_type_local_policy_party_ids import LocalPoliciesTypeLocalPolicyPartyIds
+from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.local_policies_type_local_policy_party_ids_party_id import LocalPoliciesTypeLocalPolicyPartyIdsPartyId
+from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.local_policies_type_local_policy_reinsurance_agreements import LocalPoliciesTypeLocalPolicyReinsuranceAgreements
+from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.local_policies_type_local_policy_risks import LocalPoliciesTypeLocalPolicyRisks
 from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.local_policy import LocalPolicy
 from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.location import Location
 from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.location_type import LocationType
@@ -21,6 +26,7 @@ from generali.models.com.generali.xmlns.services.program.feedback_program_servic
 from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.reinsurance_agreements import ReinsuranceAgreements
 from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.risk import Risk
 from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.risk_type import RiskType
+from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.risk_type_locations import RiskTypeLocations
 from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.risks import Risks
 from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.status import Status
 from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.status_value import StatusValue
@@ -36,6 +42,11 @@ __all__ = [
     "FeedbackProgramPoliciesResponse",
     "LocalPolicies",
     "LocalPoliciesType",
+    "LocalPoliciesTypeLocalPolicy",
+    "LocalPoliciesTypeLocalPolicyPartyIds",
+    "LocalPoliciesTypeLocalPolicyPartyIdsPartyId",
+    "LocalPoliciesTypeLocalPolicyReinsuranceAgreements",
+    "LocalPoliciesTypeLocalPolicyRisks",
     "LocalPolicy",
     "Location",
     "LocationType",
@@ -49,6 +60,7 @@ __all__ = [
     "ReinsuranceAgreements",
     "Risk",
     "RiskType",
+    "RiskTypeLocations",
     "Risks",
     "Status",
     "StatusValue",

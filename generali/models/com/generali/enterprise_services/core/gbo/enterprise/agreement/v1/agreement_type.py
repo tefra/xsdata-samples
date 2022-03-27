@@ -7,16 +7,16 @@ from generali.models.com.generali.enterprise_services.core.gbo.common.core_types
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import TextType
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_gbotype import BaseGbotype
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.local_data_type import LocalDataType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.account_manager_involvement_type import AccountManagerInvolvementType
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.agreement_type_account_managers import AgreementTypeAccountManagers
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.agreement_type_coinsurer_involvements import AgreementTypeCoinsurerInvolvements
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.agreement_type_insured_involvement import AgreementTypeInsuredInvolvement
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.agreement_type_payout_benefits import AgreementTypePayoutBenefits
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.agreement_type_underwriters import AgreementTypeUnderwriters
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.business_origin_enum import BusinessOriginEnum
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.classification_code_enum import ClassificationCodeEnum
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.coinsurer_involvement_type import CoinsurerInvolvementType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.contacts_involvement import ContactsInvolvement
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.insured_involvement import InsuredInvolvement
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.intermediary_involvement_type import IntermediaryInvolvementType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.layer_type_enum import LayerTypeEnum
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.payout_benefit import PayoutBenefit
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.underwriter_involvement import UnderwriterInvolvement
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.line_of_business_type import LineOfBusinessType
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
@@ -192,7 +192,7 @@ class AgreementType(BaseGbotype):
             "required": True,
         }
     )
-    account_managers: Optional["AgreementType.AccountManagers"] = field(
+    account_managers: Optional[AgreementTypeAccountManagers] = field(
         default=None,
         metadata={
             "name": "AccountManagers",
@@ -216,7 +216,7 @@ class AgreementType(BaseGbotype):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         }
     )
-    coinsurer_involvements: Optional["AgreementType.CoinsurerInvolvements"] = field(
+    coinsurer_involvements: Optional[AgreementTypeCoinsurerInvolvements] = field(
         default=None,
         metadata={
             "name": "CoinsurerInvolvements",
@@ -232,7 +232,7 @@ class AgreementType(BaseGbotype):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         }
     )
-    insured_involvement: Optional["AgreementType.InsuredInvolvement"] = field(
+    insured_involvement: Optional[AgreementTypeInsuredInvolvement] = field(
         default=None,
         metadata={
             "name": "InsuredInvolvement",
@@ -248,7 +248,7 @@ class AgreementType(BaseGbotype):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         }
     )
-    underwriters: Optional["AgreementType.Underwriters"] = field(
+    underwriters: Optional[AgreementTypeUnderwriters] = field(
         default=None,
         metadata={
             "name": "Underwriters",
@@ -274,7 +274,7 @@ class AgreementType(BaseGbotype):
             "required": True,
         }
     )
-    payout_benefits: Optional["AgreementType.PayoutBenefits"] = field(
+    payout_benefits: Optional[AgreementTypePayoutBenefits] = field(
         default=None,
         metadata={
             "name": "PayoutBenefits",
@@ -308,60 +308,3 @@ class AgreementType(BaseGbotype):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         }
     )
-
-    @dataclass
-    class AccountManagers:
-        account_manager: List[AccountManagerInvolvementType] = field(
-            default_factory=list,
-            metadata={
-                "name": "AccountManager",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-                "min_occurs": 1,
-            }
-        )
-
-    @dataclass
-    class CoinsurerInvolvements:
-        coinsurer: List[CoinsurerInvolvementType] = field(
-            default_factory=list,
-            metadata={
-                "name": "Coinsurer",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            }
-        )
-
-    @dataclass
-    class InsuredInvolvement:
-        insured: List[InsuredInvolvement] = field(
-            default_factory=list,
-            metadata={
-                "name": "Insured",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            }
-        )
-
-    @dataclass
-    class Underwriters:
-        underwriter: List[UnderwriterInvolvement] = field(
-            default_factory=list,
-            metadata={
-                "name": "Underwriter",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-                "min_occurs": 1,
-            }
-        )
-
-    @dataclass
-    class PayoutBenefits:
-        payout_benefit: List[PayoutBenefit] = field(
-            default_factory=list,
-            metadata={
-                "name": "PayoutBenefit",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            }
-        )

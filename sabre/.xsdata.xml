@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Config xmlns="http://pypi.org/project/xsdata" version="22.2">
+<Config xmlns="http://pypi.org/project/xsdata" version="22.3">
   <Output maxLineLength="79">
     <Package>sabre.models</Package>
     <Format repr="true" eq="true" order="false" unsafeHash="false" frozen="false" slots="false" kwOnly="false">dataclasses</Format>
@@ -8,6 +8,7 @@
     <RelativeImports>false</RelativeImports>
     <CompoundFields defaultName="choice" forceDefaultName="false">false</CompoundFields>
     <PostponedAnnotations>false</PostponedAnnotations>
+    <UnnestClasses>false</UnnestClasses>
   </Output>
   <Conventions>
     <ClassName case="pascalCase" safePrefix="type"/>

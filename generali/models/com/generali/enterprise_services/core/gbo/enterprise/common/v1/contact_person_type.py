@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_identified_component_type import BaseIdentifiedComponentType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.contact_point_type import ContactPointType
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.contact_person_type_contact_points import ContactPersonTypeContactPoints
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.individual_actor_type import IndividualActorType
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1"
@@ -26,7 +26,7 @@ class ContactPersonType(BaseIdentifiedComponentType):
             "required": True,
         }
     )
-    contact_points: Optional["ContactPersonType.ContactPoints"] = field(
+    contact_points: Optional[ContactPersonTypeContactPoints] = field(
         default=None,
         metadata={
             "name": "ContactPoints",
@@ -34,15 +34,3 @@ class ContactPersonType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         }
     )
-
-    @dataclass
-    class ContactPoints:
-        contact_point: List[ContactPointType] = field(
-            default_factory=list,
-            metadata={
-                "name": "ContactPoint",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-                "min_occurs": 1,
-            }
-        )

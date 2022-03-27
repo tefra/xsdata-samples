@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import List, Optional
+from typing import Optional
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_identified_component_type import BaseIdentifiedComponentType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.vessel_interest_type import VesselInterestType
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.vessel_type_vessel_interests import VesselTypeVesselInterests
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
 
@@ -89,7 +89,7 @@ class VesselType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         }
     )
-    vessel_interests: Optional["VesselType.VesselInterests"] = field(
+    vessel_interests: Optional[VesselTypeVesselInterests] = field(
         default=None,
         metadata={
             "name": "VesselInterests",
@@ -97,14 +97,3 @@ class VesselType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         }
     )
-
-    @dataclass
-    class VesselInterests:
-        vessel_interest: List[VesselInterestType] = field(
-            default_factory=list,
-            metadata={
-                "name": "VesselInterest",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            }
-        )

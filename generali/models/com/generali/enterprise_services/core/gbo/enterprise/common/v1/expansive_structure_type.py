@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.geography_type import GeographyType
+from typing import Optional
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.expansive_structure_type_geographic_locations import ExpansiveStructureTypeGeographicLocations
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.structure_type import StructureType
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1"
@@ -16,7 +16,7 @@ class ExpansiveStructureType(StructureType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         }
     )
-    geographic_locations: Optional["ExpansiveStructureType.GeographicLocations"] = field(
+    geographic_locations: Optional[ExpansiveStructureTypeGeographicLocations] = field(
         default=None,
         metadata={
             "name": "GeographicLocations",
@@ -24,14 +24,3 @@ class ExpansiveStructureType(StructureType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         }
     )
-
-    @dataclass
-    class GeographicLocations:
-        geographic_location: List[GeographyType] = field(
-            default_factory=list,
-            metadata={
-                "name": "GeographicLocation",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-            }
-        )

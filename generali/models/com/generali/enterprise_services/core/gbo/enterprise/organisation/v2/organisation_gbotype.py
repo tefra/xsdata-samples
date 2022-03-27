@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xsdata.models.datatype import XmlDateTime
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import CodeType
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.address_type import AddressType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organisation.v2.extended_record_type import ExtendedRecordType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organisation.v2.national_ids_type import NationalIdsType
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organisation.v2.organisation_gbotype_company_levels import OrganisationGbotypeCompanyLevels
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2"
 
@@ -118,7 +118,7 @@ class OrganisationGbotype:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         }
     )
-    company_levels: Optional["OrganisationGbotype.CompanyLevels"] = field(
+    company_levels: Optional[OrganisationGbotypeCompanyLevels] = field(
         default=None,
         metadata={
             "name": "CompanyLevels",
@@ -159,14 +159,3 @@ class OrganisationGbotype:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         }
     )
-
-    @dataclass
-    class CompanyLevels:
-        company_level: List[CodeType] = field(
-            default_factory=list,
-            metadata={
-                "name": "CompanyLevel",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
-            }
-        )

@@ -1,10 +1,15 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import List, Optional
+from typing import Optional
 from xsdata.models.datatype import XmlDateTime
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.amount_type import AmountType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.legal_status_code_type import LegalStatusCodeType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organisation.v1.party_local_id_type import PartyLocalIdType
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organisation.v1.extended_record_type_business_lines import ExtendedRecordTypeBusinessLines
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organisation.v1.extended_record_type_company_levels import ExtendedRecordTypeCompanyLevels
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organisation.v1.extended_record_type_duplicated_gunsnumbers import ExtendedRecordTypeDuplicatedGunsnumbers
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organisation.v1.extended_record_type_local_ids import ExtendedRecordTypeLocalIds
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organisation.v1.extended_record_type_party_local_ids import ExtendedRecordTypePartyLocalIds
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organisation.v1.extended_record_type_senders import ExtendedRecordTypeSenders
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1"
 
@@ -120,7 +125,7 @@ class ExtendedRecordType:
             "pattern": r"[A-Z][A-Z]",
         }
     )
-    company_levels: Optional["ExtendedRecordType.CompanyLevels"] = field(
+    company_levels: Optional[ExtendedRecordTypeCompanyLevels] = field(
         default=None,
         metadata={
             "name": "CompanyLevels",
@@ -451,7 +456,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         }
     )
-    business_lines: Optional["ExtendedRecordType.BusinessLines"] = field(
+    business_lines: Optional[ExtendedRecordTypeBusinessLines] = field(
         default=None,
         metadata={
             "name": "BusinessLines",
@@ -475,7 +480,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         }
     )
-    senders: Optional["ExtendedRecordType.Senders"] = field(
+    senders: Optional[ExtendedRecordTypeSenders] = field(
         default=None,
         metadata={
             "name": "Senders",
@@ -483,7 +488,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         }
     )
-    duplicated_gunsnumbers: Optional["ExtendedRecordType.DuplicatedGunsnumbers"] = field(
+    duplicated_gunsnumbers: Optional[ExtendedRecordTypeDuplicatedGunsnumbers] = field(
         default=None,
         metadata={
             "name": "DuplicatedGUNSNumbers",
@@ -531,7 +536,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         }
     )
-    local_ids: Optional["ExtendedRecordType.LocalIds"] = field(
+    local_ids: Optional[ExtendedRecordTypeLocalIds] = field(
         default=None,
         metadata={
             "name": "LocalIds",
@@ -539,7 +544,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         }
     )
-    party_local_ids: Optional["ExtendedRecordType.PartyLocalIds"] = field(
+    party_local_ids: Optional[ExtendedRecordTypePartyLocalIds] = field(
         default=None,
         metadata={
             "name": "PartyLocalIds",
@@ -547,71 +552,3 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         }
     )
-
-    @dataclass
-    class CompanyLevels:
-        company_level: List[str] = field(
-            default_factory=list,
-            metadata={
-                "name": "CompanyLevel",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
-            }
-        )
-
-    @dataclass
-    class BusinessLines:
-        business_line: List[str] = field(
-            default_factory=list,
-            metadata={
-                "name": "BusinessLine",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
-            }
-        )
-
-    @dataclass
-    class Senders:
-        sender: List[str] = field(
-            default_factory=list,
-            metadata={
-                "name": "Sender",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
-            }
-        )
-
-    @dataclass
-    class DuplicatedGunsnumbers:
-        duplicated_gunsnumber: List[str] = field(
-            default_factory=list,
-            metadata={
-                "name": "DuplicatedGUNSNumber",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
-                "length": 10,
-                "pattern": r"G([0-9]{9})",
-            }
-        )
-
-    @dataclass
-    class LocalIds:
-        local_id: List[str] = field(
-            default_factory=list,
-            metadata={
-                "name": "LocalId",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
-            }
-        )
-
-    @dataclass
-    class PartyLocalIds:
-        party_local_id: List[PartyLocalIdType] = field(
-            default_factory=list,
-            metadata={
-                "name": "PartyLocalId",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
-            }
-        )

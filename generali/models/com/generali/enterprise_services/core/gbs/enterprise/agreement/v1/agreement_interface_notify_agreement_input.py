@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbm.enterprise.agreement.v1.notify_program_gbmrequest import NotifyProgramGbmrequest
+from generali.models.com.generali.enterprise_services.core.gbs.enterprise.agreement.v1.agreement_interface_notify_agreement_input_body import AgreementInterfaceNotifyAgreementInputBody
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbs/enterprise/agreement/v1"
 
@@ -11,21 +11,10 @@ class AgreementInterfaceNotifyAgreementInput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AgreementInterfaceNotifyAgreementInput.Body"] = field(
+    body: Optional[AgreementInterfaceNotifyAgreementInputBody] = field(
         default=None,
         metadata={
             "name": "Body",
             "type": "Element",
         }
     )
-
-    @dataclass
-    class Body:
-        notify_program_gbmrequest: Optional[NotifyProgramGbmrequest] = field(
-            default=None,
-            metadata={
-                "name": "NotifyProgramGBMRequest",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbm/enterprise/agreement/v1",
-            }
-        )

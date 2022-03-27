@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_reference_component_type import BaseReferenceComponentType
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.thing_actor_type import ThingActorType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.contact_point_type import ContactPointType
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.actor_role_reference_type_contact_points import ActorRoleReferenceTypeContactPoints
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.individual_actor_type import IndividualActorType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.organisation_actor_type import OrganisationActorType
 
@@ -47,7 +47,7 @@ class ActorRoleReferenceType(BaseReferenceComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         }
     )
-    contact_points: Optional["ActorRoleReferenceType.ContactPoints"] = field(
+    contact_points: Optional[ActorRoleReferenceTypeContactPoints] = field(
         default=None,
         metadata={
             "name": "ContactPoints",
@@ -55,18 +55,3 @@ class ActorRoleReferenceType(BaseReferenceComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         }
     )
-
-    @dataclass
-    class ContactPoints:
-        """
-        :ivar contact_point: A specific contact point for the actor.
-        """
-        contact_point: List[ContactPointType] = field(
-            default_factory=list,
-            metadata={
-                "name": "ContactPoint",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-                "min_occurs": 1,
-            }
-        )

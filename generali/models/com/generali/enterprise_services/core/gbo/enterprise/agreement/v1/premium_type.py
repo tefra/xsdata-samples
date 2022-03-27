@@ -1,15 +1,15 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import List, Optional
+from typing import Optional
 from xsdata.models.datatype import XmlDate
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.amount_type import AmountType
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.idtype import Idtype
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import TextType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.instalment_term_enum import InstalmentTermEnum
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.premium_type_collected_amounts import PremiumTypeCollectedAmounts
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.premium_type_premium_allocations import PremiumTypePremiumAllocations
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.premium_value_enum import PremiumValueEnum
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.warranty_enum import WarrantyEnum
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.payment_transaction_type import PaymentTransactionType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.premium_allocation_type import PremiumAllocationType
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
 
@@ -137,7 +137,7 @@ class PremiumType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         }
     )
-    premium_allocations: Optional["PremiumType.PremiumAllocations"] = field(
+    premium_allocations: Optional[PremiumTypePremiumAllocations] = field(
         default=None,
         metadata={
             "name": "PremiumAllocations",
@@ -145,7 +145,7 @@ class PremiumType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         }
     )
-    collected_amounts: Optional["PremiumType.CollectedAmounts"] = field(
+    collected_amounts: Optional[PremiumTypeCollectedAmounts] = field(
         default=None,
         metadata={
             "name": "CollectedAmounts",
@@ -177,25 +177,3 @@ class PremiumType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         }
     )
-
-    @dataclass
-    class PremiumAllocations:
-        premium_allocation: List[PremiumAllocationType] = field(
-            default_factory=list,
-            metadata={
-                "name": "PremiumAllocation",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            }
-        )
-
-    @dataclass
-    class CollectedAmounts:
-        collected_amount: List[PaymentTransactionType] = field(
-            default_factory=list,
-            metadata={
-                "name": "CollectedAmount",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            }
-        )

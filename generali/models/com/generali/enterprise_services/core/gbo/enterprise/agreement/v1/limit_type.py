@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import List, Optional
+from typing import Optional
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.amount_type import AmountType
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_identified_component_type import BaseIdentifiedComponentType
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.code_description_type import CodeDescriptionType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.geography_type import GeographyType
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.value_type import ValueType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.indemnity_type import IndemnityType
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.limit_type_restricted_to_geography import LimitTypeRestrictedToGeography
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.limit_type_type import LimitTypeType
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
@@ -56,7 +56,7 @@ class LimitType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         }
     )
-    restricted_to_geography: Optional["LimitType.RestrictedToGeography"] = field(
+    restricted_to_geography: Optional[LimitTypeRestrictedToGeography] = field(
         default=None,
         metadata={
             "name": "RestrictedToGeography",
@@ -97,14 +97,3 @@ class LimitType(BaseIdentifiedComponentType):
             "type": "Attribute",
         }
     )
-
-    @dataclass
-    class RestrictedToGeography:
-        geography: List[GeographyType] = field(
-            default_factory=list,
-            metadata={
-                "name": "Geography",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            }
-        )

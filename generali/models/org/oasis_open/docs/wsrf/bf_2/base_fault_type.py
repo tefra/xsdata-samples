@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional
 from xsdata.models.datatype import XmlDateTime
+from generali.models.org.oasis_open.docs.wsrf.bf_2.base_fault_type_error_code import BaseFaultTypeErrorCode
+from generali.models.org.oasis_open.docs.wsrf.bf_2.base_fault_type_fault_cause import BaseFaultTypeFaultCause
 from generali.models.org.w3.pkg_2005.pkg_08.addressing.endpoint_reference_type import EndpointReferenceType
 
 __NAMESPACE__ = "http://docs.oasis-open.org/wsrf/bf-2"
@@ -32,7 +34,7 @@ class BaseFaultType:
             "namespace": "http://docs.oasis-open.org/wsrf/bf-2",
         }
     )
-    error_code: Optional["BaseFaultType.ErrorCode"] = field(
+    error_code: Optional[BaseFaultTypeErrorCode] = field(
         default=None,
         metadata={
             "name": "ErrorCode",
@@ -48,7 +50,7 @@ class BaseFaultType:
             "namespace": "http://docs.oasis-open.org/wsrf/bf-2",
         }
     )
-    fault_cause: Optional["BaseFaultType.FaultCause"] = field(
+    fault_cause: Optional[BaseFaultTypeFaultCause] = field(
         default=None,
         metadata={
             "name": "FaultCause",
@@ -63,31 +65,3 @@ class BaseFaultType:
             "namespace": "##other",
         }
     )
-
-    @dataclass
-    class ErrorCode:
-        dialect: Optional[str] = field(
-            default=None,
-            metadata={
-                "type": "Attribute",
-                "required": True,
-            }
-        )
-        content: List[object] = field(
-            default_factory=list,
-            metadata={
-                "type": "Wildcard",
-                "namespace": "##any",
-                "mixed": True,
-            }
-        )
-
-    @dataclass
-    class FaultCause:
-        other_element: Optional[object] = field(
-            default=None,
-            metadata={
-                "type": "Wildcard",
-                "namespace": "##other",
-            }
-        )

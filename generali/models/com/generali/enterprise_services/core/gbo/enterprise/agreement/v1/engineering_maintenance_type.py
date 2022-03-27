@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xsdata.models.datatype import XmlDateTime
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.maintenance_type import MaintenanceType
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.engineering_maintenance_type_years import EngineeringMaintenanceTypeYears
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
 
@@ -26,7 +26,7 @@ class EngineeringMaintenanceType:
             "required": True,
         }
     )
-    years: Optional["EngineeringMaintenanceType.Years"] = field(
+    years: Optional[EngineeringMaintenanceTypeYears] = field(
         default=None,
         metadata={
             "name": "Years",
@@ -35,15 +35,3 @@ class EngineeringMaintenanceType:
             "required": True,
         }
     )
-
-    @dataclass
-    class Years:
-        maintenance: List[MaintenanceType] = field(
-            default_factory=list,
-            metadata={
-                "name": "Maintenance",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-                "min_occurs": 1,
-            }
-        )

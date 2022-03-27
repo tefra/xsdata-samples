@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.feedback_program_policies import FeedbackProgramPolicies
+from generali.models.com.generali.enterprise_services.core.gbs.enterprise.agreement.v1.feedback_program_service_feedback_program_policies_input_body import FeedbackProgramServiceFeedbackProgramPoliciesInputBody
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbs/enterprise/agreement/v1"
 
@@ -11,21 +11,10 @@ class FeedbackProgramServiceFeedbackProgramPoliciesInput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["FeedbackProgramServiceFeedbackProgramPoliciesInput.Body"] = field(
+    body: Optional[FeedbackProgramServiceFeedbackProgramPoliciesInputBody] = field(
         default=None,
         metadata={
             "name": "Body",
             "type": "Element",
         }
     )
-
-    @dataclass
-    class Body:
-        feedback_program_policies: Optional[FeedbackProgramPolicies] = field(
-            default=None,
-            metadata={
-                "name": "FeedbackProgramPolicies",
-                "type": "Element",
-                "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
-            }
-        )

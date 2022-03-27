@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import List, Optional
+from typing import Optional
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import CodeType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.instalment_plans_type import InstalmentPlansType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.premium_type import PremiumType
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.total_premium_type_premiums import TotalPremiumTypePremiums
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.warranty_enum import WarrantyEnum
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
@@ -45,7 +45,7 @@ class TotalPremiumType:
             "required": True,
         }
     )
-    premiums: Optional["TotalPremiumType.Premiums"] = field(
+    premiums: Optional[TotalPremiumTypePremiums] = field(
         default=None,
         metadata={
             "name": "Premiums",
@@ -53,14 +53,3 @@ class TotalPremiumType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         }
     )
-
-    @dataclass
-    class Premiums:
-        premium: List[PremiumType] = field(
-            default_factory=list,
-            metadata={
-                "name": "Premium",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            }
-        )

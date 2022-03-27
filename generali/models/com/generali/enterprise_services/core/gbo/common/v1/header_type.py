@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xsdata.models.datatype import XmlDateTime
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.header_type_properties import HeaderTypeProperties
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.header_type_target_systems import HeaderTypeTargetSystems
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
@@ -38,7 +40,7 @@ class HeaderType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         }
     )
-    target_systems: Optional["HeaderType.TargetSystems"] = field(
+    target_systems: Optional[HeaderTypeTargetSystems] = field(
         default=None,
         metadata={
             "name": "TargetSystems",
@@ -62,7 +64,7 @@ class HeaderType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         }
     )
-    properties: Optional["HeaderType.Properties"] = field(
+    properties: Optional[HeaderTypeProperties] = field(
         default=None,
         metadata={
             "name": "Properties",
@@ -86,41 +88,3 @@ class HeaderType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         }
     )
-
-    @dataclass
-    class TargetSystems:
-        target_system: List[str] = field(
-            default_factory=list,
-            metadata={
-                "name": "TargetSystem",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-            }
-        )
-
-    @dataclass
-    class Properties:
-        property: List["HeaderType.Properties.Property"] = field(
-            default_factory=list,
-            metadata={
-                "name": "Property",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-            }
-        )
-
-        @dataclass
-        class Property:
-            value: str = field(
-                default="",
-                metadata={
-                    "required": True,
-                }
-            )
-            key: Optional[str] = field(
-                default=None,
-                metadata={
-                    "type": "Attribute",
-                    "required": True,
-                }
-            )

@@ -1,5 +1,6 @@
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.accuracy_code_list import AccuracyCodeList
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.actor_role_reference_type import ActorRoleReferenceType
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.actor_role_reference_type_contact_points import ActorRoleReferenceTypeContactPoints
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.aircraft_type import AircraftType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.aircraft_type_aircarft_type import AircraftTypeAircarftType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.amount_with_accuracy_type import AmountWithAccuracyType
@@ -7,10 +8,12 @@ from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.building_type_completition_state import BuildingTypeCompletitionState
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.contact_involvement import ContactInvolvement
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.contact_person_type import ContactPersonType
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.contact_person_type_contact_points import ContactPersonTypeContactPoints
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.contact_point_type import ContactPointType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.deduction_apply_to_enum import DeductionApplyToEnum
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.document_type import DocumentType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.expansive_structure_type import ExpansiveStructureType
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.expansive_structure_type_geographic_locations import ExpansiveStructureTypeGeographicLocations
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.exposure_item_type import ExposureItemType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.exposure_specification_type import ExposureSpecificationType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.helicopter_type import HelicopterType
@@ -21,6 +24,7 @@ from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.insured_role_type import InsuredRoleType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.insurer_capability_type import InsurerCapabilityType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.insurer_role_type import InsurerRoleType
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.insurer_role_type_insurer_capabilities import InsurerRoleTypeInsurerCapabilities
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.intermediary_role_type import IntermediaryRoleType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.intermediary_type_enum import IntermediaryTypeEnum
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.land_type import LandType
@@ -32,6 +36,7 @@ from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.organisation_actor_type import OrganisationActorType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.organisation_involvement_type import OrganisationInvolvementType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.organisation_reference_type import OrganisationReferenceType
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.organisation_reference_type_sender import OrganisationReferenceTypeSender
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.organisation_references_type import OrganisationReferencesType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.organisation_role_type import OrganisationRoleType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.payment_transaction_type import PaymentTransactionType
@@ -59,6 +64,7 @@ from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common
 __all__ = [
     "AccuracyCodeList",
     "ActorRoleReferenceType",
+    "ActorRoleReferenceTypeContactPoints",
     "AircraftType",
     "AircraftTypeAircarftType",
     "AmountWithAccuracyType",
@@ -66,10 +72,12 @@ __all__ = [
     "BuildingTypeCompletitionState",
     "ContactInvolvement",
     "ContactPersonType",
+    "ContactPersonTypeContactPoints",
     "ContactPointType",
     "DeductionApplyToEnum",
     "DocumentType",
     "ExpansiveStructureType",
+    "ExpansiveStructureTypeGeographicLocations",
     "ExposureItemType",
     "ExposureSpecificationType",
     "HelicopterType",
@@ -80,6 +88,7 @@ __all__ = [
     "InsuredRoleType",
     "InsurerCapabilityType",
     "InsurerRoleType",
+    "InsurerRoleTypeInsurerCapabilities",
     "IntermediaryRoleType",
     "IntermediaryTypeEnum",
     "LandType",
@@ -91,6 +100,7 @@ __all__ = [
     "OrganisationActorType",
     "OrganisationInvolvementType",
     "OrganisationReferenceType",
+    "OrganisationReferenceTypeSender",
     "OrganisationReferencesType",
     "OrganisationRoleType",
     "PaymentTransactionType",

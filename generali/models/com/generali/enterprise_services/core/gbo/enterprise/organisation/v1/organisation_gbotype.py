@@ -1,8 +1,9 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xsdata.models.datatype import XmlDateTime
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.address_type import AddressType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organisation.v1.extended_record_type import ExtendedRecordType
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organisation.v1.organisation_gbotype_party_roles import OrganisationGbotypePartyRoles
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1"
 
@@ -139,7 +140,7 @@ class OrganisationGbotype:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         }
     )
-    party_roles: Optional["OrganisationGbotype.PartyRoles"] = field(
+    party_roles: Optional[OrganisationGbotypePartyRoles] = field(
         default=None,
         metadata={
             "name": "PartyRoles",
@@ -203,14 +204,3 @@ class OrganisationGbotype:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         }
     )
-
-    @dataclass
-    class PartyRoles:
-        role: List[str] = field(
-            default_factory=list,
-            metadata={
-                "name": "Role",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
-            }
-        )

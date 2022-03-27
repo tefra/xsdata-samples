@@ -1,22 +1,22 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xsdata.models.datatype import XmlDateTime
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.amount_type import AmountType
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import TextType
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.sic_classification_type import SicClassificationType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.agreement_type import AgreementType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.cover_gbotype import CoverGbotype
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.cyber_exclusion_type import CyberExclusionType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.deductibles_type import DeductiblesType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.legal_cost_type import LegalCostType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.limits_type import LimitsType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.perils_structure_type import PerilsStructureType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.premium_factor_type import PremiumFactorType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.pricing_type import PricingType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.producer_involvement_type import ProducerInvolvementType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.risk_type import RiskType
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.program_gbotype_covers import ProgramGbotypeCovers
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.program_gbotype_documents import ProgramGbotypeDocuments
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.program_gbotype_premium_factors import ProgramGbotypePremiumFactors
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.program_gbotype_risks import ProgramGbotypeRisks
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.total_premium_type import TotalPremiumType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.document_type import DocumentType
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
 
@@ -93,7 +93,7 @@ class ProgramGbotype(AgreementType):
             "required": True,
         }
     )
-    risks: Optional["ProgramGbotype.Risks"] = field(
+    risks: Optional[ProgramGbotypeRisks] = field(
         default=None,
         metadata={
             "name": "Risks",
@@ -101,7 +101,7 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         }
     )
-    covers: Optional["ProgramGbotype.Covers"] = field(
+    covers: Optional[ProgramGbotypeCovers] = field(
         default=None,
         metadata={
             "name": "Covers",
@@ -126,7 +126,7 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         }
     )
-    premium_factors: Optional["ProgramGbotype.PremiumFactors"] = field(
+    premium_factors: Optional[ProgramGbotypePremiumFactors] = field(
         default=None,
         metadata={
             "name": "PremiumFactors",
@@ -198,7 +198,7 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         }
     )
-    documents: Optional["ProgramGbotype.Documents"] = field(
+    documents: Optional[ProgramGbotypeDocuments] = field(
         default=None,
         metadata={
             "name": "Documents",
@@ -278,47 +278,3 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         }
     )
-
-    @dataclass
-    class Risks:
-        risk: List[RiskType] = field(
-            default_factory=list,
-            metadata={
-                "name": "Risk",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            }
-        )
-
-    @dataclass
-    class Covers:
-        cover: List[CoverGbotype] = field(
-            default_factory=list,
-            metadata={
-                "name": "Cover",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            }
-        )
-
-    @dataclass
-    class PremiumFactors:
-        premium_factor: List[PremiumFactorType] = field(
-            default_factory=list,
-            metadata={
-                "name": "PremiumFactor",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            }
-        )
-
-    @dataclass
-    class Documents:
-        document: List[DocumentType] = field(
-            default_factory=list,
-            metadata={
-                "name": "Document",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            }
-        )

@@ -1,10 +1,11 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xsdata.models.datatype import XmlDateTime
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import CodeType
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.idtype import Idtype
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import TextType
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_component_type import BaseComponentType
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_identified_component_type_ids import BaseIdentifiedComponentTypeIds
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
@@ -53,7 +54,7 @@ class BaseIdentifiedComponentType(BaseComponentType):
         system and the details about that User.</description>
     :ivar notes:
     """
-    ids: Optional["BaseIdentifiedComponentType.Ids"] = field(
+    ids: Optional[BaseIdentifiedComponentTypeIds] = field(
         default=None,
         metadata={
             "name": "IDs",
@@ -141,24 +142,3 @@ class BaseIdentifiedComponentType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         }
     )
-
-    @dataclass
-    class Ids:
-        """
-        :ivar id: <description xmlns="">The identifier of the business
-            object or component. This should be used to identify
-            instances of a business object or component. Where the
-            component is being used to reference another business object
-            then this is the "primary key" of the target object. Use the
-            attributes @schemeName and @schemeAgencyName to identify
-            type of Identifier.</description>
-        """
-        id: List[Idtype] = field(
-            default_factory=list,
-            metadata={
-                "name": "ID",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-                "min_occurs": 1,
-            }
-        )

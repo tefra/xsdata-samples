@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organisation.v2.company_info_type import CompanyInfoType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organisation.v2.domestic_ultimate_info_type import DomesticUltimateInfoType
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organisation.v2.extended_record_type_duplicated_gunsnumbers import ExtendedRecordTypeDuplicatedGunsnumbers
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organisation.v2.extended_record_type_party_roles import ExtendedRecordTypePartyRoles
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organisation.v2.global_ultimate_info_type import GlobalUltimateInfoType
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organisation.v2.tree_below_type import TreeBelowType
 
@@ -42,7 +44,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         }
     )
-    duplicated_gunsnumbers: Optional["ExtendedRecordType.DuplicatedGunsnumbers"] = field(
+    duplicated_gunsnumbers: Optional[ExtendedRecordTypeDuplicatedGunsnumbers] = field(
         default=None,
         metadata={
             "name": "DuplicatedGUNSNumbers",
@@ -50,7 +52,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         }
     )
-    party_roles: Optional["ExtendedRecordType.PartyRoles"] = field(
+    party_roles: Optional[ExtendedRecordTypePartyRoles] = field(
         default=None,
         metadata={
             "name": "PartyRoles",
@@ -58,27 +60,3 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         }
     )
-
-    @dataclass
-    class DuplicatedGunsnumbers:
-        duplicated_gunsnumber: List[str] = field(
-            default_factory=list,
-            metadata={
-                "name": "DuplicatedGUNSNumber",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
-                "length": 10,
-                "pattern": r"G([0-9]{9})",
-            }
-        )
-
-    @dataclass
-    class PartyRoles:
-        role: List[str] = field(
-            default_factory=list,
-            metadata={
-                "name": "Role",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
-            }
-        )
