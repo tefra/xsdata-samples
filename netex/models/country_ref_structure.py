@@ -17,8 +17,6 @@ class CountryRefStructure:
         default=None,
         metadata={
             "type": "Attribute",
-            "min_length": 2,
-            "max_length": 2,
         }
     )
     ref_principality: Optional[str] = field(
