@@ -1,0 +1,226 @@
+<!-- xCBL Document DTD for XCBL35 ProductCatalog -->
+<!ELEMENT ProductCatalog ((CatalogHeader , CatalogSchema? , CatalogData?))>
+<!ELEMENT CatalogHeader ((CatalogID , CatalogDate? , CatalogProvider , CatalogPrettyName? , CatalogLogoURL? , ListOfPartners? , CatalogAudience? , PricingInformation? , SupplierAccountInformation? , ValidFrom? , ValidUntil? , CatalogVersion? , DefaultLanguage? , DefaultCurrency? , IsReplacement? , IsPriceUpdate? , IsMultiVendor? , ShortDescription* , LongDescription* , ObjectAttribute*))>
+<!ELEMENT CatalogID  (#PCDATA)>
+<!ELEMENT CatalogDate  (#PCDATA)>
+<!ELEMENT CatalogPrettyName  (#PCDATA)>
+<!ELEMENT CatalogLogoURL  (#PCDATA)>
+<!ELEMENT CatalogVersion  (#PCDATA)>
+<!ELEMENT DefaultCurrency (Currency)>
+<!ELEMENT CatalogProvider ((Party? , CatalogSystem?))>
+<!ATTLIST CatalogProvider 
+        ProviderID CDATA  #IMPLIED>
+<!ELEMENT Party ((PartyID , ListOfIdentifier? , MDFBusiness? , NameAddress? , OrderContact? , ReceivingContact? , ShippingContact? , OtherContacts? , CorrespondenceLanguage?))>
+<!ELEMENT PartyID (Identifier)>
+<!ELEMENT MDFBusiness  (#PCDATA)>
+<!ELEMENT OrderContact (Contact)>
+<!ELEMENT ReceivingContact (Contact)>
+<!ELEMENT ShippingContact (Contact)>
+<!ELEMENT OtherContacts (ListOfContact)>
+<!ELEMENT CorrespondenceLanguage (Language)>
+<!ELEMENT Identifier ((Agency , Ident))>
+<!ELEMENT Ident  (#PCDATA)>
+<!ELEMENT Agency ((AgencyCoded , AgencyCodedOther? , AgencyDescription? , CodeListIdentifierCoded? , CodeListIdentifierCodedOther?))>
+<!ELEMENT AgencyCoded  (#PCDATA)>
+<!ELEMENT AgencyCodedOther  (#PCDATA)>
+<!ELEMENT AgencyDescription  (#PCDATA)>
+<!ELEMENT CodeListIdentifierCoded  (#PCDATA)>
+<!ELEMENT CodeListIdentifierCodedOther  (#PCDATA)>
+<!ELEMENT ListOfIdentifier (Identifier+)>
+<!ELEMENT NameAddress ((ExternalAddressID? , Name1 , Name2? , Name3? , Identifier? , POBox? , Street? , HouseNumber? , StreetSupplement1? , StreetSupplement2? , Building? , Floor? , RoomNumber? , InhouseMail? , Department? , PostalCode? , City? , County? , Region? , District? , Country? , Timezone?))>
+<!ATTLIST NameAddress 
+        AddressTypeCoded  (Other|AcceptanceLocation|AccountsPayableOffice|AcknowledgementRecipient|AdditionalAddress|AdditionalDeliveryAddress|AdditionalPickUpAddress|AlcoholBeverageDepartment|AlternateReturnAddress|AlternativeAddressee|AuditOffice|BailmentWarehouse|BidOpeningLocation|BillAndShipTo|BilledFrom|BillOfLadingRecipient|BillTo|BookingOffice|CandyAndConfectionsDepartment|ChangedAddress|CompanyAssignedWell|Company-OwnedOilField|ConsigneeCourierTransferStation|ConsignorCourierTransferStation|ConsultantsOffice|ContactOffice|ContainerLocation|CopyMessageTo|CorporateOffice|CorrectedAddress|DeliveryAddress|DestinationMailFacility|DifferentPremiseAddress|DistributionRecipient|DocumentOrMessageIssuerOrSender|DocumentRecipient|DomesticFinancialInstitution|DownstreamMeterLocation|Drop-OffLocation|EmergencyDepartment|EstablishedLocation|EventLocation|FilingAddress|FilingLocation|FilingOffice|FinalMessageRecipient|FinalRecipient|FinalScheduledDestination|FinancialInstitution|FirstContact|FloralDepartment|ForeignDisclosureInformationOffice|ForeignOffice|ForeignRegistrationLocation|FormerAddress|FreeonBoardPoint|FrozenDepartment|GaragedLocation|GasPlant|GasTransactionEndingPoint|GasTransactionPoint1|GasTransactionPoint2|GasTransactionStartingPoint|HazardousMaterialOffice|HeadOffice|HomeOffice|ImportedFromLocation|IncorporatedLocation|IncorporationStatePlaceOfBusiness|IncorporationStatePrincipalOffice|InquiryAddress|InspectionAddress|InspectionAndAcceptanceLocation|InspectionLocation|InstalledAt|In-StoreBakeryDepartment|InsuredLocation|Laboratory|LastBreakTerminal|LeaseLocation|ListingOffice|LocalChain|LocationOfGoods|LocationOfGoodsForCustomsExaminationBeforeClearance|LocationOfLoadExchange|LocationOfSpotForStorage|Lot|MailAddress|MailTo|ManufacturingPlant|MasterProperty|MaterialChangeNoticeAddress|MaterialDispositionAuthorizationLocation|MeatDepartment|MeetingLocation|MessageFrom|MessageRecipient|MessageTo|Neighborhood|NewAddress|NewSupplySource|NextDestination|NextScheduledDestination|Non-TemporaryStorageFacility|NotApplicable|OperatorOfTheTransferPoint|OriginalLocation|OriginMailFacility|OriginSublocation|OriginTerminal|OtherDepartments|OuterContinentalShelfAreaLocation|Out-Of-StatePrincipalOffice|OwningInventoryControlPoint|PartSource|PaymentAddress|PersonnelOffice|PharmacyDepartment|PhysicalAddress|PickUpAddress|Pipeline|PipelineSegment|PipelineSegmentBoundary|PlaceOfBottling|PlaceOfBusiness|PostalMailingAddress|PreliminaryInspectionLocation|Premises|PresentAddress|PrimaryControlPointLocation|ProduceDepartment|ProductServicesAndRepairsCentre|ProjectCoordinationOffice|ProjectManagementOffice|ProjectProperty|Property|QualityControl|RadioControlStationLocation|Railroad|ReceiptMeterLocation|ReceiptZone|ReceivedFrom|ReceiverSite|ReceivingLocation|ReceivingPointForCustomerSamples|ReceivingSub-Location|ReclamationCenter|Record-KeepingAddress|Refinery|RegionalOffice|RegisteredOffice|ReleaseTo|RemitTo|RepairingOutlet|RepairOrRefurbishLocation|ReportingLocation|ResearchInstitute|ResidenceOrDomicile|ReturnedTo|RoutingPoint|SalesOffice|SamplesToBeReturnedTo|SamplingLocation|SecondaryLocationAddress|SecondHome|SellingOffice|ServiceBureau|ServiceLocation|ShelteredWorkshop|ShipFrom|ShipTo|SmallBaseStationLocation|SmallControlStationLocation|SoldToAndShipTo|SoldToIfDifferentFromBillTo|StorageArea|StorageFacilityatDestination|StorageFacilityAtOrigin|Store|SoldTo|SubcontractOrCognizantSecurityOffice|SubjectProperty|Sub-Office|Subsidiary|SubsidiaryDivision|SupplierOrManufacturer|SuppliersCorporateOffice|SupplySource|TankFarm|TaxAddress|TaxCollectorsOffice|TechnicalOffice|Terminal|TerminalLocation|TestingLaboratory|ToolSource|TransferPoint|TransferTo|TransportationOffice|UltimateConsignee|UltimateCustomer|UltimateParentCompany|UnitProperty|UpstreamMeterLocation|VacationHome|Vendor|VideoDepartment|Warehouse|Wholesaler) 'NotApplicable'
+        AddressTypeCodedOther CDATA  #IMPLIED>
+<!ELEMENT ExternalAddressID  (#PCDATA)>
+<!ELEMENT Name1  (#PCDATA)>
+<!ELEMENT Name2  (#PCDATA)>
+<!ELEMENT Name3  (#PCDATA)>
+<!ELEMENT Street  (#PCDATA)>
+<!ELEMENT HouseNumber  (#PCDATA)>
+<!ELEMENT StreetSupplement1  (#PCDATA)>
+<!ELEMENT StreetSupplement2  (#PCDATA)>
+<!ELEMENT Building  (#PCDATA)>
+<!ELEMENT Floor  (#PCDATA)>
+<!ELEMENT RoomNumber  (#PCDATA)>
+<!ELEMENT InhouseMail  (#PCDATA)>
+<!ELEMENT Department  (#PCDATA)>
+<!ELEMENT PostalCode  (#PCDATA)>
+<!ELEMENT City  (#PCDATA)>
+<!ELEMENT County  (#PCDATA)>
+<!ELEMENT District  (#PCDATA)>
+<!ELEMENT POBox (#PCDATA)>
+<!ATTLIST POBox 
+        POBoxPostalCode CDATA  #IMPLIED>
+<!ELEMENT Region ((RegionCoded , RegionCodedOther?))>
+<!ELEMENT RegionCoded  (#PCDATA)>
+<!ELEMENT RegionCodedOther  (#PCDATA)>
+<!ELEMENT Country ((CountryCoded , CountryCodedOther?))>
+<!ELEMENT CountryCoded  (#PCDATA)>
+<!ELEMENT CountryCodedOther  (#PCDATA)>
+<!ELEMENT Timezone ((TimezoneCoded , TimezoneCodedOther?))>
+<!ELEMENT TimezoneCoded  (#PCDATA)>
+<!ELEMENT TimezoneCodedOther  (#PCDATA)>
+<!ELEMENT Contact ((ContactID? , ContactName , ContactFunction? , ContactDescription? , ListOfContactNumber?))>
+<!ELEMENT ContactID (Identifier)>
+<!ELEMENT ContactName  (#PCDATA)>
+<!ELEMENT ContactDescription  (#PCDATA)>
+<!ELEMENT ContactFunction ((ContactFunctionCoded , ContactFunctionCodedOther?))>
+<!ELEMENT ContactFunctionCoded  (#PCDATA)>
+<!ELEMENT ContactFunctionCodedOther  (#PCDATA)>
+<!ELEMENT ListOfContactNumber (ContactNumber+)>
+<!ELEMENT ContactNumber ((ContactNumberValue , ContactNumberTypeCoded , ContactNumberTypeCodedOther?))>
+<!ELEMENT ContactNumberValue  (#PCDATA)>
+<!ELEMENT ContactNumberTypeCoded  (#PCDATA)>
+<!ELEMENT ContactNumberTypeCodedOther  (#PCDATA)>
+<!ELEMENT ListOfContact (Contact+)>
+<!ELEMENT Language ((LanguageCoded , LanguageCodedOther? , LocaleCoded? , LocaleCodedOther?))>
+<!ATTLIST Language 
+        LanguageDependent CDATA  #IMPLIED>
+<!ELEMENT LanguageCoded  (#PCDATA)>
+<!ELEMENT LanguageCodedOther  (#PCDATA)>
+<!ELEMENT LocaleCoded  (#PCDATA)>
+<!ELEMENT LocaleCodedOther  (#PCDATA)>
+<!ELEMENT CatalogSystem ((SystemAddress , SystemType))>
+<!ELEMENT SystemAddress  (#PCDATA)>
+<!ELEMENT SystemType  (#PCDATA)>
+<!ELEMENT ListOfPartners (Partner+)>
+<!ELEMENT Partner ((Action? , Party? , PartnerRelationship*))>
+<!ATTLIST Partner 
+        PartnerID ID  #IMPLIED
+        Relationship  (Supplier|SupplierAgent|Buyer|InfoProvider|Manufacturer) 'Supplier'>
+<!ELEMENT Action EMPTY>
+<!ATTLIST Action 
+        Value  (Add|Update|Delete|Replace) 'Add'>
+<!ELEMENT PartnerRelationship ((PartnerRelationshipCoded , PartnerRelationshipCodedOther?))>
+<!ELEMENT PartnerRelationshipCoded  (#PCDATA)>
+<!ELEMENT PartnerRelationshipCodedOther  (#PCDATA)>
+<!ELEMENT CatalogAudience EMPTY>
+<!ATTLIST CatalogAudience 
+        CatalogAudienceCoded  (EnumeratedBuyersOnly|Public) 'Public'>
+<!ELEMENT PricingInformation (PriceCatalog+)>
+<!ELEMENT PriceCatalog ((Action? , PriceCatalogID , ValidFrom? , ValidUntil?))>
+<!ELEMENT PriceCatalogID  (#PCDATA)>
+<!ELEMENT SupplierAccountInformation (SupplierAccount+)>
+<!ELEMENT SupplierAccount ((Action? , SupplierAccountID? , (BuyerIdentifier|IsPublicAccount) , PriceCatalogIDRef*))>
+<!ELEMENT SupplierAccountID  (#PCDATA)>
+<!ELEMENT BuyerIdentifier (Identifier)>
+<!ELEMENT IsPublicAccount EMPTY>
+<!ELEMENT DefaultLanguage EMPTY>
+<!ATTLIST DefaultLanguage 
+        xml:lang NMTOKEN 'en'>
+<!ELEMENT Currency ((CurrencyCoded , CurrencyCodedOther?))>
+<!ELEMENT CurrencyCoded  (#PCDATA)>
+<!ELEMENT CurrencyCodedOther  (#PCDATA)>
+<!ELEMENT IsReplacement EMPTY>
+<!ELEMENT IsPriceUpdate EMPTY>
+<!ELEMENT IsMultiVendor EMPTY>
+<!ELEMENT ShortDescription (#PCDATA)>
+<!ATTLIST ShortDescription 
+        xml:lang NMTOKEN 'en'>
+<!ELEMENT LongDescription (#PCDATA)>
+<!ATTLIST LongDescription 
+        xml:lang NMTOKEN 'en'
+        DescriptionPurpose CDATA  #IMPLIED>
+<!ELEMENT ObjectAttribute ((AttributeID , AttributeUnit? , AttributeValue*))>
+<!ELEMENT AttributeUnit (UOM)>
+<!ELEMENT UOM ((UOMCoded , UOMCodedOther?))>
+<!ELEMENT UOMCoded  (#PCDATA)>
+<!ELEMENT UOMCodedOther  (#PCDATA)>
+<!ELEMENT AttributeValue (#PCDATA)>
+<!ATTLIST AttributeValue 
+        xml:lang NMTOKEN 'en'>
+<!ELEMENT CatalogSchema ((SchemaName , SchemaVersion? , SchemaStandard? , ValidateAttributes? , ShortDescription* , LongDescription* , SchemaSource? , SchemaURN? , ExtensionToSchemasURN? , SchemaCategory*))>
+<!ATTLIST CatalogSchema 
+        Type  (Other|Buyer|Supplier) 'Supplier'>
+<!ELEMENT SchemaName  (#PCDATA)>
+<!ELEMENT SchemaVersion  (#PCDATA)>
+<!ELEMENT SchemaStandard  (#PCDATA)>
+<!ELEMENT SchemaSource  (#PCDATA)>
+<!ELEMENT SchemaURN  (#PCDATA)>
+<!ELEMENT ExtensionToSchemasURN  (#PCDATA)>
+<!ELEMENT ValidateAttributes EMPTY>
+<!ELEMENT SchemaCategory ((CategoryID , ParentCategoryRefList? , CategoryName* , ShortDescription* , LongDescription* , CategoryAttribute*))>
+<!ATTLIST SchemaCategory 
+        CategoryID ID  #IMPLIED
+        ParentCategoryRef IDREFS  #IMPLIED>
+<!ELEMENT CategoryID  (#PCDATA)>
+<!ELEMENT ParentCategoryRefList (CategoryIDRef+)>
+<!ELEMENT CategoryName (#PCDATA)>
+<!ATTLIST CategoryName 
+        xml:lang NMTOKEN 'en'>
+<!ELEMENT CategoryAttribute ((AttributeID , AttributeName* , AttributeType , DefaultUOM? , IsRequired?))>
+<!ELEMENT AttributeID  (#PCDATA)>
+<!ELEMENT DefaultUOM (UOM)>
+<!ELEMENT AttributeName (#PCDATA)>
+<!ATTLIST AttributeName 
+        xml:lang NMTOKEN 'en'>
+<!ELEMENT AttributeType (EnumeratedValue*)>
+<!ATTLIST AttributeType 
+        ScalarType  (String|Integer|Numeric|Currency|Date|Enumeration) 'String'
+        MaxSize CDATA  #IMPLIED>
+<!ELEMENT EnumeratedValue  (#PCDATA)>
+<!ELEMENT IsRequired EMPTY>
+<!ELEMENT CatalogData ((Product* , Pricing*))>
+<!ELEMENT Product ((Action? , ProductID , BaseProductNumber? , SchemaCategoryRefList? , ProductIDExtension? , ExternalItemRef* , ProductIDStandard? , ProductName* , UOM? , ComparableUOM? , ComparableUOMConversionFactor? , Manufacturer? , ManuPartNumber? , LeadTime? , LeadTimeUOM? , ValidFrom? , ValidUntil? , CountryOfOrigin? , MinOrder? , LotSize? , ExternalCategory* , ShortDescription* , LongDescription* , CatalogContract* , ProductPrice* , ProductVendorData* , ProductAttachment* , RelatedProduct* , ObjectAttribute*))>
+<!ATTLIST Product 
+        Type  (Other|Good|Service) 'Good'
+        SchemaCategoryRef IDREFS  #IMPLIED>
+<!ELEMENT BaseProductNumber  (#PCDATA)>
+<!ELEMENT ProductIDExtension  (#PCDATA)>
+<!ELEMENT ComparableUOM (UOM)>
+<!ELEMENT ComparableUOMConversionFactor  (#PCDATA)>
+<!ELEMENT ManuPartNumber  (#PCDATA)>
+<!ELEMENT CountryOfOrigin (Country)>
+<!ELEMENT LotSize  (#PCDATA)>
+<!ELEMENT ExternalCategory  (#PCDATA)>
+<!ELEMENT ProductID (#PCDATA)>
+<!ATTLIST ProductID 
+        Type  (Other|Buyer|Supplier) 'Supplier'>
+<!ELEMENT SchemaCategoryRefList (CategoryIDRef+)>
+<!ELEMENT CategoryIDRef  (#PCDATA)>
+<!ELEMENT ExternalItemRef (((CatalogProviderIDRef , CatalogIDRef , ProductIDRef)|ItemGUID))>
+<!ELEMENT CatalogProviderIDRef  (#PCDATA)>
+<!ELEMENT CatalogIDRef  (#PCDATA)>
+<!ELEMENT ItemGUID  (#PCDATA)>
+<!ELEMENT ProductIDStandard (#PCDATA)>
+<!ATTLIST ProductIDStandard 
+        Agency  (Other|GTIN|EAN|UCC) 'Other'>
+<!ELEMENT ProductName (#PCDATA)>
+<!ATTLIST ProductName 
+        xml:lang NMTOKEN 'en'>
+<!ELEMENT Manufacturer (#PCDATA)>
+<!ATTLIST Manufacturer 
+        PartnerRef IDREF  #IMPLIED>
+<!ELEMENT CatalogContract ((CatalogContractID , CatalogContractItemID))>
+<!ATTLIST CatalogContract 
+        Type  (Other|Buyer|Supplier) 'Buyer'>
+<!ELEMENT CatalogContractID  (#PCDATA)>
+<!ELEMENT CatalogContractItemID  (#PCDATA)>
+<!ELEMENT ProductPrice ((Amount , PriceType? , Currency? , UOM? , MinimumQuantity? , ShortDescription? , ValidFrom? , ValidUntil? , Buyer? , PriceBasisQuant?))>
+<!ELEMENT Amount  (#PCDATA)>
+<!ELEMENT PriceType  (#PCDATA)>
+<!ELEMENT MinimumQuantity  (#PCDATA)>
+<!ELEMENT ValidFrom  (#PCDATA)>
+<!ELEMENT ValidUntil  (#PCDATA)>
+<!ELEMENT PriceBasisQuant  (#PCDATA)>
+<!ELEMENT Buyer (#PCDATA)>
+<!ATTLIST Buyer 
+        PartnerRef IDREF  #IMPLIED>
+<!ELEMENT ProductVendorData ((VendorIDRef? , VendorPartNumber? , LeadTime? , LeadTimeUOM? , CatalogContract? , MinOrder? , ProductPrice*))>
+<!ATTLIST ProductVendorData 
+        PartnerRef IDREF  #REQUIRED>
+<!ELEMENT VendorIDRef  (#PCDATA)>
+<!ELEMENT VendorPartNumber  (#PCDATA)>
+<!ELEMENT LeadTime  (#PCDATA)>
+<!ELEMENT LeadTimeUOM (UOM)>
+<!ELEMENT MinOrder  (#PCDATA)>
+<!ELEMENT ProductAttachment ((AttachmentURL , AttachmentPurpose? , AttachmentMIMEType? , ShortDescription* , LongDescription*))>
+<!ELEMENT AttachmentURL  (#PCDATA)>
+<!ELEMENT AttachmentPurpose  (#PCDATA)>
+<!ELEMENT AttachmentMIMEType  (#PCDATA)>
+<!ELEMENT RelatedProduct (#PCDATA)>
+<!ATTLIST RelatedProduct 
+        TargetType  (Component|Substitute|Alternative|Accessory) 'Component'>
+<!ELEMENT Pricing ((ProductIDRef , PriceCatalogIDRef , ProductPrice*))>
+<!ELEMENT ProductIDRef  (#PCDATA)>
+<!ELEMENT PriceCatalogIDRef  (#PCDATA)>

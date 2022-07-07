@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PlanningScheduleResponse>
+  <PlanningScheduleResponseHeader>
+    <ScheduleResponseID>PS-120001resp</ScheduleResponseID>
+    <ScheduleResponseIssueDate>20001214T16:00:00</ScheduleResponseIssueDate>
+    <ScheduleReference>
+      <Reference>
+        <RefNum>PS-120001</RefNum>
+        <RefDate>20001214T16:00:00</RefDate>
+      </Reference>
+    </ScheduleReference>
+    <BuyerParty>
+      <Party>
+        <PartyID>
+          <Identifier>
+            <Agency>
+              <AgencyCoded>Other</AgencyCoded>
+            </Agency>
+            <Ident>ABB-1010</Ident>
+          </Identifier>
+        </PartyID>
+        <NameAddress AddressTypeCoded="NotApplicable">
+          <Name1>ABB Cornerstone Company</Name1>
+          <Street>45 Terrance Blvd.</Street>
+          <Floor>7th</Floor>
+          <Department>Auction Department</Department>
+          <PostalCode>96660</PostalCode>
+          <City>Angelville</City>
+          <Region>
+            <RegionCoded>USCA</RegionCoded>
+          </Region>
+          <Country>
+            <CountryCoded>US</CountryCoded>
+          </Country>
+        </NameAddress>
+        <CorrespondenceLanguage>
+          <Language>
+            <LanguageCoded>en</LanguageCoded>
+          </Language>
+        </CorrespondenceLanguage>
+      </Party>
+    </BuyerParty>
+    <SellerParty>
+      <Party>
+        <PartyID>
+          <Identifier>
+            <Agency>
+              <AgencyCoded>Other</AgencyCoded>
+            </Agency>
+            <Ident>ABB-1010</Ident>
+          </Identifier>
+        </PartyID>
+        <NameAddress AddressTypeCoded="NotApplicable">
+          <Name1>Strong Arm</Name1>
+          <Street>Cole Point</Street>
+          <InhouseMail>Mail Stop M-34</InhouseMail>
+          <PostalCode>96660</PostalCode>
+          <City>Angelville</City>
+          <Region>
+            <RegionCoded>USCA</RegionCoded>
+          </Region>
+          <Country>
+            <CountryCoded>US</CountryCoded>
+          </Country>
+        </NameAddress>
+        <CorrespondenceLanguage>
+          <Language>
+            <LanguageCoded>en</LanguageCoded>
+          </Language>
+        </CorrespondenceLanguage>
+      </Party>
+    </SellerParty>
+    <Purpose>
+      <PurposeCoded>Original</PurposeCoded>
+    </Purpose>
+    <ResponseType>
+      <ResponseTypeCoded>Agreed</ResponseTypeCoded>
+    </ResponseType>
+    <Language>
+      <LanguageCoded>en</LanguageCoded>
+    </Language>
+  </PlanningScheduleResponseHeader>
+  <ListOfLocationGroupedPlanningResponse>
+    <LocationGroupedPlanningResponse>
+      <DetailResponseCoded>Agreed</DetailResponseCoded>
+    </LocationGroupedPlanningResponse>
+  </ListOfLocationGroupedPlanningResponse>
+  <PlanningScheduleResponseSummary>
+    <PlanningScheduleSummary>
+      <TotalNumberOfLineItems>3</TotalNumberOfLineItems>
+    </PlanningScheduleSummary>
+  </PlanningScheduleResponseSummary>
+</PlanningScheduleResponse>
+

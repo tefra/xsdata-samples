@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<InvoiceResponse>
+  <InvoiceResponseHeader>
+    <BuyerInvoiceNumber>INV: 450005693</BuyerInvoiceNumber>
+    <InvoiceReference>
+      <Reference>
+        <RefNum>INV: 450005693</RefNum>
+      </Reference>
+    </InvoiceReference>
+    <InvoiceResponseIssueDate>20010215T09:05:00</InvoiceResponseIssueDate>
+    <InvoiceType>
+      <InvoiceTypeCoded>CommercialInvoice</InvoiceTypeCoded>
+    </InvoiceType>
+    <Language>
+      <LanguageCoded>en</LanguageCoded>
+    </Language>
+    <InvoiceResponseCoded>Accepted</InvoiceResponseCoded>
+    <InvoiceResponseParty>
+      <InvoicingParty>
+        <Party>
+          <PartyID>
+            <Identifier>
+              <Agency>
+                <AgencyCoded>AssignedBySellerOrSellersAgent</AgencyCoded>
+              </Agency>
+              <Ident>BCVND</Ident>
+            </Identifier>
+          </PartyID>
+          <NameAddress AddressTypeCoded="NotApplicable">
+            <Name1>Dunn Manufacturing</Name1>
+            <Department>Order Department</Department>
+            <PostalCode>95006</PostalCode>
+            <City>Orange</City>
+            <Region>
+              <RegionCoded>USCA</RegionCoded>
+            </Region>
+          </NameAddress>
+          <OtherContacts>
+            <ListOfContact>
+              <Contact>
+                <ContactName>Ms Black</ContactName>
+                <ContactFunction>
+                  <ContactFunctionCoded>AccountsReceivableContact</ContactFunctionCoded>
+                </ContactFunction>
+                <ListOfContactNumber>
+                  <ContactNumber>
+                    <ContactNumberValue>212-345-4784</ContactNumberValue>
+                    <ContactNumberTypeCoded>TelephoneNumber</ContactNumberTypeCoded>
+                  </ContactNumber>
+                  <ContactNumber>
+                    <ContactNumberValue>Hblack@DunnMfg.com</ContactNumberValue>
+                    <ContactNumberTypeCoded>EmailAddress</ContactNumberTypeCoded>
+                  </ContactNumber>
+                </ListOfContactNumber>
+              </Contact>
+            </ListOfContact>
+          </OtherContacts>
+        </Party>
+      </InvoicingParty>
+      <BillToParty>
+        <Party>
+          <PartyID>
+            <Identifier>
+              <Agency>
+                <AgencyCoded>AssignedBySellerOrSellersAgent</AgencyCoded>
+              </Agency>
+              <Ident>3000</Ident>
+            </Identifier>
+          </PartyID>
+          <NameAddress AddressTypeCoded="NotApplicable">
+            <Name1>ABC Enterprises</Name1>
+            <POBox>POBoxPostalCode="249" </POBox>
+            <PostalCode>20012</PostalCode>
+            <City>Alpine</City>
+            <Region>
+              <RegionCoded>USNY</RegionCoded>
+            </Region>
+          </NameAddress>
+          <OrderContact>
+            <Contact>
+              <ContactName>Dietl,B.</ContactName>
+              <ListOfContactNumber>
+                <ContactNumber>
+                  <ContactNumberValue>655-456-8911</ContactNumberValue>
+                  <ContactNumberTypeCoded>TelephoneNumber</ContactNumberTypeCoded>
+                </ContactNumber>
+                <ContactNumber>
+                  <ContactNumberValue>bdietl@ABC.com</ContactNumberValue>
+                  <ContactNumberTypeCoded>EmailAddress</ContactNumberTypeCoded>
+                </ContactNumber>
+              </ListOfContactNumber>
+            </Contact>
+          </OrderContact>
+        </Party>
+      </BillToParty>
+    </InvoiceResponseParty>
+  </InvoiceResponseHeader>
+  <ListOfInvoiceResponseDetail>
+    <InvoiceResponseDetail>
+      <LineItemNum>
+        <BuyerLineItemNum>0010</BuyerLineItemNum>
+      </LineItemNum>
+      <InvoiceResponseCoded>Accepted</InvoiceResponseCoded>
+    </InvoiceResponseDetail>
+    <InvoiceResponseDetail>
+      <LineItemNum>
+        <BuyerLineItemNum>0011</BuyerLineItemNum>
+      </LineItemNum>
+      <InvoiceResponseCoded>Accepted</InvoiceResponseCoded>
+    </InvoiceResponseDetail>
+  </ListOfInvoiceResponseDetail>
+</InvoiceResponse>
+

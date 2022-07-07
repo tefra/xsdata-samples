@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<!--	 SAMPLE DOCUMENT, NO REAL CUSTOMER DATA  	-->
+<!DOCTYPE FXRateResponse SYSTEM 'FXRateResponse.dtd'>
+
+<FXRateResponse>
+	<FXRateResponseHeader>
+		<FXRateResponseID>
+			<Reference>
+				<RefNum>RES: 67558</RefNum>
+				<RefDate>20010129T15:24:00</RefDate>
+			</Reference>
+		</FXRateResponseID>
+		<FXRateResponseIssueDate>20010129T15:24:00</FXRateResponseIssueDate>
+		<FXRateRequestID>
+			<Reference>
+				<RefNum>REQ: 67558</RefNum>
+				<RefDate>20010129T15:23:00</RefDate>
+			</Reference>
+		</FXRateRequestID>
+		<Language>
+			<LanguageCoded>en</LanguageCoded>
+		</Language>
+		<SendingParty>
+			<PayerParty>
+				<PartyID>
+					<Identifier>
+						<Agency>
+							<AgencyCoded>AIHA</AgencyCoded>
+						</Agency>
+						<Ident>IDNUM: TT675-01</Ident>
+					</Identifier>
+				</PartyID>
+				<MDFBusiness>false</MDFBusiness>
+				<NameAddress AddressTypeCodedOther="string">
+					<ExternalAddressID>string of characters</ExternalAddressID>
+					<Name1>string of characters</Name1>
+					<Name2>string of characters</Name2>
+					<Name3>string of characters</Name3>
+					<Identifier>
+						<Agency>
+							<AgencyCoded>ACORD</AgencyCoded>
+							<AgencyCodedOther>string of characters</AgencyCodedOther>
+							<AgencyDescription>string of characters</AgencyDescription>
+							<CodeListIdentifierCoded>Other</CodeListIdentifierCoded>
+							<CodeListIdentifierCodedOther>string of characters</CodeListIdentifierCodedOther>
+						</Agency>
+						<Ident>string</Ident>
+					</Identifier>
+					<POBox POBoxPostalCode="553">Other</POBox>
+					<Street>ABC Street</Street>
+					<HouseNumber>string of characters</HouseNumber>
+					<StreetSupplement1>string of characters</StreetSupplement1>
+					<StreetSupplement2>string of characters</StreetSupplement2>
+					<Building>string of characters</Building>
+					<Department>string of characters</Department>
+					<PostalCode>string of characters</PostalCode>
+					<City>string of characters</City>
+					<County>string of characters</County>
+					<Region>
+						<RegionCoded>Other</RegionCoded>
+						<RegionCodedOther>string of characters</RegionCodedOther>
+					</Region>
+					<District>string of characters</District>
+					<Country>
+						<CountryCoded>US</CountryCoded>
+						<CountryCodedOther>string of characters</CountryCodedOther>
+					</Country>
+					<Timezone>
+						<TimezoneCoded>09.45</TimezoneCoded>
+						<TimezoneCodedOther>-09.45</TimezoneCodedOther>
+					</Timezone>
+				</NameAddress>
+			</PayerParty>
+		</SendingParty>
+		<IndicativeIndicator>true</IndicativeIndicator>
+		</FXRateResponseHeader>
+		<ListOfFXRateResponseDetail>
+			<FXRateResponseDetail>
+				<SequenceNumber>1</SequenceNumber>
+			<ReferenceCurrency>
+				<Currency>
+					<CurrencyCoded>USD</CurrencyCoded>
+				</Currency>
+			</ReferenceCurrency>
+			<ComputationalMethodCoded>Multiply</ComputationalMethodCoded><FXRate>00000000000.000000000</FXRate>
+			<SpotRateDetail>
+				<RateRequestID>
+					<Reference>
+						<RefNum>string</RefNum>
+					</Reference>
+				</RateRequestID>
+				<ConfirmationID>sting</ConfirmationID>
+				<FXAmounts>
+					<DebitAmount>
+						<MonetaryValue>
+							<MonetaryAmount>12588.08</MonetaryAmount>
+						</MonetaryValue>
+					</DebitAmount>
+				</FXAmounts>
+			</SpotRateDetail>
+		<CertificateAuthority>string of characters</CertificateAuthority></FXRateResponseDetail>
+	</ListOfFXRateResponseDetail>
+	<FXRateResponseSummary>
+		<FXRateRequestSummary>
+			<NumberOfFXRateRequest>1</NumberOfFXRateRequest>
+		</FXRateRequestSummary>
+	</FXRateResponseSummary>
+</FXRateResponse>

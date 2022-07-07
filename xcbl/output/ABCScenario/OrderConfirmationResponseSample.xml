@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OrderConfirmationResponse>
+  <OrderConfirmationResponseHeader>
+    <BuyerOrderConfirmationID>CON903232</BuyerOrderConfirmationID>
+    <SellerOrderConfirmationReference>
+      <Reference>
+        <RefNum>CON43920432</RefNum>
+        <RefDate>20010203T12:00:00</RefDate>
+      </Reference>
+    </SellerOrderConfirmationReference>
+    <OrderConfirmationResponseIssueDate>20010204T12:00:00</OrderConfirmationResponseIssueDate>
+    <OrderConfirmationType>
+      <OrderConfirmationTypeCoded>OrderConfirmation</OrderConfirmationTypeCoded>
+    </OrderConfirmationType>
+    <OrderConfirmationResponseCoded>Accepted</OrderConfirmationResponseCoded>
+    <Language>
+      <LanguageCoded>en</LanguageCoded>
+    </Language>
+    <OrderConfirmationResponseParty>
+      <BuyerParty>
+        <Party>
+          <PartyID>
+            <Identifier>
+              <Agency>
+                <AgencyCoded>AssignedBySellerOrSellersAgent</AgencyCoded>
+              </Agency>
+              <Ident>DE321</Ident>
+            </Identifier>
+          </PartyID>
+          <NameAddress AddressTypeCoded="NotApplicable">
+            <Name1>DJK Corporation</Name1>
+            <Street>1832 Valencia</Street>
+            <StreetSupplement1>Suite 149</StreetSupplement1>
+            <PostalCode>94110</PostalCode>
+            <City>San Francisco</City>
+            <Region>
+              <RegionCoded>USCA</RegionCoded>
+            </Region>
+          </NameAddress>
+          <OrderContact>
+            <Contact>
+              <ContactName>James Georgian</ContactName>
+              <ContactFunction>
+                <ContactFunctionCoded>OrderingOfficer</ContactFunctionCoded>
+              </ContactFunction>
+              <ListOfContactNumber>
+                <ContactNumber>
+                  <ContactNumberValue>415-330-5490</ContactNumberValue>
+                  <ContactNumberTypeCoded>TelephoneNumber</ContactNumberTypeCoded>
+                </ContactNumber>
+              </ListOfContactNumber>
+            </Contact>
+          </OrderContact>
+          <CorrespondenceLanguage>
+            <Language>
+              <LanguageCoded>en</LanguageCoded>
+            </Language>
+          </CorrespondenceLanguage>
+        </Party>
+      </BuyerParty>
+      <SellerParty>
+        <Party>
+          <PartyID>
+            <Identifier>
+              <Agency>
+                <AgencyCoded>AssignedBySellerOrSellersAgent</AgencyCoded>
+              </Agency>
+              <Ident>39212</Ident>
+            </Identifier>
+          </PartyID>
+          <NameAddress AddressTypeCoded="NotApplicable">
+            <Name1>Generic Products</Name1>
+            <POBox>43421</POBox>
+            <PostalCode>60614</PostalCode>
+            <City>Chicago</City>
+            <Region>
+              <RegionCoded>USIL</RegionCoded>
+            </Region>
+          </NameAddress>
+          <OrderContact>
+            <Contact>
+              <ContactName>Bill Rodin</ContactName>
+              <ContactFunction>
+                <ContactFunctionCoded>OrderDepartment</ContactFunctionCoded>
+              </ContactFunction>
+              <ListOfContactNumber>
+                <ContactNumber>
+                  <ContactNumberValue>773-549-0549</ContactNumberValue>
+                  <ContactNumberTypeCoded>TelephoneNumber</ContactNumberTypeCoded>
+                </ContactNumber>
+              </ListOfContactNumber>
+            </Contact>
+          </OrderContact>
+        </Party>
+      </SellerParty>
+    </OrderConfirmationResponseParty>
+  </OrderConfirmationResponseHeader>
+  <ListOfOrderConfirmationResponseDetail>
+    <OrderConfirmationResponseDetail>
+      <OrderConfirmationItemNum>002</OrderConfirmationItemNum>
+      <BuyerOrderConfirmationItemNum>002</BuyerOrderConfirmationItemNum>
+      <OrderConfirmationResponseCode>Accepted</OrderConfirmationResponseCode>
+    </OrderConfirmationResponseDetail>
+  </ListOfOrderConfirmationResponseDetail>
+</OrderConfirmationResponse>
+

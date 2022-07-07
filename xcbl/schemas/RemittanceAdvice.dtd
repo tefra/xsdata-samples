@@ -1,0 +1,689 @@
+<!-- xCBL Document DTD for XCBL35 RemittanceAdvice -->
+<!ELEMENT RemittanceAdvice ((RemittanceAdviceHeader , ListOfRemittanceAdviceDetail , RemittanceAdviceSummary))>
+<!ELEMENT RemittanceAdviceSummary (PaymentRequestSummary)>
+<!ELEMENT RemittanceAdviceHeader ((RemittanceAdvicePurpose , RemittaceAdviceIssueDate , RemittanceAdviceID , RemittanceAdviceStatusCoded? , RemittanceAdviceStatusCodedOther? , PaymentSettlementDate? , TotalAmountDue? , TotalAmountPaid , PaymentCurrency , ListOfRateOfExchangeDetail? , ListOfPrice? , Language , IsCredit? , PaymentInstructions? , ListOfFinancialInstitutionCoded? , PaymentParty , PaymentReasonCoded? , PaymentReasonCodedOther? , TransactionHandlingCoded? , TransactionHandlingCodedOther? , TraceType? , ListOfRemittanceAdviceReference? , RemittanceAdviceAttachment? , GeneralNote?))>
+<!ELEMENT RemittanceAdvicePurpose (Purpose)>
+<!ELEMENT RemittaceAdviceIssueDate  (#PCDATA)>
+<!ELEMENT RemittanceAdviceStatusCoded  (#PCDATA)>
+<!ELEMENT RemittanceAdviceStatusCodedOther  (#PCDATA)>
+<!ELEMENT PaymentSettlementDate  (#PCDATA)>
+<!ELEMENT TotalAmountDue (MonetaryValue)>
+<!ELEMENT TotalAmountPaid (MonetaryValue)>
+<!ELEMENT PaymentCurrency (Currency)>
+<!ELEMENT IsCredit  (#PCDATA)>
+<!ELEMENT PaymentReasonCoded  (#PCDATA)>
+<!ELEMENT PaymentReasonCodedOther  (#PCDATA)>
+<!ELEMENT TransactionHandlingCoded  (#PCDATA)>
+<!ELEMENT TransactionHandlingCodedOther  (#PCDATA)>
+<!ELEMENT ListOfRemittanceAdviceReference (ListOfReferenceCoded)>
+<!ELEMENT RemittanceAdviceAttachment (Attachment)>
+<!ELEMENT Purpose ((PurposeCoded , PurposeCodedOther?))>
+<!ELEMENT PurposeCoded  (#PCDATA)>
+<!ELEMENT PurposeCodedOther  (#PCDATA)>
+<!ELEMENT Reference ((RefNum , RefDate?))>
+<!ELEMENT RefNum  (#PCDATA)>
+<!ELEMENT RefDate  (#PCDATA)>
+<!ELEMENT MonetaryValue ((MonetaryAmount , Currency? , RateOfExchangeDetail?))>
+<!ELEMENT MonetaryAmount  (#PCDATA)>
+<!ELEMENT Currency ((CurrencyCoded , CurrencyCodedOther?))>
+<!ELEMENT CurrencyCoded  (#PCDATA)>
+<!ELEMENT CurrencyCodedOther  (#PCDATA)>
+<!ELEMENT RateOfExchangeDetail ((ReferenceCurrency , TargetCurrency , RateOfExchange , InverseRateOfExchange? , DateOfRateOfExchange? , ListOfRateOfExchangeReference?))>
+<!ELEMENT ReferenceCurrency (Currency)>
+<!ELEMENT TargetCurrency (Currency)>
+<!ELEMENT RateOfExchange  (#PCDATA)>
+<!ELEMENT InverseRateOfExchange  (#PCDATA)>
+<!ELEMENT DateOfRateOfExchange  (#PCDATA)>
+<!ELEMENT ListOfRateOfExchangeReference (ListOfReference)>
+<!ELEMENT ListOfReference (Reference+)>
+<!ELEMENT ListOfRateOfExchangeDetail (RateOfExchangeDetail+)>
+<!ELEMENT ListOfPrice (Price+)>
+<!ELEMENT Price ((PricingType? , UnitPrice , PriceBasisQuantity? , CalculatedPriceBasisQuantity? , ValidityDates? , PriceQuantityRange? , PriceMultiplier?))>
+<!ELEMENT PriceBasisQuantity (Quantity)>
+<!ELEMENT CalculatedPriceBasisQuantity (Quantity)>
+<!ELEMENT PriceQuantityRange (Quantity)>
+<!ELEMENT PricingType ((PriceTypeCoded , PriceTypeCodedOther?))>
+<!ELEMENT PriceTypeCoded  (#PCDATA)>
+<!ELEMENT PriceTypeCodedOther  (#PCDATA)>
+<!ELEMENT UnitPrice ((UnitPriceValue , Currency? , UnitOfMeasurement?))>
+<!ELEMENT UnitPriceValue  (#PCDATA)>
+<!ELEMENT UnitOfMeasurement ((UOMCoded , UOMCodedOther?))>
+<!ELEMENT UOMCoded  (#PCDATA)>
+<!ELEMENT UOMCodedOther  (#PCDATA)>
+<!ELEMENT Quantity (((QuantityValue|QuantityRange) , UnitOfMeasurement))>
+<!ELEMENT QuantityValue (#PCDATA)>
+<!ATTLIST QuantityValue 
+        SignificanceCoded  (Other|Approximately|EqualTo|GreaterThanOrEqualTo|GreaterThan|LessThan|LessThanOrEqualTo|NotEqualTo|Trace|TrueValue|ObservedValue|OutOfRange)  #IMPLIED
+        SignificanceCodedOther CDATA  #IMPLIED
+        ConditionsCoded  (Other|WhereAirEquals1|WhereButylAcetateEquals1|WhereH2OEquals1OrWaterEquals1|CorrectedTo60DegreesFahrenheit|WhereTolueneEquals1|VaporInAir|VaporInOtherThanAir|StandardTemperatureAndPressure|ConditionsOtherThanStandardTemperatureAndPressure|InEthylAlcohol|InEthylEther|InWater|At1AtmospherePressure|WhereEtherEquals1|Actual|Predicted|Air-DriedBasis|As-ReceivedBasis|DryBasis|EquilibriumBasis|MoistureAndAsh-FreeBasis|OxidizingAtmosphere|ReducingAtmosphere|Calculated|ScaledWeight|Ratchet|SaturatedVapor|Unconditional|Short-Term|Time-Weighted|Corrected|Uncorrected|OffPeak|OnPeak|Intermediate|Average|PerGallon|Estimated|Minimum|Mist|Predominant|Total|Cost|Tenant|Owner|ForSale|RealEstateOwnedOrCorporateOwned|BoardedOrBlockedUp|Planned|Completed|Sold|Rented|Current|CurrentList|Effective|ListWhenSold|Sales|FinalList|AsIs|AsRepairedOrImproved|Instantaneous|Low|LowToGood|LowToHigh|LowToMedium|LowToModerate|Medium|MediumToGood|MediumToHigh|Moderate|ModerateToGood|ModerateToHigh|ModerateToMedium|Good|GoodToHigh|High|Budgeted|Forecast|Adjusted|Allocated|Increasing|Stable|Declining|Previous|Potential|Modeled|Measured|Maximum|SummerOn-Peak|SummerMid-Peak|SummerOff-Peak|SummerSuperOn-Peak|SummerSuperOff-Peak|WinterOn-Peak|WinterMid-Peak|WinterOff-Peak|WinterSuperOn-Peak|WinterSuperOff-Peak|SummerDay|SummerNight|WinterDay|WinterNight|Summer|Winter|Day|Night|Peak-2|Peak-3|Peak-4|Shoulder|NonTimeRelatedDemand)  #IMPLIED
+        ConditionsCodedOther CDATA  #IMPLIED>
+<!ELEMENT QuantityRange ((MinimumValue , MaximumValue))>
+<!ELEMENT MinimumValue (#PCDATA)>
+<!ATTLIST MinimumValue 
+        SignificanceCoded  (Other|Approximately|EqualTo|GreaterThanOrEqualTo|GreaterThan|LessThan|LessThanOrEqualTo|NotEqualTo|Trace|TrueValue|ObservedValue|OutOfRange)  #IMPLIED
+        SignificanceCodedOther CDATA  #IMPLIED
+        ConditionsCoded  (Other|WhereAirEquals1|WhereButylAcetateEquals1|WhereH2OEquals1OrWaterEquals1|CorrectedTo60DegreesFahrenheit|WhereTolueneEquals1|VaporInAir|VaporInOtherThanAir|StandardTemperatureAndPressure|ConditionsOtherThanStandardTemperatureAndPressure|InEthylAlcohol|InEthylEther|InWater|At1AtmospherePressure|WhereEtherEquals1|Actual|Predicted|Air-DriedBasis|As-ReceivedBasis|DryBasis|EquilibriumBasis|MoistureAndAsh-FreeBasis|OxidizingAtmosphere|ReducingAtmosphere|Calculated|ScaledWeight|Ratchet|SaturatedVapor|Unconditional|Short-Term|Time-Weighted|Corrected|Uncorrected|OffPeak|OnPeak|Intermediate|Average|PerGallon|Estimated|Minimum|Mist|Predominant|Total|Cost|Tenant|Owner|ForSale|RealEstateOwnedOrCorporateOwned|BoardedOrBlockedUp|Planned|Completed|Sold|Rented|Current|CurrentList|Effective|ListWhenSold|Sales|FinalList|AsIs|AsRepairedOrImproved|Instantaneous|Low|LowToGood|LowToHigh|LowToMedium|LowToModerate|Medium|MediumToGood|MediumToHigh|Moderate|ModerateToGood|ModerateToHigh|ModerateToMedium|Good|GoodToHigh|High|Budgeted|Forecast|Adjusted|Allocated|Increasing|Stable|Declining|Previous|Potential|Modeled|Measured|Maximum|SummerOn-Peak|SummerMid-Peak|SummerOff-Peak|SummerSuperOn-Peak|SummerSuperOff-Peak|WinterOn-Peak|WinterMid-Peak|WinterOff-Peak|WinterSuperOn-Peak|WinterSuperOff-Peak|SummerDay|SummerNight|WinterDay|WinterNight|Summer|Winter|Day|Night|Peak-2|Peak-3|Peak-4|Shoulder|NonTimeRelatedDemand)  #IMPLIED
+        ConditionsCodedOther CDATA  #IMPLIED>
+<!ELEMENT MaximumValue (#PCDATA)>
+<!ATTLIST MaximumValue 
+        SignificanceCoded  (Other|Approximately|EqualTo|GreaterThanOrEqualTo|GreaterThan|LessThan|LessThanOrEqualTo|NotEqualTo|Trace|TrueValue|ObservedValue|OutOfRange)  #IMPLIED
+        SignificanceCodedOther CDATA  #IMPLIED
+        ConditionsCoded  (Other|WhereAirEquals1|WhereButylAcetateEquals1|WhereH2OEquals1OrWaterEquals1|CorrectedTo60DegreesFahrenheit|WhereTolueneEquals1|VaporInAir|VaporInOtherThanAir|StandardTemperatureAndPressure|ConditionsOtherThanStandardTemperatureAndPressure|InEthylAlcohol|InEthylEther|InWater|At1AtmospherePressure|WhereEtherEquals1|Actual|Predicted|Air-DriedBasis|As-ReceivedBasis|DryBasis|EquilibriumBasis|MoistureAndAsh-FreeBasis|OxidizingAtmosphere|ReducingAtmosphere|Calculated|ScaledWeight|Ratchet|SaturatedVapor|Unconditional|Short-Term|Time-Weighted|Corrected|Uncorrected|OffPeak|OnPeak|Intermediate|Average|PerGallon|Estimated|Minimum|Mist|Predominant|Total|Cost|Tenant|Owner|ForSale|RealEstateOwnedOrCorporateOwned|BoardedOrBlockedUp|Planned|Completed|Sold|Rented|Current|CurrentList|Effective|ListWhenSold|Sales|FinalList|AsIs|AsRepairedOrImproved|Instantaneous|Low|LowToGood|LowToHigh|LowToMedium|LowToModerate|Medium|MediumToGood|MediumToHigh|Moderate|ModerateToGood|ModerateToHigh|ModerateToMedium|Good|GoodToHigh|High|Budgeted|Forecast|Adjusted|Allocated|Increasing|Stable|Declining|Previous|Potential|Modeled|Measured|Maximum|SummerOn-Peak|SummerMid-Peak|SummerOff-Peak|SummerSuperOn-Peak|SummerSuperOff-Peak|WinterOn-Peak|WinterMid-Peak|WinterOff-Peak|WinterSuperOn-Peak|WinterSuperOff-Peak|SummerDay|SummerNight|WinterDay|WinterNight|Summer|Winter|Day|Night|Peak-2|Peak-3|Peak-4|Shoulder|NonTimeRelatedDemand)  #IMPLIED
+        ConditionsCodedOther CDATA  #IMPLIED>
+<!ELEMENT ValidityDates ((StartDate , EndDate))>
+<!ELEMENT StartDate  (#PCDATA)>
+<!ELEMENT EndDate  (#PCDATA)>
+<!ELEMENT PriceMultiplier ((PriceMultiplierCoded , PriceMultiplierCodedOther? , Multiplier))>
+<!ELEMENT PriceMultiplierCoded  (#PCDATA)>
+<!ELEMENT PriceMultiplierCodedOther  (#PCDATA)>
+<!ELEMENT Multiplier  (#PCDATA)>
+<!ELEMENT Language ((LanguageCoded , LanguageCodedOther? , LocaleCoded? , LocaleCodedOther?))>
+<!ATTLIST Language 
+        LanguageDependent CDATA  #IMPLIED>
+<!ELEMENT LanguageCoded  (#PCDATA)>
+<!ELEMENT LanguageCodedOther  (#PCDATA)>
+<!ELEMENT LocaleCoded  (#PCDATA)>
+<!ELEMENT LocaleCodedOther  (#PCDATA)>
+<!ELEMENT PaymentInstructions ((PaymentTerms+ , PaymentMethod+))>
+<!ELEMENT PaymentTerms ((PaymentTerm+ , Discounts* , PaymentTermsNote?))>
+<!ELEMENT PaymentTermsNote  (#PCDATA)>
+<!ELEMENT PaymentTerm ((PaymentTermCoded , PaymentTermCodedOther? , PaymentTermValue? , PaymentTermDetails?))>
+<!ELEMENT PaymentTermCoded  (#PCDATA)>
+<!ELEMENT PaymentTermCodedOther  (#PCDATA)>
+<!ELEMENT PaymentTermValue  (#PCDATA)>
+<!ELEMENT PaymentTermDetails (Discounts)>
+<!ELEMENT Discounts ((DiscountPercent? , DiscountAmount? , DiscountDaysDue? , DiscountDueDate? , DiscountDayOfMonth? , DiscountDateTimeRefCoded? , DiscountDateTimeRefCodedOther? , NetDaysDue? , NetDueDate? , NetDateTimeRefCoded? , NetDateTimeRefCodedOther?))>
+<!ELEMENT DiscountPercent  (#PCDATA)>
+<!ELEMENT DiscountAmount (MonetaryValue)>
+<!ELEMENT DiscountDaysDue  (#PCDATA)>
+<!ELEMENT DiscountDueDate  (#PCDATA)>
+<!ELEMENT DiscountDayOfMonth  (#PCDATA)>
+<!ELEMENT DiscountDateTimeRefCoded  (#PCDATA)>
+<!ELEMENT DiscountDateTimeRefCodedOther  (#PCDATA)>
+<!ELEMENT NetDaysDue  (#PCDATA)>
+<!ELEMENT NetDueDate  (#PCDATA)>
+<!ELEMENT NetDateTimeRefCoded  (#PCDATA)>
+<!ELEMENT NetDateTimeRefCodedOther  (#PCDATA)>
+<!ELEMENT PaymentMethod ((PaymentMeanCoded , PaymentMeanCodedOther? , PaymentMeanReference? , PaymentSystemCoded? , PaymentSystemCodedOther? , OriginatingFIAccount? , ReceivingFIAccount? , CardInfo?))>
+<!ELEMENT PaymentMeanCoded  (#PCDATA)>
+<!ELEMENT PaymentMeanCodedOther  (#PCDATA)>
+<!ELEMENT PaymentMeanReference (Reference)>
+<!ELEMENT PaymentSystemCoded  (#PCDATA)>
+<!ELEMENT PaymentSystemCodedOther  (#PCDATA)>
+<!ELEMENT OriginatingFIAccount (FIAccount)>
+<!ELEMENT ReceivingFIAccount (FIAccount)>
+<!ELEMENT FIAccount ((AccountDetail? , FinancialInstitution))>
+<!ELEMENT AccountDetail ((AccountID , SecondaryAccountID? , IBAN? , AccountControlKey? , AccountTypeCoded , AccountTypeCodedOther? , AccountName1 , AccountName2? , Currency? , AccountReferences?))>
+<!ELEMENT AccountID  (#PCDATA)>
+<!ELEMENT SecondaryAccountID  (#PCDATA)>
+<!ELEMENT IBAN  (#PCDATA)>
+<!ELEMENT AccountControlKey  (#PCDATA)>
+<!ELEMENT AccountTypeCoded  (#PCDATA)>
+<!ELEMENT AccountTypeCodedOther  (#PCDATA)>
+<!ELEMENT AccountName1  (#PCDATA)>
+<!ELEMENT AccountName2  (#PCDATA)>
+<!ELEMENT AccountReferences (ListOfReferenceCoded)>
+<!ELEMENT ListOfReferenceCoded (ReferenceCoded+)>
+<!ELEMENT ReferenceCoded ((ReferenceTypeCoded , ReferenceTypeCodedOther? , PrimaryReference , SupportingReference? , SupportingSubReference? , ReferenceDescription?))>
+<!ELEMENT ReferenceTypeCoded  (#PCDATA)>
+<!ELEMENT ReferenceTypeCodedOther  (#PCDATA)>
+<!ELEMENT PrimaryReference (Reference)>
+<!ELEMENT SupportingReference (Reference)>
+<!ELEMENT SupportingSubReference (Reference)>
+<!ELEMENT ReferenceDescription  (#PCDATA)>
+<!ELEMENT FinancialInstitution ((FinancialInstitutionID , FinancialInstitutionName , FIBranchID? , FIBranchName? , FIBranchStreet? , FIBranchHouseNumber? , FIBranchStreetSupplement1? , FIBranchStreetSupplement2? , FIBranchPostalCode? , FIBranchCity? , FIBranchRegion? , FIBranchCountry?))>
+<!ELEMENT FinancialInstitutionID  (#PCDATA)>
+<!ELEMENT FinancialInstitutionName  (#PCDATA)>
+<!ELEMENT FIBranchID  (#PCDATA)>
+<!ELEMENT FIBranchName  (#PCDATA)>
+<!ELEMENT FIBranchStreet  (#PCDATA)>
+<!ELEMENT FIBranchHouseNumber  (#PCDATA)>
+<!ELEMENT FIBranchStreetSupplement1  (#PCDATA)>
+<!ELEMENT FIBranchStreetSupplement2  (#PCDATA)>
+<!ELEMENT FIBranchPostalCode  (#PCDATA)>
+<!ELEMENT FIBranchCity  (#PCDATA)>
+<!ELEMENT FIBranchRegion (Region)>
+<!ELEMENT FIBranchCountry (Country)>
+<!ELEMENT Region ((RegionCoded , RegionCodedOther?))>
+<!ELEMENT RegionCoded  (#PCDATA)>
+<!ELEMENT RegionCodedOther  (#PCDATA)>
+<!ELEMENT Country ((CountryCoded , CountryCodedOther?))>
+<!ELEMENT CountryCoded  (#PCDATA)>
+<!ELEMENT CountryCodedOther  (#PCDATA)>
+<!ELEMENT CardInfo ((CardNum , CardAuthCode? , CardRefNum? , CardExpirationDate? , CardType? , CardTypeOther? , CardHolderName?))>
+<!ELEMENT CardNum  (#PCDATA)>
+<!ELEMENT CardAuthCode  (#PCDATA)>
+<!ELEMENT CardRefNum  (#PCDATA)>
+<!ELEMENT CardExpirationDate  (#PCDATA)>
+<!ELEMENT CardType  (#PCDATA)>
+<!ELEMENT CardTypeOther  (#PCDATA)>
+<!ELEMENT CardHolderName  (#PCDATA)>
+<!ELEMENT ListOfFinancialInstitutionCoded (FinancialInstitutionCoded+)>
+<!ELEMENT FinancialInstitutionCoded ((FinancialInstitutionQaulifierCoded , FinancialInstitutionQaulifierCodedOther? , FinancialInstitution))>
+<!ELEMENT FinancialInstitutionQaulifierCoded  (#PCDATA)>
+<!ELEMENT FinancialInstitutionQaulifierCodedOther  (#PCDATA)>
+<!ELEMENT PaymentParty ((PayerParty , PayeeParty , BuyerParty? , SupplierParty? , BillToParty? , ListOfPartyCoded?))>
+<!ELEMENT PayeeParty (Party)>
+<!ELEMENT BuyerParty (Party)>
+<!ELEMENT SupplierParty (Party)>
+<!ELEMENT PayerParty ((PartyID , ListOfIdentifier? , MDFBusiness? , NameAddress? , OrderContact? , ReceivingContact? , ShippingContact? , OtherContacts? , CorrespondenceLanguage?) , CertificateAuthority?)>
+<!ELEMENT Party ((PartyID , ListOfIdentifier? , MDFBusiness? , NameAddress? , OrderContact? , ReceivingContact? , ShippingContact? , OtherContacts? , CorrespondenceLanguage?))>
+<!ELEMENT PartyID (Identifier)>
+<!ELEMENT MDFBusiness  (#PCDATA)>
+<!ELEMENT OrderContact (Contact)>
+<!ELEMENT ReceivingContact (Contact)>
+<!ELEMENT ShippingContact (Contact)>
+<!ELEMENT OtherContacts (ListOfContact)>
+<!ELEMENT CorrespondenceLanguage (Language)>
+<!ELEMENT Identifier ((Agency , Ident))>
+<!ELEMENT Ident  (#PCDATA)>
+<!ELEMENT Agency ((AgencyCoded , AgencyCodedOther? , AgencyDescription? , CodeListIdentifierCoded? , CodeListIdentifierCodedOther?))>
+<!ELEMENT AgencyCoded  (#PCDATA)>
+<!ELEMENT AgencyCodedOther  (#PCDATA)>
+<!ELEMENT AgencyDescription  (#PCDATA)>
+<!ELEMENT CodeListIdentifierCoded  (#PCDATA)>
+<!ELEMENT CodeListIdentifierCodedOther  (#PCDATA)>
+<!ELEMENT ListOfIdentifier (Identifier+)>
+<!ELEMENT NameAddress ((ExternalAddressID? , Name1 , Name2? , Name3? , Identifier? , POBox? , Street? , HouseNumber? , StreetSupplement1? , StreetSupplement2? , Building? , Floor? , RoomNumber? , InhouseMail? , Department? , PostalCode? , City? , County? , Region? , District? , Country? , Timezone?))>
+<!ATTLIST NameAddress 
+        AddressTypeCoded  (Other|AcceptanceLocation|AccountsPayableOffice|AcknowledgementRecipient|AdditionalAddress|AdditionalDeliveryAddress|AdditionalPickUpAddress|AlcoholBeverageDepartment|AlternateReturnAddress|AlternativeAddressee|AuditOffice|BailmentWarehouse|BidOpeningLocation|BillAndShipTo|BilledFrom|BillOfLadingRecipient|BillTo|BookingOffice|CandyAndConfectionsDepartment|ChangedAddress|CompanyAssignedWell|Company-OwnedOilField|ConsigneeCourierTransferStation|ConsignorCourierTransferStation|ConsultantsOffice|ContactOffice|ContainerLocation|CopyMessageTo|CorporateOffice|CorrectedAddress|DeliveryAddress|DestinationMailFacility|DifferentPremiseAddress|DistributionRecipient|DocumentOrMessageIssuerOrSender|DocumentRecipient|DomesticFinancialInstitution|DownstreamMeterLocation|Drop-OffLocation|EmergencyDepartment|EstablishedLocation|EventLocation|FilingAddress|FilingLocation|FilingOffice|FinalMessageRecipient|FinalRecipient|FinalScheduledDestination|FinancialInstitution|FirstContact|FloralDepartment|ForeignDisclosureInformationOffice|ForeignOffice|ForeignRegistrationLocation|FormerAddress|FreeonBoardPoint|FrozenDepartment|GaragedLocation|GasPlant|GasTransactionEndingPoint|GasTransactionPoint1|GasTransactionPoint2|GasTransactionStartingPoint|HazardousMaterialOffice|HeadOffice|HomeOffice|ImportedFromLocation|IncorporatedLocation|IncorporationStatePlaceOfBusiness|IncorporationStatePrincipalOffice|InquiryAddress|InspectionAddress|InspectionAndAcceptanceLocation|InspectionLocation|InstalledAt|In-StoreBakeryDepartment|InsuredLocation|Laboratory|LastBreakTerminal|LeaseLocation|ListingOffice|LocalChain|LocationOfGoods|LocationOfGoodsForCustomsExaminationBeforeClearance|LocationOfLoadExchange|LocationOfSpotForStorage|Lot|MailAddress|MailTo|ManufacturingPlant|MasterProperty|MaterialChangeNoticeAddress|MaterialDispositionAuthorizationLocation|MeatDepartment|MeetingLocation|MessageFrom|MessageRecipient|MessageTo|Neighborhood|NewAddress|NewSupplySource|NextDestination|NextScheduledDestination|Non-TemporaryStorageFacility|NotApplicable|OperatorOfTheTransferPoint|OriginalLocation|OriginMailFacility|OriginSublocation|OriginTerminal|OtherDepartments|OuterContinentalShelfAreaLocation|Out-Of-StatePrincipalOffice|OwningInventoryControlPoint|PartSource|PaymentAddress|PersonnelOffice|PharmacyDepartment|PhysicalAddress|PickUpAddress|Pipeline|PipelineSegment|PipelineSegmentBoundary|PlaceOfBottling|PlaceOfBusiness|PostalMailingAddress|PreliminaryInspectionLocation|Premises|PresentAddress|PrimaryControlPointLocation|ProduceDepartment|ProductServicesAndRepairsCentre|ProjectCoordinationOffice|ProjectManagementOffice|ProjectProperty|Property|QualityControl|RadioControlStationLocation|Railroad|ReceiptMeterLocation|ReceiptZone|ReceivedFrom|ReceiverSite|ReceivingLocation|ReceivingPointForCustomerSamples|ReceivingSub-Location|ReclamationCenter|Record-KeepingAddress|Refinery|RegionalOffice|RegisteredOffice|ReleaseTo|RemitTo|RepairingOutlet|RepairOrRefurbishLocation|ReportingLocation|ResearchInstitute|ResidenceOrDomicile|ReturnedTo|RoutingPoint|SalesOffice|SamplesToBeReturnedTo|SamplingLocation|SecondaryLocationAddress|SecondHome|SellingOffice|ServiceBureau|ServiceLocation|ShelteredWorkshop|ShipFrom|ShipTo|SmallBaseStationLocation|SmallControlStationLocation|SoldToAndShipTo|SoldToIfDifferentFromBillTo|StorageArea|StorageFacilityatDestination|StorageFacilityAtOrigin|Store|SoldTo|SubcontractOrCognizantSecurityOffice|SubjectProperty|Sub-Office|Subsidiary|SubsidiaryDivision|SupplierOrManufacturer|SuppliersCorporateOffice|SupplySource|TankFarm|TaxAddress|TaxCollectorsOffice|TechnicalOffice|Terminal|TerminalLocation|TestingLaboratory|ToolSource|TransferPoint|TransferTo|TransportationOffice|UltimateConsignee|UltimateCustomer|UltimateParentCompany|UnitProperty|UpstreamMeterLocation|VacationHome|Vendor|VideoDepartment|Warehouse|Wholesaler) 'NotApplicable'
+        AddressTypeCodedOther CDATA  #IMPLIED>
+<!ELEMENT Name1  (#PCDATA)>
+<!ELEMENT Name2  (#PCDATA)>
+<!ELEMENT Name3  (#PCDATA)>
+<!ELEMENT Street  (#PCDATA)>
+<!ELEMENT HouseNumber  (#PCDATA)>
+<!ELEMENT StreetSupplement1  (#PCDATA)>
+<!ELEMENT StreetSupplement2  (#PCDATA)>
+<!ELEMENT Building  (#PCDATA)>
+<!ELEMENT Floor  (#PCDATA)>
+<!ELEMENT RoomNumber  (#PCDATA)>
+<!ELEMENT InhouseMail  (#PCDATA)>
+<!ELEMENT Department  (#PCDATA)>
+<!ELEMENT PostalCode  (#PCDATA)>
+<!ELEMENT City  (#PCDATA)>
+<!ELEMENT County  (#PCDATA)>
+<!ELEMENT District  (#PCDATA)>
+<!ELEMENT POBox (#PCDATA)>
+<!ATTLIST POBox 
+        POBoxPostalCode CDATA  #IMPLIED>
+<!ELEMENT Timezone ((TimezoneCoded , TimezoneCodedOther?))>
+<!ELEMENT TimezoneCoded  (#PCDATA)>
+<!ELEMENT TimezoneCodedOther  (#PCDATA)>
+<!ELEMENT Contact ((ContactID? , ContactName , ContactFunction? , ContactDescription? , ListOfContactNumber?))>
+<!ELEMENT ContactID (Identifier)>
+<!ELEMENT ContactName  (#PCDATA)>
+<!ELEMENT ContactDescription  (#PCDATA)>
+<!ELEMENT ContactFunction ((ContactFunctionCoded , ContactFunctionCodedOther?))>
+<!ELEMENT ContactFunctionCoded  (#PCDATA)>
+<!ELEMENT ContactFunctionCodedOther  (#PCDATA)>
+<!ELEMENT ListOfContactNumber (ContactNumber+)>
+<!ELEMENT ContactNumber ((ContactNumberValue , ContactNumberTypeCoded , ContactNumberTypeCodedOther?))>
+<!ELEMENT ContactNumberValue  (#PCDATA)>
+<!ELEMENT ContactNumberTypeCoded  (#PCDATA)>
+<!ELEMENT ContactNumberTypeCodedOther  (#PCDATA)>
+<!ELEMENT ListOfContact (Contact+)>
+<!ELEMENT ListOfPartyCoded (PartyCoded+)>
+<!ELEMENT PartyCoded ((PartyID , ListOfIdentifier? , MDFBusiness? , NameAddress? , OrderContact? , ReceivingContact? , ShippingContact? , OtherContacts? , CorrespondenceLanguage?) , PartyRoleCoded , PartyRoleCodedOther?)>
+<!ELEMENT PartyRoleCoded  (#PCDATA)>
+<!ELEMENT PartyRoleCodedOther  (#PCDATA)>
+<!ELEMENT TraceType ((TraceTypeCoded , TraceTypeCodedOther? , TraceReference?))>
+<!ELEMENT TraceTypeCoded  (#PCDATA)>
+<!ELEMENT TraceTypeCodedOther  (#PCDATA)>
+<!ELEMENT TraceReference (Reference)>
+<!ELEMENT Attachment ((AttachmentActionCoded? , AttachmentActionCodedOther? , AttachmentPurpose , FileName? , AttachmentTitle? , AttachmentDescription? , Language? , MIMEType? , ReplacementFile? , AttachmentLocation))>
+<!ELEMENT AttachmentActionCoded  (#PCDATA)>
+<!ELEMENT AttachmentActionCodedOther  (#PCDATA)>
+<!ELEMENT AttachmentPurpose  (#PCDATA)>
+<!ELEMENT FileName  (#PCDATA)>
+<!ELEMENT AttachmentTitle  (#PCDATA)>
+<!ELEMENT AttachmentDescription  (#PCDATA)>
+<!ELEMENT MIMEType  (#PCDATA)>
+<!ELEMENT ReplacementFile  (#PCDATA)>
+<!ELEMENT AttachmentLocation  (#PCDATA)>
+<!ELEMENT ListOfRemittanceAdviceDetail (RemittanceAdviceDetail+)>
+<!ELEMENT RemittanceAdviceDetail (((ListOfSubsidiary|ListOfInvoicingDetail|ListOfAdjustments) , RemittanceAdviceID? , ContactNumber? , GeneralNote?))>
+<!ELEMENT RemittanceAdviceID (Reference)>
+<!ELEMENT ListOfSubsidiary (Subsidiary+)>
+<!ELEMENT Subsidiary ((PartyID , ListOfIdentifier? , MDFBusiness? , NameAddress? , OrderContact? , ReceivingContact? , ShippingContact? , OtherContacts? , CorrespondenceLanguage?) , ListOfInvoicingDetail)>
+<!ELEMENT ListOfInvoicingDetail (InvoicingDetail+)>
+<!ELEMENT InvoicingDetail ((InvoicingDetailReference , InvoicingDetailAmountDue? , InvoicingDetailAmountPaid? , InvoicingItemDetail? , ListOfAdjustments?))>
+<!ELEMENT InvoicingDetailReference (ReferenceCoded)>
+<!ELEMENT InvoicingDetailAmountDue (MonetaryValue)>
+<!ELEMENT InvoicingDetailAmountPaid (MonetaryValue)>
+<!ELEMENT InvoicingItemDetail (InvoiceItemDetail)>
+<!ELEMENT InvoiceItemDetail ((InvoiceBaseItemDetail , InvoicePricingDetail , LineItemDates? , OtherInvoiceParties? , DeliveryDetail? , LineItemNote? , ListOfStructuredNote? , ListOfNameValueSet? , LineItemAttachments?))>
+<!ELEMENT LineItemDates (InvoiceDates)>
+<!ELEMENT LineItemNote  (#PCDATA)>
+<!ELEMENT LineItemAttachments (ListOfAttachment)>
+<!ELEMENT InvoiceBaseItemDetail ((LineItemNum , LineItemType? , ParentItemNumber? , ItemIdentifiers? , ListOfDimension? , TotalQuantity? , MaxBackOrderQuantity? , ListOfQuantityCoded? , OffCatalogFlag? , CatalogReference? , ItemContractReferences? , ListOfItemReferences? , CountryOfOrigin? , CountryOfDestination? , FinalRecipient? , ListOfPartyCoded? , ConditionsOfSale? , HazardousMaterials?) , LineItemReferences? , ExceptionQuantities?)>
+<!ELEMENT LineItemReferences (InvoiceReferences)>
+<!ELEMENT BaseItemDetail ((LineItemNum , LineItemType? , ParentItemNumber? , ItemIdentifiers? , ListOfDimension? , TotalQuantity? , MaxBackOrderQuantity? , ListOfQuantityCoded? , OffCatalogFlag? , CatalogReference? , ItemContractReferences? , ListOfItemReferences? , CountryOfOrigin? , CountryOfDestination? , FinalRecipient? , ListOfPartyCoded? , ConditionsOfSale? , HazardousMaterials?))>
+<!ELEMENT ParentItemNumber (LineItemNumberReference)>
+<!ELEMENT TotalQuantity (Quantity)>
+<!ELEMENT MaxBackOrderQuantity (Quantity)>
+<!ELEMENT OffCatalogFlag  (#PCDATA)>
+<!ELEMENT ItemContractReferences (ListOfContractItem)>
+<!ELEMENT ListOfItemReferences (ListOfReferenceCoded)>
+<!ELEMENT CountryOfOrigin (Country)>
+<!ELEMENT CountryOfDestination (Country)>
+<!ELEMENT FinalRecipient (Party)>
+<!ELEMENT HazardousMaterials (Hazardous)>
+<!ELEMENT LineItemNum ((BuyerLineItemNum , SellerLineItemNum?))>
+<!ELEMENT BuyerLineItemNum  (#PCDATA)>
+<!ELEMENT SellerLineItemNum  (#PCDATA)>
+<!ELEMENT LineItemType ((LineItemTypeCoded , LineItemTypeCodedOther?))>
+<!ELEMENT LineItemTypeCoded  (#PCDATA)>
+<!ELEMENT LineItemTypeCodedOther  (#PCDATA)>
+<!ELEMENT LineItemNumberReference (#PCDATA)>
+<!ATTLIST LineItemNumberReference 
+        LineItemNumTypeCoded  (Buyer|Seller) 'Buyer'>
+<!ELEMENT ItemIdentifiers ((PartNumbers? , Service? , ItemDescription? , ListOfItemCharacteristic? , CommodityCode? , Category?))>
+<!ELEMENT Service  (#PCDATA)>
+<!ELEMENT ItemDescription  (#PCDATA)>
+<!ELEMENT CommodityCode (Identifier)>
+<!ELEMENT PartNumbers ((SellerPartNumber? , BuyerPartNumber? , ManufacturerPartNumber? , StandardPartNumber? , SubstitutePartNumbers? , OtherItemIdentifiers?))>
+<!ELEMENT SellerPartNumber (PartNum)>
+<!ELEMENT BuyerPartNumber (PartNum)>
+<!ELEMENT StandardPartNumber (ProductIdentifierCoded)>
+<!ELEMENT SubstitutePartNumbers (ListOfProductIdentifierCoded)>
+<!ELEMENT OtherItemIdentifiers (ListOfProductIdentifierCoded)>
+<!ELEMENT PartNum ((PartID , PartIDExt? , RevisionNumber?))>
+<!ELEMENT PartID  (#PCDATA)>
+<!ELEMENT PartIDExt  (#PCDATA)>
+<!ELEMENT RevisionNumber  (#PCDATA)>
+<!ELEMENT ManufacturerPartNumber ((PartID , PartIDExt? , RevisionNumber?) , ManufacturerID? , ManufacturerName?)>
+<!ELEMENT ManufacturerID (Identifier)>
+<!ELEMENT ManufacturerName  (#PCDATA)>
+<!ELEMENT ProductIdentifierCoded ((ProductIdentifierQualifierCoded , ProductIdentifierQualifierCodedOther? , ProductIdentifier , ProductIdentifierExt?))>
+<!ELEMENT ProductIdentifierQualifierCoded  (#PCDATA)>
+<!ELEMENT ProductIdentifierQualifierCodedOther  (#PCDATA)>
+<!ELEMENT ProductIdentifier  (#PCDATA)>
+<!ELEMENT ProductIdentifierExt  (#PCDATA)>
+<!ELEMENT ListOfProductIdentifierCoded (ProductIdentifierCoded+)>
+<!ELEMENT ListOfItemCharacteristic (ItemCharacteristic+)>
+<!ELEMENT ItemCharacteristic ((ItemCharacteristicCoded? , ItemCharacteristicCodedOther? , SurfaceLayerPositionCoded? , SurfaceLayerPositionCodedOther? , ItemCharacteristicValue , Identifier? , UnitOfMeasurement? , ListOfDimension?))>
+<!ELEMENT ItemCharacteristicCoded  (#PCDATA)>
+<!ELEMENT ItemCharacteristicCodedOther  (#PCDATA)>
+<!ELEMENT SurfaceLayerPositionCoded  (#PCDATA)>
+<!ELEMENT SurfaceLayerPositionCodedOther  (#PCDATA)>
+<!ELEMENT ItemCharacteristicValue  (#PCDATA)>
+<!ELEMENT ListOfDimension (Dimension+)>
+<!ELEMENT Dimension ((Measurement , DimensionCoded , DimensionCodedOther?))>
+<!ELEMENT DimensionCoded  (#PCDATA)>
+<!ELEMENT DimensionCodedOther  (#PCDATA)>
+<!ELEMENT Measurement (((MeasurementValue|MeasurementRange) , UnitOfMeasurement))>
+<!ELEMENT MeasurementValue (#PCDATA)>
+<!ATTLIST MeasurementValue 
+        SignificanceCoded  (Other|Approximately|EqualTo|GreaterThanOrEqualTo|GreaterThan|LessThan|LessThanOrEqualTo|NotEqualTo|Trace|TrueValue|ObservedValue|OutOfRange)  #IMPLIED
+        SignificanceCodedOther CDATA  #IMPLIED
+        ConditionsCoded  (Other|WhereAirEquals1|WhereButylAcetateEquals1|WhereH2OEquals1OrWaterEquals1|CorrectedTo60DegreesFahrenheit|WhereTolueneEquals1|VaporInAir|VaporInOtherThanAir|StandardTemperatureAndPressure|ConditionsOtherThanStandardTemperatureAndPressure|InEthylAlcohol|InEthylEther|InWater|At1AtmospherePressure|WhereEtherEquals1|Actual|Predicted|Air-DriedBasis|As-ReceivedBasis|DryBasis|EquilibriumBasis|MoistureAndAsh-FreeBasis|OxidizingAtmosphere|ReducingAtmosphere|Calculated|ScaledWeight|Ratchet|SaturatedVapor|Unconditional|Short-Term|Time-Weighted|Corrected|Uncorrected|OffPeak|OnPeak|Intermediate|Average|PerGallon|Estimated|Minimum|Mist|Predominant|Total|Cost|Tenant|Owner|ForSale|RealEstateOwnedOrCorporateOwned|BoardedOrBlockedUp|Planned|Completed|Sold|Rented|Current|CurrentList|Effective|ListWhenSold|Sales|FinalList|AsIs|AsRepairedOrImproved|Instantaneous|Low|LowToGood|LowToHigh|LowToMedium|LowToModerate|Medium|MediumToGood|MediumToHigh|Moderate|ModerateToGood|ModerateToHigh|ModerateToMedium|Good|GoodToHigh|High|Budgeted|Forecast|Adjusted|Allocated|Increasing|Stable|Declining|Previous|Potential|Modeled|Measured|Maximum|SummerOn-Peak|SummerMid-Peak|SummerOff-Peak|SummerSuperOn-Peak|SummerSuperOff-Peak|WinterOn-Peak|WinterMid-Peak|WinterOff-Peak|WinterSuperOn-Peak|WinterSuperOff-Peak|SummerDay|SummerNight|WinterDay|WinterNight|Summer|Winter|Day|Night|Peak-2|Peak-3|Peak-4|Shoulder|NonTimeRelatedDemand)  #IMPLIED
+        ConditionsCodedOther CDATA  #IMPLIED>
+<!ELEMENT MeasurementRange ((MinimumValue , MaximumValue))>
+<!ELEMENT Category ((CategoryID? , StandardCategoryID?))>
+<!ELEMENT CategoryID  (#PCDATA)>
+<!ELEMENT StandardCategoryID ((StandardCategoryType , ClassificationID , TechnicalID?))>
+<!ELEMENT StandardCategoryType  (#PCDATA)>
+<!ELEMENT ClassificationID  (#PCDATA)>
+<!ELEMENT TechnicalID  (#PCDATA)>
+<!ELEMENT ListOfQuantityCoded (QuantityCoded+)>
+<!ELEMENT QuantityCoded (((QuantityValue|QuantityRange) , UnitOfMeasurement) , QuantityQualifierCoded , QuantityQualifierCodedOther?)>
+<!ELEMENT QuantityQualifierCoded  (#PCDATA)>
+<!ELEMENT QuantityQualifierCodedOther  (#PCDATA)>
+<!ELEMENT CatalogReference ((CatalogURL , CatalogID? , CatalogItemID?))>
+<!ELEMENT CatalogURL  (#PCDATA)>
+<!ELEMENT CatalogID  (#PCDATA)>
+<!ELEMENT CatalogItemID  (#PCDATA)>
+<!ELEMENT ListOfContractItem (ContractItem+)>
+<!ELEMENT ContractItem ((Contract , ContractItemNumber?))>
+<!ELEMENT ContractItemNumber  (#PCDATA)>
+<!ELEMENT Contract ((ContractID , ContractType? , ValidityDates? , SystemID?))>
+<!ELEMENT ContractID (Identifier)>
+<!ELEMENT SystemID  (#PCDATA)>
+<!ELEMENT ContractType ((ContractTypeCoded , ContractTypeCodedOther?))>
+<!ELEMENT ContractTypeCoded  (#PCDATA)>
+<!ELEMENT ContractTypeCodedOther  (#PCDATA)>
+<!ELEMENT ConditionsOfSale ((SalesRequirement+ , SalesActionCoded? , SalesActionCodedOther? , SalesActionValue?))>
+<!ELEMENT SalesActionCoded  (#PCDATA)>
+<!ELEMENT SalesActionCodedOther  (#PCDATA)>
+<!ELEMENT SalesActionValue  (#PCDATA)>
+<!ELEMENT SalesRequirement ((SalesRequirementCoded , SalesRequirementCodedOther?))>
+<!ELEMENT SalesRequirementCoded  (#PCDATA)>
+<!ELEMENT SalesRequirementCodedOther  (#PCDATA)>
+<!ELEMENT Hazardous ((ListOfHazardousIdentifiers? , HazardClassCoded? , HazardClassCodedOther? , HazardousPlacardInformation? , HazardousReferences? , HazardousContact? , HazardNote? , UNDGNum? , HazardousTemperatures? , HazardousShipmentInformation? , EMSNum? , Mfag?))>
+<!ELEMENT HazardClassCoded  (#PCDATA)>
+<!ELEMENT HazardClassCodedOther  (#PCDATA)>
+<!ELEMENT HazardousReferences (ListOfReferenceCoded)>
+<!ELEMENT HazardousContact (Contact)>
+<!ELEMENT HazardNote  (#PCDATA)>
+<!ELEMENT UNDGNum  (#PCDATA)>
+<!ELEMENT EMSNum  (#PCDATA)>
+<!ELEMENT Mfag  (#PCDATA)>
+<!ELEMENT ListOfHazardousIdentifiers (HazardousIdentifiers+)>
+<!ELEMENT HazardousIdentifiers ((HazardousRegulationsCoded , HazardousRegulationsCodedOther? , HazardCode? , CodeExtension? , CodeVersion? , HazardOfficialText? , TremCardNum?))>
+<!ELEMENT HazardousRegulationsCoded  (#PCDATA)>
+<!ELEMENT HazardousRegulationsCodedOther  (#PCDATA)>
+<!ELEMENT HazardCode  (#PCDATA)>
+<!ELEMENT CodeExtension  (#PCDATA)>
+<!ELEMENT CodeVersion  (#PCDATA)>
+<!ELEMENT HazardOfficialText  (#PCDATA)>
+<!ELEMENT TremCardNum  (#PCDATA)>
+<!ELEMENT HazardousPlacardInformation ((HazardousPlacardIdentification? , HazardousPlacardText?))>
+<!ELEMENT HazardousPlacardIdentification  (#PCDATA)>
+<!ELEMENT HazardousPlacardText  (#PCDATA)>
+<!ELEMENT HazardousTemperatures ((Flashpoint? , Emergency? , Control? , ListOfTemperatureCoded?))>
+<!ELEMENT Flashpoint (Quantity)>
+<!ELEMENT Emergency (Quantity)>
+<!ELEMENT Control (Quantity)>
+<!ELEMENT ListOfTemperatureCoded (ListOfDimension)>
+<!ELEMENT HazardousShipmentInformation ((HazardPackingCoded? , HazardPackingCodedOther? , HazardousShipmentCoded? , HazardousShipmentCodedOther? , HazardousShipmentNote? , HazardousZoneCoded? , HazardousZoneCodedOther?))>
+<!ELEMENT HazardPackingCoded  (#PCDATA)>
+<!ELEMENT HazardPackingCodedOther  (#PCDATA)>
+<!ELEMENT HazardousShipmentCoded  (#PCDATA)>
+<!ELEMENT HazardousShipmentCodedOther  (#PCDATA)>
+<!ELEMENT HazardousShipmentNote  (#PCDATA)>
+<!ELEMENT HazardousZoneCoded  (#PCDATA)>
+<!ELEMENT HazardousZoneCodedOther  (#PCDATA)>
+<!ELEMENT InvoiceReferences ((PurchaseOrderReference? , ContractReference? , AccountNumber? , ProformaInvoiceNumber? , ASNNumber? , ASNOrderNumber? , SupplierOrderNumber? , PriceListNumber? , PriceListVersionNumber? , BuyersCatalogNumber? , BillOfLadingNumber? , AirWayBillNumber? , LetterOfCreditNumber? , AuthorizationReference? , DeliveryNoteNumber? , CostAllocation? , ListOfRelatedInvoiceRef? , OtherInvoiceReferences?))>
+<!ELEMENT ContractReference (Contract)>
+<!ELEMENT AccountNumber (Reference)>
+<!ELEMENT ProformaInvoiceNumber (Reference)>
+<!ELEMENT ASNNumber (Reference)>
+<!ELEMENT SupplierOrderNumber (Reference)>
+<!ELEMENT PriceListNumber (Reference)>
+<!ELEMENT PriceListVersionNumber (Reference)>
+<!ELEMENT BuyersCatalogNumber (Reference)>
+<!ELEMENT AirWayBillNumber (Reference)>
+<!ELEMENT DeliveryNoteNumber (Reference)>
+<!ELEMENT OtherInvoiceReferences (ListOfReferenceCoded)>
+<!ELEMENT PurchaseOrderReference ((PurchaseOrderNumber , PurchaseOrderDate? , PurchaseOrderLineItemNumber? , PartialOrderCoded? , PartialOrderCodedOther?))>
+<!ELEMENT PurchaseOrderNumber (Reference)>
+<!ELEMENT PurchaseOrderDate  (#PCDATA)>
+<!ELEMENT PurchaseOrderLineItemNumber  (#PCDATA)>
+<!ELEMENT PartialOrderCoded  (#PCDATA)>
+<!ELEMENT PartialOrderCodedOther  (#PCDATA)>
+<!ELEMENT ASNOrderNumber ((BuyerOrderNumber , SellerOrderNumber? , ListOfMessageID?) , ASNPartialOrder? , ASNReferences?)>
+<!ELEMENT OrderNumber ((BuyerOrderNumber , SellerOrderNumber? , ListOfMessageID?))>
+<!ELEMENT BuyerOrderNumber  (#PCDATA)>
+<!ELEMENT SellerOrderNumber  (#PCDATA)>
+<!ELEMENT ListOfMessageID (MessageID+)>
+<!ELEMENT MessageID ((IDNumber , IDAssignedBy , IDAssignedDate?))>
+<!ELEMENT IDNumber  (#PCDATA)>
+<!ELEMENT IDAssignedDate  (#PCDATA)>
+<!ELEMENT IDAssignedBy ((IDAssignedByCoded , IDAssignedByCodedOther?))>
+<!ELEMENT IDAssignedByCoded  (#PCDATA)>
+<!ELEMENT IDAssignedByCodedOther  (#PCDATA)>
+<!ELEMENT ASNPartialOrder ((ASNPartialOrderCoded , ASNPartialOrderCodedOther?))>
+<!ELEMENT ASNPartialOrderCoded  (#PCDATA)>
+<!ELEMENT ASNPartialOrderCodedOther  (#PCDATA)>
+<!ELEMENT ASNReferences ((ShipmentIdentifier? , PackingListNumber? , ContractNumber? , BillOfLadingNumber? , AirWaybillNumber? , ImportLicenceNumber? , ExportLicenceNumber? , LetterOfCreditNumber? , URL? , TrackingInformation? , ListOfCarrierReference? , OtherASNReferences?))>
+<!ELEMENT ShipmentIdentifier (Reference)>
+<!ELEMENT PackingListNumber (Reference)>
+<!ELEMENT ContractNumber (Reference)>
+<!ELEMENT BillOfLadingNumber (Reference)>
+<!ELEMENT AirWaybillNumber (Reference)>
+<!ELEMENT ImportLicenceNumber (Reference)>
+<!ELEMENT ExportLicenceNumber (Reference)>
+<!ELEMENT LetterOfCreditNumber (Reference)>
+<!ELEMENT URL  (#PCDATA)>
+<!ELEMENT OtherASNReferences (ListOfReferenceCoded)>
+<!ELEMENT TrackingInformation ((TrackingNumber , TrackingCallURL?))>
+<!ELEMENT TrackingNumber (Reference)>
+<!ELEMENT TrackingCallURL  (#PCDATA)>
+<!ELEMENT ListOfCarrierReference (CarrierReference+)>
+<!ELEMENT CarrierReference ((CarrierReferenceNumber , TransportRouteID))>
+<!ELEMENT CarrierReferenceNumber (Reference)>
+<!ELEMENT TransportRouteID  (#PCDATA)>
+<!ELEMENT AuthorizationReference ((AuthorizationNumber , AuthorizationAssignedBy?))>
+<!ELEMENT AuthorizationNumber (Reference)>
+<!ELEMENT AuthorizationAssignedBy (Party)>
+<!ELEMENT CostAllocation ((CostAllocationNumber , WorkBreakdownStructure? , FixedAsset?))>
+<!ELEMENT CostAllocationNumber (Reference)>
+<!ELEMENT WorkBreakdownStructure  (#PCDATA)>
+<!ELEMENT FixedAsset  (#PCDATA)>
+<!ELEMENT ListOfRelatedInvoiceRef (RelatedInvoiceRef+)>
+<!ELEMENT RelatedInvoiceRef ((RelatedInvoiceType , InvoiceNumber , InvoiceLineItemNumber?))>
+<!ELEMENT RelatedInvoiceType (InvoiceType)>
+<!ELEMENT InvoiceNumber (Reference)>
+<!ELEMENT InvoiceLineItemNumber  (#PCDATA)>
+<!ELEMENT InvoiceType ((InvoiceTypeCoded , InvoiceTypeCodedOther?))>
+<!ELEMENT InvoiceTypeCoded  (#PCDATA)>
+<!ELEMENT InvoiceTypeCodedOther  (#PCDATA)>
+<!ELEMENT ExceptionQuantities ((Ordered? , Damaged? , Unusable? , Returned? , ShippedToDate?))>
+<!ELEMENT Ordered (Quantity)>
+<!ELEMENT Damaged (Quantity)>
+<!ELEMENT Unusable (Quantity)>
+<!ELEMENT Returned (Quantity)>
+<!ELEMENT ShippedToDate (Quantity)>
+<!ELEMENT InvoicePricingDetail ((ListOfPrice , Tax* , ItemAllowancesOrCharges? , TotalValue?) , InvoiceCurrencyTotalValue , PaymentCurrencyTotalValue? , TaxAccountingSubTotalValue? , ActualPaymentStatus? , TotalTaxAmount?)>
+<!ELEMENT InvoiceCurrencyTotalValue (MonetaryValue)>
+<!ELEMENT PaymentCurrencyTotalValue (MonetaryValue)>
+<!ELEMENT TaxAccountingSubTotalValue (MonetaryValue)>
+<!ELEMENT TotalTaxAmount (MonetaryValue)>
+<!ELEMENT PricingDetail ((ListOfPrice , Tax* , ItemAllowancesOrCharges? , TotalValue?))>
+<!ELEMENT ItemAllowancesOrCharges (ListOfAllowOrCharge)>
+<!ELEMENT TotalValue (MonetaryValue)>
+<!ELEMENT Tax ((TaxFunctionQualifierCoded , TaxFunctionQualifierCodedOther? , TaxCategoryCoded , TaxCategoryCodedOther? , ReasonTaxExemptCoded? , ReasonTaxExemptCodedOther? , TaxTypeCoded , TaxTypeCodedOther? , TaxPercent? , TaxPaymentMethodCoded? , TaxPaymentMethodCodedOther? , TaxableAmount? , TaxableAmountInTaxAccountingCurrency? , TaxAmount , TaxAmountInTaxAccountingCurrency? , TaxLocation?))>
+<!ELEMENT TaxFunctionQualifierCoded  (#PCDATA)>
+<!ELEMENT TaxFunctionQualifierCodedOther  (#PCDATA)>
+<!ELEMENT TaxCategoryCoded  (#PCDATA)>
+<!ELEMENT TaxCategoryCodedOther  (#PCDATA)>
+<!ELEMENT ReasonTaxExemptCoded  (#PCDATA)>
+<!ELEMENT ReasonTaxExemptCodedOther  (#PCDATA)>
+<!ELEMENT TaxTypeCoded  (#PCDATA)>
+<!ELEMENT TaxTypeCodedOther (Identifier)>
+<!ELEMENT TaxPercent  (#PCDATA)>
+<!ELEMENT TaxPaymentMethodCoded  (#PCDATA)>
+<!ELEMENT TaxPaymentMethodCodedOther  (#PCDATA)>
+<!ELEMENT TaxableAmount  (#PCDATA)>
+<!ELEMENT TaxableAmountInTaxAccountingCurrency  (#PCDATA)>
+<!ELEMENT TaxAmount  (#PCDATA)>
+<!ELEMENT TaxAmountInTaxAccountingCurrency  (#PCDATA)>
+<!ELEMENT TaxLocation (Location)>
+<!ELEMENT Location ((LocationQualifierCoded? , LocationQualifierCodedOther? , (LocationIdentifier|ExternalAddressID|NameAddress) , GPSCooridinates?))>
+<!ELEMENT LocationQualifierCoded  (#PCDATA)>
+<!ELEMENT LocationQualifierCodedOther  (#PCDATA)>
+<!ELEMENT ExternalAddressID  (#PCDATA)>
+<!ELEMENT LocationIdentifier ((LocID , LocationDescription?))>
+<!ELEMENT LocID (Identifier)>
+<!ELEMENT LocationDescription  (#PCDATA)>
+<!ELEMENT GPSCooridinates ((GPSSystem , Latitude , Longitude))>
+<!ELEMENT GPSSystem  (#PCDATA)>
+<!ELEMENT Latitude  (#PCDATA)>
+<!ELEMENT Longitude  (#PCDATA)>
+<!ELEMENT ListOfAllowOrCharge (AllowOrCharge+)>
+<!ELEMENT AllowOrCharge ((IndicatorCoded , IndicatorCodedOther? , BasisCoded? , BasisCodedOther? , MethodOfHandlingCoded , MethodOfHandlingCodedOther? , AllowanceOrChargeDescription , ValidityDates? , (BasisQuantityRange|BasisMonetaryRange)? , TypeOfAllowanceOrCharge , Tax*))>
+<!ATTLIST AllowOrCharge 
+        SeqNo CDATA '1'>
+<!ELEMENT IndicatorCoded  (#PCDATA)>
+<!ELEMENT IndicatorCodedOther  (#PCDATA)>
+<!ELEMENT BasisCoded  (#PCDATA)>
+<!ELEMENT BasisCodedOther  (#PCDATA)>
+<!ELEMENT MethodOfHandlingCoded  (#PCDATA)>
+<!ELEMENT MethodOfHandlingCodedOther  (#PCDATA)>
+<!ELEMENT AllowanceOrChargeDescription (AllowOrChgDesc)>
+<!ELEMENT BasisQuantityRange (Quantity)>
+<!ELEMENT AllowOrChgDesc ((RefID? , ListOfDescription? , ServiceCoded , ServiceCodedOther?))>
+<!ELEMENT RefID  (#PCDATA)>
+<!ELEMENT ServiceCoded  (#PCDATA)>
+<!ELEMENT ServiceCodedOther  (#PCDATA)>
+<!ELEMENT ListOfDescription (Description+)>
+<!ELEMENT Description ((DescriptionText , Language))>
+<!ELEMENT DescriptionText  (#PCDATA)>
+<!ELEMENT BasisMonetaryRange ((MonetaryRange|MonetaryLimit))>
+<!ELEMENT MonetaryRange ((MinimumMonetaryValue , MaximumMonetaryValue , Currency))>
+<!ELEMENT MinimumMonetaryValue  (#PCDATA)>
+<!ELEMENT MaximumMonetaryValue  (#PCDATA)>
+<!ELEMENT MonetaryLimit ((MonetaryLimitValue , Currency))>
+<!ATTLIST MonetaryLimit 
+        SignificanceCoded  (Other|Approximately|EqualTo|GreaterThanOrEqualTo|GreaterThan|LessThan|LessThanOrEqualTo|NotEqualTo|Trace|TrueValue|ObservedValue|OutOfRange)  #IMPLIED
+        SignificanceCodedOther CDATA  #IMPLIED>
+<!ELEMENT MonetaryLimitValue  (#PCDATA)>
+<!ELEMENT TypeOfAllowanceOrCharge ((QuantityAllowanceOrCharge|PercentageAllowanceOrCharge|MonetaryValue))>
+<!ELEMENT QuantityAllowanceOrCharge ((Quantity , Rate , QuantityMonetaryValue?))>
+<!ELEMENT QuantityMonetaryValue (MonetaryValue)>
+<!ELEMENT Rate ((RatePerUnit , UnitPriceBasis , UnitOfMeasurement?))>
+<!ELEMENT RatePerUnit (UnitPrice)>
+<!ELEMENT UnitPriceBasis  (#PCDATA)>
+<!ELEMENT PercentageAllowanceOrCharge ((PercentQualifier , Percent , PercentageMonetaryValue?))>
+<!ELEMENT Percent  (#PCDATA)>
+<!ELEMENT PercentageMonetaryValue (MonetaryValue)>
+<!ELEMENT PercentQualifier ((PercentQualifierCoded , PercentQualifierCodedOther?))>
+<!ELEMENT PercentQualifierCoded  (#PCDATA)>
+<!ELEMENT PercentQualifierCodedOther  (#PCDATA)>
+<!ELEMENT ActualPaymentStatus ((ActualPaymentStatusCoded? , ActualPaymentStatusCodedOther?))>
+<!ELEMENT ActualPaymentStatusCoded  (#PCDATA)>
+<!ELEMENT ActualPaymentStatusCodedOther  (#PCDATA)>
+<!ELEMENT InvoiceDates ((InvoiceDueDate? , ExpectedShipToDateTime? , ActualShipToDateTime? , ReceiptDateTime? , TaxPeriod? , InvoicingPeriod? , ListOfOtherInvoiceDates?))>
+<!ELEMENT InvoiceDueDate  (#PCDATA)>
+<!ELEMENT ExpectedShipToDateTime  (#PCDATA)>
+<!ELEMENT ActualShipToDateTime  (#PCDATA)>
+<!ELEMENT ReceiptDateTime  (#PCDATA)>
+<!ELEMENT TaxPeriod (ValidityDates)>
+<!ELEMENT InvoicingPeriod (ValidityDates)>
+<!ELEMENT ListOfOtherInvoiceDates (ListOfDateCoded)>
+<!ELEMENT ListOfDateCoded (DateCoded+)>
+<!ELEMENT DateCoded ((Date , DateQualifier))>
+<!ELEMENT Date  (#PCDATA)>
+<!ELEMENT DateQualifier ((DateQualifierCoded , DateQualifierCodedOther?))>
+<!ELEMENT DateQualifierCoded  (#PCDATA)>
+<!ELEMENT DateQualifierCodedOther  (#PCDATA)>
+<!ELEMENT OtherInvoiceParties ((BillToParty? , RemitToParty? , ListOfPartyCoded?))>
+<!ELEMENT BillToParty (Party)>
+<!ELEMENT RemitToParty (Party)>
+<!ELEMENT DeliveryDetail ((ShipToLocation? , ShipFromLocation? , ListOfScheduleLine? , ItemPackagingReference? , SimplePackageNote? , TermsOfDelivery* , CargoClassification?))>
+<!ELEMENT ShipToLocation (Location)>
+<!ELEMENT ShipFromLocation (Location)>
+<!ELEMENT SimplePackageNote  (#PCDATA)>
+<!ELEMENT ListOfScheduleLine (ScheduleLine+)>
+<!ELEMENT ScheduleLine ((ScheduleLineID? , ShipmentStatusEventCoded? , ShipmentStatusEventCodedOther? , ShipmentStatusReasons? , Quantity , RequestedDeliveryDate? , ListOfOtherDeliveryDate? , ScheduleLineNote? , (Transport|TransportReference)? , ListOfShipToSubInformation?))>
+<!ELEMENT ScheduleLineID  (#PCDATA)>
+<!ELEMENT ShipmentStatusEventCoded  (#PCDATA)>
+<!ELEMENT ShipmentStatusEventCodedOther  (#PCDATA)>
+<!ELEMENT ShipmentStatusReasons (ListOfStatusReason)>
+<!ELEMENT RequestedDeliveryDate  (#PCDATA)>
+<!ELEMENT ListOfOtherDeliveryDate (ListOfDateCoded)>
+<!ELEMENT ScheduleLineNote  (#PCDATA)>
+<!ELEMENT TransportReference  (#PCDATA)>
+<!ELEMENT ListOfStatusReason (StatusReason+)>
+<!ELEMENT StatusReason ((StatusReasonCoded , StatusReasonCodedOther?))>
+<!ELEMENT StatusReasonCoded  (#PCDATA)>
+<!ELEMENT StatusReasonCodedOther  (#PCDATA)>
+<!ELEMENT Transport ((TransportID , TransportMode? , TransportMeans? , CarrierName? , CarrierID? , CustShippingContractNum? , ServiceLevelCoded? , ServiceLevelCodedOther? , ShippingInstructions? , TransportLegCoded? , TransportLegCodedOther? , ListOfTransportEquipment? , TransitDirection? , TransportNote?))>
+<!ELEMENT TransportID  (#PCDATA)>
+<!ELEMENT CarrierName  (#PCDATA)>
+<!ELEMENT CarrierID (Identifier)>
+<!ELEMENT CustShippingContractNum  (#PCDATA)>
+<!ELEMENT ServiceLevelCoded  (#PCDATA)>
+<!ELEMENT ServiceLevelCodedOther  (#PCDATA)>
+<!ELEMENT ShippingInstructions  (#PCDATA)>
+<!ELEMENT TransportLegCoded  (#PCDATA)>
+<!ELEMENT TransportLegCodedOther  (#PCDATA)>
+<!ELEMENT TransportNote  (#PCDATA)>
+<!ELEMENT TransportMode ((TransportModeCoded , TransportModeCodedOther?))>
+<!ELEMENT TransportModeCoded  (#PCDATA)>
+<!ELEMENT TransportModeCodedOther  (#PCDATA)>
+<!ELEMENT TransportMeans ((TransportMeansCoded , TransportMeansCodedOther?))>
+<!ELEMENT TransportMeansCoded  (#PCDATA)>
+<!ELEMENT TransportMeansCodedOther  (#PCDATA)>
+<!ELEMENT ListOfTransportEquipment (TransportEquipment+)>
+<!ELEMENT TransportEquipment ((EquipmentProviderCoded? , EquipmentProviderCodedOther? , EquipmentOwnerCoded? , EquipmentOwnerCodedOther? , EquipmentID , EquipmentSizeTypeCoded? , EquipementSizeTypeCodedOther? , EquipmentStatusCoded? , EquipmentStatusCodedOther? , FullIndicatorCoded? , FullIndicatorCodedOther? , Conditions? , EquipmentNote? , ListOfSealInfo? , ListOfEquipmentMeasurements?))>
+<!ELEMENT EquipmentProviderCoded  (#PCDATA)>
+<!ELEMENT EquipmentProviderCodedOther  (#PCDATA)>
+<!ELEMENT EquipmentOwnerCoded  (#PCDATA)>
+<!ELEMENT EquipmentOwnerCodedOther  (#PCDATA)>
+<!ELEMENT EquipmentID  (#PCDATA)>
+<!ELEMENT EquipmentSizeTypeCoded  (#PCDATA)>
+<!ELEMENT EquipementSizeTypeCodedOther  (#PCDATA)>
+<!ELEMENT EquipmentStatusCoded  (#PCDATA)>
+<!ELEMENT EquipmentStatusCodedOther  (#PCDATA)>
+<!ELEMENT FullIndicatorCoded  (#PCDATA)>
+<!ELEMENT FullIndicatorCodedOther  (#PCDATA)>
+<!ELEMENT EquipmentNote  (#PCDATA)>
+<!ELEMENT ListOfEquipmentMeasurements (ListOfDimension)>
+<!ELEMENT Conditions ((RefrigerationOn? , Residue? , ListOfConditions?))>
+<!ELEMENT RefrigerationOn  (#PCDATA)>
+<!ELEMENT Residue  (#PCDATA)>
+<!ELEMENT ListOfConditions (ListOfDimension)>
+<!ELEMENT ListOfSealInfo (SealInfo+)>
+<!ELEMENT SealInfo ((SealNumber , SealIssuer? , SealStatusDescription?))>
+<!ELEMENT SealNumber  (#PCDATA)>
+<!ELEMENT SealIssuer ((SealIssuerCoded , SealIssuerCodedOther?))>
+<!ELEMENT SealIssuerCoded  (#PCDATA)>
+<!ELEMENT SealIssuerCodedOther  (#PCDATA)>
+<!ELEMENT SealStatusDescription ((SealStatusCoded? , SealStatusCodedOther? , SealStatusInfo?))>
+<!ELEMENT SealStatusCoded  (#PCDATA)>
+<!ELEMENT SealStatusCodedOther  (#PCDATA)>
+<!ELEMENT SealStatusInfo  (#PCDATA)>
+<!ELEMENT TransitDirection ((TransitDirectionCoded , TransitDirectionCodedOther? , TransitTimeQualifierCoded? , TransitTimeQualifierCodedOther? , TransitTime?))>
+<!ELEMENT TransitDirectionCoded  (#PCDATA)>
+<!ELEMENT TransitDirectionCodedOther  (#PCDATA)>
+<!ELEMENT TransitTimeQualifierCoded  (#PCDATA)>
+<!ELEMENT TransitTimeQualifierCodedOther  (#PCDATA)>
+<!ELEMENT TransitTime  (#PCDATA)>
+<!ELEMENT ListOfShipToSubInformation (ShipToSubInformation+)>
+<!ELEMENT ShipToSubInformation ((ShipToSubLocation , ShipToSubQuantity , SubLocationItemPackagingReference?))>
+<!ELEMENT ShipToSubLocation (Location)>
+<!ELEMENT ShipToSubQuantity (Quantity)>
+<!ELEMENT SubLocationItemPackagingReference (ItemPackagingReference)>
+<!ELEMENT ItemPackagingReference (PackageReference+)>
+<!ELEMENT PackageReference ((Quantity? , PackageIDReference , PackageReference?))>
+<!ELEMENT PackageIDReference  (#PCDATA)>
+<!ELEMENT TermsOfDelivery ((TermsOfDeliveryFunctionCoded , TermsOfDeliveryFunctionCodedOther? , TransportTermsCoded? , TransportTermsCodedOther? , ShipmentMethodOfPaymentCoded , ShipmentMethodOfPaymentCodedOther? , Location? , TermsOfDeliveryDescription? , TransportDescription? , RiskOfLossCoded? , RiskOfLossCodedOther? , RiskOfLossDescription?))>
+<!ELEMENT TermsOfDeliveryFunctionCoded  (#PCDATA)>
+<!ELEMENT TermsOfDeliveryFunctionCodedOther  (#PCDATA)>
+<!ELEMENT TransportTermsCoded  (#PCDATA)>
+<!ELEMENT TransportTermsCodedOther  (#PCDATA)>
+<!ELEMENT ShipmentMethodOfPaymentCoded  (#PCDATA)>
+<!ELEMENT ShipmentMethodOfPaymentCodedOther  (#PCDATA)>
+<!ELEMENT TermsOfDeliveryDescription  (#PCDATA)>
+<!ELEMENT TransportDescription  (#PCDATA)>
+<!ELEMENT RiskOfLossCoded  (#PCDATA)>
+<!ELEMENT RiskOfLossCodedOther  (#PCDATA)>
+<!ELEMENT RiskOfLossDescription  (#PCDATA)>
+<!ELEMENT CargoClassification ((NatureOfGoods? , OperationalTypeCoded? , OperationalTypeCodedOther? , TypeOfCargo?))>
+<!ELEMENT NatureOfGoods (Identifier)>
+<!ELEMENT OperationalTypeCoded  (#PCDATA)>
+<!ELEMENT OperationalTypeCodedOther  (#PCDATA)>
+<!ELEMENT TypeOfCargo  (#PCDATA)>
+<!ELEMENT ListOfStructuredNote (StructuredNote+)>
+<!ELEMENT StructuredNote ((GeneralNote? , NoteID? , Agency? , NoteURL? , TextTypeCoded? , TextTypeCodedOther?))>
+<!ELEMENT GeneralNote  (#PCDATA)>
+<!ELEMENT NoteID  (#PCDATA)>
+<!ELEMENT NoteURL  (#PCDATA)>
+<!ELEMENT TextTypeCoded  (#PCDATA)>
+<!ELEMENT TextTypeCodedOther  (#PCDATA)>
+<!ELEMENT ListOfNameValueSet (NameValueSet+)>
+<!ELEMENT NameValueSet ((SetName , SetID? , ListOfNameValuePair))>
+<!ELEMENT SetName  (#PCDATA)>
+<!ELEMENT SetID  (#PCDATA)>
+<!ELEMENT ListOfNameValuePair (NameValuePair+)>
+<!ELEMENT NameValuePair ((Name , Value , Datatype?))>
+<!ELEMENT Name  (#PCDATA)>
+<!ELEMENT Value  (#PCDATA)>
+<!ELEMENT Datatype  (#PCDATA)>
+<!ELEMENT ListOfAttachment (Attachment+)>
+<!ELEMENT ListOfAdjustments (Adjustment+)>
+<!ELEMENT Adjustment ((LineItemReference? , AdjustmentReasonCoded , AdjustmentReasonCodedOther? , AdjustmentDate? , ExpectedAmount? , AdjustmentAmount? , AdjustmentPercent? , ActualAmount , AdjustmentNote?))>
+<!ELEMENT LineItemReference  (#PCDATA)>
+<!ELEMENT AdjustmentReasonCoded  (#PCDATA)>
+<!ELEMENT AdjustmentReasonCodedOther  (#PCDATA)>
+<!ELEMENT AdjustmentDate  (#PCDATA)>
+<!ELEMENT ExpectedAmount (MonetaryValue)>
+<!ELEMENT AdjustmentAmount (MonetaryValue)>
+<!ELEMENT AdjustmentPercent  (#PCDATA)>
+<!ELEMENT ActualAmount (MonetaryValue)>
+<!ELEMENT AdjustmentNote  (#PCDATA)>
+<!ELEMENT PaymentRequestSummary ((TotalPaymentDocuments? , TotalLineItem? , TotalSettlementAmount? , EncryptedInfo? , ListOfSummaryItems? , SummaryNote?))>
+<!ELEMENT TotalPaymentDocuments  (#PCDATA)>
+<!ELEMENT TotalLineItem  (#PCDATA)>
+<!ELEMENT TotalSettlementAmount (MonetaryValue)>
+<!ELEMENT ListOfSummaryItems (ListOfValues)>
+<!ELEMENT SummaryNote  (#PCDATA)>
+<!ELEMENT EncryptedInfo ((CertificateAuthority? , ListOfEncryptedField))>
+<!ELEMENT CertificateAuthority  (#PCDATA)>
+<!ELEMENT ListOfEncryptedField (EncryptedField+)>
+<!ELEMENT EncryptedField ((Sequence? , EncryptedData))>
+<!ELEMENT Sequence  (#PCDATA)>
+<!ELEMENT EncryptedData  (#PCDATA)>
+<!ELEMENT ListOfValues (NameValuePair+)>

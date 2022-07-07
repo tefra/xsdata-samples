@@ -1,0 +1,24 @@
+<!-- xCBL Document DTD for XCBL35 AuctionResultResponse -->
+<!ELEMENT AuctionResultResponse (AuctionResultResponseHeader)>
+<!ELEMENT AuctionResultResponseHeader ((AuctionResultResponsePurpose , AuctionResultResponseIssueDate , AuctionResultResponseID , AuctionCreateReference , AuctionResultReference? , AuctionResultResponseCoded , AuctionResultResponseCodedOther? , Language , GeneralNote?))>
+<!ELEMENT AuctionResultResponsePurpose (Purpose)>
+<!ELEMENT AuctionResultResponseIssueDate  (#PCDATA)>
+<!ELEMENT AuctionResultResponseID  (#PCDATA)>
+<!ELEMENT AuctionCreateReference (Reference)>
+<!ELEMENT AuctionResultReference (Reference)>
+<!ELEMENT AuctionResultResponseCoded  (#PCDATA)>
+<!ELEMENT AuctionResultResponseCodedOther  (#PCDATA)>
+<!ELEMENT GeneralNote  (#PCDATA)>
+<!ELEMENT Purpose ((PurposeCoded , PurposeCodedOther?))>
+<!ELEMENT PurposeCoded  (#PCDATA)>
+<!ELEMENT PurposeCodedOther  (#PCDATA)>
+<!ELEMENT Reference ((RefNum , RefDate?))>
+<!ELEMENT RefNum  (#PCDATA)>
+<!ELEMENT RefDate  (#PCDATA)>
+<!ELEMENT Language ((LanguageCoded , LanguageCodedOther? , LocaleCoded? , LocaleCodedOther?))>
+<!ATTLIST Language 
+        LanguageDependent CDATA  #IMPLIED>
+<!ELEMENT LanguageCoded  (#PCDATA)>
+<!ELEMENT LanguageCodedOther  (#PCDATA)>
+<!ELEMENT LocaleCoded  (#PCDATA)>
+<!ELEMENT LocaleCodedOther  (#PCDATA)>

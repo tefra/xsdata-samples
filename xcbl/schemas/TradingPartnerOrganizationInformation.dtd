@@ -1,0 +1,90 @@
+<!-- xCBL Document DTD for XCBL35 TradingPartnerOrganizationInformation -->
+<!ELEMENT TradingPartnerOrganizationInformation ((TradingPartnerOrganizationPurpose , ListOfTradingPartnerOrganization))>
+<!ELEMENT TradingPartnerOrganizationPurpose ((TradingPartnerOrganizationPurposeCoded , TradingPartnerOrganizationPurposeCodedOther?))>
+<!ELEMENT TradingPartnerOrganizationPurposeCoded  (#PCDATA)>
+<!ELEMENT TradingPartnerOrganizationPurposeCodedOther  (#PCDATA)>
+<!ELEMENT ListOfTradingPartnerOrganization (TradingPartnerOrganization+)>
+<!ELEMENT TradingPartnerOrganization ((TradingPartnerOrganizationHeader , OrganizationAddresses , ListOfBankDetail*))>
+<!ELEMENT TradingPartnerOrganizationHeader ((ValidityDates? , ListOfTradingPartnerType , TradingPartnerIdentifications , TradingPartnerDisplayName , name1 , name2? , name3? , OrganizationLanguage , OrganizationCurrency , TradingPartnerOrganizationVisibility , ParentTradingPartnerIdentifications? , GeneralNotes?))>
+<!ELEMENT TradingPartnerIdentifications (Identifications)>
+<!ELEMENT TradingPartnerDisplayName  (#PCDATA)>
+<!ELEMENT name1  (#PCDATA)>
+<!ELEMENT name2  (#PCDATA)>
+<!ELEMENT name3  (#PCDATA)>
+<!ELEMENT OrganizationLanguage (Language)>
+<!ELEMENT OrganizationCurrency (Currency)>
+<!ELEMENT ParentTradingPartnerIdentifications (Identifications)>
+<!ELEMENT GeneralNotes  (#PCDATA)>
+<!ELEMENT ValidityDates ((StartDate , EndDate))>
+<!ELEMENT StartDate  (#PCDATA)>
+<!ELEMENT EndDate  (#PCDATA)>
+<!ELEMENT ListOfTradingPartnerType (TradingPartnerType+)>
+<!ELEMENT TradingPartnerType ((TradingPartnerTypeCoded , TradingPartnerTypeCodedOther?))>
+<!ELEMENT TradingPartnerTypeCoded  (#PCDATA)>
+<!ELEMENT TradingPartnerTypeCodedOther  (#PCDATA)>
+<!ELEMENT Identifications ((PrimaryID? , ListOfTradingPartnerID?))>
+<!ELEMENT PrimaryID ((Agency , Ident) , ShortID? , PrimaryIDURN?)>
+<!ELEMENT ShortID  (#PCDATA)>
+<!ELEMENT PrimaryIDURN  (#PCDATA)>
+<!ELEMENT Identifier ((Agency , Ident))>
+<!ELEMENT Ident  (#PCDATA)>
+<!ELEMENT Agency ((AgencyCoded , AgencyCodedOther? , AgencyDescription? , CodeListIdentifierCoded? , CodeListIdentifierCodedOther?))>
+<!ELEMENT AgencyCoded  (#PCDATA)>
+<!ELEMENT AgencyCodedOther  (#PCDATA)>
+<!ELEMENT AgencyDescription  (#PCDATA)>
+<!ELEMENT CodeListIdentifierCoded  (#PCDATA)>
+<!ELEMENT CodeListIdentifierCodedOther  (#PCDATA)>
+<!ELEMENT ListOfTradingPartnerID (TradingPartnerID+)>
+<!ELEMENT TradingPartnerID (Identifier)>
+<!ELEMENT Language ((LanguageCoded , LanguageCodedOther? , LocaleCoded? , LocaleCodedOther?))>
+<!ATTLIST Language 
+        LanguageDependent CDATA  #IMPLIED>
+<!ELEMENT LanguageCoded  (#PCDATA)>
+<!ELEMENT LanguageCodedOther  (#PCDATA)>
+<!ELEMENT LocaleCoded  (#PCDATA)>
+<!ELEMENT LocaleCodedOther  (#PCDATA)>
+<!ELEMENT Currency ((CurrencyCoded , CurrencyCodedOther?))>
+<!ELEMENT CurrencyCoded  (#PCDATA)>
+<!ELEMENT CurrencyCodedOther  (#PCDATA)>
+<!ELEMENT TradingPartnerOrganizationVisibility ((TradingPartnerOrganizationVisibilityCoded , TradingPartnerOrganizationVisibilityCodedOther?))>
+<!ELEMENT TradingPartnerOrganizationVisibilityCoded  (#PCDATA)>
+<!ELEMENT TradingPartnerOrganizationVisibilityCodedOther  (#PCDATA)>
+<!ELEMENT OrganizationAddresses ((PrimaryOrganizationAddress , ListOfOrganizationAddress?))>
+<!ELEMENT PrimaryOrganizationAddress (OrganizationAddress)>
+<!ELEMENT OrganizationAddress ((AddressType? , ExternalAddressID , POBox? , Street? , HouseNumber? , StreetSupplement1? , StreetSupplement2? , PostalCode? , City , County? , Region? , District? , Country , TradingPartnerTimezone?))>
+<!ELEMENT ExternalAddressID  (#PCDATA)>
+<!ELEMENT Street  (#PCDATA)>
+<!ELEMENT HouseNumber  (#PCDATA)>
+<!ELEMENT StreetSupplement1  (#PCDATA)>
+<!ELEMENT StreetSupplement2  (#PCDATA)>
+<!ELEMENT PostalCode  (#PCDATA)>
+<!ELEMENT City  (#PCDATA)>
+<!ELEMENT County  (#PCDATA)>
+<!ELEMENT District  (#PCDATA)>
+<!ELEMENT TradingPartnerTimezone (Timezone)>
+<!ELEMENT AddressType ((AddressTypeCoded , AddressTypeCodedOther?))>
+<!ELEMENT AddressTypeCoded  (#PCDATA)>
+<!ELEMENT AddressTypeCodedOther  (#PCDATA)>
+<!ELEMENT POBox (#PCDATA)>
+<!ATTLIST POBox 
+        POBoxPostalCode CDATA  #IMPLIED>
+<!ELEMENT Region ((RegionCoded , RegionCodedOther?))>
+<!ELEMENT RegionCoded  (#PCDATA)>
+<!ELEMENT RegionCodedOther  (#PCDATA)>
+<!ELEMENT Country ((CountryCoded , CountryCodedOther?))>
+<!ELEMENT CountryCoded  (#PCDATA)>
+<!ELEMENT CountryCodedOther  (#PCDATA)>
+<!ELEMENT Timezone ((TimezoneCoded , TimezoneCodedOther?))>
+<!ELEMENT TimezoneCoded  (#PCDATA)>
+<!ELEMENT TimezoneCodedOther  (#PCDATA)>
+<!ELEMENT ListOfOrganizationAddress (OrganizationAddress+)>
+<!ELEMENT ListOfBankDetail (BankDetail)>
+<!ELEMENT BankDetail ((BankCountry , BankKey? , SWIFTCode? , BankAccountNumber , InternationalBankAccountNumber? , TradingPartnerAccountHolder? , BankAccountControlKey? , BankReference?))>
+<!ELEMENT BankCountry (Country)>
+<!ELEMENT BankKey  (#PCDATA)>
+<!ELEMENT SWIFTCode  (#PCDATA)>
+<!ELEMENT BankAccountNumber  (#PCDATA)>
+<!ELEMENT InternationalBankAccountNumber  (#PCDATA)>
+<!ELEMENT TradingPartnerAccountHolder  (#PCDATA)>
+<!ELEMENT BankAccountControlKey  (#PCDATA)>
+<!ELEMENT BankReference  (#PCDATA)>

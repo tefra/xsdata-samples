@@ -5,7 +5,7 @@ from xsdata.formats.dataclass.parsers import XmlParser
 from xsdata.formats.dataclass.serializers import XmlSerializer
 from xsdata.formats.dataclass.serializers.config import SerializerConfig
 
-from reqif.models import ReqIf
+from reqif.models.org.omg.spec.req_if.pkg_20110401 import ReqIf
 
 here = Path(__file__).parent
 

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ShippingScheduleResponse>
+  <ShippingScheduleResponseHeader>
+    <ScheduleResponseID>SHIP88-90-6788aa</ScheduleResponseID>
+    <ScheduleResponseIssueDate>20001214T16:34:00</ScheduleResponseIssueDate>
+    <ScheduleReference>
+      <Reference>
+        <RefNum>SHIP88-90-6788</RefNum>
+        <RefDate>20001214T16:34:00</RefDate>
+      </Reference>
+    </ScheduleReference>
+    <BuyerParty>
+      <Party>
+        <PartyID>
+          <Identifier>
+            <Agency>
+              <AgencyCoded>Other</AgencyCoded>
+            </Agency>
+            <Ident>ABB-1010</Ident>
+          </Identifier>
+        </PartyID>
+        <NameAddress AddressTypeCoded="NotApplicable">
+          <Name1>ABB Cornerstone Company</Name1>
+          <Street>45 Terrance Blvd.</Street>
+          <Floor>7th</Floor>
+          <Department>Auction Department</Department>
+          <PostalCode>96660</PostalCode>
+          <City>Angelville</City>
+          <Region>
+            <RegionCoded>USCA</RegionCoded>
+          </Region>
+          <Country>
+            <CountryCoded>US</CountryCoded>
+          </Country>
+        </NameAddress>
+        <CorrespondenceLanguage>
+          <Language>
+            <LanguageCoded>en</LanguageCoded>
+          </Language>
+        </CorrespondenceLanguage>
+      </Party>
+    </BuyerParty>
+    <SellerParty>
+      <Party>
+        <PartyID>
+          <Identifier>
+            <Agency>
+              <AgencyCoded>Other</AgencyCoded>
+            </Agency>
+            <Ident>ABB-1010</Ident>
+          </Identifier>
+        </PartyID>
+        <NameAddress AddressTypeCoded="NotApplicable">
+          <Name1>Barrel Corporation</Name1>
+          <Street>Copeland Terrace</Street>
+          <InhouseMail>Mail Stop H34</InhouseMail>
+          <PostalCode>96660</PostalCode>
+          <City>Angelville</City>
+          <Region>
+            <RegionCoded>USCA</RegionCoded>
+          </Region>
+          <Country>
+            <CountryCoded>US</CountryCoded>
+          </Country>
+        </NameAddress>
+        <CorrespondenceLanguage>
+          <Language>
+            <LanguageCoded>en</LanguageCoded>
+          </Language>
+        </CorrespondenceLanguage>
+      </Party>
+    </SellerParty>
+    <Purpose>
+      <PurposeCoded>Original</PurposeCoded>
+    </Purpose>
+    <ResponseType>
+      <ResponseTypeCoded>Accepted</ResponseTypeCoded>
+    </ResponseType>
+    <Language>
+      <LanguageCoded>en</LanguageCoded>
+    </Language>
+  </ShippingScheduleResponseHeader>
+  <ListOfLocationGroupedShippingResponse>
+    <LocationGroupedShippingResponse>
+      <DetailResponseCoded>Agreed</DetailResponseCoded>
+    </LocationGroupedShippingResponse>
+  </ListOfLocationGroupedShippingResponse>
+  <ShippingScheduleResponseSummary>
+    <ShippingScheduleSummary>
+      <TotalNumberOfLineItems>1</TotalNumberOfLineItems>
+    </ShippingScheduleSummary>
+  </ShippingScheduleResponseSummary>
+</ShippingScheduleResponse>
+

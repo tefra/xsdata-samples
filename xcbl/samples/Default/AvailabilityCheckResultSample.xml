@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+
+<!--    SAMPLE FILE, THIS DOES NOT CONTAIN REAL DATA        -->
+
+<!DOCTYPE AvailabilityCheckResult SYSTEM 'AvailabilityCheckResult.dtd'>
+
+<AvailabilityCheckResult>
+    <AvailabilityCheckResultHeader>
+        <AvailabilityCheckResultID>
+            <Reference>
+                <RefNum>string of characters</RefNum>
+                <RefDate>20000825T09:00:00</RefDate>
+            </Reference>
+        </AvailabilityCheckResultID>
+        <AvailabilityCheckResultIssueDate>20001029T18:15:00</AvailabilityCheckResultIssueDate>
+        <SupplierParty>
+            <Party>
+                <PartyID>
+                    <Identifier>
+                        <Agency>
+                            <AgencyCoded>NTP</AgencyCoded>
+                            <AgencyDescription>string of characters</AgencyDescription>
+                            <CodeListIdentifierCoded>Other</CodeListIdentifierCoded>
+                            <CodeListIdentifierCodedOther>string of characters</CodeListIdentifierCodedOther>
+                        </Agency>
+                        <Ident>string of characters</Ident>
+                    </Identifier>
+                </PartyID>
+                <MDFBusiness>true</MDFBusiness>
+                <OrderContact>
+                    <Contact>
+                        <ContactName>string of characters</ContactName>
+                        <ContactDescription>string of characters</ContactDescription>
+                        <ListOfContactNumber>
+                            <ContactNumber>
+                                <ContactNumberValue>string of characters</ContactNumberValue>
+                                <ContactNumberTypeCoded>Other</ContactNumberTypeCoded>
+                            </ContactNumber>
+                        </ListOfContactNumber>
+                    </Contact>
+                </OrderContact>
+            </Party>
+        </SupplierParty><BuyerParty>
+            <Party>
+                <PartyID>
+                    <Identifier>
+                        <Agency>
+                            <AgencyCoded>NTP</AgencyCoded>
+                        </Agency>
+                        <Ident>string of characters</Ident>
+                    </Identifier>
+                </PartyID>
+            </Party>
+        </BuyerParty><AvailabilityShipToParty>
+            <Party>
+                <PartyID>
+                    <Identifier>
+                        <Agency>
+                            <AgencyCoded>NTP</AgencyCoded>
+                        </Agency>
+                        <Ident>string of characters</Ident>
+                    </Identifier>
+                </PartyID>
+       </Party>
+    </AvailabilityShipToParty>
+    <AvailabilityCheckResultLanguage>
+        <Language>
+            <LanguageCoded>en</LanguageCoded>
+        </Language>
+    </AvailabilityCheckResultLanguage>
+    </AvailabilityCheckResultHeader>
+
+    <AvailabilityCheckResultDetail>
+        <ListOfAvailabilityCheckResultItemDetail>
+            <AvailabilityCheckResultItemDetail>
+                <QuotedItem>
+                    <CheckResultBaseItemDetail>
+                        <LineItemNum>
+                            <BuyerLineItemNum>666</BuyerLineItemNum>
+                        </LineItemNum>
+                        <CheckResultTransport>
+                            <Transport>
+                                <TransportID>7777</TransportID>
+                                <TransportMode>
+                                    <TransportModeCoded>Other</TransportModeCoded>
+                                    <TransportModeCodedOther>string of characters</TransportModeCodedOther>
+                                </TransportMode>
+                                <TransportMeans>
+                                    <TransportMeansCoded>Other</TransportMeansCoded>
+                                    <TransportMeansCodedOther>string of characters</TransportMeansCodedOther>
+                                </TransportMeans>
+                                <CustShippingContractNum>string of characters</CustShippingContractNum>
+                                <ServiceLevelCoded>Other</ServiceLevelCoded>
+                                <ServiceLevelCodedOther>string of characters</ServiceLevelCodedOther>
+                                <ShippingInstructions>string of characters</ShippingInstructions>
+                                <TransitDirection>
+                                    <TransitDirectionCoded>Other</TransitDirectionCoded>
+                                    <TransitDirectionCodedOther>string of characters</TransitDirectionCodedOther>
+                                    <TransitTime>17.00</TransitTime>
+                                </TransitDirection>
+                                <TransportNote>string of characters</TransportNote>
+                            </Transport>
+                        </CheckResultTransport>
+                    </CheckResultBaseItemDetail>
+                </QuotedItem>
+                <AvailableQuantity>
+                    <Quantity>
+                        <QuantityRange>
+                            <MinimumValue SignificanceCoded="Approximately" SignificanceCodedOther="string" ConditionsCoded="InWater" ConditionsCodedOther="string">000</MinimumValue>
+                            <MaximumValue SignificanceCoded="Approximately" SignificanceCodedOther="string" ConditionsCoded="InWater" ConditionsCodedOther="string">000</MaximumValue>
+                        </QuantityRange>
+                        <UnitOfMeasurement>
+                            <UOMCoded>Other</UOMCoded>
+                            <UOMCodedOther>string of characters</UOMCodedOther>
+                        </UnitOfMeasurement>
+                    </Quantity>
+                </AvailableQuantity>
+            </AvailabilityCheckResultItemDetail>
+        </ListOfAvailabilityCheckResultItemDetail>
+    </AvailabilityCheckResultDetail>
+
+    <AvailabilityCheckResultSummary>
+        <AvailabilityItemErrors>4</AvailabilityItemErrors>
+        <TotalNumberOfLineItem>3</TotalNumberOfLineItem>
+    </AvailabilityCheckResultSummary>
+</AvailabilityCheckResult>

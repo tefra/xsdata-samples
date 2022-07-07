@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<!--	THIS IS A SAMPLE ONLY, NO REAL DATA CONTAINED WITHIN		-->
+
+<!DOCTYPE Invoice SYSTEM 'Invoice.dtd'>
+
+<Invoice>
+	<InvoiceHeader>
+		<InvoiceNumber>
+			<Reference>
+				<RefNum>PO 66-576</RefNum>
+			</Reference>
+		</InvoiceNumber>
+		<InvoiceIssueDate>20001213T15:56:00</InvoiceIssueDate>
+		<InvoicePurpose>
+			<InvoicePurposeCoded>Original</InvoicePurposeCoded>
+		</InvoicePurpose>
+		<InvoiceType>
+			<InvoiceTypeCoded>CommercialInvoice</InvoiceTypeCoded>
+		</InvoiceType>
+		<InvoiceLanguage>
+			<Language>
+				<LanguageCoded>en</LanguageCoded>
+			</Language>
+		</InvoiceLanguage>
+		<InvoiceParty>
+			<BuyerParty>
+				<Party>
+					<PartyID>
+						<Identifier>
+							<Agency>
+								<AgencyCoded>Other</AgencyCoded>
+							</Agency>
+							<Ident>ABC1001</Ident>
+						</Identifier>
+					</PartyID>
+					<NameAddress>
+						<Name1>ABC Office Supplies Company</Name1>
+						<Street>34 Maple Street</Street>
+						<PostalCode>94501</PostalCode>
+						<City>Cupertino</City>
+						<Region>
+							<RegionCoded>USCA</RegionCoded>
+						</Region>
+						<Country>
+							<CountryCoded>US</CountryCoded>
+						</Country>
+					</NameAddress>
+				</Party>
+			</BuyerParty>
+			<SellerParty>
+				<Party>
+					<PartyID>
+						<Identifier>
+							<Agency>	
+								<AgencyCoded>Other</AgencyCoded>
+							</Agency>
+							<Ident>Pegel 2202</Ident>
+						</Identifier>
+					</PartyID>
+					<NameAddress>
+						<Name1>Pegell Pencil Manufacturers</Name1>
+						<Street>55 Covent Cove</Street>
+						<PostalCode>33067</PostalCode>
+						<City>Ann Arbor</City>
+						<Region>
+							<RegionCoded>USMI</RegionCoded>
+						</Region>
+						<Country>
+							<CountryCoded>US</CountryCoded>
+						</Country>
+					</NameAddress>
+				</Party>
+			</SellerParty>
+		</InvoiceParty>
+		<InvoiceTermsOfDelivery>
+			<TermsOfDelivery>
+				<TermsOfDeliveryFunctionCoded>CollectedByCustomer</TermsOfDeliveryFunctionCoded>
+				<ShipmentMethodOfPaymentCoded>Account</ShipmentMethodOfPaymentCoded>
+			</TermsOfDelivery>
+		</InvoiceTermsOfDelivery>
+	</InvoiceHeader>
+	
+	<InvoiceDetail>
+		<ListOfInvoiceItemDetail>
+			<InvoiceItemDetail>
+				<InvoiceBaseItemDetail>
+					<LineItemNum>
+						<BuyerLineItemNum>1</BuyerLineItemNum>
+						<SellerLineItemNum>1</SellerLineItemNum>
+					</LineItemNum>
+					<TotalQuantity>
+						<Quantity>
+							<QuantityRange>
+								<MinimumValue>1</MinimumValue>
+								<MaximumValue>5000</MaximumValue>
+							</QuantityRange>
+							<UnitOfMeasurement>
+								<UOMCoded>C62</UOMCoded>
+							</UnitOfMeasurement>
+						</Quantity>
+					</TotalQuantity>
+				</InvoiceBaseItemDetail>
+				<InvoicePricingDetail>
+					<ListOfPrice>
+						<Price>
+							<UnitPrice>
+								<UnitPriceValue>000000000000000.050000</UnitPriceValue>
+							</UnitPrice>
+						</Price>
+					</ListOfPrice>
+					<InvoiceCurrencyTotalValue>
+						<MonetaryValue>
+							<MonetaryAmount>0000000000000250.000000</MonetaryAmount>
+							<Currency>
+								<CurrencyCoded>USD</CurrencyCoded>
+							</Currency>
+						</MonetaryValue>
+					</InvoiceCurrencyTotalValue>
+					<ActualPaymentStatus>
+						<ActualPaymentStatusCoded>PaidInFull</ActualPaymentStatusCoded>
+					</ActualPaymentStatus>
+				</InvoicePricingDetail>
+			</InvoiceItemDetail>
+		</ListOfInvoiceItemDetail>
+	</InvoiceDetail>
+	
+	<InvoiceSummary>
+		<InvoiceTotals>
+			<NetValue>
+				<MonetaryValue>
+					<MonetaryAmount>0000000000000250.000000</MonetaryAmount>
+				</MonetaryValue>
+			</NetValue>
+			<GrossValue>
+				<MonetaryValue>
+					<MonetaryAmount>0000000000000250.000000</MonetaryAmount>
+				</MonetaryValue>
+			</GrossValue>
+			<PrepaidAmount>
+				<MonetaryValue>
+					<MonetaryAmount>0000000000000250.000000</MonetaryAmount>
+				</MonetaryValue>
+			</PrepaidAmount>
+		</InvoiceTotals>
+		<InvoicePaymentStatus>
+			<InvoicePaymentStatusCoded>PaidInFull</InvoicePaymentStatusCoded>
+		</InvoicePaymentStatus>
+		<SummaryNote>After doing business with this company for 6 months, they are in good standing.</SummaryNote>
+	</InvoiceSummary>
+</Invoice>

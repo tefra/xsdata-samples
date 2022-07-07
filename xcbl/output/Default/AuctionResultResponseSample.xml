@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuctionResultResponse>
+  <AuctionResultResponseHeader>
+    <AuctionResultResponsePurpose>
+      <Purpose>
+        <PurposeCoded>Original</PurposeCoded>
+      </Purpose>
+    </AuctionResultResponsePurpose>
+    <AuctionResultResponseIssueDate>20001214T10:52:00</AuctionResultResponseIssueDate>
+    <AuctionResultResponseID>AUCT-78999RSP</AuctionResultResponseID>
+    <AuctionCreateReference>
+      <Reference>
+        <RefNum>ABB Cornerstone Company Auction</RefNum>
+        <RefDate>20001214T11:19:00</RefDate>
+      </Reference>
+    </AuctionCreateReference>
+    <AuctionResultResponseCoded>Accepted</AuctionResultResponseCoded>
+    <Language>
+      <LanguageCoded>en</LanguageCoded>
+    </Language>
+  </AuctionResultResponseHeader>
+</AuctionResultResponse>
+

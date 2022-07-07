@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PriceCheckResult>
+  <PriceCheckResultHeader>
+    <PriceCheckResultID>
+      <Reference>
+        <RefNum>0011223344</RefNum>
+      </Reference>
+    </PriceCheckResultID>
+    <PriceCheckResultIssueDate>20010115T12:00:00</PriceCheckResultIssueDate>
+    <SupplierParty>
+      <Party>
+        <PartyID>
+          <Identifier>
+            <Agency>
+              <AgencyCoded>AssignedBySellerOrSellersAgent</AgencyCoded>
+            </Agency>
+            <Ident>BCVND</Ident>
+          </Identifier>
+        </PartyID>
+        <NameAddress AddressTypeCoded="NotApplicable">
+          <Name1>Dunn Manufacturing</Name1>
+          <Department>Order Department</Department>
+          <PostalCode>95006</PostalCode>
+          <City>Orange</City>
+          <Region>
+            <RegionCoded>USCA</RegionCoded>
+          </Region>
+        </NameAddress>
+        <OtherContacts>
+          <ListOfContact>
+            <Contact>
+              <ContactName>Ms Black</ContactName>
+              <ContactFunction>
+                <ContactFunctionCoded>AccountsReceivableContact</ContactFunctionCoded>
+              </ContactFunction>
+              <ListOfContactNumber>
+                <ContactNumber>
+                  <ContactNumberValue>212-345-4784</ContactNumberValue>
+                  <ContactNumberTypeCoded>TelephoneNumber</ContactNumberTypeCoded>
+                </ContactNumber>
+                <ContactNumber>
+                  <ContactNumberValue>Hblack@DunnMfg.com</ContactNumberValue>
+                  <ContactNumberTypeCoded>EmailAddress</ContactNumberTypeCoded>
+                </ContactNumber>
+              </ListOfContactNumber>
+            </Contact>
+            <Contact>
+              <ContactName>George Walsh</ContactName>
+              <ContactFunction>
+                <ContactFunctionCoded>DeliveryContact</ContactFunctionCoded>
+              </ContactFunction>
+              <ListOfContactNumber>
+                <ContactNumber>
+                  <ContactNumberValue>212-345-4701</ContactNumberValue>
+                  <ContactNumberTypeCoded>TelephoneNumber</ContactNumberTypeCoded>
+                </ContactNumber>
+                <ContactNumber>
+                  <ContactNumberValue>gwalsh@DunnMfg.com</ContactNumberValue>
+                  <ContactNumberTypeCoded>EmailAddress</ContactNumberTypeCoded>
+                </ContactNumber>
+              </ListOfContactNumber>
+            </Contact>
+          </ListOfContact>
+        </OtherContacts>
+      </Party>
+    </SupplierParty>
+    <BuyerParty>
+      <Party>
+        <PartyID>
+          <Identifier>
+            <Agency>
+              <AgencyCoded>AssignedBySellerOrSellersAgent</AgencyCoded>
+            </Agency>
+            <Ident>3000</Ident>
+          </Identifier>
+        </PartyID>
+        <NameAddress AddressTypeCoded="NotApplicable">
+          <Name1>ABC Enterprises</Name1>
+          <POBox POBoxPostalCode="249"/>
+          <PostalCode>20012</PostalCode>
+          <City>Alpine</City>
+          <Region>
+            <RegionCoded>USNY</RegionCoded>
+          </Region>
+        </NameAddress>
+        <OrderContact>
+          <Contact>
+            <ContactName>Dietl,B.</ContactName>
+            <ContactFunction>
+              <ContactFunctionCoded>DepartmentOrPersonResponsibleForProcessingPurchaseOrder</ContactFunctionCoded>
+            </ContactFunction>
+            <ListOfContactNumber>
+              <ContactNumber>
+                <ContactNumberValue>655-456-8911</ContactNumberValue>
+                <ContactNumberTypeCoded>TelephoneNumber</ContactNumberTypeCoded>
+              </ContactNumber>
+              <ContactNumber>
+                <ContactNumberValue>bdietl@ABC.com</ContactNumberValue>
+                <ContactNumberTypeCoded>EmailAddress</ContactNumberTypeCoded>
+              </ContactNumber>
+            </ListOfContactNumber>
+          </Contact>
+        </OrderContact>
+      </Party>
+    </BuyerParty>
+    <PriceCheckShipToParty>
+      <Party>
+        <PartyID>
+          <Identifier>
+            <Agency>
+              <AgencyCoded>AssignedByBuyerOrBuyersAgent</AgencyCoded>
+            </Agency>
+            <Ident>3000</Ident>
+          </Identifier>
+        </PartyID>
+        <NameAddress AddressTypeCoded="NotApplicable">
+          <Name1>ABC Enterprises</Name1>
+          <StreetSupplement1>255 Marble Court</StreetSupplement1>
+          <StreetSupplement2>Marble Industrial Complex</StreetSupplement2>
+          <Building>Building G</Building>
+          <PostalCode>20001</PostalCode>
+          <City>New York</City>
+          <Region>
+            <RegionCoded>USNY</RegionCoded>
+          </Region>
+          <Country>
+            <CountryCoded>US</CountryCoded>
+          </Country>
+        </NameAddress>
+        <ReceivingContact>
+          <Contact>
+            <ContactName>Ms. Audra Murphy</ContactName>
+            <ListOfContactNumber>
+              <ContactNumber>
+                <ContactNumberValue>655-456-8901</ContactNumberValue>
+                <ContactNumberTypeCoded>TelephoneNumber</ContactNumberTypeCoded>
+              </ContactNumber>
+              <ContactNumber>
+                <ContactNumberValue>Amurphy@ABC.com</ContactNumberValue>
+                <ContactNumberTypeCoded>EmailAddress</ContactNumberTypeCoded>
+              </ContactNumber>
+            </ListOfContactNumber>
+          </Contact>
+        </ReceivingContact>
+      </Party>
+    </PriceCheckShipToParty>
+    <PriceCheckCurrency>
+      <Currency>
+        <CurrencyCoded>USD</CurrencyCoded>
+      </Currency>
+    </PriceCheckCurrency>
+    <PriceCheckResultLanguage>
+      <Language>
+        <LanguageCoded>en</LanguageCoded>
+      </Language>
+    </PriceCheckResultLanguage>
+  </PriceCheckResultHeader>
+  <PriceCheckResultDetail>
+    <ListOfPriceCheckResultItemDetail>
+      <PriceCheckResultItemDetail>
+        <QuotedItem>
+          <CheckResultBaseItemDetail>
+            <LineItemNum>
+              <BuyerLineItemNum>0010</BuyerLineItemNum>
+            </LineItemNum>
+            <CheckResultTransport>
+              <Transport>
+                <TransportID>56</TransportID>
+              </Transport>
+            </CheckResultTransport>
+          </CheckResultBaseItemDetail>
+        </QuotedItem>
+        <ResultPrice>
+          <Price>
+            <UnitPrice>
+              <UnitPriceValue>10.00</UnitPriceValue>
+              <Currency>
+                <CurrencyCoded>USD</CurrencyCoded>
+              </Currency>
+            </UnitPrice>
+            <PriceBasisQuantity>
+              <Quantity>
+                <QuantityValue>1</QuantityValue>
+                <UnitOfMeasurement>
+                  <UOMCoded>EA</UOMCoded>
+                </UnitOfMeasurement>
+              </Quantity>
+            </PriceBasisQuantity>
+          </Price>
+        </ResultPrice>
+      </PriceCheckResultItemDetail>
+    </ListOfPriceCheckResultItemDetail>
+  </PriceCheckResultDetail>
+  <PriceCheckResultSummary>
+    <PriceCheckItemError>0</PriceCheckItemError>
+  </PriceCheckResultSummary>
+</PriceCheckResult>
+

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SourcingCreateResponse>
+  <SourcingCreateResponseHeader>
+    <SourcingCreateResponsePurpose>
+      <Purpose>
+        <PurposeCoded>Change</PurposeCoded>
+        <PurposeCodedOther>oayhqcssjhbfzsrys</PurposeCodedOther>
+      </Purpose>
+    </SourcingCreateResponsePurpose>
+    <SourcingCreateResponseIssueDate>20011114T19:48:32-19:00</SourcingCreateResponseIssueDate>
+    <SourcingCreateResponseID>tqvssknqsgk</SourcingCreateResponseID>
+    <SourcingCreateReference>
+      <Reference>
+        <RefNum>wzvfcdsqu</RefNum>
+        <RefDate>20011114T19:48:32+18:00</RefDate>
+      </Reference>
+    </SourcingCreateReference>
+    <TrackingIDNumber>uffbad</TrackingIDNumber>
+    <SourcingResponseCoded>Other</SourcingResponseCoded>
+    <SourcingResponseCodedOther>polpblgtskvd</SourcingResponseCodedOther>
+    <Language LanguageDependent="true">
+      <LanguageCoded>hi</LanguageCoded>
+      <LanguageCodedOther>aweg</LanguageCodedOther>
+      <LocaleCoded>si</LocaleCoded>
+      <LocaleCodedOther>fdgkretyg</LocaleCodedOther>
+    </Language>
+    <SourcingCreateResponseNote>abc</SourcingCreateResponseNote>
+  </SourcingCreateResponseHeader>
+  <ListOfSourcingCreateResponseDetail>
+    <SourcingCreateResponseDetail>
+      <SourcingItemID>oxtiokbwgxl</SourcingItemID>
+      <SourcingItemName>zzjmerczovzhnx</SourcingItemName>
+      <ItemNumber>hcbxhrrrmpctmhpio</ItemNumber>
+      <ParentItemIdentifier>bjif</ParentItemIdentifier>
+      <SourcingItemResponseCoded>Other</SourcingItemResponseCoded>
+      <SourcingItemResponseCodedOther>lwkcqdmpoujjlcsfzr</SourcingItemResponseCodedOther>
+      <ListOfSourcingItemComponentResponse>
+        <SourcingItemComponentResponse>
+          <SourcingCreateResponseDetail>
+            <SourcingItemID>fpawvcjul</SourcingItemID>
+            <SourcingItemName>incsgkaoxlocl</SourcingItemName>
+            <ItemNumber>p</ItemNumber>
+            <ParentItemIdentifier>rwrwgribdtkalrnotvwtfqcxsqsu</ParentItemIdentifier>
+            <SourcingItemResponseCoded>InvalidSourcingDescription</SourcingItemResponseCoded>
+            <SourcingItemResponseCodedOther>nygdxmnwgmafwmdls</SourcingItemResponseCodedOther>
+          </SourcingCreateResponseDetail>
+        </SourcingItemComponentResponse>
+      </ListOfSourcingItemComponentResponse>
+    </SourcingCreateResponseDetail>
+  </ListOfSourcingCreateResponseDetail>
+  <SourcingCreateResponseSummary>
+    <SourcingCreateSummary>
+      <TotalNumberOfSourcingItems>815546200</TotalNumberOfSourcingItems>
+      <TotalNumberOfParticipants>1143003627</TotalNumberOfParticipants>
+      <EstimatedTotalValue>214053714</EstimatedTotalValue>
+    </SourcingCreateSummary>
+  </SourcingCreateResponseSummary>
+</SourcingCreateResponse>
+

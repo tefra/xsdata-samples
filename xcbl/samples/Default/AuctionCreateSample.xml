@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+
+<!--     SAMPLE DOCUMENT, NO REAL CUSTOMER DATA     -->
+
+<!DOCTYPE AuctionCreate SYSTEM 'AuctionCreate.dtd'>
+
+<AuctionCreate>
+    <AuctionCreateHeader>
+        <AuctionCreatePurpose>
+            <Purpose>
+                <PurposeCoded>Original</PurposeCoded>
+            </Purpose>
+        </AuctionCreatePurpose>
+        <AuctionCreateIssueDate>20001214T10:52:00</AuctionCreateIssueDate>
+        <AuctionCreateID>AUCT-78999</AuctionCreateID>
+        <FowardAuctionIndicator>true</FowardAuctionIndicator>
+        <AuctionValidityDates>
+            <ValidityDates>
+                <StartDate>20001215T09:00:00</StartDate>
+                <EndDate>20010115T09:00:00</EndDate>
+            </ValidityDates>
+        </AuctionValidityDates>
+        <DecisionDate>20010117T09:00:00</DecisionDate>
+        <RulesProfile>
+            <BidRuleCoded>EnglishForward</BidRuleCoded>
+            <WinRuleCoded>HighestBidWins</WinRuleCoded>
+        </RulesProfile>
+        <AuctionParticipants>
+            <InitiatingParty>
+                <Party>
+                    <PartyID>
+                        <Identifier>
+                            <Agency>
+                                <AgencyCoded>Other</AgencyCoded>
+                            </Agency>
+                            <Ident>ABB-1010</Ident>
+                        </Identifier>
+                    </PartyID>
+                    <NameAddress>
+                        <Name1>ABB Cornerstone Company</Name1>
+                        <Street>45 Terrance Blvd.</Street>
+                        <Floor>7th</Floor>
+                        <Department>Auction Department</Department>
+                        <PostalCode>96660</PostalCode>
+                        <City>Angelville</City>
+                        <Region>
+                            <RegionCoded>USCA</RegionCoded>
+                        </Region>
+                        <Country>
+                            <CountryCoded>US</CountryCoded>
+                        </Country>
+                    </NameAddress>
+                    <CorrespondenceLanguage>
+                        <Language>
+                            <LanguageCoded>en</LanguageCoded>
+                        </Language>
+                    </CorrespondenceLanguage>
+                </Party>
+            </InitiatingParty>
+            <ListOfAuctionPartners>
+                <AuctionPartners>
+                    <PartyID>
+                        <Identifier>
+                            <Agency>
+                                <AgencyCoded>Other</AgencyCoded>
+                            </Agency>
+                            <Ident>SEG-101</Ident>
+                        </Identifier>
+                    </PartyID>
+                    <GroupIndicator>true</GroupIndicator>
+                </AuctionPartners>
+            </ListOfAuctionPartners>
+        </AuctionParticipants>
+        <Language>
+            <LanguageCoded>en</LanguageCoded>
+        </Language>
+    </AuctionCreateHeader>
+
+    <ListOfAuctionCreateDetail>
+        <AuctionCreateDetail>
+            <AuctionItem>
+                <AuctionItemID>65777</AuctionItemID>
+                <AuctionItemName>56788893241</AuctionItemName>
+                <ListOfAuctionCategory>
+                    <AuctionCategory>
+                        <AuctionCategoryName>Office Supplies</AuctionCategoryName>
+                        <AuctionCategoryLevel>1</AuctionCategoryLevel>
+                    </AuctionCategory>
+                </ListOfAuctionCategory>
+                <AuctionItemHierarchyLevel>1</AuctionItemHierarchyLevel>
+                <AuctionQuantity>
+                    <Quantity>
+                        <QuantityValue SignificanceCoded="EqualTo" ConditionsCoded="Actual">5000</QuantityValue>
+                        <UnitOfMeasurement>
+                            <UOMCoded>EA</UOMCoded>
+                        </UnitOfMeasurement>
+                    </Quantity>
+                </AuctionQuantity>
+            </AuctionItem>
+            <ComponentAuctionIndicator>true</ComponentAuctionIndicator>
+            <ListOfAuctionItemComponents>
+                <AuctionItemComponent>
+                    <AuctionCreateDetail>
+                        <AuctionItem>
+                            <AuctionItemID>1</AuctionItemID>
+                            <AuctionItemName>554</AuctionItemName>
+                            <ListOfAuctionCategory>
+                                <AuctionCategory>
+                                    <AuctionCategoryName>Office Supplies</AuctionCategoryName>
+                                    <AuctionCategoryLevel>1</AuctionCategoryLevel>
+                                </AuctionCategory>
+                            </ListOfAuctionCategory>
+                            <AuctionItemHierarchyLevel>1</AuctionItemHierarchyLevel>
+                            <AuctionQuantity>
+                                <Quantity>
+                                    <QuantityValue SignificanceCoded="EqualTo" ConditionsCoded="Actual">5000</QuantityValue>
+                                    <UnitOfMeasurement>
+                                        <UOMCoded>EA</UOMCoded>
+                                    </UnitOfMeasurement>
+                                </Quantity>
+                            </AuctionQuantity>
+                        </AuctionItem>
+                        <ComponentAuctionIndicator>true</ComponentAuctionIndicator>
+                    </AuctionCreateDetail>
+                </AuctionItemComponent>
+                <AuctionItemComponent>
+                    <AuctionCreateDetail>
+                        <AuctionItem>
+                            <AuctionItemID>2</AuctionItemID>
+                            <AuctionItemName>555</AuctionItemName>
+                            <ListOfAuctionCategory>
+                                <AuctionCategory>
+                                    <AuctionCategoryName>Office Supplies</AuctionCategoryName>
+                                    <AuctionCategoryLevel>1</AuctionCategoryLevel>
+                                </AuctionCategory>
+                            </ListOfAuctionCategory>
+                            <AuctionItemHierarchyLevel>1</AuctionItemHierarchyLevel>
+                                <AuctionQuantity>
+                                    <Quantity>
+                                        <QuantityValue SignificanceCoded="EqualTo" ConditionsCoded="Actual">5000</QuantityValue>
+                                        <UnitOfMeasurement>
+                                            <UOMCoded>EA</UOMCoded>
+                                        </UnitOfMeasurement>
+                                    </Quantity>
+                                </AuctionQuantity>
+                            </AuctionItem>
+                            <ComponentAuctionIndicator>true</ComponentAuctionIndicator>
+                        </AuctionCreateDetail>
+                    </AuctionItemComponent>
+                </ListOfAuctionItemComponents>
+            </AuctionCreateDetail>
+        </ListOfAuctionCreateDetail>
+
+        <AuctionCreateSummary>
+            <TotalNumberOfAuctionItems>5000</TotalNumberOfAuctionItems>
+            <TotalNumberOfParticipants>4</TotalNumberOfParticipants>
+        </AuctionCreateSummary>
+
+</AuctionCreate>

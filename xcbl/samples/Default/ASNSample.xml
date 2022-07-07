@@ -1,0 +1,576 @@
+<?xml version="1.0"?>
+<!--     SAMPLE DOCUMENT, NO REAL CUSTOMER DATA     -->
+<!--        Every possible element is included. -->
+<!DOCTYPE AdvanceShipmentNotice SYSTEM 'AdvanceShipmentNotice.dtd'>
+
+<AdvanceShipmentNotice><!--This sample does not contain real life data, it also does not reflect a real transaction.  It is a sample made up of as many valid elements possible within an XML instance.-->
+    <ASNHeader>
+        <ASNNumber>
+            <Reference>
+                <RefNum>string of characters</RefNum>
+                <RefDate>20001011T12:46:00</RefDate>
+            </Reference>
+        </ASNNumber>
+        <ASNIssueDate>20001011T12:46:00</ASNIssueDate>
+        <ASNOrderNumber>
+            <BuyerOrderNumber>string of characters</BuyerOrderNumber>
+            <SellerOrderNumber>string of characters</SellerOrderNumber>
+            <ListOfMessageID>
+                <MessageID>
+                    <IDNumber>string of characters</IDNumber>
+                    <IDAssignedBy>
+                        <IDAssignedByCoded>Other</IDAssignedByCoded>
+                        <IDAssignedByCodedOther>string of characters</IDAssignedByCodedOther>
+                    </IDAssignedBy>
+                    <IDAssignedDate>20001211T14:45:00</IDAssignedDate>
+                </MessageID>
+                <MessageID>
+                    <IDNumber>string of characters</IDNumber>
+                    <IDAssignedBy>
+                        <IDAssignedByCoded>Other</IDAssignedByCoded>
+                        <IDAssignedByCodedOther>string of characters</IDAssignedByCodedOther>
+                    </IDAssignedBy><IDAssignedDate>20001211T14:45:00</IDAssignedDate>
+                </MessageID>
+            </ListOfMessageID>
+            <ASNPartialOrder>
+                <ASNPartialOrderCoded>Other</ASNPartialOrderCoded>
+                <ASNPartialOrderCodedOther>string of characters</ASNPartialOrderCodedOther>
+            </ASNPartialOrder>
+        </ASNOrderNumber>
+        <ASNOrderNumber>
+            <BuyerOrderNumber>string of characters</BuyerOrderNumber>
+        </ASNOrderNumber>
+        <ASNReferences>
+            <ShipmentIdentifier>
+                <Reference>
+                    <RefNum>string of characters</RefNum>
+                <RefDate>20001011T12:46:00</RefDate></Reference>
+            </ShipmentIdentifier>
+            <PackingListNumber>
+                <Reference>
+                    <RefNum>string of characters</RefNum>
+                    <RefDate>20001211T14:45:00</RefDate>
+                </Reference>
+            </PackingListNumber>
+            <ContractNumber>
+                <Reference>
+                    <RefNum>string of characters</RefNum>
+                    <RefDate>20001211T14:45:00</RefDate>
+                </Reference>
+            </ContractNumber>
+            <BillOfLadingNumber>
+                <Reference>
+                    <RefNum>string of characters</RefNum>
+                    <RefDate>20001211T14:45:00</RefDate>
+                </Reference>
+            </BillOfLadingNumber>
+            <AirWaybillNumber>
+                <Reference>
+                    <RefNum>string of characters</RefNum>
+                <RefDate>20001211T14:45:00</RefDate></Reference>
+            </AirWaybillNumber>
+            <ExportLicenceNumber>
+                <Reference>
+                    <RefNum>string of characters</RefNum>
+                    <RefDate>20001211T14:45:00</RefDate>
+                </Reference>
+            </ExportLicenceNumber>
+            <LetterOfCreditNumber>
+                <Reference>
+                    <RefNum>string of characters</RefNum>
+                <RefDate>20001211T14:45:00</RefDate></Reference>
+            </LetterOfCreditNumber>
+            <ListOfCarrierReference>
+                <CarrierReference>
+                    <CarrierReferenceNumber>
+                        <Reference>
+                            <RefNum>string of characters</RefNum>
+                            <RefDate>20001211T14:45:00</RefDate>
+                        </Reference>
+                    </CarrierReferenceNumber>
+                    <TransportRouteID>6</TransportRouteID>
+                </CarrierReference>
+                <CarrierReference>
+                    <CarrierReferenceNumber>
+                        <Reference>
+                            <RefNum>string of characters</RefNum>
+                            <RefDate>20001011T12:46:00</RefDate>
+                        </Reference>
+                    </CarrierReferenceNumber>
+                    <TransportRouteID>56</TransportRouteID>
+                </CarrierReference>
+            </ListOfCarrierReference>
+            <OtherASNReferences>
+                <ListOfReferenceCoded>
+                    <ReferenceCoded>
+                        <ReferenceTypeCoded>Other</ReferenceTypeCoded>
+                        <ReferenceTypeCodedOther>string of characters</ReferenceTypeCodedOther>
+                        <PrimaryReference>
+                            <Reference>
+                                <RefNum>string of characters</RefNum>
+                            <RefDate>20001211T14:45:00</RefDate></Reference>
+                        </PrimaryReference>
+                    </ReferenceCoded>
+                    <ReferenceCoded>
+                        <ReferenceTypeCoded>Other</ReferenceTypeCoded>
+                        <ReferenceTypeCodedOther>string of characters</ReferenceTypeCodedOther>
+                        <PrimaryReference>
+                            <Reference>
+                                <RefNum>string of characters</RefNum>
+                            <RefDate>20001211T14:45:00</RefDate></Reference>
+                        </PrimaryReference>
+                    </ReferenceCoded>
+                </ListOfReferenceCoded>
+            </OtherASNReferences>
+        </ASNReferences>
+        <ASNPurpose>
+            <ASNPurposeCoded>Replace</ASNPurposeCoded>
+            <ASNPurposeCodedOther>string of characters</ASNPurposeCodedOther>
+        </ASNPurpose>
+        <ASNType>
+            <ASNTypeCoded>Other</ASNTypeCoded>
+            <ASNTypeCodedOther>String of characters</ASNTypeCodedOther>
+        </ASNType>
+        <ASNStatus>
+            <ASNStatusCoded>Other</ASNStatusCoded>
+        </ASNStatus>
+        <ASNCurrency>
+            <Currency>
+                <CurrencyCoded>USD</CurrencyCoded>
+            </Currency>
+        </ASNCurrency>
+        <ASNLanguage>
+            <Language>
+                <LanguageCoded>fr</LanguageCoded>
+            </Language>
+        </ASNLanguage>
+        <ASNDates>
+            <DeliveryDate>20001011T14:10:00</DeliveryDate>
+            <EarliestDeliveryDate>20001011T14:10:00</EarliestDeliveryDate>
+            <ScheduleDeliveryDateAfter>20001011T14:10:00</ScheduleDeliveryDateAfter>
+            <ScheduleDeliveryDateBefore>20001011T14:10:00</ScheduleDeliveryDateBefore>
+            <ListOfDateCoded>
+                <DateCoded>
+                    <Date>20001011T14:10:00</Date>
+                    <DateQualifier>
+                        <DateQualifierCoded>Other</DateQualifierCoded>
+                        <DateQualifierCodedOther>string of characters</DateQualifierCodedOther>
+                    </DateQualifier>
+                </DateCoded>
+            </ListOfDateCoded>
+        </ASNDates>
+        <ASNParty>
+            <OrderParty>
+                <BuyerParty>
+                    <Party>
+                        <PartyID>
+                            <Identifier>
+                                <Agency>
+                                    <AgencyCoded>ACORD</AgencyCoded>
+                                </Agency>
+                                <Ident>string of characters</Ident>
+                            </Identifier>
+                        </PartyID>
+                        <MDFBusiness>false</MDFBusiness>
+                        <NameAddress AddressTypeCoded="ShipFrom" AddressTypeCodedOther="string">
+                        <ExternalAddressID>string of characters</ExternalAddressID>
+                        <Name1>ABC Company, Ltd.</Name1>
+                        <Name2>Also known as XYZ Company</Name2>
+                        <Name3>string of characters, optional</Name3>
+                        <Identifier>
+                            <Agency>
+                                <AgencyCoded>APWAAndOCSI</AgencyCoded>
+                                <AgencyCodedOther>string of characters</AgencyCodedOther>
+                            </Agency>
+                            <Ident>string of characters</Ident>
+                        </Identifier>
+                        <POBox POBoxPostalCode="555">string of characters, optional</POBox>
+                        <Street>string of characters, optional</Street>
+                        <HouseNumber>string of characters, optional</HouseNumber>
+                        <StreetSupplement1>string of characters, optional</StreetSupplement1>
+                        <StreetSupplement2>string of characters, optional</StreetSupplement2>
+                        <Building>string of characters, optional</Building>
+                        <Floor>string of characters, optional</Floor>
+                        <RoomNumber>string of characters, optional</RoomNumber>
+                        <InhouseMail>string of characters, optional</InhouseMail>
+                        <Department>string of characters, optional</Department>
+                        <PostalCode>string of characters, optional</PostalCode>
+                        <City>string of characters</City>
+                        <County>string of characters</County>
+                        <Region>
+                            <RegionCoded>Other</RegionCoded>
+                            <RegionCodedOther>string of characters, optional</RegionCodedOther>
+                        </Region>
+                        <District>string of characters</District>
+                        <Country>
+                            <CountryCoded>DE</CountryCoded>
+                            <CountryCodedOther>string of characters</CountryCodedOther>
+                        </Country>
+                        <Timezone>
+                            <TimezoneCoded>11.45</TimezoneCoded>
+                            <TimezoneCodedOther>0000.00</TimezoneCodedOther>
+                        </Timezone>
+                    </NameAddress>
+                    <CorrespondenceLanguage>
+                        <Language>
+                            <LanguageCoded>en</LanguageCoded>
+                        </Language>
+                    </CorrespondenceLanguage>
+                </Party>
+            </BuyerParty>
+            <BuyerTaxInformation>
+                <PartyTaxInformation>
+                    <RegisteredName>string of characters</RegisteredName>
+                    <RegisteredOffice>string of characters</RegisteredOffice>
+                    <TaxLocation>
+                        <Location>
+                            <LocationQualifierCoded>Other</LocationQualifierCoded>
+                            <LocationQualifierCodedOther>string of characters</LocationQualifierCodedOther>
+                            <LocationIdentifier>
+                                <LocID>
+                                    <Identifier>
+                                        <Agency>
+                                            <AgencyCoded>ACORD</AgencyCoded>
+                                            <AgencyCodedOther>string of characters</AgencyCodedOther>
+                                            <AgencyDescription>string of characters</AgencyDescription>
+                                            <CodeListIdentifierCoded>Other</CodeListIdentifierCoded>
+                                            <CodeListIdentifierCodedOther>string of characters</CodeListIdentifierCodedOther>
+                                        </Agency>
+                                        <Ident>string of characters</Ident>
+                                    </Identifier>
+                                </LocID>
+                            </LocationIdentifier>
+                            <GPSCooridinates>
+                                <GPSSystem>string</GPSSystem>
+                                <Latitude>string</Latitude>
+                                <Longitude>string</Longitude>
+                            </GPSCooridinates>
+                        </Location>
+                    </TaxLocation>
+                    <CompanyRegistrationNumber>string of characters</CompanyRegistrationNumber>
+                </PartyTaxInformation>
+            </BuyerTaxInformation>
+            <SellerParty>
+                <Party>
+                    <PartyID>
+                        <Identifier>
+                            <Agency>
+                                <AgencyCoded>ACORD</AgencyCoded>
+                            </Agency>
+                            <Ident>string of characters</Ident>
+                        </Identifier>
+                    </PartyID>
+                    <MDFBusiness>false</MDFBusiness>
+                    <NameAddress AddressTypeCoded="ShipTo" AddressTypeCodedOther="string">
+                    <ExternalAddressID>string of characters</ExternalAddressID>
+                    <Name1>string of characters</Name1>
+                    <Name2>string of characters, optional</Name2>
+                    <Name3>string of characters, optional</Name3>
+                    <Identifier>
+                        <Agency>
+                            <AgencyCoded>APWAAndOCSI</AgencyCoded>
+                            <AgencyCodedOther>string of characters</AgencyCodedOther>
+                        </Agency>
+                        <Ident>string of characters</Ident>
+                    </Identifier>
+                    <POBox POBoxPostalCode="555">string of characters, optional</POBox>
+                    <Street>string of characters, optional</Street>
+                    <HouseNumber>string of characters, optional</HouseNumber>
+                    <StreetSupplement1>string of characters, optional</StreetSupplement1>
+                    <StreetSupplement2>string of characters, optional</StreetSupplement2>
+                    <Building>string of characters, optional</Building>
+                    <Floor>string of characters, optional</Floor>
+                    <RoomNumber>string of characters, optional</RoomNumber>
+                    <InhouseMail>string of characters, optional</InhouseMail>
+                    <Department>string of characters, optional</Department>
+                    <PostalCode>string of characters, optional</PostalCode>
+                    <City>string of characters</City>
+                    <County>string of characters</County>
+                    <Region>
+                        <RegionCoded>Other</RegionCoded>
+                        <RegionCodedOther>string of characters, optional</RegionCodedOther>
+                    </Region>
+                    <District>string of characters</District>
+                    <Country>
+                        <CountryCoded>DE</CountryCoded>
+                        <CountryCodedOther>string of characters</CountryCodedOther>
+                    </Country>
+                            <Timezone>
+                                <TimezoneCoded>11.45</TimezoneCoded>
+                                <TimezoneCodedOther>0000.00</TimezoneCodedOther>
+                            </Timezone>
+                        </NameAddress>
+                        <CorrespondenceLanguage>
+                            <Language>
+                                <LanguageCoded>en</LanguageCoded>
+                            </Language>
+                        </CorrespondenceLanguage>
+                    </Party>
+                </SellerParty>
+            </OrderParty>
+        </ASNParty>
+    </ASNHeader>
+
+    <ASNDetail>
+        <ListOfASNItemDetail>
+            <ASNItemDetail>
+                <ASNBaseItemDetail>
+                    <LineItemNum>
+                        <BuyerLineItemNum>665</BuyerLineItemNum>
+                        <SellerLineItemNum>4321</SellerLineItemNum>
+                    </LineItemNum>
+                    <ConditionsOfSale>
+                        <SalesRequirement>
+                            <SalesRequirementCoded>Other</SalesRequirementCoded>
+                            <SalesRequirementCodedOther>string of characters</SalesRequirementCodedOther>
+                        </SalesRequirement>
+                    </ConditionsOfSale>
+                    <ExceptionQuantities>
+                        <Damaged>
+                            <Quantity>
+                                <QuantityRange>
+                                    <MinimumValue SignificanceCoded="Approximately" SignificanceCodedOther="string" ConditionsCoded="InWater" ConditionsCodedOther="string">000</MinimumValue>
+                                    <MaximumValue SignificanceCoded="Approximately" SignificanceCodedOther="string" ConditionsCoded="InWater" ConditionsCodedOther="string">000</MaximumValue>
+                                </QuantityRange>
+                                <UnitOfMeasurement>
+                                    <UOMCoded>Other</UOMCoded>
+                                    <UOMCodedOther>string of characters</UOMCodedOther>
+                                </UnitOfMeasurement>
+                            </Quantity>
+                        </Damaged>
+                        <Returned>
+                            <Quantity>
+                                <QuantityRange>
+                                    <MinimumValue SignificanceCoded="Approximately" SignificanceCodedOther="string" ConditionsCoded="InWater" ConditionsCodedOther="string">000</MinimumValue>
+                                    <MaximumValue SignificanceCoded="Approximately" SignificanceCodedOther="string" ConditionsCoded="InWater" ConditionsCodedOther="string">000</MaximumValue>
+                                </QuantityRange>
+                                <UnitOfMeasurement>
+                                    <UOMCoded>Other</UOMCoded>
+                                    <UOMCodedOther>string of characters</UOMCodedOther>
+                                </UnitOfMeasurement>
+                            </Quantity>
+                        </Returned>
+                        <ShippedToDate>
+                            <Quantity>
+                                <QuantityRange>
+                                    <MinimumValue SignificanceCoded="Approximately" SignificanceCodedOther="string" ConditionsCoded="InWater" ConditionsCodedOther="string">000</MinimumValue>
+                                    <MaximumValue SignificanceCoded="Approximately" SignificanceCodedOther="string" ConditionsCoded="InWater" ConditionsCodedOther="string">000</MaximumValue>
+                                </QuantityRange>
+                                <UnitOfMeasurement>
+                                    <UOMCoded>Other</UOMCoded>
+                                    <UOMCodedOther>string of characters</UOMCodedOther>
+                                </UnitOfMeasurement>
+                            </Quantity>
+                        </ShippedToDate>
+                    </ExceptionQuantities>
+                    <ReferenceToPackage>
+                        <ItemPackagingReference>
+                            <PackageReference>
+                                <Quantity>
+                                    <QuantityRange>
+                                        <MinimumValue SignificanceCoded="Approximately" SignificanceCodedOther="string" ConditionsCoded="InWater" ConditionsCodedOther="string">000</MinimumValue>
+                                        <MaximumValue SignificanceCoded="Approximately" SignificanceCodedOther="string" ConditionsCoded="InWater" ConditionsCodedOther="string">000</MaximumValue>
+                                    </QuantityRange>
+                                    <UnitOfMeasurement>
+                                        <UOMCoded>Other</UOMCoded>
+                                        <UOMCodedOther>string of characters</UOMCodedOther>
+                                    </UnitOfMeasurement>
+                                </Quantity>
+                                <PackageIDReference>567</PackageIDReference>
+                                <PackageReference>
+                                    <PackageIDReference>554</PackageIDReference>
+                                </PackageReference>
+                            </PackageReference>
+                        </ItemPackagingReference>
+                    </ReferenceToPackage>
+                    <ItemShipFromParty>
+                        <Party>
+                            <PartyID>
+                                <Identifier>
+                                    <Agency>
+                                        <AgencyCoded>ACORD</AgencyCoded>
+                                    </Agency>
+                                    <Ident>string</Ident>
+                                </Identifier>
+                            </PartyID>
+                            <NameAddress AddressTypeCoded="ShipTo" AddressTypeCodedOther="string">
+                            <ExternalAddressID>string of characters</ExternalAddressID>
+                            <Name1>string of characters</Name1>
+                            <Name2>string of characters, optional</Name2>
+                            <Name3>string of characters, optional</Name3>
+                            <Identifier>
+                                <Agency>
+                                    <AgencyCoded>APWAAndOCSI</AgencyCoded>
+                                    <AgencyCodedOther>string of characters</AgencyCodedOther>
+                                </Agency>
+                                <Ident>string of characters</Ident>
+                            </Identifier>
+                            <POBox POBoxPostalCode="555">string of characters, optional</POBox>
+                            <Street>string of characters, optional</Street>
+                            <HouseNumber>string of characters, optional</HouseNumber>
+                            <StreetSupplement1>string of characters, optional</StreetSupplement1>
+                            <StreetSupplement2>string of characters, optional</StreetSupplement2>
+                            <Building>string of characters, optional</Building>
+                            <Floor>string of characters, optional</Floor>
+                            <RoomNumber>string of characters, optional</RoomNumber>
+                            <InhouseMail>string of characters, optional</InhouseMail>
+                            <Department>string of characters, optional</Department>
+                            <PostalCode>string of characters, optional</PostalCode>
+                            <City>string of characters</City>
+                            <County>string of characters</County>
+                            <Region>
+                                <RegionCoded>Other</RegionCoded>
+                                <RegionCodedOther>string of characters, optional</RegionCodedOther>
+                            </Region>
+                            <District>string of characters</District>
+                            <Country>
+                                <CountryCoded>DE</CountryCoded>
+                                <CountryCodedOther>string of characters</CountryCodedOther>
+                            </Country>
+                            <Timezone>
+                                <TimezoneCoded>11.45</TimezoneCoded>
+                                <TimezoneCodedOther>0000.00</TimezoneCodedOther>
+                            </Timezone>
+                        </NameAddress>
+                        <CorrespondenceLanguage>
+                            <Language>
+                                <LanguageCoded>en</LanguageCoded>
+                            </Language>
+                        </CorrespondenceLanguage>
+                    </Party>
+                </ItemShipFromParty>
+                </ASNBaseItemDetail>
+                <ASNLineItemListOfAllowOrCharge>
+                    <ListOfAllowOrCharge>
+                        <AllowOrCharge>
+                            <IndicatorCoded>Allowance</IndicatorCoded>
+                            <IndicatorCodedOther>string of characters</IndicatorCodedOther>
+                            <BasisCoded>Other</BasisCoded>
+                            <BasisCodedOther>String of characters</BasisCodedOther>
+                            <MethodOfHandlingCoded>VendorCheckToCustomer</MethodOfHandlingCoded>
+                            <MethodOfHandlingCodedOther>string of characters</MethodOfHandlingCodedOther>
+                            <AllowanceOrChargeDescription>
+                                <AllowOrChgDesc>
+                                    <RefID>string of characters</RefID>
+                                    <ServiceCoded>CancelledOrderHeavyDutyFlatcar</ServiceCoded>
+                                </AllowOrChgDesc>
+                            </AllowanceOrChargeDescription>
+                            <ValidityDates>
+                                <StartDate>20001211T14:23:00</StartDate>
+                                <EndDate>20011211T14:23:00</EndDate>
+                            </ValidityDates>
+                            <BasisQuantityRange>
+                                <Quantity>
+                                    <QuantityRange>
+                                        <MinimumValue SignificanceCoded="Approximately" SignificanceCodedOther="string" ConditionsCoded="InWater" ConditionsCodedOther="string">000</MinimumValue>
+                                        <MaximumValue SignificanceCoded="Approximately" SignificanceCodedOther="string" ConditionsCoded="InWater" ConditionsCodedOther="string">000</MaximumValue>
+                                    </QuantityRange>
+                                    <UnitOfMeasurement>
+                                        <UOMCoded>Other</UOMCoded>
+                                        <UOMCodedOther>string of characters</UOMCodedOther>
+                                    </UnitOfMeasurement>
+                                </Quantity>
+                            </BasisQuantityRange>
+                            <TypeOfAllowanceOrCharge>
+                                <MonetaryValue>
+                                    <MonetaryAmount>000000000000000.000000</MonetaryAmount>
+                                    <Currency>
+                                        <CurrencyCoded>USD</CurrencyCoded>
+                                    </Currency>
+                                    <RateOfExchangeDetail>
+                                        <ReferenceCurrency>
+                                            <Currency>
+                                                <CurrencyCoded>USD</CurrencyCoded>
+                                            </Currency>
+                                        </ReferenceCurrency>
+                                        <TargetCurrency>
+                                            <Currency>
+                                                <CurrencyCoded>NZD</CurrencyCoded>
+                                            </Currency>
+                                        </TargetCurrency>
+                                        <RateOfExchange>0000000000.000000000</RateOfExchange>
+                                        <InverseRateOfExchange>0000000000.000000000</InverseRateOfExchange>
+                                        <DateOfRateOfExchange>20001211T14:21:00</DateOfRateOfExchange>
+                                        <ListOfRateOfExchangeReference>
+                                            <ListOfReference>
+                                                <Reference>
+                                                    <RefNum>string of characters</RefNum>
+                                                    <RefDate>20001211T14:22:00</RefDate>
+                                                </Reference>
+                                                <Reference>
+                                                    <RefNum>string of characters</RefNum>
+                                                    <RefDate>20001211T14:22:00</RefDate>
+                                                </Reference>
+                                                <Reference>
+                                                    <RefNum>string of characters</RefNum>
+                                                    <RefDate>20001211T14:22:00</RefDate>
+                                                </Reference>
+                                            </ListOfReference>
+                                        </ListOfRateOfExchangeReference>
+                                    </RateOfExchangeDetail>
+                                </MonetaryValue>
+                            </TypeOfAllowanceOrCharge>
+                            <Tax>
+                                <TaxFunctionQualifierCoded>Other</TaxFunctionQualifierCoded>
+                                <TaxFunctionQualifierCodedOther>string of characters</TaxFunctionQualifierCodedOther>
+                                <TaxCategoryCoded>Other</TaxCategoryCoded>
+                                <TaxCategoryCodedOther>string of characters</TaxCategoryCodedOther>
+                                <ReasonTaxExemptCoded>Other</ReasonTaxExemptCoded>
+                                <ReasonTaxExemptCodedOther>string of characters</ReasonTaxExemptCodedOther>
+                                <TaxTypeCoded>Other</TaxTypeCoded>
+                                <TaxTypeCodedOther>
+                                    <Identifier>
+                                        <Agency>
+                                            <AgencyCoded>ACORD</AgencyCoded>
+                                        </Agency>
+                                        <Ident>string of characters</Ident>
+                                    </Identifier>
+                                </TaxTypeCodedOther>
+                                <TaxPercent>000000.0000</TaxPercent>
+                                <TaxPaymentMethodCoded>Other</TaxPaymentMethodCoded>
+                                <TaxPaymentMethodCodedOther>string of characters</TaxPaymentMethodCodedOther>
+                                <TaxableAmount>000000000000000.000000</TaxableAmount>
+                                <TaxableAmountInTaxAccountingCurrency>000000000000000.000000</TaxableAmountInTaxAccountingCurrency>
+                                <TaxAmount>000000000000000.000000</TaxAmount>
+                            </Tax>
+                        </AllowOrCharge>
+                    </ListOfAllowOrCharge>
+                </ASNLineItemListOfAllowOrCharge>
+                <LineItemNote>String of characters</LineItemNote>
+            </ASNItemDetail>
+        </ListOfASNItemDetail>
+    </ASNDetail>
+    <ASNSummary>
+        <NumberOfLines>788</NumberOfLines>
+        <TransportPackagingTotals>
+            <TotalPackages>4500</TotalPackages>
+            <TotalPackageDepth>56</TotalPackageDepth>
+            <TotalTransport>4445</TotalTransport>
+            <TotalGrossWeight>
+                <Measurement>
+                    <MeasurementRange>
+                        <MinimumValue SignificanceCoded="Approximately" SignificanceCodedOther="string" ConditionsCoded="InWater" ConditionsCodedOther="string">000</MinimumValue>
+                        <MaximumValue SignificanceCoded="Approximately" SignificanceCodedOther="string" ConditionsCoded="InWater" ConditionsCodedOther="string">000</MaximumValue>
+                    </MeasurementRange>
+                    <UnitOfMeasurement>
+                        <UOMCoded>Other</UOMCoded>
+                        <UOMCodedOther>string of characters</UOMCodedOther>
+                    </UnitOfMeasurement>
+                </Measurement>
+            </TotalGrossWeight>
+            <GrossVolume>
+                <Measurement>
+                    <MeasurementRange>
+                        <MinimumValue SignificanceCoded="Approximately" SignificanceCodedOther="string" ConditionsCoded="InWater" ConditionsCodedOther="string">000</MinimumValue>
+                        <MaximumValue SignificanceCoded="Approximately" SignificanceCodedOther="string" ConditionsCoded="InWater" ConditionsCodedOther="string">000</MaximumValue>
+                    </MeasurementRange>
+                    <UnitOfMeasurement>
+                        <UOMCoded>Other</UOMCoded>
+                        <UOMCodedOther>string of characters</UOMCodedOther>
+                    </UnitOfMeasurement>
+                </Measurement>
+            </GrossVolume>
+        </TransportPackagingTotals>
+        <SummaryNote>string of characters</SummaryNote>
+    </ASNSummary>
+</AdvanceShipmentNotice>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TradingPartnerUserInformation>
+  <TradingPartnerUserPurpose>
+    <TradingPartnerUserPurposeCoded>Other</TradingPartnerUserPurposeCoded>
+    <TradingPartnerUserPurposeCodedOther>string of characters</TradingPartnerUserPurposeCodedOther>
+  </TradingPartnerUserPurpose>
+  <ListOfTradingPartnerUser>
+    <TradingPartnerUser>
+      <TradingPartnerOrganizationReference>
+        <Identifications>
+          <PrimaryID>
+            <Agency>
+              <AgencyCoded>AU-LIFA</AgencyCoded>
+            </Agency>
+            <Ident>string of characters</Ident>
+            <ShortID>string of characters</ShortID>
+          </PrimaryID>
+          <ListOfTradingPartnerID>
+            <TradingPartnerID>
+              <Identifier>
+                <Agency>
+                  <AgencyCoded>AU-LIFA</AgencyCoded>
+                </Agency>
+                <Ident>string of characters</Ident>
+              </Identifier>
+            </TradingPartnerID>
+          </ListOfTradingPartnerID>
+        </Identifications>
+      </TradingPartnerOrganizationReference>
+      <UserID UserShortID="jblack">Joe Black</UserID>
+      <PersonProfile>
+        <Title>
+          <TitleCoded>Other</TitleCoded>
+          <TitleCodedOther>String of characters</TitleCodedOther>
+        </Title>
+        <AcademicTitle>
+          <AcademicTitleCoded>Other</AcademicTitleCoded>
+          <AcademicTitleCodedOther>string of characters</AcademicTitleCodedOther>
+        </AcademicTitle>
+        <LastName>string of characters</LastName>
+        <FirstName>string of characters</FirstName>
+        <MiddleName>string of characters</MiddleName>
+        <FullName>string of characters</FullName>
+        <CorrespondenceLanguage>
+          <Language>
+            <LanguageCoded>en</LanguageCoded>
+            <LanguageCodedOther>string of characters</LanguageCodedOther>
+            <LocaleCoded>Other</LocaleCoded>
+            <LocaleCodedOther>string of characters</LocaleCodedOther>
+          </Language>
+        </CorrespondenceLanguage>
+        <DateFormat>
+          <DateFormatCoded>YYYYMMDD</DateFormatCoded>
+          <DateFormatCodedOther>string of characters</DateFormatCodedOther>
+        </DateFormat>
+        <PersonTimezone>
+          <Timezone>
+            <TimezoneCoded>09.00</TimezoneCoded>
+            <TimezoneCodedOther>-06.00</TimezoneCodedOther>
+          </Timezone>
+        </PersonTimezone>
+        <ListOfX509Certificate>
+          <X509Certificate>
+            <ListOfCertificatePurpose>
+              <CertificatePurpose>
+                <CertificatePurposeCoded>Other</CertificatePurposeCoded>
+              </CertificatePurpose>
+            </ListOfCertificatePurpose>
+            <X509Cert>string of characters</X509Cert>
+          </X509Certificate>
+        </ListOfX509Certificate>
+        <PersonAddress>
+          <POBox POBoxPostalCode="555">string of characters</POBox>
+          <Street>string of characters</Street>
+          <HouseNumber>string of characters</HouseNumber>
+          <StreetSupplement1>string of characters</StreetSupplement1>
+          <StreetSupplement2>string of characters</StreetSupplement2>
+          <PostalCode>string of characters</PostalCode>
+          <City>string of characters</City>
+          <County>string of characters</County>
+          <Region>
+            <RegionCoded>Other</RegionCoded>
+            <RegionCodedOther>string of characters</RegionCodedOther>
+          </Region>
+          <District>string of characters</District>
+          <Country>
+            <CountryCoded>US</CountryCoded>
+          </Country>
+          <Building>string of characters</Building>
+          <Floor>string of characters</Floor>
+          <RoomNumber>string of characters</RoomNumber>
+          <InhouseMail>string of characters</InhouseMail>
+          <Department>string of characters</Department>
+          <ListOfCommunicationDetail>
+            <CommunicationDetail>
+              <CommunicationDetailDescription>string of characters</CommunicationDetailDescription>
+              <PersonCommunicationType>
+                <PersonCommunicationTypeCoded>Other</PersonCommunicationTypeCoded>
+                <PersonCommunicationTypeCodedOther>string of characters</PersonCommunicationTypeCodedOther>
+              </PersonCommunicationType>
+              <CommunicationValue>string of characters</CommunicationValue>
+            </CommunicationDetail>
+          </ListOfCommunicationDetail>
+        </PersonAddress>
+        <GeneralNotes>string of characters</GeneralNotes>
+      </PersonProfile>
+      <ListOfUserRole>
+        <UserRole>
+          <UserRoleName>string of characters</UserRoleName>
+        </UserRole>
+      </ListOfUserRole>
+      <UserAdministration>
+        <ValidityDates>
+          <StartDate>20001010T14:40:00</StartDate>
+          <EndDate>20021010T14:40:00</EndDate>
+        </ValidityDates>
+        <UserStatus>
+          <UserStatusCoded>Other</UserStatusCoded>
+          <UserStatusCodedOther>string of characters</UserStatusCodedOther>
+        </UserStatus>
+      </UserAdministration>
+      <ListOfContactRelationType>
+        <ContactRelationType>
+          <ContactRelationTypeCoded>Other</ContactRelationTypeCoded>
+          <ContactRelationTypeCodedOther>string of characters</ContactRelationTypeCodedOther>
+        </ContactRelationType>
+      </ListOfContactRelationType>
+    </TradingPartnerUser>
+  </ListOfTradingPartnerUser>
+</TradingPartnerUserInformation>
+

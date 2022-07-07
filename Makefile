@@ -14,6 +14,7 @@ build-sabre: schema = sabre/schemas
 build-spacex: schema = spacex/launches.json
 build-travelport: schema = travelport/schemas/air_v48_0/Air.wsdl
 build-ubl: schema = ubl/schemas/maindoc
+build-xcbl: schema = xcbl/schemas
 
 builds = $\
 	build-amadeus $\
@@ -29,7 +30,8 @@ builds = $\
 	build-sabre $\
 	build-spacex $\
 	build-travelport $\
-	build-ubl
+	build-ubl $\
+	build-xcbl
 
 tests = $\
 	test-amadeus $\
@@ -46,7 +48,8 @@ tests = $\
 	test-sabre $\
 	test-spacex $\
 	test-travelport $\
-	test-ubl
+	test-ubl $\
+	test-xcbl
 
 mypies = $\
 	mypy-amadeus $\
@@ -63,7 +66,8 @@ mypies = $\
 	mypy-sabre $\
 	mypy-spacex $\
 	mypy-travelport $\
-	mypy-ubl
+	mypy-ubl $\
+	mypy-xcbl
 
 init-configs = $\
 	init-config-amadeus $\
@@ -80,7 +84,8 @@ init-configs = $\
 	init-config-sabre $\
 	init-config-spacex $\
 	init-config-travelport $\
-	init-config-ubl
+	init-config-ubl $\
+	init-config-xcbl
 
 all: $(builds) $(tests) $(mypies)
 
@@ -99,6 +104,7 @@ sabre: build-sabre test-sabre mypy-sabre
 spacex: build-spacex test-spacex mypy-spacex
 travelport: build-travelport test-travelport mypy-travelport
 ubl: build-ubl test-ubl mypy-ubl
+xcbl: build-xcbl test-xcbl mypy-xcbl
 
 build: $(builds)
 test: $(tests)

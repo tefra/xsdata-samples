@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TradingPartnerResponse>
+  <ListOfTradingPartnerResponseInfo>
+    <TradingPartnerResponseInfo>
+      <ReturnMessageInformation>
+        <PrimaryMessageInformation>
+          <MessageResponseIdentifier>
+            <Reference>
+              <RefNum>string of characters</RefNum>
+              <RefDate>20001212T19:03:00</RefDate>
+            </Reference>
+          </MessageResponseIdentifier>
+          <PrimaryReturnCoded>99</PrimaryReturnCoded>
+          <PrimaryReturnCodeDescription>string of characters</PrimaryReturnCodeDescription>
+        </PrimaryMessageInformation>
+      </ReturnMessageInformation>
+    </TradingPartnerResponseInfo>
+    <TradingPartnerResponseInfo>
+      <ReturnMessageInformation>
+        <PrimaryMessageInformation>
+          <MessageResponseIdentifier>
+            <Reference>
+              <RefNum>string of characters</RefNum>
+              <RefDate>20001212T19:03:00</RefDate>
+            </Reference>
+          </MessageResponseIdentifier>
+          <PrimaryReturnCoded>99</PrimaryReturnCoded>
+        </PrimaryMessageInformation>
+      </ReturnMessageInformation>
+      <ServiceID>string of characters</ServiceID>
+    </TradingPartnerResponseInfo>
+  </ListOfTradingPartnerResponseInfo>
+</TradingPartnerResponse>
+

@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+
+<!--ABC Scenario, Order Request Document -->
+
+<!DOCTYPE OrderRequest SYSTEM 'OrderRequest.dtd'>
+
+<OrderRequest><OrderRequestHeader><OrderRequestNumber><BuyerOrderRequestNumber>REF-002-99-0-3000</BuyerOrderRequestNumber><SellerOrderRequestNumber>REF002-44556677</SellerOrderRequestNumber></OrderRequestNumber><OrderRequestIssueDate>20010104T09:00:00</OrderRequestIssueDate><OrderRequestReferences><OrderReferences><ContractReferences><ListOfContract><Contract><ContractID><Identifier><Agency><AgencyCoded>AssignedByPartyOriginatingTheMessage</AgencyCoded></Agency><Ident>CONTRACT:002-91</Ident></Identifier></ContractID><ContractType><ContractTypeCoded>FixedPriceIncentive</ContractTypeCoded></ContractType><ValidityDates><StartDate>20000604T09:00:00</StartDate><EndDate>20010615T09:00:00</EndDate></ValidityDates></Contract></ListOfContract></ContractReferences></OrderReferences></OrderRequestReferences><Purpose><PurposeCoded>InformationOnly</PurposeCoded></Purpose><RequestedResponse><RequestedResponseCoded>ResponseExpected</RequestedResponseCoded></RequestedResponse><OrderRequestCurrency><Currency><CurrencyCoded>USD</CurrencyCoded></Currency></OrderRequestCurrency><OrderRequestLanguage><Language><LanguageCoded>en</LanguageCoded></Language></OrderRequestLanguage><OrderRequestParty><SellerParty>
+				<Party>
+					<PartyID>
+						<Identifier>
+							<Agency>
+								<AgencyCoded>AssignedBySellerOrSellersAgent</AgencyCoded>
+							</Agency>
+							<Ident>BCVND</Ident>
+						</Identifier>
+					</PartyID>
+					<NameAddress>
+					 	<Name1>Dunn Manufacturing</Name1>
+					<Department>Order Department</Department><PostalCode>95006</PostalCode><City>Orange</City><Region><RegionCoded>USCA</RegionCoded></Region></NameAddress>
+					<OtherContacts>
+						<ListOfContact>
+							<Contact>
+								<ContactName>Ms Black</ContactName>
+								<ContactFunction><ContactFunctionCoded>AccountsReceivableContact</ContactFunctionCoded></ContactFunction><ListOfContactNumber>
+									<ContactNumber>
+										<ContactNumberValue>212-345-4784</ContactNumberValue>
+										<ContactNumberTypeCoded>TelephoneNumber</ContactNumberTypeCoded>
+									</ContactNumber>
+								<ContactNumber><ContactNumberValue>Hblack@DunnMfg.com</ContactNumberValue><ContactNumberTypeCoded>EmailAddress</ContactNumberTypeCoded></ContactNumber></ListOfContactNumber>
+							</Contact>
+						<Contact><ContactName>George Walsh</ContactName><ContactFunction><ContactFunctionCoded>DeliveryContact</ContactFunctionCoded></ContactFunction><ListOfContactNumber><ContactNumber><ContactNumberValue>212-345-4701</ContactNumberValue><ContactNumberTypeCoded>TelephoneNumber</ContactNumberTypeCoded></ContactNumber><ContactNumber><ContactNumberValue>gwalsh@DunnMfg.com</ContactNumberValue><ContactNumberTypeCoded>EmailAddress</ContactNumberTypeCoded></ContactNumber></ListOfContactNumber></Contact></ListOfContact>
+					</OtherContacts>
+				</Party>
+			</SellerParty></OrderRequestParty></OrderRequestHeader><OrderRequestDetail><OrderDetail><ListOfItemDetail><ItemDetail><BaseItemDetail><LineItemNum><BuyerLineItemNum>0010</BuyerLineItemNum></LineItemNum><ItemIdentifiers>
+						<PartNumbers>
+							<SellerPartNumber>
+								<PartNum>
+									<PartID>R-5000</PartID>
+								</PartNum>
+							</SellerPartNumber>
+							<BuyerPartNumber>
+								<PartNum>
+									<PartID>R-5000</PartID>
+								</PartNum>
+							</BuyerPartNumber>
+						</PartNumbers>
+					</ItemIdentifiers><TotalQuantity>
+						<Quantity>
+							<QuantityValue>111</QuantityValue>
+							<UnitOfMeasurement>
+								<UOMCoded>EA</UOMCoded>
+							</UnitOfMeasurement>
+						</Quantity>
+					</TotalQuantity></BaseItemDetail></ItemDetail><ItemDetail><BaseItemDetail><LineItemNum><BuyerLineItemNum>0011</BuyerLineItemNum></LineItemNum><ItemIdentifiers>
+						<PartNumbers>
+							<SellerPartNumber>
+								<PartNum>
+									<PartID>R-3456</PartID>
+								</PartNum>
+							</SellerPartNumber>
+							<BuyerPartNumber>
+								<PartNum>
+									<PartID>R-3456</PartID>
+								</PartNum>
+							</BuyerPartNumber>
+						</PartNumbers>
+					</ItemIdentifiers>
+					<TotalQuantity>
+						<Quantity>
+							<QuantityValue>1</QuantityValue>
+							<UnitOfMeasurement>
+								<UOMCoded>EA</UOMCoded>
+							</UnitOfMeasurement>
+						</Quantity>
+					</TotalQuantity></BaseItemDetail></ItemDetail></ListOfItemDetail></OrderDetail></OrderRequestDetail><OrderRequestSummary><OrderSummary><NumberOfLines>2</NumberOfLines><TransportPackagingTotals><TotalPackages>2</TotalPackages></TransportPackagingTotals></OrderSummary></OrderRequestSummary></OrderRequest>

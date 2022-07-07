@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuctionCreateResponse>
+  <AuctionCreateResponseHeader>
+    <AuctionCreateResponsePurpose>
+      <Purpose>
+        <PurposeCoded>Original</PurposeCoded>
+      </Purpose>
+    </AuctionCreateResponsePurpose>
+    <AuctionCreateResponseIssueDate>20001214T10:52:00</AuctionCreateResponseIssueDate>
+    <AuctionCreateResponseID>AUCT-78999</AuctionCreateResponseID>
+    <AuctionCreateReference>
+      <Reference>
+        <RefNum>ABB Cornerstone Company Auction</RefNum>
+        <RefDate>20001214T11:19:00</RefDate>
+      </Reference>
+    </AuctionCreateReference>
+    <AuctionResponseCoded>Accepted</AuctionResponseCoded>
+    <Language>
+      <LanguageCoded>en</LanguageCoded>
+    </Language>
+    <AuctionCreateResponseNote>Auction Accepted for start</AuctionCreateResponseNote>
+  </AuctionCreateResponseHeader>
+  <ListOfAuctionCreateResponseDetail>
+    <AuctionCreateResponseDetail>
+      <AuctionItemID>65777</AuctionItemID>
+      <AuctionItemName>56788893241</AuctionItemName>
+      <AuctionItemHierarchyLevel>1</AuctionItemHierarchyLevel>
+      <AuctionItemResponseCoded>AuctionAccepted</AuctionItemResponseCoded>
+    </AuctionCreateResponseDetail>
+  </ListOfAuctionCreateResponseDetail>
+  <AuctionCreateResponseSummary>
+    <AuctionCreateSummary>
+      <TotalNumberOfAuctionItems>10000</TotalNumberOfAuctionItems>
+      <TotalNumberOfParticipants>4</TotalNumberOfParticipants>
+    </AuctionCreateSummary>
+  </AuctionCreateResponseSummary>
+</AuctionCreateResponse>
+

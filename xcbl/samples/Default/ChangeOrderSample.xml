@@ -1,0 +1,312 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE ChangeOrder SYSTEM 'ChangeOrder.dtd'>
+
+<ChangeOrder>
+    <ChangeOrderHeader>
+        <ChangeOrderNumber>
+            <BuyerChangeOrderNumber>string of characters</BuyerChangeOrderNumber>
+            <SellerChangeOrderNumber>string of characters</SellerChangeOrderNumber>
+            <ListOfMessageID>
+                <MessageID>
+                    <IDNumber>string of characters</IDNumber>
+                    <IDAssignedBy>
+                        <IDAssignedByCoded>Other</IDAssignedByCoded>
+                    </IDAssignedBy>
+                    <IDAssignedDate>20001023T18:07:00</IDAssignedDate>
+                </MessageID>
+            </ListOfMessageID>
+        </ChangeOrderNumber>
+        <ChangeOrderSequence>string of characters</ChangeOrderSequence>
+        <ChangeOrderIssueDate>20001023T15:44:00</ChangeOrderIssueDate>
+        <OrderReference>
+            <Reference>
+                <RefNum>string of characters</RefNum>
+                <RefDate>20001023T18:08:00</RefDate>
+            </Reference>
+        </OrderReference>
+            <SellerParty>
+                <Party>
+                    <PartyID>
+                        <Identifier>
+                            <Agency>
+                                <AgencyCoded>ACORD</AgencyCoded>
+                                <AgencyCodedOther>string of characters</AgencyCodedOther>
+                            </Agency>
+                            <Ident>string of characters</Ident>
+                        </Identifier>
+                    </PartyID>
+                    <NameAddress>
+                        <Name1>string of characters</Name1>
+                        <Name2>string of characters</Name2>
+                        <Name3>string of characters</Name3>
+                        <Identifier>
+                            <Agency>
+                                <AgencyCoded>ASME</AgencyCoded>
+                                <AgencyCodedOther>string of characters</AgencyCodedOther>
+                            </Agency>
+                            <Ident>string of characters</Ident>
+                        </Identifier>
+                        <POBox POBoxPostalCode="553"></POBox>
+                        <Street>string of characters</Street>
+                        <HouseNumber>string of characters</HouseNumber>
+                        <StreetSupplement1>string of characters</StreetSupplement1>
+                        <StreetSupplement2>string of characters</StreetSupplement2>
+                        <RoomNumber>string of characters</RoomNumber>
+                        <InhouseMail>string of characters</InhouseMail>
+                        <Department>string of characters</Department>
+                        <PostalCode>string of characters</PostalCode>
+                        <City>string of characters</City>
+                        <Country>
+                            <CountryCoded>BS</CountryCoded>
+                        </Country>
+                        <Timezone>
+                            <TimezoneCoded>09.45</TimezoneCoded>
+                            <TimezoneCodedOther>-06.00</TimezoneCodedOther>
+                        </Timezone>
+                    </NameAddress><CorrespondenceLanguage>
+                        <Language>
+                            <LanguageCoded>en</LanguageCoded>
+                            <LocaleCoded>Other</LocaleCoded>
+                            <LocaleCodedOther>Asia-Pacific</LocaleCodedOther>
+                        </Language>
+                    </CorrespondenceLanguage></Party>
+                    </SellerParty><BuyerParty>
+                            <Party>
+                                <PartyID>
+                                    <Identifier>
+                                        <Agency>
+                                            <AgencyCoded>ACORD</AgencyCoded>
+                                            <AgencyCodedOther>string of characters</AgencyCodedOther>
+                                        </Agency>
+                                        <Ident>string of characters</Ident>
+                                    </Identifier>
+                                </PartyID>
+                            <NameAddress>
+                            <Name1>string of characters</Name1>
+                            <Name2>string of characters</Name2>
+                            <Name3>string of characters</Name3>
+                            <Identifier>
+                                <Agency>
+                                    <AgencyCoded>ASME</AgencyCoded>
+                                    <AgencyCodedOther>string of characters</AgencyCodedOther>
+                                </Agency>
+                                <Ident>string of characters</Ident>
+                            </Identifier>
+                            <POBox POBoxPostalCode="553"></POBox>
+                            <Street>string of characters</Street>
+                            <HouseNumber>string of characters</HouseNumber>
+                            <StreetSupplement1>string of characters</StreetSupplement1>
+                            <StreetSupplement2>string of characters</StreetSupplement2>
+                            <RoomNumber>string of characters</RoomNumber>
+                            <InhouseMail>string of characters</InhouseMail>
+                            <Department>string of characters</Department>
+                            <PostalCode>string of characters</PostalCode>
+                            <City>string of characters</City>
+                            <Country>
+                                <CountryCoded>BS</CountryCoded>
+                            </Country>
+                            <Timezone>
+                                <TimezoneCoded>09.45</TimezoneCoded>
+                                <TimezoneCodedOther>-06.00</TimezoneCodedOther>
+                            </Timezone>
+                        </NameAddress>
+                        <CorrespondenceLanguage>
+                            <Language>
+                                <LanguageCoded>en</LanguageCoded>
+                                <LocaleCoded>Other</LocaleCoded>
+                                <LocaleCodedOther>Asia-Pacific</LocaleCodedOther>
+                            </Language>
+                        </CorrespondenceLanguage>
+                    </Party>
+                </BuyerParty>
+                <ListOfReferenceCoded>
+                    <ReferenceCoded>
+                        <ReferenceTypeCoded>Other</ReferenceTypeCoded>
+                        <PrimaryReference>
+                            <Reference>
+                                <RefNum>string of characters</RefNum>
+                            </Reference>
+                        </PrimaryReference>
+                        <ReferenceDescription>string of characters</ReferenceDescription>
+                    </ReferenceCoded>
+                </ListOfReferenceCoded>
+                <Purpose>
+                    <PurposeCoded>Other</PurposeCoded>
+                    <PurposeCodedOther>string of characters</PurposeCodedOther>
+                </Purpose>
+                <RequestedResponse>
+                    <RequestedResponseCoded>Other</RequestedResponseCoded>
+                    <RequestedResponseCodedOther>string of characters</RequestedResponseCodedOther>
+                </RequestedResponse>
+                <ChangeType>
+                    <ChangeTypeCoded>Other</ChangeTypeCoded>
+                    <ChangeTypeCodedOther>string of characters</ChangeTypeCodedOther>
+                </ChangeType>
+                <OrderType>
+                    <OrderTypeCoded>Other</OrderTypeCoded>
+                    <OrderTypeCodedOther>string of characters</OrderTypeCodedOther>
+                </OrderType>
+            <OrderHeaderChanges>
+                <OrderHeader>
+                    <OrderNumber>
+                        <BuyerOrderNumber>string of characters</BuyerOrderNumber>
+                    </OrderNumber>
+                    <OrderIssueDate>20001006T09:00:00</OrderIssueDate>
+                    <Purpose>
+                        <PurposeCoded>Other</PurposeCoded>
+                        <PurposeCodedOther>string of characters</PurposeCodedOther>
+                    </Purpose>
+                    <OrderCurrency>
+                        <Currency>
+                            <CurrencyCoded>USD</CurrencyCoded>
+                        </Currency>
+                    </OrderCurrency>
+                    <OrderLanguage>
+                        <Language>
+                            <LanguageCoded>en</LanguageCoded>
+                        </Language>
+                    </OrderLanguage>
+                    <OrderParty>
+                        <BuyerParty>
+                            <Party>
+                                <PartyID>
+                                    <Identifier>
+                                        <Agency>
+                                            <AgencyCoded>ACORD</AgencyCoded>
+                                            <AgencyCodedOther>string of characters</AgencyCodedOther>
+                                        </Agency>
+                                        <Ident>string of characters</Ident>
+                                    </Identifier>
+                                </PartyID>
+                            </Party>
+                        </BuyerParty>
+                        <BuyerTaxInformation>
+                            <PartyTaxInformation></PartyTaxInformation>
+                        </BuyerTaxInformation>
+                    <SellerParty>
+                        <Party>
+                            <PartyID>
+                                <Identifier>
+                                    <Agency>
+                                        <AgencyCoded>ACORD</AgencyCoded>
+                                        <AgencyCodedOther>string of characters</AgencyCodedOther>
+                                    </Agency>
+                                    <Ident>string of characters</Ident>
+                                </Identifier>
+                            </PartyID>
+                        </Party>
+                    </SellerParty>
+                </OrderParty>
+                <OrderAllowancesOrCharges>
+                    <ListOfAllowOrCharge>
+                        <AllowOrCharge>
+                            <IndicatorCoded>Allowance</IndicatorCoded>
+                            <IndicatorCodedOther>string of characters</IndicatorCodedOther>
+                            <MethodOfHandlingCoded>VendorCheckToCustomer</MethodOfHandlingCoded>
+                            <AllowanceOrChargeDescription>
+                                <AllowOrChgDesc>
+                                    <ListOfDescription><Description><DescriptionText>string of characters</DescriptionText><Language><LanguageCoded>en</LanguageCoded></Language></Description></ListOfDescription><ServiceCoded>CancelledOrderHeavyDutyFlatcar</ServiceCoded>
+                                </AllowOrChgDesc>
+                            </AllowanceOrChargeDescription>
+                            <BasisQuantityRange>
+                                <Quantity>
+                                    <QuantityRange>
+                                        <MinimumValue SignificanceCoded="Approximately" SignificanceCodedOther="string" ConditionsCoded="InWater" ConditionsCodedOther="string">000</MinimumValue>
+                                        <MaximumValue SignificanceCoded="Approximately" SignificanceCodedOther="string" ConditionsCoded="InWater" ConditionsCodedOther="string">000</MaximumValue>
+                                    </QuantityRange>
+                                    <UnitOfMeasurement>
+                                        <UOMCoded>Other</UOMCoded>
+                                            <UOMCodedOther>string of characters</UOMCodedOther>
+                                    </UnitOfMeasurement>
+                                </Quantity>
+                            </BasisQuantityRange>
+                        <TypeOfAllowanceOrCharge>
+                            <MonetaryValue>
+                                <MonetaryAmount>000000000000000.000000</MonetaryAmount>
+                                <Currency>
+                                    <CurrencyCoded>USD</CurrencyCoded>
+                                </Currency>
+                            </MonetaryValue>
+                        </TypeOfAllowanceOrCharge>
+                    </AllowOrCharge>
+                </ListOfAllowOrCharge>
+            </OrderAllowancesOrCharges>
+        </OrderHeader>
+    </OrderHeaderChanges>
+</ChangeOrderHeader>
+
+<ChangeOrderDetail>
+    <ListOfChangeOrderItemDetail>
+        <ChangeOrderItemDetail>
+            <ItemDetailChangeCoded>Other</ItemDetailChangeCoded>
+        </ChangeOrderItemDetail>
+    </ListOfChangeOrderItemDetail>
+</ChangeOrderDetail>
+
+<ChangeOrderSummary>
+    <OriginalOrderSummary>
+        <OrderSummary>
+            <NumberOfLines>5</NumberOfLines>
+            <TotalTax>
+                <MonetaryValue>
+                    <MonetaryAmount>000000000000000.000</MonetaryAmount>
+                    <Currency>
+                        <CurrencyCoded>NZD</CurrencyCoded>
+                    </Currency>
+                    <RateOfExchangeDetail>
+                        <ReferenceCurrency>
+                            <Currency>
+                                <CurrencyCoded>NZD</CurrencyCoded>
+                            </Currency>
+                        </ReferenceCurrency>
+                        <TargetCurrency>
+                            <Currency>
+                                <CurrencyCoded>USD</CurrencyCoded>
+                            </Currency>
+                        </TargetCurrency>
+                        <RateOfExchange>000000000000000.000</RateOfExchange>
+                    </RateOfExchangeDetail>
+                </MonetaryValue>
+            </TotalTax>
+            <TotalAmount>
+                <MonetaryValue>
+                    <MonetaryAmount>000000000000000.00</MonetaryAmount>
+                </MonetaryValue>
+            </TotalAmount>
+            <TransportPackagingTotals>
+                <TotalNetNetWeight>
+                    <Measurement>
+                        <MeasurementRange>
+                            <MinimumValue SignificanceCoded="Approximately" SignificanceCodedOther="string" ConditionsCoded="InWater" ConditionsCodedOther="string">000</MinimumValue>
+                            <MaximumValue SignificanceCoded="Approximately" SignificanceCodedOther="string" ConditionsCoded="InWater" ConditionsCodedOther="string">000</MaximumValue>
+                        </MeasurementRange>
+                        <UnitOfMeasurement>
+                            <UOMCoded>Other</UOMCoded>
+                            <UOMCodedOther>string of characters</UOMCodedOther>
+                        </UnitOfMeasurement>
+                    </Measurement>
+                </TotalNetNetWeight>
+                <GrossVolume>
+                    <Measurement>
+                        <MeasurementRange>
+                            <MinimumValue SignificanceCoded="Approximately" SignificanceCodedOther="string" ConditionsCoded="InWater" ConditionsCodedOther="string">000</MinimumValue>
+                            <MaximumValue SignificanceCoded="Approximately" SignificanceCodedOther="string" ConditionsCoded="InWater" ConditionsCodedOther="string">000</MaximumValue>
+                        </MeasurementRange>
+                        <UnitOfMeasurement>
+                            <UOMCoded>Other</UOMCoded>
+                            <UOMCodedOther>string of characters</UOMCodedOther>
+                        </UnitOfMeasurement>
+                    </Measurement>
+                </GrossVolume>
+            </TransportPackagingTotals>
+            <SummaryNote>string of characters</SummaryNote>
+        </OrderSummary>
+    </OriginalOrderSummary>
+    <RevisedOrderSummary>
+        <OrderSummary>
+            <SummaryNote>string of characters</SummaryNote>
+        </OrderSummary>
+    </RevisedOrderSummary>
+</ChangeOrderSummary>
+</ChangeOrder>

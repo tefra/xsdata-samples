@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PaymentRequest>
+  <PaymentRequestHeader>
+    <PaymentRequestPurpose>
+      <Purpose>
+        <PurposeCoded>Original</PurposeCoded>
+      </Purpose>
+    </PaymentRequestPurpose>
+    <PaymentRequestIssueDate>20000201T09:03:00</PaymentRequestIssueDate>
+    <PaymentRequestID>
+      <Reference>
+        <RefNum>YY-77-97854344</RefNum>
+        <RefDate>20010201T09:03:00</RefDate>
+      </Reference>
+    </PaymentRequestID>
+    <PayerParty>
+      <PartyID>
+        <Identifier>
+          <Agency>
+            <AgencyCoded>Other</AgencyCoded>
+          </Agency>
+          <Ident>TTYYID-909</Ident>
+        </Identifier>
+      </PartyID>
+      <ListOfIdentifier>
+        <Identifier>
+          <Agency>
+            <AgencyCoded>Other</AgencyCoded>
+            <AgencyCodedOther>SMG</AgencyCodedOther>
+            <AgencyDescription>SIMEX Manufacturing Group</AgencyDescription>
+            <CodeListIdentifierCoded>Other</CodeListIdentifierCoded>
+            <CodeListIdentifierCodedOther>SMG-99</CodeListIdentifierCodedOther>
+          </Agency>
+          <Ident>SMG-99</Ident>
+        </Identifier>
+      </ListOfIdentifier>
+      <MDFBusiness>false</MDFBusiness>
+      <NameAddress AddressTypeCoded="NotApplicable">
+        <ExternalAddressID>SMG</ExternalAddressID>
+        <Name1>UnDo Manufacturing Company</Name1>
+        <POBox POBoxPostalCode="555">5555</POBox>
+        <Street>Marlin Street</Street>
+        <HouseNumber>55</HouseNumber>
+        <StreetSupplement1>Corner of Winchester</StreetSupplement1>
+        <Floor>5th Floor</Floor>
+        <PostalCode>90909-0000</PostalCode>
+        <City>Marbleville</City>
+        <County>Tate</County>
+        <Region>
+          <RegionCoded>USCA</RegionCoded>
+        </Region>
+        <Country>
+          <CountryCoded>US</CountryCoded>
+        </Country>
+        <Timezone>
+          <TimezoneCoded>09.45</TimezoneCoded>
+          <TimezoneCodedOther>-08.45</TimezoneCodedOther>
+        </Timezone>
+      </NameAddress>
+      <OrderContact>
+        <Contact>
+          <ContactName>Jane Small Doe</ContactName>
+          <ContactFunction>
+            <ContactFunctionCoded>Other</ContactFunctionCoded>
+          </ContactFunction>
+          <ContactDescription>Office Manager</ContactDescription>
+          <ListOfContactNumber>
+            <ContactNumber>
+              <ContactNumberValue>662-888-8888</ContactNumberValue>
+              <ContactNumberTypeCoded>TelephoneNumber</ContactNumberTypeCoded>
+            </ContactNumber>
+          </ListOfContactNumber>
+        </Contact>
+      </OrderContact>
+      <CorrespondenceLanguage>
+        <Language>
+          <LanguageCoded>en</LanguageCoded>
+        </Language>
+      </CorrespondenceLanguage>
+      <CertificateAuthority>Cert:99-654-87879990-00B-UY-002</CertificateAuthority>
+    </PayerParty>
+    <Language>
+      <LanguageCoded>en</LanguageCoded>
+    </Language>
+    <GeneralNotes>Allow</GeneralNotes>
+  </PaymentRequestHeader>
+  <ListOfPaymentRequestDetail>
+    <PaymentRequestDetail>
+      <PaymentDocumentID>
+        <Reference>
+          <RefNum>PO556093SMG-889</RefNum>
+          <RefDate>19991215T09:00:00</RefDate>
+        </Reference>
+      </PaymentDocumentID>
+      <PaymentDates>
+        <PaymentDueDate>20010201T09:03:00</PaymentDueDate>
+        <RequestedPaymentDate>20010201T09:03:00</RequestedPaymentDate>
+        <PayBeforeDate>20010201T09:03:00</PayBeforeDate>
+        <ListOfPaymentDates>
+          <ListOfDateCoded>
+            <DateCoded>
+              <Date>20010201T09:03:00</Date>
+              <DateQualifier>
+                <DateQualifierCoded>Other</DateQualifierCoded>
+                <DateQualifierCodedOther>Legal action starts on this date.</DateQualifierCodedOther>
+              </DateQualifier>
+            </DateCoded>
+          </ListOfDateCoded>
+        </ListOfPaymentDates>
+      </PaymentDates>
+      <FinancialInstitutionDetail>
+        <OriginatingFinancialInstitution>
+          <FIAccountDetail>
+            <AccountDetail>
+              <AccountID>565656-009-009-009-6733</AccountID>
+              <AccountTypeCoded>Other</AccountTypeCoded>
+              <AccountName1>SMG-UnDo Manufacturing Company</AccountName1>
+            </AccountDetail>
+            <FinancialInstitution>
+              <FinancialInstitutionID>CL-009</FinancialInstitutionID>
+              <FinancialInstitutionName>Banks Up In The Clouds</FinancialInstitutionName>
+              <FIBranchID>BUITC-009</FIBranchID>
+              <FIBranchName>Barley Branch</FIBranchName>
+              <FIBranchCity>Barley</FIBranchCity>
+              <FIBranchCountry>
+                <Country>
+                  <CountryCoded>US</CountryCoded>
+                </Country>
+              </FIBranchCountry>
+            </FinancialInstitution>
+          </FIAccountDetail>
+        </OriginatingFinancialInstitution>
+        <ReceivingFinancialInstitution>
+          <FIAccountDetail>
+            <AccountDetail>
+              <AccountID>TBG-1229</AccountID>
+              <SecondaryAccountID>TBG-1</SecondaryAccountID>
+              <IBAN>555555-009</IBAN>
+              <AccountControlKey>UH76TG68443DE4</AccountControlKey>
+              <AccountTypeCoded>Other</AccountTypeCoded>
+              <AccountTypeCodedOther>Holding Account</AccountTypeCodedOther>
+              <AccountName1>The Big Guys</AccountName1>
+              <AccountName2>The Biggest Guys</AccountName2>
+              <Currency>
+                <CurrencyCoded>USD</CurrencyCoded>
+              </Currency>
+              <AccountReferences>
+                <ListOfReferenceCoded>
+                  <ReferenceCoded>
+                    <ReferenceTypeCoded>Other</ReferenceTypeCoded>
+                    <PrimaryReference>
+                      <Reference>
+                        <RefNum>TBG-1229</RefNum>
+                        <RefDate>20001029T09:00:00</RefDate>
+                      </Reference>
+                    </PrimaryReference>
+                  </ReferenceCoded>
+                </ListOfReferenceCoded>
+              </AccountReferences>
+            </AccountDetail>
+            <FinancialInstitution>
+              <FinancialInstitutionID>CL-009</FinancialInstitutionID>
+              <FinancialInstitutionName>Banks Up In The Clouds</FinancialInstitutionName>
+            </FinancialInstitution>
+          </FIAccountDetail>
+        </ReceivingFinancialInstitution>
+      </FinancialInstitutionDetail>
+      <SettlementAmount>
+        <MonetaryValue>
+          <MonetaryAmount>000000000060000.000000</MonetaryAmount>
+        </MonetaryValue>
+      </SettlementAmount>
+      <SettlementCurrency>
+        <Currency>
+          <CurrencyCoded>USD</CurrencyCoded>
+        </Currency>
+      </SettlementCurrency>
+      <PaymentRequestParty>
+        <PayeeParty>
+          <Party>
+            <PartyID>
+              <Identifier>
+                <Agency>
+                  <AgencyCoded>Other</AgencyCoded>
+                </Agency>
+                <Ident>PayTheMan-99</Ident>
+              </Identifier>
+            </PartyID>
+          </Party>
+        </PayeeParty>
+      </PaymentRequestParty>
+      <LegalReportingInformation>
+        <LegalReportingIndicator>Legal-99</LegalReportingIndicator>
+        <LegalReportingSupplementalCode>TBG-legal-99-0354652</LegalReportingSupplementalCode>
+        <LegalReportingParty>
+          <Company>
+            <PartyID>
+              <Identifier>
+                <Agency>
+                  <AgencyCoded>Other</AgencyCoded>
+                </Agency>
+                <Ident>string of characters</Ident>
+              </Identifier>
+            </PartyID>
+            <MDFBusiness>true</MDFBusiness>
+            <NameAddress AddressTypeCoded="NotApplicable" AddressTypeCodedOther="string">
+              <Name1>Watch Dog Corporation</Name1>
+              <Identifier>
+                <Agency>
+                  <AgencyCoded>Other</AgencyCoded>
+                </Agency>
+                <Ident>string of characters</Ident>
+              </Identifier>
+              <POBox POBoxPostalCode="66">Sixty Six</POBox>
+              <Street>Dog Pound Lane</Street>
+              <Floor>102</Floor>
+              <PostalCode>78899</PostalCode>
+              <City>Roffville</City>
+              <Region>
+                <RegionCoded>USCA</RegionCoded>
+              </Region>
+              <Country>
+                <CountryCoded>US</CountryCoded>
+              </Country>
+            </NameAddress>
+            <CorrespondenceLanguage>
+              <Language>
+                <LanguageCoded>en</LanguageCoded>
+              </Language>
+            </CorrespondenceLanguage>
+          </Company>
+        </LegalReportingParty>
+        <LegalReportingInvoicedAmount>
+          <MonetaryValue>
+            <MonetaryAmount>000000000600000.000000</MonetaryAmount>
+          </MonetaryValue>
+        </LegalReportingInvoicedAmount>
+      </LegalReportingInformation>
+      <PaymentReasonCoded>HospitalCare</PaymentReasonCoded>
+      <PaymentReasonCodedOther>Behind again</PaymentReasonCodedOther>
+      <PaymentUrgencyCoded>Other</PaymentUrgencyCoded>
+      <PaymentUrgencyCodedOther>Immediately</PaymentUrgencyCodedOther>
+      <InternationalPaymentIndicator>true</InternationalPaymentIndicator>
+      <IntraCompanyPaymentIndicator>false</IntraCompanyPaymentIndicator>
+      <PaymentMeanCoded>Other</PaymentMeanCoded>
+      <PaymentInstructionNotes>Pay Upon Demand</PaymentInstructionNotes>
+      <IsCredit>false</IsCredit>
+    </PaymentRequestDetail>
+  </ListOfPaymentRequestDetail>
+  <PaymentRequestSummary>
+    <TotalPaymentDocuments>5</TotalPaymentDocuments>
+    <TotalLineItem>6</TotalLineItem>
+    <TotalSettlementAmount>
+      <MonetaryValue>
+        <MonetaryAmount>000000000600000.000000</MonetaryAmount>
+        <Currency>
+          <CurrencyCoded>USD</CurrencyCoded>
+        </Currency>
+      </MonetaryValue>
+    </TotalSettlementAmount>
+    <SummaryNote>Pay these guys, or else!</SummaryNote>
+  </PaymentRequestSummary>
+</PaymentRequest>
+

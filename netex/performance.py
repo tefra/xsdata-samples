@@ -10,6 +10,8 @@ from xsdata.formats.dataclass.parsers.config import ParserConfig
 from xsdata.formats.dataclass.parsers.handlers import LxmlEventHandler
 from xsdata.formats.dataclass.parsers.handlers import XmlEventHandler
 
+from netex.models import PublicationDelivery
+
 
 @contextmanager
 def timing(description: str) -> Any:
@@ -21,7 +23,7 @@ def timing(description: str) -> Any:
 
 
 with timing("importing module"):
-    from netex.models import *
+    from netex.models import *  # noqa
 
 sample = str(Path(__file__).parent.joinpath("NeTEx_HTM__2020-10-12.tar.xz"))
 with timing("decompress sample"):

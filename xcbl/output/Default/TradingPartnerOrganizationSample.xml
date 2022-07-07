@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TradingPartnerOrganizationInformation>
+  <TradingPartnerOrganizationPurpose>
+    <TradingPartnerOrganizationPurposeCoded>Other</TradingPartnerOrganizationPurposeCoded>
+    <TradingPartnerOrganizationPurposeCodedOther>string of characters</TradingPartnerOrganizationPurposeCodedOther>
+  </TradingPartnerOrganizationPurpose>
+  <ListOfTradingPartnerOrganization>
+    <TradingPartnerOrganization>
+      <TradingPartnerOrganizationHeader>
+        <ValidityDates>
+          <StartDate>20001009T18:33:00</StartDate>
+          <EndDate>20001009T18:33:00</EndDate>
+        </ValidityDates>
+        <ListOfTradingPartnerType>
+          <TradingPartnerType>
+            <TradingPartnerTypeCoded>Other</TradingPartnerTypeCoded>
+          </TradingPartnerType>
+        </ListOfTradingPartnerType>
+        <TradingPartnerIdentifications>
+          <Identifications>
+            <PrimaryID>
+              <Agency>
+                <AgencyCoded>AU-LIFA</AgencyCoded>
+                <AgencyCodedOther>string of characters</AgencyCodedOther>
+                <AgencyDescription>string of characters</AgencyDescription>
+                <CodeListIdentifierCoded>Other</CodeListIdentifierCoded>
+              </Agency>
+              <Ident>string of characters</Ident>
+            </PrimaryID>
+          </Identifications>
+        </TradingPartnerIdentifications>
+        <TradingPartnerDisplayName>string of characters</TradingPartnerDisplayName>
+        <name1>string of characters</name1>
+        <name2>string of characters</name2>
+        <name3>string of characters</name3>
+        <OrganizationLanguage>
+          <Language>
+            <LanguageCoded>en</LanguageCoded>
+          </Language>
+        </OrganizationLanguage>
+        <OrganizationCurrency>
+          <Currency>
+            <CurrencyCoded>USD</CurrencyCoded>
+          </Currency>
+        </OrganizationCurrency>
+        <TradingPartnerOrganizationVisibility>
+          <TradingPartnerOrganizationVisibilityCoded>Local</TradingPartnerOrganizationVisibilityCoded>
+        </TradingPartnerOrganizationVisibility>
+        <GeneralNotes>string of characters</GeneralNotes>
+      </TradingPartnerOrganizationHeader>
+      <OrganizationAddresses>
+        <PrimaryOrganizationAddress>
+          <OrganizationAddress>
+            <AddressType>
+              <AddressTypeCoded>Other</AddressTypeCoded>
+              <AddressTypeCodedOther>string of characters</AddressTypeCodedOther>
+            </AddressType>
+            <ExternalAddressID>string of characters</ExternalAddressID>
+            <POBox>string of characters</POBox>
+            <Street>string of characters</Street>
+            <HouseNumber>string of characters</HouseNumber>
+            <StreetSupplement1>string of characters</StreetSupplement1>
+            <StreetSupplement2>string of characters</StreetSupplement2>
+            <PostalCode>string of characters</PostalCode>
+            <City>string of characters</City>
+            <Country>
+              <CountryCoded>US</CountryCoded>
+            </Country>
+          </OrganizationAddress>
+        </PrimaryOrganizationAddress>
+      </OrganizationAddresses>
+      <ListOfBankDetail>
+        <BankDetail>
+          <BankCountry>
+            <Country>
+              <CountryCoded>US</CountryCoded>
+            </Country>
+          </BankCountry>
+          <BankKey>string of characters</BankKey>
+          <SWIFTCode>string of characters</SWIFTCode>
+          <BankAccountNumber>string of characters</BankAccountNumber>
+          <InternationalBankAccountNumber>string of characters</InternationalBankAccountNumber>
+          <TradingPartnerAccountHolder>string of characters</TradingPartnerAccountHolder>
+          <BankAccountControlKey>string of characters</BankAccountControlKey>
+          <BankReference>string of characters</BankReference>
+        </BankDetail>
+      </ListOfBankDetail>
+    </TradingPartnerOrganization>
+  </ListOfTradingPartnerOrganization>
+</TradingPartnerOrganizationInformation>
+

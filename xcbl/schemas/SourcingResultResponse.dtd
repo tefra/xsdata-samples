@@ -1,0 +1,24 @@
+<!-- xCBL Document DTD for XCBL35 SourcingResultResponse -->
+<!ELEMENT SourcingResultResponse ((SourcingResultResponsePurpose , SourcingresultResponseissueDate , SourcingResultResponseID , TrackingID , SourcingCreateReference , SourcingResultReference? , SourcingResultResponseCoded , SourcingResultResponseCodedOther? , Language , GeneralNote?))>
+<!ELEMENT SourcingResultResponsePurpose (Purpose)>
+<!ELEMENT SourcingresultResponseissueDate  (#PCDATA)>
+<!ELEMENT SourcingResultResponseID  (#PCDATA)>
+<!ELEMENT TrackingID  (#PCDATA)>
+<!ELEMENT SourcingCreateReference (Reference)>
+<!ELEMENT SourcingResultReference (Reference)>
+<!ELEMENT SourcingResultResponseCoded  (#PCDATA)>
+<!ELEMENT SourcingResultResponseCodedOther  (#PCDATA)>
+<!ELEMENT GeneralNote  (#PCDATA)>
+<!ELEMENT Purpose ((PurposeCoded , PurposeCodedOther?))>
+<!ELEMENT PurposeCoded  (#PCDATA)>
+<!ELEMENT PurposeCodedOther  (#PCDATA)>
+<!ELEMENT Reference ((RefNum , RefDate?))>
+<!ELEMENT RefNum  (#PCDATA)>
+<!ELEMENT RefDate  (#PCDATA)>
+<!ELEMENT Language ((LanguageCoded , LanguageCodedOther? , LocaleCoded? , LocaleCodedOther?))>
+<!ATTLIST Language 
+        LanguageDependent CDATA  #IMPLIED>
+<!ELEMENT LanguageCoded  (#PCDATA)>
+<!ELEMENT LanguageCodedOther  (#PCDATA)>
+<!ELEMENT LocaleCoded  (#PCDATA)>
+<!ELEMENT LocaleCodedOther  (#PCDATA)>
