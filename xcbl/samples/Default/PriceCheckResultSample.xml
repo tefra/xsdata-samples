@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+
+<!--    SAMPLE FILE, THIS DOES NOT CONTAIN REAL DATA        -->
+
+<!DOCTYPE PriceCheckResult SYSTEM 'PriceCheckResult.dtd'>
+
+<PriceCheckResult>
+    <PriceCheckResultHeader>
+        <PriceCheckResultID>
+            <Reference>
+                <RefNum>PC-009</RefNum>
+                <RefDate>20001214T17:04:00</RefDate>
+            </Reference>
+        </PriceCheckResultID>
+        <PriceCheckResultIssueDate>20001214T17:04:00</PriceCheckResultIssueDate>
+        <SupplierParty>
+            <Party>
+                <PartyID>
+                    <Identifier>
+                        <Agency>
+                            <AgencyCoded>Other</AgencyCoded>
+                        </Agency>
+                        <Ident>ABB-1010</Ident>
+                    </Identifier>
+                </PartyID>
+                <NameAddress>
+                    <Name1>ABB Cornerstone Company</Name1>
+                    <Street>45 Terrance Blvd.</Street>
+                    <Floor>7th</Floor>
+                    <Department>Auction Department</Department>
+                    <PostalCode>96660</PostalCode>
+                    <City>Angelville</City>
+                    <Region>
+                        <RegionCoded>USCA</RegionCoded>
+                    </Region>
+                    <Country>
+                        <CountryCoded>US</CountryCoded>
+                    </Country>
+                </NameAddress>
+                <CorrespondenceLanguage>
+                    <Language>
+                        <LanguageCoded>en</LanguageCoded>
+                    </Language>
+                </CorrespondenceLanguage>
+            </Party>
+        </SupplierParty>
+        <BuyerParty>
+            <Party>
+                <PartyID>
+                    <Identifier>
+                        <Agency>
+                            <AgencyCoded>Other</AgencyCoded>
+                        </Agency>
+                        <Ident>ABB-1010</Ident>
+                    </Identifier>
+                </PartyID>
+                <NameAddress>
+                    <Name1>ABB Cornerstone Company</Name1>
+                    <Street>45 Terrance Blvd.</Street>
+                    <Floor>7th</Floor>
+                    <Department>Auction Department</Department>
+                    <PostalCode>96660</PostalCode>
+                    <City>Angelville</City>
+                    <Region>
+                        <RegionCoded>USCA</RegionCoded>
+                    </Region>
+                    <Country>
+                        <CountryCoded>US</CountryCoded>
+                    </Country>
+                </NameAddress>
+                <CorrespondenceLanguage>
+                    <Language>
+                        <LanguageCoded>en</LanguageCoded>
+                    </Language>
+                </CorrespondenceLanguage>
+            </Party>
+        </BuyerParty>
+        <PriceCheckShipToParty>
+            <Party>
+                <PartyID>
+                    <Identifier>
+                        <Agency>
+                            <AgencyCoded>Other</AgencyCoded>
+                        </Agency>
+                        <Ident>HHG5T66-0</Ident>
+                    </Identifier>
+                </PartyID>
+            </Party>
+        </PriceCheckShipToParty>
+    </PriceCheckResultHeader>
+
+    <PriceCheckResultDetail>
+        <ListOfPriceCheckResultItemDetail>
+            <PriceCheckResultItemDetail>
+                <QuotedItem>
+                    <CheckResultBaseItemDetail>
+                        <LineItemNum>
+                            <BuyerLineItemNum>1</BuyerLineItemNum>
+                            <SellerLineItemNum>1</SellerLineItemNum>
+                        </LineItemNum>
+                        <ItemIdentifiers>
+                            <PartNumbers>
+                                <BuyerPartNumber>
+                                    <PartNum>
+                                        <PartID>T-77-0-0-56</PartID>
+                                    </PartNum>
+                                </BuyerPartNumber>
+                                <ManufacturerPartNumber>
+                                    <PartID>T-77-0-0-56</PartID>
+                                    <ManufacturerID>
+                                        <Identifier>
+                                            <Agency>
+                                                <AgencyCoded>Other</AgencyCoded>
+                                            </Agency>
+                                            <Ident>yy_88uiurj-009098776</Ident>
+                                        </Identifier>
+                                    </ManufacturerID>
+                                </ManufacturerPartNumber>
+                            </PartNumbers>
+                        </ItemIdentifiers>
+                        <CheckResultTransport>
+                            <Transport>
+                                <TransportID>77</TransportID>
+                            </Transport>
+                        </CheckResultTransport>
+                    </CheckResultBaseItemDetail>
+                </QuotedItem>
+                <ResultPrice>
+                    <Price>
+                        <UnitPrice>
+                            <UnitPriceValue>.005</UnitPriceValue>
+                        </UnitPrice>
+                    </Price>
+                </ResultPrice>
+                <GeneralLineItemNote>This Item on sale this month.</GeneralLineItemNote>
+            </PriceCheckResultItemDetail>
+        </ListOfPriceCheckResultItemDetail>
+    </PriceCheckResultDetail>
+
+    <PriceCheckResultSummary>
+        <PriceCheckItemError>0</PriceCheckItemError>
+        <TotalNumberOfLineItem>1</TotalNumberOfLineItem>
+    </PriceCheckResultSummary>
+
+</PriceCheckResult>

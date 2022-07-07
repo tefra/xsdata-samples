@@ -1,0 +1,327 @@
+<?xml version="1.0"?>
+
+<!--	SAMPLE FILE, THIS DOES NOT CONTAIN REAL DATA		-->
+
+<!DOCTYPE AvailabilityToPromiseResponse SYSTEM 'AvailabilityToPromiseResponse.dtd'>
+
+<AvailabilityToPromiseResponse>
+	<AvailabilityToPromiseResponseHeader>
+		<AvailabilityResponseID>
+			<Reference>
+				<RefNum>string of characters</RefNum>
+				<RefDate>20000825T09:00:00</RefDate>
+			</Reference>
+		</AvailabilityResponseID>
+		<AvailabilityResponseIssueDate>20001214T16:07:00</AvailabilityResponseIssueDate>
+		<AvailabilityToPromiseID>
+			<Reference>
+				<RefNum>string of characters</RefNum>
+				<RefDate>20000825T09:00:00</RefDate>
+			</Reference>
+		</AvailabilityToPromiseID>
+		<ATPResponse>
+			<AvailabilityToPromiseResponseCoded>Other</AvailabilityToPromiseResponseCoded>
+		</ATPResponse>
+		<AvailabilityResponseDeliveryOption>
+			<AvailabilityDeliveryOption>
+				<AvailabilityDeliveryOptionCoded>Other</AvailabilityDeliveryOptionCoded>
+			</AvailabilityDeliveryOption>
+		</AvailabilityResponseDeliveryOption>
+		<InitiatingParty>
+			<Party>
+				<PartyID>
+					<Identifier>
+						<Agency>
+							<AgencyCoded>AIHA</AgencyCoded>
+							<AgencyCodedOther>string of characters</AgencyCodedOther>
+							<AgencyDescription>string of characters</AgencyDescription>
+							<CodeListIdentifierCoded>Other</CodeListIdentifierCoded>
+							<CodeListIdentifierCodedOther>string of characters</CodeListIdentifierCodedOther>
+						</Agency>
+						<Ident>string of characters</Ident>
+					</Identifier>
+				</PartyID>
+				<ListOfIdentifier>
+					<Identifier>
+						<Agency>
+							<AgencyCoded>AIHA</AgencyCoded>
+							<AgencyCodedOther>string of characters</AgencyCodedOther>
+							<AgencyDescription>string of characters</AgencyDescription>
+							<CodeListIdentifierCoded>Other</CodeListIdentifierCoded>
+							<CodeListIdentifierCodedOther>string of characters</CodeListIdentifierCodedOther>
+						</Agency>
+						<Ident>string of characters</Ident>
+					</Identifier>
+					<Identifier>
+						<Agency>
+							<AgencyCoded>AIHA</AgencyCoded>
+							<AgencyCodedOther>string of characters</AgencyCodedOther>
+							<AgencyDescription>string of characters</AgencyDescription>
+							<CodeListIdentifierCoded>Other</CodeListIdentifierCoded>
+							<CodeListIdentifierCodedOther>string of characters</CodeListIdentifierCodedOther>
+						</Agency>
+						<Ident>string of characters</Ident>
+					</Identifier>
+					<Identifier>
+						<Agency>
+							<AgencyCoded>AIHA</AgencyCoded>
+							<AgencyCodedOther>string of characters</AgencyCodedOther>
+							<AgencyDescription>string of characters</AgencyDescription>
+							<CodeListIdentifierCoded>Other</CodeListIdentifierCoded>
+							<CodeListIdentifierCodedOther>string of characters</CodeListIdentifierCodedOther>
+						</Agency>
+						<Ident>string of characters</Ident>
+					</Identifier>
+				</ListOfIdentifier>
+				<MDFBusiness>true</MDFBusiness>
+				<NameAddress AddressTypeCodedOther="string">
+					<ExternalAddressID>string of characters</ExternalAddressID>
+					<Name1>string of characters</Name1>
+					<Name2>string of characters</Name2>
+					<Name3>string of characters</Name3>
+					<Identifier>
+						<Agency>
+							<AgencyCoded>ACORD</AgencyCoded>
+							<AgencyCodedOther>string of characters</AgencyCodedOther>
+							<AgencyDescription>string of characters</AgencyDescription>
+							<CodeListIdentifierCoded>Other</CodeListIdentifierCoded>
+							<CodeListIdentifierCodedOther>string of characters</CodeListIdentifierCodedOther>
+						</Agency>
+						<Ident>string</Ident>
+					</Identifier>
+					<POBox POBoxPostalCode="553">Other</POBox>
+					<Street>ABC Street</Street>
+					<HouseNumber>string of characters</HouseNumber>
+					<StreetSupplement1>string of characters</StreetSupplement1>
+					<StreetSupplement2>string of characters</StreetSupplement2>
+					<Building>string of characters</Building>
+					<Department>string of characters</Department>
+					<PostalCode>string of characters</PostalCode>
+					<City>string of characters</City>
+					<County>string of characters</County>
+					<Region>
+						<RegionCoded>Other</RegionCoded>
+						<RegionCodedOther>string of characters</RegionCodedOther>
+					</Region>
+					<District>string of characters</District>
+					<Country>
+						<CountryCoded>US</CountryCoded>
+						<CountryCodedOther>string of characters</CountryCodedOther>
+					</Country>
+					<Timezone>
+						<TimezoneCoded>09.45</TimezoneCoded>
+						<TimezoneCodedOther>-09.45</TimezoneCodedOther>
+					</Timezone>
+				</NameAddress>
+			</Party>
+		</InitiatingParty>
+		<AvailabilityShipToParty>
+			<Party>
+				<PartyID>
+					<Identifier>
+						<Agency>
+							<AgencyCoded>AIHA</AgencyCoded>
+							<AgencyCodedOther>string of characters</AgencyCodedOther>
+							<AgencyDescription>string of characters</AgencyDescription>
+							<CodeListIdentifierCoded>Other</CodeListIdentifierCoded>
+							<CodeListIdentifierCodedOther>string of characters</CodeListIdentifierCodedOther>
+						</Agency>
+						<Ident>string of characters</Ident>
+					</Identifier>
+				</PartyID>
+				<ListOfIdentifier>
+					<Identifier>
+						<Agency>
+							<AgencyCoded>AIHA</AgencyCoded>
+							<AgencyCodedOther>string of characters</AgencyCodedOther>
+							<AgencyDescription>string of characters</AgencyDescription>
+							<CodeListIdentifierCoded>Other</CodeListIdentifierCoded>
+							<CodeListIdentifierCodedOther>string of characters</CodeListIdentifierCodedOther>
+						</Agency>
+						<Ident>string of characters</Ident>
+					</Identifier>
+					<Identifier>
+						<Agency>
+							<AgencyCoded>AIHA</AgencyCoded>
+							<AgencyCodedOther>string of characters</AgencyCodedOther>
+							<AgencyDescription>string of characters</AgencyDescription>
+							<CodeListIdentifierCoded>Other</CodeListIdentifierCoded>
+							<CodeListIdentifierCodedOther>string of characters</CodeListIdentifierCodedOther>
+						</Agency>
+						<Ident>string of characters</Ident>
+					</Identifier>
+					<Identifier>
+						<Agency>
+							<AgencyCoded>AIHA</AgencyCoded>
+							<AgencyCodedOther>string of characters</AgencyCodedOther>
+							<AgencyDescription>string of characters</AgencyDescription>
+							<CodeListIdentifierCoded>Other</CodeListIdentifierCoded>
+							<CodeListIdentifierCodedOther>string of characters</CodeListIdentifierCodedOther>
+						</Agency>
+						<Ident>string of characters</Ident>
+					</Identifier>
+				</ListOfIdentifier>
+				<MDFBusiness>true</MDFBusiness>
+				<NameAddress AddressTypeCodedOther="string">
+					<ExternalAddressID>string of characters</ExternalAddressID>
+					<Name1>string of characters</Name1>
+					<Name2>string of characters</Name2>
+					<Name3>string of characters</Name3>
+					<Identifier>
+						<Agency>
+							<AgencyCoded>ACORD</AgencyCoded>
+							<AgencyCodedOther>string of characters</AgencyCodedOther>
+							<AgencyDescription>string of characters</AgencyDescription>
+							<CodeListIdentifierCoded>Other</CodeListIdentifierCoded>
+							<CodeListIdentifierCodedOther>string of characters</CodeListIdentifierCodedOther>
+						</Agency>
+						<Ident>string</Ident>
+					</Identifier>
+					<POBox POBoxPostalCode="553">Other</POBox>
+					<Street>ABC Street</Street>
+					<HouseNumber>string of characters</HouseNumber>
+					<StreetSupplement1>string of characters</StreetSupplement1>
+					<StreetSupplement2>string of characters</StreetSupplement2>
+					<Building>string of characters</Building>
+					<Department>string of characters</Department>
+					<PostalCode>string of characters</PostalCode>
+					<City>string of characters</City>
+					<County>string of characters</County>
+					<Region>
+						<RegionCoded>Other</RegionCoded>
+						<RegionCodedOther>string of characters</RegionCodedOther>
+					</Region>
+					<District>string of characters</District>
+					<Country>
+						<CountryCoded>US</CountryCoded>
+						<CountryCodedOther>string of characters</CountryCodedOther>
+					</Country>
+					<Timezone>
+						<TimezoneCoded>09.45</TimezoneCoded>
+						<TimezoneCodedOther>-09.45</TimezoneCodedOther>
+					</Timezone>
+				</NameAddress>
+				<CorrespondenceLanguage>
+					<Language>
+						<LanguageCoded>en</LanguageCoded>
+					</Language>
+				</CorrespondenceLanguage>
+			</Party>
+		</AvailabilityShipToParty>
+		<GeneralNote>string of characters</GeneralNote>
+	</AvailabilityToPromiseResponseHeader>
+	
+	<AvailabilityToPromiseResponseDetail>
+		<ListOfAvailabilityToPromiseResponseItemDetail>
+			<AvailabilityToPromiseResponseItemDetail>
+				<AvailabilityToPromiseResponseBaseItemDetail>
+					<BaseItemDetail>
+						<LineItemNum>
+							<BuyerLineItemNum>55</BuyerLineItemNum>
+							<SellerLineItemNum>66</SellerLineItemNum>
+						</LineItemNum>
+						<CountryOfOrigin>
+							<Country>
+								<CountryCoded>AF</CountryCoded>
+								<CountryCodedOther>string of characters</CountryCodedOther>
+							</Country>
+						</CountryOfOrigin>
+						<CountryOfDestination>
+							<Country>
+								<CountryCoded>US</CountryCoded>
+							</Country>
+						</CountryOfDestination>
+						<FinalRecipient>
+							<Party>
+								<PartyID>
+									<Identifier>
+										<Agency>
+											<AgencyCoded>AIHA</AgencyCoded>
+											<AgencyCodedOther>string of characters</AgencyCodedOther>
+											<AgencyDescription>string of characters</AgencyDescription>
+											<CodeListIdentifierCoded>Other</CodeListIdentifierCoded>
+											<CodeListIdentifierCodedOther>string of characters</CodeListIdentifierCodedOther>
+										</Agency>
+										<Ident>string of characters</Ident>
+									</Identifier>
+								</PartyID>
+								<ListOfIdentifier>
+									<Identifier>
+										<Agency>
+											<AgencyCoded>AIHA</AgencyCoded>
+											<AgencyCodedOther>string of characters</AgencyCodedOther>
+											<AgencyDescription>string of characters</AgencyDescription>
+											<CodeListIdentifierCoded>Other</CodeListIdentifierCoded>
+											<CodeListIdentifierCodedOther>string of characters</CodeListIdentifierCodedOther>
+										</Agency>
+										<Ident>string of characters</Ident>
+									</Identifier>
+									<Identifier>
+										<Agency>
+											<AgencyCoded>AIHA</AgencyCoded>
+											<AgencyCodedOther>string of characters</AgencyCodedOther>
+											<AgencyDescription>string of characters</AgencyDescription>
+											<CodeListIdentifierCoded>Other</CodeListIdentifierCoded>
+											<CodeListIdentifierCodedOther>string of characters</CodeListIdentifierCodedOther>
+										</Agency>
+										<Ident>string of characters</Ident>
+									</Identifier>
+									<Identifier>
+										<Agency>
+											<AgencyCoded>AIHA</AgencyCoded>
+											<AgencyCodedOther>string of characters</AgencyCodedOther>
+											<AgencyDescription>string of characters</AgencyDescription>
+											<CodeListIdentifierCoded>Other</CodeListIdentifierCoded>
+											<CodeListIdentifierCodedOther>string of characters</CodeListIdentifierCodedOther>
+										</Agency>
+										<Ident>string of characters</Ident>
+									</Identifier>
+								</ListOfIdentifier>
+								<MDFBusiness>true</MDFBusiness>
+								<NameAddress AddressTypeCodedOther="string">
+								<ExternalAddressID>string of characters</ExternalAddressID>
+								<Name1>string of characters</Name1>
+								<City>string of characters</City>
+								<Country>
+									<CountryCoded>US</CountryCoded>
+									<CountryCodedOther>string of characters</CountryCodedOther>
+								</Country>
+								<Timezone>
+									<TimezoneCoded>09.45</TimezoneCoded>
+									<TimezoneCodedOther>-09.45</TimezoneCodedOther>
+								</Timezone>
+							</NameAddress>
+							<CorrespondenceLanguage>
+								<Language>
+									<LanguageCoded>fr</LanguageCoded>
+								</Language>
+							</CorrespondenceLanguage>
+						</Party>
+					</FinalRecipient>
+						<ConditionsOfSale>
+							<SalesRequirement>
+								<SalesRequirementCoded>Other</SalesRequirementCoded>
+								<SalesRequirementCodedOther>string of characters</SalesRequirementCodedOther>
+							</SalesRequirement>
+							<SalesActionCoded>Other</SalesActionCoded>
+							<SalesActionCodedOther>string of characters</SalesActionCodedOther>
+							<SalesActionValue>string of characters</SalesActionValue>
+						</ConditionsOfSale>
+						<HazardousMaterials>
+							<Hazardous>
+								<HazardNote>string</HazardNote>
+								<EMSNum>string</EMSNum>
+								<Mfag>string</Mfag>
+							</Hazardous>
+						</HazardousMaterials>
+					</BaseItemDetail>
+				</AvailabilityToPromiseResponseBaseItemDetail>
+			</AvailabilityToPromiseResponseItemDetail>
+		</ListOfAvailabilityToPromiseResponseItemDetail>
+	</AvailabilityToPromiseResponseDetail>
+
+	<AvailabilityToPromiseResponseSummary>
+		<TotalNumberOfLineItems>4</TotalNumberOfLineItems>
+	</AvailabilityToPromiseResponseSummary>
+	
+</AvailabilityToPromiseResponse>

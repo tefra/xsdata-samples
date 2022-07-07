@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuctionResult>
+  <AuctionResultHeader>
+    <AuctionResultPurpose>
+      <Purpose>
+        <PurposeCoded>Original</PurposeCoded>
+      </Purpose>
+    </AuctionResultPurpose>
+    <AuctionResultIssueDate>20001214T10:52:00</AuctionResultIssueDate>
+    <AuctionResultID>
+      <Reference>
+        <RefNum>ABB Cornerstone Company Auction</RefNum>
+        <RefDate>20001214T11:19:00</RefDate>
+      </Reference>
+    </AuctionResultID>
+    <AuctionCreateReference>
+      <Reference>
+        <RefNum>ABB Cornerstone Company Auction</RefNum>
+        <RefDate>20001214T11:19:00</RefDate>
+      </Reference>
+    </AuctionCreateReference>
+    <ForwardAuctionIndicator>true</ForwardAuctionIndicator>
+    <Language>
+      <LanguageCoded>en</LanguageCoded>
+    </Language>
+  </AuctionResultHeader>
+  <ListOfAuctionResultDetail>
+    <AuctionResultDetail>
+      <AuctionResultItemID>
+        <Reference>
+          <RefNum>ABB Cornerstone Company Auction</RefNum>
+          <RefDate>20001214T11:19:00</RefDate>
+        </Reference>
+      </AuctionResultItemID>
+      <WinningBidIndicator>true</WinningBidIndicator>
+      <AuctionResultParty>
+        <OrderParty>
+          <BuyerParty>
+            <Party>
+              <PartyID>
+                <Identifier>
+                  <Agency>
+                    <AgencyCoded>Other</AgencyCoded>
+                  </Agency>
+                  <Ident>XZZ</Ident>
+                </Identifier>
+              </PartyID>
+              <NameAddress AddressTypeCoded="NotApplicable">
+                <Name1>ZXX Supply Company</Name1>
+                <Street>7665 Highway 51</Street>
+                <Building>3</Building>
+                <Department>Purchasing Department</Department>
+                <PostalCode>77754</PostalCode>
+                <City>Frost</City>
+                <Region>
+                  <RegionCoded>USAK</RegionCoded>
+                </Region>
+                <Country>
+                  <CountryCoded>US</CountryCoded>
+                </Country>
+              </NameAddress>
+              <CorrespondenceLanguage>
+                <Language>
+                  <LanguageCoded>en</LanguageCoded>
+                </Language>
+              </CorrespondenceLanguage>
+            </Party>
+          </BuyerParty>
+          <SellerParty>
+            <Party>
+              <PartyID>
+                <Identifier>
+                  <Agency>
+                    <AgencyCoded>Other</AgencyCoded>
+                  </Agency>
+                  <Ident>ABB-1010</Ident>
+                </Identifier>
+              </PartyID>
+              <NameAddress AddressTypeCoded="NotApplicable">
+                <Name1>ABB Cornerstone Company</Name1>
+                <Street>45 Terrance Blvd.</Street>
+                <Floor>7th</Floor>
+                <Department>Auction Department</Department>
+                <PostalCode>96660</PostalCode>
+                <City>Angelville</City>
+                <Region>
+                  <RegionCoded>USCA</RegionCoded>
+                </Region>
+                <Country>
+                  <CountryCoded>US</CountryCoded>
+                </Country>
+              </NameAddress>
+              <CorrespondenceLanguage>
+                <Language>
+                  <LanguageCoded>en</LanguageCoded>
+                </Language>
+              </CorrespondenceLanguage>
+            </Party>
+          </SellerParty>
+        </OrderParty>
+      </AuctionResultParty>
+      <ListOfAuctionResultItem>
+        <AuctionResultItem>
+          <BaseItemDetail>
+            <LineItemNum>
+              <BuyerLineItemNum>1</BuyerLineItemNum>
+            </LineItemNum>
+            <TotalQuantity>
+              <Quantity>
+                <QuantityValue SignificanceCoded="EqualTo" ConditionsCoded="Actual">5000</QuantityValue>
+                <UnitOfMeasurement>
+                  <UOMCoded>EA</UOMCoded>
+                </UnitOfMeasurement>
+              </Quantity>
+            </TotalQuantity>
+          </BaseItemDetail>
+        </AuctionResultItem>
+      </ListOfAuctionResultItem>
+    </AuctionResultDetail>
+  </ListOfAuctionResultDetail>
+  <AuctionResultSummary>
+    <TotalNumAuctionResults>1</TotalNumAuctionResults>
+    <TotalNumWinningBids>1</TotalNumWinningBids>
+    <TotalNumParticipants>4</TotalNumParticipants>
+  </AuctionResultSummary>
+</AuctionResult>
+

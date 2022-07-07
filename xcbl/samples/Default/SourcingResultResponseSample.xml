@@ -1,0 +1,23 @@
+<!DOCTYPE SourcingResultResponse SYSTEM 'SourcingResultResponse.dtd'>
+
+<SourcingResultResponse>
+<SourcingResultResponsePurpose><Purpose>
+<PurposeCoded>Other</PurposeCoded>
+<PurposeCodedOther>fbggxvmkdxlfhwnltni</PurposeCodedOther></Purpose></SourcingResultResponsePurpose>
+<SourcingresultResponseissueDate>20011002T18:36:50+11:00</SourcingresultResponseissueDate>
+<SourcingResultResponseID>g</SourcingResultResponseID>
+<TrackingID>ximwofa</TrackingID>
+<SourcingCreateReference><Reference>
+<RefNum>f</RefNum>
+<RefDate>20011002T18:36:50-21:00</RefDate></Reference></SourcingCreateReference>
+<SourcingResultReference><Reference>
+<RefNum>yszgutzyuxdayrhzlh</RefNum>
+<RefDate>20011002T18:36:50-22:00</RefDate></Reference></SourcingResultReference>
+<SourcingResultResponseCoded>RejectedDoNotResend</SourcingResultResponseCoded>
+<SourcingResultResponseCodedOther>ppmoypjhyjjloirwsytgmquty</SourcingResultResponseCodedOther>
+<Language LanguageDependent="true">
+<LanguageCoded>de</LanguageCoded>
+<LanguageCodedOther>sgtjcazbtwhkxcsbxbs</LanguageCodedOther>
+<LocaleCoded>gp</LocaleCoded>
+<LocaleCodedOther>sivbxzqdelesblobll</LocaleCodedOther></Language>
+<GeneralNote>mwvaieaxnscfswpatxrihzc</GeneralNote></SourcingResultResponse>

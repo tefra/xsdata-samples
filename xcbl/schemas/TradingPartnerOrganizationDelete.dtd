@@ -1,0 +1,20 @@
+<!-- xCBL Document DTD for XCBL35 TradingPartnerOrganizationDelete -->
+<!ELEMENT TradingPartnerOrganizationDelete (ListOfTradingPartnerOrganizationDeletion)>
+<!ELEMENT ListOfTradingPartnerOrganizationDeletion (TradingPartnerOrganizationDeletion+)>
+<!ELEMENT TradingPartnerOrganizationDeletion ((TradingPartnerIdentifications , TradingPartnerDisplayName))>
+<!ELEMENT TradingPartnerIdentifications (Identifications)>
+<!ELEMENT TradingPartnerDisplayName  (#PCDATA)>
+<!ELEMENT Identifications ((PrimaryID? , ListOfTradingPartnerID?))>
+<!ELEMENT PrimaryID ((Agency , Ident) , ShortID? , PrimaryIDURN?)>
+<!ELEMENT ShortID  (#PCDATA)>
+<!ELEMENT PrimaryIDURN  (#PCDATA)>
+<!ELEMENT Identifier ((Agency , Ident))>
+<!ELEMENT Ident  (#PCDATA)>
+<!ELEMENT Agency ((AgencyCoded , AgencyCodedOther? , AgencyDescription? , CodeListIdentifierCoded? , CodeListIdentifierCodedOther?))>
+<!ELEMENT AgencyCoded  (#PCDATA)>
+<!ELEMENT AgencyCodedOther  (#PCDATA)>
+<!ELEMENT AgencyDescription  (#PCDATA)>
+<!ELEMENT CodeListIdentifierCoded  (#PCDATA)>
+<!ELEMENT CodeListIdentifierCodedOther  (#PCDATA)>
+<!ELEMENT ListOfTradingPartnerID (TradingPartnerID+)>
+<!ELEMENT TradingPartnerID (Identifier)>

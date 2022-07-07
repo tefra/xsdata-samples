@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PaymentRequestAcknowledgment>
+  <PaymentRequestAcknHeader>
+    <PaymentRequestAcknCoded>Original</PaymentRequestAcknCoded>
+    <PaymentRequestAcknIssueDate>20010201T09:03:00</PaymentRequestAcknIssueDate>
+    <PaymentRequestAcknID>PRAID-665746565</PaymentRequestAcknID>
+    <PaymentRequestIDReference>
+      <Reference>
+        <RefNum>string of characters</RefNum>
+        <RefDate>20010201T13:23:33</RefDate>
+      </Reference>
+    </PaymentRequestIDReference>
+    <SuccessfulReceptIndicator>true</SuccessfulReceptIndicator>
+    <Language>
+      <LanguageCoded>en</LanguageCoded>
+    </Language>
+  </PaymentRequestAcknHeader>
+  <ListOfPaymentRequestAcknDetail>
+    <PaymentRequestAcknDetail>
+      <ConfirmationID>YYY654767566455r5</ConfirmationID>
+      <PaymentDocumentID>
+        <Reference>
+          <RefNum>YY-77-97854344</RefNum>
+        </Reference>
+      </PaymentDocumentID>
+      <PaymentParty>
+        <PayerParty>
+          <PartyID>
+            <Identifier>
+              <Agency>
+                <AgencyCoded>California</AgencyCoded>
+              </Agency>
+              <Ident>IDNumber in string format</Ident>
+            </Identifier>
+          </PartyID>
+          <MDFBusiness>false</MDFBusiness>
+          <NameAddress AddressTypeCoded="NotApplicable">
+            <ExternalAddressID>SMG</ExternalAddressID>
+            <Name1>UnDo Manufacturing Company</Name1>
+            <POBox POBoxPostalCode="555">5555</POBox>
+            <Street>Marlin Street</Street>
+            <HouseNumber>55</HouseNumber>
+            <StreetSupplement1>Corner of Winchester</StreetSupplement1>
+            <Floor>5th Floor</Floor>
+            <PostalCode>90909-0000</PostalCode>
+            <City>Marbleville</City>
+            <County>Tate</County>
+            <Region>
+              <RegionCoded>USCA</RegionCoded>
+            </Region>
+            <Country>
+              <CountryCoded>US</CountryCoded>
+            </Country>
+            <Timezone>
+              <TimezoneCoded>09.45</TimezoneCoded>
+              <TimezoneCodedOther>-08.45</TimezoneCodedOther>
+            </Timezone>
+          </NameAddress>
+          <CertificateAuthority>string of characters</CertificateAuthority>
+        </PayerParty>
+        <PayeeParty>
+          <Party>
+            <PartyID>
+              <Identifier>
+                <Agency>
+                  <AgencyCoded>California</AgencyCoded>
+                </Agency>
+                <Ident>IDNumber in string format</Ident>
+              </Identifier>
+            </PartyID>
+            <MDFBusiness>false</MDFBusiness>
+            <NameAddress AddressTypeCoded="NotApplicable">
+              <ExternalAddressID>ABC</ExternalAddressID>
+              <Name1>ABC Bank of Money</Name1>
+              <POBox POBoxPostalCode="555">456</POBox>
+              <Street>Ridgeway Cicle</Street>
+              <Floor>71st Floor</Floor>
+              <PostalCode>90916-0000</PostalCode>
+              <City>Titusdale</City>
+              <County>Tate</County>
+              <Region>
+                <RegionCoded>USCA</RegionCoded>
+              </Region>
+              <Country>
+                <CountryCoded>US</CountryCoded>
+              </Country>
+              <Timezone>
+                <TimezoneCoded>09.45</TimezoneCoded>
+                <TimezoneCodedOther>-08.45</TimezoneCodedOther>
+              </Timezone>
+            </NameAddress>
+          </Party>
+        </PayeeParty>
+      </PaymentParty>
+      <EncryptedInfo>
+        <ListOfEncryptedField>
+          <EncryptedField>
+            <EncryptedData>fjiejalken ejl eaofno fen aefno fuenf ana454h rnkefuon4f af afna 4afna na  8rjfoa fuah f 4r89jh oegs49fh48rfs4 rha9h r7hafuash rfjiejalken ejl eaofno fen aefno fuenf ana454h rnkefuon4f af afna 4afna na  8rjfoa fuah f 4r89jh oegs49fh48rfs4 rha9h r7hafuash r</EncryptedData>
+          </EncryptedField>
+        </ListOfEncryptedField>
+      </EncryptedInfo>
+    </PaymentRequestAcknDetail>
+  </ListOfPaymentRequestAcknDetail>
+  <PaymentRequestAcknSummary>
+    <PaymentRequestSummary>
+      <TotalLineItem>2</TotalLineItem>
+      <TotalSettlementAmount>
+        <MonetaryValue>
+          <MonetaryAmount>000000000060000.000000</MonetaryAmount>
+          <Currency>
+            <CurrencyCoded>USD</CurrencyCoded>
+          </Currency>
+        </MonetaryValue>
+      </TotalSettlementAmount>
+      <EncryptedInfo>
+        <CertificateAuthority>Cert:99-654-87879990-00B-UY-002</CertificateAuthority>
+        <ListOfEncryptedField>
+          <EncryptedField>
+            <Sequence>1</Sequence>
+            <EncryptedData>jfkdfjiejalken ejl eaofno fen aefno fuenf ana454h rnkefuon4f af afna 4afna na  8rjfoa fuah f 4r89jh oegs49fh48rfs4 rha9h r7hafuash ru47prh4 h4eju aeuhf9 4 ouhfia ra4r4irfhae r9wyhr w4hr7h4 ra4hr wehrpaw hfiaehr</EncryptedData>
+          </EncryptedField>
+        </ListOfEncryptedField>
+      </EncryptedInfo>
+    </PaymentRequestSummary>
+  </PaymentRequestAcknSummary>
+</PaymentRequestAcknowledgment>
+

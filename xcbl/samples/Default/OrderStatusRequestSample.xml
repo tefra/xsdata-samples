@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+
+<!--    SAMPLE FILE OF PARSABLE ORDERSTATUSREQEST, THIS DOES NOT CONTAIN REAL DATA      -->
+
+
+<!DOCTYPE OrderStatusRequest SYSTEM 'OrderStatusRequest.dtd'>
+
+<OrderStatusRequest>
+    <OrderStatusRequestHeader>
+        <OrderStatusRequestID>
+            <Reference>
+                <RefNum>string of characters</RefNum>
+                <RefDate>20001213T15:09:00</RefDate>
+            </Reference>
+        </OrderStatusRequestID>
+        <OrderStatusIssueDate>20001213T15:09:00</OrderStatusIssueDate>
+        <OrderStatusParty>
+            <OrderParty>
+                <BuyerParty>
+                    <Party>
+                        <PartyID>
+                            <Identifier>
+                                <Agency>
+                                    <AgencyCoded>Other</AgencyCoded>
+                                    <AgencyCodedOther>string of characters</AgencyCodedOther>
+                                    <AgencyDescription>string of characters</AgencyDescription>
+                                </Agency>
+                                <Ident>999-99-9999</Ident>
+                            </Identifier>
+                        </PartyID>
+                        <MDFBusiness>false</MDFBusiness>
+                    <NameAddress>
+                    <Name1>string of characters</Name1>
+                    <Name2>string of characters</Name2>
+                    <Name3>string of characters</Name3>
+                    <Identifier>
+                        <Agency>
+                            <AgencyCoded>ACORD</AgencyCoded>
+                            <AgencyCodedOther>string of characters</AgencyCodedOther>
+                        </Agency>
+                        <Ident>string of characters</Ident>
+                    </Identifier>
+                    <POBox POBoxPostalCode="553"></POBox>
+                    <Street>string of characters</Street>
+                    <HouseNumber>string of characters</HouseNumber>
+                    <StreetSupplement1>string of characters</StreetSupplement1>
+                    <StreetSupplement2>string of characters</StreetSupplement2>
+                    <RoomNumber>string of characters</RoomNumber>
+                    <InhouseMail>string of characters</InhouseMail>
+                    <Department>string of characters</Department>
+                    <PostalCode>string of characters</PostalCode>
+                    <City>string of characters</City>
+                    <Country>
+                        <CountryCoded>BS</CountryCoded>
+                    </Country>
+                    <Timezone>
+                        <TimezoneCoded>09.45</TimezoneCoded>
+                        <TimezoneCodedOther>-06.00</TimezoneCodedOther>
+                    </Timezone>
+                </NameAddress>
+                <CorrespondenceLanguage>
+                    <Language>
+                        <LanguageCoded>en</LanguageCoded>
+                        <LocaleCoded>Other</LocaleCoded>
+                        <LocaleCodedOther>Asia-Pacific</LocaleCodedOther>
+                    </Language>
+                </CorrespondenceLanguage>
+            </Party></BuyerParty><SellerParty>
+                <Party>
+                    <PartyID>
+                        <Identifier>
+                            <Agency>
+                            <AgencyCoded>ACORD</AgencyCoded>
+                            <AgencyCodedOther>string of characters</AgencyCodedOther>
+                        </Agency>
+                        <Ident>string of characters</Ident>
+                    </Identifier>
+                </PartyID>
+                <NameAddress>
+                    <Name1>string of characters</Name1>
+                    <Name2>string of characters</Name2>
+                    <Name3>string of characters</Name3>
+                    <Identifier>
+                        <Agency>
+                            <AgencyCoded>ACORD</AgencyCoded>
+                            <AgencyCodedOther>string of characters</AgencyCodedOther>
+                        </Agency>
+                        <Ident>string of characters</Ident>
+                    </Identifier>
+                    <POBox POBoxPostalCode="553"></POBox>
+                    <Street>string of characters</Street>
+                    <HouseNumber>string of characters</HouseNumber>
+                    <StreetSupplement1>string of characters</StreetSupplement1>
+                    <StreetSupplement2>string of characters</StreetSupplement2>
+                    <RoomNumber>string of characters</RoomNumber>
+                    <InhouseMail>string of characters</InhouseMail>
+                    <Department>string of characters</Department>
+                    <PostalCode>string of characters</PostalCode>
+                    <City>string of characters</City>
+                    <Country>
+                        <CountryCoded>BS</CountryCoded>
+                    </Country>
+                    <Timezone>
+                        <TimezoneCoded>09.45</TimezoneCoded>
+                        <TimezoneCodedOther>-06.00</TimezoneCodedOther>
+                    </Timezone>
+                </NameAddress>
+                <CorrespondenceLanguage>
+                    <Language>
+                        <LanguageCoded>en</LanguageCoded>
+                        <LocaleCoded>Other</LocaleCoded>
+                        <LocaleCodedOther>Asia-Pacific</LocaleCodedOther>
+                    </Language>
+                </CorrespondenceLanguage>
+            </Party>
+        </SellerParty>
+    </OrderParty>
+    </OrderStatusParty>
+    <OrderStatusLanguage>
+        <Language>
+            <LanguageCoded>en</LanguageCoded>
+        </Language>
+    </OrderStatusLanguage>
+</OrderStatusRequestHeader>
+
+<OrderStatusRequestDetail>
+    <ListOfOrderStatusRequestDetail>
+        <OrderStatusDetailRequest>
+            <OrderStatusReference>
+                <BuyerReferenceNumber>
+                    <Reference>
+                        <RefNum>string of characters</RefNum>
+                        <RefDate>20001213T15:09:00</RefDate>
+                    </Reference>
+                </BuyerReferenceNumber>
+                <SellerReferenceNumber>
+                    <Reference>
+                        <RefNum>string of characters</RefNum>
+                        <RefDate>20001213T15:09:00</RefDate>
+                    </Reference>
+                </SellerReferenceNumber>
+                <OrderDate>20001201T09:30:00</OrderDate>
+            </OrderStatusReference>
+        </OrderStatusDetailRequest>
+        <OrderStatusDetailRequest>
+            <OrderStatusReference>
+                <BuyerReferenceNumber>
+                    <Reference>
+                        <RefNum>string of characters</RefNum>
+                        <RefDate>20001213T15:09:00</RefDate>
+                    </Reference>
+                </BuyerReferenceNumber>
+                <SellerReferenceNumber>
+                    <Reference>
+                        <RefNum>string of characters</RefNum>
+                        <RefDate>20001213T15:09:00</RefDate>
+                    </Reference>
+                </SellerReferenceNumber>
+                <OrderDate>20001201T09:30:00</OrderDate>
+            </OrderStatusReference>
+            <GeneralLineItemNote>string of characters</GeneralLineItemNote>
+        </OrderStatusDetailRequest>
+    </ListOfOrderStatusRequestDetail>
+</OrderStatusRequestDetail>
+
+<OrderStatusRequestSummary>
+    <TotalNumberOfLineItem>7</TotalNumberOfLineItem>
+</OrderStatusRequestSummary>
+
+</OrderStatusRequest>

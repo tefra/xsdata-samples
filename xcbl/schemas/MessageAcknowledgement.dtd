@@ -1,0 +1,5 @@
+<!-- xCBL Document DTD for XCBL35 MessageAcknowledgement -->
+<!ELEMENT MessageAcknowledgement ((AcknowledgementLocation? , AcknowledgementReferenceNumber? , AcknowledgementNote?))>
+<!ELEMENT AcknowledgementLocation  (#PCDATA)>
+<!ELEMENT AcknowledgementReferenceNumber  (#PCDATA)>
+<!ELEMENT AcknowledgementNote  (#PCDATA)>

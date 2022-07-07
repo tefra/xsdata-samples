@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OrderStatusResult>
+  <OrderStatusResultHeader>
+    <OrderStatusID>
+      <Reference>
+        <RefNum>string of characters</RefNum>
+        <RefDate>20001213T15:09:00</RefDate>
+      </Reference>
+    </OrderStatusID>
+    <OrderStatusIssueDate>20001213T15:00:00</OrderStatusIssueDate>
+    <OrderStatusResultParty>
+      <OrderParty>
+        <BuyerParty>
+          <Party>
+            <PartyID>
+              <Identifier>
+                <Agency>
+                  <AgencyCoded>Other</AgencyCoded>
+                  <AgencyCodedOther>string of characters</AgencyCodedOther>
+                  <AgencyDescription>string of characters</AgencyDescription>
+                </Agency>
+                <Ident>999-99-9999</Ident>
+              </Identifier>
+            </PartyID>
+            <MDFBusiness>false</MDFBusiness>
+            <NameAddress AddressTypeCoded="NotApplicable">
+              <Name1>string of characters</Name1>
+              <Name2>string of characters</Name2>
+              <Name3>string of characters</Name3>
+              <Identifier>
+                <Agency>
+                  <AgencyCoded>ACORD</AgencyCoded>
+                  <AgencyCodedOther>string of characters</AgencyCodedOther>
+                </Agency>
+                <Ident>string of characters</Ident>
+              </Identifier>
+              <POBox POBoxPostalCode="553"/>
+              <Street>string of characters</Street>
+              <HouseNumber>string of characters</HouseNumber>
+              <StreetSupplement1>string of characters</StreetSupplement1>
+              <StreetSupplement2>string of characters</StreetSupplement2>
+              <RoomNumber>string of characters</RoomNumber>
+              <InhouseMail>string of characters</InhouseMail>
+              <Department>string of characters</Department>
+              <PostalCode>string of characters</PostalCode>
+              <City>string of characters</City>
+              <Country>
+                <CountryCoded>BS</CountryCoded>
+              </Country>
+              <Timezone>
+                <TimezoneCoded>09.45</TimezoneCoded>
+                <TimezoneCodedOther>-06.00</TimezoneCodedOther>
+              </Timezone>
+            </NameAddress>
+            <CorrespondenceLanguage>
+              <Language>
+                <LanguageCoded>en</LanguageCoded>
+                <LocaleCoded>Other</LocaleCoded>
+                <LocaleCodedOther>Asia-Pacific</LocaleCodedOther>
+              </Language>
+            </CorrespondenceLanguage>
+          </Party>
+        </BuyerParty>
+        <SellerParty>
+          <Party>
+            <PartyID>
+              <Identifier>
+                <Agency>
+                  <AgencyCoded>ACORD</AgencyCoded>
+                  <AgencyCodedOther>string of characters</AgencyCodedOther>
+                </Agency>
+                <Ident>string of characters</Ident>
+              </Identifier>
+            </PartyID>
+            <NameAddress AddressTypeCoded="NotApplicable">
+              <Name1>string of characters</Name1>
+              <Name2>string of characters</Name2>
+              <Name3>string of characters</Name3>
+              <Identifier>
+                <Agency>
+                  <AgencyCoded>ACORD</AgencyCoded>
+                  <AgencyCodedOther>string of characters</AgencyCodedOther>
+                </Agency>
+                <Ident>string of characters</Ident>
+              </Identifier>
+              <POBox POBoxPostalCode="553"/>
+              <Street>string of characters</Street>
+              <HouseNumber>string of characters</HouseNumber>
+              <StreetSupplement1>string of characters</StreetSupplement1>
+              <StreetSupplement2>string of characters</StreetSupplement2>
+              <RoomNumber>string of characters</RoomNumber>
+              <InhouseMail>string of characters</InhouseMail>
+              <Department>string of characters</Department>
+              <PostalCode>string of characters</PostalCode>
+              <City>string of characters</City>
+              <Country>
+                <CountryCoded>BS</CountryCoded>
+              </Country>
+              <Timezone>
+                <TimezoneCoded>09.45</TimezoneCoded>
+                <TimezoneCodedOther>-06.00</TimezoneCodedOther>
+              </Timezone>
+            </NameAddress>
+            <CorrespondenceLanguage>
+              <Language>
+                <LanguageCoded>en</LanguageCoded>
+                <LocaleCoded>Other</LocaleCoded>
+                <LocaleCodedOther>Asia-Pacific</LocaleCodedOther>
+              </Language>
+            </CorrespondenceLanguage>
+          </Party>
+        </SellerParty>
+      </OrderParty>
+    </OrderStatusResultParty>
+  </OrderStatusResultHeader>
+  <OrderStatusResultDetail>
+    <ListOfOrderStatusResultDetail>
+      <OrderStatusDetailResult>
+        <OrderStatusResultReference>
+          <BuyerReferenceNumber>
+            <Reference>
+              <RefNum>string of characters</RefNum>
+              <RefDate>20001213T15:09:00</RefDate>
+            </Reference>
+          </BuyerReferenceNumber>
+          <SellerReferenceNumber>
+            <Reference>
+              <RefNum>string of characters</RefNum>
+              <RefDate>20001213T15:09:00</RefDate>
+            </Reference>
+          </SellerReferenceNumber>
+          <OrderDate>20001201T09:30:00</OrderDate>
+          <OrderStatusDate>20001213T09:00:00</OrderStatusDate>
+          <OrderStatus>
+            <Status>
+              <StatusEvent>
+                <StatusEventCoded>NotAccepted</StatusEventCoded>
+              </StatusEvent>
+              <StatusNote>string of characters</StatusNote>
+              <ErrorInfo>
+                <CompletionText>string of characters</CompletionText>
+                <CompletionMsg>
+                  <LanguageString>
+                    <LangString>string of characters</LangString>
+                    <Language>
+                      <LanguageCoded>en</LanguageCoded>
+                    </Language>
+                  </LanguageString>
+                </CompletionMsg>
+                <Severity>
+                  <SeverityCoded>Other</SeverityCoded>
+                </Severity>
+                <ListOfParameter>
+                  <Parameter>string of characters</Parameter>
+                </ListOfParameter>
+                <MinRetrySecs>20</MinRetrySecs>
+                <SwVendorErrorRef>string of characters</SwVendorErrorRef>
+              </ErrorInfo>
+            </Status>
+          </OrderStatus>
+        </OrderStatusResultReference>
+      </OrderStatusDetailResult>
+    </ListOfOrderStatusResultDetail>
+  </OrderStatusResultDetail>
+  <OrderStatusResultSummary>
+    <OrderStatusCheckItemError>99</OrderStatusCheckItemError>
+    <OrderStatusSummaryErrorInfo>
+      <ErrorInfo>
+        <CompletionText>string of characters</CompletionText>
+        <CompletionMsg>
+          <LanguageString>
+            <LangString>string of characters</LangString>
+            <Language>
+              <LanguageCoded>en</LanguageCoded>
+            </Language>
+          </LanguageString>
+        </CompletionMsg>
+        <Severity>
+          <SeverityCoded>Other</SeverityCoded>
+        </Severity>
+      </ErrorInfo>
+    </OrderStatusSummaryErrorInfo>
+    <TotalNumberOfLineItem>7</TotalNumberOfLineItem>
+  </OrderStatusResultSummary>
+</OrderStatusResult>
+

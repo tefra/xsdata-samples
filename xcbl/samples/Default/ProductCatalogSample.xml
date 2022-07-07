@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+
+<!--    SAMPLE FILE, THIS DOES NOT CONTAIN REAL DATA        -->
+
+<!DOCTYPE ProductCatalog SYSTEM 'ProductCatalog.dtd'>
+
+<ProductCatalog>
+    <CatalogHeader>
+        <CatalogID>Acme Laptops Catalog</CatalogID>
+        <CatalogDate>20000816</CatalogDate>
+        <CatalogProvider>
+            <Party>
+                <PartyID>
+                    <Identifier>
+                        <Agency>
+                            <AgencyCoded>Other</AgencyCoded>
+                            <AgencyCodedOther>CommerceOne</AgencyCodedOther>
+                        </Agency>
+                        <Ident>Acme_Laptops</Ident>
+                    </Identifier>
+                </PartyID>
+            </Party>
+        </CatalogProvider>
+        <ListOfPartners>
+            <Partner PartnerID="General_Motors" Relationship="Buyer"/>
+            <Partner PartnerID="Compaq" Relationship="Manufacturer"/>
+            <Partner PartnerID="Acme_Laptops" Relationship="Supplier"/>
+        </ListOfPartners>
+        <ValidFrom>20000816</ValidFrom>
+        <ValidUntil>20001231</ValidUntil>
+        <CatalogVersion>1.0</CatalogVersion>
+        <DefaultLanguage xml:lang="en"/>
+        <DefaultCurrency>
+            <Currency>
+                <CurrencyCoded>USD</CurrencyCoded>
+            </Currency>
+        </DefaultCurrency>
+        <IsMultiVendor/>
+        <ShortDescription xml:lang="en">This is Acme Laptops&apos;s catalog of Compaq Laptops, for General Motors. </ShortDescription>
+    </CatalogHeader>
+
+    <CatalogSchema>
+        <SchemaName>Acme&apos;s UNSPSC Subset for Computers</SchemaName>
+        <SchemaVersion>1.0</SchemaVersion>
+        <SchemaStandard>UNSPSC</SchemaStandard>
+        <SchemaCategory>
+            <CategoryID>C43000000</CategoryID>
+            <CategoryName>Communications, Computer Equipment, Peripherals, Components and Supplies</CategoryName>
+        </SchemaCategory>
+        <SchemaCategory>
+            <CategoryID>C43170000</CategoryID>
+            <ParentCategoryRefList><CategoryIDRef>C43000000</CategoryIDRef></ParentCategoryRefList>
+            <CategoryName>  Hardware and accessories</CategoryName>
+        </SchemaCategory>
+        <SchemaCategory>
+            <CategoryID>C43171800</CategoryID>
+            <ParentCategoryRefList><CategoryIDRef>C43170000</CategoryIDRef></ParentCategoryRefList>
+            <CategoryName>Computers</CategoryName>
+            <CategoryAttribute>
+                <AttributeID>Processor Speed</AttributeID>
+                <AttributeName xml:lang="en">Processor Speed</AttributeName>
+                <AttributeType ScalarType="String"></AttributeType>
+            </CategoryAttribute>
+        </SchemaCategory>
+        <SchemaCategory>
+            <CategoryID>C43171801</CategoryID>
+            <ParentCategoryRefList><CategoryIDRef>C43171800</CategoryIDRef></ParentCategoryRefList>
+            <CategoryName>Notebook computers</CategoryName>
+            <CategoryAttribute>
+                <AttributeID>Battery Life</AttributeID>
+                <AttributeName xml:lang="en">Battery Life</AttributeName>
+                <AttributeType ScalarType="String"></AttributeType>
+            </CategoryAttribute>
+        </SchemaCategory>
+        <SchemaCategory>
+            <CategoryID>C43171803</CategoryID>
+            <ParentCategoryRefList><CategoryIDRef>C43171800</CategoryIDRef></ParentCategoryRefList>
+            <CategoryName>Workstations, desktop computers</CategoryName>
+        </SchemaCategory>
+    </CatalogSchema>
+
+    <CatalogData>
+        <Product>
+            <Action Value="Delete"/>
+            <ProductID>118003-008</ProductID>
+        </Product>
+        <Product Type="Good">
+            <ProductID>140141-002</ProductID>
+            <SchemaCategoryRefList><CategoryIDRef>C43171801</CategoryIDRef></SchemaCategoryRefList>
+            <UOM>
+                <UOMCoded>EA</UOMCoded>
+            </UOM>
+            <Manufacturer>Compaq</Manufacturer>
+            <LeadTime>2</LeadTime>
+            <CountryOfOrigin>
+                <Country>
+                    <CountryCoded>US</CountryCoded>
+                </Country>
+            </CountryOfOrigin>
+            <ShortDescription xml:lang="en">Armada M700 PIII 500 12GB</ShortDescription>
+            <LongDescription xml:lang="en">This light, thin powerhouse delivers no-compromise performance in a sub-five pound form factor. Size and Weight(HxWxD):    12.4 X 9.8 X 1.1 in    4.3 - 4.9 lbs (depending on configuration)  Processor:   500-MHZ Intel Pentium III Processor with 256K   integrated cache  Memory:   128MB of RAM, expandable to 576MB  Hard Drive:     12.0GB Removable SMART Hard Drive  Display Graphics:    14.1-inch color TFT with 1024 x 768 resolution    (up to 16M colors internal)  Communication:     Mini-PCI V.90 Modem/Nic Combo   Operating System:    Dual Installation of Microsoft Windows 95 &amp; Microsoft Windows 98</LongDescription>
+            <ProductAttachment>
+                <AttachmentURL>file:\5931.jpg</AttachmentURL>
+                <AttachmentPurpose>PicName</AttachmentPurpose>
+                <AttachmentMIMEType>jpg</AttachmentMIMEType>
+            </ProductAttachment>
+            <ObjectAttribute>
+                <AttributeID>Processor Speed</AttributeID>
+                <AttributeValue>500MHZ</AttributeValue>
+            </ObjectAttribute>
+            <ObjectAttribute>
+                <AttributeID>Battery Life</AttributeID>
+                <AttributeUnit>
+                    <UOM>
+                        <UOMCoded>EA</UOMCoded>
+                    </UOM>
+                </AttributeUnit>
+                <AttributeValue>6 hours</AttributeValue>
+            </ObjectAttribute>
+        </Product>
+        <Product Type="Good">
+            <ProductID>154723-005</ProductID>
+            <SchemaCategoryRefList><CategoryIDRef>C43171803</CategoryIDRef></SchemaCategoryRefList>
+            <Manufacturer PartnerRef="Compaq"></Manufacturer>
+            <LeadTime>5</LeadTime>
+            <CountryOfOrigin>
+                <Country>
+                    <CountryCoded>US</CountryCoded>
+                </Country>
+            </CountryOfOrigin>
+            <ShortDescription xml:lang="en">Deskpro EN SFF Pentium III 600MHz/10.0GB/64MB/24X/NIC/NT 4.0</ShortDescription>
+            <LongDescription xml:lang="en">Pentium&#x00AE; III 600 MHZ deskpro system with a 10GB hard drive, running Windows&#x00AE; NT 4.0       Pentium III Processor, 512K Secondary Cache, 64MB, Bays/Slots 3x2, Intelligent Manageability, ATI RAGE PRO TURBO AGP 2X Graphics, SMART II Ultra ATA Hard Drive, Compaq PremierSound using ESS 1869, MS Windows NT 4.0, Mouse, Compaq 10/100 TX PCI Intel WOL UTP, 24X Slimline CD ROM.</LongDescription>
+            <ProductVendorData PartnerRef="Acme_Laptops">
+                <VendorPartNumber>12345</VendorPartNumber>
+                <ProductPrice>
+                    <Amount>1000</Amount>
+                    <Currency>
+                        <CurrencyCoded>USD</CurrencyCoded>
+                    </Currency>
+                    <UOM>
+                        <UOMCoded>EA</UOMCoded>
+                    </UOM>
+                </ProductPrice>
+            </ProductVendorData>
+            <ProductAttachment>
+                <AttachmentURL>file:///5922.jpg</AttachmentURL>
+                <AttachmentPurpose>PicName</AttachmentPurpose>
+                <AttachmentMIMEType>jpg</AttachmentMIMEType>
+            </ProductAttachment>
+            <ObjectAttribute>
+                <AttributeID>Processor Speed</AttributeID>
+                <AttributeValue>600MHZ</AttributeValue>
+            </ObjectAttribute>
+        </Product>
+    </CatalogData>
+
+</ProductCatalog>

@@ -1,0 +1,290 @@
+<?xml version="1.0"?>
+
+<!--    SAMPLE FILE, THIS DOES NOT CONTAIN REAL DATA        -->
+
+<!DOCTYPE ShippingSchedule SYSTEM 'ShippingSchedule.dtd'>
+
+<ShippingSchedule>
+    <ShippingScheduleHeader>
+        <ScheduleID>SHIP88-90-6788</ScheduleID>
+        <ScheduleIssuedDate>20001214T16:34:00</ScheduleIssuedDate>
+        <SchedulePurpose>
+            <Purpose>
+                <PurposeCoded>Original</PurposeCoded>
+            </Purpose>
+        </SchedulePurpose>
+        <ScheduleTypeCoded>ShipmentBased</ScheduleTypeCoded>
+        <QuantityQualifierCoded>BookOrderQuantity</QuantityQualifierCoded>
+        <ScheduleParty>
+            <BuyerParty>
+                <Party>
+                    <PartyID>
+                        <Identifier>
+                            <Agency>
+                                <AgencyCoded>Other</AgencyCoded>
+                            </Agency>
+                            <Ident>ABB-1010</Ident>
+                        </Identifier>
+                    </PartyID>
+                    <NameAddress>
+                        <Name1>ABB Cornerstone Company</Name1>
+                        <Street>45 Terrance Blvd.</Street>
+                        <Floor>7th</Floor>
+                        <Department>Auction Department</Department>
+                        <PostalCode>96660</PostalCode>
+                        <City>Angelville</City>
+                        <Region>
+                            <RegionCoded>USCA</RegionCoded>
+                        </Region>
+                        <Country>
+                            <CountryCoded>US</CountryCoded>
+                        </Country>
+                    </NameAddress>
+                    <CorrespondenceLanguage>
+                        <Language>
+                            <LanguageCoded>en</LanguageCoded>
+                        </Language>
+                    </CorrespondenceLanguage>
+                </Party>
+            </BuyerParty>
+            <SellerParty>
+                <Party>
+                    <PartyID>
+                        <Identifier>
+                            <Agency>
+                                <AgencyCoded>Other</AgencyCoded>
+                            </Agency>
+                            <Ident>ABB-1010</Ident>
+                        </Identifier>
+                    </PartyID>
+                    <NameAddress>
+                        <Name1>Barrel Corporation</Name1>
+                        <Street>Copeland Terrace</Street>
+                        <InhouseMail>Mail Stop H34</InhouseMail>
+                        <PostalCode>96660</PostalCode>
+                        <City>Angelville</City>
+                        <Region>
+                            <RegionCoded>USCA</RegionCoded>
+                        </Region>
+                        <Country>
+                            <CountryCoded>US</CountryCoded>
+                        </Country>
+                    </NameAddress>
+                    <CorrespondenceLanguage>
+                        <Language>
+                            <LanguageCoded>en</LanguageCoded>
+                        </Language>
+                    </CorrespondenceLanguage>
+                </Party>
+            </SellerParty>
+            <ShipFromParty>
+                <Party>
+                    <PartyID>
+                        <Identifier>
+                            <Agency>
+                                <AgencyCoded>Other</AgencyCoded>
+                            </Agency>
+                            <Ident>ABB-1010</Ident>
+                        </Identifier>
+                    </PartyID>
+                    <NameAddress>
+                        <Name1>Barrel Corporation</Name1>
+                        <Street>Copeland Terrace</Street>
+                        <InhouseMail>Mail Stop H34</InhouseMail>
+
+                        <PostalCode>96660</PostalCode>
+                        <City>Angelville</City>
+                        <Region>
+                            <RegionCoded>USCA</RegionCoded>
+                        </Region>
+                        <Country>
+                            <CountryCoded>US</CountryCoded>
+                        </Country>
+                    </NameAddress>
+                    <CorrespondenceLanguage>
+                        <Language>
+                            <LanguageCoded>en</LanguageCoded>
+                        </Language>
+                    </CorrespondenceLanguage>
+                </Party>
+            </ShipFromParty>
+            <ShipToParty>
+                <Party>
+                    <PartyID>
+                        <Identifier>
+                            <Agency>
+                                <AgencyCoded>Other</AgencyCoded>
+                            </Agency>
+                            <Ident>ABB-1010</Ident>
+                        </Identifier>
+                    </PartyID>
+                    <NameAddress>
+                        <Name1>ABB Cornerstone Company</Name1>
+                        <Street>45 Terrance Blvd.</Street>
+                        <Floor>7th</Floor>
+                        <Department>Auction Department</Department>
+                        <PostalCode>96660</PostalCode>
+                        <City>Angelville</City>
+                        <Region>
+                            <RegionCoded>USCA</RegionCoded>
+                        </Region>
+                        <Country>
+                            <CountryCoded>US</CountryCoded>
+                        </Country>
+                    </NameAddress>
+                    <CorrespondenceLanguage>
+                        <Language>
+                            <LanguageCoded>en</LanguageCoded>
+                        </Language>
+                    </CorrespondenceLanguage>
+                </Party>
+            </ShipToParty>
+        </ScheduleParty>
+        <TermsOfDelivery>
+            <TermsOfDeliveryFunctionCoded>DeliveryCondition</TermsOfDeliveryFunctionCoded>
+            <ShipmentMethodOfPaymentCoded>Account</ShipmentMethodOfPaymentCoded>
+        </TermsOfDelivery>
+        <Language>
+            <LanguageCoded>en</LanguageCoded>
+        </Language>
+    </ShippingScheduleHeader>
+
+    <ListOfLocationGroupedShippingDetail>
+        <LocationGroupedShippingDetail>
+            <Location>
+                <NameAddress>
+                    <Name1>ABB Cornerstone Company</Name1>
+                    <Street>45 Terrance Blvd.</Street>
+                    <Floor>7th</Floor>
+                    <Department>Auction Department</Department>
+                    <PostalCode>96660</PostalCode>
+                    <City>Angelville</City>
+                    <Region>
+                        <RegionCoded>USCA</RegionCoded>
+                    </Region>
+                    <Country>
+                        <CountryCoded>US</CountryCoded>
+                    </Country>
+                </NameAddress>
+            </Location>
+            <ListOfLocationShippingItemDetail>
+                <LocationShippingItemDetail>
+                    <BaseShippingDetail>
+                        <LineItemNum>
+                            <BuyerLineItemNum>1</BuyerLineItemNum>
+                            <SellerLineItemNum>1</SellerLineItemNum>
+                        </LineItemNum>
+                        <ItemIdentifiers>
+                            <PartNumbers>
+                                <BuyerPartNumber>
+                                    <PartNum>
+                                        <PartID>T-77-0-0-56</PartID>
+                                    </PartNum>
+                                </BuyerPartNumber>
+                                <ManufacturerPartNumber>
+                                    <PartID>T-77-0-0-56</PartID>
+                                    <ManufacturerID>
+                                        <Identifier>
+                                            <Agency>
+                                                <AgencyCoded>Other</AgencyCoded>
+                                            </Agency>
+                                            <Ident>yy_88uiurj-009098776</Ident>
+                                        </Identifier>
+                                    </ManufacturerID>
+                                </ManufacturerPartNumber>
+                            </PartNumbers>
+                        </ItemIdentifiers>
+                        <ForecastFrequencyCoded>Daily</ForecastFrequencyCoded>
+                    </BaseShippingDetail>
+                    <ListOfShipScheduleDetail>
+                        <ShipScheduleDetail>
+                            <CommitmentLevelCoded>Firm</CommitmentLevelCoded>
+                            <ScheduleDates>
+                                <ListOfDateCoded>
+                                    <DateCoded>
+                                        <Date>20001214T17:34:00</Date>
+                                        <DateQualifier>
+                                            <DateQualifierCoded>Actual</DateQualifierCoded>
+                                        </DateQualifier>
+                                    </DateCoded>
+                                </ListOfDateCoded>
+                            </ScheduleDates>
+                            <ScheduleQuantities>
+                                <ListOfQuantityCoded>
+                                    <QuantityCoded>
+                                        <QuantityValue SignificanceCoded="TrueValue" ConditionsCoded="Actual">6000000.00</QuantityValue>
+                                        <UnitOfMeasurement>
+                                            <UOMCoded>EA</UOMCoded>
+                                        </UnitOfMeasurement>
+                                        <QuantityQualifierCoded>Actual</QuantityQualifierCoded>
+                                    </QuantityCoded>
+                                </ListOfQuantityCoded>
+                            </ScheduleQuantities>
+                            <ScheduleNote>Ship only on sunny days.</ScheduleNote>
+                        </ShipScheduleDetail>
+                    </ListOfShipScheduleDetail>
+                </LocationShippingItemDetail>
+            </ListOfLocationShippingItemDetail>
+        </LocationGroupedShippingDetail>
+
+        <LocationGroupedShippingDetail>
+            <Location>
+                <NameAddress>
+                    <Name1>ABB Cornerstone Company</Name1>
+                    <Street>45 Terrance Blvd.</Street>
+                    <Floor>7th</Floor>
+                    <Department>Auction Department</Department>
+                    <PostalCode>96660</PostalCode>
+                    <City>Angelville</City>
+                    <Region>
+                        <RegionCoded>USCA</RegionCoded>
+                    </Region>
+                    <Country>
+                        <CountryCoded>US</CountryCoded>
+                    </Country>
+                </NameAddress>
+            </Location>
+            <ListOfLocationShippingItemDetail>
+                <LocationShippingItemDetail>
+                    <BaseShippingDetail>
+                        <LineItemNum>
+                            <BuyerLineItemNum>1</BuyerLineItemNum>
+                        </LineItemNum>
+                        <ForecastFrequencyCoded>Daily</ForecastFrequencyCoded>
+                    </BaseShippingDetail>
+                    <ListOfShipScheduleDetail>
+                        <ShipScheduleDetail>
+                            <CommitmentLevelCoded>Firm</CommitmentLevelCoded>
+                            <ScheduleDates>
+                                <ListOfDateCoded>
+                                    <DateCoded>
+                                        <Date>20001214T17:34:00</Date>
+                                        <DateQualifier>
+                                            <DateQualifierCoded>Actual</DateQualifierCoded>
+                                        </DateQualifier>
+                                    </DateCoded>
+                                </ListOfDateCoded>
+                            </ScheduleDates>
+                            <ScheduleQuantities>
+                                <ListOfQuantityCoded>
+                                    <QuantityCoded>
+                                        <QuantityValue SignificanceCoded="TrueValue" ConditionsCoded="Actual">6000000.00</QuantityValue>
+                                        <UnitOfMeasurement>
+                                            <UOMCoded>EA</UOMCoded>
+                                        </UnitOfMeasurement>
+                                        <QuantityQualifierCoded>Actual</QuantityQualifierCoded>
+                                    </QuantityCoded>
+                                </ListOfQuantityCoded>
+                            </ScheduleQuantities>
+                        </ShipScheduleDetail>
+                    </ListOfShipScheduleDetail>
+                </LocationShippingItemDetail>
+            </ListOfLocationShippingItemDetail>
+        </LocationGroupedShippingDetail>
+    </ListOfLocationGroupedShippingDetail>
+
+    <ShippingScheduleSummary>
+        <TotalNumberOfLineItems>1</TotalNumberOfLineItems>
+    </ShippingScheduleSummary>
+
+</ShippingSchedule>

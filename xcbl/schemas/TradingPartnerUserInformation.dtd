@@ -1,0 +1,113 @@
+<!-- xCBL Document DTD for XCBL35 TradingPartnerUserInformation -->
+<!ELEMENT TradingPartnerUserInformation ((TradingPartnerUserPurpose , ListOfTradingPartnerUser))>
+<!ELEMENT TradingPartnerUserPurpose ((TradingPartnerUserPurposeCoded , TradingPartnerUserPurposeCodedOther?))>
+<!ELEMENT TradingPartnerUserPurposeCoded  (#PCDATA)>
+<!ELEMENT TradingPartnerUserPurposeCodedOther  (#PCDATA)>
+<!ELEMENT ListOfTradingPartnerUser (TradingPartnerUser+)>
+<!ELEMENT TradingPartnerUser ((TradingPartnerOrganizationReference , UserID , PersonProfile , ListOfUserRole? , UserAdministration? , ListOfContactRelationType?))>
+<!ELEMENT TradingPartnerOrganizationReference (Identifications)>
+<!ELEMENT ListOfContactRelationType (ContactRelationType)>
+<!ELEMENT Identifications ((PrimaryID? , ListOfTradingPartnerID?))>
+<!ELEMENT PrimaryID ((Agency , Ident) , ShortID? , PrimaryIDURN?)>
+<!ELEMENT ShortID  (#PCDATA)>
+<!ELEMENT PrimaryIDURN  (#PCDATA)>
+<!ELEMENT Identifier ((Agency , Ident))>
+<!ELEMENT Ident  (#PCDATA)>
+<!ELEMENT Agency ((AgencyCoded , AgencyCodedOther? , AgencyDescription? , CodeListIdentifierCoded? , CodeListIdentifierCodedOther?))>
+<!ELEMENT AgencyCoded  (#PCDATA)>
+<!ELEMENT AgencyCodedOther  (#PCDATA)>
+<!ELEMENT AgencyDescription  (#PCDATA)>
+<!ELEMENT CodeListIdentifierCoded  (#PCDATA)>
+<!ELEMENT CodeListIdentifierCodedOther  (#PCDATA)>
+<!ELEMENT ListOfTradingPartnerID (TradingPartnerID+)>
+<!ELEMENT TradingPartnerID (Identifier)>
+<!ELEMENT UserID (#PCDATA)>
+<!ATTLIST UserID 
+        UserShortID CDATA  #IMPLIED>
+<!ELEMENT PersonProfile ((Title? , AcademicTitle? , LastName , FirstName? , MiddleName? , FullName? , CorrespondenceLanguage? , NumberFormat? , DateFormat? , TimeFormat? , PersonTimezone? , ListOfX509Certificate? , PersonAddress , GeneralNotes?))>
+<!ELEMENT LastName  (#PCDATA)>
+<!ELEMENT FirstName  (#PCDATA)>
+<!ELEMENT MiddleName  (#PCDATA)>
+<!ELEMENT FullName  (#PCDATA)>
+<!ELEMENT CorrespondenceLanguage (Language)>
+<!ELEMENT NumberFormat  (#PCDATA)>
+<!ELEMENT TimeFormat  (#PCDATA)>
+<!ELEMENT PersonTimezone (Timezone)>
+<!ELEMENT GeneralNotes  (#PCDATA)>
+<!ELEMENT Title ((TitleCoded , TitleCodedOther?))>
+<!ELEMENT TitleCoded  (#PCDATA)>
+<!ELEMENT TitleCodedOther  (#PCDATA)>
+<!ELEMENT AcademicTitle ((AcademicTitleCoded , AcademicTitleCodedOther?))>
+<!ELEMENT AcademicTitleCoded  (#PCDATA)>
+<!ELEMENT AcademicTitleCodedOther  (#PCDATA)>
+<!ELEMENT Language ((LanguageCoded , LanguageCodedOther? , LocaleCoded? , LocaleCodedOther?))>
+<!ATTLIST Language 
+        LanguageDependent CDATA  #IMPLIED>
+<!ELEMENT LanguageCoded  (#PCDATA)>
+<!ELEMENT LanguageCodedOther  (#PCDATA)>
+<!ELEMENT LocaleCoded  (#PCDATA)>
+<!ELEMENT LocaleCodedOther  (#PCDATA)>
+<!ELEMENT DateFormat ((DateFormatCoded , DateFormatCodedOther?))>
+<!ELEMENT DateFormatCoded  (#PCDATA)>
+<!ELEMENT DateFormatCodedOther  (#PCDATA)>
+<!ELEMENT Timezone ((TimezoneCoded , TimezoneCodedOther?))>
+<!ELEMENT TimezoneCoded  (#PCDATA)>
+<!ELEMENT TimezoneCodedOther  (#PCDATA)>
+<!ELEMENT ListOfX509Certificate (X509Certificate*)>
+<!ELEMENT X509Certificate ((ListOfCertificatePurpose* , (X509Cert|X509CertificateInfo)))>
+<!ELEMENT X509Cert  (#PCDATA)>
+<!ELEMENT ListOfCertificatePurpose (CertificatePurpose*)>
+<!ELEMENT CertificatePurpose ((CertificatePurposeCoded , CertificatePurposeCodedOther?))>
+<!ELEMENT CertificatePurposeCoded  (#PCDATA)>
+<!ELEMENT CertificatePurposeCodedOther  (#PCDATA)>
+<!ELEMENT X509CertificateInfo ((X509Subject , X509Issuer , X509SerialNumber))>
+<!ELEMENT X509Subject  (#PCDATA)>
+<!ELEMENT X509Issuer  (#PCDATA)>
+<!ELEMENT X509SerialNumber  (#PCDATA)>
+<!ELEMENT PersonAddress (((OrganizationAddressID|(POBox? , Street? , HouseNumber? , StreetSupplement1? , StreetSupplement2? , PostalCode? , City , County? , Region? , District? , Country)) , Building? , Floor? , RoomNumber? , InhouseMail? , Department? , ListOfCommunicationDetail))>
+<!ELEMENT OrganizationAddressID  (#PCDATA)>
+<!ELEMENT Street  (#PCDATA)>
+<!ELEMENT HouseNumber  (#PCDATA)>
+<!ELEMENT StreetSupplement1  (#PCDATA)>
+<!ELEMENT StreetSupplement2  (#PCDATA)>
+<!ELEMENT PostalCode  (#PCDATA)>
+<!ELEMENT City  (#PCDATA)>
+<!ELEMENT County  (#PCDATA)>
+<!ELEMENT District  (#PCDATA)>
+<!ELEMENT Building  (#PCDATA)>
+<!ELEMENT Floor  (#PCDATA)>
+<!ELEMENT RoomNumber  (#PCDATA)>
+<!ELEMENT InhouseMail  (#PCDATA)>
+<!ELEMENT Department  (#PCDATA)>
+<!ELEMENT POBox (#PCDATA)>
+<!ATTLIST POBox 
+        POBoxPostalCode CDATA  #IMPLIED>
+<!ELEMENT Region ((RegionCoded , RegionCodedOther?))>
+<!ELEMENT RegionCoded  (#PCDATA)>
+<!ELEMENT RegionCodedOther  (#PCDATA)>
+<!ELEMENT Country ((CountryCoded , CountryCodedOther?))>
+<!ELEMENT CountryCoded  (#PCDATA)>
+<!ELEMENT CountryCodedOther  (#PCDATA)>
+<!ELEMENT ListOfCommunicationDetail (CommunicationDetail+)>
+<!ELEMENT CommunicationDetail ((CommunicationDetailDescription? , PersonCommunicationType , CommunicationValue , DefaultCommunication?))>
+<!ELEMENT CommunicationDetailDescription  (#PCDATA)>
+<!ELEMENT CommunicationValue  (#PCDATA)>
+<!ELEMENT DefaultCommunication  (#PCDATA)>
+<!ELEMENT PersonCommunicationType ((PersonCommunicationTypeCoded , PersonCommunicationTypeCodedOther))>
+<!ELEMENT PersonCommunicationTypeCoded  (#PCDATA)>
+<!ELEMENT PersonCommunicationTypeCodedOther  (#PCDATA)>
+<!ELEMENT ListOfUserRole (UserRole+)>
+<!ELEMENT UserRole ((UserRoleAuthority? , UserRoleName , UserRoleID?))>
+<!ELEMENT UserRoleAuthority  (#PCDATA)>
+<!ELEMENT UserRoleName  (#PCDATA)>
+<!ELEMENT UserRoleID  (#PCDATA)>
+<!ELEMENT UserAdministration ((ValidityDates? , UserStatus?))>
+<!ELEMENT ValidityDates ((StartDate , EndDate))>
+<!ELEMENT StartDate  (#PCDATA)>
+<!ELEMENT EndDate  (#PCDATA)>
+<!ELEMENT UserStatus ((UserStatusCoded , UserStatusCodedOther?))>
+<!ELEMENT UserStatusCoded  (#PCDATA)>
+<!ELEMENT UserStatusCodedOther  (#PCDATA)>
+<!ELEMENT ContactRelationType ((ContactRelationTypeCoded , ContactRelationTypeCodedOther?))>
+<!ELEMENT ContactRelationTypeCoded  (#PCDATA)>
+<!ELEMENT ContactRelationTypeCodedOther  (#PCDATA)>

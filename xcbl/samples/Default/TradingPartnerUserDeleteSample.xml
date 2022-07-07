@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE TradingPartnerUserDelete SYSTEM 'TradingPartnerUserDelete.dtd'>
+
+<TradingPartnerUserDelete>
+    <ListOfTradingPartnerUserDeletion>
+        <TradingPartnerUserDeletion>
+            <TradingPartnerOrganizationReference>
+                <Identifications>
+                    <ListOfTradingPartnerID>
+                        <TradingPartnerID>
+                            <Identifier>
+                                <Agency>
+                                    <AgencyCoded>ACORD</AgencyCoded>
+                                    <AgencyCodedOther>string of characters</AgencyCodedOther>
+                                    <AgencyDescription>string of characters</AgencyDescription>
+                                </Agency>
+                                <Ident>string of characters</Ident>
+                            </Identifier>
+                        </TradingPartnerID>
+                    </ListOfTradingPartnerID>
+                </Identifications>
+            </TradingPartnerOrganizationReference>
+            <UserID UserShortID="string">string of characters</UserID>
+        </TradingPartnerUserDeletion>
+    </ListOfTradingPartnerUserDeletion>
+</TradingPartnerUserDelete>

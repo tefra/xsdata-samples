@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+
+<!--    SAMPLE FILE, THIS DOES NOT CONTAIN REAL DATA        -->
+
+<!DOCTYPE TimeSeriesRequest SYSTEM 'TimeSeriesRequest.dtd'>
+
+<TimeSeriesRequest>
+    <TimeSeriesRequestHeader>
+        <TimeSeriesHeader>
+            <TimeSeriesIssueDate>20001214T17:22:00</TimeSeriesIssueDate>
+            <TimeSeriesID>
+                <Reference>
+                    <RefNum>TS-44-001</RefNum>
+                </Reference>
+            </TimeSeriesID>
+            <TimeSeriesPurposeCoded>Original</TimeSeriesPurposeCoded>
+            <TimeSeriesTimePeriod>
+                <ValidityDates>
+                    <StartDate>20001231T09:00:00</StartDate>
+                    <EndDate>20011231T09:00:00</EndDate>
+                </ValidityDates>
+            </TimeSeriesTimePeriod>
+            <TimeSeriesSystemType>
+                <SourceTargetID>
+                    <SourceID>SAP-F00836</SourceID>
+                </SourceTargetID>
+            </TimeSeriesSystemType>
+            <TimeSeriesPlanningData>
+                <SourceTargetID>
+                    <TargetID>F00834</TargetID>
+                </SourceTargetID>
+            </TimeSeriesPlanningData>
+            <TimeSeriesParty>
+                <SourceParty>
+                    <Party>
+                        <PartyID>
+                            <Identifier>
+                                <Agency>
+                                    <AgencyCoded>Other</AgencyCoded>
+                                </Agency>
+                                <Ident>HHY-8989-2003</Ident>
+                            </Identifier>
+                        </PartyID>
+                        <NameAddress>
+                            <Name1>JUSTIN Works Corporation</Name1>
+                            <Street>34550 Winchester</Street>
+                            <Floor>18th</Floor>
+                            <Department>Order IT</Department>
+                            <PostalCode>33069</PostalCode>
+                            <City>Collierville</City>
+                            <Region>
+                                <RegionCoded>USTN</RegionCoded>
+                            </Region>
+                            <Country>
+                                <CountryCoded>US</CountryCoded>
+                            </Country>
+                        </NameAddress>
+                    </Party>
+                </SourceParty>
+                <ReceiverParty>
+                    <Party>
+                        <PartyID>
+                            <Identifier>
+                                <Agency>
+                                    <AgencyCoded>Other</AgencyCoded>
+                                </Agency>
+                                <Ident>ABB 6885-21</Ident>
+                            </Identifier>
+                        </PartyID>
+                        <ReceivingContact>
+                            <Contact>
+                                <ContactName>John Dillinger Small</ContactName>
+                                <ContactDescription>Department Manager</ContactDescription>
+                                <ListOfContactNumber>
+                                    <ContactNumber>
+                                        <ContactNumberValue>901-551-0000</ContactNumberValue>
+                                        <ContactNumberTypeCoded>TelephoneNumber</ContactNumberTypeCoded>
+                                    </ContactNumber>
+                                </ListOfContactNumber>
+                            </Contact>
+                        </ReceivingContact>
+                    </Party>
+                </ReceiverParty>
+            </TimeSeriesParty>
+            <Language>
+                <LanguageCoded>en</LanguageCoded>
+            </Language>
+        </TimeSeriesHeader>
+    </TimeSeriesRequestHeader>
+
+    <TimeSeriesRequestDetail>
+        <ListOfCharacteristicCombinations>
+            <CharacteristicCombination>
+                <CharacteristicCombinationID>STAT3456</CharacteristicCombinationID>
+                <CharacteristicProduct>
+                    <SourceProduct>
+                        <BaseCharacteristicProduct>
+                            <ProductAttributeID>HH:0909:Y-909-776:C009- a s a p :456-665</ProductAttributeID>
+                        </BaseCharacteristicProduct>
+                    </SourceProduct>
+                </CharacteristicProduct>
+                <CharacteristicLocation>
+                    <TargetLocation>
+                        <BaseCharacteristicLocation>
+                            <LocationAttributeID>GBFXT</LocationAttributeID>
+                            <Location>
+                                <LocationIdentifier>
+                                    <LocID>
+                                        <Identifier>
+                                            <Agency>
+                                                <AgencyCoded>Other</AgencyCoded>
+                                            </Agency>
+                                            <Ident>TTB-90903445-00</Ident>
+                                        </Identifier>
+                                    </LocID>
+                                </LocationIdentifier>
+                            </Location>
+                        </BaseCharacteristicLocation>
+                    </TargetLocation>
+                </CharacteristicLocation>
+            </CharacteristicCombination>
+        </ListOfCharacteristicCombinations>
+
+
+        <ListOfKeyFigureData>
+            <KeyFigureData>
+                <KeyFigureInformation>
+                    <SourceKeyFigure>
+                        <KeyFigure>
+                            <KeyFigureID>ssap - FOO675YEP</KeyFigureID>
+                        </KeyFigure>
+                    </SourceKeyFigure>
+                    <TargetKeyFigure>
+                        <KeyFigure>
+                            <KeyFigureID>ssap - BAR445YEP</KeyFigureID>
+                            <KeyFigureDescription>InHouse SAP System</KeyFigureDescription>
+                        </KeyFigure>
+                    </TargetKeyFigure>
+                </KeyFigureInformation>
+                <UnitOfMeasurement>
+                    <UOMCoded>4L</UOMCoded>
+                </UnitOfMeasurement>
+            </KeyFigureData>
+        </ListOfKeyFigureData>
+    </TimeSeriesRequestDetail>
+
+    <TimeSeriesRequestSummary>
+        <TimeSeriesSummary>
+            <TotalTimeSeriesData>22</TotalTimeSeriesData>
+            <TotalCharacteristicCombinations>4</TotalCharacteristicCombinations>
+            <TotalKeyFigures>4</TotalKeyFigures>
+        </TimeSeriesSummary>
+    </TimeSeriesRequestSummary>
+
+</TimeSeriesRequest>

@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<!--The Buyer is ABC Enterprises, they are purchasing parts from Dunn Manufacturing-->
+<!--This is the Response from Dunn to ABC, confirmation of the Order-->
+<!DOCTYPE OrderResponse SYSTEM 'OrderResponse.dtd'>
+
+<OrderResponse>
+	<OrderResponseHeader>
+		<OrderResponseNumber>
+			<BuyerOrderResponseNumber>8989888866701</BuyerOrderResponseNumber>
+		</OrderResponseNumber>
+		<OrderResponseIssueDate>20010204T12:30:01</OrderResponseIssueDate>
+		<OrderResponseDocTypeCoded>OrderResponse</OrderResponseDocTypeCoded>
+		<OrderReference>
+			<Reference>
+				<RefNum>4500005693</RefNum>
+				<RefDate>20010203T12:00:00</RefDate>
+			</Reference>
+		</OrderReference>
+		<SellerParty>
+				<Party>
+					<PartyID>
+						<Identifier>
+							<Agency>
+								<AgencyCoded>AssignedBySellerOrSellersAgent</AgencyCoded>
+							</Agency>
+							<Ident>BCVND</Ident>
+						</Identifier>
+					</PartyID>
+					<NameAddress>
+					 	<Name1>Dunn Manufacturing</Name1>
+					<Department>Order Department</Department><PostalCode>95006</PostalCode><City>Orange</City><Region><RegionCoded>USCA</RegionCoded></Region></NameAddress>
+					<OtherContacts>
+						<ListOfContact>
+							<Contact>
+								<ContactName>Ms Black</ContactName>
+								<ContactFunction><ContactFunctionCoded>AccountsReceivableContact</ContactFunctionCoded></ContactFunction><ListOfContactNumber>
+									<ContactNumber>
+										<ContactNumberValue>212-345-4784</ContactNumberValue>
+										<ContactNumberTypeCoded>TelephoneNumber</ContactNumberTypeCoded>
+									</ContactNumber>
+								<ContactNumber><ContactNumberValue>Hblack@DunnMfg.com</ContactNumberValue><ContactNumberTypeCoded>EmailAddress</ContactNumberTypeCoded></ContactNumber></ListOfContactNumber>
+							</Contact>
+						<Contact><ContactName>George Walsh</ContactName><ContactFunction><ContactFunctionCoded>DeliveryContact</ContactFunctionCoded></ContactFunction><ListOfContactNumber><ContactNumber><ContactNumberValue>212-345-4701</ContactNumberValue><ContactNumberTypeCoded>TelephoneNumber</ContactNumberTypeCoded></ContactNumber><ContactNumber><ContactNumberValue>gwalsh@DunnMfg.com</ContactNumberValue><ContactNumberTypeCoded>EmailAddress</ContactNumberTypeCoded></ContactNumber></ListOfContactNumber></Contact></ListOfContact>
+					</OtherContacts>
+				</Party>
+			</SellerParty>
+		<BuyerParty>
+				<Party>
+					<PartyID>
+						<Identifier>
+							<Agency>
+								<AgencyCoded>AssignedBySellerOrSellersAgent</AgencyCoded>
+							</Agency>
+							<Ident>3000</Ident>
+						</Identifier>
+					</PartyID>
+					<NameAddress>
+						<Name1>ABC Enterprises</Name1>
+					<POBox POBoxPostalCode="249">	</POBox><PostalCode>20012</PostalCode><City>Alpine</City><Region><RegionCoded>USNY</RegionCoded></Region></NameAddress>
+					<OrderContact>
+						<Contact>
+							<ContactName>Dietl,B.</ContactName>
+							<ContactFunction>
+								<ContactFunctionCoded>DepartmentOrPersonResponsibleForProcessingPurchaseOrder</ContactFunctionCoded>
+							</ContactFunction>
+							<ListOfContactNumber>
+								<ContactNumber>
+									<ContactNumberValue>655-456-8911</ContactNumberValue>
+									<ContactNumberTypeCoded>TelephoneNumber</ContactNumberTypeCoded>
+								</ContactNumber>
+							<ContactNumber><ContactNumberValue>bdietl@ABC.com</ContactNumberValue><ContactNumberTypeCoded>EmailAddress</ContactNumberTypeCoded></ContactNumber></ListOfContactNumber>
+						</Contact>
+					</OrderContact>
+				</Party>
+			</BuyerParty>
+		<Purpose>
+			<PurposeCoded>Confirmation</PurposeCoded>
+		</Purpose>
+		<ResponseType>
+			<ResponseTypeCoded>Accepted</ResponseTypeCoded>
+		</ResponseType>
+	</OrderResponseHeader>
+
+	<OrderResponseDetail>
+		<ListOfOrderResponseItemDetail>
+			<OrderResponseItemDetail>
+				<ItemDetailResponseCoded>ApprovedAsSubmitted</ItemDetailResponseCoded>
+			</OrderResponseItemDetail>
+		</ListOfOrderResponseItemDetail>
+	</OrderResponseDetail>
+	
+	<OrderResponseSummary>
+		<OriginalOrderSummary>
+			<OrderSummary>
+				<TotalAmount>
+					<MonetaryValue>
+						<MonetaryAmount>2110.00</MonetaryAmount>
+						<Currency>
+							<CurrencyCoded>USD</CurrencyCoded>
+						</Currency>
+					</MonetaryValue>
+				</TotalAmount>
+			</OrderSummary>
+		</OriginalOrderSummary>
+	</OrderResponseSummary>
+	
+</OrderResponse>

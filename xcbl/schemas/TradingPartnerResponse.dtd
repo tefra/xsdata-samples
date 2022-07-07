@@ -1,0 +1,40 @@
+<!-- xCBL Document DTD for XCBL35 TradingPartnerResponse -->
+<!ELEMENT TradingPartnerResponse (ListOfTradingPartnerResponseInfo)>
+<!ELEMENT ListOfTradingPartnerResponseInfo (TradingPartnerResponseInfo+)>
+<!ELEMENT TradingPartnerResponseInfo ((ReturnMessageInformation , ListOfReturnedIdentification? , RedirectURL? , ServiceID?))>
+<!ELEMENT RedirectURL  (#PCDATA)>
+<!ELEMENT ServiceID  (#PCDATA)>
+<!ELEMENT ReturnMessageInformation ((PrimaryMessageInformation , ListOfSecondaryMessageInformation?))>
+<!ELEMENT PrimaryMessageInformation ((MessageResponseIdentifier , PrimaryReturnCoded , PrimaryReturnCodeDescription?))>
+<!ELEMENT MessageResponseIdentifier (Reference)>
+<!ELEMENT PrimaryReturnCoded  (#PCDATA)>
+<!ELEMENT PrimaryReturnCodeDescription  (#PCDATA)>
+<!ELEMENT Reference ((RefNum , RefDate?))>
+<!ELEMENT RefNum  (#PCDATA)>
+<!ELEMENT RefDate  (#PCDATA)>
+<!ELEMENT ListOfSecondaryMessageInformation (SecondaryMessageInformation+)>
+<!ELEMENT SecondaryMessageInformation ((MessageTypeCoded , MessageTypeCodedOther? , MessageClass? , MessageNumber? , MessageDescription?))>
+<!ELEMENT MessageTypeCoded  (#PCDATA)>
+<!ELEMENT MessageTypeCodedOther  (#PCDATA)>
+<!ELEMENT MessageClass  (#PCDATA)>
+<!ELEMENT MessageNumber  (#PCDATA)>
+<!ELEMENT MessageDescription  (#PCDATA)>
+<!ELEMENT ListOfReturnedIdentification (ReturnedIdentification+)>
+<!ELEMENT ReturnedIdentification ((TradingPartnerPrimaryID? , AlternateID? , UserID? , ReturnedIdentificationURN?))>
+<!ELEMENT TradingPartnerPrimaryID (PrimaryID)>
+<!ELEMENT AlternateID  (#PCDATA)>
+<!ELEMENT ReturnedIdentificationURN  (#PCDATA)>
+<!ELEMENT PrimaryID ((Agency , Ident) , ShortID? , PrimaryIDURN?)>
+<!ELEMENT ShortID  (#PCDATA)>
+<!ELEMENT PrimaryIDURN  (#PCDATA)>
+<!ELEMENT Identifier ((Agency , Ident))>
+<!ELEMENT Ident  (#PCDATA)>
+<!ELEMENT Agency ((AgencyCoded , AgencyCodedOther? , AgencyDescription? , CodeListIdentifierCoded? , CodeListIdentifierCodedOther?))>
+<!ELEMENT AgencyCoded  (#PCDATA)>
+<!ELEMENT AgencyCodedOther  (#PCDATA)>
+<!ELEMENT AgencyDescription  (#PCDATA)>
+<!ELEMENT CodeListIdentifierCoded  (#PCDATA)>
+<!ELEMENT CodeListIdentifierCodedOther  (#PCDATA)>
+<!ELEMENT UserID (#PCDATA)>
+<!ATTLIST UserID 
+        UserShortID CDATA  #IMPLIED>

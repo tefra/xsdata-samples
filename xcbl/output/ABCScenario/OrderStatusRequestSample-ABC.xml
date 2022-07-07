@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OrderStatusRequest>
+  <OrderStatusRequestHeader>
+    <OrderStatusRequestID>
+      <Reference>
+        <RefNum>223487655</RefNum>
+        <RefDate>20010203T12:00:00</RefDate>
+      </Reference>
+    </OrderStatusRequestID>
+    <OrderStatusIssueDate>20010205T09:00:00</OrderStatusIssueDate>
+    <OrderStatusParty>
+      <OrderParty>
+        <BuyerParty>
+          <Party>
+            <PartyID>
+              <Identifier>
+                <Agency>
+                  <AgencyCoded>AssignedBySellerOrSellersAgent</AgencyCoded>
+                </Agency>
+                <Ident>3000</Ident>
+              </Identifier>
+            </PartyID>
+            <NameAddress AddressTypeCoded="NotApplicable">
+              <Name1>ABC Enterprises</Name1>
+              <POBox POBoxPostalCode="249">	</POBox>
+              <PostalCode>20012</PostalCode>
+              <City>Alpine</City>
+              <Region>
+                <RegionCoded>USNY</RegionCoded>
+              </Region>
+            </NameAddress>
+            <OrderContact>
+              <Contact>
+                <ContactName>Dietl,B.</ContactName>
+                <ContactFunction>
+                  <ContactFunctionCoded>DepartmentOrPersonResponsibleForProcessingPurchaseOrder</ContactFunctionCoded>
+                </ContactFunction>
+                <ListOfContactNumber>
+                  <ContactNumber>
+                    <ContactNumberValue>655-456-8911</ContactNumberValue>
+                    <ContactNumberTypeCoded>TelephoneNumber</ContactNumberTypeCoded>
+                  </ContactNumber>
+                  <ContactNumber>
+                    <ContactNumberValue>bdietl@ABC.com</ContactNumberValue>
+                    <ContactNumberTypeCoded>EmailAddress</ContactNumberTypeCoded>
+                  </ContactNumber>
+                </ListOfContactNumber>
+              </Contact>
+            </OrderContact>
+          </Party>
+        </BuyerParty>
+        <SellerParty>
+          <Party>
+            <PartyID>
+              <Identifier>
+                <Agency>
+                  <AgencyCoded>AssignedBySellerOrSellersAgent</AgencyCoded>
+                </Agency>
+                <Ident>BCVND</Ident>
+              </Identifier>
+            </PartyID>
+            <NameAddress AddressTypeCoded="NotApplicable">
+              <Name1>Dunn Manufacturing</Name1>
+              <Department>Order Department</Department>
+              <PostalCode>95006</PostalCode>
+              <City>Orange</City>
+              <Region>
+                <RegionCoded>USCA</RegionCoded>
+              </Region>
+            </NameAddress>
+            <OtherContacts>
+              <ListOfContact>
+                <Contact>
+                  <ContactName>Ms Black</ContactName>
+                  <ContactFunction>
+                    <ContactFunctionCoded>AccountsReceivableContact</ContactFunctionCoded>
+                  </ContactFunction>
+                  <ListOfContactNumber>
+                    <ContactNumber>
+                      <ContactNumberValue>212-345-4784</ContactNumberValue>
+                      <ContactNumberTypeCoded>TelephoneNumber</ContactNumberTypeCoded>
+                    </ContactNumber>
+                    <ContactNumber>
+                      <ContactNumberValue>Hblack@DunnMfg.com</ContactNumberValue>
+                      <ContactNumberTypeCoded>EmailAddress</ContactNumberTypeCoded>
+                    </ContactNumber>
+                  </ListOfContactNumber>
+                </Contact>
+                <Contact>
+                  <ContactName>George Walsh</ContactName>
+                  <ContactFunction>
+                    <ContactFunctionCoded>DeliveryContact</ContactFunctionCoded>
+                  </ContactFunction>
+                  <ListOfContactNumber>
+                    <ContactNumber>
+                      <ContactNumberValue>212-345-4701</ContactNumberValue>
+                      <ContactNumberTypeCoded>TelephoneNumber</ContactNumberTypeCoded>
+                    </ContactNumber>
+                    <ContactNumber>
+                      <ContactNumberValue>gwalsh@DunnMfg.com</ContactNumberValue>
+                      <ContactNumberTypeCoded>EmailAddress</ContactNumberTypeCoded>
+                    </ContactNumber>
+                  </ListOfContactNumber>
+                </Contact>
+              </ListOfContact>
+            </OtherContacts>
+          </Party>
+        </SellerParty>
+      </OrderParty>
+    </OrderStatusParty>
+  </OrderStatusRequestHeader>
+  <OrderStatusRequestDetail>
+    <ListOfOrderStatusRequestDetail>
+      <OrderStatusDetailRequest>
+        <OrderStatusReference>
+          <BuyerReferenceNumber>
+            <Reference>
+              <RefNum>4500005693</RefNum>
+            </Reference>
+          </BuyerReferenceNumber>
+          <SellerReferenceNumber>
+            <Reference>
+              <RefNum>4500005693</RefNum>
+            </Reference>
+          </SellerReferenceNumber>
+          <OrderDate>20010203T12:00:00</OrderDate>
+        </OrderStatusReference>
+        <GeneralLineItemNote>Note Increase Line Item 0011 from 1 to 5</GeneralLineItemNote>
+      </OrderStatusDetailRequest>
+    </ListOfOrderStatusRequestDetail>
+  </OrderStatusRequestDetail>
+  <OrderStatusRequestSummary>
+    <TotalNumberOfLineItem>1</TotalNumberOfLineItem>
+  </OrderStatusRequestSummary>
+</OrderStatusRequest>
+

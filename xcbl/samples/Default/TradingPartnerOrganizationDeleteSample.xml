@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE TradingPartnerOrganizationDelete SYSTEM 'TradingPartnerOrganizationDelete.dtd'>
+
+<TradingPartnerOrganizationDelete>
+	<ListOfTradingPartnerOrganizationDeletion>
+		<TradingPartnerOrganizationDeletion>
+			<TradingPartnerIdentifications>
+				<Identifications>
+					<ListOfTradingPartnerID>
+						<TradingPartnerID>
+							<Identifier>
+								<Agency>
+									<AgencyCoded>ACORD</AgencyCoded>
+									<AgencyCodedOther>string of characters</AgencyCodedOther>
+									<AgencyDescription>string of characters</AgencyDescription>
+									<CodeListIdentifierCoded>Other</CodeListIdentifierCoded>
+									<CodeListIdentifierCodedOther>string of characters</CodeListIdentifierCodedOther>
+								</Agency>
+								<Ident>string of characters</Ident>
+							</Identifier>
+						</TradingPartnerID>
+					</ListOfTradingPartnerID>
+				</Identifications>
+			</TradingPartnerIdentifications>
+			<TradingPartnerDisplayName>string of characters</TradingPartnerDisplayName>
+		</TradingPartnerOrganizationDeletion>
+	</ListOfTradingPartnerOrganizationDeletion>
+</TradingPartnerOrganizationDelete>

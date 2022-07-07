@@ -1,0 +1,181 @@
+<!-- xCBL Document DTD for XCBL35 PaymentRequestAcknowledgment -->
+<!ELEMENT PaymentRequestAcknowledgment ((PaymentRequestAcknHeader , ListOfPaymentRequestAcknDetail , PaymentRequestAcknSummary))>
+<!ELEMENT PaymentRequestAcknSummary (PaymentRequestSummary)>
+<!ELEMENT PaymentRequestAcknHeader ((PaymentRequestAcknCoded , PaymentRequestAcknCodedOther? , PaymentRequestAcknIssueDate , PaymentRequestAcknID , PaymentRequestIDReference? , CertificateAuthority? , SuccessfulReceptIndicator , GeneralNote? , Language))>
+<!ELEMENT PaymentRequestAcknCoded  (#PCDATA)>
+<!ELEMENT PaymentRequestAcknCodedOther  (#PCDATA)>
+<!ELEMENT PaymentRequestAcknIssueDate  (#PCDATA)>
+<!ELEMENT PaymentRequestAcknID  (#PCDATA)>
+<!ELEMENT PaymentRequestIDReference (Reference)>
+<!ELEMENT SuccessfulReceptIndicator  (#PCDATA)>
+<!ELEMENT GeneralNote  (#PCDATA)>
+<!ELEMENT Reference ((RefNum , RefDate?))>
+<!ELEMENT RefNum  (#PCDATA)>
+<!ELEMENT RefDate  (#PCDATA)>
+<!ELEMENT Language ((LanguageCoded , LanguageCodedOther? , LocaleCoded? , LocaleCodedOther?))>
+<!ATTLIST Language 
+        LanguageDependent CDATA  #IMPLIED>
+<!ELEMENT LanguageCoded  (#PCDATA)>
+<!ELEMENT LanguageCodedOther  (#PCDATA)>
+<!ELEMENT LocaleCoded  (#PCDATA)>
+<!ELEMENT LocaleCodedOther  (#PCDATA)>
+<!ELEMENT ListOfPaymentRequestAcknDetail (PaymentRequestAcknDetail+)>
+<!ELEMENT PaymentRequestAcknDetail ((ConfirmationID , PaymentDocumentID , PaymentSequenceNo? , SettlementAmount? , DebitAmount? , CreditAmount? , PaymentParty? , FinancialInstitutionDetail? , ListOfRateOfExchangeDetail? , ExcpetionNote? , PaymentRequestNote? , ListOfPaymentException? , EncryptedInfo?))>
+<!ELEMENT ConfirmationID  (#PCDATA)>
+<!ELEMENT PaymentDocumentID (Reference)>
+<!ELEMENT PaymentSequenceNo  (#PCDATA)>
+<!ELEMENT SettlementAmount (MonetaryValue)>
+<!ELEMENT DebitAmount (MonetaryValue)>
+<!ELEMENT CreditAmount (MonetaryValue)>
+<!ELEMENT ExcpetionNote  (#PCDATA)>
+<!ELEMENT PaymentRequestNote  (#PCDATA)>
+<!ELEMENT MonetaryValue ((MonetaryAmount , Currency? , RateOfExchangeDetail?))>
+<!ELEMENT MonetaryAmount  (#PCDATA)>
+<!ELEMENT Currency ((CurrencyCoded , CurrencyCodedOther?))>
+<!ELEMENT CurrencyCoded  (#PCDATA)>
+<!ELEMENT CurrencyCodedOther  (#PCDATA)>
+<!ELEMENT RateOfExchangeDetail ((ReferenceCurrency , TargetCurrency , RateOfExchange , InverseRateOfExchange? , DateOfRateOfExchange? , ListOfRateOfExchangeReference?))>
+<!ELEMENT ReferenceCurrency (Currency)>
+<!ELEMENT TargetCurrency (Currency)>
+<!ELEMENT RateOfExchange  (#PCDATA)>
+<!ELEMENT InverseRateOfExchange  (#PCDATA)>
+<!ELEMENT DateOfRateOfExchange  (#PCDATA)>
+<!ELEMENT ListOfRateOfExchangeReference (ListOfReference)>
+<!ELEMENT ListOfReference (Reference+)>
+<!ELEMENT PaymentParty ((PayerParty , PayeeParty , BuyerParty? , SupplierParty? , BillToParty? , ListOfPartyCoded?))>
+<!ELEMENT PayeeParty (Party)>
+<!ELEMENT BuyerParty (Party)>
+<!ELEMENT SupplierParty (Party)>
+<!ELEMENT BillToParty (Party)>
+<!ELEMENT PayerParty ((PartyID , ListOfIdentifier? , MDFBusiness? , NameAddress? , OrderContact? , ReceivingContact? , ShippingContact? , OtherContacts? , CorrespondenceLanguage?) , CertificateAuthority?)>
+<!ELEMENT Party ((PartyID , ListOfIdentifier? , MDFBusiness? , NameAddress? , OrderContact? , ReceivingContact? , ShippingContact? , OtherContacts? , CorrespondenceLanguage?))>
+<!ELEMENT PartyID (Identifier)>
+<!ELEMENT MDFBusiness  (#PCDATA)>
+<!ELEMENT OrderContact (Contact)>
+<!ELEMENT ReceivingContact (Contact)>
+<!ELEMENT ShippingContact (Contact)>
+<!ELEMENT OtherContacts (ListOfContact)>
+<!ELEMENT CorrespondenceLanguage (Language)>
+<!ELEMENT Identifier ((Agency , Ident))>
+<!ELEMENT Ident  (#PCDATA)>
+<!ELEMENT Agency ((AgencyCoded , AgencyCodedOther? , AgencyDescription? , CodeListIdentifierCoded? , CodeListIdentifierCodedOther?))>
+<!ELEMENT AgencyCoded  (#PCDATA)>
+<!ELEMENT AgencyCodedOther  (#PCDATA)>
+<!ELEMENT AgencyDescription  (#PCDATA)>
+<!ELEMENT CodeListIdentifierCoded  (#PCDATA)>
+<!ELEMENT CodeListIdentifierCodedOther  (#PCDATA)>
+<!ELEMENT ListOfIdentifier (Identifier+)>
+<!ELEMENT NameAddress ((ExternalAddressID? , Name1 , Name2? , Name3? , Identifier? , POBox? , Street? , HouseNumber? , StreetSupplement1? , StreetSupplement2? , Building? , Floor? , RoomNumber? , InhouseMail? , Department? , PostalCode? , City? , County? , Region? , District? , Country? , Timezone?))>
+<!ATTLIST NameAddress 
+        AddressTypeCoded  (Other|AcceptanceLocation|AccountsPayableOffice|AcknowledgementRecipient|AdditionalAddress|AdditionalDeliveryAddress|AdditionalPickUpAddress|AlcoholBeverageDepartment|AlternateReturnAddress|AlternativeAddressee|AuditOffice|BailmentWarehouse|BidOpeningLocation|BillAndShipTo|BilledFrom|BillOfLadingRecipient|BillTo|BookingOffice|CandyAndConfectionsDepartment|ChangedAddress|CompanyAssignedWell|Company-OwnedOilField|ConsigneeCourierTransferStation|ConsignorCourierTransferStation|ConsultantsOffice|ContactOffice|ContainerLocation|CopyMessageTo|CorporateOffice|CorrectedAddress|DeliveryAddress|DestinationMailFacility|DifferentPremiseAddress|DistributionRecipient|DocumentOrMessageIssuerOrSender|DocumentRecipient|DomesticFinancialInstitution|DownstreamMeterLocation|Drop-OffLocation|EmergencyDepartment|EstablishedLocation|EventLocation|FilingAddress|FilingLocation|FilingOffice|FinalMessageRecipient|FinalRecipient|FinalScheduledDestination|FinancialInstitution|FirstContact|FloralDepartment|ForeignDisclosureInformationOffice|ForeignOffice|ForeignRegistrationLocation|FormerAddress|FreeonBoardPoint|FrozenDepartment|GaragedLocation|GasPlant|GasTransactionEndingPoint|GasTransactionPoint1|GasTransactionPoint2|GasTransactionStartingPoint|HazardousMaterialOffice|HeadOffice|HomeOffice|ImportedFromLocation|IncorporatedLocation|IncorporationStatePlaceOfBusiness|IncorporationStatePrincipalOffice|InquiryAddress|InspectionAddress|InspectionAndAcceptanceLocation|InspectionLocation|InstalledAt|In-StoreBakeryDepartment|InsuredLocation|Laboratory|LastBreakTerminal|LeaseLocation|ListingOffice|LocalChain|LocationOfGoods|LocationOfGoodsForCustomsExaminationBeforeClearance|LocationOfLoadExchange|LocationOfSpotForStorage|Lot|MailAddress|MailTo|ManufacturingPlant|MasterProperty|MaterialChangeNoticeAddress|MaterialDispositionAuthorizationLocation|MeatDepartment|MeetingLocation|MessageFrom|MessageRecipient|MessageTo|Neighborhood|NewAddress|NewSupplySource|NextDestination|NextScheduledDestination|Non-TemporaryStorageFacility|NotApplicable|OperatorOfTheTransferPoint|OriginalLocation|OriginMailFacility|OriginSublocation|OriginTerminal|OtherDepartments|OuterContinentalShelfAreaLocation|Out-Of-StatePrincipalOffice|OwningInventoryControlPoint|PartSource|PaymentAddress|PersonnelOffice|PharmacyDepartment|PhysicalAddress|PickUpAddress|Pipeline|PipelineSegment|PipelineSegmentBoundary|PlaceOfBottling|PlaceOfBusiness|PostalMailingAddress|PreliminaryInspectionLocation|Premises|PresentAddress|PrimaryControlPointLocation|ProduceDepartment|ProductServicesAndRepairsCentre|ProjectCoordinationOffice|ProjectManagementOffice|ProjectProperty|Property|QualityControl|RadioControlStationLocation|Railroad|ReceiptMeterLocation|ReceiptZone|ReceivedFrom|ReceiverSite|ReceivingLocation|ReceivingPointForCustomerSamples|ReceivingSub-Location|ReclamationCenter|Record-KeepingAddress|Refinery|RegionalOffice|RegisteredOffice|ReleaseTo|RemitTo|RepairingOutlet|RepairOrRefurbishLocation|ReportingLocation|ResearchInstitute|ResidenceOrDomicile|ReturnedTo|RoutingPoint|SalesOffice|SamplesToBeReturnedTo|SamplingLocation|SecondaryLocationAddress|SecondHome|SellingOffice|ServiceBureau|ServiceLocation|ShelteredWorkshop|ShipFrom|ShipTo|SmallBaseStationLocation|SmallControlStationLocation|SoldToAndShipTo|SoldToIfDifferentFromBillTo|StorageArea|StorageFacilityatDestination|StorageFacilityAtOrigin|Store|SoldTo|SubcontractOrCognizantSecurityOffice|SubjectProperty|Sub-Office|Subsidiary|SubsidiaryDivision|SupplierOrManufacturer|SuppliersCorporateOffice|SupplySource|TankFarm|TaxAddress|TaxCollectorsOffice|TechnicalOffice|Terminal|TerminalLocation|TestingLaboratory|ToolSource|TransferPoint|TransferTo|TransportationOffice|UltimateConsignee|UltimateCustomer|UltimateParentCompany|UnitProperty|UpstreamMeterLocation|VacationHome|Vendor|VideoDepartment|Warehouse|Wholesaler) 'NotApplicable'
+        AddressTypeCodedOther CDATA  #IMPLIED>
+<!ELEMENT ExternalAddressID  (#PCDATA)>
+<!ELEMENT Name1  (#PCDATA)>
+<!ELEMENT Name2  (#PCDATA)>
+<!ELEMENT Name3  (#PCDATA)>
+<!ELEMENT Street  (#PCDATA)>
+<!ELEMENT HouseNumber  (#PCDATA)>
+<!ELEMENT StreetSupplement1  (#PCDATA)>
+<!ELEMENT StreetSupplement2  (#PCDATA)>
+<!ELEMENT Building  (#PCDATA)>
+<!ELEMENT Floor  (#PCDATA)>
+<!ELEMENT RoomNumber  (#PCDATA)>
+<!ELEMENT InhouseMail  (#PCDATA)>
+<!ELEMENT Department  (#PCDATA)>
+<!ELEMENT PostalCode  (#PCDATA)>
+<!ELEMENT City  (#PCDATA)>
+<!ELEMENT County  (#PCDATA)>
+<!ELEMENT District  (#PCDATA)>
+<!ELEMENT POBox (#PCDATA)>
+<!ATTLIST POBox 
+        POBoxPostalCode CDATA  #IMPLIED>
+<!ELEMENT Region ((RegionCoded , RegionCodedOther?))>
+<!ELEMENT RegionCoded  (#PCDATA)>
+<!ELEMENT RegionCodedOther  (#PCDATA)>
+<!ELEMENT Country ((CountryCoded , CountryCodedOther?))>
+<!ELEMENT CountryCoded  (#PCDATA)>
+<!ELEMENT CountryCodedOther  (#PCDATA)>
+<!ELEMENT Timezone ((TimezoneCoded , TimezoneCodedOther?))>
+<!ELEMENT TimezoneCoded  (#PCDATA)>
+<!ELEMENT TimezoneCodedOther  (#PCDATA)>
+<!ELEMENT Contact ((ContactID? , ContactName , ContactFunction? , ContactDescription? , ListOfContactNumber?))>
+<!ELEMENT ContactID (Identifier)>
+<!ELEMENT ContactName  (#PCDATA)>
+<!ELEMENT ContactDescription  (#PCDATA)>
+<!ELEMENT ContactFunction ((ContactFunctionCoded , ContactFunctionCodedOther?))>
+<!ELEMENT ContactFunctionCoded  (#PCDATA)>
+<!ELEMENT ContactFunctionCodedOther  (#PCDATA)>
+<!ELEMENT ListOfContactNumber (ContactNumber+)>
+<!ELEMENT ContactNumber ((ContactNumberValue , ContactNumberTypeCoded , ContactNumberTypeCodedOther?))>
+<!ELEMENT ContactNumberValue  (#PCDATA)>
+<!ELEMENT ContactNumberTypeCoded  (#PCDATA)>
+<!ELEMENT ContactNumberTypeCodedOther  (#PCDATA)>
+<!ELEMENT ListOfContact (Contact+)>
+<!ELEMENT ListOfPartyCoded (PartyCoded+)>
+<!ELEMENT PartyCoded ((PartyID , ListOfIdentifier? , MDFBusiness? , NameAddress? , OrderContact? , ReceivingContact? , ShippingContact? , OtherContacts? , CorrespondenceLanguage?) , PartyRoleCoded , PartyRoleCodedOther?)>
+<!ELEMENT PartyRoleCoded  (#PCDATA)>
+<!ELEMENT PartyRoleCodedOther  (#PCDATA)>
+<!ELEMENT FinancialInstitutionDetail ((OriginatingFinancialInstitution , ReceivingFinancialInstitution , ListOfFinancialInstitutions?))>
+<!ELEMENT OriginatingFinancialInstitution (FIAccountDetail)>
+<!ELEMENT ReceivingFinancialInstitution (FIAccountDetail)>
+<!ELEMENT ListOfFinancialInstitutions (ListOfFIAccount)>
+<!ELEMENT FIAccountDetail ((AccountDetail , FinancialInstitution))>
+<!ELEMENT AccountDetail ((AccountID , SecondaryAccountID? , IBAN? , AccountControlKey? , AccountTypeCoded , AccountTypeCodedOther? , AccountName1 , AccountName2? , Currency? , AccountReferences?))>
+<!ELEMENT AccountID  (#PCDATA)>
+<!ELEMENT SecondaryAccountID  (#PCDATA)>
+<!ELEMENT IBAN  (#PCDATA)>
+<!ELEMENT AccountControlKey  (#PCDATA)>
+<!ELEMENT AccountTypeCoded  (#PCDATA)>
+<!ELEMENT AccountTypeCodedOther  (#PCDATA)>
+<!ELEMENT AccountName1  (#PCDATA)>
+<!ELEMENT AccountName2  (#PCDATA)>
+<!ELEMENT AccountReferences (ListOfReferenceCoded)>
+<!ELEMENT ListOfReferenceCoded (ReferenceCoded+)>
+<!ELEMENT ReferenceCoded ((ReferenceTypeCoded , ReferenceTypeCodedOther? , PrimaryReference , SupportingReference? , SupportingSubReference? , ReferenceDescription?))>
+<!ELEMENT ReferenceTypeCoded  (#PCDATA)>
+<!ELEMENT ReferenceTypeCodedOther  (#PCDATA)>
+<!ELEMENT PrimaryReference (Reference)>
+<!ELEMENT SupportingReference (Reference)>
+<!ELEMENT SupportingSubReference (Reference)>
+<!ELEMENT ReferenceDescription  (#PCDATA)>
+<!ELEMENT FinancialInstitution ((FinancialInstitutionID , FinancialInstitutionName , FIBranchID? , FIBranchName? , FIBranchStreet? , FIBranchHouseNumber? , FIBranchStreetSupplement1? , FIBranchStreetSupplement2? , FIBranchPostalCode? , FIBranchCity? , FIBranchRegion? , FIBranchCountry?))>
+<!ELEMENT FinancialInstitutionID  (#PCDATA)>
+<!ELEMENT FinancialInstitutionName  (#PCDATA)>
+<!ELEMENT FIBranchID  (#PCDATA)>
+<!ELEMENT FIBranchName  (#PCDATA)>
+<!ELEMENT FIBranchStreet  (#PCDATA)>
+<!ELEMENT FIBranchHouseNumber  (#PCDATA)>
+<!ELEMENT FIBranchStreetSupplement1  (#PCDATA)>
+<!ELEMENT FIBranchStreetSupplement2  (#PCDATA)>
+<!ELEMENT FIBranchPostalCode  (#PCDATA)>
+<!ELEMENT FIBranchCity  (#PCDATA)>
+<!ELEMENT FIBranchRegion (Region)>
+<!ELEMENT FIBranchCountry (Country)>
+<!ELEMENT ListOfFIAccount (FIAccountData+)>
+<!ELEMENT FIAccountData ((AccountDetail? , FinancialInstitution) , Sequence? , FINote?)>
+<!ELEMENT FINote  (#PCDATA)>
+<!ELEMENT FIAccount ((AccountDetail? , FinancialInstitution))>
+<!ELEMENT ListOfRateOfExchangeDetail (RateOfExchangeDetail+)>
+<!ELEMENT ListOfPaymentException (PaymentException+)>
+<!ELEMENT PaymentException ((PaymentExceptionCoded , PaymentExceptionCodedOther? , PaymentExceptionNote? , OffendingPaymentElement?))>
+<!ELEMENT PaymentExceptionCoded  (#PCDATA)>
+<!ELEMENT PaymentExceptionCodedOther  (#PCDATA)>
+<!ELEMENT PaymentExceptionNote  (#PCDATA)>
+<!ELEMENT OffendingPaymentElement (NameValuePair)>
+<!ELEMENT NameValuePair ((Name , Value , Datatype?))>
+<!ELEMENT Name  (#PCDATA)>
+<!ELEMENT Value  (#PCDATA)>
+<!ELEMENT Datatype  (#PCDATA)>
+<!ELEMENT EncryptedInfo ((CertificateAuthority? , ListOfEncryptedField))>
+<!ELEMENT CertificateAuthority  (#PCDATA)>
+<!ELEMENT ListOfEncryptedField (EncryptedField+)>
+<!ELEMENT EncryptedField ((Sequence? , EncryptedData))>
+<!ELEMENT Sequence  (#PCDATA)>
+<!ELEMENT EncryptedData  (#PCDATA)>
+<!ELEMENT PaymentRequestSummary ((TotalPaymentDocuments? , TotalLineItem? , TotalSettlementAmount? , EncryptedInfo? , ListOfSummaryItems? , SummaryNote?))>
+<!ELEMENT TotalPaymentDocuments  (#PCDATA)>
+<!ELEMENT TotalLineItem  (#PCDATA)>
+<!ELEMENT TotalSettlementAmount (MonetaryValue)>
+<!ELEMENT ListOfSummaryItems (ListOfValues)>
+<!ELEMENT SummaryNote  (#PCDATA)>
+<!ELEMENT ListOfValues (NameValuePair+)>

@@ -1,0 +1,193 @@
+<!-- xCBL Document DTD for XCBL35 TimeSeriesRequest -->
+<!ELEMENT TimeSeriesRequest ((TimeSeriesRequestHeader , TimeSeriesRequestDetail , TimeSeriesRequestSummary))>
+<!ELEMENT TimeSeriesRequestHeader (TimeSeriesHeader)>
+<!ELEMENT TimeSeriesRequestSummary (TimeSeriesSummary)>
+<!ELEMENT TimeSeriesHeader ((TimeSeriesIssueDate , TimeSeriesID , TimeSeriesPurposeCoded , TimeSeriesPurposeCodedOther? , TimeSeriesTimePeriod? , TimeSeriesSystemType? , TimeSeriesPlanningData , TimeSeriesSelection? , TimeSeriesPlanningStep? , TimeSeriesParty , Language , GeneralNotes?))>
+<!ELEMENT TimeSeriesIssueDate  (#PCDATA)>
+<!ELEMENT TimeSeriesID (Reference)>
+<!ELEMENT TimeSeriesPurposeCoded  (#PCDATA)>
+<!ELEMENT TimeSeriesPurposeCodedOther  (#PCDATA)>
+<!ELEMENT TimeSeriesTimePeriod (ValidityDates)>
+<!ELEMENT TimeSeriesSystemType (SourceTargetID)>
+<!ELEMENT TimeSeriesPlanningData (SourceTargetID)>
+<!ELEMENT TimeSeriesSelection (SourceTargetID)>
+<!ELEMENT TimeSeriesPlanningStep (SourceTargetID)>
+<!ELEMENT GeneralNotes  (#PCDATA)>
+<!ELEMENT Reference ((RefNum , RefDate?))>
+<!ELEMENT RefNum  (#PCDATA)>
+<!ELEMENT RefDate  (#PCDATA)>
+<!ELEMENT ValidityDates ((StartDate , EndDate))>
+<!ELEMENT StartDate  (#PCDATA)>
+<!ELEMENT EndDate  (#PCDATA)>
+<!ELEMENT SourceTargetID ((SourceID? , TargetID?))>
+<!ELEMENT SourceID  (#PCDATA)>
+<!ELEMENT TargetID  (#PCDATA)>
+<!ELEMENT TimeSeriesParty ((SourceParty? , ReceiverParty? , ListOfPartyCoded?))>
+<!ELEMENT SourceParty (Party)>
+<!ELEMENT ReceiverParty (Party)>
+<!ELEMENT Party ((PartyID , ListOfIdentifier? , MDFBusiness? , NameAddress? , OrderContact? , ReceivingContact? , ShippingContact? , OtherContacts? , CorrespondenceLanguage?))>
+<!ELEMENT PartyID (Identifier)>
+<!ELEMENT MDFBusiness  (#PCDATA)>
+<!ELEMENT OrderContact (Contact)>
+<!ELEMENT ReceivingContact (Contact)>
+<!ELEMENT ShippingContact (Contact)>
+<!ELEMENT OtherContacts (ListOfContact)>
+<!ELEMENT CorrespondenceLanguage (Language)>
+<!ELEMENT Identifier ((Agency , Ident))>
+<!ELEMENT Ident  (#PCDATA)>
+<!ELEMENT Agency ((AgencyCoded , AgencyCodedOther? , AgencyDescription? , CodeListIdentifierCoded? , CodeListIdentifierCodedOther?))>
+<!ELEMENT AgencyCoded  (#PCDATA)>
+<!ELEMENT AgencyCodedOther  (#PCDATA)>
+<!ELEMENT AgencyDescription  (#PCDATA)>
+<!ELEMENT CodeListIdentifierCoded  (#PCDATA)>
+<!ELEMENT CodeListIdentifierCodedOther  (#PCDATA)>
+<!ELEMENT ListOfIdentifier (Identifier+)>
+<!ELEMENT NameAddress ((ExternalAddressID? , Name1 , Name2? , Name3? , Identifier? , POBox? , Street? , HouseNumber? , StreetSupplement1? , StreetSupplement2? , Building? , Floor? , RoomNumber? , InhouseMail? , Department? , PostalCode? , City? , County? , Region? , District? , Country? , Timezone?))>
+<!ATTLIST NameAddress 
+        AddressTypeCoded  (Other|AcceptanceLocation|AccountsPayableOffice|AcknowledgementRecipient|AdditionalAddress|AdditionalDeliveryAddress|AdditionalPickUpAddress|AlcoholBeverageDepartment|AlternateReturnAddress|AlternativeAddressee|AuditOffice|BailmentWarehouse|BidOpeningLocation|BillAndShipTo|BilledFrom|BillOfLadingRecipient|BillTo|BookingOffice|CandyAndConfectionsDepartment|ChangedAddress|CompanyAssignedWell|Company-OwnedOilField|ConsigneeCourierTransferStation|ConsignorCourierTransferStation|ConsultantsOffice|ContactOffice|ContainerLocation|CopyMessageTo|CorporateOffice|CorrectedAddress|DeliveryAddress|DestinationMailFacility|DifferentPremiseAddress|DistributionRecipient|DocumentOrMessageIssuerOrSender|DocumentRecipient|DomesticFinancialInstitution|DownstreamMeterLocation|Drop-OffLocation|EmergencyDepartment|EstablishedLocation|EventLocation|FilingAddress|FilingLocation|FilingOffice|FinalMessageRecipient|FinalRecipient|FinalScheduledDestination|FinancialInstitution|FirstContact|FloralDepartment|ForeignDisclosureInformationOffice|ForeignOffice|ForeignRegistrationLocation|FormerAddress|FreeonBoardPoint|FrozenDepartment|GaragedLocation|GasPlant|GasTransactionEndingPoint|GasTransactionPoint1|GasTransactionPoint2|GasTransactionStartingPoint|HazardousMaterialOffice|HeadOffice|HomeOffice|ImportedFromLocation|IncorporatedLocation|IncorporationStatePlaceOfBusiness|IncorporationStatePrincipalOffice|InquiryAddress|InspectionAddress|InspectionAndAcceptanceLocation|InspectionLocation|InstalledAt|In-StoreBakeryDepartment|InsuredLocation|Laboratory|LastBreakTerminal|LeaseLocation|ListingOffice|LocalChain|LocationOfGoods|LocationOfGoodsForCustomsExaminationBeforeClearance|LocationOfLoadExchange|LocationOfSpotForStorage|Lot|MailAddress|MailTo|ManufacturingPlant|MasterProperty|MaterialChangeNoticeAddress|MaterialDispositionAuthorizationLocation|MeatDepartment|MeetingLocation|MessageFrom|MessageRecipient|MessageTo|Neighborhood|NewAddress|NewSupplySource|NextDestination|NextScheduledDestination|Non-TemporaryStorageFacility|NotApplicable|OperatorOfTheTransferPoint|OriginalLocation|OriginMailFacility|OriginSublocation|OriginTerminal|OtherDepartments|OuterContinentalShelfAreaLocation|Out-Of-StatePrincipalOffice|OwningInventoryControlPoint|PartSource|PaymentAddress|PersonnelOffice|PharmacyDepartment|PhysicalAddress|PickUpAddress|Pipeline|PipelineSegment|PipelineSegmentBoundary|PlaceOfBottling|PlaceOfBusiness|PostalMailingAddress|PreliminaryInspectionLocation|Premises|PresentAddress|PrimaryControlPointLocation|ProduceDepartment|ProductServicesAndRepairsCentre|ProjectCoordinationOffice|ProjectManagementOffice|ProjectProperty|Property|QualityControl|RadioControlStationLocation|Railroad|ReceiptMeterLocation|ReceiptZone|ReceivedFrom|ReceiverSite|ReceivingLocation|ReceivingPointForCustomerSamples|ReceivingSub-Location|ReclamationCenter|Record-KeepingAddress|Refinery|RegionalOffice|RegisteredOffice|ReleaseTo|RemitTo|RepairingOutlet|RepairOrRefurbishLocation|ReportingLocation|ResearchInstitute|ResidenceOrDomicile|ReturnedTo|RoutingPoint|SalesOffice|SamplesToBeReturnedTo|SamplingLocation|SecondaryLocationAddress|SecondHome|SellingOffice|ServiceBureau|ServiceLocation|ShelteredWorkshop|ShipFrom|ShipTo|SmallBaseStationLocation|SmallControlStationLocation|SoldToAndShipTo|SoldToIfDifferentFromBillTo|StorageArea|StorageFacilityatDestination|StorageFacilityAtOrigin|Store|SoldTo|SubcontractOrCognizantSecurityOffice|SubjectProperty|Sub-Office|Subsidiary|SubsidiaryDivision|SupplierOrManufacturer|SuppliersCorporateOffice|SupplySource|TankFarm|TaxAddress|TaxCollectorsOffice|TechnicalOffice|Terminal|TerminalLocation|TestingLaboratory|ToolSource|TransferPoint|TransferTo|TransportationOffice|UltimateConsignee|UltimateCustomer|UltimateParentCompany|UnitProperty|UpstreamMeterLocation|VacationHome|Vendor|VideoDepartment|Warehouse|Wholesaler) 'NotApplicable'
+        AddressTypeCodedOther CDATA  #IMPLIED>
+<!ELEMENT Name1  (#PCDATA)>
+<!ELEMENT Name2  (#PCDATA)>
+<!ELEMENT Name3  (#PCDATA)>
+<!ELEMENT Street  (#PCDATA)>
+<!ELEMENT HouseNumber  (#PCDATA)>
+<!ELEMENT StreetSupplement1  (#PCDATA)>
+<!ELEMENT StreetSupplement2  (#PCDATA)>
+<!ELEMENT Building  (#PCDATA)>
+<!ELEMENT Floor  (#PCDATA)>
+<!ELEMENT RoomNumber  (#PCDATA)>
+<!ELEMENT InhouseMail  (#PCDATA)>
+<!ELEMENT Department  (#PCDATA)>
+<!ELEMENT PostalCode  (#PCDATA)>
+<!ELEMENT City  (#PCDATA)>
+<!ELEMENT County  (#PCDATA)>
+<!ELEMENT District  (#PCDATA)>
+<!ELEMENT POBox (#PCDATA)>
+<!ATTLIST POBox 
+        POBoxPostalCode CDATA  #IMPLIED>
+<!ELEMENT Region ((RegionCoded , RegionCodedOther?))>
+<!ELEMENT RegionCoded  (#PCDATA)>
+<!ELEMENT RegionCodedOther  (#PCDATA)>
+<!ELEMENT Country ((CountryCoded , CountryCodedOther?))>
+<!ELEMENT CountryCoded  (#PCDATA)>
+<!ELEMENT CountryCodedOther  (#PCDATA)>
+<!ELEMENT Timezone ((TimezoneCoded , TimezoneCodedOther?))>
+<!ELEMENT TimezoneCoded  (#PCDATA)>
+<!ELEMENT TimezoneCodedOther  (#PCDATA)>
+<!ELEMENT Contact ((ContactID? , ContactName , ContactFunction? , ContactDescription? , ListOfContactNumber?))>
+<!ELEMENT ContactID (Identifier)>
+<!ELEMENT ContactName  (#PCDATA)>
+<!ELEMENT ContactDescription  (#PCDATA)>
+<!ELEMENT ContactFunction ((ContactFunctionCoded , ContactFunctionCodedOther?))>
+<!ELEMENT ContactFunctionCoded  (#PCDATA)>
+<!ELEMENT ContactFunctionCodedOther  (#PCDATA)>
+<!ELEMENT ListOfContactNumber (ContactNumber+)>
+<!ELEMENT ContactNumber ((ContactNumberValue , ContactNumberTypeCoded , ContactNumberTypeCodedOther?))>
+<!ELEMENT ContactNumberValue  (#PCDATA)>
+<!ELEMENT ContactNumberTypeCoded  (#PCDATA)>
+<!ELEMENT ContactNumberTypeCodedOther  (#PCDATA)>
+<!ELEMENT ListOfContact (Contact+)>
+<!ELEMENT Language ((LanguageCoded , LanguageCodedOther? , LocaleCoded? , LocaleCodedOther?))>
+<!ATTLIST Language 
+        LanguageDependent CDATA  #IMPLIED>
+<!ELEMENT LanguageCoded  (#PCDATA)>
+<!ELEMENT LanguageCodedOther  (#PCDATA)>
+<!ELEMENT LocaleCoded  (#PCDATA)>
+<!ELEMENT LocaleCodedOther  (#PCDATA)>
+<!ELEMENT ListOfPartyCoded (PartyCoded+)>
+<!ELEMENT PartyCoded ((PartyID , ListOfIdentifier? , MDFBusiness? , NameAddress? , OrderContact? , ReceivingContact? , ShippingContact? , OtherContacts? , CorrespondenceLanguage?) , PartyRoleCoded , PartyRoleCodedOther?)>
+<!ELEMENT PartyRoleCoded  (#PCDATA)>
+<!ELEMENT PartyRoleCodedOther  (#PCDATA)>
+<!ELEMENT TimeSeriesRequestDetail ((ListOfCharacteristicCombinations? , ListOfKeyFigureData?))>
+<!ELEMENT ListOfCharacteristicCombinations (CharacteristicCombination+)>
+<!ELEMENT CharacteristicCombination ((CharacteristicCombinationPurposeCoded? , CharacteristicCombinationPurposeCodedOther? , CharacteristicCombinationResponseCoded? , CharacteristicCombinationResponseCodedOther? , CharacteristicCombinationID , CharacteristicProduct? , CharacteristicLocation? , CharacteristicProductGroup? , CharacteristicOther*))>
+<!ELEMENT CharacteristicCombinationPurposeCoded  (#PCDATA)>
+<!ELEMENT CharacteristicCombinationPurposeCodedOther  (#PCDATA)>
+<!ELEMENT CharacteristicCombinationResponseCoded  (#PCDATA)>
+<!ELEMENT CharacteristicCombinationResponseCodedOther  (#PCDATA)>
+<!ELEMENT CharacteristicProduct ((SourceProduct? , TargetProduct?))>
+<!ELEMENT SourceProduct (BaseCharacteristicProduct)>
+<!ELEMENT TargetProduct (BaseCharacteristicProduct)>
+<!ELEMENT BaseCharacteristicProduct ((ProductAttributeID , ProductAttributeName* , ProductAttributeDescription? , ListOfDimension? , ProductNotes? , OtherProductAttribute?))>
+<!ELEMENT ProductAttributeID  (#PCDATA)>
+<!ELEMENT ProductAttributeName (Identifier)>
+<!ELEMENT ProductAttributeDescription  (#PCDATA)>
+<!ELEMENT ProductNotes  (#PCDATA)>
+<!ELEMENT OtherProductAttribute (CharacteristicAttribute)>
+<!ELEMENT ListOfDimension (Dimension+)>
+<!ELEMENT Dimension ((Measurement , DimensionCoded , DimensionCodedOther?))>
+<!ELEMENT DimensionCoded  (#PCDATA)>
+<!ELEMENT DimensionCodedOther  (#PCDATA)>
+<!ELEMENT Measurement (((MeasurementValue|MeasurementRange) , UnitOfMeasurement))>
+<!ELEMENT MeasurementValue (#PCDATA)>
+<!ATTLIST MeasurementValue 
+        SignificanceCoded  (Other|Approximately|EqualTo|GreaterThanOrEqualTo|GreaterThan|LessThan|LessThanOrEqualTo|NotEqualTo|Trace|TrueValue|ObservedValue|OutOfRange)  #IMPLIED
+        SignificanceCodedOther CDATA  #IMPLIED
+        ConditionsCoded  (Other|WhereAirEquals1|WhereButylAcetateEquals1|WhereH2OEquals1OrWaterEquals1|CorrectedTo60DegreesFahrenheit|WhereTolueneEquals1|VaporInAir|VaporInOtherThanAir|StandardTemperatureAndPressure|ConditionsOtherThanStandardTemperatureAndPressure|InEthylAlcohol|InEthylEther|InWater|At1AtmospherePressure|WhereEtherEquals1|Actual|Predicted|Air-DriedBasis|As-ReceivedBasis|DryBasis|EquilibriumBasis|MoistureAndAsh-FreeBasis|OxidizingAtmosphere|ReducingAtmosphere|Calculated|ScaledWeight|Ratchet|SaturatedVapor|Unconditional|Short-Term|Time-Weighted|Corrected|Uncorrected|OffPeak|OnPeak|Intermediate|Average|PerGallon|Estimated|Minimum|Mist|Predominant|Total|Cost|Tenant|Owner|ForSale|RealEstateOwnedOrCorporateOwned|BoardedOrBlockedUp|Planned|Completed|Sold|Rented|Current|CurrentList|Effective|ListWhenSold|Sales|FinalList|AsIs|AsRepairedOrImproved|Instantaneous|Low|LowToGood|LowToHigh|LowToMedium|LowToModerate|Medium|MediumToGood|MediumToHigh|Moderate|ModerateToGood|ModerateToHigh|ModerateToMedium|Good|GoodToHigh|High|Budgeted|Forecast|Adjusted|Allocated|Increasing|Stable|Declining|Previous|Potential|Modeled|Measured|Maximum|SummerOn-Peak|SummerMid-Peak|SummerOff-Peak|SummerSuperOn-Peak|SummerSuperOff-Peak|WinterOn-Peak|WinterMid-Peak|WinterOff-Peak|WinterSuperOn-Peak|WinterSuperOff-Peak|SummerDay|SummerNight|WinterDay|WinterNight|Summer|Winter|Day|Night|Peak-2|Peak-3|Peak-4|Shoulder|NonTimeRelatedDemand)  #IMPLIED
+        ConditionsCodedOther CDATA  #IMPLIED>
+<!ELEMENT MeasurementRange ((MinimumValue , MaximumValue))>
+<!ELEMENT MinimumValue (#PCDATA)>
+<!ATTLIST MinimumValue 
+        SignificanceCoded  (Other|Approximately|EqualTo|GreaterThanOrEqualTo|GreaterThan|LessThan|LessThanOrEqualTo|NotEqualTo|Trace|TrueValue|ObservedValue|OutOfRange)  #IMPLIED
+        SignificanceCodedOther CDATA  #IMPLIED
+        ConditionsCoded  (Other|WhereAirEquals1|WhereButylAcetateEquals1|WhereH2OEquals1OrWaterEquals1|CorrectedTo60DegreesFahrenheit|WhereTolueneEquals1|VaporInAir|VaporInOtherThanAir|StandardTemperatureAndPressure|ConditionsOtherThanStandardTemperatureAndPressure|InEthylAlcohol|InEthylEther|InWater|At1AtmospherePressure|WhereEtherEquals1|Actual|Predicted|Air-DriedBasis|As-ReceivedBasis|DryBasis|EquilibriumBasis|MoistureAndAsh-FreeBasis|OxidizingAtmosphere|ReducingAtmosphere|Calculated|ScaledWeight|Ratchet|SaturatedVapor|Unconditional|Short-Term|Time-Weighted|Corrected|Uncorrected|OffPeak|OnPeak|Intermediate|Average|PerGallon|Estimated|Minimum|Mist|Predominant|Total|Cost|Tenant|Owner|ForSale|RealEstateOwnedOrCorporateOwned|BoardedOrBlockedUp|Planned|Completed|Sold|Rented|Current|CurrentList|Effective|ListWhenSold|Sales|FinalList|AsIs|AsRepairedOrImproved|Instantaneous|Low|LowToGood|LowToHigh|LowToMedium|LowToModerate|Medium|MediumToGood|MediumToHigh|Moderate|ModerateToGood|ModerateToHigh|ModerateToMedium|Good|GoodToHigh|High|Budgeted|Forecast|Adjusted|Allocated|Increasing|Stable|Declining|Previous|Potential|Modeled|Measured|Maximum|SummerOn-Peak|SummerMid-Peak|SummerOff-Peak|SummerSuperOn-Peak|SummerSuperOff-Peak|WinterOn-Peak|WinterMid-Peak|WinterOff-Peak|WinterSuperOn-Peak|WinterSuperOff-Peak|SummerDay|SummerNight|WinterDay|WinterNight|Summer|Winter|Day|Night|Peak-2|Peak-3|Peak-4|Shoulder|NonTimeRelatedDemand)  #IMPLIED
+        ConditionsCodedOther CDATA  #IMPLIED>
+<!ELEMENT MaximumValue (#PCDATA)>
+<!ATTLIST MaximumValue 
+        SignificanceCoded  (Other|Approximately|EqualTo|GreaterThanOrEqualTo|GreaterThan|LessThan|LessThanOrEqualTo|NotEqualTo|Trace|TrueValue|ObservedValue|OutOfRange)  #IMPLIED
+        SignificanceCodedOther CDATA  #IMPLIED
+        ConditionsCoded  (Other|WhereAirEquals1|WhereButylAcetateEquals1|WhereH2OEquals1OrWaterEquals1|CorrectedTo60DegreesFahrenheit|WhereTolueneEquals1|VaporInAir|VaporInOtherThanAir|StandardTemperatureAndPressure|ConditionsOtherThanStandardTemperatureAndPressure|InEthylAlcohol|InEthylEther|InWater|At1AtmospherePressure|WhereEtherEquals1|Actual|Predicted|Air-DriedBasis|As-ReceivedBasis|DryBasis|EquilibriumBasis|MoistureAndAsh-FreeBasis|OxidizingAtmosphere|ReducingAtmosphere|Calculated|ScaledWeight|Ratchet|SaturatedVapor|Unconditional|Short-Term|Time-Weighted|Corrected|Uncorrected|OffPeak|OnPeak|Intermediate|Average|PerGallon|Estimated|Minimum|Mist|Predominant|Total|Cost|Tenant|Owner|ForSale|RealEstateOwnedOrCorporateOwned|BoardedOrBlockedUp|Planned|Completed|Sold|Rented|Current|CurrentList|Effective|ListWhenSold|Sales|FinalList|AsIs|AsRepairedOrImproved|Instantaneous|Low|LowToGood|LowToHigh|LowToMedium|LowToModerate|Medium|MediumToGood|MediumToHigh|Moderate|ModerateToGood|ModerateToHigh|ModerateToMedium|Good|GoodToHigh|High|Budgeted|Forecast|Adjusted|Allocated|Increasing|Stable|Declining|Previous|Potential|Modeled|Measured|Maximum|SummerOn-Peak|SummerMid-Peak|SummerOff-Peak|SummerSuperOn-Peak|SummerSuperOff-Peak|WinterOn-Peak|WinterMid-Peak|WinterOff-Peak|WinterSuperOn-Peak|WinterSuperOff-Peak|SummerDay|SummerNight|WinterDay|WinterNight|Summer|Winter|Day|Night|Peak-2|Peak-3|Peak-4|Shoulder|NonTimeRelatedDemand)  #IMPLIED
+        ConditionsCodedOther CDATA  #IMPLIED>
+<!ELEMENT UnitOfMeasurement ((UOMCoded , UOMCodedOther?))>
+<!ELEMENT UOMCoded  (#PCDATA)>
+<!ELEMENT UOMCodedOther  (#PCDATA)>
+<!ELEMENT CharacteristicAttribute ((CharacteristicName , CharacteristicAttributeID , CharacteristicAttributeName* , CharacteristicAttributeDescription? , ListOfDimension? , CharacteristicAttributeNote? , OtherCharacteristicAttribute*))>
+<!ELEMENT CharacteristicName  (#PCDATA)>
+<!ELEMENT CharacteristicAttributeID  (#PCDATA)>
+<!ELEMENT CharacteristicAttributeName (Identifier)>
+<!ELEMENT CharacteristicAttributeDescription  (#PCDATA)>
+<!ELEMENT CharacteristicAttributeNote  (#PCDATA)>
+<!ELEMENT OtherCharacteristicAttribute (CharacteristicAttribute)>
+<!ELEMENT CharacteristicLocation ((SourceLocation? , TargetLocation?))>
+<!ELEMENT SourceLocation (BaseCharacteristicLocation)>
+<!ELEMENT TargetLocation (BaseCharacteristicLocation)>
+<!ELEMENT BaseCharacteristicLocation ((LocationAttributeID , LocationAttributeName* , LocationAttributeDescription? , Location? , LocationNotes? , OtherLocationAttribute?))>
+<!ELEMENT LocationAttributeID  (#PCDATA)>
+<!ELEMENT LocationAttributeName (Identifier)>
+<!ELEMENT LocationAttributeDescription  (#PCDATA)>
+<!ELEMENT LocationNotes  (#PCDATA)>
+<!ELEMENT OtherLocationAttribute (CharacteristicAttribute)>
+<!ELEMENT Location ((LocationQualifierCoded? , LocationQualifierCodedOther? , (LocationIdentifier|ExternalAddressID|NameAddress) , GPSCooridinates?))>
+<!ELEMENT LocationQualifierCoded  (#PCDATA)>
+<!ELEMENT LocationQualifierCodedOther  (#PCDATA)>
+<!ELEMENT ExternalAddressID  (#PCDATA)>
+<!ELEMENT LocationIdentifier ((LocID , LocationDescription?))>
+<!ELEMENT LocID (Identifier)>
+<!ELEMENT LocationDescription  (#PCDATA)>
+<!ELEMENT GPSCooridinates ((GPSSystem , Latitude , Longitude))>
+<!ELEMENT GPSSystem  (#PCDATA)>
+<!ELEMENT Latitude  (#PCDATA)>
+<!ELEMENT Longitude  (#PCDATA)>
+<!ELEMENT CharacteristicProductGroup ((SourceProductGroup? , TargetProductGroup?))>
+<!ELEMENT SourceProductGroup (BaseCharacteristicProduct)>
+<!ELEMENT TargetProductGroup (BaseCharacteristicProduct)>
+<!ELEMENT CharacteristicOther ((SourceCharacteristicsOther? , TargetCharacteristicsOther?))>
+<!ELEMENT SourceCharacteristicsOther (CharacteristicAttribute)>
+<!ELEMENT TargetCharacteristicsOther (CharacteristicAttribute)>
+<!ELEMENT ListOfKeyFigureData (KeyFigureData+)>
+<!ELEMENT KeyFigureData ((KeyFigurePurposeCoded? , KeyFigurePurposeCodedOther? , CharacteristicCombinationID? , KeyFigureInformation , UnitOfMeasurement , KeyFigureNotes?))>
+<!ELEMENT KeyFigurePurposeCoded  (#PCDATA)>
+<!ELEMENT KeyFigurePurposeCodedOther  (#PCDATA)>
+<!ELEMENT CharacteristicCombinationID  (#PCDATA)>
+<!ELEMENT KeyFigureNotes  (#PCDATA)>
+<!ELEMENT KeyFigureInformation ((SourceKeyFigure? , TargetKeyFigure?))>
+<!ELEMENT SourceKeyFigure (KeyFigure)>
+<!ELEMENT TargetKeyFigure (KeyFigure)>
+<!ELEMENT KeyFigure ((KeyFigureID , KeyFigureName? , KeyFigureDescription?))>
+<!ELEMENT KeyFigureID  (#PCDATA)>
+<!ELEMENT KeyFigureName  (#PCDATA)>
+<!ELEMENT KeyFigureDescription  (#PCDATA)>
+<!ELEMENT TimeSeriesSummary ((TotalTimeSeriesData? , TotalCharacteristicCombinations? , TotalKeyFigures?))>
+<!ELEMENT TotalTimeSeriesData  (#PCDATA)>
+<!ELEMENT TotalCharacteristicCombinations  (#PCDATA)>
+<!ELEMENT TotalKeyFigures  (#PCDATA)>

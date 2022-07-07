@@ -1,0 +1,39 @@
+<!-- xCBL Document DTD for XCBL35 SourcingCreateResponse -->
+<!ELEMENT SourcingCreateResponse ((SourcingCreateResponseHeader , ListOfSourcingCreateResponseDetail? , SourcingCreateResponseSummary?))>
+<!ELEMENT SourcingCreateResponseSummary (SourcingCreateSummary)>
+<!ELEMENT SourcingCreateResponseHeader ((SourcingCreateResponsePurpose , SourcingCreateResponseIssueDate , SourcingCreateResponseID , SourcingCreateReference , TrackingIDNumber , SourcingResponseCoded , SourcingResponseCodedOther? , Language , SourcingCreateResponseNote?))>
+<!ELEMENT SourcingCreateResponsePurpose (Purpose)>
+<!ELEMENT SourcingCreateResponseIssueDate  (#PCDATA)>
+<!ELEMENT SourcingCreateResponseID  (#PCDATA)>
+<!ELEMENT SourcingCreateReference (Reference)>
+<!ELEMENT TrackingIDNumber  (#PCDATA)>
+<!ELEMENT SourcingResponseCoded  (#PCDATA)>
+<!ELEMENT SourcingResponseCodedOther  (#PCDATA)>
+<!ELEMENT SourcingCreateResponseNote  (#PCDATA)>
+<!ELEMENT Purpose ((PurposeCoded , PurposeCodedOther?))>
+<!ELEMENT PurposeCoded  (#PCDATA)>
+<!ELEMENT PurposeCodedOther  (#PCDATA)>
+<!ELEMENT Reference ((RefNum , RefDate?))>
+<!ELEMENT RefNum  (#PCDATA)>
+<!ELEMENT RefDate  (#PCDATA)>
+<!ELEMENT Language ((LanguageCoded , LanguageCodedOther? , LocaleCoded? , LocaleCodedOther?))>
+<!ATTLIST Language 
+        LanguageDependent CDATA  #IMPLIED>
+<!ELEMENT LanguageCoded  (#PCDATA)>
+<!ELEMENT LanguageCodedOther  (#PCDATA)>
+<!ELEMENT LocaleCoded  (#PCDATA)>
+<!ELEMENT LocaleCodedOther  (#PCDATA)>
+<!ELEMENT ListOfSourcingCreateResponseDetail (SourcingCreateResponseDetail+)>
+<!ELEMENT SourcingCreateResponseDetail ((SourcingItemID , SourcingItemName , ItemNumber , ParentItemIdentifier? , SourcingItemResponseCoded , SourcingItemResponseCodedOther? , ListOfSourcingItemComponentResponse?))>
+<!ELEMENT SourcingItemID  (#PCDATA)>
+<!ELEMENT SourcingItemName  (#PCDATA)>
+<!ELEMENT ItemNumber  (#PCDATA)>
+<!ELEMENT ParentItemIdentifier  (#PCDATA)>
+<!ELEMENT SourcingItemResponseCoded  (#PCDATA)>
+<!ELEMENT SourcingItemResponseCodedOther  (#PCDATA)>
+<!ELEMENT ListOfSourcingItemComponentResponse (SourcingItemComponentResponse+)>
+<!ELEMENT SourcingItemComponentResponse (SourcingCreateResponseDetail)>
+<!ELEMENT SourcingCreateSummary ((TotalNumberOfSourcingItems? , TotalNumberOfParticipants? , EstimatedTotalValue))>
+<!ELEMENT TotalNumberOfSourcingItems  (#PCDATA)>
+<!ELEMENT TotalNumberOfParticipants  (#PCDATA)>
+<!ELEMENT EstimatedTotalValue  (#PCDATA)>

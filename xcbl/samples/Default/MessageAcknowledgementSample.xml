@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<!--	SAMPLE FILE, THIS DOES NOT CONTAIN REAL DATA		-->
+
+<!DOCTYPE MessageAcknowledgement SYSTEM 'MessageAcknowledgement.dtd'>
+
+<MessageAcknowledgement>
+	<AcknowledgementLocation>MURRAY:RF-0909MESSACK</AcknowledgementLocation>
+	<AcknowledgementReferenceNumber>ABB-009-10001</AcknowledgementReferenceNumber>
+	<AcknowledgementNote>Received</AcknowledgementNote>
+</MessageAcknowledgement>

@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+
+<!--    SAMPLE FILE, THIS DOES NOT CONTAIN REAL DATA        -->
+
+<!DOCTYPE PlanningSchedule SYSTEM 'PlanningSchedule.dtd'>
+
+<PlanningSchedule>
+    <PlanningScheduleHeader>
+        <ScheduleID>PS-120001</ScheduleID>
+        <ScheduleIssueDate>20001214T16:00:00</ScheduleIssueDate>
+        <SchedulePurpose>
+            <Purpose>
+                <PurposeCoded>Original</PurposeCoded>
+            </Purpose>
+        </SchedulePurpose>
+        <ScheduleTypeCoded>DeliveryBased</ScheduleTypeCoded>
+        <QuantityQualifierCoded>ActiveListings</QuantityQualifierCoded>
+        <ValidityDates>
+            <StartDate>20001214T16:00:00</StartDate>
+            <EndDate>20011214T16:00:00</EndDate>
+        </ValidityDates>
+        <ScheduleParty>
+            <BuyerParty>
+                <Party>
+                    <PartyID>
+                        <Identifier>
+                            <Agency>
+                                <AgencyCoded>Other</AgencyCoded>
+                            </Agency>
+                            <Ident>ABB-1010</Ident>
+                        </Identifier>
+                    </PartyID>
+                    <NameAddress>
+                        <Name1>ABB Cornerstone Company</Name1>
+                        <Street>45 Terrance Blvd.</Street>
+                        <Floor>7th</Floor>
+                        <Department>Auction Department</Department>
+                        <PostalCode>96660</PostalCode>
+                        <City>Angelville</City>
+                        <Region>
+                            <RegionCoded>USCA</RegionCoded>
+                        </Region>
+                        <Country>
+                            <CountryCoded>US</CountryCoded>
+                        </Country>
+                    </NameAddress>
+                    <CorrespondenceLanguage>
+                        <Language>
+                            <LanguageCoded>en</LanguageCoded>
+                        </Language>
+                    </CorrespondenceLanguage>
+                </Party>
+            </BuyerParty>
+            <SellerParty>
+                <Party>
+                    <PartyID>
+                        <Identifier>
+                            <Agency>
+                                <AgencyCoded>Other</AgencyCoded>
+                            </Agency>
+                            <Ident>ABB-1010</Ident>
+                        </Identifier>
+                    </PartyID>
+                    <NameAddress>
+                        <Name1>Strong Arm</Name1>
+                        <Street>Cole Point</Street>
+                        <InhouseMail>Mail Stop M-34</InhouseMail>
+                        <PostalCode>96660</PostalCode>
+                        <City>Angelville</City>
+                        <Region>
+                            <RegionCoded>USCA</RegionCoded>
+                        </Region>
+                        <Country>
+                            <CountryCoded>US</CountryCoded>
+                        </Country>
+                    </NameAddress>
+                    <CorrespondenceLanguage>
+                        <Language>
+                            <LanguageCoded>en</LanguageCoded>
+                        </Language>
+                    </CorrespondenceLanguage>
+                </Party>
+            </SellerParty>
+            <ShipFromParty>
+                <Party>
+                    <PartyID>
+                        <Identifier>
+                            <Agency>
+                                <AgencyCoded>Other</AgencyCoded>
+                            </Agency>
+                            <Ident>GF665-99</Ident>
+                        </Identifier>
+                    </PartyID>
+                </Party>
+            </ShipFromParty>
+            <ShipToParty>
+                <Party>
+                    <PartyID>
+                        <Identifier>
+                            <Agency>
+                                <AgencyCoded>Other</AgencyCoded>
+                            </Agency>
+                            <Ident>HUY88-009</Ident>
+                        </Identifier>
+                    </PartyID>
+                </Party>
+            </ShipToParty>
+        </ScheduleParty>
+        <Language>
+            <LanguageCoded>en</LanguageCoded>
+        </Language>
+    </PlanningScheduleHeader>
+
+    <ListOfLocationGroupedPlanningDetail>
+        <LocationGroupedPlanningDetail>
+            <Location>
+                <ExternalAddressID>The Barrels Building</ExternalAddressID>
+            </Location>
+            <ListOfLocationPlanningItemDetail>
+                <LocationPlanningItemDetail>
+                    <BasePlanningDetail>
+                        <LineItemNum>
+                            <BuyerLineItemNum>2</BuyerLineItemNum>
+                        </LineItemNum>
+                        <ForecastFrequencyCoded>Daily</ForecastFrequencyCoded>
+                    </BasePlanningDetail>
+                    <ListOfScheduleDetail>
+                        <ScheduleDetail>
+                            <CommitmentLevelCoded>Firm</CommitmentLevelCoded>
+                            <ScheduleDates>
+                                <ListOfDateCoded>
+                                    <DateCoded>
+                                        <Date>20010214T09:00:00</Date>
+                                        <DateQualifier>
+                                            <DateQualifierCoded>1stScheduleShip</DateQualifierCoded>
+                                        </DateQualifier>
+                                    </DateCoded>
+                                </ListOfDateCoded>
+                            </ScheduleDates>
+                            <ScheduleQuantities>
+                                <ListOfQuantityCoded>
+                                    <QuantityCoded>
+                                        <QuantityRange>
+                                            <MinimumValue SignificanceCoded="TrueValue" ConditionsCoded="Actual">50</MinimumValue>
+                                            <MaximumValue SignificanceCoded="TrueValue" ConditionsCoded="Actual">50000</MaximumValue>
+                                        </QuantityRange>
+                                        <UnitOfMeasurement>
+                                            <UOMCoded>EA</UOMCoded>
+                                        </UnitOfMeasurement>
+                                        <QuantityQualifierCoded>ActualUnits</QuantityQualifierCoded>
+                                    </QuantityCoded>
+                                    <QuantityCoded>
+                                        <QuantityRange>
+                                            <MinimumValue SignificanceCoded="TrueValue" ConditionsCoded="Actual">50</MinimumValue>
+                                            <MaximumValue SignificanceCoded="TrueValue" ConditionsCoded="Actual">50000</MaximumValue>
+                                        </QuantityRange>
+                                        <UnitOfMeasurement>
+                                            <UOMCoded>EA</UOMCoded>
+                                        </UnitOfMeasurement>
+                                        <QuantityQualifierCoded>ActualUnits</QuantityQualifierCoded>
+                                    </QuantityCoded>
+                                </ListOfQuantityCoded>
+                            </ScheduleQuantities>
+                            <ScheduleNote>Delivery when available</ScheduleNote>
+                        </ScheduleDetail>
+                    </ListOfScheduleDetail>
+                    <LineItemNote>This item is made daily</LineItemNote>
+                </LocationPlanningItemDetail>
+            </ListOfLocationPlanningItemDetail>
+        </LocationGroupedPlanningDetail>
+    </ListOfLocationGroupedPlanningDetail>
+
+    <PlanningScheduleSummary>
+        <TotalNumberOfLineItems>3</TotalNumberOfLineItems>
+    </PlanningScheduleSummary>
+
+</PlanningSchedule>

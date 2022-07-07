@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<!--The Buyer is ABC Enterprises, they are purchasing parts from Dunn Manufacturing-->
+<!--They are changing their order from 111 items to 150 items in Line Number 0011-->
+<!DOCTYPE ChangeOrder SYSTEM 'ChangeOrder.dtd'>
+
+<ChangeOrder>
+	<ChangeOrderHeader>
+		<ChangeOrderNumber>
+			<BuyerChangeOrderNumber>CO9987440-00-33456700001</BuyerChangeOrderNumber>
+		</ChangeOrderNumber>
+		<ChangeOrderSequence>first change</ChangeOrderSequence>
+		<ChangeOrderIssueDate>20010206T12:45:12</ChangeOrderIssueDate>
+		<OrderReference>
+			<Reference>
+				<RefNum>4500005693</RefNum>
+				<RefDate>20010203T12:00:00</RefDate>
+			</Reference>
+		</OrderReference>
+		<SellerParty>
+				<Party>
+					<PartyID>
+						<Identifier>
+							<Agency>
+								<AgencyCoded>AssignedBySellerOrSellersAgent</AgencyCoded>
+							</Agency>
+							<Ident>BCVND</Ident>
+						</Identifier>
+					</PartyID>
+					<NameAddress>
+					 	<Name1>Dunn Manufacturing</Name1>
+					<Department>Order Department</Department><PostalCode>95006</PostalCode><City>Orange</City><Region><RegionCoded>USCA</RegionCoded></Region></NameAddress>
+					<OtherContacts>
+						<ListOfContact>
+							<Contact>
+								<ContactName>Ms Black</ContactName>
+								<ContactFunction><ContactFunctionCoded>AccountsReceivableContact</ContactFunctionCoded></ContactFunction><ListOfContactNumber>
+									<ContactNumber>
+										<ContactNumberValue>212-345-4784</ContactNumberValue>
+										<ContactNumberTypeCoded>TelephoneNumber</ContactNumberTypeCoded>
+									</ContactNumber>
+								<ContactNumber><ContactNumberValue>Hblack@DunnMfg.com</ContactNumberValue><ContactNumberTypeCoded>EmailAddress</ContactNumberTypeCoded></ContactNumber></ListOfContactNumber>
+							</Contact>
+						<Contact><ContactName>George Walsh</ContactName><ContactFunction><ContactFunctionCoded>DeliveryContact</ContactFunctionCoded></ContactFunction><ListOfContactNumber><ContactNumber><ContactNumberValue>212-345-4701</ContactNumberValue><ContactNumberTypeCoded>TelephoneNumber</ContactNumberTypeCoded></ContactNumber><ContactNumber><ContactNumberValue>gwalsh@DunnMfg.com</ContactNumberValue><ContactNumberTypeCoded>EmailAddress</ContactNumberTypeCoded></ContactNumber></ListOfContactNumber></Contact></ListOfContact>
+					</OtherContacts>
+				</Party>
+			</SellerParty>
+		<BuyerParty>
+				<Party>
+					<PartyID>
+						<Identifier>
+							<Agency>
+								<AgencyCoded>AssignedBySellerOrSellersAgent</AgencyCoded>
+							</Agency>
+							<Ident>3000</Ident>
+						</Identifier>
+					</PartyID>
+					<NameAddress>
+						<Name1>ABC Enterprises</Name1>
+					<POBox POBoxPostalCode="249">	</POBox><PostalCode>20012</PostalCode><City>Alpine</City><Region><RegionCoded>USNY</RegionCoded></Region></NameAddress>
+					<OrderContact>
+						<Contact>
+							<ContactName>Dietl,B.</ContactName>
+							<ContactFunction>
+								<ContactFunctionCoded>DepartmentOrPersonResponsibleForProcessingPurchaseOrder</ContactFunctionCoded>
+							</ContactFunction>
+							<ListOfContactNumber>
+								<ContactNumber>
+									<ContactNumberValue>655-456-8911</ContactNumberValue>
+									<ContactNumberTypeCoded>TelephoneNumber</ContactNumberTypeCoded>
+								</ContactNumber>
+							<ContactNumber><ContactNumberValue>bdietl@ABC.com</ContactNumberValue><ContactNumberTypeCoded>EmailAddress</ContactNumberTypeCoded></ContactNumber></ListOfContactNumber>
+						</Contact>
+					</OrderContact>
+				</Party>
+			</BuyerParty>
+		<Purpose>
+			<PurposeCoded>Change</PurposeCoded>
+		</Purpose>
+		<ChangeType>
+			<ChangeTypeCoded>QuantityIncrease</ChangeTypeCoded>
+		</ChangeType>
+	</ChangeOrderHeader>
+
+	<ChangeOrderDetail>
+		<ListOfChangeOrderItemDetail>
+			<ChangeOrderItemDetail>
+				<ItemDetailChangeCoded>QuantityIncrease</ItemDetailChangeCoded>
+				<OriginalItemDetail><ItemDetail>
+				<BaseItemDetail>
+					<LineItemNum>
+						<BuyerLineItemNum>00011</BuyerLineItemNum>
+					</LineItemNum>
+					<ItemIdentifiers>
+						<PartNumbers>
+							<SellerPartNumber>
+								<PartNum>
+									<PartID>R-3456</PartID>
+								</PartNum>
+							</SellerPartNumber>
+							<BuyerPartNumber>
+								<PartNum>
+									<PartID>R-3456</PartID>
+								</PartNum>
+							</BuyerPartNumber>
+						</PartNumbers>
+					</ItemIdentifiers>
+					<TotalQuantity>
+						<Quantity>
+							<QuantityValue>1</QuantityValue>
+							<UnitOfMeasurement>
+								<UOMCoded>EA</UOMCoded>
+							</UnitOfMeasurement>
+						</Quantity>
+					</TotalQuantity>
+				</BaseItemDetail>
+				<PricingDetail>
+					<ListOfPrice>
+						<Price>
+							<UnitPrice>
+								<UnitPriceValue>1000.00</UnitPriceValue>
+								<Currency>
+									<CurrencyCoded>USD</CurrencyCoded>
+								</Currency>
+							</UnitPrice>
+							<PriceBasisQuantity>
+								<Quantity>
+									<QuantityValue>1</QuantityValue>
+									<UnitOfMeasurement>
+										<UOMCoded>EA</UOMCoded>
+									</UnitOfMeasurement>
+								</Quantity>
+							</PriceBasisQuantity>
+						</Price>
+					</ListOfPrice>
+					<TotalValue>
+						<MonetaryValue>
+							<MonetaryAmount>1000.00</MonetaryAmount>
+						</MonetaryValue>
+					</TotalValue>
+				</PricingDetail>
+				<DeliveryDetail>
+					<ListOfScheduleLine>
+						<ScheduleLine>
+							<Quantity>
+								<QuantityValue>1</QuantityValue>
+								<UnitOfMeasurement>
+									<UOMCoded>EA</UOMCoded>
+								</UnitOfMeasurement>
+							</Quantity>
+							<RequestedDeliveryDate>20010207T12:00:00</RequestedDeliveryDate>
+						</ScheduleLine>
+					</ListOfScheduleLine>
+				</DeliveryDetail>
+				<LineItemNote>Item text manually entered</LineItemNote>
+					<ListOfStructuredNote>
+						<StructuredNote>
+							<GeneralNote>Material PO text manually entered</GeneralNote>
+							<NoteID>Material PO text</NoteID>
+							<Agency>
+								<AgencyCoded>Other</AgencyCoded>
+								<AgencyCodedOther>SAP</AgencyCodedOther>
+							</Agency>
+						</StructuredNote>
+						<StructuredNote>
+							<GeneralNote>Info Record PO Text manually entered</GeneralNote>
+							<NoteID>Info record PO text</NoteID>
+							<Agency>
+								<AgencyCoded>Other</AgencyCoded>
+								<AgencyCodedOther>SAP</AgencyCodedOther>
+							</Agency>
+						</StructuredNote>
+						<StructuredNote>
+							<GeneralNote>Delivery text manually entered</GeneralNote>
+							<NoteID>Delivery text</NoteID>
+							<Agency>
+								<AgencyCoded>Other</AgencyCoded>
+								<AgencyCodedOther>SAP</AgencyCodedOther>
+							</Agency>
+						</StructuredNote>
+					</ListOfStructuredNote>
+				</ItemDetail></OriginalItemDetail><ItemDetailChanges>
+					<ItemDetail>
+						<BaseItemDetail>
+							<LineItemNum>
+								<BuyerLineItemNum>00011</BuyerLineItemNum>
+							</LineItemNum>
+							<TotalQuantity>
+								<Quantity>
+									<QuantityValue>5</QuantityValue>
+									<UnitOfMeasurement>
+										<UOMCoded>EA</UOMCoded>
+									</UnitOfMeasurement>
+								</Quantity>
+							</TotalQuantity>
+						</BaseItemDetail>
+					</ItemDetail>
+				</ItemDetailChanges>
+			<LineItemNote>Change quanitity from 1 to 5.</LineItemNote></ChangeOrderItemDetail>
+		</ListOfChangeOrderItemDetail>
+	</ChangeOrderDetail>
+
+	<ChangeOrderSummary>
+		<OriginalOrderSummary>
+			<OrderSummary>
+				<TotalAmount>
+					<MonetaryValue>
+						<MonetaryAmount>2110.00</MonetaryAmount>
+						<Currency>
+							<CurrencyCoded>USD</CurrencyCoded>
+						</Currency>
+					</MonetaryValue>
+				</TotalAmount>
+			</OrderSummary>
+		</OriginalOrderSummary>
+		<RevisedOrderSummary>
+			<OrderSummary>
+				<TotalAmount>
+					<MonetaryValue>
+						<MonetaryAmount>6110.00</MonetaryAmount>
+						<Currency>
+							<CurrencyCoded>USD</CurrencyCoded>
+						</Currency>
+					</MonetaryValue>
+				</TotalAmount>
+			</OrderSummary>
+		</RevisedOrderSummary>
+	</ChangeOrderSummary>
+</ChangeOrder>
