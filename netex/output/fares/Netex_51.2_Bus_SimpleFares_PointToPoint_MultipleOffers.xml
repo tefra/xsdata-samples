@@ -77,11 +77,13 @@
                         <Name>Child Fare</Name>
                         <TypeOfConcessionRef version="any" ref="myfares:adult"/>
                         <MaximumAge>16</MaximumAge>
+                        <ProofRequired/>
                       </UserProfile>
                       <UserProfile id="myfares:child" version="any">
                         <Name>Child Fare</Name>
                         <TypeOfConcessionRef version="any" ref="myfares:child"/>
                         <MaximumAge>16</MaximumAge>
+                        <ProofRequired/>
                       </UserProfile>
                     </limitations>
                   </GenericParameterAssignment>
@@ -197,6 +199,7 @@
                 <DistributionAssignment id="myfares:Trip-SOP@p-ticket@atStop" version="10" order="1">
                   <Name>Onboard</Name>
                   <Description>Pay for ticket onboard</Description>
+                  <DistributionRights/>
                   <DistributionChannelType>atStop</DistributionChannelType>
                   <TicketingServiceFacilityList>purchase</TicketingServiceFacilityList>
                   <PaymentMethods>cashAndCard</PaymentMethods>
@@ -205,6 +208,7 @@
                 <DistributionAssignment id="myfares:Trip-SOP@p-ticket@onBoard" version="1.0" order="2">
                   <Name>Onboard</Name>
                   <Description>Pay for ticket onboard</Description>
+                  <DistributionRights/>
                   <DistributionChannelType>onBoard</DistributionChannelType>
                   <TicketingServiceFacilityList>purchase</TicketingServiceFacilityList>
                   <PaymentMethods>cashAndCard</PaymentMethods>
@@ -223,7 +227,9 @@
               <distributionAssignments>
                 <DistributionAssignment id="myfares:Trip-SOP@m-ticket@online" version="10" order="1">
                   <Name>Online</Name>
+                  <DistributionRights/>
                   <DistributionChannelType>mobileDevice</DistributionChannelType>
+                  <TicketingServiceFacilityList/>
                   <PaymentMethods>cardsOnly</PaymentMethods>
                   <FulfilmentMethodRef ref="ntx:mobile_app" versionRef="ntx:v1.0"/>
                 </DistributionAssignment>
@@ -403,6 +409,8 @@
               <Name>Line 24 Alpha to Charley</Name>
               <PublicCode>24</PublicCode>
               <OperatorRef version="any" ref="mybus:DTA"/>
+              <PaymentMethods/>
+              <PurchaseMoment/>
             </Line>
           </lines>
           <groupsOfLines>
@@ -411,6 +419,8 @@
               <members>
                 <LineRef version="any" ref="mybus:LN_24"/>
               </members>
+              <PaymentMethods/>
+              <PurchaseMoment/>
             </GroupOfLines>
           </groupsOfLines>
           <scheduledStopPoints>
@@ -422,6 +432,7 @@
               </Location>
               <ShortName>Alpha</ShortName>
               <PublicCode>ALPH</PublicCode>
+              <VehicleModes/>
             </ScheduledStopPoint>
             <ScheduledStopPoint id="mybus:SSP_002" version="any">
               <Name>Bravo Street</Name>
@@ -431,6 +442,7 @@
               </Location>
               <ShortName>Bravo</ShortName>
               <PublicCode>BRAV</PublicCode>
+              <VehicleModes/>
             </ScheduledStopPoint>
             <ScheduledStopPoint id="mybus:SSP_077" version="any">
               <Name>Charley Crescent</Name>
@@ -440,6 +452,7 @@
               </Location>
               <ShortName>Charley</ShortName>
               <PublicCode>CHAS</PublicCode>
+              <VehicleModes/>
             </ScheduledStopPoint>
           </scheduledStopPoints>
         </ServiceFrame>
@@ -536,9 +549,11 @@
               <values>
                 <TypeOfTravelDocument id="myfares:printed_ticket" version="any">
                   <Name>Paper ticket</Name>
+                  <MachineReadable/>
                 </TypeOfTravelDocument>
                 <TypeOfTravelDocument id="myfares:mobile_app" version="any">
                   <Name>Mobile app</Name>
+                  <MachineReadable/>
                 </TypeOfTravelDocument>
               </values>
             </ValueSet>
@@ -560,6 +575,8 @@
           <organisations>
             <Operator id="mybus:DTA" version="any">
               <Name>Demo Transit Authority</Name>
+              <OrganisationType/>
+              <OperatorActivities/>
             </Operator>
           </organisations>
         </ResourceFrame>

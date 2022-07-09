@@ -17,6 +17,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Everyday</DaysOfWeek>
+                  <WeeksOfMonth/>
+                  <HolidayTypes/>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -36,6 +40,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Everyday</DaysOfWeek>
+                  <WeeksOfMonth/>
+                  <HolidayTypes/>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -76,13 +84,38 @@
             <Town>Barcester</Town>
             <PostCode>BXC 24P</PostCode>
           </PostalAddress>
+          <AccessModes/>
           <Landmark>Sainsbury's</Landmark>
           <PublicUse>all</PublicUse>
           <Covered>indoors</Covered>
           <AllAreasWheelchairAccessible>false</AllAreasWheelchairAccessible>
           <facilities>
             <SiteFacilitySet id="pkg:PP01" version="any">
+              <AccessibilityInfoFacilityList/>
+              <AssistanceFacilityList/>
               <AccessibilityToolList>pushchair wheelchair</AccessibilityToolList>
+              <CarServiceFacilityList/>
+              <CateringFacilityList/>
+              <FamilyFacilityList/>
+              <FareClasses/>
+              <MealFacilityList/>
+              <MedicalFacilityList/>
+              <MobilityFacilityList/>
+              <NuisanceFacilityList/>
+              <PassengerCommsFacilityList/>
+              <PassengerInformationFacilityList/>
+              <RetailFacilityList/>
+              <SafetyFacilityList/>
+              <SanitaryFacilityList/>
+              <TicketingFacilityList/>
+              <TicketingServiceFacilityList/>
+              <AccessFacilityList/>
+              <EmergencyServiceList/>
+              <HireFacilityList/>
+              <LuggageLockerFacilityList/>
+              <LuggageServiceFacilityList/>
+              <MoneyFacilityList/>
+              <ParkingFacilityList/>
             </SiteFacilitySet>
           </facilities>
           <SiteType>retail</SiteType>
@@ -94,6 +127,7 @@
               </validityConditions>
               <Name>Main Vehicle Entrance from street</Name>
               <ParentZoneRef version="any" ref="pkg:PP01"/>
+              <AccessModes/>
               <Label>IN</Label>
               <EntranceType>gate</EntranceType>
               <IsExternal>true</IsExternal>
@@ -108,6 +142,7 @@
               </validityConditions>
               <Name>Main Vehicle Exit to street</Name>
               <ParentZoneRef version="any" ref="pkg:PP01"/>
+              <AccessModes/>
               <Label>Exit</Label>
               <EntranceType>gate</EntranceType>
               <IsExternal>true</IsExternal>
@@ -136,6 +171,7 @@
             </Access>
           </accesses>
           <ParkingType>shoppingCentreParking</ParkingType>
+          <ParkingVehicleTypes/>
           <ParkingLayout>multistorey</ParkingLayout>
           <NumberOfParkingLevels>3</NumberOfParkingLevels>
           <PrincipalCapacity>250</PrincipalCapacity>
@@ -147,11 +183,13 @@
           <PaymentMethods>creditCard cash debitCard creditCard mobilePhone</PaymentMethods>
           <DefaultCurrency>GBP</DefaultCurrency>
           <CurrenciesAccepted>GBP</CurrenciesAccepted>
+          <CardsAccepted/>
           <ParkingReservation>noReservations</ParkingReservation>
           <BookingUrl>http://www.bookmyparking.com</BookingUrl>
           <parkingProperties>
             <ParkingProperties id="pkg:PP01" version="any">
               <ParkingUserTypes>allUsers</ParkingUserTypes>
+              <ParkingVehicleTypes/>
               <ParkingStayList>all</ParkingStayList>
               <MaximumStay>PT48H</MaximumStay>
               <spaces>
@@ -189,7 +227,10 @@
                     <PropertyOfDay>
                       <Description/>
                       <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+                      <WeeksOfMonth/>
                       <HolidayTypes>NotHoliday</HolidayTypes>
+                      <Seasons/>
+                      <Tides/>
                     </PropertyOfDay>
                   </properties>
                 </DayType>
@@ -232,6 +273,7 @@
             </Access>
           </accesses>
           <ParkingType>parkingZone</ParkingType>
+          <ParkingVehicleTypes/>
           <ParkingLayout>roadside</ParkingLayout>
           <PrincipalCapacity>45</PrincipalCapacity>
           <TotalCapacity>50</TotalCapacity>
@@ -254,6 +296,7 @@
           <parkingProperties>
             <ParkingProperties id="pkg:PS22" version="any">
               <ParkingUserTypes>all</ParkingUserTypes>
+              <ParkingVehicleTypes/>
               <ParkingStayList>unlimited</ParkingStayList>
               <spaces>
                 <ParkingCapacity id="pkg:PS22@01_disabled" version="any">

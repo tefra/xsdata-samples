@@ -310,6 +310,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:wimcon_01to01_both_N01_01" version="any">
                       <AccessFeatureType>footpath</AccessFeatureType>
@@ -317,6 +318,7 @@
                       <Transition>level</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                 </NavigationPath>
               </navigationPaths>
             </SiteConnection>
@@ -352,6 +354,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:wimcon_01to02_both_N01_01" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -359,6 +362,7 @@
                       <Transition>down</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                 </NavigationPath>
               </navigationPaths>
             </SiteConnection>
@@ -394,6 +398,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:wimcon_01to03_both_01" version="any">
                       <AccessFeatureType>barrier</AccessFeatureType>
@@ -401,6 +406,7 @@
                       <Transition>level</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                 </NavigationPath>
               </navigationPaths>
             </SiteConnection>
@@ -436,6 +442,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:wimcon_01to04_both_01" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -443,6 +450,7 @@
                       <Transition>down</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                 </NavigationPath>
               </navigationPaths>
             </SiteConnection>
@@ -478,6 +486,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:wimcon_01to05_both_01" version="any">
                       <AccessFeatureType>footpath</AccessFeatureType>
@@ -485,6 +494,7 @@
                       <Transition>level</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                 </NavigationPath>
               </navigationPaths>
             </SiteConnection>
@@ -520,6 +530,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:wimcon_01to06_both_01" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -527,6 +538,7 @@
                       <Transition>down</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                 </NavigationPath>
               </navigationPaths>
             </SiteConnection>
@@ -561,6 +573,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:wimcon_01to07_both_01" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -568,6 +581,7 @@
                       <Transition>down</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                 </NavigationPath>
               </navigationPaths>
             </SiteConnection>
@@ -601,6 +615,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:wimcon_01to00_both_01" version="any">
                       <AccessFeatureType>footpath</AccessFeatureType>
@@ -608,6 +623,7 @@
                       <Transition>level</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                 </NavigationPath>
               </navigationPaths>
             </SiteConnection>
@@ -644,6 +660,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:wimcon_02to02_both_01" version="any">
                       <AccessFeatureType>footpath</AccessFeatureType>
@@ -651,6 +668,7 @@
                       <Transition>level</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                 </NavigationPath>
               </navigationPaths>
             </SiteConnection>
@@ -687,6 +705,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:wimcon_02to03_both_01" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -694,6 +713,7 @@
                       <Transition>up</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                 </NavigationPath>
               </navigationPaths>
             </SiteConnection>
@@ -730,6 +750,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:wimcon_02to04_both_01" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -737,6 +758,7 @@
                       <Transition>upAndDown</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                 </NavigationPath>
               </navigationPaths>
             </SiteConnection>
@@ -773,6 +795,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:wimcon_02to05_both_01" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -780,6 +803,7 @@
                       <Transition>up</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                 </NavigationPath>
               </navigationPaths>
             </SiteConnection>
@@ -817,6 +841,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:wimcon_02to06_both_01" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -824,6 +849,7 @@
                       <Transition>upAndDown</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                 </NavigationPath>
               </navigationPaths>
             </SiteConnection>
@@ -861,6 +887,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:wimcon_02to07_both" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -868,6 +895,7 @@
                       <Transition>upAndDown</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                 </NavigationPath>
               </navigationPaths>
             </SiteConnection>
@@ -902,6 +930,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:wimcon_02to00_both_01" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -914,6 +943,7 @@
                       <Transition>level</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                 </NavigationPath>
               </navigationPaths>
             </SiteConnection>
@@ -950,6 +980,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:wimcon_03to04_both_01" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -957,6 +988,7 @@
                       <Transition>down</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                 </NavigationPath>
               </navigationPaths>
             </SiteConnection>
@@ -993,6 +1025,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:wimcon_03to05_both_01" version="any">
                       <AccessFeatureType>barrier</AccessFeatureType>
@@ -1000,6 +1033,7 @@
                       <Transition>level</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                 </NavigationPath>
               </navigationPaths>
             </SiteConnection>
@@ -1037,6 +1071,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:wimcon_03to06_both_01" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -1044,6 +1079,7 @@
                       <Transition>down</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                 </NavigationPath>
               </navigationPaths>
             </SiteConnection>
@@ -1081,6 +1117,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:wimcon_03to07_both_01" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -1088,6 +1125,7 @@
                       <Transition>down</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                 </NavigationPath>
               </navigationPaths>
             </SiteConnection>
@@ -1122,6 +1160,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:wimcon_03to00_both_01" version="any">
                       <AccessFeatureType>barrier</AccessFeatureType>
@@ -1129,6 +1168,7 @@
                       <Transition>level</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                 </NavigationPath>
               </navigationPaths>
             </SiteConnection>
@@ -1165,6 +1205,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:wimcon_04to04_both_01" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -1172,6 +1213,7 @@
                       <Transition>level</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                 </NavigationPath>
               </navigationPaths>
             </SiteConnection>
@@ -1208,6 +1250,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:wimcon_04to05_both_01" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -1220,6 +1263,7 @@
                       <Transition>level</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                 </NavigationPath>
               </navigationPaths>
             </SiteConnection>
@@ -1257,6 +1301,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:wimcon_04to06_both_01" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -1264,6 +1309,7 @@
                       <Transition>upAndDown</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                 </NavigationPath>
               </navigationPaths>
             </SiteConnection>
@@ -1301,6 +1347,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:wimcon_04to07_both_01" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -1308,6 +1355,7 @@
                       <Transition>upAndDown</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                 </NavigationPath>
               </navigationPaths>
             </SiteConnection>
@@ -1342,6 +1390,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:wimcon_04to00_both_01" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -1354,6 +1403,7 @@
                       <Transition>level</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                 </NavigationPath>
               </navigationPaths>
             </SiteConnection>
@@ -1391,6 +1441,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:wimcon_05to06_both_01" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -1398,6 +1449,7 @@
                       <Transition>down</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                 </NavigationPath>
               </navigationPaths>
             </SiteConnection>
@@ -1435,6 +1487,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:wimcon_05to07_both_01" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -1442,6 +1495,7 @@
                       <Transition>down</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                 </NavigationPath>
               </navigationPaths>
             </SiteConnection>
@@ -1476,6 +1530,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:wimcon_05to00_both_01" version="any">
                       <AccessFeatureType>footpath</AccessFeatureType>
@@ -1483,6 +1538,7 @@
                       <Transition>level</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                 </NavigationPath>
               </navigationPaths>
             </SiteConnection>
@@ -1521,6 +1577,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:wimcon_06to06_both_01" version="any">
                       <AccessFeatureType>footpath</AccessFeatureType>
@@ -1528,6 +1585,7 @@
                       <Transition>level</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                 </NavigationPath>
               </navigationPaths>
             </SiteConnection>
@@ -1565,6 +1623,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:wimcon_06to07_both_01" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -1572,6 +1631,7 @@
                       <Transition>upAndDown</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                 </NavigationPath>
               </navigationPaths>
             </SiteConnection>
@@ -1606,6 +1666,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:wimcon_06to00_both_01" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -1618,6 +1679,7 @@
                       <Transition>level</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                 </NavigationPath>
               </navigationPaths>
             </SiteConnection>
@@ -1656,6 +1718,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:wimcon_07to07_both_01" version="any">
                       <AccessFeatureType>footpath</AccessFeatureType>
@@ -1663,6 +1726,7 @@
                       <Transition>level</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                 </NavigationPath>
               </navigationPaths>
             </SiteConnection>
@@ -1698,6 +1762,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:wimcon_07to00_both_01" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -1710,6 +1775,7 @@
                       <Transition>level</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                 </NavigationPath>
               </navigationPaths>
             </SiteConnection>
@@ -2145,6 +2211,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_G0"/>
                   <EntranceType>openDoor</EntranceType>
                   <IsExternal>true</IsExternal>
@@ -2152,10 +2219,12 @@
                   <IsExit>true</IsExit>
                   <Width>3.0</Width>
                   <Height>2.0</Height>
+                  <OtherTransportModes/>
                 </StopPlaceEntrance>
                 <StopPlaceEntrance id="nptg:9100WIMBLDN_A1-EI1" created="2010-05-17T09:30:47Z" version="001">
                   <Name>Internal Entrance to Upper Concourse from  Ticket Hall</Name>
                   <ParentZoneRef version="001" ref="nptg:9100WIMBLDN_A2"/>
+                  <AccessModes/>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_G0"/>
                   <placeEquipments>
                     <EntranceEquipment id="nptg:9100WIMBLDN_A2-EI1_B1" version="any">
@@ -2183,10 +2252,12 @@
                   <IsExit>true</IsExit>
                   <Width>1.0</Width>
                   <Height>2.0</Height>
+                  <OtherTransportModes/>
                 </StopPlaceEntrance>
                 <StopPlaceEntrance id="nptg:9100WIMBLDN_A2-ES1g" created="2010-05-17T09:30:47Z" version="001">
                   <Name>Upper Concourse Stairs Entrance to District Line concourse (Platforms 1-4)</Name>
                   <ParentZoneRef version="001" ref="nptg:9100WIMBLDN_A2"/>
+                  <AccessModes/>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_G0"/>
                   <EntranceType>opening</EntranceType>
                   <IsExternal>false</IsExternal>
@@ -2194,10 +2265,12 @@
                   <IsExit>true</IsExit>
                   <Width>3.0</Width>
                   <Height>3.0</Height>
+                  <OtherTransportModes/>
                 </StopPlaceEntrance>
                 <StopPlaceEntrance id="nptg:9100WIMBLDN_A2-ES2g" created="2010-05-17T09:30:47Z" version="001">
                   <Name>Upper Concourse Stairs Entrance  Platforms 5 and 6</Name>
                   <ParentZoneRef version="001" ref="nptg:9100WIMBLDN_A2"/>
+                  <AccessModes/>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_G0"/>
                   <EntranceType>opening</EntranceType>
                   <IsExternal>false</IsExternal>
@@ -2205,10 +2278,12 @@
                   <IsExit>true</IsExit>
                   <Width>3.0</Width>
                   <Height>3.0</Height>
+                  <OtherTransportModes/>
                 </StopPlaceEntrance>
                 <StopPlaceEntrance id="nptg:9100WIMBLDN_A2-ES3g" created="2010-05-17T09:30:47Z" version="001">
                   <Name>Upper Concourse Stairs Entrance  Platforms 7 and 8</Name>
                   <ParentZoneRef version="001" ref="nptg:9100WIMBLDN_A2"/>
+                  <AccessModes/>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_G0"/>
                   <EntranceType>opening</EntranceType>
                   <IsExternal>false</IsExternal>
@@ -2216,10 +2291,12 @@
                   <IsExit>true</IsExit>
                   <Width>3.0</Width>
                   <Height>3.0</Height>
+                  <OtherTransportModes/>
                 </StopPlaceEntrance>
                 <StopPlaceEntrance id="nptg:9100WIMBLDN_A2-ES4g" created="2010-05-17T09:30:47Z" version="001">
                   <Name>Upper Concourse Stairs Entrance  Platforms 9 and 10</Name>
                   <ParentZoneRef version="001" ref="nptg:9100WIMBLDN_A2"/>
+                  <AccessModes/>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_G0"/>
                   <EntranceType>opening</EntranceType>
                   <IsExternal>false</IsExternal>
@@ -2227,10 +2304,12 @@
                   <IsExit>true</IsExit>
                   <Width>3.0</Width>
                   <Height>3.0</Height>
+                  <OtherTransportModes/>
                 </StopPlaceEntrance>
                 <StopPlaceEntrance id="nptg:9100WIMBLDN_A2b-EI5" created="2010-05-17T09:30:47Z" version="001">
                   <Name>Internal Entrance to Lift Area Concourse Corridor from Concourse at Main Entrance end</Name>
                   <ParentZoneRef version="001" ref="nptg:9100WIMBLDN_A2b"/>
+                  <AccessModes/>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_G0"/>
                   <placeEquipments>
                     <EntranceEquipment id="nptg:9100WIMBLDN_A2b-EI5_e1" version="any">
@@ -2245,10 +2324,12 @@
                   <IsExit>true</IsExit>
                   <Width>1.0</Width>
                   <Height>2.0</Height>
+                  <OtherTransportModes/>
                 </StopPlaceEntrance>
                 <StopPlaceEntrance id="nptg:9100WIMBLDN_A2b-EI6" created="2010-05-17T09:30:47Z" version="001">
                   <Name>Internal Entrance to Lift Area Concourse Corridor from Concourse at Centre Court end</Name>
                   <ParentZoneRef version="001" ref="nptg:9100WIMBLDN_A2b"/>
+                  <AccessModes/>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_G0"/>
                   <placeEquipments>
                     <EntranceEquipment id="nptg:9100WIMBLDN_A2b-EI6" version="any">
@@ -2263,10 +2344,12 @@
                   <IsExit>true</IsExit>
                   <Width>1.0</Width>
                   <Height>2.0</Height>
+                  <OtherTransportModes/>
                 </StopPlaceEntrance>
                 <StopPlaceEntrance id="nptg:9100WIMBLDN_A2b-EL1g" created="2010-05-17T09:30:47Z" version="001">
                   <Name>Upper concourse corridor  Lift Entrance to District LINE  (Platforms 1-4)</Name>
                   <ParentZoneRef version="001" ref="nptg:9100WIMBLDN_A2b"/>
+                  <AccessModes/>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_G0"/>
                   <placeEquipments>
                     <EntranceEquipment id="nptg:9100WIMBLDN_A2b-EL1g" version="any">
@@ -2281,10 +2364,12 @@
                   <IsExit>true</IsExit>
                   <Width>1.0</Width>
                   <Height>2.0</Height>
+                  <OtherTransportModes/>
                 </StopPlaceEntrance>
                 <StopPlaceEntrance id="nptg:9100WIMBLDN_A2b-EL2g" created="2010-05-17T09:30:47Z" version="001">
                   <Name>Upper concourse corridor  Lift Entrance to Platforms 5 and 6</Name>
                   <ParentZoneRef version="001" ref="nptg:9100WIMBLDN_A2b"/>
+                  <AccessModes/>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_G0"/>
                   <placeEquipments>
                     <EntranceEquipment id="nptg:9100WIMBLDN_A2b-EL2g" version="any">
@@ -2299,10 +2384,12 @@
                   <IsExit>true</IsExit>
                   <Width>1.0</Width>
                   <Height>2.0</Height>
+                  <OtherTransportModes/>
                 </StopPlaceEntrance>
                 <StopPlaceEntrance id="nptg:9100WIMBLDN_A2b-EL3g" created="2010-05-17T09:30:47Z" version="001">
                   <Name>Upper concourse corridor  Lift Entrance to Platforms 7 and 8</Name>
                   <ParentZoneRef version="001" ref="nptg:9100WIMBLDN_A2b"/>
+                  <AccessModes/>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_G0"/>
                   <placeEquipments>
                     <EntranceEquipment id="nptg:9100WIMBLDN_A2b-EL3g" version="any">
@@ -2317,10 +2404,12 @@
                   <IsExit>true</IsExit>
                   <Width>1.0</Width>
                   <Height>2.0</Height>
+                  <OtherTransportModes/>
                 </StopPlaceEntrance>
                 <StopPlaceEntrance id="nptg:9100WIMBLDN_A2b-EL4g" created="2010-05-17T09:30:47Z" version="001">
                   <Name>Upper concourse corridor  Lift Entrance Platforms 9 and 10</Name>
                   <ParentZoneRef version="001" ref="nptg:9100WIMBLDN_A2b"/>
+                  <AccessModes/>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_G0"/>
                   <placeEquipments>
                     <EntranceEquipment id="nptg:9100WIMBLDN_A2b-EL4g" version="any">
@@ -2335,6 +2424,7 @@
                   <IsExit>true</IsExit>
                   <Width>1.0</Width>
                   <Height>2.0</Height>
+                  <OtherTransportModes/>
                 </StopPlaceEntrance>
                 <StopPlaceEntrance id="nptg:9100WIMBLDN_A4-EE1" created="2010-05-17T09:30:47Z" version="001">
                   <validityConditions>
@@ -2345,6 +2435,7 @@
                     <TypeOfZoneRef version="any" ref="napt:Type_of_zone@RSE"/>
                   </types>
                   <ParentZoneRef version="001" ref="nptg:9100WIMBLDN_A3"/>
+                  <AccessModes/>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_G0"/>
                   <placeEquipments>
                     <EntranceEquipment id="nptg:9100WIMBLDN_A4-EE1" version="any">
@@ -2359,10 +2450,12 @@
                   <IsExit>true</IsExit>
                   <Width>1.0</Width>
                   <Height>2.0</Height>
+                  <OtherTransportModes/>
                 </StopPlaceEntrance>
                 <StopPlaceEntrance id="nptg:9100WIMBLDN_A4-EI3" created="2010-05-17T09:30:47Z" version="001">
                   <Name>Internal Entrance to Upper Concourse from  Centre Court Ticket Hall</Name>
                   <ParentZoneRef version="001" ref="nptg:9100WIMBLDN_A2"/>
+                  <AccessModes/>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_G0"/>
                   <EntranceType>ticketBarrier</EntranceType>
                   <IsExternal>false</IsExternal>
@@ -2370,10 +2463,12 @@
                   <IsExit>true</IsExit>
                   <Width>1.0</Width>
                   <Height>2.0</Height>
+                  <OtherTransportModes/>
                 </StopPlaceEntrance>
                 <StopPlaceEntrance id="nptg:9100WIMBLDN_5n6-ES1pl" created="2010-05-17T09:30:47Z" version="001">
                   <Name>Lower Staris Entrance to Platforms 5 and 6</Name>
                   <ParentZoneRef version="001" ref="naptStop:9100WIMBLDN_5n6"/>
+                  <AccessModes/>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_PL"/>
                   <EntranceType>opening</EntranceType>
                   <IsExternal>false</IsExternal>
@@ -2381,10 +2476,12 @@
                   <IsExit>true</IsExit>
                   <Width>1.0</Width>
                   <Height>2.0</Height>
+                  <OtherTransportModes/>
                 </StopPlaceEntrance>
                 <StopPlaceEntrance id="nptg:9100WIMBLDN_5n6-EL1pl" created="2010-05-17T09:30:47Z" version="001">
                   <Name>Lower Lift Entrance to Platforms 5 and 6</Name>
                   <ParentZoneRef version="001" ref="naptStop:9100WIMBLDN_5n6"/>
+                  <AccessModes/>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_PL"/>
                   <EntranceType>opening</EntranceType>
                   <IsExternal>false</IsExternal>
@@ -2392,10 +2489,12 @@
                   <IsExit>true</IsExit>
                   <Width>1.0</Width>
                   <Height>2.0</Height>
+                  <OtherTransportModes/>
                 </StopPlaceEntrance>
                 <StopPlaceEntrance id="nptg:9100WIMBLDN_7n8-ES1pl" created="2010-05-17T09:30:47Z" version="001">
                   <Name>Lower Stairs Entrance to Platforms 7 and 8</Name>
                   <ParentZoneRef version="001" ref="naptStop:9100WIMBLDN_7n8"/>
+                  <AccessModes/>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_PL"/>
                   <EntranceType>opening</EntranceType>
                   <IsExternal>false</IsExternal>
@@ -2403,10 +2502,12 @@
                   <IsExit>true</IsExit>
                   <Width>3.0</Width>
                   <Height>3.0</Height>
+                  <OtherTransportModes/>
                 </StopPlaceEntrance>
                 <StopPlaceEntrance id="nptg:9100WIMBLDN_7n8-EL1pl" created="2010-05-17T09:30:47Z" version="001">
                   <Name>Lower Lift Entrance to Platforms 7 and 8</Name>
                   <ParentZoneRef version="001" ref="naptStop:9100WIMBLDN_7n8"/>
+                  <AccessModes/>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_PL"/>
                   <EntranceType>opening</EntranceType>
                   <IsExternal>false</IsExternal>
@@ -2414,10 +2515,12 @@
                   <IsExit>true</IsExit>
                   <Width>3.0</Width>
                   <Height>3.0</Height>
+                  <OtherTransportModes/>
                 </StopPlaceEntrance>
                 <StopPlaceEntrance id="nptg:9100WIMBLDN_9n10-ES1pl" created="2010-05-17T09:30:47Z" version="001">
                   <Name>Lower Stairs Entrance to Platforms 9 and 10</Name>
                   <ParentZoneRef version="001" ref="naptStop:9100WIMBLDN_9n10"/>
+                  <AccessModes/>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_PL"/>
                   <EntranceType>opening</EntranceType>
                   <IsExternal>false</IsExternal>
@@ -2425,10 +2528,12 @@
                   <IsExit>true</IsExit>
                   <Width>3.0</Width>
                   <Height>3.0</Height>
+                  <OtherTransportModes/>
                 </StopPlaceEntrance>
                 <StopPlaceEntrance id="nptg:9100WIMBLDN_9n10-EL1pl" created="2010-05-17T09:30:47Z" version="001">
                   <Name>Lower Stairs Entrance to Platforms 9 and 10</Name>
                   <ParentZoneRef version="001" ref="naptStop:9100WIMBLDN_9n10"/>
+                  <AccessModes/>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_PL"/>
                   <EntranceType>opening</EntranceType>
                   <IsExternal>false</IsExternal>
@@ -2436,6 +2541,7 @@
                   <IsExit>true</IsExit>
                   <Width>3.0</Width>
                   <Height>3.0</Height>
+                  <OtherTransportModes/>
                 </StopPlaceEntrance>
               </entrances>
               <PublicCode>WIM</PublicCode>
@@ -2457,16 +2563,23 @@
                 </TicketingService>
                 <TicketingService id="nptg:TicketingService:9100WIMBLDN_LS2" version="any">
                   <VehicleModes>metro</VehicleModes>
+                  <TicketingServiceList/>
+                  <TicketTypeList/>
                   <TicketCounterService>true</TicketCounterService>
                   <OnlinePurchaseForSelfPrintTicket>false</OnlinePurchaseForSelfPrintTicket>
                   <PaymentMethods>cash creditCard debitCard travelCard</PaymentMethods>
                 </TicketingService>
                 <AssistanceService id="nptg:9100WIMBLDN_LS3" version="any">
+                  <AssistanceFacilityList/>
                   <AssistanceAvailability>availableIfBooked</AssistanceAvailability>
+                  <AccessibilityToolList/>
+                  <Languages/>
                   <AccessibilityTrainedStaff>true</AccessibilityTrainedStaff>
+                  <EmergencyServiceList/>
                   <SafetyFacilityList>ccTv sosPoints</SafetyFacilityList>
                 </AssistanceService>
                 <AccessVehicleEquipment id="nptg:AccessVehicleEquipment:9100WIMBLDN_LS3" version="any">
+                  <SuitableFor/>
                   <AssistedBoardingLocation>boardAtAnyDoor</AssistedBoardingLocation>
                   <GuideDogsAllowed>true</GuideDogsAllowed>
                 </AccessVehicleEquipment>
@@ -2497,6 +2610,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>covered</Covered>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_PL"/>
                   <placeEquipments>
@@ -2505,6 +2619,7 @@
                       <AccessibilityInfoFacilityList>visualDisplays</AccessibilityInfoFacilityList>
                     </PassengerInformationEquipment>
                   </placeEquipments>
+                  <OtherTransportModes/>
                   <BoardingUse>true</BoardingUse>
                   <AlightingUse>true</AlightingUse>
                   <Label>5 and 6</Label>
@@ -2525,6 +2640,8 @@
                 <Quay id="naptStop:9100WIMBLDN5" created="2010-04-17T09:30:47Z" version="001">
                   <Name>Platform 5</Name>
                   <Description>Platform 5 is paired with platform 6 with separate lift and stair access  </Description>
+                  <AccessModes/>
+                  <OtherTransportModes/>
                   <Label>5</Label>
                   <QuayType>railPlatform</QuayType>
                   <ParentQuayRef version="001" ref="naptStop:9100WIMBLDN_5n6"/>
@@ -2532,6 +2649,8 @@
                 <Quay id="naptStop:9100WIMBLDN6" created="2010-04-17T09:30:47Z" version="001">
                   <Name>Platform 6</Name>
                   <Description>Platform 5 is paired with platform 6 with separate lift and stair access</Description>
+                  <AccessModes/>
+                  <OtherTransportModes/>
                   <Label>5</Label>
                   <QuayType>railPlatform</QuayType>
                   <ParentQuayRef version="001" ref="naptStop:9100WIMBLDN_5n6"/>
@@ -2557,6 +2676,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>covered</Covered>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_PL"/>
                   <placeEquipments>
@@ -2565,6 +2685,7 @@
                       <AccessibilityInfoFacilityList>visualDisplays</AccessibilityInfoFacilityList>
                     </PassengerInformationEquipment>
                   </placeEquipments>
+                  <OtherTransportModes/>
                   <BoardingUse>true</BoardingUse>
                   <AlightingUse>true</AlightingUse>
                   <Label>7 and 8</Label>
@@ -2585,6 +2706,8 @@
                 <Quay id="naptStop:9100WIMBLDN7" created="2010-04-17T09:30:47Z" version="001">
                   <Name>Platform 7</Name>
                   <Description>Platform 7 is paired with platform 8 with separate lift and stair access  </Description>
+                  <AccessModes/>
+                  <OtherTransportModes/>
                   <Label>7</Label>
                   <QuayType>railPlatform</QuayType>
                   <ParentQuayRef version="001" ref="naptStop:9100WIMBLDN_7n8"/>
@@ -2592,6 +2715,8 @@
                 <Quay id="naptStop:9100WIMBLDN8" created="2010-04-17T09:30:47Z" version="001">
                   <Name>Platform 8</Name>
                   <Description>Platform 8 is paired with platform 7 with separate lift and stair access</Description>
+                  <AccessModes/>
+                  <OtherTransportModes/>
                   <Label>8</Label>
                   <QuayType>railPlatform</QuayType>
                   <ParentQuayRef version="001" ref="naptStop:9100WIMBLDN_7n8"/>
@@ -2617,6 +2742,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>covered</Covered>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_PL"/>
                   <placeEquipments>
@@ -2625,6 +2751,7 @@
                       <AccessibilityInfoFacilityList>visualDisplays</AccessibilityInfoFacilityList>
                     </PassengerInformationEquipment>
                   </placeEquipments>
+                  <OtherTransportModes/>
                   <BoardingUse>true</BoardingUse>
                   <AlightingUse>true</AlightingUse>
                   <Label>9 and 10</Label>
@@ -2637,6 +2764,8 @@
                 <Quay id="naptStop:9100WIMBLDN9" created="2010-04-17T09:30:47Z" version="001">
                   <Name>Platform 9</Name>
                   <Description>Platform 9  is paired with platform 10 with separate lift and stair access  </Description>
+                  <AccessModes/>
+                  <OtherTransportModes/>
                   <Label>9</Label>
                   <destinations>
                     <DestinationDisplayView>
@@ -2649,6 +2778,7 @@
                 <Quay id="naptStop:9100WIMBLDN10" created="2010-04-17T09:30:47Z" version="001">
                   <Name>Platform 10</Name>
                   <Description>Platform 10 is paired with platform 9 with separate lift and stair access. It has shared use for tram</Description>
+                  <AccessModes/>
                   <TransportMode>rail</TransportMode>
                   <OtherTransportModes>tram</OtherTransportModes>
                   <Label>10</Label>
@@ -2668,8 +2798,10 @@
                       <gml:pos srsName="UKOS">524811.0 170666.0</gml:pos>
                     </Location>
                   </Centroid>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_ST"/>
+                  <OtherTransportModes/>
                   <Label>Taxi</Label>
                   <QuayType>taxiStand</QuayType>
                 </Quay>
@@ -2681,8 +2813,10 @@
                       <gml:pos srsName="UKOS">524811.0 170666.0</gml:pos>
                     </Location>
                   </Centroid>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_ST"/>
+                  <OtherTransportModes/>
                   <Label>Set down</Label>
                   <QuayType>setDownPlace</QuayType>
                 </Quay>
@@ -2704,6 +2838,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>covered</Covered>
                   <Lighting>wellLit</Lighting>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_G0"/>
@@ -2713,11 +2848,14 @@
                         <TicketingEquipment id="nptg:9100WIMBLDN_A1-Eq-T1" version="any">
                           <Description>Ticket Office</Description>
                           <VehicleModes>metro rail</VehicleModes>
+                          <TicketingFacilityList/>
                           <TicketingServiceFacilityList>cardTopUp purchase</TicketingServiceFacilityList>
                           <TicketCounter>true</TicketCounter>
                           <NumberOfTills>6</NumberOfTills>
                           <QueueManagement>maze</QueueManagement>
                           <PaymentMethods>coin cash cheque creditCard debitCard</PaymentMethods>
+                          <TicketTypesAvailable/>
+                          <ScopeOfTicketsAvailable/>
                           <LowCounterAccess>true</LowCounterAccess>
                           <HeightOfLowCounter>0.95</HeightOfLowCounter>
                         </TicketingEquipment>
@@ -2727,28 +2865,42 @@
                           <TicketMachines>true</TicketMachines>
                           <NumberOfMachines>2</NumberOfMachines>
                           <HeightOfMachineInterface>0.95</HeightOfMachineInterface>
+                          <TicketingFacilityList/>
                           <TicketingServiceFacilityList>cardTopUp purchase</TicketingServiceFacilityList>
                           <PaymentMethods>coin creditCard debitCard</PaymentMethods>
+                          <TicketTypesAvailable/>
+                          <ScopeOfTicketsAvailable/>
                         </TicketingEquipment>
                         <TicketingEquipment id="nptg:9100WIMBLDN_A1-Eq-T3" version="any">
                           <Description>Card only </Description>
                           <VehicleModes>metro rail</VehicleModes>
                           <TicketMachines>true</TicketMachines>
                           <NumberOfMachines>4</NumberOfMachines>
+                          <TicketingFacilityList/>
                           <TicketingServiceFacilityList>purchase reservations</TicketingServiceFacilityList>
                           <PaymentMethods>cardsOnly</PaymentMethods>
+                          <TicketTypesAvailable/>
+                          <ScopeOfTicketsAvailable/>
                         </TicketingEquipment>
                         <WaitingRoomEquipment id="nptg:9100WIMBLDN_Aep1-wt" version="any">
                           <Seats>0</Seats>
+                          <FareClass/>
+                          <Sanitary/>
                         </WaitingRoomEquipment>
                       </placeEquipments>
                     </EquipmentPlace>
                   </equipmentPlaces>
                   <localServices>
                     <AssistanceService id="nptg:9100WIMBLDN_A1_SF" version="any">
+                      <AssistanceFacilityList/>
                       <Staffing>fullTime</Staffing>
+                      <AccessibilityToolList/>
+                      <Languages/>
+                      <EmergencyServiceList/>
+                      <SafetyFacilityList/>
                     </AssistanceService>
                   </localServices>
+                  <OtherTransportModes/>
                   <entrances>
                     <StopPlaceEntranceRef version="001" ref="nptg:9100WIMBLDN_A1-EE1"/>
                     <StopPlaceEntranceRef version="001" ref="nptg:9100WIMBLDN_A1-EI1"/>
@@ -2771,6 +2923,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <Lighting>wellLit</Lighting>
                   <AllAreasWheelchairAccessible>true</AllAreasWheelchairAccessible>
@@ -2782,11 +2935,13 @@
                           <Gender>femaleOnly</Gender>
                           <SanitaryFacilityList>toilet</SanitaryFacilityList>
                           <FreeToUse>true</FreeToUse>
+                          <PaymentMethods/>
                           <Staffing>unmanned</Staffing>
                         </SanitaryEquipment>
                       </placeEquipments>
                     </EquipmentPlace>
                   </equipmentPlaces>
+                  <OtherTransportModes/>
                   <entrances>
                     <StopPlaceEntranceRef version="001" ref="nptg:9100WIMBLDN_A1-EI1"/>
                     <StopPlaceEntranceRef version="001" ref="nptg:9100WIMBLDN_A2b-EI5"/>
@@ -2801,9 +2956,11 @@
                 <AccessSpace id="nptg:9100WIMBLDN_A2b" created="2010-05-17T09:30:47Z" version="001">
                   <Name>Upper Concourse Corridor  Lift Area</Name>
                   <Description>Upper concourse lift area with lifts to platforms. Part of upper concourse</Description>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <Lighting>wellLit</Lighting>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_G0"/>
+                  <OtherTransportModes/>
                   <entrances>
                     <StopPlaceEntranceRef version="001" ref="nptg:9100WIMBLDN_A2b-EI5"/>
                     <StopPlaceEntranceRef version="001" ref="nptg:9100WIMBLDN_A2b-EI6"/>
@@ -2818,6 +2975,7 @@
                 <AccessSpace id="nptg:9100WIMBLDN_A3" created="2010-05-17T09:30:47Z" version="001">
                   <Name>Upper Concourse Corridor Bicycle Store</Name>
                   <Description>Upper concourse  cycle stores. Part of upper concourse</Description>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <Lighting>wellLit</Lighting>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_G0"/>
@@ -2826,6 +2984,7 @@
                       <CycleStorageType>racks</CycleStorageType>
                     </CycleStorageEquipment>
                   </placeEquipments>
+                  <OtherTransportModes/>
                   <AccessSpaceType>concourse</AccessSpaceType>
                   <ParentAccessSpaceRef version="001" ref="nptg:9100WIMBLDN_A2b"/>
                 </AccessSpace>
@@ -2845,6 +3004,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <Lighting>wellLit</Lighting>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_G0"/>
@@ -2856,20 +3016,31 @@
                           <VehicleModes>metro rail</VehicleModes>
                           <TicketMachines>true</TicketMachines>
                           <NumberOfMachines>3</NumberOfMachines>
+                          <TicketingFacilityList/>
                           <TicketingServiceFacilityList>cardTopUp purchase</TicketingServiceFacilityList>
                           <PaymentMethods>coin creditCard debitCard</PaymentMethods>
+                          <TicketTypesAvailable/>
+                          <ScopeOfTicketsAvailable/>
                         </TicketingEquipment>
                         <WaitingRoomEquipment id="nptg:9100WIMBLDN_A5-eq1-wt" version="any">
                           <Seats>0</Seats>
+                          <FareClass/>
+                          <Sanitary/>
                         </WaitingRoomEquipment>
                       </placeEquipments>
                     </EquipmentPlace>
                   </equipmentPlaces>
                   <localServices>
                     <AssistanceService id="nptg:9100WIMBLDN_A5_ls_SF" version="any">
+                      <AssistanceFacilityList/>
                       <Staffing>fullTime</Staffing>
+                      <AccessibilityToolList/>
+                      <Languages/>
+                      <EmergencyServiceList/>
+                      <SafetyFacilityList/>
                     </AssistanceService>
                   </localServices>
+                  <OtherTransportModes/>
                   <entrances>
                     <StopPlaceEntranceRef version="001" ref="nptg:9100WIMBLDN_A4-EE1"/>
                     <StopPlaceEntranceRef version="001" ref="nptg:9100WIMBLDN_A4-EI3"/>
@@ -2892,6 +3063,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <Lighting>wellLit</Lighting>
                   <equipmentPlaces>
@@ -2913,6 +3085,7 @@
                       </placeEquipments>
                     </EquipmentPlace>
                   </equipmentPlaces>
+                  <OtherTransportModes/>
                   <entrances>
                     <EntranceRef version="001" ref="nptg:9100WIMBLDN_A2b-EL1g"/>
                     <StopPlaceEntranceRef version="001" ref="nptg:9100WIMBLDN_A5-EL1pl"/>
@@ -2935,6 +3108,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <Lighting>wellLit</Lighting>
                   <equipmentPlaces>
@@ -2950,6 +3124,7 @@
                       </placeEquipments>
                     </EquipmentPlace>
                   </equipmentPlaces>
+                  <OtherTransportModes/>
                   <entrances>
                     <StopPlaceEntranceRef version="001" ref="nptg:9100WIMBLDN_A2b-EL2g"/>
                     <StopPlaceEntranceRef version="001" ref="nptg:9100WIMBLDN_5n6-EL1pl"/>
@@ -2972,6 +3147,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <Lighting>wellLit</Lighting>
                   <equipmentPlaces>
@@ -2987,6 +3163,7 @@
                       </placeEquipments>
                     </EquipmentPlace>
                   </equipmentPlaces>
+                  <OtherTransportModes/>
                   <entrances>
                     <StopPlaceEntranceRef version="001" ref="nptg:9100WIMBLDN_A2b-EL3g"/>
                     <StopPlaceEntranceRef version="001" ref="nptg:9100WIMBLDN_7n8-EL1pl"/>
@@ -3009,6 +3186,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <Lighting>wellLit</Lighting>
                   <equipmentPlaces>
@@ -3024,6 +3202,7 @@
                       </placeEquipments>
                     </EquipmentPlace>
                   </equipmentPlaces>
+                  <OtherTransportModes/>
                   <entrances>
                     <StopPlaceEntranceRef version="001" ref="nptg:9100WIMBLDN_A2b-EL4g"/>
                     <StopPlaceEntranceRef version="001" ref="nptg:9100WIMBLDN_9n10-EL1pl"/>
@@ -3044,8 +3223,10 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <Lighting>wellLit</Lighting>
+                  <OtherTransportModes/>
                   <entrances>
                     <StopPlaceEntranceRef version="001" ref="nptg:9100WIMBLDN_A2-ES2g"/>
                     <StopPlaceEntranceRef version="001" ref="nptg:9100WIMBLDN_5n6-ES1pl"/>
@@ -3066,8 +3247,10 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <Lighting>wellLit</Lighting>
+                  <OtherTransportModes/>
                   <entrances>
                     <StopPlaceEntranceRef version="001" ref="nptg:9100WIMBLDN_A2-ES3g"/>
                     <StopPlaceEntranceRef version="001" ref="nptg:9100WIMBLDN_9n10-ES1pl"/>
@@ -3088,8 +3271,10 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <Lighting>wellLit</Lighting>
+                  <OtherTransportModes/>
                   <entrances>
                     <StopPlaceEntranceRef version="001" ref="nptg:9100WIMBLDN_A2-ES4g"/>
                     <StopPlaceEntranceRef version="001" ref="nptg:9100WIMBLDN_9n10-ES1pl"/>
@@ -3110,8 +3295,10 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
                   <Lighting>wellLit</Lighting>
+                  <OtherTransportModes/>
                   <entrances>
                     <StopPlaceEntranceRef version="001" ref="nptg:9100WIMBLDN_A1-EE1"/>
                   </entrances>
@@ -3143,6 +3330,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
                   <Transition>level</Transition>
@@ -3208,6 +3396,7 @@
                   <To>
                     <PlaceRef version="001" ref="nptg:9100WIMBLDN_A2_J1"/>
                   </To>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -3231,6 +3420,7 @@
                   <To>
                     <PlaceRef version="001" ref="nptg:9100WIMBLDN_A2_J2"/>
                   </To>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -3255,6 +3445,7 @@
                   <To>
                     <PlaceRef version="001" ref="nptg:9100WIMBLDN_A2_J1"/>
                   </To>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -3279,6 +3470,7 @@
                     <PlaceRef version="001" ref="nptg:9100WIMBLDN_A2" xsi:type="AccessSpaceRefStructure"/>
                     <EntranceRef version="001" ref="nptg:9100WIMBLDN_A2-ES4g" xsi:type="StopPlaceEntranceRefStructure"/>
                   </To>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -3302,6 +3494,7 @@
                   <To>
                     <PlaceRef version="001" ref="nptg:9100WIMBLDN_A2_J1"/>
                   </To>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -3326,6 +3519,7 @@
                   <To>
                     <PlaceRef version="001" ref="nptg:9100WIMBLDN_A2_J4"/>
                   </To>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -3349,6 +3543,7 @@
                   <To>
                     <PlaceRef version="001" ref="nptg:9100WIMBLDN_A2_J2"/>
                   </To>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -3372,6 +3567,7 @@
                   <To>
                     <PlaceRef version="001" ref="nptg:9100WIMBLDN_A2_J1"/>
                   </To>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -3396,6 +3592,7 @@
                   <To>
                     <PlaceRef version="001" ref="nptg:9100WIMBLDN_A2_J2"/>
                   </To>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -3419,6 +3616,7 @@
                   <To>
                     <PlaceRef version="001" ref="nptg:9100WIMBLDN_A2_J3"/>
                   </To>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -3443,6 +3641,7 @@
                   <To>
                     <PlaceRef version="001" ref="nptg:9100WIMBLDN_A2_J3"/>
                   </To>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -3463,6 +3662,7 @@
                   <To>
                     <PlaceRef version="001" ref="nptg:9100WIMBLDN_A2_J4"/>
                   </To>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -3484,6 +3684,7 @@
                   <To>
                     <PlaceRef version="001" ref="nptg:9100WIMBLDN_A2_J4"/>
                   </To>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -3505,6 +3706,7 @@
                   <To>
                     <PlaceRef version="001" ref="nptg:9100WIMBLDN_FC_J1"/>
                   </To>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -3522,6 +3724,7 @@
                   <To>
                     <PlaceRef version="001" ref="nptg:9100WIMBLDN_FC_J2"/>
                   </To>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -3539,6 +3742,7 @@
                   <To>
                     <PlaceRef version="001" ref="nptg:490G00272P_Jw1"/>
                   </To>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -3571,6 +3775,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>26</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -3618,6 +3823,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>26</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -3664,6 +3870,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>26</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -3710,6 +3917,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -3776,6 +3984,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -3842,6 +4051,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -3892,6 +4102,7 @@
                   <To>
                     <PlaceRef version="001" ref="nptg:9100WIMBLDN_A2_J2"/>
                   </To>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -3913,6 +4124,7 @@
                   <To>
                     <PlaceRef version="001" ref="nptg:9100WIMBLDN_A2_J4"/>
                   </To>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -3933,6 +4145,7 @@
                   <To>
                     <PlaceRef version="001" ref="nptg:9100WIMBLDN_A2b_J6"/>
                   </To>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -3954,6 +4167,7 @@
                   <To>
                     <PlaceRef version="001" ref="nptg:9100WIMBLDN_A2b_J5"/>
                   </To>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -3978,6 +4192,7 @@
                   <To>
                     <PlaceRef version="001" ref="nptg:9100WIMBLDN_A2b_J5"/>
                   </To>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -4002,6 +4217,7 @@
                   <To>
                     <PlaceRef version="001" ref="nptg:9100WIMBLDN_A2b_J5"/>
                   </To>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -4026,6 +4242,7 @@
                   <To>
                     <PlaceRef version="001" ref="nptg:9100WIMBLDN_A2b_J6"/>
                   </To>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -4050,6 +4267,7 @@
                   <To>
                     <PlaceRef version="001" ref="nptg:9100WIMBLDN_A2b_J6"/>
                   </To>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -4074,6 +4292,7 @@
                   <To>
                     <PlaceRef version="001" ref="nptg:9100WIMBLDN_A2b_J6"/>
                   </To>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -4097,6 +4316,7 @@
                   <To>
                     <PlaceRef version="001" ref="nptg:9100WIMBLDN_A2b_J5"/>
                   </To>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -4121,6 +4341,7 @@
                   <To>
                     <PlaceRef version="001" ref="nptg:9100WIMBLDN_A2_J4"/>
                   </To>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -4158,6 +4379,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -4255,6 +4477,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:9100WIMBLDN_A1-EE1_to_5n6-acc" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -4262,6 +4485,7 @@
                       <Transition>down</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                   <NavigationType>hallToQuay</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="nptg:9100WIMBLDN_A1-EE1_to_5n6-acc-01" version="any" order="1">
@@ -4314,6 +4538,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:9100WIMBLDN_A1-EE1_to_5n6-notacc" version="any">
                       <AccessFeatureType>stairs</AccessFeatureType>
@@ -4321,6 +4546,7 @@
                       <Transition>down</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                   <NavigationType>hallToQuay</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2-01" version="any" order="1">
@@ -4359,6 +4585,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:9100WIMBLDN_5n6to_A1-EE1-acc" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -4366,6 +4593,7 @@
                       <Transition>up</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                   <NavigationType>quayToHall</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="nptg:9100WIMBLDN_5n6to_A1-EE1-acc-01" version="any" order="1">
@@ -4418,6 +4646,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:9100WIMBLDN_5n6_to_A1-EE1-notacc" version="any">
                       <AccessFeatureType>stairs</AccessFeatureType>
@@ -4425,6 +4654,7 @@
                       <Transition>up</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                   <NavigationType>quayToHall</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="nptg:9100WIMBLDN_5n6to_A1-EE1-notacc-01" version="any" order="1">
@@ -4463,6 +4693,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:9100WIMBLDN_A1-EE1_to_7n8-acc" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -4470,6 +4701,7 @@
                       <Transition>down</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                   <NavigationType>hallToQuay</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="nptg:9100WIMBLDN_A1-EE1_to_7n8-acc-01" version="any" order="1">
@@ -4529,6 +4761,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:9100WIMBLDN_A1-EE1_to_7n8-notacc" version="any">
                       <AccessFeatureType>stairs</AccessFeatureType>
@@ -4536,6 +4769,7 @@
                       <Transition>down</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                   <NavigationType>hallToQuay</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="nptg:9100WIMBLDN_A1-EE1_to_7n8-notacc-01" version="any" order="1">
@@ -4581,6 +4815,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:9100WIMBLDN_7n8to_A1-EE1-acc" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -4588,6 +4823,7 @@
                       <Transition>up</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                   <NavigationType>quayToHall</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="nptg:9100WIMBLDN_7n8to_A1-EE1-acc-01" version="any" order="1">
@@ -4647,6 +4883,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:9100WIMBLDN_7n8to_A1-EE1-notacc" version="any">
                       <AccessFeatureType>stairs</AccessFeatureType>
@@ -4654,6 +4891,7 @@
                       <Transition>up</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                   <NavigationType>quayToHall</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="nptg:9100WIMBLDN_7n8to_A1-EE1-notacc-01" version="any" order="1">
@@ -4699,6 +4937,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:9100WIMBLDN_A1-EE1_to_9n10-acc" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -4706,6 +4945,7 @@
                       <Transition>down</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                   <NavigationType>hallToQuay</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="nptg:9100WIMBLDN_A1-EE1_to_9n10-acc-01" version="any" order="1">
@@ -4765,6 +5005,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:9100WIMBLDN_A1-EE1_to_9n10-notacc" version="any">
                       <AccessFeatureType>stairs</AccessFeatureType>
@@ -4772,6 +5013,7 @@
                       <Transition>down</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                   <NavigationType>hallToQuay</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="nptg:9100WIMBLDN_A1-EE1_to_9n10-notacc-01" version="any" order="1">
@@ -4824,6 +5066,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:9100WIMBLDN_9n10to_A1-EE1-acc" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -4831,6 +5074,7 @@
                       <Transition>up</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                   <NavigationType>quayToHall</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="nptg:9100WIMBLDN_9n10to_A1-EE1-acc-01" version="any" order="1">
@@ -4890,6 +5134,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:9100WIMBLDN_9n10to_A1-EE1-notacc" version="any">
                       <AccessFeatureType>stairs</AccessFeatureType>
@@ -4897,6 +5142,7 @@
                       <Transition>up</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                   <NavigationType>quayToHall</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="nptg:9100WIMBLDN_9n10to_A1-EE1-notacc-01" version="any" order="1">
@@ -4949,6 +5195,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:9100WIMBLDN_DL_to_7n8-acc" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -4956,6 +5203,7 @@
                       <Transition>down</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                   <NavigationType>quayToQuay</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="nptg:9100WIMBLDN_DL_to_7n8-acc_01" version="any" order="1">
@@ -5008,6 +5256,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:9100WIMBLDN_DL_to_7n8-notacc" version="any">
                       <AccessFeatureType>stairs</AccessFeatureType>
@@ -5015,6 +5264,7 @@
                       <Transition>down</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                   <NavigationType>quayToQuay</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="nptg:9100WIMBLDN_DL_to_7n8-notacc_01" version="any" order="1">
@@ -5074,6 +5324,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:9100WIMBLDN_7n8to_DL-acc" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -5081,6 +5332,7 @@
                       <Transition>up</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                   <NavigationType>quayToQuay</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="nptg:9100WIMBLDN_7n8to_DL-acc_01" version="any" order="1">
@@ -5133,6 +5385,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:9100WIMBLDN_7n8to_DL-notacc" version="any">
                       <AccessFeatureType>stairs</AccessFeatureType>
@@ -5140,6 +5393,7 @@
                       <Transition>up</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                   <NavigationType>quayToQuay</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="nptg:9100WIMBLDN_7n8_to_DL-notacc_01" version="any" order="1">
@@ -5199,6 +5453,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:9100WIMBLDN_5n6_to_7n8-acc" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -5210,6 +5465,7 @@
                     <DefaultDuration>PT5M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT10M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
+                  <AccessFeatureList/>
                   <NavigationType>quayToQuay</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="nptg:9100WIMBLDN_5n6_to_7n8-acc_01" version="any" order="1">
@@ -5262,6 +5518,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:9100WIMBLDN_5n6_to_7n8-notacc" version="any">
                       <AccessFeatureType>stairs</AccessFeatureType>
@@ -5272,6 +5529,7 @@
                   <TransferDuration>
                     <DefaultDuration>PT5M</DefaultDuration>
                   </TransferDuration>
+                  <AccessFeatureList/>
                   <NavigationType>quayToQuay</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="nptg:9100WIMBLDN_5n6_to_7n8-notacc_01" version="any" order="1">
@@ -5324,6 +5582,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:9100WIMBLDN_7n8to_5n6-acc" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -5335,6 +5594,7 @@
                     <DefaultDuration>PT5M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT10M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
+                  <AccessFeatureList/>
                   <NavigationType>quayToQuay</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="nptg:9100WIMBLDN_7n8to_5n6-acc_01" version="any" order="1">
@@ -5387,6 +5647,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:9100WIMBLDN_7n8to_5n6-notacc" version="any">
                       <AccessFeatureType>stairs</AccessFeatureType>
@@ -5397,6 +5658,7 @@
                   <TransferDuration>
                     <DefaultDuration>PT5M</DefaultDuration>
                   </TransferDuration>
+                  <AccessFeatureList/>
                   <NavigationType>quayToQuay</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="nptg:9100WIMBLDN_7n8_to_5n6-notacc_01" version="any" order="1">
@@ -5449,6 +5711,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:9100WIMBLDN_5n6_to_9n10-acc" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -5460,6 +5723,7 @@
                     <DefaultDuration>PT5M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT10M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
+                  <AccessFeatureList/>
                   <NavigationType>quayToQuay</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="nptg:9100WIMBLDN_5n6_to_9n10-acc_01" version="any" order="1">
@@ -5512,6 +5776,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:9100WIMBLDN_5n6_to_9n10-notacc-01" version="any">
                       <AccessFeatureType>stairs</AccessFeatureType>
@@ -5523,6 +5788,7 @@
                     <DefaultDuration>PT5M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT10M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
+                  <AccessFeatureList/>
                   <NavigationType>quayToQuay</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="nptg:9100WIMBLDN_5n6_to_9n10-notacc-01" version="any" order="1">
@@ -5582,6 +5848,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:9100WIMBLDN_9n10to_5n6-acc" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -5593,6 +5860,7 @@
                     <DefaultDuration>PT5M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT10M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
+                  <AccessFeatureList/>
                   <NavigationType>quayToQuay</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="nptg:9100WIMBLDN_9n10to_5n6-acc_01" version="any" order="1">
@@ -5645,6 +5913,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:9100WIMBLDN_9n10_to_5n6-notacc" version="any">
                       <AccessFeatureType>stairs</AccessFeatureType>
@@ -5652,6 +5921,7 @@
                       <Transition>up</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                   <NavigationType>quayToQuay</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="nptg:9100WIMBLDN_9n10_to_5n6-notacc_01" version="any" order="1">
@@ -5711,6 +5981,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:9100WIMBLDN_7n8_to_9n10-acc_01" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -5718,6 +5989,7 @@
                       <Transition>down</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                   <NavigationType>quayToQuay</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="nptg:9100WIMBLDN_7n8_to_9n10-acc_01" version="any" order="1">
@@ -5763,6 +6035,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:9100WIMBLDN_7n8_to_9n10-notacc-01" version="any">
                       <AccessFeatureType>stairs</AccessFeatureType>
@@ -5770,6 +6043,7 @@
                       <Transition>down</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                   <NavigationType>quayToQuay</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="nptg:9100WIMBLDN_7n8_to_9n10-notacc-01" version="any" order="1">
@@ -5822,6 +6096,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:9100WIMBLDN_9n10to_7n8-acc_01" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -5829,6 +6104,7 @@
                       <Transition>up</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                   <NavigationType>quayToQuay</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="nptg:9100WIMBLDN_9n10to_7n8-acc_01" version="any" order="1">
@@ -5874,6 +6150,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:9100WIMBLDN_9n10_to_7n8-notacc_01" version="any">
                       <AccessFeatureType>stairs</AccessFeatureType>
@@ -5881,6 +6158,7 @@
                       <Transition>up</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                   <NavigationType>quayToQuay</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="nptg:9100WIMBLDN_9n10_to_7n8-notacc_01" version="any" order="1">
@@ -5957,6 +6235,7 @@
                 <StopPlaceEntrance id="nptg:9100WIMBLDN_A5-ES1pl" created="2010-05-17T09:30:47Z" version="001">
                   <Name>Lower Stairs Entrance to District Line concourse</Name>
                   <ParentZoneRef version="001" ref="nptg:9100WIMBLDN_A5"/>
+                  <AccessModes/>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_PL"/>
                   <EntranceType>opening</EntranceType>
                   <IsExternal>false</IsExternal>
@@ -5964,10 +6243,12 @@
                   <IsExit>true</IsExit>
                   <Width>3.0</Width>
                   <Height>3.0</Height>
+                  <OtherTransportModes/>
                 </StopPlaceEntrance>
                 <StopPlaceEntrance id="nptg:9100WIMBLDN_A5-EL1pl" created="2010-05-17T09:30:47Z" version="001">
                   <Name>Lower Lift Entrance to District Line concourse</Name>
                   <ParentZoneRef version="001" ref="nptg:9100WIMBLDN_A5"/>
+                  <AccessModes/>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_PL"/>
                   <EntranceType>automaticDoor</EntranceType>
                   <IsExternal>false</IsExternal>
@@ -5975,10 +6256,12 @@
                   <IsExit>true</IsExit>
                   <Width>1.0</Width>
                   <Height>2.0</Height>
+                  <OtherTransportModes/>
                 </StopPlaceEntrance>
                 <StopPlaceEntrance id="nptg:9100WIMBLDN_A5-EI1" created="2010-05-17T09:30:47Z" version="001">
                   <Name>District Line concourse to Platforms 1 and 2</Name>
                   <ParentZoneRef version="001" ref="nptg:9100WIMBLDN_A5"/>
+                  <AccessModes/>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_PL"/>
                   <placeEquipments>
                     <EntranceEquipment id="nptg:9100WIMBLDN_A5-EI1_Eq1" version="any">
@@ -5992,10 +6275,12 @@
                   <IsExit>true</IsExit>
                   <Width>1.0</Width>
                   <Height>2.0</Height>
+                  <OtherTransportModes/>
                 </StopPlaceEntrance>
                 <StopPlaceEntrance id="nptg:9100WIMBLDN_A5_EI2" created="2010-05-17T09:30:47Z" version="001">
                   <Name>District Line concourse to Platforms 3 and 4</Name>
                   <ParentZoneRef version="001" ref="nptg:9100WIMBLDN_A5"/>
+                  <AccessModes/>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_PL"/>
                   <placeEquipments>
                     <EntranceEquipment id="nptg:9100WIMBLDN_A5_EI2-Eq" version="any">
@@ -6009,9 +6294,11 @@
                   <IsExit>true</IsExit>
                   <Width>1.0</Width>
                   <Height>2.0</Height>
+                  <OtherTransportModes/>
                 </StopPlaceEntrance>
               </entrances>
               <TransportMode>metro</TransportMode>
+              <OtherTransportModes/>
               <tariffZones>
                 <TariffZoneRef version="001" ref="tfl:tf_03"/>
               </tariffZones>
@@ -6048,6 +6335,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>covered</Covered>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_PL"/>
                   <equipmentPlaces>
@@ -6064,13 +6352,20 @@
                       <placeEquipments>
                         <WaitingRoomEquipment id="nptg:4900ZZLUWIM1n2_Eq-Seats1" version="any">
                           <Seats>8</Seats>
+                          <FareClass/>
+                          <Sanitary/>
                         </WaitingRoomEquipment>
                         <AssistanceService id="nptg:4900ZZLUWIM1n2" version="any">
                           <AssistanceFacilityList>none</AssistanceFacilityList>
+                          <AccessibilityToolList/>
+                          <Languages/>
+                          <EmergencyServiceList/>
+                          <SafetyFacilityList/>
                         </AssistanceService>
                       </placeEquipments>
                     </EquipmentPlace>
                   </equipmentPlaces>
+                  <OtherTransportModes/>
                   <BoardingUse>true</BoardingUse>
                   <AlightingUse>true</AlightingUse>
                   <Label>1 and 2</Label>
@@ -6090,6 +6385,8 @@
                 <Quay id="naptStop:4900ZZLUWIM1" dataSourceRef="nptg:NaPTAN" created="2010-04-17T09:30:47Z" version="001">
                   <Name>Platform 1</Name>
                   <Description>Platform 1 is paired with platform 2  </Description>
+                  <AccessModes/>
+                  <OtherTransportModes/>
                   <Label>1</Label>
                   <QuayType>metroPlatform</QuayType>
                   <ParentQuayRef version="001" ref="naptStop:4900ZZLUWIM1n2"/>
@@ -6097,6 +6394,8 @@
                 <Quay id="naptStop:4900ZZLUWIM2" dataSourceRef="nptg:NaPTAN" created="2010-04-17T09:30:47Z" version="001">
                   <Name>Platform 2</Name>
                   <Description>Platforms 2 is a pair with platform 1</Description>
+                  <AccessModes/>
+                  <OtherTransportModes/>
                   <Label>2</Label>
                   <QuayType>metroPlatform</QuayType>
                   <ParentQuayRef version="001" ref="naptStop:4900ZZLUWIM1n2"/>
@@ -6122,6 +6421,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>covered</Covered>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_PL"/>
                   <equipmentPlaces>
@@ -6138,13 +6438,20 @@
                       <placeEquipments>
                         <WaitingRoomEquipment id="nptg:4900ZZLUWIM3n4_Eq-Seats1" version="any">
                           <Seats>8</Seats>
+                          <FareClass/>
+                          <Sanitary/>
                         </WaitingRoomEquipment>
                         <AssistanceService id="nptg:4900ZZLUWIM3n4_Eq-Seats1" version="any">
                           <AssistanceFacilityList>none</AssistanceFacilityList>
+                          <AccessibilityToolList/>
+                          <Languages/>
+                          <EmergencyServiceList/>
+                          <SafetyFacilityList/>
                         </AssistanceService>
                       </placeEquipments>
                     </EquipmentPlace>
                   </equipmentPlaces>
+                  <OtherTransportModes/>
                   <BoardingUse>true</BoardingUse>
                   <AlightingUse>true</AlightingUse>
                   <Label>3 and 4</Label>
@@ -6163,6 +6470,8 @@
                 <Quay id="naptStop:4900ZZLUWIM3" dataSourceRef="nptg:NaPTAN" created="2010-04-17T09:30:47Z" version="001">
                   <Name>Platform 3</Name>
                   <Description>Platform 3 is paired with platform 4 </Description>
+                  <AccessModes/>
+                  <OtherTransportModes/>
                   <Label>3</Label>
                   <QuayType>metroPlatform</QuayType>
                   <ParentQuayRef version="001" ref="naptStop:4900ZZLUWIM3n4"/>
@@ -6170,6 +6479,8 @@
                 <Quay id="naptStop:4900ZZLUWIM4" dataSourceRef="nptg:NaPTAN" created="2010-04-17T09:30:47Z" version="001">
                   <Name>Platform 4</Name>
                   <Description>Platforms 4 is a pair with platform 3</Description>
+                  <AccessModes/>
+                  <OtherTransportModes/>
                   <Label>4</Label>
                   <QuayType>metroPlatform</QuayType>
                   <ParentQuayRef version="001" ref="naptStop:4900ZZLUWIM3n4"/>
@@ -6192,6 +6503,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>covered</Covered>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_PL"/>
                   <equipmentPlaces>
@@ -6201,6 +6513,7 @@
                           <validityConditions>
                             <AvailabilityCondition id="nptg:9100WIMBLDN1n2_Eq-Sv1" created="2010-05-17T09:30:47Z" version="001"/>
                           </validityConditions>
+                          <VehicleModes/>
                           <TicketingServiceList>all</TicketingServiceList>
                           <TicketTypeList>all</TicketTypeList>
                           <TicketCounterService>true</TicketCounterService>
@@ -6209,6 +6522,7 @@
                       </placeEquipments>
                     </EquipmentPlace>
                   </equipmentPlaces>
+                  <OtherTransportModes/>
                   <entrances>
                     <StopPlaceEntranceRef version="001" ref="nptg:9100WIMBLDN_A5-EL1pl"/>
                     <StopPlaceEntranceRef version="001" ref="nptg:9100WIMBLDN_A5-ES1pl"/>
@@ -6229,6 +6543,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <equipmentPlaces>
                     <EquipmentPlace id="nptg:4900ZZLUWIM3n4-S1" version="any">
@@ -6285,6 +6600,7 @@
                       </flights>
                     </StaircaseEquipment>
                   </placeEquipments>
+                  <OtherTransportModes/>
                   <entrances>
                     <StopPlaceEntranceRef version="001" ref="nptg:9100WIMBLDN_A5-ES1pl"/>
                     <StopPlaceEntranceRef version="001" ref="nptg:9100WIMBLDN_A2-ES1g"/>
@@ -6317,6 +6633,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -6375,6 +6692,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>13</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -6408,6 +6726,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>13</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -6430,6 +6749,7 @@
                     <PlaceRef version="001" ref="naptStop:4900ZZLUWIM1n2"/>
                     <EntranceRef ref="nptg:4900ZZLUWIM1n2-EI1" xsi:type="StopPlaceEntranceRefStructure"/>
                   </To>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -6455,6 +6775,7 @@
                     <PlaceRef version="001" ref="naptStop:4900ZZLUWIM3n4"/>
                     <EntranceRef ref="nptg:4900ZZLUWIM3n4-EI1" xsi:type="StopPlaceEntranceRefStructure"/>
                   </To>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -6480,6 +6801,7 @@
                     <PlaceRef ref="naptStop:4900ZZLUWIM1n2" xsi:type="QuayRefStructure"/>
                     <EntranceRef ref="nptg:4900ZZLUWIM1n2-EI1" xsi:type="StopPlaceEntranceRefStructure"/>
                   </To>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -6505,6 +6827,7 @@
                     <PlaceRef version="001" ref="naptStop:4900ZZLUWIM3n4"/>
                     <EntranceRef ref="nptg:4900ZZLUWIM3n4-EI1" xsi:type="StopPlaceEntranceRefStructure"/>
                   </To>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -6530,6 +6853,7 @@
                     <PlaceRef version="001" ref="naptStop:4900ZZLUWIM3n4"/>
                     <EntranceRef ref="nptg:4900ZZLUWIM3n4-EI1" xsi:type="StopPlaceEntranceRefStructure"/>
                   </To>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -6570,6 +6894,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:9100WIMBLDN_A1-EE1_to_DL_is-acc" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -6577,6 +6902,7 @@
                       <Transition>down</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                   <NavigationType>streetToQuay</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="nptg:9100WIMBLDN_A1-EE1_to_DL_-01" version="any" order="1">
@@ -6650,6 +6976,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:9100WIMBLDN_DL-acc-to-EI1_is-acc" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -6657,6 +6984,7 @@
                       <Transition>up</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                   <NavigationType>quayToStreet</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="nptg:9100WIMBLDN_DL-acc-to-EI1_is-acc_01" version="any" order="1">
@@ -6730,6 +7058,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:9100WIMBLDN_A1-EE1_to_DL_is-notacc" version="any">
                       <AccessFeatureType>stairs</AccessFeatureType>
@@ -6737,6 +7066,7 @@
                       <Transition>down</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                   <NavigationType>streetToQuay</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="nptg:9100WIMBLDN_A1-EE1_to_DL_is-notacc_01" version="any" order="1">
@@ -6796,6 +7126,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="nptg:9100WIMBLDN_DL_to_A1-EE1-is-notacc" version="any">
                       <AccessFeatureType>stairs</AccessFeatureType>
@@ -6803,6 +7134,7 @@
                       <Transition>down</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                   <NavigationType>quayToStreet</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="nptg:9100WIMBLDN_DL_to_A1-EE1-is-notacc_01" version="any" order="1">
@@ -6862,6 +7194,8 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
+                  <AccessFeatureList/>
                   <NavigationType>quayToQuay</NavigationType>
                 </NavigationPath>
                 <NavigationPath id="nptg:490G00272P_ST-StopD_to_DL_is-branched" created="2010-05-17T09:30:47Z" version="001">
@@ -6877,6 +7211,8 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
+                  <AccessFeatureList/>
                   <NavigationType>hallToQuay</NavigationType>
                   <placesInSequence>
                     <PlaceInSequence id="nptg:9100WIMBLDN_DL_to_Q1-Q2-is-acc_01" version="001" order="1">
@@ -7001,11 +7337,13 @@
                   </AccessibilityLimitation>
                 </limitations>
               </AccessibilityAssessment>
+              <AccessModes/>
               <TopographicPlaceView>
                 <TopographicPlaceRef version="001" ref="nptgLocality:E0034695"/>
               </TopographicPlaceView>
               <ParentSiteRef version="001" ref="naptStop:910GWIMBLDN" xsi:type="StopPlaceRefStructure"/>
               <TransportMode>tram</TransportMode>
+              <OtherTransportModes/>
               <StopPlaceType>tramStation</StopPlaceType>
               <quays>
                 <QuayRef version="001" ref="naptStop:9100WIMBLDN10"/>
@@ -7038,6 +7376,7 @@
               </OperatingOrganisationView>
               <ParentSiteRef version="001" ref="naptStop:910GWIMBLDN" xsi:type="StopPlaceRefStructure"/>
               <TransportMode>bus</TransportMode>
+              <OtherTransportModes/>
               <StopPlaceType>onstreetBus</StopPlaceType>
               <quays>
                 <Quay id="naptStop:490000272P" dataSourceRef="nptg:NaPTAN" created="2010-04-17T09:30:47Z" version="001" responsibilitySetRef="nptg:082">
@@ -7061,9 +7400,11 @@
                   <AccessibilityAssessment id="nptg:490000272P" version="any">
                     <MobilityImpairedAccess>true</MobilityImpairedAccess>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>covered</Covered>
                   <SiteRef version="001" ref="naptStop:490G00272P"/>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_ST"/>
+                  <OtherTransportModes/>
                   <BoardingUse>true</BoardingUse>
                   <AlightingUse>true</AlightingUse>
                   <Label>Stop P</Label>
@@ -7079,7 +7420,9 @@
                     <BoardingPosition id="naptStop:490000272P@boarding_point" version="001">
                       <Name>Stop P Boarding Point </Name>
                       <ParentZoneRef version="001" ref="naptStop:490000272P"/>
+                      <AccessModes/>
                       <Covered>outdoors</Covered>
+                      <OtherTransportModes/>
                       <Label>P</Label>
                       <BoardingPositionType>positionAtBusStop</BoardingPositionType>
                     </BoardingPosition>
@@ -7116,9 +7459,11 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
                   <SiteRef version="001" ref="naptStop:490G00272P"/>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_ST"/>
+                  <OtherTransportModes/>
                   <BoardingUse>true</BoardingUse>
                   <AlightingUse>true</AlightingUse>
                   <Label>Stop C</Label>
@@ -7162,9 +7507,11 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
                   <SiteRef version="001" ref="naptStop:490G00272P"/>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_ST"/>
+                  <OtherTransportModes/>
                   <BoardingUse>true</BoardingUse>
                   <AlightingUse>true</AlightingUse>
                   <Label>Stop D</Label>
@@ -7208,9 +7555,11 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
                   <SiteRef version="001" ref="naptStop:490G00272P"/>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_ST"/>
+                  <OtherTransportModes/>
                   <BoardingUse>true</BoardingUse>
                   <AlightingUse>true</AlightingUse>
                   <Label>Stop L</Label>
@@ -7234,6 +7583,7 @@
                   <To>
                     <PlaceRef ref="naptStop:490015472L" xsi:type="StopPlaceRefStructure"/>
                   </To>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -7251,6 +7601,7 @@
                   <To>
                     <PlaceRef version="001" ref="nptg:490G00272P_Jw3"/>
                   </To>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -7268,6 +7619,7 @@
                   <To>
                     <PlaceRef ref="naptStop:490000272P" xsi:type="StopPlaceRefStructure"/>
                   </To>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -7285,6 +7637,7 @@
                   <To>
                     <PlaceRef version="001" ref="nptg:490G00272P_Jw2"/>
                   </To>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -7302,6 +7655,7 @@
                   <To>
                     <PlaceRef version="001" ref="nptg:490G00272P_Jw4"/>
                   </To>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -7319,6 +7673,7 @@
                   <To>
                     <PlaceRef version="001" ref="nptg:490G00272P_Jw5"/>
                   </To>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -7337,6 +7692,7 @@
                     <PlaceRef version="001" ref="nptg:9100WIMBLDN_A4" xsi:type="AccessSpaceRefStructure"/>
                     <EntranceRef ref="nptg:9100WIMBLDN_A4-EE1" xsi:type="StopPlaceEntranceRefStructure"/>
                   </To>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -7412,6 +7768,8 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
+                  <AccessFeatureList/>
                   <NavigationType>quayToQuay</NavigationType>
                   <placesInSequence>
                     <PlaceInSequence id="nptg:490G00272P_ST-StopD_to_5n6_01" version="001" order="1">
@@ -7581,6 +7939,8 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
+                  <AccessFeatureList/>
                   <NavigationType>quayToQuay</NavigationType>
                   <placesInSequence>
                     <PlaceInSequence id="nptg:490G00272P_ST-StopL_to_9n10_01" version="001" order="1">
@@ -7728,7 +8088,9 @@
               </navigationPaths>
               <vehicleStoppingPlaces>
                 <VehicleStoppingPlace id="naptStop:910GWIMBLDN@P@stopping" version="001">
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
+                  <OtherTransportModes/>
                   <vehicleStoppingPositions>
                     <VehicleStoppingPosition id="naptStop:910GWIMBLDN@P@stopping@p1" version="001">
                       <Name>Next to stop P</Name>
@@ -7738,6 +8100,8 @@
                           <Latitude>51.4207729448</Latitude>
                         </Location>
                       </Centroid>
+                      <AccessModes/>
+                      <OtherTransportModes/>
                       <RelationToVehicle>frontLeft</RelationToVehicle>
                       <Bearing>349</Bearing>
                       <vehiclePositionAlignments>
@@ -7784,10 +8148,13 @@
               </OperatingOrganisationView>
               <ParentSiteRef version="001" ref="naptStop:490G00272P" xsi:type="StopPlaceRefStructure"/>
               <TransportMode>bus</TransportMode>
+              <OtherTransportModes/>
               <StopPlaceType>onstreetBus</StopPlaceType>
               <quays>
                 <Quay id="naptStop:490014734AnB" version="any">
                   <Description>Stop A  is paired with Stop B on Alexandra Road  St Georges Road</Description>
+                  <AccessModes/>
+                  <OtherTransportModes/>
                 </Quay>
                 <Quay id="naptStop:490014734A" dataSourceRef="nptg:NaPTAN" created="2010-04-17T09:30:47Z" version="001" responsibilitySetRef="nptg:082">
                   <Name>Alexandra Road, Stop A</Name>
@@ -7809,9 +8176,11 @@
                   <AccessibilityAssessment id="naptStop:490014734A" version="any">
                     <MobilityImpairedAccess>true</MobilityImpairedAccess>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
                   <SiteRef version="001" ref="naptStop:490G0019043"/>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_ST"/>
+                  <OtherTransportModes/>
                   <BoardingUse>true</BoardingUse>
                   <AlightingUse>true</AlightingUse>
                   <Label>Stop A</Label>
@@ -7854,9 +8223,11 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
                   <SiteRef version="001" ref="naptStop:490G0019043"/>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_ST"/>
+                  <OtherTransportModes/>
                   <BoardingUse>true</BoardingUse>
                   <AlightingUse>true</AlightingUse>
                   <Label>Stop B</Label>
@@ -7918,6 +8289,7 @@
               </OperatingOrganisationView>
               <ParentSiteRef version="001" ref="naptStop:490G00272P" xsi:type="StopPlaceRefStructure"/>
               <TransportMode>bus</TransportMode>
+              <OtherTransportModes/>
               <StopPlaceType>onstreetBus</StopPlaceType>
               <quays>
                 <Quay id="naptStop:490G00272L@quay" dataSourceRef="nptg:NaPTAN" created="2010-04-17T09:30:47Z" version="001" responsibilitySetRef="nptg:082">
@@ -7940,9 +8312,11 @@
                   <AccessibilityAssessment id="naptStop:490G00272L@quay" version="any">
                     <MobilityImpairedAccess>true</MobilityImpairedAccess>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
                   <SiteRef version="001" ref="naptStop:490G0019043"/>
                   <LevelRef version="001" ref="nptg:9100WIMBLDN_Lvl_ST"/>
+                  <OtherTransportModes/>
                   <BoardingUse>true</BoardingUse>
                   <AlightingUse>true</AlightingUse>
                   <Label>Stop L</Label>
@@ -7968,6 +8342,7 @@
                   <Latitude>-90</Latitude>
                 </Location>
               </Centroid>
+              <AccessModes/>
               <PublicUse>all</PublicUse>
               <Covered>outdoors</Covered>
               <Lighting>wellLit</Lighting>
@@ -7982,6 +8357,7 @@
                     <PlaceRef version="001" ref="nptg:9100WIMBLDN_FC_J1"/>
                   </To>
                   <Description>From car park to foreCourt path junction 1</Description>
+                  <AccessModes/>
                   <NumberOfSteps>0</NumberOfSteps>
                   <Transition>up</Transition>
                   <AccessFeatureType>ramp</AccessFeatureType>
@@ -8002,11 +8378,17 @@
                 </SitePathLink>
               </pathLinks>
               <ParkingType>trainStationParking</ParkingType>
+              <ParkingVehicleTypes/>
               <ParkingLayout>openSpace</ParkingLayout>
               <TotalCapacity>4</TotalCapacity>
+              <ParkingPaymentProcess/>
+              <PaymentMethods/>
+              <CurrenciesAccepted/>
+              <CardsAccepted/>
               <parkingProperties>
                 <ParkingProperties id="nptg:ParkingProperties:9100WIMBLDN_P1_pp2" version="any">
                   <ParkingUserTypes>allUsers</ParkingUserTypes>
+                  <ParkingVehicleTypes/>
                   <ParkingStayList>shortStay</ParkingStayList>
                   <MaximumStay>PT2H</MaximumStay>
                   <spaces>
@@ -8021,8 +8403,11 @@
               <parkingAreas>
                 <ParkingArea id="nptg:ParkingArea:9100WIMBLDN_P1_PA4" version="any">
                   <Description>Parking for disabled</Description>
+                  <AccessModes/>
                   <ParkingProperties id="nptg:ParkingArea:9100WIMBLDN_P1_PA4" version="any">
                     <ParkingUserTypes>registeredDisabled</ParkingUserTypes>
+                    <ParkingVehicleTypes/>
+                    <ParkingStayList/>
                     <spaces>
                       <ParkingCapacity id="nptg:9100WIMBLDN_P1_PA4" version="any">
                         <NumberOfSpaces>2</NumberOfSpaces>
@@ -8050,6 +8435,7 @@
                 <ResponsibilityRoleAssignment id="napt:RS_82_01" created="2010-05-17T09:30:47Z" version="001">
                   <Description>490 London - Managed centrally</Description>
                   <DataRoleType>collects</DataRoleType>
+                  <StakeholderRoleType/>
                   <ResponsibleOrganisationRef version="any" ref="nptg:Org_TL001"/>
                   <ResponsibleAreaRef version="any" ref="nptg:Administrative_Zone@82"/>
                 </ResponsibilityRoleAssignment>
@@ -8060,6 +8446,7 @@
                 <ResponsibilityRoleAssignment id="napt:RS_110_01" created="2010-05-17T09:30:47Z" version="001">
                   <Description>910 UK Rail - Managed centrally</Description>
                   <DataRoleType>collects</DataRoleType>
+                  <StakeholderRoleType/>
                   <ResponsibleOrganisationRef version="any" ref="nptg:Org_TD002"/>
                   <ResponsibleAreaRef version="any" ref="nptg:Administrative_Zone@110"/>
                 </ResponsibilityRoleAssignment>
@@ -8070,6 +8457,7 @@
                 <ResponsibilityRoleAssignment id="napt:RS_147_01" created="2010-05-17T09:30:47Z" version="001">
                   <Description>940 UK Tram - Managed centrally</Description>
                   <DataRoleType>collects</DataRoleType>
+                  <StakeholderRoleType/>
                   <ResponsibleOrganisationRef version="any" ref="nptg:Org_TL001"/>
                   <ResponsibleAreaRef version="any" ref="nptg:Administrative_Zone@147"/>
                 </ResponsibilityRoleAssignment>
@@ -8091,6 +8479,7 @@
                 <ResponsibilityRoleAssignment id="napt:RS_123_01" created="2010-05-17T09:30:47Z" version="001">
                   <Description>Extra STOP PLACE data </Description>
                   <DataRoleType>all</DataRoleType>
+                  <StakeholderRoleType/>
                   <ResponsibleOrganisationRef version="any" ref="nptg:Org_TD002"/>
                 </ResponsibilityRoleAssignment>
               </roles>
@@ -8167,6 +8556,7 @@
             </Authority>
             <GeneralOrganisation id="nptg:Org_TL001" version="any">
               <Name>Travellne</Name>
+              <OrganisationType/>
               <parts>
                 <OrganisationPart id="nptg:GL" version="any">
                   <Name>Greater London</Name>
@@ -8180,6 +8570,7 @@
                           <Description>Boroughs of Greater London </Description>
                         </CodespaceAssignment>
                       </codespaceAssignments>
+                      <VehicleModes/>
                     </TransportAdministrativeZone>
                   </administrativeZones>
                 </OrganisationPart>
@@ -8187,6 +8578,7 @@
             </GeneralOrganisation>
             <GeneralOrganisation id="nptg:Org_TD002" version="any">
               <Name>Dft</Name>
+              <OrganisationType/>
               <parts>
                 <OrganisationPart id="nptg:Org_TD002_1" version="any">
                   <Name>Transport Direct</Name>
@@ -8199,6 +8591,7 @@
                           <Description>UK NPTG Admin Area codes  </Description>
                         </CodespaceAssignment>
                       </codespaceAssignments>
+                      <VehicleModes/>
                     </TransportAdministrativeZone>
                     <TransportAdministrativeZone id="nptg:Administrative_Zone@110" version="any">
                       <Name>UK Rail </Name>
@@ -8209,6 +8602,7 @@
                           <Description>UK Rail  </Description>
                         </CodespaceAssignment>
                       </codespaceAssignments>
+                      <VehicleModes/>
                     </TransportAdministrativeZone>
                     <TransportAdministrativeZone id="nptg:Administrative_Zone@144" version="any">
                       <Name>UK Rail</Name>
@@ -8219,6 +8613,7 @@
                           <Description>UK Rail Alias</Description>
                         </CodespaceAssignment>
                       </codespaceAssignments>
+                      <VehicleModes/>
                     </TransportAdministrativeZone>
                     <TransportAdministrativeZone id="nptg:Administrative_Zone@147" version="any">
                       <Name>UK Metro</Name>
@@ -8229,6 +8624,7 @@
                           <Description>UK Metro and Tram</Description>
                         </CodespaceAssignment>
                       </codespaceAssignments>
+                      <VehicleModes/>
                     </TransportAdministrativeZone>
                   </administrativeZones>
                 </OrganisationPart>
@@ -8274,7 +8670,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+                  <WeeksOfMonth/>
                   <HolidayTypes>WorkingDay</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
               <timebands>
@@ -8289,7 +8688,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Saturday</DaysOfWeek>
+                  <WeeksOfMonth/>
                   <HolidayTypes>WorkingDay</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
               <timebands>
@@ -8304,6 +8706,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Sunday</DaysOfWeek>
+                  <WeeksOfMonth/>
+                  <HolidayTypes/>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
               <timebands>
@@ -8317,7 +8723,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday Saturday</DaysOfWeek>
+                  <WeeksOfMonth/>
                   <HolidayTypes>WorkingDay</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
               <timebands>
@@ -8331,7 +8740,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+                  <WeeksOfMonth/>
                   <HolidayTypes>WorkingDay</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
               <timebands>
@@ -8345,6 +8757,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Sunday</DaysOfWeek>
+                  <WeeksOfMonth/>
+                  <HolidayTypes/>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
               <timebands>

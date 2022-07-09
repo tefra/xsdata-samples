@@ -88,11 +88,13 @@
                         <Name>Child Fare</Name>
                         <TypeOfConcessionRef version="any" ref="myfares:adult"/>
                         <MaximumAge>16</MaximumAge>
+                        <ProofRequired/>
                       </UserProfile>
                       <UserProfile id="myfares:child" version="any">
                         <Name>Child Fare</Name>
                         <TypeOfConcessionRef version="any" ref="myfares:child"/>
                         <MaximumAge>16</MaximumAge>
+                        <ProofRequired/>
                       </UserProfile>
                     </limitations>
                   </GenericParameterAssignment>
@@ -191,6 +193,7 @@
                 <DistributionAssignment id="myfares:SingleTrip-SOP@p-ticket@onBoard" version="1.0" order="2">
                   <Name>Onboard</Name>
                   <Description>Pay for ticket onboard</Description>
+                  <DistributionRights/>
                   <DistributionChannelRef ref="ntx:on_board" versionRef="ntx:v1.0"/>
                   <DistributionChannelType>onBoard</DistributionChannelType>
                   <TicketingServiceFacilityList>purchase</TicketingServiceFacilityList>
@@ -282,12 +285,16 @@
         <ServiceFrame id="mybus:DTA@z2Z@network" version="1">
           <Name>Stops for Winter timetable for Network</Name>
           <Network id="mybus:DTA" version="any">
+            <PaymentMethods/>
+            <PurchaseMoment/>
             <groupsOfLines>
               <GroupOfLines id="mybus:DTA@lines" version="any">
                 <members>
                   <LineRef version="any" ref="mybus:Line_24"/>
                   <LineRef version="any" ref="mybus:Line_48"/>
                 </members>
+                <PaymentMethods/>
+                <PurchaseMoment/>
               </GroupOfLines>
             </groupsOfLines>
             <tariffZones>
@@ -299,9 +306,13 @@
           <lines>
             <Line id="mybus:Line_24" version="any">
               <Name>Line  24</Name>
+              <PaymentMethods/>
+              <PurchaseMoment/>
             </Line>
             <Line id="mybus:Line_48" version="any">
               <Name>Line  48</Name>
+              <PaymentMethods/>
+              <PurchaseMoment/>
             </Line>
           </lines>
           <scheduledStopPoints>
@@ -432,6 +443,8 @@
           <organisations>
             <Operator id="mybus:DTA" version="any">
               <Name>Demo Transit Authority</Name>
+              <OrganisationType/>
+              <OperatorActivities/>
             </Operator>
           </organisations>
         </ResourceFrame>

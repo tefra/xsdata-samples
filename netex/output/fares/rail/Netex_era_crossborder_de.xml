@@ -513,6 +513,7 @@ Further fare reductions will not be granted.  </Description>
                         <Description>Adult  - if not eligible for CONCESSION</Description>
                         <TypeOfConcessionRef version="any" ref="eura:adult"/>
                         <MinimumAge>16</MinimumAge>
+                        <ProofRequired/>
                         <companionProfiles>
                           <CompanionProfile id="tlx:Trilex@Tariff@Tagesticket@eligibilities@adult@companion@infant" version="any">
                             <Name>AccompanyingI nfant</Name>
@@ -688,6 +689,7 @@ All other animals and animals with infectious diseases are excluded from carriag
                         <Description>Adult  - if not eligible for CONCESSION</Description>
                         <TypeOfConcessionRef version="any" ref="eura:adult"/>
                         <MinimumAge>16</MinimumAge>
+                        <ProofRequired/>
                         <companionProfiles>
                           <CompanionProfile id="tlx:Trilex@Tariff@L7@eligibilities@adult@companion@infant" version="any">
                             <Name>Accompanying  Infant</Name>
@@ -722,6 +724,7 @@ All other animals and animals with infectious diseases are excluded from carriag
                         <TypeOfConcessionRef version="any" ref="eura:child"/>
                         <MinimumAge>5</MinimumAge>
                         <MaximumAge>15</MaximumAge>
+                        <ProofRequired/>
                       </UserProfile>
                     </limitations>
                   </GenericParameterAssignment>
@@ -1233,13 +1236,22 @@ DB ticket machines</Description>
               <Url>https://www.laenderbahn.com/trilex/tarife/trilex-tagesticket/</Url>
               <distributionAssignments>
                 <DistributionAssignment id="tlx:Trilex@Product@Pass@Tagesticket@period-SOP@at_counter" version="01" order="1">
+                  <DistributionRights/>
                   <DistributionChannelRef version="01" ref="eura:at_counter"/>
+                  <TicketingServiceFacilityList/>
+                  <PaymentMethods/>
                 </DistributionAssignment>
                 <DistributionAssignment id="tlx:Trilex@Product@Pass@Tagesticket@period-SOP@self_service_ticket_machine" version="01" order="2">
+                  <DistributionRights/>
                   <DistributionChannelRef version="01" ref="eura:self_service_ticket_machine"/>
+                  <TicketingServiceFacilityList/>
+                  <PaymentMethods/>
                 </DistributionAssignment>
                 <DistributionAssignment id="tlx:Trilex@Product@Pass@Tagesticket@period-SOP@online" version="01" order="2">
+                  <DistributionRights/>
                   <DistributionChannelRef version="01" ref="eura:online"/>
+                  <TicketingServiceFacilityList/>
+                  <PaymentMethods/>
                 </DistributionAssignment>
               </distributionAssignments>
               <salesOfferPackageElements>
@@ -1259,16 +1271,28 @@ The ideal ticket for your city trip to Wrocław. Whether you travel in family, a
               <Url>https://www.laenderbahn.com/trilex/tarife/trilex-tagesticket/</Url>
               <distributionAssignments>
                 <DistributionAssignment id="tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@period-SOP@at_counter" version="01" order="1">
+                  <DistributionRights/>
                   <DistributionChannelRef version="01" ref="eura:at_counter"/>
+                  <TicketingServiceFacilityList/>
+                  <PaymentMethods/>
                 </DistributionAssignment>
                 <DistributionAssignment id="tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@period-SOP@self_service_ticket_machine" version="01" order="2">
+                  <DistributionRights/>
                   <DistributionChannelRef version="01" ref="eura:self_service_ticket_machine"/>
+                  <TicketingServiceFacilityList/>
+                  <PaymentMethods/>
                 </DistributionAssignment>
                 <DistributionAssignment id="tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@period-SOP@online" version="01" order="2">
+                  <DistributionRights/>
                   <DistributionChannelRef version="01" ref="eura:online"/>
+                  <TicketingServiceFacilityList/>
+                  <PaymentMethods/>
                 </DistributionAssignment>
                 <DistributionAssignment id="tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@period-SOP@onboard" version="01" order="2">
+                  <DistributionRights/>
                   <DistributionChannelRef version="01" ref="eura:onboard"/>
+                  <TicketingServiceFacilityList/>
+                  <PaymentMethods/>
                 </DistributionAssignment>
               </distributionAssignments>
               <salesOfferPackageElements>
@@ -1311,13 +1335,22 @@ issued to DB ticket vending machines.</Description>
               <Url>https://www.laenderbahn.com/trilex/tarife/katzensprungtickets/</Url>
               <distributionAssignments>
                 <DistributionAssignment id="tlx:Trilex@Product@Pass@Katzensprungticket@period-SOP@at_counter" version="01" order="1">
+                  <DistributionRights/>
                   <DistributionChannelRef version="01" ref="eura:at_counter"/>
+                  <TicketingServiceFacilityList/>
+                  <PaymentMethods/>
                 </DistributionAssignment>
                 <DistributionAssignment id="tlx:Trilex@Product@Pass@Katzensprungticket@period-SOP@self_service_ticket_machine" version="01" order="2">
+                  <DistributionRights/>
                   <DistributionChannelRef version="01" ref="eura:self_service_ticket_machine"/>
+                  <TicketingServiceFacilityList/>
+                  <PaymentMethods/>
                 </DistributionAssignment>
                 <DistributionAssignment id="tlx:Trilex@Product@Pass@Katzensprungticket@period-SOP@online" version="01" order="2">
+                  <DistributionRights/>
                   <DistributionChannelRef version="01" ref="eura:online"/>
+                  <TicketingServiceFacilityList/>
+                  <PaymentMethods/>
                 </DistributionAssignment>
               </distributionAssignments>
               <salesOfferPackageElements>
@@ -1333,13 +1366,22 @@ issued to DB ticket vending machines.</Description>
               <Name>Single P2P fare </Name>
               <distributionAssignments>
                 <DistributionAssignment id="tlx:Trilex@Product@Trip@single-SOP@at_counter" version="01" order="1">
+                  <DistributionRights/>
                   <DistributionChannelRef version="01" ref="eura:at_counter"/>
+                  <TicketingServiceFacilityList/>
+                  <PaymentMethods/>
                 </DistributionAssignment>
                 <DistributionAssignment id="tlx:Trilex@Product@Trip@single-SOP@self_service_ticket_machine" version="01" order="2">
+                  <DistributionRights/>
                   <DistributionChannelRef version="01" ref="eura:self_service_ticket_machine"/>
+                  <TicketingServiceFacilityList/>
+                  <PaymentMethods/>
                 </DistributionAssignment>
                 <DistributionAssignment id="tlx:Trilex@Product@Trip@single-SOP@onboard" version="01" order="2">
+                  <DistributionRights/>
                   <DistributionChannelRef version="01" ref="eura:onboard"/>
+                  <TicketingServiceFacilityList/>
+                  <PaymentMethods/>
                 </DistributionAssignment>
               </distributionAssignments>
               <salesOfferPackageElements>
@@ -1397,6 +1439,7 @@ issued to DB ticket vending machines.</Description>
               <Name>Trilex Rail Products</Name>
               <roles>
                 <ResponsibilityRoleAssignment id="tlx:products@TLX" version="any">
+                  <DataRoleType/>
                   <StakeholderRoleType>Other</StakeholderRoleType>
                   <ResponsibleOrganisationRef version="any" ref="db:TLX"/>
                   <ResponsibleAreaRef ref="tlx:de" versionRef="TODO"/>
@@ -1407,6 +1450,7 @@ issued to DB ticket vending machines.</Description>
               <Name>Trilex Rail Products</Name>
               <roles>
                 <ResponsibilityRoleAssignment id="tlx-t:sales@TLX" version="any">
+                  <DataRoleType/>
                   <StakeholderRoleType>Operation</StakeholderRoleType>
                   <ResponsibleOrganisationRef version="any" ref="db:TLX"/>
                 </ResponsibilityRoleAssignment>
@@ -1429,7 +1473,9 @@ issued to DB ticket vending machines.</Description>
               <PublicCode>TLX</PublicCode>
               <Name>Trilex </Name>
               <ShortName>Trilex</ShortName>
+              <OrganisationType/>
               <CountryRef ref="de"/>
+              <OperatorActivities/>
             </Operator>
           </organisations>
         </ResourceFrame>
@@ -1449,7 +1495,10 @@ issued to DB ticket vending machines.</Description>
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Everyday</DaysOfWeek>
+                  <WeeksOfMonth/>
                   <HolidayTypes>AnyDay</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </FareDayType>
@@ -1458,7 +1507,11 @@ issued to DB ticket vending machines.</Description>
               <Description>After 9.00 end at 4.30 next day.</Description>
               <properties>
                 <PropertyOfDay>
+                  <DaysOfWeek/>
+                  <WeeksOfMonth/>
                   <HolidayTypes>WorkingDay</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
               <timebands>
@@ -1474,7 +1527,11 @@ issued to DB ticket vending machines.</Description>
               <DayLength>P1DT3H</DayLength>
               <properties>
                 <PropertyOfDay>
+                  <DaysOfWeek/>
+                  <WeeksOfMonth/>
                   <HolidayTypes>NotWorkingDay</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </FareDayType>
@@ -1651,6 +1708,7 @@ The ZVON bicycle day pass and monthly pass is valid in conjunction with the ZVON
               <Name>Trilex Rail Products</Name>
               <roles>
                 <ResponsibilityRoleAssignment id="vvo:products@VVO" version="any">
+                  <DataRoleType/>
                   <StakeholderRoleType>Other</StakeholderRoleType>
                   <ResponsibleOrganisationRef version="any" ref="db:VVO"/>
                   <ResponsibleAreaRef ref="vvo:de" versionRef="TODO"/>
@@ -1663,7 +1721,9 @@ The ZVON bicycle day pass and monthly pass is valid in conjunction with the ZVON
               <PublicCode>VVO</PublicCode>
               <Name>Verkehrsverbund Oberelbe</Name>
               <ShortName>VVO</ShortName>
+              <OrganisationType/>
               <CountryRef ref="de"/>
+              <OperatorActivities/>
             </Operator>
           </organisations>
         </ResourceFrame>
@@ -1736,6 +1796,8 @@ Example: If you are traveling with the trilex from Hainewalde to Zittau and tran
           <Network id="zvo:ZVON@Lines@Network" version="01">
             <Name>ZVON Rail Network</Name>
             <TransportMode>rail</TransportMode>
+            <PaymentMethods/>
+            <PurchaseMoment/>
             <OperatorRef version="any" ref="uic:0080">DBN</OperatorRef>
           </Network>
           <lines>
@@ -1743,6 +1805,8 @@ Example: If you are traveling with the trilex from Hainewalde to Zittau and tran
               <Name lang="de">Seifhennersdorf - Zittau</Name>
               <TransportMode>rail</TransportMode>
               <LineType>local</LineType>
+              <PaymentMethods/>
+              <PurchaseMoment/>
             </Line>
           </lines>
         </ServiceFrame>
@@ -1792,6 +1856,7 @@ Example: If you are traveling with the trilex from Hainewalde to Zittau and tran
               <Name>Trilex Rail Products</Name>
               <roles>
                 <ResponsibilityRoleAssignment id="zvo:products@ZVON" version="any">
+                  <DataRoleType/>
                   <StakeholderRoleType>Other</StakeholderRoleType>
                   <ResponsibleOrganisationRef version="any" ref="db:ZVON"/>
                   <ResponsibleAreaRef ref="zvo:de" versionRef="TODO"/>
@@ -1804,7 +1869,9 @@ Example: If you are traveling with the trilex from Hainewalde to Zittau and tran
               <PublicCode>ZVON</PublicCode>
               <Name>Zweckverband Verkehrsverbund Oberlausitz-Niederschlesien</Name>
               <ShortName>ZVON</ShortName>
+              <OrganisationType/>
               <CountryRef ref="de"/>
+              <OperatorActivities/>
             </Operator>
           </organisations>
         </ResourceFrame>
@@ -1877,6 +1944,7 @@ Example: If you are traveling with the trilex from Hainewalde to Zittau and tran
                         <Description>Adult  - if not eligible for CONCESSION</Description>
                         <TypeOfConcessionRef version="any" ref="eura:adult"/>
                         <MinimumAge>16</MinimumAge>
+                        <ProofRequired/>
                         <companionProfiles>
                           <CompanionProfile id="db:adult@companion@infant" version="any">
                             <Name>Up to 2 Infants  under 5 are free for each adult</Name>
@@ -1898,6 +1966,7 @@ Example: If you are traveling with the trilex from Hainewalde to Zittau and tran
                         <TypeOfConcessionRef version="any" ref="eura:infant"/>
                         <MinimumAge>0</MinimumAge>
                         <MaximumAge>5</MaximumAge>
+                        <ProofRequired/>
                         <DiscountBasis>free</DiscountBasis>
                         <companionProfiles>
                           <CompanionProfile id="db:infant@companion" version="any">
@@ -1924,6 +1993,7 @@ Example: If you are traveling with the trilex from Hainewalde to Zittau and tran
                         <TypeOfConcessionRef version="any" ref="eura:child"/>
                         <MinimumAge>6</MinimumAge>
                         <MaximumAge>14</MaximumAge>
+                        <ProofRequired/>
                         <DiscountBasis>discount</DiscountBasis>
                       </UserProfile>
                       <UserProfile id="db:youth" version="any">
@@ -1932,6 +2002,7 @@ Example: If you are traveling with the trilex from Hainewalde to Zittau and tran
                         <TypeOfConcessionRef version="any" ref="eura:youth"/>
                         <MinimumAge>15</MinimumAge>
                         <MaximumAge>25</MaximumAge>
+                        <ProofRequired/>
                         <DiscountBasis>discount</DiscountBasis>
                       </UserProfile>
                       <UserProfile id="db:senior" version="any">
@@ -1952,11 +2023,13 @@ Example: If you are traveling with the trilex from Hainewalde to Zittau and tran
                         </prices>
                         <TypeOfConcessionRef version="any" ref="eura:senior"/>
                         <MinimumAge>60</MinimumAge>
+                        <ProofRequired/>
                         <DiscountBasis>discount</DiscountBasis>
                       </UserProfile>
                       <UserProfile id="db:small_animal" version="any">
                         <Name>Small Animal</Name>
                         <TypeOfConcessionRef version="any" ref="eura:animal"/>
+                        <ProofRequired/>
                         <DiscountBasis>discount</DiscountBasis>
                       </UserProfile>
                     </limitations>
@@ -2761,6 +2834,8 @@ An overview of the validity of EURO-NEISSE tickets can be found here. Further in
           <Network id="dbn:DBN@Lines@Network" version="01">
             <Name>UK Rail Network</Name>
             <TransportMode>rail</TransportMode>
+            <PaymentMethods/>
+            <PurchaseMoment/>
             <OperatorRef version="any" ref="uic:0080">DBN</OperatorRef>
           </Network>
           <lines>
@@ -2768,26 +2843,36 @@ An overview of the validity of EURO-NEISSE tickets can be found here. Further in
               <Name lang="de">Dresden - Wroclaw</Name>
               <TransportMode>rail</TransportMode>
               <LineType>express</LineType>
+              <PaymentMethods/>
+              <PurchaseMoment/>
             </Line>
             <Line id="db:RB60" version="01">
               <Name lang="de">Dresden - Wroclaw</Name>
               <TransportMode>rail</TransportMode>
               <LineType>local</LineType>
+              <PaymentMethods/>
+              <PurchaseMoment/>
             </Line>
             <Line id="db:RE2" version="01">
               <Name lang="de">Dresden - Liberec</Name>
               <TransportMode>rail</TransportMode>
               <LineType>express</LineType>
+              <PaymentMethods/>
+              <PurchaseMoment/>
             </Line>
             <Line id="db:RB61" version="01">
               <Name lang="de">Dresden - Liberec</Name>
               <TransportMode>rail</TransportMode>
               <LineType>local</LineType>
+              <PaymentMethods/>
+              <PurchaseMoment/>
             </Line>
             <Line id="db:TL70" version="01">
               <Name lang="de">Rybniste  - Liberec</Name>
               <TransportMode>rail</TransportMode>
               <LineType>local</LineType>
+              <PaymentMethods/>
+              <PurchaseMoment/>
             </Line>
           </lines>
         </ServiceFrame>
@@ -2852,6 +2937,7 @@ An overview of the validity of EURO-NEISSE tickets can be found here. Further in
               <Name>National Rail Products</Name>
               <roles>
                 <ResponsibilityRoleAssignment id="db:products@DB" version="any">
+                  <DataRoleType/>
                   <StakeholderRoleType>Operation</StakeholderRoleType>
                   <ResponsibleOrganisationRef version="any" ref="uic:0080"/>
                   <ResponsibleAreaRef ref="dbn:de" versionRef="TODO"/>
@@ -2862,6 +2948,7 @@ An overview of the validity of EURO-NEISSE tickets can be found here. Further in
               <Name>National Rail Products</Name>
               <roles>
                 <ResponsibilityRoleAssignment id="dbn:network@DB" version="any">
+                  <DataRoleType/>
                   <StakeholderRoleType>Operation</StakeholderRoleType>
                   <ResponsibleOrganisationRef version="any" ref="uic:0080"/>
                   <ResponsibleAreaRef ref="dbn:de" versionRef="TODO"/>
@@ -3022,19 +3109,27 @@ An overview of the validity of EURO-NEISSE tickets can be found here. Further in
               </alternativeNames>
               <DistributionChannelType>online</DistributionChannelType>
               <IsObligatory>false</IsObligatory>
+              <PaymentMethods/>
+              <DistributionRights/>
             </DistributionChannel>
             <DistributionChannel id="eura:in_station" version="01">
               <ShortName>Instation sale by machine, counter or payg</ShortName>
               <DistributionChannelType>atStop</DistributionChannelType>
               <IsObligatory>false</IsObligatory>
+              <PaymentMethods/>
+              <DistributionRights/>
             </DistributionChannel>
             <DistributionChannel id="eura:self_service_ticket_machine" version="01">
               <ShortName>Automatic Ticket Machine</ShortName>
               <DistributionChannelType>atStop</DistributionChannelType>
+              <PaymentMethods/>
+              <DistributionRights/>
             </DistributionChannel>
             <DistributionChannel id="eura:pay_as_you_go_device" version="01">
               <ShortName>Automatic Ticket Machine</ShortName>
               <DistributionChannelType>atStop</DistributionChannelType>
+              <PaymentMethods/>
+              <DistributionRights/>
             </DistributionChannel>
             <DistributionChannel id="eura:at_counter" version="01">
               <ShortName>Ticket counter sale</ShortName>
@@ -3048,6 +3143,8 @@ An overview of the validity of EURO-NEISSE tickets can be found here. Further in
               </alternativeNames>
               <DistributionChannelType>atStop</DistributionChannelType>
               <IsObligatory>false</IsObligatory>
+              <PaymentMethods/>
+              <DistributionRights/>
             </DistributionChannel>
             <DistributionChannel id="eura:onboard" version="01">
               <ShortName>onboard</ShortName>
@@ -3058,26 +3155,36 @@ An overview of the validity of EURO-NEISSE tickets can be found here. Further in
               </alternativeNames>
               <DistributionChannelType>onBoard</DistributionChannelType>
               <IsObligatory>false</IsObligatory>
+              <PaymentMethods/>
+              <DistributionRights/>
             </DistributionChannel>
             <DistributionChannel id="eura:call_centre" version="01">
               <ShortName>Call Centre</ShortName>
               <DistributionChannelType>telephone</DistributionChannelType>
               <IsObligatory>false</IsObligatory>
+              <PaymentMethods/>
+              <DistributionRights/>
             </DistributionChannel>
             <DistributionChannel id="eura:travel_agent" version="01">
               <ShortName>Travel Agent</ShortName>
               <DistributionChannelType>agency</DistributionChannelType>
               <IsObligatory>false</IsObligatory>
+              <PaymentMethods/>
+              <DistributionRights/>
             </DistributionChannel>
             <DistributionChannel id="eura:employee_organisation" version="01">
               <ShortName>Employee Organisation</ShortName>
               <DistributionChannelType>other</DistributionChannelType>
               <IsObligatory>false</IsObligatory>
+              <PaymentMethods/>
+              <DistributionRights/>
             </DistributionChannel>
             <DistributionChannel id="eura:statutory_organisation" version="01">
               <ShortName>Statutory Organisation</ShortName>
               <DistributionChannelType>other</DistributionChannelType>
               <IsObligatory>false</IsObligatory>
+              <PaymentMethods/>
+              <DistributionRights/>
             </DistributionChannel>
           </distributionChannels>
           <fulfilmentMethods>
@@ -3165,6 +3272,7 @@ An overview of the validity of EURO-NEISSE tickets can be found here. Further in
             <TypeOfTravelDocument id="eura:distribution_channel_dependent" version="01">
               <Name>Depends on channel used</Name>
               <MediaType>other</MediaType>
+              <MachineReadable/>
             </TypeOfTravelDocument>
             <TypeOfTravelDocument id="eura:printed_ticket" version="01">
               <Name>Printed Ticket</Name>
@@ -3174,6 +3282,7 @@ An overview of the validity of EURO-NEISSE tickets can be found here. Further in
             <TypeOfTravelDocument id="eura:hand_written_ticket" version="01">
               <Name>Hand written ticket</Name>
               <MediaType>paperTicket</MediaType>
+              <MachineReadable/>
             </TypeOfTravelDocument>
             <TypeOfTravelDocument id="eura:magstripe_printed_ticket" version="01">
               <Name>Printed Ticket with magnetic Stripe</Name>
@@ -3237,6 +3346,7 @@ An overview of the validity of EURO-NEISSE tickets can be found here. Further in
               <Name>National Rail Stations</Name>
               <roles>
                 <ResponsibilityRoleAssignment id="uic:Station_Management@0080" version="any">
+                  <DataRoleType/>
                   <StakeholderRoleType>Operation</StakeholderRoleType>
                   <ResponsibleOrganisationRef version="any" ref="uic:Station_Management@0080"/>
                   <ResponsibleAreaRef ref="dbn:uk">TODO</ResponsibleAreaRef>
@@ -3492,10 +3602,12 @@ An overview of the validity of EURO-NEISSE tickets can be found here. Further in
                   <Name lang="en">Polish Railways.</Name>
                 </AlternativeName>
               </alternativeNames>
+              <OrganisationType/>
               <ValidityPeriod>
                 <FromDate>2003-11-13T00:00:00Z</FromDate>
               </ValidityPeriod>
               <CountryRef ref="pl"/>
+              <OperatorActivities/>
             </Operator>
             <Operator id="uic:0054" version="any">
               <PublicCode>SŽDC</PublicCode>
@@ -3506,6 +3618,7 @@ An overview of the validity of EURO-NEISSE tickets can be found here. Further in
                   <Name lang="en">Czech Railways.</Name>
                 </AlternativeName>
               </alternativeNames>
+              <OrganisationType/>
               <ValidityPeriod>
                 <FromDate>2009-01-01T00:00:00Z</FromDate>
               </ValidityPeriod>
@@ -3515,34 +3628,41 @@ An overview of the validity of EURO-NEISSE tickets can be found here. Further in
                   <InfoLink/>
                 </infoLinks>
               </Address>
+              <OperatorActivities/>
             </Operator>
             <Operator id="uic:0080" version="any">
               <PublicCode>DB</PublicCode>
               <Name>Deutsche Bahn </Name>
               <ShortName>Bahn</ShortName>
+              <OrganisationType/>
               <ValidityPeriod>
                 <FromDate>1999-11-29T00:00:00Z</FromDate>
               </ValidityPeriod>
               <CountryRef ref="de"/>
+              <OperatorActivities/>
             </Operator>
             <Operator id="uic:Station_Management@0080" version="any">
               <PublicCode>DBN</PublicCode>
               <Name>DB Netz AG</Name>
               <ShortName>DB Netz AG</ShortName>
+              <OrganisationType/>
               <ValidityPeriod>
                 <FromDate>1999-11-29T00:00:00Z</FromDate>
                 <ToDate>2020-01-01T00:00:00Z</ToDate>
               </ValidityPeriod>
               <CountryRef ref="de"/>
+              <OperatorActivities/>
             </Operator>
             <Operator id="uic:0003" version="any">
               <PublicCode>UIC</PublicCode>
               <Name>International Union of Railways</Name>
               <ShortName>UIC</ShortName>
+              <OrganisationType/>
               <ValidityPeriod>
                 <FromDate>2001-01-01T00:00:00Z</FromDate>
                 <ToDate>2020-01-01T00:00:00Z</ToDate>
               </ValidityPeriod>
+              <OperatorActivities/>
             </Operator>
             <GeneralOrganisation id="eura:EURA" version="any">
               <Name>European Union Agency for Railways</Name>

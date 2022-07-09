@@ -235,7 +235,11 @@
               <StopPlaceType>railStation</StopPlaceType>
               <unlocalisedEquipments>
                 <AssistanceService id="naptStop:910GSTRFD-LS1" version="any">
+                  <AssistanceFacilityList/>
+                  <AccessibilityToolList/>
+                  <Languages/>
                   <AccessibilityTrainedStaff>true</AccessibilityTrainedStaff>
+                  <EmergencyServiceList/>
                   <SafetyFacilityList>ccTv sosPoints</SafetyFacilityList>
                 </AssistanceService>
               </unlocalisedEquipments>
@@ -260,6 +264,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="naptStop:910GSTRFD_to_8100OPK-E1-a" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -267,6 +272,7 @@
                       <Transition>up</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                   <NavigationType>other</NavigationType>
                 </NavigationPath>
                 <NavigationPath id="tbd:8100OPK-E1_to_910GSTRFD" created="2010-05-17T09:30:47Z" version="any" responsibilitySetRef="tbd:RS_123">
@@ -289,6 +295,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="tbd:8100OPK-E1_to_910GSTRFD" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -296,6 +303,7 @@
                       <Transition>down</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                   <NavigationType>other</NavigationType>
                 </NavigationPath>
               </navigationPaths>
@@ -331,6 +339,7 @@
               </TopographicPlaceView>
               <ParentSiteRef version="any" ref="naptStop:910GSTRFD" xsi:type="StopPlaceRefStructure"/>
               <TransportMode>metro</TransportMode>
+              <OtherTransportModes/>
               <StopPlaceType>metroStation</StopPlaceType>
               <navigationPaths>
                 <NavigationPath id="naptStop:940GZZLUSTD_to_8100OPK-E1" created="2010-05-17T09:30:47Z" version="any" responsibilitySetRef="tbd:RS_123">
@@ -353,6 +362,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="naptStop:940GZZLUSTD_to_8100OPK-E1" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -360,6 +370,7 @@
                       <Transition>up</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                   <NavigationType>other</NavigationType>
                 </NavigationPath>
                 <NavigationPath id="tbd:8100OPK-E1_to_GZZLUSTD" created="2010-05-17T09:30:47Z" version="any" responsibilitySetRef="tbd:RS_123">
@@ -382,6 +393,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="tbd:8100OPK-E1_to_GZZLUSTD_ac1" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -389,6 +401,7 @@
                       <Transition>down</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                   <NavigationType>other</NavigationType>
                 </NavigationPath>
               </navigationPaths>
@@ -419,11 +432,13 @@
                   </AccessibilityLimitation>
                 </limitations>
               </AccessibilityAssessment>
+              <AccessModes/>
               <TopographicPlaceView>
                 <TopographicPlaceRef ref="nptgLocality:E0034695"/>
               </TopographicPlaceView>
               <ParentSiteRef version="any" ref="naptStop:910GSTRFD" xsi:type="StopPlaceRefStructure"/>
               <TransportMode>metro</TransportMode>
+              <OtherTransportModes/>
               <StopPlaceType>metroStation</StopPlaceType>
               <navigationPaths>
                 <NavigationPath id="naptStop:940GZZCRSTD_to_8100OPK-E1" created="2010-05-17T09:30:47Z" version="any" responsibilitySetRef="tbd:RS_123">
@@ -446,6 +461,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="naptStop:940GZZCRSTD_to_8100OPK-E1" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -453,6 +469,7 @@
                       <Transition>up</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                   <NavigationType>other</NavigationType>
                 </NavigationPath>
                 <NavigationPath id="tbd::8100OPK-E1_to_940GZZCRSTD" created="2010-05-17T09:30:47Z" version="any" responsibilitySetRef="tbd:RS_123">
@@ -475,6 +492,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="tbd:8100OPK-E1_to_940GZZCRSTD" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -482,6 +500,7 @@
                       <Transition>down</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                   <NavigationType>other</NavigationType>
                 </NavigationPath>
               </navigationPaths>
@@ -516,10 +535,15 @@
                 <TopographicPlaceRef ref="nptgLocality:E0034695"/>
               </TopographicPlaceView>
               <TransportMode>metro</TransportMode>
+              <OtherTransportModes/>
               <StopPlaceType>metroStation</StopPlaceType>
               <unlocalisedEquipments>
                 <AssistanceService id="naptStop:940GZZLUWHM-ls1" version="any">
+                  <AssistanceFacilityList/>
+                  <AccessibilityToolList/>
+                  <Languages/>
                   <AccessibilityTrainedStaff>true</AccessibilityTrainedStaff>
+                  <EmergencyServiceList/>
                   <SafetyFacilityList>ccTv sosPoints</SafetyFacilityList>
                 </AssistanceService>
               </unlocalisedEquipments>
@@ -544,6 +568,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="naptStop:940GZZLUWHM_to_8100OPK-E1" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -551,6 +576,7 @@
                       <Transition>up</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                   <NavigationType>other</NavigationType>
                 </NavigationPath>
                 <NavigationPath id="tbd:8100OPK-E1_to_940GZZLUWHM" created="2010-05-17T09:30:47Z" version="any" responsibilitySetRef="tbd:RS_123">
@@ -573,6 +599,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="tbd:8100OPK-E1_to_940GZZLUWHM" version="any">
                       <AccessFeatureType>lift</AccessFeatureType>
@@ -580,6 +607,7 @@
                       <Transition>down</Transition>
                     </AccessSummary>
                   </summaries>
+                  <AccessFeatureList/>
                   <NavigationType>other</NavigationType>
                 </NavigationPath>
               </navigationPaths>
@@ -836,6 +864,11 @@
                   <localServices>
                     <AssistanceService id="naptPoi:8100OPK_E1_Eq3" version="any">
                       <Name>Assistance available</Name>
+                      <AssistanceFacilityList/>
+                      <AccessibilityToolList/>
+                      <Languages/>
+                      <EmergencyServiceList/>
+                      <SafetyFacilityList/>
                     </AssistanceService>
                   </localServices>
                   <EntranceType>gate</EntranceType>
@@ -1028,6 +1061,11 @@
                   <localServices>
                     <AssistanceService id="naptPoi:8100OPK_E1_AS1" version="any">
                       <Name>Assistance available</Name>
+                      <AssistanceFacilityList/>
+                      <AccessibilityToolList/>
+                      <Languages/>
+                      <EmergencyServiceList/>
+                      <SafetyFacilityList/>
                     </AssistanceService>
                   </localServices>
                   <EntranceType>gate</EntranceType>
@@ -1234,6 +1272,11 @@
                   <localServices>
                     <AssistanceService id="naptPoi:8100OPK_A1_E2_Eq3" version="any">
                       <Name>Assistance available</Name>
+                      <AssistanceFacilityList/>
+                      <AccessibilityToolList/>
+                      <Languages/>
+                      <EmergencyServiceList/>
+                      <SafetyFacilityList/>
                     </AssistanceService>
                   </localServices>
                   <EntranceType>gate</EntranceType>
@@ -1440,6 +1483,11 @@
                   <localServices>
                     <AssistanceService id="naptPoi:8100OPK_E3_Eq3" version="any">
                       <Name>Assistance available</Name>
+                      <AssistanceFacilityList/>
+                      <AccessibilityToolList/>
+                      <Languages/>
+                      <EmergencyServiceList/>
+                      <SafetyFacilityList/>
                     </AssistanceService>
                   </localServices>
                   <EntranceType>gate</EntranceType>
@@ -1646,6 +1694,11 @@
                   <localServices>
                     <AssistanceService id="naptPoi:8100OPK_E4_Eq3" version="any">
                       <Name>Assistance available</Name>
+                      <AssistanceFacilityList/>
+                      <AccessibilityToolList/>
+                      <Languages/>
+                      <EmergencyServiceList/>
+                      <SafetyFacilityList/>
                     </AssistanceService>
                   </localServices>
                   <EntranceType>gate</EntranceType>
@@ -1740,6 +1793,11 @@
                   <localServices>
                     <AssistanceService id="naptPoi:8100OPK_E4_LS3" version="any">
                       <Name>Assistance available</Name>
+                      <AssistanceFacilityList/>
+                      <AccessibilityToolList/>
+                      <Languages/>
+                      <EmergencyServiceList/>
+                      <SafetyFacilityList/>
                     </AssistanceService>
                   </localServices>
                   <EntranceType>gate</EntranceType>
@@ -1754,36 +1812,42 @@
               <spaces>
                 <PointOfInterestSpace id="naptPoi:8100OPK_SPC_1" version="any">
                   <Name>Bridge between Velodrome etc, and Hockey Centre etc</Name>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Lighting>wellLit</Lighting>
                   <PassageType>overpass</PassageType>
                 </PointOfInterestSpace>
                 <PointOfInterestSpace id="naptPoi:8100OPK_SPC_2" version="any">
                   <Name>Bridge between Basketball  etc, and Handball Arana etc</Name>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Lighting>wellLit</Lighting>
                   <PassageType>overpass</PassageType>
                 </PointOfInterestSpace>
                 <PointOfInterestSpace id="naptPoi:8100OPK_SPC_3" version="any">
                   <Name>Bridge between Waterpolo  etc, and Stadium  Centre etc</Name>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Lighting>wellLit</Lighting>
                   <PassageType>overpass</PassageType>
                 </PointOfInterestSpace>
                 <PointOfInterestSpace id="naptPoi:8100OPK_SPC_4" version="any">
                   <Name>Bridge between Velodrome etc, and Hockey Centre etc</Name>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Lighting>wellLit</Lighting>
                   <PassageType>overpass</PassageType>
                 </PointOfInterestSpace>
                 <PointOfInterestSpace id="naptPoi:8100OPK_SPC_5" version="any">
                   <Name>Bridge between Aquatics  etc, and Stadium etc</Name>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Lighting>wellLit</Lighting>
                   <PassageType>overpass</PassageType>
                 </PointOfInterestSpace>
                 <PointOfInterestSpace id="naptPoi:8100OPK_SPC_6" version="any">
                   <Name>Bridge between Northen ENtrance etc, and Velodrome  Centre etc</Name>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Lighting>wellLit</Lighting>
                   <PassageType>overpass</PassageType>
@@ -1811,6 +1875,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -1832,6 +1897,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_SPC_4" xsi:type="PointOfInterestSpaceRefStructure"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -1854,6 +1920,7 @@
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V4_AQUA_E1"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -1876,6 +1943,7 @@
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V5_WPOL_E2"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -1898,6 +1966,7 @@
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V5_WPOL_E1"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -1920,6 +1989,7 @@
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V4_AQUA_E2"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -1942,6 +2012,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj12"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -1963,6 +2034,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_SPC_6" xsi:type="PointOfInterestSpaceRefStructure"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -1985,6 +2057,7 @@
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V9_EMAN_E1"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2007,6 +2080,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj13"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2029,6 +2103,7 @@
                     <EntranceRef version="any" ref="naptPoi:8100OPK_E3"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2050,6 +2125,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_V11_WARM" xsi:type="PointOfInterestRefStructure"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2071,6 +2147,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj11"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2092,6 +2169,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_SPC_1" xsi:type="PointOfInterestSpaceRefStructure"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2114,6 +2192,7 @@
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V7_VELO_E1"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2136,6 +2215,7 @@
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V8_BMXT_E1"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2158,6 +2238,7 @@
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V6_BKTB_E1"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2179,6 +2260,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj9"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2201,6 +2283,7 @@
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V6_BKTB_E1"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2222,6 +2305,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_SPC_2" xsi:type="PointOfInterestSpaceRefStructure"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2243,6 +2327,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj10"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2264,6 +2349,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj8"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2285,6 +2371,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj8"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2306,6 +2393,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_SPC_4"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2327,6 +2415,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj6"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2348,6 +2437,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj7"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2370,6 +2460,7 @@
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V3_HAND_E1"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2392,6 +2483,7 @@
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V2_HOCK_E1"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2414,6 +2506,7 @@
                     <EntranceRef version="any" ref="naptPoi:8100OPK_V2_HOCK_E2"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2435,6 +2528,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj10"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>authorisedPublicOnly</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2457,6 +2551,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj2"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2478,6 +2573,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj2"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2499,6 +2595,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj3"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2520,6 +2617,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj4"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2541,6 +2639,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj3"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2562,6 +2661,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj5"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2583,6 +2683,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj5"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2604,6 +2705,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_V1_STDM" xsi:type="PointOfInterestRefStructure"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2625,6 +2727,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_V1_STDM" xsi:type="PointOfInterestRefStructure"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2646,6 +2749,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_V1_STDM" xsi:type="PointOfInterestRefStructure"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2667,6 +2771,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj4"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2688,6 +2793,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj10"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2709,6 +2815,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj6"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2730,6 +2837,7 @@
                     <PlaceRef version="any" ref="naptPoi:8100OPK_pj6"/>
                   </To>
                   <AccessibilityAssessmentRef version="any" ref="naptPoi:8100OPK_fully_accessible"/>
+                  <AccessModes/>
                   <PublicUse>all</PublicUse>
                   <Covered>outdoors</Covered>
                   <AllowedUse>twoWay</AllowedUse>
@@ -2892,6 +3000,7 @@
                   </TransferDuration>
                   <PublicUse>all</PublicUse>
                   <Gated>gatedArea</Gated>
+                  <AccessFeatureList/>
                   <NavigationType>streetToSpace</NavigationType>
                 </NavigationPath>
                 <NavigationPath id="naptPoi:8100OPK_N3.2i_OPK-E1_to_V2-E1" version="any">
@@ -2931,6 +3040,7 @@
                   </TransferDuration>
                   <PublicUse>all</PublicUse>
                   <Gated>gatedArea</Gated>
+                  <AccessFeatureList/>
                   <NavigationType>streetToSpace</NavigationType>
                 </NavigationPath>
                 <NavigationPath id="naptPoi:8100OPK_N3.3i_OPK-E1_to_V3-E1" version="any">
@@ -2970,6 +3080,7 @@
                   </TransferDuration>
                   <PublicUse>all</PublicUse>
                   <Gated>gatedArea</Gated>
+                  <AccessFeatureList/>
                   <NavigationType>streetToSpace</NavigationType>
                 </NavigationPath>
                 <NavigationPath id="naptPoi:8100OPK_N3.4i_OPK-E1_to_V4-E1" version="any">
@@ -3009,6 +3120,7 @@
                   </TransferDuration>
                   <PublicUse>all</PublicUse>
                   <Gated>gatedArea</Gated>
+                  <AccessFeatureList/>
                   <NavigationType>streetToSpace</NavigationType>
                 </NavigationPath>
                 <NavigationPath id="naptPoi:8100OPK_N3.5i_OPK-E1_to_V5-E1" version="any">
@@ -3048,6 +3160,7 @@
                   </TransferDuration>
                   <PublicUse>all</PublicUse>
                   <Gated>gatedArea</Gated>
+                  <AccessFeatureList/>
                   <NavigationType>streetToSpace</NavigationType>
                 </NavigationPath>
                 <NavigationPath id="naptPoi:8100OPK_N3.6i_OPK-E1_to_V6-E1" version="any">
@@ -3087,6 +3200,7 @@
                   </TransferDuration>
                   <PublicUse>all</PublicUse>
                   <Gated>gatedArea</Gated>
+                  <AccessFeatureList/>
                   <NavigationType>streetToSpace</NavigationType>
                 </NavigationPath>
                 <NavigationPath id="naptPoi:8100OPK_N3.7i_OPK-E1_to_V7-E1" version="any">
@@ -3126,6 +3240,7 @@
                   </TransferDuration>
                   <PublicUse>all</PublicUse>
                   <Gated>gatedArea</Gated>
+                  <AccessFeatureList/>
                   <NavigationType>streetToSpace</NavigationType>
                 </NavigationPath>
                 <NavigationPath id="naptPoi:8100OPK_N3.8i_OPK-E1_to_V8-E1" version="any">
@@ -3165,6 +3280,7 @@
                   </TransferDuration>
                   <PublicUse>all</PublicUse>
                   <Gated>gatedArea</Gated>
+                  <AccessFeatureList/>
                   <NavigationType>streetToSpace</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="naptPoi:8100OPK_N1_l01" version="any" order="1">
@@ -3269,6 +3385,7 @@
                   </TransferDuration>
                   <PublicUse>all</PublicUse>
                   <Gated>gatedArea</Gated>
+                  <AccessFeatureList/>
                   <NavigationType>streetToSpace</NavigationType>
                 </NavigationPath>
                 <NavigationPath id="naptPoi:8100OPK_N3.10i_OPK-E1_to_V10-E1" version="any">
@@ -3308,6 +3425,7 @@
                   </TransferDuration>
                   <PublicUse>authorisedPublicOnly</PublicUse>
                   <Gated>gatedArea</Gated>
+                  <AccessFeatureList/>
                   <NavigationType>streetToSpace</NavigationType>
                 </NavigationPath>
                 <NavigationPath id="naptPoi:8100OPK_N3.11i_OPK-E1_to_V11-E1" version="any">
@@ -3346,6 +3464,7 @@
                   </TransferDuration>
                   <PublicUse>all</PublicUse>
                   <Gated>gatedArea</Gated>
+                  <AccessFeatureList/>
                   <NavigationType>streetToSpace</NavigationType>
                 </NavigationPath>
                 <NavigationPath id="naptPoi:8100OPK_N3.1o_OPK-E1_to_V1" version="any">
@@ -3384,6 +3503,7 @@
                   </TransferDuration>
                   <PublicUse>all</PublicUse>
                   <Gated>gatedArea</Gated>
+                  <AccessFeatureList/>
                   <NavigationType>spaceToStreet</NavigationType>
                 </NavigationPath>
                 <NavigationPath id="naptPoi:8100OPK_N3.2o_OPK-E1_to_V2-E1" version="any">
@@ -3423,6 +3543,7 @@
                   </TransferDuration>
                   <PublicUse>all</PublicUse>
                   <Gated>gatedArea</Gated>
+                  <AccessFeatureList/>
                   <NavigationType>spaceToStreet</NavigationType>
                 </NavigationPath>
                 <NavigationPath id="naptPoi:8100OPK_N3.3o_OPK-E1_to_V3-E1" version="any">
@@ -3462,6 +3583,7 @@
                   </TransferDuration>
                   <PublicUse>all</PublicUse>
                   <Gated>gatedArea</Gated>
+                  <AccessFeatureList/>
                   <NavigationType>spaceToStreet</NavigationType>
                 </NavigationPath>
                 <NavigationPath id="naptPoi:8100OPK_N3.4o_OPK-E1_to_V4-E1" version="any">
@@ -3501,6 +3623,7 @@
                   </TransferDuration>
                   <PublicUse>all</PublicUse>
                   <Gated>gatedArea</Gated>
+                  <AccessFeatureList/>
                   <NavigationType>spaceToStreet</NavigationType>
                 </NavigationPath>
                 <NavigationPath id="naptPoi:8100OPK_N3.5o_OPK-E1_to_V5-E1" version="any">
@@ -3540,6 +3663,7 @@
                   </TransferDuration>
                   <PublicUse>all</PublicUse>
                   <Gated>gatedArea</Gated>
+                  <AccessFeatureList/>
                   <NavigationType>spaceToStreet</NavigationType>
                 </NavigationPath>
                 <NavigationPath id="naptPoi:8100OPK_N3.6o_OPK-E1_to_V6-E1" version="any">
@@ -3579,6 +3703,7 @@
                   </TransferDuration>
                   <PublicUse>all</PublicUse>
                   <Gated>gatedArea</Gated>
+                  <AccessFeatureList/>
                   <NavigationType>spaceToStreet</NavigationType>
                 </NavigationPath>
                 <NavigationPath id="naptPoi:8100OPK_N3.7o_OPK-E1_to_V7-E1" version="any">
@@ -3618,6 +3743,7 @@
                   </TransferDuration>
                   <PublicUse>all</PublicUse>
                   <Gated>gatedArea</Gated>
+                  <AccessFeatureList/>
                   <NavigationType>spaceToStreet</NavigationType>
                 </NavigationPath>
                 <NavigationPath id="naptPoi:8100OPK_N3.8o_V8-E1_to_OPK-E1" version="any">
@@ -3662,6 +3788,7 @@
                   </TransferDuration>
                   <PublicUse>all</PublicUse>
                   <Gated>gatedArea</Gated>
+                  <AccessFeatureList/>
                   <NavigationType>spaceToStreet</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="naptPoi:8100OPK_N2_l01" version="any" order="1">
@@ -3766,6 +3893,7 @@
                   </TransferDuration>
                   <PublicUse>all</PublicUse>
                   <Gated>gatedArea</Gated>
+                  <AccessFeatureList/>
                   <NavigationType>spaceToStreet</NavigationType>
                 </NavigationPath>
                 <NavigationPath id="naptPoi:8100OPK_N3.10o_OPK-E1_to_V10-E1" version="any">
@@ -3805,6 +3933,7 @@
                   </TransferDuration>
                   <PublicUse>authorisedPublicOnly</PublicUse>
                   <Gated>gatedArea</Gated>
+                  <AccessFeatureList/>
                   <NavigationType>spaceToStreet</NavigationType>
                 </NavigationPath>
                 <NavigationPath id="naptPoi:8100OPK_N3.11o_OPK-E1_to_V11-E1" version="any">
@@ -3843,6 +3972,7 @@
                   </TransferDuration>
                   <PublicUse>all</PublicUse>
                   <Gated>gatedArea</Gated>
+                  <AccessFeatureList/>
                   <NavigationType>spaceToStreet</NavigationType>
                 </NavigationPath>
               </navigationPaths>
@@ -3902,6 +4032,7 @@
                   <types>
                     <TypeOfZoneRef version="any" ref="napt:type_of_zone@PIE"/>
                   </types>
+                  <AccessModes/>
                   <EntranceType>door</EntranceType>
                   <IsExternal>true</IsExternal>
                   <IsEntry>true</IsEntry>
@@ -3912,6 +4043,7 @@
                   <types>
                     <TypeOfZoneRef version="any" ref="napt:type_of_zone@PIE"/>
                   </types>
+                  <AccessModes/>
                   <EntranceType>door</EntranceType>
                   <IsExternal>true</IsExternal>
                   <IsEntry>true</IsEntry>
@@ -3949,6 +4081,7 @@
                   <types>
                     <TypeOfZoneRef version="any" ref="napt:type_of_zone@PIE"/>
                   </types>
+                  <AccessModes/>
                   <EntranceType>door</EntranceType>
                   <IsExternal>true</IsExternal>
                   <IsEntry>true</IsEntry>
@@ -3986,6 +4119,7 @@
                   <types>
                     <TypeOfZoneRef version="any" ref="napt:type_of_zone@PIE"/>
                   </types>
+                  <AccessModes/>
                   <EntranceType>door</EntranceType>
                   <IsExternal>true</IsExternal>
                   <IsEntry>true</IsEntry>
@@ -3996,6 +4130,7 @@
                   <types>
                     <TypeOfZoneRef version="any" ref="napt:type_of_zone@PIE"/>
                   </types>
+                  <AccessModes/>
                   <EntranceType>door</EntranceType>
                   <IsExternal>true</IsExternal>
                   <IsEntry>true</IsEntry>
@@ -4025,6 +4160,7 @@
                   <types>
                     <TypeOfZoneRef version="any" ref="napt:type_of_zone@PIE"/>
                   </types>
+                  <AccessModes/>
                   <EntranceType>door</EntranceType>
                   <IsExternal>true</IsExternal>
                   <IsEntry>true</IsEntry>
@@ -4035,6 +4171,7 @@
                   <types>
                     <TypeOfZoneRef version="any" ref="napt:type_of_zone@PIE"/>
                   </types>
+                  <AccessModes/>
                   <EntranceType>door</EntranceType>
                   <IsExternal>true</IsExternal>
                   <IsEntry>true</IsEntry>
@@ -4065,6 +4202,7 @@
                   <types>
                     <TypeOfZoneRef version="any" ref="napt:type_of_zone@PIE"/>
                   </types>
+                  <AccessModes/>
                   <EntranceType>door</EntranceType>
                   <IsExternal>true</IsExternal>
                   <IsEntry>true</IsEntry>
@@ -4102,6 +4240,7 @@
                   <types>
                     <TypeOfZoneRef version="any" ref="napt:type_of_zone@PIE"/>
                   </types>
+                  <AccessModes/>
                   <EntranceType>door</EntranceType>
                   <IsExternal>true</IsExternal>
                   <IsEntry>true</IsEntry>
@@ -4139,6 +4278,7 @@
                   <types>
                     <TypeOfZoneRef version="any" ref="napt:type_of_zone@PIE"/>
                   </types>
+                  <AccessModes/>
                   <checkConstraints>
                     <CheckConstraint id="naptPoi:8100OPK_V8_BMXT_E1_C1" version="any" order="1">
                       <Name>Entrance to BMX gate - incoming</Name>
@@ -4284,6 +4424,7 @@
                   <types>
                     <TypeOfZoneRef version="any" ref="napt:type_of_zone@PIE"/>
                   </types>
+                  <AccessModes/>
                   <EntranceType>door</EntranceType>
                   <IsExternal>true</IsExternal>
                   <IsEntry>true</IsEntry>
@@ -4314,6 +4455,7 @@
                   <types>
                     <TypeOfZoneRef version="any" ref="napt:type_of_zone@PIE"/>
                   </types>
+                  <AccessModes/>
                   <EntranceType>door</EntranceType>
                   <IsExternal>true</IsExternal>
                   <IsEntry>true</IsEntry>
@@ -4332,6 +4474,7 @@
                     </Location>
                   </Centroid>
                   <ParentZoneRef version="any" ref="naptPoi:8100OPK_V10_PRSC"/>
+                  <AccessModes/>
                   <PublicUse>authorisedPublicOnly</PublicUse>
                   <Covered>covered</Covered>
                   <Gated>gatedArea</Gated>
@@ -4349,6 +4492,7 @@
                     </Location>
                   </Centroid>
                   <ParentZoneRef version="any" ref="naptPoi:8100OPK_V10_PRSC"/>
+                  <AccessModes/>
                   <PublicUse>authorisedPublicOnly</PublicUse>
                   <Covered>covered</Covered>
                   <Gated>gatedArea</Gated>
@@ -4420,6 +4564,11 @@
               <Name>Busy Day</Name>
               <properties>
                 <PropertyOfDay>
+                  <DaysOfWeek/>
+                  <WeeksOfMonth/>
+                  <HolidayTypes/>
+                  <Seasons/>
+                  <Tides/>
                   <Crowding>veryBusy</Crowding>
                 </PropertyOfDay>
               </properties>
@@ -4433,6 +4582,11 @@
               <Name>Busy Day</Name>
               <properties>
                 <PropertyOfDay>
+                  <DaysOfWeek/>
+                  <WeeksOfMonth/>
+                  <HolidayTypes/>
+                  <Seasons/>
+                  <Tides/>
                   <Crowding>busy</Crowding>
                 </PropertyOfDay>
               </properties>
@@ -4446,6 +4600,11 @@
               <Name>Busy Day</Name>
               <properties>
                 <PropertyOfDay>
+                  <DaysOfWeek/>
+                  <WeeksOfMonth/>
+                  <HolidayTypes/>
+                  <Seasons/>
+                  <Tides/>
                   <Crowding>normal</Crowding>
                 </PropertyOfDay>
               </properties>
@@ -4459,6 +4618,11 @@
               <Name>Quiet Day</Name>
               <properties>
                 <PropertyOfDay>
+                  <DaysOfWeek/>
+                  <WeeksOfMonth/>
+                  <HolidayTypes/>
+                  <Seasons/>
+                  <Tides/>
                   <Crowding>quiet</Crowding>
                 </PropertyOfDay>
               </properties>

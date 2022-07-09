@@ -43,6 +43,8 @@
               <TransportMode>bus</TransportMode>
               <PublicCode>24</PublicCode>
               <OperatorRef version="1.0" ref="acs:ACS"/>
+              <PaymentMethods/>
+              <PurchaseMoment/>
             </Line>
           </lines>
           <destinationDisplays>
@@ -251,13 +253,32 @@
           <serviceFacilitySets>
             <ServiceFacilitySet id="acs:sfs_24o_01" version="any">
               <ProvidedByRef ref="xyz:4567">EXTERNAL</ProvidedByRef>
+              <AccessibilityInfoFacilityList/>
               <AssistanceFacilityList>boardingAssistance conductor wheechairAssistance</AssistanceFacilityList>
+              <AccessibilityToolList/>
+              <CarServiceFacilityList/>
+              <CateringFacilityList/>
+              <FamilyFacilityList/>
               <FareClasses>standardClass</FareClasses>
+              <MealFacilityList/>
+              <MedicalFacilityList/>
               <MobilityFacilityList>stepFreeAccess suitableForWheelchairs</MobilityFacilityList>
               <NuisanceFacilityList>noSmoking</NuisanceFacilityList>
+              <PassengerCommsFacilityList/>
               <PassengerInformationFacilityList>nextStopIndicator realTimeConnections stopAnnouncements</PassengerInformationFacilityList>
+              <RetailFacilityList/>
+              <SafetyFacilityList/>
+              <SanitaryFacilityList/>
+              <TicketingFacilityList/>
               <TicketingServiceFacilityList>purchase</TicketingServiceFacilityList>
+              <VehicleAccessFacilityList/>
+              <AccommodationAccessList/>
+              <AccommodationFacilityList/>
+              <BookingProcessFacilityList/>
+              <CouchetteFacilityList/>
               <LuggageCarriageFacilityList>noBaggageStorage</LuggageCarriageFacilityList>
+              <ServiceReservationFacilityList/>
+              <UicProductCharacteristicList/>
             </ServiceFacilitySet>
           </serviceFacilitySets>
         </TimetableFrame>
@@ -282,6 +303,8 @@
                 <Phone>+33-1-675-9876</Phone>
                 <Url>http://autocarssuperbe.fr</Url>
               </ContactDetails>
+              <OrganisationType/>
+              <OperatorActivities/>
             </Operator>
           </organisations>
         </ResourceFrame>
@@ -297,7 +320,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+                  <WeeksOfMonth/>
                   <HolidayTypes>NotHoliday</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -306,7 +332,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Everyday</DaysOfWeek>
+                  <WeeksOfMonth/>
                   <HolidayTypes>NotHoliday</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -315,7 +344,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Saturday Sunday</DaysOfWeek>
+                  <WeeksOfMonth/>
                   <HolidayTypes>NotHoliday</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -324,7 +356,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Everyday</DaysOfWeek>
+                  <WeeksOfMonth/>
                   <HolidayTypes>AnyHoliday</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>

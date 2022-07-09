@@ -100,7 +100,12 @@
                           <DayType id="myfares:Time_interval@access_when" version="1.0">
                             <properties>
                               <PropertyOfDay>
+                                <DaysOfWeek/>
+                                <WeeksOfMonth/>
                                 <DayOfMonth>---01</DayOfMonth>
+                                <HolidayTypes/>
+                                <Seasons/>
+                                <Tides/>
                               </PropertyOfDay>
                             </properties>
                           </DayType>
@@ -130,11 +135,13 @@
                       <UserProfile id="myfares:adult" version="any">
                         <Name>Normal</Name>
                         <TypeOfConcessionRef version="any" ref="myfares:standard"/>
+                        <ProofRequired/>
                       </UserProfile>
                       <UserProfile id="myfares:child" version="any">
                         <Name>Child</Name>
                         <TypeOfConcessionRef version="any" ref="myfares:concession"/>
                         <MaximumAge>16</MaximumAge>
+                        <ProofRequired/>
                       </UserProfile>
                       <UserProfile id="myfares:student" version="any">
                         <Name>Student</Name>
@@ -280,6 +287,7 @@
                       <RefundType>earlyTermination</RefundType>
                       <RefundPolicy>any</RefundPolicy>
                       <PartialRefundBasis>unusedMonths</PartialRefundBasis>
+                      <PaymentMethod/>
                     </Refunding>
                     <PurchaseWindow id="myfares:ABO_purchase Window_conditions" version="1.0">
                       <Name>Purchase window for subscription</Name>
@@ -555,9 +563,11 @@
               <values>
                 <TypeOfTravelDocument id="myfares:mobile_app" version="any">
                   <Name>Mobile Electronic</Name>
+                  <MachineReadable/>
                 </TypeOfTravelDocument>
                 <TypeOfTravelDocument id="myfares:card" version="any">
                   <Name>Railcard - plastic</Name>
+                  <MachineReadable/>
                 </TypeOfTravelDocument>
               </values>
             </ValueSet>
@@ -588,6 +598,8 @@
           <organisations>
             <Operator id="mytoc:DTA" version="any">
               <Name>Demo Transit Authority</Name>
+              <OrganisationType/>
+              <OperatorActivities/>
             </Operator>
           </organisations>
         </ResourceFrame>

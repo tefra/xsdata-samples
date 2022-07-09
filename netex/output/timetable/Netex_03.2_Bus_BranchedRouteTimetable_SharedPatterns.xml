@@ -64,6 +64,8 @@
               <ShortName>Line 24</ShortName>
               <TransportMode>bus</TransportMode>
               <PublicCode>24</PublicCode>
+              <PaymentMethods/>
+              <PurchaseMoment/>
             </Line>
           </lines>
           <destinationDisplays>
@@ -113,9 +115,11 @@
                     <PointOnLineSection id="mybus:LSM_Yankee_Alpha" version="any" order="1">
                       <ScheduledStopPointRef version="any" ref="mybus:Yankee"/>
                       <ServiceLinkRef version="any" ref="mybus:SL@Yankee+Alpha"/>
+                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="mybus:LSM_Yankee_Alpha" version="any" order="2">
                       <ScheduledStopPointRef version="any" ref="mybus:Alpha"/>
+                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                   <SectionType>trunk</SectionType>
@@ -125,9 +129,11 @@
                     <PointOnLineSection id="mybus:LSM_Zulu_Alpha" version="any" order="1">
                       <ScheduledStopPointRef version="any" ref="mybus:Zulu"/>
                       <ServiceLinkRef version="any" ref="mybus:SL@Zulu+Alpha"/>
+                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="mybus:LSM_Zulu_Alpha" version="any" order="2">
                       <ScheduledStopPointRef version="any" ref="mybus:Alpha"/>
+                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                   <SectionType>trunk</SectionType>
@@ -137,13 +143,16 @@
                     <PointOnLineSection id="mybus:LSM_Alpha_Charley" version="any" order="1">
                       <ScheduledStopPointRef version="any" ref="mybus:Alpha"/>
                       <ServiceLinkRef version="any" ref="mybus:SL@Alpha+Bravo"/>
+                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="mybus:LSM_Alpha_Charley" version="any" order="2">
                       <ScheduledStopPointRef version="any" ref="mybus:Bravo"/>
                       <ServiceLinkRef version="any" ref="mybus:SL@Bravo+Charley"/>
+                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="mybus:LSM_Alpha_Charley" version="any" order="3">
                       <ScheduledStopPointRef version="any" ref="mybus:Charley"/>
+                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                   <SectionType>trunk</SectionType>
@@ -153,9 +162,11 @@
                     <PointOnLineSection id="mybus:LSM_Charley_Papa" version="any" order="1">
                       <ScheduledStopPointRef version="any" ref="mybus:Charley"/>
                       <ServiceLinkRef version="any" ref="mybus:SL@Charley+Papa"/>
+                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="mybus:LSM_Charley_Papa" version="any" order="2">
                       <ScheduledStopPointRef version="any" ref="mybus:Papa"/>
+                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                   <SectionType>trunk</SectionType>
@@ -165,9 +176,11 @@
                     <PointOnLineSection id="mybus:LSM_Charley_Quebec" version="any" order="1">
                       <ScheduledStopPointRef version="any" ref="mybus:Charley"/>
                       <ServiceLinkRef version="any" ref="mybus:SL@Charley+Quebec"/>
+                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="mybus:LSM_Charley_Quebec" version="any" order="2">
                       <ScheduledStopPointRef version="any" ref="mybus:Quebec"/>
+                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                   <SectionType>trunk</SectionType>
@@ -1023,6 +1036,7 @@
               <MaximumWaitTime>PT15M</MaximumWaitTime>
               <StandardTransferTime>PT1M</StandardTransferTime>
               <MinimumTransferTime>PT1M</MinimumTransferTime>
+              <transferModes/>
               <noticeAssignments>
                 <NoticeAssignment id="hde::sji_YP_01_YQ_02" version="any" order="1">
                   <NoticeRef version="any" ref="hde:fn_01"/>
@@ -1047,6 +1061,7 @@
               <MaximumWaitTime>PT15M</MaximumWaitTime>
               <StandardTransferTime>PT1M</StandardTransferTime>
               <MinimumTransferTime>PT1M</MinimumTransferTime>
+              <transferModes/>
               <noticeAssignments>
                 <NoticeAssignment id="hde::sji_ZP_02_YP_03" version="any" order="1">
                   <NoticeRef version="any" ref="hde:fn_02"/>
@@ -1071,6 +1086,7 @@
               <MaximumWaitTime>PT15M</MaximumWaitTime>
               <StandardTransferTime>PT1M</StandardTransferTime>
               <MinimumTransferTime>PT1M</MinimumTransferTime>
+              <transferModes/>
               <noticeAssignments>
                 <NoticeAssignment id="hde::sji_ZP_03_ZQ_04" version="any" order="1">
                   <NoticeRef version="any" ref="hde:fn_01"/>
@@ -1096,7 +1112,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+                  <WeeksOfMonth/>
                   <HolidayTypes>NotHoliday</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>

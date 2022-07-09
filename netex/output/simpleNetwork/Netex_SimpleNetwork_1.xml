@@ -393,6 +393,8 @@
               <Presentation>
                 <ColourName>yellow</ColourName>
               </Presentation>
+              <PaymentMethods/>
+              <PurchaseMoment/>
             </Line>
           </lines>
         </ServiceFrame>
@@ -412,6 +414,7 @@
                 <Latitude>53</Latitude>
               </Location>
               <Label>Towards C</Label>
+              <VehicleModes/>
             </ScheduledStopPoint>
             <ScheduledStopPoint id="hde:SSP0002B_a" created="2010-12-17T09:30:47Z" version="032">
               <Name>Haltstelle Ba</Name>
@@ -420,6 +423,7 @@
                 <Latitude>53</Latitude>
               </Location>
               <Label>Towards C</Label>
+              <VehicleModes/>
             </ScheduledStopPoint>
             <ScheduledStopPoint id="hde:SSP0002B_b" created="2010-12-17T09:30:47Z" version="032">
               <Name>Haltstelle Bb</Name>
@@ -428,6 +432,7 @@
                 <Latitude>53</Latitude>
               </Location>
               <Label>TowardsA</Label>
+              <VehicleModes/>
             </ScheduledStopPoint>
             <ScheduledStopPoint id="hde:SSP0003C_a" created="2001-06-17T09:30:47Z" changed="2002-12-17T09:30:47Z" version="015">
               <Name>Haltstelle Ca</Name>
@@ -436,6 +441,7 @@
                 <Latitude>53</Latitude>
               </Location>
               <Label>Towards D</Label>
+              <VehicleModes/>
             </ScheduledStopPoint>
             <ScheduledStopPoint id="hde:SSP0004D" created="2001-06-17T09:30:47Z" changed="2002-12-17T09:30:47Z" version="015">
               <Name>Haltstelle D</Name>
@@ -443,6 +449,7 @@
                 <Longitude>-180</Longitude>
                 <Latitude>53</Latitude>
               </Location>
+              <VehicleModes/>
             </ScheduledStopPoint>
             <ScheduledStopPoint id="hde:SSP0003C_b" created="2010-12-17T09:30:47Z" version="015">
               <Name>Haltstelle Cb</Name>
@@ -451,6 +458,7 @@
                 <Latitude>53</Latitude>
               </Location>
               <Label>Towards A</Label>
+              <VehicleModes/>
             </ScheduledStopPoint>
             <ScheduledStopPoint id="hde:SSP0005E" created="2001-06-17T09:30:47Z" changed="2002-12-17T09:30:47Z" version="015">
               <Name>Haltstelle D</Name>
@@ -458,6 +466,7 @@
                 <Longitude>-180</Longitude>
                 <Latitude>53</Latitude>
               </Location>
+              <VehicleModes/>
             </ScheduledStopPoint>
           </scheduledStopPoints>
           <serviceLinks>
@@ -1055,7 +1064,9 @@
               <RoadAddress id="mybus:RAd_SP001A@01" version="any">
                 <RoadName>Alexandra Road</RoadName>
               </RoadAddress>
+              <AccessModes/>
               <TransportMode>bus</TransportMode>
+              <OtherTransportModes/>
               <StopPlaceType>onstreetBus</StopPlaceType>
               <quays>
                 <Quay id="mybus:Q_SP001A@1" created="2010-04-17T09:30:47Z" version="any">
@@ -1067,7 +1078,9 @@
                       <Latitude>51.4217482061</Latitude>
                     </Location>
                   </Centroid>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
+                  <OtherTransportModes/>
                   <Label>Stop A</Label>
                   <PublicCode>1-3454 </PublicCode>
                   <CompassOctant>S</CompassOctant>
@@ -1086,6 +1099,8 @@
               <RoadAddress id="mybus:RAd_SP002B@01" version="any">
                 <RoadName>Alexandra Road</RoadName>
               </RoadAddress>
+              <AccessModes/>
+              <OtherTransportModes/>
               <StopPlaceType>onstreetBus</StopPlaceType>
               <quays>
                 <Quay id="mybus:Q_SP002B@1" version="any">
@@ -1097,7 +1112,9 @@
                       <Latitude>51.4217482061</Latitude>
                     </Location>
                   </Centroid>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
+                  <OtherTransportModes/>
                   <Label>Stop Ba</Label>
                   <PublicCode>1-3456 </PublicCode>
                   <CompassOctant>S</CompassOctant>
@@ -1112,7 +1129,9 @@
                       <Latitude>51.4217482061</Latitude>
                     </Location>
                   </Centroid>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
+                  <OtherTransportModes/>
                   <Label>Stop Bb</Label>
                   <PublicCode>1-3457 </PublicCode>
                   <CompassOctant>N</CompassOctant>
@@ -1131,7 +1150,9 @@
               <RoadAddress id="mybus:RAd_SP002C@01" version="any">
                 <RoadName>Foo Road</RoadName>
               </RoadAddress>
+              <AccessModes/>
               <TransportMode>bus</TransportMode>
+              <OtherTransportModes/>
               <StopPlaceType>onstreetBus</StopPlaceType>
               <quays>
                 <Quay id="mybus:Q_SP002C@1" created="2010-04-17T09:30:47Z" version="any">
@@ -1143,7 +1164,9 @@
                       <Latitude>51.4217482061</Latitude>
                     </Location>
                   </Centroid>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
+                  <OtherTransportModes/>
                   <Label>Stop Ca</Label>
                   <PublicCode>1-3454 </PublicCode>
                   <CompassOctant>NE</CompassOctant>
@@ -1158,7 +1181,9 @@
                       <Latitude>51.4217482061</Latitude>
                     </Location>
                   </Centroid>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
+                  <OtherTransportModes/>
                   <Label>Stop Cb</Label>
                   <PublicCode>1-3454 </PublicCode>
                   <CompassOctant>SE</CompassOctant>
@@ -1177,7 +1202,9 @@
               <RoadAddress id="mybus:RAd_SP004D_01" version="any">
                 <RoadName>Bar Road</RoadName>
               </RoadAddress>
+              <AccessModes/>
               <TransportMode>bus</TransportMode>
+              <OtherTransportModes/>
               <StopPlaceType>onstreetBus</StopPlaceType>
               <quays>
                 <Quay id="mybus:Q_SP004D_1" created="2010-04-17T09:30:47Z" version="any">
@@ -1189,7 +1216,9 @@
                       <Latitude>51.4217482061</Latitude>
                     </Location>
                   </Centroid>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
+                  <OtherTransportModes/>
                   <Label>Stop D</Label>
                   <PublicCode>1-3454 </PublicCode>
                   <CompassOctant>W</CompassOctant>
@@ -1208,7 +1237,9 @@
               <RoadAddress id="mybus:RAd_SP005E_01" version="any">
                 <RoadName>Bar Road</RoadName>
               </RoadAddress>
+              <AccessModes/>
               <TransportMode>bus</TransportMode>
+              <OtherTransportModes/>
               <StopPlaceType>onstreetBus</StopPlaceType>
               <quays>
                 <Quay id="mybus:Q_SP005E_1" created="2010-04-17T09:30:47Z" version="any">
@@ -1220,7 +1251,9 @@
                       <Latitude>51.4217482061</Latitude>
                     </Location>
                   </Centroid>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
+                  <OtherTransportModes/>
                   <Label>Stop E</Label>
                   <PublicCode>1-3454 </PublicCode>
                   <CompassOctant>W</CompassOctant>
@@ -1366,6 +1399,7 @@
               <roles>
                 <ResponsibilityRoleAssignment id="mybus:RS_10_01" created="2010-05-17T09:30:47Z" version="any">
                   <DataRoleType>collects</DataRoleType>
+                  <StakeholderRoleType/>
                   <ResponsibleOrganisationRef version="any" ref="mybus:Org_TL001"/>
                 </ResponsibilityRoleAssignment>
               </roles>
@@ -1374,6 +1408,7 @@
               <roles>
                 <ResponsibilityRoleAssignment id="mybus:RS_22_02" created="2010-05-17T09:30:47Z" version="any">
                   <DataRoleType>collects</DataRoleType>
+                  <StakeholderRoleType/>
                   <ResponsibleOrganisationRef version="any" ref="hde:Org_Hd001"/>
                 </ResponsibilityRoleAssignment>
               </roles>
@@ -1382,6 +1417,7 @@
               <roles>
                 <ResponsibilityRoleAssignment id="mybus:RS_22_31" created="2010-05-17T09:30:47Z" version="any">
                   <DataRoleType>collects</DataRoleType>
+                  <StakeholderRoleType/>
                   <ResponsibleOrganisationRef ref="gis:Org_Gis003">EXTERNAL</ResponsibleOrganisationRef>
                 </ResponsibilityRoleAssignment>
               </roles>
@@ -1391,14 +1427,18 @@
             <Authority id="hde:Org_Hd001" version="any">
               <Name>Town Authority </Name>
               <Description>Responsible for network schedules</Description>
+              <OrganisationType/>
             </Authority>
             <Operator id="mybus:Org_TL001" version="any">
               <Name>Big red Bus Co</Name>
               <Description>Responsible just  for STOP PLACEs</Description>
+              <OrganisationType/>
+              <OperatorActivities/>
             </Operator>
             <GeneralOrganisation id="gis:Org_G001" version="any">
               <Name>Infrastucture  data Co </Name>
               <Description>Responsible for Infrastructure elements</Description>
+              <OrganisationType/>
             </GeneralOrganisation>
           </organisations>
         </ResourceFrame>

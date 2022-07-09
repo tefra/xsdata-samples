@@ -63,18 +63,24 @@
               <ShortName>Line 24</ShortName>
               <TransportMode>tram</TransportMode>
               <PublicCode>24</PublicCode>
+              <PaymentMethods/>
+              <PurchaseMoment/>
             </Line>
             <Line id="mybus:LN_46" version="any">
               <Name>Line 46 Foxtrot to Tango</Name>
               <ShortName>Line 46</ShortName>
               <TransportMode>bus</TransportMode>
               <PublicCode>46</PublicCode>
+              <PaymentMethods/>
+              <PurchaseMoment/>
             </Line>
             <Line id="mybus:LN_68" version="any">
               <Name>Line 68 Bravo to Kilo</Name>
               <ShortName>Line 68</ShortName>
               <TransportMode>bus</TransportMode>
               <PublicCode>46</PublicCode>
+              <PaymentMethods/>
+              <PurchaseMoment/>
             </Line>
           </lines>
           <destinationDisplays>
@@ -492,6 +498,8 @@
               <StopPlaceRef version="any" ref="mybus:SP002B"/>
               <QuayRef version="any" ref="mybus:Q_SP002B_1"/>
               <TypeOfPassengerInformationEquipmentRef version="any" ref="mybus:PlatDisp"/>
+              <PassengerInformationFacilityList/>
+              <AccessibilityInfoFacilityList/>
             </PassengerInformationEquipment>
             <PassengerInformationEquipment id="mybus:pif_SP002B_TramBus_Q2" version="any">
               <Name>Display on Bravo   Tram bus     departures  Platform 2 </Name>
@@ -499,6 +507,8 @@
               <StopPlaceRef version="any" ref="mybus:SP002B"/>
               <QuayRef version="any" ref="mybus:Q_SP002B_2"/>
               <TypeOfPassengerInformationEquipmentRef version="any" ref="mybus:PlatDisp"/>
+              <PassengerInformationFacilityList/>
+              <AccessibilityInfoFacilityList/>
             </PassengerInformationEquipment>
             <PassengerInformationEquipment id="mybus:pif_SP002B_TicketHall_arrivals" version="any">
               <Name>Display of all Arrivals all modes in Bravo  Ticket  Hall</Name>
@@ -506,6 +516,8 @@
               <StopPlaceRef version="any" ref="mybus:SP002B"/>
               <AccessSpaceRef version="any" ref="mybus:as_SP002B_01"/>
               <TypeOfPassengerInformationEquipmentRef version="any" ref="mybus:LargeBoard"/>
+              <PassengerInformationFacilityList/>
+              <AccessibilityInfoFacilityList/>
             </PassengerInformationEquipment>
             <PassengerInformationEquipment id="mybus:pif_SP002B_TicketHall_departures" version="any">
               <Name>Display of all Departures all modes  in Bravo  Ticket  Hall</Name>
@@ -513,6 +525,8 @@
               <StopPlaceRef version="any" ref="mybus:SP002B"/>
               <AccessSpaceRef version="any" ref="mybus:as_SP002B_01"/>
               <TypeOfPassengerInformationEquipmentRef version="any" ref="mybus:LargeBoard"/>
+              <PassengerInformationFacilityList/>
+              <AccessibilityInfoFacilityList/>
             </PassengerInformationEquipment>
             <PassengerInformationEquipment id="mybus:pif_SP002B_Rail_01" version="any">
               <Name>Display 1 on Bravo Rail Rail Platform 3</Name>
@@ -520,6 +534,8 @@
               <StopPlaceRef version="any" ref="mybus:SP002B"/>
               <QuayRef version="any" ref="mybus:Q_SP002B_3"/>
               <TypeOfPassengerInformationEquipmentRef version="any" ref="mybus:PlatDisp"/>
+              <PassengerInformationFacilityList/>
+              <AccessibilityInfoFacilityList/>
             </PassengerInformationEquipment>
             <PassengerInformationEquipment id="mybus:pif_SP002B_Rail_02" version="any">
               <Name>Display 2 on Bravo Rail Rail Platform 3</Name>
@@ -527,6 +543,8 @@
               <StopPlaceRef version="any" ref="mybus:SP002B"/>
               <QuayRef version="any" ref="mybus:Q_SP002B_3"/>
               <TypeOfPassengerInformationEquipmentRef version="any" ref="mybus:PlatDisp"/>
+              <PassengerInformationFacilityList/>
+              <AccessibilityInfoFacilityList/>
             </PassengerInformationEquipment>
           </passengerInformationEquipments>
         </ServiceFrame>
@@ -543,7 +561,9 @@
                   <gml:pos srsName="UKOS">524811.0 170666.0</gml:pos>
                 </Location>
               </Centroid>
+              <AccessModes/>
               <TransportMode>bus</TransportMode>
+              <OtherTransportModes/>
               <StopPlaceType>onstreetTram</StopPlaceType>
               <quays>
                 <Quay id="mybus:Q_SP001A_1" created="2010-04-17T09:30:47Z" version="any">
@@ -555,7 +575,9 @@
                       <Latitude>51.4217482061</Latitude>
                     </Location>
                   </Centroid>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
+                  <OtherTransportModes/>
                   <Label>Stop A</Label>
                   <PublicCode>1-3454 </PublicCode>
                   <CompassOctant>S</CompassOctant>
@@ -574,6 +596,8 @@
               <RoadAddress id="mybus:RAd_SP002B_01" version="any">
                 <RoadName>Bravo Road</RoadName>
               </RoadAddress>
+              <AccessModes/>
+              <OtherTransportModes/>
               <StopPlaceType>tramStation</StopPlaceType>
               <quays>
                 <Quay id="mybus:Q_SP002B_1" version="any">
@@ -585,7 +609,9 @@
                       <Latitude>51.4217482061</Latitude>
                     </Location>
                   </Centroid>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
+                  <OtherTransportModes/>
                   <Label>Stop B1</Label>
                   <CompassOctant>S</CompassOctant>
                   <QuayType>tramPlatform</QuayType>
@@ -599,7 +625,9 @@
                       <Latitude>51.4217482061</Latitude>
                     </Location>
                   </Centroid>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
+                  <OtherTransportModes/>
                   <Label>Stop B2</Label>
                   <PublicCode>1-3457 </PublicCode>
                   <CompassOctant>N</CompassOctant>
@@ -613,7 +641,9 @@
                       <Latitude>51.4217482061</Latitude>
                     </Location>
                   </Centroid>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
+                  <OtherTransportModes/>
                   <Label>Platform 1</Label>
                   <CompassOctant>N</CompassOctant>
                   <QuayType>railPlatform</QuayType>
@@ -623,7 +653,9 @@
                 <AccessSpace id="mybus:as_SP002B_01" version="any">
                   <Name>Bravo Ticket Hall </Name>
                   <Description>Ticket Hall at Bravo</Description>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
+                  <OtherTransportModes/>
                   <AccessSpaceType>bookingHall</AccessSpaceType>
                 </AccessSpace>
               </accessSpaces>
@@ -639,7 +671,9 @@
               <RoadAddress id="mybus:RAd_SP003C_01" version="any">
                 <RoadName>Foo Road</RoadName>
               </RoadAddress>
+              <AccessModes/>
               <TransportMode>bus</TransportMode>
+              <OtherTransportModes/>
               <StopPlaceType>onstreetTram</StopPlaceType>
               <quays>
                 <Quay id="mybus:Q_SP003C_1" created="2010-04-17T09:30:47Z" version="any">
@@ -651,7 +685,9 @@
                       <Latitude>51.4217482061</Latitude>
                     </Location>
                   </Centroid>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
+                  <OtherTransportModes/>
                   <Label>Stop Ca</Label>
                   <PublicCode>1-3454 </PublicCode>
                   <CompassOctant>NE</CompassOctant>
@@ -666,7 +702,9 @@
                       <Latitude>51.4217482061</Latitude>
                     </Location>
                   </Centroid>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
+                  <OtherTransportModes/>
                   <Label>Stop Cb</Label>
                   <PublicCode>1-3455 </PublicCode>
                   <CompassOctant>SE</CompassOctant>
