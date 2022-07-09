@@ -64,6 +64,8 @@
               <ShortName>Line 24</ShortName>
               <TransportMode>bus</TransportMode>
               <PublicCode>24</PublicCode>
+              <PaymentMethods/>
+              <PurchaseMoment/>
             </Line>
           </lines>
           <destinationDisplays>
@@ -383,7 +385,9 @@
                   <gml:pos srsName="UKOS">524811.0 170666.0</gml:pos>
                 </Location>
               </Centroid>
+              <AccessModes/>
               <TransportMode>bus</TransportMode>
+              <OtherTransportModes/>
               <StopPlaceType>onstreetBus</StopPlaceType>
               <quays>
                 <Quay id="mybus:Q_SP57001A_4" created="2010-04-17T09:30:47Z" version="any">
@@ -395,7 +399,9 @@
                       <Latitude>51.4217482061</Latitude>
                     </Location>
                   </Centroid>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
+                  <OtherTransportModes/>
                   <Label>Quay 4</Label>
                   <PublicCode>1-3454 </PublicCode>
                   <CompassOctant>S</CompassOctant>
@@ -414,6 +420,8 @@
               <RoadAddress id="mybus:RAd_SP57002B_01" version="any">
                 <RoadName>Bravo Road</RoadName>
               </RoadAddress>
+              <AccessModes/>
+              <OtherTransportModes/>
               <StopPlaceType>onstreetBus</StopPlaceType>
               <quays>
                 <Quay id="mybus:Q_SP57002B_1a" version="any">
@@ -425,7 +433,9 @@
                       <Latitude>51.4217482061</Latitude>
                     </Location>
                   </Centroid>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
+                  <OtherTransportModes/>
                   <Label>Bravo 1A</Label>
                   <PublicCode>1-3456a </PublicCode>
                   <CompassOctant>S</CompassOctant>
@@ -440,7 +450,9 @@
                       <Latitude>51.4317482061</Latitude>
                     </Location>
                   </Centroid>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
+                  <OtherTransportModes/>
                   <Label>Bravo 1B</Label>
                   <PublicCode>1-3456b </PublicCode>
                   <CompassOctant>S</CompassOctant>
@@ -455,7 +467,9 @@
                       <Latitude>51.4217482061</Latitude>
                     </Location>
                   </Centroid>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
+                  <OtherTransportModes/>
                   <Label>Stop Bb</Label>
                   <PublicCode>1-3457 </PublicCode>
                   <CompassOctant>N</CompassOctant>
@@ -474,7 +488,9 @@
               <RoadAddress id="mybus:RAd_SP57003C_01" version="any">
                 <RoadName>Foo Road</RoadName>
               </RoadAddress>
+              <AccessModes/>
               <TransportMode>bus</TransportMode>
+              <OtherTransportModes/>
               <StopPlaceType>onstreetBus</StopPlaceType>
               <quays>
                 <Quay id="mybus:Q_SP57003C_1" created="2010-04-17T09:30:47Z" version="any">
@@ -486,7 +502,9 @@
                       <Latitude>51.4217482061</Latitude>
                     </Location>
                   </Centroid>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
+                  <OtherTransportModes/>
                   <Label> Ca</Label>
                   <PublicCode>1-3454 </PublicCode>
                   <CompassOctant>NE</CompassOctant>
@@ -501,7 +519,9 @@
                       <Latitude>51.4217482061</Latitude>
                     </Location>
                   </Centroid>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
+                  <OtherTransportModes/>
                   <Label>  C1</Label>
                   <PublicCode>1-3454 </PublicCode>
                   <CompassOctant>SE</CompassOctant>
@@ -520,7 +540,9 @@
               <RoadAddress id="mybus:RAd_SP57004D_01" version="any">
                 <RoadName>Bar Road</RoadName>
               </RoadAddress>
+              <AccessModes/>
               <TransportMode>bus</TransportMode>
+              <OtherTransportModes/>
               <StopPlaceType>onstreetBus</StopPlaceType>
               <quays>
                 <Quay id="mybus:Q_SP57004D_1" created="2010-04-17T09:30:47Z" version="any">
@@ -531,7 +553,9 @@
                       <Latitude>51.4217482061</Latitude>
                     </Location>
                   </Centroid>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
+                  <OtherTransportModes/>
                   <Label>Stop D</Label>
                   <PublicCode>1-3455 </PublicCode>
                   <CompassOctant>W</CompassOctant>
@@ -553,7 +577,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+                  <WeeksOfMonth/>
                   <HolidayTypes>NotHoliday</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -562,7 +589,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Everyday</DaysOfWeek>
+                  <WeeksOfMonth/>
                   <HolidayTypes>NotHoliday</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -571,7 +601,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Saturday Sunday</DaysOfWeek>
+                  <WeeksOfMonth/>
                   <HolidayTypes>NotHoliday</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -580,7 +613,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Everyday</DaysOfWeek>
+                  <WeeksOfMonth/>
                   <HolidayTypes>AnyHoliday</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>

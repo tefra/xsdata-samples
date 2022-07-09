@@ -18,17 +18,27 @@
           <lines>
             <FlexibleLine id="bar:foo1" version="001">
               <Name>LINE</Name>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+              <BookingMethods/>
+              <BuyWhen/>
             </FlexibleLine>
             <Line id="bar:foo" version="001">
               <Name>LINE</Name>
+              <PaymentMethods/>
+              <PurchaseMoment/>
             </Line>
           </lines>
           <groupsOfLines>
-            <GroupOfLines id="bar:foo" version="001"/>
+            <GroupOfLines id="bar:foo" version="001">
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </GroupOfLines>
           </groupsOfLines>
           <scheduledStopPoints>
             <ScheduledStopPoint id="bar:foo5" version="001">
               <Name>POINT</Name>
+              <VehicleModes/>
             </ScheduledStopPoint>
           </scheduledStopPoints>
           <serviceLinks>
@@ -71,6 +81,7 @@
         </ServiceFrame>
         <TimetableFrame id="bar:foo" version="001">
           <Name>FRAME </Name>
+          <VehicleModes/>
           <vehicleJourneys>
             <VehicleJourney id="bar:foo" version="001">
               <Name>JOURNEY</Name>
@@ -83,6 +94,8 @@
             </TemplateServiceJourney>
             <SpecialService id="bar:foo3" version="001">
               <Name>JOURNEY</Name>
+              <BookingMethods/>
+              <BuyWhen/>
             </SpecialService>
             <DatedServiceJourney id="bar:foo4" version="001">
               <Name>JOURNEY</Name>
@@ -94,6 +107,32 @@
           <serviceFacilitySets>
             <ServiceFacilitySet id="bar:foo2" version="001">
               <Description>FACILITY SET</Description>
+              <AccessibilityInfoFacilityList/>
+              <AssistanceFacilityList/>
+              <AccessibilityToolList/>
+              <CarServiceFacilityList/>
+              <CateringFacilityList/>
+              <FamilyFacilityList/>
+              <FareClasses/>
+              <MealFacilityList/>
+              <MedicalFacilityList/>
+              <MobilityFacilityList/>
+              <NuisanceFacilityList/>
+              <PassengerCommsFacilityList/>
+              <PassengerInformationFacilityList/>
+              <RetailFacilityList/>
+              <SafetyFacilityList/>
+              <SanitaryFacilityList/>
+              <TicketingFacilityList/>
+              <TicketingServiceFacilityList/>
+              <VehicleAccessFacilityList/>
+              <AccommodationAccessList/>
+              <AccommodationFacilityList/>
+              <BookingProcessFacilityList/>
+              <CouchetteFacilityList/>
+              <LuggageCarriageFacilityList/>
+              <ServiceReservationFacilityList/>
+              <UicProductCharacteristicList/>
             </ServiceFacilitySet>
           </serviceFacilitySets>
         </TimetableFrame>
@@ -111,6 +150,7 @@
           <stopPlaces>
             <StopPlace id="bar:foo2" version="001">
               <Name>ZONE</Name>
+              <AccessModes/>
               <equipmentPlaces>
                 <EquipmentPlace id="bar:foo2-x" version="001">
                   <Name>ZONE</Name>
@@ -122,14 +162,19 @@
                   </placeEquipments>
                 </EquipmentPlace>
               </equipmentPlaces>
+              <OtherTransportModes/>
               <quays>
                 <Quay id="bar:foo2-a" version="001">
                   <Name>ZONE</Name>
+                  <AccessModes/>
+                  <OtherTransportModes/>
                 </Quay>
               </quays>
             </StopPlace>
             <StopPlace id="bar:foo2-bis" version="001">
               <Name>ZONE</Name>
+              <AccessModes/>
+              <OtherTransportModes/>
             </StopPlace>
           </stopPlaces>
           <flexibleStopPlaces>
@@ -140,17 +185,31 @@
           <pointsOfInterest>
             <PointOfInterest id="bar:foo4" version="001">
               <Name>ZONE</Name>
+              <AccessModes/>
             </PointOfInterest>
           </pointsOfInterest>
           <parkings>
             <Parking id="bar:foo5" version="001">
               <Name>ZONE</Name>
+              <AccessModes/>
               <entrances>
-                <ParkingPassengerEntrance id="bar:foo5-a" version="001"/>
-                <ParkingPassengerEntrance id="bar:foo5-b" version="001"/>
+                <ParkingPassengerEntrance id="bar:foo5-a" version="001">
+                  <AccessModes/>
+                </ParkingPassengerEntrance>
+                <ParkingPassengerEntrance id="bar:foo5-b" version="001">
+                  <AccessModes/>
+                </ParkingPassengerEntrance>
               </entrances>
+              <ParkingVehicleTypes/>
+              <ParkingPaymentProcess/>
+              <PaymentMethods/>
+              <CurrenciesAccepted/>
+              <CardsAccepted/>
               <parkingProperties>
                 <ParkingProperties id="bar:foo" version="001">
+                  <ParkingUserTypes/>
+                  <ParkingVehicleTypes/>
+                  <ParkingStayList/>
                   <spaces>
                     <ParkingCapacity id="bar:foo" version="001"/>
                   </spaces>
@@ -159,16 +218,22 @@
               <parkingAreas>
                 <ParkingArea id="bar:foo7" version="001">
                   <Name>ZONE</Name>
+                  <AccessModes/>
                   <bays>
                     <ParkingBay id="bar:foo8" version="001">
                       <Name>ZONE</Name>
+                      <AccessModes/>
                     </ParkingBay>
                   </bays>
                 </ParkingArea>
               </parkingAreas>
               <vehicleEntrances>
-                <ParkingEntranceForVehicles id="bar:foo" version="001"/>
-                <ParkingEntranceForVehicles id="bar:foo1" version="001"/>
+                <ParkingEntranceForVehicles id="bar:foo" version="001">
+                  <AccessModes/>
+                </ParkingEntranceForVehicles>
+                <ParkingEntranceForVehicles id="bar:foo1" version="001">
+                  <AccessModes/>
+                </ParkingEntranceForVehicles>
               </vehicleEntrances>
             </Parking>
           </parkings>
@@ -186,6 +251,31 @@
           <siteFacilitySets>
             <SiteFacilitySet id="bar:foo" version="001">
               <Description>FACILITY SET</Description>
+              <AccessibilityInfoFacilityList/>
+              <AssistanceFacilityList/>
+              <AccessibilityToolList/>
+              <CarServiceFacilityList/>
+              <CateringFacilityList/>
+              <FamilyFacilityList/>
+              <FareClasses/>
+              <MealFacilityList/>
+              <MedicalFacilityList/>
+              <MobilityFacilityList/>
+              <NuisanceFacilityList/>
+              <PassengerCommsFacilityList/>
+              <PassengerInformationFacilityList/>
+              <RetailFacilityList/>
+              <SafetyFacilityList/>
+              <SanitaryFacilityList/>
+              <TicketingFacilityList/>
+              <TicketingServiceFacilityList/>
+              <AccessFacilityList/>
+              <EmergencyServiceList/>
+              <HireFacilityList/>
+              <LuggageLockerFacilityList/>
+              <LuggageServiceFacilityList/>
+              <MoneyFacilityList/>
+              <ParkingFacilityList/>
             </SiteFacilitySet>
           </siteFacilitySets>
         </SiteFrame>
@@ -229,11 +319,22 @@
             <Version id="bar:foo" version="001"/>
           </versions>
           <organisations>
-            <Authority id="bar:foo2" version="001"/>
-            <Operator id="bar:foo" version="001"/>
-            <ServicedOrganisation id="bar:foo3" version="001"/>
-            <ManagementAgent id="bar:foo5" version="001"/>
-            <TravelAgent id="bar:foo4" version="001"/>
+            <Authority id="bar:foo2" version="001">
+              <OrganisationType/>
+            </Authority>
+            <Operator id="bar:foo" version="001">
+              <OrganisationType/>
+              <OperatorActivities/>
+            </Operator>
+            <ServicedOrganisation id="bar:foo3" version="001">
+              <OrganisationType/>
+            </ServicedOrganisation>
+            <ManagementAgent id="bar:foo5" version="001">
+              <OrganisationType/>
+            </ManagementAgent>
+            <TravelAgent id="bar:foo4" version="001">
+              <OrganisationType/>
+            </TravelAgent>
             <OtherOrganisation id="bar:foo5" version="001">
               <validityConditions>
                 <ValidityCondition id="bar:foo" version="001"/>
@@ -250,7 +351,9 @@
                     </OperatingDay>
                   </operatingDays>
                 </AvailabilityCondition>
-                <ValidDuring id="bar:foo" version="001"/>
+                <ValidDuring id="bar:foo" version="001">
+                  <DaysOfWeek/>
+                </ValidDuring>
                 <ValidBetween id="bar:foo" version="001"/>
               </validityConditions>
               <alternativeTexts>
@@ -270,6 +373,7 @@
                   <Name>Foo</Name>
                 </AlternativeName>
               </alternativeNames>
+              <OrganisationType/>
               <parts>
                 <OrganisationPart id="bar:foo" version="001">
                   <administrativeZones>
@@ -283,7 +387,10 @@
               <ownResponsibilitySets>
                 <ResponsibilitySet id="bar:foo" version="001">
                   <roles>
-                    <ResponsibilityRoleAssignment id="bar:foo" version="001"/>
+                    <ResponsibilityRoleAssignment id="bar:foo" version="001">
+                      <DataRoleType/>
+                      <StakeholderRoleType/>
+                    </ResponsibilityRoleAssignment>
                   </roles>
                 </ResponsibilitySet>
               </ownResponsibilitySets>
@@ -307,6 +414,7 @@
               <components>
                 <TrainComponent id="bar:foo" version="001" order="1">
                   <TrainElement id="bar:foo" version="001">
+                    <FareClasses/>
                     <capacities>
                       <PassengerCapacity id="bar:foo" version="001"/>
                     </capacities>
@@ -315,6 +423,32 @@
                         <otherFacilities>
                           <TypeOfEquipment id="bar:foo" version="001"/>
                         </otherFacilities>
+                        <AccessibilityInfoFacilityList/>
+                        <AssistanceFacilityList/>
+                        <AccessibilityToolList/>
+                        <CarServiceFacilityList/>
+                        <CateringFacilityList/>
+                        <FamilyFacilityList/>
+                        <FareClasses/>
+                        <MealFacilityList/>
+                        <MedicalFacilityList/>
+                        <MobilityFacilityList/>
+                        <NuisanceFacilityList/>
+                        <PassengerCommsFacilityList/>
+                        <PassengerInformationFacilityList/>
+                        <RetailFacilityList/>
+                        <SafetyFacilityList/>
+                        <SanitaryFacilityList/>
+                        <TicketingFacilityList/>
+                        <TicketingServiceFacilityList/>
+                        <VehicleAccessFacilityList/>
+                        <AccommodationAccessList/>
+                        <AccommodationFacilityList/>
+                        <BookingProcessFacilityList/>
+                        <CouchetteFacilityList/>
+                        <LuggageCarriageFacilityList/>
+                        <ServiceReservationFacilityList/>
+                        <UicProductCharacteristicList/>
                       </ServiceFacilitySet>
                     </facilities>
                   </TrainElement>
@@ -337,7 +471,9 @@
             </SchematicMap>
           </schematicMaps>
           <groupsOfEntities>
-            <Entrance id="bar:foo6" version="001"/>
+            <Entrance id="bar:foo6" version="001">
+              <AccessModes/>
+            </Entrance>
             <Zone id="bar:foo6" version="001"/>
           </groupsOfEntities>
           <zones>

@@ -203,6 +203,7 @@
                   <Name>Main Entrance from street</Name>
                   <Description lang="en">External Entrance to  Ticket Hall from forecourt</Description>
                   <ParentZoneRef version="01" ref="ztb:bh0023@A1"/>
+                  <AccessModes/>
                   <LevelRef version="01" ref="ztb:bh0023@Lvl_0"/>
                   <placeEquipments>
                     <RampEquipment id="ztb:bh0023@A1-E1@ramp" version="any">
@@ -224,6 +225,7 @@
                   <IsExit>true</IsExit>
                   <Width>1.0</Width>
                   <Height>2.0</Height>
+                  <OtherTransportModes/>
                 </StopPlaceEntrance>
                 <StopPlaceEntrance id="ztb:bh0023@A1-E2" created="2010-05-17T09:30:47Z" version="01">
                   <validityConditions>
@@ -232,6 +234,7 @@
                   <Name>Entrance to platform 1 from Ticket hall </Name>
                   <Description lang="en"> Entrance to  Ticket Hall from platform 1</Description>
                   <ParentZoneRef version="01" ref="ztb:bh0023@A1"/>
+                  <AccessModes/>
                   <LevelRef version="01" ref="ztb:bh0023@Lvl_0"/>
                   <placeEquipments>
                     <EntranceEquipment id="ztb:bh0023@A1-E2" version="any">
@@ -247,11 +250,13 @@
                   <IsExit>true</IsExit>
                   <Width>1.0</Width>
                   <Height>2.0</Height>
+                  <OtherTransportModes/>
                 </StopPlaceEntrance>
                 <StopPlaceEntrance id="ztb:bh0023@Rail@Q1-E1tr" created="2010-05-17T09:30:47Z" version="01">
                   <Name>Entrance to track  crossing from platorm  l </Name>
                   <Description lang="en">platform 1 Entrance to crossing over tracks to platform 2</Description>
                   <ParentZoneRef version="01" ref="ztb:bh0023@Rail@Q1"/>
+                  <AccessModes/>
                   <LevelRef version="01" ref="ztb:bh0023@Lvl_0"/>
                   <placeEquipments>
                     <RampEquipment id="ztb:bh0023@Rail@Q1-E1tr@ramp" version="any">
@@ -270,11 +275,13 @@
                   <IsEntry>true</IsEntry>
                   <IsExit>true</IsExit>
                   <Width>2.0</Width>
+                  <OtherTransportModes/>
                 </StopPlaceEntrance>
                 <StopPlaceEntrance id="ztb:bh0023@Rail@Q2-E1tr" created="2010-05-17T09:30:47Z" version="01">
                   <Name>platform 2 Entrance to track  crossing from platorm  l </Name>
                   <Description lang="en"> Entrance to crossing over tracks from platform2</Description>
                   <ParentZoneRef version="01" ref="ztb:bh0023@Rail@Q2"/>
+                  <AccessModes/>
                   <LevelRef version="01" ref="ztb:bh0023@Lvl_0"/>
                   <placeEquipments>
                     <RampEquipment id="ztb:bh0023@Rail@Q2-E1tr@ramp" version="any">
@@ -288,10 +295,12 @@
                   <IsEntry>true</IsEntry>
                   <IsExit>true</IsExit>
                   <Width>2.0</Width>
+                  <OtherTransportModes/>
                 </StopPlaceEntrance>
               </entrances>
               <PublicCode>1564</PublicCode>
               <TransportMode>rail</TransportMode>
+              <OtherTransportModes/>
               <StopPlaceType>railStation</StopPlaceType>
               <servedPlaces>
                 <TopographicPlaceRef created="2010-05-17T09:30:47Z" ref="topat:E0034695"/>
@@ -305,6 +314,7 @@
                       <gml:pos srsName="ATGRID">471800.0 115210.0</gml:pos>
                     </Location>
                   </Centroid>
+                  <AccessModes/>
                   <Covered>mixed</Covered>
                   <LevelRef version="01" ref="ztb:bh0023@Lvl_0"/>
                   <equipmentPlaces>
@@ -341,6 +351,7 @@
                       </placeEquipments>
                     </EquipmentPlace>
                   </equipmentPlaces>
+                  <OtherTransportModes/>
                   <Label>1</Label>
                   <QuayType>railPlatform</QuayType>
                 </Quay>
@@ -352,6 +363,7 @@
                       <gml:pos srsName="ATGRID">471801.0 115211.0</gml:pos>
                     </Location>
                   </Centroid>
+                  <AccessModes/>
                   <Covered>mixed</Covered>
                   <LevelRef version="01" ref="ztb:bh0023@Lvl_0"/>
                   <equipmentPlaces>
@@ -375,6 +387,7 @@
                       </placeEquipments>
                     </EquipmentPlace>
                   </equipmentPlaces>
+                  <OtherTransportModes/>
                   <Label>2</Label>
                   <QuayType>railPlatform</QuayType>
                 </Quay>
@@ -396,6 +409,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <LevelRef version="01" ref="ztb:bh0023@Lvl_0"/>
                   <equipmentPlaces>
@@ -404,12 +418,16 @@
                         <TicketingEquipment id="ztb:bh0023@A1@EqP01_01" version="any">
                           <VehicleModes>rail</VehicleModes>
                           <TicketMachines>true</TicketMachines>
+                          <TicketingFacilityList/>
                           <TicketingServiceFacilityList>cardTopUp purchase</TicketingServiceFacilityList>
                           <PaymentMethods>cash creditCard debitCard</PaymentMethods>
+                          <TicketTypesAvailable/>
+                          <ScopeOfTicketsAvailable/>
                         </TicketingEquipment>
                       </placeEquipments>
                     </EquipmentPlace>
                   </equipmentPlaces>
+                  <OtherTransportModes/>
                   <entrances>
                     <EntranceRef version="01" ref="ztb:bh0023@A1-E1"/>
                     <EntranceRef version="01" ref="ztb:bh0023@A1-E2"/>
@@ -430,10 +448,12 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
                   <Gated>openArea</Gated>
                   <Lighting>wellLit</Lighting>
                   <LevelRef version="01" ref="ztb:bh0023@Lvl_0"/>
+                  <OtherTransportModes/>
                   <AccessSpaceType>forecourt</AccessSpaceType>
                 </AccessSpace>
                 <AccessSpace id="ztb:bh0023@AX3" created="2010-05-17T09:30:47Z" version="01">
@@ -452,6 +472,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
                   <Gated>openArea</Gated>
                   <LevelRef version="01" ref="ztb:bh0023@Lvl_0"/>
@@ -461,6 +482,7 @@
                       <CrossingType>barrowCrossing</CrossingType>
                     </CrossingEquipment>
                   </placeEquipments>
+                  <OtherTransportModes/>
                   <entrances>
                     <EntranceRef version="01" ref="ztb:bh0023@Rail@Q1-E1tr"/>
                     <EntranceRef version="01" ref="ztb:bh0023@Rail@Q2-E1tr"/>
@@ -492,6 +514,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -529,6 +552,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>covered</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -579,6 +603,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>covered</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -629,6 +654,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>covered</Covered>
                   <NumberOfSteps>0</NumberOfSteps>
                   <AllowedUse>twoWay</AllowedUse>
@@ -650,6 +676,7 @@
                   <AccessibilityAssessment id="ztb:NP_bh0023@Bus-Q1+Rail@Q2-E2trr" version="any">
                     <MobilityImpairedAccess>true</MobilityImpairedAccess>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="ztb:NP_bh0023@Bus-Q1+Rail@Q2-E2tr" version="any">
                       <AccessFeatureType>crossing</AccessFeatureType>
@@ -661,6 +688,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT1M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
+                  <AccessFeatureList/>
                   <NavigationType>quayToHall</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="ztb:bh0023@Bus-Q1+Rail@Q2-E2tr-01" version="any" order="1">
@@ -677,6 +705,7 @@
                   <AccessibilityAssessment id="ztb:NP_bh0023@A1+Bus-Q1" version="any">
                     <MobilityImpairedAccess>true</MobilityImpairedAccess>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="ztb:NP_bh0023@A1+Bus-Q1" version="any">
                       <AccessFeatureType>crossing</AccessFeatureType>
@@ -688,6 +717,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT1M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
+                  <AccessFeatureList/>
                   <NavigationType>hallToQuay</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="ztb:NP_bh0023@A1+Bus-Q-01" version="any" order="1">
@@ -704,10 +734,12 @@
                   <AccessibilityAssessment id="ztb:NP_bh0023@A1+Rail@Q2" version="any">
                     <MobilityImpairedAccess>true</MobilityImpairedAccess>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <TransferDuration>
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT2M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
+                  <AccessFeatureList/>
                   <NavigationType>hallToQuay</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="ztb:NP_bh0023@A1+Rail@Q1" version="any" order="1">
@@ -724,10 +756,12 @@
                   <AccessibilityAssessment id="ztb:NP_bh0023@Rail@Q1+A1" version="any">
                     <MobilityImpairedAccess>true</MobilityImpairedAccess>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <TransferDuration>
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT2M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
+                  <AccessFeatureList/>
                   <NavigationType>quayToHall</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="ztb:NP_bh0023@Rail@Q1+A1" version="any" order="1">
@@ -744,6 +778,7 @@
                   <AccessibilityAssessment id="ztb:NP_bh0023@A1+Rail@Q2-E1tr" version="any">
                     <MobilityImpairedAccess>true</MobilityImpairedAccess>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="ztb:NP_bh0023@A1+Rail@Q2-E1tr" version="any">
                       <AccessFeatureType>crossing</AccessFeatureType>
@@ -755,6 +790,7 @@
                     <DefaultDuration>PT3M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT10M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
+                  <AccessFeatureList/>
                   <NavigationType>hallToQuay</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="ztb:NP_bh0023@A1+Rail@Q2-02" version="any" order="1">
@@ -785,6 +821,7 @@
                   <AccessibilityAssessment id="ztb:NP_bh0023@Rail@Q2+A1" version="any">
                     <MobilityImpairedAccess>true</MobilityImpairedAccess>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="ztb:NP_bh0023@Rail@Q2+A1" version="any">
                       <AccessFeatureType>crossing</AccessFeatureType>
@@ -796,6 +833,7 @@
                     <DefaultDuration>PT3M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT10M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
+                  <AccessFeatureList/>
                   <NavigationType>quayToHall</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="ztb:NP_bh0023@Rail@Q2+A1-01" version="any" order="1">
@@ -836,6 +874,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="ztb:bh0023@Rail@Q1+Rail@Q2" version="any">
                       <AccessFeatureType>crossing</AccessFeatureType>
@@ -847,6 +886,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
+                  <AccessFeatureList/>
                   <NavigationType>quayToQuay</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="ztb:bh0023@Rail@Q1+Rail@Q2_01" version="any" order="1">
@@ -873,6 +913,7 @@
                       </AccessibilityLimitation>
                     </limitations>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <summaries>
                     <AccessSummary id="ztb:bh0023@Rail@Q2+Rail@Q1" version="any">
                       <AccessFeatureType>crossing</AccessFeatureType>
@@ -884,6 +925,7 @@
                     <DefaultDuration>PT1M</DefaultDuration>
                     <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
                   </TransferDuration>
+                  <AccessFeatureList/>
                   <NavigationType>quayToQuay</NavigationType>
                   <pathLinksInSequence>
                     <PathLinkInSequence id="ztb:bh0023@Rail@Q2+Rail@Q1_01" version="any" order="1">
@@ -911,10 +953,12 @@
               <AccessibilityAssessment id="ztb:bh0024" created="2010-05-17T09:30:47Z" version="01">
                 <MobilityImpairedAccess>true</MobilityImpairedAccess>
               </AccessibilityAssessment>
+              <AccessModes/>
               <TopographicPlaceView>
                 <TopographicPlaceRef version="01" ref="topat:E0034695"/>
               </TopographicPlaceView>
               <TransportMode>bus</TransportMode>
+              <OtherTransportModes/>
               <StopPlaceType>onstreetBus</StopPlaceType>
               <quays>
                 <Quay id="ztb:bh0024_Rail@Q1" created="2010-04-17T09:30:47Z" version="01">
@@ -933,7 +977,9 @@
                   <AccessibilityAssessment id="ztb:bh0024_Rail@Q1" version="any">
                     <MobilityImpairedAccess>true</MobilityImpairedAccess>
                   </AccessibilityAssessment>
+                  <AccessModes/>
                   <Covered>outdoors</Covered>
+                  <OtherTransportModes/>
                   <BoardingUse>true</BoardingUse>
                   <AlightingUse>true</AlightingUse>
                   <Label>Halt A</Label>
@@ -958,6 +1004,7 @@
                 <ResponsibilityRoleAssignment id="mybus:Resp01" created="2010-05-17T09:30:47Z" version="01">
                   <Description>Zall Zillertal transport - Managed centrally</Description>
                   <DataRoleType>all</DataRoleType>
+                  <StakeholderRoleType/>
                   <ResponsibleOrganisationRef version="any" ref="zbt:Org_ZTLB" xsi:type="OperatorRefStructure"/>
                 </ResponsibilityRoleAssignment>
               </roles>
@@ -968,6 +1015,7 @@
                 <ResponsibilityRoleAssignment id="mybus:Resp02" created="2010-05-17T09:30:47Z" version="01">
                   <Description>Zall Zillertal transport - Managed centrally</Description>
                   <DataRoleType>all</DataRoleType>
+                  <StakeholderRoleType/>
                   <ResponsibleOrganisationRef version="any" ref="zbt:Org_ZTLB" xsi:type="OperatorRefStructure"/>
                 </ResponsibilityRoleAssignment>
               </roles>
@@ -981,6 +1029,7 @@
               <TradingName>Zillerthalerbahn GMBh</TradingName>
               <Description>Responsible for Underground</Description>
               <OrganisationType>operator</OrganisationType>
+              <OperatorActivities/>
             </Operator>
           </organisations>
         </ResourceFrame>
@@ -997,7 +1046,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+                  <WeeksOfMonth/>
                   <HolidayTypes>WorkingDay</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
               <timebands>
@@ -1011,7 +1063,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Saturday</DaysOfWeek>
+                  <WeeksOfMonth/>
                   <HolidayTypes>WorkingDay</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
               <timebands>
@@ -1025,6 +1080,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Sunday</DaysOfWeek>
+                  <WeeksOfMonth/>
+                  <HolidayTypes/>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
               <timebands>
@@ -1038,7 +1097,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday Saturday</DaysOfWeek>
+                  <WeeksOfMonth/>
                   <HolidayTypes>WorkingDay</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
               <timebands>
@@ -1052,6 +1114,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Sunday</DaysOfWeek>
+                  <WeeksOfMonth/>
+                  <HolidayTypes/>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
               <timebands>

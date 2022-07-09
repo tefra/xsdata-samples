@@ -44,6 +44,8 @@
               <ShortName>Line 234</ShortName>
               <TransportMode>bus</TransportMode>
               <PublicCode>234</PublicCode>
+              <PaymentMethods/>
+              <PurchaseMoment/>
             </Line>
           </lines>
           <scheduledStopPoints>
@@ -163,6 +165,10 @@
                 <properties>
                   <PropertyOfDay>
                     <DaysOfWeek>Everyday</DaysOfWeek>
+                    <WeeksOfMonth/>
+                    <HolidayTypes/>
+                    <Seasons/>
+                    <Tides/>
                   </PropertyOfDay>
                 </properties>
               </DayType>
@@ -171,6 +177,10 @@
                 <properties>
                   <PropertyOfDay>
                     <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+                    <WeeksOfMonth/>
+                    <HolidayTypes/>
+                    <Seasons/>
+                    <Tides/>
                   </PropertyOfDay>
                 </properties>
               </DayType>

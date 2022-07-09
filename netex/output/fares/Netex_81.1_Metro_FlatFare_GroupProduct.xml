@@ -72,10 +72,12 @@
                       <UserProfile id="myfares:adult" version="any">
                         <Name>Child Fare</Name>
                         <MinimumAge>17</MinimumAge>
+                        <ProofRequired/>
                       </UserProfile>
                       <UserProfile id="myfares:child" version="any">
                         <Name>Child Fare</Name>
                         <MaximumAge>16</MaximumAge>
+                        <ProofRequired/>
                       </UserProfile>
                       <GroupTicket id="myfares:group" version="any">
                         <Name>Group Fare - 10 or more people</Name>
@@ -416,9 +418,11 @@
               <values>
                 <TypeOfTravelDocument id="myfares:mobile_app" version="any">
                   <Name>Mobile Electronic</Name>
+                  <MachineReadable/>
                 </TypeOfTravelDocument>
                 <TypeOfTravelDocument id="myfares:paper_ticket" version="any">
                   <Name>Printed ticket</Name>
+                  <MachineReadable/>
                 </TypeOfTravelDocument>
               </values>
             </ValueSet>
@@ -446,6 +450,8 @@
           <organisations>
             <Operator id="mybus:DTA" version="any">
               <Name>Demo Transit Authority</Name>
+              <OrganisationType/>
+              <OperatorActivities/>
             </Operator>
           </organisations>
         </ResourceFrame>

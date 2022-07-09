@@ -96,6 +96,8 @@
               <ShortName>Line 42</ShortName>
               <TransportMode>bus</TransportMode>
               <PublicCode>42</PublicCode>
+              <PaymentMethods/>
+              <PurchaseMoment/>
             </Line>
           </lines>
           <destinationDisplays>
@@ -1147,6 +1149,7 @@
               <Controlled>false</Controlled>
               <StandardWaitTime>PT15M</StandardWaitTime>
               <StandardTransferTime>PT0M</StandardTransferTime>
+              <transferModes/>
               <FromJourneyRef version="any" ref="hde:sj_42c@A+E@01"/>
               <ToJourneyRef version="any" ref="hde:sj_42c@A+E@02"/>
             </ServiceJourneyInterchange>
@@ -1159,6 +1162,7 @@
               <Controlled>false</Controlled>
               <StandardWaitTime>PT15M</StandardWaitTime>
               <StandardTransferTime>PT0M</StandardTransferTime>
+              <transferModes/>
               <FromJourneyRef version="any" ref="hde:sj_42a@E+A@03"/>
               <ToJourneyRef version="any" ref="hde:sj_42a@E+A@04"/>
             </ServiceJourneyInterchange>
@@ -1186,7 +1190,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+                  <WeeksOfMonth/>
                   <HolidayTypes>NotHoliday</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>

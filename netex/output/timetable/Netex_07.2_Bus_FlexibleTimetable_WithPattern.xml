@@ -184,8 +184,12 @@ The Calendar is shown coded as
                 <BusSubmode>demandAndResponseBus</BusSubmode>
               </TransportSubmode>
               <PublicCode>24</PublicCode>
+              <PaymentMethods/>
+              <PurchaseMoment/>
               <FlexibleLineType>mixedFlexibleAndFixed</FlexibleLineType>
+              <BookingMethods/>
               <BookingAccess>public</BookingAccess>
+              <BuyWhen/>
               <LatestBookingTime>16:30:00</LatestBookingTime>
               <MinimumBookingPeriod>PT30M</MinimumBookingPeriod>
             </FlexibleLine>
@@ -558,6 +562,7 @@ The Calendar is shown coded as
                 <TypeOfFlexibleServiceRef version="any" ref="myfs"/>
                 <BookingMethods>online callOffice</BookingMethods>
                 <BookingAccess>public</BookingAccess>
+                <BuyWhen/>
                 <LatestBookingTime>16:00:00Z</LatestBookingTime>
                 <MinimumBookingPeriod>PT2H</MinimumBookingPeriod>
               </FlexibleServiceProperties>
@@ -655,6 +660,7 @@ The Calendar is shown coded as
                 <TypeOfFlexibleServiceRef version="any" ref="myfs"/>
                 <BookingMethods>online callOffice</BookingMethods>
                 <BookingAccess>public</BookingAccess>
+                <BuyWhen/>
                 <LatestBookingTime>16:00:00Z</LatestBookingTime>
                 <MinimumBookingPeriod>PT2H</MinimumBookingPeriod>
                 <BookingNote>Some text</BookingNote>
@@ -745,7 +751,10 @@ The Calendar is shown coded as
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+                  <WeeksOfMonth/>
                   <HolidayTypes>NotHoliday</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>

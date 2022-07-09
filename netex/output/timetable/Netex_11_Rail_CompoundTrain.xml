@@ -159,16 +159,22 @@
               <Name>LN_amsterdam-cz_prague</Name>
               <ShortName>Line 24</ShortName>
               <TransportMode>rail</TransportMode>
+              <PaymentMethods/>
+              <PurchaseMoment/>
             </Line>
             <Line id="myrail:LN_nl_amsterdam-pl_warsaw" version="any">
               <Name>LN_amsterdam-pl_warsaw</Name>
               <ShortName>Line 25</ShortName>
               <TransportMode>rail</TransportMode>
+              <PaymentMethods/>
+              <PurchaseMoment/>
             </Line>
             <Line id="myrail:LN_nl_amsterdam-dk_copenhagen" version="any">
               <Name>LN_amsterdam-pl_warsaw</Name>
               <ShortName>Line 31</ShortName>
               <TransportMode>rail</TransportMode>
+              <PaymentMethods/>
+              <PurchaseMoment/>
             </Line>
           </lines>
           <destinationDisplays>
@@ -983,8 +989,32 @@
               <facilities>
                 <ServiceFacilitySet id="bbd:svcfc_60457" version="any">
                   <Description>Second  class facilities only</Description>
+                  <AccessibilityInfoFacilityList/>
+                  <AssistanceFacilityList/>
+                  <AccessibilityToolList/>
+                  <CarServiceFacilityList/>
                   <CateringFacilityList>buffet</CateringFacilityList>
+                  <FamilyFacilityList/>
                   <FareClasses>secondClass</FareClasses>
+                  <MealFacilityList/>
+                  <MedicalFacilityList/>
+                  <MobilityFacilityList/>
+                  <NuisanceFacilityList/>
+                  <PassengerCommsFacilityList/>
+                  <PassengerInformationFacilityList/>
+                  <RetailFacilityList/>
+                  <SafetyFacilityList/>
+                  <SanitaryFacilityList/>
+                  <TicketingFacilityList/>
+                  <TicketingServiceFacilityList/>
+                  <VehicleAccessFacilityList/>
+                  <AccommodationAccessList/>
+                  <AccommodationFacilityList/>
+                  <BookingProcessFacilityList/>
+                  <CouchetteFacilityList/>
+                  <LuggageCarriageFacilityList/>
+                  <ServiceReservationFacilityList/>
+                  <UicProductCharacteristicList/>
                 </ServiceFacilitySet>
               </facilities>
             </ServiceJourney>
@@ -1077,27 +1107,61 @@
           <serviceFacilitySets>
             <ServiceFacilitySet id="bbd:svcfc_general" version="any">
               <Description>General facilities</Description>
+              <AccessibilityInfoFacilityList/>
               <AssistanceFacilityList>boardingAssistance conductor wheechairAssistance</AssistanceFacilityList>
+              <AccessibilityToolList/>
+              <CarServiceFacilityList/>
               <CateringFacilityList>buffet</CateringFacilityList>
+              <FamilyFacilityList/>
               <FareClasses>firstClass standardClass</FareClasses>
+              <MealFacilityList/>
+              <MedicalFacilityList/>
               <MobilityFacilityList>stepFreeAccess suitableForWheelchairs</MobilityFacilityList>
               <NuisanceFacilityList>mobilePhoneFreeZone noSmoking</NuisanceFacilityList>
               <PassengerCommsFacilityList>publicWifi</PassengerCommsFacilityList>
               <PassengerInformationFacilityList>nextStopIndicator passengerInformationDisplay realTimeConnections stopAnnouncements</PassengerInformationFacilityList>
+              <RetailFacilityList/>
+              <SafetyFacilityList/>
               <SanitaryFacilityList>toilet wheelChairAccessToilet</SanitaryFacilityList>
+              <TicketingFacilityList/>
               <TicketingServiceFacilityList>purchase</TicketingServiceFacilityList>
+              <VehicleAccessFacilityList/>
               <AccommodationAccessList>reservation</AccommodationAccessList>
               <AccommodationFacilityList>couchette seating sleeper</AccommodationFacilityList>
+              <BookingProcessFacilityList/>
               <CouchetteFacilityList>C2 C4 C6 T2</CouchetteFacilityList>
               <LuggageCarriageFacilityList>baggageStorage baggageVan cyclesAllowedWithReservation luggageRacks</LuggageCarriageFacilityList>
+              <ServiceReservationFacilityList/>
+              <UicProductCharacteristicList/>
             </ServiceFacilitySet>
             <ServiceFacilitySet id="bbd:svcfc_first" version="any">
               <Description>First class facilities</Description>
+              <AccessibilityInfoFacilityList/>
+              <AssistanceFacilityList/>
+              <AccessibilityToolList/>
+              <CarServiceFacilityList/>
               <CateringFacilityList>breakfastInCar</CateringFacilityList>
+              <FamilyFacilityList/>
               <FareClasses>firstClass</FareClasses>
+              <MealFacilityList/>
+              <MedicalFacilityList/>
+              <MobilityFacilityList/>
+              <NuisanceFacilityList/>
               <PassengerCommsFacilityList>powerSupplySockets publicWifi</PassengerCommsFacilityList>
+              <PassengerInformationFacilityList/>
+              <RetailFacilityList/>
+              <SafetyFacilityList/>
+              <SanitaryFacilityList/>
+              <TicketingFacilityList/>
+              <TicketingServiceFacilityList/>
+              <VehicleAccessFacilityList/>
               <AccommodationAccessList>reservation</AccommodationAccessList>
               <AccommodationFacilityList>sleeper</AccommodationFacilityList>
+              <BookingProcessFacilityList/>
+              <CouchetteFacilityList/>
+              <LuggageCarriageFacilityList/>
+              <ServiceReservationFacilityList/>
+              <UicProductCharacteristicList/>
               <accommodations>
                 <Accommodation id="bbd:svcfc_firs@singleSleeper" version="any">
                   <FareClass>firstClass</FareClass>
@@ -1114,12 +1178,14 @@
                   <CouchetteFacility>C2</CouchetteFacility>
                   <ShowerFacility>shower</ShowerFacility>
                   <ToiletFacility>toilet</ToiletFacility>
+                  <NuisanceFacilityList/>
                   <PassengerCommsFacilityList>freeWifi</PassengerCommsFacilityList>
                 </Accommodation>
                 <Accommodation id="bbd:svcfc_firs@sleeper" version="any">
                   <FareClass>secondClass</FareClass>
                   <AccommodationFacility>couchette</AccommodationFacility>
                   <CouchetteFacility>C4</CouchetteFacility>
+                  <NuisanceFacilityList/>
                   <PassengerCommsFacilityList>freeWifi</PassengerCommsFacilityList>
                 </Accommodation>
               </accommodations>
@@ -1251,6 +1317,7 @@
                   <TrainElement id="bbd:trne_40447_01" version="any">
                     <Name/>
                     <TrainElementType>engine</TrainElementType>
+                    <FareClasses/>
                   </TrainElement>
                 </TrainComponent>
                 <TrainComponent id="bbd:trncmp_40447_02" version="any" order="2">
@@ -1387,6 +1454,7 @@
                   <TrainElement id="bbd:trne_447_09" version="any">
                     <Name/>
                     <TrainElementType>engine</TrainElementType>
+                    <FareClasses/>
                   </TrainElement>
                 </TrainComponent>
               </components>
@@ -1460,6 +1528,7 @@
                   <TrainElement id="bbd:trne_60457_01" version="any">
                     <Name/>
                     <TrainElementType>engine</TrainElementType>
+                    <FareClasses/>
                   </TrainElement>
                 </TrainComponent>
                 <TrainComponent id="bbd:trncmp_60457_02" version="any" order="2">
@@ -1516,66 +1585,98 @@
           <stopPlaces>
             <StopPlace id="uic:nl_amsterdam" version="any">
               <Name>Amsterdam</Name>
+              <AccessModes/>
+              <OtherTransportModes/>
               <quays>
                 <Quay id="uic:nl_amsterdam_1" version="any">
                   <Name>Platform 1</Name>
+                  <AccessModes/>
+                  <OtherTransportModes/>
                 </Quay>
               </quays>
             </StopPlace>
             <StopPlace id="uic:de_berlin" version="any">
               <Name>Berlin HBF</Name>
+              <AccessModes/>
               <TransportMode>rail</TransportMode>
+              <OtherTransportModes/>
               <quays>
                 <Quay id="uic:de_berlin_1" version="any">
                   <Name>Platform 1</Name>
+                  <AccessModes/>
+                  <OtherTransportModes/>
                 </Quay>
                 <Quay id="uic:de_berlin_2" version="any">
                   <Name>Platform 2</Name>
+                  <AccessModes/>
+                  <OtherTransportModes/>
                 </Quay>
                 <Quay id="uic:de_berlin_3" version="any">
                   <Name>Platform 3</Name>
+                  <AccessModes/>
+                  <OtherTransportModes/>
                 </Quay>
               </quays>
             </StopPlace>
             <StopPlace id="uic:dk_copenhagen" version="any">
               <Name>Copenhagen HBF</Name>
+              <AccessModes/>
               <TransportMode>rail</TransportMode>
+              <OtherTransportModes/>
               <quays>
                 <Quay id="uic:dk_copenhagen_1" version="any">
                   <Name>Platform 1</Name>
+                  <AccessModes/>
+                  <OtherTransportModes/>
                 </Quay>
               </quays>
             </StopPlace>
             <StopPlace id="uic:de_hannover" version="any">
               <Name>Hannover HBF</Name>
+              <AccessModes/>
               <TransportMode>rail</TransportMode>
+              <OtherTransportModes/>
               <quays>
                 <Quay id="uic:de_hannover_5" version="any">
                   <Name>Platform 5</Name>
+                  <AccessModes/>
+                  <OtherTransportModes/>
                 </Quay>
               </quays>
             </StopPlace>
             <StopPlace id="uic:cz_prague" version="any">
               <Name>Warsaw HBF</Name>
+              <AccessModes/>
               <TransportMode>rail</TransportMode>
+              <OtherTransportModes/>
               <quays>
                 <Quay id="uic:cz_prague_1" version="any">
                   <Name>Platform 1</Name>
+                  <AccessModes/>
+                  <OtherTransportModes/>
                 </Quay>
                 <Quay id="uic:cz_prague_2" version="any">
                   <Name>Platform 2</Name>
+                  <AccessModes/>
+                  <OtherTransportModes/>
                 </Quay>
               </quays>
             </StopPlace>
             <StopPlace id="uic:pl_warsaw" version="any">
               <Name>Warsaw HBF</Name>
+              <AccessModes/>
               <TransportMode>rail</TransportMode>
+              <OtherTransportModes/>
               <quays>
                 <Quay id="uic:pl_warsaw_7" version="any">
                   <Name>Platform 1</Name>
+                  <AccessModes/>
+                  <OtherTransportModes/>
                 </Quay>
                 <Quay id="uic:pl_warsaw_8" version="any">
                   <Name>Platform 1</Name>
+                  <AccessModes/>
+                  <OtherTransportModes/>
                 </Quay>
               </quays>
             </StopPlace>
@@ -1593,7 +1694,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+                  <WeeksOfMonth/>
                   <HolidayTypes>NotHoliday</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -1602,7 +1706,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Saturday Sunday</DaysOfWeek>
+                  <WeeksOfMonth/>
                   <HolidayTypes>NotHoliday</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>

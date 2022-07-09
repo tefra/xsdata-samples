@@ -69,13 +69,19 @@
               <ShortName>Line 46</ShortName>
               <TransportMode>bus</TransportMode>
               <PublicCode>46</PublicCode>
+              <PaymentMethods/>
+              <PurchaseMoment/>
               <FlexibleLineType>hailAndRideSections</FlexibleLineType>
+              <BookingMethods/>
+              <BuyWhen/>
             </FlexibleLine>
             <Line id="mybus:LN_24" version="any">
               <Name>Line 24 Alpha to Charley</Name>
               <ShortName>Line 24</ShortName>
               <TransportMode>bus</TransportMode>
               <PublicCode>24</PublicCode>
+              <PaymentMethods/>
+              <PurchaseMoment/>
             </Line>
           </lines>
           <destinationDisplays>
@@ -962,6 +968,7 @@
               <MaximumWaitTime>PT35M</MaximumWaitTime>
               <StandardTransferTime>PT1M</StandardTransferTime>
               <MinimumTransferTime>PT1M</MinimumTransferTime>
+              <transferModes/>
               <FromPointRef version="any" ref="mybus:SSP_002"/>
               <ToPointRef version="any" ref="mybus:SSP_002"/>
               <FromJourneyRef version="any" ref="hde:sj_24o@01"/>
@@ -979,6 +986,7 @@
               <MaximumWaitTime>PT35M</MaximumWaitTime>
               <StandardTransferTime>PT1M</StandardTransferTime>
               <MinimumTransferTime>PT1M</MinimumTransferTime>
+              <transferModes/>
               <FromPointRef version="any" ref="mybus:SSP_002"/>
               <ToPointRef version="any" ref="mybus:SSP_002"/>
               <FromJourneyRef version="any" ref="hde:sj_24o@02"/>
@@ -1044,6 +1052,7 @@
                 <ContactPerson>Wackford Squeers  </ContactPerson>
                 <Email>enquiries@Dotheboys.ac.uk</Email>
               </ContactDetails>
+              <OrganisationType/>
               <ServiceCalendarRef version="any" ref="dth:DTH_01"/>
               <ServicedOrganisationType>school</ServicedOrganisationType>
             </ServicedOrganisation>
@@ -1065,7 +1074,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+                  <WeeksOfMonth/>
                   <HolidayTypes>NotHoliday</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -1074,7 +1086,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Everyday</DaysOfWeek>
+                  <WeeksOfMonth/>
                   <HolidayTypes>NotHoliday</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -1083,7 +1098,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Saturday Sunday</DaysOfWeek>
+                  <WeeksOfMonth/>
                   <HolidayTypes>NotHoliday</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -1092,7 +1110,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Everyday</DaysOfWeek>
+                  <WeeksOfMonth/>
                   <HolidayTypes>AnyHoliday</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>

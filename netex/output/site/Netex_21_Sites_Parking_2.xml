@@ -17,6 +17,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Everyday</DaysOfWeek>
+                  <WeeksOfMonth/>
+                  <HolidayTypes/>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -36,6 +40,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Everyday</DaysOfWeek>
+                  <WeeksOfMonth/>
+                  <HolidayTypes/>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -130,9 +138,31 @@
           <AllAreasWheelchairAccessible>false</AllAreasWheelchairAccessible>
           <facilities>
             <SiteFacilitySet id="mypark:PP01" version="any">
+              <AccessibilityInfoFacilityList/>
+              <AssistanceFacilityList/>
               <AccessibilityToolList>buggy wheelchair</AccessibilityToolList>
               <CarServiceFacilityList>carWash</CarServiceFacilityList>
+              <CateringFacilityList/>
+              <FamilyFacilityList/>
+              <FareClasses/>
+              <MealFacilityList/>
+              <MedicalFacilityList/>
+              <MobilityFacilityList/>
+              <NuisanceFacilityList/>
+              <PassengerCommsFacilityList/>
+              <PassengerInformationFacilityList/>
+              <RetailFacilityList/>
+              <SafetyFacilityList/>
               <SanitaryFacilityList>toilet wheelChairAccessToilet</SanitaryFacilityList>
+              <TicketingFacilityList/>
+              <TicketingServiceFacilityList/>
+              <AccessFacilityList/>
+              <EmergencyServiceList/>
+              <HireFacilityList/>
+              <LuggageLockerFacilityList/>
+              <LuggageServiceFacilityList/>
+              <MoneyFacilityList/>
+              <ParkingFacilityList/>
             </SiteFacilitySet>
           </facilities>
           <TopographicPlaceRef version="any" ref="nptgLocality:TP_0032A"/>
@@ -157,6 +187,7 @@
               <Name>Main Entrance from street</Name>
               <Description lang="en">External Entrance Street level from High Street </Description>
               <ParentZoneRef version="any" ref="mypark:PP01"/>
+              <AccessModes/>
               <LevelRef version="any" ref="mypark:PP01@Level@01"/>
               <placeEquipments>
                 <RampEquipment id="mypark:PP01@EP01@ramp" version="any">
@@ -186,6 +217,7 @@
               <Name>Walkway  Entrance from store</Name>
               <Description lang="en">External Entrance Walkway to store.</Description>
               <ParentZoneRef version="any" ref="mypark:PP01"/>
+              <AccessModes/>
               <LevelRef version="any" ref="mypark:PP01@Level@03"/>
               <placeEquipments>
                 <EntranceEquipment id="mypark:PP01@EP02@entrance" version="any">
@@ -209,6 +241,7 @@
               </validityConditions>
               <Name>Main Vehicle Entrance from street</Name>
               <ParentZoneRef version="any" ref="mypark:PP01"/>
+              <AccessModes/>
               <LevelRef version="any" ref="mypark:PP01@Level@01"/>
               <checkConstraints>
                 <CheckConstraint id="mypark:PP01@EV11@Entrance" version="any">
@@ -271,6 +304,7 @@
               </validityConditions>
               <Name>Main Vehicle Exit to street</Name>
               <ParentZoneRef version="any" ref="mypark:PP01"/>
+              <AccessModes/>
               <LevelRef version="any" ref="mypark:PP01@Level@01"/>
               <checkConstraints>
                 <CheckConstraint id="mypark:PP01@EV12@Exit" version="any">
@@ -332,6 +366,7 @@
             <ParkingEntranceForVehicles id="mypark:PP01@EV01+02" version="any">
               <Name>Entrance from level 1 to level 2</Name>
               <ParentZoneRef version="any" ref="mypark:PP01"/>
+              <AccessModes/>
               <Label>Up To Level 1</Label>
               <IsExternal>false</IsExternal>
               <IsEntry>true</IsEntry>
@@ -342,6 +377,7 @@
             <ParkingEntranceForVehicles id="mypark:PP01@EV02+03" version="any">
               <Name>Entrance from level 2 to level 3</Name>
               <ParentZoneRef version="any" ref="mypark:PP01"/>
+              <AccessModes/>
               <Label>Up To Level 2 </Label>
               <IsExternal>false</IsExternal>
               <IsEntry>true</IsEntry>
@@ -352,6 +388,7 @@
             <ParkingEntranceForVehicles id="mypark:PP01@EV02+01" version="any">
               <Name>Entrance Dwon from level 2 to level 1</Name>
               <ParentZoneRef version="any" ref="mypark:PP01"/>
+              <AccessModes/>
               <Label>Down  To Level 1</Label>
               <IsExternal>false</IsExternal>
               <IsEntry>false</IsEntry>
@@ -362,6 +399,7 @@
             <ParkingEntranceForVehicles id="mypark:PP01@EV03+02" version="any">
               <Name>Entrance  Down from level 3 to level 2</Name>
               <ParentZoneRef version="any" ref="mypark:PP01"/>
+              <AccessModes/>
               <Label>Down  To Level 2 </Label>
               <IsExternal>false</IsExternal>
               <IsEntry>false</IsEntry>
@@ -387,10 +425,15 @@
           </equipmentPlaces>
           <placeEquipments>
             <TicketingEquipment id="mypark:PP01@Q01" version="any">
+              <VehicleModes/>
               <TicketMachines>true</TicketMachines>
               <NumberOfMachines>2</NumberOfMachines>
               <HeightOfMachineInterface>1.20</HeightOfMachineInterface>
+              <TicketingFacilityList/>
+              <TicketingServiceFacilityList/>
               <PaymentMethods>creditCard cash</PaymentMethods>
+              <TicketTypesAvailable/>
+              <ScopeOfTicketsAvailable/>
             </TicketingEquipment>
           </placeEquipments>
           <accesses>
@@ -413,6 +456,7 @@
           </accesses>
           <PublicCode>CP1</PublicCode>
           <ParkingType>shoppingCentreParking</ParkingType>
+          <ParkingVehicleTypes/>
           <ParkingLayout>multistorey</ParkingLayout>
           <NumberOfParkingLevels>3</NumberOfParkingLevels>
           <PrincipalCapacity>250</PrincipalCapacity>
@@ -425,6 +469,7 @@
           <PaymentMethods>creditCard cash debitCard creditCard mobilePhone</PaymentMethods>
           <DefaultCurrency>GBP</DefaultCurrency>
           <CurrenciesAccepted>GBP</CurrenciesAccepted>
+          <CardsAccepted/>
           <ParkingReservation>noReservations</ParkingReservation>
           <BookingUrl>http://www.bookmyparking.com</BookingUrl>
           <PaymentByMobile>
@@ -436,6 +481,7 @@
           <parkingProperties>
             <ParkingProperties id="mypark:PP01" version="any">
               <ParkingUserTypes>all</ParkingUserTypes>
+              <ParkingVehicleTypes/>
               <ParkingStayList>all</ParkingStayList>
               <MaximumStay>PT48H</MaximumStay>
               <spaces>
@@ -460,6 +506,7 @@
             <ParkingArea id="mypark:PP01@A01" version="any">
               <Name>Barcester CIty Centre  Car Park - Street Level</Name>
               <ShortName>Street Level</ShortName>
+              <AccessModes/>
               <SiteRef ref="mypark:PP01"/>
               <LevelRef ref="mypark:PP01@Level@01"/>
               <Label>S1</Label>
@@ -469,6 +516,8 @@
               <MaximumWeight>15</MaximumWeight>
               <TotalCapacity>100</TotalCapacity>
               <ParkingProperties id="mypark:PP01@A01" version="any">
+                <ParkingUserTypes/>
+                <ParkingVehicleTypes/>
                 <ParkingStayList>midTerm</ParkingStayList>
                 <MaximumStay>PT48H</MaximumStay>
                 <spaces>
@@ -497,6 +546,7 @@
             <ParkingArea id="mypark:PP01@A02" version="any">
               <Name>Barcester City Centret Car Park - Mezzanine  Level</Name>
               <ShortName>Mezzanine</ShortName>
+              <AccessModes/>
               <SiteRef ref="mypark:PP01"/>
               <LevelRef ref="mypark:PP01@Level@012"/>
               <Label>Parking 1</Label>
@@ -506,6 +556,8 @@
               <MaximumWeight>10</MaximumWeight>
               <TotalCapacity>50</TotalCapacity>
               <ParkingProperties id="mypark:PP01@A02" version="any">
+                <ParkingUserTypes/>
+                <ParkingVehicleTypes/>
                 <ParkingStayList>midTerm</ParkingStayList>
                 <MaximumStay>PT48H</MaximumStay>
                 <spaces>
@@ -527,6 +579,7 @@
             <ParkingArea id="mypark:PP01@A03" version="any">
               <Name>Barchester City Centret Car Park - Store  Level</Name>
               <ShortName>Parking 2</ShortName>
+              <AccessModes/>
               <SiteRef ref="mypark:PP01"/>
               <LevelRef ref="mypark:PP01@Level@03"/>
               <Label>Parking 2</Label>
@@ -536,6 +589,8 @@
               <MaximumWeight>10</MaximumWeight>
               <TotalCapacity>100</TotalCapacity>
               <ParkingProperties id="mypark:PP01@A03" version="any">
+                <ParkingUserTypes/>
+                <ParkingVehicleTypes/>
                 <ParkingStayList>midTerm</ParkingStayList>
                 <MaximumStay>PT48H</MaximumStay>
                 <spaces>
@@ -580,7 +635,10 @@
                   <properties>
                     <PropertyOfDay>
                       <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+                      <WeeksOfMonth/>
                       <HolidayTypes>NotHoliday</HolidayTypes>
+                      <Seasons/>
+                      <Tides/>
                     </PropertyOfDay>
                   </properties>
                 </DayType>
@@ -624,10 +682,15 @@
           </equipmentPlaces>
           <placeEquipments>
             <TicketingEquipment id="mypark:PS22@QP01@L01" version="any">
+              <VehicleModes/>
               <TicketMachines>true</TicketMachines>
               <NumberOfMachines>1</NumberOfMachines>
               <HeightOfMachineInterface>1.20</HeightOfMachineInterface>
+              <TicketingFacilityList/>
+              <TicketingServiceFacilityList/>
               <PaymentMethods>creditCard cash</PaymentMethods>
+              <TicketTypesAvailable/>
+              <ScopeOfTicketsAvailable/>
             </TicketingEquipment>
           </placeEquipments>
           <accesses>
@@ -649,6 +712,7 @@
             </Access>
           </accesses>
           <ParkingType>parkingZone</ParkingType>
+          <ParkingVehicleTypes/>
           <ParkingLayout>roadside</ParkingLayout>
           <PrincipalCapacity>45</PrincipalCapacity>
           <TotalCapacity>50</TotalCapacity>
@@ -659,6 +723,7 @@
           <PaymentMethods>creditCard cash debitCard creditCard mobilePhone</PaymentMethods>
           <DefaultCurrency>GBP</DefaultCurrency>
           <CurrenciesAccepted>GBP</CurrenciesAccepted>
+          <CardsAccepted/>
           <ParkingReservation>noReservations</ParkingReservation>
           <BookingUrl>http://www.bookmyparking.com</BookingUrl>
           <PaymentByMobile>
@@ -670,6 +735,7 @@
           <parkingProperties>
             <ParkingProperties id="mypark:PS22" version="any">
               <ParkingUserTypes>all</ParkingUserTypes>
+              <ParkingVehicleTypes/>
               <ParkingStayList>unlimited</ParkingStayList>
               <spaces>
                 <ParkingCapacity id="mypark:PS22@01_disabled" version="any">
@@ -693,6 +759,7 @@
             <ParkingArea id="mypark:PS22@01" version="any">
               <Name>Street Level</Name>
               <ShortName>S1</ShortName>
+              <AccessModes/>
               <SiteRef ref="mypark:PS22"/>
               <ParkingPaymentCode>ABCD</ParkingPaymentCode>
               <MaximumLength>8</MaximumLength>
@@ -701,6 +768,8 @@
               <MaximumWeight>15</MaximumWeight>
               <TotalCapacity>100</TotalCapacity>
               <ParkingProperties id="mypark:PS22@01" version="any">
+                <ParkingUserTypes/>
+                <ParkingVehicleTypes/>
                 <ParkingStayList>midTerm</ParkingStayList>
                 <MaximumStay>PT48H</MaximumStay>
                 <spaces>
@@ -726,15 +795,21 @@
           <AllAreasWheelchairAccessible>true</AllAreasWheelchairAccessible>
           <TopographicPlaceRef version="any" ref="nptgLocality:TP_0032A"/>
           <ParkingType>urbanParking</ParkingType>
+          <ParkingVehicleTypes/>
           <ParkingLayout>roadside</ParkingLayout>
           <PrincipalCapacity>3</PrincipalCapacity>
           <TotalCapacity>3</TotalCapacity>
           <OvernightParkingPermitted>true</OvernightParkingPermitted>
           <RechargingAvailable>false</RechargingAvailable>
+          <ParkingPaymentProcess/>
+          <PaymentMethods/>
+          <CurrenciesAccepted/>
+          <CardsAccepted/>
           <ParkingReservation>noReservations</ParkingReservation>
           <parkingProperties>
             <ParkingProperties id="mypark:PB44" version="any">
               <ParkingUserTypes>all</ParkingUserTypes>
+              <ParkingVehicleTypes/>
               <ParkingStayList>unlimited</ParkingStayList>
               <spaces>
                 <ParkingCapacity id="mypark:PS44@C01_disabled" version="any">
@@ -751,10 +826,13 @@
             <ParkingArea id="mypark:PB44@A01" version="any">
               <Name>Disabled Bays</Name>
               <ShortName>S1</ShortName>
+              <AccessModes/>
               <MaximumLength>8</MaximumLength>
               <MaximumWidth>3</MaximumWidth>
               <TotalCapacity>30</TotalCapacity>
               <ParkingProperties id="mypark:PB44@01" version="any">
+                <ParkingUserTypes/>
+                <ParkingVehicleTypes/>
                 <ParkingStayList>midTerm</ParkingStayList>
                 <MaximumStay>PT3H</MaximumStay>
                 <spaces>
@@ -965,6 +1043,7 @@
             <ParkingEntranceForVehicles id="mypark:PNR01@EV01" version="any">
               <Name>Main Vehicle Entrance from street</Name>
               <ParentZoneRef version="any" ref="mypark:PNR01"/>
+              <AccessModes/>
               <Label>IN</Label>
               <EntranceType>opening</EntranceType>
               <IsExternal>true</IsExternal>
@@ -991,10 +1070,15 @@
           </equipmentPlaces>
           <placeEquipments>
             <TicketingEquipment id="mypark:PNR01@Q01@ticketing" version="any">
+              <VehicleModes/>
               <TicketMachines>true</TicketMachines>
               <NumberOfMachines>1</NumberOfMachines>
               <HeightOfMachineInterface>1.20</HeightOfMachineInterface>
+              <TicketingFacilityList/>
+              <TicketingServiceFacilityList/>
               <PaymentMethods>creditCard cash</PaymentMethods>
+              <TicketTypesAvailable/>
+              <ScopeOfTicketsAvailable/>
             </TicketingEquipment>
           </placeEquipments>
           <accesses>
@@ -1016,6 +1100,7 @@
             </Access>
           </accesses>
           <ParkingType>parkAndRide</ParkingType>
+          <ParkingVehicleTypes/>
           <ParkingLayout>openSpace</ParkingLayout>
           <PrincipalCapacity>100</PrincipalCapacity>
           <TotalCapacity>100</TotalCapacity>
@@ -1027,12 +1112,14 @@
           <PaymentMethods>creditCard cash debitCard creditCard</PaymentMethods>
           <DefaultCurrency>GBP</DefaultCurrency>
           <CurrenciesAccepted>GBP</CurrenciesAccepted>
+          <CardsAccepted/>
           <ParkingReservation>noReservations</ParkingReservation>
           <BookingUrl>http://www.bookmyparking.com</BookingUrl>
           <FreeParkingOutOfHours>false</FreeParkingOutOfHours>
           <parkingProperties>
             <ParkingProperties id="mypark:PNR01" version="any">
               <ParkingUserTypes>all</ParkingUserTypes>
+              <ParkingVehicleTypes/>
               <ParkingStayList>all</ParkingStayList>
               <MaximumStay>PT48H</MaximumStay>
               <spaces>

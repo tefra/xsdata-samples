@@ -303,6 +303,8 @@
               <ShortName>Line 24</ShortName>
               <TransportMode>bus</TransportMode>
               <PublicCode>24</PublicCode>
+              <PaymentMethods/>
+              <PurchaseMoment/>
             </Line>
           </lines>
           <destinationDisplays>
@@ -1360,7 +1362,10 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+                  <WeeksOfMonth/>
                   <HolidayTypes>NotHoliday</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>

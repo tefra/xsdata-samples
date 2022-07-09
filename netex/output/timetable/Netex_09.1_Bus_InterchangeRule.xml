@@ -86,36 +86,48 @@
               <ShortName>Line 1</ShortName>
               <TransportMode>bus</TransportMode>
               <PublicCode>1</PublicCode>
+              <PaymentMethods/>
+              <PurchaseMoment/>
             </Line>
             <Line id="mybus:LN_2" version="any">
               <Name>Line 2  Market hall to Museum</Name>
               <ShortName>Line 2</ShortName>
               <TransportMode>bus</TransportMode>
               <PublicCode>2</PublicCode>
+              <PaymentMethods/>
+              <PurchaseMoment/>
             </Line>
             <Line id="mybus:LN_3" version="any">
               <Name>Line 3 Tower to Town Hall</Name>
               <ShortName>Line 3</ShortName>
               <TransportMode>bus</TransportMode>
               <PublicCode>3</PublicCode>
+              <PaymentMethods/>
+              <PurchaseMoment/>
             </Line>
             <Line id="mybus:LN_4" version="any">
               <Name>Line 4  Outskirts to Opera</Name>
               <ShortName>Line 5</ShortName>
               <TransportMode>bus</TransportMode>
               <PublicCode>5</PublicCode>
+              <PaymentMethods/>
+              <PurchaseMoment/>
             </Line>
             <Line id="mybus:LN_5" version="any">
               <Name>Line 5 IndustriePark West  to Carparkl</Name>
               <ShortName>Line 5</ShortName>
               <TransportMode>bus</TransportMode>
               <PublicCode>5</PublicCode>
+              <PaymentMethods/>
+              <PurchaseMoment/>
             </Line>
             <Line id="mybus:LN_6" version="any">
               <Name>Line 6 Stadium to Hospitall</Name>
               <ShortName>Line 6</ShortName>
               <TransportMode>bus</TransportMode>
               <PublicCode>6</PublicCode>
+              <PaymentMethods/>
+              <PurchaseMoment/>
             </Line>
           </lines>
           <scheduledStopPoints>
@@ -203,6 +215,7 @@
           </validityConditions>
           <Name>Winter timetable for route 23 outbound</Name>
           <BaselineVersionFrameRef nameOfRefClass="TimetableFrame" ref="hde:1"/>
+          <VehicleModes/>
           <interchangeRules>
             <InterchangeRule id="hde:IR_25_all_f" version="any">
               <Name>Main Station - All  inbound</Name>
@@ -217,6 +230,7 @@
               <StandardTransferTime>PT5M</StandardTransferTime>
               <MinimumTransferTime>PT3M</MinimumTransferTime>
               <MaximumTransferTime>PT8M</MaximumTransferTime>
+              <transferModes/>
               <ControlCentreRef version="101" ref="hde:123"/>
               <FeederFilter>
                 <TransportMode>bus</TransportMode>
@@ -235,6 +249,7 @@
               <StandardWaitTime>PT3M</StandardWaitTime>
               <MaximumWaitTime>PT3M</MaximumWaitTime>
               <MaximumAutomaticWaitTime>PT1M</MaximumAutomaticWaitTime>
+              <transferModes/>
               <ControlCentreRef version="101" ref="hde:123"/>
               <FeederFilter>
                 <TransportMode>bus</TransportMode>
@@ -262,6 +277,7 @@
               <StandardTransferTime>PT5M</StandardTransferTime>
               <MinimumTransferTime>PT3M</MinimumTransferTime>
               <MaximumTransferTime>PT8M</MaximumTransferTime>
+              <transferModes/>
               <ControlCentreRef version="101" ref="hde:123"/>
               <DistributorFilter>
                 <TransportMode>bus</TransportMode>
@@ -283,6 +299,7 @@
               <StandardTransferTime>PT5M</StandardTransferTime>
               <MinimumTransferTime>PT3M</MinimumTransferTime>
               <MaximumTransferTime>PT8M</MaximumTransferTime>
+              <transferModes/>
               <ControlCentreRef version="101" ref="hde:123"/>
               <DistributorFilter>
                 <TransportMode>bus</TransportMode>
@@ -304,6 +321,7 @@
           <organisations>
             <Authority id="hde:TFO" version="101">
               <Name>Mission Central</Name>
+              <OrganisationType/>
             </Authority>
           </organisations>
           <controlCentres>

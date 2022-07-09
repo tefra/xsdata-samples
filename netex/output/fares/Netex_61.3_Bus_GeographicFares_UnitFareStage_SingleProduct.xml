@@ -212,6 +212,8 @@
             <Line id="mybus:line_5" version="1.0">
               <Name>Line 5</Name>
               <OperatorRef version="1.0" ref="mybus:DTA"/>
+              <PaymentMethods/>
+              <PurchaseMoment/>
             </Line>
           </lines>
           <scheduledStopPoints>
@@ -412,6 +414,8 @@
           <organisations>
             <Operator id="mybus:DTA" version="1.0">
               <Name>Demo Transit Authority</Name>
+              <OrganisationType/>
+              <OperatorActivities/>
             </Operator>
           </organisations>
         </ResourceFrame>

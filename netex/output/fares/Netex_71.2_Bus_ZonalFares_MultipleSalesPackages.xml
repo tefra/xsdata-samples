@@ -128,11 +128,13 @@
                         <Name>Child Fare</Name>
                         <TypeOfConcessionRef version="any" ref="cdla:adult"/>
                         <MinimumAge>17</MinimumAge>
+                        <ProofRequired/>
                       </UserProfile>
                       <UserProfile id="cdla:child" version="any">
                         <Name>Child Fare</Name>
                         <TypeOfConcessionRef version="any" ref="cdla:child"/>
                         <MaximumAge>16</MaximumAge>
+                        <ProofRequired/>
                       </UserProfile>
                     </limitations>
                   </GenericParameterAssignment>
@@ -176,9 +178,11 @@
           <distributionChannels>
             <DistributionChannel id="cdla:online" version="1.0">
               <PaymentMethods>cardsOnly</PaymentMethods>
+              <DistributionRights/>
             </DistributionChannel>
             <DistributionChannel id="cdla:at_counter" version="1.0">
               <PaymentMethods>cashAndCard</PaymentMethods>
+              <DistributionRights/>
             </DistributionChannel>
           </distributionChannels>
           <fulfilmentMethods>
@@ -197,7 +201,10 @@
               <Name>Adult  Pass  Mobile </Name>
               <distributionAssignments>
                 <DistributionAssignment id="cdla:Period_pass-SOP@mobile" version="1.0" order="1">
+                  <DistributionRights/>
                   <DistributionChannelRef version="1.0" ref="cdla:online"/>
+                  <TicketingServiceFacilityList/>
+                  <PaymentMethods/>
                   <FulfilmentMethodRef version="1.0" ref="cdla:mobile_app"/>
                 </DistributionAssignment>
               </distributionAssignments>
@@ -225,11 +232,17 @@
               </validityParameterAssignments>
               <distributionAssignments>
                 <DistributionAssignment id="cdla:Period_pass-SOP@smartcard@online" version="1.0" order="1">
+                  <DistributionRights/>
                   <DistributionChannelRef version="1.0" ref="cdla:online"/>
+                  <TicketingServiceFacilityList/>
+                  <PaymentMethods/>
                   <FulfilmentMethodRef version="1.0" ref="cdla:post"/>
                 </DistributionAssignment>
                 <DistributionAssignment id="cdla:Period_pass-SOP@smartcard@at_counter" version="1.0" order="1">
+                  <DistributionRights/>
                   <DistributionChannelRef version="1.0" ref="cdla:at_counter"/>
+                  <TicketingServiceFacilityList/>
+                  <PaymentMethods/>
                   <FulfilmentMethodRef version="1.0" ref="cdla:collect"/>
                 </DistributionAssignment>
               </distributionAssignments>
@@ -316,7 +329,10 @@
               <Name>Family day  Mobile </Name>
               <distributionAssignments>
                 <DistributionAssignment id="cdla:Day_pass-SOP@family@mobile" version="1.0" order="1">
+                  <DistributionRights/>
                   <DistributionChannelRef version="1.0" ref="cdla:online"/>
+                  <TicketingServiceFacilityList/>
+                  <PaymentMethods/>
                   <FulfilmentMethodRef version="1.0" ref="cdla:mobile_app"/>
                 </DistributionAssignment>
               </distributionAssignments>
@@ -512,6 +528,7 @@
                       <UserProfile id="cdla:student" version="any">
                         <Name>student Fare</Name>
                         <TypeOfConcessionRef version="any" ref="cdla:student"/>
+                        <ProofRequired/>
                       </UserProfile>
                     </limitations>
                   </GenericParameterAssignment>
@@ -583,6 +600,7 @@
                               <ToDate>2011-10-31T23:59:59Z</ToDate>
                             </ValidBetween>
                           </validityConditions>
+                          <PurchaseMoment/>
                         </PurchaseWindow>
                       </limitations>
                       <TimeIntervalRef version="1.0" ref="cdla:academic_year"/>
@@ -593,6 +611,7 @@
                           <validityConditions>
                             <AvailabilityConditionRef version="1.0" ref="cdla:academic_term@autumn"/>
                           </validityConditions>
+                          <PurchaseMoment/>
                         </PurchaseWindow>
                       </limitations>
                       <TimeIntervalRef version="1.0" ref="cdla:academic_term@autumn"/>
@@ -603,6 +622,7 @@
                           <validityConditions>
                             <AvailabilityConditionRef version="1.0" ref="cdla:academic_term@spring"/>
                           </validityConditions>
+                          <PurchaseMoment/>
                         </PurchaseWindow>
                       </limitations>
                       <TimeIntervalRef version="1.0" ref="cdla:academic_term@spring"/>
@@ -613,6 +633,7 @@
                           <validityConditions>
                             <AvailabilityConditionRef version="1.0" ref="cdla:academic_term@summer"/>
                           </validityConditions>
+                          <PurchaseMoment/>
                         </PurchaseWindow>
                       </limitations>
                       <TimeIntervalRef version="1.0" ref="cdla:academic_term@summer"/>
@@ -622,7 +643,10 @@
               </validityParameterAssignments>
               <distributionAssignments>
                 <DistributionAssignment id="cdla:Period_pass-SOP@student@mobile" version="1.0" order="1">
+                  <DistributionRights/>
                   <DistributionChannelRef version="1.0" ref="cdla:online"/>
+                  <TicketingServiceFacilityList/>
+                  <PaymentMethods/>
                   <FulfilmentMethodRef version="1.0" ref="cdla:mobile_app"/>
                 </DistributionAssignment>
               </distributionAssignments>
@@ -644,11 +668,17 @@
               </validityParameterAssignments>
               <distributionAssignments>
                 <DistributionAssignment id="cdla:Period_pass-SOP@student@smartcard@online" version="1.0" order="1">
+                  <DistributionRights/>
                   <DistributionChannelRef version="1.0" ref="cdla:online"/>
+                  <TicketingServiceFacilityList/>
+                  <PaymentMethods/>
                   <FulfilmentMethodRef version="1.0" ref="cdla:post"/>
                 </DistributionAssignment>
                 <DistributionAssignment id="cdla:Period_pass-SOP@student@smartcard@at_counter" version="1.0" order="1">
+                  <DistributionRights/>
                   <DistributionChannelRef version="1.0" ref="cdla:at_counter"/>
+                  <TicketingServiceFacilityList/>
+                  <PaymentMethods/>
                   <FulfilmentMethodRef version="1.0" ref="cdla:collect"/>
                 </DistributionAssignment>
               </distributionAssignments>
@@ -1360,6 +1390,8 @@
             <ResourceFrameRef version="1.0" ref="cdla:CDLA@Common_resources"/>
           </prerequisites>
           <Network id="cdla:Northern_England" version="1.0">
+            <PaymentMethods/>
+            <PurchaseMoment/>
             <OperatorRef version="any" ref="mybus:CDLA"/>
             <tariffZones>
               <TariffZoneRef version="any" ref="cdla:Midlands_Area"/>
@@ -1574,9 +1606,11 @@
               <values>
                 <TypeOfTravelDocument id="cdla:mobile_app" version="any">
                   <Name>Mobile Electronic</Name>
+                  <MachineReadable/>
                 </TypeOfTravelDocument>
                 <TypeOfTravelDocument id="cdla:card" version="any">
                   <Name>Travel Card</Name>
+                  <MachineReadable/>
                 </TypeOfTravelDocument>
               </values>
             </ValueSet>
@@ -1604,6 +1638,8 @@
           <organisations>
             <Operator id="mybus:CDLA" version="any">
               <Name>Northern area operator</Name>
+              <OrganisationType/>
+              <OperatorActivities/>
             </Operator>
           </organisations>
         </ResourceFrame>

@@ -49,6 +49,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Park" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
               <alternativeNames>
                 <AlternativeName>
                   <Lang>fr</Lang>
@@ -67,6 +68,7 @@
                   <placeTypes>
                     <TypeOfPlaceRef ref="napt:type_of_place@PIE" versionRef="EXTERNAL"/>
                   </placeTypes>
+                  <AccessModes/>
                   <PublicUse>authorisedPublicOnly</PublicUse>
                   <checkConstraints>
                     <CheckConstraint id="oda:8100OPKgN@SecQ" created="2011-03-01T17:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
@@ -105,6 +107,7 @@
                   <placeTypes>
                     <TypeOfPlaceRef ref="napt:type_of_place@PIE" versionRef="EXTERNAL"/>
                   </placeTypes>
+                  <AccessModes/>
                   <checkConstraints>
                     <CheckConstraint id="oda:8100OPKgE@SecQ" created="2011-03-01T17:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                       <Name>Olympic Park Eastern Gate Security Queue</Name>
@@ -141,6 +144,7 @@
                   <placeTypes>
                     <TypeOfPlaceRef ref="napt:type_of_place@PIE" versionRef="EXTERNAL"/>
                   </placeTypes>
+                  <AccessModes/>
                   <checkConstraints>
                     <CheckConstraint id="oda:8100OPKgS@SecQ" created="2011-03-01T17:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                       <Name>Olympic Park Southern Gate Security Queue</Name>
@@ -177,6 +181,7 @@
                   <placeTypes>
                     <TypeOfPlaceRef ref="napt:type_of_place@PIE" versionRef="EXTERNAL"/>
                   </placeTypes>
+                  <AccessModes/>
                   <checkConstraints>
                     <CheckConstraint id="oda:8100OPKgW@SecQ" created="2011-03-01T17:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                       <Name>Olympic Park Western Gate Security Queue</Name>
@@ -220,6 +225,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Venue" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
               <alternativeNames>
                 <AlternativeName>
                   <Lang>fr</Lang>
@@ -244,6 +250,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Venue" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
               <alternativeNames>
                 <AlternativeName>
                   <Lang>fr</Lang>
@@ -268,6 +275,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Venue" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
               <alternativeNames>
                 <AlternativeName>
                   <Lang>fr</Lang>
@@ -292,6 +300,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Venue" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
               <alternativeNames>
                 <AlternativeName>
                   <Lang>fr</Lang>
@@ -316,6 +325,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Venue" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
               <alternativeNames>
                 <AlternativeName>
                   <Lang>fr</Lang>
@@ -340,6 +350,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Venue" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
               <alternativeNames>
                 <AlternativeName>
                   <Lang>fr</Lang>
@@ -364,6 +375,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Venue" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
               <alternativeNames>
                 <AlternativeName>
                   <Lang>fr</Lang>
@@ -388,6 +400,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Venue" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
               <alternativeNames>
                 <AlternativeName>
                   <Lang>fr</Lang>
@@ -412,6 +425,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Venue" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
               <ParentSiteRef version="any" ref="naptPoi:8100OPK"/>
             </PointOfInterest>
           </pointsOfInterest>
@@ -426,9 +440,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100HOC"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M00S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_HOC_OPKgE" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>Hockey Centre to OPK East Entrance</Name>
@@ -440,9 +456,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgE"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M00S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgE_HBA" created="2011-02-10T22:00:00Z" version="any">
               <Name>OPK East Entrance to Handball Arena</Name>
@@ -454,9 +472,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100HBA"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT14M21S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_HBA_OPKgE" created="2011-02-10T22:00:00Z" changed="2011-03-01T17:00:00Z" modification="revise" version="any">
               <Name>Handball Arena to OPK East Entrance</Name>
@@ -468,9 +488,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgE"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT14M21S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgE_STA" created="2011-02-10T22:00:00Z" version="any">
               <Name>OPK East Entrance to Olympic Stadium</Name>
@@ -482,9 +504,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100STA"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT6M8S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_STA_OPKgE" created="2011-02-10T22:00:00Z" changed="2011-03-01T17:00:00Z" modification="revise" version="any">
               <Name>Olympic Stadium to OPK East Entrance</Name>
@@ -496,9 +520,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgE"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT6M8S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgE_BBA" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>OPK East Entrance to Basketball Arena</Name>
@@ -510,9 +536,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100BBA"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_BBA_OPKgE" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>Basketball Arena to OPK East Entrance</Name>
@@ -524,9 +552,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgE"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgE_AWP" created="2011-02-10T22:00:00Z" version="any">
               <Name>OPK East Entrance to Water Polo Arena</Name>
@@ -538,9 +568,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100AWP"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT7M52S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_AWP_OPKgE" created="2011-02-10T22:00:00Z" changed="2011-03-01T17:00:00Z" modification="revise" version="any">
               <Name>Water Polo Arena to OPK East Entrance</Name>
@@ -552,9 +584,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgE"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT7M52S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgE_AQC" created="2011-02-10T22:00:00Z" version="any">
               <Name>OPK East Entrance to Aquatics Centre</Name>
@@ -566,9 +600,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100AQC"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT8M46S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_AQC_OPKgE" created="2011-02-10T22:00:00Z" changed="2011-03-01T17:00:00Z" modification="revise" version="any">
               <Name>Aquatics Centre to OPK East Entrance</Name>
@@ -580,9 +616,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgE"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT8M46S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgE_VEL" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>OPK East Entrance to Velodrome</Name>
@@ -594,9 +632,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100VEL"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_VEL_OPKgE" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>Velodrome to OPK East Entrance</Name>
@@ -608,9 +648,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgE"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgE_ETM" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>OPK East Entrance to Eton Manor</Name>
@@ -622,9 +664,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100ETM"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_ETM_OPKgE" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>Eton Manor to OPK East Entrance</Name>
@@ -636,9 +680,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgE"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgE_BMX" created="2011-02-11T09:35:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>OPK East Entrance to BMX Circuit</Name>
@@ -650,9 +696,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100BMX"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_BMX_OPKgE" created="2011-02-11T09:35:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>BMX Circuit to OPK East Entrance</Name>
@@ -664,9 +712,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgE"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgE_OPK" created="2011-02-11T10:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>OPK East Entrance to centre of Olympic Park</Name>
@@ -678,9 +728,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT5M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_OPK_OPKgE" created="2011-02-11T10:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>centre of Olympic Park to OPK East Entrance</Name>
@@ -692,9 +744,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgE"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT5M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgS_HOC" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>OPK South Entrance to Hockey Centre</Name>
@@ -706,9 +760,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100HOC"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_HOC_OPKgS" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>Hockey Centre to OPK South Entrance</Name>
@@ -720,9 +776,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgS"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgS_HBA" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>OPK South Entrance to Handball Arena</Name>
@@ -734,9 +792,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100HBA"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_HBA_OPKgS" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>Handball Arena to OPK South Entrance</Name>
@@ -748,9 +808,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgS"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgS_STA" created="2011-02-10T22:00:00Z" version="any">
               <Name>OPK South Entrance to Olympic Stadium</Name>
@@ -762,9 +824,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100STA"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT5M23S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_STA_OPKgS" created="2011-02-10T22:00:00Z" changed="2011-03-01T17:00:00Z" modification="revise" version="any">
               <Name>Olympic Stadium to OPK South Entrance</Name>
@@ -776,9 +840,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgS"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT5M23S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgS_BBA" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>OPK South Entrance to Basketball Arena</Name>
@@ -790,9 +856,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100BBA"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_BBA_OPKgS" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>Basketball Arena to OPK South Entrance</Name>
@@ -804,9 +872,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgS"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgS_AWP" created="2011-02-10T22:00:00Z" version="any">
               <Name>OPK South Entrance to Water Polo Arena</Name>
@@ -818,9 +888,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100AWP"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT10M45S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_AWP_OPKgS" created="2011-02-10T22:00:00Z" changed="2011-03-01T17:00:00Z" modification="revise" version="any">
               <Name>Water Polo Arena to OPK South Entrance</Name>
@@ -832,9 +904,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgS"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT10M45S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgS_AQC" created="2011-02-10T22:00:00Z" version="any">
               <Name>OPK South Entrance to Aquatics Centre</Name>
@@ -846,9 +920,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100AQC"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT6M32S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_AQC_OPKgS" created="2011-02-10T22:00:00Z" changed="2011-03-01T17:00:00Z" modification="revise" version="any">
               <Name>Aquatics Centre to OPK South Entrance</Name>
@@ -860,9 +936,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgS"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT6M32S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgS_VEL" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>OPK South Entrance to Velodrome</Name>
@@ -874,9 +952,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100VEL"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_VEL_OPKgS" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>Velodrome to OPK South Entrance</Name>
@@ -888,9 +968,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgS"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgS_ETM" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>OPK South Entrance to Eton Manor</Name>
@@ -902,9 +984,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100ETM"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_ETM_OPKgS" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>Eton Manor to OPK South Entrance</Name>
@@ -916,9 +1000,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgS"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgS_BMX" created="2011-02-11T09:35:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>OPK South Entrance to BMX Circuit</Name>
@@ -930,9 +1016,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100BMX"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_BMX_OPKgS" created="2011-02-11T09:35:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>BMX Circuit to OPK South Entrance</Name>
@@ -944,9 +1032,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgS"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgS_OPK" created="2011-02-11T10:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>OPK South Entrance to centre of Olympic Park</Name>
@@ -958,9 +1048,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT5M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_OPK_OPKgS" created="2011-02-11T10:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>centre of Olympic Park to OPK South Entrance</Name>
@@ -972,9 +1064,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgS"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT5M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgN_ETM" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>OPK North Entrance to Eton Manor</Name>
@@ -986,9 +1080,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100ETM"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT5M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_ETM_OPKgN" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>Eton Manor to OPK North Entrance</Name>
@@ -1000,9 +1096,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgN"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT5M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgN_VEL" created="2011-02-10T22:00:00Z" version="any">
               <Name>OPK North Entrance to Velodrome</Name>
@@ -1014,9 +1112,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100VEL"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT7M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_VEL_OPKgN" created="2011-02-10T22:00:00Z" changed="2011-03-01T17:00:00Z" modification="revise" version="any">
               <Name>Velodrome to OPK North Entrance</Name>
@@ -1028,9 +1128,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgN"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT7M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgN_BBA" created="2011-02-10T22:00:00Z" version="any">
               <Name>OPK North Entrance to Basketball Arena</Name>
@@ -1042,9 +1144,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100BBA"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT8M37S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_BBA_OPKgN" created="2011-02-10T22:00:00Z" changed="2011-03-01T17:00:00Z" modification="revise" version="any">
               <Name>Basketball Arena to OPK North Entrance</Name>
@@ -1056,9 +1160,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgN"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT8M37S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgN_HOC" created="2011-02-10T22:00:00Z" version="any">
               <Name>OPK North Entrance to Hockey Centre</Name>
@@ -1070,9 +1176,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100HOC"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT11M13S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_HOC_OPKgN" created="2011-02-10T22:00:00Z" changed="2011-03-01T17:00:00Z" modification="revise" version="any">
               <Name>Hockey Centre to OPK North Entrance</Name>
@@ -1084,9 +1192,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgN"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT11M13S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgN_HBA" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>OPK North Entrance to Handball Arena</Name>
@@ -1098,9 +1208,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100HBA"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_HBA_OPKgN" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>Handball Arena to OPK North Entrance</Name>
@@ -1112,9 +1224,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgN"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgN_STA" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>OPK North Entrance to Olympic Stadium</Name>
@@ -1126,9 +1240,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100STA"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_STA_OPKgN" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>Olympic Stadium to OPK North Entrance</Name>
@@ -1140,9 +1256,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgN"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgN_AWP" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>OPK North Entrance to Water Polo Arena</Name>
@@ -1154,9 +1272,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100AWP"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_AWP_OPKgN" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>Water Polo Arena to OPK North Entrance</Name>
@@ -1168,9 +1288,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgN"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgN_AQC" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>OPK North Entrance to Aquatics Centre</Name>
@@ -1182,9 +1304,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100AQC"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_AQC_OPKgN" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>Aquatics Centre to OPK North Entrance</Name>
@@ -1196,9 +1320,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgN"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgN_BMX" created="2011-02-11T09:35:00Z" changed="2011-02-22T10:00:00Z" modification="revise" version="any">
               <Name>OPK North Entrance to BMX Circuit</Name>
@@ -1210,9 +1336,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100BMX"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT9M8S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_BMX_OPKgN" created="2011-02-11T09:35:00Z" changed="2011-03-01T17:00:00Z" modification="revise" version="any">
               <Name>BMX Circuit to OPK North Entrance</Name>
@@ -1224,9 +1352,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgN"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT9M8S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgN_OPK" created="2011-02-11T10:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>OPK North Entrance to centre of Olympic Park</Name>
@@ -1238,9 +1368,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT5M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_OPK_OPKgN" created="2011-02-11T10:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>centre of Olympic Park to OPK North Entrance</Name>
@@ -1252,9 +1384,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgN"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT5M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgW_HOC" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>OPK West Entrance to Hockey Centre</Name>
@@ -1266,9 +1400,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100HOC"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_HOC_OPKgW" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>Hockey Centre to OPK West Entrance</Name>
@@ -1280,9 +1416,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgW"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgW_BBA" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>OPK West Entrance to Basketball Arena</Name>
@@ -1294,9 +1432,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100BBA"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_BBA_OPKgW" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>Basketball Arena to OPK West Entrance</Name>
@@ -1308,9 +1448,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgW"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgW_HBA" created="2011-02-10T22:00:00Z" version="any">
               <Name>OPK West Entrance to Handball Arena</Name>
@@ -1322,9 +1464,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100HBA"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT11M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_HBA_OPKgW" created="2011-02-10T22:00:00Z" changed="2011-03-01T17:00:00Z" modification="revise" version="any">
               <Name>Handball Arena to OPK West Entrance</Name>
@@ -1336,9 +1480,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgW"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT11M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgW_AWP" created="2011-02-10T22:00:00Z" version="any">
               <Name>OPK West Entrance to Water Polo Arena</Name>
@@ -1350,9 +1496,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100AWP"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT10M11S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_AWP_OPKgW" created="2011-02-10T22:00:00Z" changed="2011-03-01T17:00:00Z" modification="revise" version="any">
               <Name>Water Polo Arena to OPK West Entrance</Name>
@@ -1364,9 +1512,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgW"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT10M11S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgW_AQC" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>OPK West Entrance to Aquatics Centre</Name>
@@ -1378,9 +1528,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100AQC"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_AQC_OPKgW" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>Aquatics Centre to OPK West Entrance</Name>
@@ -1392,9 +1544,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgW"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgW_STA" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>OPK West Entrance to Olympic Stadium</Name>
@@ -1406,9 +1560,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100STA"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_STA_OPKgW" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>Olympic Stadium to OPK West Entrance</Name>
@@ -1420,9 +1576,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgW"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgW_VEL" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>OPK West Entrance to Velodrome</Name>
@@ -1434,9 +1592,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100VEL"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_VEL_OPKgW" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>Velodrome to OPK West Entrance</Name>
@@ -1448,9 +1608,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgW"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgW_ETM" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>OPK West Entrance to Eton Manor</Name>
@@ -1462,9 +1624,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100ETM"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_ETM_OPKgW" created="2011-02-10T22:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>Eton Manor to OPK West Entrance</Name>
@@ -1476,9 +1640,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgW"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgW_BMX" created="2011-02-11T09:35:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>OPK West Entrance to BMX Circuit</Name>
@@ -1490,9 +1656,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100BMX"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_BMX_OPKgW" created="2011-02-11T09:35:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>BMX Circuit to OPK West Entrance</Name>
@@ -1504,9 +1672,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgW"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPKgW_OPK" created="2011-02-11T10:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>OPK West Entrance to centre of Olympic Park</Name>
@@ -1518,9 +1688,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT5M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100OPK_OPK_OPKgW" created="2011-02-11T10:00:00Z" changed="2011-06-20T17:00:00Z" modification="revise" version="any">
               <Name>centre of Olympic Park to OPK West Entrance</Name>
@@ -1532,9 +1704,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100OPK"/>
                 <EntranceRef version="any" ref="naptPoi:8100OPKgW"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT5M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
           </navigationPaths>
         </SiteFrame>
@@ -1556,6 +1730,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Venue" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
               <entrances>
                 <PointOfInterestEntrance id="naptPoi:8100EXL@gEntr" created="2011-03-01T17:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                   <Name>ExCeL Spectator Entrance</Name>
@@ -1567,6 +1742,7 @@
                   <placeTypes>
                     <TypeOfPlaceRef ref="napt:type_of_place@PIE" versionRef="EXTERNAL"/>
                   </placeTypes>
+                  <AccessModes/>
                   <checkConstraints>
                     <CheckConstraint id="oda:8100EXL@gEntr@SecQ" created="2011-03-01T17:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                       <Name>ExCeL Entrance Security Queue</Name>
@@ -1592,6 +1768,7 @@
                   <placeTypes>
                     <TypeOfPlaceRef ref="napt:type_of_place@PIE" versionRef="EXTERNAL"/>
                   </placeTypes>
+                  <AccessModes/>
                   <checkConstraints>
                     <CheckConstraint id="oda:8100EXL@gExit@ExitQ" created="2011-03-01T17:00:00Z" version="any">
                       <Name>ExCeL Exit Congestion</Name>
@@ -1624,6 +1801,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Venue" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
               <ParentSiteRef version="any" ref="naptPoi:8100EXL"/>
             </PointOfInterest>
             <PointOfInterest id="naptPoi:8100EXLN2" created="2011-03-01T17:00:00Z" version="any">
@@ -1641,6 +1819,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Venue" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
               <ParentSiteRef version="any" ref="naptPoi:8100EXL"/>
             </PointOfInterest>
             <PointOfInterest id="naptPoi:8100EXLS1" created="2011-03-01T17:00:00Z" version="any">
@@ -1658,6 +1837,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Venue" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
               <ParentSiteRef version="any" ref="naptPoi:8100EXL"/>
             </PointOfInterest>
             <PointOfInterest id="naptPoi:8100EXLS2" created="2011-03-01T17:00:00Z" version="any">
@@ -1675,6 +1855,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Venue" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
               <ParentSiteRef version="any" ref="naptPoi:8100EXL"/>
             </PointOfInterest>
             <PointOfInterest id="naptPoi:8100EXLS3" created="2011-03-01T17:00:00Z" version="any">
@@ -1692,6 +1873,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Venue" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
               <ParentSiteRef version="any" ref="naptPoi:8100EXL"/>
             </PointOfInterest>
           </pointsOfInterest>
@@ -1706,9 +1888,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100EXLN1"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT4M15S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100EXL_8100EXL@gEntr+8100EXLN2" created="2011-03-01T17:00:00Z" version="any">
               <Name>ExCeL Entrance to North Sports Hall 2</Name>
@@ -1720,9 +1904,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100EXLN2"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT11M30S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100EXL_8100EXL@gEntr+8100EXLS1" created="2011-03-01T17:00:00Z" version="any">
               <Name>ExCeL Entrance to South Sports Hall 1</Name>
@@ -1734,9 +1920,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100EXLS1"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT4M15S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100EXL_8100EXL@gEntr+8100EXLS2" created="2011-03-01T17:00:00Z" version="any">
               <Name>ExCeL Entrance to South Sports Hall 2</Name>
@@ -1748,9 +1936,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100EXLS2"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT11M30S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100EXL_8100EXL@gEntr+8100EXLS3" created="2011-03-01T17:00:00Z" version="any">
               <Name>ExCeL Entrance to South Sports Hall 3</Name>
@@ -1762,9 +1952,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100EXLS3"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT17M00S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100EXL_8100EXL@gEntr+8100EXL" created="2011-06-06T17:00:00Z" version="any">
               <Name>ExCeL Entrance to Excel (nominal venue point)</Name>
@@ -1776,9 +1968,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100EXL"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT11M30S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100EXLN1+8100EXL_8100EXL@gExit" created="2011-03-01T17:00:00Z" version="any">
               <Name>ExCeL North Sports Hall 1 to Exit</Name>
@@ -1790,9 +1984,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100EXL"/>
                 <EntranceRef version="any" ref="naptPoi:8100EXL@gExit"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M45S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100EXLN2+8100EXL_8100EXL@gExit" created="2011-03-01T17:00:00Z" version="any">
               <Name>ExCeL North Sports Hall 2 to Exit</Name>
@@ -1804,9 +2000,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100EXL"/>
                 <EntranceRef version="any" ref="naptPoi:8100EXL@gExit"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT9M00S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100EXLS1+8100EXL_8100EXL@gExit" created="2011-03-01T17:00:00Z" version="any">
               <Name>ExCeL South Sports Hall 1 to Exit</Name>
@@ -1818,9 +2016,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100EXL"/>
                 <EntranceRef version="any" ref="naptPoi:8100EXL@gExit"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT15M45S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100EXLS2+8100EXL_8100EXL@gExit" created="2011-03-01T17:00:00Z" version="any">
               <Name>ExCeL South Sports Hall 2 to Exit</Name>
@@ -1832,9 +2032,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100EXL"/>
                 <EntranceRef version="any" ref="naptPoi:8100EXL@gExit"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT9M00S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100EXLS3+8100EXL_8100EXL@gExit" created="2011-03-01T17:00:00Z" version="any">
               <Name>ExCeL South Sports Hall 3 to Exit</Name>
@@ -1846,9 +2048,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100EXL"/>
                 <EntranceRef version="any" ref="naptPoi:8100EXL@gExit"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT2M45S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100EXL+8100EXL_8100EXL@gExit" created="2011-06-06T17:00:00Z" version="any">
               <Name>ExCeL (nominal venue point) to Exit</Name>
@@ -1860,9 +2064,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100EXL"/>
                 <EntranceRef version="any" ref="naptPoi:8100EXL@gExit"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT9M00S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
           </navigationPaths>
         </SiteFrame>
@@ -1884,6 +2090,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Venue" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
               <entrances>
                 <PointOfInterestEntrance id="naptPoi:8100GRP@gGNW" created="2011-02-22T16:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                   <Name>Greenwich Spectator Gate</Name>
@@ -1895,6 +2102,7 @@
                   <placeTypes>
                     <TypeOfPlaceRef ref="napt:type_of_place@PIE" versionRef="EXTERNAL"/>
                   </placeTypes>
+                  <AccessModes/>
                   <checkConstraints>
                     <CheckConstraint id="oda:8100GRP@gGNW@SecQ" created="2011-03-01T17:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                       <Name>Greenwich Park Greenwich Gate Security Queue</Name>
@@ -1937,6 +2145,7 @@
                   <placeTypes>
                     <TypeOfPlaceRef ref="napt:type_of_place@PIE" versionRef="EXTERNAL"/>
                   </placeTypes>
+                  <AccessModes/>
                   <checkConstraints>
                     <CheckConstraint id="oda:8100GRP@gBKH1@SecQ" created="2011-03-01T17:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                       <Name>Greemwich Park Blackheath Gate (Days 1-4) Security Queue</Name>
@@ -1979,6 +2188,7 @@
                   <placeTypes>
                     <TypeOfPlaceRef ref="napt:type_of_place@PIE" versionRef="EXTERNAL"/>
                   </placeTypes>
+                  <AccessModes/>
                   <checkConstraints>
                     <CheckConstraint id="oda:8100GRP@gBKH6@SecQ" created="2011-03-01T17:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                       <Name>Greenwich Park Blackheath Gate (Days 6-16) Security Queue</Name>
@@ -2019,9 +2229,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100GRP"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT2M30S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100GRP+8100GRP_8100GRP@gGNW" created="2011-02-23T09:30:00Z" changed="2011-03-01T17:00:00Z" modification="revise" version="any">
               <Name>Greenwich Park Venue to Greenwich Entrance</Name>
@@ -2033,9 +2245,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100GRP"/>
                 <EntranceRef version="any" ref="naptPoi:8100GRP@gGNW"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT2M30S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100GRP_8100GRP@gBKH1+8100GRP" created="2011-02-23T09:30:00Z" version="any">
               <Name>Greenwich Park Blackheath Entrance (Days 1-4) to Venue</Name>
@@ -2047,9 +2261,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100GRP"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT13M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100GRP+8100GRP_8100GRP@gBKH1" created="2011-02-23T09:30:00Z" changed="2011-03-01T17:00:00Z" modification="revise" version="any">
               <Name>Greenwich Park Venue to Blackheath Entrance (Days 1-4)</Name>
@@ -2061,9 +2277,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100GRP"/>
                 <EntranceRef version="any" ref="naptPoi:8100GRP@gBKH1"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT13M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100GRP_8100GRP@gBKH6+8100GRP" created="2011-02-23T09:30:00Z" version="any">
               <Name>Greenwich Park Blackheath Entrance (Days 6-16) to Venue</Name>
@@ -2075,9 +2293,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100GRP"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT6M50S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100GRP+8100GRP_8100GRP@gBKH6" created="2011-02-23T09:30:00Z" changed="2011-03-01T17:00:00Z" modification="revise" version="any">
               <Name>Greenwich Park Venue to Blackheath Entrance (Days 6-16)</Name>
@@ -2089,9 +2309,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100GRP"/>
                 <EntranceRef version="any" ref="naptPoi:8100GRP@gBKH6"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT6M50S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
           </navigationPaths>
         </SiteFrame>
@@ -2113,6 +2335,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Venue" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
               <entrances>
                 <PointOfInterestEntrance id="naptPoi:8100NGA@gEntr" created="2011-02-23T10:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                   <Name>North Greenwich Arena Spectator Entrance</Name>
@@ -2124,6 +2347,7 @@
                   <placeTypes>
                     <TypeOfPlaceRef ref="napt:type_of_place@PIE" versionRef="EXTERNAL"/>
                   </placeTypes>
+                  <AccessModes/>
                   <checkConstraints>
                     <CheckConstraint id="oda:8100NGA@gEntr@SecQ" created="2011-03-01T17:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                       <Name>North Greenwich Arena Entrance Security Queue</Name>
@@ -2149,6 +2373,7 @@
                   <placeTypes>
                     <TypeOfPlaceRef ref="napt:type_of_place@PIE" versionRef="EXTERNAL"/>
                   </placeTypes>
+                  <AccessModes/>
                   <checkConstraints>
                     <CheckConstraint id="naptPoi:8100NGA@gExit@ExitQ" created="2011-03-01T17:00:00Z" version="any">
                       <Name>North Greenwich Arena Exit Congestion</Name>
@@ -2178,9 +2403,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100NGA"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT7M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100NGA+8100NGA_8100NGA@gExit" created="2011-02-23T10:00:00Z" version="any">
               <Name>NGA Venue to Exit</Name>
@@ -2192,9 +2419,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100NGA"/>
                 <EntranceRef version="any" ref="naptPoi:8100NGA@gExit"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT4M30S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
           </navigationPaths>
         </SiteFrame>
@@ -2216,6 +2445,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Venue" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
               <entrances>
                 <PointOfInterestEntrance id="naptPoi:8100RAB@g0" created="2011-04-21T17:00:00Z" changed="2011-06-22T10:00:00Z" modification="revise" version="any">
                   <Name>The Royal Artillery Barracks Northern Spectator Gate</Name>
@@ -2227,6 +2457,7 @@
                   <placeTypes>
                     <TypeOfPlaceRef ref="napt:type_of_place@PIE" versionRef="EXTERNAL"/>
                   </placeTypes>
+                  <AccessModes/>
                   <checkConstraints>
                     <CheckConstraint id="oda:8100RAB@g0@EntrQ" created="2011-04-21T17:00:00Z" changed="2011-06-22T10:00:00Z" modification="revise" version="any">
                       <Name>The Royal Artillery Barracks Northern Spectator Gate Secturity Queue</Name>
@@ -2263,6 +2494,7 @@
                   <placeTypes>
                     <TypeOfPlaceRef ref="napt:type_of_place@PIE" versionRef="EXTERNAL"/>
                   </placeTypes>
+                  <AccessModes/>
                   <checkConstraints>
                     <CheckConstraint id="oda:8100RAB@g1@EntrQ" created="2011-06-14T17:00:00Z" changed="2011-06-22T10:00:00Z" modification="revise" version="any">
                       <Name>The Royal Artillery Barracks Southern Spectator Gate Secturity Queue</Name>
@@ -2303,9 +2535,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100RAB"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT4M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100RAB+8100RAB_8100RAB@g0" created="2011-04-21T17:00:00Z" changed="2011-06-22T10:00:00Z" modification="revise" version="any">
               <Name>The Royal Artillery Barracks Spectator Area to Northern Spectator Gate (Exit)</Name>
@@ -2317,9 +2551,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100RAB"/>
                 <EntranceRef version="any" ref="naptPoi:8100RAB@g0"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT4M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100RAB_8100RAB@g1+8100RAB" created="2011-06-14T17:00:00Z" changed="2011-06-22T10:00:00Z" modification="revise" version="any">
               <Name>The Royal Artillery Barracks Southern Spectator Gate (Entry) to Spectator Area</Name>
@@ -2331,9 +2567,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100RAB"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT4M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100RAB+8100RAB_8100RAB@g1" created="2011-06-14T17:00:00Z" changed="2011-06-22T10:00:00Z" modification="revise" version="any">
               <Name>The Royal Artillery Barracks Spectator Area to Southern Spectator Gate (Exit)</Name>
@@ -2345,9 +2583,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100RAB"/>
                 <EntranceRef version="any" ref="naptPoi:8100RAB@g1"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT4M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
           </navigationPaths>
         </SiteFrame>
@@ -2369,6 +2609,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Venue" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
               <entrances>
                 <PointOfInterestEntrance id="naptPoi:8100EAR@gEntr" created="2011-02-10T22:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                   <Name>Earls Court Spectator Entrance</Name>
@@ -2380,6 +2621,7 @@
                   <placeTypes>
                     <TypeOfPlaceRef ref="napt:type_of_place@PIE" versionRef="EXTERNAL"/>
                   </placeTypes>
+                  <AccessModes/>
                   <checkConstraints>
                     <CheckConstraint id="oda:8100EAR@gEntr@SecQ" created="2011-03-01T17:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                       <Name>Earls Court Entrance Security Queue</Name>
@@ -2405,6 +2647,7 @@
                   <placeTypes>
                     <TypeOfPlaceRef ref="napt:type_of_place@PIE" versionRef="EXTERNAL"/>
                   </placeTypes>
+                  <AccessModes/>
                   <checkConstraints>
                     <CheckConstraint id="oda:8100EAR@gExit@ExitQ" created="2011-03-01T17:00:00Z" version="any">
                       <Name>Earls Court Exit Congestion</Name>
@@ -2434,9 +2677,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100EAR"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT19M10S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100EAR+8100EAR_8100EAR@gExit" created="2011-02-10T22:00:00Z" changed="2011-02-23T09:30:00Z" modification="revise" version="any">
               <Name>Earls Court Venue to Spectator Exit</Name>
@@ -2448,9 +2693,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100EAR"/>
                 <EntranceRef version="any" ref="naptPoi:8100EAR@gExit"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT19M10S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
           </navigationPaths>
         </SiteFrame>
@@ -2472,6 +2719,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Venue" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
               <entrances>
                 <PointOfInterestEntrance id="naptPoi:8100LCG@g0" created="2011-04-14T17:00:00Z" changed="2011-06-22T10:00:00Z" modification="revise" version="any">
                   <Name>Lords Cricket Ground Western Spectator Gate</Name>
@@ -2483,6 +2731,7 @@
                   <placeTypes>
                     <TypeOfPlaceRef ref="napt:type_of_place@PIE" versionRef="EXTERNAL"/>
                   </placeTypes>
+                  <AccessModes/>
                   <checkConstraints>
                     <CheckConstraint id="oda:8100LCG@g0@EntrQ" created="2011-04-14T17:00:00Z" changed="2011-06-22T10:00:00Z" modification="revise" version="any">
                       <Name>Lords Cricket Ground Western Spectator Gate Secturity Queue</Name>
@@ -2519,6 +2768,7 @@
                   <placeTypes>
                     <TypeOfPlaceRef ref="napt:type_of_place@PIE" versionRef="EXTERNAL"/>
                   </placeTypes>
+                  <AccessModes/>
                   <checkConstraints>
                     <CheckConstraint id="oda:8100LCG@g1@EntrQ" created="2011-06-14T17:00:00Z" changed="2011-06-22T10:00:00Z" modification="revise" version="any">
                       <Name>Lords Cricket Ground Eastern Spectator Gate Secturity Queue</Name>
@@ -2559,9 +2809,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100LCG"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT2M25S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100LCG+8100LCG_8100LCG@g0" created="2011-04-14T17:00:00Z" changed="2011-06-22T10:00:00Z" modification="revise" version="any">
               <Name>Lords Cricket Ground Spectator Area to Western Gate (Exit)</Name>
@@ -2573,9 +2825,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100LCG"/>
                 <EntranceRef version="any" ref="naptPoi:8100LCG@g0"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT2M25S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100LCG_8100LCG@g1+8100LCG" created="2011-06-14T17:00:00Z" changed="2011-06-22T10:00:00Z" modification="revise" version="any">
               <Name>Lords Cricket Ground Eastern Gate (Entry) to Spectator Area</Name>
@@ -2587,9 +2841,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100LCG"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT3M00S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100LCG+8100LCG_8100LCG@g1" created="2011-06-14T17:00:00Z" changed="2011-06-22T10:00:00Z" modification="revise" version="any">
               <Name>Lords Cricket Ground Spectator Area to Eastern Gate (Exit)</Name>
@@ -2601,9 +2857,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100LCG"/>
                 <EntranceRef version="any" ref="naptPoi:8100LCG@g1"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT3M00S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
           </navigationPaths>
         </SiteFrame>
@@ -2625,6 +2883,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Venue" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
               <entrances>
                 <PointOfInterestEntrance id="naptPoi:8100WIM@gN" created="2011-04-14T17:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                   <Name>Wimbledon Northern Spectator Gate</Name>
@@ -2636,6 +2895,7 @@
                   <placeTypes>
                     <TypeOfPlaceRef ref="napt:type_of_place@PIE" versionRef="EXTERNAL"/>
                   </placeTypes>
+                  <AccessModes/>
                   <checkConstraints>
                     <CheckConstraint id="oda:8100WIM@gN@EntrQ" created="2011-04-14T17:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                       <Name>Wimbledon Northern Spectator Gate Security Queue</Name>
@@ -2672,6 +2932,7 @@
                   <placeTypes>
                     <TypeOfPlaceRef ref="napt:type_of_place@PIE" versionRef="EXTERNAL"/>
                   </placeTypes>
+                  <AccessModes/>
                   <checkConstraints>
                     <CheckConstraint id="oda:8100LCG@gC@EntrQ" created="2011-04-14T17:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                       <Name>Wimbledon Central Spectator Gate Security Queue</Name>
@@ -2708,6 +2969,7 @@
                   <placeTypes>
                     <TypeOfPlaceRef ref="napt:type_of_place@PIE" versionRef="EXTERNAL"/>
                   </placeTypes>
+                  <AccessModes/>
                   <checkConstraints>
                     <CheckConstraint id="oda:8100WIM@gS@EntrQ" created="2011-04-14T17:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                       <Name>Wimbledon Southern Spectator Gate Security Queue</Name>
@@ -2748,9 +3010,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100WIM"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT3M16S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100WIM+8100WIM_100WIM@gN" created="2011-04-14T17:00:00Z" version="any">
               <Name>Wimbledon Spectator Area to Northern Gate (Exit)</Name>
@@ -2762,9 +3026,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100WIM"/>
                 <EntranceRef version="any" ref="naptPoi:8100WIM@gN"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT3M16S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100WIM_8100WIM@gC+8100WIM" created="2011-04-14T17:00:00Z" version="any">
               <Name>Wimbledon Central Spectator Gate (Entry) to Spectator Area</Name>
@@ -2776,9 +3042,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100WIM"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT2M10S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100WIM+8100WIM_8100WIM@gC" created="2011-04-14T17:00:00Z" version="any">
               <Name>Wimbledon Spectator Area to Central Gate (Exit)</Name>
@@ -2790,9 +3058,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100WIM"/>
                 <EntranceRef version="any" ref="naptPoi:8100WIM@gC"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT2M10S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100WIM_8100WIM@gS+8100WIM" created="2011-04-14T17:00:00Z" version="any">
               <Name>Wimbledon Southern Spectator Gate (Entry) to Spectator Area</Name>
@@ -2804,9 +3074,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100WIM"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT4M37S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100WIM+8100WIM_8100WIM@gS" created="2011-04-14T17:00:00Z" version="any">
               <Name>Wimbledon Spectator Area to Southern Gate (Exit)</Name>
@@ -2818,9 +3090,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100WIM"/>
                 <EntranceRef version="any" ref="naptPoi:8100WIM@gS"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT4M37S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
           </navigationPaths>
         </SiteFrame>
@@ -2842,6 +3116,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Venue" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
               <entrances>
                 <PointOfInterestEntrance id="naptPoi:8100HGP@gInN" created="2011-04-21T17:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                   <Name>Horse Guards Parade Northern Spectator Entrance</Name>
@@ -2853,6 +3128,7 @@
                   <placeTypes>
                     <TypeOfPlaceRef ref="napt:type_of_place@PIE" versionRef="EXTERNAL"/>
                   </placeTypes>
+                  <AccessModes/>
                   <checkConstraints>
                     <CheckConstraint id="oda:8100HGP@gInN@SecQ" created="2011-04-21T17:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                       <Name>Horse Guards Parade Northern Entrance Security Queue</Name>
@@ -2878,6 +3154,7 @@
                   <placeTypes>
                     <TypeOfPlaceRef ref="napt:type_of_place@PIE" versionRef="EXTERNAL"/>
                   </placeTypes>
+                  <AccessModes/>
                   <checkConstraints>
                     <CheckConstraint id="oda:8100HGP@gOutN@ExitQ" created="2011-04-21T17:00:00Z" version="any">
                       <Name>Horse Guards Parade Northern Exit Congestion</Name>
@@ -2903,6 +3180,7 @@
                   <placeTypes>
                     <TypeOfPlaceRef ref="napt:type_of_place@PIE" versionRef="EXTERNAL"/>
                   </placeTypes>
+                  <AccessModes/>
                   <checkConstraints>
                     <CheckConstraint id="oda:8100HGP@gInS@SecQ" created="2011-04-21T17:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                       <Name>Horse Guards Parade Southern Entrance Security Queue</Name>
@@ -2928,6 +3206,7 @@
                   <placeTypes>
                     <TypeOfPlaceRef ref="napt:type_of_place@PIE" versionRef="EXTERNAL"/>
                   </placeTypes>
+                  <AccessModes/>
                   <checkConstraints>
                     <CheckConstraint id="oda:8100HGP@gOutS@ExitQ" created="2011-04-21T17:00:00Z" version="any">
                       <Name>Horse Guards Parade Southern Exit Congestion</Name>
@@ -2957,9 +3236,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100HGP"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT10M00S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100HGP+800HGP_800HGP@gOutN" created="2011-04-21T17:00:00Z" version="any">
               <Name>Horse Guards Parade Venue to Northern Spectator Exit</Name>
@@ -2971,9 +3252,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100HGP"/>
                 <EntranceRef version="any" ref="naptPoi:8100HGP@gOutN"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT5M00S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100HGP_8100HGP@gInS@gInS+800HGP" created="2011-04-21T17:00:00Z" version="any">
               <Name>Horse Guards Parade Southern Spectator Entrance to Venue</Name>
@@ -2985,9 +3268,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100HGP"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT13M00S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100HGP_800HGP_800HGP@gOutS" created="2011-04-21T17:00:00Z" version="any">
               <Name>Horse Guards Parade Venue to Southern Spectator Exit</Name>
@@ -2999,9 +3284,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100HGP"/>
                 <EntranceRef version="any" ref="naptPoi:8100HGP@gOutS"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT8M00S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
           </navigationPaths>
         </SiteFrame>
@@ -3023,6 +3310,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Venue" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
               <entrances>
                 <PointOfInterestEntrance id="naptPoi:8100MAL@gN" created="2011-04-21T17:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                   <Name>The Mall Northern Spectator Gate</Name>
@@ -3034,6 +3322,7 @@
                   <placeTypes>
                     <TypeOfPlaceRef ref="napt:type_of_place@PIE" versionRef="EXTERNAL"/>
                   </placeTypes>
+                  <AccessModes/>
                   <checkConstraints>
                     <CheckConstraint id="oda:8100MAL@gN@SecQ" created="2011-04-21T17:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                       <Name>The Mall Northern Gate (Entry) Security Queue</Name>
@@ -3070,6 +3359,7 @@
                   <placeTypes>
                     <TypeOfPlaceRef ref="napt:type_of_place@PIE" versionRef="EXTERNAL"/>
                   </placeTypes>
+                  <AccessModes/>
                   <checkConstraints>
                     <CheckConstraint id="oda:8100MAL@gS@SecQ" created="2011-04-21T17:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                       <Name>The Mall Southern Gate (Entry) Security Queue</Name>
@@ -3110,9 +3400,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100MAL"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT2M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100MAL+8100MAL_8100MAL@gN" created="2011-04-21T17:00:00Z" version="any">
               <Name>The Mall Venue to Northern Spectator Gate</Name>
@@ -3124,9 +3416,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100MAL"/>
                 <EntranceRef version="any" ref="naptPoi:8100MAL@gN"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT2M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100MAL_8100MAL@gS+8100MAL" created="2011-04-21T17:00:00Z" version="any">
               <Name>The Mall Southern Spectator Gate to Venue</Name>
@@ -3138,9 +3432,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100MAL"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT2M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100MAL+8100MAL_8100MAL@gS" created="2011-04-21T17:00:00Z" version="any">
               <Name>The Mall Venue to Southern Spectator Gate</Name>
@@ -3152,9 +3448,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100MAL"/>
                 <EntranceRef version="any" ref="naptPoi:8100MAL@gS"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT2M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
           </navigationPaths>
         </SiteFrame>
@@ -3176,6 +3474,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Venue" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
               <entrances>
                 <PointOfInterestEntrance id="naptPoi:8100HYD@g0" created="2011-04-21T17:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                   <Name>Hyde Park Spectator Gate</Name>
@@ -3187,6 +3486,7 @@
                   <placeTypes>
                     <TypeOfPlaceRef ref="napt:type_of_place@PIE" versionRef="EXTERNAL"/>
                   </placeTypes>
+                  <AccessModes/>
                   <checkConstraints>
                     <CheckConstraint id="oda:8100HYD@g0@EntrQ" created="2011-04-21T17:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                       <Name>Hyde Park Entrance Secturity Queue</Name>
@@ -3227,9 +3527,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100HYD"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT3M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100HYD+8100HYD_8100HYD@g0" created="2011-04-21T17:00:00Z" version="any">
               <Name>Hyde Park Spectator Area to Gate (Exit)</Name>
@@ -3241,9 +3543,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100HYD"/>
                 <EntranceRef version="any" ref="naptPoi:8100HYD@g0"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT3M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
           </navigationPaths>
         </SiteFrame>
@@ -3265,6 +3569,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Venue" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
               <entrances>
                 <PointOfInterestEntrance id="naptPoi:8100WEA@gEntr" created="2011-04-14T17:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                   <Name>Wembley Arena Spectator Entrance</Name>
@@ -3276,6 +3581,7 @@
                   <placeTypes>
                     <TypeOfPlaceRef ref="napt:type_of_place@PIE" versionRef="EXTERNAL"/>
                   </placeTypes>
+                  <AccessModes/>
                   <checkConstraints>
                     <CheckConstraint id="oda:8100WEA@gEntr@SecQ" created="2011-04-14T17:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                       <Name>Wembley Arena Entrance Security Queue</Name>
@@ -3301,6 +3607,7 @@
                   <placeTypes>
                     <TypeOfPlaceRef ref="napt:type_of_place@PIE" versionRef="EXTERNAL"/>
                   </placeTypes>
+                  <AccessModes/>
                   <checkConstraints>
                     <CheckConstraint id="oda:8100WEA@gExit@ExitQ" created="2011-04-14T17:00:00Z" version="any">
                       <Name>Wembley Arena Exit Congestion</Name>
@@ -3330,9 +3637,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100WEA"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT2M23S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100WEA+8100WEAWEA_8100WEA@gExit" created="2011-04-14T17:00:00Z" version="any">
               <Name>Wembley Arena Venue to Spectator Exit</Name>
@@ -3344,9 +3653,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100WEA"/>
                 <EntranceRef version="any" ref="naptPoi:8100WEA@gExit"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT1M24S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
           </navigationPaths>
         </SiteFrame>
@@ -3368,6 +3679,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Venue" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
               <entrances>
                 <PointOfInterestEntrance id="naptPoi:8100LVC@g0" created="2011-04-14T17:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                   <Name>Lee Valley Centre Spectator Gate</Name>
@@ -3379,6 +3691,7 @@
                   <placeTypes>
                     <TypeOfPlaceRef ref="napt:type_of_place@PIE" versionRef="EXTERNAL"/>
                   </placeTypes>
+                  <AccessModes/>
                   <checkConstraints>
                     <CheckConstraint id="oda:8100LVC@g0@EntrQ" created="2011-04-14T17:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                       <Name>Lee Valley Centre Entrance Secturity Queue</Name>
@@ -3419,9 +3732,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100LVC"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT4M12S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100LVC+8100LVC_8100LVC@g0" created="2011-04-14T17:00:00Z" version="any">
               <Name>Lee Valley Spectator Area to Gate (Exit)</Name>
@@ -3433,9 +3748,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100LVC"/>
                 <EntranceRef version="any" ref="naptPoi:8100LVC@g0"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT4M12S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
           </navigationPaths>
         </SiteFrame>
@@ -3457,6 +3774,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Venue" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
               <entrances>
                 <PointOfInterestEntrance id="naptPoi:8100HAD@g0" created="2011-04-14T17:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                   <Name>Hadleigh Farm Spectator Gate</Name>
@@ -3468,6 +3786,7 @@
                   <placeTypes>
                     <TypeOfPlaceRef ref="napt:type_of_place@PIE" versionRef="EXTERNAL"/>
                   </placeTypes>
+                  <AccessModes/>
                   <checkConstraints>
                     <CheckConstraint id="oda:8100HAD@g0@EntrQ" created="2011-04-14T17:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                       <Name>Hadleigh Farm Entrance Secturity Queue</Name>
@@ -3508,9 +3827,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100HAD"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT10M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100HAD+8100HAD_8100HAD@g0" created="2011-04-14T17:00:00Z" version="any">
               <Name>Hadleigh Farm Spectator Area to Gate (Exit)</Name>
@@ -3522,9 +3843,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100HAD"/>
                 <EntranceRef version="any" ref="naptPoi:8100HAD@g0"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT10M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
           </navigationPaths>
         </SiteFrame>
@@ -3546,6 +3869,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Venue" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
               <entrances>
                 <PointOfInterestEntrance id="naptPoi:8100ETD@gTHub" created="2011-04-21T17:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                   <Name>Eton Dorney Transport Hub Gate</Name>
@@ -3557,6 +3881,7 @@
                   <placeTypes>
                     <TypeOfPlaceRef ref="napt:type_of_place@PIE" versionRef="EXTERNAL"/>
                   </placeTypes>
+                  <AccessModes/>
                   <checkConstraints>
                     <CheckConstraint id="oda:8100ETD@gTHub@SecQ" created="2011-04-21T17:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                       <Name>Eton Dorney Transport Hub Gate (Entry) Security Queue</Name>
@@ -3593,6 +3918,7 @@
                   <placeTypes>
                     <TypeOfPlaceRef ref="napt:type_of_place@PIE" versionRef="EXTERNAL"/>
                   </placeTypes>
+                  <AccessModes/>
                   <checkConstraints>
                     <CheckConstraint id="oda:8100ETD@gN@SecQ" created="2011-04-21T17:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                       <Name>Eton Dorney Northern Gate (Entry) Security Queue</Name>
@@ -3633,9 +3959,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100ETD"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT10M30S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100ETD+8100TD_8100ETD@gN" created="2011-04-21T17:00:00Z" version="any">
               <Name>Eton Dorney Venue to Northern Spectator Gate</Name>
@@ -3647,9 +3975,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100ETD"/>
                 <EntranceRef version="any" ref="naptPoi:8100ETD@gN"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT10M30S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100ETD_8100ETD@gTHub+8100ETD" created="2011-04-21T17:00:00Z" version="any">
               <Name>Eton Dorney Transport Hub Spectator Gate to Venue</Name>
@@ -3661,9 +3991,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100ETD"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT19M30S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100ETD+8100ETD_8100ETD@gTHub" created="2011-04-21T17:00:00Z" version="any">
               <Name>Eton Dorney Venue to Transport Hub Spectator Gate</Name>
@@ -3675,9 +4007,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100ETD"/>
                 <EntranceRef version="any" ref="naptPoi:8100ETD@gTHub"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT19M30S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
           </navigationPaths>
         </SiteFrame>
@@ -3699,6 +4033,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Venue" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
               <entrances>
                 <PointOfInterestEntrance id="naptPoi:8100WAP@g0" created="2011-04-21T17:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                   <Name>Weymouth and Portland Spectator Gate</Name>
@@ -3710,6 +4045,7 @@
                   <placeTypes>
                     <TypeOfPlaceRef ref="napt:type_of_place@PIE" versionRef="EXTERNAL"/>
                   </placeTypes>
+                  <AccessModes/>
                   <checkConstraints>
                     <CheckConstraint id="oda:8100WAP@g0@EntrQ" created="2011-04-21T17:00:00Z" changed="2011-05-27T17:00:00Z" modification="revise" version="any">
                       <Name>Weymouth and Portland Entrance Secturity Queue</Name>
@@ -3750,9 +4086,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100WAP"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT2M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100WAP_8100WAP+8100WAP@g0" created="2011-04-21T17:00:00Z" version="any">
               <Name>Weymouth and Portland Spectator Area to Gate (Exit)</Name>
@@ -3764,9 +4102,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100WAP"/>
                 <EntranceRef version="any" ref="naptPoi:8100WAP@g0"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT2M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
           </navigationPaths>
         </SiteFrame>
@@ -3788,6 +4128,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Venue" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
               <entrances>
                 <PointOfInterestEntrance id="naptPoi:8100WEM@g0" created="2011-06-22T10:00:00Z" version="any">
                   <Name>Wembley Stadium Turnstiles</Name>
@@ -3799,6 +4140,7 @@
                   <placeTypes>
                     <TypeOfPlaceRef ref="napt:type_of_place@PIE" versionRef="EXTERNAL"/>
                   </placeTypes>
+                  <AccessModes/>
                   <checkConstraints>
                     <CheckConstraint id="oda:8100WEM@g0@EntrQ" created="2011-06-22T10:00:00Z" version="any">
                       <Name>Wembley Stadium Turnstiles Ticket Check Queue</Name>
@@ -3839,9 +4181,11 @@
               <To>
                 <PlaceRef version="any" ref="naptPoi:8100WEM"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT5M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
             <NavigationPath id="oda:8100WEM+8100WEM_8100WEM@g0" created="2011-04-21T17:00:00Z" version="any">
               <Name>Wembley Stadium Spectator Area to Turnstiles (Exit)</Name>
@@ -3853,9 +4197,11 @@
                 <PlaceRef version="any" ref="naptPoi:8100WEM"/>
                 <EntranceRef version="any" ref="naptPoi:8100WEM@g0"/>
               </To>
+              <AccessModes/>
               <TransferDuration>
                 <DefaultDuration>PT5M0S</DefaultDuration>
               </TransferDuration>
+              <AccessFeatureList/>
             </NavigationPath>
           </navigationPaths>
         </SiteFrame>
@@ -3877,6 +4223,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Venue" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
             </PointOfInterest>
           </pointsOfInterest>
         </SiteFrame>
@@ -3898,6 +4245,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Venue" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
             </PointOfInterest>
           </pointsOfInterest>
         </SiteFrame>
@@ -3919,6 +4267,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Venue" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
             </PointOfInterest>
           </pointsOfInterest>
         </SiteFrame>
@@ -3940,6 +4289,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Venue" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
             </PointOfInterest>
           </pointsOfInterest>
         </SiteFrame>
@@ -3961,6 +4311,7 @@
               <placeTypes>
                 <TypeOfPlaceRef ref="napt:type_of_place@Venue" versionRef="EXTERNAL"/>
               </placeTypes>
+              <AccessModes/>
             </PointOfInterest>
           </pointsOfInterest>
         </SiteFrame>
