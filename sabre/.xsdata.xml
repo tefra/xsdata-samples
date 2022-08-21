@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Config xmlns="http://pypi.org/project/xsdata" version="22.3">
+<Config xmlns="http://pypi.org/project/xsdata" version="22.8">
   <Output maxLineLength="79">
     <Package>sabre.models</Package>
     <Format repr="true" eq="true" order="false" unsafeHash="false" frozen="false" slots="false" kwOnly="false">dataclasses</Format>
     <Structure>filenames</Structure>
     <DocstringStyle>Google</DocstringStyle>
+    <FilterStrategy>allGlobals</FilterStrategy>
     <RelativeImports>false</RelativeImports>
     <CompoundFields defaultName="choice" forceDefaultName="false">false</CompoundFields>
     <PostponedAnnotations>false</PostponedAnnotations>

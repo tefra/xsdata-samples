@@ -4,6 +4,7 @@
 
 - Auto generated models from schema definitions
 - Verify bindings from samples
+- Showcase class filter strategy `referredGlobals`
 
 ## Makefile commands
 

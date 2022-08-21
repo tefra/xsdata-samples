@@ -587,11 +587,7 @@
                           },
                           "type": null
                         },
-                        {
-                          "qname": "{http://www.w3.org/1999/xhtml}br",
-                          "value": {},
-                          "type": "{http://www.w3.org/1999/xhtml}xhtml.br.type"
-                        },
+                        {},
                         {
                           "qname": "{http://www.w3.org/1999/xhtml}b",
                           "value": {
@@ -602,11 +598,7 @@
                           },
                           "type": null
                         },
-                        {
-                          "qname": "{http://www.w3.org/1999/xhtml}br",
-                          "value": {},
-                          "type": "{http://www.w3.org/1999/xhtml}xhtml.br.type"
-                        },
+                        {},
                         {
                           "qname": "{http://www.w3.org/1999/xhtml}b",
                           "value": {
@@ -617,11 +609,7 @@
                           },
                           "type": null
                         },
-                        {
-                          "qname": "{http://www.w3.org/1999/xhtml}br",
-                          "value": {},
-                          "type": "{http://www.w3.org/1999/xhtml}xhtml.br.type"
-                        },
+                        {},
                         {
                           "qname": "{http://www.w3.org/1999/xhtml}b",
                           "value": {
@@ -632,11 +620,7 @@
                           },
                           "type": null
                         },
-                        {
-                          "qname": "{http://www.w3.org/1999/xhtml}br",
-                          "value": {},
-                          "type": "{http://www.w3.org/1999/xhtml}xhtml.br.type"
-                        },
+                        {},
                         {
                           "qname": "{http://www.w3.org/1999/xhtml}b",
                           "value": {
@@ -647,11 +631,7 @@
                           },
                           "type": null
                         },
-                        {
-                          "qname": "{http://www.w3.org/1999/xhtml}br",
-                          "value": {},
-                          "type": "{http://www.w3.org/1999/xhtml}xhtml.br.type"
-                        },
+                        {},
                         {
                           "qname": "{http://www.w3.org/1999/xhtml}b",
                           "value": {
@@ -662,11 +642,7 @@
                           },
                           "type": null
                         },
-                        {
-                          "qname": "{http://www.w3.org/1999/xhtml}br",
-                          "value": {},
-                          "type": "{http://www.w3.org/1999/xhtml}xhtml.br.type"
-                        },
+                        {},
                         {
                           "qname": "{http://www.w3.org/1999/xhtml}b",
                           "value": {
@@ -677,11 +653,7 @@
                           },
                           "type": null
                         },
-                        {
-                          "qname": "{http://www.w3.org/1999/xhtml}br",
-                          "value": {},
-                          "type": "{http://www.w3.org/1999/xhtml}xhtml.br.type"
-                        },
+                        {},
                         {
                           "qname": "{http://www.w3.org/1999/xhtml}b",
                           "value": {
@@ -908,22 +880,14 @@
                     "p": {
                       "content": [
                         {
-                          "qname": "{http://www.w3.org/1999/xhtml}span",
-                          "value": {
-                            "style": "",
-                            "content": [
-                              {
-                                "qname": "{http://www.w3.org/1999/xhtml}object",
-                                "value": {
-                                  "data": "KuFu_Testfunktion_00270cf8/21744/_3f36bf4d-5428-4134-9059-02e7c8a3af26_1.png",
-                                  "type": "image/png",
-                                  "content": []
-                                },
-                                "type": "{http://www.w3.org/1999/xhtml}xhtml.object.type"
-                              }
-                            ]
-                          },
-                          "type": "{http://www.w3.org/1999/xhtml}xhtml.span.type"
+                          "style": "",
+                          "content": [
+                            {
+                              "data": "KuFu_Testfunktion_00270cf8/21744/_3f36bf4d-5428-4134-9059-02e7c8a3af26_1.png",
+                              "type": "image/png",
+                              "content": []
+                            }
+                          ]
                         }
                       ]
                     },
@@ -1069,11 +1033,7 @@
                     "p": {
                       "content": [
                         "Das vorliegende Lastenheft beschreibt die Kundenfunktionsauspr\u00e4gung der",
-                        {
-                          "qname": "{http://www.w3.org/1999/xhtml}br",
-                          "value": {},
-                          "type": "{http://www.w3.org/1999/xhtml}xhtml.br.type"
-                        },
+                        {},
                         "\nFunktion \"Testfunktion\"  "
                       ]
                     },
@@ -1363,11 +1323,7 @@
                     "p": {
                       "content": [
                         "ACA:  ",
-                        {
-                          "qname": "{http://www.w3.org/1999/xhtml}br",
-                          "value": {},
-                          "type": "{http://www.w3.org/1999/xhtml}xhtml.br.type"
-                        },
+                        {},
                         "\nAdaptive Cruise Assist  "
                       ]
                     },
@@ -1441,11 +1397,7 @@
                     "p": {
                       "content": [
                         "ACC:  ",
-                        {
-                          "qname": "{http://www.w3.org/1999/xhtml}br",
-                          "value": {},
-                          "type": "{http://www.w3.org/1999/xhtml}xhtml.br.type"
-                        },
+                        {},
                         "\nAdaptive Cruise Control  "
                       ]
                     },
@@ -1519,11 +1471,7 @@
                     "p": {
                       "content": [
                         "HMI:  ",
-                        {
-                          "qname": "{http://www.w3.org/1999/xhtml}br",
-                          "value": {},
-                          "type": "{http://www.w3.org/1999/xhtml}xhtml.br.type"
-                        },
+                        {},
                         "\nHuman Maschine Interface  "
                       ]
                     },
@@ -1669,11 +1617,7 @@
                     "p": {
                       "content": [
                         "Ego-Fahrzeug:  ",
-                        {
-                          "qname": "{http://www.w3.org/1999/xhtml}br",
-                          "value": {},
-                          "type": "{http://www.w3.org/1999/xhtml}xhtml.br.type"
-                        },
+                        {},
                         "\nDas eigene Fahrzeug auf das sich die Funktionsberschreibung bezieht  "
                       ]
                     },
@@ -1747,11 +1691,7 @@
                     "p": {
                       "content": [
                         "Ego-Fahrstreifen:  ",
-                        {
-                          "qname": "{http://www.w3.org/1999/xhtml}br",
-                          "value": {},
-                          "type": "{http://www.w3.org/1999/xhtml}xhtml.br.type"
-                        },
+                        {},
                         "\nFahrstreifen auf dem sich das Ego-Fahrzeug bewegt  "
                       ]
                     },

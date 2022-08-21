@@ -152,22 +152,6 @@ class CodeType:
 
 
 @dataclass(frozen=True)
-class DateTimeType:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        }
-    )
-    format: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass(frozen=True)
 class IdentifierType:
     value: str = field(
         default="",
@@ -221,22 +205,6 @@ class IdentifierType:
         default=None,
         metadata={
             "name": "schemeURI",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass(frozen=True)
-class IndicatorType:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        }
-    )
-    format: Optional[str] = field(
-        default=None,
-        metadata={
             "type": "Attribute",
         }
     )

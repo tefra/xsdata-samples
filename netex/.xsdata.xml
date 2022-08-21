@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Config xmlns="http://pypi.org/project/xsdata" version="22.3">
+<Config xmlns="http://pypi.org/project/xsdata" version="22.8">
   <Output maxLineLength="79">
     <Package>netex.models</Package>
     <Format repr="true" eq="true" order="false" unsafeHash="false" frozen="false" slots="false" kwOnly="false">dataclasses</Format>
     <Structure>clusters</Structure>
     <DocstringStyle>Blank</DocstringStyle>
+    <FilterStrategy>allGlobals</FilterStrategy>
     <RelativeImports>true</RelativeImports>
     <CompoundFields defaultName="choice" forceDefaultName="false">true</CompoundFields>
     <PostponedAnnotations>false</PostponedAnnotations>
