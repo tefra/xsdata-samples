@@ -12,7 +12,6 @@ xsd_location = str(cwd.joinpath("schemas/BargainFinderMaxRQ_v1-9-7.xsd"))
 
 
 def test_serializing(json_parser, xml_serializer):
-
     fixture = "bargain_finder_max_rq"
     json_fixture = cwd.joinpath(f"{fixture}.json")
     xml_fixture = cwd.joinpath(f"{fixture}.xml")

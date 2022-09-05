@@ -20,10 +20,9 @@ from xcbl.models.planning_schedule import (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ResponseType:
-    response_type_coded: Optional[str] = field(
-        default=None,
+    response_type_coded: str = field(
         metadata={
             "name": "ResponseTypeCoded",
             "type": "Element",
@@ -39,10 +38,9 @@ class ResponseType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ChangedLocationGroupedPlanningDetail:
-    location_grouped_planning_detail: Optional[LocationGroupedPlanningDetail] = field(
-        default=None,
+    location_grouped_planning_detail: LocationGroupedPlanningDetail = field(
         metadata={
             "name": "LocationGroupedPlanningDetail",
             "type": "Element",
@@ -51,10 +49,9 @@ class ChangedLocationGroupedPlanningDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ChangedMaterialGroupedPlanningDetail:
-    material_grouped_planning_detail: Optional[MaterialGroupedPlanningDetail] = field(
-        default=None,
+    material_grouped_planning_detail: MaterialGroupedPlanningDetail = field(
         metadata={
             "name": "MaterialGroupedPlanningDetail",
             "type": "Element",
@@ -63,10 +60,9 @@ class ChangedMaterialGroupedPlanningDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ChangedPlanningScheduleHeader:
-    planning_schedule_header: Optional[PlanningScheduleHeader] = field(
-        default=None,
+    planning_schedule_header: PlanningScheduleHeader = field(
         metadata={
             "name": "PlanningScheduleHeader",
             "type": "Element",
@@ -75,10 +71,9 @@ class ChangedPlanningScheduleHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OriginalLocationGroupedPlanningDetail:
-    location_grouped_planning_detail: Optional[LocationGroupedPlanningDetail] = field(
-        default=None,
+    location_grouped_planning_detail: LocationGroupedPlanningDetail = field(
         metadata={
             "name": "LocationGroupedPlanningDetail",
             "type": "Element",
@@ -87,10 +82,9 @@ class OriginalLocationGroupedPlanningDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OriginalMaterialGroupedPlanningDetail:
-    material_grouped_planning_detail: Optional[MaterialGroupedPlanningDetail] = field(
-        default=None,
+    material_grouped_planning_detail: MaterialGroupedPlanningDetail = field(
         metadata={
             "name": "MaterialGroupedPlanningDetail",
             "type": "Element",
@@ -99,10 +93,9 @@ class OriginalMaterialGroupedPlanningDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OriginalPlanningScheduleHeader:
-    planning_schedule_header: Optional[PlanningScheduleHeader] = field(
-        default=None,
+    planning_schedule_header: PlanningScheduleHeader = field(
         metadata={
             "name": "PlanningScheduleHeader",
             "type": "Element",
@@ -111,10 +104,9 @@ class OriginalPlanningScheduleHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PlanningScheduleResponseSummary:
-    planning_schedule_summary: Optional[PlanningScheduleSummary] = field(
-        default=None,
+    planning_schedule_summary: PlanningScheduleSummary = field(
         metadata={
             "name": "PlanningScheduleSummary",
             "type": "Element",
@@ -123,10 +115,9 @@ class PlanningScheduleResponseSummary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ScheduleReference:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -135,10 +126,9 @@ class ScheduleReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LocationGroupedPlanningResponse:
-    detail_response_coded: Optional[str] = field(
-        default=None,
+    detail_response_coded: str = field(
         metadata={
             "name": "DetailResponseCoded",
             "type": "Element",
@@ -189,10 +179,9 @@ class LocationGroupedPlanningResponse:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MaterialGroupedPlanningResponse:
-    detail_response_coded: Optional[str] = field(
-        default=None,
+    detail_response_coded: str = field(
         metadata={
             "name": "DetailResponseCoded",
             "type": "Element",
@@ -243,26 +232,23 @@ class MaterialGroupedPlanningResponse:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PlanningScheduleResponseHeader:
-    schedule_response_id: Optional[str] = field(
-        default=None,
+    schedule_response_id: str = field(
         metadata={
             "name": "ScheduleResponseID",
             "type": "Element",
             "required": True,
         }
     )
-    schedule_response_issue_date: Optional[str] = field(
-        default=None,
+    schedule_response_issue_date: str = field(
         metadata={
             "name": "ScheduleResponseIssueDate",
             "type": "Element",
             "required": True,
         }
     )
-    schedule_reference: Optional[ScheduleReference] = field(
-        default=None,
+    schedule_reference: ScheduleReference = field(
         metadata={
             "name": "ScheduleReference",
             "type": "Element",
@@ -276,40 +262,35 @@ class PlanningScheduleResponseHeader:
             "type": "Element",
         }
     )
-    buyer_party: Optional[BuyerParty] = field(
-        default=None,
+    buyer_party: BuyerParty = field(
         metadata={
             "name": "BuyerParty",
             "type": "Element",
             "required": True,
         }
     )
-    seller_party: Optional[SellerParty] = field(
-        default=None,
+    seller_party: SellerParty = field(
         metadata={
             "name": "SellerParty",
             "type": "Element",
             "required": True,
         }
     )
-    purpose: Optional[Purpose] = field(
-        default=None,
+    purpose: Purpose = field(
         metadata={
             "name": "Purpose",
             "type": "Element",
             "required": True,
         }
     )
-    response_type: Optional[ResponseType] = field(
-        default=None,
+    response_type: ResponseType = field(
         metadata={
             "name": "ResponseType",
             "type": "Element",
             "required": True,
         }
     )
-    language: Optional[Language] = field(
-        default=None,
+    language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
@@ -353,7 +334,7 @@ class PlanningScheduleResponseHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfLocationGroupedPlanningResponse:
     location_grouped_planning_response: List[LocationGroupedPlanningResponse] = field(
         default_factory=list,
@@ -365,7 +346,7 @@ class ListOfLocationGroupedPlanningResponse:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfMaterialGroupedPlanningResponse:
     material_grouped_planning_response: List[MaterialGroupedPlanningResponse] = field(
         default_factory=list,
@@ -377,10 +358,9 @@ class ListOfMaterialGroupedPlanningResponse:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PlanningScheduleResponse:
-    planning_schedule_response_header: Optional[PlanningScheduleResponseHeader] = field(
-        default=None,
+    planning_schedule_response_header: PlanningScheduleResponseHeader = field(
         metadata={
             "name": "PlanningScheduleResponseHeader",
             "type": "Element",
@@ -392,7 +372,6 @@ class PlanningScheduleResponse:
         metadata={
             "name": "ListOfLocationGroupedPlanningResponse",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_material_grouped_planning_response: Optional[ListOfMaterialGroupedPlanningResponse] = field(
@@ -400,7 +379,6 @@ class PlanningScheduleResponse:
         metadata={
             "name": "ListOfMaterialGroupedPlanningResponse",
             "type": "Element",
-            "required": True,
         }
     )
     planning_schedule_response_summary: Optional[PlanningScheduleResponseSummary] = field(

@@ -7,7 +7,7 @@ from xcbl.models.auction_create import (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SourcingCreateSummary:
     total_number_of_sourcing_items: Optional[str] = field(
         default=None,
@@ -23,8 +23,7 @@ class SourcingCreateSummary:
             "type": "Element",
         }
     )
-    estimated_total_value: Optional[str] = field(
-        default=None,
+    estimated_total_value: str = field(
         metadata={
             "name": "EstimatedTotalValue",
             "type": "Element",
@@ -33,10 +32,9 @@ class SourcingCreateSummary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SourcingItemComponentResponse:
-    sourcing_create_response_detail: Optional["SourcingCreateResponseDetail"] = field(
-        default=None,
+    sourcing_create_response_detail: "SourcingCreateResponseDetail" = field(
         metadata={
             "name": "SourcingCreateResponseDetail",
             "type": "Element",
@@ -45,7 +43,7 @@ class SourcingItemComponentResponse:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfSourcingItemComponentResponse:
     sourcing_item_component_response: List[SourcingItemComponentResponse] = field(
         default_factory=list,
@@ -57,10 +55,9 @@ class ListOfSourcingItemComponentResponse:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SourcingCreateReference:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -69,10 +66,9 @@ class SourcingCreateReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SourcingCreateResponsePurpose:
-    purpose: Optional[Purpose] = field(
-        default=None,
+    purpose: Purpose = field(
         metadata={
             "name": "Purpose",
             "type": "Element",
@@ -81,10 +77,9 @@ class SourcingCreateResponsePurpose:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SourcingCreateResponseSummary:
-    sourcing_create_summary: Optional[SourcingCreateSummary] = field(
-        default=None,
+    sourcing_create_summary: SourcingCreateSummary = field(
         metadata={
             "name": "SourcingCreateSummary",
             "type": "Element",
@@ -93,26 +88,23 @@ class SourcingCreateResponseSummary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SourcingCreateResponseDetail:
-    sourcing_item_id: Optional[str] = field(
-        default=None,
+    sourcing_item_id: str = field(
         metadata={
             "name": "SourcingItemID",
             "type": "Element",
             "required": True,
         }
     )
-    sourcing_item_name: Optional[str] = field(
-        default=None,
+    sourcing_item_name: str = field(
         metadata={
             "name": "SourcingItemName",
             "type": "Element",
             "required": True,
         }
     )
-    item_number: Optional[str] = field(
-        default=None,
+    item_number: str = field(
         metadata={
             "name": "ItemNumber",
             "type": "Element",
@@ -126,8 +118,7 @@ class SourcingCreateResponseDetail:
             "type": "Element",
         }
     )
-    sourcing_item_response_coded: Optional[str] = field(
-        default=None,
+    sourcing_item_response_coded: str = field(
         metadata={
             "name": "SourcingItemResponseCoded",
             "type": "Element",
@@ -150,50 +141,44 @@ class SourcingCreateResponseDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SourcingCreateResponseHeader:
-    sourcing_create_response_purpose: Optional[SourcingCreateResponsePurpose] = field(
-        default=None,
+    sourcing_create_response_purpose: SourcingCreateResponsePurpose = field(
         metadata={
             "name": "SourcingCreateResponsePurpose",
             "type": "Element",
             "required": True,
         }
     )
-    sourcing_create_response_issue_date: Optional[str] = field(
-        default=None,
+    sourcing_create_response_issue_date: str = field(
         metadata={
             "name": "SourcingCreateResponseIssueDate",
             "type": "Element",
             "required": True,
         }
     )
-    sourcing_create_response_id: Optional[str] = field(
-        default=None,
+    sourcing_create_response_id: str = field(
         metadata={
             "name": "SourcingCreateResponseID",
             "type": "Element",
             "required": True,
         }
     )
-    sourcing_create_reference: Optional[SourcingCreateReference] = field(
-        default=None,
+    sourcing_create_reference: SourcingCreateReference = field(
         metadata={
             "name": "SourcingCreateReference",
             "type": "Element",
             "required": True,
         }
     )
-    tracking_idnumber: Optional[str] = field(
-        default=None,
+    tracking_idnumber: str = field(
         metadata={
             "name": "TrackingIDNumber",
             "type": "Element",
             "required": True,
         }
     )
-    sourcing_response_coded: Optional[str] = field(
-        default=None,
+    sourcing_response_coded: str = field(
         metadata={
             "name": "SourcingResponseCoded",
             "type": "Element",
@@ -207,8 +192,7 @@ class SourcingCreateResponseHeader:
             "type": "Element",
         }
     )
-    language: Optional[Language] = field(
-        default=None,
+    language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
@@ -224,7 +208,7 @@ class SourcingCreateResponseHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfSourcingCreateResponseDetail:
     sourcing_create_response_detail: List[SourcingCreateResponseDetail] = field(
         default_factory=list,
@@ -236,10 +220,9 @@ class ListOfSourcingCreateResponseDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SourcingCreateResponse:
-    sourcing_create_response_header: Optional[SourcingCreateResponseHeader] = field(
-        default=None,
+    sourcing_create_response_header: SourcingCreateResponseHeader = field(
         metadata={
             "name": "SourcingCreateResponseHeader",
             "type": "Element",

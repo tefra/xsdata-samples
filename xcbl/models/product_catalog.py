@@ -26,7 +26,7 @@ class AttributeTypeScalarType(Enum):
     ENUMERATION = "Enumeration"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AttributeValue:
     value: str = field(
         default="",
@@ -44,7 +44,7 @@ class AttributeValue:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Buyer:
     value: str = field(
         default="",
@@ -78,18 +78,16 @@ class CatalogSchemaType(Enum):
     SUPPLIER = "Supplier"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CatalogSystem:
-    system_address: Optional[str] = field(
-        default=None,
+    system_address: str = field(
         metadata={
             "name": "SystemAddress",
             "type": "Element",
             "required": True,
         }
     )
-    system_type: Optional[str] = field(
-        default=None,
+    system_type: str = field(
         metadata={
             "name": "SystemType",
             "type": "Element",
@@ -98,7 +96,7 @@ class CatalogSystem:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CategoryName:
     value: str = field(
         default="",
@@ -116,7 +114,7 @@ class CategoryName:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DefaultLanguage:
     lang: str = field(
         default="en",
@@ -128,14 +126,13 @@ class DefaultLanguage:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExternalItemRef:
     catalog_provider_idref: Optional[str] = field(
         default=None,
         metadata={
             "name": "CatalogProviderIDRef",
             "type": "Element",
-            "required": True,
         }
     )
     catalog_idref: Optional[str] = field(
@@ -143,7 +140,6 @@ class ExternalItemRef:
         metadata={
             "name": "CatalogIDRef",
             "type": "Element",
-            "required": True,
         }
     )
     product_idref: Optional[str] = field(
@@ -151,7 +147,6 @@ class ExternalItemRef:
         metadata={
             "name": "ProductIDRef",
             "type": "Element",
-            "required": True,
         }
     )
     item_guid: Optional[str] = field(
@@ -159,37 +154,36 @@ class ExternalItemRef:
         metadata={
             "name": "ItemGUID",
             "type": "Element",
-            "required": True,
         }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IsMultiVendor:
     pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IsPriceUpdate:
     pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IsPublicAccount:
     pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IsReplacement:
     pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IsRequired:
     pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LongDescription:
     value: str = field(
         default="",
@@ -214,7 +208,7 @@ class LongDescription:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Manufacturer:
     value: str = field(
         default="",
@@ -231,7 +225,7 @@ class Manufacturer:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParentCategoryRefList:
     category_idref: List[str] = field(
         default_factory=list,
@@ -243,10 +237,9 @@ class ParentCategoryRefList:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PartnerRelationship:
-    partner_relationship_coded: Optional[str] = field(
-        default=None,
+    partner_relationship_coded: str = field(
         metadata={
             "name": "PartnerRelationshipCoded",
             "type": "Element",
@@ -283,7 +276,7 @@ class ProductIdType(Enum):
     SUPPLIER = "Supplier"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProductName:
     value: str = field(
         default="",
@@ -314,7 +307,7 @@ class RelatedProductTargetType(Enum):
     ACCESSORY = "Accessory"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SchemaCategoryRefList:
     category_idref: List[str] = field(
         default_factory=list,
@@ -326,7 +319,7 @@ class SchemaCategoryRefList:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ShortDescription:
     value: str = field(
         default="",
@@ -344,13 +337,12 @@ class ShortDescription:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Uom:
     class Meta:
         name = "UOM"
 
-    uomcoded: Optional[str] = field(
-        default=None,
+    uomcoded: str = field(
         metadata={
             "name": "UOMCoded",
             "type": "Element",
@@ -366,12 +358,12 @@ class Uom:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ValidateAttributes:
     pass
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Action:
     value: ActionValue = field(
         default=ActionValue.ADD,
@@ -383,7 +375,7 @@ class Action:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AttributeType:
     scalar_type: AttributeTypeScalarType = field(
         default=AttributeTypeScalarType.STRING,
@@ -409,10 +401,9 @@ class AttributeType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AttributeUnit:
-    uom: Optional[Uom] = field(
-        default=None,
+    uom: Uom = field(
         metadata={
             "name": "UOM",
             "type": "Element",
@@ -421,10 +412,9 @@ class AttributeUnit:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BuyerIdentifier:
-    identifier: Optional[Identifier] = field(
-        default=None,
+    identifier: Identifier = field(
         metadata={
             "name": "Identifier",
             "type": "Element",
@@ -433,7 +423,7 @@ class BuyerIdentifier:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CatalogAudience:
     catalog_audience_coded: CatalogAudienceCatalogAudienceCoded = field(
         default=CatalogAudienceCatalogAudienceCoded.PUBLIC,
@@ -445,7 +435,7 @@ class CatalogAudience:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CatalogContract:
     type: CatalogContractType = field(
         default=CatalogContractType.BUYER,
@@ -455,16 +445,14 @@ class CatalogContract:
             "required": True,
         }
     )
-    catalog_contract_id: Optional[str] = field(
-        default=None,
+    catalog_contract_id: str = field(
         metadata={
             "name": "CatalogContractID",
             "type": "Element",
             "required": True,
         }
     )
-    catalog_contract_item_id: Optional[str] = field(
-        default=None,
+    catalog_contract_item_id: str = field(
         metadata={
             "name": "CatalogContractItemID",
             "type": "Element",
@@ -473,7 +461,7 @@ class CatalogContract:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CatalogProvider:
     provider_id: Optional[str] = field(
         default=None,
@@ -498,13 +486,12 @@ class CatalogProvider:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ComparableUom:
     class Meta:
         name = "ComparableUOM"
 
-    uom: Optional[Uom] = field(
-        default=None,
+    uom: Uom = field(
         metadata={
             "name": "UOM",
             "type": "Element",
@@ -513,10 +500,9 @@ class ComparableUom:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DefaultCurrency:
-    currency: Optional[Currency] = field(
-        default=None,
+    currency: Currency = field(
         metadata={
             "name": "Currency",
             "type": "Element",
@@ -525,13 +511,12 @@ class DefaultCurrency:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DefaultUom:
     class Meta:
         name = "DefaultUOM"
 
-    uom: Optional[Uom] = field(
-        default=None,
+    uom: Uom = field(
         metadata={
             "name": "UOM",
             "type": "Element",
@@ -540,13 +525,12 @@ class DefaultUom:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LeadTimeUom:
     class Meta:
         name = "LeadTimeUOM"
 
-    uom: Optional[Uom] = field(
-        default=None,
+    uom: Uom = field(
         metadata={
             "name": "UOM",
             "type": "Element",
@@ -555,10 +539,9 @@ class LeadTimeUom:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProductAttachment:
-    attachment_url: Optional[str] = field(
-        default=None,
+    attachment_url: str = field(
         metadata={
             "name": "AttachmentURL",
             "type": "Element",
@@ -595,7 +578,7 @@ class ProductAttachment:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProductId:
     class Meta:
         name = "ProductID"
@@ -616,7 +599,7 @@ class ProductId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProductIdstandard:
     class Meta:
         name = "ProductIDStandard"
@@ -637,10 +620,9 @@ class ProductIdstandard:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProductPrice:
-    amount: Optional[str] = field(
-        default=None,
+    amount: str = field(
         metadata={
             "name": "Amount",
             "type": "Element",
@@ -712,7 +694,7 @@ class ProductPrice:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RelatedProduct:
     value: str = field(
         default="",
@@ -730,10 +712,9 @@ class RelatedProduct:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CategoryAttribute:
-    attribute_id: Optional[str] = field(
-        default=None,
+    attribute_id: str = field(
         metadata={
             "name": "AttributeID",
             "type": "Element",
@@ -747,8 +728,7 @@ class CategoryAttribute:
             "type": "Element",
         }
     )
-    attribute_type: Optional[AttributeType] = field(
-        default=None,
+    attribute_type: AttributeType = field(
         metadata={
             "name": "AttributeType",
             "type": "Element",
@@ -771,10 +751,9 @@ class CategoryAttribute:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ObjectAttribute:
-    attribute_id: Optional[str] = field(
-        default=None,
+    attribute_id: str = field(
         metadata={
             "name": "AttributeID",
             "type": "Element",
@@ -797,7 +776,7 @@ class ObjectAttribute:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Partner:
     partner_id: Optional[str] = field(
         default=None,
@@ -837,7 +816,7 @@ class Partner:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PriceCatalog:
     action: Optional[Action] = field(
         default=None,
@@ -846,8 +825,7 @@ class PriceCatalog:
             "type": "Element",
         }
     )
-    price_catalog_id: Optional[str] = field(
-        default=None,
+    price_catalog_id: str = field(
         metadata={
             "name": "PriceCatalogID",
             "type": "Element",
@@ -870,18 +848,16 @@ class PriceCatalog:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Pricing:
-    product_idref: Optional[str] = field(
-        default=None,
+    product_idref: str = field(
         metadata={
             "name": "ProductIDRef",
             "type": "Element",
             "required": True,
         }
     )
-    price_catalog_idref: Optional[str] = field(
-        default=None,
+    price_catalog_idref: str = field(
         metadata={
             "name": "PriceCatalogIDRef",
             "type": "Element",
@@ -897,10 +873,9 @@ class Pricing:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProductVendorData:
-    partner_ref: Optional[str] = field(
-        default=None,
+    partner_ref: str = field(
         metadata={
             "name": "PartnerRef",
             "type": "Attribute",
@@ -958,7 +933,7 @@ class ProductVendorData:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SupplierAccount:
     action: Optional[Action] = field(
         default=None,
@@ -979,7 +954,6 @@ class SupplierAccount:
         metadata={
             "name": "BuyerIdentifier",
             "type": "Element",
-            "required": True,
         }
     )
     is_public_account: Optional[IsPublicAccount] = field(
@@ -987,7 +961,6 @@ class SupplierAccount:
         metadata={
             "name": "IsPublicAccount",
             "type": "Element",
-            "required": True,
         }
     )
     price_catalog_idref: List[str] = field(
@@ -999,7 +972,7 @@ class SupplierAccount:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfPartners:
     partner: List[Partner] = field(
         default_factory=list,
@@ -1011,7 +984,7 @@ class ListOfPartners:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PricingInformation:
     price_catalog: List[PriceCatalog] = field(
         default_factory=list,
@@ -1023,7 +996,7 @@ class PricingInformation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Product:
     type: ProductType = field(
         default=ProductType.GOOD,
@@ -1048,8 +1021,7 @@ class Product:
             "type": "Element",
         }
     )
-    product_id: Optional[ProductId] = field(
-        default=None,
+    product_id: ProductId = field(
         metadata={
             "name": "ProductID",
             "type": "Element",
@@ -1247,7 +1219,7 @@ class Product:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SchemaCategory:
     category_id_attribute: Optional[str] = field(
         default=None,
@@ -1264,8 +1236,7 @@ class SchemaCategory:
             "tokens": True,
         }
     )
-    category_id: Optional[str] = field(
-        default=None,
+    category_id: str = field(
         metadata={
             "name": "CategoryID",
             "type": "Element",
@@ -1309,7 +1280,7 @@ class SchemaCategory:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SupplierAccountInformation:
     supplier_account: List[SupplierAccount] = field(
         default_factory=list,
@@ -1321,7 +1292,7 @@ class SupplierAccountInformation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CatalogData:
     product: List[Product] = field(
         default_factory=list,
@@ -1339,10 +1310,9 @@ class CatalogData:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CatalogHeader:
-    catalog_id: Optional[str] = field(
-        default=None,
+    catalog_id: str = field(
         metadata={
             "name": "CatalogID",
             "type": "Element",
@@ -1356,8 +1326,7 @@ class CatalogHeader:
             "type": "Element",
         }
     )
-    catalog_provider: Optional[CatalogProvider] = field(
-        default=None,
+    catalog_provider: CatalogProvider = field(
         metadata={
             "name": "CatalogProvider",
             "type": "Element",
@@ -1485,7 +1454,7 @@ class CatalogHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CatalogSchema:
     type: CatalogSchemaType = field(
         default=CatalogSchemaType.SUPPLIER,
@@ -1495,8 +1464,7 @@ class CatalogSchema:
             "required": True,
         }
     )
-    schema_name: Optional[str] = field(
-        default=None,
+    schema_name: str = field(
         metadata={
             "name": "SchemaName",
             "type": "Element",
@@ -1568,10 +1536,9 @@ class CatalogSchema:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProductCatalog:
-    catalog_header: Optional[CatalogHeader] = field(
-        default=None,
+    catalog_header: CatalogHeader = field(
         metadata={
             "name": "CatalogHeader",
             "type": "Element",

@@ -8,7 +8,7 @@ from xcbl.models.time_series_response import (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeSeriesDetail:
     list_of_characteristic_combinations: Optional[ListOfCharacteristicCombinations] = field(
         default=None,
@@ -26,26 +26,23 @@ class TimeSeriesDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeSeries:
-    time_series_header: Optional[TimeSeriesHeader] = field(
-        default=None,
+    time_series_header: TimeSeriesHeader = field(
         metadata={
             "name": "TimeSeriesHeader",
             "type": "Element",
             "required": True,
         }
     )
-    time_series_detail: Optional[TimeSeriesDetail] = field(
-        default=None,
+    time_series_detail: TimeSeriesDetail = field(
         metadata={
             "name": "TimeSeriesDetail",
             "type": "Element",
             "required": True,
         }
     )
-    time_series_summary: Optional[TimeSeriesSummary] = field(
-        default=None,
+    time_series_summary: TimeSeriesSummary = field(
         metadata={
             "name": "TimeSeriesSummary",
             "type": "Element",

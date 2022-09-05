@@ -36,7 +36,7 @@ from xcbl.models.order_status_result import (
 from xcbl.models.request_for_quotation import OrderParty
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderStatusRequestSummary:
     total_number_of_line_item: Optional[str] = field(
         default=None,
@@ -47,10 +47,9 @@ class OrderStatusRequestSummary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderStatusItemTransport:
-    transport: Optional[Transport] = field(
-        default=None,
+    transport: Transport = field(
         metadata={
             "name": "Transport",
             "type": "Element",
@@ -59,10 +58,9 @@ class OrderStatusItemTransport:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderStatusLanguage:
-    language: Optional[Language] = field(
-        default=None,
+    language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
@@ -71,10 +69,9 @@ class OrderStatusLanguage:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderStatusListOfAttachment:
-    list_of_attachment: Optional[ListOfAttachment] = field(
-        default=None,
+    list_of_attachment: ListOfAttachment = field(
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
@@ -83,10 +80,9 @@ class OrderStatusListOfAttachment:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderStatusParty:
-    order_party: Optional[OrderParty] = field(
-        default=None,
+    order_party: OrderParty = field(
         metadata={
             "name": "OrderParty",
             "type": "Element",
@@ -95,13 +91,12 @@ class OrderStatusParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderStatusRequestId:
     class Meta:
         name = "OrderStatusRequestID"
 
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -110,10 +105,9 @@ class OrderStatusRequestId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderStatusItem:
-    line_item_num: Optional[LineItemNum] = field(
-        default=None,
+    line_item_num: LineItemNum = field(
         metadata={
             "name": "LineItemNum",
             "type": "Element",
@@ -246,8 +240,7 @@ class OrderStatusItem:
             "type": "Element",
         }
     )
-    variance_qty: Optional[VarianceQty] = field(
-        default=None,
+    variance_qty: VarianceQty = field(
         metadata={
             "name": "VarianceQty",
             "type": "Element",
@@ -256,26 +249,23 @@ class OrderStatusItem:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderStatusRequestHeader:
-    order_status_request_id: Optional[OrderStatusRequestId] = field(
-        default=None,
+    order_status_request_id: OrderStatusRequestId = field(
         metadata={
             "name": "OrderStatusRequestID",
             "type": "Element",
             "required": True,
         }
     )
-    order_status_issue_date: Optional[str] = field(
-        default=None,
+    order_status_issue_date: str = field(
         metadata={
             "name": "OrderStatusIssueDate",
             "type": "Element",
             "required": True,
         }
     )
-    order_status_party: Optional[OrderStatusParty] = field(
-        default=None,
+    order_status_party: OrderStatusParty = field(
         metadata={
             "name": "OrderStatusParty",
             "type": "Element",
@@ -305,7 +295,7 @@ class OrderStatusRequestHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfOrderStatusItem:
     order_status_item: List[OrderStatusItem] = field(
         default_factory=list,
@@ -317,7 +307,7 @@ class ListOfOrderStatusItem:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderStatusReference:
     account_code: Optional[AccountCode] = field(
         default=None,
@@ -326,16 +316,14 @@ class OrderStatusReference:
             "type": "Element",
         }
     )
-    buyer_reference_number: Optional[BuyerReferenceNumber] = field(
-        default=None,
+    buyer_reference_number: BuyerReferenceNumber = field(
         metadata={
             "name": "BuyerReferenceNumber",
             "type": "Element",
             "required": True,
         }
     )
-    seller_reference_number: Optional[SellerReferenceNumber] = field(
-        default=None,
+    seller_reference_number: SellerReferenceNumber = field(
         metadata={
             "name": "SellerReferenceNumber",
             "type": "Element",
@@ -349,8 +337,7 @@ class OrderStatusReference:
             "type": "Element",
         }
     )
-    order_date: Optional[str] = field(
-        default=None,
+    order_date: str = field(
         metadata={
             "name": "OrderDate",
             "type": "Element",
@@ -366,10 +353,9 @@ class OrderStatusReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderStatusDetailRequest:
-    order_status_reference: Optional[OrderStatusReference] = field(
-        default=None,
+    order_status_reference: OrderStatusReference = field(
         metadata={
             "name": "OrderStatusReference",
             "type": "Element",
@@ -392,7 +378,7 @@ class OrderStatusDetailRequest:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfOrderStatusRequestDetail:
     order_status_detail_request: List[OrderStatusDetailRequest] = field(
         default_factory=list,
@@ -404,10 +390,9 @@ class ListOfOrderStatusRequestDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderStatusRequestDetail:
-    list_of_order_status_request_detail: Optional[ListOfOrderStatusRequestDetail] = field(
-        default=None,
+    list_of_order_status_request_detail: ListOfOrderStatusRequestDetail = field(
         metadata={
             "name": "ListOfOrderStatusRequestDetail",
             "type": "Element",
@@ -416,10 +401,9 @@ class OrderStatusRequestDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderStatusRequest:
-    order_status_request_header: Optional[OrderStatusRequestHeader] = field(
-        default=None,
+    order_status_request_header: OrderStatusRequestHeader = field(
         metadata={
             "name": "OrderStatusRequestHeader",
             "type": "Element",

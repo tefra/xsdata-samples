@@ -4,6 +4,8 @@
 
 This suite is testing the dtd code generator against the official xml samples.
 
+ - kwonly dataclasses
+ - restrictions accuracy
 
 ## Makefile commands
 

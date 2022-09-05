@@ -33,10 +33,9 @@ from xcbl.models.order_request import (
 from xcbl.models.planning_schedule import OrderType
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RequestQuotePurpose:
-    request_quote_purpose_coded: Optional[str] = field(
-        default=None,
+    request_quote_purpose_coded: str = field(
         metadata={
             "name": "RequestQuotePurposeCoded",
             "type": "Element",
@@ -52,7 +51,7 @@ class RequestQuotePurpose:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RequestQuoteSummary:
     total_number_of_line_items: Optional[str] = field(
         default=None,
@@ -63,10 +62,9 @@ class RequestQuoteSummary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AccountNumber:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -75,10 +73,9 @@ class AccountNumber:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BuyersCatalogNumber:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -87,10 +84,9 @@ class BuyersCatalogNumber:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ContractReference:
-    contract: Optional[Contract] = field(
-        default=None,
+    contract: Contract = field(
         metadata={
             "name": "Contract",
             "type": "Element",
@@ -99,10 +95,9 @@ class ContractReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfRequestQuotePackageDetail:
-    list_of_package_detail: Optional[ListOfPackageDetail] = field(
-        default=None,
+    list_of_package_detail: ListOfPackageDetail = field(
         metadata={
             "name": "ListOfPackageDetail",
             "type": "Element",
@@ -111,10 +106,9 @@ class ListOfRequestQuotePackageDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ManufacturingToParty:
-    party: Optional[Party] = field(
-        default=None,
+    party: Party = field(
         metadata={
             "name": "Party",
             "type": "Element",
@@ -123,10 +117,9 @@ class ManufacturingToParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MaterialIssuer:
-    party: Optional[Party] = field(
-        default=None,
+    party: Party = field(
         metadata={
             "name": "Party",
             "type": "Element",
@@ -135,10 +128,9 @@ class MaterialIssuer:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OtherRequestQuoteReferences:
-    list_of_reference_coded: Optional[ListOfReferenceCoded] = field(
-        default=None,
+    list_of_reference_coded: ListOfReferenceCoded = field(
         metadata={
             "name": "ListOfReferenceCoded",
             "type": "Element",
@@ -147,10 +139,9 @@ class OtherRequestQuoteReferences:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PriceListNumber:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -159,10 +150,9 @@ class PriceListNumber:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PriceListVersionNumber:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -171,10 +161,9 @@ class PriceListVersionNumber:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RequestQuoteAllowanceOrCharge:
-    list_of_allow_or_charge: Optional[ListOfAllowOrCharge] = field(
-        default=None,
+    list_of_allow_or_charge: ListOfAllowOrCharge = field(
         metadata={
             "name": "ListOfAllowOrCharge",
             "type": "Element",
@@ -183,10 +172,9 @@ class RequestQuoteAllowanceOrCharge:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RequestQuoteCurrency:
-    currency: Optional[Currency] = field(
-        default=None,
+    currency: Currency = field(
         metadata={
             "name": "Currency",
             "type": "Element",
@@ -195,10 +183,9 @@ class RequestQuoteCurrency:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RequestQuoteDeliveryDetail:
-    delivery_detail: Optional[DeliveryDetail] = field(
-        default=None,
+    delivery_detail: DeliveryDetail = field(
         metadata={
             "name": "DeliveryDetail",
             "type": "Element",
@@ -207,13 +194,12 @@ class RequestQuoteDeliveryDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RequestQuoteId:
     class Meta:
         name = "RequestQuoteID"
 
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -222,10 +208,9 @@ class RequestQuoteId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RequestQuoteItemDetail:
-    base_item_detail: Optional[BaseItemDetail] = field(
-        default=None,
+    base_item_detail: BaseItemDetail = field(
         metadata={
             "name": "BaseItemDetail",
             "type": "Element",
@@ -234,10 +219,9 @@ class RequestQuoteItemDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RequestQuoteItemListOfAttachment:
-    list_of_attachment: Optional[ListOfAttachment] = field(
-        default=None,
+    list_of_attachment: ListOfAttachment = field(
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
@@ -246,10 +230,9 @@ class RequestQuoteItemListOfAttachment:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RequestQuoteLanguage:
-    language: Optional[Language] = field(
-        default=None,
+    language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
@@ -258,10 +241,9 @@ class RequestQuoteLanguage:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RequestQuoteListOfAttachment:
-    list_of_attachment: Optional[ListOfAttachment] = field(
-        default=None,
+    list_of_attachment: ListOfAttachment = field(
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
@@ -270,10 +252,9 @@ class RequestQuoteListOfAttachment:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RequestQuotePricingDetail:
-    pricing_detail: Optional[PricingDetail] = field(
-        default=None,
+    pricing_detail: PricingDetail = field(
         metadata={
             "name": "PricingDetail",
             "type": "Element",
@@ -282,10 +263,9 @@ class RequestQuotePricingDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RequestQuoteTax:
-    tax: Optional[Tax] = field(
-        default=None,
+    tax: Tax = field(
         metadata={
             "name": "Tax",
             "type": "Element",
@@ -294,10 +274,9 @@ class RequestQuoteTax:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RequestQuoteTermsOfDelivery:
-    terms_of_delivery: Optional[TermsOfDelivery] = field(
-        default=None,
+    terms_of_delivery: TermsOfDelivery = field(
         metadata={
             "name": "TermsOfDelivery",
             "type": "Element",
@@ -306,10 +285,9 @@ class RequestQuoteTermsOfDelivery:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RequestQuoteTermsOfPayment:
-    payment_instructions: Optional[PaymentInstructions] = field(
-        default=None,
+    payment_instructions: PaymentInstructions = field(
         metadata={
             "name": "PaymentInstructions",
             "type": "Element",
@@ -318,10 +296,9 @@ class RequestQuoteTermsOfPayment:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RequestQuoteTransport:
-    transport_routing: Optional[TransportRouting] = field(
-        default=None,
+    transport_routing: TransportRouting = field(
         metadata={
             "name": "TransportRouting",
             "type": "Element",
@@ -330,10 +307,9 @@ class RequestQuoteTransport:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RequestQuoteValidityDate:
-    validity_dates: Optional[ValidityDates] = field(
-        default=None,
+    validity_dates: ValidityDates = field(
         metadata={
             "name": "ValidityDates",
             "type": "Element",
@@ -342,10 +318,9 @@ class RequestQuoteValidityDate:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ResultingOrderType:
-    order_type: Optional[OrderType] = field(
-        default=None,
+    order_type: OrderType = field(
         metadata={
             "name": "OrderType",
             "type": "Element",
@@ -354,10 +329,9 @@ class ResultingOrderType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SoldToParty:
-    party: Optional[Party] = field(
-        default=None,
+    party: Party = field(
         metadata={
             "name": "Party",
             "type": "Element",
@@ -366,10 +340,9 @@ class SoldToParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class WarehouseParty:
-    party: Optional[Party] = field(
-        default=None,
+    party: Party = field(
         metadata={
             "name": "Party",
             "type": "Element",
@@ -378,10 +351,9 @@ class WarehouseParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderParty:
-    buyer_party: Optional[BuyerParty] = field(
-        default=None,
+    buyer_party: BuyerParty = field(
         metadata={
             "name": "BuyerParty",
             "type": "Element",
@@ -395,8 +367,7 @@ class OrderParty:
             "type": "Element",
         }
     )
-    seller_party: Optional[SellerParty] = field(
-        default=None,
+    seller_party: SellerParty = field(
         metadata={
             "name": "SellerParty",
             "type": "Element",
@@ -475,10 +446,9 @@ class OrderParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RequestQuoteDate:
-    request_quote_validity_date: Optional[RequestQuoteValidityDate] = field(
-        default=None,
+    request_quote_validity_date: RequestQuoteValidityDate = field(
         metadata={
             "name": "RequestQuoteValidityDate",
             "type": "Element",
@@ -529,10 +499,9 @@ class RequestQuoteDate:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RequestQuoteDetails:
-    request_quote_item_detail: Optional[RequestQuoteItemDetail] = field(
-        default=None,
+    request_quote_item_detail: RequestQuoteItemDetail = field(
         metadata={
             "name": "RequestQuoteItemDetail",
             "type": "Element",
@@ -562,7 +531,7 @@ class RequestQuoteDetails:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RequestQuoteReference:
     contract_reference: Optional[ContractReference] = field(
         default=None,
@@ -608,7 +577,7 @@ class RequestQuoteReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfRequestQuoteDetails:
     request_quote_details: List[RequestQuoteDetails] = field(
         default_factory=list,
@@ -620,10 +589,9 @@ class ListOfRequestQuoteDetails:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RequestQuoteParty:
-    order_party: Optional[OrderParty] = field(
-        default=None,
+    order_party: OrderParty = field(
         metadata={
             "name": "OrderParty",
             "type": "Element",
@@ -632,18 +600,16 @@ class RequestQuoteParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RequestQuoteHeader:
-    request_quote_issue_date: Optional[str] = field(
-        default=None,
+    request_quote_issue_date: str = field(
         metadata={
             "name": "RequestQuoteIssueDate",
             "type": "Element",
             "required": True,
         }
     )
-    request_quote_id: Optional[RequestQuoteId] = field(
-        default=None,
+    request_quote_id: RequestQuoteId = field(
         metadata={
             "name": "RequestQuoteID",
             "type": "Element",
@@ -671,8 +637,7 @@ class RequestQuoteHeader:
             "type": "Element",
         }
     )
-    request_quote_party: Optional[RequestQuoteParty] = field(
-        default=None,
+    request_quote_party: RequestQuoteParty = field(
         metadata={
             "name": "RequestQuoteParty",
             "type": "Element",
@@ -751,10 +716,9 @@ class RequestQuoteHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RequestForQuotation:
-    request_quote_header: Optional[RequestQuoteHeader] = field(
-        default=None,
+    request_quote_header: RequestQuoteHeader = field(
         metadata={
             "name": "RequestQuoteHeader",
             "type": "Element",

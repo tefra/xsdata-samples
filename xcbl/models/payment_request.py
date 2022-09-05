@@ -49,10 +49,9 @@ from xcbl.models.payment_status_response import (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ActualAmount:
-    monetary_value: Optional[MonetaryValue] = field(
-        default=None,
+    monetary_value: MonetaryValue = field(
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
@@ -61,10 +60,9 @@ class ActualAmount:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdjustmentAmount:
-    monetary_value: Optional[MonetaryValue] = field(
-        default=None,
+    monetary_value: MonetaryValue = field(
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
@@ -73,10 +71,9 @@ class AdjustmentAmount:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ChargeAccount:
-    account_detail: Optional[AccountDetail] = field(
-        default=None,
+    account_detail: AccountDetail = field(
         metadata={
             "name": "AccountDetail",
             "type": "Element",
@@ -85,10 +82,9 @@ class ChargeAccount:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ChargeFinancialInstitution:
-    financial_institution: Optional[FinancialInstitution] = field(
-        default=None,
+    financial_institution: FinancialInstitution = field(
         metadata={
             "name": "FinancialInstitution",
             "type": "Element",
@@ -97,10 +93,9 @@ class ChargeFinancialInstitution:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Company:
-    party_id: Optional[PartyId] = field(
-        default=None,
+    party_id: PartyId = field(
         metadata={
             "name": "PartyID",
             "type": "Element",
@@ -179,10 +174,9 @@ class Company:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExpectedAmount:
-    monetary_value: Optional[MonetaryValue] = field(
-        default=None,
+    monetary_value: MonetaryValue = field(
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
@@ -191,10 +185,9 @@ class ExpectedAmount:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FeeAmount:
-    monetary_value: Optional[MonetaryValue] = field(
-        default=None,
+    monetary_value: MonetaryValue = field(
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
@@ -203,10 +196,9 @@ class FeeAmount:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoicingDetailAmountDue:
-    monetary_value: Optional[MonetaryValue] = field(
-        default=None,
+    monetary_value: MonetaryValue = field(
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
@@ -215,10 +207,9 @@ class InvoicingDetailAmountDue:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoicingDetailAmountPaid:
-    monetary_value: Optional[MonetaryValue] = field(
-        default=None,
+    monetary_value: MonetaryValue = field(
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
@@ -227,10 +218,9 @@ class InvoicingDetailAmountPaid:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoicingDetailReference:
-    reference_coded: Optional[ReferenceCoded] = field(
-        default=None,
+    reference_coded: ReferenceCoded = field(
         metadata={
             "name": "ReferenceCoded",
             "type": "Element",
@@ -239,10 +229,9 @@ class InvoicingDetailReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoicingItemDetail:
-    invoice_item_detail: Optional[InvoiceItemDetail] = field(
-        default=None,
+    invoice_item_detail: InvoiceItemDetail = field(
         metadata={
             "name": "InvoiceItemDetail",
             "type": "Element",
@@ -251,10 +240,9 @@ class InvoicingItemDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LegalReportingInvoicedAmount:
-    monetary_value: Optional[MonetaryValue] = field(
-        default=None,
+    monetary_value: MonetaryValue = field(
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
@@ -263,10 +251,9 @@ class LegalReportingInvoicedAmount:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LegalReportingPayeeCountry:
-    country: Optional[Country] = field(
-        default=None,
+    country: Country = field(
         metadata={
             "name": "Country",
             "type": "Element",
@@ -275,10 +262,9 @@ class LegalReportingPayeeCountry:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LegalReportingPaymentAmount:
-    monetary_value: Optional[MonetaryValue] = field(
-        default=None,
+    monetary_value: MonetaryValue = field(
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
@@ -287,10 +273,9 @@ class LegalReportingPaymentAmount:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LegalReportingSupplyingCountry:
-    country: Optional[Country] = field(
-        default=None,
+    country: Country = field(
         metadata={
             "name": "Country",
             "type": "Element",
@@ -299,13 +284,12 @@ class LegalReportingSupplyingCountry:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OriginatingFispecificId:
     class Meta:
         name = "OriginatingFISpecificID"
 
-    party: Optional[Party] = field(
-        default=None,
+    party: Party = field(
         metadata={
             "name": "Party",
             "type": "Element",
@@ -314,10 +298,9 @@ class OriginatingFispecificId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PaymentDetailAttachment:
-    attachment: Optional[Attachment] = field(
-        default=None,
+    attachment: Attachment = field(
         metadata={
             "name": "Attachment",
             "type": "Element",
@@ -326,10 +309,9 @@ class PaymentDetailAttachment:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PaymentReference:
-    list_of_reference_coded: Optional[ListOfReferenceCoded] = field(
-        default=None,
+    list_of_reference_coded: ListOfReferenceCoded = field(
         metadata={
             "name": "ListOfReferenceCoded",
             "type": "Element",
@@ -338,10 +320,9 @@ class PaymentReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PaymentRequestAttachment:
-    attachment: Optional[Attachment] = field(
-        default=None,
+    attachment: Attachment = field(
         metadata={
             "name": "Attachment",
             "type": "Element",
@@ -350,7 +331,7 @@ class PaymentRequestAttachment:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PaymentRequestParty:
     payer_party: Optional[PayerParty] = field(
         default=None,
@@ -359,8 +340,7 @@ class PaymentRequestParty:
             "type": "Element",
         }
     )
-    payee_party: Optional[PayeeParty] = field(
-        default=None,
+    payee_party: PayeeParty = field(
         metadata={
             "name": "PayeeParty",
             "type": "Element",
@@ -397,10 +377,9 @@ class PaymentRequestParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PaymentRequestPurpose:
-    purpose: Optional[Purpose] = field(
-        default=None,
+    purpose: Purpose = field(
         metadata={
             "name": "Purpose",
             "type": "Element",
@@ -409,13 +388,12 @@ class PaymentRequestPurpose:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReceivingFispecificId:
     class Meta:
         name = "ReceivingFISpecificID"
 
-    party: Optional[Party] = field(
-        default=None,
+    party: Party = field(
         metadata={
             "name": "Party",
             "type": "Element",
@@ -424,13 +402,12 @@ class ReceivingFispecificId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RemittanceAdviceId:
     class Meta:
         name = "RemittanceAdviceID"
 
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -439,10 +416,9 @@ class RemittanceAdviceId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SettlementCurrency:
-    currency: Optional[Currency] = field(
-        default=None,
+    currency: Currency = field(
         metadata={
             "name": "Currency",
             "type": "Element",
@@ -451,7 +427,7 @@ class SettlementCurrency:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Adjustment:
     line_item_reference: Optional[str] = field(
         default=None,
@@ -460,8 +436,7 @@ class Adjustment:
             "type": "Element",
         }
     )
-    adjustment_reason_coded: Optional[str] = field(
-        default=None,
+    adjustment_reason_coded: str = field(
         metadata={
             "name": "AdjustmentReasonCoded",
             "type": "Element",
@@ -503,8 +478,7 @@ class Adjustment:
             "type": "Element",
         }
     )
-    actual_amount: Optional[ActualAmount] = field(
-        default=None,
+    actual_amount: ActualAmount = field(
         metadata={
             "name": "ActualAmount",
             "type": "Element",
@@ -520,10 +494,9 @@ class Adjustment:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FinancialChargesAllocation:
-    charge_regulation_coded: Optional[str] = field(
-        default=None,
+    charge_regulation_coded: str = field(
         metadata={
             "name": "ChargeRegulationCoded",
             "type": "Element",
@@ -560,10 +533,9 @@ class FinancialChargesAllocation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LegalReportingParty:
-    company: Optional[Company] = field(
-        default=None,
+    company: Company = field(
         metadata={
             "name": "Company",
             "type": "Element",
@@ -572,42 +544,37 @@ class LegalReportingParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PaymentRequestHeader:
-    payment_request_purpose: Optional[PaymentRequestPurpose] = field(
-        default=None,
+    payment_request_purpose: PaymentRequestPurpose = field(
         metadata={
             "name": "PaymentRequestPurpose",
             "type": "Element",
             "required": True,
         }
     )
-    payment_request_issue_date: Optional[str] = field(
-        default=None,
+    payment_request_issue_date: str = field(
         metadata={
             "name": "PaymentRequestIssueDate",
             "type": "Element",
             "required": True,
         }
     )
-    payment_request_id: Optional[PaymentRequestId] = field(
-        default=None,
+    payment_request_id: PaymentRequestId = field(
         metadata={
             "name": "PaymentRequestID",
             "type": "Element",
             "required": True,
         }
     )
-    payer_party: Optional[PayerParty] = field(
-        default=None,
+    payer_party: PayerParty = field(
         metadata={
             "name": "PayerParty",
             "type": "Element",
             "required": True,
         }
     )
-    language: Optional[Language] = field(
-        default=None,
+    language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
@@ -630,10 +597,9 @@ class PaymentRequestHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LegalReportingInformation:
-    legal_reporting_indicator: Optional[str] = field(
-        default=None,
+    legal_reporting_indicator: str = field(
         metadata={
             "name": "LegalReportingIndicator",
             "type": "Element",
@@ -654,8 +620,7 @@ class LegalReportingInformation:
             "type": "Element",
         }
     )
-    legal_reporting_invoiced_amount: Optional[LegalReportingInvoicedAmount] = field(
-        default=None,
+    legal_reporting_invoiced_amount: LegalReportingInvoicedAmount = field(
         metadata={
             "name": "LegalReportingInvoicedAmount",
             "type": "Element",
@@ -706,7 +671,7 @@ class LegalReportingInformation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfAdjustments:
     adjustment: List[Adjustment] = field(
         default_factory=list,
@@ -718,10 +683,9 @@ class ListOfAdjustments:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoicingDetail:
-    invoicing_detail_reference: Optional[InvoicingDetailReference] = field(
-        default=None,
+    invoicing_detail_reference: InvoicingDetailReference = field(
         metadata={
             "name": "InvoicingDetailReference",
             "type": "Element",
@@ -758,7 +722,7 @@ class InvoicingDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfInvoicingDetail:
     invoicing_detail: List[InvoicingDetail] = field(
         default_factory=list,
@@ -770,10 +734,9 @@ class ListOfInvoicingDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Subsidiary:
-    party_id: Optional[PartyId] = field(
-        default=None,
+    party_id: PartyId = field(
         metadata={
             "name": "PartyID",
             "type": "Element",
@@ -836,8 +799,7 @@ class Subsidiary:
             "type": "Element",
         }
     )
-    list_of_invoicing_detail: Optional[ListOfInvoicingDetail] = field(
-        default=None,
+    list_of_invoicing_detail: ListOfInvoicingDetail = field(
         metadata={
             "name": "ListOfInvoicingDetail",
             "type": "Element",
@@ -846,7 +808,7 @@ class Subsidiary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfSubsidiary:
     subsidiary: List[Subsidiary] = field(
         default_factory=list,
@@ -858,14 +820,13 @@ class ListOfSubsidiary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RemittanceAdviceDetail:
     list_of_subsidiary: Optional[ListOfSubsidiary] = field(
         default=None,
         metadata={
             "name": "ListOfSubsidiary",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_invoicing_detail: Optional[ListOfInvoicingDetail] = field(
@@ -873,7 +834,6 @@ class RemittanceAdviceDetail:
         metadata={
             "name": "ListOfInvoicingDetail",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_adjustments: Optional[ListOfAdjustments] = field(
@@ -881,7 +841,6 @@ class RemittanceAdviceDetail:
         metadata={
             "name": "ListOfAdjustments",
             "type": "Element",
-            "required": True,
         }
     )
     remittance_advice_id: Optional[RemittanceAdviceId] = field(
@@ -907,10 +866,9 @@ class RemittanceAdviceDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PaymentDocumentDetail:
-    remittance_advice_detail: Optional[RemittanceAdviceDetail] = field(
-        default=None,
+    remittance_advice_detail: RemittanceAdviceDetail = field(
         metadata={
             "name": "RemittanceAdviceDetail",
             "type": "Element",
@@ -919,7 +877,7 @@ class PaymentDocumentDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfPaymentDocumentDetail:
     payment_document_detail: List[PaymentDocumentDetail] = field(
         default_factory=list,
@@ -931,10 +889,9 @@ class ListOfPaymentDocumentDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PaymentRequestDetail:
-    payment_document_id: Optional[PaymentDocumentId] = field(
-        default=None,
+    payment_document_id: PaymentDocumentId = field(
         metadata={
             "name": "PaymentDocumentID",
             "type": "Element",
@@ -960,7 +917,6 @@ class PaymentRequestDetail:
         metadata={
             "name": "FinancialInstitutionDetail",
             "type": "Element",
-            "required": True,
         }
     )
     originating_financial_institution: Optional[OriginatingFinancialInstitution] = field(
@@ -968,7 +924,6 @@ class PaymentRequestDetail:
         metadata={
             "name": "OriginatingFinancialInstitution",
             "type": "Element",
-            "required": True,
         }
     )
     receiving_fispecific_id: List[ReceivingFispecificId] = field(
@@ -976,7 +931,6 @@ class PaymentRequestDetail:
         metadata={
             "name": "ReceivingFISpecificID",
             "type": "Element",
-            "min_occurs": 1,
             "max_occurs": 2,
         }
     )
@@ -985,7 +939,6 @@ class PaymentRequestDetail:
         metadata={
             "name": "OriginatingFISpecificID",
             "type": "Element",
-            "required": True,
         }
     )
     receiving_financial_institution: Optional[ReceivingFinancialInstitution] = field(
@@ -993,7 +946,6 @@ class PaymentRequestDetail:
         metadata={
             "name": "ReceivingFinancialInstitution",
             "type": "Element",
-            "required": True,
         }
     )
     card_info: Optional[CardInfo] = field(
@@ -1001,27 +953,23 @@ class PaymentRequestDetail:
         metadata={
             "name": "CardInfo",
             "type": "Element",
-            "required": True,
         }
     )
-    settlement_amount: Optional[SettlementAmount] = field(
-        default=None,
+    settlement_amount: SettlementAmount = field(
         metadata={
             "name": "SettlementAmount",
             "type": "Element",
             "required": True,
         }
     )
-    settlement_currency: Optional[SettlementCurrency] = field(
-        default=None,
+    settlement_currency: SettlementCurrency = field(
         metadata={
             "name": "SettlementCurrency",
             "type": "Element",
             "required": True,
         }
     )
-    payment_request_party: Optional[PaymentRequestParty] = field(
-        default=None,
+    payment_request_party: PaymentRequestParty = field(
         metadata={
             "name": "PaymentRequestParty",
             "type": "Element",
@@ -1077,8 +1025,7 @@ class PaymentRequestDetail:
             "type": "Element",
         }
     )
-    payment_mean_coded: Optional[str] = field(
-        default=None,
+    payment_mean_coded: str = field(
         metadata={
             "name": "PaymentMeanCoded",
             "type": "Element",
@@ -1178,7 +1125,7 @@ class PaymentRequestDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfPaymentRequestDetail:
     payment_request_detail: List[PaymentRequestDetail] = field(
         default_factory=list,
@@ -1190,26 +1137,23 @@ class ListOfPaymentRequestDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PaymentRequest:
-    payment_request_header: Optional[PaymentRequestHeader] = field(
-        default=None,
+    payment_request_header: PaymentRequestHeader = field(
         metadata={
             "name": "PaymentRequestHeader",
             "type": "Element",
             "required": True,
         }
     )
-    list_of_payment_request_detail: Optional[ListOfPaymentRequestDetail] = field(
-        default=None,
+    list_of_payment_request_detail: ListOfPaymentRequestDetail = field(
         metadata={
             "name": "ListOfPaymentRequestDetail",
             "type": "Element",
             "required": True,
         }
     )
-    payment_request_summary: Optional[PaymentRequestSummary] = field(
-        default=None,
+    payment_request_summary: PaymentRequestSummary = field(
         metadata={
             "name": "PaymentRequestSummary",
             "type": "Element",

@@ -15,26 +15,23 @@ from xcbl.models.request_for_quotation import OrderParty
 from xcbl.models.sourcing_create_response import SourcingCreateReference
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuoteAwardDetails:
-    name: Optional[str] = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Element",
             "required": True,
         }
     )
-    number_of_line_items_awarded: Optional[str] = field(
-        default=None,
+    number_of_line_items_awarded: str = field(
         metadata={
             "name": "NumberOfLineItemsAwarded",
             "type": "Element",
             "required": True,
         }
     )
-    total_award_value: Optional[str] = field(
-        default=None,
+    total_award_value: str = field(
         metadata={
             "name": "TotalAwardValue",
             "type": "Element",
@@ -43,10 +40,9 @@ class QuoteAwardDetails:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfSourcingResultDetailAttachment:
-    list_of_attachment: Optional[ListOfAttachment] = field(
-        default=None,
+    list_of_attachment: ListOfAttachment = field(
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
@@ -55,10 +51,9 @@ class ListOfSourcingResultDetailAttachment:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SourcingResultCurrency:
-    currency: Optional[Currency] = field(
-        default=None,
+    currency: Currency = field(
         metadata={
             "name": "Currency",
             "type": "Element",
@@ -67,10 +62,9 @@ class SourcingResultCurrency:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SourcingResultDates:
-    order_dates: Optional[OrderDates] = field(
-        default=None,
+    order_dates: OrderDates = field(
         metadata={
             "name": "OrderDates",
             "type": "Element",
@@ -79,13 +73,12 @@ class SourcingResultDates:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SourcingResultId:
     class Meta:
         name = "SourcingResultID"
 
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -94,10 +87,9 @@ class SourcingResultId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SourcingResultItem:
-    item_detail: Optional[ItemDetail] = field(
-        default=None,
+    item_detail: ItemDetail = field(
         metadata={
             "name": "ItemDetail",
             "type": "Element",
@@ -106,13 +98,12 @@ class SourcingResultItem:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SourcingResultItemId:
     class Meta:
         name = "SourcingResultItemID"
 
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -121,10 +112,9 @@ class SourcingResultItemId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SourcingResultListOfAttachment:
-    list_of_attachment: Optional[ListOfAttachment] = field(
-        default=None,
+    list_of_attachment: ListOfAttachment = field(
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
@@ -133,10 +123,9 @@ class SourcingResultListOfAttachment:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SourcingResultParty:
-    order_party: Optional[OrderParty] = field(
-        default=None,
+    order_party: OrderParty = field(
         metadata={
             "name": "OrderParty",
             "type": "Element",
@@ -145,10 +134,9 @@ class SourcingResultParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SourcingResultPurpose:
-    purpose: Optional[Purpose] = field(
-        default=None,
+    purpose: Purpose = field(
         metadata={
             "name": "Purpose",
             "type": "Element",
@@ -157,7 +145,7 @@ class SourcingResultPurpose:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SourcingResultSummary:
     total_num_sourcing_results: Optional[str] = field(
         default=None,
@@ -189,7 +177,7 @@ class SourcingResultSummary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfSourcingResultItem:
     sourcing_result_item: List[SourcingResultItem] = field(
         default_factory=list,
@@ -201,42 +189,37 @@ class ListOfSourcingResultItem:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SourcingResultHeader:
-    sourcing_result_purpose: Optional[SourcingResultPurpose] = field(
-        default=None,
+    sourcing_result_purpose: SourcingResultPurpose = field(
         metadata={
             "name": "SourcingResultPurpose",
             "type": "Element",
             "required": True,
         }
     )
-    sourcing_result_issue_date: Optional[str] = field(
-        default=None,
+    sourcing_result_issue_date: str = field(
         metadata={
             "name": "SourcingResultIssueDate",
             "type": "Element",
             "required": True,
         }
     )
-    sourcing_result_id: Optional[SourcingResultId] = field(
-        default=None,
+    sourcing_result_id: SourcingResultId = field(
         metadata={
             "name": "SourcingResultID",
             "type": "Element",
             "required": True,
         }
     )
-    tracking_id: Optional[str] = field(
-        default=None,
+    tracking_id: str = field(
         metadata={
             "name": "TrackingID",
             "type": "Element",
             "required": True,
         }
     )
-    sourcing_create_reference: Optional[SourcingCreateReference] = field(
-        default=None,
+    sourcing_create_reference: SourcingCreateReference = field(
         metadata={
             "name": "SourcingCreateReference",
             "type": "Element",
@@ -250,8 +233,7 @@ class SourcingResultHeader:
             "type": "Element",
         }
     )
-    language: Optional[Language] = field(
-        default=None,
+    language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
@@ -281,26 +263,23 @@ class SourcingResultHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SourcingResultDetail:
-    sourcing_result_item_id: Optional[SourcingResultItemId] = field(
-        default=None,
+    sourcing_result_item_id: SourcingResultItemId = field(
         metadata={
             "name": "SourcingResultItemID",
             "type": "Element",
             "required": True,
         }
     )
-    winning_quote_indicator: Optional[str] = field(
-        default=None,
+    winning_quote_indicator: str = field(
         metadata={
             "name": "WinningQuoteIndicator",
             "type": "Element",
             "required": True,
         }
     )
-    sourcing_result_party: Optional[SourcingResultParty] = field(
-        default=None,
+    sourcing_result_party: SourcingResultParty = field(
         metadata={
             "name": "SourcingResultParty",
             "type": "Element",
@@ -321,8 +300,7 @@ class SourcingResultDetail:
             "type": "Element",
         }
     )
-    list_of_sourcing_result_item: Optional[ListOfSourcingResultItem] = field(
-        default=None,
+    list_of_sourcing_result_item: ListOfSourcingResultItem = field(
         metadata={
             "name": "ListOfSourcingResultItem",
             "type": "Element",
@@ -345,7 +323,7 @@ class SourcingResultDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfSourcingResultDetail:
     sourcing_result_detail: List[SourcingResultDetail] = field(
         default_factory=list,
@@ -357,26 +335,23 @@ class ListOfSourcingResultDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SourcingResult:
-    sourcing_result_header: Optional[SourcingResultHeader] = field(
-        default=None,
+    sourcing_result_header: SourcingResultHeader = field(
         metadata={
             "name": "SourcingResultHeader",
             "type": "Element",
             "required": True,
         }
     )
-    list_of_sourcing_result_detail: Optional[ListOfSourcingResultDetail] = field(
-        default=None,
+    list_of_sourcing_result_detail: ListOfSourcingResultDetail = field(
         metadata={
             "name": "ListOfSourcingResultDetail",
             "type": "Element",
             "required": True,
         }
     )
-    sourcing_result_summary: Optional[SourcingResultSummary] = field(
-        default=None,
+    sourcing_result_summary: SourcingResultSummary = field(
         metadata={
             "name": "SourcingResultSummary",
             "type": "Element",

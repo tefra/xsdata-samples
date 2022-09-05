@@ -35,13 +35,12 @@ from xcbl.models.order_status_result import (
 from xcbl.models.payment_request_acknowledgment import SupplierParty
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilityCheckResultId:
     class Meta:
         name = "AvailabilityCheckResultID"
 
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -50,10 +49,9 @@ class AvailabilityCheckResultId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilityCheckResultLanguage:
-    language: Optional[Language] = field(
-        default=None,
+    language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
@@ -62,10 +60,9 @@ class AvailabilityCheckResultLanguage:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilityErrorInfo:
-    error_info: Optional[ErrorInfo] = field(
-        default=None,
+    error_info: ErrorInfo = field(
         metadata={
             "name": "ErrorInfo",
             "type": "Element",
@@ -74,10 +71,9 @@ class AvailabilityErrorInfo:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilityShipToParty:
-    party: Optional[Party] = field(
-        default=None,
+    party: Party = field(
         metadata={
             "name": "Party",
             "type": "Element",
@@ -86,10 +82,9 @@ class AvailabilityShipToParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailableQuantity:
-    quantity: Optional[Quantity] = field(
-        default=None,
+    quantity: Quantity = field(
         metadata={
             "name": "Quantity",
             "type": "Element",
@@ -98,10 +93,9 @@ class AvailableQuantity:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CheckResultTransport:
-    transport: Optional[Transport] = field(
-        default=None,
+    transport: Transport = field(
         metadata={
             "name": "Transport",
             "type": "Element",
@@ -110,10 +104,9 @@ class CheckResultTransport:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SummaryErrorInfo:
-    error_info: Optional[ErrorInfo] = field(
-        default=None,
+    error_info: ErrorInfo = field(
         metadata={
             "name": "ErrorInfo",
             "type": "Element",
@@ -122,26 +115,23 @@ class SummaryErrorInfo:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilityCheckResultHeader:
-    availability_check_result_id: Optional[AvailabilityCheckResultId] = field(
-        default=None,
+    availability_check_result_id: AvailabilityCheckResultId = field(
         metadata={
             "name": "AvailabilityCheckResultID",
             "type": "Element",
             "required": True,
         }
     )
-    availability_check_result_issue_date: Optional[str] = field(
-        default=None,
+    availability_check_result_issue_date: str = field(
         metadata={
             "name": "AvailabilityCheckResultIssueDate",
             "type": "Element",
             "required": True,
         }
     )
-    supplier_party: Optional[SupplierParty] = field(
-        default=None,
+    supplier_party: SupplierParty = field(
         metadata={
             "name": "SupplierParty",
             "type": "Element",
@@ -155,8 +145,7 @@ class AvailabilityCheckResultHeader:
             "type": "Element",
         }
     )
-    buyer_party: Optional[BuyerParty] = field(
-        default=None,
+    buyer_party: BuyerParty = field(
         metadata={
             "name": "BuyerParty",
             "type": "Element",
@@ -170,8 +159,7 @@ class AvailabilityCheckResultHeader:
             "type": "Element",
         }
     )
-    availability_ship_to_party: Optional[AvailabilityShipToParty] = field(
-        default=None,
+    availability_ship_to_party: AvailabilityShipToParty = field(
         metadata={
             "name": "AvailabilityShipToParty",
             "type": "Element",
@@ -201,10 +189,9 @@ class AvailabilityCheckResultHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilityCheckResultSummary:
-    availability_item_errors: Optional[str] = field(
-        default=None,
+    availability_item_errors: str = field(
         metadata={
             "name": "AvailabilityItemErrors",
             "type": "Element",
@@ -227,10 +214,9 @@ class AvailabilityCheckResultSummary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CheckResultBaseItemDetail:
-    line_item_num: Optional[LineItemNum] = field(
-        default=None,
+    line_item_num: LineItemNum = field(
         metadata={
             "name": "LineItemNum",
             "type": "Element",
@@ -366,10 +352,9 @@ class CheckResultBaseItemDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuotedItem:
-    check_result_base_item_detail: Optional[CheckResultBaseItemDetail] = field(
-        default=None,
+    check_result_base_item_detail: CheckResultBaseItemDetail = field(
         metadata={
             "name": "CheckResultBaseItemDetail",
             "type": "Element",
@@ -378,18 +363,16 @@ class QuotedItem:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilityCheckResultItemDetail:
-    quoted_item: Optional[QuotedItem] = field(
-        default=None,
+    quoted_item: QuotedItem = field(
         metadata={
             "name": "QuotedItem",
             "type": "Element",
             "required": True,
         }
     )
-    available_quantity: Optional[AvailableQuantity] = field(
-        default=None,
+    available_quantity: AvailableQuantity = field(
         metadata={
             "name": "AvailableQuantity",
             "type": "Element",
@@ -426,7 +409,7 @@ class AvailabilityCheckResultItemDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfAvailabilityCheckResultItemDetail:
     availability_check_result_item_detail: List[AvailabilityCheckResultItemDetail] = field(
         default_factory=list,
@@ -438,10 +421,9 @@ class ListOfAvailabilityCheckResultItemDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilityCheckResultDetail:
-    list_of_availability_check_result_item_detail: Optional[ListOfAvailabilityCheckResultItemDetail] = field(
-        default=None,
+    list_of_availability_check_result_item_detail: ListOfAvailabilityCheckResultItemDetail = field(
         metadata={
             "name": "ListOfAvailabilityCheckResultItemDetail",
             "type": "Element",
@@ -450,10 +432,9 @@ class AvailabilityCheckResultDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilityCheckResult:
-    availability_check_result_header: Optional[AvailabilityCheckResultHeader] = field(
-        default=None,
+    availability_check_result_header: AvailabilityCheckResultHeader = field(
         metadata={
             "name": "AvailabilityCheckResultHeader",
             "type": "Element",

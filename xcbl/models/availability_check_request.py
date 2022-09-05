@@ -32,7 +32,7 @@ from xcbl.models.payment_request_acknowledgment import SupplierParty
 from xcbl.models.price_check_request import RequestListOfAttachment
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilityCheckRequestSummary:
     total_number_of_line_item: Optional[str] = field(
         default=None,
@@ -43,13 +43,12 @@ class AvailabilityCheckRequestSummary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilityCheckRequestId:
     class Meta:
         name = "AvailabilityCheckRequestID"
 
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -58,10 +57,9 @@ class AvailabilityCheckRequestId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilityCheckRequestLanguage:
-    language: Optional[Language] = field(
-        default=None,
+    language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
@@ -70,10 +68,9 @@ class AvailabilityCheckRequestLanguage:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilityCheckRequestTransport:
-    transport: Optional[Transport] = field(
-        default=None,
+    transport: Transport = field(
         metadata={
             "name": "Transport",
             "type": "Element",
@@ -82,10 +79,9 @@ class AvailabilityCheckRequestTransport:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilityCheckRequestBaseItemDetail:
-    line_item_num: Optional[LineItemNum] = field(
-        default=None,
+    line_item_num: LineItemNum = field(
         metadata={
             "name": "LineItemNum",
             "type": "Element",
@@ -228,26 +224,23 @@ class AvailabilityCheckRequestBaseItemDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilityCheckRequestHeader:
-    availability_check_request_id: Optional[AvailabilityCheckRequestId] = field(
-        default=None,
+    availability_check_request_id: AvailabilityCheckRequestId = field(
         metadata={
             "name": "AvailabilityCheckRequestID",
             "type": "Element",
             "required": True,
         }
     )
-    availability_check_request_issue_date: Optional[str] = field(
-        default=None,
+    availability_check_request_issue_date: str = field(
         metadata={
             "name": "AvailabilityCheckRequestIssueDate",
             "type": "Element",
             "required": True,
         }
     )
-    supplier_party: Optional[SupplierParty] = field(
-        default=None,
+    supplier_party: SupplierParty = field(
         metadata={
             "name": "SupplierParty",
             "type": "Element",
@@ -261,8 +254,7 @@ class AvailabilityCheckRequestHeader:
             "type": "Element",
         }
     )
-    buyer_party: Optional[BuyerParty] = field(
-        default=None,
+    buyer_party: BuyerParty = field(
         metadata={
             "name": "BuyerParty",
             "type": "Element",
@@ -283,8 +275,7 @@ class AvailabilityCheckRequestHeader:
             "type": "Element",
         }
     )
-    availability_ship_to_party: Optional[AvailabilityShipToParty] = field(
-        default=None,
+    availability_ship_to_party: AvailabilityShipToParty = field(
         metadata={
             "name": "AvailabilityShipToParty",
             "type": "Element",
@@ -314,10 +305,9 @@ class AvailabilityCheckRequestHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilityCheckRequestItemDetail:
-    availability_check_request_base_item_detail: Optional[AvailabilityCheckRequestBaseItemDetail] = field(
-        default=None,
+    availability_check_request_base_item_detail: AvailabilityCheckRequestBaseItemDetail = field(
         metadata={
             "name": "AvailabilityCheckRequestBaseItemDetail",
             "type": "Element",
@@ -340,7 +330,7 @@ class AvailabilityCheckRequestItemDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfAvailabilityCheckRequestItemDetail:
     availability_check_request_item_detail: List[AvailabilityCheckRequestItemDetail] = field(
         default_factory=list,
@@ -352,10 +342,9 @@ class ListOfAvailabilityCheckRequestItemDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilityCheckRequestDetail:
-    list_of_availability_check_request_item_detail: Optional[ListOfAvailabilityCheckRequestItemDetail] = field(
-        default=None,
+    list_of_availability_check_request_item_detail: ListOfAvailabilityCheckRequestItemDetail = field(
         metadata={
             "name": "ListOfAvailabilityCheckRequestItemDetail",
             "type": "Element",
@@ -364,10 +353,9 @@ class AvailabilityCheckRequestDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilityCheckRequest:
-    availability_check_request_header: Optional[AvailabilityCheckRequestHeader] = field(
-        default=None,
+    availability_check_request_header: AvailabilityCheckRequestHeader = field(
         metadata={
             "name": "AvailabilityCheckRequestHeader",
             "type": "Element",

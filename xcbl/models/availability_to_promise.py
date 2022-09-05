@@ -14,13 +14,12 @@ from xcbl.models.goods_receipt import TransportRouting
 from xcbl.models.order_request import BaseItemDetail
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AtpcheckType:
     class Meta:
         name = "ATPCheckType"
 
-    atpcheck_type_coded: Optional[str] = field(
-        default=None,
+    atpcheck_type_coded: str = field(
         metadata={
             "name": "ATPCheckTypeCoded",
             "type": "Element",
@@ -36,13 +35,12 @@ class AtpcheckType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Atpresponse:
     class Meta:
         name = "ATPResponse"
 
-    availability_to_promise_response_coded: Optional[str] = field(
-        default=None,
+    availability_to_promise_response_coded: str = field(
         metadata={
             "name": "AvailabilityToPromiseResponseCoded",
             "type": "Element",
@@ -58,10 +56,9 @@ class Atpresponse:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilityDeliveryOption:
-    availability_delivery_option_coded: Optional[str] = field(
-        default=None,
+    availability_delivery_option_coded: str = field(
         metadata={
             "name": "AvailabilityDeliveryOptionCoded",
             "type": "Element",
@@ -77,10 +74,9 @@ class AvailabilityDeliveryOption:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilityToPromisePurpose:
-    availability_to_promise_purpose_coded: Optional[str] = field(
-        default=None,
+    availability_to_promise_purpose_coded: str = field(
         metadata={
             "name": "AvailabilityToPromisePurposeCoded",
             "type": "Element",
@@ -96,7 +92,7 @@ class AvailabilityToPromisePurpose:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilityToPromiseSummary:
     total_number_of_line_items: Optional[str] = field(
         default=None,
@@ -107,13 +103,12 @@ class AvailabilityToPromiseSummary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilityId:
     class Meta:
         name = "AvailabilityID"
 
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -122,10 +117,9 @@ class AvailabilityId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilityToPromiseBaseItemDetail:
-    base_item_detail: Optional[BaseItemDetail] = field(
-        default=None,
+    base_item_detail: BaseItemDetail = field(
         metadata={
             "name": "BaseItemDetail",
             "type": "Element",
@@ -134,10 +128,9 @@ class AvailabilityToPromiseBaseItemDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilityToPromiseDeliveryDetail:
-    delivery_detail: Optional[DeliveryDetail] = field(
-        default=None,
+    delivery_detail: DeliveryDetail = field(
         metadata={
             "name": "DeliveryDetail",
             "type": "Element",
@@ -146,10 +139,9 @@ class AvailabilityToPromiseDeliveryDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilityToPromiseHeaderTransport:
-    transport_routing: Optional[TransportRouting] = field(
-        default=None,
+    transport_routing: TransportRouting = field(
         metadata={
             "name": "TransportRouting",
             "type": "Element",
@@ -158,10 +150,9 @@ class AvailabilityToPromiseHeaderTransport:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilityToPromiseItemListOfAttachment:
-    list_of_attachment: Optional[ListOfAttachment] = field(
-        default=None,
+    list_of_attachment: ListOfAttachment = field(
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
@@ -170,10 +161,9 @@ class AvailabilityToPromiseItemListOfAttachment:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilityToPromiseListOfAttachment:
-    list_of_attachment: Optional[ListOfAttachment] = field(
-        default=None,
+    list_of_attachment: ListOfAttachment = field(
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
@@ -182,10 +172,9 @@ class AvailabilityToPromiseListOfAttachment:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilityToPromiseTransportDetail:
-    transport: Optional[Transport] = field(
-        default=None,
+    transport: Transport = field(
         metadata={
             "name": "Transport",
             "type": "Element",
@@ -194,10 +183,9 @@ class AvailabilityToPromiseTransportDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RespondingParty:
-    party: Optional[Party] = field(
-        default=None,
+    party: Party = field(
         metadata={
             "name": "Party",
             "type": "Element",
@@ -206,18 +194,16 @@ class RespondingParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilityToPromiseHeader:
-    availability_id: Optional[AvailabilityId] = field(
-        default=None,
+    availability_id: AvailabilityId = field(
         metadata={
             "name": "AvailabilityID",
             "type": "Element",
             "required": True,
         }
     )
-    availability_issue_date: Optional[str] = field(
-        default=None,
+    availability_issue_date: str = field(
         metadata={
             "name": "AvailabilityIssueDate",
             "type": "Element",
@@ -231,16 +217,14 @@ class AvailabilityToPromiseHeader:
             "type": "Element",
         }
     )
-    availability_to_promise_purpose: Optional[AvailabilityToPromisePurpose] = field(
-        default=None,
+    availability_to_promise_purpose: AvailabilityToPromisePurpose = field(
         metadata={
             "name": "AvailabilityToPromisePurpose",
             "type": "Element",
             "required": True,
         }
     )
-    availability_delivery_option: Optional[AvailabilityDeliveryOption] = field(
-        default=None,
+    availability_delivery_option: AvailabilityDeliveryOption = field(
         metadata={
             "name": "AvailabilityDeliveryOption",
             "type": "Element",
@@ -261,8 +245,7 @@ class AvailabilityToPromiseHeader:
             "type": "Element",
         }
     )
-    initiating_party: Optional[InitiatingParty] = field(
-        default=None,
+    initiating_party: InitiatingParty = field(
         metadata={
             "name": "InitiatingParty",
             "type": "Element",
@@ -306,10 +289,9 @@ class AvailabilityToPromiseHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilityToPromiseItemDetail:
-    availability_to_promise_base_item_detail: Optional[AvailabilityToPromiseBaseItemDetail] = field(
-        default=None,
+    availability_to_promise_base_item_detail: AvailabilityToPromiseBaseItemDetail = field(
         metadata={
             "name": "AvailabilityToPromiseBaseItemDetail",
             "type": "Element",
@@ -346,7 +328,7 @@ class AvailabilityToPromiseItemDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfAvailabilityToPromiseItemDetail:
     availability_to_promise_item_detail: List[AvailabilityToPromiseItemDetail] = field(
         default_factory=list,
@@ -358,7 +340,7 @@ class ListOfAvailabilityToPromiseItemDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilityToPromiseDetail:
     list_of_availability_to_promise_item_detail: Optional[ListOfAvailabilityToPromiseItemDetail] = field(
         default=None,
@@ -369,10 +351,9 @@ class AvailabilityToPromiseDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AvailabilityToPromise:
-    availability_to_promise_header: Optional[AvailabilityToPromiseHeader] = field(
-        default=None,
+    availability_to_promise_header: AvailabilityToPromiseHeader = field(
         metadata={
             "name": "AvailabilityToPromiseHeader",
             "type": "Element",

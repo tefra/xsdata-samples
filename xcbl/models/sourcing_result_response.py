@@ -8,10 +8,9 @@ from xcbl.models.auction_create import (
 from xcbl.models.sourcing_create_response import SourcingCreateReference
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SourcingResultReference:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -20,10 +19,9 @@ class SourcingResultReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SourcingResultResponsePurpose:
-    purpose: Optional[Purpose] = field(
-        default=None,
+    purpose: Purpose = field(
         metadata={
             "name": "Purpose",
             "type": "Element",
@@ -32,42 +30,37 @@ class SourcingResultResponsePurpose:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SourcingResultResponse:
-    sourcing_result_response_purpose: Optional[SourcingResultResponsePurpose] = field(
-        default=None,
+    sourcing_result_response_purpose: SourcingResultResponsePurpose = field(
         metadata={
             "name": "SourcingResultResponsePurpose",
             "type": "Element",
             "required": True,
         }
     )
-    sourcingresult_responseissue_date: Optional[str] = field(
-        default=None,
+    sourcingresult_responseissue_date: str = field(
         metadata={
             "name": "SourcingresultResponseissueDate",
             "type": "Element",
             "required": True,
         }
     )
-    sourcing_result_response_id: Optional[str] = field(
-        default=None,
+    sourcing_result_response_id: str = field(
         metadata={
             "name": "SourcingResultResponseID",
             "type": "Element",
             "required": True,
         }
     )
-    tracking_id: Optional[str] = field(
-        default=None,
+    tracking_id: str = field(
         metadata={
             "name": "TrackingID",
             "type": "Element",
             "required": True,
         }
     )
-    sourcing_create_reference: Optional[SourcingCreateReference] = field(
-        default=None,
+    sourcing_create_reference: SourcingCreateReference = field(
         metadata={
             "name": "SourcingCreateReference",
             "type": "Element",
@@ -81,8 +74,7 @@ class SourcingResultResponse:
             "type": "Element",
         }
     )
-    sourcing_result_response_coded: Optional[str] = field(
-        default=None,
+    sourcing_result_response_coded: str = field(
         metadata={
             "name": "SourcingResultResponseCoded",
             "type": "Element",
@@ -96,8 +88,7 @@ class SourcingResultResponse:
             "type": "Element",
         }
     )
-    language: Optional[Language] = field(
-        default=None,
+    language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",

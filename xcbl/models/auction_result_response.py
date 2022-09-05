@@ -8,10 +8,9 @@ from xcbl.models.auction_create import (
 from xcbl.models.auction_result import AuctionCreateReference
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionResultReference:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -20,10 +19,9 @@ class AuctionResultReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionResultResponsePurpose:
-    purpose: Optional[Purpose] = field(
-        default=None,
+    purpose: Purpose = field(
         metadata={
             "name": "Purpose",
             "type": "Element",
@@ -32,34 +30,30 @@ class AuctionResultResponsePurpose:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionResultResponseHeader:
-    auction_result_response_purpose: Optional[AuctionResultResponsePurpose] = field(
-        default=None,
+    auction_result_response_purpose: AuctionResultResponsePurpose = field(
         metadata={
             "name": "AuctionResultResponsePurpose",
             "type": "Element",
             "required": True,
         }
     )
-    auction_result_response_issue_date: Optional[str] = field(
-        default=None,
+    auction_result_response_issue_date: str = field(
         metadata={
             "name": "AuctionResultResponseIssueDate",
             "type": "Element",
             "required": True,
         }
     )
-    auction_result_response_id: Optional[str] = field(
-        default=None,
+    auction_result_response_id: str = field(
         metadata={
             "name": "AuctionResultResponseID",
             "type": "Element",
             "required": True,
         }
     )
-    auction_create_reference: Optional[AuctionCreateReference] = field(
-        default=None,
+    auction_create_reference: AuctionCreateReference = field(
         metadata={
             "name": "AuctionCreateReference",
             "type": "Element",
@@ -73,8 +67,7 @@ class AuctionResultResponseHeader:
             "type": "Element",
         }
     )
-    auction_result_response_coded: Optional[str] = field(
-        default=None,
+    auction_result_response_coded: str = field(
         metadata={
             "name": "AuctionResultResponseCoded",
             "type": "Element",
@@ -88,8 +81,7 @@ class AuctionResultResponseHeader:
             "type": "Element",
         }
     )
-    language: Optional[Language] = field(
-        default=None,
+    language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
@@ -105,10 +97,9 @@ class AuctionResultResponseHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionResultResponse:
-    auction_result_response_header: Optional[AuctionResultResponseHeader] = field(
-        default=None,
+    auction_result_response_header: AuctionResultResponseHeader = field(
         metadata={
             "name": "AuctionResultResponseHeader",
             "type": "Element",

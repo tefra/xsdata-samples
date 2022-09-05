@@ -41,10 +41,9 @@ from xcbl.models.order_request import (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderType:
-    order_type_coded: Optional[str] = field(
-        default=None,
+    order_type_coded: str = field(
         metadata={
             "name": "OrderTypeCoded",
             "type": "Element",
@@ -60,10 +59,9 @@ class OrderType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PlanningScheduleSummary:
-    total_number_of_line_items: Optional[str] = field(
-        default=None,
+    total_number_of_line_items: str = field(
         metadata={
             "name": "TotalNumberOfLineItems",
             "type": "Element",
@@ -72,10 +70,9 @@ class PlanningScheduleSummary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ItemQuantities:
-    list_of_quantity_coded: Optional[ListOfQuantityCoded] = field(
-        default=None,
+    list_of_quantity_coded: ListOfQuantityCoded = field(
         metadata={
             "name": "ListOfQuantityCoded",
             "type": "Element",
@@ -84,10 +81,9 @@ class ItemQuantities:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ItemResourceAuthorization:
-    resource_authorization_coded: Optional[str] = field(
-        default=None,
+    resource_authorization_coded: str = field(
         metadata={
             "name": "ResourceAuthorizationCoded",
             "type": "Element",
@@ -110,10 +106,9 @@ class ItemResourceAuthorization:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MaterialIssuerParty:
-    party: Optional[Party] = field(
-        default=None,
+    party: Party = field(
         metadata={
             "name": "Party",
             "type": "Element",
@@ -122,10 +117,9 @@ class MaterialIssuerParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderNumber:
-    buyer_order_number: Optional[str] = field(
-        default=None,
+    buyer_order_number: str = field(
         metadata={
             "name": "BuyerOrderNumber",
             "type": "Element",
@@ -148,10 +142,9 @@ class OrderNumber:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OtherSchedleReferences:
-    list_of_reference_coded: Optional[ListOfReferenceCoded] = field(
-        default=None,
+    list_of_reference_coded: ListOfReferenceCoded = field(
         metadata={
             "name": "ListOfReferenceCoded",
             "type": "Element",
@@ -160,10 +153,9 @@ class OtherSchedleReferences:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ScheduleDates:
-    list_of_date_coded: Optional[ListOfDateCoded] = field(
-        default=None,
+    list_of_date_coded: ListOfDateCoded = field(
         metadata={
             "name": "ListOfDateCoded",
             "type": "Element",
@@ -172,10 +164,9 @@ class ScheduleDates:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SchedulePurpose:
-    purpose: Optional[Purpose] = field(
-        default=None,
+    purpose: Purpose = field(
         metadata={
             "name": "Purpose",
             "type": "Element",
@@ -184,10 +175,9 @@ class SchedulePurpose:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ScheduleQuantities:
-    list_of_quantity_coded: Optional[ListOfQuantityCoded] = field(
-        default=None,
+    list_of_quantity_coded: ListOfQuantityCoded = field(
         metadata={
             "name": "ListOfQuantityCoded",
             "type": "Element",
@@ -196,10 +186,9 @@ class ScheduleQuantities:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ScheduleDetail:
-    commitment_level_coded: Optional[str] = field(
-        default=None,
+    commitment_level_coded: str = field(
         metadata={
             "name": "CommitmentLevelCoded",
             "type": "Element",
@@ -213,16 +202,14 @@ class ScheduleDetail:
             "type": "Element",
         }
     )
-    schedule_dates: Optional[ScheduleDates] = field(
-        default=None,
+    schedule_dates: ScheduleDates = field(
         metadata={
             "name": "ScheduleDates",
             "type": "Element",
             "required": True,
         }
     )
-    schedule_quantities: Optional[ScheduleQuantities] = field(
-        default=None,
+    schedule_quantities: ScheduleQuantities = field(
         metadata={
             "name": "ScheduleQuantities",
             "type": "Element",
@@ -245,10 +232,9 @@ class ScheduleDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ScheduleOrderReference:
-    order_number: Optional[OrderNumber] = field(
-        default=None,
+    order_number: OrderNumber = field(
         metadata={
             "name": "OrderNumber",
             "type": "Element",
@@ -271,34 +257,30 @@ class ScheduleOrderReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ScheduleParty:
-    buyer_party: Optional[BuyerParty] = field(
-        default=None,
+    buyer_party: BuyerParty = field(
         metadata={
             "name": "BuyerParty",
             "type": "Element",
             "required": True,
         }
     )
-    seller_party: Optional[SellerParty] = field(
-        default=None,
+    seller_party: SellerParty = field(
         metadata={
             "name": "SellerParty",
             "type": "Element",
             "required": True,
         }
     )
-    ship_from_party: Optional[ShipFromParty] = field(
-        default=None,
+    ship_from_party: ShipFromParty = field(
         metadata={
             "name": "ShipFromParty",
             "type": "Element",
             "required": True,
         }
     )
-    ship_to_party: Optional[ShipToParty] = field(
-        default=None,
+    ship_to_party: ShipToParty = field(
         metadata={
             "name": "ShipToParty",
             "type": "Element",
@@ -328,7 +310,7 @@ class ScheduleParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfScheduleDetail:
     schedule_detail: List[ScheduleDetail] = field(
         default_factory=list,
@@ -340,7 +322,7 @@ class ListOfScheduleDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ScheduleReferences:
     contract_references: Optional[ContractReferences] = field(
         default=None,
@@ -372,10 +354,9 @@ class ScheduleReferences:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ItemScheduleReference:
-    schedule_references: Optional[ScheduleReferences] = field(
-        default=None,
+    schedule_references: ScheduleReferences = field(
         metadata={
             "name": "ScheduleReferences",
             "type": "Element",
@@ -384,7 +365,7 @@ class ItemScheduleReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LocationSchedule:
     location: Optional[Location] = field(
         default=None,
@@ -400,8 +381,7 @@ class LocationSchedule:
             "type": "Element",
         }
     )
-    list_of_schedule_detail: Optional[ListOfScheduleDetail] = field(
-        default=None,
+    list_of_schedule_detail: ListOfScheduleDetail = field(
         metadata={
             "name": "ListOfScheduleDetail",
             "type": "Element",
@@ -410,18 +390,16 @@ class LocationSchedule:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PlanningScheduleHeader:
-    schedule_id: Optional[str] = field(
-        default=None,
+    schedule_id: str = field(
         metadata={
             "name": "ScheduleID",
             "type": "Element",
             "required": True,
         }
     )
-    schedule_issue_date: Optional[str] = field(
-        default=None,
+    schedule_issue_date: str = field(
         metadata={
             "name": "ScheduleIssueDate",
             "type": "Element",
@@ -442,8 +420,7 @@ class PlanningScheduleHeader:
             "type": "Element",
         }
     )
-    schedule_purpose: Optional[SchedulePurpose] = field(
-        default=None,
+    schedule_purpose: SchedulePurpose = field(
         metadata={
             "name": "SchedulePurpose",
             "type": "Element",
@@ -457,8 +434,7 @@ class PlanningScheduleHeader:
             "type": "Element",
         }
     )
-    schedule_type_coded: Optional[str] = field(
-        default=None,
+    schedule_type_coded: str = field(
         metadata={
             "name": "ScheduleTypeCoded",
             "type": "Element",
@@ -472,8 +448,7 @@ class PlanningScheduleHeader:
             "type": "Element",
         }
     )
-    quantity_qualifier_coded: Optional[str] = field(
-        default=None,
+    quantity_qualifier_coded: str = field(
         metadata={
             "name": "QuantityQualifierCoded",
             "type": "Element",
@@ -494,16 +469,14 @@ class PlanningScheduleHeader:
             "type": "Element",
         }
     )
-    schedule_party: Optional[ScheduleParty] = field(
-        default=None,
+    schedule_party: ScheduleParty = field(
         metadata={
             "name": "ScheduleParty",
             "type": "Element",
             "required": True,
         }
     )
-    language: Optional[Language] = field(
-        default=None,
+    language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
@@ -533,10 +506,9 @@ class PlanningScheduleHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BasePlanningDetail:
-    line_item_num: Optional[LineItemNum] = field(
-        default=None,
+    line_item_num: LineItemNum = field(
         metadata={
             "name": "LineItemNum",
             "type": "Element",
@@ -676,8 +648,7 @@ class BasePlanningDetail:
             "type": "Element",
         }
     )
-    forecast_frequency_coded: Optional[str] = field(
-        default=None,
+    forecast_frequency_coded: str = field(
         metadata={
             "name": "ForecastFrequencyCoded",
             "type": "Element",
@@ -714,7 +685,7 @@ class BasePlanningDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfLocationSchedule:
     location_schedule: List[LocationSchedule] = field(
         default_factory=list,
@@ -726,18 +697,16 @@ class ListOfLocationSchedule:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LocationPlanningItemDetail:
-    base_planning_detail: Optional[BasePlanningDetail] = field(
-        default=None,
+    base_planning_detail: BasePlanningDetail = field(
         metadata={
             "name": "BasePlanningDetail",
             "type": "Element",
             "required": True,
         }
     )
-    list_of_schedule_detail: Optional[ListOfScheduleDetail] = field(
-        default=None,
+    list_of_schedule_detail: ListOfScheduleDetail = field(
         metadata={
             "name": "ListOfScheduleDetail",
             "type": "Element",
@@ -760,18 +729,16 @@ class LocationPlanningItemDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MaterialGroupedPlanningDetail:
-    base_planning_detail: Optional[BasePlanningDetail] = field(
-        default=None,
+    base_planning_detail: BasePlanningDetail = field(
         metadata={
             "name": "BasePlanningDetail",
             "type": "Element",
             "required": True,
         }
     )
-    list_of_location_schedule: Optional[ListOfLocationSchedule] = field(
-        default=None,
+    list_of_location_schedule: ListOfLocationSchedule = field(
         metadata={
             "name": "ListOfLocationSchedule",
             "type": "Element",
@@ -794,7 +761,7 @@ class MaterialGroupedPlanningDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfLocationPlanningItemDetail:
     location_planning_item_detail: List[LocationPlanningItemDetail] = field(
         default_factory=list,
@@ -806,7 +773,7 @@ class ListOfLocationPlanningItemDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfMaterialGroupedPlanningDetail:
     material_grouped_planning_detail: List[MaterialGroupedPlanningDetail] = field(
         default_factory=list,
@@ -818,10 +785,9 @@ class ListOfMaterialGroupedPlanningDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LocationGroupedPlanningDetail:
-    location: Optional[Location] = field(
-        default=None,
+    location: Location = field(
         metadata={
             "name": "Location",
             "type": "Element",
@@ -835,8 +801,7 @@ class LocationGroupedPlanningDetail:
             "type": "Element",
         }
     )
-    list_of_location_planning_item_detail: Optional[ListOfLocationPlanningItemDetail] = field(
-        default=None,
+    list_of_location_planning_item_detail: ListOfLocationPlanningItemDetail = field(
         metadata={
             "name": "ListOfLocationPlanningItemDetail",
             "type": "Element",
@@ -845,7 +810,7 @@ class LocationGroupedPlanningDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfLocationGroupedPlanningDetail:
     location_grouped_planning_detail: List[LocationGroupedPlanningDetail] = field(
         default_factory=list,
@@ -857,10 +822,9 @@ class ListOfLocationGroupedPlanningDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PlanningSchedule:
-    planning_schedule_header: Optional[PlanningScheduleHeader] = field(
-        default=None,
+    planning_schedule_header: PlanningScheduleHeader = field(
         metadata={
             "name": "PlanningScheduleHeader",
             "type": "Element",
@@ -872,7 +836,6 @@ class PlanningSchedule:
         metadata={
             "name": "ListOfLocationGroupedPlanningDetail",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_material_grouped_planning_detail: Optional[ListOfMaterialGroupedPlanningDetail] = field(
@@ -880,7 +843,6 @@ class PlanningSchedule:
         metadata={
             "name": "ListOfMaterialGroupedPlanningDetail",
             "type": "Element",
-            "required": True,
         }
     )
     planning_schedule_summary: Optional[PlanningScheduleSummary] = field(

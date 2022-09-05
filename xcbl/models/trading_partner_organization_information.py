@@ -15,10 +15,9 @@ from xcbl.models.trading_partner_organization_delete import (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AddressType:
-    address_type_coded: Optional[str] = field(
-        default=None,
+    address_type_coded: str = field(
         metadata={
             "name": "AddressTypeCoded",
             "type": "Element",
@@ -34,10 +33,9 @@ class AddressType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TradingPartnerOrganizationPurpose:
-    trading_partner_organization_purpose_coded: Optional[str] = field(
-        default=None,
+    trading_partner_organization_purpose_coded: str = field(
         metadata={
             "name": "TradingPartnerOrganizationPurposeCoded",
             "type": "Element",
@@ -53,10 +51,9 @@ class TradingPartnerOrganizationPurpose:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TradingPartnerOrganizationVisibility:
-    trading_partner_organization_visibility_coded: Optional[str] = field(
-        default=None,
+    trading_partner_organization_visibility_coded: str = field(
         metadata={
             "name": "TradingPartnerOrganizationVisibilityCoded",
             "type": "Element",
@@ -72,10 +69,9 @@ class TradingPartnerOrganizationVisibility:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TradingPartnerType:
-    trading_partner_type_coded: Optional[str] = field(
-        default=None,
+    trading_partner_type_coded: str = field(
         metadata={
             "name": "TradingPartnerTypeCoded",
             "type": "Element",
@@ -91,10 +87,9 @@ class TradingPartnerType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BankCountry:
-    country: Optional[Country] = field(
-        default=None,
+    country: Country = field(
         metadata={
             "name": "Country",
             "type": "Element",
@@ -103,7 +98,7 @@ class BankCountry:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfTradingPartnerType:
     trading_partner_type: List[TradingPartnerType] = field(
         default_factory=list,
@@ -115,10 +110,9 @@ class ListOfTradingPartnerType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrganizationCurrency:
-    currency: Optional[Currency] = field(
-        default=None,
+    currency: Currency = field(
         metadata={
             "name": "Currency",
             "type": "Element",
@@ -127,10 +121,9 @@ class OrganizationCurrency:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrganizationLanguage:
-    language: Optional[Language] = field(
-        default=None,
+    language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
@@ -139,10 +132,9 @@ class OrganizationLanguage:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParentTradingPartnerIdentifications:
-    identifications: Optional[Identifications] = field(
-        default=None,
+    identifications: Identifications = field(
         metadata={
             "name": "Identifications",
             "type": "Element",
@@ -151,10 +143,9 @@ class ParentTradingPartnerIdentifications:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TradingPartnerTimezone:
-    timezone: Optional[Timezone] = field(
-        default=None,
+    timezone: Timezone = field(
         metadata={
             "name": "Timezone",
             "type": "Element",
@@ -163,10 +154,9 @@ class TradingPartnerTimezone:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BankDetail:
-    bank_country: Optional[BankCountry] = field(
-        default=None,
+    bank_country: BankCountry = field(
         metadata={
             "name": "BankCountry",
             "type": "Element",
@@ -187,8 +177,7 @@ class BankDetail:
             "type": "Element",
         }
     )
-    bank_account_number: Optional[str] = field(
-        default=None,
+    bank_account_number: str = field(
         metadata={
             "name": "BankAccountNumber",
             "type": "Element",
@@ -225,7 +214,7 @@ class BankDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrganizationAddress:
     address_type: Optional[AddressType] = field(
         default=None,
@@ -234,8 +223,7 @@ class OrganizationAddress:
             "type": "Element",
         }
     )
-    external_address_id: Optional[str] = field(
-        default=None,
+    external_address_id: str = field(
         metadata={
             "name": "ExternalAddressID",
             "type": "Element",
@@ -284,8 +272,7 @@ class OrganizationAddress:
             "type": "Element",
         }
     )
-    city: Optional[str] = field(
-        default=None,
+    city: str = field(
         metadata={
             "name": "City",
             "type": "Element",
@@ -313,8 +300,7 @@ class OrganizationAddress:
             "type": "Element",
         }
     )
-    country: Optional[Country] = field(
-        default=None,
+    country: Country = field(
         metadata={
             "name": "Country",
             "type": "Element",
@@ -330,7 +316,7 @@ class OrganizationAddress:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TradingPartnerOrganizationHeader:
     validity_dates: Optional[ValidityDates] = field(
         default=None,
@@ -339,32 +325,28 @@ class TradingPartnerOrganizationHeader:
             "type": "Element",
         }
     )
-    list_of_trading_partner_type: Optional[ListOfTradingPartnerType] = field(
-        default=None,
+    list_of_trading_partner_type: ListOfTradingPartnerType = field(
         metadata={
             "name": "ListOfTradingPartnerType",
             "type": "Element",
             "required": True,
         }
     )
-    trading_partner_identifications: Optional[TradingPartnerIdentifications] = field(
-        default=None,
+    trading_partner_identifications: TradingPartnerIdentifications = field(
         metadata={
             "name": "TradingPartnerIdentifications",
             "type": "Element",
             "required": True,
         }
     )
-    trading_partner_display_name: Optional[str] = field(
-        default=None,
+    trading_partner_display_name: str = field(
         metadata={
             "name": "TradingPartnerDisplayName",
             "type": "Element",
             "required": True,
         }
     )
-    name1: Optional[str] = field(
-        default=None,
+    name1: str = field(
         metadata={
             "type": "Element",
             "required": True,
@@ -382,24 +364,21 @@ class TradingPartnerOrganizationHeader:
             "type": "Element",
         }
     )
-    organization_language: Optional[OrganizationLanguage] = field(
-        default=None,
+    organization_language: OrganizationLanguage = field(
         metadata={
             "name": "OrganizationLanguage",
             "type": "Element",
             "required": True,
         }
     )
-    organization_currency: Optional[OrganizationCurrency] = field(
-        default=None,
+    organization_currency: OrganizationCurrency = field(
         metadata={
             "name": "OrganizationCurrency",
             "type": "Element",
             "required": True,
         }
     )
-    trading_partner_organization_visibility: Optional[TradingPartnerOrganizationVisibility] = field(
-        default=None,
+    trading_partner_organization_visibility: TradingPartnerOrganizationVisibility = field(
         metadata={
             "name": "TradingPartnerOrganizationVisibility",
             "type": "Element",
@@ -422,10 +401,9 @@ class TradingPartnerOrganizationHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfBankDetail:
-    bank_detail: Optional[BankDetail] = field(
-        default=None,
+    bank_detail: BankDetail = field(
         metadata={
             "name": "BankDetail",
             "type": "Element",
@@ -434,7 +412,7 @@ class ListOfBankDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfOrganizationAddress:
     organization_address: List[OrganizationAddress] = field(
         default_factory=list,
@@ -446,10 +424,9 @@ class ListOfOrganizationAddress:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrimaryOrganizationAddress:
-    organization_address: Optional[OrganizationAddress] = field(
-        default=None,
+    organization_address: OrganizationAddress = field(
         metadata={
             "name": "OrganizationAddress",
             "type": "Element",
@@ -458,10 +435,9 @@ class PrimaryOrganizationAddress:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrganizationAddresses:
-    primary_organization_address: Optional[PrimaryOrganizationAddress] = field(
-        default=None,
+    primary_organization_address: PrimaryOrganizationAddress = field(
         metadata={
             "name": "PrimaryOrganizationAddress",
             "type": "Element",
@@ -477,18 +453,16 @@ class OrganizationAddresses:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TradingPartnerOrganization:
-    trading_partner_organization_header: Optional[TradingPartnerOrganizationHeader] = field(
-        default=None,
+    trading_partner_organization_header: TradingPartnerOrganizationHeader = field(
         metadata={
             "name": "TradingPartnerOrganizationHeader",
             "type": "Element",
             "required": True,
         }
     )
-    organization_addresses: Optional[OrganizationAddresses] = field(
-        default=None,
+    organization_addresses: OrganizationAddresses = field(
         metadata={
             "name": "OrganizationAddresses",
             "type": "Element",
@@ -504,7 +478,7 @@ class TradingPartnerOrganization:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfTradingPartnerOrganization:
     trading_partner_organization: List[TradingPartnerOrganization] = field(
         default_factory=list,
@@ -516,18 +490,16 @@ class ListOfTradingPartnerOrganization:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TradingPartnerOrganizationInformation:
-    trading_partner_organization_purpose: Optional[TradingPartnerOrganizationPurpose] = field(
-        default=None,
+    trading_partner_organization_purpose: TradingPartnerOrganizationPurpose = field(
         metadata={
             "name": "TradingPartnerOrganizationPurpose",
             "type": "Element",
             "required": True,
         }
     )
-    list_of_trading_partner_organization: Optional[ListOfTradingPartnerOrganization] = field(
-        default=None,
+    list_of_trading_partner_organization: ListOfTradingPartnerOrganization = field(
         metadata={
             "name": "ListOfTradingPartnerOrganization",
             "type": "Element",

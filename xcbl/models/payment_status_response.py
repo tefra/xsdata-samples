@@ -24,7 +24,7 @@ from xcbl.models.payment_request_acknowledgment import (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PaymentStatusRequestSummary:
     total_number_payment_requests: Optional[str] = field(
         default=None,
@@ -35,10 +35,9 @@ class PaymentStatusRequestSummary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfOtherPaymentInfo:
-    list_of_name_value_pair: Optional[ListOfNameValuePair] = field(
-        default=None,
+    list_of_name_value_pair: ListOfNameValuePair = field(
         metadata={
             "name": "ListOfNameValuePair",
             "type": "Element",
@@ -47,10 +46,9 @@ class ListOfOtherPaymentInfo:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfPaymentDates:
-    list_of_date_coded: Optional[ListOfDateCoded] = field(
-        default=None,
+    list_of_date_coded: ListOfDateCoded = field(
         metadata={
             "name": "ListOfDateCoded",
             "type": "Element",
@@ -59,10 +57,9 @@ class ListOfPaymentDates:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfPaymentReferences:
-    list_of_reference: Optional[ListOfReference] = field(
-        default=None,
+    list_of_reference: ListOfReference = field(
         metadata={
             "name": "ListOfReference",
             "type": "Element",
@@ -71,10 +68,9 @@ class ListOfPaymentReferences:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfPaymentResponse:
-    list_of_payment_exception: Optional[ListOfPaymentException] = field(
-        default=None,
+    list_of_payment_exception: ListOfPaymentException = field(
         metadata={
             "name": "ListOfPaymentException",
             "type": "Element",
@@ -83,13 +79,12 @@ class ListOfPaymentResponse:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ParticipantUserId:
     class Meta:
         name = "ParticipantUserID"
 
-    identifier: Optional[Identifier] = field(
-        default=None,
+    identifier: Identifier = field(
         metadata={
             "name": "Identifier",
             "type": "Element",
@@ -98,13 +93,12 @@ class ParticipantUserId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PaymentRequestId:
     class Meta:
         name = "PaymentRequestID"
 
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -113,13 +107,12 @@ class PaymentRequestId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PaymentStatusRequestId:
     class Meta:
         name = "PaymentStatusRequestID"
 
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -128,13 +121,12 @@ class PaymentStatusRequestId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PaymentStatusResponseId:
     class Meta:
         name = "PaymentStatusResponseID"
 
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -143,10 +135,9 @@ class PaymentStatusResponseId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PaymentStatusResponseSummary:
-    payment_status_request_summary: Optional[PaymentStatusRequestSummary] = field(
-        default=None,
+    payment_status_request_summary: PaymentStatusRequestSummary = field(
         metadata={
             "name": "PaymentStatusRequestSummary",
             "type": "Element",
@@ -155,10 +146,9 @@ class PaymentStatusResponseSummary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SendingParty:
-    payer_party: Optional[PayerParty] = field(
-        default=None,
+    payer_party: PayerParty = field(
         metadata={
             "name": "PayerParty",
             "type": "Element",
@@ -167,7 +157,7 @@ class SendingParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PaymentDates:
     payment_due_date: Optional[str] = field(
         default=None,
@@ -199,26 +189,23 @@ class PaymentDates:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PaymentStatusResponseHeader:
-    payment_status_request_id: Optional[PaymentStatusRequestId] = field(
-        default=None,
+    payment_status_request_id: PaymentStatusRequestId = field(
         metadata={
             "name": "PaymentStatusRequestID",
             "type": "Element",
             "required": True,
         }
     )
-    payment_status_response_id: Optional[PaymentStatusResponseId] = field(
-        default=None,
+    payment_status_response_id: PaymentStatusResponseId = field(
         metadata={
             "name": "PaymentStatusResponseID",
             "type": "Element",
             "required": True,
         }
     )
-    payment_status_response_issue_date: Optional[str] = field(
-        default=None,
+    payment_status_response_issue_date: str = field(
         metadata={
             "name": "PaymentStatusResponseIssueDate",
             "type": "Element",
@@ -232,8 +219,7 @@ class PaymentStatusResponseHeader:
             "type": "Element",
         }
     )
-    language: Optional[Language] = field(
-        default=None,
+    language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
@@ -249,18 +235,16 @@ class PaymentStatusResponseHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PaymentStatusResponseDetail:
-    payment_request_id: Optional[PaymentRequestId] = field(
-        default=None,
+    payment_request_id: PaymentRequestId = field(
         metadata={
             "name": "PaymentRequestID",
             "type": "Element",
             "required": True,
         }
     )
-    confirmation_id: Optional[str] = field(
-        default=None,
+    confirmation_id: str = field(
         metadata={
             "name": "ConfirmationID",
             "type": "Element",
@@ -386,8 +370,7 @@ class PaymentStatusResponseDetail:
             "type": "Element",
         }
     )
-    list_of_payment_response: Optional[ListOfPaymentResponse] = field(
-        default=None,
+    list_of_payment_response: ListOfPaymentResponse = field(
         metadata={
             "name": "ListOfPaymentResponse",
             "type": "Element",
@@ -396,7 +379,7 @@ class PaymentStatusResponseDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfPaymentStatusResponseDetail:
     payment_status_response_detail: List[PaymentStatusResponseDetail] = field(
         default_factory=list,
@@ -408,26 +391,23 @@ class ListOfPaymentStatusResponseDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PaymentStatusResponse:
-    payment_status_response_header: Optional[PaymentStatusResponseHeader] = field(
-        default=None,
+    payment_status_response_header: PaymentStatusResponseHeader = field(
         metadata={
             "name": "PaymentStatusResponseHeader",
             "type": "Element",
             "required": True,
         }
     )
-    list_of_payment_status_response_detail: Optional[ListOfPaymentStatusResponseDetail] = field(
-        default=None,
+    list_of_payment_status_response_detail: ListOfPaymentStatusResponseDetail = field(
         metadata={
             "name": "ListOfPaymentStatusResponseDetail",
             "type": "Element",
             "required": True,
         }
     )
-    payment_status_response_summary: Optional[PaymentStatusResponseSummary] = field(
-        default=None,
+    payment_status_response_summary: PaymentStatusResponseSummary = field(
         metadata={
             "name": "PaymentStatusResponseSummary",
             "type": "Element",

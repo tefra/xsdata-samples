@@ -73,13 +73,12 @@ from xcbl.models.request_for_quotation import (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AsnpartialOrder:
     class Meta:
         name = "ASNPartialOrder"
 
-    asnpartial_order_coded: Optional[str] = field(
-        default=None,
+    asnpartial_order_coded: str = field(
         metadata={
             "name": "ASNPartialOrderCoded",
             "type": "Element",
@@ -95,7 +94,7 @@ class AsnpartialOrder:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ActualPaymentStatus:
     actual_payment_status_coded: Optional[str] = field(
         default=None,
@@ -113,7 +112,7 @@ class ActualPaymentStatus:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AllowOrChargeTreatment:
     allow_or_charge_treatment_coded: Optional[str] = field(
         default=None,
@@ -131,7 +130,7 @@ class AllowOrChargeTreatment:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoiceMedium:
     invoice_medium_coded: Optional[str] = field(
         default=None,
@@ -149,7 +148,7 @@ class InvoiceMedium:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoicePaymentStatus:
     invoice_payment_status_coded: Optional[str] = field(
         default=None,
@@ -167,10 +166,9 @@ class InvoicePaymentStatus:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoicePurpose:
-    invoice_purpose_coded: Optional[str] = field(
-        default=None,
+    invoice_purpose_coded: str = field(
         metadata={
             "name": "InvoicePurposeCoded",
             "type": "Element",
@@ -186,10 +184,9 @@ class InvoicePurpose:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoiceType:
-    invoice_type_coded: Optional[str] = field(
-        default=None,
+    invoice_type_coded: str = field(
         metadata={
             "name": "InvoiceTypeCoded",
             "type": "Element",
@@ -205,10 +202,9 @@ class InvoiceType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PaymentMean:
-    payment_mean_coded: Optional[str] = field(
-        default=None,
+    payment_mean_coded: str = field(
         metadata={
             "name": "PaymentMeanCoded",
             "type": "Element",
@@ -224,13 +220,12 @@ class PaymentMean:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Asnnumber:
     class Meta:
         name = "ASNNumber"
 
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -239,13 +234,12 @@ class Asnnumber:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirWayBillNumber1:
     class Meta:
         name = "AirWayBillNumber"
 
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -254,13 +248,12 @@ class AirWayBillNumber1:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AirWaybillNumber2:
     class Meta:
         name = "AirWaybillNumber"
 
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -269,10 +262,9 @@ class AirWaybillNumber2:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuthorizationAssignedBy:
-    party: Optional[Party] = field(
-        default=None,
+    party: Party = field(
         metadata={
             "name": "Party",
             "type": "Element",
@@ -281,10 +273,9 @@ class AuthorizationAssignedBy:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuthorizationNumber:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -293,10 +284,9 @@ class AuthorizationNumber:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BillOfLadingNumber:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -305,10 +295,9 @@ class BillOfLadingNumber:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BuyerTax:
-    tax: Optional[Tax] = field(
-        default=None,
+    tax: Tax = field(
         metadata={
             "name": "Tax",
             "type": "Element",
@@ -317,10 +306,9 @@ class BuyerTax:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CarrierReferenceNumber:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -329,10 +317,9 @@ class CarrierReferenceNumber:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ChargeTotal:
-    monetary_value: Optional[MonetaryValue] = field(
-        default=None,
+    monetary_value: MonetaryValue = field(
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
@@ -341,10 +328,9 @@ class ChargeTotal:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ContractNumber:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -353,10 +339,9 @@ class ContractNumber:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CostAllocationNumber:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -365,10 +350,9 @@ class CostAllocationNumber:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Damaged:
-    quantity: Optional[Quantity] = field(
-        default=None,
+    quantity: Quantity = field(
         metadata={
             "name": "Quantity",
             "type": "Element",
@@ -377,10 +361,9 @@ class Damaged:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DeliveryNoteNumber:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -389,10 +372,9 @@ class DeliveryNoteNumber:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExportLicenceNumber:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -401,10 +383,9 @@ class ExportLicenceNumber:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ForeignCurrencyPayment:
-    monetary_value: Optional[MonetaryValue] = field(
-        default=None,
+    monetary_value: MonetaryValue = field(
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
@@ -413,13 +394,12 @@ class ForeignCurrencyPayment:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FromFitransfer:
     class Meta:
         name = "FromFITransfer"
 
-    fiaccount: Optional[Fiaccount] = field(
-        default=None,
+    fiaccount: Fiaccount = field(
         metadata={
             "name": "FIAccount",
             "type": "Element",
@@ -428,10 +408,9 @@ class FromFitransfer:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GrossValue:
-    monetary_value: Optional[MonetaryValue] = field(
-        default=None,
+    monetary_value: MonetaryValue = field(
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
@@ -440,10 +419,9 @@ class GrossValue:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ImportLicenceNumber:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -452,10 +430,9 @@ class ImportLicenceNumber:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoiceAllowancesOrCharges:
-    list_of_allow_or_charge: Optional[ListOfAllowOrCharge] = field(
-        default=None,
+    list_of_allow_or_charge: ListOfAllowOrCharge = field(
         metadata={
             "name": "ListOfAllowOrCharge",
             "type": "Element",
@@ -464,10 +441,9 @@ class InvoiceAllowancesOrCharges:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoiceCurrency:
-    currency: Optional[Currency] = field(
-        default=None,
+    currency: Currency = field(
         metadata={
             "name": "Currency",
             "type": "Element",
@@ -476,10 +452,9 @@ class InvoiceCurrency:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoiceCurrencyAmt:
-    monetary_value: Optional[MonetaryValue] = field(
-        default=None,
+    monetary_value: MonetaryValue = field(
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
@@ -488,10 +463,9 @@ class InvoiceCurrencyAmt:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoiceCurrencyTotalValue:
-    monetary_value: Optional[MonetaryValue] = field(
-        default=None,
+    monetary_value: MonetaryValue = field(
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
@@ -500,10 +474,9 @@ class InvoiceCurrencyTotalValue:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoiceHeaderAttachments:
-    list_of_attachment: Optional[ListOfAttachment] = field(
-        default=None,
+    list_of_attachment: ListOfAttachment = field(
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
@@ -512,10 +485,9 @@ class InvoiceHeaderAttachments:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoiceLanguage:
-    language: Optional[Language] = field(
-        default=None,
+    language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
@@ -524,10 +496,9 @@ class InvoiceLanguage:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoiceNumber:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -536,10 +507,9 @@ class InvoiceNumber:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoicePaymentInstructions:
-    payment_instructions: Optional[PaymentInstructions] = field(
-        default=None,
+    payment_instructions: PaymentInstructions = field(
         metadata={
             "name": "PaymentInstructions",
             "type": "Element",
@@ -548,10 +518,9 @@ class InvoicePaymentInstructions:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoiceTaxReference:
-    tax_reference: Optional[TaxReference] = field(
-        default=None,
+    tax_reference: TaxReference = field(
         metadata={
             "name": "TaxReference",
             "type": "Element",
@@ -560,10 +529,9 @@ class InvoiceTaxReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoiceTermsOfDelivery:
-    terms_of_delivery: Optional[TermsOfDelivery] = field(
-        default=None,
+    terms_of_delivery: TermsOfDelivery = field(
         metadata={
             "name": "TermsOfDelivery",
             "type": "Element",
@@ -572,10 +540,9 @@ class InvoiceTermsOfDelivery:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoicingPeriod:
-    validity_dates: Optional[ValidityDates] = field(
-        default=None,
+    validity_dates: ValidityDates = field(
         metadata={
             "name": "ValidityDates",
             "type": "Element",
@@ -584,10 +551,9 @@ class InvoicingPeriod:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LetterOfCreditNumber:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -596,10 +562,9 @@ class LetterOfCreditNumber:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfOtherInvoiceDates:
-    list_of_date_coded: Optional[ListOfDateCoded] = field(
-        default=None,
+    list_of_date_coded: ListOfDateCoded = field(
         metadata={
             "name": "ListOfDateCoded",
             "type": "Element",
@@ -608,10 +573,9 @@ class ListOfOtherInvoiceDates:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ManufacturingParty:
-    party: Optional[Party] = field(
-        default=None,
+    party: Party = field(
         metadata={
             "name": "Party",
             "type": "Element",
@@ -620,10 +584,9 @@ class ManufacturingParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NetValue:
-    monetary_value: Optional[MonetaryValue] = field(
-        default=None,
+    monetary_value: MonetaryValue = field(
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
@@ -632,10 +595,9 @@ class NetValue:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Ordered:
-    quantity: Optional[Quantity] = field(
-        default=None,
+    quantity: Quantity = field(
         metadata={
             "name": "Quantity",
             "type": "Element",
@@ -644,13 +606,12 @@ class Ordered:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OtherAsnreferences:
     class Meta:
         name = "OtherASNReferences"
 
-    list_of_reference_coded: Optional[ListOfReferenceCoded] = field(
-        default=None,
+    list_of_reference_coded: ListOfReferenceCoded = field(
         metadata={
             "name": "ListOfReferenceCoded",
             "type": "Element",
@@ -659,7 +620,7 @@ class OtherAsnreferences:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OtherInvoiceParties:
     bill_to_party: Optional[BillToParty] = field(
         default=None,
@@ -684,10 +645,9 @@ class OtherInvoiceParties:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OtherInvoiceReferences:
-    list_of_reference_coded: Optional[ListOfReferenceCoded] = field(
-        default=None,
+    list_of_reference_coded: ListOfReferenceCoded = field(
         metadata={
             "name": "ListOfReferenceCoded",
             "type": "Element",
@@ -696,10 +656,9 @@ class OtherInvoiceReferences:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PackingListNumber:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -708,10 +667,9 @@ class PackingListNumber:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PaymentCurrency:
-    currency: Optional[Currency] = field(
-        default=None,
+    currency: Currency = field(
         metadata={
             "name": "Currency",
             "type": "Element",
@@ -720,10 +678,9 @@ class PaymentCurrency:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PaymentCurrencyTotalValue:
-    monetary_value: Optional[MonetaryValue] = field(
-        default=None,
+    monetary_value: MonetaryValue = field(
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
@@ -732,10 +689,9 @@ class PaymentCurrencyTotalValue:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PaymentRef:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -744,10 +700,9 @@ class PaymentRef:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrepaidAmount:
-    monetary_value: Optional[MonetaryValue] = field(
-        default=None,
+    monetary_value: MonetaryValue = field(
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
@@ -756,10 +711,9 @@ class PrepaidAmount:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProformaInvoiceNumber:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -768,10 +722,9 @@ class ProformaInvoiceNumber:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PurchaseOrderNumber:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -780,10 +733,9 @@ class PurchaseOrderNumber:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RelatedInvoiceType:
-    invoice_type: Optional[InvoiceType] = field(
-        default=None,
+    invoice_type: InvoiceType = field(
         metadata={
             "name": "InvoiceType",
             "type": "Element",
@@ -792,10 +744,9 @@ class RelatedInvoiceType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RemitToTax:
-    tax: Optional[Tax] = field(
-        default=None,
+    tax: Tax = field(
         metadata={
             "name": "Tax",
             "type": "Element",
@@ -804,10 +755,9 @@ class RemitToTax:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RemitToTaxInformation:
-    party_tax_information: Optional[PartyTaxInformation] = field(
-        default=None,
+    party_tax_information: PartyTaxInformation = field(
         metadata={
             "name": "PartyTaxInformation",
             "type": "Element",
@@ -816,10 +766,9 @@ class RemitToTaxInformation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RequirementReference:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -828,10 +777,9 @@ class RequirementReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Returned:
-    quantity: Optional[Quantity] = field(
-        default=None,
+    quantity: Quantity = field(
         metadata={
             "name": "Quantity",
             "type": "Element",
@@ -840,10 +788,9 @@ class Returned:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ShipmentIdentifier:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -852,10 +799,9 @@ class ShipmentIdentifier:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ShippedToDate:
-    quantity: Optional[Quantity] = field(
-        default=None,
+    quantity: Quantity = field(
         metadata={
             "name": "Quantity",
             "type": "Element",
@@ -864,10 +810,9 @@ class ShippedToDate:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SummaryAllowOrCharge:
-    monetary_value: Optional[MonetaryValue] = field(
-        default=None,
+    monetary_value: MonetaryValue = field(
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
@@ -876,10 +821,9 @@ class SummaryAllowOrCharge:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SupplierOrderNumber:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -888,10 +832,9 @@ class SupplierOrderNumber:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TaxAccountingSubTotalValue:
-    monetary_value: Optional[MonetaryValue] = field(
-        default=None,
+    monetary_value: MonetaryValue = field(
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
@@ -900,10 +843,9 @@ class TaxAccountingSubTotalValue:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TaxPeriod:
-    validity_dates: Optional[ValidityDates] = field(
-        default=None,
+    validity_dates: ValidityDates = field(
         metadata={
             "name": "ValidityDates",
             "type": "Element",
@@ -912,10 +854,9 @@ class TaxPeriod:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TaxSummary:
-    tax: Optional[Tax] = field(
-        default=None,
+    tax: Tax = field(
         metadata={
             "name": "Tax",
             "type": "Element",
@@ -924,10 +865,9 @@ class TaxSummary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TaxValue:
-    monetary_value: Optional[MonetaryValue] = field(
-        default=None,
+    monetary_value: MonetaryValue = field(
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
@@ -936,10 +876,9 @@ class TaxValue:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TaxValueInTaxAccountingCurrency:
-    monetary_value: Optional[MonetaryValue] = field(
-        default=None,
+    monetary_value: MonetaryValue = field(
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
@@ -948,13 +887,12 @@ class TaxValueInTaxAccountingCurrency:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ToFitransfer:
     class Meta:
         name = "ToFITransfer"
 
-    fiaccount: Optional[Fiaccount] = field(
-        default=None,
+    fiaccount: Fiaccount = field(
         metadata={
             "name": "FIAccount",
             "type": "Element",
@@ -963,10 +901,9 @@ class ToFitransfer:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TotalAmountMinusDiscount:
-    monetary_value: Optional[MonetaryValue] = field(
-        default=None,
+    monetary_value: MonetaryValue = field(
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
@@ -975,10 +912,9 @@ class TotalAmountMinusDiscount:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TotalAmountPayable:
-    monetary_value: Optional[MonetaryValue] = field(
-        default=None,
+    monetary_value: MonetaryValue = field(
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
@@ -987,10 +923,9 @@ class TotalAmountPayable:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TotalDiscount:
-    monetary_value: Optional[MonetaryValue] = field(
-        default=None,
+    monetary_value: MonetaryValue = field(
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
@@ -999,10 +934,9 @@ class TotalDiscount:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TotalTaxAmount:
-    monetary_value: Optional[MonetaryValue] = field(
-        default=None,
+    monetary_value: MonetaryValue = field(
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
@@ -1011,10 +945,9 @@ class TotalTaxAmount:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TrackingNumber:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -1023,10 +956,9 @@ class TrackingNumber:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Unusable:
-    quantity: Optional[Quantity] = field(
-        default=None,
+    quantity: Quantity = field(
         metadata={
             "name": "Quantity",
             "type": "Element",
@@ -1035,10 +967,9 @@ class Unusable:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuthorizationReference:
-    authorization_number: Optional[AuthorizationNumber] = field(
-        default=None,
+    authorization_number: AuthorizationNumber = field(
         metadata={
             "name": "AuthorizationNumber",
             "type": "Element",
@@ -1054,18 +985,16 @@ class AuthorizationReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CarrierReference:
-    carrier_reference_number: Optional[CarrierReferenceNumber] = field(
-        default=None,
+    carrier_reference_number: CarrierReferenceNumber = field(
         metadata={
             "name": "CarrierReferenceNumber",
             "type": "Element",
             "required": True,
         }
     )
-    transport_route_id: Optional[str] = field(
-        default=None,
+    transport_route_id: str = field(
         metadata={
             "name": "TransportRouteID",
             "type": "Element",
@@ -1074,10 +1003,9 @@ class CarrierReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CostAllocation:
-    cost_allocation_number: Optional[CostAllocationNumber] = field(
-        default=None,
+    cost_allocation_number: CostAllocationNumber = field(
         metadata={
             "name": "CostAllocationNumber",
             "type": "Element",
@@ -1100,7 +1028,7 @@ class CostAllocation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ExceptionQuantities:
     ordered: Optional[Ordered] = field(
         default=None,
@@ -1139,7 +1067,7 @@ class ExceptionQuantities:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Fitransfer:
     class Meta:
         name = "FITransfer"
@@ -1151,8 +1079,7 @@ class Fitransfer:
             "type": "Element",
         }
     )
-    to_fitransfer: Optional[ToFitransfer] = field(
-        default=None,
+    to_fitransfer: ToFitransfer = field(
         metadata={
             "name": "ToFITransfer",
             "type": "Element",
@@ -1168,7 +1095,7 @@ class Fitransfer:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoiceDates:
     invoice_due_date: Optional[str] = field(
         default=None,
@@ -1221,10 +1148,9 @@ class InvoiceDates:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoiceParty:
-    buyer_party: Optional[BuyerParty] = field(
-        default=None,
+    buyer_party: BuyerParty = field(
         metadata={
             "name": "BuyerParty",
             "type": "Element",
@@ -1245,8 +1171,7 @@ class InvoiceParty:
             "type": "Element",
         }
     )
-    seller_party: Optional[SellerParty] = field(
-        default=None,
+    seller_party: SellerParty = field(
         metadata={
             "name": "SellerParty",
             "type": "Element",
@@ -1339,10 +1264,9 @@ class InvoiceParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoicePricingDetail:
-    list_of_price: Optional[ListOfPrice] = field(
-        default=None,
+    list_of_price: ListOfPrice = field(
         metadata={
             "name": "ListOfPrice",
             "type": "Element",
@@ -1370,8 +1294,7 @@ class InvoicePricingDetail:
             "type": "Element",
         }
     )
-    invoice_currency_total_value: Optional[InvoiceCurrencyTotalValue] = field(
-        default=None,
+    invoice_currency_total_value: InvoiceCurrencyTotalValue = field(
         metadata={
             "name": "InvoiceCurrencyTotalValue",
             "type": "Element",
@@ -1408,18 +1331,16 @@ class InvoicePricingDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoiceTotals:
-    net_value: Optional[NetValue] = field(
-        default=None,
+    net_value: NetValue = field(
         metadata={
             "name": "NetValue",
             "type": "Element",
             "required": True,
         }
     )
-    gross_value: Optional[GrossValue] = field(
-        default=None,
+    gross_value: GrossValue = field(
         metadata={
             "name": "GrossValue",
             "type": "Element",
@@ -1484,7 +1405,7 @@ class InvoiceTotals:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfTaxSummary:
     tax_summary: List[TaxSummary] = field(
         default_factory=list,
@@ -1496,18 +1417,16 @@ class ListOfTaxSummary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PaymentAmount:
-    invoice_currency_amt: Optional[InvoiceCurrencyAmt] = field(
-        default=None,
+    invoice_currency_amt: InvoiceCurrencyAmt = field(
         metadata={
             "name": "InvoiceCurrencyAmt",
             "type": "Element",
             "required": True,
         }
     )
-    foreign_currency_payment: Optional[ForeignCurrencyPayment] = field(
-        default=None,
+    foreign_currency_payment: ForeignCurrencyPayment = field(
         metadata={
             "name": "ForeignCurrencyPayment",
             "type": "Element",
@@ -1516,10 +1435,9 @@ class PaymentAmount:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PurchaseOrderReference:
-    purchase_order_number: Optional[PurchaseOrderNumber] = field(
-        default=None,
+    purchase_order_number: PurchaseOrderNumber = field(
         metadata={
             "name": "PurchaseOrderNumber",
             "type": "Element",
@@ -1556,18 +1474,16 @@ class PurchaseOrderReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RelatedInvoiceRef:
-    related_invoice_type: Optional[RelatedInvoiceType] = field(
-        default=None,
+    related_invoice_type: RelatedInvoiceType = field(
         metadata={
             "name": "RelatedInvoiceType",
             "type": "Element",
             "required": True,
         }
     )
-    invoice_number: Optional[InvoiceNumber] = field(
-        default=None,
+    invoice_number: InvoiceNumber = field(
         metadata={
             "name": "InvoiceNumber",
             "type": "Element",
@@ -1583,10 +1499,9 @@ class RelatedInvoiceRef:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SpecificRequirement:
-    requirement_type_coded: Optional[str] = field(
-        default=None,
+    requirement_type_coded: str = field(
         metadata={
             "name": "RequirementTypeCoded",
             "type": "Element",
@@ -1616,10 +1531,9 @@ class SpecificRequirement:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TotalAllowOrCharge:
-    allow_or_charge_indicator_coded: Optional[str] = field(
-        default=None,
+    allow_or_charge_indicator_coded: str = field(
         metadata={
             "name": "AllowOrChargeIndicatorCoded",
             "type": "Element",
@@ -1633,16 +1547,14 @@ class TotalAllowOrCharge:
             "type": "Element",
         }
     )
-    allowance_or_charge_description: Optional[AllowanceOrChargeDescription] = field(
-        default=None,
+    allowance_or_charge_description: AllowanceOrChargeDescription = field(
         metadata={
             "name": "AllowanceOrChargeDescription",
             "type": "Element",
             "required": True,
         }
     )
-    summary_allow_or_charge: Optional[SummaryAllowOrCharge] = field(
-        default=None,
+    summary_allow_or_charge: SummaryAllowOrCharge = field(
         metadata={
             "name": "SummaryAllowOrCharge",
             "type": "Element",
@@ -1651,10 +1563,9 @@ class TotalAllowOrCharge:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TrackingInformation:
-    tracking_number: Optional[TrackingNumber] = field(
-        default=None,
+    tracking_number: TrackingNumber = field(
         metadata={
             "name": "TrackingNumber",
             "type": "Element",
@@ -1670,7 +1581,7 @@ class TrackingInformation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AllowOrChargeSummary:
     total_allow_or_charge: List[TotalAllowOrCharge] = field(
         default_factory=list,
@@ -1682,10 +1593,9 @@ class AllowOrChargeSummary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LineItemDates:
-    invoice_dates: Optional[InvoiceDates] = field(
-        default=None,
+    invoice_dates: InvoiceDates = field(
         metadata={
             "name": "InvoiceDates",
             "type": "Element",
@@ -1694,7 +1604,7 @@ class LineItemDates:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfCarrierReference:
     carrier_reference: List[CarrierReference] = field(
         default_factory=list,
@@ -1706,7 +1616,7 @@ class ListOfCarrierReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfRelatedInvoiceRef:
     related_invoice_ref: List[RelatedInvoiceRef] = field(
         default_factory=list,
@@ -1718,7 +1628,7 @@ class ListOfRelatedInvoiceRef:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfSpecificRequirement:
     specific_requirement: List[SpecificRequirement] = field(
         default_factory=list,
@@ -1730,7 +1640,7 @@ class ListOfSpecificRequirement:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PaymentRecord:
     payment_ref: Optional[PaymentRef] = field(
         default=None,
@@ -1755,7 +1665,7 @@ class PaymentRecord:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Asnreferences:
     class Meta:
         name = "ASNReferences"
@@ -1846,26 +1756,23 @@ class Asnreferences:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ActualPayment:
-    payment_amount: Optional[PaymentAmount] = field(
-        default=None,
+    payment_amount: PaymentAmount = field(
         metadata={
             "name": "PaymentAmount",
             "type": "Element",
             "required": True,
         }
     )
-    payment_date: Optional[str] = field(
-        default=None,
+    payment_date: str = field(
         metadata={
             "name": "PaymentDate",
             "type": "Element",
             "required": True,
         }
     )
-    payment_mean: Optional[PaymentMean] = field(
-        default=None,
+    payment_mean: PaymentMean = field(
         metadata={
             "name": "PaymentMean",
             "type": "Element",
@@ -1888,18 +1795,16 @@ class ActualPayment:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CountryRequirement:
-    country: Optional[Country] = field(
-        default=None,
+    country: Country = field(
         metadata={
             "name": "Country",
             "type": "Element",
             "required": True,
         }
     )
-    list_of_specific_requirement: Optional[ListOfSpecificRequirement] = field(
-        default=None,
+    list_of_specific_requirement: ListOfSpecificRequirement = field(
         metadata={
             "name": "ListOfSpecificRequirement",
             "type": "Element",
@@ -1908,13 +1813,12 @@ class CountryRequirement:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AsnorderNumber:
     class Meta:
         name = "ASNOrderNumber"
 
-    buyer_order_number: Optional[str] = field(
-        default=None,
+    buyer_order_number: str = field(
         metadata={
             "name": "BuyerOrderNumber",
             "type": "Element",
@@ -1951,7 +1855,7 @@ class AsnorderNumber:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfActualPayment:
     actual_payment: List[ActualPayment] = field(
         default_factory=list,
@@ -1963,7 +1867,7 @@ class ListOfActualPayment:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfCountryRequirement:
     country_requirement: List[CountryRequirement] = field(
         default_factory=list,
@@ -1975,7 +1879,7 @@ class ListOfCountryRequirement:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoiceReferences:
     purchase_order_reference: Optional[PurchaseOrderReference] = field(
         default=None,
@@ -2105,7 +2009,7 @@ class InvoiceReferences:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoiceSummary:
     number_of_lines: Optional[str] = field(
         default=None,
@@ -2158,10 +2062,9 @@ class InvoiceSummary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OtherCountryRequirments:
-    list_of_country_requirement: Optional[ListOfCountryRequirement] = field(
-        default=None,
+    list_of_country_requirement: ListOfCountryRequirement = field(
         metadata={
             "name": "ListOfCountryRequirement",
             "type": "Element",
@@ -2170,7 +2073,7 @@ class OtherCountryRequirments:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CountrySpecificRequirements:
     nota_fiscal_type: Optional[str] = field(
         default=None,
@@ -2195,10 +2098,9 @@ class CountrySpecificRequirements:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LineItemReferences:
-    invoice_references: Optional[InvoiceReferences] = field(
-        default=None,
+    invoice_references: InvoiceReferences = field(
         metadata={
             "name": "InvoiceReferences",
             "type": "Element",
@@ -2207,10 +2109,9 @@ class LineItemReferences:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoiceBaseItemDetail:
-    line_item_num: Optional[LineItemNum] = field(
-        default=None,
+    line_item_num: LineItemNum = field(
         metadata={
             "name": "LineItemNum",
             "type": "Element",
@@ -2352,18 +2253,16 @@ class InvoiceBaseItemDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoiceHeader:
-    invoice_number: Optional[InvoiceNumber] = field(
-        default=None,
+    invoice_number: InvoiceNumber = field(
         metadata={
             "name": "InvoiceNumber",
             "type": "Element",
             "required": True,
         }
     )
-    invoice_issue_date: Optional[str] = field(
-        default=None,
+    invoice_issue_date: str = field(
         metadata={
             "name": "InvoiceIssueDate",
             "type": "Element",
@@ -2384,16 +2283,14 @@ class InvoiceHeader:
             "type": "Element",
         }
     )
-    invoice_purpose: Optional[InvoicePurpose] = field(
-        default=None,
+    invoice_purpose: InvoicePurpose = field(
         metadata={
             "name": "InvoicePurpose",
             "type": "Element",
             "required": True,
         }
     )
-    invoice_type: Optional[InvoiceType] = field(
-        default=None,
+    invoice_type: InvoiceType = field(
         metadata={
             "name": "InvoiceType",
             "type": "Element",
@@ -2428,8 +2325,7 @@ class InvoiceHeader:
             "type": "Element",
         }
     )
-    invoice_language: Optional[InvoiceLanguage] = field(
-        default=None,
+    invoice_language: InvoiceLanguage = field(
         metadata={
             "name": "InvoiceLanguage",
             "type": "Element",
@@ -2464,8 +2360,7 @@ class InvoiceHeader:
             "type": "Element",
         }
     )
-    invoice_party: Optional[InvoiceParty] = field(
-        default=None,
+    invoice_party: InvoiceParty = field(
         metadata={
             "name": "InvoiceParty",
             "type": "Element",
@@ -2537,18 +2432,16 @@ class InvoiceHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoiceItemDetail:
-    invoice_base_item_detail: Optional[InvoiceBaseItemDetail] = field(
-        default=None,
+    invoice_base_item_detail: InvoiceBaseItemDetail = field(
         metadata={
             "name": "InvoiceBaseItemDetail",
             "type": "Element",
             "required": True,
         }
     )
-    invoice_pricing_detail: Optional[InvoicePricingDetail] = field(
-        default=None,
+    invoice_pricing_detail: InvoicePricingDetail = field(
         metadata={
             "name": "InvoicePricingDetail",
             "type": "Element",
@@ -2606,7 +2499,7 @@ class InvoiceItemDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfInvoiceItemDetail:
     invoice_item_detail: List[InvoiceItemDetail] = field(
         default_factory=list,
@@ -2618,10 +2511,9 @@ class ListOfInvoiceItemDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoiceDetail:
-    list_of_invoice_item_detail: Optional[ListOfInvoiceItemDetail] = field(
-        default=None,
+    list_of_invoice_item_detail: ListOfInvoiceItemDetail = field(
         metadata={
             "name": "ListOfInvoiceItemDetail",
             "type": "Element",
@@ -2637,18 +2529,16 @@ class InvoiceDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Invoice:
-    invoice_header: Optional[InvoiceHeader] = field(
-        default=None,
+    invoice_header: InvoiceHeader = field(
         metadata={
             "name": "InvoiceHeader",
             "type": "Element",
             "required": True,
         }
     )
-    invoice_detail: Optional[InvoiceDetail] = field(
-        default=None,
+    invoice_detail: InvoiceDetail = field(
         metadata={
             "name": "InvoiceDetail",
             "type": "Element",

@@ -18,10 +18,9 @@ from xcbl.models.order_request import (
 from xcbl.models.order_status_result import ErrorInfo
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoiceReference:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -30,10 +29,9 @@ class InvoiceReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoiceResponseDetail:
-    line_item_num: Optional[LineItemNum] = field(
-        default=None,
+    line_item_num: LineItemNum = field(
         metadata={
             "name": "LineItemNum",
             "type": "Element",
@@ -84,10 +82,9 @@ class InvoiceResponseDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoicingParty:
-    party: Optional[Party] = field(
-        default=None,
+    party: Party = field(
         metadata={
             "name": "Party",
             "type": "Element",
@@ -96,18 +93,16 @@ class InvoicingParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoiceResponseParty:
-    invoicing_party: Optional[InvoicingParty] = field(
-        default=None,
+    invoicing_party: InvoicingParty = field(
         metadata={
             "name": "InvoicingParty",
             "type": "Element",
             "required": True,
         }
     )
-    bill_to_party: Optional[BillToParty] = field(
-        default=None,
+    bill_to_party: BillToParty = field(
         metadata={
             "name": "BillToParty",
             "type": "Element",
@@ -130,7 +125,7 @@ class InvoiceResponseParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfInvoiceResponseDetail:
     invoice_response_detail: List[InvoiceResponseDetail] = field(
         default_factory=list,
@@ -142,18 +137,16 @@ class ListOfInvoiceResponseDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoiceResponseHeader:
-    buyer_invoice_number: Optional[str] = field(
-        default=None,
+    buyer_invoice_number: str = field(
         metadata={
             "name": "BuyerInvoiceNumber",
             "type": "Element",
             "required": True,
         }
     )
-    invoice_reference: Optional[InvoiceReference] = field(
-        default=None,
+    invoice_reference: InvoiceReference = field(
         metadata={
             "name": "InvoiceReference",
             "type": "Element",
@@ -167,24 +160,21 @@ class InvoiceResponseHeader:
             "type": "Element",
         }
     )
-    invoice_type: Optional[InvoiceType] = field(
-        default=None,
+    invoice_type: InvoiceType = field(
         metadata={
             "name": "InvoiceType",
             "type": "Element",
             "required": True,
         }
     )
-    language: Optional[Language] = field(
-        default=None,
+    language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
             "required": True,
         }
     )
-    invoice_response_coded: Optional[str] = field(
-        default=None,
+    invoice_response_coded: str = field(
         metadata={
             "name": "InvoiceResponseCoded",
             "type": "Element",
@@ -198,8 +188,7 @@ class InvoiceResponseHeader:
             "type": "Element",
         }
     )
-    invoice_response_party: Optional[InvoiceResponseParty] = field(
-        default=None,
+    invoice_response_party: InvoiceResponseParty = field(
         metadata={
             "name": "InvoiceResponseParty",
             "type": "Element",
@@ -243,10 +232,9 @@ class InvoiceResponseHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InvoiceResponse:
-    invoice_response_header: Optional[InvoiceResponseHeader] = field(
-        default=None,
+    invoice_response_header: InvoiceResponseHeader = field(
         metadata={
             "name": "InvoiceResponseHeader",
             "type": "Element",

@@ -25,10 +25,9 @@ from xcbl.models.payment_request_acknowledgment import (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FinancialInstitutionCoded:
-    financial_institution_qaulifier_coded: Optional[str] = field(
-        default=None,
+    financial_institution_qaulifier_coded: str = field(
         metadata={
             "name": "FinancialInstitutionQaulifierCoded",
             "type": "Element",
@@ -42,8 +41,7 @@ class FinancialInstitutionCoded:
             "type": "Element",
         }
     )
-    financial_institution: Optional[FinancialInstitution] = field(
-        default=None,
+    financial_institution: FinancialInstitution = field(
         metadata={
             "name": "FinancialInstitution",
             "type": "Element",
@@ -52,7 +50,7 @@ class FinancialInstitutionCoded:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfRemittanceAdviceDetail:
     remittance_advice_detail: List[RemittanceAdviceDetail] = field(
         default_factory=list,
@@ -64,10 +62,9 @@ class ListOfRemittanceAdviceDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfRemittanceAdviceReference:
-    list_of_reference_coded: Optional[ListOfReferenceCoded] = field(
-        default=None,
+    list_of_reference_coded: ListOfReferenceCoded = field(
         metadata={
             "name": "ListOfReferenceCoded",
             "type": "Element",
@@ -76,10 +73,9 @@ class ListOfRemittanceAdviceReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RemittanceAdviceAttachment:
-    attachment: Optional[Attachment] = field(
-        default=None,
+    attachment: Attachment = field(
         metadata={
             "name": "Attachment",
             "type": "Element",
@@ -88,10 +84,9 @@ class RemittanceAdviceAttachment:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RemittanceAdvicePurpose:
-    purpose: Optional[Purpose] = field(
-        default=None,
+    purpose: Purpose = field(
         metadata={
             "name": "Purpose",
             "type": "Element",
@@ -100,10 +95,9 @@ class RemittanceAdvicePurpose:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RemittanceAdviceSummary:
-    payment_request_summary: Optional[PaymentRequestSummary] = field(
-        default=None,
+    payment_request_summary: PaymentRequestSummary = field(
         metadata={
             "name": "PaymentRequestSummary",
             "type": "Element",
@@ -112,10 +106,9 @@ class RemittanceAdviceSummary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TotalAmountDue:
-    monetary_value: Optional[MonetaryValue] = field(
-        default=None,
+    monetary_value: MonetaryValue = field(
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
@@ -124,10 +117,9 @@ class TotalAmountDue:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TotalAmountPaid:
-    monetary_value: Optional[MonetaryValue] = field(
-        default=None,
+    monetary_value: MonetaryValue = field(
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
@@ -136,10 +128,9 @@ class TotalAmountPaid:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TraceReference:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -148,7 +139,7 @@ class TraceReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfFinancialInstitutionCoded:
     financial_institution_coded: List[FinancialInstitutionCoded] = field(
         default_factory=list,
@@ -160,10 +151,9 @@ class ListOfFinancialInstitutionCoded:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TraceType:
-    trace_type_coded: Optional[str] = field(
-        default=None,
+    trace_type_coded: str = field(
         metadata={
             "name": "TraceTypeCoded",
             "type": "Element",
@@ -186,26 +176,23 @@ class TraceType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RemittanceAdviceHeader:
-    remittance_advice_purpose: Optional[RemittanceAdvicePurpose] = field(
-        default=None,
+    remittance_advice_purpose: RemittanceAdvicePurpose = field(
         metadata={
             "name": "RemittanceAdvicePurpose",
             "type": "Element",
             "required": True,
         }
     )
-    remittace_advice_issue_date: Optional[str] = field(
-        default=None,
+    remittace_advice_issue_date: str = field(
         metadata={
             "name": "RemittaceAdviceIssueDate",
             "type": "Element",
             "required": True,
         }
     )
-    remittance_advice_id: Optional[RemittanceAdviceId] = field(
-        default=None,
+    remittance_advice_id: RemittanceAdviceId = field(
         metadata={
             "name": "RemittanceAdviceID",
             "type": "Element",
@@ -240,16 +227,14 @@ class RemittanceAdviceHeader:
             "type": "Element",
         }
     )
-    total_amount_paid: Optional[TotalAmountPaid] = field(
-        default=None,
+    total_amount_paid: TotalAmountPaid = field(
         metadata={
             "name": "TotalAmountPaid",
             "type": "Element",
             "required": True,
         }
     )
-    payment_currency: Optional[PaymentCurrency] = field(
-        default=None,
+    payment_currency: PaymentCurrency = field(
         metadata={
             "name": "PaymentCurrency",
             "type": "Element",
@@ -270,8 +255,7 @@ class RemittanceAdviceHeader:
             "type": "Element",
         }
     )
-    language: Optional[Language] = field(
-        default=None,
+    language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
@@ -299,8 +283,7 @@ class RemittanceAdviceHeader:
             "type": "Element",
         }
     )
-    payment_party: Optional[PaymentParty] = field(
-        default=None,
+    payment_party: PaymentParty = field(
         metadata={
             "name": "PaymentParty",
             "type": "Element",
@@ -365,26 +348,23 @@ class RemittanceAdviceHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RemittanceAdvice:
-    remittance_advice_header: Optional[RemittanceAdviceHeader] = field(
-        default=None,
+    remittance_advice_header: RemittanceAdviceHeader = field(
         metadata={
             "name": "RemittanceAdviceHeader",
             "type": "Element",
             "required": True,
         }
     )
-    list_of_remittance_advice_detail: Optional[ListOfRemittanceAdviceDetail] = field(
-        default=None,
+    list_of_remittance_advice_detail: ListOfRemittanceAdviceDetail = field(
         metadata={
             "name": "ListOfRemittanceAdviceDetail",
             "type": "Element",
             "required": True,
         }
     )
-    remittance_advice_summary: Optional[RemittanceAdviceSummary] = field(
-        default=None,
+    remittance_advice_summary: RemittanceAdviceSummary = field(
         metadata={
             "name": "RemittanceAdviceSummary",
             "type": "Element",

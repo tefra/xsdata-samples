@@ -22,29 +22,26 @@ from xcbl.models.payment_request_acknowledgment import (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FxrateRequestHeader:
     class Meta:
         name = "FXRateRequestHeader"
 
-    fxrate_request_id: Optional[FxrateRequestId] = field(
-        default=None,
+    fxrate_request_id: FxrateRequestId = field(
         metadata={
             "name": "FXRateRequestID",
             "type": "Element",
             "required": True,
         }
     )
-    fxrate_request_issue_date: Optional[str] = field(
-        default=None,
+    fxrate_request_issue_date: str = field(
         metadata={
             "name": "FXRateRequestIssueDate",
             "type": "Element",
             "required": True,
         }
     )
-    language: Optional[Language] = field(
-        default=None,
+    language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
@@ -72,8 +69,7 @@ class FxrateRequestHeader:
             "type": "Element",
         }
     )
-    indicative_indicator: Optional[str] = field(
-        default=None,
+    indicative_indicator: str = field(
         metadata={
             "name": "IndicativeIndicator",
             "type": "Element",
@@ -89,13 +85,12 @@ class FxrateRequestHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RateQuoteId:
     class Meta:
         name = "RateQuoteID"
 
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -104,7 +99,7 @@ class RateQuoteId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FxrateRequestDetail:
     class Meta:
         name = "FXRateRequestDetail"
@@ -123,24 +118,21 @@ class FxrateRequestDetail:
             "type": "Element",
         }
     )
-    reference_currency: Optional[ReferenceCurrency] = field(
-        default=None,
+    reference_currency: ReferenceCurrency = field(
         metadata={
             "name": "ReferenceCurrency",
             "type": "Element",
             "required": True,
         }
     )
-    target_currency: Optional[TargetCurrency] = field(
-        default=None,
+    target_currency: TargetCurrency = field(
         metadata={
             "name": "TargetCurrency",
             "type": "Element",
             "required": True,
         }
     )
-    settlement_amount: Optional[SettlementAmount] = field(
-        default=None,
+    settlement_amount: SettlementAmount = field(
         metadata={
             "name": "SettlementAmount",
             "type": "Element",
@@ -233,7 +225,7 @@ class FxrateRequestDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfFxrateRequestDetail:
     class Meta:
         name = "ListOfFXRateRequestDetail"
@@ -248,13 +240,12 @@ class ListOfFxrateRequestDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FxrateRequest:
     class Meta:
         name = "FXRateRequest"
 
-    fxrate_request_header: Optional[FxrateRequestHeader] = field(
-        default=None,
+    fxrate_request_header: FxrateRequestHeader = field(
         metadata={
             "name": "FXRateRequestHeader",
             "type": "Element",
