@@ -51,13 +51,12 @@ from xcbl.models.order_status_result import LineItemAttachment
 from xcbl.models.request_for_quotation import OrderParty
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Asnpurpose:
     class Meta:
         name = "ASNPurpose"
 
-    asnpurpose_coded: Optional[str] = field(
-        default=None,
+    asnpurpose_coded: str = field(
         metadata={
             "name": "ASNPurposeCoded",
             "type": "Element",
@@ -73,13 +72,12 @@ class Asnpurpose:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Asnstatus:
     class Meta:
         name = "ASNStatus"
 
-    asnstatus_coded: Optional[str] = field(
-        default=None,
+    asnstatus_coded: str = field(
         metadata={
             "name": "ASNStatusCoded",
             "type": "Element",
@@ -95,13 +93,12 @@ class Asnstatus:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Asntype:
     class Meta:
         name = "ASNType"
 
-    asntype_coded: Optional[str] = field(
-        default=None,
+    asntype_coded: str = field(
         metadata={
             "name": "ASNTypeCoded",
             "type": "Element",
@@ -117,13 +114,12 @@ class Asntype:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AsnallowancesOrCharges:
     class Meta:
         name = "ASNAllowancesOrCharges"
 
-    list_of_allow_or_charge: Optional[ListOfAllowOrCharge] = field(
-        default=None,
+    list_of_allow_or_charge: ListOfAllowOrCharge = field(
         metadata={
             "name": "ListOfAllowOrCharge",
             "type": "Element",
@@ -132,13 +128,12 @@ class AsnallowancesOrCharges:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Asncurrency:
     class Meta:
         name = "ASNCurrency"
 
-    currency: Optional[Currency] = field(
-        default=None,
+    currency: Currency = field(
         metadata={
             "name": "Currency",
             "type": "Element",
@@ -147,7 +142,7 @@ class Asncurrency:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Asndates:
     class Meta:
         name = "ASNDates"
@@ -210,13 +205,12 @@ class Asndates:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AsnheaderAttachments:
     class Meta:
         name = "ASNHeaderAttachments"
 
-    list_of_attachment: Optional[ListOfAttachment] = field(
-        default=None,
+    list_of_attachment: ListOfAttachment = field(
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
@@ -225,13 +219,12 @@ class AsnheaderAttachments:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Asnlanguage:
     class Meta:
         name = "ASNLanguage"
 
-    language: Optional[Language] = field(
-        default=None,
+    language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
@@ -240,13 +233,12 @@ class Asnlanguage:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AsnlineItemListOfAllowOrCharge:
     class Meta:
         name = "ASNLineItemListOfAllowOrCharge"
 
-    list_of_allow_or_charge: Optional[ListOfAllowOrCharge] = field(
-        default=None,
+    list_of_allow_or_charge: ListOfAllowOrCharge = field(
         metadata={
             "name": "ListOfAllowOrCharge",
             "type": "Element",
@@ -255,13 +247,12 @@ class AsnlineItemListOfAllowOrCharge:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AsnlineItemReferences:
     class Meta:
         name = "ASNLineItemReferences"
 
-    asnreferences: Optional[Asnreferences] = field(
-        default=None,
+    asnreferences: Asnreferences = field(
         metadata={
             "name": "ASNReferences",
             "type": "Element",
@@ -270,13 +261,12 @@ class AsnlineItemReferences:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AsnpackageDetail:
     class Meta:
         name = "ASNPackageDetail"
 
-    package_detail: Optional[PackageDetail] = field(
-        default=None,
+    package_detail: PackageDetail = field(
         metadata={
             "name": "PackageDetail",
             "type": "Element",
@@ -285,13 +275,12 @@ class AsnpackageDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Asnparty:
     class Meta:
         name = "ASNParty"
 
-    order_party: Optional[OrderParty] = field(
-        default=None,
+    order_party: OrderParty = field(
         metadata={
             "name": "OrderParty",
             "type": "Element",
@@ -300,13 +289,12 @@ class Asnparty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AsnpaymentInstructions:
     class Meta:
         name = "ASNPaymentInstructions"
 
-    payment_instructions: Optional[PaymentInstructions] = field(
-        default=None,
+    payment_instructions: PaymentInstructions = field(
         metadata={
             "name": "PaymentInstructions",
             "type": "Element",
@@ -315,7 +303,7 @@ class AsnpaymentInstructions:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Asnsummary:
     class Meta:
         name = "ASNSummary"
@@ -343,13 +331,12 @@ class Asnsummary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AsntermsOfDelivery:
     class Meta:
         name = "ASNTermsOfDelivery"
 
-    terms_of_delivery: Optional[TermsOfDelivery] = field(
-        default=None,
+    terms_of_delivery: TermsOfDelivery = field(
         metadata={
             "name": "TermsOfDelivery",
             "type": "Element",
@@ -358,10 +345,9 @@ class AsntermsOfDelivery:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LineItemOrderReference:
-    purchase_order_reference: Optional[PurchaseOrderReference] = field(
-        default=None,
+    purchase_order_reference: PurchaseOrderReference = field(
         metadata={
             "name": "PurchaseOrderReference",
             "type": "Element",
@@ -370,10 +356,9 @@ class LineItemOrderReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReferenceToPackage:
-    item_packaging_reference: Optional[ItemPackagingReference] = field(
-        default=None,
+    item_packaging_reference: ItemPackagingReference = field(
         metadata={
             "name": "ItemPackagingReference",
             "type": "Element",
@@ -382,13 +367,12 @@ class ReferenceToPackage:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AsnbaseItemDetail:
     class Meta:
         name = "ASNBaseItemDetail"
 
-    line_item_num: Optional[LineItemNum] = field(
-        default=None,
+    line_item_num: LineItemNum = field(
         metadata={
             "name": "LineItemNum",
             "type": "Element",
@@ -600,21 +584,19 @@ class AsnbaseItemDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Asnheader:
     class Meta:
         name = "ASNHeader"
 
-    asnnumber: Optional[Asnnumber] = field(
-        default=None,
+    asnnumber: Asnnumber = field(
         metadata={
             "name": "ASNNumber",
             "type": "Element",
             "required": True,
         }
     )
-    asnissue_date: Optional[str] = field(
-        default=None,
+    asnissue_date: str = field(
         metadata={
             "name": "ASNIssueDate",
             "type": "Element",
@@ -636,8 +618,7 @@ class Asnheader:
             "type": "Element",
         }
     )
-    asnpurpose: Optional[Asnpurpose] = field(
-        default=None,
+    asnpurpose: Asnpurpose = field(
         metadata={
             "name": "ASNPurpose",
             "type": "Element",
@@ -672,16 +653,14 @@ class Asnheader:
             "type": "Element",
         }
     )
-    asndates: Optional[Asndates] = field(
-        default=None,
+    asndates: Asndates = field(
         metadata={
             "name": "ASNDates",
             "type": "Element",
             "required": True,
         }
     )
-    asnparty: Optional[Asnparty] = field(
-        default=None,
+    asnparty: Asnparty = field(
         metadata={
             "name": "ASNParty",
             "type": "Element",
@@ -746,7 +725,7 @@ class Asnheader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfAsnpackageDetail:
     class Meta:
         name = "ListOfASNPackageDetail"
@@ -761,13 +740,12 @@ class ListOfAsnpackageDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AsnitemDetail:
     class Meta:
         name = "ASNItemDetail"
 
-    asnbase_item_detail: Optional[AsnbaseItemDetail] = field(
-        default=None,
+    asnbase_item_detail: AsnbaseItemDetail = field(
         metadata={
             "name": "ASNBaseItemDetail",
             "type": "Element",
@@ -811,7 +789,7 @@ class AsnitemDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfAsnitemDetail:
     class Meta:
         name = "ListOfASNItemDetail"
@@ -826,13 +804,12 @@ class ListOfAsnitemDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Asndetail:
     class Meta:
         name = "ASNDetail"
 
-    list_of_asnitem_detail: Optional[ListOfAsnitemDetail] = field(
-        default=None,
+    list_of_asnitem_detail: ListOfAsnitemDetail = field(
         metadata={
             "name": "ListOfASNItemDetail",
             "type": "Element",
@@ -848,10 +825,9 @@ class Asndetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AdvanceShipmentNotice:
-    asnheader: Optional[Asnheader] = field(
-        default=None,
+    asnheader: Asnheader = field(
         metadata={
             "name": "ASNHeader",
             "type": "Element",

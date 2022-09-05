@@ -3,10 +3,9 @@ from enum import Enum
 from typing import List, Optional
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Agency:
-    agency_coded: Optional[str] = field(
-        default=None,
+    agency_coded: str = field(
         metadata={
             "name": "AgencyCoded",
             "type": "Element",
@@ -43,18 +42,16 @@ class Agency:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionCategory:
-    auction_category_name: Optional[str] = field(
-        default=None,
+    auction_category_name: str = field(
         metadata={
             "name": "AuctionCategoryName",
             "type": "Element",
             "required": True,
         }
     )
-    auction_category_level: Optional[str] = field(
-        default=None,
+    auction_category_level: str = field(
         metadata={
             "name": "AuctionCategoryLevel",
             "type": "Element",
@@ -63,7 +60,7 @@ class AuctionCategory:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionCreateSummary:
     total_number_of_auction_items: Optional[str] = field(
         default=None,
@@ -81,10 +78,9 @@ class AuctionCreateSummary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionItemComponent:
-    auction_create_detail: Optional["AuctionCreateDetail"] = field(
-        default=None,
+    auction_create_detail: "AuctionCreateDetail" = field(
         metadata={
             "name": "AuctionCreateDetail",
             "type": "Element",
@@ -93,7 +89,7 @@ class AuctionItemComponent:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionSpecifications:
     auction_create_name: Optional[str] = field(
         default=None,
@@ -125,10 +121,9 @@ class AuctionSpecifications:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ContactFunction:
-    contact_function_coded: Optional[str] = field(
-        default=None,
+    contact_function_coded: str = field(
         metadata={
             "name": "ContactFunctionCoded",
             "type": "Element",
@@ -144,18 +139,16 @@ class ContactFunction:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ContactNumber:
-    contact_number_value: Optional[str] = field(
-        default=None,
+    contact_number_value: str = field(
         metadata={
             "name": "ContactNumberValue",
             "type": "Element",
             "required": True,
         }
     )
-    contact_number_type_coded: Optional[str] = field(
-        default=None,
+    contact_number_type_coded: str = field(
         metadata={
             "name": "ContactNumberTypeCoded",
             "type": "Element",
@@ -171,10 +164,9 @@ class ContactNumber:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Country:
-    country_coded: Optional[str] = field(
-        default=None,
+    country_coded: str = field(
         metadata={
             "name": "CountryCoded",
             "type": "Element",
@@ -190,10 +182,9 @@ class Country:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Currency:
-    currency_coded: Optional[str] = field(
-        default=None,
+    currency_coded: str = field(
         metadata={
             "name": "CurrencyCoded",
             "type": "Element",
@@ -209,10 +200,9 @@ class Currency:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DateQualifier:
-    date_qualifier_coded: Optional[str] = field(
-        default=None,
+    date_qualifier_coded: str = field(
         metadata={
             "name": "DateQualifierCoded",
             "type": "Element",
@@ -228,29 +218,26 @@ class DateQualifier:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Gpscooridinates:
     class Meta:
         name = "GPSCooridinates"
 
-    gpssystem: Optional[str] = field(
-        default=None,
+    gpssystem: str = field(
         metadata={
             "name": "GPSSystem",
             "type": "Element",
             "required": True,
         }
     )
-    latitude: Optional[str] = field(
-        default=None,
+    latitude: str = field(
         metadata={
             "name": "Latitude",
             "type": "Element",
             "required": True,
         }
     )
-    longitude: Optional[str] = field(
-        default=None,
+    longitude: str = field(
         metadata={
             "name": "Longitude",
             "type": "Element",
@@ -259,7 +246,7 @@ class Gpscooridinates:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Language:
     language_dependent: Optional[str] = field(
         default=None,
@@ -268,8 +255,7 @@ class Language:
             "type": "Attribute",
         }
     )
-    language_coded: Optional[str] = field(
-        default=None,
+    language_coded: str = field(
         metadata={
             "name": "LanguageCoded",
             "type": "Element",
@@ -901,18 +887,16 @@ class NameAddressAddressTypeCoded(Enum):
     WHOLESALER = "Wholesaler"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NameValuePair:
-    name: Optional[str] = field(
-        default=None,
+    name: str = field(
         metadata={
             "name": "Name",
             "type": "Element",
             "required": True,
         }
     )
-    value: Optional[str] = field(
-        default=None,
+    value: str = field(
         metadata={
             "name": "Value",
             "type": "Element",
@@ -928,7 +912,7 @@ class NameValuePair:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Pobox:
     class Meta:
         name = "POBox"
@@ -948,10 +932,9 @@ class Pobox:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PartNum:
-    part_id: Optional[str] = field(
-        default=None,
+    part_id: str = field(
         metadata={
             "name": "PartID",
             "type": "Element",
@@ -974,10 +957,9 @@ class PartNum:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PriceMultiplier:
-    price_multiplier_coded: Optional[str] = field(
-        default=None,
+    price_multiplier_coded: str = field(
         metadata={
             "name": "PriceMultiplierCoded",
             "type": "Element",
@@ -991,8 +973,7 @@ class PriceMultiplier:
             "type": "Element",
         }
     )
-    multiplier: Optional[str] = field(
-        default=None,
+    multiplier: str = field(
         metadata={
             "name": "Multiplier",
             "type": "Element",
@@ -1001,10 +982,9 @@ class PriceMultiplier:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PricingType:
-    price_type_coded: Optional[str] = field(
-        default=None,
+    price_type_coded: str = field(
         metadata={
             "name": "PriceTypeCoded",
             "type": "Element",
@@ -1020,10 +1000,9 @@ class PricingType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProductIdentifierCoded:
-    product_identifier_qualifier_coded: Optional[str] = field(
-        default=None,
+    product_identifier_qualifier_coded: str = field(
         metadata={
             "name": "ProductIdentifierQualifierCoded",
             "type": "Element",
@@ -1037,8 +1016,7 @@ class ProductIdentifierCoded:
             "type": "Element",
         }
     )
-    product_identifier: Optional[str] = field(
-        default=None,
+    product_identifier: str = field(
         metadata={
             "name": "ProductIdentifier",
             "type": "Element",
@@ -1054,10 +1032,9 @@ class ProductIdentifierCoded:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Purpose:
-    purpose_coded: Optional[str] = field(
-        default=None,
+    purpose_coded: str = field(
         metadata={
             "name": "PurposeCoded",
             "type": "Element",
@@ -1203,10 +1180,9 @@ class QuantityValueSignificanceCoded(Enum):
     OUT_OF_RANGE = "OutOfRange"
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Reference:
-    ref_num: Optional[str] = field(
-        default=None,
+    ref_num: str = field(
         metadata={
             "name": "RefNum",
             "type": "Element",
@@ -1222,10 +1198,9 @@ class Reference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Region:
-    region_coded: Optional[str] = field(
-        default=None,
+    region_coded: str = field(
         metadata={
             "name": "RegionCoded",
             "type": "Element",
@@ -1241,10 +1216,9 @@ class Region:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Rule:
-    rule_name: Optional[str] = field(
-        default=None,
+    rule_name: str = field(
         metadata={
             "name": "RuleName",
             "type": "Element",
@@ -1258,8 +1232,7 @@ class Rule:
             "type": "Element",
         }
     )
-    rule_value: Optional[str] = field(
-        default=None,
+    rule_value: str = field(
         metadata={
             "name": "RuleValue",
             "type": "Element",
@@ -1275,10 +1248,9 @@ class Rule:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SealIssuer:
-    seal_issuer_coded: Optional[str] = field(
-        default=None,
+    seal_issuer_coded: str = field(
         metadata={
             "name": "SealIssuerCoded",
             "type": "Element",
@@ -1294,7 +1266,7 @@ class SealIssuer:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SealStatusDescription:
     seal_status_coded: Optional[str] = field(
         default=None,
@@ -1319,10 +1291,9 @@ class SealStatusDescription:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StatusReason:
-    status_reason_coded: Optional[str] = field(
-        default=None,
+    status_reason_coded: str = field(
         metadata={
             "name": "StatusReasonCoded",
             "type": "Element",
@@ -1338,10 +1309,9 @@ class StatusReason:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Timezone:
-    timezone_coded: Optional[str] = field(
-        default=None,
+    timezone_coded: str = field(
         metadata={
             "name": "TimezoneCoded",
             "type": "Element",
@@ -1357,10 +1327,9 @@ class Timezone:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransitDirection:
-    transit_direction_coded: Optional[str] = field(
-        default=None,
+    transit_direction_coded: str = field(
         metadata={
             "name": "TransitDirectionCoded",
             "type": "Element",
@@ -1397,10 +1366,9 @@ class TransitDirection:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransportMeans:
-    transport_means_coded: Optional[str] = field(
-        default=None,
+    transport_means_coded: str = field(
         metadata={
             "name": "TransportMeansCoded",
             "type": "Element",
@@ -1416,10 +1384,9 @@ class TransportMeans:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransportMode:
-    transport_mode_coded: Optional[str] = field(
-        default=None,
+    transport_mode_coded: str = field(
         metadata={
             "name": "TransportModeCoded",
             "type": "Element",
@@ -1435,10 +1402,9 @@ class TransportMode:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UnitOfMeasurement:
-    uomcoded: Optional[str] = field(
-        default=None,
+    uomcoded: str = field(
         metadata={
             "name": "UOMCoded",
             "type": "Element",
@@ -1454,18 +1420,16 @@ class UnitOfMeasurement:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ValidityDates:
-    start_date: Optional[str] = field(
-        default=None,
+    start_date: str = field(
         metadata={
             "name": "StartDate",
             "type": "Element",
             "required": True,
         }
     )
-    end_date: Optional[str] = field(
-        default=None,
+    end_date: str = field(
         metadata={
             "name": "EndDate",
             "type": "Element",
@@ -1474,7 +1438,7 @@ class ValidityDates:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class VisibilityRules:
     visibility_indicator: Optional[str] = field(
         default=None,
@@ -1513,7 +1477,7 @@ class VisibilityRules:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Attachment:
     attachment_action_coded: Optional[str] = field(
         default=None,
@@ -1529,8 +1493,7 @@ class Attachment:
             "type": "Element",
         }
     )
-    attachment_purpose: Optional[str] = field(
-        default=None,
+    attachment_purpose: str = field(
         metadata={
             "name": "AttachmentPurpose",
             "type": "Element",
@@ -1579,8 +1542,7 @@ class Attachment:
             "type": "Element",
         }
     )
-    attachment_location: Optional[str] = field(
-        default=None,
+    attachment_location: str = field(
         metadata={
             "name": "AttachmentLocation",
             "type": "Element",
@@ -1589,10 +1551,9 @@ class Attachment:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionCreatePurpose:
-    purpose: Optional[Purpose] = field(
-        default=None,
+    purpose: Purpose = field(
         metadata={
             "name": "Purpose",
             "type": "Element",
@@ -1601,10 +1562,9 @@ class AuctionCreatePurpose:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionValidityDates:
-    validity_dates: Optional[ValidityDates] = field(
-        default=None,
+    validity_dates: ValidityDates = field(
         metadata={
             "name": "ValidityDates",
             "type": "Element",
@@ -1613,10 +1573,9 @@ class AuctionValidityDates:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaseCurrency:
-    currency: Optional[Currency] = field(
-        default=None,
+    currency: Currency = field(
         metadata={
             "name": "Currency",
             "type": "Element",
@@ -1625,10 +1584,9 @@ class BaseCurrency:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BidCurrency:
-    currency: Optional[Currency] = field(
-        default=None,
+    currency: Currency = field(
         metadata={
             "name": "Currency",
             "type": "Element",
@@ -1637,10 +1595,9 @@ class BidCurrency:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BuyerPartNumber:
-    part_num: Optional[PartNum] = field(
-        default=None,
+    part_num: PartNum = field(
         metadata={
             "name": "PartNum",
             "type": "Element",
@@ -1649,10 +1606,9 @@ class BuyerPartNumber:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CorrespondenceLanguage:
-    language: Optional[Language] = field(
-        default=None,
+    language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
@@ -1661,18 +1617,16 @@ class CorrespondenceLanguage:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DateCoded:
-    date: Optional[str] = field(
-        default=None,
+    date: str = field(
         metadata={
             "name": "Date",
             "type": "Element",
             "required": True,
         }
     )
-    date_qualifier: Optional[DateQualifier] = field(
-        default=None,
+    date_qualifier: DateQualifier = field(
         metadata={
             "name": "DateQualifier",
             "type": "Element",
@@ -1681,18 +1635,16 @@ class DateCoded:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Identifier:
-    agency: Optional[Agency] = field(
-        default=None,
+    agency: Agency = field(
         metadata={
             "name": "Agency",
             "type": "Element",
             "required": True,
         }
     )
-    ident: Optional[str] = field(
-        default=None,
+    ident: str = field(
         metadata={
             "name": "Ident",
             "type": "Element",
@@ -1701,26 +1653,23 @@ class Identifier:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class KeyVal:
-    key_val_string: Optional[str] = field(
-        default=None,
+    key_val_string: str = field(
         metadata={
             "name": "KeyValString",
             "type": "Element",
             "required": True,
         }
     )
-    language: Optional[Language] = field(
-        default=None,
+    language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
             "required": True,
         }
     )
-    keyword: Optional[str] = field(
-        default=None,
+    keyword: str = field(
         metadata={
             "name": "Keyword",
             "type": "Element",
@@ -1729,7 +1678,7 @@ class KeyVal:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfAuctionCategory:
     auction_category: List[AuctionCategory] = field(
         default_factory=list,
@@ -1740,7 +1689,7 @@ class ListOfAuctionCategory:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfAuctionItemComponents:
     auction_item_component: List[AuctionItemComponent] = field(
         default_factory=list,
@@ -1752,7 +1701,7 @@ class ListOfAuctionItemComponents:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfContactNumber:
     contact_number: List[ContactNumber] = field(
         default_factory=list,
@@ -1764,7 +1713,7 @@ class ListOfContactNumber:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfProductIdentifierCoded:
     product_identifier_coded: List[ProductIdentifierCoded] = field(
         default_factory=list,
@@ -1776,7 +1725,7 @@ class ListOfProductIdentifierCoded:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfReference:
     reference: List[Reference] = field(
         default_factory=list,
@@ -1788,7 +1737,7 @@ class ListOfReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfRules:
     rule: List[Rule] = field(
         default_factory=list,
@@ -1800,7 +1749,7 @@ class ListOfRules:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfStatusReason:
     status_reason: List[StatusReason] = field(
         default_factory=list,
@@ -1812,7 +1761,7 @@ class ListOfStatusReason:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfValues:
     name_value_pair: List[NameValuePair] = field(
         default_factory=list,
@@ -1824,7 +1773,7 @@ class ListOfValues:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MaximumValue:
     value: str = field(
         default="",
@@ -1862,7 +1811,7 @@ class MaximumValue:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MeasurementValue:
     value: str = field(
         default="",
@@ -1900,7 +1849,7 @@ class MeasurementValue:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MinimumValue:
     value: str = field(
         default="",
@@ -1938,10 +1887,9 @@ class MinimumValue:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrimaryReference:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -1950,7 +1898,7 @@ class PrimaryReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuantityValue:
     value: str = field(
         default="",
@@ -1988,10 +1936,9 @@ class QuantityValue:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReferenceCurrency:
-    currency: Optional[Currency] = field(
-        default=None,
+    currency: Currency = field(
         metadata={
             "name": "Currency",
             "type": "Element",
@@ -2000,10 +1947,9 @@ class ReferenceCurrency:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SealInfo:
-    seal_number: Optional[str] = field(
-        default=None,
+    seal_number: str = field(
         metadata={
             "name": "SealNumber",
             "type": "Element",
@@ -2026,10 +1972,9 @@ class SealInfo:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SellerPartNumber:
-    part_num: Optional[PartNum] = field(
-        default=None,
+    part_num: PartNum = field(
         metadata={
             "name": "PartNum",
             "type": "Element",
@@ -2038,10 +1983,9 @@ class SellerPartNumber:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StandardPartNumber:
-    product_identifier_coded: Optional[ProductIdentifierCoded] = field(
-        default=None,
+    product_identifier_coded: ProductIdentifierCoded = field(
         metadata={
             "name": "ProductIdentifierCoded",
             "type": "Element",
@@ -2050,10 +1994,9 @@ class StandardPartNumber:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SupportingReference:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -2062,10 +2005,9 @@ class SupportingReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SupportingSubReference:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -2074,10 +2016,9 @@ class SupportingSubReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TargetCurrency:
-    currency: Optional[Currency] = field(
-        default=None,
+    currency: Currency = field(
         metadata={
             "name": "Currency",
             "type": "Element",
@@ -2086,10 +2027,9 @@ class TargetCurrency:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UnitPrice:
-    unit_price_value: Optional[str] = field(
-        default=None,
+    unit_price_value: str = field(
         metadata={
             "name": "UnitPriceValue",
             "type": "Element",
@@ -2112,10 +2052,9 @@ class UnitPrice:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionItemAttribute:
-    auction_attribute_name: Optional[str] = field(
-        default=None,
+    auction_attribute_name: str = field(
         metadata={
             "name": "AuctionAttributeName",
             "type": "Element",
@@ -2129,8 +2068,7 @@ class AuctionItemAttribute:
             "type": "Element",
         }
     )
-    auction_attribute_data_type_coded: Optional[str] = field(
-        default=None,
+    auction_attribute_data_type_coded: str = field(
         metadata={
             "name": "AuctionAttributeDataTypeCoded",
             "type": "Element",
@@ -2158,8 +2096,7 @@ class AuctionItemAttribute:
             "type": "Element",
         }
     )
-    required_indicator: Optional[str] = field(
-        default=None,
+    required_indicator: str = field(
         metadata={
             "name": "RequiredIndicator",
             "type": "Element",
@@ -2175,13 +2112,12 @@ class AuctionItemAttribute:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CarrierId:
     class Meta:
         name = "CarrierID"
 
-    identifier: Optional[Identifier] = field(
-        default=None,
+    identifier: Identifier = field(
         metadata={
             "name": "Identifier",
             "type": "Element",
@@ -2190,13 +2126,12 @@ class CarrierId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ContactId:
     class Meta:
         name = "ContactID"
 
-    identifier: Optional[Identifier] = field(
-        default=None,
+    identifier: Identifier = field(
         metadata={
             "name": "Identifier",
             "type": "Element",
@@ -2205,7 +2140,7 @@ class ContactId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfAttachment:
     attachment: List[Attachment] = field(
         default_factory=list,
@@ -2217,7 +2152,7 @@ class ListOfAttachment:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfDateCoded:
     date_coded: List[DateCoded] = field(
         default_factory=list,
@@ -2229,7 +2164,7 @@ class ListOfDateCoded:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfIdentifier:
     identifier: List[Identifier] = field(
         default_factory=list,
@@ -2241,7 +2176,7 @@ class ListOfIdentifier:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfKeyVal:
     key_val: List[KeyVal] = field(
         default_factory=list,
@@ -2253,10 +2188,9 @@ class ListOfKeyVal:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfRateOfExchangeReference:
-    list_of_reference: Optional[ListOfReference] = field(
-        default=None,
+    list_of_reference: ListOfReference = field(
         metadata={
             "name": "ListOfReference",
             "type": "Element",
@@ -2265,7 +2199,7 @@ class ListOfRateOfExchangeReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfSealInfo:
     seal_info: List[SealInfo] = field(
         default_factory=list,
@@ -2277,13 +2211,12 @@ class ListOfSealInfo:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LocId:
     class Meta:
         name = "LocID"
 
-    identifier: Optional[Identifier] = field(
-        default=None,
+    identifier: Identifier = field(
         metadata={
             "name": "Identifier",
             "type": "Element",
@@ -2292,13 +2225,12 @@ class LocId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ManufacturerId:
     class Meta:
         name = "ManufacturerID"
 
-    identifier: Optional[Identifier] = field(
-        default=None,
+    identifier: Identifier = field(
         metadata={
             "name": "Identifier",
             "type": "Element",
@@ -2307,18 +2239,16 @@ class ManufacturerId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MeasurementRange:
-    minimum_value: Optional[MinimumValue] = field(
-        default=None,
+    minimum_value: MinimumValue = field(
         metadata={
             "name": "MinimumValue",
             "type": "Element",
             "required": True,
         }
     )
-    maximum_value: Optional[MaximumValue] = field(
-        default=None,
+    maximum_value: MaximumValue = field(
         metadata={
             "name": "MaximumValue",
             "type": "Element",
@@ -2327,7 +2257,7 @@ class MeasurementRange:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NameAddress:
     address_type_coded: NameAddressAddressTypeCoded = field(
         default=NameAddressAddressTypeCoded.NOT_APPLICABLE,
@@ -2351,8 +2281,7 @@ class NameAddress:
             "type": "Element",
         }
     )
-    name1: Optional[str] = field(
-        default=None,
+    name1: str = field(
         metadata={
             "name": "Name1",
             "type": "Element",
@@ -2501,10 +2430,9 @@ class NameAddress:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class NatureOfGoods:
-    identifier: Optional[Identifier] = field(
-        default=None,
+    identifier: Identifier = field(
         metadata={
             "name": "Identifier",
             "type": "Element",
@@ -2513,10 +2441,9 @@ class NatureOfGoods:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OtherItemIdentifiers:
-    list_of_product_identifier_coded: Optional[ListOfProductIdentifierCoded] = field(
-        default=None,
+    list_of_product_identifier_coded: ListOfProductIdentifierCoded = field(
         metadata={
             "name": "ListOfProductIdentifierCoded",
             "type": "Element",
@@ -2525,13 +2452,12 @@ class OtherItemIdentifiers:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PartyId:
     class Meta:
         name = "PartyID"
 
-    identifier: Optional[Identifier] = field(
-        default=None,
+    identifier: Identifier = field(
         metadata={
             "name": "Identifier",
             "type": "Element",
@@ -2540,18 +2466,16 @@ class PartyId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuantityRange:
-    minimum_value: Optional[MinimumValue] = field(
-        default=None,
+    minimum_value: MinimumValue = field(
         metadata={
             "name": "MinimumValue",
             "type": "Element",
             "required": True,
         }
     )
-    maximum_value: Optional[MaximumValue] = field(
-        default=None,
+    maximum_value: MaximumValue = field(
         metadata={
             "name": "MaximumValue",
             "type": "Element",
@@ -2560,18 +2484,16 @@ class QuantityRange:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Range:
-    minimum_value: Optional[MinimumValue] = field(
-        default=None,
+    minimum_value: MinimumValue = field(
         metadata={
             "name": "MinimumValue",
             "type": "Element",
             "required": True,
         }
     )
-    maximum_value: Optional[MaximumValue] = field(
-        default=None,
+    maximum_value: MaximumValue = field(
         metadata={
             "name": "MaximumValue",
             "type": "Element",
@@ -2580,10 +2502,9 @@ class Range:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReferenceCoded:
-    reference_type_coded: Optional[str] = field(
-        default=None,
+    reference_type_coded: str = field(
         metadata={
             "name": "ReferenceTypeCoded",
             "type": "Element",
@@ -2597,8 +2518,7 @@ class ReferenceCoded:
             "type": "Element",
         }
     )
-    primary_reference: Optional[PrimaryReference] = field(
-        default=None,
+    primary_reference: PrimaryReference = field(
         metadata={
             "name": "PrimaryReference",
             "type": "Element",
@@ -2628,10 +2548,9 @@ class ReferenceCoded:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RulesProfile:
-    bid_rule_coded: Optional[str] = field(
-        default=None,
+    bid_rule_coded: str = field(
         metadata={
             "name": "BidRuleCoded",
             "type": "Element",
@@ -2652,8 +2571,7 @@ class RulesProfile:
             "type": "Element",
         }
     )
-    win_rule_coded: Optional[str] = field(
-        default=None,
+    win_rule_coded: str = field(
         metadata={
             "name": "WinRuleCoded",
             "type": "Element",
@@ -2683,10 +2601,9 @@ class RulesProfile:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ShipmentStatusReasons:
-    list_of_status_reason: Optional[ListOfStatusReason] = field(
-        default=None,
+    list_of_status_reason: ListOfStatusReason = field(
         metadata={
             "name": "ListOfStatusReason",
             "type": "Element",
@@ -2695,10 +2612,9 @@ class ShipmentStatusReasons:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SubstitutePartNumbers:
-    list_of_product_identifier_coded: Optional[ListOfProductIdentifierCoded] = field(
-        default=None,
+    list_of_product_identifier_coded: ListOfProductIdentifierCoded = field(
         metadata={
             "name": "ListOfProductIdentifierCoded",
             "type": "Element",
@@ -2707,10 +2623,9 @@ class SubstitutePartNumbers:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionCreatListOfAttachment:
-    list_of_attachment: Optional[ListOfAttachment] = field(
-        default=None,
+    list_of_attachment: ListOfAttachment = field(
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
@@ -2719,7 +2634,7 @@ class AuctionCreatListOfAttachment:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CargoTypeification:
     class Meta:
         name = "CargoClassification"
@@ -2754,7 +2669,7 @@ class CargoTypeification:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Contact:
     contact_id: Optional[ContactId] = field(
         default=None,
@@ -2763,8 +2678,7 @@ class Contact:
             "type": "Element",
         }
     )
-    contact_name: Optional[str] = field(
-        default=None,
+    contact_name: str = field(
         metadata={
             "name": "ContactName",
             "type": "Element",
@@ -2794,7 +2708,7 @@ class Contact:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfAuctionItemAttribute:
     auction_item_attribute: List[AuctionItemAttribute] = field(
         default_factory=list,
@@ -2806,10 +2720,9 @@ class ListOfAuctionItemAttribute:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfOtherDeliveryDate:
-    list_of_date_coded: Optional[ListOfDateCoded] = field(
-        default=None,
+    list_of_date_coded: ListOfDateCoded = field(
         metadata={
             "name": "ListOfDateCoded",
             "type": "Element",
@@ -2818,7 +2731,7 @@ class ListOfOtherDeliveryDate:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfReferenceCoded:
     reference_coded: List[ReferenceCoded] = field(
         default_factory=list,
@@ -2830,10 +2743,9 @@ class ListOfReferenceCoded:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LocationIdentifier:
-    loc_id: Optional[LocId] = field(
-        default=None,
+    loc_id: LocId = field(
         metadata={
             "name": "LocID",
             "type": "Element",
@@ -2849,13 +2761,12 @@ class LocationIdentifier:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Mvbrange:
     class Meta:
         name = "MVBRange"
 
-    range: Optional[Range] = field(
-        default=None,
+    range: Range = field(
         metadata={
             "name": "Range",
             "type": "Element",
@@ -2864,10 +2775,9 @@ class Mvbrange:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ManufacturerPartNumber:
-    part_id: Optional[str] = field(
-        default=None,
+    part_id: str = field(
         metadata={
             "name": "PartID",
             "type": "Element",
@@ -2904,14 +2814,13 @@ class ManufacturerPartNumber:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Measurement:
     measurement_value: Optional[MeasurementValue] = field(
         default=None,
         metadata={
             "name": "MeasurementValue",
             "type": "Element",
-            "required": True,
         }
     )
     measurement_range: Optional[MeasurementRange] = field(
@@ -2919,11 +2828,9 @@ class Measurement:
         metadata={
             "name": "MeasurementRange",
             "type": "Element",
-            "required": True,
         }
     )
-    unit_of_measurement: Optional[UnitOfMeasurement] = field(
-        default=None,
+    unit_of_measurement: UnitOfMeasurement = field(
         metadata={
             "name": "UnitOfMeasurement",
             "type": "Element",
@@ -2932,7 +2839,7 @@ class Measurement:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderDates:
     requested_ship_by_date: Optional[str] = field(
         default=None,
@@ -2978,14 +2885,13 @@ class OrderDates:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Quantity:
     quantity_value: Optional[QuantityValue] = field(
         default=None,
         metadata={
             "name": "QuantityValue",
             "type": "Element",
-            "required": True,
         }
     )
     quantity_range: Optional[QuantityRange] = field(
@@ -2993,11 +2899,9 @@ class Quantity:
         metadata={
             "name": "QuantityRange",
             "type": "Element",
-            "required": True,
         }
     )
-    unit_of_measurement: Optional[UnitOfMeasurement] = field(
-        default=None,
+    unit_of_measurement: UnitOfMeasurement = field(
         metadata={
             "name": "UnitOfMeasurement",
             "type": "Element",
@@ -3006,26 +2910,23 @@ class Quantity:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RateOfExchangeDetail:
-    reference_currency: Optional[ReferenceCurrency] = field(
-        default=None,
+    reference_currency: ReferenceCurrency = field(
         metadata={
             "name": "ReferenceCurrency",
             "type": "Element",
             "required": True,
         }
     )
-    target_currency: Optional[TargetCurrency] = field(
-        default=None,
+    target_currency: TargetCurrency = field(
         metadata={
             "name": "TargetCurrency",
             "type": "Element",
             "required": True,
         }
     )
-    rate_of_exchange: Optional[str] = field(
-        default=None,
+    rate_of_exchange: str = field(
         metadata={
             "name": "RateOfExchange",
             "type": "Element",
@@ -3055,10 +2956,9 @@ class RateOfExchangeDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionItemDates:
-    order_dates: Optional[OrderDates] = field(
-        default=None,
+    order_dates: OrderDates = field(
         metadata={
             "name": "OrderDates",
             "type": "Element",
@@ -3067,10 +2967,9 @@ class AuctionItemDates:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionQuantity:
-    quantity: Optional[Quantity] = field(
-        default=None,
+    quantity: Quantity = field(
         metadata={
             "name": "Quantity",
             "type": "Element",
@@ -3079,10 +2978,9 @@ class AuctionQuantity:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CalculatedPriceBasisQuantity:
-    quantity: Optional[Quantity] = field(
-        default=None,
+    quantity: Quantity = field(
         metadata={
             "name": "Quantity",
             "type": "Element",
@@ -3091,18 +2989,16 @@ class CalculatedPriceBasisQuantity:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Dimension:
-    measurement: Optional[Measurement] = field(
-        default=None,
+    measurement: Measurement = field(
         metadata={
             "name": "Measurement",
             "type": "Element",
             "required": True,
         }
     )
-    dimension_coded: Optional[str] = field(
-        default=None,
+    dimension_coded: str = field(
         metadata={
             "name": "DimensionCoded",
             "type": "Element",
@@ -3118,7 +3014,7 @@ class Dimension:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfContact:
     contact: List[Contact] = field(
         default_factory=list,
@@ -3130,7 +3026,7 @@ class ListOfContact:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Location:
     location_qualifier_coded: Optional[str] = field(
         default=None,
@@ -3151,7 +3047,6 @@ class Location:
         metadata={
             "name": "LocationIdentifier",
             "type": "Element",
-            "required": True,
         }
     )
     external_address_id: Optional[str] = field(
@@ -3159,7 +3054,6 @@ class Location:
         metadata={
             "name": "ExternalAddressID",
             "type": "Element",
-            "required": True,
         }
     )
     name_address: Optional[NameAddress] = field(
@@ -3167,7 +3061,6 @@ class Location:
         metadata={
             "name": "NameAddress",
             "type": "Element",
-            "required": True,
         }
     )
     gpscooridinates: Optional[Gpscooridinates] = field(
@@ -3179,13 +3072,12 @@ class Location:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Mvbvariable:
     class Meta:
         name = "MVBVariable"
 
-    mvbvariable_name: Optional[str] = field(
-        default=None,
+    mvbvariable_name: str = field(
         metadata={
             "name": "MVBVariableName",
             "type": "Element",
@@ -3197,7 +3089,6 @@ class Mvbvariable:
         metadata={
             "name": "MVBVariableValue",
             "type": "Element",
-            "required": True,
         }
     )
     mvbrange: Optional[Mvbrange] = field(
@@ -3205,15 +3096,13 @@ class Mvbvariable:
         metadata={
             "name": "MVBRange",
             "type": "Element",
-            "required": True,
         }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderContact:
-    contact: Optional[Contact] = field(
-        default=None,
+    contact: Contact = field(
         metadata={
             "name": "Contact",
             "type": "Element",
@@ -3222,7 +3111,7 @@ class OrderContact:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PackageReference:
     quantity: Optional[Quantity] = field(
         default=None,
@@ -3231,8 +3120,7 @@ class PackageReference:
             "type": "Element",
         }
     )
-    package_idreference: Optional[str] = field(
-        default=None,
+    package_idreference: str = field(
         metadata={
             "name": "PackageIDReference",
             "type": "Element",
@@ -3248,7 +3136,7 @@ class PackageReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PartNumbers:
     seller_part_number: Optional[SellerPartNumber] = field(
         default=None,
@@ -3294,10 +3182,9 @@ class PartNumbers:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PriceBasisQuantity:
-    quantity: Optional[Quantity] = field(
-        default=None,
+    quantity: Quantity = field(
         metadata={
             "name": "Quantity",
             "type": "Element",
@@ -3306,10 +3193,9 @@ class PriceBasisQuantity:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PriceQuantityRange:
-    quantity: Optional[Quantity] = field(
-        default=None,
+    quantity: Quantity = field(
         metadata={
             "name": "Quantity",
             "type": "Element",
@@ -3318,10 +3204,9 @@ class PriceQuantityRange:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReceivingContact:
-    contact: Optional[Contact] = field(
-        default=None,
+    contact: Contact = field(
         metadata={
             "name": "Contact",
             "type": "Element",
@@ -3330,10 +3215,9 @@ class ReceivingContact:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ShipToSubQuantity:
-    quantity: Optional[Quantity] = field(
-        default=None,
+    quantity: Quantity = field(
         metadata={
             "name": "Quantity",
             "type": "Element",
@@ -3342,10 +3226,9 @@ class ShipToSubQuantity:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ShippingContact:
-    contact: Optional[Contact] = field(
-        default=None,
+    contact: Contact = field(
         metadata={
             "name": "Contact",
             "type": "Element",
@@ -3354,10 +3237,9 @@ class ShippingContact:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ValidBidCurrency:
-    bid_currency: Optional[BidCurrency] = field(
-        default=None,
+    bid_currency: BidCurrency = field(
         metadata={
             "name": "BidCurrency",
             "type": "Element",
@@ -3373,18 +3255,16 @@ class ValidBidCurrency:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionItem:
-    auction_item_id: Optional[str] = field(
-        default=None,
+    auction_item_id: str = field(
         metadata={
             "name": "AuctionItemID",
             "type": "Element",
             "required": True,
         }
     )
-    auction_item_name: Optional[str] = field(
-        default=None,
+    auction_item_name: str = field(
         metadata={
             "name": "AuctionItemName",
             "type": "Element",
@@ -3398,8 +3278,7 @@ class AuctionItem:
             "type": "Element",
         }
     )
-    list_of_auction_category: Optional[ListOfAuctionCategory] = field(
-        default=None,
+    list_of_auction_category: ListOfAuctionCategory = field(
         metadata={
             "name": "ListOfAuctionCategory",
             "type": "Element",
@@ -3413,8 +3292,7 @@ class AuctionItem:
             "type": "Element",
         }
     )
-    auction_item_hierarchy_level: Optional[str] = field(
-        default=None,
+    auction_item_hierarchy_level: str = field(
         metadata={
             "name": "AuctionItemHierarchyLevel",
             "type": "Element",
@@ -3428,8 +3306,7 @@ class AuctionItem:
             "type": "Element",
         }
     )
-    auction_quantity: Optional[AuctionQuantity] = field(
-        default=None,
+    auction_quantity: AuctionQuantity = field(
         metadata={
             "name": "AuctionQuantity",
             "type": "Element",
@@ -3452,7 +3329,7 @@ class AuctionItem:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ItemPackagingReference:
     package_reference: List[PackageReference] = field(
         default_factory=list,
@@ -3464,7 +3341,7 @@ class ItemPackagingReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfDimension:
     dimension: List[Dimension] = field(
         default_factory=list,
@@ -3476,7 +3353,7 @@ class ListOfDimension:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfMvbvariables:
     class Meta:
         name = "ListOfMVBVariables"
@@ -3491,7 +3368,7 @@ class ListOfMvbvariables:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfValidBidCurrency:
     valid_bid_currency: List[ValidBidCurrency] = field(
         default_factory=list,
@@ -3503,10 +3380,9 @@ class ListOfValidBidCurrency:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OtherContacts:
-    list_of_contact: Optional[ListOfContact] = field(
-        default=None,
+    list_of_contact: ListOfContact = field(
         metadata={
             "name": "ListOfContact",
             "type": "Element",
@@ -3515,7 +3391,7 @@ class OtherContacts:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Price:
     pricing_type: Optional[PricingType] = field(
         default=None,
@@ -3524,8 +3400,7 @@ class Price:
             "type": "Element",
         }
     )
-    unit_price: Optional[UnitPrice] = field(
-        default=None,
+    unit_price: UnitPrice = field(
         metadata={
             "name": "UnitPrice",
             "type": "Element",
@@ -3569,10 +3444,9 @@ class Price:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ShipFromLocation:
-    location: Optional[Location] = field(
-        default=None,
+    location: Location = field(
         metadata={
             "name": "Location",
             "type": "Element",
@@ -3581,10 +3455,9 @@ class ShipFromLocation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ShipToLocation:
-    location: Optional[Location] = field(
-        default=None,
+    location: Location = field(
         metadata={
             "name": "Location",
             "type": "Element",
@@ -3593,10 +3466,9 @@ class ShipToLocation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ShipToSubLocation:
-    location: Optional[Location] = field(
-        default=None,
+    location: Location = field(
         metadata={
             "name": "Location",
             "type": "Element",
@@ -3605,10 +3477,9 @@ class ShipToSubLocation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TermsOfDelivery:
-    terms_of_delivery_function_coded: Optional[str] = field(
-        default=None,
+    terms_of_delivery_function_coded: str = field(
         metadata={
             "name": "TermsOfDeliveryFunctionCoded",
             "type": "Element",
@@ -3636,8 +3507,7 @@ class TermsOfDelivery:
             "type": "Element",
         }
     )
-    shipment_method_of_payment_coded: Optional[str] = field(
-        default=None,
+    shipment_method_of_payment_coded: str = field(
         metadata={
             "name": "ShipmentMethodOfPaymentCoded",
             "type": "Element",
@@ -3695,10 +3565,9 @@ class TermsOfDelivery:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionCurrency:
-    base_currency: Optional[BaseCurrency] = field(
-        default=None,
+    base_currency: BaseCurrency = field(
         metadata={
             "name": "BaseCurrency",
             "type": "Element",
@@ -3714,10 +3583,9 @@ class AuctionCurrency:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionPartners:
-    party_id: Optional[PartyId] = field(
-        default=None,
+    party_id: PartyId = field(
         metadata={
             "name": "PartyID",
             "type": "Element",
@@ -3780,8 +3648,7 @@ class AuctionPartners:
             "type": "Element",
         }
     )
-    group_indicator: Optional[str] = field(
-        default=None,
+    group_indicator: str = field(
         metadata={
             "name": "GroupIndicator",
             "type": "Element",
@@ -3797,10 +3664,9 @@ class AuctionPartners:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfConditions:
-    list_of_dimension: Optional[ListOfDimension] = field(
-        default=None,
+    list_of_dimension: ListOfDimension = field(
         metadata={
             "name": "ListOfDimension",
             "type": "Element",
@@ -3809,10 +3675,9 @@ class ListOfConditions:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfEquipmentMeasurements:
-    list_of_dimension: Optional[ListOfDimension] = field(
-        default=None,
+    list_of_dimension: ListOfDimension = field(
         metadata={
             "name": "ListOfDimension",
             "type": "Element",
@@ -3821,7 +3686,7 @@ class ListOfEquipmentMeasurements:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfPrice:
     price: List[Price] = field(
         default_factory=list,
@@ -3833,10 +3698,9 @@ class ListOfPrice:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Party:
-    party_id: Optional[PartyId] = field(
-        default=None,
+    party_id: PartyId = field(
         metadata={
             "name": "PartyID",
             "type": "Element",
@@ -3901,10 +3765,9 @@ class Party:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SubLocationItemPackagingReference:
-    item_packaging_reference: Optional[ItemPackagingReference] = field(
-        default=None,
+    item_packaging_reference: ItemPackagingReference = field(
         metadata={
             "name": "ItemPackagingReference",
             "type": "Element",
@@ -3913,10 +3776,9 @@ class SubLocationItemPackagingReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionPricingDetail:
-    open_price: Optional[str] = field(
-        default=None,
+    open_price: str = field(
         metadata={
             "name": "OpenPrice",
             "type": "Element",
@@ -3946,7 +3808,7 @@ class AuctionPricingDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Conditions:
     refrigeration_on: Optional[str] = field(
         default=None,
@@ -3971,10 +3833,9 @@ class Conditions:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InitiatingParty:
-    party: Optional[Party] = field(
-        default=None,
+    party: Party = field(
         metadata={
             "name": "Party",
             "type": "Element",
@@ -3983,7 +3844,7 @@ class InitiatingParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfAuctionPartners:
     auction_partners: List[AuctionPartners] = field(
         default_factory=list,
@@ -3995,7 +3856,7 @@ class ListOfAuctionPartners:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfParty:
     party: List[Party] = field(
         default_factory=list,
@@ -4007,18 +3868,16 @@ class ListOfParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ShipToSubInformation:
-    ship_to_sub_location: Optional[ShipToSubLocation] = field(
-        default=None,
+    ship_to_sub_location: ShipToSubLocation = field(
         metadata={
             "name": "ShipToSubLocation",
             "type": "Element",
             "required": True,
         }
     )
-    ship_to_sub_quantity: Optional[ShipToSubQuantity] = field(
-        default=None,
+    ship_to_sub_quantity: ShipToSubQuantity = field(
         metadata={
             "name": "ShipToSubQuantity",
             "type": "Element",
@@ -4034,7 +3893,7 @@ class ShipToSubInformation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfShipToSubInformation:
     ship_to_sub_information: List[ShipToSubInformation] = field(
         default_factory=list,
@@ -4046,10 +3905,9 @@ class ListOfShipToSubInformation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListToInform:
-    list_of_party: Optional[ListOfParty] = field(
-        default=None,
+    list_of_party: ListOfParty = field(
         metadata={
             "name": "ListOfParty",
             "type": "Element",
@@ -4058,7 +3916,7 @@ class ListToInform:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransportEquipment:
     equipment_provider_coded: Optional[str] = field(
         default=None,
@@ -4088,8 +3946,7 @@ class TransportEquipment:
             "type": "Element",
         }
     )
-    equipment_id: Optional[str] = field(
-        default=None,
+    equipment_id: str = field(
         metadata={
             "name": "EquipmentID",
             "type": "Element",
@@ -4168,10 +4025,9 @@ class TransportEquipment:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionParticipants:
-    initiating_party: Optional[InitiatingParty] = field(
-        default=None,
+    initiating_party: InitiatingParty = field(
         metadata={
             "name": "InitiatingParty",
             "type": "Element",
@@ -4192,8 +4048,7 @@ class AuctionParticipants:
             "type": "Element",
         }
     )
-    list_of_auction_partners: Optional[ListOfAuctionPartners] = field(
-        default=None,
+    list_of_auction_partners: ListOfAuctionPartners = field(
         metadata={
             "name": "ListOfAuctionPartners",
             "type": "Element",
@@ -4202,7 +4057,7 @@ class AuctionParticipants:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfTransportEquipment:
     transport_equipment: List[TransportEquipment] = field(
         default_factory=list,
@@ -4214,42 +4069,37 @@ class ListOfTransportEquipment:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionCreateHeader:
-    auction_create_purpose: Optional[AuctionCreatePurpose] = field(
-        default=None,
+    auction_create_purpose: AuctionCreatePurpose = field(
         metadata={
             "name": "AuctionCreatePurpose",
             "type": "Element",
             "required": True,
         }
     )
-    auction_create_issue_date: Optional[str] = field(
-        default=None,
+    auction_create_issue_date: str = field(
         metadata={
             "name": "AuctionCreateIssueDate",
             "type": "Element",
             "required": True,
         }
     )
-    auction_create_id: Optional[str] = field(
-        default=None,
+    auction_create_id: str = field(
         metadata={
             "name": "AuctionCreateID",
             "type": "Element",
             "required": True,
         }
     )
-    foward_auction_indicator: Optional[str] = field(
-        default=None,
+    foward_auction_indicator: str = field(
         metadata={
             "name": "FowardAuctionIndicator",
             "type": "Element",
             "required": True,
         }
     )
-    auction_validity_dates: Optional[AuctionValidityDates] = field(
-        default=None,
+    auction_validity_dates: AuctionValidityDates = field(
         metadata={
             "name": "AuctionValidityDates",
             "type": "Element",
@@ -4263,8 +4113,7 @@ class AuctionCreateHeader:
             "type": "Element",
         }
     )
-    rules_profile: Optional[RulesProfile] = field(
-        default=None,
+    rules_profile: RulesProfile = field(
         metadata={
             "name": "RulesProfile",
             "type": "Element",
@@ -4278,8 +4127,7 @@ class AuctionCreateHeader:
             "type": "Element",
         }
     )
-    auction_participants: Optional[AuctionParticipants] = field(
-        default=None,
+    auction_participants: AuctionParticipants = field(
         metadata={
             "name": "AuctionParticipants",
             "type": "Element",
@@ -4293,8 +4141,7 @@ class AuctionCreateHeader:
             "type": "Element",
         }
     )
-    language: Optional[Language] = field(
-        default=None,
+    language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
@@ -4324,10 +4171,9 @@ class AuctionCreateHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Transport:
-    transport_id: Optional[str] = field(
-        default=None,
+    transport_id: str = field(
         metadata={
             "name": "TransportID",
             "type": "Element",
@@ -4427,7 +4273,7 @@ class Transport:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ScheduleLine:
     schedule_line_id: Optional[str] = field(
         default=None,
@@ -4457,8 +4303,7 @@ class ScheduleLine:
             "type": "Element",
         }
     )
-    quantity: Optional[Quantity] = field(
-        default=None,
+    quantity: Quantity = field(
         metadata={
             "name": "Quantity",
             "type": "Element",
@@ -4491,7 +4336,6 @@ class ScheduleLine:
         metadata={
             "name": "Transport",
             "type": "Element",
-            "required": True,
         }
     )
     transport_reference: Optional[str] = field(
@@ -4499,7 +4343,6 @@ class ScheduleLine:
         metadata={
             "name": "TransportReference",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_ship_to_sub_information: Optional[ListOfShipToSubInformation] = field(
@@ -4511,7 +4354,7 @@ class ScheduleLine:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfScheduleLine:
     schedule_line: List[ScheduleLine] = field(
         default_factory=list,
@@ -4523,7 +4366,7 @@ class ListOfScheduleLine:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DeliveryDetail:
     ship_to_location: Optional[ShipToLocation] = field(
         default=None,
@@ -4576,10 +4419,9 @@ class DeliveryDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionDeliveryDetail:
-    delivery_detail: Optional[DeliveryDetail] = field(
-        default=None,
+    delivery_detail: DeliveryDetail = field(
         metadata={
             "name": "DeliveryDetail",
             "type": "Element",
@@ -4588,10 +4430,9 @@ class AuctionDeliveryDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionCreateDetail:
-    auction_item: Optional[AuctionItem] = field(
-        default=None,
+    auction_item: AuctionItem = field(
         metadata={
             "name": "AuctionItem",
             "type": "Element",
@@ -4633,8 +4474,7 @@ class AuctionCreateDetail:
             "type": "Element",
         }
     )
-    component_auction_indicator: Optional[str] = field(
-        default=None,
+    component_auction_indicator: str = field(
         metadata={
             "name": "ComponentAuctionIndicator",
             "type": "Element",
@@ -4650,10 +4490,9 @@ class AuctionCreateDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionDetail:
-    auction_item: Optional[AuctionItem] = field(
-        default=None,
+    auction_item: AuctionItem = field(
         metadata={
             "name": "AuctionItem",
             "type": "Element",
@@ -4695,8 +4534,7 @@ class AuctionDetail:
             "type": "Element",
         }
     )
-    component_auction_indicator: Optional[str] = field(
-        default=None,
+    component_auction_indicator: str = field(
         metadata={
             "name": "ComponentAuctionIndicator",
             "type": "Element",
@@ -4705,7 +4543,7 @@ class AuctionDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfAuctionCreateDetail:
     auction_create_detail: List[AuctionCreateDetail] = field(
         default_factory=list,
@@ -4717,26 +4555,23 @@ class ListOfAuctionCreateDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionCreate:
-    auction_create_header: Optional[AuctionCreateHeader] = field(
-        default=None,
+    auction_create_header: AuctionCreateHeader = field(
         metadata={
             "name": "AuctionCreateHeader",
             "type": "Element",
             "required": True,
         }
     )
-    list_of_auction_create_detail: Optional[ListOfAuctionCreateDetail] = field(
-        default=None,
+    list_of_auction_create_detail: ListOfAuctionCreateDetail = field(
         metadata={
             "name": "ListOfAuctionCreateDetail",
             "type": "Element",
             "required": True,
         }
     )
-    auction_create_summary: Optional[AuctionCreateSummary] = field(
-        default=None,
+    auction_create_summary: AuctionCreateSummary = field(
         metadata={
             "name": "AuctionCreateSummary",
             "type": "Element",

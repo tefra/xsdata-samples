@@ -10,10 +10,9 @@ from xcbl.models.auction_create import (
 from xcbl.models.auction_result import AuctionCreateReference
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionItemComponentResponse:
-    auction_create_response_detail: Optional["AuctionCreateResponseDetail"] = field(
-        default=None,
+    auction_create_response_detail: "AuctionCreateResponseDetail" = field(
         metadata={
             "name": "AuctionCreateResponseDetail",
             "type": "Element",
@@ -22,10 +21,9 @@ class AuctionItemComponentResponse:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionCreateResponsePurpose:
-    purpose: Optional[Purpose] = field(
-        default=None,
+    purpose: Purpose = field(
         metadata={
             "name": "Purpose",
             "type": "Element",
@@ -34,10 +32,9 @@ class AuctionCreateResponsePurpose:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionCreateResponseSummary:
-    auction_create_summary: Optional[AuctionCreateSummary] = field(
-        default=None,
+    auction_create_summary: AuctionCreateSummary = field(
         metadata={
             "name": "AuctionCreateSummary",
             "type": "Element",
@@ -46,10 +43,9 @@ class AuctionCreateResponseSummary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ChangedAuctionCreateDetail:
-    auction_detail: Optional[AuctionDetail] = field(
-        default=None,
+    auction_detail: AuctionDetail = field(
         metadata={
             "name": "AuctionDetail",
             "type": "Element",
@@ -58,10 +54,9 @@ class ChangedAuctionCreateDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ChangedAuctionCreateHeader:
-    auction_create_header: Optional[AuctionCreateHeader] = field(
-        default=None,
+    auction_create_header: AuctionCreateHeader = field(
         metadata={
             "name": "AuctionCreateHeader",
             "type": "Element",
@@ -70,7 +65,7 @@ class ChangedAuctionCreateHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfAuctionItemComponentResponse:
     auction_item_component_response: List[AuctionItemComponentResponse] = field(
         default_factory=list,
@@ -82,18 +77,16 @@ class ListOfAuctionItemComponentResponse:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionCreateResponseDetail:
-    auction_item_id: Optional[str] = field(
-        default=None,
+    auction_item_id: str = field(
         metadata={
             "name": "AuctionItemID",
             "type": "Element",
             "required": True,
         }
     )
-    auction_item_name: Optional[str] = field(
-        default=None,
+    auction_item_name: str = field(
         metadata={
             "name": "AuctionItemName",
             "type": "Element",
@@ -107,8 +100,7 @@ class AuctionCreateResponseDetail:
             "type": "Element",
         }
     )
-    auction_item_hierarchy_level: Optional[str] = field(
-        default=None,
+    auction_item_hierarchy_level: str = field(
         metadata={
             "name": "AuctionItemHierarchyLevel",
             "type": "Element",
@@ -122,8 +114,7 @@ class AuctionCreateResponseDetail:
             "type": "Element",
         }
     )
-    auction_item_response_coded: Optional[str] = field(
-        default=None,
+    auction_item_response_coded: str = field(
         metadata={
             "name": "AuctionItemResponseCoded",
             "type": "Element",
@@ -153,42 +144,37 @@ class AuctionCreateResponseDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionCreateResponseHeader:
-    auction_create_response_purpose: Optional[AuctionCreateResponsePurpose] = field(
-        default=None,
+    auction_create_response_purpose: AuctionCreateResponsePurpose = field(
         metadata={
             "name": "AuctionCreateResponsePurpose",
             "type": "Element",
             "required": True,
         }
     )
-    auction_create_response_issue_date: Optional[str] = field(
-        default=None,
+    auction_create_response_issue_date: str = field(
         metadata={
             "name": "AuctionCreateResponseIssueDate",
             "type": "Element",
             "required": True,
         }
     )
-    auction_create_response_id: Optional[str] = field(
-        default=None,
+    auction_create_response_id: str = field(
         metadata={
             "name": "AuctionCreateResponseID",
             "type": "Element",
             "required": True,
         }
     )
-    auction_create_reference: Optional[AuctionCreateReference] = field(
-        default=None,
+    auction_create_reference: AuctionCreateReference = field(
         metadata={
             "name": "AuctionCreateReference",
             "type": "Element",
             "required": True,
         }
     )
-    auction_response_coded: Optional[str] = field(
-        default=None,
+    auction_response_coded: str = field(
         metadata={
             "name": "AuctionResponseCoded",
             "type": "Element",
@@ -209,8 +195,7 @@ class AuctionCreateResponseHeader:
             "type": "Element",
         }
     )
-    language: Optional[Language] = field(
-        default=None,
+    language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
@@ -226,7 +211,7 @@ class AuctionCreateResponseHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfAuctionCreateResponseDetail:
     auction_create_response_detail: List[AuctionCreateResponseDetail] = field(
         default_factory=list,
@@ -238,10 +223,9 @@ class ListOfAuctionCreateResponseDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionCreateResponse:
-    auction_create_response_header: Optional[AuctionCreateResponseHeader] = field(
-        default=None,
+    auction_create_response_header: AuctionCreateResponseHeader = field(
         metadata={
             "name": "AuctionCreateResponseHeader",
             "type": "Element",
@@ -255,8 +239,7 @@ class AuctionCreateResponse:
             "type": "Element",
         }
     )
-    auction_create_response_summary: Optional[AuctionCreateResponseSummary] = field(
-        default=None,
+    auction_create_response_summary: AuctionCreateResponseSummary = field(
         metadata={
             "name": "AuctionCreateResponseSummary",
             "type": "Element",

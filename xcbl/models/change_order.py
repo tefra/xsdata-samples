@@ -9,7 +9,7 @@ from xcbl.models.order_response import (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ChangeOrderSummary:
     original_order_summary: Optional[OriginalOrderSummary] = field(
         default=None,
@@ -27,7 +27,7 @@ class ChangeOrderSummary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfChangeOrderItemDetail:
     change_order_item_detail: List[ChangeOrderItemDetail] = field(
         default_factory=list,
@@ -39,7 +39,7 @@ class ListOfChangeOrderItemDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfChangeOrderPackageDetail:
     change_order_package_detail: List[ChangeOrderPackageDetail] = field(
         default_factory=list,
@@ -51,7 +51,7 @@ class ListOfChangeOrderPackageDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ChangeOrderDetail:
     list_of_change_order_item_detail: Optional[ListOfChangeOrderItemDetail] = field(
         default=None,
@@ -69,10 +69,9 @@ class ChangeOrderDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ChangeOrder:
-    change_order_header: Optional[ChangeOrderHeader] = field(
-        default=None,
+    change_order_header: ChangeOrderHeader = field(
         metadata={
             "name": "ChangeOrderHeader",
             "type": "Element",

@@ -41,7 +41,7 @@ from xcbl.models.request_for_quotation import (
 from xcbl.models.sourcing_create import QuoteCurrency
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuoteSummary:
     total_number_of_line_items: Optional[str] = field(
         default=None,
@@ -52,10 +52,9 @@ class QuoteSummary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuoteType:
-    quote_type_coded: Optional[str] = field(
-        default=None,
+    quote_type_coded: str = field(
         metadata={
             "name": "QuoteTypeCoded",
             "type": "Element",
@@ -71,10 +70,9 @@ class QuoteType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfQuotePackageDetail:
-    list_of_package_detail: Optional[ListOfPackageDetail] = field(
-        default=None,
+    list_of_package_detail: ListOfPackageDetail = field(
         metadata={
             "name": "ListOfPackageDetail",
             "type": "Element",
@@ -83,10 +81,9 @@ class ListOfQuotePackageDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuotationReqReference:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -95,10 +92,9 @@ class QuotationReqReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuoteAllowanceOrCharge:
-    list_of_allow_or_charge: Optional[ListOfAllowOrCharge] = field(
-        default=None,
+    list_of_allow_or_charge: ListOfAllowOrCharge = field(
         metadata={
             "name": "ListOfAllowOrCharge",
             "type": "Element",
@@ -107,10 +103,9 @@ class QuoteAllowanceOrCharge:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuoteDeliveryDetail:
-    delivery_detail: Optional[DeliveryDetail] = field(
-        default=None,
+    delivery_detail: DeliveryDetail = field(
         metadata={
             "name": "DeliveryDetail",
             "type": "Element",
@@ -119,13 +114,12 @@ class QuoteDeliveryDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuoteId:
     class Meta:
         name = "QuoteID"
 
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -134,10 +128,9 @@ class QuoteId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuoteItemListOfAttachment:
-    list_of_attachment: Optional[ListOfAttachment] = field(
-        default=None,
+    list_of_attachment: ListOfAttachment = field(
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
@@ -146,10 +139,9 @@ class QuoteItemListOfAttachment:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuoteItemParty:
-    order_party: Optional[OrderParty] = field(
-        default=None,
+    order_party: OrderParty = field(
         metadata={
             "name": "OrderParty",
             "type": "Element",
@@ -158,10 +150,9 @@ class QuoteItemParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuoteItemReferences:
-    request_quote_reference: Optional[RequestQuoteReference] = field(
-        default=None,
+    request_quote_reference: RequestQuoteReference = field(
         metadata={
             "name": "RequestQuoteReference",
             "type": "Element",
@@ -170,10 +161,9 @@ class QuoteItemReferences:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuoteItemType:
-    quote_type: Optional[QuoteType] = field(
-        default=None,
+    quote_type: QuoteType = field(
         metadata={
             "name": "QuoteType",
             "type": "Element",
@@ -182,10 +172,9 @@ class QuoteItemType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuoteLanguage:
-    language: Optional[Language] = field(
-        default=None,
+    language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
@@ -194,10 +183,9 @@ class QuoteLanguage:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuoteListOfAttachment:
-    list_of_attachment: Optional[ListOfAttachment] = field(
-        default=None,
+    list_of_attachment: ListOfAttachment = field(
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
@@ -206,10 +194,9 @@ class QuoteListOfAttachment:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuoteParty:
-    order_party: Optional[OrderParty] = field(
-        default=None,
+    order_party: OrderParty = field(
         metadata={
             "name": "OrderParty",
             "type": "Element",
@@ -218,10 +205,9 @@ class QuoteParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuotePricingDetail:
-    pricing_detail: Optional[PricingDetail] = field(
-        default=None,
+    pricing_detail: PricingDetail = field(
         metadata={
             "name": "PricingDetail",
             "type": "Element",
@@ -230,10 +216,9 @@ class QuotePricingDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuoteTax:
-    tax_reference: Optional[TaxReference] = field(
-        default=None,
+    tax_reference: TaxReference = field(
         metadata={
             "name": "TaxReference",
             "type": "Element",
@@ -242,10 +227,9 @@ class QuoteTax:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuoteTermsOfDelivery:
-    terms_of_delivery: Optional[TermsOfDelivery] = field(
-        default=None,
+    terms_of_delivery: TermsOfDelivery = field(
         metadata={
             "name": "TermsOfDelivery",
             "type": "Element",
@@ -254,10 +238,9 @@ class QuoteTermsOfDelivery:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuoteTermsOfPayment:
-    payment_instructions: Optional[PaymentInstructions] = field(
-        default=None,
+    payment_instructions: PaymentInstructions = field(
         metadata={
             "name": "PaymentInstructions",
             "type": "Element",
@@ -266,10 +249,9 @@ class QuoteTermsOfPayment:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuoteTransport:
-    transport_routing: Optional[TransportRouting] = field(
-        default=None,
+    transport_routing: TransportRouting = field(
         metadata={
             "name": "TransportRouting",
             "type": "Element",
@@ -278,10 +260,9 @@ class QuoteTransport:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuotationRequestReference:
-    quotation_req_reference: Optional[QuotationReqReference] = field(
-        default=None,
+    quotation_req_reference: QuotationReqReference = field(
         metadata={
             "name": "QuotationReqReference",
             "type": "Element",
@@ -297,10 +278,9 @@ class QuotationRequestReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuoteItemDetail:
-    line_item_num: Optional[LineItemNum] = field(
-        default=None,
+    line_item_num: LineItemNum = field(
         metadata={
             "name": "LineItemNum",
             "type": "Element",
@@ -442,18 +422,16 @@ class QuoteItemDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuoteDetails:
-    quote_item_type: Optional[QuoteItemType] = field(
-        default=None,
+    quote_item_type: QuoteItemType = field(
         metadata={
             "name": "QuoteItemType",
             "type": "Element",
             "required": True,
         }
     )
-    quote_item_detail: Optional[QuoteItemDetail] = field(
-        default=None,
+    quote_item_detail: QuoteItemDetail = field(
         metadata={
             "name": "QuoteItemDetail",
             "type": "Element",
@@ -490,18 +468,16 @@ class QuoteDetails:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuoteHeader:
-    quote_issue_date: Optional[str] = field(
-        default=None,
+    quote_issue_date: str = field(
         metadata={
             "name": "QuoteIssueDate",
             "type": "Element",
             "required": True,
         }
     )
-    quote_id: Optional[QuoteId] = field(
-        default=None,
+    quote_id: QuoteId = field(
         metadata={
             "name": "QuoteID",
             "type": "Element",
@@ -529,8 +505,7 @@ class QuoteHeader:
             "type": "Element",
         }
     )
-    quote_party: Optional[QuoteParty] = field(
-        default=None,
+    quote_party: QuoteParty = field(
         metadata={
             "name": "QuoteParty",
             "type": "Element",
@@ -609,7 +584,7 @@ class QuoteHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfQuoteDetails:
     quote_details: List[QuoteDetails] = field(
         default_factory=list,
@@ -621,10 +596,9 @@ class ListOfQuoteDetails:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Quote:
-    quote_header: Optional[QuoteHeader] = field(
-        default=None,
+    quote_header: QuoteHeader = field(
         metadata={
             "name": "QuoteHeader",
             "type": "Element",

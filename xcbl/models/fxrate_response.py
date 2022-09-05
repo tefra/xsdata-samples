@@ -27,7 +27,7 @@ from xcbl.models.payment_status_response import (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CurrencyAvailabilityCheckList:
     funds_transfer_indicator: Optional[str] = field(
         default=None,
@@ -73,7 +73,7 @@ class CurrencyAvailabilityCheckList:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FxrateRequestSummary:
     class Meta:
         name = "FXRateRequestSummary"
@@ -87,7 +87,7 @@ class FxrateRequestSummary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Fxamounts:
     class Meta:
         name = "FXAmounts"
@@ -99,8 +99,7 @@ class Fxamounts:
             "type": "Element",
         }
     )
-    debit_amount: Optional[DebitAmount] = field(
-        default=None,
+    debit_amount: DebitAmount = field(
         metadata={
             "name": "DebitAmount",
             "type": "Element",
@@ -116,7 +115,7 @@ class Fxamounts:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Fxdates:
     class Meta:
         name = "FXDates"
@@ -151,7 +150,7 @@ class Fxdates:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FxidentificationData:
     class Meta:
         name = "FXIdentificationData"
@@ -179,13 +178,12 @@ class FxidentificationData:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FxrateRequestId:
     class Meta:
         name = "FXRateRequestID"
 
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -194,13 +192,12 @@ class FxrateRequestId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FxrateResponseId:
     class Meta:
         name = "FXRateResponseID"
 
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -209,13 +206,12 @@ class FxrateResponseId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FxrateResponseSummary:
     class Meta:
         name = "FXRateResponseSummary"
 
-    fxrate_request_summary: Optional[FxrateRequestSummary] = field(
-        default=None,
+    fxrate_request_summary: FxrateRequestSummary = field(
         metadata={
             "name": "FXRateRequestSummary",
             "type": "Element",
@@ -224,13 +220,12 @@ class FxrateResponseSummary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FxreferenceNumber:
     class Meta:
         name = "FXReferenceNumber"
 
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -239,10 +234,9 @@ class FxreferenceNumber:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FeeValue:
-    monetary_value: Optional[MonetaryValue] = field(
-        default=None,
+    monetary_value: MonetaryValue = field(
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
@@ -251,7 +245,7 @@ class FeeValue:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class IndicativeRateDetail:
     currency_decimal_places: Optional[str] = field(
         default=None,
@@ -283,10 +277,9 @@ class IndicativeRateDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfPaymentReference:
-    list_of_reference: Optional[ListOfReference] = field(
-        default=None,
+    list_of_reference: ListOfReference = field(
         metadata={
             "name": "ListOfReference",
             "type": "Element",
@@ -295,13 +288,12 @@ class ListOfPaymentReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RateRequestId:
     class Meta:
         name = "RateRequestID"
 
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -310,37 +302,33 @@ class RateRequestId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FxrateResponseHeader:
     class Meta:
         name = "FXRateResponseHeader"
 
-    fxrate_response_id: Optional[FxrateResponseId] = field(
-        default=None,
+    fxrate_response_id: FxrateResponseId = field(
         metadata={
             "name": "FXRateResponseID",
             "type": "Element",
             "required": True,
         }
     )
-    fxrate_response_issue_date: Optional[str] = field(
-        default=None,
+    fxrate_response_issue_date: str = field(
         metadata={
             "name": "FXRateResponseIssueDate",
             "type": "Element",
             "required": True,
         }
     )
-    fxrate_request_id: Optional[FxrateRequestId] = field(
-        default=None,
+    fxrate_request_id: FxrateRequestId = field(
         metadata={
             "name": "FXRateRequestID",
             "type": "Element",
             "required": True,
         }
     )
-    language: Optional[Language] = field(
-        default=None,
+    language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
@@ -354,8 +342,7 @@ class FxrateResponseHeader:
             "type": "Element",
         }
     )
-    indicative_indicator: Optional[str] = field(
-        default=None,
+    indicative_indicator: str = field(
         metadata={
             "name": "IndicativeIndicator",
             "type": "Element",
@@ -371,7 +358,7 @@ class FxrateResponseHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Fee:
     fee_type: Optional[str] = field(
         default=None,
@@ -389,7 +376,7 @@ class Fee:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfFee:
     fee: List[Fee] = field(
         default_factory=list,
@@ -401,18 +388,16 @@ class ListOfFee:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SpotRateDetail:
-    rate_request_id: Optional[RateRequestId] = field(
-        default=None,
+    rate_request_id: RateRequestId = field(
         metadata={
             "name": "RateRequestID",
             "type": "Element",
             "required": True,
         }
     )
-    confirmation_id: Optional[str] = field(
-        default=None,
+    confirmation_id: str = field(
         metadata={
             "name": "ConfirmationID",
             "type": "Element",
@@ -440,8 +425,7 @@ class SpotRateDetail:
             "type": "Element",
         }
     )
-    fxamounts: Optional[Fxamounts] = field(
-        default=None,
+    fxamounts: Fxamounts = field(
         metadata={
             "name": "FXAmounts",
             "type": "Element",
@@ -492,7 +476,7 @@ class SpotRateDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FxrateResponseDetail:
     class Meta:
         name = "FXRateResponseDetail"
@@ -504,8 +488,7 @@ class FxrateResponseDetail:
             "type": "Element",
         }
     )
-    reference_currency: Optional[ReferenceCurrency] = field(
-        default=None,
+    reference_currency: ReferenceCurrency = field(
         metadata={
             "name": "ReferenceCurrency",
             "type": "Element",
@@ -526,8 +509,7 @@ class FxrateResponseDetail:
             "type": "Element",
         }
     )
-    fxrate: Optional[str] = field(
-        default=None,
+    fxrate: str = field(
         metadata={
             "name": "FXRate",
             "type": "Element",
@@ -553,7 +535,6 @@ class FxrateResponseDetail:
         metadata={
             "name": "IndicativeRateDetail",
             "type": "Element",
-            "required": True,
         }
     )
     spot_rate_detail: Optional[SpotRateDetail] = field(
@@ -561,7 +542,6 @@ class FxrateResponseDetail:
         metadata={
             "name": "SpotRateDetail",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_payment_reference: Optional[ListOfPaymentReference] = field(
@@ -601,7 +581,7 @@ class FxrateResponseDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfFxrateResponseDetail:
     class Meta:
         name = "ListOfFXRateResponseDetail"
@@ -616,21 +596,19 @@ class ListOfFxrateResponseDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class FxrateResponse:
     class Meta:
         name = "FXRateResponse"
 
-    fxrate_response_header: Optional[FxrateResponseHeader] = field(
-        default=None,
+    fxrate_response_header: FxrateResponseHeader = field(
         metadata={
             "name": "FXRateResponseHeader",
             "type": "Element",
             "required": True,
         }
     )
-    list_of_fxrate_response_detail: Optional[ListOfFxrateResponseDetail] = field(
-        default=None,
+    list_of_fxrate_response_detail: ListOfFxrateResponseDetail = field(
         metadata={
             "name": "ListOfFXRateResponseDetail",
             "type": "Element",

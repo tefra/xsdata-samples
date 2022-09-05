@@ -17,10 +17,9 @@ from xcbl.models.order_status_result import (
 from xcbl.models.payment_request_acknowledgment import SupplierParty
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PriceCheckCurrency:
-    currency: Optional[Currency] = field(
-        default=None,
+    currency: Currency = field(
         metadata={
             "name": "Currency",
             "type": "Element",
@@ -29,13 +28,12 @@ class PriceCheckCurrency:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PriceCheckResultId:
     class Meta:
         name = "PriceCheckResultID"
 
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -44,10 +42,9 @@ class PriceCheckResultId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PriceCheckResultLanguage:
-    language: Optional[Language] = field(
-        default=None,
+    language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
@@ -56,10 +53,9 @@ class PriceCheckResultLanguage:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PriceCheckShipToParty:
-    party: Optional[Party] = field(
-        default=None,
+    party: Party = field(
         metadata={
             "name": "Party",
             "type": "Element",
@@ -68,10 +64,9 @@ class PriceCheckShipToParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PriceCheckSummaryErrorInfo:
-    error_info: Optional[ErrorInfo] = field(
-        default=None,
+    error_info: ErrorInfo = field(
         metadata={
             "name": "ErrorInfo",
             "type": "Element",
@@ -80,10 +75,9 @@ class PriceCheckSummaryErrorInfo:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PriceErrorInfo:
-    error_info: Optional[ErrorInfo] = field(
-        default=None,
+    error_info: ErrorInfo = field(
         metadata={
             "name": "ErrorInfo",
             "type": "Element",
@@ -92,10 +86,9 @@ class PriceErrorInfo:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ResultPrice:
-    price: Optional[Price] = field(
-        default=None,
+    price: Price = field(
         metadata={
             "name": "Price",
             "type": "Element",
@@ -104,26 +97,23 @@ class ResultPrice:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PriceCheckResultHeader:
-    price_check_result_id: Optional[PriceCheckResultId] = field(
-        default=None,
+    price_check_result_id: PriceCheckResultId = field(
         metadata={
             "name": "PriceCheckResultID",
             "type": "Element",
             "required": True,
         }
     )
-    price_check_result_issue_date: Optional[str] = field(
-        default=None,
+    price_check_result_issue_date: str = field(
         metadata={
             "name": "PriceCheckResultIssueDate",
             "type": "Element",
             "required": True,
         }
     )
-    supplier_party: Optional[SupplierParty] = field(
-        default=None,
+    supplier_party: SupplierParty = field(
         metadata={
             "name": "SupplierParty",
             "type": "Element",
@@ -137,8 +127,7 @@ class PriceCheckResultHeader:
             "type": "Element",
         }
     )
-    buyer_party: Optional[BuyerParty] = field(
-        default=None,
+    buyer_party: BuyerParty = field(
         metadata={
             "name": "BuyerParty",
             "type": "Element",
@@ -152,8 +141,7 @@ class PriceCheckResultHeader:
             "type": "Element",
         }
     )
-    price_check_ship_to_party: Optional[PriceCheckShipToParty] = field(
-        default=None,
+    price_check_ship_to_party: PriceCheckShipToParty = field(
         metadata={
             "name": "PriceCheckShipToParty",
             "type": "Element",
@@ -197,18 +185,16 @@ class PriceCheckResultHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PriceCheckResultItemDetail:
-    quoted_item: Optional[QuotedItem] = field(
-        default=None,
+    quoted_item: QuotedItem = field(
         metadata={
             "name": "QuotedItem",
             "type": "Element",
             "required": True,
         }
     )
-    result_price: Optional[ResultPrice] = field(
-        default=None,
+    result_price: ResultPrice = field(
         metadata={
             "name": "ResultPrice",
             "type": "Element",
@@ -238,10 +224,9 @@ class PriceCheckResultItemDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PriceCheckResultSummary:
-    price_check_item_error: Optional[str] = field(
-        default=None,
+    price_check_item_error: str = field(
         metadata={
             "name": "PriceCheckItemError",
             "type": "Element",
@@ -264,7 +249,7 @@ class PriceCheckResultSummary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfPriceCheckResultItemDetail:
     price_check_result_item_detail: List[PriceCheckResultItemDetail] = field(
         default_factory=list,
@@ -276,10 +261,9 @@ class ListOfPriceCheckResultItemDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PriceCheckResultDetail:
-    list_of_price_check_result_item_detail: Optional[ListOfPriceCheckResultItemDetail] = field(
-        default=None,
+    list_of_price_check_result_item_detail: ListOfPriceCheckResultItemDetail = field(
         metadata={
             "name": "ListOfPriceCheckResultItemDetail",
             "type": "Element",
@@ -288,10 +272,9 @@ class PriceCheckResultDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PriceCheckResult:
-    price_check_result_header: Optional[PriceCheckResultHeader] = field(
-        default=None,
+    price_check_result_header: PriceCheckResultHeader = field(
         metadata={
             "name": "PriceCheckResultHeader",
             "type": "Element",

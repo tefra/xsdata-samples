@@ -3,7 +3,7 @@ from typing import List, Optional
 from xcbl.models.trading_partner_organization_delete import Identifications
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UserId:
     class Meta:
         name = "UserID"
@@ -23,10 +23,9 @@ class UserId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TradingPartnerOrganizationReference:
-    identifications: Optional[Identifications] = field(
-        default=None,
+    identifications: Identifications = field(
         metadata={
             "name": "Identifications",
             "type": "Element",
@@ -35,18 +34,16 @@ class TradingPartnerOrganizationReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TradingPartnerUserDeletion:
-    trading_partner_organization_reference: Optional[TradingPartnerOrganizationReference] = field(
-        default=None,
+    trading_partner_organization_reference: TradingPartnerOrganizationReference = field(
         metadata={
             "name": "TradingPartnerOrganizationReference",
             "type": "Element",
             "required": True,
         }
     )
-    user_id: Optional[UserId] = field(
-        default=None,
+    user_id: UserId = field(
         metadata={
             "name": "UserID",
             "type": "Element",
@@ -55,7 +52,7 @@ class TradingPartnerUserDeletion:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfTradingPartnerUserDeletion:
     trading_partner_user_deletion: List[TradingPartnerUserDeletion] = field(
         default_factory=list,
@@ -67,10 +64,9 @@ class ListOfTradingPartnerUserDeletion:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TradingPartnerUserDelete:
-    list_of_trading_partner_user_deletion: Optional[ListOfTradingPartnerUserDeletion] = field(
-        default=None,
+    list_of_trading_partner_user_deletion: ListOfTradingPartnerUserDeletion = field(
         metadata={
             "name": "ListOfTradingPartnerUserDeletion",
             "type": "Element",

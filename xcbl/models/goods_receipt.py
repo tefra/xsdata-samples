@@ -35,18 +35,16 @@ from xcbl.models.planning_schedule import (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DestinationRef:
-    route_id: Optional[str] = field(
-        default=None,
+    route_id: str = field(
         metadata={
             "name": "RouteID",
             "type": "Element",
             "required": True,
         }
     )
-    location_id: Optional[str] = field(
-        default=None,
+    location_id: str = field(
         metadata={
             "name": "LocationID",
             "type": "Element",
@@ -55,7 +53,7 @@ class DestinationRef:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GoodsCondition:
     element_identifier_coded: Optional[str] = field(
         default=None,
@@ -92,8 +90,7 @@ class GoodsCondition:
             "type": "Element",
         }
     )
-    goods_condition_coded: Optional[str] = field(
-        default=None,
+    goods_condition_coded: str = field(
         metadata={
             "name": "GoodsConditionCoded",
             "type": "Element",
@@ -109,7 +106,7 @@ class GoodsCondition:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ServiceLevel:
     service_level_coded: Optional[str] = field(
         default=None,
@@ -155,13 +152,12 @@ class ServiceLevel:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Asnreference:
     class Meta:
         name = "ASNReference"
 
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -170,10 +166,9 @@ class Asnreference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GoodsReceiptLanguage:
-    language: Optional[Language] = field(
-        default=None,
+    language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
@@ -182,7 +177,7 @@ class GoodsReceiptLanguage:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GoodsReceiptOrderReference:
     schedule_order_reference: Optional[ScheduleOrderReference] = field(
         default=None,
@@ -207,10 +202,9 @@ class GoodsReceiptOrderReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GoodsReceiptParty:
-    schedule_party: Optional[ScheduleParty] = field(
-        default=None,
+    schedule_party: ScheduleParty = field(
         metadata={
             "name": "ScheduleParty",
             "type": "Element",
@@ -219,10 +213,9 @@ class GoodsReceiptParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GoodsReceiptPurpose:
-    purpose: Optional[Purpose] = field(
-        default=None,
+    purpose: Purpose = field(
         metadata={
             "name": "Purpose",
             "type": "Element",
@@ -231,10 +224,9 @@ class GoodsReceiptPurpose:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ItemShipFromParty:
-    party: Optional[Party] = field(
-        default=None,
+    party: Party = field(
         metadata={
             "name": "Party",
             "type": "Element",
@@ -243,10 +235,9 @@ class ItemShipFromParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ItemShipToParty:
-    party: Optional[Party] = field(
-        default=None,
+    party: Party = field(
         metadata={
             "name": "Party",
             "type": "Element",
@@ -255,10 +246,9 @@ class ItemShipToParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LadingQuantity:
-    quantity: Optional[Quantity] = field(
-        default=None,
+    quantity: Quantity = field(
         metadata={
             "name": "Quantity",
             "type": "Element",
@@ -267,18 +257,16 @@ class LadingQuantity:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LineItemGoodsCondition:
-    quantity: Optional[Quantity] = field(
-        default=None,
+    quantity: Quantity = field(
         metadata={
             "name": "Quantity",
             "type": "Element",
             "required": True,
         }
     )
-    goods_condition: Optional[GoodsCondition] = field(
-        default=None,
+    goods_condition: GoodsCondition = field(
         metadata={
             "name": "GoodsCondition",
             "type": "Element",
@@ -301,7 +289,7 @@ class LineItemGoodsCondition:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfDestinationRef:
     destination_ref: List[DestinationRef] = field(
         default_factory=list,
@@ -313,7 +301,7 @@ class ListOfDestinationRef:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfGoodsCondition:
     goods_condition: List[GoodsCondition] = field(
         default_factory=list,
@@ -325,10 +313,9 @@ class ListOfGoodsCondition:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfGoodsReceiptPackageDetail:
-    list_of_package_detail: Optional[ListOfPackageDetail] = field(
-        default=None,
+    list_of_package_detail: ListOfPackageDetail = field(
         metadata={
             "name": "ListOfPackageDetail",
             "type": "Element",
@@ -337,10 +324,9 @@ class ListOfGoodsReceiptPackageDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OtherItemDates:
-    list_of_date_coded: Optional[ListOfDateCoded] = field(
-        default=None,
+    list_of_date_coded: ListOfDateCoded = field(
         metadata={
             "name": "ListOfDateCoded",
             "type": "Element",
@@ -349,10 +335,9 @@ class OtherItemDates:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuantityDifference:
-    quantity: Optional[Quantity] = field(
-        default=None,
+    quantity: Quantity = field(
         metadata={
             "name": "Quantity",
             "type": "Element",
@@ -361,10 +346,9 @@ class QuantityDifference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuantityReceived:
-    quantity: Optional[Quantity] = field(
-        default=None,
+    quantity: Quantity = field(
         metadata={
             "name": "Quantity",
             "type": "Element",
@@ -373,10 +357,9 @@ class QuantityReceived:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class QuantityShipped:
-    quantity: Optional[Quantity] = field(
-        default=None,
+    quantity: Quantity = field(
         metadata={
             "name": "Quantity",
             "type": "Element",
@@ -385,18 +368,16 @@ class QuantityShipped:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransportLocation:
-    location: Optional[Location] = field(
-        default=None,
+    location: Location = field(
         metadata={
             "name": "Location",
             "type": "Element",
             "required": True,
         }
     )
-    location_id: Optional[str] = field(
-        default=None,
+    location_id: str = field(
         metadata={
             "name": "LocationID",
             "type": "Element",
@@ -440,10 +421,9 @@ class TransportLocation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransportMeansIdentifier:
-    identifier: Optional[Identifier] = field(
-        default=None,
+    identifier: Identifier = field(
         metadata={
             "name": "Identifier",
             "type": "Element",
@@ -452,10 +432,9 @@ class TransportMeansIdentifier:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransportMeansReference:
-    identifier: Optional[Identifier] = field(
-        default=None,
+    identifier: Identifier = field(
         metadata={
             "name": "Identifier",
             "type": "Element",
@@ -464,10 +443,9 @@ class TransportMeansReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class EndTransportLocation:
-    transport_location: Optional[TransportLocation] = field(
-        default=None,
+    transport_location: TransportLocation = field(
         metadata={
             "name": "TransportLocation",
             "type": "Element",
@@ -476,7 +454,7 @@ class EndTransportLocation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GoodsReceiptDeliveryDetail:
     item_packaging_reference: Optional[ItemPackagingReference] = field(
         default=None,
@@ -536,10 +514,9 @@ class GoodsReceiptDeliveryDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GoodsReceiptItemOrderReference:
-    goods_receipt_order_reference: Optional[GoodsReceiptOrderReference] = field(
-        default=None,
+    goods_receipt_order_reference: GoodsReceiptOrderReference = field(
         metadata={
             "name": "GoodsReceiptOrderReference",
             "type": "Element",
@@ -555,10 +532,9 @@ class GoodsReceiptItemOrderReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class InterimTransportLocation:
-    transport_location: Optional[TransportLocation] = field(
-        default=None,
+    transport_location: TransportLocation = field(
         metadata={
             "name": "TransportLocation",
             "type": "Element",
@@ -567,7 +543,7 @@ class InterimTransportLocation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfGoodsReceiptOrderReference:
     goods_receipt_order_reference: List[GoodsReceiptOrderReference] = field(
         default_factory=list,
@@ -579,7 +555,7 @@ class ListOfGoodsReceiptOrderReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfLineItemGoodsCondition:
     line_item_goods_condition: List[LineItemGoodsCondition] = field(
         default_factory=list,
@@ -591,10 +567,9 @@ class ListOfLineItemGoodsCondition:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class StartTransportLocation:
-    transport_location: Optional[TransportLocation] = field(
-        default=None,
+    transport_location: TransportLocation = field(
         metadata={
             "name": "TransportLocation",
             "type": "Element",
@@ -603,7 +578,7 @@ class StartTransportLocation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransportQuantities:
     lading_quantity: Optional[LadingQuantity] = field(
         default=None,
@@ -621,7 +596,7 @@ class TransportQuantities:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GoodsReceiptReferences:
     asnreference: Optional[Asnreference] = field(
         default=None,
@@ -646,7 +621,7 @@ class GoodsReceiptReferences:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfGoodsReceiptItemOrderReference:
     goods_receipt_item_order_reference: List[GoodsReceiptItemOrderReference] = field(
         default_factory=list,
@@ -658,10 +633,9 @@ class ListOfGoodsReceiptItemOrderReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransportLocationList:
-    start_transport_location: Optional[StartTransportLocation] = field(
-        default=None,
+    start_transport_location: StartTransportLocation = field(
         metadata={
             "name": "StartTransportLocation",
             "type": "Element",
@@ -675,8 +649,7 @@ class TransportLocationList:
             "type": "Element",
         }
     )
-    end_transport_location: Optional[EndTransportLocation] = field(
-        default=None,
+    end_transport_location: EndTransportLocation = field(
         metadata={
             "name": "EndTransportLocation",
             "type": "Element",
@@ -685,7 +658,7 @@ class TransportLocationList:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GoodsReceiptLineItemReferences:
     asnreference: Optional[Asnreference] = field(
         default=None,
@@ -717,10 +690,9 @@ class GoodsReceiptLineItemReferences:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TransportRouting:
-    transport_route_id: Optional[str] = field(
-        default=None,
+    transport_route_id: str = field(
         metadata={
             "name": "TransportRouteID",
             "type": "Element",
@@ -839,8 +811,7 @@ class TransportRouting:
             "type": "Element",
         }
     )
-    transport_location_list: Optional[TransportLocationList] = field(
-        default=None,
+    transport_location_list: TransportLocationList = field(
         metadata={
             "name": "TransportLocationList",
             "type": "Element",
@@ -849,50 +820,44 @@ class TransportRouting:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GoodsReceiptItemDetail:
-    line_item_num: Optional[LineItemNum] = field(
-        default=None,
+    line_item_num: LineItemNum = field(
         metadata={
             "name": "LineItemNum",
             "type": "Element",
             "required": True,
         }
     )
-    line_item_type: Optional[LineItemType] = field(
-        default=None,
+    line_item_type: LineItemType = field(
         metadata={
             "name": "LineItemType",
             "type": "Element",
             "required": True,
         }
     )
-    parent_item_number: Optional[ParentItemNumber] = field(
-        default=None,
+    parent_item_number: ParentItemNumber = field(
         metadata={
             "name": "ParentItemNumber",
             "type": "Element",
             "required": True,
         }
     )
-    item_identifiers: Optional[ItemIdentifiers] = field(
-        default=None,
+    item_identifiers: ItemIdentifiers = field(
         metadata={
             "name": "ItemIdentifiers",
             "type": "Element",
             "required": True,
         }
     )
-    quantity_shipped: Optional[QuantityShipped] = field(
-        default=None,
+    quantity_shipped: QuantityShipped = field(
         metadata={
             "name": "QuantityShipped",
             "type": "Element",
             "required": True,
         }
     )
-    quantity_received: Optional[QuantityReceived] = field(
-        default=None,
+    quantity_received: QuantityReceived = field(
         metadata={
             "name": "QuantityReceived",
             "type": "Element",
@@ -964,7 +929,7 @@ class GoodsReceiptItemDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfTransportRouting:
     transport_routing: List[TransportRouting] = field(
         default_factory=list,
@@ -976,34 +941,30 @@ class ListOfTransportRouting:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GoodsReceiptHeader:
-    goods_receipt_id: Optional[str] = field(
-        default=None,
+    goods_receipt_id: str = field(
         metadata={
             "name": "GoodsReceiptID",
             "type": "Element",
             "required": True,
         }
     )
-    goods_receipt_issue_date: Optional[str] = field(
-        default=None,
+    goods_receipt_issue_date: str = field(
         metadata={
             "name": "GoodsReceiptIssueDate",
             "type": "Element",
             "required": True,
         }
     )
-    goods_receipt_purpose: Optional[GoodsReceiptPurpose] = field(
-        default=None,
+    goods_receipt_purpose: GoodsReceiptPurpose = field(
         metadata={
             "name": "GoodsReceiptPurpose",
             "type": "Element",
             "required": True,
         }
     )
-    goods_receipt_type_coded: Optional[str] = field(
-        default=None,
+    goods_receipt_type_coded: str = field(
         metadata={
             "name": "GoodsReceiptTypeCoded",
             "type": "Element",
@@ -1038,16 +999,14 @@ class GoodsReceiptHeader:
             "type": "Element",
         }
     )
-    goods_receipt_language: Optional[GoodsReceiptLanguage] = field(
-        default=None,
+    goods_receipt_language: GoodsReceiptLanguage = field(
         metadata={
             "name": "GoodsReceiptLanguage",
             "type": "Element",
             "required": True,
         }
     )
-    goods_receipt_party: Optional[GoodsReceiptParty] = field(
-        default=None,
+    goods_receipt_party: GoodsReceiptParty = field(
         metadata={
             "name": "GoodsReceiptParty",
             "type": "Element",
@@ -1098,7 +1057,7 @@ class GoodsReceiptHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfGoodsReceiptItemDetail:
     goods_receipt_item_detail: List[GoodsReceiptItemDetail] = field(
         default_factory=list,
@@ -1110,10 +1069,9 @@ class ListOfGoodsReceiptItemDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GoodsReceiptDetail:
-    list_of_goods_receipt_item_detail: Optional[ListOfGoodsReceiptItemDetail] = field(
-        default=None,
+    list_of_goods_receipt_item_detail: ListOfGoodsReceiptItemDetail = field(
         metadata={
             "name": "ListOfGoodsReceiptItemDetail",
             "type": "Element",
@@ -1129,10 +1087,9 @@ class GoodsReceiptDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class GoodsReceipt:
-    goods_receipt_header: Optional[GoodsReceiptHeader] = field(
-        default=None,
+    goods_receipt_header: GoodsReceiptHeader = field(
         metadata={
             "name": "GoodsReceiptHeader",
             "type": "Element",

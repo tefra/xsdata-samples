@@ -6,21 +6,19 @@ from xcbl.models.auction_create import (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrimaryId:
     class Meta:
         name = "PrimaryID"
 
-    agency: Optional[Agency] = field(
-        default=None,
+    agency: Agency = field(
         metadata={
             "name": "Agency",
             "type": "Element",
             "required": True,
         }
     )
-    ident: Optional[str] = field(
-        default=None,
+    ident: str = field(
         metadata={
             "name": "Ident",
             "type": "Element",
@@ -43,13 +41,12 @@ class PrimaryId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TradingPartnerId:
     class Meta:
         name = "TradingPartnerID"
 
-    identifier: Optional[Identifier] = field(
-        default=None,
+    identifier: Identifier = field(
         metadata={
             "name": "Identifier",
             "type": "Element",
@@ -58,7 +55,7 @@ class TradingPartnerId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfTradingPartnerId:
     class Meta:
         name = "ListOfTradingPartnerID"
@@ -73,7 +70,7 @@ class ListOfTradingPartnerId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Identifications:
     primary_id: Optional[PrimaryId] = field(
         default=None,
@@ -91,10 +88,9 @@ class Identifications:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TradingPartnerIdentifications:
-    identifications: Optional[Identifications] = field(
-        default=None,
+    identifications: Identifications = field(
         metadata={
             "name": "Identifications",
             "type": "Element",
@@ -103,18 +99,16 @@ class TradingPartnerIdentifications:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TradingPartnerOrganizationDeletion:
-    trading_partner_identifications: Optional[TradingPartnerIdentifications] = field(
-        default=None,
+    trading_partner_identifications: TradingPartnerIdentifications = field(
         metadata={
             "name": "TradingPartnerIdentifications",
             "type": "Element",
             "required": True,
         }
     )
-    trading_partner_display_name: Optional[str] = field(
-        default=None,
+    trading_partner_display_name: str = field(
         metadata={
             "name": "TradingPartnerDisplayName",
             "type": "Element",
@@ -123,7 +117,7 @@ class TradingPartnerOrganizationDeletion:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfTradingPartnerOrganizationDeletion:
     trading_partner_organization_deletion: List[TradingPartnerOrganizationDeletion] = field(
         default_factory=list,
@@ -135,10 +129,9 @@ class ListOfTradingPartnerOrganizationDeletion:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TradingPartnerOrganizationDelete:
-    list_of_trading_partner_organization_deletion: Optional[ListOfTradingPartnerOrganizationDeletion] = field(
-        default=None,
+    list_of_trading_partner_organization_deletion: ListOfTradingPartnerOrganizationDeletion = field(
         metadata={
             "name": "ListOfTradingPartnerOrganizationDeletion",
             "type": "Element",

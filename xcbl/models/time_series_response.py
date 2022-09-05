@@ -13,10 +13,9 @@ from xcbl.models.auction_create import (
 from xcbl.models.order_request import ListOfPartyCoded
 
 
-@dataclass
+@dataclass(kw_only=True)
 class KeyFigure:
-    key_figure_id: Optional[str] = field(
-        default=None,
+    key_figure_id: str = field(
         metadata={
             "name": "KeyFigureID",
             "type": "Element",
@@ -39,10 +38,9 @@ class KeyFigure:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OtherCharacteristicAttribute:
-    characteristic_attribute: Optional["CharacteristicAttribute"] = field(
-        default=None,
+    characteristic_attribute: "CharacteristicAttribute" = field(
         metadata={
             "name": "CharacteristicAttribute",
             "type": "Element",
@@ -51,7 +49,7 @@ class OtherCharacteristicAttribute:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SourceTargetId:
     class Meta:
         name = "SourceTargetID"
@@ -72,7 +70,7 @@ class SourceTargetId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeSeriesSummary:
     total_time_series_data: Optional[str] = field(
         default=None,
@@ -97,10 +95,9 @@ class TimeSeriesSummary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CharacteristicAttributeName:
-    identifier: Optional[Identifier] = field(
-        default=None,
+    identifier: Identifier = field(
         metadata={
             "name": "Identifier",
             "type": "Element",
@@ -109,10 +106,9 @@ class CharacteristicAttributeName:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LocationAttributeName:
-    identifier: Optional[Identifier] = field(
-        default=None,
+    identifier: Identifier = field(
         metadata={
             "name": "Identifier",
             "type": "Element",
@@ -121,10 +117,9 @@ class LocationAttributeName:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ProductAttributeName:
-    identifier: Optional[Identifier] = field(
-        default=None,
+    identifier: Identifier = field(
         metadata={
             "name": "Identifier",
             "type": "Element",
@@ -133,10 +128,9 @@ class ProductAttributeName:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReceiverParty:
-    party: Optional[Party] = field(
-        default=None,
+    party: Party = field(
         metadata={
             "name": "Party",
             "type": "Element",
@@ -145,10 +139,9 @@ class ReceiverParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SourceKeyFigure:
-    key_figure: Optional[KeyFigure] = field(
-        default=None,
+    key_figure: KeyFigure = field(
         metadata={
             "name": "KeyFigure",
             "type": "Element",
@@ -157,10 +150,9 @@ class SourceKeyFigure:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SourceParty:
-    party: Optional[Party] = field(
-        default=None,
+    party: Party = field(
         metadata={
             "name": "Party",
             "type": "Element",
@@ -169,10 +161,9 @@ class SourceParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TargetKeyFigure:
-    key_figure: Optional[KeyFigure] = field(
-        default=None,
+    key_figure: KeyFigure = field(
         metadata={
             "name": "KeyFigure",
             "type": "Element",
@@ -181,10 +172,9 @@ class TargetKeyFigure:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeSeriesBucket:
-    validity_dates: Optional[ValidityDates] = field(
-        default=None,
+    validity_dates: ValidityDates = field(
         metadata={
             "name": "ValidityDates",
             "type": "Element",
@@ -193,13 +183,12 @@ class TimeSeriesBucket:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeSeriesId:
     class Meta:
         name = "TimeSeriesID"
 
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -208,10 +197,9 @@ class TimeSeriesId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeSeriesPlanningData:
-    source_target_id: Optional[SourceTargetId] = field(
-        default=None,
+    source_target_id: SourceTargetId = field(
         metadata={
             "name": "SourceTargetID",
             "type": "Element",
@@ -220,10 +208,9 @@ class TimeSeriesPlanningData:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeSeriesPlanningStep:
-    source_target_id: Optional[SourceTargetId] = field(
-        default=None,
+    source_target_id: SourceTargetId = field(
         metadata={
             "name": "SourceTargetID",
             "type": "Element",
@@ -232,10 +219,9 @@ class TimeSeriesPlanningStep:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeSeriesReference:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -244,13 +230,12 @@ class TimeSeriesReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeSeriesResponseId:
     class Meta:
         name = "TimeSeriesResponseID"
 
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -259,10 +244,9 @@ class TimeSeriesResponseId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeSeriesResponseSummary:
-    time_series_summary: Optional[TimeSeriesSummary] = field(
-        default=None,
+    time_series_summary: TimeSeriesSummary = field(
         metadata={
             "name": "TimeSeriesSummary",
             "type": "Element",
@@ -271,10 +255,9 @@ class TimeSeriesResponseSummary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeSeriesSelection:
-    source_target_id: Optional[SourceTargetId] = field(
-        default=None,
+    source_target_id: SourceTargetId = field(
         metadata={
             "name": "SourceTargetID",
             "type": "Element",
@@ -283,10 +266,9 @@ class TimeSeriesSelection:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeSeriesSystemType:
-    source_target_id: Optional[SourceTargetId] = field(
-        default=None,
+    source_target_id: SourceTargetId = field(
         metadata={
             "name": "SourceTargetID",
             "type": "Element",
@@ -295,10 +277,9 @@ class TimeSeriesSystemType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeSeriesTimePeriod:
-    validity_dates: Optional[ValidityDates] = field(
-        default=None,
+    validity_dates: ValidityDates = field(
         metadata={
             "name": "ValidityDates",
             "type": "Element",
@@ -307,18 +288,16 @@ class TimeSeriesTimePeriod:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CharacteristicAttribute:
-    characteristic_name: Optional[str] = field(
-        default=None,
+    characteristic_name: str = field(
         metadata={
             "name": "CharacteristicName",
             "type": "Element",
             "required": True,
         }
     )
-    characteristic_attribute_id: Optional[str] = field(
-        default=None,
+    characteristic_attribute_id: str = field(
         metadata={
             "name": "CharacteristicAttributeID",
             "type": "Element",
@@ -362,7 +341,7 @@ class CharacteristicAttribute:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class KeyFigureInformation:
     source_key_figure: Optional[SourceKeyFigure] = field(
         default=None,
@@ -380,18 +359,16 @@ class KeyFigureInformation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeSeriesData:
-    time_series_bucket: Optional[TimeSeriesBucket] = field(
-        default=None,
+    time_series_bucket: TimeSeriesBucket = field(
         metadata={
             "name": "TimeSeriesBucket",
             "type": "Element",
             "required": True,
         }
     )
-    time_series_value: Optional[str] = field(
-        default=None,
+    time_series_value: str = field(
         metadata={
             "name": "TimeSeriesValue",
             "type": "Element",
@@ -407,7 +384,7 @@ class TimeSeriesData:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeSeriesParty:
     source_party: Optional[SourceParty] = field(
         default=None,
@@ -432,10 +409,9 @@ class TimeSeriesParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OtherLocationAttribute:
-    characteristic_attribute: Optional[CharacteristicAttribute] = field(
-        default=None,
+    characteristic_attribute: CharacteristicAttribute = field(
         metadata={
             "name": "CharacteristicAttribute",
             "type": "Element",
@@ -444,10 +420,9 @@ class OtherLocationAttribute:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OtherProductAttribute:
-    characteristic_attribute: Optional[CharacteristicAttribute] = field(
-        default=None,
+    characteristic_attribute: CharacteristicAttribute = field(
         metadata={
             "name": "CharacteristicAttribute",
             "type": "Element",
@@ -456,10 +431,9 @@ class OtherProductAttribute:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SourceCharacteristicsOther:
-    characteristic_attribute: Optional[CharacteristicAttribute] = field(
-        default=None,
+    characteristic_attribute: CharacteristicAttribute = field(
         metadata={
             "name": "CharacteristicAttribute",
             "type": "Element",
@@ -468,10 +442,9 @@ class SourceCharacteristicsOther:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TargetCharacteristicsOther:
-    characteristic_attribute: Optional[CharacteristicAttribute] = field(
-        default=None,
+    characteristic_attribute: CharacteristicAttribute = field(
         metadata={
             "name": "CharacteristicAttribute",
             "type": "Element",
@@ -480,26 +453,23 @@ class TargetCharacteristicsOther:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeSeriesHeader:
-    time_series_issue_date: Optional[str] = field(
-        default=None,
+    time_series_issue_date: str = field(
         metadata={
             "name": "TimeSeriesIssueDate",
             "type": "Element",
             "required": True,
         }
     )
-    time_series_id: Optional[TimeSeriesId] = field(
-        default=None,
+    time_series_id: TimeSeriesId = field(
         metadata={
             "name": "TimeSeriesID",
             "type": "Element",
             "required": True,
         }
     )
-    time_series_purpose_coded: Optional[str] = field(
-        default=None,
+    time_series_purpose_coded: str = field(
         metadata={
             "name": "TimeSeriesPurposeCoded",
             "type": "Element",
@@ -527,8 +497,7 @@ class TimeSeriesHeader:
             "type": "Element",
         }
     )
-    time_series_planning_data: Optional[TimeSeriesPlanningData] = field(
-        default=None,
+    time_series_planning_data: TimeSeriesPlanningData = field(
         metadata={
             "name": "TimeSeriesPlanningData",
             "type": "Element",
@@ -549,16 +518,14 @@ class TimeSeriesHeader:
             "type": "Element",
         }
     )
-    time_series_party: Optional[TimeSeriesParty] = field(
-        default=None,
+    time_series_party: TimeSeriesParty = field(
         metadata={
             "name": "TimeSeriesParty",
             "type": "Element",
             "required": True,
         }
     )
-    language: Optional[Language] = field(
-        default=None,
+    language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
@@ -574,7 +541,7 @@ class TimeSeriesHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeSeriesKeyFigureData:
     time_series_key_figure_purpose_coded: Optional[str] = field(
         default=None,
@@ -604,24 +571,21 @@ class TimeSeriesKeyFigureData:
             "type": "Element",
         }
     )
-    characteristic_combination_id: Optional[str] = field(
-        default=None,
+    characteristic_combination_id: str = field(
         metadata={
             "name": "CharacteristicCombinationID",
             "type": "Element",
             "required": True,
         }
     )
-    key_figure_information: Optional[KeyFigureInformation] = field(
-        default=None,
+    key_figure_information: KeyFigureInformation = field(
         metadata={
             "name": "KeyFigureInformation",
             "type": "Element",
             "required": True,
         }
     )
-    unit_of_measurement: Optional[UnitOfMeasurement] = field(
-        default=None,
+    unit_of_measurement: UnitOfMeasurement = field(
         metadata={
             "name": "UnitOfMeasurement",
             "type": "Element",
@@ -638,10 +602,9 @@ class TimeSeriesKeyFigureData:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeSeriesResponseParty:
-    time_series_party: Optional[TimeSeriesParty] = field(
-        default=None,
+    time_series_party: TimeSeriesParty = field(
         metadata={
             "name": "TimeSeriesParty",
             "type": "Element",
@@ -650,10 +613,9 @@ class TimeSeriesResponseParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaseCharacteristicLocation:
-    location_attribute_id: Optional[str] = field(
-        default=None,
+    location_attribute_id: str = field(
         metadata={
             "name": "LocationAttributeID",
             "type": "Element",
@@ -697,10 +659,9 @@ class BaseCharacteristicLocation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaseCharacteristicProduct:
-    product_attribute_id: Optional[str] = field(
-        default=None,
+    product_attribute_id: str = field(
         metadata={
             "name": "ProductAttributeID",
             "type": "Element",
@@ -744,10 +705,9 @@ class BaseCharacteristicProduct:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ChangedTimeSeriesHeader:
-    time_series_header: Optional[TimeSeriesHeader] = field(
-        default=None,
+    time_series_header: TimeSeriesHeader = field(
         metadata={
             "name": "TimeSeriesHeader",
             "type": "Element",
@@ -756,7 +716,7 @@ class ChangedTimeSeriesHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CharacteristicOther:
     source_characteristics_other: Optional[SourceCharacteristicsOther] = field(
         default=None,
@@ -774,7 +734,7 @@ class CharacteristicOther:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfTimeSeriesKeyFigureData:
     time_series_key_figure_data: List[TimeSeriesKeyFigureData] = field(
         default_factory=list,
@@ -786,10 +746,9 @@ class ListOfTimeSeriesKeyFigureData:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfChangedTimeSeriesKeyFigureData:
-    list_of_time_series_key_figure_data: Optional[ListOfTimeSeriesKeyFigureData] = field(
-        default=None,
+    list_of_time_series_key_figure_data: ListOfTimeSeriesKeyFigureData = field(
         metadata={
             "name": "ListOfTimeSeriesKeyFigureData",
             "type": "Element",
@@ -798,10 +757,9 @@ class ListOfChangedTimeSeriesKeyFigureData:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SourceLocation:
-    base_characteristic_location: Optional[BaseCharacteristicLocation] = field(
-        default=None,
+    base_characteristic_location: BaseCharacteristicLocation = field(
         metadata={
             "name": "BaseCharacteristicLocation",
             "type": "Element",
@@ -810,10 +768,9 @@ class SourceLocation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SourceProduct:
-    base_characteristic_product: Optional[BaseCharacteristicProduct] = field(
-        default=None,
+    base_characteristic_product: BaseCharacteristicProduct = field(
         metadata={
             "name": "BaseCharacteristicProduct",
             "type": "Element",
@@ -822,10 +779,9 @@ class SourceProduct:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SourceProductGroup:
-    base_characteristic_product: Optional[BaseCharacteristicProduct] = field(
-        default=None,
+    base_characteristic_product: BaseCharacteristicProduct = field(
         metadata={
             "name": "BaseCharacteristicProduct",
             "type": "Element",
@@ -834,10 +790,9 @@ class SourceProductGroup:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TargetLocation:
-    base_characteristic_location: Optional[BaseCharacteristicLocation] = field(
-        default=None,
+    base_characteristic_location: BaseCharacteristicLocation = field(
         metadata={
             "name": "BaseCharacteristicLocation",
             "type": "Element",
@@ -846,10 +801,9 @@ class TargetLocation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TargetProduct:
-    base_characteristic_product: Optional[BaseCharacteristicProduct] = field(
-        default=None,
+    base_characteristic_product: BaseCharacteristicProduct = field(
         metadata={
             "name": "BaseCharacteristicProduct",
             "type": "Element",
@@ -858,10 +812,9 @@ class TargetProduct:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TargetProductGroup:
-    base_characteristic_product: Optional[BaseCharacteristicProduct] = field(
-        default=None,
+    base_characteristic_product: BaseCharacteristicProduct = field(
         metadata={
             "name": "BaseCharacteristicProduct",
             "type": "Element",
@@ -870,26 +823,23 @@ class TargetProductGroup:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeSeriesResponseHeader:
-    time_series_response_issue_date: Optional[str] = field(
-        default=None,
+    time_series_response_issue_date: str = field(
         metadata={
             "name": "TimeSeriesResponseIssueDate",
             "type": "Element",
             "required": True,
         }
     )
-    time_series_response_id: Optional[TimeSeriesResponseId] = field(
-        default=None,
+    time_series_response_id: TimeSeriesResponseId = field(
         metadata={
             "name": "TimeSeriesResponseID",
             "type": "Element",
             "required": True,
         }
     )
-    time_series_reference: Optional[TimeSeriesReference] = field(
-        default=None,
+    time_series_reference: TimeSeriesReference = field(
         metadata={
             "name": "TimeSeriesReference",
             "type": "Element",
@@ -903,16 +853,14 @@ class TimeSeriesResponseHeader:
             "type": "Element",
         }
     )
-    time_series_response_party: Optional[TimeSeriesResponseParty] = field(
-        default=None,
+    time_series_response_party: TimeSeriesResponseParty = field(
         metadata={
             "name": "TimeSeriesResponseParty",
             "type": "Element",
             "required": True,
         }
     )
-    time_series_header_response_coded: Optional[str] = field(
-        default=None,
+    time_series_header_response_coded: str = field(
         metadata={
             "name": "TimeSeriesHeaderResponseCoded",
             "type": "Element",
@@ -933,8 +881,7 @@ class TimeSeriesResponseHeader:
             "type": "Element",
         }
     )
-    language: Optional[Language] = field(
-        default=None,
+    language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
@@ -950,7 +897,7 @@ class TimeSeriesResponseHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CharacteristicLocation:
     source_location: Optional[SourceLocation] = field(
         default=None,
@@ -968,7 +915,7 @@ class CharacteristicLocation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CharacteristicProduct:
     source_product: Optional[SourceProduct] = field(
         default=None,
@@ -986,7 +933,7 @@ class CharacteristicProduct:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CharacteristicProductGroup:
     source_product_group: Optional[SourceProductGroup] = field(
         default=None,
@@ -1004,7 +951,7 @@ class CharacteristicProductGroup:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CharacteristicCombination:
     characteristic_combination_purpose_coded: Optional[str] = field(
         default=None,
@@ -1034,8 +981,7 @@ class CharacteristicCombination:
             "type": "Element",
         }
     )
-    characteristic_combination_id: Optional[str] = field(
-        default=None,
+    characteristic_combination_id: str = field(
         metadata={
             "name": "CharacteristicCombinationID",
             "type": "Element",
@@ -1072,7 +1018,7 @@ class CharacteristicCombination:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfCharacteristicCombinations:
     characteristic_combination: List[CharacteristicCombination] = field(
         default_factory=list,
@@ -1084,10 +1030,9 @@ class ListOfCharacteristicCombinations:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfChangedCharacteristicCombinations:
-    list_of_characteristic_combinations: Optional[ListOfCharacteristicCombinations] = field(
-        default=None,
+    list_of_characteristic_combinations: ListOfCharacteristicCombinations = field(
         metadata={
             "name": "ListOfCharacteristicCombinations",
             "type": "Element",
@@ -1096,18 +1041,16 @@ class ListOfChangedCharacteristicCombinations:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeSeriesResponseDetail:
-    time_series_detail_response_coded: Optional[str] = field(
-        default=None,
+    time_series_detail_response_coded: str = field(
         metadata={
             "name": "TimeSeriesDetailResponseCoded",
             "type": "Element",
             "required": True,
         }
     )
-    time_series_detail_response_coded_other: Optional[str] = field(
-        default=None,
+    time_series_detail_response_coded_other: str = field(
         metadata={
             "name": "TimeSeriesDetailResponseCodedOther",
             "type": "Element",
@@ -1130,26 +1073,23 @@ class TimeSeriesResponseDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeSeriesResponse:
-    time_series_response_header: Optional[TimeSeriesResponseHeader] = field(
-        default=None,
+    time_series_response_header: TimeSeriesResponseHeader = field(
         metadata={
             "name": "TimeSeriesResponseHeader",
             "type": "Element",
             "required": True,
         }
     )
-    time_series_response_detail: Optional[TimeSeriesResponseDetail] = field(
-        default=None,
+    time_series_response_detail: TimeSeriesResponseDetail = field(
         metadata={
             "name": "TimeSeriesResponseDetail",
             "type": "Element",
             "required": True,
         }
     )
-    time_series_response_summary: Optional[TimeSeriesResponseSummary] = field(
-        default=None,
+    time_series_response_summary: TimeSeriesResponseSummary = field(
         metadata={
             "name": "TimeSeriesResponseSummary",
             "type": "Element",

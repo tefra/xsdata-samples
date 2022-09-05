@@ -25,10 +25,9 @@ from xcbl.models.order_request import (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderConfirmationAction:
-    order_confirmation_action_coded: Optional[str] = field(
-        default=None,
+    order_confirmation_action_coded: str = field(
         metadata={
             "name": "OrderConfirmationActionCoded",
             "type": "Element",
@@ -44,18 +43,16 @@ class OrderConfirmationAction:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ContractAndSystemReference:
-    contract_id: Optional[ContractId] = field(
-        default=None,
+    contract_id: ContractId = field(
         metadata={
             "name": "ContractID",
             "type": "Element",
             "required": True,
         }
     )
-    contract_item_id: Optional[str] = field(
-        default=None,
+    contract_item_id: str = field(
         metadata={
             "name": "ContractItemID",
             "type": "Element",
@@ -71,7 +68,7 @@ class ContractAndSystemReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderConfirmationParty:
     buyer_party: Optional[BuyerParty] = field(
         default=None,
@@ -103,10 +100,9 @@ class OrderConfirmationParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderConfirmationDetailReferences:
-    purchase_order_reference: Optional[PurchaseOrderReference] = field(
-        default=None,
+    purchase_order_reference: PurchaseOrderReference = field(
         metadata={
             "name": "PurchaseOrderReference",
             "type": "Element",
@@ -143,26 +139,23 @@ class OrderConfirmationDetailReferences:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderConfirmationHeader:
-    seller_order_confirmation_number: Optional[str] = field(
-        default=None,
+    seller_order_confirmation_number: str = field(
         metadata={
             "name": "SellerOrderConfirmationNumber",
             "type": "Element",
             "required": True,
         }
     )
-    seller_order_number: Optional[str] = field(
-        default=None,
+    seller_order_number: str = field(
         metadata={
             "name": "SellerOrderNumber",
             "type": "Element",
             "required": True,
         }
     )
-    order_confirmation_issue_date: Optional[str] = field(
-        default=None,
+    order_confirmation_issue_date: str = field(
         metadata={
             "name": "OrderConfirmationIssueDate",
             "type": "Element",
@@ -241,10 +234,9 @@ class OrderConfirmationHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderConfirmationItemDetail:
-    order_confirmation_item_num: Optional[str] = field(
-        default=None,
+    order_confirmation_item_num: str = field(
         metadata={
             "name": "OrderConfirmationItemNum",
             "type": "Element",
@@ -265,8 +257,7 @@ class OrderConfirmationItemDetail:
             "type": "Element",
         }
     )
-    order_confirmation_detail_references: Optional[OrderConfirmationDetailReferences] = field(
-        default=None,
+    order_confirmation_detail_references: OrderConfirmationDetailReferences = field(
         metadata={
             "name": "OrderConfirmationDetailReferences",
             "type": "Element",
@@ -280,8 +271,7 @@ class OrderConfirmationItemDetail:
             "type": "Element",
         }
     )
-    item_detail: Optional[ItemDetail] = field(
-        default=None,
+    item_detail: ItemDetail = field(
         metadata={
             "name": "ItemDetail",
             "type": "Element",
@@ -297,7 +287,7 @@ class OrderConfirmationItemDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfOrderConfirmationItemDetail:
     order_confirmation_item_detail: List[OrderConfirmationItemDetail] = field(
         default_factory=list,
@@ -309,10 +299,9 @@ class ListOfOrderConfirmationItemDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderConfirmationDetail:
-    list_of_order_confirmation_item_detail: Optional[ListOfOrderConfirmationItemDetail] = field(
-        default=None,
+    list_of_order_confirmation_item_detail: ListOfOrderConfirmationItemDetail = field(
         metadata={
             "name": "ListOfOrderConfirmationItemDetail",
             "type": "Element",
@@ -321,18 +310,16 @@ class OrderConfirmationDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderConfirmation:
-    order_confirmation_header: Optional[OrderConfirmationHeader] = field(
-        default=None,
+    order_confirmation_header: OrderConfirmationHeader = field(
         metadata={
             "name": "OrderConfirmationHeader",
             "type": "Element",
             "required": True,
         }
     )
-    order_confirmation_detail: Optional[OrderConfirmationDetail] = field(
-        default=None,
+    order_confirmation_detail: OrderConfirmationDetail = field(
         metadata={
             "name": "OrderConfirmationDetail",
             "type": "Element",

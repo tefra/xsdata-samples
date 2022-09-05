@@ -51,10 +51,9 @@ from xcbl.models.planning_schedule_response import (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ShippingScheduleSummary:
-    total_number_of_line_items: Optional[str] = field(
-        default=None,
+    total_number_of_line_items: str = field(
         metadata={
             "name": "TotalNumberOfLineItems",
             "type": "Element",
@@ -63,10 +62,9 @@ class ShippingScheduleSummary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class BaseShippingDetail:
-    line_item_num: Optional[LineItemNum] = field(
-        default=None,
+    line_item_num: LineItemNum = field(
         metadata={
             "name": "LineItemNum",
             "type": "Element",
@@ -206,8 +204,7 @@ class BaseShippingDetail:
             "type": "Element",
         }
     )
-    forecast_frequency_coded: Optional[str] = field(
-        default=None,
+    forecast_frequency_coded: str = field(
         metadata={
             "name": "ForecastFrequencyCoded",
             "type": "Element",
@@ -251,10 +248,9 @@ class BaseShippingDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ShipScheduleDetail:
-    commitment_level_coded: Optional[str] = field(
-        default=None,
+    commitment_level_coded: str = field(
         metadata={
             "name": "CommitmentLevelCoded",
             "type": "Element",
@@ -268,16 +264,14 @@ class ShipScheduleDetail:
             "type": "Element",
         }
     )
-    schedule_dates: Optional[ScheduleDates] = field(
-        default=None,
+    schedule_dates: ScheduleDates = field(
         metadata={
             "name": "ScheduleDates",
             "type": "Element",
             "required": True,
         }
     )
-    schedule_quantities: Optional[ScheduleQuantities] = field(
-        default=None,
+    schedule_quantities: ScheduleQuantities = field(
         metadata={
             "name": "ScheduleQuantities",
             "type": "Element",
@@ -307,18 +301,16 @@ class ShipScheduleDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ShippingScheduleHeader:
-    schedule_id: Optional[str] = field(
-        default=None,
+    schedule_id: str = field(
         metadata={
             "name": "ScheduleID",
             "type": "Element",
             "required": True,
         }
     )
-    schedule_issued_date: Optional[str] = field(
-        default=None,
+    schedule_issued_date: str = field(
         metadata={
             "name": "ScheduleIssuedDate",
             "type": "Element",
@@ -339,8 +331,7 @@ class ShippingScheduleHeader:
             "type": "Element",
         }
     )
-    schedule_purpose: Optional[SchedulePurpose] = field(
-        default=None,
+    schedule_purpose: SchedulePurpose = field(
         metadata={
             "name": "SchedulePurpose",
             "type": "Element",
@@ -354,8 +345,7 @@ class ShippingScheduleHeader:
             "type": "Element",
         }
     )
-    schedule_type_coded: Optional[str] = field(
-        default=None,
+    schedule_type_coded: str = field(
         metadata={
             "name": "ScheduleTypeCoded",
             "type": "Element",
@@ -369,8 +359,7 @@ class ShippingScheduleHeader:
             "type": "Element",
         }
     )
-    quantity_qualifier_coded: Optional[str] = field(
-        default=None,
+    quantity_qualifier_coded: str = field(
         metadata={
             "name": "QuantityQualifierCoded",
             "type": "Element",
@@ -391,8 +380,7 @@ class ShippingScheduleHeader:
             "type": "Element",
         }
     )
-    schedule_party: Optional[ScheduleParty] = field(
-        default=None,
+    schedule_party: ScheduleParty = field(
         metadata={
             "name": "ScheduleParty",
             "type": "Element",
@@ -413,8 +401,7 @@ class ShippingScheduleHeader:
             "type": "Element",
         }
     )
-    language: Optional[Language] = field(
-        default=None,
+    language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
@@ -444,10 +431,9 @@ class ShippingScheduleHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ShippingScheduleResponseSummary:
-    shipping_schedule_summary: Optional[ShippingScheduleSummary] = field(
-        default=None,
+    shipping_schedule_summary: ShippingScheduleSummary = field(
         metadata={
             "name": "ShippingScheduleSummary",
             "type": "Element",
@@ -456,10 +442,9 @@ class ShippingScheduleResponseSummary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ChangedShippingScheduleHeader:
-    shipping_schedule_header: Optional[ShippingScheduleHeader] = field(
-        default=None,
+    shipping_schedule_header: ShippingScheduleHeader = field(
         metadata={
             "name": "ShippingScheduleHeader",
             "type": "Element",
@@ -468,7 +453,7 @@ class ChangedShippingScheduleHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfShipScheduleDetail:
     ship_schedule_detail: List[ShipScheduleDetail] = field(
         default_factory=list,
@@ -480,10 +465,9 @@ class ListOfShipScheduleDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OriginalShippingScheduleHeader:
-    shipping_schedule_header: Optional[ShippingScheduleHeader] = field(
-        default=None,
+    shipping_schedule_header: ShippingScheduleHeader = field(
         metadata={
             "name": "ShippingScheduleHeader",
             "type": "Element",
@@ -492,7 +476,7 @@ class OriginalShippingScheduleHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LocationShipSchedule:
     location: Optional[Location] = field(
         default=None,
@@ -508,8 +492,7 @@ class LocationShipSchedule:
             "type": "Element",
         }
     )
-    list_of_ship_schedule_detail: Optional[ListOfShipScheduleDetail] = field(
-        default=None,
+    list_of_ship_schedule_detail: ListOfShipScheduleDetail = field(
         metadata={
             "name": "ListOfShipScheduleDetail",
             "type": "Element",
@@ -518,18 +501,16 @@ class LocationShipSchedule:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LocationShippingItemDetail:
-    base_shipping_detail: Optional[BaseShippingDetail] = field(
-        default=None,
+    base_shipping_detail: BaseShippingDetail = field(
         metadata={
             "name": "BaseShippingDetail",
             "type": "Element",
             "required": True,
         }
     )
-    list_of_ship_schedule_detail: Optional[ListOfShipScheduleDetail] = field(
-        default=None,
+    list_of_ship_schedule_detail: ListOfShipScheduleDetail = field(
         metadata={
             "name": "ListOfShipScheduleDetail",
             "type": "Element",
@@ -552,26 +533,23 @@ class LocationShippingItemDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ShippingScheduleResponseHeader:
-    schedule_response_id: Optional[str] = field(
-        default=None,
+    schedule_response_id: str = field(
         metadata={
             "name": "ScheduleResponseID",
             "type": "Element",
             "required": True,
         }
     )
-    schedule_response_issue_date: Optional[str] = field(
-        default=None,
+    schedule_response_issue_date: str = field(
         metadata={
             "name": "ScheduleResponseIssueDate",
             "type": "Element",
             "required": True,
         }
     )
-    schedule_reference: Optional[ScheduleReference] = field(
-        default=None,
+    schedule_reference: ScheduleReference = field(
         metadata={
             "name": "ScheduleReference",
             "type": "Element",
@@ -585,40 +563,35 @@ class ShippingScheduleResponseHeader:
             "type": "Element",
         }
     )
-    buyer_party: Optional[BuyerParty] = field(
-        default=None,
+    buyer_party: BuyerParty = field(
         metadata={
             "name": "BuyerParty",
             "type": "Element",
             "required": True,
         }
     )
-    seller_party: Optional[SellerParty] = field(
-        default=None,
+    seller_party: SellerParty = field(
         metadata={
             "name": "SellerParty",
             "type": "Element",
             "required": True,
         }
     )
-    purpose: Optional[Purpose] = field(
-        default=None,
+    purpose: Purpose = field(
         metadata={
             "name": "Purpose",
             "type": "Element",
             "required": True,
         }
     )
-    response_type: Optional[ResponseType] = field(
-        default=None,
+    response_type: ResponseType = field(
         metadata={
             "name": "ResponseType",
             "type": "Element",
             "required": True,
         }
     )
-    language: Optional[Language] = field(
-        default=None,
+    language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
@@ -662,7 +635,7 @@ class ShippingScheduleResponseHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfLocationShipSchedule:
     location_ship_schedule: List[LocationShipSchedule] = field(
         default_factory=list,
@@ -674,7 +647,7 @@ class ListOfLocationShipSchedule:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfLocationShippingItemDetail:
     location_shipping_item_detail: List[LocationShippingItemDetail] = field(
         default_factory=list,
@@ -686,10 +659,9 @@ class ListOfLocationShippingItemDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LocationGroupedShippingDetail:
-    location: Optional[Location] = field(
-        default=None,
+    location: Location = field(
         metadata={
             "name": "Location",
             "type": "Element",
@@ -703,8 +675,7 @@ class LocationGroupedShippingDetail:
             "type": "Element",
         }
     )
-    list_of_location_shipping_item_detail: Optional[ListOfLocationShippingItemDetail] = field(
-        default=None,
+    list_of_location_shipping_item_detail: ListOfLocationShippingItemDetail = field(
         metadata={
             "name": "ListOfLocationShippingItemDetail",
             "type": "Element",
@@ -713,18 +684,16 @@ class LocationGroupedShippingDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MaterialGroupedShippingDetail:
-    base_shipping_detail: Optional[BaseShippingDetail] = field(
-        default=None,
+    base_shipping_detail: BaseShippingDetail = field(
         metadata={
             "name": "BaseShippingDetail",
             "type": "Element",
             "required": True,
         }
     )
-    list_of_location_ship_schedule: Optional[ListOfLocationShipSchedule] = field(
-        default=None,
+    list_of_location_ship_schedule: ListOfLocationShipSchedule = field(
         metadata={
             "name": "ListOfLocationShipSchedule",
             "type": "Element",
@@ -747,10 +716,9 @@ class MaterialGroupedShippingDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ChangedLocationGroupedShippingDetail:
-    location_grouped_shipping_detail: Optional[LocationGroupedShippingDetail] = field(
-        default=None,
+    location_grouped_shipping_detail: LocationGroupedShippingDetail = field(
         metadata={
             "name": "LocationGroupedShippingDetail",
             "type": "Element",
@@ -759,10 +727,9 @@ class ChangedLocationGroupedShippingDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ChangedMaterialGroupedShippingDetail:
-    material_grouped_shipping_detail: Optional[MaterialGroupedShippingDetail] = field(
-        default=None,
+    material_grouped_shipping_detail: MaterialGroupedShippingDetail = field(
         metadata={
             "name": "MaterialGroupedShippingDetail",
             "type": "Element",
@@ -771,10 +738,9 @@ class ChangedMaterialGroupedShippingDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OriginalLocationGroupedShippingDetail:
-    location_grouped_shipping_detail: Optional[LocationGroupedShippingDetail] = field(
-        default=None,
+    location_grouped_shipping_detail: LocationGroupedShippingDetail = field(
         metadata={
             "name": "LocationGroupedShippingDetail",
             "type": "Element",
@@ -783,10 +749,9 @@ class OriginalLocationGroupedShippingDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OriginalMaterialGroupedShippingDetail:
-    material_grouped_shipping_detail: Optional[MaterialGroupedShippingDetail] = field(
-        default=None,
+    material_grouped_shipping_detail: MaterialGroupedShippingDetail = field(
         metadata={
             "name": "MaterialGroupedShippingDetail",
             "type": "Element",
@@ -795,10 +760,9 @@ class OriginalMaterialGroupedShippingDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class LocationGroupedShippingResponse:
-    detail_response_coded: Optional[str] = field(
-        default=None,
+    detail_response_coded: str = field(
         metadata={
             "name": "DetailResponseCoded",
             "type": "Element",
@@ -849,10 +813,9 @@ class LocationGroupedShippingResponse:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MaterialGroupedShippingResponse:
-    detail_response_coded: Optional[str] = field(
-        default=None,
+    detail_response_coded: str = field(
         metadata={
             "name": "DetailResponseCoded",
             "type": "Element",
@@ -903,7 +866,7 @@ class MaterialGroupedShippingResponse:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfLocationGroupedShippingResponse:
     location_grouped_shipping_response: List[LocationGroupedShippingResponse] = field(
         default_factory=list,
@@ -915,7 +878,7 @@ class ListOfLocationGroupedShippingResponse:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfMaterialGroupedShippingResponse:
     material_grouped_shipping_response: List[MaterialGroupedShippingResponse] = field(
         default_factory=list,
@@ -927,10 +890,9 @@ class ListOfMaterialGroupedShippingResponse:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ShippingScheduleResponse:
-    shipping_schedule_response_header: Optional[ShippingScheduleResponseHeader] = field(
-        default=None,
+    shipping_schedule_response_header: ShippingScheduleResponseHeader = field(
         metadata={
             "name": "ShippingScheduleResponseHeader",
             "type": "Element",
@@ -942,7 +904,6 @@ class ShippingScheduleResponse:
         metadata={
             "name": "ListOfLocationGroupedShippingResponse",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_material_grouped_shipping_response: Optional[ListOfMaterialGroupedShippingResponse] = field(
@@ -950,7 +911,6 @@ class ShippingScheduleResponse:
         metadata={
             "name": "ListOfMaterialGroupedShippingResponse",
             "type": "Element",
-            "required": True,
         }
     )
     shipping_schedule_response_summary: Optional[ShippingScheduleResponseSummary] = field(

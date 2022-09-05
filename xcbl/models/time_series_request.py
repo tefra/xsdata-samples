@@ -9,7 +9,7 @@ from xcbl.models.time_series_response import (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class KeyFigureData:
     key_figure_purpose_coded: Optional[str] = field(
         default=None,
@@ -32,16 +32,14 @@ class KeyFigureData:
             "type": "Element",
         }
     )
-    key_figure_information: Optional[KeyFigureInformation] = field(
-        default=None,
+    key_figure_information: KeyFigureInformation = field(
         metadata={
             "name": "KeyFigureInformation",
             "type": "Element",
             "required": True,
         }
     )
-    unit_of_measurement: Optional[UnitOfMeasurement] = field(
-        default=None,
+    unit_of_measurement: UnitOfMeasurement = field(
         metadata={
             "name": "UnitOfMeasurement",
             "type": "Element",
@@ -57,10 +55,9 @@ class KeyFigureData:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeSeriesRequestHeader:
-    time_series_header: Optional[TimeSeriesHeader] = field(
-        default=None,
+    time_series_header: TimeSeriesHeader = field(
         metadata={
             "name": "TimeSeriesHeader",
             "type": "Element",
@@ -69,10 +66,9 @@ class TimeSeriesRequestHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeSeriesRequestSummary:
-    time_series_summary: Optional[TimeSeriesSummary] = field(
-        default=None,
+    time_series_summary: TimeSeriesSummary = field(
         metadata={
             "name": "TimeSeriesSummary",
             "type": "Element",
@@ -81,7 +77,7 @@ class TimeSeriesRequestSummary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfKeyFigureData:
     key_figure_data: List[KeyFigureData] = field(
         default_factory=list,
@@ -93,7 +89,7 @@ class ListOfKeyFigureData:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeSeriesRequestDetail:
     list_of_characteristic_combinations: Optional[ListOfCharacteristicCombinations] = field(
         default=None,
@@ -111,26 +107,23 @@ class TimeSeriesRequestDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TimeSeriesRequest:
-    time_series_request_header: Optional[TimeSeriesRequestHeader] = field(
-        default=None,
+    time_series_request_header: TimeSeriesRequestHeader = field(
         metadata={
             "name": "TimeSeriesRequestHeader",
             "type": "Element",
             "required": True,
         }
     )
-    time_series_request_detail: Optional[TimeSeriesRequestDetail] = field(
-        default=None,
+    time_series_request_detail: TimeSeriesRequestDetail = field(
         metadata={
             "name": "TimeSeriesRequestDetail",
             "type": "Element",
             "required": True,
         }
     )
-    time_series_request_summary: Optional[TimeSeriesRequestSummary] = field(
-        default=None,
+    time_series_request_summary: TimeSeriesRequestSummary = field(
         metadata={
             "name": "TimeSeriesRequestSummary",
             "type": "Element",

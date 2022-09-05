@@ -14,10 +14,9 @@ from xcbl.models.trading_partner_user_delete import (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AcademicTitle:
-    academic_title_coded: Optional[str] = field(
-        default=None,
+    academic_title_coded: str = field(
         metadata={
             "name": "AcademicTitleCoded",
             "type": "Element",
@@ -33,10 +32,9 @@ class AcademicTitle:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CertificatePurpose:
-    certificate_purpose_coded: Optional[str] = field(
-        default=None,
+    certificate_purpose_coded: str = field(
         metadata={
             "name": "CertificatePurposeCoded",
             "type": "Element",
@@ -52,10 +50,9 @@ class CertificatePurpose:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ContactRelationType:
-    contact_relation_type_coded: Optional[str] = field(
-        default=None,
+    contact_relation_type_coded: str = field(
         metadata={
             "name": "ContactRelationTypeCoded",
             "type": "Element",
@@ -71,10 +68,9 @@ class ContactRelationType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DateFormat:
-    date_format_coded: Optional[str] = field(
-        default=None,
+    date_format_coded: str = field(
         metadata={
             "name": "DateFormatCoded",
             "type": "Element",
@@ -90,18 +86,16 @@ class DateFormat:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PersonCommunicationType:
-    person_communication_type_coded: Optional[str] = field(
-        default=None,
+    person_communication_type_coded: str = field(
         metadata={
             "name": "PersonCommunicationTypeCoded",
             "type": "Element",
             "required": True,
         }
     )
-    person_communication_type_coded_other: Optional[str] = field(
-        default=None,
+    person_communication_type_coded_other: str = field(
         metadata={
             "name": "PersonCommunicationTypeCodedOther",
             "type": "Element",
@@ -110,10 +104,9 @@ class PersonCommunicationType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Title:
-    title_coded: Optional[str] = field(
-        default=None,
+    title_coded: str = field(
         metadata={
             "name": "TitleCoded",
             "type": "Element",
@@ -129,10 +122,9 @@ class Title:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TradingPartnerUserPurpose:
-    trading_partner_user_purpose_coded: Optional[str] = field(
-        default=None,
+    trading_partner_user_purpose_coded: str = field(
         metadata={
             "name": "TradingPartnerUserPurposeCoded",
             "type": "Element",
@@ -148,7 +140,7 @@ class TradingPartnerUserPurpose:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UserRole:
     user_role_authority: Optional[str] = field(
         default=None,
@@ -157,8 +149,7 @@ class UserRole:
             "type": "Element",
         }
     )
-    user_role_name: Optional[str] = field(
-        default=None,
+    user_role_name: str = field(
         metadata={
             "name": "UserRoleName",
             "type": "Element",
@@ -174,10 +165,9 @@ class UserRole:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UserStatus:
-    user_status_coded: Optional[str] = field(
-        default=None,
+    user_status_coded: str = field(
         metadata={
             "name": "UserStatusCoded",
             "type": "Element",
@@ -193,26 +183,23 @@ class UserStatus:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class X509CertificateInfo:
-    x509_subject: Optional[str] = field(
-        default=None,
+    x509_subject: str = field(
         metadata={
             "name": "X509Subject",
             "type": "Element",
             "required": True,
         }
     )
-    x509_issuer: Optional[str] = field(
-        default=None,
+    x509_issuer: str = field(
         metadata={
             "name": "X509Issuer",
             "type": "Element",
             "required": True,
         }
     )
-    x509_serial_number: Optional[str] = field(
-        default=None,
+    x509_serial_number: str = field(
         metadata={
             "name": "X509SerialNumber",
             "type": "Element",
@@ -221,7 +208,7 @@ class X509CertificateInfo:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class CommunicationDetail:
     communication_detail_description: Optional[str] = field(
         default=None,
@@ -230,16 +217,14 @@ class CommunicationDetail:
             "type": "Element",
         }
     )
-    person_communication_type: Optional[PersonCommunicationType] = field(
-        default=None,
+    person_communication_type: PersonCommunicationType = field(
         metadata={
             "name": "PersonCommunicationType",
             "type": "Element",
             "required": True,
         }
     )
-    communication_value: Optional[str] = field(
-        default=None,
+    communication_value: str = field(
         metadata={
             "name": "CommunicationValue",
             "type": "Element",
@@ -255,7 +240,7 @@ class CommunicationDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfCertificatePurpose:
     certificate_purpose: List[CertificatePurpose] = field(
         default_factory=list,
@@ -266,10 +251,9 @@ class ListOfCertificatePurpose:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfContactRelationType:
-    contact_relation_type: Optional[ContactRelationType] = field(
-        default=None,
+    contact_relation_type: ContactRelationType = field(
         metadata={
             "name": "ContactRelationType",
             "type": "Element",
@@ -278,7 +262,7 @@ class ListOfContactRelationType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfUserRole:
     user_role: List[UserRole] = field(
         default_factory=list,
@@ -290,10 +274,9 @@ class ListOfUserRole:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PersonTimezone:
-    timezone: Optional[Timezone] = field(
-        default=None,
+    timezone: Timezone = field(
         metadata={
             "name": "Timezone",
             "type": "Element",
@@ -302,7 +285,7 @@ class PersonTimezone:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class UserAdministration:
     validity_dates: Optional[ValidityDates] = field(
         default=None,
@@ -320,7 +303,7 @@ class UserAdministration:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfCommunicationDetail:
     communication_detail: List[CommunicationDetail] = field(
         default_factory=list,
@@ -332,7 +315,7 @@ class ListOfCommunicationDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class X509Certificate:
     list_of_certificate_purpose: List[ListOfCertificatePurpose] = field(
         default_factory=list,
@@ -346,7 +329,6 @@ class X509Certificate:
         metadata={
             "name": "X509Cert",
             "type": "Element",
-            "required": True,
         }
     )
     x509_certificate_info: Optional[X509CertificateInfo] = field(
@@ -354,12 +336,11 @@ class X509Certificate:
         metadata={
             "name": "X509CertificateInfo",
             "type": "Element",
-            "required": True,
         }
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfX509Certificate:
     x509_certificate: List[X509Certificate] = field(
         default_factory=list,
@@ -370,14 +351,13 @@ class ListOfX509Certificate:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PersonAddress:
     organization_address_id: Optional[str] = field(
         default=None,
         metadata={
             "name": "OrganizationAddressID",
             "type": "Element",
-            "required": True,
         }
     )
     pobox: Optional[Pobox] = field(
@@ -427,7 +407,6 @@ class PersonAddress:
         metadata={
             "name": "City",
             "type": "Element",
-            "required": True,
         }
     )
     county: Optional[str] = field(
@@ -456,7 +435,6 @@ class PersonAddress:
         metadata={
             "name": "Country",
             "type": "Element",
-            "required": True,
         }
     )
     building: Optional[str] = field(
@@ -494,8 +472,7 @@ class PersonAddress:
             "type": "Element",
         }
     )
-    list_of_communication_detail: Optional[ListOfCommunicationDetail] = field(
-        default=None,
+    list_of_communication_detail: ListOfCommunicationDetail = field(
         metadata={
             "name": "ListOfCommunicationDetail",
             "type": "Element",
@@ -504,7 +481,7 @@ class PersonAddress:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PersonProfile:
     title: Optional[Title] = field(
         default=None,
@@ -520,8 +497,7 @@ class PersonProfile:
             "type": "Element",
         }
     )
-    last_name: Optional[str] = field(
-        default=None,
+    last_name: str = field(
         metadata={
             "name": "LastName",
             "type": "Element",
@@ -591,8 +567,7 @@ class PersonProfile:
             "type": "Element",
         }
     )
-    person_address: Optional[PersonAddress] = field(
-        default=None,
+    person_address: PersonAddress = field(
         metadata={
             "name": "PersonAddress",
             "type": "Element",
@@ -608,26 +583,23 @@ class PersonProfile:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TradingPartnerUser:
-    trading_partner_organization_reference: Optional[TradingPartnerOrganizationReference] = field(
-        default=None,
+    trading_partner_organization_reference: TradingPartnerOrganizationReference = field(
         metadata={
             "name": "TradingPartnerOrganizationReference",
             "type": "Element",
             "required": True,
         }
     )
-    user_id: Optional[UserId] = field(
-        default=None,
+    user_id: UserId = field(
         metadata={
             "name": "UserID",
             "type": "Element",
             "required": True,
         }
     )
-    person_profile: Optional[PersonProfile] = field(
-        default=None,
+    person_profile: PersonProfile = field(
         metadata={
             "name": "PersonProfile",
             "type": "Element",
@@ -657,7 +629,7 @@ class TradingPartnerUser:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfTradingPartnerUser:
     trading_partner_user: List[TradingPartnerUser] = field(
         default_factory=list,
@@ -669,18 +641,16 @@ class ListOfTradingPartnerUser:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TradingPartnerUserInformation:
-    trading_partner_user_purpose: Optional[TradingPartnerUserPurpose] = field(
-        default=None,
+    trading_partner_user_purpose: TradingPartnerUserPurpose = field(
         metadata={
             "name": "TradingPartnerUserPurpose",
             "type": "Element",
             "required": True,
         }
     )
-    list_of_trading_partner_user: Optional[ListOfTradingPartnerUser] = field(
-        default=None,
+    list_of_trading_partner_user: ListOfTradingPartnerUser = field(
         metadata={
             "name": "ListOfTradingPartnerUser",
             "type": "Element",

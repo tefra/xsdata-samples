@@ -5,10 +5,9 @@ from xcbl.models.trading_partner_organization_delete import PrimaryId
 from xcbl.models.trading_partner_user_delete import UserId
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SecondaryMessageInformation:
-    message_type_coded: Optional[str] = field(
-        default=None,
+    message_type_coded: str = field(
         metadata={
             "name": "MessageTypeCoded",
             "type": "Element",
@@ -45,7 +44,7 @@ class SecondaryMessageInformation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfSecondaryMessageInformation:
     secondary_message_information: List[SecondaryMessageInformation] = field(
         default_factory=list,
@@ -57,10 +56,9 @@ class ListOfSecondaryMessageInformation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class MessageResponseIdentifier:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -69,13 +67,12 @@ class MessageResponseIdentifier:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TradingPartnerPrimaryId:
     class Meta:
         name = "TradingPartnerPrimaryID"
 
-    primary_id: Optional[PrimaryId] = field(
-        default=None,
+    primary_id: PrimaryId = field(
         metadata={
             "name": "PrimaryID",
             "type": "Element",
@@ -84,18 +81,16 @@ class TradingPartnerPrimaryId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PrimaryMessageInformation:
-    message_response_identifier: Optional[MessageResponseIdentifier] = field(
-        default=None,
+    message_response_identifier: MessageResponseIdentifier = field(
         metadata={
             "name": "MessageResponseIdentifier",
             "type": "Element",
             "required": True,
         }
     )
-    primary_return_coded: Optional[str] = field(
-        default=None,
+    primary_return_coded: str = field(
         metadata={
             "name": "PrimaryReturnCoded",
             "type": "Element",
@@ -111,7 +106,7 @@ class PrimaryMessageInformation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReturnedIdentification:
     trading_partner_primary_id: Optional[TradingPartnerPrimaryId] = field(
         default=None,
@@ -143,7 +138,7 @@ class ReturnedIdentification:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfReturnedIdentification:
     returned_identification: List[ReturnedIdentification] = field(
         default_factory=list,
@@ -155,10 +150,9 @@ class ListOfReturnedIdentification:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ReturnMessageInformation:
-    primary_message_information: Optional[PrimaryMessageInformation] = field(
-        default=None,
+    primary_message_information: PrimaryMessageInformation = field(
         metadata={
             "name": "PrimaryMessageInformation",
             "type": "Element",
@@ -174,10 +168,9 @@ class ReturnMessageInformation:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TradingPartnerResponseInfo:
-    return_message_information: Optional[ReturnMessageInformation] = field(
-        default=None,
+    return_message_information: ReturnMessageInformation = field(
         metadata={
             "name": "ReturnMessageInformation",
             "type": "Element",
@@ -207,7 +200,7 @@ class TradingPartnerResponseInfo:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfTradingPartnerResponseInfo:
     trading_partner_response_info: List[TradingPartnerResponseInfo] = field(
         default_factory=list,
@@ -219,10 +212,9 @@ class ListOfTradingPartnerResponseInfo:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class TradingPartnerResponse:
-    list_of_trading_partner_response_info: Optional[ListOfTradingPartnerResponseInfo] = field(
-        default=None,
+    list_of_trading_partner_response_info: ListOfTradingPartnerResponseInfo = field(
         metadata={
             "name": "ListOfTradingPartnerResponseInfo",
             "type": "Element",

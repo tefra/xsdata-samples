@@ -9,7 +9,7 @@ from xcbl.models.shipping_schedule_response import (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfLocationGroupedShippingDetail:
     location_grouped_shipping_detail: List[LocationGroupedShippingDetail] = field(
         default_factory=list,
@@ -21,7 +21,7 @@ class ListOfLocationGroupedShippingDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfMaterialGroupedShippingDetail:
     material_grouped_shipping_detail: List[MaterialGroupedShippingDetail] = field(
         default_factory=list,
@@ -33,10 +33,9 @@ class ListOfMaterialGroupedShippingDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ShippingSchedule:
-    shipping_schedule_header: Optional[ShippingScheduleHeader] = field(
-        default=None,
+    shipping_schedule_header: ShippingScheduleHeader = field(
         metadata={
             "name": "ShippingScheduleHeader",
             "type": "Element",
@@ -48,7 +47,6 @@ class ShippingSchedule:
         metadata={
             "name": "ListOfLocationGroupedShippingDetail",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_material_grouped_shipping_detail: Optional[ListOfMaterialGroupedShippingDetail] = field(
@@ -56,7 +54,6 @@ class ShippingSchedule:
         metadata={
             "name": "ListOfMaterialGroupedShippingDetail",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_package_detail: Optional[ListOfPackageDetail] = field(

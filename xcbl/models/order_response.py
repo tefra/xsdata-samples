@@ -46,10 +46,9 @@ from xcbl.models.price_check_result import PriceErrorInfo
 from xcbl.models.request_for_quotation import OrderParty
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ChangeType:
-    change_type_coded: Optional[str] = field(
-        default=None,
+    change_type_coded: str = field(
         metadata={
             "name": "ChangeTypeCoded",
             "type": "Element",
@@ -65,10 +64,9 @@ class ChangeType:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ChangeOrderNumber:
-    buyer_change_order_number: Optional[str] = field(
-        default=None,
+    buyer_change_order_number: str = field(
         metadata={
             "name": "BuyerChangeOrderNumber",
             "type": "Element",
@@ -91,10 +89,9 @@ class ChangeOrderNumber:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ChangeOrderReference:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -103,10 +100,9 @@ class ChangeOrderReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ItemDetailChanges:
-    item_detail: Optional[ItemDetail] = field(
-        default=None,
+    item_detail: ItemDetail = field(
         metadata={
             "name": "ItemDetail",
             "type": "Element",
@@ -115,7 +111,7 @@ class ItemDetailChanges:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfErrorInfo:
     error_info: List[ErrorInfo] = field(
         default_factory=list,
@@ -127,10 +123,9 @@ class ListOfErrorInfo:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderCurrency:
-    currency: Optional[Currency] = field(
-        default=None,
+    currency: Currency = field(
         metadata={
             "name": "Currency",
             "type": "Element",
@@ -139,10 +134,9 @@ class OrderCurrency:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderLanguage:
-    language: Optional[Language] = field(
-        default=None,
+    language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
@@ -151,10 +145,9 @@ class OrderLanguage:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderReference:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -163,10 +156,9 @@ class OrderReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderResponseNumber:
-    buyer_order_response_number: Optional[str] = field(
-        default=None,
+    buyer_order_response_number: str = field(
         metadata={
             "name": "BuyerOrderResponseNumber",
             "type": "Element",
@@ -189,10 +181,9 @@ class OrderResponseNumber:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderTaxReference:
-    tax_reference: Optional[TaxReference] = field(
-        default=None,
+    tax_reference: TaxReference = field(
         metadata={
             "name": "TaxReference",
             "type": "Element",
@@ -201,10 +192,9 @@ class OrderTaxReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OriginalItemDetail:
-    item_detail: Optional[ItemDetail] = field(
-        default=None,
+    item_detail: ItemDetail = field(
         metadata={
             "name": "ItemDetail",
             "type": "Element",
@@ -213,10 +203,9 @@ class OriginalItemDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OriginalOrderSummary:
-    order_summary: Optional[OrderSummary] = field(
-        default=None,
+    order_summary: OrderSummary = field(
         metadata={
             "name": "OrderSummary",
             "type": "Element",
@@ -225,10 +214,9 @@ class OriginalOrderSummary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OriginalPackageDetail:
-    package_detail: Optional[PackageDetail] = field(
-        default=None,
+    package_detail: PackageDetail = field(
         metadata={
             "name": "PackageDetail",
             "type": "Element",
@@ -237,10 +225,9 @@ class OriginalPackageDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PackageDetailChanges:
-    package_detail: Optional[PackageDetail] = field(
-        default=None,
+    package_detail: PackageDetail = field(
         metadata={
             "name": "PackageDetail",
             "type": "Element",
@@ -249,10 +236,9 @@ class PackageDetailChanges:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RevisedOrderSummary:
-    order_summary: Optional[OrderSummary] = field(
-        default=None,
+    order_summary: OrderSummary = field(
         metadata={
             "name": "OrderSummary",
             "type": "Element",
@@ -261,10 +247,9 @@ class RevisedOrderSummary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ChangeOrderItemDetail:
-    item_detail_change_coded: Optional[str] = field(
-        default=None,
+    item_detail_change_coded: str = field(
         metadata={
             "name": "ItemDetailChangeCoded",
             "type": "Element",
@@ -315,10 +300,9 @@ class ChangeOrderItemDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ChangeOrderPackageDetail:
-    package_detail_change_coded: Optional[str] = field(
-        default=None,
+    package_detail_change_coded: str = field(
         metadata={
             "name": "PackageDetailChangeCoded",
             "type": "Element",
@@ -355,18 +339,16 @@ class ChangeOrderPackageDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderHeader:
-    order_number: Optional[OrderNumber] = field(
-        default=None,
+    order_number: OrderNumber = field(
         metadata={
             "name": "OrderNumber",
             "type": "Element",
             "required": True,
         }
     )
-    order_issue_date: Optional[str] = field(
-        default=None,
+    order_issue_date: str = field(
         metadata={
             "name": "OrderIssueDate",
             "type": "Element",
@@ -387,8 +369,7 @@ class OrderHeader:
             "type": "Element",
         }
     )
-    purpose: Optional[Purpose] = field(
-        default=None,
+    purpose: Purpose = field(
         metadata={
             "name": "Purpose",
             "type": "Element",
@@ -409,8 +390,7 @@ class OrderHeader:
             "type": "Element",
         }
     )
-    order_currency: Optional[OrderCurrency] = field(
-        default=None,
+    order_currency: OrderCurrency = field(
         metadata={
             "name": "OrderCurrency",
             "type": "Element",
@@ -424,8 +404,7 @@ class OrderHeader:
             "type": "Element",
         }
     )
-    order_language: Optional[OrderLanguage] = field(
-        default=None,
+    order_language: OrderLanguage = field(
         metadata={
             "name": "OrderLanguage",
             "type": "Element",
@@ -467,8 +446,7 @@ class OrderHeader:
             "type": "Element",
         }
     )
-    order_party: Optional[OrderParty] = field(
-        default=None,
+    order_party: OrderParty = field(
         metadata={
             "name": "OrderParty",
             "type": "Element",
@@ -554,7 +532,7 @@ class OrderHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderResponseSummary:
     error_info: Optional[ErrorInfo] = field(
         default=None,
@@ -579,10 +557,9 @@ class OrderResponseSummary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderHeaderChanges:
-    order_header: Optional[OrderHeader] = field(
-        default=None,
+    order_header: OrderHeader = field(
         metadata={
             "name": "OrderHeader",
             "type": "Element",
@@ -591,10 +568,9 @@ class OrderHeaderChanges:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderResponseItemDetail:
-    item_detail_response_coded: Optional[str] = field(
-        default=None,
+    item_detail_response_coded: str = field(
         metadata={
             "name": "ItemDetailResponseCoded",
             "type": "Element",
@@ -669,7 +645,6 @@ class OrderResponseItemDetail:
         metadata={
             "name": "OriginalItemDetail",
             "type": "Element",
-            "required": True,
         }
     )
     change_order_item_detail: Optional[ChangeOrderItemDetail] = field(
@@ -677,7 +652,6 @@ class OrderResponseItemDetail:
         metadata={
             "name": "ChangeOrderItemDetail",
             "type": "Element",
-            "required": True,
         }
     )
     item_detail_changes: Optional[ItemDetailChanges] = field(
@@ -703,10 +677,9 @@ class OrderResponseItemDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderResponsePackageDetail:
-    package_detail_response_coded: Optional[str] = field(
-        default=None,
+    package_detail_response_coded: str = field(
         metadata={
             "name": "PackageDetailResponseCoded",
             "type": "Element",
@@ -725,7 +698,6 @@ class OrderResponsePackageDetail:
         metadata={
             "name": "OriginalPackageDetail",
             "type": "Element",
-            "required": True,
         }
     )
     change_order_package_detail: Optional[ChangeOrderPackageDetail] = field(
@@ -733,7 +705,6 @@ class OrderResponsePackageDetail:
         metadata={
             "name": "ChangeOrderPackageDetail",
             "type": "Element",
-            "required": True,
         }
     )
     package_detail_changes: Optional[PackageDetailChanges] = field(
@@ -752,10 +723,9 @@ class OrderResponsePackageDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OriginalOrderHeader:
-    order_header: Optional[OrderHeader] = field(
-        default=None,
+    order_header: OrderHeader = field(
         metadata={
             "name": "OrderHeader",
             "type": "Element",
@@ -764,50 +734,44 @@ class OriginalOrderHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ChangeOrderHeader:
-    change_order_number: Optional[ChangeOrderNumber] = field(
-        default=None,
+    change_order_number: ChangeOrderNumber = field(
         metadata={
             "name": "ChangeOrderNumber",
             "type": "Element",
             "required": True,
         }
     )
-    change_order_sequence: Optional[str] = field(
-        default=None,
+    change_order_sequence: str = field(
         metadata={
             "name": "ChangeOrderSequence",
             "type": "Element",
             "required": True,
         }
     )
-    change_order_issue_date: Optional[str] = field(
-        default=None,
+    change_order_issue_date: str = field(
         metadata={
             "name": "ChangeOrderIssueDate",
             "type": "Element",
             "required": True,
         }
     )
-    order_reference: Optional[OrderReference] = field(
-        default=None,
+    order_reference: OrderReference = field(
         metadata={
             "name": "OrderReference",
             "type": "Element",
             "required": True,
         }
     )
-    seller_party: Optional[SellerParty] = field(
-        default=None,
+    seller_party: SellerParty = field(
         metadata={
             "name": "SellerParty",
             "type": "Element",
             "required": True,
         }
     )
-    buyer_party: Optional[BuyerParty] = field(
-        default=None,
+    buyer_party: BuyerParty = field(
         metadata={
             "name": "BuyerParty",
             "type": "Element",
@@ -821,8 +785,7 @@ class ChangeOrderHeader:
             "type": "Element",
         }
     )
-    purpose: Optional[Purpose] = field(
-        default=None,
+    purpose: Purpose = field(
         metadata={
             "name": "Purpose",
             "type": "Element",
@@ -836,8 +799,7 @@ class ChangeOrderHeader:
             "type": "Element",
         }
     )
-    change_type: Optional[ChangeType] = field(
-        default=None,
+    change_type: ChangeType = field(
         metadata={
             "name": "ChangeType",
             "type": "Element",
@@ -881,7 +843,7 @@ class ChangeOrderHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfOrderResponseItemDetail:
     order_response_item_detail: List[OrderResponseItemDetail] = field(
         default_factory=list,
@@ -893,7 +855,7 @@ class ListOfOrderResponseItemDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfOrderResponsePackageDetail:
     order_response_package_detail: List[OrderResponsePackageDetail] = field(
         default_factory=list,
@@ -905,7 +867,7 @@ class ListOfOrderResponsePackageDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderResponseDetail:
     list_of_order_response_item_detail: Optional[ListOfOrderResponseItemDetail] = field(
         default=None,
@@ -923,26 +885,23 @@ class OrderResponseDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderResponseHeader:
-    order_response_number: Optional[OrderResponseNumber] = field(
-        default=None,
+    order_response_number: OrderResponseNumber = field(
         metadata={
             "name": "OrderResponseNumber",
             "type": "Element",
             "required": True,
         }
     )
-    order_response_issue_date: Optional[str] = field(
-        default=None,
+    order_response_issue_date: str = field(
         metadata={
             "name": "OrderResponseIssueDate",
             "type": "Element",
             "required": True,
         }
     )
-    order_response_doc_type_coded: Optional[str] = field(
-        default=None,
+    order_response_doc_type_coded: str = field(
         metadata={
             "name": "OrderResponseDocTypeCoded",
             "type": "Element",
@@ -956,8 +915,7 @@ class OrderResponseHeader:
             "type": "Element",
         }
     )
-    order_reference: Optional[OrderReference] = field(
-        default=None,
+    order_reference: OrderReference = field(
         metadata={
             "name": "OrderReference",
             "type": "Element",
@@ -971,16 +929,14 @@ class OrderResponseHeader:
             "type": "Element",
         }
     )
-    seller_party: Optional[SellerParty] = field(
-        default=None,
+    seller_party: SellerParty = field(
         metadata={
             "name": "SellerParty",
             "type": "Element",
             "required": True,
         }
     )
-    buyer_party: Optional[BuyerParty] = field(
-        default=None,
+    buyer_party: BuyerParty = field(
         metadata={
             "name": "BuyerParty",
             "type": "Element",
@@ -1001,16 +957,14 @@ class OrderResponseHeader:
             "type": "Element",
         }
     )
-    purpose: Optional[Purpose] = field(
-        default=None,
+    purpose: Purpose = field(
         metadata={
             "name": "Purpose",
             "type": "Element",
             "required": True,
         }
     )
-    response_type: Optional[ResponseType] = field(
-        default=None,
+    response_type: ResponseType = field(
         metadata={
             "name": "ResponseType",
             "type": "Element",
@@ -1043,7 +997,6 @@ class OrderResponseHeader:
         metadata={
             "name": "OriginalOrderHeader",
             "type": "Element",
-            "required": True,
         }
     )
     change_order_header: Optional[ChangeOrderHeader] = field(
@@ -1051,7 +1004,6 @@ class OrderResponseHeader:
         metadata={
             "name": "ChangeOrderHeader",
             "type": "Element",
-            "required": True,
         }
     )
     order_header_changes: Optional[OrderHeaderChanges] = field(
@@ -1077,10 +1029,9 @@ class OrderResponseHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class OrderResponse:
-    order_response_header: Optional[OrderResponseHeader] = field(
-        default=None,
+    order_response_header: OrderResponseHeader = field(
         metadata={
             "name": "OrderResponseHeader",
             "type": "Element",

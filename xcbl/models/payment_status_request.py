@@ -17,10 +17,9 @@ from xcbl.models.payment_status_response import (
 )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfPaymentRequestReferences:
-    list_of_reference: Optional[ListOfReference] = field(
-        default=None,
+    list_of_reference: ListOfReference = field(
         metadata={
             "name": "ListOfReference",
             "type": "Element",
@@ -29,10 +28,9 @@ class ListOfPaymentRequestReferences:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PaymentDateRange:
-    validity_dates: Optional[ValidityDates] = field(
-        default=None,
+    validity_dates: ValidityDates = field(
         metadata={
             "name": "ValidityDates",
             "type": "Element",
@@ -41,18 +39,16 @@ class PaymentDateRange:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PaymentStatusRequestHeader:
-    payment_status_request_id: Optional[PaymentStatusRequestId] = field(
-        default=None,
+    payment_status_request_id: PaymentStatusRequestId = field(
         metadata={
             "name": "PaymentStatusRequestID",
             "type": "Element",
             "required": True,
         }
     )
-    payment_status_request_issue_date: Optional[str] = field(
-        default=None,
+    payment_status_request_issue_date: str = field(
         metadata={
             "name": "PaymentStatusRequestIssueDate",
             "type": "Element",
@@ -66,8 +62,7 @@ class PaymentStatusRequestHeader:
             "type": "Element",
         }
     )
-    language: Optional[Language] = field(
-        default=None,
+    language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
@@ -83,7 +78,7 @@ class PaymentStatusRequestHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PaymentStatusRequestDetail:
     sequence_number: Optional[str] = field(
         default=None,
@@ -97,7 +92,6 @@ class PaymentStatusRequestDetail:
         metadata={
             "name": "PaymentRequestID",
             "type": "Element",
-            "required": True,
         }
     )
     confirmation_id: Optional[str] = field(
@@ -105,7 +99,6 @@ class PaymentStatusRequestDetail:
         metadata={
             "name": "ConfirmationID",
             "type": "Element",
-            "required": True,
         }
     )
     payment_date_range: Optional[PaymentDateRange] = field(
@@ -113,7 +106,6 @@ class PaymentStatusRequestDetail:
         metadata={
             "name": "PaymentDateRange",
             "type": "Element",
-            "required": True,
         }
     )
     payment_dates: Optional[PaymentDates] = field(
@@ -121,7 +113,6 @@ class PaymentStatusRequestDetail:
         metadata={
             "name": "PaymentDates",
             "type": "Element",
-            "required": True,
         }
     )
     settlement_amount: Optional[SettlementAmount] = field(
@@ -140,7 +131,7 @@ class PaymentStatusRequestDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfPaymentStatusRequestDetail:
     payment_status_request_detail: List[PaymentStatusRequestDetail] = field(
         default_factory=list,
@@ -152,26 +143,23 @@ class ListOfPaymentStatusRequestDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class PaymentStatusRequest:
-    payment_status_request_header: Optional[PaymentStatusRequestHeader] = field(
-        default=None,
+    payment_status_request_header: PaymentStatusRequestHeader = field(
         metadata={
             "name": "PaymentStatusRequestHeader",
             "type": "Element",
             "required": True,
         }
     )
-    list_of_payment_status_request_detail: Optional[ListOfPaymentStatusRequestDetail] = field(
-        default=None,
+    list_of_payment_status_request_detail: ListOfPaymentStatusRequestDetail = field(
         metadata={
             "name": "ListOfPaymentStatusRequestDetail",
             "type": "Element",
             "required": True,
         }
     )
-    payment_status_request_summary: Optional[PaymentStatusRequestSummary] = field(
-        default=None,
+    payment_status_request_summary: PaymentStatusRequestSummary = field(
         metadata={
             "name": "PaymentStatusRequestSummary",
             "type": "Element",

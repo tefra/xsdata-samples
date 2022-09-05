@@ -14,7 +14,6 @@ samples = list(map(str, samples_dir.rglob("*.xml")))
 
 @pytest.mark.parametrize("sample", samples)
 def test_bindings(sample, xml_parser, xml_serializer):
-
     obj = xml_parser.parse(sample)
     result = xml_serializer.render(obj, ns_map=xml_parser.ns_map)
     xml_parser.ns_map.clear()

@@ -23,7 +23,7 @@ from xcbl.models.order_request import (
 from xcbl.models.request_for_quotation import OrderParty
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionResultSummary:
     total_num_auction_results: Optional[str] = field(
         default=None,
@@ -48,10 +48,9 @@ class AuctionResultSummary:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionCreateReference:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -60,10 +59,9 @@ class AuctionCreateReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionResultCurrency:
-    currency: Optional[Currency] = field(
-        default=None,
+    currency: Currency = field(
         metadata={
             "name": "Currency",
             "type": "Element",
@@ -72,10 +70,9 @@ class AuctionResultCurrency:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionResultDates:
-    order_dates: Optional[OrderDates] = field(
-        default=None,
+    order_dates: OrderDates = field(
         metadata={
             "name": "OrderDates",
             "type": "Element",
@@ -84,13 +81,12 @@ class AuctionResultDates:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionResultId:
     class Meta:
         name = "AuctionResultID"
 
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -99,10 +95,9 @@ class AuctionResultId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionResultItem:
-    base_item_detail: Optional[BaseItemDetail] = field(
-        default=None,
+    base_item_detail: BaseItemDetail = field(
         metadata={
             "name": "BaseItemDetail",
             "type": "Element",
@@ -167,13 +162,12 @@ class AuctionResultItem:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionResultItemId:
     class Meta:
         name = "AuctionResultItemID"
 
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -182,10 +176,9 @@ class AuctionResultItemId:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionResultListOfAttachment:
-    list_of_attachment: Optional[ListOfAttachment] = field(
-        default=None,
+    list_of_attachment: ListOfAttachment = field(
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
@@ -194,10 +187,9 @@ class AuctionResultListOfAttachment:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionResultParty:
-    order_party: Optional[OrderParty] = field(
-        default=None,
+    order_party: OrderParty = field(
         metadata={
             "name": "OrderParty",
             "type": "Element",
@@ -206,10 +198,9 @@ class AuctionResultParty:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionResultPurpose:
-    purpose: Optional[Purpose] = field(
-        default=None,
+    purpose: Purpose = field(
         metadata={
             "name": "Purpose",
             "type": "Element",
@@ -218,10 +209,9 @@ class AuctionResultPurpose:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfAuctionResultDetailAttachment:
-    list_of_attachment: Optional[ListOfAttachment] = field(
-        default=None,
+    list_of_attachment: ListOfAttachment = field(
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
@@ -230,42 +220,37 @@ class ListOfAuctionResultDetailAttachment:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionResultHeader:
-    auction_result_purpose: Optional[AuctionResultPurpose] = field(
-        default=None,
+    auction_result_purpose: AuctionResultPurpose = field(
         metadata={
             "name": "AuctionResultPurpose",
             "type": "Element",
             "required": True,
         }
     )
-    auction_result_issue_date: Optional[str] = field(
-        default=None,
+    auction_result_issue_date: str = field(
         metadata={
             "name": "AuctionResultIssueDate",
             "type": "Element",
             "required": True,
         }
     )
-    auction_result_id: Optional[AuctionResultId] = field(
-        default=None,
+    auction_result_id: AuctionResultId = field(
         metadata={
             "name": "AuctionResultID",
             "type": "Element",
             "required": True,
         }
     )
-    auction_create_reference: Optional[AuctionCreateReference] = field(
-        default=None,
+    auction_create_reference: AuctionCreateReference = field(
         metadata={
             "name": "AuctionCreateReference",
             "type": "Element",
             "required": True,
         }
     )
-    forward_auction_indicator: Optional[str] = field(
-        default=None,
+    forward_auction_indicator: str = field(
         metadata={
             "name": "ForwardAuctionIndicator",
             "type": "Element",
@@ -279,8 +264,7 @@ class AuctionResultHeader:
             "type": "Element",
         }
     )
-    language: Optional[Language] = field(
-        default=None,
+    language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
@@ -310,7 +294,7 @@ class AuctionResultHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfAuctionResultItem:
     auction_result_item: List[AuctionResultItem] = field(
         default_factory=list,
@@ -322,26 +306,23 @@ class ListOfAuctionResultItem:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionResultDetail:
-    auction_result_item_id: Optional[AuctionResultItemId] = field(
-        default=None,
+    auction_result_item_id: AuctionResultItemId = field(
         metadata={
             "name": "AuctionResultItemID",
             "type": "Element",
             "required": True,
         }
     )
-    winning_bid_indicator: Optional[str] = field(
-        default=None,
+    winning_bid_indicator: str = field(
         metadata={
             "name": "WinningBidIndicator",
             "type": "Element",
             "required": True,
         }
     )
-    auction_result_party: Optional[AuctionResultParty] = field(
-        default=None,
+    auction_result_party: AuctionResultParty = field(
         metadata={
             "name": "AuctionResultParty",
             "type": "Element",
@@ -362,8 +343,7 @@ class AuctionResultDetail:
             "type": "Element",
         }
     )
-    list_of_auction_result_item: Optional[ListOfAuctionResultItem] = field(
-        default=None,
+    list_of_auction_result_item: ListOfAuctionResultItem = field(
         metadata={
             "name": "ListOfAuctionResultItem",
             "type": "Element",
@@ -386,7 +366,7 @@ class AuctionResultDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfAuctionResultDetail:
     auction_result_detail: List[AuctionResultDetail] = field(
         default_factory=list,
@@ -398,26 +378,23 @@ class ListOfAuctionResultDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class AuctionResult:
-    auction_result_header: Optional[AuctionResultHeader] = field(
-        default=None,
+    auction_result_header: AuctionResultHeader = field(
         metadata={
             "name": "AuctionResultHeader",
             "type": "Element",
             "required": True,
         }
     )
-    list_of_auction_result_detail: Optional[ListOfAuctionResultDetail] = field(
-        default=None,
+    list_of_auction_result_detail: ListOfAuctionResultDetail = field(
         metadata={
             "name": "ListOfAuctionResultDetail",
             "type": "Element",
             "required": True,
         }
     )
-    auction_result_summary: Optional[AuctionResultSummary] = field(
-        default=None,
+    auction_result_summary: AuctionResultSummary = field(
         metadata={
             "name": "AuctionResultSummary",
             "type": "Element",

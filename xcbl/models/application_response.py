@@ -12,10 +12,9 @@ from xcbl.models.order_request import (
 from xcbl.models.order_status_result import ErrorInfo
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ApplicationIdentification:
-    application_id: Optional[str] = field(
-        default=None,
+    application_id: str = field(
         metadata={
             "name": "ApplicationID",
             "type": "Element",
@@ -38,10 +37,9 @@ class ApplicationIdentification:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ApplicationResponseReceiver:
-    party: Optional[Party] = field(
-        default=None,
+    party: Party = field(
         metadata={
             "name": "Party",
             "type": "Element",
@@ -50,10 +48,9 @@ class ApplicationResponseReceiver:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ApplicationResponseSender:
-    party: Optional[Party] = field(
-        default=None,
+    party: Party = field(
         metadata={
             "name": "Party",
             "type": "Element",
@@ -62,10 +59,9 @@ class ApplicationResponseSender:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class DocumentReference:
-    reference: Optional[Reference] = field(
-        default=None,
+    reference: Reference = field(
         metadata={
             "name": "Reference",
             "type": "Element",
@@ -74,10 +70,9 @@ class DocumentReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ItemReference:
-    line_item_number_reference: Optional[LineItemNumberReference] = field(
-        default=None,
+    line_item_number_reference: LineItemNumberReference = field(
         metadata={
             "name": "LineItemNumberReference",
             "type": "Element",
@@ -93,10 +88,9 @@ class ItemReference:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class RespondingApplication:
-    application_identification: Optional[ApplicationIdentification] = field(
-        default=None,
+    application_identification: ApplicationIdentification = field(
         metadata={
             "name": "ApplicationIdentification",
             "type": "Element",
@@ -105,10 +99,9 @@ class RespondingApplication:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class SendingApplication:
-    application_identification: Optional[ApplicationIdentification] = field(
-        default=None,
+    application_identification: ApplicationIdentification = field(
         metadata={
             "name": "ApplicationIdentification",
             "type": "Element",
@@ -117,10 +110,9 @@ class SendingApplication:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ApplicationResponseDetail:
-    error_type_coded: Optional[str] = field(
-        default=None,
+    error_type_coded: str = field(
         metadata={
             "name": "ErrorTypeCoded",
             "type": "Element",
@@ -141,8 +133,7 @@ class ApplicationResponseDetail:
             "type": "Element",
         }
     )
-    error_info: Optional[ErrorInfo] = field(
-        default=None,
+    error_info: ErrorInfo = field(
         metadata={
             "name": "ErrorInfo",
             "type": "Element",
@@ -156,8 +147,7 @@ class ApplicationResponseDetail:
             "type": "Element",
         }
     )
-    list_of_name_value_set: Optional[ListOfNameValueSet] = field(
-        default=None,
+    list_of_name_value_set: ListOfNameValueSet = field(
         metadata={
             "name": "ListOfNameValueSet",
             "type": "Element",
@@ -166,26 +156,23 @@ class ApplicationResponseDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ApplicationResponseHeader:
-    application_response_issue_date: Optional[str] = field(
-        default=None,
+    application_response_issue_date: str = field(
         metadata={
             "name": "ApplicationResponseIssueDate",
             "type": "Element",
             "required": True,
         }
     )
-    application_response_type_coded: Optional[str] = field(
-        default=None,
+    application_response_type_coded: str = field(
         metadata={
             "name": "ApplicationResponseTypeCoded",
             "type": "Element",
             "required": True,
         }
     )
-    application_response_sender: Optional[ApplicationResponseSender] = field(
-        default=None,
+    application_response_sender: ApplicationResponseSender = field(
         metadata={
             "name": "ApplicationResponseSender",
             "type": "Element",
@@ -199,8 +186,7 @@ class ApplicationResponseHeader:
             "type": "Element",
         }
     )
-    application_response_receiver: Optional[ApplicationResponseReceiver] = field(
-        default=None,
+    application_response_receiver: ApplicationResponseReceiver = field(
         metadata={
             "name": "ApplicationResponseReceiver",
             "type": "Element",
@@ -214,8 +200,7 @@ class ApplicationResponseHeader:
             "type": "Element",
         }
     )
-    business_document_type_coded: Optional[str] = field(
-        default=None,
+    business_document_type_coded: str = field(
         metadata={
             "name": "BusinessDocumentTypeCoded",
             "type": "Element",
@@ -229,16 +214,14 @@ class ApplicationResponseHeader:
             "type": "Element",
         }
     )
-    document_reference: Optional[DocumentReference] = field(
-        default=None,
+    document_reference: DocumentReference = field(
         metadata={
             "name": "DocumentReference",
             "type": "Element",
             "required": True,
         }
     )
-    document_status_coded: Optional[str] = field(
-        default=None,
+    document_status_coded: str = field(
         metadata={
             "name": "DocumentStatusCoded",
             "type": "Element",
@@ -275,7 +258,7 @@ class ApplicationResponseHeader:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ListOfApplicationResponseDetail:
     application_response_detail: List[ApplicationResponseDetail] = field(
         default_factory=list,
@@ -287,10 +270,9 @@ class ListOfApplicationResponseDetail:
     )
 
 
-@dataclass
+@dataclass(kw_only=True)
 class ApplicationResponse:
-    application_response_header: Optional[ApplicationResponseHeader] = field(
-        default=None,
+    application_response_header: ApplicationResponseHeader = field(
         metadata={
             "name": "ApplicationResponseHeader",
             "type": "Element",

@@ -7,10 +7,9 @@ from xcbl.models.order_request import (
 from xcbl.models.order_response import OrderHeader
 
 
-@dataclass
+@dataclass(kw_only=True)
 class Order:
-    order_header: Optional[OrderHeader] = field(
-        default=None,
+    order_header: OrderHeader = field(
         metadata={
             "name": "OrderHeader",
             "type": "Element",
