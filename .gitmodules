@@ -4,3 +4,6 @@
 [submodule "netex/NeTEx"]
 	path = netex/NeTEx
 	url = git@github.com:NeTEx-CEN/NeTEx.git
+[submodule "crossref/schema"]
+	path = crossref/schema
+	url = https://gitlab.com/crossref/schema.git
