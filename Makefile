@@ -4,6 +4,7 @@ build-amadeus: schema = amadeus/schemas
 build-autosar: schema = autosar/schemas/AUTOSAR_00049_COMPACT.xsd
 build-bpmn: schema = bpmn/schemas/BPMN20.xsd
 build-common_types: schema = common_types/Common-Types/src/main/resources/schemas/nhinc/hl7
+build-crossref: schema = crossref/schema/schemas/crossref5.3.1.xsd
 build-datexii: schema = datexii/schemas
 build-ewp: schema = ewp/schemas/ewp-specs-api-discovery/stable-v5/manifest.xsd
 build-generali: schema = generali/schemas -r
@@ -21,6 +22,7 @@ builds = $\
 	build-autosar $\
 	build-bpmn $\
 	build-common_types $\
+	build-crossref $\
 	build-datexii $\
 	build-ewp $\
 	build-generali $\
@@ -38,6 +40,7 @@ tests = $\
 	test-autosar $\
 	test-bpmn $\
 	test-common_types $\
+	test-crossref $\
 	test-datexii $\
 	test-defxml $\
 	test-ewp $\
@@ -56,6 +59,7 @@ mypies = $\
 	mypy-autosar $\
 	mypy-bpmn $\
 	mypy-common_types $\
+	mypy-crossref $\
 	mypy-datexii $\
 	mypy-defxml $\
 	mypy-ewp $\
@@ -74,6 +78,7 @@ init-configs = $\
 	init-config-autosar $\
 	init-config-bpmn $\
 	init-config-common_types $\
+	init-config-crossref $\
 	init-config-datexii $\
 	init-config-defxml $\
 	init-config-ewp $\
@@ -93,6 +98,7 @@ amadeus: build-amadeus test-amadeus mypy-amadeus
 autosar: build-autosar test-autosar mypy-autosar
 bpmn: build-bpmn test-bpmn mypy-bpmn
 common_types: build-common_types test-common_types mypy-common_types
+crossref: build-crossref test-crossref mypy-crossref
 datexii: build-datexii test-datexii mypy-datexii
 defxml: test-defxml mypy-defxml
 ewp: build-ewp test-ewp mypy-ewp
