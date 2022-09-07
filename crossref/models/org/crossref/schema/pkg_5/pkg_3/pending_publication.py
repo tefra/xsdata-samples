@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import Abstract
-from crossref.models.org.crossref.access_indicators.program import Program
-from crossref.models.org.crossref.fundref.program import Program as ProgramProgram
-from crossref.models.org.crossref.relations.program import Program as ProgramProgram
+from crossref.models.org.crossref.access_indicators.program import Program as AccessIndicatorsProgram
+from crossref.models.org.crossref.fundref.program import Program as FundrefProgram
+from crossref.models.org.crossref.relations.program import Program as RelationsProgram
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.acceptance_date import AcceptanceDate
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.contributors import Contributors
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.crossmark import Crossmark
@@ -87,14 +87,14 @@ class PendingPublication:
             "type": "Element",
         }
     )
-    program: Optional[ProgramProgram] = field(
+    program: Optional[FundrefProgram] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/fundref.xsd",
         }
     )
-    program_1: Optional[Program] = field(
+    program_1: Optional[AccessIndicatorsProgram] = field(
         default=None,
         metadata={
             "name": "program",
@@ -102,7 +102,7 @@ class PendingPublication:
             "namespace": "http://www.crossref.org/AccessIndicators.xsd",
         }
     )
-    program_2: Optional[ProgramProgram] = field(
+    program_2: Optional[RelationsProgram] = field(
         default=None,
         metadata={
             "name": "program",

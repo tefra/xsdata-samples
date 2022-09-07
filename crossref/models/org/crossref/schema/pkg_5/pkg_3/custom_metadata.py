@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from crossref.models.org.crossref.access_indicators.program import Program
-from crossref.models.org.crossref.clinicaltrials.program import Program as ProgramProgram
-from crossref.models.org.crossref.fundref.program import Program as ProgramProgram
+from crossref.models.org.crossref.access_indicators.program import Program as AccessIndicatorsProgram
+from crossref.models.org.crossref.clinicaltrials.program import Program as ClinicaltrialsProgram
+from crossref.models.org.crossref.fundref.program import Program as FundrefProgram
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.assertion import Assertion
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
@@ -28,7 +28,7 @@ class CustomMetadata:
             "type": "Element",
         }
     )
-    program: List[ProgramProgram] = field(
+    program: List[FundrefProgram] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -37,7 +37,7 @@ class CustomMetadata:
             "sequential": True,
         }
     )
-    program_1: List[Program] = field(
+    program_1: List[AccessIndicatorsProgram] = field(
         default_factory=list,
         metadata={
             "name": "program",
@@ -47,7 +47,7 @@ class CustomMetadata:
             "sequential": True,
         }
     )
-    program_2: List[ProgramProgram] = field(
+    program_2: List[ClinicaltrialsProgram] = field(
         default_factory=list,
         metadata={
             "name": "program",
