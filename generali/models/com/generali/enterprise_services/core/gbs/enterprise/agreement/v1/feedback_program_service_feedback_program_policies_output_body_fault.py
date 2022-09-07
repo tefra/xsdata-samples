@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbs/enterprise/organisation/v1"
+__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbs/enterprise/agreement/v1"
 
 
 @dataclass
-class AgreementInterfaceNotifyAgreementOutputBodyFault:
+class FeedbackProgramServiceFeedbackProgramPoliciesOutputBodyFault:
     class Meta:
         global_type = False
 
