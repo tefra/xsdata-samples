@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import Abstract
-from crossref.models.org.crossref.access_indicators.program import Program
-from crossref.models.org.crossref.fundref.program import Program as ProgramProgram
+from crossref.models.org.crossref.access_indicators.program import Program as AccessIndicatorsProgram
+from crossref.models.org.crossref.fundref.program import Program as FundrefProgram
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.archive_locations import ArchiveLocations
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.contributors import Contributors
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.crossmark import Crossmark
@@ -94,14 +94,14 @@ class SeriesMetadata:
             "type": "Element",
         }
     )
-    program: Optional[ProgramProgram] = field(
+    program: Optional[FundrefProgram] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/fundref.xsd",
         }
     )
-    crossref_org_access_indicators_program: Optional[Program] = field(
+    crossref_org_access_indicators_program: Optional[AccessIndicatorsProgram] = field(
         default=None,
         metadata={
             "name": "program",

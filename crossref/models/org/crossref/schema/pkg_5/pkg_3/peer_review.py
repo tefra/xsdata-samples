@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from crossref.models.org.crossref.access_indicators.program import Program
-from crossref.models.org.crossref.relations.program import Program as ProgramProgram
+from crossref.models.org.crossref.access_indicators.program import Program as AccessIndicatorsProgram
+from crossref.models.org.crossref.relations.program import Program as RelationsProgram
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.competing_interest_statement import CompetingInterestStatement
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.contributors import Contributors
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.doi_data import DoiData
@@ -83,14 +83,14 @@ class PeerReview:
             "type": "Element",
         }
     )
-    program: Optional[Program] = field(
+    program: Optional[AccessIndicatorsProgram] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/AccessIndicators.xsd",
         }
     )
-    crossref_org_relations_program: Optional[ProgramProgram] = field(
+    crossref_org_relations_program: Optional[RelationsProgram] = field(
         default=None,
         metadata={
             "name": "program",
