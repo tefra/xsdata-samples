@@ -11,6 +11,8 @@ examples = [
     "schema/test-examples/5.3.1-stm-asf.xml",
     "schema/test-examples/journal.article5.3.1.xml",
 ]
+
+
 @pytest.mark.parametrize("example", examples)
 def test_bindings(example, xml_parser, xml_serializer):
     example_path = here.joinpath(example)
