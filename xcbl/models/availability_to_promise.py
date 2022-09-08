@@ -1,95 +1,23 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from xcbl.models.auction_create import (
+from xcbl.models.availability_to_promise_response import (
+    AtpcheckType,
+    Atpresponse,
+    AvailabilityDeliveryOption,
+    AvailabilityShipToParty,
+    AvailabilityToPromisePurpose,
+    RespondingParty,
+)
+from xcbl.models.shipping_schedule_response import TransportRouting
+from xcbl.models.sourcing_result import (
+    BaseItemDetail,
     DeliveryDetail,
     InitiatingParty,
     ListOfAttachment,
     ListOfReferenceCoded,
-    Party,
-    Reference,
     Transport,
 )
-from xcbl.models.availability_check_result import AvailabilityShipToParty
-from xcbl.models.goods_receipt import TransportRouting
-from xcbl.models.order_request import BaseItemDetail
-
-
-@dataclass(kw_only=True)
-class AtpcheckType:
-    class Meta:
-        name = "ATPCheckType"
-
-    atpcheck_type_coded: str = field(
-        metadata={
-            "name": "ATPCheckTypeCoded",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    atpcheck_type_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ATPCheckTypeCodedOther",
-            "type": "Element",
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class Atpresponse:
-    class Meta:
-        name = "ATPResponse"
-
-    availability_to_promise_response_coded: str = field(
-        metadata={
-            "name": "AvailabilityToPromiseResponseCoded",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    availability_to_promise_response_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "AvailabilityToPromiseResponseCodedOther",
-            "type": "Element",
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class AvailabilityDeliveryOption:
-    availability_delivery_option_coded: str = field(
-        metadata={
-            "name": "AvailabilityDeliveryOptionCoded",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    availability_delivery_option_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "AvailabilityDeliveryOptionCodedOther",
-            "type": "Element",
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class AvailabilityToPromisePurpose:
-    availability_to_promise_purpose_coded: str = field(
-        metadata={
-            "name": "AvailabilityToPromisePurposeCoded",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    availability_to_promise_purpose_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "AvailabilityToPromisePurposeCodedOther",
-            "type": "Element",
-        }
-    )
+from xcbl.models.trading_partner_response import Reference
 
 
 @dataclass(kw_only=True)
@@ -177,17 +105,6 @@ class AvailabilityToPromiseTransportDetail:
     transport: Transport = field(
         metadata={
             "name": "Transport",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class RespondingParty:
-    party: Party = field(
-        metadata={
-            "name": "Party",
             "type": "Element",
             "required": True,
         }

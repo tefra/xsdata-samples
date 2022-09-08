@@ -1,15 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from xcbl.models.auction_create import (
-    Currency,
-    Language,
-    ListOfAttachment,
-    ListOfDimension,
-    Reference,
-    Transport,
+from xcbl.models.price_check_result import (
+    LineItemAttachment,
+    PriceCheckShipToParty,
 )
-from xcbl.models.order_request import (
-    AccountCode,
+from xcbl.models.remittance_advice import SupplierParty
+from xcbl.models.shipping_schedule import AccountCode
+from xcbl.models.sourcing_result import (
     BuyerParty,
     CatalogReference,
     ConditionsOfSale,
@@ -21,16 +18,21 @@ from xcbl.models.order_request import (
     ItemIdentifiers,
     LineItemNum,
     LineItemType,
+    ListOfAttachment,
     ListOfItemReferences,
-    ListOfPartyCoded,
     ListOfQuantityCoded,
     MaxBackOrderQuantity,
     ParentItemNumber,
     TotalQuantity,
+    Transport,
 )
-from xcbl.models.order_status_result import LineItemAttachment
-from xcbl.models.payment_request_acknowledgment import SupplierParty
-from xcbl.models.price_check_result import PriceCheckShipToParty
+from xcbl.models.time_series_response import (
+    ListOfDimension,
+    ListOfPartyCoded,
+)
+from xcbl.models.trading_partner_organization_information import Currency
+from xcbl.models.trading_partner_response import Reference
+from xcbl.models.trading_partner_user_information import Language
 
 
 @dataclass(kw_only=True)

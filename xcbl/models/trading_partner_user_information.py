@@ -1,17 +1,5 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from xcbl.models.auction_create import (
-    CorrespondenceLanguage,
-    Country,
-    Pobox,
-    Region,
-    Timezone,
-    ValidityDates,
-)
-from xcbl.models.trading_partner_user_delete import (
-    TradingPartnerOrganizationReference,
-    UserId,
-)
 
 
 @dataclass(kw_only=True)
@@ -27,6 +15,45 @@ class AcademicTitle:
         default=None,
         metadata={
             "name": "AcademicTitleCodedOther",
+            "type": "Element",
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class Agency:
+    agency_coded: str = field(
+        metadata={
+            "name": "AgencyCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    agency_coded_other: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "AgencyCodedOther",
+            "type": "Element",
+        }
+    )
+    agency_description: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "AgencyDescription",
+            "type": "Element",
+        }
+    )
+    code_list_identifier_coded: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "CodeListIdentifierCoded",
+            "type": "Element",
+        }
+    )
+    code_list_identifier_coded_other: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "CodeListIdentifierCodedOther",
             "type": "Element",
         }
     )
@@ -69,6 +96,24 @@ class ContactRelationType:
 
 
 @dataclass(kw_only=True)
+class Country:
+    country_coded: str = field(
+        metadata={
+            "name": "CountryCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    country_coded_other: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "CountryCodedOther",
+            "type": "Element",
+        }
+    )
+
+
+@dataclass(kw_only=True)
 class DateFormat:
     date_format_coded: str = field(
         metadata={
@@ -87,6 +132,65 @@ class DateFormat:
 
 
 @dataclass(kw_only=True)
+class Language:
+    language_dependent: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "LanguageDependent",
+            "type": "Attribute",
+        }
+    )
+    language_coded: str = field(
+        metadata={
+            "name": "LanguageCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    language_coded_other: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "LanguageCodedOther",
+            "type": "Element",
+        }
+    )
+    locale_coded: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "LocaleCoded",
+            "type": "Element",
+        }
+    )
+    locale_coded_other: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "LocaleCodedOther",
+            "type": "Element",
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class Pobox:
+    class Meta:
+        name = "POBox"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        }
+    )
+    pobox_postal_code: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "POBoxPostalCode",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass(kw_only=True)
 class PersonCommunicationType:
     person_communication_type_coded: str = field(
         metadata={
@@ -100,6 +204,42 @@ class PersonCommunicationType:
             "name": "PersonCommunicationTypeCodedOther",
             "type": "Element",
             "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class Region:
+    region_coded: str = field(
+        metadata={
+            "name": "RegionCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    region_coded_other: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "RegionCodedOther",
+            "type": "Element",
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class Timezone:
+    timezone_coded: str = field(
+        metadata={
+            "name": "TimezoneCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    timezone_coded_other: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "TimezoneCodedOther",
+            "type": "Element",
         }
     )
 
@@ -136,6 +276,26 @@ class TradingPartnerUserPurpose:
         metadata={
             "name": "TradingPartnerUserPurposeCodedOther",
             "type": "Element",
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class UserId:
+    class Meta:
+        name = "UserID"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        }
+    )
+    user_short_id: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "UserShortID",
+            "type": "Attribute",
         }
     )
 
@@ -179,6 +339,24 @@ class UserStatus:
         metadata={
             "name": "UserStatusCodedOther",
             "type": "Element",
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class ValidityDates:
+    start_date: str = field(
+        metadata={
+            "name": "StartDate",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    end_date: str = field(
+        metadata={
+            "name": "EndDate",
+            "type": "Element",
+            "required": True,
         }
     )
 
@@ -241,6 +419,35 @@ class CommunicationDetail:
 
 
 @dataclass(kw_only=True)
+class CorrespondenceLanguage:
+    language: Language = field(
+        metadata={
+            "name": "Language",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class Identifier:
+    agency: Agency = field(
+        metadata={
+            "name": "Agency",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    ident: str = field(
+        metadata={
+            "name": "Ident",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
 class ListOfCertificatePurpose:
     certificate_purpose: List[CertificatePurpose] = field(
         default_factory=list,
@@ -286,6 +493,41 @@ class PersonTimezone:
 
 
 @dataclass(kw_only=True)
+class PrimaryId:
+    class Meta:
+        name = "PrimaryID"
+
+    agency: Agency = field(
+        metadata={
+            "name": "Agency",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    ident: str = field(
+        metadata={
+            "name": "Ident",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    short_id: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "ShortID",
+            "type": "Element",
+        }
+    )
+    primary_idurn: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "PrimaryIDURN",
+            "type": "Element",
+        }
+    )
+
+
+@dataclass(kw_only=True)
 class UserAdministration:
     validity_dates: Optional[ValidityDates] = field(
         default=None,
@@ -316,6 +558,20 @@ class ListOfCommunicationDetail:
 
 
 @dataclass(kw_only=True)
+class TradingPartnerId:
+    class Meta:
+        name = "TradingPartnerID"
+
+    identifier: Identifier = field(
+        metadata={
+            "name": "Identifier",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
 class X509Certificate:
     list_of_certificate_purpose: List[ListOfCertificatePurpose] = field(
         default_factory=list,
@@ -336,6 +592,21 @@ class X509Certificate:
         metadata={
             "name": "X509CertificateInfo",
             "type": "Element",
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class ListOfTradingPartnerId:
+    class Meta:
+        name = "ListOfTradingPartnerID"
+
+    trading_partner_id: List[TradingPartnerId] = field(
+        default_factory=list,
+        metadata={
+            "name": "TradingPartnerID",
+            "type": "Element",
+            "min_occurs": 1,
         }
     )
 
@@ -482,6 +753,24 @@ class PersonAddress:
 
 
 @dataclass(kw_only=True)
+class Identifications:
+    primary_id: Optional[PrimaryId] = field(
+        default=None,
+        metadata={
+            "name": "PrimaryID",
+            "type": "Element",
+        }
+    )
+    list_of_trading_partner_id: Optional[ListOfTradingPartnerId] = field(
+        default=None,
+        metadata={
+            "name": "ListOfTradingPartnerID",
+            "type": "Element",
+        }
+    )
+
+
+@dataclass(kw_only=True)
 class PersonProfile:
     title: Optional[Title] = field(
         default=None,
@@ -579,6 +868,17 @@ class PersonProfile:
         metadata={
             "name": "GeneralNotes",
             "type": "Element",
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class TradingPartnerOrganizationReference:
+    identifications: Identifications = field(
+        metadata={
+            "name": "Identifications",
+            "type": "Element",
+            "required": True,
         }
     )
 

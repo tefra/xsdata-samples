@@ -1,17 +1,13 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from xcbl.models.auction_create import (
+from xcbl.models.trading_partner_user_information import (
     Country,
-    Currency,
+    Identifications,
     Language,
     Pobox,
     Region,
     Timezone,
     ValidityDates,
-)
-from xcbl.models.trading_partner_organization_delete import (
-    Identifications,
-    TradingPartnerIdentifications,
 )
 
 
@@ -28,6 +24,24 @@ class AddressType:
         default=None,
         metadata={
             "name": "AddressTypeCodedOther",
+            "type": "Element",
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class Currency:
+    currency_coded: str = field(
+        metadata={
+            "name": "CurrencyCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    currency_coded_other: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "CurrencyCodedOther",
             "type": "Element",
         }
     )
@@ -134,6 +148,17 @@ class OrganizationLanguage:
 
 @dataclass(kw_only=True)
 class ParentTradingPartnerIdentifications:
+    identifications: Identifications = field(
+        metadata={
+            "name": "Identifications",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class TradingPartnerIdentifications:
     identifications: Identifications = field(
         metadata={
             "name": "Identifications",

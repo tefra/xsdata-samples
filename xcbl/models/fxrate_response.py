@@ -1,30 +1,28 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from xcbl.models.auction_create import (
-    Language,
+from xcbl.models.payment_status_response import (
+    CreditAmount,
+    DebitAmount,
+    ListOfOtherPaymentInfo,
+    ListOfPaymentException,
+    OriginatingFinancialInstitution,
+    SendingParty,
+    SettlementAmount,
+)
+from xcbl.models.remittance_advice import (
+    PayeeParty,
+    PayerParty,
+)
+from xcbl.models.request_for_quotation import CardInfo
+from xcbl.models.sourcing_result import (
     ListOfDateCoded,
     ListOfReference,
-    Reference,
+    MonetaryValue,
     ReferenceCurrency,
     TargetCurrency,
 )
-from xcbl.models.order_request import (
-    CardInfo,
-    MonetaryValue,
-)
-from xcbl.models.payment_request_acknowledgment import (
-    CreditAmount,
-    DebitAmount,
-    ListOfPaymentException,
-    OriginatingFinancialInstitution,
-    PayeeParty,
-    PayerParty,
-    SettlementAmount,
-)
-from xcbl.models.payment_status_response import (
-    ListOfOtherPaymentInfo,
-    SendingParty,
-)
+from xcbl.models.trading_partner_response import Reference
+from xcbl.models.trading_partner_user_information import Language
 
 
 @dataclass(kw_only=True)

@@ -1,20 +1,18 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from xcbl.models.auction_create import (
-    DeliveryDetail,
-    Language,
-    ListOfAttachment,
-    ListOfDimension,
-    Purpose,
-    Reference,
-    TermsOfDelivery,
+from xcbl.models.request_for_quotation import (
+    PaymentInstructions,
+    RequestQuoteReference,
 )
-from xcbl.models.goods_receipt import TransportRouting
-from xcbl.models.order_request import (
+from xcbl.models.shipping_schedule import ListOfPackageDetail
+from xcbl.models.shipping_schedule_response import TransportRouting
+from xcbl.models.sourcing_create import QuoteCurrency
+from xcbl.models.sourcing_result import (
     CatalogReference,
     ConditionsOfSale,
     CountryOfDestination,
     CountryOfOrigin,
+    DeliveryDetail,
     FinalRecipient,
     HazardousMaterials,
     ItemContractReferences,
@@ -22,23 +20,26 @@ from xcbl.models.order_request import (
     LineItemNum,
     LineItemType,
     ListOfAllowOrCharge,
+    ListOfAttachment,
     ListOfItemReferences,
-    ListOfPackageDetail,
-    ListOfPartyCoded,
     ListOfQuantityCoded,
     ListOfStructuredNote,
     MaxBackOrderQuantity,
+    OrderParty,
     ParentItemNumber,
-    PaymentInstructions,
     PricingDetail,
-    TaxReference,
+    TaxLocation,
+    TaxTypeCodedOther,
+    TermsOfDelivery,
     TotalQuantity,
 )
-from xcbl.models.request_for_quotation import (
-    OrderParty,
-    RequestQuoteReference,
+from xcbl.models.sourcing_result_response import Purpose
+from xcbl.models.time_series_response import (
+    ListOfDimension,
+    ListOfPartyCoded,
 )
-from xcbl.models.sourcing_create import QuoteCurrency
+from xcbl.models.trading_partner_response import Reference
+from xcbl.models.trading_partner_user_information import Language
 
 
 @dataclass(kw_only=True)
@@ -217,17 +218,6 @@ class QuotePricingDetail:
 
 
 @dataclass(kw_only=True)
-class QuoteTax:
-    tax_reference: TaxReference = field(
-        metadata={
-            "name": "TaxReference",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
 class QuoteTermsOfDelivery:
     terms_of_delivery: TermsOfDelivery = field(
         metadata={
@@ -256,6 +246,136 @@ class QuoteTransport:
             "name": "TransportRouting",
             "type": "Element",
             "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class TaxReference:
+    tax_function_qualifier_coded: str = field(
+        metadata={
+            "name": "TaxFunctionQualifierCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    tax_function_qualifier_coded_other: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "TaxFunctionQualifierCodedOther",
+            "type": "Element",
+        }
+    )
+    tax_category_coded: str = field(
+        metadata={
+            "name": "TaxCategoryCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    tax_category_coded_other: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "TaxCategoryCodedOther",
+            "type": "Element",
+        }
+    )
+    reason_tax_exempt_coded: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "ReasonTaxExemptCoded",
+            "type": "Element",
+        }
+    )
+    reason_tax_exempt_coded_other: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "ReasonTaxExemptCodedOther",
+            "type": "Element",
+        }
+    )
+    tax_type_coded: str = field(
+        metadata={
+            "name": "TaxTypeCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    tax_type_coded_other: Optional[TaxTypeCodedOther] = field(
+        default=None,
+        metadata={
+            "name": "TaxTypeCodedOther",
+            "type": "Element",
+        }
+    )
+    tax_percent: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "TaxPercent",
+            "type": "Element",
+        }
+    )
+    tax_payment_method_coded: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "TaxPaymentMethodCoded",
+            "type": "Element",
+        }
+    )
+    tax_payment_method_coded_other: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "TaxPaymentMethodCodedOther",
+            "type": "Element",
+        }
+    )
+    taxable_amount: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "TaxableAmount",
+            "type": "Element",
+        }
+    )
+    taxable_amount_in_tax_accounting_currency: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "TaxableAmountInTaxAccountingCurrency",
+            "type": "Element",
+        }
+    )
+    tax_amount: str = field(
+        metadata={
+            "name": "TaxAmount",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    tax_amount_in_tax_accounting_currency: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "TaxAmountInTaxAccountingCurrency",
+            "type": "Element",
+        }
+    )
+    tax_location: Optional[TaxLocation] = field(
+        default=None,
+        metadata={
+            "name": "TaxLocation",
+            "type": "Element",
+        }
+    )
+    tax_treatment_coded: str = field(
+        metadata={
+            "name": "TaxTreatmentCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    tax_treatment_coded_other: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "TaxTreatmentCodedOther",
+            "type": "Element",
         }
     )
 
@@ -418,6 +538,17 @@ class QuoteItemDetail:
         metadata={
             "name": "QuoteItemParty",
             "type": "Element",
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class QuoteTax:
+    tax_reference: TaxReference = field(
+        metadata={
+            "name": "TaxReference",
+            "type": "Element",
+            "required": True,
         }
     )
 

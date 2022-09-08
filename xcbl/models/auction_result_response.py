@@ -1,11 +1,19 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from xcbl.models.auction_create import (
-    Language,
-    Purpose,
-    Reference,
-)
-from xcbl.models.auction_result import AuctionCreateReference
+from xcbl.models.sourcing_result_response import Purpose
+from xcbl.models.trading_partner_response import Reference
+from xcbl.models.trading_partner_user_information import Language
+
+
+@dataclass(kw_only=True)
+class AuctionCreateReference:
+    reference: Reference = field(
+        metadata={
+            "name": "Reference",
+            "type": "Element",
+            "required": True,
+        }
+    )
 
 
 @dataclass(kw_only=True)

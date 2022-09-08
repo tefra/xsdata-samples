@@ -1,13 +1,11 @@
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import List, Optional
-from xcbl.models.auction_create import (
-    Currency,
-    Identifier,
-    Party,
-)
-from xcbl.models.order_request import CountryOfOrigin
 from xcbl.models.sourcing_create import AttributeName
+from xcbl.models.sourcing_result import CountryOfOrigin
+from xcbl.models.time_series_response import Party
+from xcbl.models.trading_partner_organization_information import Currency
+from xcbl.models.trading_partner_user_information import Identifier
 
 
 class ActionValue(Enum):

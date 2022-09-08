@@ -1,15 +1,13 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from xcbl.models.auction_create import (
-    Party,
-    Reference,
-)
-from xcbl.models.order_request import (
+from xcbl.models.price_check_result import ErrorInfo
+from xcbl.models.sourcing_result import (
     LineItemNumberReference,
     ListOfNameValueSet,
     ListOfStructuredNote,
 )
-from xcbl.models.order_status_result import ErrorInfo
+from xcbl.models.time_series_response import Party
+from xcbl.models.trading_partner_response import Reference
 
 
 @dataclass(kw_only=True)

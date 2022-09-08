@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from xcbl.models.order_request import (
-    OrderDetail,
+from xcbl.models.order_request import OrderDetail
+from xcbl.models.order_response import (
+    OrderHeader,
     OrderSummary,
 )
-from xcbl.models.order_response import OrderHeader
 
 
 @dataclass(kw_only=True)

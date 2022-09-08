@@ -1,19 +1,17 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from xcbl.models.auction_create import (
-    Language,
-    ListOfReference,
-    ValidityDates,
-)
-from xcbl.models.payment_request_acknowledgment import (
-    PayerParty,
-    SettlementAmount,
-)
 from xcbl.models.payment_status_response import (
     PaymentDates,
     PaymentRequestId,
     PaymentStatusRequestId,
     PaymentStatusRequestSummary,
+    SettlementAmount,
+)
+from xcbl.models.remittance_advice import PayerParty
+from xcbl.models.sourcing_result import ListOfReference
+from xcbl.models.trading_partner_user_information import (
+    Language,
+    ValidityDates,
 )
 
 

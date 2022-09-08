@@ -1,37 +1,9 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
-from xcbl.models.trading_partner_organization_delete import Identifications
-
-
-@dataclass(kw_only=True)
-class UserId:
-    class Meta:
-        name = "UserID"
-
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        }
-    )
-    user_short_id: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "UserShortID",
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class TradingPartnerOrganizationReference:
-    identifications: Identifications = field(
-        metadata={
-            "name": "Identifications",
-            "type": "Element",
-            "required": True,
-        }
-    )
+from typing import List
+from xcbl.models.trading_partner_user_information import (
+    TradingPartnerOrganizationReference,
+    UserId,
+)
 
 
 @dataclass(kw_only=True)

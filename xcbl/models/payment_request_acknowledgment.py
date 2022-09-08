@@ -1,69 +1,25 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from xcbl.models.auction_create import (
-    CorrespondenceLanguage,
-    Language,
-    ListOfIdentifier,
-    ListOfValues,
-    NameAddress,
-    NameValuePair,
-    OrderContact,
-    OtherContacts,
-    Party,
-    PartyId,
-    RateOfExchangeDetail,
-    ReceivingContact,
-    Reference,
-    ShippingContact,
+from xcbl.models.payment_status_response import (
+    CreditAmount,
+    DebitAmount,
+    ListOfPaymentException,
+    OriginatingFinancialInstitution,
+    ReceivingFinancialInstitution,
+    SettlementAmount,
 )
-from xcbl.models.order_request import (
+from xcbl.models.remittance_advice import (
+    EncryptedInfo,
+    ListOfRateOfExchangeDetail,
+    PaymentParty,
+    PaymentRequestSummary,
+)
+from xcbl.models.request_for_quotation import (
     AccountDetail,
-    BillToParty,
-    BuyerParty,
     FinancialInstitution,
-    ListOfPartyCoded,
-    MonetaryValue,
 )
-
-
-@dataclass(kw_only=True)
-class EncryptedField:
-    sequence: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "Sequence",
-            "type": "Element",
-        }
-    )
-    encrypted_data: str = field(
-        metadata={
-            "name": "EncryptedData",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class CreditAmount:
-    monetary_value: MonetaryValue = field(
-        metadata={
-            "name": "MonetaryValue",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class DebitAmount:
-    monetary_value: MonetaryValue = field(
-        metadata={
-            "name": "MonetaryValue",
-            "type": "Element",
-            "required": True,
-        }
-    )
+from xcbl.models.trading_partner_response import Reference
+from xcbl.models.trading_partner_user_information import Language
 
 
 @dataclass(kw_only=True)
@@ -102,158 +58,6 @@ class FiaccountData:
 
 
 @dataclass(kw_only=True)
-class FiaccountDetail:
-    class Meta:
-        name = "FIAccountDetail"
-
-    account_detail: AccountDetail = field(
-        metadata={
-            "name": "AccountDetail",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    financial_institution: FinancialInstitution = field(
-        metadata={
-            "name": "FinancialInstitution",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class ListOfEncryptedField:
-    encrypted_field: List[EncryptedField] = field(
-        default_factory=list,
-        metadata={
-            "name": "EncryptedField",
-            "type": "Element",
-            "min_occurs": 1,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class ListOfRateOfExchangeDetail:
-    rate_of_exchange_detail: List[RateOfExchangeDetail] = field(
-        default_factory=list,
-        metadata={
-            "name": "RateOfExchangeDetail",
-            "type": "Element",
-            "min_occurs": 1,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class ListOfSummaryItems:
-    list_of_values: ListOfValues = field(
-        metadata={
-            "name": "ListOfValues",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class OffendingPaymentElement:
-    name_value_pair: NameValuePair = field(
-        metadata={
-            "name": "NameValuePair",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class PayeeParty:
-    party: Party = field(
-        metadata={
-            "name": "Party",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class PayerParty:
-    party_id: PartyId = field(
-        metadata={
-            "name": "PartyID",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    list_of_identifier: Optional[ListOfIdentifier] = field(
-        default=None,
-        metadata={
-            "name": "ListOfIdentifier",
-            "type": "Element",
-        }
-    )
-    mdfbusiness: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "MDFBusiness",
-            "type": "Element",
-        }
-    )
-    name_address: Optional[NameAddress] = field(
-        default=None,
-        metadata={
-            "name": "NameAddress",
-            "type": "Element",
-        }
-    )
-    order_contact: Optional[OrderContact] = field(
-        default=None,
-        metadata={
-            "name": "OrderContact",
-            "type": "Element",
-        }
-    )
-    receiving_contact: Optional[ReceivingContact] = field(
-        default=None,
-        metadata={
-            "name": "ReceivingContact",
-            "type": "Element",
-        }
-    )
-    shipping_contact: Optional[ShippingContact] = field(
-        default=None,
-        metadata={
-            "name": "ShippingContact",
-            "type": "Element",
-        }
-    )
-    other_contacts: Optional[OtherContacts] = field(
-        default=None,
-        metadata={
-            "name": "OtherContacts",
-            "type": "Element",
-        }
-    )
-    correspondence_language: Optional[CorrespondenceLanguage] = field(
-        default=None,
-        metadata={
-            "name": "CorrespondenceLanguage",
-            "type": "Element",
-        }
-    )
-    certificate_authority: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "CertificateAuthority",
-            "type": "Element",
-        }
-    )
-
-
-@dataclass(kw_only=True)
 class PaymentDocumentId:
     class Meta:
         name = "PaymentDocumentID"
@@ -261,6 +65,17 @@ class PaymentDocumentId:
     reference: Reference = field(
         metadata={
             "name": "Reference",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class PaymentRequestAcknSummary:
+    payment_request_summary: PaymentRequestSummary = field(
+        metadata={
+            "name": "PaymentRequestSummary",
             "type": "Element",
             "required": True,
         }
@@ -282,57 +97,6 @@ class PaymentRequestIdreference:
 
 
 @dataclass(kw_only=True)
-class SettlementAmount:
-    monetary_value: MonetaryValue = field(
-        metadata={
-            "name": "MonetaryValue",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class SupplierParty:
-    party: Party = field(
-        metadata={
-            "name": "Party",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class TotalSettlementAmount:
-    monetary_value: MonetaryValue = field(
-        metadata={
-            "name": "MonetaryValue",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class EncryptedInfo:
-    certificate_authority: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "CertificateAuthority",
-            "type": "Element",
-        }
-    )
-    list_of_encrypted_field: ListOfEncryptedField = field(
-        metadata={
-            "name": "ListOfEncryptedField",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
 class ListOfFiaccount:
     class Meta:
         name = "ListOfFIAccount"
@@ -343,95 +107,6 @@ class ListOfFiaccount:
             "name": "FIAccountData",
             "type": "Element",
             "min_occurs": 1,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class OriginatingFinancialInstitution:
-    fiaccount_detail: FiaccountDetail = field(
-        metadata={
-            "name": "FIAccountDetail",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class PaymentException:
-    payment_exception_coded: str = field(
-        metadata={
-            "name": "PaymentExceptionCoded",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    payment_exception_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "PaymentExceptionCodedOther",
-            "type": "Element",
-        }
-    )
-    payment_exception_note: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "PaymentExceptionNote",
-            "type": "Element",
-        }
-    )
-    offending_payment_element: Optional[OffendingPaymentElement] = field(
-        default=None,
-        metadata={
-            "name": "OffendingPaymentElement",
-            "type": "Element",
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class PaymentParty:
-    payer_party: PayerParty = field(
-        metadata={
-            "name": "PayerParty",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    payee_party: PayeeParty = field(
-        metadata={
-            "name": "PayeeParty",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    buyer_party: Optional[BuyerParty] = field(
-        default=None,
-        metadata={
-            "name": "BuyerParty",
-            "type": "Element",
-        }
-    )
-    supplier_party: Optional[SupplierParty] = field(
-        default=None,
-        metadata={
-            "name": "SupplierParty",
-            "type": "Element",
-        }
-    )
-    bill_to_party: Optional[BillToParty] = field(
-        default=None,
-        metadata={
-            "name": "BillToParty",
-            "type": "Element",
-        }
-    )
-    list_of_party_coded: Optional[ListOfPartyCoded] = field(
-        default=None,
-        metadata={
-            "name": "ListOfPartyCoded",
-            "type": "Element",
         }
     )
 
@@ -504,81 +179,12 @@ class PaymentRequestAcknHeader:
 
 
 @dataclass(kw_only=True)
-class ReceivingFinancialInstitution:
-    fiaccount_detail: FiaccountDetail = field(
-        metadata={
-            "name": "FIAccountDetail",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
 class ListOfFinancialInstitutions:
     list_of_fiaccount: ListOfFiaccount = field(
         metadata={
             "name": "ListOfFIAccount",
             "type": "Element",
             "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class ListOfPaymentException:
-    payment_exception: List[PaymentException] = field(
-        default_factory=list,
-        metadata={
-            "name": "PaymentException",
-            "type": "Element",
-            "min_occurs": 1,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class PaymentRequestSummary:
-    total_payment_documents: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "TotalPaymentDocuments",
-            "type": "Element",
-        }
-    )
-    total_line_item: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "TotalLineItem",
-            "type": "Element",
-        }
-    )
-    total_settlement_amount: Optional[TotalSettlementAmount] = field(
-        default=None,
-        metadata={
-            "name": "TotalSettlementAmount",
-            "type": "Element",
-        }
-    )
-    encrypted_info: Optional[EncryptedInfo] = field(
-        default=None,
-        metadata={
-            "name": "EncryptedInfo",
-            "type": "Element",
-        }
-    )
-    list_of_summary_items: Optional[ListOfSummaryItems] = field(
-        default=None,
-        metadata={
-            "name": "ListOfSummaryItems",
-            "type": "Element",
-        }
-    )
-    summary_note: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "SummaryNote",
-            "type": "Element",
         }
     )
 
@@ -604,17 +210,6 @@ class FinancialInstitutionDetail:
         metadata={
             "name": "ListOfFinancialInstitutions",
             "type": "Element",
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class PaymentRequestAcknSummary:
-    payment_request_summary: PaymentRequestSummary = field(
-        metadata={
-            "name": "PaymentRequestSummary",
-            "type": "Element",
-            "required": True,
         }
     )
 

@@ -1,21 +1,21 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from xcbl.models.auction_create import (
-    Language,
-    ListOfAttachment,
-    Party,
-    Reference,
-)
-from xcbl.models.invoice import InvoiceType
-from xcbl.models.order_request import (
+from xcbl.models.price_check_result import ErrorInfo
+from xcbl.models.remittance_advice import InvoiceType
+from xcbl.models.sourcing_result import (
     BillToParty,
     LineItemNum,
+    ListOfAttachment,
     ListOfNameValueSet,
-    ListOfPartyCoded,
     ListOfStructuredNote,
     RemitToParty,
 )
-from xcbl.models.order_status_result import ErrorInfo
+from xcbl.models.time_series_response import (
+    ListOfPartyCoded,
+    Party,
+)
+from xcbl.models.trading_partner_response import Reference
+from xcbl.models.trading_partner_user_information import Language
 
 
 @dataclass(kw_only=True)

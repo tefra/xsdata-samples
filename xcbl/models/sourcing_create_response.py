@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from xcbl.models.auction_create import (
-    Language,
+from xcbl.models.sourcing_result_response import (
     Purpose,
-    Reference,
+    SourcingCreateReference,
 )
+from xcbl.models.trading_partner_user_information import Language
 
 
 @dataclass(kw_only=True)
@@ -51,17 +51,6 @@ class ListOfSourcingItemComponentResponse:
             "name": "SourcingItemComponentResponse",
             "type": "Element",
             "min_occurs": 1,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class SourcingCreateReference:
-    reference: Reference = field(
-        metadata={
-            "name": "Reference",
-            "type": "Element",
-            "required": True,
         }
     )
 

@@ -1,26 +1,26 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from xcbl.models.auction_create import (
-    Identifier,
-    Language,
-    ListOfDateCoded,
-    ListOfReference,
-    RateOfExchangeDetail,
-    Reference,
-)
-from xcbl.models.order_request import (
-    CardInfo,
-    ListOfNameValuePair,
-)
-from xcbl.models.payment_request_acknowledgment import (
-    CreditAmount,
-    DebitAmount,
-    ListOfPaymentException,
-    OriginatingFinancialInstitution,
+from xcbl.models.remittance_advice import (
     PayerParty,
     PaymentParty,
-    ReceivingFinancialInstitution,
-    SettlementAmount,
+)
+from xcbl.models.request_for_quotation import (
+    AccountDetail,
+    CardInfo,
+    FinancialInstitution,
+)
+from xcbl.models.sourcing_result import (
+    ListOfDateCoded,
+    ListOfNameValuePair,
+    ListOfReference,
+    MonetaryValue,
+    NameValuePair,
+    RateOfExchangeDetail,
+)
+from xcbl.models.trading_partner_response import Reference
+from xcbl.models.trading_partner_user_information import (
+    Identifier,
+    Language,
 )
 
 
@@ -31,6 +31,49 @@ class PaymentStatusRequestSummary:
         metadata={
             "name": "TotalNumberPaymentRequests",
             "type": "Element",
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class CreditAmount:
+    monetary_value: MonetaryValue = field(
+        metadata={
+            "name": "MonetaryValue",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class DebitAmount:
+    monetary_value: MonetaryValue = field(
+        metadata={
+            "name": "MonetaryValue",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class FiaccountDetail:
+    class Meta:
+        name = "FIAccountDetail"
+
+    account_detail: AccountDetail = field(
+        metadata={
+            "name": "AccountDetail",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    financial_institution: FinancialInstitution = field(
+        metadata={
+            "name": "FinancialInstitution",
+            "type": "Element",
+            "required": True,
         }
     )
 
@@ -69,10 +112,10 @@ class ListOfPaymentReferences:
 
 
 @dataclass(kw_only=True)
-class ListOfPaymentResponse:
-    list_of_payment_exception: ListOfPaymentException = field(
+class OffendingPaymentElement:
+    name_value_pair: NameValuePair = field(
         metadata={
-            "name": "ListOfPaymentException",
+            "name": "NameValuePair",
             "type": "Element",
             "required": True,
         }
@@ -158,6 +201,28 @@ class SendingParty:
 
 
 @dataclass(kw_only=True)
+class SettlementAmount:
+    monetary_value: MonetaryValue = field(
+        metadata={
+            "name": "MonetaryValue",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class OriginatingFinancialInstitution:
+    fiaccount_detail: FiaccountDetail = field(
+        metadata={
+            "name": "FIAccountDetail",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
 class PaymentDates:
     payment_due_date: Optional[str] = field(
         default=None,
@@ -184,6 +249,38 @@ class PaymentDates:
         default=None,
         metadata={
             "name": "ListOfPaymentDates",
+            "type": "Element",
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class PaymentException:
+    payment_exception_coded: str = field(
+        metadata={
+            "name": "PaymentExceptionCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    payment_exception_coded_other: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "PaymentExceptionCodedOther",
+            "type": "Element",
+        }
+    )
+    payment_exception_note: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "PaymentExceptionNote",
+            "type": "Element",
+        }
+    )
+    offending_payment_element: Optional[OffendingPaymentElement] = field(
+        default=None,
+        metadata={
+            "name": "OffendingPaymentElement",
             "type": "Element",
         }
     )
@@ -231,6 +328,40 @@ class PaymentStatusResponseHeader:
         metadata={
             "name": "GeneralNote",
             "type": "Element",
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class ReceivingFinancialInstitution:
+    fiaccount_detail: FiaccountDetail = field(
+        metadata={
+            "name": "FIAccountDetail",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class ListOfPaymentException:
+    payment_exception: List[PaymentException] = field(
+        default_factory=list,
+        metadata={
+            "name": "PaymentException",
+            "type": "Element",
+            "min_occurs": 1,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class ListOfPaymentResponse:
+    list_of_payment_exception: ListOfPaymentException = field(
+        metadata={
+            "name": "ListOfPaymentException",
+            "type": "Element",
+            "required": True,
         }
     )
 

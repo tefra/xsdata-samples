@@ -1,26 +1,28 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from xcbl.models.auction_create import (
-    Currency,
+from xcbl.models.auction_result_response import AuctionCreateReference
+from xcbl.models.sourcing_result import (
+    BaseItemDetail,
     DeliveryDetail,
     InitiatingParty,
-    Language,
-    ListOfAttachment,
-    ListOfMvbvariables,
-    ListOfReferenceCoded,
-    OrderDates,
-    Purpose,
-    Reference,
-)
-from xcbl.models.order_request import (
-    BaseItemDetail,
     LineItemAttachments,
+    ListOfAttachment,
     ListOfNameValueSet,
+    ListOfReferenceCoded,
     ListOfStructuredNote,
+    OrderDates,
+    OrderParty,
     PricingDetail,
     RoundTripInformation,
 )
-from xcbl.models.request_for_quotation import OrderParty
+from xcbl.models.sourcing_result_response import Purpose
+from xcbl.models.time_series_response import (
+    MaximumValue,
+    MinimumValue,
+)
+from xcbl.models.trading_partner_organization_information import Currency
+from xcbl.models.trading_partner_response import Reference
+from xcbl.models.trading_partner_user_information import Language
 
 
 @dataclass(kw_only=True)
@@ -44,17 +46,6 @@ class AuctionResultSummary:
         metadata={
             "name": "TotalNumParticipants",
             "type": "Element",
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class AuctionCreateReference:
-    reference: Reference = field(
-        metadata={
-            "name": "Reference",
-            "type": "Element",
-            "required": True,
         }
     )
 
@@ -91,73 +82,6 @@ class AuctionResultId:
             "name": "Reference",
             "type": "Element",
             "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class AuctionResultItem:
-    base_item_detail: BaseItemDetail = field(
-        metadata={
-            "name": "BaseItemDetail",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    pricing_detail: Optional[PricingDetail] = field(
-        default=None,
-        metadata={
-            "name": "PricingDetail",
-            "type": "Element",
-        }
-    )
-    delivery_detail: Optional[DeliveryDetail] = field(
-        default=None,
-        metadata={
-            "name": "DeliveryDetail",
-            "type": "Element",
-        }
-    )
-    round_trip_information: Optional[RoundTripInformation] = field(
-        default=None,
-        metadata={
-            "name": "RoundTripInformation",
-            "type": "Element",
-        }
-    )
-    line_item_note: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "LineItemNote",
-            "type": "Element",
-        }
-    )
-    list_of_structured_note: Optional[ListOfStructuredNote] = field(
-        default=None,
-        metadata={
-            "name": "ListOfStructuredNote",
-            "type": "Element",
-        }
-    )
-    list_of_name_value_set: Optional[ListOfNameValueSet] = field(
-        default=None,
-        metadata={
-            "name": "ListOfNameValueSet",
-            "type": "Element",
-        }
-    )
-    line_item_attachments: Optional[LineItemAttachments] = field(
-        default=None,
-        metadata={
-            "name": "LineItemAttachments",
-            "type": "Element",
-        }
-    )
-    list_of_mvbvariables: Optional[ListOfMvbvariables] = field(
-        default=None,
-        metadata={
-            "name": "ListOfMVBVariables",
-            "type": "Element",
         }
     )
 
@@ -214,6 +138,24 @@ class ListOfAuctionResultDetailAttachment:
     list_of_attachment: ListOfAttachment = field(
         metadata={
             "name": "ListOfAttachment",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class Range:
+    minimum_value: MinimumValue = field(
+        metadata={
+            "name": "MinimumValue",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    maximum_value: MaximumValue = field(
+        metadata={
+            "name": "MaximumValue",
             "type": "Element",
             "required": True,
         }
@@ -289,6 +231,130 @@ class AuctionResultHeader:
         default=None,
         metadata={
             "name": "AuctionResultGeneralNote",
+            "type": "Element",
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class Mvbrange:
+    class Meta:
+        name = "MVBRange"
+
+    range: Range = field(
+        metadata={
+            "name": "Range",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class Mvbvariable:
+    class Meta:
+        name = "MVBVariable"
+
+    mvbvariable_name: str = field(
+        metadata={
+            "name": "MVBVariableName",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    mvbvariable_value: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "MVBVariableValue",
+            "type": "Element",
+        }
+    )
+    mvbrange: Optional[Mvbrange] = field(
+        default=None,
+        metadata={
+            "name": "MVBRange",
+            "type": "Element",
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class ListOfMvbvariables:
+    class Meta:
+        name = "ListOfMVBVariables"
+
+    mvbvariable: List[Mvbvariable] = field(
+        default_factory=list,
+        metadata={
+            "name": "MVBVariable",
+            "type": "Element",
+            "min_occurs": 1,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class AuctionResultItem:
+    base_item_detail: BaseItemDetail = field(
+        metadata={
+            "name": "BaseItemDetail",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    pricing_detail: Optional[PricingDetail] = field(
+        default=None,
+        metadata={
+            "name": "PricingDetail",
+            "type": "Element",
+        }
+    )
+    delivery_detail: Optional[DeliveryDetail] = field(
+        default=None,
+        metadata={
+            "name": "DeliveryDetail",
+            "type": "Element",
+        }
+    )
+    round_trip_information: Optional[RoundTripInformation] = field(
+        default=None,
+        metadata={
+            "name": "RoundTripInformation",
+            "type": "Element",
+        }
+    )
+    line_item_note: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "LineItemNote",
+            "type": "Element",
+        }
+    )
+    list_of_structured_note: Optional[ListOfStructuredNote] = field(
+        default=None,
+        metadata={
+            "name": "ListOfStructuredNote",
+            "type": "Element",
+        }
+    )
+    list_of_name_value_set: Optional[ListOfNameValueSet] = field(
+        default=None,
+        metadata={
+            "name": "ListOfNameValueSet",
+            "type": "Element",
+        }
+    )
+    line_item_attachments: Optional[LineItemAttachments] = field(
+        default=None,
+        metadata={
+            "name": "LineItemAttachments",
+            "type": "Element",
+        }
+    )
+    list_of_mvbvariables: Optional[ListOfMvbvariables] = field(
+        default=None,
+        metadata={
+            "name": "ListOfMVBVariables",
             "type": "Element",
         }
     )

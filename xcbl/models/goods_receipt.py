@@ -1,38 +1,29 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from xcbl.models.auction_create import (
-    CarrierId,
-    Identifier,
-    ItemPackagingReference,
-    Language,
-    ListOfAttachment,
-    ListOfDateCoded,
-    ListOfReferenceCoded,
-    ListOfTransportEquipment,
-    Location,
-    Party,
-    Purpose,
-    Quantity,
-    Reference,
-    TermsOfDelivery,
-    TransitDirection,
-    TransportMeans,
-    TransportMode,
-)
-from xcbl.models.order_request import (
-    ItemIdentifiers,
-    LineItemNum,
-    LineItemType,
-    ListOfNameValueSet,
-    ListOfPackageDetail,
-    ListOfQuantityCoded,
-    ListOfStructuredNote,
-    ParentItemNumber,
-)
-from xcbl.models.planning_schedule import (
+from xcbl.models.shipping_schedule import ListOfPackageDetail
+from xcbl.models.shipping_schedule_response import (
+    ListOfTransportRouting,
     ScheduleOrderReference,
     ScheduleParty,
 )
+from xcbl.models.sourcing_result import (
+    ItemIdentifiers,
+    ItemPackagingReference,
+    LineItemNum,
+    LineItemType,
+    ListOfAttachment,
+    ListOfDateCoded,
+    ListOfNameValueSet,
+    ListOfReferenceCoded,
+    ListOfStructuredNote,
+    ParentItemNumber,
+    Quantity,
+    TermsOfDelivery,
+)
+from xcbl.models.sourcing_result_response import Purpose
+from xcbl.models.time_series_response import Party
+from xcbl.models.trading_partner_response import Reference
+from xcbl.models.trading_partner_user_information import Language
 
 
 @dataclass(kw_only=True)
@@ -101,52 +92,6 @@ class GoodsCondition:
         default=None,
         metadata={
             "name": "GoodsConditionCodedOther",
-            "type": "Element",
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class ServiceLevel:
-    service_level_coded: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ServiceLevelCoded",
-            "type": "Element",
-        }
-    )
-    service_level_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ServiceLevelCodedOther",
-            "type": "Element",
-        }
-    )
-    service_level_reason_coded: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ServiceLevelReasonCoded",
-            "type": "Element",
-        }
-    )
-    service_level_reason_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ServiceLevelReasonCodedOther",
-            "type": "Element",
-        }
-    )
-    service_level_responsibility_coded: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ServiceLevelResponsibilityCoded",
-            "type": "Element",
-        }
-    )
-    service_level_responsibility_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ServiceLevelResponsibilityCodedOther",
             "type": "Element",
         }
     )
@@ -240,17 +185,6 @@ class ItemShipToParty:
     party: Party = field(
         metadata={
             "name": "Party",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class LadingQuantity:
-    quantity: Quantity = field(
-        metadata={
-            "name": "Quantity",
             "type": "Element",
             "required": True,
         }
@@ -369,92 +303,6 @@ class QuantityShipped:
 
 
 @dataclass(kw_only=True)
-class TransportLocation:
-    location: Location = field(
-        metadata={
-            "name": "Location",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    location_id: str = field(
-        metadata={
-            "name": "LocationID",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    sequence: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "Sequence",
-            "type": "Element",
-        }
-    )
-    estimated_arrival_date: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "EstimatedArrivalDate",
-            "type": "Element",
-        }
-    )
-    actual_arrival_date: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ActualArrivalDate",
-            "type": "Element",
-        }
-    )
-    estimated_departure_date: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "EstimatedDepartureDate",
-            "type": "Element",
-        }
-    )
-    actual_departure_date: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ActualDepartureDate",
-            "type": "Element",
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class TransportMeansIdentifier:
-    identifier: Identifier = field(
-        metadata={
-            "name": "Identifier",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class TransportMeansReference:
-    identifier: Identifier = field(
-        metadata={
-            "name": "Identifier",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class EndTransportLocation:
-    transport_location: TransportLocation = field(
-        metadata={
-            "name": "TransportLocation",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
 class GoodsReceiptDeliveryDetail:
     item_packaging_reference: Optional[ItemPackagingReference] = field(
         default=None,
@@ -533,17 +381,6 @@ class GoodsReceiptItemOrderReference:
 
 
 @dataclass(kw_only=True)
-class InterimTransportLocation:
-    transport_location: TransportLocation = field(
-        metadata={
-            "name": "TransportLocation",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
 class ListOfGoodsReceiptOrderReference:
     goods_receipt_order_reference: List[GoodsReceiptOrderReference] = field(
         default_factory=list,
@@ -563,35 +400,6 @@ class ListOfLineItemGoodsCondition:
             "name": "LineItemGoodsCondition",
             "type": "Element",
             "min_occurs": 1,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class StartTransportLocation:
-    transport_location: TransportLocation = field(
-        metadata={
-            "name": "TransportLocation",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class TransportQuantities:
-    lading_quantity: Optional[LadingQuantity] = field(
-        default=None,
-        metadata={
-            "name": "LadingQuantity",
-            "type": "Element",
-        }
-    )
-    list_of_quantity_coded: Optional[ListOfQuantityCoded] = field(
-        default=None,
-        metadata={
-            "name": "ListOfQuantityCoded",
-            "type": "Element",
         }
     )
 
@@ -627,314 +435,6 @@ class ListOfGoodsReceiptItemOrderReference:
         default_factory=list,
         metadata={
             "name": "GoodsReceiptItemOrderReference",
-            "type": "Element",
-            "min_occurs": 1,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class TransportLocationList:
-    start_transport_location: StartTransportLocation = field(
-        metadata={
-            "name": "StartTransportLocation",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    interim_transport_location: List[InterimTransportLocation] = field(
-        default_factory=list,
-        metadata={
-            "name": "InterimTransportLocation",
-            "type": "Element",
-        }
-    )
-    end_transport_location: EndTransportLocation = field(
-        metadata={
-            "name": "EndTransportLocation",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class GoodsReceiptLineItemReferences:
-    asnreference: Optional[Asnreference] = field(
-        default=None,
-        metadata={
-            "name": "ASNReference",
-            "type": "Element",
-        }
-    )
-    asnline_item_number: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ASNLineItemNumber",
-            "type": "Element",
-        }
-    )
-    list_of_goods_receipt_item_order_reference: Optional[ListOfGoodsReceiptItemOrderReference] = field(
-        default=None,
-        metadata={
-            "name": "ListOfGoodsReceiptItemOrderReference",
-            "type": "Element",
-        }
-    )
-    list_of_reference_coded: Optional[ListOfReferenceCoded] = field(
-        default=None,
-        metadata={
-            "name": "ListOfReferenceCoded",
-            "type": "Element",
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class TransportRouting:
-    transport_route_id: str = field(
-        metadata={
-            "name": "TransportRouteID",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    transport_mode: Optional[TransportMode] = field(
-        default=None,
-        metadata={
-            "name": "TransportMode",
-            "type": "Element",
-        }
-    )
-    transport_means: Optional[TransportMeans] = field(
-        default=None,
-        metadata={
-            "name": "TransportMeans",
-            "type": "Element",
-        }
-    )
-    transport_means_identifier: Optional[TransportMeansIdentifier] = field(
-        default=None,
-        metadata={
-            "name": "TransportMeansIdentifier",
-            "type": "Element",
-        }
-    )
-    transport_means_reference: Optional[TransportMeansReference] = field(
-        default=None,
-        metadata={
-            "name": "TransportMeansReference",
-            "type": "Element",
-        }
-    )
-    transport_requirement_coded: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "TransportRequirementCoded",
-            "type": "Element",
-        }
-    )
-    transport_requirement_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "TransportRequirementCodedOther",
-            "type": "Element",
-        }
-    )
-    carrier_name: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "CarrierName",
-            "type": "Element",
-        }
-    )
-    carrier_id: Optional[CarrierId] = field(
-        default=None,
-        metadata={
-            "name": "CarrierID",
-            "type": "Element",
-        }
-    )
-    transport_quantities: Optional[TransportQuantities] = field(
-        default=None,
-        metadata={
-            "name": "TransportQuantities",
-            "type": "Element",
-        }
-    )
-    cust_shipping_contract_num: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "CustShippingContractNum",
-            "type": "Element",
-        }
-    )
-    service_level: Optional[ServiceLevel] = field(
-        default=None,
-        metadata={
-            "name": "ServiceLevel",
-            "type": "Element",
-        }
-    )
-    shipping_instructions: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ShippingInstructions",
-            "type": "Element",
-        }
-    )
-    transport_leg_coded: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "TransportLegCoded",
-            "type": "Element",
-        }
-    )
-    transport_leg_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "TransportLegCodedOther",
-            "type": "Element",
-        }
-    )
-    list_of_transport_equipment: Optional[ListOfTransportEquipment] = field(
-        default=None,
-        metadata={
-            "name": "ListOfTransportEquipment",
-            "type": "Element",
-        }
-    )
-    transit_direction: Optional[TransitDirection] = field(
-        default=None,
-        metadata={
-            "name": "TransitDirection",
-            "type": "Element",
-        }
-    )
-    transport_location_list: TransportLocationList = field(
-        metadata={
-            "name": "TransportLocationList",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class GoodsReceiptItemDetail:
-    line_item_num: LineItemNum = field(
-        metadata={
-            "name": "LineItemNum",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    line_item_type: LineItemType = field(
-        metadata={
-            "name": "LineItemType",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    parent_item_number: ParentItemNumber = field(
-        metadata={
-            "name": "ParentItemNumber",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    item_identifiers: ItemIdentifiers = field(
-        metadata={
-            "name": "ItemIdentifiers",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    quantity_shipped: QuantityShipped = field(
-        metadata={
-            "name": "QuantityShipped",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    quantity_received: QuantityReceived = field(
-        metadata={
-            "name": "QuantityReceived",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    quantity_difference: Optional[QuantityDifference] = field(
-        default=None,
-        metadata={
-            "name": "QuantityDifference",
-            "type": "Element",
-        }
-    )
-    list_of_line_item_goods_condition: Optional[ListOfLineItemGoodsCondition] = field(
-        default=None,
-        metadata={
-            "name": "ListOfLineItemGoodsCondition",
-            "type": "Element",
-        }
-    )
-    unacceptable_packaging: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "UnacceptablePackaging",
-            "type": "Element",
-        }
-    )
-    goods_receipt_line_item_references: Optional[GoodsReceiptLineItemReferences] = field(
-        default=None,
-        metadata={
-            "name": "GoodsReceiptLineItemReferences",
-            "type": "Element",
-        }
-    )
-    goods_receipt_delivery_detail: Optional[GoodsReceiptDeliveryDetail] = field(
-        default=None,
-        metadata={
-            "name": "GoodsReceiptDeliveryDetail",
-            "type": "Element",
-        }
-    )
-    list_of_structured_note: Optional[ListOfStructuredNote] = field(
-        default=None,
-        metadata={
-            "name": "ListOfStructuredNote",
-            "type": "Element",
-        }
-    )
-    list_of_name_value_set: Optional[ListOfNameValueSet] = field(
-        default=None,
-        metadata={
-            "name": "ListOfNameValueSet",
-            "type": "Element",
-        }
-    )
-    list_of_attachment: Optional[ListOfAttachment] = field(
-        default=None,
-        metadata={
-            "name": "ListOfAttachment",
-            "type": "Element",
-        }
-    )
-    goods_receipt_detail_note: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "GoodsReceiptDetailNote",
-            "type": "Element",
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class ListOfTransportRouting:
-    transport_routing: List[TransportRouting] = field(
-        default_factory=list,
-        metadata={
-            "name": "TransportRouting",
             "type": "Element",
             "min_occurs": 1,
         }
@@ -1052,6 +552,147 @@ class GoodsReceiptHeader:
         default=None,
         metadata={
             "name": "ListOfAttachment",
+            "type": "Element",
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class GoodsReceiptLineItemReferences:
+    asnreference: Optional[Asnreference] = field(
+        default=None,
+        metadata={
+            "name": "ASNReference",
+            "type": "Element",
+        }
+    )
+    asnline_item_number: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "ASNLineItemNumber",
+            "type": "Element",
+        }
+    )
+    list_of_goods_receipt_item_order_reference: Optional[ListOfGoodsReceiptItemOrderReference] = field(
+        default=None,
+        metadata={
+            "name": "ListOfGoodsReceiptItemOrderReference",
+            "type": "Element",
+        }
+    )
+    list_of_reference_coded: Optional[ListOfReferenceCoded] = field(
+        default=None,
+        metadata={
+            "name": "ListOfReferenceCoded",
+            "type": "Element",
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class GoodsReceiptItemDetail:
+    line_item_num: LineItemNum = field(
+        metadata={
+            "name": "LineItemNum",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    line_item_type: LineItemType = field(
+        metadata={
+            "name": "LineItemType",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    parent_item_number: ParentItemNumber = field(
+        metadata={
+            "name": "ParentItemNumber",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    item_identifiers: ItemIdentifiers = field(
+        metadata={
+            "name": "ItemIdentifiers",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    quantity_shipped: QuantityShipped = field(
+        metadata={
+            "name": "QuantityShipped",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    quantity_received: QuantityReceived = field(
+        metadata={
+            "name": "QuantityReceived",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    quantity_difference: Optional[QuantityDifference] = field(
+        default=None,
+        metadata={
+            "name": "QuantityDifference",
+            "type": "Element",
+        }
+    )
+    list_of_line_item_goods_condition: Optional[ListOfLineItemGoodsCondition] = field(
+        default=None,
+        metadata={
+            "name": "ListOfLineItemGoodsCondition",
+            "type": "Element",
+        }
+    )
+    unacceptable_packaging: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "UnacceptablePackaging",
+            "type": "Element",
+        }
+    )
+    goods_receipt_line_item_references: Optional[GoodsReceiptLineItemReferences] = field(
+        default=None,
+        metadata={
+            "name": "GoodsReceiptLineItemReferences",
+            "type": "Element",
+        }
+    )
+    goods_receipt_delivery_detail: Optional[GoodsReceiptDeliveryDetail] = field(
+        default=None,
+        metadata={
+            "name": "GoodsReceiptDeliveryDetail",
+            "type": "Element",
+        }
+    )
+    list_of_structured_note: Optional[ListOfStructuredNote] = field(
+        default=None,
+        metadata={
+            "name": "ListOfStructuredNote",
+            "type": "Element",
+        }
+    )
+    list_of_name_value_set: Optional[ListOfNameValueSet] = field(
+        default=None,
+        metadata={
+            "name": "ListOfNameValueSet",
+            "type": "Element",
+        }
+    )
+    list_of_attachment: Optional[ListOfAttachment] = field(
+        default=None,
+        metadata={
+            "name": "ListOfAttachment",
+            "type": "Element",
+        }
+    )
+    goods_receipt_detail_note: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "GoodsReceiptDetailNote",
             "type": "Element",
         }
     )

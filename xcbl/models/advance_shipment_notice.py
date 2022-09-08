@@ -1,29 +1,24 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from xcbl.models.auction_create import (
-    Currency,
-    ItemPackagingReference,
-    Language,
-    ListOfAttachment,
-    ListOfDateCoded,
-    ListOfDimension,
-    TermsOfDelivery,
-)
 from xcbl.models.goods_receipt import (
     ItemShipFromParty,
     ItemShipToParty,
     ListOfDestinationRef,
-    ListOfTransportRouting,
     OtherItemDates,
 )
-from xcbl.models.invoice import (
+from xcbl.models.order_response import TransportPackagingTotals
+from xcbl.models.price_check_result import LineItemAttachment
+from xcbl.models.remittance_advice import (
     Asnnumber,
     AsnorderNumber,
     Asnreferences,
     ExceptionQuantities,
     PurchaseOrderReference,
 )
-from xcbl.models.order_request import (
+from xcbl.models.request_for_quotation import PaymentInstructions
+from xcbl.models.shipping_schedule import PackageDetail
+from xcbl.models.shipping_schedule_response import ListOfTransportRouting
+from xcbl.models.sourcing_result import (
     CatalogReference,
     ConditionsOfSale,
     CountryOfDestination,
@@ -32,23 +27,28 @@ from xcbl.models.order_request import (
     HazardousMaterials,
     ItemContractReferences,
     ItemIdentifiers,
+    ItemPackagingReference,
     LineItemNum,
     LineItemType,
     ListOfAllowOrCharge,
+    ListOfAttachment,
+    ListOfDateCoded,
     ListOfItemReferences,
     ListOfNameValueSet,
-    ListOfPartyCoded,
     ListOfQuantityCoded,
     ListOfStructuredNote,
     MaxBackOrderQuantity,
-    PackageDetail,
+    OrderParty,
     ParentItemNumber,
-    PaymentInstructions,
+    TermsOfDelivery,
     TotalQuantity,
-    TransportPackagingTotals,
 )
-from xcbl.models.order_status_result import LineItemAttachment
-from xcbl.models.request_for_quotation import OrderParty
+from xcbl.models.time_series_response import (
+    ListOfDimension,
+    ListOfPartyCoded,
+)
+from xcbl.models.trading_partner_organization_information import Currency
+from xcbl.models.trading_partner_user_information import Language
 
 
 @dataclass(kw_only=True)

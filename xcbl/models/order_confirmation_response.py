@@ -1,18 +1,16 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from xcbl.models.auction_create import (
-    Language,
-    ListOfAttachment,
-    Reference,
-)
-from xcbl.models.order_request import (
+from xcbl.models.price_check_result import ErrorInfo
+from xcbl.models.sourcing_result import (
     BuyerParty,
+    ListOfAttachment,
     ListOfNameValueSet,
-    ListOfPartyCoded,
     ListOfStructuredNote,
     SellerParty,
 )
-from xcbl.models.order_status_result import ErrorInfo
+from xcbl.models.time_series_response import ListOfPartyCoded
+from xcbl.models.trading_partner_response import Reference
+from xcbl.models.trading_partner_user_information import Language
 
 
 @dataclass(kw_only=True)

@@ -1,49 +1,50 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from xcbl.models.auction_create import (
-    Currency,
-    Language,
-    ListOfReferenceCoded,
-    OrderDates,
-    Purpose,
-    Reference,
-)
-from xcbl.models.availability_check_result import AvailabilityErrorInfo
-from xcbl.models.order_request import (
-    BuyerParty,
-    ItemDetail,
-    ListOfMessageId,
-    ListOfNameValueSet,
-    ListOfStructuredNote,
-    ListOfTransport,
-    OrderAllowancesOrCharges,
-    OrderHeaderAttachments,
-    OrderHeaderPrice,
-    OrderPaymentInstructions,
-    OrderReferences,
-    OrderSummary,
-    OrderTermsOfDelivery,
-    PackageDetail,
-    RequestedResponse,
-    RoundTripInformation,
-    SellerParty,
-    TaxAccountingCurrency,
-    TaxReference,
-)
 from xcbl.models.order_status_result import (
-    ErrorInfo,
     ItemStatusEvent,
     OrderStatus,
     PaymentStatusEvent,
     ShipmentStatusEvent,
 )
-from xcbl.models.planning_schedule import (
+from xcbl.models.price_check_result import (
+    ErrorInfo,
+    PriceErrorInfo,
+)
+from xcbl.models.quote import TaxReference
+from xcbl.models.request_for_quotation import PaymentInstructions
+from xcbl.models.shipping_schedule import (
+    OrderReferences,
+    PackageDetail,
+)
+from xcbl.models.shipping_schedule_response import (
+    ListOfMessageId,
     OrderNumber,
     OrderType,
+    RequestedResponse,
+    ResponseType,
 )
-from xcbl.models.planning_schedule_response import ResponseType
-from xcbl.models.price_check_result import PriceErrorInfo
-from xcbl.models.request_for_quotation import OrderParty
+from xcbl.models.sourcing_result import (
+    BuyerParty,
+    ItemDetail,
+    ListOfAllowOrCharge,
+    ListOfAttachment,
+    ListOfNameValueSet,
+    ListOfPrice,
+    ListOfReferenceCoded,
+    ListOfStructuredNote,
+    MonetaryValue,
+    OrderDates,
+    OrderParty,
+    RoundTripInformation,
+    SellerParty,
+    TermsOfDelivery,
+    Transport,
+)
+from xcbl.models.sourcing_result_response import Purpose
+from xcbl.models.time_series_response import Measurement
+from xcbl.models.trading_partner_organization_information import Currency
+from xcbl.models.trading_partner_response import Reference
+from xcbl.models.trading_partner_user_information import Language
 
 
 @dataclass(kw_only=True)
@@ -60,6 +61,17 @@ class ChangeType:
         metadata={
             "name": "ChangeTypeCodedOther",
             "type": "Element",
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class AvailabilityErrorInfo:
+    error_info: ErrorInfo = field(
+        metadata={
+            "name": "ErrorInfo",
+            "type": "Element",
+            "required": True,
         }
     )
 
@@ -101,6 +113,17 @@ class ChangeOrderReference:
 
 
 @dataclass(kw_only=True)
+class GrossVolume:
+    measurement: Measurement = field(
+        metadata={
+            "name": "Measurement",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
 class ItemDetailChanges:
     item_detail: ItemDetail = field(
         metadata={
@@ -124,6 +147,29 @@ class ListOfErrorInfo:
 
 
 @dataclass(kw_only=True)
+class ListOfTransport:
+    transport: List[Transport] = field(
+        default_factory=list,
+        metadata={
+            "name": "Transport",
+            "type": "Element",
+            "min_occurs": 1,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class OrderAllowancesOrCharges:
+    list_of_allow_or_charge: ListOfAllowOrCharge = field(
+        metadata={
+            "name": "ListOfAllowOrCharge",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
 class OrderCurrency:
     currency: Currency = field(
         metadata={
@@ -135,10 +181,43 @@ class OrderCurrency:
 
 
 @dataclass(kw_only=True)
+class OrderHeaderAttachments:
+    list_of_attachment: ListOfAttachment = field(
+        metadata={
+            "name": "ListOfAttachment",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class OrderHeaderPrice:
+    list_of_price: ListOfPrice = field(
+        metadata={
+            "name": "ListOfPrice",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
 class OrderLanguage:
     language: Language = field(
         metadata={
             "name": "Language",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class OrderPaymentInstructions:
+    payment_instructions: PaymentInstructions = field(
+        metadata={
+            "name": "PaymentInstructions",
             "type": "Element",
             "required": True,
         }
@@ -193,10 +272,10 @@ class OrderTaxReference:
 
 
 @dataclass(kw_only=True)
-class OriginalItemDetail:
-    item_detail: ItemDetail = field(
+class OrderTermsOfDelivery:
+    terms_of_delivery: TermsOfDelivery = field(
         metadata={
-            "name": "ItemDetail",
+            "name": "TermsOfDelivery",
             "type": "Element",
             "required": True,
         }
@@ -204,10 +283,10 @@ class OriginalItemDetail:
 
 
 @dataclass(kw_only=True)
-class OriginalOrderSummary:
-    order_summary: OrderSummary = field(
+class OriginalItemDetail:
+    item_detail: ItemDetail = field(
         metadata={
-            "name": "OrderSummary",
+            "name": "ItemDetail",
             "type": "Element",
             "required": True,
         }
@@ -237,10 +316,76 @@ class PackageDetailChanges:
 
 
 @dataclass(kw_only=True)
-class RevisedOrderSummary:
-    order_summary: OrderSummary = field(
+class TaxAccountingCurrency:
+    currency: Currency = field(
         metadata={
-            "name": "OrderSummary",
+            "name": "Currency",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class TotalAmount:
+    monetary_value: MonetaryValue = field(
+        metadata={
+            "name": "MonetaryValue",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class TotalGrossWeight:
+    measurement: Measurement = field(
+        metadata={
+            "name": "Measurement",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class TotalNetNetWeight:
+    measurement: Measurement = field(
+        metadata={
+            "name": "Measurement",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class TotalNetWeight:
+    measurement: Measurement = field(
+        metadata={
+            "name": "Measurement",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class TotalTareWeight:
+    measurement: Measurement = field(
+        metadata={
+            "name": "Measurement",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class TotalTax:
+    monetary_value: MonetaryValue = field(
+        metadata={
+            "name": "MonetaryValue",
             "type": "Element",
             "required": True,
         }
@@ -533,25 +678,60 @@ class OrderHeader:
 
 
 @dataclass(kw_only=True)
-class OrderResponseSummary:
-    error_info: Optional[ErrorInfo] = field(
+class TransportPackagingTotals:
+    total_packages: Optional[str] = field(
         default=None,
         metadata={
-            "name": "ErrorInfo",
+            "name": "TotalPackages",
             "type": "Element",
         }
     )
-    original_order_summary: Optional[OriginalOrderSummary] = field(
+    total_package_depth: Optional[str] = field(
         default=None,
         metadata={
-            "name": "OriginalOrderSummary",
+            "name": "TotalPackageDepth",
             "type": "Element",
         }
     )
-    revised_order_summary: Optional[RevisedOrderSummary] = field(
+    total_transport: Optional[str] = field(
         default=None,
         metadata={
-            "name": "RevisedOrderSummary",
+            "name": "TotalTransport",
+            "type": "Element",
+        }
+    )
+    total_gross_weight: Optional[TotalGrossWeight] = field(
+        default=None,
+        metadata={
+            "name": "TotalGrossWeight",
+            "type": "Element",
+        }
+    )
+    total_net_weight: Optional[TotalNetWeight] = field(
+        default=None,
+        metadata={
+            "name": "TotalNetWeight",
+            "type": "Element",
+        }
+    )
+    total_net_net_weight: Optional[TotalNetNetWeight] = field(
+        default=None,
+        metadata={
+            "name": "TotalNetNetWeight",
+            "type": "Element",
+        }
+    )
+    total_tare_weight: Optional[TotalTareWeight] = field(
+        default=None,
+        metadata={
+            "name": "TotalTareWeight",
+            "type": "Element",
+        }
+    )
+    gross_volume: Optional[GrossVolume] = field(
+        default=None,
+        metadata={
+            "name": "GrossVolume",
             "type": "Element",
         }
     )
@@ -724,6 +904,45 @@ class OrderResponsePackageDetail:
 
 
 @dataclass(kw_only=True)
+class OrderSummary:
+    number_of_lines: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "NumberOfLines",
+            "type": "Element",
+        }
+    )
+    total_tax: Optional[TotalTax] = field(
+        default=None,
+        metadata={
+            "name": "TotalTax",
+            "type": "Element",
+        }
+    )
+    total_amount: Optional[TotalAmount] = field(
+        default=None,
+        metadata={
+            "name": "TotalAmount",
+            "type": "Element",
+        }
+    )
+    transport_packaging_totals: Optional[TransportPackagingTotals] = field(
+        default=None,
+        metadata={
+            "name": "TransportPackagingTotals",
+            "type": "Element",
+        }
+    )
+    summary_note: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "SummaryNote",
+            "type": "Element",
+        }
+    )
+
+
+@dataclass(kw_only=True)
 class OriginalOrderHeader:
     order_header: OrderHeader = field(
         metadata={
@@ -863,6 +1082,28 @@ class ListOfOrderResponsePackageDetail:
             "name": "OrderResponsePackageDetail",
             "type": "Element",
             "min_occurs": 1,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class OriginalOrderSummary:
+    order_summary: OrderSummary = field(
+        metadata={
+            "name": "OrderSummary",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class RevisedOrderSummary:
+    order_summary: OrderSummary = field(
+        metadata={
+            "name": "OrderSummary",
+            "type": "Element",
+            "required": True,
         }
     )
 
@@ -1024,6 +1265,31 @@ class OrderResponseHeader:
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
+            "type": "Element",
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class OrderResponseSummary:
+    error_info: Optional[ErrorInfo] = field(
+        default=None,
+        metadata={
+            "name": "ErrorInfo",
+            "type": "Element",
+        }
+    )
+    original_order_summary: Optional[OriginalOrderSummary] = field(
+        default=None,
+        metadata={
+            "name": "OriginalOrderSummary",
+            "type": "Element",
+        }
+    )
+    revised_order_summary: Optional[RevisedOrderSummary] = field(
+        default=None,
+        metadata={
+            "name": "RevisedOrderSummary",
             "type": "Element",
         }
     )

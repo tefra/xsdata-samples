@@ -1,8 +1,27 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from xcbl.models.auction_create import Reference
-from xcbl.models.trading_partner_organization_delete import PrimaryId
-from xcbl.models.trading_partner_user_delete import UserId
+from xcbl.models.trading_partner_user_information import (
+    PrimaryId,
+    UserId,
+)
+
+
+@dataclass(kw_only=True)
+class Reference:
+    ref_num: str = field(
+        metadata={
+            "name": "RefNum",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    ref_date: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "RefDate",
+            "type": "Element",
+        }
+    )
 
 
 @dataclass(kw_only=True)

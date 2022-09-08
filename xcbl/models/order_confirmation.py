@@ -1,28 +1,26 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from xcbl.models.auction_create import (
-    Currency,
-    Language,
-    ListOfAttachment,
-    ListOfReferenceCoded,
-)
-from xcbl.models.invoice import PurchaseOrderReference
 from xcbl.models.order_confirmation_response import (
     ListOfAccountAssignment,
     OrderConfirmationType,
 )
-from xcbl.models.order_request import (
+from xcbl.models.remittance_advice import PurchaseOrderReference
+from xcbl.models.sourcing_result import (
     BuyerParty,
     CatalogReference,
     Category,
     ContractId,
     ItemDetail,
+    ListOfAttachment,
     ListOfNameValueSet,
-    ListOfPartyCoded,
+    ListOfReferenceCoded,
     ListOfStructuredNote,
     SellerParty,
     ShipToParty,
 )
+from xcbl.models.time_series_response import ListOfPartyCoded
+from xcbl.models.trading_partner_organization_information import Currency
+from xcbl.models.trading_partner_user_information import Language
 
 
 @dataclass(kw_only=True)

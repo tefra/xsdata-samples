@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from xcbl.models.auction_create import UnitOfMeasurement
 from xcbl.models.time_series_response import (
     KeyFigureInformation,
     ListOfCharacteristicCombinations,
     TimeSeriesHeader,
     TimeSeriesSummary,
+    UnitOfMeasurement,
 )
 
 

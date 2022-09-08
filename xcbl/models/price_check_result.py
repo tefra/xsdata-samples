@@ -1,20 +1,105 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from xcbl.models.auction_create import (
-    Currency,
-    Language,
-    Party,
+from xcbl.models.remittance_advice import SupplierParty
+from xcbl.models.sourcing_result import (
+    BuyerParty,
+    CatalogReference,
+    ConditionsOfSale,
+    CountryOfDestination,
+    CountryOfOrigin,
+    FinalRecipient,
+    HazardousMaterials,
+    ItemContractReferences,
+    ItemIdentifiers,
+    LineItemNum,
+    LineItemType,
+    ListOfAttachment,
+    ListOfItemReferences,
+    ListOfQuantityCoded,
+    MaxBackOrderQuantity,
+    ParentItemNumber,
     Price,
-    Reference,
+    TotalQuantity,
+    Transport,
 )
-from xcbl.models.availability_check_result import QuotedItem
-from xcbl.models.order_request import BuyerParty
-from xcbl.models.order_status_result import (
-    ErrorInfo,
-    LineItemAttachment,
-    ResultListOfAttachment,
+from xcbl.models.time_series_response import (
+    ListOfDimension,
+    ListOfPartyCoded,
+    Party,
 )
-from xcbl.models.payment_request_acknowledgment import SupplierParty
+from xcbl.models.trading_partner_organization_information import Currency
+from xcbl.models.trading_partner_response import Reference
+from xcbl.models.trading_partner_user_information import Language
+
+
+@dataclass(kw_only=True)
+class ListOfParameter:
+    parameter: List[str] = field(
+        default_factory=list,
+        metadata={
+            "name": "Parameter",
+            "type": "Element",
+            "min_occurs": 1,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class Severity:
+    severity_coded: str = field(
+        metadata={
+            "name": "SeverityCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    severity_coded_other: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "SeverityCodedOther",
+            "type": "Element",
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class CheckResultTransport:
+    transport: Transport = field(
+        metadata={
+            "name": "Transport",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class LanguageString:
+    lang_string: str = field(
+        metadata={
+            "name": "LangString",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    language: Language = field(
+        metadata={
+            "name": "Language",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class LineItemAttachment:
+    list_of_attachment: ListOfAttachment = field(
+        metadata={
+            "name": "ListOfAttachment",
+            "type": "Element",
+            "required": True,
+        }
+    )
 
 
 @dataclass(kw_only=True)
@@ -65,21 +150,10 @@ class PriceCheckShipToParty:
 
 
 @dataclass(kw_only=True)
-class PriceCheckSummaryErrorInfo:
-    error_info: ErrorInfo = field(
+class ResultListOfAttachment:
+    list_of_attachment: ListOfAttachment = field(
         metadata={
-            "name": "ErrorInfo",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class PriceErrorInfo:
-    error_info: ErrorInfo = field(
-        metadata={
-            "name": "ErrorInfo",
+            "name": "ListOfAttachment",
             "type": "Element",
             "required": True,
         }
@@ -91,6 +165,155 @@ class ResultPrice:
     price: Price = field(
         metadata={
             "name": "Price",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class CheckResultBaseItemDetail:
+    line_item_num: LineItemNum = field(
+        metadata={
+            "name": "LineItemNum",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    line_item_type: Optional[LineItemType] = field(
+        default=None,
+        metadata={
+            "name": "LineItemType",
+            "type": "Element",
+        }
+    )
+    parent_item_number: Optional[ParentItemNumber] = field(
+        default=None,
+        metadata={
+            "name": "ParentItemNumber",
+            "type": "Element",
+        }
+    )
+    item_identifiers: Optional[ItemIdentifiers] = field(
+        default=None,
+        metadata={
+            "name": "ItemIdentifiers",
+            "type": "Element",
+        }
+    )
+    list_of_dimension: Optional[ListOfDimension] = field(
+        default=None,
+        metadata={
+            "name": "ListOfDimension",
+            "type": "Element",
+        }
+    )
+    total_quantity: Optional[TotalQuantity] = field(
+        default=None,
+        metadata={
+            "name": "TotalQuantity",
+            "type": "Element",
+        }
+    )
+    max_back_order_quantity: Optional[MaxBackOrderQuantity] = field(
+        default=None,
+        metadata={
+            "name": "MaxBackOrderQuantity",
+            "type": "Element",
+        }
+    )
+    list_of_quantity_coded: Optional[ListOfQuantityCoded] = field(
+        default=None,
+        metadata={
+            "name": "ListOfQuantityCoded",
+            "type": "Element",
+        }
+    )
+    off_catalog_flag: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "OffCatalogFlag",
+            "type": "Element",
+        }
+    )
+    catalog_reference: Optional[CatalogReference] = field(
+        default=None,
+        metadata={
+            "name": "CatalogReference",
+            "type": "Element",
+        }
+    )
+    item_contract_references: Optional[ItemContractReferences] = field(
+        default=None,
+        metadata={
+            "name": "ItemContractReferences",
+            "type": "Element",
+        }
+    )
+    list_of_item_references: Optional[ListOfItemReferences] = field(
+        default=None,
+        metadata={
+            "name": "ListOfItemReferences",
+            "type": "Element",
+        }
+    )
+    country_of_origin: Optional[CountryOfOrigin] = field(
+        default=None,
+        metadata={
+            "name": "CountryOfOrigin",
+            "type": "Element",
+        }
+    )
+    country_of_destination: Optional[CountryOfDestination] = field(
+        default=None,
+        metadata={
+            "name": "CountryOfDestination",
+            "type": "Element",
+        }
+    )
+    final_recipient: Optional[FinalRecipient] = field(
+        default=None,
+        metadata={
+            "name": "FinalRecipient",
+            "type": "Element",
+        }
+    )
+    list_of_party_coded: Optional[ListOfPartyCoded] = field(
+        default=None,
+        metadata={
+            "name": "ListOfPartyCoded",
+            "type": "Element",
+        }
+    )
+    conditions_of_sale: Optional[ConditionsOfSale] = field(
+        default=None,
+        metadata={
+            "name": "ConditionsOfSale",
+            "type": "Element",
+        }
+    )
+    hazardous_materials: Optional[HazardousMaterials] = field(
+        default=None,
+        metadata={
+            "name": "HazardousMaterials",
+            "type": "Element",
+        }
+    )
+    check_result_transport: List[CheckResultTransport] = field(
+        default_factory=list,
+        metadata={
+            "name": "CheckResultTransport",
+            "type": "Element",
+            "min_occurs": 1,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class CompletionMsg:
+    language_string: LanguageString = field(
+        metadata={
+            "name": "LanguageString",
             "type": "Element",
             "required": True,
         }
@@ -181,6 +404,85 @@ class PriceCheckResultHeader:
         metadata={
             "name": "ResultListOfAttachment",
             "type": "Element",
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class ErrorInfo:
+    completion_text: str = field(
+        metadata={
+            "name": "CompletionText",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    completion_msg: CompletionMsg = field(
+        metadata={
+            "name": "CompletionMsg",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    severity: Severity = field(
+        metadata={
+            "name": "Severity",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    list_of_parameter: Optional[ListOfParameter] = field(
+        default=None,
+        metadata={
+            "name": "ListOfParameter",
+            "type": "Element",
+        }
+    )
+    min_retry_secs: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "MinRetrySecs",
+            "type": "Element",
+        }
+    )
+    sw_vendor_error_ref: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "SwVendorErrorRef",
+            "type": "Element",
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class QuotedItem:
+    check_result_base_item_detail: CheckResultBaseItemDetail = field(
+        metadata={
+            "name": "CheckResultBaseItemDetail",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class PriceCheckSummaryErrorInfo:
+    error_info: ErrorInfo = field(
+        metadata={
+            "name": "ErrorInfo",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class PriceErrorInfo:
+    error_info: ErrorInfo = field(
+        metadata={
+            "name": "ErrorInfo",
+            "type": "Element",
+            "required": True,
         }
     )
 

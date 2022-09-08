@@ -116,6 +116,58 @@ class CategoryCode:
 
 
 @dataclass
+class Code:
+    class Meta:
+        name = "code"
+
+    type: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        }
+    )
+    description: Optional[object] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        }
+    )
+    properties: Optional["Properties"] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        }
+    )
+    required: List[str] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+        }
+    )
+    value: Optional[object] = field(
+        default=None,
+        metadata={
+            "name": "$",
+            "type": "Element",
+        }
+    )
+    list_agency_name: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "@list-agency-name",
+            "type": "Element",
+        }
+    )
+    list_name: Optional[object] = field(
+        default=None,
+        metadata={
+            "name": "@list-name",
+            "type": "Element",
+        }
+    )
+
+
+@dataclass
 class CreatedById:
     class Meta:
         name = "created-by-id"
@@ -172,31 +224,6 @@ class Criteria:
 
 
 @dataclass
-class DataRef:
-    class Meta:
-        name = "data-ref"
-
-    type: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        }
-    )
-    description: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        }
-    )
-    properties: Optional["Properties"] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        }
-    )
-
-
-@dataclass
 class ErrorCode:
     class Meta:
         name = "error-code"
@@ -217,6 +244,38 @@ class ErrorCode:
         default=None,
         metadata={
             "name": "@dialect",
+            "type": "Element",
+        }
+    )
+
+
+@dataclass
+class Failure:
+    class Meta:
+        name = "failure"
+
+    type: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        }
+    )
+    description: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        }
+    )
+    properties: Optional["Properties"] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        }
+    )
+    data_ref: Optional["DataRef"] = field(
+        default=None,
+        metadata={
+            "name": "data-ref",
             "type": "Element",
         }
     )
@@ -583,31 +642,6 @@ class ValueExpression:
 
 
 @dataclass
-class Values:
-    class Meta:
-        name = "values"
-
-    type: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        }
-    )
-    properties: Optional["Properties"] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        }
-    )
-    value: Optional["Value"] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        }
-    )
-
-
-@dataclass
 class VersionId:
     class Meta:
         name = "version-id"
@@ -632,6 +666,186 @@ class VersionId:
     )
     required: List[str] = field(
         default_factory=list,
+        metadata={
+            "type": "Element",
+        }
+    )
+
+
+@dataclass
+class Failures:
+    class Meta:
+        name = "failures"
+
+    type: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        }
+    )
+    properties: Optional["Properties"] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        }
+    )
+    failure: Optional[Failure] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        }
+    )
+
+
+@dataclass
+class Originator:
+    class Meta:
+        name = "originator"
+
+    address: Optional[object] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        }
+    )
+    reference_parameters: List[ReferenceParameters] = field(
+        default_factory=list,
+        metadata={
+            "name": "reference-parameters",
+            "type": "Element",
+        }
+    )
+    metadata: List[Metadata] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+        }
+    )
+    type: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        }
+    )
+    properties: Optional["Properties"] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        }
+    )
+
+
+@dataclass
+class Value:
+    class Meta:
+        name = "value"
+
+    text: Optional[object] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        }
+    )
+    code: Optional[Code] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        }
+    )
+    amount: Optional[Amount] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        }
+    )
+    quantity: Optional[Quantity] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        }
+    )
+    numeric: Optional[object] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        }
+    )
+    percent: Optional[int] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        }
+    )
+    indicator: Optional[object] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        }
+    )
+    duration: Optional[XmlDuration] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        }
+    )
+    time: Optional[object] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        }
+    )
+    date: Optional[XmlDate] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        }
+    )
+    date_time: Optional[XmlDateTime] = field(
+        default=None,
+        metadata={
+            "name": "date-time",
+            "type": "Element",
+        }
+    )
+    type: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        }
+    )
+    description: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        }
+    )
+    properties: Optional["Properties"] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        }
+    )
+
+
+@dataclass
+class Values:
+    class Meta:
+        name = "values"
+
+    type: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        }
+    )
+    properties: Optional["Properties"] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        }
+    )
+    value: Optional[Value] = field(
+        default=None,
         metadata={
             "type": "Element",
         }
@@ -691,76 +905,6 @@ class Characteristic:
 
 
 @dataclass
-class Failure:
-    class Meta:
-        name = "failure"
-
-    type: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        }
-    )
-    description: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        }
-    )
-    properties: Optional["Properties"] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        }
-    )
-    data_ref: Optional[DataRef] = field(
-        default=None,
-        metadata={
-            "name": "data-ref",
-            "type": "Element",
-        }
-    )
-
-
-@dataclass
-class Originator:
-    class Meta:
-        name = "originator"
-
-    address: Optional[object] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        }
-    )
-    reference_parameters: List[ReferenceParameters] = field(
-        default_factory=list,
-        metadata={
-            "name": "reference-parameters",
-            "type": "Element",
-        }
-    )
-    metadata: List[Metadata] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-        }
-    )
-    type: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        }
-    )
-    properties: Optional["Properties"] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        }
-    )
-
-
-@dataclass
 class Characteristics:
     class Meta:
         name = "characteristics"
@@ -778,31 +922,6 @@ class Characteristics:
         }
     )
     characteristic: Optional[Characteristic] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        }
-    )
-
-
-@dataclass
-class Failures:
-    class Meta:
-        name = "failures"
-
-    type: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        }
-    )
-    properties: Optional["Properties"] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        }
-    )
-    failure: Optional[Failure] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -903,7 +1022,7 @@ class Properties:
             "type": "Element",
         }
     )
-    code: Optional["Code"] = field(
+    code: Optional[Code] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1029,20 +1148,6 @@ class Properties:
             "type": "Element",
         }
     )
-    scheme_name: Optional[SchemeName] = field(
-        default=None,
-        metadata={
-            "name": "@scheme-name",
-            "type": "Element",
-        }
-    )
-    scheme_agency_name: Optional[SchemeAgencyName] = field(
-        default=None,
-        metadata={
-            "name": "@scheme-agency-name",
-            "type": "Element",
-        }
-    )
     list_agency_name: Optional[ListAgencyName] = field(
         default=None,
         metadata={
@@ -1076,6 +1181,34 @@ class Properties:
             "type": "Element",
         }
     )
+    scheme_name: Optional[SchemeName] = field(
+        default=None,
+        metadata={
+            "name": "@scheme-name",
+            "type": "Element",
+        }
+    )
+    scheme_agency_name: Optional[SchemeAgencyName] = field(
+        default=None,
+        metadata={
+            "name": "@scheme-agency-name",
+            "type": "Element",
+        }
+    )
+    unit_code: Optional[UnitCode] = field(
+        default=None,
+        metadata={
+            "name": "@unit-code",
+            "type": "Element",
+        }
+    )
+    currency_id: Optional[CurrencyId] = field(
+        default=None,
+        metadata={
+            "name": "@currency-id",
+            "type": "Element",
+        }
+    )
     value_expression: Optional[ValueExpression] = field(
         default=None,
         metadata={
@@ -1102,21 +1235,26 @@ class Properties:
             "type": "Element",
         }
     )
-    unit_code: Optional[UnitCode] = field(
+    data_ref: Optional["DataRef"] = field(
         default=None,
         metadata={
-            "name": "@unit-code",
+            "name": "data-ref",
             "type": "Element",
         }
     )
-    currency_id: Optional[CurrencyId] = field(
+    failure: Optional[Failure] = field(
         default=None,
         metadata={
-            "name": "@currency-id",
             "type": "Element",
         }
     )
-    value: Optional["Value"] = field(
+    value: Optional[Value] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        }
+    )
+    characteristic: Optional[Characteristic] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1135,151 +1273,13 @@ class Properties:
             "type": "Element",
         }
     )
-    data_ref: Optional[DataRef] = field(
-        default=None,
-        metadata={
-            "name": "data-ref",
-            "type": "Element",
-        }
-    )
-    failure: Optional[Failure] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        }
-    )
-    characteristic: Optional[Characteristic] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        }
-    )
 
 
 @dataclass
-class Code:
+class DataRef:
     class Meta:
-        name = "code"
+        name = "data-ref"
 
-    type: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        }
-    )
-    description: Optional[object] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        }
-    )
-    properties: Optional[Properties] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        }
-    )
-    required: List[str] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-        }
-    )
-    value: Optional[object] = field(
-        default=None,
-        metadata={
-            "name": "$",
-            "type": "Element",
-        }
-    )
-    list_agency_name: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "@list-agency-name",
-            "type": "Element",
-        }
-    )
-    list_name: Optional[object] = field(
-        default=None,
-        metadata={
-            "name": "@list-name",
-            "type": "Element",
-        }
-    )
-
-
-@dataclass
-class Value:
-    class Meta:
-        name = "value"
-
-    text: Optional[object] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        }
-    )
-    code: Optional[Code] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        }
-    )
-    amount: Optional[Amount] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        }
-    )
-    quantity: Optional[Quantity] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        }
-    )
-    numeric: Optional[object] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        }
-    )
-    percent: Optional[int] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        }
-    )
-    indicator: Optional[object] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        }
-    )
-    duration: Optional[XmlDuration] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        }
-    )
-    time: Optional[object] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        }
-    )
-    date: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        }
-    )
-    date_time: Optional[XmlDateTime] = field(
-        default=None,
-        metadata={
-            "name": "date-time",
-            "type": "Element",
-        }
-    )
     type: Optional[str] = field(
         default=None,
         metadata={

@@ -1,115 +1,58 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from xcbl.models.auction_create import (
-    Country,
-    Currency,
-    DeliveryDetail,
-    Language,
-    ListOfAttachment,
-    ListOfDateCoded,
-    ListOfDimension,
-    ListOfPrice,
-    ListOfReferenceCoded,
-    Party,
-    Quantity,
-    Reference,
-    TermsOfDelivery,
-    ValidityDates,
+from xcbl.models.order_response import TaxAccountingCurrency
+from xcbl.models.quote import TaxReference
+from xcbl.models.remittance_advice import (
+    InvoiceDates,
+    InvoiceItemDetail,
+    InvoiceNumber,
+    InvoiceReferences,
+    InvoiceType,
+    ListOfRateOfExchangeDetail,
+    PaymentCurrency,
+    TotalTaxAmount,
 )
-from xcbl.models.goods_receipt import ListOfTransportRouting
-from xcbl.models.order_request import (
+from xcbl.models.request_for_quotation import (
+    CardInfo,
+    Fiaccount,
+    PaymentInstructions,
+)
+from xcbl.models.shipping_schedule import ListOfPackageDetail
+from xcbl.models.shipping_schedule_response import (
+    ListOfTransportRouting,
+    MaterialIssuerParty,
+)
+from xcbl.models.sourcing_result import (
     AllowanceOrChargeDescription,
     BillToParty,
     BuyerParty,
     BuyerTaxInformation,
-    CardInfo,
-    CatalogReference,
-    ConditionsOfSale,
-    CountryOfDestination,
-    CountryOfOrigin,
-    Fiaccount,
-    FinalRecipient,
-    HazardousMaterials,
-    ItemAllowancesOrCharges,
-    ItemContractReferences,
-    ItemIdentifiers,
-    LineItemAttachments,
-    LineItemNum,
-    LineItemType,
     ListOfAllowOrCharge,
-    ListOfItemReferences,
-    ListOfMessageId,
+    ListOfAttachment,
     ListOfNameValueSet,
-    ListOfPackageDetail,
-    ListOfPartyCoded,
-    ListOfQuantityCoded,
     ListOfStructuredNote,
-    MaxBackOrderQuantity,
     MonetaryValue,
-    ParentItemNumber,
     PartyTaxInformation,
-    PaymentInstructions,
     RemitToParty,
     SellerParty,
     SellerTaxInformation,
     ShipFromParty,
     ShipToParty,
-    Tax,
-    TaxAccountingCurrency,
-    TaxReference,
-    TotalQuantity,
-    TotalValue,
-)
-from xcbl.models.payment_request_acknowledgment import ListOfRateOfExchangeDetail
-from xcbl.models.planning_schedule import MaterialIssuerParty
-from xcbl.models.request_for_quotation import (
-    AccountNumber,
-    BuyersCatalogNumber,
-    ContractReference,
-    PriceListNumber,
-    PriceListVersionNumber,
     SoldToParty,
+    Tax,
+    TermsOfDelivery,
     WarehouseParty,
 )
-
-
-@dataclass(kw_only=True)
-class AsnpartialOrder:
-    class Meta:
-        name = "ASNPartialOrder"
-
-    asnpartial_order_coded: str = field(
-        metadata={
-            "name": "ASNPartialOrderCoded",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    asnpartial_order_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ASNPartialOrderCodedOther",
-            "type": "Element",
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class ActualPaymentStatus:
-    actual_payment_status_coded: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ActualPaymentStatusCoded",
-            "type": "Element",
-        }
-    )
-    actual_payment_status_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ActualPaymentStatusCodedOther",
-            "type": "Element",
-        }
-    )
+from xcbl.models.time_series_response import (
+    ListOfPartyCoded,
+    Party,
+)
+from xcbl.models.trading_partner_organization_information import Currency
+from xcbl.models.trading_partner_response import Reference
+from xcbl.models.trading_partner_user_information import (
+    Country,
+    Language,
+)
 
 
 @dataclass(kw_only=True)
@@ -185,24 +128,6 @@ class InvoicePurpose:
 
 
 @dataclass(kw_only=True)
-class InvoiceType:
-    invoice_type_coded: str = field(
-        metadata={
-            "name": "InvoiceTypeCoded",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    invoice_type_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "InvoiceTypeCodedOther",
-            "type": "Element",
-        }
-    )
-
-
-@dataclass(kw_only=True)
 class PaymentMean:
     payment_mean_coded: str = field(
         metadata={
@@ -221,81 +146,6 @@ class PaymentMean:
 
 
 @dataclass(kw_only=True)
-class Asnnumber:
-    class Meta:
-        name = "ASNNumber"
-
-    reference: Reference = field(
-        metadata={
-            "name": "Reference",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class AirWayBillNumber1:
-    class Meta:
-        name = "AirWayBillNumber"
-
-    reference: Reference = field(
-        metadata={
-            "name": "Reference",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class AirWaybillNumber2:
-    class Meta:
-        name = "AirWaybillNumber"
-
-    reference: Reference = field(
-        metadata={
-            "name": "Reference",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class AuthorizationAssignedBy:
-    party: Party = field(
-        metadata={
-            "name": "Party",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class AuthorizationNumber:
-    reference: Reference = field(
-        metadata={
-            "name": "Reference",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class BillOfLadingNumber:
-    reference: Reference = field(
-        metadata={
-            "name": "Reference",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
 class BuyerTax:
     tax: Tax = field(
         metadata={
@@ -307,76 +157,10 @@ class BuyerTax:
 
 
 @dataclass(kw_only=True)
-class CarrierReferenceNumber:
-    reference: Reference = field(
-        metadata={
-            "name": "Reference",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
 class ChargeTotal:
     monetary_value: MonetaryValue = field(
         metadata={
             "name": "MonetaryValue",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class ContractNumber:
-    reference: Reference = field(
-        metadata={
-            "name": "Reference",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class CostAllocationNumber:
-    reference: Reference = field(
-        metadata={
-            "name": "Reference",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class Damaged:
-    quantity: Quantity = field(
-        metadata={
-            "name": "Quantity",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class DeliveryNoteNumber:
-    reference: Reference = field(
-        metadata={
-            "name": "Reference",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class ExportLicenceNumber:
-    reference: Reference = field(
-        metadata={
-            "name": "Reference",
             "type": "Element",
             "required": True,
         }
@@ -420,17 +204,6 @@ class GrossValue:
 
 
 @dataclass(kw_only=True)
-class ImportLicenceNumber:
-    reference: Reference = field(
-        metadata={
-            "name": "Reference",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
 class InvoiceAllowancesOrCharges:
     list_of_allow_or_charge: ListOfAllowOrCharge = field(
         metadata={
@@ -464,17 +237,6 @@ class InvoiceCurrencyAmt:
 
 
 @dataclass(kw_only=True)
-class InvoiceCurrencyTotalValue:
-    monetary_value: MonetaryValue = field(
-        metadata={
-            "name": "MonetaryValue",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
 class InvoiceHeaderAttachments:
     list_of_attachment: ListOfAttachment = field(
         metadata={
@@ -490,17 +252,6 @@ class InvoiceLanguage:
     language: Language = field(
         metadata={
             "name": "Language",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class InvoiceNumber:
-    reference: Reference = field(
-        metadata={
-            "name": "Reference",
             "type": "Element",
             "required": True,
         }
@@ -541,34 +292,13 @@ class InvoiceTermsOfDelivery:
 
 
 @dataclass(kw_only=True)
-class InvoicingPeriod:
-    validity_dates: ValidityDates = field(
+class ListOfInvoiceItemDetail:
+    invoice_item_detail: List[InvoiceItemDetail] = field(
+        default_factory=list,
         metadata={
-            "name": "ValidityDates",
+            "name": "InvoiceItemDetail",
             "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class LetterOfCreditNumber:
-    reference: Reference = field(
-        metadata={
-            "name": "Reference",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class ListOfOtherInvoiceDates:
-    list_of_date_coded: ListOfDateCoded = field(
-        metadata={
-            "name": "ListOfDateCoded",
-            "type": "Element",
-            "required": True,
+            "min_occurs": 1,
         }
     )
 
@@ -596,100 +326,6 @@ class NetValue:
 
 
 @dataclass(kw_only=True)
-class Ordered:
-    quantity: Quantity = field(
-        metadata={
-            "name": "Quantity",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class OtherAsnreferences:
-    class Meta:
-        name = "OtherASNReferences"
-
-    list_of_reference_coded: ListOfReferenceCoded = field(
-        metadata={
-            "name": "ListOfReferenceCoded",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class OtherInvoiceParties:
-    bill_to_party: Optional[BillToParty] = field(
-        default=None,
-        metadata={
-            "name": "BillToParty",
-            "type": "Element",
-        }
-    )
-    remit_to_party: Optional[RemitToParty] = field(
-        default=None,
-        metadata={
-            "name": "RemitToParty",
-            "type": "Element",
-        }
-    )
-    list_of_party_coded: Optional[ListOfPartyCoded] = field(
-        default=None,
-        metadata={
-            "name": "ListOfPartyCoded",
-            "type": "Element",
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class OtherInvoiceReferences:
-    list_of_reference_coded: ListOfReferenceCoded = field(
-        metadata={
-            "name": "ListOfReferenceCoded",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class PackingListNumber:
-    reference: Reference = field(
-        metadata={
-            "name": "Reference",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class PaymentCurrency:
-    currency: Currency = field(
-        metadata={
-            "name": "Currency",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class PaymentCurrencyTotalValue:
-    monetary_value: MonetaryValue = field(
-        metadata={
-            "name": "MonetaryValue",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
 class PaymentRef:
     reference: Reference = field(
         metadata={
@@ -705,39 +341,6 @@ class PrepaidAmount:
     monetary_value: MonetaryValue = field(
         metadata={
             "name": "MonetaryValue",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class ProformaInvoiceNumber:
-    reference: Reference = field(
-        metadata={
-            "name": "Reference",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class PurchaseOrderNumber:
-    reference: Reference = field(
-        metadata={
-            "name": "Reference",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class RelatedInvoiceType:
-    invoice_type: InvoiceType = field(
-        metadata={
-            "name": "InvoiceType",
             "type": "Element",
             "required": True,
         }
@@ -778,76 +381,10 @@ class RequirementReference:
 
 
 @dataclass(kw_only=True)
-class Returned:
-    quantity: Quantity = field(
-        metadata={
-            "name": "Quantity",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class ShipmentIdentifier:
-    reference: Reference = field(
-        metadata={
-            "name": "Reference",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class ShippedToDate:
-    quantity: Quantity = field(
-        metadata={
-            "name": "Quantity",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
 class SummaryAllowOrCharge:
     monetary_value: MonetaryValue = field(
         metadata={
             "name": "MonetaryValue",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class SupplierOrderNumber:
-    reference: Reference = field(
-        metadata={
-            "name": "Reference",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class TaxAccountingSubTotalValue:
-    monetary_value: MonetaryValue = field(
-        metadata={
-            "name": "MonetaryValue",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class TaxPeriod:
-    validity_dates: ValidityDates = field(
-        metadata={
-            "name": "ValidityDates",
             "type": "Element",
             "required": True,
         }
@@ -935,139 +472,6 @@ class TotalDiscount:
 
 
 @dataclass(kw_only=True)
-class TotalTaxAmount:
-    monetary_value: MonetaryValue = field(
-        metadata={
-            "name": "MonetaryValue",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class TrackingNumber:
-    reference: Reference = field(
-        metadata={
-            "name": "Reference",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class Unusable:
-    quantity: Quantity = field(
-        metadata={
-            "name": "Quantity",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class AuthorizationReference:
-    authorization_number: AuthorizationNumber = field(
-        metadata={
-            "name": "AuthorizationNumber",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    authorization_assigned_by: Optional[AuthorizationAssignedBy] = field(
-        default=None,
-        metadata={
-            "name": "AuthorizationAssignedBy",
-            "type": "Element",
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class CarrierReference:
-    carrier_reference_number: CarrierReferenceNumber = field(
-        metadata={
-            "name": "CarrierReferenceNumber",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    transport_route_id: str = field(
-        metadata={
-            "name": "TransportRouteID",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class CostAllocation:
-    cost_allocation_number: CostAllocationNumber = field(
-        metadata={
-            "name": "CostAllocationNumber",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    work_breakdown_structure: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "WorkBreakdownStructure",
-            "type": "Element",
-        }
-    )
-    fixed_asset: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "FixedAsset",
-            "type": "Element",
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class ExceptionQuantities:
-    ordered: Optional[Ordered] = field(
-        default=None,
-        metadata={
-            "name": "Ordered",
-            "type": "Element",
-        }
-    )
-    damaged: Optional[Damaged] = field(
-        default=None,
-        metadata={
-            "name": "Damaged",
-            "type": "Element",
-        }
-    )
-    unusable: Optional[Unusable] = field(
-        default=None,
-        metadata={
-            "name": "Unusable",
-            "type": "Element",
-        }
-    )
-    returned: Optional[Returned] = field(
-        default=None,
-        metadata={
-            "name": "Returned",
-            "type": "Element",
-        }
-    )
-    shipped_to_date: Optional[ShippedToDate] = field(
-        default=None,
-        metadata={
-            "name": "ShippedToDate",
-            "type": "Element",
-        }
-    )
-
-
-@dataclass(kw_only=True)
 class Fitransfer:
     class Meta:
         name = "FITransfer"
@@ -1096,53 +500,18 @@ class Fitransfer:
 
 
 @dataclass(kw_only=True)
-class InvoiceDates:
-    invoice_due_date: Optional[str] = field(
-        default=None,
+class InvoiceDetail:
+    list_of_invoice_item_detail: ListOfInvoiceItemDetail = field(
         metadata={
-            "name": "InvoiceDueDate",
+            "name": "ListOfInvoiceItemDetail",
             "type": "Element",
+            "required": True,
         }
     )
-    expected_ship_to_date_time: Optional[str] = field(
+    list_of_package_detail: Optional[ListOfPackageDetail] = field(
         default=None,
         metadata={
-            "name": "ExpectedShipToDateTime",
-            "type": "Element",
-        }
-    )
-    actual_ship_to_date_time: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ActualShipToDateTime",
-            "type": "Element",
-        }
-    )
-    receipt_date_time: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ReceiptDateTime",
-            "type": "Element",
-        }
-    )
-    tax_period: Optional[TaxPeriod] = field(
-        default=None,
-        metadata={
-            "name": "TaxPeriod",
-            "type": "Element",
-        }
-    )
-    invoicing_period: Optional[InvoicingPeriod] = field(
-        default=None,
-        metadata={
-            "name": "InvoicingPeriod",
-            "type": "Element",
-        }
-    )
-    list_of_other_invoice_dates: Optional[ListOfOtherInvoiceDates] = field(
-        default=None,
-        metadata={
-            "name": "ListOfOtherInvoiceDates",
+            "name": "ListOfPackageDetail",
             "type": "Element",
         }
     )
@@ -1265,73 +634,6 @@ class InvoiceParty:
 
 
 @dataclass(kw_only=True)
-class InvoicePricingDetail:
-    list_of_price: ListOfPrice = field(
-        metadata={
-            "name": "ListOfPrice",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    tax: List[Tax] = field(
-        default_factory=list,
-        metadata={
-            "name": "Tax",
-            "type": "Element",
-        }
-    )
-    item_allowances_or_charges: Optional[ItemAllowancesOrCharges] = field(
-        default=None,
-        metadata={
-            "name": "ItemAllowancesOrCharges",
-            "type": "Element",
-        }
-    )
-    total_value: Optional[TotalValue] = field(
-        default=None,
-        metadata={
-            "name": "TotalValue",
-            "type": "Element",
-        }
-    )
-    invoice_currency_total_value: InvoiceCurrencyTotalValue = field(
-        metadata={
-            "name": "InvoiceCurrencyTotalValue",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    payment_currency_total_value: Optional[PaymentCurrencyTotalValue] = field(
-        default=None,
-        metadata={
-            "name": "PaymentCurrencyTotalValue",
-            "type": "Element",
-        }
-    )
-    tax_accounting_sub_total_value: Optional[TaxAccountingSubTotalValue] = field(
-        default=None,
-        metadata={
-            "name": "TaxAccountingSubTotalValue",
-            "type": "Element",
-        }
-    )
-    actual_payment_status: Optional[ActualPaymentStatus] = field(
-        default=None,
-        metadata={
-            "name": "ActualPaymentStatus",
-            "type": "Element",
-        }
-    )
-    total_tax_amount: Optional[TotalTaxAmount] = field(
-        default=None,
-        metadata={
-            "name": "TotalTaxAmount",
-            "type": "Element",
-        }
-    )
-
-
-@dataclass(kw_only=True)
 class InvoiceTotals:
     net_value: NetValue = field(
         metadata={
@@ -1436,70 +738,6 @@ class PaymentAmount:
 
 
 @dataclass(kw_only=True)
-class PurchaseOrderReference:
-    purchase_order_number: PurchaseOrderNumber = field(
-        metadata={
-            "name": "PurchaseOrderNumber",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    purchase_order_date: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "PurchaseOrderDate",
-            "type": "Element",
-        }
-    )
-    purchase_order_line_item_number: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "PurchaseOrderLineItemNumber",
-            "type": "Element",
-        }
-    )
-    partial_order_coded: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "PartialOrderCoded",
-            "type": "Element",
-        }
-    )
-    partial_order_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "PartialOrderCodedOther",
-            "type": "Element",
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class RelatedInvoiceRef:
-    related_invoice_type: RelatedInvoiceType = field(
-        metadata={
-            "name": "RelatedInvoiceType",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    invoice_number: InvoiceNumber = field(
-        metadata={
-            "name": "InvoiceNumber",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    invoice_line_item_number: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "InvoiceLineItemNumber",
-            "type": "Element",
-        }
-    )
-
-
-@dataclass(kw_only=True)
 class SpecificRequirement:
     requirement_type_coded: str = field(
         metadata={
@@ -1564,64 +802,11 @@ class TotalAllowOrCharge:
 
 
 @dataclass(kw_only=True)
-class TrackingInformation:
-    tracking_number: TrackingNumber = field(
-        metadata={
-            "name": "TrackingNumber",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    tracking_call_url: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "TrackingCallURL",
-            "type": "Element",
-        }
-    )
-
-
-@dataclass(kw_only=True)
 class AllowOrChargeSummary:
     total_allow_or_charge: List[TotalAllowOrCharge] = field(
         default_factory=list,
         metadata={
             "name": "TotalAllowOrCharge",
-            "type": "Element",
-            "min_occurs": 1,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class LineItemDates:
-    invoice_dates: InvoiceDates = field(
-        metadata={
-            "name": "InvoiceDates",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class ListOfCarrierReference:
-    carrier_reference: List[CarrierReference] = field(
-        default_factory=list,
-        metadata={
-            "name": "CarrierReference",
-            "type": "Element",
-            "min_occurs": 1,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class ListOfRelatedInvoiceRef:
-    related_invoice_ref: List[RelatedInvoiceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "RelatedInvoiceRef",
             "type": "Element",
             "min_occurs": 1,
         }
@@ -1660,97 +845,6 @@ class PaymentRecord:
         default=None,
         metadata={
             "name": "FITransfer",
-            "type": "Element",
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class Asnreferences:
-    class Meta:
-        name = "ASNReferences"
-
-    shipment_identifier: Optional[ShipmentIdentifier] = field(
-        default=None,
-        metadata={
-            "name": "ShipmentIdentifier",
-            "type": "Element",
-        }
-    )
-    packing_list_number: Optional[PackingListNumber] = field(
-        default=None,
-        metadata={
-            "name": "PackingListNumber",
-            "type": "Element",
-        }
-    )
-    contract_number: Optional[ContractNumber] = field(
-        default=None,
-        metadata={
-            "name": "ContractNumber",
-            "type": "Element",
-        }
-    )
-    bill_of_lading_number: Optional[BillOfLadingNumber] = field(
-        default=None,
-        metadata={
-            "name": "BillOfLadingNumber",
-            "type": "Element",
-        }
-    )
-    air_waybill_number: Optional[AirWaybillNumber2] = field(
-        default=None,
-        metadata={
-            "name": "AirWaybillNumber",
-            "type": "Element",
-        }
-    )
-    import_licence_number: Optional[ImportLicenceNumber] = field(
-        default=None,
-        metadata={
-            "name": "ImportLicenceNumber",
-            "type": "Element",
-        }
-    )
-    export_licence_number: Optional[ExportLicenceNumber] = field(
-        default=None,
-        metadata={
-            "name": "ExportLicenceNumber",
-            "type": "Element",
-        }
-    )
-    letter_of_credit_number: Optional[LetterOfCreditNumber] = field(
-        default=None,
-        metadata={
-            "name": "LetterOfCreditNumber",
-            "type": "Element",
-        }
-    )
-    url: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "URL",
-            "type": "Element",
-        }
-    )
-    tracking_information: Optional[TrackingInformation] = field(
-        default=None,
-        metadata={
-            "name": "TrackingInformation",
-            "type": "Element",
-        }
-    )
-    list_of_carrier_reference: Optional[ListOfCarrierReference] = field(
-        default=None,
-        metadata={
-            "name": "ListOfCarrierReference",
-            "type": "Element",
-        }
-    )
-    other_asnreferences: Optional[OtherAsnreferences] = field(
-        default=None,
-        metadata={
-            "name": "OtherASNReferences",
             "type": "Element",
         }
     )
@@ -1814,48 +908,6 @@ class CountryRequirement:
 
 
 @dataclass(kw_only=True)
-class AsnorderNumber:
-    class Meta:
-        name = "ASNOrderNumber"
-
-    buyer_order_number: str = field(
-        metadata={
-            "name": "BuyerOrderNumber",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    seller_order_number: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "SellerOrderNumber",
-            "type": "Element",
-        }
-    )
-    list_of_message_id: Optional[ListOfMessageId] = field(
-        default=None,
-        metadata={
-            "name": "ListOfMessageID",
-            "type": "Element",
-        }
-    )
-    asnpartial_order: Optional[AsnpartialOrder] = field(
-        default=None,
-        metadata={
-            "name": "ASNPartialOrder",
-            "type": "Element",
-        }
-    )
-    asnreferences: Optional[Asnreferences] = field(
-        default=None,
-        metadata={
-            "name": "ASNReferences",
-            "type": "Element",
-        }
-    )
-
-
-@dataclass(kw_only=True)
 class ListOfActualPayment:
     actual_payment: List[ActualPayment] = field(
         default_factory=list,
@@ -1875,136 +927,6 @@ class ListOfCountryRequirement:
             "name": "CountryRequirement",
             "type": "Element",
             "min_occurs": 1,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class InvoiceReferences:
-    purchase_order_reference: Optional[PurchaseOrderReference] = field(
-        default=None,
-        metadata={
-            "name": "PurchaseOrderReference",
-            "type": "Element",
-        }
-    )
-    contract_reference: Optional[ContractReference] = field(
-        default=None,
-        metadata={
-            "name": "ContractReference",
-            "type": "Element",
-        }
-    )
-    account_number: Optional[AccountNumber] = field(
-        default=None,
-        metadata={
-            "name": "AccountNumber",
-            "type": "Element",
-        }
-    )
-    proforma_invoice_number: Optional[ProformaInvoiceNumber] = field(
-        default=None,
-        metadata={
-            "name": "ProformaInvoiceNumber",
-            "type": "Element",
-        }
-    )
-    asnnumber: Optional[Asnnumber] = field(
-        default=None,
-        metadata={
-            "name": "ASNNumber",
-            "type": "Element",
-        }
-    )
-    asnorder_number: Optional[AsnorderNumber] = field(
-        default=None,
-        metadata={
-            "name": "ASNOrderNumber",
-            "type": "Element",
-        }
-    )
-    supplier_order_number: Optional[SupplierOrderNumber] = field(
-        default=None,
-        metadata={
-            "name": "SupplierOrderNumber",
-            "type": "Element",
-        }
-    )
-    price_list_number: Optional[PriceListNumber] = field(
-        default=None,
-        metadata={
-            "name": "PriceListNumber",
-            "type": "Element",
-        }
-    )
-    price_list_version_number: Optional[PriceListVersionNumber] = field(
-        default=None,
-        metadata={
-            "name": "PriceListVersionNumber",
-            "type": "Element",
-        }
-    )
-    buyers_catalog_number: Optional[BuyersCatalogNumber] = field(
-        default=None,
-        metadata={
-            "name": "BuyersCatalogNumber",
-            "type": "Element",
-        }
-    )
-    bill_of_lading_number: Optional[BillOfLadingNumber] = field(
-        default=None,
-        metadata={
-            "name": "BillOfLadingNumber",
-            "type": "Element",
-        }
-    )
-    air_way_bill_number: Optional[AirWayBillNumber1] = field(
-        default=None,
-        metadata={
-            "name": "AirWayBillNumber",
-            "type": "Element",
-        }
-    )
-    letter_of_credit_number: Optional[LetterOfCreditNumber] = field(
-        default=None,
-        metadata={
-            "name": "LetterOfCreditNumber",
-            "type": "Element",
-        }
-    )
-    authorization_reference: Optional[AuthorizationReference] = field(
-        default=None,
-        metadata={
-            "name": "AuthorizationReference",
-            "type": "Element",
-        }
-    )
-    delivery_note_number: Optional[DeliveryNoteNumber] = field(
-        default=None,
-        metadata={
-            "name": "DeliveryNoteNumber",
-            "type": "Element",
-        }
-    )
-    cost_allocation: Optional[CostAllocation] = field(
-        default=None,
-        metadata={
-            "name": "CostAllocation",
-            "type": "Element",
-        }
-    )
-    list_of_related_invoice_ref: Optional[ListOfRelatedInvoiceRef] = field(
-        default=None,
-        metadata={
-            "name": "ListOfRelatedInvoiceRef",
-            "type": "Element",
-        }
-    )
-    other_invoice_references: Optional[OtherInvoiceReferences] = field(
-        default=None,
-        metadata={
-            "name": "OtherInvoiceReferences",
-            "type": "Element",
         }
     )
 
@@ -2093,161 +1015,6 @@ class CountrySpecificRequirements:
         default=None,
         metadata={
             "name": "OtherCountryRequirments",
-            "type": "Element",
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class LineItemReferences:
-    invoice_references: InvoiceReferences = field(
-        metadata={
-            "name": "InvoiceReferences",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class InvoiceBaseItemDetail:
-    line_item_num: LineItemNum = field(
-        metadata={
-            "name": "LineItemNum",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    line_item_type: Optional[LineItemType] = field(
-        default=None,
-        metadata={
-            "name": "LineItemType",
-            "type": "Element",
-        }
-    )
-    parent_item_number: Optional[ParentItemNumber] = field(
-        default=None,
-        metadata={
-            "name": "ParentItemNumber",
-            "type": "Element",
-        }
-    )
-    item_identifiers: Optional[ItemIdentifiers] = field(
-        default=None,
-        metadata={
-            "name": "ItemIdentifiers",
-            "type": "Element",
-        }
-    )
-    list_of_dimension: Optional[ListOfDimension] = field(
-        default=None,
-        metadata={
-            "name": "ListOfDimension",
-            "type": "Element",
-        }
-    )
-    total_quantity: Optional[TotalQuantity] = field(
-        default=None,
-        metadata={
-            "name": "TotalQuantity",
-            "type": "Element",
-        }
-    )
-    max_back_order_quantity: Optional[MaxBackOrderQuantity] = field(
-        default=None,
-        metadata={
-            "name": "MaxBackOrderQuantity",
-            "type": "Element",
-        }
-    )
-    list_of_quantity_coded: Optional[ListOfQuantityCoded] = field(
-        default=None,
-        metadata={
-            "name": "ListOfQuantityCoded",
-            "type": "Element",
-        }
-    )
-    off_catalog_flag: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "OffCatalogFlag",
-            "type": "Element",
-        }
-    )
-    catalog_reference: Optional[CatalogReference] = field(
-        default=None,
-        metadata={
-            "name": "CatalogReference",
-            "type": "Element",
-        }
-    )
-    item_contract_references: Optional[ItemContractReferences] = field(
-        default=None,
-        metadata={
-            "name": "ItemContractReferences",
-            "type": "Element",
-        }
-    )
-    list_of_item_references: Optional[ListOfItemReferences] = field(
-        default=None,
-        metadata={
-            "name": "ListOfItemReferences",
-            "type": "Element",
-        }
-    )
-    country_of_origin: Optional[CountryOfOrigin] = field(
-        default=None,
-        metadata={
-            "name": "CountryOfOrigin",
-            "type": "Element",
-        }
-    )
-    country_of_destination: Optional[CountryOfDestination] = field(
-        default=None,
-        metadata={
-            "name": "CountryOfDestination",
-            "type": "Element",
-        }
-    )
-    final_recipient: Optional[FinalRecipient] = field(
-        default=None,
-        metadata={
-            "name": "FinalRecipient",
-            "type": "Element",
-        }
-    )
-    list_of_party_coded: Optional[ListOfPartyCoded] = field(
-        default=None,
-        metadata={
-            "name": "ListOfPartyCoded",
-            "type": "Element",
-        }
-    )
-    conditions_of_sale: Optional[ConditionsOfSale] = field(
-        default=None,
-        metadata={
-            "name": "ConditionsOfSale",
-            "type": "Element",
-        }
-    )
-    hazardous_materials: Optional[HazardousMaterials] = field(
-        default=None,
-        metadata={
-            "name": "HazardousMaterials",
-            "type": "Element",
-        }
-    )
-    line_item_references: Optional[LineItemReferences] = field(
-        default=None,
-        metadata={
-            "name": "LineItemReferences",
-            "type": "Element",
-        }
-    )
-    exception_quantities: Optional[ExceptionQuantities] = field(
-        default=None,
-        metadata={
-            "name": "ExceptionQuantities",
             "type": "Element",
         }
     )
@@ -2427,103 +1194,6 @@ class InvoiceHeader:
         default=None,
         metadata={
             "name": "InvoiceHeaderAttachments",
-            "type": "Element",
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class InvoiceItemDetail:
-    invoice_base_item_detail: InvoiceBaseItemDetail = field(
-        metadata={
-            "name": "InvoiceBaseItemDetail",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    invoice_pricing_detail: InvoicePricingDetail = field(
-        metadata={
-            "name": "InvoicePricingDetail",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    line_item_dates: Optional[LineItemDates] = field(
-        default=None,
-        metadata={
-            "name": "LineItemDates",
-            "type": "Element",
-        }
-    )
-    other_invoice_parties: Optional[OtherInvoiceParties] = field(
-        default=None,
-        metadata={
-            "name": "OtherInvoiceParties",
-            "type": "Element",
-        }
-    )
-    delivery_detail: Optional[DeliveryDetail] = field(
-        default=None,
-        metadata={
-            "name": "DeliveryDetail",
-            "type": "Element",
-        }
-    )
-    line_item_note: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "LineItemNote",
-            "type": "Element",
-        }
-    )
-    list_of_structured_note: Optional[ListOfStructuredNote] = field(
-        default=None,
-        metadata={
-            "name": "ListOfStructuredNote",
-            "type": "Element",
-        }
-    )
-    list_of_name_value_set: Optional[ListOfNameValueSet] = field(
-        default=None,
-        metadata={
-            "name": "ListOfNameValueSet",
-            "type": "Element",
-        }
-    )
-    line_item_attachments: Optional[LineItemAttachments] = field(
-        default=None,
-        metadata={
-            "name": "LineItemAttachments",
-            "type": "Element",
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class ListOfInvoiceItemDetail:
-    invoice_item_detail: List[InvoiceItemDetail] = field(
-        default_factory=list,
-        metadata={
-            "name": "InvoiceItemDetail",
-            "type": "Element",
-            "min_occurs": 1,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class InvoiceDetail:
-    list_of_invoice_item_detail: ListOfInvoiceItemDetail = field(
-        metadata={
-            "name": "ListOfInvoiceItemDetail",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    list_of_package_detail: Optional[ListOfPackageDetail] = field(
-        default=None,
-        metadata={
-            "name": "ListOfPackageDetail",
             "type": "Element",
         }
     )

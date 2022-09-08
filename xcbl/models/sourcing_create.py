@@ -1,32 +1,34 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from xcbl.models.auction_create import (
-    BaseCurrency,
-    CorrespondenceLanguage,
-    Currency,
+from xcbl.models.sourcing_create_response import SourcingCreateSummary
+from xcbl.models.sourcing_result import (
     DeliveryDetail,
     InitiatingParty,
-    Language,
     ListOfAttachment,
-    ListOfIdentifier,
-    ListOfKeyVal,
     ListOfReferenceCoded,
-    ListToInform,
+    ListOfStructuredNote,
+    PartNumbers,
+    Quantity,
+    RateOfExchangeDetail,
+    UnitPrice,
+)
+from xcbl.models.sourcing_result_response import Purpose
+from xcbl.models.time_series_response import (
+    ListOfIdentifier,
     NameAddress,
     OrderContact,
     OtherContacts,
-    PartNumbers,
+    Party,
     PartyId,
-    Purpose,
-    Quantity,
-    RateOfExchangeDetail,
     ReceivingContact,
     ShippingContact,
-    UnitPrice,
+)
+from xcbl.models.trading_partner_organization_information import Currency
+from xcbl.models.trading_partner_user_information import (
+    CorrespondenceLanguage,
+    Language,
     ValidityDates,
 )
-from xcbl.models.order_request import ListOfStructuredNote
-from xcbl.models.sourcing_create_response import SourcingCreateSummary
 
 
 @dataclass(kw_only=True)
@@ -188,6 +190,56 @@ class VisibilityOfBuyer:
 
 
 @dataclass(kw_only=True)
+class VisibilityRules:
+    visibility_indicator: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "VisibilityIndicator",
+            "type": "Element",
+        }
+    )
+    visibility_of_comments: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "VisibilityOfComments",
+            "type": "Element",
+        }
+    )
+    visibility_of_amounts: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "VisibilityOfAmounts",
+            "type": "Element",
+        }
+    )
+    visibility_of_quantities: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "VisibilityOfQuantities",
+            "type": "Element",
+        }
+    )
+    visibility_of_participants: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "VisibilityOfParticipants",
+            "type": "Element",
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class BaseCurrency:
+    currency: Currency = field(
+        metadata={
+            "name": "Currency",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
 class FormulaAttribute:
     attribute_name: Optional[AttributeName] = field(
         default=None,
@@ -201,6 +253,31 @@ class FormulaAttribute:
         metadata={
             "name": "Value",
             "type": "Element",
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class KeyVal:
+    key_val_string: str = field(
+        metadata={
+            "name": "KeyValString",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    language: Language = field(
+        metadata={
+            "name": "Language",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    keyword: str = field(
+        metadata={
+            "name": "Keyword",
+            "type": "Element",
+            "required": True,
         }
     )
 
@@ -223,6 +300,18 @@ class ListOfDropDownMenuValue:
         default_factory=list,
         metadata={
             "name": "DropDownMenuValue",
+            "type": "Element",
+            "min_occurs": 1,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class ListOfParty:
+    party: List[Party] = field(
+        default_factory=list,
+        metadata={
+            "name": "Party",
             "type": "Element",
             "min_occurs": 1,
         }
@@ -306,87 +395,6 @@ class SourcingDeliveryDetail:
             "name": "DeliveryDetail",
             "type": "Element",
             "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class SourcingPartners:
-    party_id: PartyId = field(
-        metadata={
-            "name": "PartyID",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    list_of_identifier: Optional[ListOfIdentifier] = field(
-        default=None,
-        metadata={
-            "name": "ListOfIdentifier",
-            "type": "Element",
-        }
-    )
-    mdfbusiness: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "MDFBusiness",
-            "type": "Element",
-        }
-    )
-    name_address: Optional[NameAddress] = field(
-        default=None,
-        metadata={
-            "name": "NameAddress",
-            "type": "Element",
-        }
-    )
-    order_contact: Optional[OrderContact] = field(
-        default=None,
-        metadata={
-            "name": "OrderContact",
-            "type": "Element",
-        }
-    )
-    receiving_contact: Optional[ReceivingContact] = field(
-        default=None,
-        metadata={
-            "name": "ReceivingContact",
-            "type": "Element",
-        }
-    )
-    shipping_contact: Optional[ShippingContact] = field(
-        default=None,
-        metadata={
-            "name": "ShippingContact",
-            "type": "Element",
-        }
-    )
-    other_contacts: Optional[OtherContacts] = field(
-        default=None,
-        metadata={
-            "name": "OtherContacts",
-            "type": "Element",
-        }
-    )
-    correspondence_language: Optional[CorrespondenceLanguage] = field(
-        default=None,
-        metadata={
-            "name": "CorrespondenceLanguage",
-            "type": "Element",
-        }
-    )
-    group_indicator: str = field(
-        metadata={
-            "name": "GroupIndicator",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    list_of_key_val: Optional[ListOfKeyVal] = field(
-        default=None,
-        metadata={
-            "name": "ListOfKeyVal",
-            "type": "Element",
         }
     )
 
@@ -478,13 +486,24 @@ class AdditionalAttribute:
 
 
 @dataclass(kw_only=True)
-class ListOfSourcingPartners:
-    sourcing_partners: List[SourcingPartners] = field(
+class ListOfKeyVal:
+    key_val: List[KeyVal] = field(
         default_factory=list,
         metadata={
-            "name": "SourcingPartners",
+            "name": "KeyVal",
             "type": "Element",
             "min_occurs": 1,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class ListToInform:
+    list_of_party: ListOfParty = field(
+        metadata={
+            "name": "ListOfParty",
+            "type": "Element",
+            "required": True,
         }
     )
 
@@ -665,32 +684,81 @@ class ListOfValidQuoteCurrency:
 
 
 @dataclass(kw_only=True)
-class SourcingParticipants:
-    initiating_party: InitiatingParty = field(
+class SourcingPartners:
+    party_id: PartyId = field(
         metadata={
-            "name": "InitiatingParty",
+            "name": "PartyID",
             "type": "Element",
             "required": True,
         }
     )
-    community_id: Optional[str] = field(
+    list_of_identifier: Optional[ListOfIdentifier] = field(
         default=None,
         metadata={
-            "name": "CommunityID",
+            "name": "ListOfIdentifier",
             "type": "Element",
         }
     )
-    list_to_inform: Optional[ListToInform] = field(
+    mdfbusiness: Optional[str] = field(
         default=None,
         metadata={
-            "name": "ListToInform",
+            "name": "MDFBusiness",
             "type": "Element",
         }
     )
-    list_of_sourcing_partners: Optional[ListOfSourcingPartners] = field(
+    name_address: Optional[NameAddress] = field(
         default=None,
         metadata={
-            "name": "ListOfSourcingPartners",
+            "name": "NameAddress",
+            "type": "Element",
+        }
+    )
+    order_contact: Optional[OrderContact] = field(
+        default=None,
+        metadata={
+            "name": "OrderContact",
+            "type": "Element",
+        }
+    )
+    receiving_contact: Optional[ReceivingContact] = field(
+        default=None,
+        metadata={
+            "name": "ReceivingContact",
+            "type": "Element",
+        }
+    )
+    shipping_contact: Optional[ShippingContact] = field(
+        default=None,
+        metadata={
+            "name": "ShippingContact",
+            "type": "Element",
+        }
+    )
+    other_contacts: Optional[OtherContacts] = field(
+        default=None,
+        metadata={
+            "name": "OtherContacts",
+            "type": "Element",
+        }
+    )
+    correspondence_language: Optional[CorrespondenceLanguage] = field(
+        default=None,
+        metadata={
+            "name": "CorrespondenceLanguage",
+            "type": "Element",
+        }
+    )
+    group_indicator: str = field(
+        metadata={
+            "name": "GroupIndicator",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    list_of_key_val: Optional[ListOfKeyVal] = field(
+        default=None,
+        metadata={
+            "name": "ListOfKeyVal",
             "type": "Element",
         }
     )
@@ -737,6 +805,18 @@ class SourcingSpecifications:
         default_factory=list,
         metadata={
             "name": "SourcingAttribute",
+            "type": "Element",
+            "min_occurs": 1,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class ListOfSourcingPartners:
+    sourcing_partners: List[SourcingPartners] = field(
+        default_factory=list,
+        metadata={
+            "name": "SourcingPartners",
             "type": "Element",
             "min_occurs": 1,
         }
@@ -896,6 +976,50 @@ class SourcingCreateDetail:
 
 
 @dataclass(kw_only=True)
+class SourcingParticipants:
+    initiating_party: InitiatingParty = field(
+        metadata={
+            "name": "InitiatingParty",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    community_id: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "CommunityID",
+            "type": "Element",
+        }
+    )
+    list_to_inform: Optional[ListToInform] = field(
+        default=None,
+        metadata={
+            "name": "ListToInform",
+            "type": "Element",
+        }
+    )
+    list_of_sourcing_partners: Optional[ListOfSourcingPartners] = field(
+        default=None,
+        metadata={
+            "name": "ListOfSourcingPartners",
+            "type": "Element",
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class ListOfSourcingCreateDetail:
+    sourcing_create_detail: List[SourcingCreateDetail] = field(
+        default_factory=list,
+        metadata={
+            "name": "SourcingCreateDetail",
+            "type": "Element",
+            "min_occurs": 1,
+        }
+    )
+
+
+@dataclass(kw_only=True)
 class SourcingCreateHeader:
     sourcing_create_purpose: SourcingCreatePurpose = field(
         metadata={
@@ -1007,18 +1131,6 @@ class SourcingCreateHeader:
         metadata={
             "name": "SourcingSpecifications",
             "type": "Element",
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class ListOfSourcingCreateDetail:
-    sourcing_create_detail: List[SourcingCreateDetail] = field(
-        default_factory=list,
-        metadata={
-            "name": "SourcingCreateDetail",
-            "type": "Element",
-            "min_occurs": 1,
         }
     )
 

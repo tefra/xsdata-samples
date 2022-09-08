@@ -1,74 +1,55 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from xcbl.models.auction_create import (
+from xcbl.models.payment_request_acknowledgment import (
+    FinancialInstitutionDetail,
+    PaymentDocumentId,
+)
+from xcbl.models.payment_status_response import (
+    OriginatingFinancialInstitution,
+    PaymentDates,
+    PaymentRequestId,
+    ReceivingFinancialInstitution,
+    SettlementAmount,
+)
+from xcbl.models.remittance_advice import (
+    ListOfRateOfExchangeDetail,
+    PayeeParty,
+    PayerParty,
+    PaymentRequestSummary,
+    RemittanceAdviceDetail,
+    SupplierParty,
+)
+from xcbl.models.request_for_quotation import (
+    AccountDetail,
+    CardInfo,
+    FinancialInstitution,
+    PaymentMeanReference,
+)
+from xcbl.models.sourcing_result import (
     Attachment,
-    ContactNumber,
-    CorrespondenceLanguage,
-    Country,
-    Currency,
-    Language,
-    ListOfIdentifier,
+    BillToParty,
+    BuyerParty,
     ListOfReferenceCoded,
+    MonetaryValue,
+)
+from xcbl.models.sourcing_result_response import Purpose
+from xcbl.models.time_series_response import (
+    ListOfIdentifier,
+    ListOfPartyCoded,
     NameAddress,
     OrderContact,
     OtherContacts,
     Party,
     PartyId,
-    Purpose,
     ReceivingContact,
-    Reference,
-    ReferenceCoded,
     ShippingContact,
 )
-from xcbl.models.invoice import InvoiceItemDetail
-from xcbl.models.order_request import (
-    AccountDetail,
-    BillToParty,
-    BuyerParty,
-    CardInfo,
-    FinancialInstitution,
-    ListOfPartyCoded,
-    MonetaryValue,
-    PaymentMeanReference,
+from xcbl.models.trading_partner_organization_information import Currency
+from xcbl.models.trading_partner_user_information import (
+    CorrespondenceLanguage,
+    Country,
+    Language,
 )
-from xcbl.models.payment_request_acknowledgment import (
-    FinancialInstitutionDetail,
-    ListOfRateOfExchangeDetail,
-    OriginatingFinancialInstitution,
-    PayeeParty,
-    PayerParty,
-    PaymentDocumentId,
-    PaymentRequestSummary,
-    ReceivingFinancialInstitution,
-    SettlementAmount,
-    SupplierParty,
-)
-from xcbl.models.payment_status_response import (
-    PaymentDates,
-    PaymentRequestId,
-)
-
-
-@dataclass(kw_only=True)
-class ActualAmount:
-    monetary_value: MonetaryValue = field(
-        metadata={
-            "name": "MonetaryValue",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class AdjustmentAmount:
-    monetary_value: MonetaryValue = field(
-        metadata={
-            "name": "MonetaryValue",
-            "type": "Element",
-            "required": True,
-        }
-    )
 
 
 @dataclass(kw_only=True)
@@ -175,65 +156,10 @@ class Company:
 
 
 @dataclass(kw_only=True)
-class ExpectedAmount:
-    monetary_value: MonetaryValue = field(
-        metadata={
-            "name": "MonetaryValue",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
 class FeeAmount:
     monetary_value: MonetaryValue = field(
         metadata={
             "name": "MonetaryValue",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class InvoicingDetailAmountDue:
-    monetary_value: MonetaryValue = field(
-        metadata={
-            "name": "MonetaryValue",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class InvoicingDetailAmountPaid:
-    monetary_value: MonetaryValue = field(
-        metadata={
-            "name": "MonetaryValue",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class InvoicingDetailReference:
-    reference_coded: ReferenceCoded = field(
-        metadata={
-            "name": "ReferenceCoded",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class InvoicingItemDetail:
-    invoice_item_detail: InvoiceItemDetail = field(
-        metadata={
-            "name": "InvoiceItemDetail",
             "type": "Element",
             "required": True,
         }
@@ -303,6 +229,17 @@ class PaymentDetailAttachment:
     attachment: Attachment = field(
         metadata={
             "name": "Attachment",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class PaymentDocumentDetail:
+    remittance_advice_detail: RemittanceAdviceDetail = field(
+        metadata={
+            "name": "RemittanceAdviceDetail",
             "type": "Element",
             "required": True,
         }
@@ -403,93 +340,12 @@ class ReceivingFispecificId:
 
 
 @dataclass(kw_only=True)
-class RemittanceAdviceId:
-    class Meta:
-        name = "RemittanceAdviceID"
-
-    reference: Reference = field(
-        metadata={
-            "name": "Reference",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
 class SettlementCurrency:
     currency: Currency = field(
         metadata={
             "name": "Currency",
             "type": "Element",
             "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class Adjustment:
-    line_item_reference: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "LineItemReference",
-            "type": "Element",
-        }
-    )
-    adjustment_reason_coded: str = field(
-        metadata={
-            "name": "AdjustmentReasonCoded",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    adjustment_reason_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "AdjustmentReasonCodedOther",
-            "type": "Element",
-        }
-    )
-    adjustment_date: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "AdjustmentDate",
-            "type": "Element",
-        }
-    )
-    expected_amount: Optional[ExpectedAmount] = field(
-        default=None,
-        metadata={
-            "name": "ExpectedAmount",
-            "type": "Element",
-        }
-    )
-    adjustment_amount: Optional[AdjustmentAmount] = field(
-        default=None,
-        metadata={
-            "name": "AdjustmentAmount",
-            "type": "Element",
-        }
-    )
-    adjustment_percent: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "AdjustmentPercent",
-            "type": "Element",
-        }
-    )
-    actual_amount: ActualAmount = field(
-        metadata={
-            "name": "ActualAmount",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    adjustment_note: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "AdjustmentNote",
-            "type": "Element",
         }
     )
 
@@ -540,6 +396,18 @@ class LegalReportingParty:
             "name": "Company",
             "type": "Element",
             "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class ListOfPaymentDocumentDetail:
+    payment_document_detail: List[PaymentDocumentDetail] = field(
+        default_factory=list,
+        metadata={
+            "name": "PaymentDocumentDetail",
+            "type": "Element",
+            "min_occurs": 1,
         }
     )
 
@@ -667,224 +535,6 @@ class LegalReportingInformation:
         metadata={
             "name": "LegalReportingDescription",
             "type": "Element",
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class ListOfAdjustments:
-    adjustment: List[Adjustment] = field(
-        default_factory=list,
-        metadata={
-            "name": "Adjustment",
-            "type": "Element",
-            "min_occurs": 1,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class InvoicingDetail:
-    invoicing_detail_reference: InvoicingDetailReference = field(
-        metadata={
-            "name": "InvoicingDetailReference",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    invoicing_detail_amount_due: Optional[InvoicingDetailAmountDue] = field(
-        default=None,
-        metadata={
-            "name": "InvoicingDetailAmountDue",
-            "type": "Element",
-        }
-    )
-    invoicing_detail_amount_paid: Optional[InvoicingDetailAmountPaid] = field(
-        default=None,
-        metadata={
-            "name": "InvoicingDetailAmountPaid",
-            "type": "Element",
-        }
-    )
-    invoicing_item_detail: Optional[InvoicingItemDetail] = field(
-        default=None,
-        metadata={
-            "name": "InvoicingItemDetail",
-            "type": "Element",
-        }
-    )
-    list_of_adjustments: Optional[ListOfAdjustments] = field(
-        default=None,
-        metadata={
-            "name": "ListOfAdjustments",
-            "type": "Element",
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class ListOfInvoicingDetail:
-    invoicing_detail: List[InvoicingDetail] = field(
-        default_factory=list,
-        metadata={
-            "name": "InvoicingDetail",
-            "type": "Element",
-            "min_occurs": 1,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class Subsidiary:
-    party_id: PartyId = field(
-        metadata={
-            "name": "PartyID",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    list_of_identifier: Optional[ListOfIdentifier] = field(
-        default=None,
-        metadata={
-            "name": "ListOfIdentifier",
-            "type": "Element",
-        }
-    )
-    mdfbusiness: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "MDFBusiness",
-            "type": "Element",
-        }
-    )
-    name_address: Optional[NameAddress] = field(
-        default=None,
-        metadata={
-            "name": "NameAddress",
-            "type": "Element",
-        }
-    )
-    order_contact: Optional[OrderContact] = field(
-        default=None,
-        metadata={
-            "name": "OrderContact",
-            "type": "Element",
-        }
-    )
-    receiving_contact: Optional[ReceivingContact] = field(
-        default=None,
-        metadata={
-            "name": "ReceivingContact",
-            "type": "Element",
-        }
-    )
-    shipping_contact: Optional[ShippingContact] = field(
-        default=None,
-        metadata={
-            "name": "ShippingContact",
-            "type": "Element",
-        }
-    )
-    other_contacts: Optional[OtherContacts] = field(
-        default=None,
-        metadata={
-            "name": "OtherContacts",
-            "type": "Element",
-        }
-    )
-    correspondence_language: Optional[CorrespondenceLanguage] = field(
-        default=None,
-        metadata={
-            "name": "CorrespondenceLanguage",
-            "type": "Element",
-        }
-    )
-    list_of_invoicing_detail: ListOfInvoicingDetail = field(
-        metadata={
-            "name": "ListOfInvoicingDetail",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class ListOfSubsidiary:
-    subsidiary: List[Subsidiary] = field(
-        default_factory=list,
-        metadata={
-            "name": "Subsidiary",
-            "type": "Element",
-            "min_occurs": 1,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class RemittanceAdviceDetail:
-    list_of_subsidiary: Optional[ListOfSubsidiary] = field(
-        default=None,
-        metadata={
-            "name": "ListOfSubsidiary",
-            "type": "Element",
-        }
-    )
-    list_of_invoicing_detail: Optional[ListOfInvoicingDetail] = field(
-        default=None,
-        metadata={
-            "name": "ListOfInvoicingDetail",
-            "type": "Element",
-        }
-    )
-    list_of_adjustments: Optional[ListOfAdjustments] = field(
-        default=None,
-        metadata={
-            "name": "ListOfAdjustments",
-            "type": "Element",
-        }
-    )
-    remittance_advice_id: Optional[RemittanceAdviceId] = field(
-        default=None,
-        metadata={
-            "name": "RemittanceAdviceID",
-            "type": "Element",
-        }
-    )
-    contact_number: Optional[ContactNumber] = field(
-        default=None,
-        metadata={
-            "name": "ContactNumber",
-            "type": "Element",
-        }
-    )
-    general_note: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "GeneralNote",
-            "type": "Element",
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class PaymentDocumentDetail:
-    remittance_advice_detail: RemittanceAdviceDetail = field(
-        metadata={
-            "name": "RemittanceAdviceDetail",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class ListOfPaymentDocumentDetail:
-    payment_document_detail: List[PaymentDocumentDetail] = field(
-        default_factory=list,
-        metadata={
-            "name": "PaymentDocumentDetail",
-            "type": "Element",
-            "min_occurs": 1,
         }
     )
 

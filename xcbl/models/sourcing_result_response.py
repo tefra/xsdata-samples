@@ -1,11 +1,36 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from xcbl.models.auction_create import (
-    Language,
-    Purpose,
-    Reference,
-)
-from xcbl.models.sourcing_create_response import SourcingCreateReference
+from xcbl.models.trading_partner_response import Reference
+from xcbl.models.trading_partner_user_information import Language
+
+
+@dataclass(kw_only=True)
+class Purpose:
+    purpose_coded: str = field(
+        metadata={
+            "name": "PurposeCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    purpose_coded_other: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "PurposeCodedOther",
+            "type": "Element",
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class SourcingCreateReference:
+    reference: Reference = field(
+        metadata={
+            "name": "Reference",
+            "type": "Element",
+            "required": True,
+        }
+    )
 
 
 @dataclass(kw_only=True)
