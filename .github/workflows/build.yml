@@ -13,7 +13,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        python: [ "3.7", "3.8", "3.9", "3.10" ]
+        python: [ "3.7", "3.8", "3.9", "3.10", "3.11" ]
         collection:
           - { name: "Amadeus", id: "amadeus" }
           - { name: "Autosar", id: "autosar" }
@@ -33,17 +33,13 @@ jobs:
           - { name: "UBL", id: "ubl" }
           - { name: "XCBL", id: "xcbl" }
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           submodules: 'recursive'
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python }}
-      - name: Install libxml2
-        if: startsWith(matrix.python, 'pypy')
-        run: |
-          sudo apt-get install libxml2-dev libxslt-dev
       - name: Install dependencies
         run: |
           pip install --upgrade pip
